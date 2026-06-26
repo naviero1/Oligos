@@ -71,11 +71,12 @@ Graded label: **`nephrotox_grade` 0–3** (rubric in `schema.md`). Inotersen
 
 | | Count | Target |
 |---|------|--------|
-| Unique oligos (`oligos.csv`) | **7** | — |
-| Measurement rows (`measurements.csv`) | **16** | **≥ 100** |
-| — of which strict-kidney | **16** | majority |
+| Unique oligos (`oligos.csv`) | **10** | — |
+| Measurement rows (`measurements.csv`) | **26** | **≥ 100** |
+| — of which strict-kidney | **26** | majority |
 | — of which hepatotox fallback (flagged) | **0** | as needed |
-| Grade distribution (0/1/2/3) | 1 / 3 / 7 / 5 | — |
+| Grade distribution (0/1/2/3) | 4 / 10 / 7 / 5 | — |
+| Oligos with sequence (not TBD) | **3** | all |
 
 _Update this table in the same commit whenever rows are added._
 
@@ -88,6 +89,12 @@ _Update this table in the same commit whenever rows are added._
 > `TBD` where a primary source is still needed. These are **in-vivo/clinical**
 > anchors; the >100-record **in-vitro** volume still requires the `sources/`
 > drops (see `sources/SOURCES.md`).
+>
+> **First primary-source extraction (drisapersen / N2):** rows MSR017–026 and
+> OLG008–010 were extracted from the uploaded open-access paper (Janssen 2019,
+> PMC6796739) — including 3 published **sequences** and strict-kidney **in-vitro
+> ciPTEC** rows that capture the functional-not-cytotoxic phenotype (A1M
+> proteinuria grade 1; no viability loss and no tubular damage = grade 0).
 
 ## Provenance & licensing
 
