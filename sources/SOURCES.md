@@ -115,6 +115,60 @@ _Sequences for all anchor oligos are published (labels/INN/patents) but were lef
 `TBD` rather than recalled from memory — retrieve to satisfy the Phase 2
 "sequences of all oligos tested" requirement._
 
+## NEWLY SURFACED SOURCES & SEARCH ALIASES (added 2026-06-26)
+
+### Confirmed identifiers for the priority sources (search under any of these)
+- **N2** drisapersen proteinuria — *Mol Ther Nucleic Acids* 2019; **PMC6796739**;
+  Cell Press pii **S2162-2531(19)30244-6** (ScienceDirect **S2162253119302446**);
+  Utrecht (Masereeuw lab, ciPTEC). Drug dosed 6 mg/kg; readout urinary A1M.
+  Aliases: "2OMePS reversible proteinuria", "drisapersen A1M proximal tubule".
+- **N1** Dieckmann — pii **S2162-2531(17)30288-3**; **PMC5725219**;
+  DOI 10.1016/j.omtn.2017.11.004. (hepatotox, 236 LNA-ASOs, mouse fibroblasts.)
+- **N3/N4** patents, both *"In vitro nephrotoxicity screening assay"*:
+  **US 11,479,818** = EGFR-mRNA-decrease readout; **US 11,105,794** =
+  EGF-in-supernatant-increase readout. Tool reference oligo SEQ ID NO:1 =
+  `CGTcagtatgcgAATc` (β-D-oxy-LNA + PS). Assignee to confirm on the patent face.
+  Sibling application: **US 2015/0219625** *"In vitro assay for predicting renal
+  proximal tubular cell toxicity."* Find WO/EP family via Google Patents
+  "Also Published As" / Espacenet.
+
+### NEW kidney-specific sources to fetch (strict-kidney)
+- **Sandelius et al. 2020** *"Urinary Kidney Biomarker Panel Detects Preclinical
+  Antisense Oligonucleotide-Induced Tubular Toxicity,"* *Toxicol Pathol*;
+  DOI 10.1177/0192623320964391; **PMID 33084520**. cEt ASO 50 mg/kg in mice →
+  proximal tubular pathology + KIM-1, clusterin, NGAL, cystatin C. (AstraZeneca)
+- **Engelhardt 2016** *"Comparative Renal Toxicopathology of Antisense
+  Oligonucleotides"* (review), *Nucleic Acid Ther* 26:199–209;
+  DOI 10.1089/nat.2015.0598; **PMID 26983026**. **Reference-list goldmine.**
+- **3D-RPTEC platform** (tests SPC5001 + nucleic-acid drugs; ATP depletion +
+  high-content biomarkers). Find via "3D-RPTEC oligonucleotide nephrotoxicity
+  SPC5001 high-content".
+- **"Preclinical Evaluation of the Renal Toxicity of Oligonucleotide Therapeutics
+  in Mice"** — *Methods Mol Biol* 2022; **PMID 35213032**; Bookshelf **NBK584232**.
+- **Frazier 2015** "Antisense Oligonucleotide Therapies" (Toxicol Pathol,
+  10.1177/0192623314551840); **Frazier 2022** kidney-effects review
+  (10.1177/01926233221100414).
+
+### Hepatotox fallback — now with confirmed citations
+- **Hagedorn 2013** *"Hepatotoxic potential of therapeutic oligonucleotides can be
+  predicted from their sequence and modification pattern,"* *Nucleic Acid Ther*.
+- **Burdick 2014** *"Sequence motifs associated with hepatotoxicity of LNA-modified
+  ASOs,"* *Nucleic Acids Res* 42:4882–4891; DOI 10.1093/nar/gku142.
+- **Kasuya 2016** *"RNase H1-dependent hepatotoxicity caused by LNA gapmer ASOs,"*
+  *Sci Rep* 6:30377; DOI 10.1038/srep30377 (**open access**).
+
+### Source-hunting strategy
+- Mine the reference lists of the two reviews — **Engelhardt 2016** and
+  **"Nephrotoxicity of marketed ASO drugs" (PMC10174585)** — they aggregate most
+  primary renal-tox papers.
+- Key labs / authors: **Roche** (Dieckmann, Hagedorn, Berrera); **AstraZeneca**
+  (Sandelius, Söderberg, Andersson); **Ionis** (Henry, Frazier, Engelhardt);
+  **Utrecht/ciPTEC** (Masereeuw).
+- Key journals: *Nucleic Acid Therapeutics*, *Mol Ther Nucleic Acids*,
+  *Toxicologic Pathology*, *Nucleic Acids Research*.
+- Patents: Google Patents → "Also Published As" + "Cited By"; Espacenet patent
+  family; USPTO Patent Public Search (ppubs.uspto.gov).
+
 ## Provenance discipline
 - Each extracted row → `source_id` (N1…), `source_ref` (DOI/patent),
   `source_table` (exact table/figure/claim), `redistribution`.
