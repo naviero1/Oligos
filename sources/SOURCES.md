@@ -176,6 +176,7 @@ Uploaded via GitHub and sorted under `sources/`:
 ```
 sources/
   kidney/      — strict-kidney primary sources & reviews
+    Janssen2019_drisapersen_reversible_proteinuria_ciPTEC_PMC6796739.pdf  (= N2; drisapersen patients+monkey+ciPTEC)
     Wu_Nephrotoxicity_marketed_ASO_drugs_review_PMC10174585.pdf   (= source "REV"; marketed-ASO renal review)
     Frazier2022_kidney_effects_review_ToxPathol.pdf               (DOI 10.1177/01926233221100414)
     MethodsMolBiol2022_book_incl_renal-tox-mice_chapter.pdf       (book; contains the renal-tox-in-mice chapter, NBK584232)
@@ -196,7 +197,7 @@ sources/
 chapter = strict-kidney cross-reference and any extractable per-oligo findings.
 
 **STILL MISSING — highest-priority strict-kidney VOLUME (please add to `sources/kidney/`):**
-- **N2** drisapersen ciPTEC — PMC6796739 (+ supplementary)
+- ~~**N2** drisapersen ciPTEC — PMC6796739~~ ✅ **acquired** (Janssen 2019)
 - **N3/N4** USPTO patents 11,105,794 & 11,479,818 (public domain; contain oligo sequences + readouts)
 - **N1** Dieckmann 236-oligo **supplementary table** — PMC5725219
 - **Sandelius 2020** urinary biomarker panel — PMID 33084520 / DOI 10.1177/0192623320964391
