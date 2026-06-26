@@ -71,11 +71,11 @@ Graded label: **`nephrotox_grade` 0–3** (rubric in `schema.md`). Inotersen
 
 | | Count | Target |
 |---|------|--------|
-| Unique oligos (`oligos.csv`) | **10** | — |
-| Measurement rows (`measurements.csv`) | **26** | **≥ 100** |
-| — of which strict-kidney | **26** | majority |
+| Unique oligos (`oligos.csv`) | **13** | — |
+| Measurement rows (`measurements.csv`) | **30** | **≥ 100** |
+| — of which strict-kidney | **30** | majority |
 | — of which hepatotox fallback (flagged) | **0** | as needed |
-| Grade distribution (0/1/2/3) | 4 / 10 / 7 / 5 | — |
+| Grade distribution (0/1/2/3) | 4 / 11 / 10 / 5 | — |
 | Oligos with sequence (not TBD) | **3** | all |
 
 _Update this table in the same commit whenever rows are added._
