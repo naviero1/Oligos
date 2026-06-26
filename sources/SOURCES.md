@@ -181,6 +181,7 @@ sources/
     Frazier2022_kidney_effects_review_ToxPathol.pdf               (DOI 10.1177/01926233221100414)
     MethodsMolBiol2022_book_incl_renal-tox-mice_chapter.pdf       (book; contains the renal-tox-in-mice chapter, NBK584232)
   hepatotox/   — hepatotox fallback panels (every extracted row → is_kidney_specific=FALSE)
+    Dieckmann2018_HDT_236-LNA-ASO_hepatotox_PMC5725219.pdf        (N1; MAIN PDF only — 236-oligo panel is in its SUPP table)
     Burdick2014_LNA-ASO_hepatotox_seqmotifs_NAR.pdf               (DOI 10.1093/nar/gku142)
     Hagedorn2013_hepatotox_from_sequence_NAT.pdf                  (DOI 10.1089/nat.2013.0436)
   reference/   — background reviews / textbooks / project docs (NOT per-row data)
@@ -198,9 +199,9 @@ chapter = strict-kidney cross-reference and any extractable per-oligo findings.
 
 **STILL MISSING — highest-priority strict-kidney VOLUME (please add to `sources/kidney/`):**
 - ~~**N2** drisapersen ciPTEC — PMC6796739~~ ✅ **acquired** (Janssen 2019)
-- **N3/N4** USPTO patents 11,105,794 & 11,479,818 (public domain; contain oligo sequences + readouts)
-- **N1** Dieckmann 236-oligo **supplementary table** — PMC5725219
-- **Sandelius 2020** urinary biomarker panel — PMID 33084520 / DOI 10.1177/0192623320964391
+- **N3/N4** USPTO patents 11,105,794 & 11,479,818 (public domain; contain oligo sequences + readouts) — **strict kidney**
+- **N1 Dieckmann SUPPLEMENTARY table** — main PDF ✅ acquired (hepatotox); the **236-oligo panel** (sequences + tox) is in the Cell Press supplement (`mmc*.xlsx`), not the PDF — needed for volume
+- **Sandelius 2020** urinary biomarker panel — PMID 33084520 / DOI 10.1177/0192623320964391 — **strict kidney**
 
 ## Provenance discipline
 - Each extracted row → `source_id` (N1…), `source_ref` (DOI/patent),
