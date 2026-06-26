@@ -71,12 +71,23 @@ Graded label: **`nephrotox_grade` 0–3** (rubric in `schema.md`). Inotersen
 
 | | Count | Target |
 |---|------|--------|
-| Unique oligos (`oligos.csv`) | **0** | — |
-| Measurement rows (`measurements.csv`) | **0** | **≥ 100** |
-| — of which strict-kidney | **0** | majority |
+| Unique oligos (`oligos.csv`) | **7** | — |
+| Measurement rows (`measurements.csv`) | **16** | **≥ 100** |
+| — of which strict-kidney | **16** | majority |
 | — of which hepatotox fallback (flagged) | **0** | as needed |
+| Grade distribution (0/1/2/3) | 1 / 3 / 7 / 5 | — |
 
 _Update this table in the same commit whenever rows are added._
+
+> **Provisional anchor rows (2026-06-26):** the 16 seed rows are marketed-oligo
+> **clinical/regulatory** renal outcomes re-derived via `WebSearch` with full
+> citations (FDA/EMA labels, NEJM, AJKD, Br J Clin Pharmacol, Arch Toxicol,
+> Liver Int). Every `nephrotox_grade` is assigned per the `schema.md` rubric and
+> flagged `grade_provisional` in `notes` — **pending scientific sign-off**. No
+> toxicity values were fabricated; numeric `readout_value`/`sequence_5to3` left
+> `TBD` where a primary source is still needed. These are **in-vivo/clinical**
+> anchors; the >100-record **in-vitro** volume still requires the `sources/`
+> drops (see `sources/SOURCES.md`).
 
 ## Provenance & licensing
 

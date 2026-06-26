@@ -92,6 +92,29 @@ _(DOIs intentionally left unconfirmed rather than guessed; fill on retrieval.)_
 
 ---
 
+## ANCHOR SOURCES USED (clinical / regulatory — marketed oligos, seed rows MSR001–016)
+
+These were extracted via `WebSearch` (no full-text fetch) into the 16 provisional
+anchor rows. Labels/EMA = `public_domain`; journal stats = `summary_stat`.
+
+| ID | Source | Used for | Redistribution |
+|----|--------|----------|----------------|
+| A1 | Inotersen — NEJM 2018 `NEJMoa1716793` (NEURO-TTR) + FDA label 211172 | crescentic GN 3%, UPCR>5×ULN 15%, SCr rise 11% | public_domain |
+| A2 | Inotersen FSGS case — AJKD 2022 `S0272-6386(22)00929-5` | biopsy FSGS | summary_stat |
+| A3 | SPC5001 — van Poelgeest 2013 `10.1111/bcp.12738` | ATN/AKI, urinary KIM-1, β2-microglobulin | summary_stat |
+| A4 | SPC5001 PT-on-chip — Arch Toxicol 2021 `10.1007/s00204-021-03062-8` (PMID 33961089) | **in-vitro** KIM-1 induction | summary_stat |
+| A5 | Givosiran — NEJM 2019 `NEJMoa1913147` (ENVISION) + FDA label | eGFR decline / SCr rise 15% vs 7% | public_domain |
+| A6 | Givosiran — Liver Int 2022 `10.1111/liv.15090` (ENVISION 24-mo) | CKD onset/worsening (5 pts) | summary_stat |
+| A7 | Nusinersen — FDA label (Spinraza PI) | urine protein 58% vs 34% | public_domain |
+| A8 | Volanesorsen — EMA SmPC (Waylivra) + APPROACH `NCT02658175` | proteinuria 7.84%, FSGS 1/14 | public_domain |
+| A9 | Mipomersen — FDA label 203568 + EMA EPAR (Kynamro) | proteinuria 9% vs 3%, GN case | public_domain |
+| A10 | Inclisiran — FDA label (Leqvio) + Novartis SmPC | no renal signal (**negative control**) | public_domain |
+| REV | "Nephrotoxicity of marketed ASO drugs" — PMC10174585 | cross-check of clinical renal grades | summary_stat |
+
+_Sequences for all anchor oligos are published (labels/INN/patents) but were left
+`TBD` rather than recalled from memory — retrieve to satisfy the Phase 2
+"sequences of all oligos tested" requirement._
+
 ## Provenance discipline
 - Each extracted row → `source_id` (N1…), `source_ref` (DOI/patent),
   `source_table` (exact table/figure/claim), `redistribution`.
