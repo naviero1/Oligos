@@ -115,6 +115,17 @@ _Sequences for all anchor oligos are published (labels/INN/patents) but were lef
 `TBD` rather than recalled from memory — retrieve to satisfy the Phase 2
 "sequences of all oligos tested" requirement._
 
+**Other `source_id` keys in `measurements.csv`:**
+- `N2` = Janssen 2019 drisapersen (PMC6796739) — full-text extracted (MSR017–026).
+- `K1` = Sandelius 2020 (PMID 33084520) — full-text extracted (MSR031–039).
+- `WS` = **WebSearch-derived** (MSR040–052): each row's `source_ref` names the
+  specific FDA/EMA label, clinical trial, or nonclinical paper the figure came
+  from. No full-text fetch (egress-blocked) — values are the published
+  label/trial numbers as reported via search summaries; verify against the
+  primary `source_ref` before release. Covers eteplirsen, tofersen, eplontersen,
+  patisiran, lumasiran, nedosiran, vutrisiran, revusiran, pegaptanib (aptamer),
+  ISIS 113715, + golodirsen/viltolarsen nonclinical detail.
+
 ## NEWLY SURFACED SOURCES & SEARCH ALIASES (added 2026-06-26)
 
 ### Confirmed identifiers for the priority sources (search under any of these)
