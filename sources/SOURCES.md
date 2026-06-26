@@ -182,7 +182,9 @@ sources/
     Sandelius2020_urinary_kidney_biomarker_panel_ASO_tubular_tox_PMID33084520.pdf  (= K1; cEt ASO mouse; KIM-1/clusterin/NGAL/cystatin-C)
     MethodsMolBiol2022_book_incl_renal-tox-mice_chapter.pdf       (book; contains the renal-tox-in-mice chapter, NBK584232)
   hepatotox/   — hepatotox fallback panels (every extracted row → is_kidney_specific=FALSE)
-    Dieckmann2018_HDT_236-LNA-ASO_hepatotox_PMC5725219.pdf        (N1; MAIN PDF only — 236-oligo panel is in its SUPP table)
+    Dieckmann2018_HDT_236-LNA-ASO_hepatotox_PMC5725219.pdf        (N1 main PDF)
+    Dieckmann2018_supp_mmc1_oligo_sequences_Tm.pdf                (Table S1: GAPDH LNA-ASO sequences + Tm; NO per-oligo tox)
+    Dieckmann2018_supp_mmc2_full_with_supptables.pdf              (article + supp; Myd88 set 3 toxic/3 tolerated; aggregate 236 analysis)
     Burdick2014_LNA-ASO_hepatotox_seqmotifs_NAR.pdf               (DOI 10.1093/nar/gku142)
     Hagedorn2013_hepatotox_from_sequence_NAT.pdf                  (DOI 10.1089/nat.2013.0436)
   reference/   — background reviews / textbooks / project docs (NOT per-row data)
@@ -201,7 +203,7 @@ chapter = strict-kidney cross-reference and any extractable per-oligo findings.
 **STILL MISSING — highest-priority strict-kidney VOLUME (please add to `sources/kidney/`):**
 - ~~**N2** drisapersen ciPTEC — PMC6796739~~ ✅ **acquired** (Janssen 2019)
 - **N3/N4** USPTO patents 11,105,794 & 11,479,818 (public domain; contain oligo sequences + readouts) — **strict kidney** — ⛔ couldn't be located by user; **#1 remaining gap**
-- **N1 Dieckmann SUPPLEMENTARY table** — main PDF ✅ acquired (hepatotox; a 2nd copy was uploaded and removed as a duplicate); the **236-oligo panel** is in the Cell Press supplement (`mmc*.xlsx`), not the PDF — still needed for hepatotox volume
+- **N1 Dieckmann supplement** — ✅ acquired (mmc1 = Table S1 GAPDH sequences+Tm; mmc2 = article + Myd88 labeled set). BUT these PDFs only give the 6-oligo Myd88 labeled set + sequence/Tm design data; the **full 236 per-oligo tox values are NOT in them** (aggregate analyses only — raw per-oligo table is a separate Excel). Hepatotox volume from here is limited.
 - ~~**Sandelius 2020** urinary biomarker panel — PMID 33084520~~ ✅ **acquired** (K1; extracted → MSR031–039)
 
 ## Provenance discipline
