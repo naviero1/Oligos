@@ -169,6 +169,38 @@ _Sequences for all anchor oligos are published (labels/INN/patents) but were lef
 - Patents: Google Patents → "Also Published As" + "Cited By"; Espacenet patent
   family; USPTO Patent Public Search (ppubs.uspto.gov).
 
+## LOCAL SOURCE FILES (committed to repo, organized 2026-06-26)
+
+Uploaded via GitHub and sorted under `sources/`:
+
+```
+sources/
+  kidney/      — strict-kidney primary sources & reviews
+    Wu_Nephrotoxicity_marketed_ASO_drugs_review_PMC10174585.pdf   (= source "REV"; marketed-ASO renal review)
+    Frazier2022_kidney_effects_review_ToxPathol.pdf               (DOI 10.1177/01926233221100414)
+    MethodsMolBiol2022_book_incl_renal-tox-mice_chapter.pdf       (book; contains the renal-tox-in-mice chapter, NBK584232)
+  hepatotox/   — hepatotox fallback panels (every extracted row → is_kidney_specific=FALSE)
+    Burdick2014_LNA-ASO_hepatotox_seqmotifs_NAR.pdf               (DOI 10.1093/nar/gku142)
+    Hagedorn2013_hepatotox_from_sequence_NAT.pdf                  (DOI 10.1089/nat.2013.0436)
+  reference/   — background reviews / textbooks / project docs (NOT per-row data)
+    Frazier2015_ASO_therapies_review_ToxPathol.pdf                (DOI 10.1177/0192623314551840)
+    Sioud_oligo_immunostimulation_cytokines_book.pdf             (immunostimulation; off-endpoint)
+    CasarettDoull_Toxicology_textbook.pdf                         (general toxicology textbook, ~22 MB)
+    OligoTox_challenge_brief.pdf                                  (challenge executive summary)
+  _unrelated/  — off-topic upload, flagged for REMOVAL
+    Tipthara2016_urinary_lipidomics_OFFTOPIC.pdf                  (urinary lipidomics — NOT oligonucleotide-related)
+```
+
+**Extraction status:** pending (next step). Hepatotox panels (Burdick, Hagedorn)
+= volume for the fallback bucket; kidney reviews (Wu, Frazier) + the MMB renal
+chapter = strict-kidney cross-reference and any extractable per-oligo findings.
+
+**STILL MISSING — highest-priority strict-kidney VOLUME (please add to `sources/kidney/`):**
+- **N2** drisapersen ciPTEC — PMC6796739 (+ supplementary)
+- **N3/N4** USPTO patents 11,105,794 & 11,479,818 (public domain; contain oligo sequences + readouts)
+- **N1** Dieckmann 236-oligo **supplementary table** — PMC5725219
+- **Sandelius 2020** urinary biomarker panel — PMID 33084520 / DOI 10.1177/0192623320964391
+
 ## Provenance discipline
 - Each extracted row → `source_id` (N1…), `source_ref` (DOI/patent),
   `source_table` (exact table/figure/claim), `redistribution`.
