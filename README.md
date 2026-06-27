@@ -67,6 +67,10 @@ Two normalized tables joined on `oligo_id`:
 Graded label: **`nephrotox_grade` 0–3** (rubric in `schema.md`). Inotersen
 (grade-3 glomerulonephritis) is the canonical severe anchor.
 
+Curation methodology, extraction methods, variable distributions, provenance,
+QC, and limitations are documented in **`METHODOLOGY.md`** (Phase 2 methodology
+deliverable).
+
 ## Record counter
 
 | | Count | Target |
@@ -79,7 +83,7 @@ Graded label: **`nephrotox_grade` 0–3** (rubric in `schema.md`). Inotersen
 | Oligo classes — gapmer / GalNAc-siRNA / SSO / PMO / LNP-siRNA / aptamer / 1st-gen-PS-DNA | 11 / 8 / 4 / 4 / 1 / 1 / 2 | all |
 | Delivery routes (systemic/gymnotic/intrathecal/intravitreal/oral) | 47 / 6 / 3 / 1 / 1 | 5 routes |
 | Study types (clinical/animal/in-vitro) | 30 / 22 / 6 | mixed |
-| Oligos with sequence (not TBD) | **7** | all |
+| Oligos with sequence (not TBD) | **12** | all |
 
 _Update this table in the same commit whenever rows are added._
 
