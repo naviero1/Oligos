@@ -20,12 +20,12 @@ are the chemistry/sequence/design features hypothesized to drive nephrotoxicity.
 | `target_gene` | string | Intended molecular target (e.g. `TTR`), or `NA` for non-hybridizing aptamers. |
 | `indication` | string | Disease/indication, free text. |
 | `developer` | string | Sponsor/developer. |
-| `max_phase` | enum | `approved` \| `phase_3` \| `phase_2` \| `phase_1` \| `preclinical` \| `research_panel`. |
+| `max_phase` | enum | `approved` \| `approved_EMA` \| `phase_3` \| `phase_3_discontinued` \| `phase_2` \| `phase_1` \| `preclinical` \| `research_panel` \| `class_review` (class-level/pooled entry). |
 | `length_nt` | int | Oligonucleotide length in nucleotides. |
 | `backbone_chemistry` | enum | `full_PS` \| `PS_PO_mix` \| `full_PO` \| `PMO_neutral` \| `mixed` \| `TBD`. |
 | `sugar_modifications` | string | `;`-separated, e.g. `2'-MOE;2'-OMe;cEt;LNA;2'-F;morpholino;DNA_gap`. |
 | `gapmer_design` | string | Wing-gap-wing motif if applicable, e.g. `5-10-5_MOE`; else `NA`. |
-| `conjugate` | enum | `none` \| `GalNAc` \| `lipid` \| `peptide` \| `other`. (Affects renal exposure.) |
+| `conjugate` | enum | `none` \| `GalNAc` \| `lipid` \| `peptide` \| `PEG` (e.g. `PEG_5prime`) \| `other`. (Affects renal exposure.) |
 | `ps_count` | int | Number of phosphorothioate linkages, or `TBD`. |
 | `sequence_5to3` | string | 5′→3′ sequence. **`TBD` unless from a redistribution-permitted source. Never guessed.** |
 | `design_source` | string | Source for the design metadata (DOI / patent / label). |
@@ -44,12 +44,12 @@ single oligo at a single concentration measured with KIM-1 *and* viability =
 | `measurement_id` | string PK | Stable ID, e.g. `MSR001`. |
 | `oligo_id` | string FK | → `oligos.oligo_id`. |
 | `study_type` | enum | `in_vitro` \| `animal_invivo` \| `clinical`. |
-| `species` | enum | `human` \| `monkey` \| `rat` \| `mouse` \| `NA`. |
+| `species` | enum | `human` \| `monkey` \| `rat` \| `mouse` \| `multi_species` (finding pooled across species) \| `NA`. |
 | `system_model` | string | Cell line / model / subject, e.g. `ciPTEC`, `HK-2`, `RPTEC_TERT1`, `primary_human_PTEC`, `proximal_tubule_on_chip`, `kidney_invivo`, `patient`. |
 | `tissue` | string | `kidney` \| `proximal_tubule` \| `glomerulus` \| `NA`. |
-| `delivery_method` | enum | `gymnotic_free_uptake` \| `transfection` \| `conjugate_mediated` \| `systemic_dose` \| `TBD`. |
+| `delivery_method` | enum | `gymnotic_free_uptake` \| `transfection` \| `conjugate_mediated` \| `systemic_dose` \| `intrathecal` \| `intravitreal` \| `oral` \| `TBD`. |
 | `dose_or_conc_value` | float | Numeric concentration or dose, or `TBD`. |
-| `dose_or_conc_unit` | enum | `uM` \| `nM` \| `ug/mL` \| `mg/kg` \| `NA`. |
+| `dose_or_conc_unit` | enum | `uM` \| `nM` \| `ug/mL` \| `mg/kg` \| `mg` (total dose) \| `fold_Cmax` (multiple of clinical Cmax) \| `NA`. |
 | `exposure_duration` | string | e.g. `72h`, `14d`, `chronic`; or `TBD`. |
 | `readout_category` | enum | `functional` \| `injury_biomarker` \| `viability` \| `accumulation` \| `histopathology` \| `clinical_renal_outcome`. |
 | `readout_name` | string | e.g. `KIM-1`, `NGAL`, `clusterin`, `cystatin_C`, `albumin_reabsorption`, `A1M`, `RAP_uptake`, `LMW_proteinuria`, `lysosomal_load`, `LDH_release`, `viability_MTT`, `eGFR`, `serum_creatinine`, `proteinuria`, `tubular_degeneration`. |
@@ -87,3 +87,16 @@ oligo may differ by model/dose. Record the rationale in `notes` when non-obvious
   `summary_stat` — when unsure, use `verify` and resolve before release.
 - `sequence_5to3` and any toxicity `readout_value` are **never fabricated**.
   Use `TBD` and fetch the source.
+
+---
+
+## Data-dictionary QC log
+
+- **2026-06-26** — Validated every controlled-vocabulary column against the enums
+  above. Reconciled the dictionary to the curated data by documenting values that
+  arose during extraction: `conjugate=PEG`; `species=multi_species`;
+  `delivery_method=intrathecal/intravitreal/oral`; `max_phase=approved_EMA / phase_3_discontinued / class_review`;
+  `dose_or_conc_unit=mg / fold_Cmax`. After reconciliation: all rows pass enum
+  validation; measurements→oligos FK = 0 orphans; no duplicate IDs; grades ∈ {0,1,2,3}.
+  `sequence_5to3` filled for 7/31 oligos (rest `TBD` pending authoritative
+  retrieval — never guessed).
