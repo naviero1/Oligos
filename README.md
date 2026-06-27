@@ -75,15 +75,15 @@ deliverable).
 
 | | Count | Target |
 |---|------|--------|
-| Unique oligos (`oligos.csv`) | **31** | — |
-| Measurement rows (`measurements.csv`) | **58** | **≥ 100** |
-| — of which strict-kidney | **58** | majority |
+| Unique oligos (`oligos.csv`) | **37** | — |
+| Measurement rows (`measurements.csv`) | **68** | **≥ 100** |
+| — of which strict-kidney | **68** | majority |
 | — of which hepatotox fallback (flagged) | **0** | as needed |
-| Grade distribution (0/1/2/3) | 14 / 20 / 18 / 6 | — |
-| Oligo classes — gapmer / GalNAc-siRNA / SSO / PMO / LNP-siRNA / aptamer / 1st-gen-PS-DNA | 11 / 8 / 4 / 4 / 1 / 1 / 2 | all |
-| Delivery routes (systemic/gymnotic/intrathecal/intravitreal/oral) | 47 / 6 / 3 / 1 / 1 | 5 routes |
-| Study types (clinical/animal/in-vitro) | 30 / 22 / 6 | mixed |
-| Oligos with sequence (not TBD) | **12** | all |
+| Grade distribution (0/1/2/3) | 19 / 22 / 21 / 6 | — |
+| Oligo classes — gapmer / GalNAc-siRNA / SSO / PMO / LNP-siRNA / aptamer / 1st-gen-PS-DNA | 14 / 11 / 4 / 4 / 1 / 1 / 2 | all |
+| Delivery routes (systemic/gymnotic/intrathecal/intravitreal/oral) | 57 / 6 / 3 / 1 / 1 | 5 routes |
+| Study types (clinical/animal/in-vitro) | 36 / 26 / 6 | mixed |
+| Oligos with sequence (not TBD) | **13** | all |
 
 _Update this table in the same commit whenever rows are added._
 
