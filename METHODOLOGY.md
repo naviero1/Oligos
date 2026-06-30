@@ -12,7 +12,7 @@ curated, openly-releasable, per-measurement dataset of oligonucleotide
 > dataset was *assembled and computationally processed*, in the spirit of the
 > Phase 2 methodology requirement.
 
-Snapshot at this revision: **31 oligonucleotides · 58 measurements · 21 target
+Snapshot at this revision: **65 oligonucleotides · 111 measurements · 35 target
 genes · all strict-kidney** (`is_kidney_specific = TRUE`).
 
 ---
@@ -104,34 +104,34 @@ currently flagged **`grade_provisional`** in `notes`, pending scientific sign-of
 ## 7. Independent (predictor) variables and their distribution
 
 Design predictors hypothesized to drive nephrotoxicity, per `oligos.csv`
-(n = 31 oligos):
+(n = 65 oligos):
 
 | Variable | Distribution |
 |----------|--------------|
-| **Modality** (`oligo_class`) | ASO gapmer 11 · GalNAc-siRNA 8 · splice-switching ASO 4 · PMO 4 · 1st-gen PS-DNA (`other`) 2 · LNP-siRNA 1 · aptamer 1 |
-| **Backbone** | full-PS 16 · PS/PO-mix 10 · PMO-neutral 4 · mixed 1 |
-| **Conjugate** | none 21 · GalNAc 9 · PEG 1 |
-| **Development stage** | approved 18 · research panel 5 · phase 2 3 · phase 3 (incl. discontinued) 3 · phase 1 1 · class-level 1 |
-| **Sequence available** | 12 / 31 (rest `TBD`, never guessed) |
-| **Target genes** | 21 distinct |
+| **Modality** (`oligo_class`) | ASO gapmer 40 · GalNAc-siRNA 12 · splice-switching ASO 4 · PMO 4 · siRNA 2 · 1st-gen PS-DNA (`other`) 2 · aptamer 1 |
+| **Backbone** | full-PS 45 · PS/PO-mix 15 · PMO-neutral 4 · mixed 1 |
+| **Conjugate** | none 48 · GalNAc 16 · PEG 1 |
+| **Development stage** | approved 19 · research panel 30 · phase 3 (incl. discontinued) 9 · phase 2 5 · phase 1 1 · class-level 1 |
+| **Sequence available** | 33 / 65 (rest `TBD`, never guessed) |
+| **Target genes** | 35 distinct |
 
 ## 8. Dependent (indicator) variables and their distribution
 
-Toxicity indicators per `measurements.csv` (n = 58):
+Toxicity indicators per `measurements.csv` (n = 111):
 
 | Variable | Distribution |
 |----------|--------------|
-| **`nephrotox_grade`** | 0: 14 · 1: 20 · 2: 18 · 3: 6 |
-| **Study type** | clinical 30 · animal 22 · in-vitro 6 |
-| **Species** | human 36 · mouse 9 · monkey 6 · multi-species 5 · rat 2 |
-| **Delivery route** | systemic 47 · gymnotic/free-uptake 6 · intrathecal 3 · intravitreal 1 · oral 1 |
-| **Readout category** | functional 26 · histopathology 15 · injury-biomarker 10 · clinical renal outcome 5 · viability 1 · accumulation 1 |
-| **Kidney-specific** | TRUE 58 / 58 |
+| **`nephrotox_grade`** | 0: 27 · 1: 30 · 2: 39 · 3: 15 |
+| **Study type** | clinical 39 · animal 53 · in-vitro 19 |
+| **Species** | human 58 · mouse 30 · monkey 7 · multi-species 8 · rat 8 |
+| **Delivery route** | systemic 87 · gymnotic/free-uptake 19 · intrathecal 3 · intravitreal 1 · oral 1 |
+| **Readout category** | functional 35 · clinical renal outcome 27 · histopathology 24 · injury-biomarker 16 · viability 7 · accumulation 2 |
+| **Kidney-specific** | TRUE 111 / 111 |
 
 Readouts emphasize the **functional / injury-biomarker** axis (KIM-1, NGAL,
 clusterin, cystatin C, A1M, proteinuria) over viability, by design. The dataset
-deliberately includes **14 grade-0 negative controls** spanning GalNAc-siRNA,
-LNP-siRNA, intrathecal ASO, and aptamer modalities — and paired
+deliberately includes **27 grade-0 negative controls** spanning GalNAc-siRNA,
+siRNA, intrathecal ASO, and aptamer modalities — and paired
 functional-positive / structural-negative rows on the same agent (e.g.
 drisapersen: grade-1 A1M proteinuria alongside grade-0 viability and grade-0
 monkey histopathology), which encode the central functional-not-cytotoxic signal.
@@ -142,7 +142,7 @@ monkey histopathology), which encode the central functional-not-cytotoxic signal
   figure/table/label section/claim).
 - `redistribution` is tracked per row: regulatory documents (FDA/EMA) →
   `public_domain`; journal-derived statistics → `summary_stat`; use `verify`
-  where rights are unresolved. The 14 source identifiers in use are documented in
+  where rights are unresolved. The 16 source identifiers in use are documented in
   `sources/SOURCES.md`.
 - Intended public license: a permissive open license (e.g. CC-BY) for the curated
   tables; underlying third-party full texts are **referenced, not redistributed**.
@@ -160,14 +160,14 @@ Automated checks run after every ingestion round:
 ## 11. Known limitations
 
 - **Provisional grades** pending scientific (subject-matter) review.
-- **Sequence coverage 12/31**; remaining marketed-oligo sequences are published
+- **Sequence coverage 33/65**; remaining marketed-oligo sequences are published
   (patents/INN) but were not transcribable from available summaries.
 - **`WS` rows** rest on secondary search summaries of primary regulatory/trial
   sources and must be verified before release.
 - **Species translation** — animal toxicology is known to *over-predict* human
   renal effects for 2′-MOE ASOs; this is captured explicitly (e.g. the Crooke
   pooled-human entry) and should be modeled, not ignored.
-- **In-vitro human-system rows are still under-represented** (6/58); expanding
+- **In-vitro human-system rows are still under-represented** (19/111); expanding
   these (e.g. the pending in-vitro nephrotoxicity-assay patents and ciPTEC/
   RPTEC-TERT1 panels) is the priority for the next ingestion round.
 
