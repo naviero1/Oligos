@@ -118,6 +118,8 @@ _Sequences for all anchor oligos are published (labels/INN/patents) but were lef
 **Other `source_id` keys in `measurements.csv`:**
 - `N2` = Janssen 2019 drisapersen (PMC6796739) — full-text extracted (MSR017–026).
 - `K1` = Sandelius 2020 (PMID 33084520) — full-text extracted (MSR031–039).
+- `M1` = Moisan 2017 (PMC5363415) — full-text extracted (MSR080–090); in-vitro human PTEC-TERT1 EGF/ATP nephrotox panel.
+- `A4` = SPC5001 proximal-tubule-on-chip (Arch Toxicol 2021) — quantitative in-vitro fold-changes.
 - `WS` = **WebSearch-derived** (MSR040–052): each row's `source_ref` names the
   specific FDA/EMA label, clinical trial, or nonclinical paper the figure came
   from. No full-text fetch (egress-blocked) — values are the published
@@ -213,7 +215,8 @@ chapter = strict-kidney cross-reference and any extractable per-oligo findings.
 
 **STILL MISSING — highest-priority strict-kidney VOLUME (please add to `sources/kidney/`):**
 - ~~**N2** drisapersen ciPTEC — PMC6796739~~ ✅ **acquired** (Janssen 2019)
-- **N3/N4** USPTO patents 11,105,794 & 11,479,818 (public domain; contain oligo sequences + readouts) — **strict kidney** — ⏳ **PENDING** (user will retrieve later; not actively searching now). Best route: Google Patents `US11105794B2` / `US11479818B2` → "Download PDF". #1 remaining volume lever.
+- ~~**N3/N4** USPTO patents 11,105,794 & 11,479,818~~ ✅ **acquired** (sources/kidney/) — public domain; Gubler/Roche in-vitro EGF/ATP nephrotox assay; 28 SEQ IDs + EC50 + toxic/non-toxic classification. Per-compound sequence extraction still TODO (dense patent text).
+- ~~**Moisan 2017** in-vitro EGF nephrotox panel~~ ✅ **acquired** (= source `M1`, PMC5363415) — extracted → MSR080–090 (human PTEC-TERT1 panel; AON-A/C/D/E + SPC5001=AON-B).
 - **N1 Dieckmann supplement** — ✅ acquired (mmc1 = Table S1 GAPDH sequences+Tm; mmc2 = article + Myd88 labeled set). BUT these PDFs only give the 6-oligo Myd88 labeled set + sequence/Tm design data; the **full 236 per-oligo tox values are NOT in them** (aggregate analyses only — raw per-oligo table is a separate Excel). Hepatotox volume from here is limited.
 - ~~**Sandelius 2020** urinary biomarker panel — PMID 33084520~~ ✅ **acquired** (K1; extracted → MSR031–039)
 
