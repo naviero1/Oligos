@@ -215,7 +215,8 @@ chapter = strict-kidney cross-reference and any extractable per-oligo findings.
 
 **STILL MISSING — highest-priority strict-kidney VOLUME (please add to `sources/kidney/`):**
 - ~~**N2** drisapersen ciPTEC — PMC6796739~~ ✅ **acquired** (Janssen 2019)
-- ~~**N3/N4** USPTO patents 11,105,794 & 11,479,818~~ ✅ **acquired** (sources/kidney/) — public domain; Gubler/Roche in-vitro EGF/ATP nephrotox assay; 28 SEQ IDs + EC50 + toxic/non-toxic classification. Per-compound sequence extraction still TODO (dense patent text).
+- ~~**N3** USPTO patent 11,105,794~~ ✅ **acquired + extracted** (`source_id N3`) — Table 1 → **21 compounds (MSR091–111)** with public-domain sequences, targets (PCSK9/Myd88/BCL11A/SGLT2), chemistry, and graded in-vivo nephrotoxicity. Table 2 (per-compound in-vitro EGF) not yet extracted.
+- **N4** USPTO patent 11,479,818 ✅ acquired (sources/kidney/) — companion patent (EGFR-mRNA readout); likely overlapping compound panel — mine for any *unique* compounds to add more rows/sequences.
 - ~~**Moisan 2017** in-vitro EGF nephrotox panel~~ ✅ **acquired** (= source `M1`, PMC5363415) — extracted → MSR080–090 (human PTEC-TERT1 panel; AON-A/C/D/E + SPC5001=AON-B).
 - **N1 Dieckmann supplement** — ✅ acquired (mmc1 = Table S1 GAPDH sequences+Tm; mmc2 = article + Myd88 labeled set). BUT these PDFs only give the 6-oligo Myd88 labeled set + sequence/Tm design data; the **full 236 per-oligo tox values are NOT in them** (aggregate analyses only — raw per-oligo table is a separate Excel). Hepatotox volume from here is limited.
 - ~~**Sandelius 2020** urinary biomarker panel — PMID 33084520~~ ✅ **acquired** (K1; extracted → MSR031–039)
