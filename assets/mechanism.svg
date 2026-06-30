@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 470" font-family="Liberation Sans, DejaVu Sans, sans-serif">
+  <defs>
+    <marker id="ah" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#5A6B78"/>
+    </marker>
+    <marker id="ahr" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#C0392B"/>
+    </marker>
+  </defs>
+
+  <!-- Stage A: bloodstream -->
+  <text x="100" y="52" text-anchor="middle" font-size="17" font-weight="700" fill="#0E4D64">Bloodstream</text>
+  <rect x="32" y="64" width="136" height="210" rx="16" fill="#FCEDEC" stroke="#D98880" stroke-width="2"/>
+  <circle cx="74" cy="104" r="9" fill="#08323F"/><circle cx="120" cy="126" r="9" fill="#08323F"/>
+  <circle cx="92" cy="158" r="9" fill="#08323F"/><circle cx="132" cy="186" r="9" fill="#08323F"/>
+  <circle cx="70" cy="206" r="9" fill="#08323F"/><circle cx="110" cy="232" r="9" fill="#08323F"/>
+  <text x="100" y="298" text-anchor="middle" font-size="14" fill="#5A6B78">PS-ASO drug</text>
+
+  <line x1="172" y1="168" x2="214" y2="168" stroke="#5A6B78" stroke-width="3" marker-end="url(#ah)"/>
+
+  <!-- Stage B: glomerulus filter -->
+  <text x="290" y="52" text-anchor="middle" font-size="17" font-weight="700" fill="#0E4D64">Glomerulus</text>
+  <circle cx="290" cy="168" r="62" fill="#EAF3F6" stroke="#17A2B8" stroke-width="2"/>
+  <path d="M250,150 q20,-16 40,0 t40,0 M250,170 q20,-16 40,0 t40,0 M250,190 q20,-16 40,0 t40,0" fill="none" stroke="#17A2B8" stroke-width="2.5"/>
+  <text x="290" y="258" text-anchor="middle" font-size="14" fill="#5A6B78">filters blood</text>
+
+  <line x1="356" y1="168" x2="398" y2="168" stroke="#5A6B78" stroke-width="3" marker-end="url(#ah)"/>
+
+  <!-- Stage C: proximal tubule cell -->
+  <text x="600" y="52" text-anchor="middle" font-size="17" font-weight="700" fill="#0E4D64">Proximal tubule cell</text>
+  <rect x="410" y="64" width="380" height="232" rx="22" fill="#F5F8FA" stroke="#0E4D64" stroke-width="2.5"/>
+  <!-- apical membrane receptors (megalin/cubilin) catching dots -->
+  <path d="M430,96 a14,14 0 0 1 28,0" fill="none" stroke="#17A2B8" stroke-width="4"/>
+  <path d="M430,150 a14,14 0 0 1 28,0" fill="none" stroke="#17A2B8" stroke-width="4"/>
+  <path d="M430,204 a14,14 0 0 1 28,0" fill="none" stroke="#17A2B8" stroke-width="4"/>
+  <path d="M430,258 a14,14 0 0 1 28,0" fill="none" stroke="#17A2B8" stroke-width="4"/>
+  <circle cx="444" cy="90" r="7" fill="#08323F"/><circle cx="444" cy="144" r="7" fill="#08323F"/>
+  <circle cx="444" cy="198" r="7" fill="#08323F"/><circle cx="444" cy="252" r="7" fill="#08323F"/>
+  <text x="470" y="320" font-size="13.5" fill="#17A2B8" font-weight="700">megalin / cubilin receptors</text>
+  <!-- lysosome accumulation -->
+  <circle cx="650" cy="180" r="58" fill="#FBF3E7" stroke="#E8730C" stroke-width="2.5"/>
+  <circle cx="632" cy="166" r="8" fill="#08323F"/><circle cx="668" cy="170" r="8" fill="#08323F"/>
+  <circle cx="648" cy="196" r="8" fill="#08323F"/><circle cx="624" cy="192" r="8" fill="#08323F"/>
+  <circle cx="672" cy="200" r="8" fill="#08323F"/><circle cx="652" cy="160" r="8" fill="#08323F"/>
+  <text x="650" y="258" text-anchor="middle" font-size="13.5" fill="#E8730C" font-weight="700">lysosome: drug accumulates</text>
+
+  <!-- arrow to urine (leaked small proteins) -->
+  <line x1="792" y1="168" x2="836" y2="168" stroke="#C0392B" stroke-width="3" marker-end="url(#ahr)"/>
+
+  <!-- Stage D: urine -->
+  <text x="978" y="52" text-anchor="middle" font-size="17" font-weight="700" fill="#0E4D64">Urine</text>
+  <rect x="852" y="64" width="236" height="210" rx="16" fill="#FBECEA" stroke="#C0392B" stroke-width="2"/>
+  <circle cx="900" cy="110" r="8" fill="#1B9AAA"/><circle cx="950" cy="130" r="8" fill="#1B9AAA"/>
+  <circle cx="1010" cy="116" r="8" fill="#1B9AAA"/><circle cx="930" cy="170" r="8" fill="#1B9AAA"/>
+  <circle cx="990" cy="186" r="8" fill="#1B9AAA"/><circle cx="1040" cy="160" r="8" fill="#1B9AAA"/>
+  <text x="970" y="232" text-anchor="middle" font-size="15" fill="#C0392B" font-weight="700">small proteins leak out</text>
+  <text x="970" y="254" text-anchor="middle" font-size="13.5" fill="#5A6B78">= low-MW proteinuria</text>
+
+  <!-- outcome badges -->
+  <rect x="410" y="356" width="330" height="84" rx="12" fill="#FBECEA" stroke="#C0392B" stroke-width="2"/>
+  <text x="430" y="386" font-size="16" font-weight="800" fill="#C0392B">Reabsorption FAILS</text>
+  <text x="430" y="410" font-size="14.5" fill="#14202B">Protein leaks to urine — but reversible.</text>
+  <text x="430" y="430" font-size="14.5" fill="#14202B">Functional injury &#8594; <tspan font-weight="800">GRADE 1</tspan></text>
+
+  <rect x="758" y="356" width="330" height="84" rx="12" fill="#EAF6EC" stroke="#2E7D32" stroke-width="2"/>
+  <text x="778" y="386" font-size="16" font-weight="800" fill="#2E7D32">Cell SURVIVES</text>
+  <text x="778" y="410" font-size="14.5" fill="#14202B">Viability normal, no cell death.</text>
+  <text x="778" y="430" font-size="14.5" fill="#14202B">A viability test sees <tspan font-weight="800">GRADE 0</tspan></text>
+</svg>

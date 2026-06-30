@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 430" font-family="Liberation Sans, DejaVu Sans, sans-serif">
+  <defs>
+    <marker id="ah2" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#5A6B78"/>
+    </marker>
+  </defs>
+  <!-- path 1 -->
+  <rect x="36" y="40" width="470" height="104" rx="12" fill="#EAF6EC" stroke="#2E7D32" stroke-width="2"/>
+  <circle cx="78" cy="92" r="22" fill="#2E7D32"/><text x="78" y="100" text-anchor="middle" font-size="22" font-weight="800" fill="#FFFFFF">1</text>
+  <text x="116" y="80" font-size="18" font-weight="800" fill="#0E4D64">Primary full-text (strongest)</text>
+  <text x="116" y="104" font-size="14.5" fill="#14202B">Read source PDFs with PyMuPDF; transcribe</text>
+  <text x="116" y="124" font-size="14.5" fill="#14202B">values + tables by hand &#183; <tspan font-weight="700">N2, K1, M1, N3</tspan></text>
+  <!-- path 2 -->
+  <rect x="36" y="162" width="470" height="104" rx="12" fill="#EAF3F6" stroke="#17A2B8" stroke-width="2"/>
+  <circle cx="78" cy="214" r="22" fill="#17A2B8"/><text x="78" y="222" text-anchor="middle" font-size="22" font-weight="800" fill="#FFFFFF">2</text>
+  <text x="116" y="202" font-size="18" font-weight="800" fill="#0E4D64">Review / secondary</text>
+  <text x="116" y="226" font-size="14.5" fill="#14202B">Aggregating reviews, cross-checked against</text>
+  <text x="116" y="246" font-size="14.5" fill="#14202B">primary data &#183; <tspan font-weight="700">REV (Wu 2022)</tspan></text>
+  <!-- path 3 -->
+  <rect x="36" y="284" width="470" height="108" rx="12" fill="#FBF3E7" stroke="#E8730C" stroke-width="2"/>
+  <circle cx="78" cy="338" r="22" fill="#E8730C"/><text x="78" y="346" text-anchor="middle" font-size="22" font-weight="800" fill="#FFFFFF">3</text>
+  <text x="116" y="320" font-size="18" font-weight="800" fill="#0E4D64">WebSearch-derived (flagged)</text>
+  <text x="116" y="344" font-size="14.5" fill="#14202B">Full-text fetch blocked here &#8594; label/trial figures</text>
+  <text x="116" y="364" font-size="14.5" fill="#14202B">from search summaries &#183; <tspan font-weight="700">WS &#8211; verify before release</tspan></text>
+
+  <!-- arrows to dataset -->
+  <line x1="510" y1="92"  x2="690" y2="190" stroke="#5A6B78" stroke-width="3" marker-end="url(#ah2)"/>
+  <line x1="510" y1="214" x2="690" y2="214" stroke="#5A6B78" stroke-width="3" marker-end="url(#ah2)"/>
+  <line x1="510" y1="338" x2="690" y2="238" stroke="#5A6B78" stroke-width="3" marker-end="url(#ah2)"/>
+
+  <!-- dataset cylinder -->
+  <ellipse cx="858" cy="150" rx="150" ry="30" fill="#0E4D64"/>
+  <rect x="708" y="150" width="300" height="150" fill="#0E4D64"/>
+  <ellipse cx="858" cy="300" rx="150" ry="30" fill="#08323F"/>
+  <ellipse cx="858" cy="150" rx="150" ry="30" fill="#125a73"/>
+  <text x="858" y="222" text-anchor="middle" font-size="20" font-weight="800" fill="#FFFFFF">111 graded rows</text>
+  <text x="858" y="250" text-anchor="middle" font-size="14.5" fill="#BFE0E8">every row tagged by source_id</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 400" font-family="Liberation Sans, DejaVu Sans, sans-serif">
+  <defs><marker id="ah4" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#5A6B78"/></marker></defs>
+  <!-- patent table snippet -->
+  <rect x="40" y="60" width="520" height="280" rx="12" fill="#FFFFFF" stroke="#0E4D64" stroke-width="2.5"/>
+  <text x="60" y="92" font-size="16" font-weight="800" fill="#0E4D64">US 11,105,794 B2 &#8212; Table 1 (public domain)</text>
+  <line x1="60" y1="104" x2="540" y2="104" stroke="#CBD8E0"/>
+  <!-- columns header -->
+  <text x="60"  y="134" font-size="13.5" font-weight="700" fill="#5A6B78">compound</text>
+  <text x="200" y="134" font-size="13.5" font-weight="700" fill="#5A6B78">sequence</text>
+  <text x="350" y="134" font-size="13.5" font-weight="700" fill="#5A6B78">SEQ ID</text>
+  <text x="440" y="134" font-size="13.5" font-weight="700" fill="#5A6B78">in-vivo class</text>
+  <!-- rows -->
+  <g font-size="13" fill="#14202B" font-family="DejaVu Sans Mono, monospace">
+    <text x="60" y="166">Cmpd 1-1</text><text x="200" y="166">CGTcag&#8230;AATC</text><text x="360" y="166">1</text>
+    <text x="60" y="196">Cmpd 1-2</text><text x="200" y="196">ACGtta&#8230;GGTA</text><text x="360" y="196">2</text>
+    <text x="60" y="226">Cmpd 2-1</text><text x="200" y="226">TGCcat&#8230;TACG</text><text x="360" y="226">3</text>
+    <text x="60" y="256">&#8230;</text><text x="200" y="256">&#8230;</text><text x="360" y="256">&#8230;</text>
+  </g>
+  <rect x="430" y="150" width="100" height="26" rx="6" fill="#F2B705"/><text x="480" y="168" text-anchor="middle" font-size="13" font-weight="700" fill="#3A2E00">low &#8594; G1</text>
+  <rect x="430" y="180" width="100" height="26" rx="6" fill="#E8730C"/><text x="480" y="198" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">medium &#8594; G2</text>
+  <rect x="430" y="210" width="100" height="26" rx="6" fill="#C0392B"/><text x="480" y="228" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF">high &#8594; G3</text>
+  <text x="60" y="300" font-size="13.5" fill="#5A6B78">sequence AND toxicity in the SAME row &#8212; rare &amp; valuable</text>
+  <text x="60" y="322" font-size="13.5" fill="#5A6B78">words mapped to our 0&#8211;3 scale</text>
+
+  <line x1="566" y1="200" x2="624" y2="200" stroke="#5A6B78" stroke-width="3" marker-end="url(#ah4)"/>
+
+  <!-- impact -->
+  <rect x="636" y="84" width="424" height="110" rx="12" fill="#EAF3F6" stroke="#17A2B8" stroke-width="2"/>
+  <text x="848" y="128" text-anchor="middle" font-size="17" font-weight="800" fill="#0E4D64">+21 measurement rows</text>
+  <text x="848" y="158" text-anchor="middle" font-size="14.5" fill="#14202B">our single biggest source</text>
+  <text x="848" y="178" text-anchor="middle" font-size="13" fill="#5A6B78">in one clean, public-domain panel</text>
+
+  <rect x="636" y="206" width="424" height="134" rx="12" fill="#0E4D64"/>
+  <text x="848" y="248" text-anchor="middle" font-size="16" fill="#BFE0E8">sequences with real letters</text>
+  <text x="848" y="298" text-anchor="middle" font-size="40" font-weight="800" fill="#FFFFFF">13 &#8594; 33</text>
+  <text x="848" y="324" text-anchor="middle" font-size="14" fill="#BFE0E8">tripled &#8212; the most model-ready slice</text>
+</svg>

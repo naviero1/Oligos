@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 440" font-family="Liberation Sans, DejaVu Sans, sans-serif">
+  <!-- ascending steps -->
+  <!-- g0 -->
+  <rect x="40"  y="320" width="240" height="84" rx="10" fill="#2E7D32"/>
+  <text x="60" y="352" font-size="30" font-weight="800" fill="#FFFFFF">0</text>
+  <text x="104" y="346" font-size="16" font-weight="700" fill="#FFFFFF">No signal</text>
+  <text x="104" y="368" font-size="13" fill="#EAF6EC">true negative control</text>
+  <text x="104" y="388" font-size="12.5" fill="#EAF6EC">e.g. GalNAc-siRNA, aptamer</text>
+  <!-- g1 -->
+  <rect x="296" y="236" width="240" height="168" rx="10" fill="#F2B705"/>
+  <text x="316" y="270" font-size="30" font-weight="800" fill="#3A2E00">1</text>
+  <text x="360" y="264" font-size="16" font-weight="700" fill="#3A2E00">Mild / functional</text>
+  <text x="316" y="292" font-size="13" fill="#4A3B00">reversible, no cell death</text>
+  <text x="316" y="312" font-size="12.5" fill="#4A3B00">e.g. drisapersen A1M</text>
+  <text x="316" y="330" font-size="12.5" fill="#4A3B00">proteinuria (ciPTEC)</text>
+  <!-- g2 -->
+  <rect x="552" y="152" width="240" height="252" rx="10" fill="#E8730C"/>
+  <text x="572" y="186" font-size="30" font-weight="800" fill="#FFFFFF">2</text>
+  <text x="616" y="180" font-size="16" font-weight="700" fill="#FFFFFF">Moderate injury</text>
+  <text x="572" y="208" font-size="13" fill="#FBF3E7">biomarker &#8593; and/or</text>
+  <text x="572" y="226" font-size="13" fill="#FBF3E7">histopathology change</text>
+  <text x="572" y="246" font-size="12.5" fill="#FBF3E7">e.g. KIM-1/NGAL rise,</text>
+  <text x="572" y="264" font-size="12.5" fill="#FBF3E7">tubular granules</text>
+  <!-- g3 -->
+  <rect x="808" y="68" width="252" height="336" rx="10" fill="#C0392B"/>
+  <text x="828" y="102" font-size="30" font-weight="800" fill="#FFFFFF">3</text>
+  <text x="872" y="96" font-size="16" font-weight="700" fill="#FFFFFF">Severe</text>
+  <text x="828" y="124" font-size="13" fill="#FBECEA">AKI / glomerulonephritis /</text>
+  <text x="828" y="142" font-size="13" fill="#FBECEA">renal failure</text>
+  <text x="828" y="166" font-size="12.5" fill="#FBECEA">e.g. inotersen (GN);</text>
+  <text x="828" y="184" font-size="12.5" fill="#FBECEA">SPC5001 (tubular AKI)</text>
+  <!-- baseline + severity arrow -->
+  <line x1="40" y1="416" x2="1060" y2="416" stroke="#CBD8E0" stroke-width="2"/>
+  <text x="40" y="40" font-size="15" fill="#5A6B78">severity</text>
+  <line x1="36" y1="404" x2="36" y2="52" stroke="#5A6B78" stroke-width="2" marker-end="url(#up)"/>
+  <defs><marker id="up" markerWidth="10" markerHeight="10" refX="3" refY="6" orient="auto"><path d="M3,0 L6,6 L0,6 Z" fill="#5A6B78"/></marker></defs>
+</svg>

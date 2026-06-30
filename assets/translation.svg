@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 400" font-family="Liberation Sans, DejaVu Sans, sans-serif">
+  <text x="550" y="44" text-anchor="middle" font-size="20" font-weight="800" fill="#0E4D64">Animal tests look worse than patients actually fare</text>
+  <!-- axis -->
+  <line x1="120" y1="320" x2="980" y2="320" stroke="#CBD8E0" stroke-width="2"/>
+  <text x="120" y="120" font-size="14" fill="#5A6B78">apparent kidney risk</text>
+  <line x1="116" y1="320" x2="116" y2="120" stroke="#5A6B78" stroke-width="2"/>
+  <!-- animal bar high -->
+  <rect x="240" y="150" width="150" height="170" rx="8" fill="#C0392B"/>
+  <text x="315" y="138" text-anchor="middle" font-size="16" font-weight="800" fill="#C0392B">Animal tox</text>
+  <text x="315" y="300" text-anchor="middle" font-size="15" font-weight="800" fill="#FFFFFF">HIGH</text>
+  <!-- human bar lower -->
+  <rect x="610" y="244" width="150" height="76" rx="8" fill="#2E7D32"/>
+  <text x="685" y="232" text-anchor="middle" font-size="16" font-weight="800" fill="#2E7D32">Human outcome</text>
+  <text x="685" y="294" text-anchor="middle" font-size="15" font-weight="800" fill="#FFFFFF">LOWER</text>
+  <!-- gap bracket -->
+  <line x1="430" y1="150" x2="580" y2="150" stroke="#E8730C" stroke-width="2" stroke-dasharray="6 4"/>
+  <line x1="430" y1="244" x2="580" y2="244" stroke="#E8730C" stroke-width="2" stroke-dasharray="6 4"/>
+  <line x1="505" y1="150" x2="505" y2="244" stroke="#E8730C" stroke-width="3"/>
+  <text x="516" y="202" font-size="15" font-weight="800" fill="#E8730C">over-prediction</text>
+  <text x="516" y="222" font-size="15" font-weight="800" fill="#E8730C">gap</text>
+  <!-- caption -->
+  <rect x="120" y="344" width="860" height="44" rx="8" fill="#F5F8FA" stroke="#CBD8E0"/>
+  <text x="550" y="372" text-anchor="middle" font-size="15" fill="#14202B">Human &amp; animal rows sit side by side, measured the same way &#8212; so the gap can be <tspan font-weight="800" fill="#0E4D64">modelled, not hidden</tspan>.</text>
+</svg>

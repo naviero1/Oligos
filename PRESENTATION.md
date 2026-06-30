@@ -1,943 +1,792 @@
 ---
 marp: true
+size: 16:9
+paginate: true
+footer: 'OligoTox-Kidney  ·  NCATS OligoTox Open Data Challenge — Phase 2'
 title: "OligoTox-Kidney — A Curated Nephrotoxicity Dataset for Oligonucleotide Therapeutics"
 description: "Findings, methodology, and sources — for scientific review"
-paginate: true
 ---
+
+<style>
+:root{
+  --ink:#14202B; --primary:#0E4D64; --primary2:#08323F; --teal:#17A2B8;
+  --muted:#5A6B78; --bg:#FFFFFF; --panel:#F5F8FA; --line:#E1E8ED;
+  --g0:#2E7D32; --g1:#F2B705; --g2:#E8730C; --g3:#C0392B;
+}
+section{
+  font-family:"Liberation Sans","DejaVu Sans",Arial,sans-serif;
+  font-size:23px; color:var(--ink); background:var(--bg);
+  padding:50px 72px; line-height:1.42;
+  display:flex; flex-direction:column; justify-content:flex-start;
+}
+section h1{ font-size:40px; color:var(--primary); margin:0 0 10px; }
+section h2{ font-size:31px; color:var(--primary); margin:0 0 18px; padding-left:16px; border-left:8px solid var(--teal); }
+section h3{ color:var(--primary); margin:.2em 0; }
+strong{ color:var(--primary); }
+a{ color:var(--teal); text-decoration:none; }
+section img{ display:block; margin:6px auto; }
+ul{ margin:.2em 0; } li{ margin:.28em 0; }
+.kicker{ text-transform:uppercase; letter-spacing:2.5px; font-size:14px; font-weight:800; color:var(--teal); margin-bottom:6px; }
+section::after{ color:#9AB0BC; font-size:13px; }
+footer{ color:#9AB0BC; font-size:13px; }
+
+/* title */
+section.title{ background:var(--primary2); color:#EAF3F6; justify-content:center; }
+section.title h1{ color:#fff; font-size:50px; border:none; padding:0; }
+section.title .kicker{ color:#7FD3E0; }
+section.title .sub{ font-size:25px; color:#BFE0E8; margin-top:6px; }
+section.title .meta{ margin-top:30px; font-size:18px; color:#8FB6C4; }
+section.title .rule{ width:90px; height:6px; background:var(--teal); border-radius:3px; margin:22px 0; }
+
+/* section divider */
+section.section{ background:var(--primary); color:#fff; justify-content:center; }
+section.section h2{ color:#fff; font-size:44px; border-left:10px solid var(--teal); }
+section.section .kicker{ color:#7FD3E0; }
+section.section p{ color:#CFE6EC; font-size:23px; }
+
+/* lead / big statement */
+section.lead{ justify-content:center; }
+section.lead .big{ font-size:38px; line-height:1.32; font-weight:600; color:var(--ink); }
+section.lead .big b{ color:var(--primary); }
+
+/* stat tiles */
+.tiles{ display:flex; gap:22px; margin-top:28px; }
+.tile{ flex:1; background:var(--panel); border:1px solid var(--line); border-top:6px solid var(--teal); border-radius:12px; padding:24px 16px; text-align:center; }
+.tile .n{ font-size:58px; font-weight:800; color:var(--primary); line-height:1; }
+.tile .l{ font-size:17px; color:var(--muted); margin-top:10px; }
+
+/* bar charts */
+.chart{ margin-top:14px; }
+.chart .row{ display:flex; align-items:center; gap:16px; margin:9px 0; }
+.chart .lab{ width:250px; text-align:right; font-size:20px; color:var(--ink); }
+.chart .track{ flex:1; height:30px; background:#EDF1F4; border-radius:6px; }
+.chart .fill{ display:block; height:30px; border-radius:6px; background:var(--teal); }
+.chart .val{ width:44px; font-weight:800; color:var(--primary); font-size:19px; }
+.c0{ background:var(--g0)!important; } .c1{ background:var(--g1)!important; }
+.c2{ background:var(--g2)!important; } .c3{ background:var(--g3)!important; }
+.dim .fill{ background:#9FB4BE; }
+
+/* callouts */
+.note,.warn,.ok{ padding:15px 22px; border-radius:8px; font-size:21px; }
+.note{ background:#EAF3F6; border-left:7px solid var(--teal); }
+.warn{ background:#FBF3E7; border-left:7px solid var(--g2); }
+.ok{ background:#EAF6EC; border-left:7px solid var(--g0); }
+
+/* columns */
+.cols{ display:flex; gap:34px; align-items:flex-start; }
+.col{ flex:1; }
+
+/* pills */
+.pills{ display:flex; flex-wrap:wrap; gap:9px; margin-top:8px; }
+.pill{ background:var(--panel); border:1px solid #D8E2E8; border-radius:22px; padding:6px 14px; font-size:15.5px; }
+.pill b{ color:var(--primary); }
+
+/* numbered steps */
+.step{ display:flex; gap:16px; margin:13px 0; align-items:flex-start; }
+.step .k{ background:var(--primary); color:#fff; width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:19px; flex:none; }
+.step .t{ font-size:20px; }
+.small{ font-size:17px; color:var(--muted); }
+.mono{ font-family:"DejaVu Sans Mono",monospace; font-size:16px; }
+</style>
+
+<!-- _class: title -->
+<!-- _paginate: false -->
+<!-- _footer: '' -->
+
+<div class="kicker">NCATS OligoTox Open Data Challenge · Phase 2</div>
 
 # OligoTox-Kidney
 
-### A curated, per-measurement **nephrotoxicity** dataset for therapeutic oligonucleotides
+<div class="sub">A curated, per-measurement <b style="color:#fff">kidney-toxicity</b> dataset for oligonucleotide therapeutics</div>
 
-Built for the **NIH / NCATS Oligonucleotide Toxicity (OligoTox) Open Data Challenge — Phase 2** (Data Generation Phase; submission window 1 May – 31 Dec 2026)
+<div class="rule"></div>
 
-**For scientific review — German (biochemist)**
-Snapshot: 65 oligos · 111 measurements · 35 target genes · all strict-kidney
-
-> This deck is a Markdown/Marp presentation. It can be read as a document on GitHub or exported to slides (`marp PRESENTATION.md --pdf`). Every claim traces to a row in `data/` and a source in `sources/SOURCES.md`.
-
-<!--
-SPEAKER NOTES — plain English (read this to understand the slide)
-
-What this project is, in one breath: we are building a clean, well-documented
-SPREADSHEET of evidence about how a certain class of modern drugs can harm the
-kidney. We are NOT building an AI or a lab experiment — we are collecting and
-organising facts that already exist in the scientific literature.
-
-Key terms on this slide:
-• "Oligonucleotide" (say: ah-LIG-oh-NEW-clee-oh-tide), or "oligo" for short =
-  a drug made from a short string of genetic letters (the same A/C/G/T/U
-  letters as DNA and RNA), usually 12–25 letters long. Instead of a normal
-  small-molecule pill, the drug IS a tiny piece of designed genetic code that
-  switches a specific gene on or off. ~19 are approved; this is one of the
-  hottest areas of new medicine.
-• "Nephrotoxicity" (NEFF-roh-tox-issity) = kidney toxicity, i.e. damage or
-  dysfunction of the kidney caused by a drug. "Nephro" = kidney.
-• "NIH / NCATS" = the US National Institutes of Health and one of its centres.
-  They are running a public "challenge" (a competition) asking teams to build
-  open datasets about oligo toxicity. We are entering the data-generation phase.
-• "Per-measurement" = the finest level of detail: each line in our spreadsheet
-  is ONE measured result from ONE experiment, not a vague summary of a drug.
-• "Strict-kidney" = every single row is about the kidney specifically (we did
-  not pad the set with liver or other-organ data).
-• "Marp" = the simple tool that turns this text file into slides. Not science —
-  just the format.
--->
-
----
-
-## What we are building (and what we are *not*)
-
-- **A dataset, not a model.** NCATS Phase 2 scores an **openly-releasable, well-documented, reproducible dataset**. We are not training a predictor — we are assembling the labelled substrate one could be trained on.
-- **Endpoint: kidney toxicity / nephrotoxicity** — one of the named OligoTox endpoints of interest.
-- **Method: in-silico curation** of already-published data — no wet lab. The "methods" are *source identification, extraction, harmonization, grading, provenance, and QC*.
-- **Granularity: strict-kidney, per-measurement.** One row = **oligo × cell-model/subject × delivery × concentration/dose × readout.**
-- **Coverage goal:** span every therapeutic oligo modality and the full severity range (including negative controls). Target **≥ 100 measurement rows — met (111).**
+<div class="meta">
+65 oligos · 111 measurements · 35 target genes · 100% kidney-specific<br>
+Prepared for scientific review — German (biochemist) · June 2026
+</div>
 
 <!--
 SPEAKER NOTES — plain English
 
-This slide draws the boundary around the job so expectations are clear.
+One-line pitch: we built a clean, well-documented SPREADSHEET of evidence on how
+oligonucleotide drugs can harm the kidney — for a public NIH/NCATS data challenge.
 
-• "Dataset, not a model" = we deliver the ORGANISED EVIDENCE (the spreadsheet),
-  not an artificial-intelligence program. Someone could later train an AI on our
-  spreadsheet, but that is a separate job. The competition rewards the quality of
-  the data itself.
-• "Openly-releasable / reproducible" = anyone can download it, and anyone can
-  re-check every number against its original source. That trustworthiness is
-  exactly what is being graded.
-• "Labelled substrate" = the raw material (the data) with answers attached
-  (each row says how toxic it was). "Substrate" here just means "the stuff you
-  build on top of."
-• "Endpoint" = the specific type of harm we are tracking. Ours is kidney damage.
-  (In tox studies an "endpoint" is the outcome you measure.)
-• "In-silico" (in-SILL-ih-koh) = "done on a computer," as opposed to "in-vitro"
-  (in a dish) or "in-vivo" (in a living animal/person). We did no lab work; we
-  curated existing results on a computer.
-• "Curation" = carefully selecting, cleaning, and organising existing data —
-  like a museum curator choosing and labelling exhibits.
-• "Harmonization" = forcing everyone's differently-worded results into ONE
-  consistent format so they can be compared.
-• "QC" = quality control: automated checks that catch mistakes.
-• "Granularity" = how zoomed-in the data is. Our row = one oligo, tested in one
-  model (a dish of cells or an animal or a patient), given one way ("delivery"),
-  at one dose, measured by one readout. The "×" just means "combined with."
-• "Modality" = the TYPE of oligo drug (there are several families — explained on
-  the next slides). "Span every modality" = include all the families.
-• "Negative controls" = examples that are known to be SAFE for the kidney. You
-  need safe examples as well as harmful ones, otherwise you cannot tell them
-  apart. We deliberately included safe ones.
-• Bottom line: target was at least 100 rows; we have 111.
+Terms:
+• "Oligonucleotide" (oligo) = a drug made of a short string of genetic letters
+  (DNA/RNA), ~12–25 long, designed to switch a specific gene on/off. ~19 approved.
+• "Nephrotoxicity" = kidney toxicity (nephro = kidney).
+• "Per-measurement" = each row is one experimental result, the finest detail.
+• "NCATS Phase 2" = the data-generation phase of the challenge; it scores DATASETS.
+This deck is for German to review the science and sign off the toxicity grades.
 -->
 
 ---
 
-## Why kidney, and why this is scientifically non-trivial
+<!-- _class: lead -->
+<!-- _footer: '' -->
 
-The central biology that shaped every design decision:
+<div class="kicker">The idea in one sentence</div>
 
-1. **Oligo nephrotoxicity is frequently *functional*, not *cytotoxic*.**
-   Phosphorothioate ASOs are filtered and reabsorbed by **proximal tubule epithelial cells via megalin/cubilin-mediated endocytosis**, accumulating in the lysosomal compartment. This produces **reversible low-molecular-weight proteinuria** (impaired reabsorption of albumin, α1-microglobulin, RAP) **with no loss of cell viability.**
-   → **A viability/MTT readout will score these compounds as clean.** That is the trap this dataset is designed to avoid.
-2. **Toxicity = sequence + chemistry + design *together*** — not chemistry class alone. Two MOE gapmers of identical chemistry can differ by orders of magnitude in renal signal based on sequence. So we record **granular per-oligo design predictors.**
-3. **Marketed-drug data alone is too small** (~19 approved oligos, a minority with renal signal). Volume and mechanistic resolution come from **in-vitro human proximal-tubule panels** and **patent toxicity panels.**
-
-<!--
-SPEAKER NOTES — plain English (this is the most important science slide; take it slow)
-
-THE BIG IDEA: these drugs can hurt the kidney in a SNEAKY way that the usual
-safety test misses. Understanding that one fact justifies the whole project.
-
-First, a 30-second kidney primer:
-• The kidney filters your blood. The filtered fluid passes through tiny tubes
-  called TUBULES, which reabsorb the good things (small proteins, sugars) back
-  into the blood and let waste continue out as urine.
-• The "PROXIMAL TUBULE" is the first and main reabsorbing stretch of that tube.
-  Its lining cells are the "proximal tubule epithelial cells." ("Epithelial" =
-  the cells that line a surface.)
-
-Now the mechanism, term by term:
-• "Phosphorothioate (PS) ASO" = the most common oligo design. "ASO" = antisense
-  oligonucleotide, a single strand that sticks to a target gene's RNA to silence
-  it. "Phosphorothioate" is a chemical tweak to the drug's backbone (one oxygen
-  swapped for sulfur) that stops the body destroying it too fast — but it also
-  makes the drug stick to proteins and get taken into cells. Useful, but it is
-  part of why the kidney soaks them up.
-• "Megalin / cubilin" = two receptors (molecular catcher's mitts) on the surface
-  of those proximal-tubule cells whose normal job is to grab small proteins out
-  of the filtered fluid and pull them back in. Unfortunately they ALSO grab these
-  PS-ASO drugs.
-• "Endocytosis" = the process of a cell swallowing something by wrapping it in a
-  bubble and pulling it inside.
-• "Lysosomal compartment / lysosome" = the cell's stomach / recycling bin. The
-  drug piles up there.
-• So: the drug gets filtered, the tubule cells vacuum it up via megalin/cubilin,
-  and it accumulates inside them.
-
-What goes wrong — and why it's sneaky:
-• "Functional, not cytotoxic." CYTOTOXIC means "kills cells" (cyto = cell).
-  FUNCTIONAL means "the cells are still alive but not doing their job properly."
-  These drugs mostly cause the second kind: the tubule cells survive but get so
-  busy hoarding the drug that they stop reabsorbing small proteins well.
-• "Low-molecular-weight proteinuria" = small proteins leaking into the urine.
-  PROTEINURIA = protein in urine (a classic sign of kidney trouble).
-  "Low-molecular-weight" = the SMALL proteins specifically — their appearance
-  points to a TUBULE reabsorption problem (as opposed to a damaged filter).
-  Examples named: albumin, α1-microglobulin ("A1M"), and RAP — these are normal
-  small blood/filtrate proteins that should be reabsorbed; finding them in urine
-  means reabsorption failed.
-• "Reversible" = it goes away when you stop the drug — so it is real toxicity but
-  usually not permanent damage. That nuance matters for grading severity later.
-• "No loss of cell viability" = the cells don't die. "Viability" = the fraction
-  of cells still alive.
-
-THE TRAP (the punchline):
-• "MTT / viability readout" = the standard cheap lab test that just asks "are the
-  cells still alive?" Because these drugs DON'T kill cells, that test says
-  "harmless" — a FALSE all-clear. Our dataset is built to capture the functional
-  signal that the cheap test misses. This is the project's reason to exist.
-
-Points 2 and 3, quickly:
-• Point 2: toxicity depends on the exact genetic SEQUENCE plus the CHEMISTRY plus
-  the DESIGN, all together — not just the drug family. "MOE gapmer" = a popular
-  ASO design (explained on the data-model slide). "Orders of magnitude" = 10×,
-  100× differences. Two drugs that look chemically identical can differ hugely in
-  kidney risk because of their letter sequence. So we record lots of fine design
-  details ("granular predictors") for each drug, hoping the pattern is learnable.
-• Point 3: there are only ~19 approved oligo drugs, and few have kidney signals,
-  so approved drugs alone can't give us 100+ rows. The bulk of the data comes
-  from (a) lab experiments on human kidney cells and (b) toxicity tables inside
-  patents. Those are explained later.
--->
-
----
-
-## The schema captures the *right* phenotype
-
-Because the injury is functional, the readout vocabulary is deliberately weighted toward **function and injury biomarkers**, not viability:
-
-| Readout category | Rows | Examples |
-|---|---:|---|
-| **functional** | 35 | LMW proteinuria, A1M/albumin reabsorption, eGFR/creatinine shift, RAP |
-| **clinical_renal_outcome** | 27 | proteinuria, AKI, glomerulonephritis on label/trial |
-| **histopathology** | 24 | tubular degeneration, basophilic granules, glomerular change |
-| **injury_biomarker** | 16 | **KIM-1, NGAL, clusterin, cystatin C**, osteopontin |
-| **viability** | 7 | included only to *pair against* functional positives |
-| **accumulation** | 2 | tubular drug accumulation |
-
-The dataset deliberately encodes **paired functional-positive / structural-negative rows on the same agent** (e.g. drisapersen: grade-1 A1M proteinuria *alongside* grade-0 viability and grade-0 monkey histopathology) — that pairing *is* the functional-not-cytotoxic signal in machine-readable form.
+<div class="big">
+Oligonucleotide drugs can injure the kidney in a way the <b>standard safety test misses</b> — so we built a dataset that captures the <b>right</b> signal, one experiment per row, every value traceable to its source.
+</div>
 
 <!--
 SPEAKER NOTES — plain English
 
-This slide proves we followed through on the previous slide's insight: we
-collected the RIGHT kinds of measurements, not just the easy "are cells alive?"
-one.
-
-• "Schema" = the structure/blueprint of our spreadsheet (what columns exist and
-  what's allowed in them).
-• "Phenotype" = the observable result/outcome — what the toxicity actually looks
-  like. "The right phenotype" = we measured the functional damage, not just death.
-• "Readout" = a single measured thing in an experiment. "Readout category" = the
-  KIND of measurement. The table shows how our 111 rows split across kinds.
-
-The six categories explained:
-• FUNCTIONAL (35 rows) = the cells/organ are alive but not working right. Items:
-  - "LMW proteinuria" = small proteins leaking into urine (from previous slide).
-  - "A1M / albumin reabsorption" = whether those small proteins are being
-    reabsorbed properly.
-  - "eGFR" = estimated Glomerular Filtration Rate = a score of how well the
-    kidney filters blood; lower = worse.
-  - "Creatinine" = a waste chemical the kidney clears; if it rises in the blood,
-    the kidney is filtering worse. A "shift" = a change from normal.
-  - "RAP" = one of those small marker proteins again.
-• CLINICAL_RENAL_OUTCOME (27) = what was actually seen in PATIENTS (in trials or
-  on the drug's official label). "Renal" = kidney.
-  - "AKI" = Acute Kidney Injury = a sudden drop in kidney function.
-  - "Glomerulonephritis" = inflammation of the glomeruli, the kidney's tiny
-    filter units (more serious — a structural disease, not just dysfunction).
-• HISTOPATHOLOGY (24) = what the tissue looks like under a MICROSCOPE.
-  ("Histo" = tissue, "pathology" = disease.) 
-  - "Tubular degeneration" = the tubule cells looking damaged.
-  - "Basophilic granules" = blue-staining specks inside cells under the
-    microscope — here, clumps of accumulated drug; a classic ASO footprint.
-  - "Glomerular change" = visible change in the filter units.
-• INJURY_BIOMARKER (16) = chemicals you can measure in urine or blood that rise
-  when the kidney is stressed — an early-warning panel. ("Biomarker" = a
-  measurable biological signal.) The named ones:
-  - "KIM-1" (Kidney Injury Molecule-1) = goes up with proximal-tubule injury.
-  - "NGAL" = goes up early in acute kidney injury.
-  - "Clusterin" = tubule-injury marker.
-  - "Cystatin C" = a marker of overall filtering function.
-  - "Osteopontin" = another kidney-stress marker.
-• VIABILITY (7) = the simple "are the cells alive?" test. We kept only a few, on
-  purpose, to CONTRAST against the functional findings (see below).
-• ACCUMULATION (2) = simply measuring how much drug piled up in the tubule.
-
-THE CLEVER PART ("paired rows"):
-• For the SAME drug we sometimes have two rows that, side by side, tell the whole
-  story. Example — drisapersen (an experimental muscular-dystrophy oligo):
-  - one row: small-protein (A1M) leakage = a real but mild functional problem →
-    we graded it 1.
-  - another row: cells still alive (viability fine) → graded 0.
-  - another row: monkey kidney tissue under microscope looked normal → graded 0.
-  Put together, those rows literally spell out "dysfunction without cell death."
-• "Grade 0/1/..." = our 0–3 severity score, defined on the next-but-one slide.
-• "Machine-readable form" = arranged as tidy numbers/labels a computer can learn
-  from, rather than buried in paragraphs of a paper.
+This frames the whole project. The "standard safety test" is the cheap
+"are the cells alive?" test. These drugs often DON'T kill cells, so that test
+gives a false all-clear. Our dataset is designed to record the subtler "the cell
+is alive but not working" damage instead. "Traceable to source" = every number
+points back to the exact paper/patent table it came from.
 -->
 
 ---
 
-## Data model — two normalized tables
+## Why this matters
 
-Joined on `oligo_id`; full dictionary + controlled vocabularies + grading rubric in `schema.md`.
+<div class="cols">
+<div class="col">
 
-| File | Grain | Key | Cols |
-|---|---|---|---:|
-| `data/oligos.csv` | one row per unique oligo (identity + **design predictors**) | `oligo_id` (PK) | 17 |
-| `data/measurements.csv` | one row per oligo × model × delivery × dose × readout (**graded outcomes**) | `measurement_id` (PK), `oligo_id` (FK) | 23 |
+**Oligonucleotides are a booming drug class** — ~19 already approved, dozens in trials, treating diseases nothing else could.
 
-**Predictor columns (oligos):** class, target gene, backbone chemistry, sugar modifications, gapmer design, conjugate (GalNAc/PEG), PS count, length, sequence (5′→3′), development stage.
+**But the kidney is a common casualty.** The kidney filters and concentrates these drugs, so it is exposed to high levels — and several oligos have caused proteinuria, kidney injury, even kidney failure.
 
-**Outcome columns (measurements):** study type, species, system/model, tissue, delivery, dose/conc, exposure, readout name/value/unit, effect direction vs control, **`nephrotox_grade`**, `is_kidney_specific`, and full provenance (`source_id`, `source_ref`, `source_table`, `redistribution`).
+**The catch:** the damage is often *invisible* to routine cell-survival screening (next slides).
 
-Missing/unknown is the literal `TBD` — **never guessed, never imputed as zero.**
+</div>
+<div class="col">
+
+<div class="note">
+<b>The gap we fill</b><br>
+There is no open, well-structured dataset that pairs each oligo's <b>design</b> (sequence + chemistry) with a <b>graded kidney outcome</b>. That is exactly what a model would need to predict risk early — and what we assembled.
+</div>
+
+</div>
+</div>
 
 <!--
 SPEAKER NOTES — plain English
 
-This slide shows how the spreadsheet is physically organised: TWO linked tables.
-
-Why two tables? To avoid repeating yourself. One table describes each DRUG once;
-the other lists each EXPERIMENTAL RESULT. They are linked by a shared ID.
-
-• "Normalized tables" = a database tidiness principle: store each fact in exactly
-  one place. Drug facts live in one file; result facts in the other.
-• "CSV" = a plain spreadsheet file (comma-separated values); opens in Excel.
-• "Grain" = what one row represents.
-• "oligos.csv" = one row per DRUG (65 rows). "measurements.csv" = one row per
-  RESULT (111 rows). One drug can have many results, so 65 drugs → 111 rows.
-• "Joined on oligo_id" = each result carries the ID of the drug it used, so you
-  can match a result back to its drug — like a foreign key in a database.
-• "PK (primary key)" = the unique ID column for a table (no duplicates allowed).
-• "FK (foreign key)" = a column that points to another table's primary key. In
-  measurements, oligo_id is an FK pointing to the oligos table.
-• "Cols" = number of columns (17 in the drug table, 23 in the results table).
-
-PREDICTOR columns = the drug's design features (the suspected CAUSES of toxicity).
-Plain-English glossary:
-• "Class / modality" = which oligo family (gapmer, siRNA, PMO, aptamer…).
-• "Target gene" = the gene the drug is designed to silence/affect.
-• "Backbone chemistry" = the chemistry of the drug's spine. "Full-PS" =
-  every link is the sulfur-modified phosphorothioate type; "PS/PO mix" = some
-  sulfur (PS), some normal (PO = phosphodiester) links. PS = sticky/stable but
-  more kidney uptake.
-• "Sugar modifications" = chemical tweaks to the sugar part of each letter (e.g.
-  "2′-MOE" or "LNA") that boost stability and target-binding.
-• "Gapmer design" = a specific ASO layout: a central DNA "gap" flanked by two
-  chemically-modified "wings." The gap lets an enzyme (RNase H) chop the target
-  RNA; the wings protect the drug. Very common design.
-• "Conjugate" = an extra molecule bolted on to steer delivery. "GalNAc" (gal-NACK)
-  = a sugar tag that homes the drug to LIVER cells; "PEG" = a polymer that makes
-  the drug last longer in blood. "none" = no conjugate.
-• "PS count" = how many of those sulfur-modified links the drug has.
-• "Length" = how many letters long the oligo is.
-• "Sequence (5′→3′)" = the actual genetic letters of the drug, written in the
-  standard direction (5-prime to 3-prime are just the two ends of the strand).
-• "Development stage" = how far the drug got: approved, or still in phase 1/2/3
-  trials, or just a research compound.
-
-OUTCOME columns = what happened in each experiment (the EFFECTS). Highlights:
-• "Study type" = in-vitro (dish) / animal / clinical (humans).
-• "Species" = human, mouse, rat, monkey…
-• "System/model" = the exact test system (a named human cell line, an animal
-  study, etc.). "Tissue" = kidney part involved.
-• "Delivery" = how the drug was given (injection, free uptake into cells, etc.).
-• "Dose/conc, exposure" = how much, and for how long.
-• "Readout name/value/unit" = what was measured, the number, and its unit.
-• "Effect direction vs control" = did it go UP or DOWN compared with an untreated
-  comparison sample ("control").
-• "nephrotox_grade" = our 0–3 kidney-toxicity severity score (next slide).
-• "is_kidney_specific" = TRUE/FALSE flag; here always TRUE.
-• "Provenance" columns = the paper trail (which source, which table/figure, and
-  whether we're legally allowed to republish it). Detailed two slides on.
-
-• "TBD" = "to be determined" — our literal text for "we don't have this yet." We
-  NEVER guess and NEVER silently fill a blank with zero (a zero would be a lie —
-  it would say "we measured this and it was none," which isn't true).
+Why kidney, why now. Oligo drugs are a fast-growing, important class. The kidney
+is especially exposed because it filters the blood and concentrates whatever
+passes through, so these drugs pile up there. Several have caused real kidney
+problems. "Proteinuria" = protein leaking into urine, a classic kidney-trouble
+sign. The missing piece in the field is a tidy table linking each drug's design
+to a kidney-toxicity score — that is our contribution.
 -->
 
 ---
 
-## The graded label: `nephrotox_grade` (0–3)
+<!-- _class: section -->
+<!-- _footer: '' -->
+<!-- _paginate: false -->
 
-An ordinal severity scale assigned from the reported endpoint (rubric in `schema.md`):
+<div class="kicker">Part 1</div>
 
-| Grade | Meaning | Canonical anchor |
-|:---:|---|---|
-| **0** | No renal signal (true negative control) | GalNAc-siRNA, intrathecal ASO, aptamer negatives |
-| **1** | Mild / **functional** / reversible — **no viability loss** | drisapersen A1M proteinuria (ciPTEC) |
-| **2** | Moderate — injury biomarker ↑ and/or histopathology | tubular basophilic granules; KIM-1/NGAL rise |
-| **3** | Severe — AKI / glomerulonephritis / renal failure | **inotersen** (grade-3 GN); **SPC5001** (tubular AKI, FIH) |
+## The science: a quiet kind of kidney injury
 
-> **All grades currently carry a `grade_provisional` flag in `notes`.** Removing that flag is the **scientific sign-off we are asking German to perform** (see final slide). Grades were assigned by rubric, but the rubric→row mapping is exactly where domain judgment is most valuable.
+<p>Why a cell-survival test gives these drugs a false "all-clear"</p>
+
+---
+
+## How these drugs injure the kidney
+
+![w:1040](assets/mechanism.svg)
+
+<div class="small" style="margin-top:6px">Phosphorothioate ASOs are filtered, then vacuumed into proximal-tubule cells by the megalin/cubilin receptors and stored in lysosomes. Reabsorption of small proteins fails → they leak into urine (proteinuria) — yet the cell stays alive.</div>
 
 <!--
-SPEAKER NOTES — plain English
+SPEAKER NOTES — plain English (the key science slide)
 
-This is our scoring system — the single "answer" column that turns messy
-findings into one comparable number from 0 (safe) to 3 (severe).
+30-second kidney primer: the kidney filters blood; tiny tubes called TUBULES then
+reabsorb the good stuff (small proteins, sugars) back into the blood. The
+PROXIMAL TUBULE is the main reabsorbing stretch; its lining cells do this work.
 
-• "Graded label" = the answer/score attached to each row. In machine-learning
-  terms the "label" is the thing you'd train a model to predict.
-• "Ordinal scale" = a ranked scale where order matters but the gaps aren't
-  necessarily equal (0 < 1 < 2 < 3 in severity). Like a hotel star rating.
-• "Rubric" = the written rule book that says which findings earn which grade. It
-  lives in the file schema.md so anyone can audit our judgement calls.
-• "Canonical anchor" = a textbook reference example for that grade — a
-  well-known drug everyone agrees belongs there, so the scale is calibrated.
-
-The grades:
-• 0 = no kidney signal at all — a genuine SAFE example ("negative control").
-  Examples are drug types that spare the kidney: "GalNAc-siRNA" (liver-targeted,
-  so little reaches kidney), "intrathecal ASO" (injected into spinal fluid, stays
-  near the nervous system), and "aptamer" drugs.
-• 1 = MILD: the sneaky functional problem from earlier — small-protein leakage,
-  reversible, cells don't die. Anchor: drisapersen causing A1M leakage in
-  "ciPTEC," which is a lab line of human proximal-tubule kidney cells
-  (conditionally immortalised proximal tubule epithelial cells — a standard human
-  kidney-cell model in a dish).
-• 2 = MODERATE: now there's measurable injury — a biomarker rises (KIM-1/NGAL go
-  up) and/or the tissue looks abnormal under the microscope ("basophilic
-  granules" = the blue specks of accumulated drug). "↑" just means "increased."
-• 3 = SEVERE: real kidney disease/failure. "AKI" = acute kidney injury;
-  "glomerulonephritis (GN)" = inflammation of the filter units; "renal failure" =
-  kidney stops working. Anchors: INOTERSEN, an approved nerve-disease oligo that
-  caused glomerulonephritis in patients; and SPC5001, an experimental oligo that
-  caused acute tubular injury the first time it was tried in humans ("FIH" =
-  First-In-Human, the very first human trial).
-
-The yellow box — IMPORTANT for German:
-• Every grade is currently marked "grade_provisional," meaning PROVISIONAL = not
-  yet confirmed by an expert. We assigned grades by following our rubric, but a
-  real biochemist (German) should check that each finding was mapped to the right
-  number. His sign-off lets us remove the "provisional" flag. This is the main
-  thing we want from him.
+The pathway, left to right in the diagram:
+• "PS-ASO" = the most common oligo type; "phosphorothioate (PS)" = a sulfur tweak
+  to the drug's backbone that makes it stable and sticky — and easily taken into
+  cells.
+• "Glomerulus" = the kidney's filter; the drug passes into the filtered fluid.
+• "Megalin / cubilin" = receptors (molecular catcher's mitts) on the tubule cells
+  whose normal job is to grab small proteins back — they also grab these drugs.
+• "Endocytosis" = the cell swallowing them inside; "lysosome" = the cell's
+  recycling bin, where the drug piles up.
+• Result: the busy, clogged cell stops reabsorbing small proteins, so those
+  proteins LEAK into urine = "low-MW proteinuria." But the cell does NOT die.
+This is "functional" (not working right) vs "cytotoxic" (killed). It's usually
+reversible. We score this mild functional injury as GRADE 1.
 -->
 
 ---
 
-## Methodology — three extraction paths (each tagged per row)
+## The trap: one drug, two tests, opposite answers
 
-Every row records *how* it was obtained via `source_id`:
+![w:980](assets/trap.svg)
 
-1. **Local full-text extraction (primary sources).** PDFs supplied by the team parsed with **PyMuPDF** (text + tables); per-measurement values, doses, sequences, and figure/table loci transcribed by hand.
-   → `N2` drisapersen, `K1` Sandelius, `M1` Moisan, `N3` patent panel.
-2. **Secondary / review extraction.** Aggregating reviews used for marketed-drug renal findings, cross-checked against primary data. → `REV` = Wu et al. 2022.
-3. **`WS` (WebSearch-derived).** This environment's network policy **blocks outbound full-text fetch** (org egress denies the CONNECT tunnel; only search summaries are available). Label/trial figures not supplied as files were taken from **search summaries of the specific FDA/EMA label or trial named in that row's `source_ref`**, flagged `source_id = WS`, and marked **to be verified against the primary source before release.**
+<div class="warn" style="margin-top:10px">
+A viability/MTT screen asks only <b>"are the cells alive?"</b> — and these drugs don't kill cells. So routine screening calls them <b>clean</b>. Our schema is built to capture the <b>functional</b> signal that test misses.
+</div>
 
 <!--
 SPEAKER NOTES — plain English
 
-This explains the THREE ways we got our numbers, and how we tag each row so you
-always know how trustworthy it is.
-
-• "Extraction" = pulling specific data out of a source document into our table.
-• "source_id" = a short code in each row naming where it came from (so the row is
-  always traceable).
-
-The three paths, from most to least solid:
-1. PRIMARY SOURCES read in full. "Primary source" = the original research paper or
-   official document where the data first appeared — the gold standard. The team
-   uploaded PDFs and we read them directly.
-   - "PyMuPDF" = a software library that reads text and tables out of PDF files.
-   - "Transcribed by hand" = we typed the values in carefully, ourselves.
-   - "loci" = locations (which figure or table the number came from).
-   - The codes (N2, K1, M1, N3) are our nicknames for specific sources, listed on
-     the next two slides.
-2. SECONDARY / REVIEW sources. A "review" is a paper that SUMMARISES many other
-   studies. Convenient, but one step removed from the original, so we cross-check
-   it against primary data. Code "REV" = a 2022 review by Wu and colleagues.
-3. "WS" = WEBSEARCH-DERIVED — the weakest tier, and we flag it honestly.
-   - Why this exists: the secure computer environment we work in BLOCKS direct
-     downloading of full papers from the internet (an IT security setting). In
-     plain terms: "outbound full-text fetch is blocked," "egress" = outbound
-     traffic, "CONNECT tunnel" = the technical way a program opens a web
-     connection — it's denied. We could only get short SEARCH-ENGINE SUMMARIES,
-     not the full documents.
-   - So for some well-known drugs we took the figure from a web summary of the
-     drug's official FDA/EMA label or trial, and we MARKED that row "WS" with a
-     note that it must be re-checked against the original before any public
-     release. 36 of our 111 rows are this type — honest, but provisional.
-   - "FDA / EMA" = the US and European medicines regulators; a drug's "label" is
-     its official, legally-vetted information sheet.
+"MTT / viability test" = the standard cheap lab test that just checks if cells are
+still alive. Because these drugs leave cells alive, that test says "safe" — a
+false all-clear. The functional test (does the cell still reabsorb protein?)
+reveals the real problem. The whole dataset exists to record that second kind of
+result, not just the misleading first kind.
 -->
 
 ---
 
-## The rule that governs the whole dataset
+## So we record the *right* readouts
 
-> ## ⚠️ No-fabrication policy (strict)
-> **`sequence_5to3` and any toxicity `readout_value` are never invented or recalled from memory.**
->
-> - A **sequence** is filled only when an explicit string is returned by a credible, redistribution-permitted source — otherwise `TBD`. (e.g. inotersen, corroborated independently against the vutrisiran guide strand.)
-> - A **toxicity value** is filled only when reported in the cited source.
-> - **Compounds lacking published renal data were omitted, not padded** to hit the count.
+We deliberately weight the data toward **function and injury markers**, not cell survival:
 
-This is why sequence coverage is **33/65 and not 65/65** — the remaining 32 are real gaps, honestly marked, not fabricated. For a reviewer, that distinction is the credibility of the whole table.
+<div class="chart">
+<div class="row"><span class="lab">functional</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="val">35</span></div>
+<div class="row"><span class="lab">clinical renal outcome</span><span class="track"><span class="fill" style="width:77%"></span></span><span class="val">27</span></div>
+<div class="row"><span class="lab">histopathology</span><span class="track"><span class="fill" style="width:69%"></span></span><span class="val">24</span></div>
+<div class="row"><span class="lab">injury biomarker</span><span class="track"><span class="fill" style="width:46%"></span></span><span class="val">16</span></div>
+<div class="row dim"><span class="lab">viability (kept only to contrast)</span><span class="track"><span class="fill" style="width:20%"></span></span><span class="val">7</span></div>
+<div class="row dim"><span class="lab">accumulation</span><span class="track"><span class="fill" style="width:6%"></span></span><span class="val">2</span></div>
+</div>
+
+<div class="small" style="margin-top:8px">“Readout” = one measured thing. Biomarkers = chemicals (KIM-1, NGAL, clusterin, cystatin C) that rise when the kidney is stressed. Functional + biomarker rows (51) dwarf viability rows (7) — by design.</div>
 
 <!--
 SPEAKER NOTES — plain English
 
-This is our integrity rule, and it's worth stating loudly to German because it's
-WHY the dataset can be trusted.
-
-• "No-fabrication policy" = we never make anything up. Two things in particular
-  are sacred and never invented:
-  - "sequence_5to3" = the drug's actual genetic-letter sequence.
-  - "readout_value" = any measured toxicity number.
-• "Never recalled from memory" = even though an AI assistant helped build this, it
-  was not allowed to fill these in from its own memory (which could be wrong).
-  A value goes in ONLY if a real, citable source explicitly states it.
-• "Redistribution-permitted source" = a source we're legally allowed to copy from
-  (e.g. a US patent or government document, which are public domain).
-• "Corroborated independently" = double-checked against a second source. Example:
-  the sequence for the drug INOTERSEN was confirmed by cross-checking it against
-  the published "guide strand" of a related drug, VUTRISIRAN. (A siRNA drug has
-  two strands; the "guide strand" is the one that does the targeting.)
-• "Compounds lacking published renal data were omitted, not padded" = if a drug
-  had no real kidney data, we LEFT IT OUT rather than inventing rows to reach our
-  target. "Padded" = bulked up with filler. We refused to pad.
-
-Why the slide brags about "33/65, not 65/65":
-• We have real sequences for only 33 of the 65 drugs. We could have made the other
-  32 look complete by guessing — but that would be fabrication. Showing honest
-  blanks ("TBD") is MORE trustworthy than a falsely-complete table. For a careful
-  reviewer, that honesty is the whole point — if we fudged the easy stuff, none of
-  the hard stuff could be trusted either.
+"Readout category" = the KIND of measurement in a row. The bars show how our 111
+rows split. We intentionally collected mostly FUNCTIONAL and INJURY-BIOMARKER
+results (the meaningful ones) and only a few VIABILITY results (kept just to
+contrast against them). Biomarkers named: KIM-1, NGAL, clusterin, cystatin C —
+chemicals measurable in urine/blood that signal kidney stress early.
+"Histopathology" = what the tissue looks like under a microscope.
 -->
 
 ---
 
-## Papers & sources researched — strict-kidney primary
+<!-- _class: section -->
+<!-- _footer: '' -->
+<!-- _paginate: false -->
 
-The scientific backbone — direct nephrotoxicity measurements:
+<div class="kicker">Part 2</div>
 
-| ID | Source | Contribution | Rows |
-|---|---|---|---:|
-| **N2** | **Janssen et al. 2019**, *PMC6796739* (drisapersen) | **ciPTEC** human proximal-tubule in-vitro; A1M proteinuria *without* viability loss — the functional phenotype; **3 published sequences** | 10 |
-| **N3** | **US 11,105,794 B2** (Roche/patent panel) | Table 1: per-compound LNA/MOE gapmers with **sequence + SEQ ID + in-vivo nephrotox class** — public domain | 21 |
-| **M1** | **Moisan et al. 2017**, *PMC5363415* | **RPTEC/TERT1** human tubule panel; ASO uptake / EGF-pathway nephrotox in-vitro | 11 |
-| **K1** | **Sandelius et al. 2020**, *PMID 33084520* | Urinary **kidney injury-biomarker** panel (KIM-1/NGAL/clusterin) | 9 |
-| **A3** | **van Poelgeest et al. 2013**, *bcp.12738* | **SPC5001** first-in-human — proteinuria + tubular **AKI** (grade-3 anchor) | 3 |
-| **A4** | **Arch Toxicol 2021**, *s00204-021-03062-8* | **SPC5001 kidney-on-chip** — recapitulating the FIH signal in vitro | 5 |
+## What we built
+
+<p>The dataset, its structure, and how toxicity is scored</p>
+
+---
+
+## The dataset at a glance
+
+<div class="tiles">
+<div class="tile"><div class="n">65</div><div class="l">unique oligos<br>(7 drug families)</div></div>
+<div class="tile"><div class="n">111</div><div class="l">graded measurements<br>(target was ≥100)</div></div>
+<div class="tile"><div class="n">100%</div><div class="l">kidney-specific<br>(no padding)</div></div>
+<div class="tile"><div class="n">16</div><div class="l">distinct sources<br>fully cited</div></div>
+</div>
+
+<div class="cols" style="margin-top:26px">
+<div class="col note">Spans every oligo modality, all three study types (dish / animal / human), and the full severity range from safe to severe — including deliberate negative controls.</div>
+<div class="col ok"><b>35</b> target genes · <b>33/65</b> sequences filled (rest honestly marked “TBD”, never guessed) · every row carries its source.</div>
+</div>
 
 <!--
 SPEAKER NOTES — plain English
 
-These are our BEST, kidney-specific sources — the "primary" ones we read in full.
-"Strict-kidney primary" = original papers (not summaries) that directly measured
-kidney effects. The "Rows" column = how many spreadsheet rows each one gave us.
-Think of this slide as the bibliography's first division.
-
-• The IDs (N2, N3, M1, K1, A3, A4) are our internal nicknames so each data row
-  can point back here. "PMC######" / "PMID########" = public ID numbers for papers
-  in the US national library (PubMed). "US 11,105,794 B2" = a US patent number.
-  "bcp.12738" / "s00204-..." = journal article DOIs (permanent article IDs).
-
-Source by source:
-• N2 — Janssen 2019 (drisapersen): the key paper showing the SNEAKY phenotype in a
-  dish. "ciPTEC" = a line of human proximal-tubule kidney cells grown in the lab.
-  They saw small-protein (A1M) leakage WITHOUT the cells dying — exactly the
-  functional-not-deadly signal. Also gave us 3 real drug sequences. 10 rows.
-• N3 — US patent 11,105,794: the volume jackpot. A patent containing a TABLE of
-  many oligos, each listed with its sequence, an ID number ("SEQ ID"), and a
-  rating of how kidney-toxic it was in animals ("in-vivo nephrotox class").
-  Because US patents are "public domain" (free to copy), we could reproduce it.
-  "LNA/MOE gapmers" = the gapmer design (central gap + modified wings) using LNA
-  or 2′-MOE chemistry in the wings. 21 rows — our single biggest source.
-• M1 — Moisan 2017: experiments on "RPTEC/TERT1," another human kidney-tubule cell
-  line (immortalised so it keeps growing). Looked at how oligos get taken up and
-  disturb the "EGF pathway" (EGF = epidermal growth factor, a cell-signalling
-  system). 11 rows.
-• K1 — Sandelius 2020: measured the urine INJURY-BIOMARKER panel (KIM-1, NGAL,
-  clusterin) — the early-warning chemicals. 9 rows.
-• A3 — van Poelgeest 2013: the human story of SPC5001, an oligo that caused
-  protein in urine and acute kidney injury the FIRST time it was given to people
-  ("first-in-human"). This is a key severe (grade-3) anchor. 3 rows.
-• A4 — Arch Toxicol 2021: the SAME drug (SPC5001) reproduced on a "kidney-on-chip"
-  — a thumb-sized device with living kidney cells in tiny channels that mimics a
-  real kidney. It "recapitulated" (reproduced) the human injury, validating the
-  lab model. 5 rows.
+The scoreboard. 65 distinct drugs; 111 measured results (a drug can appear in
+several rows). Every row is kidney-specific — we did not pad with other-organ
+data. 16 separate sources, all cited. "Modality" = drug family. "Negative
+controls" = known-safe examples, needed so a model can tell safe from harmful.
+"TBD" = our literal label for missing data we refused to guess.
 -->
 
 ---
 
-## Papers & sources researched — anchors, reviews & patents
+## How the data is organised — two linked tables
 
-| ID | Source | Role |
-|---|---|---|
-| **REV** | **Wu et al. 2022**, *PMC10174585* | Marketed-ASO nephrotoxicity review — cross-checked anchor findings (4 rows) |
-| **A1** | inotersen — **NEJM 2018 NEURO-TTR** + FDA label 211172 | **Grade-3 glomerulonephritis** — canonical severe anchor |
-| **A9** | mipomersen — FDA 203568 + EMA Kynamro EPAR | 2′-MOE gapmer renal monitoring |
-| **A8** | volanesorsen — EMA Waylivra + APPROACH (NCT02658175) | APOC3 gapmer renal signal |
-| **A10 / A5 / A7** | inclisiran (Leqvio) · givosiran (Givlaari) · nusinersen (Spinraza) | GalNAc-siRNA & intrathecal **negative/low** controls |
-| **N3 / N4** | **US 11,105,794 B2** · **US 11,479,818 B2** | In-vitro nephrotox-assay patents (public domain); N4 staged for unique-compound mining |
+![w:1020](assets/datamodel.svg)
 
-**`WS` anchor set (36 rows)** — FDA/EMA labels + pivotal trials for: patisiran (Onpattro), vutrisiran (HELIOS-A), lumasiran (ILLUMINATE-B), nedosiran (PHYOX3), eplontersen (Wainua), tofersen (Qalsody), bepirovirsen (B-Clear), olpasiran (OCEAN-DOSE), the DMD PMOs (eteplirsen/golodirsen/casimersen/viltolarsen), pegaptanib (Macugen), fitusiran (Qfitlia), zilebesiran (KARDIA), plus **Crooke 2018 pooled-human** and **Yu 2012 ISIS-113715 monkey** translation references.
+<div class="small" style="margin-top:6px">One table describes each <b>drug</b> (the suspected causes); the other lists each <b>result</b> (the effects). They share an ID (<span class="mono">oligo_id</span>) so any result links back to its drug — like two tabs in a spreadsheet joined by a key.</div>
 
 <!--
 SPEAKER NOTES — plain English
 
-The second half of the bibliography: real-world drug evidence used as reference
-points ("anchors"), one big review, and patents.
-
-• "Anchor" = a well-established example we trust to calibrate the scale.
-• "Marketed / approved drug" = a drug already on sale (strongest real-world
-  evidence). Most entries below are named by brand (in parentheses).
-• "NEJM" = New England Journal of Medicine (top medical journal). "FDA label
-  #####" = the US drug's official document and its number. "EMA ... EPAR" =
-  the European regulator's public assessment report. Trial names in caps
-  (NEURO-TTR, APPROACH, HELIOS-A…) are the specific clinical trials.
-
-Row by row:
-• REV — Wu 2022: a REVIEW summarising kidney toxicity of marketed antisense drugs;
-  used to cross-check our anchors. 4 rows.
-• A1 — INOTERSEN: our headline SEVERE example. In its pivotal trial (NEURO-TTR) and
-  on its FDA label it caused glomerulonephritis (filter-unit inflammation) →
-  grade 3. "2′-MOE gapmer" chemistry.
-• A9 — MIPOMERSEN (Kynamro): another 2′-MOE gapmer; its labels note kidney
-  monitoring. "Renal monitoring" = doctors must watch the kidney while dosing.
-• A8 — VOLANESORSEN (Waylivra): targets the APOC3 gene; had a kidney signal in the
-  APPROACH trial (NCT… is the trial's registry number).
-• A10/A5/A7 — INCLISIRAN (Leqvio), GIVOSIRAN (Givlaari), NUSINERSEN (Spinraza):
-  used as SAFE/low examples. The first two are "GalNAc-siRNA" (liver-targeted, so
-  the kidney is largely spared); nusinersen is given "intrathecally" (into spinal
-  fluid) so it stays near the nervous system. Good negative controls.
-• N3/N4 — two US PATENTS describing lab tests ("assays") for oligo kidney
-  toxicity. N3 we already mined (previous slide). N4 (US 11,479,818) is queued for
-  later, to pull out any NEW compounds not already in our set ("unique-compound
-  mining"). Patents are public domain, so freely reproducible.
-
-THE "WS" SET (36 rows) — explained on the methodology slide as the web-summary
-tier. These are mostly approved oligo drugs whose kidney info we took from
-summaries of their official labels/trials and flagged for re-checking. You don't
-need every name, but for orientation they include:
-• siRNA drugs (mostly liver- or kidney-relevant): patisiran, vutrisiran, lumasiran,
-  nedosiran, olpasiran, fitusiran, zilebesiran.
-• ASO drugs: eplontersen, tofersen, bepirovirsen.
-• "DMD PMOs" = four muscular-dystrophy drugs of the PMO type (eteplirsen,
-  golodirsen, casimersen, viltolarsen). "PMO" = a special neutral-backbone oligo
-  used to patch faulty gene splicing. ("DMD" = Duchenne muscular dystrophy.)
-• pegaptanib (Macugen) = an "aptamer" eye drug (an oligo folded into a shape that
-  grabs a target protein, like an antibody made of nucleic acid).
-• "Crooke 2018 pooled-human" and "Yu 2012 monkey" = two TRANSLATION references —
-  they let us compare what happens in monkeys vs. humans (see the next-but-one
-  slide on animals over-predicting human risk). "ISIS-113715" is a research
-  compound's code name.
+Two tables avoid repetition. Left = oligos.csv, one row per DRUG with its design
+features (the suspected CAUSES of toxicity). Right = measurements.csv, one row per
+RESULT with the graded outcome (the EFFECTS). "Primary key (PK)" = a table's
+unique ID column. "Foreign key (FK)" = a column pointing to another table's key;
+here each result stores the oligo_id of its drug, so the two tables join.
+Predictor examples: sequence, chemistry, gapmer design. Outcome example:
+nephrotox_grade plus a full source trail.
 -->
 
 ---
 
-## Key finding 1 — the functional-not-cytotoxic phenotype is captured, in machine-readable form
+## The scoring system: a 0–3 severity grade
 
-- The dataset contains **explicit paired rows** where the *same* oligo is **grade-1 on a functional readout and grade-0 on viability/histopathology.**
-- Example (drisapersen, `N2`): A1M proteinuria in **ciPTEC** → grade 1; viability unchanged → grade 0; monkey histopathology clean → grade 0.
-- This is the single most important scientific property of the set: a model trained on it can learn the distinction **reversible functional proteinuria vs. structural tubular injury** — which viability-only datasets *cannot* teach.
-- **35 functional + 16 injury-biomarker rows** vs. only **7 viability rows** — the readout mix reflects the biology, not assay convenience.
+![w:1000](assets/grade-ladder.svg)
+
+<div class="small" style="margin-top:6px">Each result gets one ordinal grade by a written rubric (in <span class="mono">schema.md</span>). <b>All grades are currently flagged “provisional”</b> — confirming them is the sign-off we’re asking German for.</div>
 
 <!--
 SPEAKER NOTES — plain English
 
-The first of three "headline findings." This one says: we successfully captured
-the sneaky-damage signal in a form a computer can learn from.
-
-• Recap of the core idea (from slide 3): these drugs often make kidney cells stop
-  WORKING properly without KILLING them. A simple "are the cells alive?" test
-  misses it.
-• "Paired rows" = for the same drug, one row scores the functional problem (a
-  grade 1) and another row scores the cell-survival/tissue tests (grade 0). Seen
-  together they encode "dysfunction without death."
-• The drisapersen example again: protein leakage in human kidney cells = grade 1;
-  cells alive = grade 0; monkey tissue normal under microscope = grade 0.
-• Why it matters: a computer model trained on this can learn to tell apart:
-  - "reversible functional proteinuria" = the mild, goes-away protein leak, vs.
-  - "structural tubular injury" = actual physical damage to the tubule.
-  A dataset that only recorded "alive/dead" could never teach that difference.
-• The numbers (35 functional + 16 biomarker vs only 7 viability) prove we
-  prioritised the meaningful measurements over the easy/cheap one. "Assay
-  convenience" = picking a test because it's easy rather than because it's
-  informative — we deliberately did NOT do that.
+Our single "answer" column: a 0-to-3 severity score.
+0 = no kidney signal (a genuinely safe example).
+1 = mild/functional/reversible — the sneaky protein-leak, cells don't die.
+2 = moderate — an injury biomarker rises and/or tissue looks abnormal.
+3 = severe — actual acute kidney injury, glomerulonephritis (inflammation of the
+    filter units), or kidney failure.
+"Ordinal" = ranked (0<1<2<3) but gaps aren't necessarily equal. "Rubric" = the
+written rulebook for assigning grades. "Anchor" = a famous example that pins each
+level (inotersen for severe, etc.). Every grade is PROVISIONAL until an expert
+(German) confirms it.
 -->
 
 ---
 
-## Key finding 2 — the patent panel unlocked sequence-resolved volume
+## Grades span the full range — including safe controls
 
-- **US 11,105,794 B2, Table 1** was the breakthrough source: a clean per-oligo panel of LNA/MOE gapmers giving **compound → sequence → SEQ ID → in-vivo nephrotoxicity class**, all **public domain.**
-- Mapped the patent's qualitative in-vivo classes to our rubric: *innocuous → 0, low → 1, low/medium & medium → 2, medium/high & high → 3.*
-- Impact: **+21 measurement rows and tripled sequence coverage (13 → 33 sequences).** This is the only large block where **sequence and graded outcome sit in the same record** — the most directly model-ready slice of the dataset.
+<div class="chart">
+<div class="row"><span class="lab">0 — no signal (controls)</span><span class="track"><span class="fill c0" style="width:69%"></span></span><span class="val">27</span></div>
+<div class="row"><span class="lab">1 — mild / functional</span><span class="track"><span class="fill c1" style="width:77%"></span></span><span class="val">30</span></div>
+<div class="row"><span class="lab">2 — moderate injury</span><span class="track"><span class="fill c2" style="width:100%"></span></span><span class="val">39</span></div>
+<div class="row"><span class="lab">3 — severe</span><span class="track"><span class="fill c3" style="width:38%"></span></span><span class="val">15</span></div>
+</div>
+
+<div class="note" style="margin-top:18px">A healthy spread across all four levels — a usable dataset needs examples of <b>every</b> severity, not just the dramatic ones. The 27 grade-0 rows are real negative controls (GalNAc-siRNA, intrathecal ASO, aptamer).</div>
 
 <!--
 SPEAKER NOTES — plain English
 
-The second headline finding: a single patent gave us a big, unusually complete
-block of data — the kind most useful for future modelling.
-
-• "Patent panel" = a table inside a patent document listing many compounds and
-  their test results.
-• Why it's special: for each oligo it provides BOTH the genetic sequence AND a
-  toxicity rating, in the same row. That pairing is rare and valuable — usually
-  you find a sequence in one place and toxicity in another.
-• "Sequence-resolved volume" = lots of rows that each include the actual sequence.
-• "compound → sequence → SEQ ID → in-vivo nephrotox class" = for each drug the
-  table lists its name, its letters, an ID number, and a rating of its kidney
-  toxicity in live animals ("in-vivo").
-• "Public domain" = freely reproducible (US patents are), so we could legally copy
-  the values.
-• "Mapped the qualitative classes to our rubric" = the patent rated toxicity in
-  WORDS (innocuous / low / medium / high). We translated those words into our 0–3
-  numbers so they match the rest of the dataset:
-  innocuous→0, low→1, low-or-medium & medium→2, medium-high & high→3.
-  ("Qualitative" = described in words/categories rather than exact numbers.)
-• Impact: +21 rows, and our count of real sequences jumped from 13 to 33 (roughly
-  tripled).
-• "Model-ready" = in the ideal shape for training a predictive model, because
-  cause (sequence) and effect (grade) sit together in one record.
+How the 111 results split by severity: 27 safe, 30 mild, 39 moderate, 15 severe.
+A good dataset needs all levels represented. The grade-0 rows are deliberate SAFE
+examples — drug types that spare the kidney: "GalNAc-siRNA" (liver-targeted, so
+little reaches the kidney), "intrathecal" ASOs (injected into spinal fluid), and
+aptamers. Bars are coloured green→yellow→orange→red to match the grade ladder.
 -->
 
 ---
 
-## Key finding 3 — animal toxicology over-predicts human renal risk
+## Coverage: every oligonucleotide family
 
-- A documented, modellable bias: **2′-MOE ASO animal toxicology over-predicts human renal effects.**
-- Captured explicitly rather than hidden — e.g. the **Crooke 2018 pooled-human** entry and the **Yu 2012 monkey** ISIS-113715 entry sit in the same table, same readout vocabulary, different species.
-- Distribution makes the translation axis learnable: **human 58 · mouse 30 · monkey 7 · rat 8 · multi-species 8**, across **in-vitro 19 / animal 53 / clinical 39** rows.
-- A reviewer/modeler can therefore study the **animal→human translation gap directly** instead of treating animal histopathology as ground truth for human risk.
+<div class="chart">
+<div class="row"><span class="lab">ASO gapmer</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="val">40</span></div>
+<div class="row"><span class="lab">GalNAc-siRNA</span><span class="track"><span class="fill" style="width:30%"></span></span><span class="val">12</span></div>
+<div class="row"><span class="lab">splice-switching ASO</span><span class="track"><span class="fill" style="width:10%"></span></span><span class="val">4</span></div>
+<div class="row"><span class="lab">PMO</span><span class="track"><span class="fill" style="width:10%"></span></span><span class="val">4</span></div>
+<div class="row"><span class="lab">siRNA</span><span class="track"><span class="fill" style="width:5%"></span></span><span class="val">2</span></div>
+<div class="row"><span class="lab">1st-gen PS-DNA</span><span class="track"><span class="fill" style="width:5%"></span></span><span class="val">2</span></div>
+<div class="row"><span class="lab">aptamer</span><span class="track"><span class="fill" style="width:3%"></span></span><span class="val">1</span></div>
+</div>
+
+<div class="small" style="margin-top:8px"><b>Gapmer</b> = central DNA “gap” + chemically-modified wings (cuts target RNA). <b>siRNA</b> = double-stranded silencer; <b>GalNAc</b> = sugar tag aiming it at the liver. <b>PMO</b> = neutral-backbone splice fixer (the muscular-dystrophy drugs). <b>Aptamer</b> = an oligo folded to grab a protein, like an antibody.</div>
 
 <!--
 SPEAKER NOTES — plain English
 
-The third headline finding: animals tend to look MORE kidney-damaged than people
-actually turn out to be for this drug type — and we captured that gap on purpose
-so it can be studied, not hidden.
-
-• "Animal toxicology over-predicts human renal risk" = when you test these oligos
-  (specifically 2′-MOE ASOs) in animals, the kidneys look worse than what
-  actually happens in human patients. So animal results can be overly alarming.
-  "Renal" = kidney.
-• "Documented, modellable bias" = this over-prediction is a known, consistent
-  pattern — which means a computer model could actually learn to correct for it.
-  A "bias" here = a systematic lean in one direction, not a random error.
-• How we captured it: we put HUMAN data and ANIMAL data side by side in the same
-  table, measured the same way, so the difference is visible.
-  - "Crooke 2018 pooled-human" = combined safety data from many human patients.
-  - "Yu 2012 monkey (ISIS-113715)" = a monkey toxicology study of one research
-    compound. Same readouts, different species → you can compare directly.
-• "Translation axis" / "animal→human translation gap" = the question of how well
-  an animal result predicts the human result. "Translation" = carrying a finding
-  from one species to another.
-• The species/study counts show we have enough of each (58 human, 30 mouse, etc.;
-  19 dish + 53 animal + 39 human-clinical rows) to actually study that gap.
-• "Treating animal histopathology as ground truth" = blindly assuming the animal
-  microscope result equals the human truth. We AVOID that — we let the data show
-  where animals and humans disagree. ("Ground truth" = the assumed-correct answer.)
+Our drugs cover all the oligo families. Gapmers (40) dominate because they're the
+most common and most kidney-relevant ASO design. Quick glossary:
+• ASO gapmer — antisense strand with a DNA gap flanked by modified wings; the gap
+  lets the enzyme RNase H chop the target RNA.
+• GalNAc-siRNA — double-stranded silencer carrying a GalNAc sugar that homes it to
+  the liver (so the kidney is largely spared).
+• splice-switching ASO / PMO — change how a gene is assembled rather than
+  destroying it; PMOs are the Duchenne muscular-dystrophy drugs.
+• 1st-gen PS-DNA — older phosphorothioate DNA oligos.
+• aptamer — an oligo folded into a 3-D shape that binds a target protein.
 -->
 
 ---
 
-## Final dataset — at a glance
+## Coverage: dish → animal → human (the translation axis)
 
-| Dimension | Distribution |
-|---|---|
-| **Records** | **65 oligos · 111 measurements** (≥100 target met; all strict-kidney) |
-| **Grade (0/1/2/3)** | 27 · 30 · 39 · 15 |
-| **Modality** | ASO gapmer 40 · GalNAc-siRNA 12 · splice-switching/SSO 4 · PMO 4 · siRNA 2 · 1st-gen PS-DNA 2 · aptamer 1 |
-| **Backbone** | full-PS 45 · PS/PO-mix 15 · PMO-neutral 4 · mixed 1 |
-| **Conjugate** | none 48 · GalNAc 16 · PEG 1 |
-| **Stage** | approved 19 · research-panel 30 · phase 3 (incl. disc.) 9 · phase 2 5 · phase 1 1 · class-level 1 |
-| **Study type** | animal 53 · clinical 39 · in-vitro 19 |
-| **Species** | human 58 · mouse 30 · multi 8 · rat 8 · monkey 7 |
-| **Delivery** | systemic 87 · gymnotic/free-uptake 19 · intrathecal 3 · intravitreal 1 · oral 1 |
-| **Sequences filled** | **33 / 65** (rest `TBD`, never guessed) · **35 target genes** |
+<div class="cols">
+<div class="col">
+<div class="kicker">Study type</div>
+<div class="chart">
+<div class="row"><span class="lab">animal</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="val">53</span></div>
+<div class="row"><span class="lab">clinical (human)</span><span class="track"><span class="fill" style="width:74%"></span></span><span class="val">39</span></div>
+<div class="row"><span class="lab">in-vitro (dish)</span><span class="track"><span class="fill" style="width:36%"></span></span><span class="val">19</span></div>
+</div>
+</div>
+<div class="col">
+<div class="kicker">Species</div>
+<div class="chart">
+<div class="row"><span class="lab">human</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="val">58</span></div>
+<div class="row"><span class="lab">mouse</span><span class="track"><span class="fill" style="width:52%"></span></span><span class="val">30</span></div>
+<div class="row"><span class="lab">multi-species</span><span class="track"><span class="fill" style="width:14%"></span></span><span class="val">8</span></div>
+<div class="row"><span class="lab">rat</span><span class="track"><span class="fill" style="width:14%"></span></span><span class="val">8</span></div>
+<div class="row"><span class="lab">monkey</span><span class="track"><span class="fill" style="width:12%"></span></span><span class="val">7</span></div>
+</div>
+</div>
+</div>
+
+<div class="small" style="margin-top:10px">Having dish, animal, and human rows side by side — measured the same way — lets the <b>animal-to-human translation gap</b> be studied directly (Finding 3).</div>
 
 <!--
 SPEAKER NOTES — plain English
 
-This is the scoreboard — the whole dataset summarised in counts. "Distribution"
-just means "how the rows split across categories." Reading it row by row:
-
-• RECORDS: 65 distinct drugs, 111 measured results. Target was ≥100 → met. Every
-  row is kidney-specific.
-• GRADE (0/1/2/3): how many results fell at each severity — 27 safe, 30 mild,
-  39 moderate, 15 severe. A healthy spread from safe to severe (good for modelling
-  — you need examples of every level).
-• MODALITY = the drug families and how many of each:
-  - "ASO gapmer" (40) = the central-gap antisense design — our biggest group.
-  - "GalNAc-siRNA" (12) = liver-targeted double-stranded silencers.
-  - "splice-switching / SSO" (4) = oligos that change how a gene is assembled
-    ("spliced") rather than destroying it.
-  - "PMO" (4) = the neutral-backbone splice-switchers (the muscular-dystrophy
-    drug type).
-  - "siRNA" (2) = double-stranded silencers without the liver tag.
-  - "1st-gen PS-DNA" (2) = older first-generation phosphorothioate DNA oligos.
-  - "aptamer" (1) = the antibody-like folded oligo.
-• BACKBONE = the spine chemistry: "full-PS" (45, every link sulfur-modified),
-  "PS/PO mix" (15, partly normal links), "PMO-neutral" (4, the uncharged PMO
-  type), "mixed" (1).
-• CONJUGATE = bolt-on targeting tags: most have none (48); 16 carry the liver
-  "GalNAc" sugar; 1 carries "PEG" (the long-life polymer).
-• STAGE = how far each drug has progressed: 19 approved (on the market), 30 are
-  research compounds, the rest are in clinical trials (phase 1→3; "incl. disc." =
-  including some discontinued), plus 1 scored at the whole-class level.
-• STUDY TYPE = where the result came from: 53 animal studies, 39 human/clinical,
-  19 in-vitro (dish).
-• SPECIES = which organism: 58 human, 30 mouse, 8 multi-species, 8 rat, 7 monkey.
-• DELIVERY = how the drug was given:
-  - "systemic" (87) = into the whole body (e.g. injection into blood/under skin).
-  - "gymnotic / free-uptake" (19) = in a dish, letting cells absorb the naked oligo
-    on their own with no delivery helper ("gymnotic" = "naked" uptake).
-  - "intrathecal" (3) = into the spinal fluid. "intravitreal" (1) = into the eye.
-    "oral" (1) = by mouth.
-• SEQUENCES FILLED: 33 of 65 drugs have their real sequence; the rest are honest
-  blanks. 35 different target genes are represented (good diversity).
+Where the results come from. "In-vitro" = in a dish; "in-vivo" = in a living
+animal; "clinical" = in human patients. We have all three, across several species.
+Why it matters: because human and animal results sit in the same table measured
+the same way, you can directly compare how well an animal result predicts the
+human one — the "translation gap" we return to in Finding 3.
 -->
 
 ---
 
-## Provenance & redistribution — every row is defensible
+<!-- _class: section -->
+<!-- _footer: '' -->
+<!-- _paginate: false -->
 
-- **Each measurement carries `source_id` + `source_ref` + `source_table`** (exact figure / table / label section / patent claim). Any value can be re-verified against its locus.
-- **Redistribution tracked per row:** `public_domain` 47 (FDA/EMA labels, USPTO patents — values reproducible) · `summary_stat` 64 (journal-derived figures — derived/summary only).
-- **16 distinct source identifiers** in use, all registered in `sources/SOURCES.md` with acquisition state.
-- Intended public license for the curated tables: **permissive (e.g. CC-BY)**; third-party full texts are **referenced, not redistributed.**
+<div class="kicker">Part 3</div>
 
-**QC run after every ingestion round (all currently passing):** schema-enum conformance · column-count integrity (17/23) · referential integrity `measurements.oligo_id → oligos.oligo_id` (**0 orphans**) · no duplicate PKs · `nephrotox_grade ∈ {0,1,2,3}` · sequence policy (only explicitly-sourced sequences filled).
+## How we built it
+
+<p>Methodology, the integrity rule, and the sources researched</p>
+
+---
+
+## Three ways we gathered data — each tagged per row
+
+![w:1000](assets/extraction.svg)
+
+<div class="small" style="margin-top:6px">Every row records <i>how</i> it was obtained, so its reliability is visible. Web-search rows are flagged for re-checking because this secure environment blocks downloading full papers.</div>
 
 <!--
 SPEAKER NOTES — plain English
 
-Two things here: (1) every number has a paper trail, and (2) we respect copyright.
-Both are scored by the competition and both build trust.
-
-• "Provenance" = the documented origin/paper-trail of each value — where exactly it
-  came from. Each row stores three breadcrumbs:
-  - "source_id" = the short code (N2, A1, WS…) for the source.
-  - "source_ref" = the precise reference (paper ID, label number, patent number).
-  - "source_table" = the exact figure, table, label section, or patent claim the
-    number sits in.
-  "Re-verify against its locus" = anyone can open that exact table and confirm the
-  number. ("Locus" = the precise spot.)
-
-• "Redistribution" = our legal right to republish a value. Tracked per row:
-  - "public_domain" (47 rows) = free to copy outright — US government documents
-    (FDA/EMA labels) and US patents ("USPTO" = the US Patent Office).
-  - "summary_stat" (64 rows) = from copyrighted journals, so we only reproduce
-    SUMMARY statistics / derived figures, not the raw copyrighted tables. This
-    keeps us on the right side of copyright.
-• "16 source identifiers" = 16 distinct sources in total, all catalogued in
-  sources/SOURCES.md with their "acquisition state" (whether we have the file yet).
-• "License: CC-BY" = the open licence we intend to release OUR tables under — it
-  lets anyone reuse them as long as they credit us. We REFERENCE the third-party
-  papers (cite them) but do NOT republish their full text.
-
-• "QC" = quality-control checks that run after every batch of new data
-  ("ingestion round" = a round of adding data). In plain terms they confirm:
-  - every category value is from the allowed list ("schema-enum conformance";
-    an "enum" = a fixed list of allowed values);
-  - the tables have the right number of columns (17 and 23);
-  - "referential integrity, 0 orphans" = every result points to a real drug; no
-    result references a drug ID that doesn't exist (an "orphan" would be a result
-    with no matching drug);
-  - no duplicate ID numbers;
-  - every grade is 0, 1, 2, or 3 (nothing out of range);
-  - the no-guessing sequence rule held.
-  All of these currently PASS.
+Three data-gathering methods, strongest first:
+1. PRIMARY full-text — we read the original papers/patents (PDFs) with a tool
+   called PyMuPDF and typed values in by hand. Gold standard.
+2. REVIEW / secondary — summary papers that aggregate many studies, cross-checked
+   against primary data.
+3. WEBSEARCH-derived ("WS") — the weakest tier. Our secure computer BLOCKS direct
+   downloading of full papers, so for some drugs we took figures from search-engine
+   summaries of their official label/trial, and FLAGGED those rows to be verified
+   against the original before any public release. 36 of 111 rows are this type.
+"source_id" = a code in each row naming its source, so everything is traceable.
 -->
 
 ---
 
-## Honest limitations (what a reviewer should know)
+## The rule that makes the dataset trustworthy
 
-- **Grades are provisional** — assigned by rubric, pending the scientific sign-off requested here.
-- **Sequence coverage is 33/65.** Remaining gaps are siRNA guide strands and some PMOs whose sequences were not transcribable from available summaries (and never guessed).
-- **`WS` rows (36)** rest on search summaries of primary regulatory/trial sources — they need a verification pass against the cited primary document before publication.
-- **In-vitro human-system rows (19)** are the scientific core but still a minority; expanding human proximal-tubule panels (ciPTEC / RPTEC-TERT1 / 3D-RPTEC / kidney-on-chip) is the top growth priority.
-- **Animal over-prediction** is present by design and must be *modeled*, not ignored.
+<div class="warn" style="font-size:24px">
+<b>⚠️ Strict no-fabrication policy</b><br><br>
+Drug <b>sequences</b> and toxicity <b>values</b> are never invented or recalled from memory. A value goes in <b>only</b> if an explicit, citable, redistribution-permitted source states it. Drugs with no published kidney data were <b>omitted, not padded</b>.
+</div>
+
+<div class="cols" style="margin-top:22px">
+<div class="col"><div class="kicker">Why sequences are 33/65, not 65/65</div>The 32 blanks are <b>real gaps</b>, honestly marked “TBD”. We could have made the table look complete by guessing — but a falsely-complete table can’t be trusted at all.</div>
+<div class="col"><div class="kicker">Why this matters to a reviewer</div>If the easy fields were fudged, none of the hard toxicity values could be believed. Honest blanks are the <b>credibility</b> of the whole dataset.</div>
+</div>
 
 <!--
 SPEAKER NOTES — plain English
 
-We state our weaknesses openly. For a scientific reviewer, admitting limits builds
-MORE trust, not less — it shows we know exactly where the soft spots are.
-
-• "Grades are provisional" = our 0–3 scores aren't expert-confirmed yet. That's the
-  sign-off we're asking German for.
-• "Sequence coverage 33/65" = we still lack the genetic sequence for 32 drugs.
-  Mostly these are:
-  - "siRNA guide strands" = the targeting strand of double-stranded siRNA drugs,
-    not always published; and
-  - some "PMO" drugs whose sequences weren't available in the summaries we could
-    reach. We left these blank rather than guess.
-• "WS rows (36)" = the web-summary-sourced rows. They must be double-checked against
-  the original FDA/EMA/trial documents before any public release. ("Verification
-  pass" = a round of re-checking.)
-• "In-vitro human-system rows (19)" = results from human kidney cells in a dish.
-  These are the scientific heart of the set (human-relevant, mechanism-revealing)
-  but they're still a minority of rows, so GROWING them is our top priority. The
-  named models are all human kidney-tubule systems: ciPTEC, RPTEC/TERT1, its 3D
-  version, and the kidney-on-chip device.
-• "Animal over-prediction... must be modeled, not ignored" = the animal-vs-human
-  gap from finding 3 is a feature to account for, not a flaw to hide. Anyone using
-  the data should remember animal kidney results run alarmist for these drugs.
+Our integrity rule, stated loudly because it's WHY the data can be trusted.
+We never make up two things: the drug's genetic SEQUENCE and any toxicity NUMBER.
+Even though an AI assistant helped build this, it was not allowed to fill those
+from memory — only from a real, citable, copy-permitted source. If a drug had no
+published kidney data, we left it out rather than invent rows to hit the target.
+That's why only 33 of 65 drugs have sequences — the rest are honest blanks, which
+is more trustworthy than a fake-complete table.
 -->
 
 ---
 
-## What we need from German (the ask)
+## Sources researched
 
-1. **Grade sign-off.** Review the rubric→row mapping in `data/measurements.csv` and the rubric in `schema.md`; confirm or correct grades so we can **remove the `grade_provisional` flag.** Highest-value targets: the grade-2/3 boundary (injury-biomarker vs. AKI) and the patent-class → grade mapping.
-2. **Biology sanity check.** Is the **functional-vs-structural** framing (megalin/cubilin → LMW proteinuria → grade 1) faithful, and are the readout→severity assignments physiologically sound?
-3. **Source confidence.** Flag any anchor you'd want re-verified against primary text before release (esp. the `WS` set).
+<div class="cols">
+<div class="col">
+<div class="kicker">Strict-kidney primary (read in full)</div>
 
-**Then (on hold until sign-off):** finalize the ≤12-page narrative; verify `WS` rows; backfill remaining sequences; optionally mine patent **N4 (US 11,479,818)** and **US 11,105,794 Table 2** (per-compound in-vitro EGF values) for the next volume increment.
+- **Janssen 2019** · drisapersen, human kidney-cell injury *(N2 · 10 rows)*
+- **US 11,105,794 B2** · patent tox panel *(N3 · 21 rows)*
+- **Moisan 2017** · human tubule-cell panel *(M1 · 11 rows)*
+- **Sandelius 2020** · urine injury-biomarkers *(K1 · 9 rows)*
+- **van Poelgeest 2013** · SPC5001 first-in-human AKI *(A3)*
+- **Arch Toxicol 2021** · SPC5001 kidney-on-chip *(A4 · 5 rows)*
+
+</div>
+<div class="col">
+<div class="kicker">Anchors · review · patents</div>
+
+- **Wu 2022** · marketed-ASO nephrotoxicity review *(REV)*
+- **inotersen** · NEJM NEURO-TTR + FDA label — severe anchor *(A1)*
+- **mipomersen, volanesorsen** · gapmer renal signals *(A9, A8)*
+- **inclisiran, givosiran, nusinersen** · safe controls
+- **US 11,479,818 B2** · 2nd patent, queued *(N4)*
+
+</div>
+</div>
+
+<div class="small" style="margin-top:10px"><b>+ 36 “WS” rows</b> from FDA/EMA labels & pivotal trials: patisiran, vutrisiran, lumasiran, nedosiran, eplontersen, tofersen, bepirovirsen, olpasiran, the DMD PMOs, pegaptanib, fitusiran, zilebesiran — plus Crooke 2018 (human) & Yu 2012 (monkey) for the translation gap.</div>
 
 <!--
 SPEAKER NOTES — plain English
 
-This is the call to action — exactly what we want German (the expert biochemist)
-to do. Keep it concrete so he can act without re-reading everything.
-
-1. GRADE SIGN-OFF (the big one): look at our 0–3 scores in the measurements file
-   and the rule book (schema.md), and confirm or fix them. Once he approves, we
-   delete the "provisional" flag and the grades become final.
-   - "rubric→row mapping" = the judgement call of which finding got which grade.
-   - Two trickiest spots we'd love him to focus on:
-     (a) the line between grade 2 and grade 3 — i.e. is a finding "a worrying
-         biomarker rise" (2) or "actual acute kidney injury" (3)?
-     (b) whether we translated the PATENT's word-ratings into grades correctly.
-2. BIOLOGY SANITY CHECK: does our core scientific story hold up? Specifically the
-   chain "drug grabbed by megalin/cubilin → small-protein leakage → we call that a
-   mild grade 1." And are our readout-to-severity calls physiologically sensible
-   (i.e. do they match how a kidney really behaves)? "Physiologically sound" =
-   consistent with real body function.
-3. SOURCE CONFIDENCE: point out any reference he'd want re-checked against the
-   original before we publish — especially the 36 web-summary ("WS") rows.
-
-• "On hold until sign-off" = the remaining to-do list that we deliberately PAUSED
-  until German weighs in, so we don't polish things he might change:
-  - finish the short written narrative (≤12 pages) the competition wants;
-  - re-verify the WS rows;
-  - fill in more sequences where possible;
-  - optionally pull more data from a second patent (N4) and from Table 2 of the
-    first patent (which has per-drug lab "EGF" values) to add volume.
-  "Backfill" = go back and fill gaps. "Volume increment" = another batch of rows.
+Our bibliography, split into the best kidney-specific papers (read in full) and
+the real-world anchors/reviews/patents. The number in italics is each source's
+code and how many rows it gave. Highlights:
+• N2 Janssen — showed the sneaky dish phenotype + gave 3 real sequences.
+• N3 patent — the jackpot: a public-domain table of many oligos with sequence AND
+  toxicity together (21 rows, our biggest source).
+• M1 Moisan / K1 Sandelius — human kidney-cell panels and urine biomarkers.
+• A3/A4 SPC5001 — a drug that caused acute kidney injury first-in-human, also
+  reproduced on a "kidney-on-chip" (a chip with living kidney cells).
+• A1 inotersen — our severe anchor (caused glomerulonephritis in patients).
+• Safe controls: inclisiran, givosiran, nusinersen.
+The 36 "WS" rows are mostly approved drugs whose data came from label/trial
+summaries (flagged for re-checking). Crooke 2018 (human) and Yu 2012 (monkey) let
+us compare species.
 -->
 
 ---
 
-## Repository map (for review)
+<!-- _class: section -->
+<!-- _footer: '' -->
+<!-- _paginate: false -->
 
-```
-README.md            strategy, scope, domain rationale, live record counter
-schema.md            full data dictionary, grade rubric, vocab + QC log
-METHODOLOGY.md       Phase-2 methodology deliverable (source→grade→QC)
-PRESENTATION.md      this deck
-data/oligos.csv      65 oligos  · 17 predictor columns
-data/measurements.csv  111 graded rows · 23 columns · full provenance
-sources/SOURCES.md   source registry (16 IDs), acquisition state, drop-list
-sources/kidney/      drisapersen, Wu, Sandelius, Moisan, SPC5001, patents …
-sources/hepatotox/   Dieckmann, Burdick, Hagedorn (chemistry diversity, flagged non-kidney)
-```
+<div class="kicker">Part 4</div>
 
-**Thank you — feedback welcome at the row level.** Every number in this deck regenerates from `data/` (`python` count scripts in the repo history); nothing here is hand-maintained prose detached from the tables.
+## What the data shows
+
+<p>Three findings worth a biochemist’s attention</p>
+
+---
+
+## Finding 1 — the “invisible” injury, captured
+
+![w:980](assets/paired.svg)
+
+<div class="note" style="margin-top:8px">For the <b>same</b> drug we store <b>paired rows</b>: a mild grade on the functional test, a clean grade on viability/tissue. Side by side they encode “dysfunction without death” — a distinction viability-only datasets simply cannot teach a model.</div>
 
 <!--
 SPEAKER NOTES — plain English
 
-A guide to the files in the project folder ("repository" / "repo" = the project's
-folder of files, tracked with version control), so German knows where to look.
+Finding 1: we successfully captured the sneaky damage in machine-readable form.
+For one drug (drisapersen) we have three rows: protein leak in human kidney cells
+→ grade 1; cells alive → grade 0; monkey tissue normal → grade 0. Together they
+say "the cell malfunctions without dying." A model trained on this can learn the
+difference between reversible functional proteinuria and real structural injury —
+something an alive/dead-only dataset can never convey.
+-->
 
-• README.md = the front-page overview: what we're doing and a live tally of rows.
-• schema.md = the data DICTIONARY: defines every column and the grading rule book.
-  "Vocab" = the lists of allowed category values. This is where to check our
-  grading rules.
-• METHODOLOGY.md = the formal write-up of HOW we built it (sources → grading → QC);
-  one of the competition's required deliverables.
-• PRESENTATION.md = this slide deck.
-• data/oligos.csv = the 65 drugs and their 17 design features.
-• data/measurements.csv = the 111 results with grades and full source trail (23
-  columns). THIS is the file to review for grade sign-off.
-• sources/SOURCES.md = the catalogue of all 16 sources and whether we have each
-  file ("acquisition state"), plus a "drop-list" of files still wanted.
-• sources/kidney/ = the actual kidney source PDFs.
-• sources/hepatotox/ = LIVER-toxicity papers kept only for chemistry variety and
-  clearly flagged as NOT kidney, so they never pollute the kidney data. ("Hepato"
-  = liver.)
+---
 
-• Closing point: "feedback welcome at the row level" = please comment on specific
-  rows, not just generalities. "Every number regenerates from data/" = nothing on
-  these slides is hand-typed and possibly stale — all the counts come straight out
-  of the data files via little Python scripts, so they always match the data.
+## Finding 2 — a patent unlocked sequence + toxicity together
+
+![w:980](assets/patent.svg)
+
+<div class="note" style="margin-top:8px">Most sources give a sequence <i>or</i> a toxicity value. This public-domain patent table gave <b>both in the same row</b> for many oligos — the most directly model-ready slice of the dataset, and it tripled our sequence coverage.</div>
+
+<!--
+SPEAKER NOTES — plain English
+
+Finding 2: one patent (US 11,105,794) was a goldmine. Its Table 1 lists many
+oligos each with BOTH the genetic sequence AND a kidney-toxicity rating in animals
+— rare, because usually those live in different places. The patent rated toxicity
+in words (innocuous/low/medium/high); we translated those into our 0–3 numbers.
+It added 21 rows and tripled our real sequences from 13 to 33. Because cause
+(sequence) and effect (grade) sit together, it's the most "model-ready" data.
+"Public domain" = freely reproducible (US patents are).
+-->
+
+---
+
+## Finding 3 — animal tests over-predict human risk
+
+![w:980](assets/translation.svg)
+
+<div class="note" style="margin-top:8px">A known, consistent bias for this drug class: animal kidneys look worse than patients turn out to be. We captured human and animal rows side by side so the gap can be <b>modelled, not ignored</b> — don't treat animal histopathology as human ground truth.</div>
+
+<!--
+SPEAKER NOTES — plain English
+
+Finding 3: for these drugs, animal studies tend to show MORE kidney damage than
+humans actually experience. This over-prediction is a known, consistent pattern —
+so a model could learn to correct for it. We deliberately placed human data (e.g.
+Crooke 2018) and animal data (e.g. Yu 2012 monkey) in the same table, measured the
+same way, so the gap is visible and analysable rather than hidden. "Don't treat
+animal histopathology as ground truth" = don't assume the animal microscope result
+equals the human truth.
+-->
+
+---
+
+<!-- _class: section -->
+<!-- _footer: '' -->
+<!-- _paginate: false -->
+
+<div class="kicker">Part 5</div>
+
+## Trust, limits, and the ask
+
+---
+
+## Every row is defensible
+
+<div class="cols">
+<div class="col">
+<div class="kicker">Provenance — the paper trail</div>
+
+Each measurement carries its **source**, the **exact** table/figure/claim, and its **redistribution right**, so any value can be re-checked at its origin.
+
+<div class="pills">
+<span class="pill"><b>47</b> public-domain rows</span>
+<span class="pill"><b>64</b> summary-stat rows</span>
+<span class="pill"><b>16</b> sources</span>
+</div>
+
+</div>
+<div class="col">
+<div class="kicker">Quality control — all passing</div>
+
+<div class="ok">
+✓ every category value from an allowed list<br>
+✓ column counts intact (17 / 23)<br>
+✓ every result links to a real drug — <b>0 orphans</b><br>
+✓ no duplicate IDs · grades all 0–3<br>
+✓ no-guessing sequence rule held
+</div>
+
+</div>
+</div>
+
+<!--
+SPEAKER NOTES — plain English
+
+Two trust pillars. PROVENANCE = the documented origin of each value: which source,
+which exact table/figure, and whether we're legally allowed to republish it
+("public domain" = yes, e.g. patents and government labels; "summary stat" = we
+only reproduce summary figures from copyrighted journals). QUALITY CONTROL =
+automated checks that run after each data addition: valid categories, right column
+counts, every result points to a real drug (no "orphans"), no duplicate IDs,
+grades within 0–3, and the no-guessing rule. All currently pass.
+-->
+
+---
+
+## Honest limitations
+
+<div class="cols">
+<div class="col">
+
+- **Grades are provisional** — assigned by rubric, awaiting expert sign-off.
+- **Sequences 33/65** — remaining gaps (siRNA guide strands, some PMOs) left blank, never guessed.
+- **36 “WS” rows** rest on web summaries — need verification against the primary document.
+
+</div>
+<div class="col">
+
+- **In-vitro human-cell rows (19)** are the scientific core but still a minority — growing them is the top priority.
+- **Animal over-prediction** is present by design — it must be modelled, not ignored.
+
+</div>
+</div>
+
+<div class="small" style="margin-top:16px">Stating the soft spots plainly is part of the deliverable — a reviewer should know exactly where to push.</div>
+
+<!--
+SPEAKER NOTES — plain English
+
+We state our weaknesses openly — for a scientist that builds trust. The grades
+aren't expert-confirmed yet; 32 sequences are still blank; 36 rows came from web
+summaries and need re-checking; the human-cell-in-a-dish rows (the most valuable)
+are still a minority we want to grow; and the animal-over-prediction bias must be
+accounted for in any model.
+-->
+
+---
+
+## What we need from German
+
+<div class="step"><div class="k">1</div><div class="t"><b>Grade sign-off.</b> Check the rubric→row mapping in <span class="mono">measurements.csv</span> so we can remove the “provisional” flag. Hot spots: the <b>grade 2↔3</b> line (biomarker rise vs. true AKI) and the <b>patent words→grade</b> mapping.</div></div>
+
+<div class="step"><div class="k">2</div><div class="t"><b>Biology sanity check.</b> Is the functional-vs-structural story (megalin/cubilin → protein leak → grade 1) faithful, and are the readout→severity calls physiologically sound?</div></div>
+
+<div class="step"><div class="k">3</div><div class="t"><b>Source confidence.</b> Flag any anchor — especially the 36 “WS” rows — you’d want re-verified against the primary text before release.</div></div>
+
+<div class="small" style="margin-top:14px"><b>On hold until sign-off:</b> the ≤12-page narrative · verifying WS rows · backfilling sequences · mining patent N4 for more rows.</div>
+
+<!--
+SPEAKER NOTES — plain English
+
+The concrete ask. (1) The big one: review our 0–3 grades against the rulebook and
+confirm/correct them — focus on the 2-vs-3 boundary and whether we converted the
+patent's word-ratings correctly; his OK lets us finalise the grades. (2) Sanity-
+check the core biology story. (3) Point out any source he'd want re-verified,
+especially the web-summary rows. Everything else (the written narrative, WS
+verification, more sequences, a second patent) is paused until he weighs in, so we
+don't polish things he might change.
+-->
+
+---
+
+## Roadmap
+
+<div class="cols">
+<div class="col ok">
+<div class="kicker" style="color:#2E7D32">Done</div>
+
+- 111 graded, kidney-specific rows (≥100 target met)
+- All 7 oligo families; full 0–3 severity range
+- Two-table schema, full provenance, QC passing
+- Methodology + this deck
+
+</div>
+<div class="col note">
+<div class="kicker">Next (post sign-off)</div>
+
+- Finalise grades → remove provisional flag
+- Verify the 36 WS rows against primary text
+- Backfill more sequences; mine patent N4
+- Write the ≤12-page narrative for submission
+
+</div>
+</div>
+
+<div class="small" style="margin-top:18px">Submission window: <b>1 May – 31 Dec 2026</b>. The dataset already clears the volume bar; the remaining work is verification and write-up.</div>
+
+<!--
+SPEAKER NOTES — plain English
+
+Where we are and what's left. The dataset already meets the size and coverage
+goals with full documentation. The remaining work is mostly checking (grade
+sign-off, verifying the web-sourced rows) and writing the required narrative, plus
+optional extra volume from a second patent. Submission runs May–Dec 2026.
+-->
+
+---
+
+## Where everything lives
+
+<div class="mono" style="background:#F5F8FA;border:1px solid var(--line);border-radius:10px;padding:20px 24px;font-size:17px;line-height:1.7">
+README.md&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strategy, scope, live record counter<br>
+schema.md&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data dictionary + the grade rubric<br>
+METHODOLOGY.md&nbsp;&nbsp;&nbsp;how it was built (sources → grading → QC)<br>
+PRESENTATION.md&nbsp;&nbsp;this deck (+ plain-English speaker notes)<br>
+data/oligos.csv&nbsp;&nbsp;&nbsp;65 drugs · 17 design columns<br>
+data/measurements.csv&nbsp;&nbsp;<b style="color:#0E4D64">111 graded rows ← review here</b><br>
+sources/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the source PDFs + the source registry
+</div>
+
+<div class="note" style="margin-top:20px"><b>Thank you — feedback welcome at the row level.</b> Every number in this deck regenerates from <span class="mono">data/</span>; nothing here is hand-maintained prose detached from the tables.</div>
+
+<!--
+SPEAKER NOTES — plain English
+
+A map of the project folder so German knows where to look. The key file for his
+review is data/measurements.csv (the graded results); the rulebook is schema.md.
+Closing point: every count on these slides comes straight out of the data files,
+so the deck can't drift from the underlying data. We'd love comments on specific
+rows, not just general impressions.
 -->

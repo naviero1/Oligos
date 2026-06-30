@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 430" font-family="Liberation Sans, DejaVu Sans, sans-serif">
+  <text x="550" y="40" text-anchor="middle" font-size="22" font-weight="800" fill="#0E4D64">Same drug. Two tests. Opposite conclusions.</text>
+
+  <!-- left: viability -->
+  <rect x="40" y="72" width="490" height="320" rx="16" fill="#EAF6EC" stroke="#2E7D32" stroke-width="2.5"/>
+  <text x="285" y="118" text-anchor="middle" font-size="20" font-weight="800" fill="#2E7D32">Viability / MTT test</text>
+  <text x="285" y="148" text-anchor="middle" font-size="15" fill="#5A6B78">"Are the cells still alive?"</text>
+  <circle cx="285" cy="222" r="48" fill="#FFFFFF" stroke="#2E7D32" stroke-width="3"/>
+  <path d="M262,222 l16,16 l30,-34" fill="none" stroke="#2E7D32" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="285" y="312" text-anchor="middle" font-size="17" fill="#14202B">Cells alive &#10003;</text>
+  <rect x="90" y="336" width="390" height="40" rx="8" fill="#2E7D32"/>
+  <text x="285" y="362" text-anchor="middle" font-size="17" font-weight="800" fill="#FFFFFF">VERDICT: "looks clean"  (misleading)</text>
+
+  <!-- right: functional -->
+  <rect x="570" y="72" width="490" height="320" rx="16" fill="#EAF3F6" stroke="#17A2B8" stroke-width="2.5"/>
+  <text x="815" y="118" text-anchor="middle" font-size="20" font-weight="800" fill="#0E4D64">Functional test</text>
+  <text x="815" y="148" text-anchor="middle" font-size="15" fill="#5A6B78">"Is the cell still doing its job?"</text>
+  <!-- rising proteinuria arrow -->
+  <line x1="770" y1="270" x2="860" y2="180" stroke="#C0392B" stroke-width="6" stroke-linecap="round"/>
+  <path d="M860,180 l-22,2 l8,-20 Z" fill="#C0392B"/>
+  <text x="815" y="312" text-anchor="middle" font-size="17" fill="#14202B">Protein reabsorption fails &#8594; proteinuria</text>
+  <rect x="620" y="336" width="390" height="40" rx="8" fill="#17A2B8"/>
+  <text x="815" y="362" text-anchor="middle" font-size="17" font-weight="800" fill="#FFFFFF">VERDICT: real toxicity (GRADE 1)</text>
+</svg>

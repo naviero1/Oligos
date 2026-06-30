@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 470" font-family="Liberation Sans, DejaVu Sans, sans-serif">
+  <!-- left table: oligos -->
+  <rect x="40" y="60" width="430" height="368" rx="14" fill="#FFFFFF" stroke="#0E4D64" stroke-width="2.5"/>
+  <rect x="40" y="60" width="430" height="56" rx="14" fill="#0E4D64"/>
+  <rect x="40" y="92" width="430" height="24" fill="#0E4D64"/>
+  <text x="64" y="96" font-size="20" font-weight="800" fill="#FFFFFF">data/oligos.csv</text>
+  <text x="64" y="132" font-size="14" fill="#17A2B8" font-weight="700">one row per drug &#183; the PREDICTORS (causes)</text>
+  <text x="64" y="170" font-size="16" fill="#14202B">&#128273; oligo_id  <tspan fill="#5A6B78">(primary key)</tspan></text>
+  <text x="64" y="200" font-size="16" fill="#14202B">oligo_class &#183; target_gene</text>
+  <text x="64" y="230" font-size="16" fill="#14202B">backbone_chemistry &#183; sugar_mods</text>
+  <text x="64" y="260" font-size="16" fill="#14202B">gapmer_design &#183; conjugate</text>
+  <text x="64" y="290" font-size="16" fill="#14202B">ps_count &#183; length_nt</text>
+  <text x="64" y="320" font-size="16" fill="#14202B">sequence_5to3 &#183; max_phase</text>
+  <rect x="64" y="344" width="382" height="58" rx="8" fill="#F5F8FA" stroke="#CBD8E0"/>
+  <text x="80" y="370" font-size="14.5" fill="#5A6B78">17 columns describing the drug's</text>
+  <text x="80" y="390" font-size="14.5" fill="#5A6B78">sequence + chemistry + design</text>
+  <text x="255" y="56" text-anchor="middle" font-size="15" font-weight="700" fill="#0E4D64">65 drugs</text>
+
+  <!-- link -->
+  <line x1="470" y1="172" x2="630" y2="172" stroke="#17A2B8" stroke-width="3" stroke-dasharray="7 5"/>
+  <text x="550" y="160" text-anchor="middle" font-size="15" font-weight="700" fill="#17A2B8">oligo_id</text>
+  <text x="550" y="194" text-anchor="middle" font-size="13" fill="#5A6B78">links them</text>
+  <circle cx="470" cy="172" r="5" fill="#17A2B8"/>
+  <circle cx="630" cy="172" r="5" fill="#17A2B8"/>
+
+  <!-- right table: measurements -->
+  <rect x="630" y="60" width="430" height="368" rx="14" fill="#FFFFFF" stroke="#E8730C" stroke-width="2.5"/>
+  <rect x="630" y="60" width="430" height="56" rx="14" fill="#E8730C"/>
+  <rect x="630" y="92" width="430" height="24" fill="#E8730C"/>
+  <text x="654" y="96" font-size="20" font-weight="800" fill="#FFFFFF">data/measurements.csv</text>
+  <text x="654" y="132" font-size="14" fill="#E8730C" font-weight="700">one row per result &#183; the OUTCOMES (effects)</text>
+  <text x="654" y="170" font-size="16" fill="#14202B">&#128273; measurement_id  <tspan fill="#5A6B78">(PK)</tspan></text>
+  <text x="654" y="200" font-size="16" fill="#14202B">&#128279; oligo_id  <tspan fill="#5A6B78">(foreign key)</tspan></text>
+  <text x="654" y="230" font-size="16" fill="#14202B">study_type &#183; species &#183; system_model</text>
+  <text x="654" y="260" font-size="16" fill="#14202B">delivery &#183; dose &#183; readout_name/value</text>
+  <text x="654" y="290" font-size="16" fill="#14202B"><tspan font-weight="800" fill="#0E4D64">nephrotox_grade (0&#8211;3)</tspan></text>
+  <text x="654" y="320" font-size="16" fill="#14202B">source_id &#183; source_ref &#183; redistribution</text>
+  <rect x="654" y="344" width="382" height="58" rx="8" fill="#FBF3E7" stroke="#E8C9A0"/>
+  <text x="670" y="370" font-size="14.5" fill="#5A6B78">23 columns: the graded result +</text>
+  <text x="670" y="390" font-size="14.5" fill="#5A6B78">a full source trail for every row</text>
+  <text x="845" y="56" text-anchor="middle" font-size="15" font-weight="700" fill="#E8730C">111 measurements</text>
+</svg>
