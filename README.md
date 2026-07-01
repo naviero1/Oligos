@@ -67,6 +67,14 @@ Two normalized tables joined on `oligo_id`:
 Graded label: **`nephrotox_grade` 0–3** (rubric in `schema.md`). Inotersen
 (grade-3 glomerulonephritis) is the canonical severe anchor.
 
+**Derived analysis-ready view.** For convenience, a denormalized join of the two
+tables on `oligo_id` is generated at `data/oligotox_kidney_merged.csv`
+(**111 rows × 39 columns** — one row per measurement enriched with its oligo's
+design predictors, so each row carries both predictors *and* graded outcome).
+It is produced by `scripts/build_merged.py` and is intended for direct
+EDA/predictive modeling. The two normalized tables above remain the **source of
+truth**; the merged file is regenerated from them (never hand-edited).
+
 Curation methodology, extraction methods, variable distributions, provenance,
 QC, and limitations are documented in **`METHODOLOGY.md`** (Phase 2 methodology
 deliverable).

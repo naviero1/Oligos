@@ -100,3 +100,23 @@ oligo may differ by model/dose. Record the rationale in `notes` when non-obvious
   validation; measurements→oligos FK = 0 orphans; no duplicate IDs; grades ∈ {0,1,2,3}.
   `sequence_5to3` filled for 7/31 oligos (rest `TBD` pending authoritative
   retrieval — never guessed).
+
+---
+
+## Derived table — `data/oligotox_kidney_merged.csv` (generated, not canonical)
+
+An analysis-ready **denormalized join** of the two canonical tables on `oligo_id`,
+produced by `scripts/build_merged.py`.
+
+- **Grain / size:** one row per measurement — **111 rows × 39 columns**.
+- **Columns:** `measurement_id`, `oligo_id`, then all 15 oligo **design predictors**
+  + `notes_oligo`, then all 20 measurement **outcome/context** fields + `notes_measurement`.
+  (The two source `notes` columns are disambiguated to `notes_oligo` /
+  `notes_measurement`; `oligo_id` appears once.)
+- **Purpose:** each row carries the **predictors and the graded outcome together**,
+  so downstream EDA / model training needs no join. Supports the challenge's
+  "data translatability" dimension.
+- **Status:** **generated and derived — not a source of truth.** `data/oligos.csv`
+  and `data/measurements.csv` remain canonical; regenerate this file with
+  `python scripts/build_merged.py` after any change, and never hand-edit it
+  (denormalization repeats each oligo's design across its measurement rows).
