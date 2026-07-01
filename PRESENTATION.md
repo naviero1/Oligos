@@ -90,6 +90,7 @@ section.lead .big b{ color:var(--primary); }
 .crit{ background:var(--panel); border:1px solid var(--line); border-left:6px solid var(--teal); border-radius:10px; padding:14px 18px; }
 .crit .h{ font-weight:800; color:var(--primary); font-size:19px; margin-bottom:5px; }
 .crit .d{ font-size:16.5px; color:var(--ink); line-height:1.38; }
+.crit .pts{ float:right; background:var(--teal); color:#fff; font-size:14px; font-weight:800; padding:2px 11px; border-radius:12px; }
 </style>
 
 <!-- _class: title -->
@@ -674,6 +675,37 @@ We designed for these four from the start, rather than fitting them afterward.
 
 ---
 
+## Mapped to Phase-2's technical scoring rubric
+
+<div class="crit"><div class="h">Experimental design <span class="pts">20 pts</span></div><div class="d"><b>Controls built in</b> — 27 grade-0 <b>negative controls</b> (GalNAc-siRNA, intrathecal ASO, aptamer) and severe <b>positive anchors</b> (inotersen GN, SPC5001 AKI), plus within-compound functional-positive / structural-negative pairs. Source-study replicates stay traceable through per-row provenance.</div></div>
+
+<div class="crit" style="margin-top:12px"><div class="h">Data translatability <span class="pts">20 pts</span></div><div class="d"><b>Built for modeling</b> — explicit <b>predictor variables</b> (sequence, chemistry, backbone, gapmer design, conjugate) against <b>graded toxicity indicators</b>; 7 modalities, full 0–3 range; captures the functional-not-cytotoxic signal and the animal→human gap. Patent rows carry sequence + grade in one record.</div></div>
+
+<div class="crit" style="margin-top:12px"><div class="h">Dataset management &amp; documentation <span class="pts">10 pts</span></div><div class="d"><b>FAIR by construction</b> — stable IDs, open CSV + CC-BY, controlled vocabularies (<b>common data elements</b>), a full data dictionary (<span class="mono">schema.md</span>), per-row provenance + redistribution, automated QC. A <b>Public Access &amp; Dissemination Plan</b> (<span class="mono">PADP.md</span>) accompanies the submission.</div></div>
+
+<div class="small" style="margin-top:13px">The Evaluation Panel's technical criteria (≈50 pts shown) — complementing the four judging factors on the previous slide.</div>
+
+<!--
+SPEAKER NOTES — plain English
+
+The previous slide covered the four high-level "judging factors." This one maps the
+more granular TECHNICAL SCORING the Evaluation Panel applies, point by point:
+• Experimental design (20 pts) — reviewers look for proper controls and replicates.
+  We include 27 known-SAFE negative controls and clear severe positives (inotersen,
+  SPC5001), plus paired rows on the same drug; replicates live in the source studies
+  our provenance points to.
+• Data translatability (20 pts) — can the data actually improve predictive models?
+  Our design lines up drug predictors (sequence/chemistry/design) against graded
+  toxicity, across all modalities and severities, and captures the two hardest
+  signals (functional-not-lethal injury; animal-vs-human gap).
+• Dataset management & documentation (10 pts) — metadata, FAIR, and "common data
+  elements" (shared, standard field definitions). We use stable IDs, an open license,
+  controlled vocabularies, a full data dictionary, per-row provenance, and QC — plus
+  the required Public Access & Dissemination Plan (PADP.md) in the repo.
+-->
+
+---
+
 ## Every row is defensible
 
 <div class="cols">
@@ -779,6 +811,7 @@ weigh in, so we don't polish things that might change.
 README.md&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strategy, scope, live record counter<br>
 schema.md&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data dictionary + the grade rubric<br>
 METHODOLOGY.md&nbsp;&nbsp;&nbsp;how it was built (sources → grading → QC)<br>
+PADP.md&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public access &amp; dissemination plan (licensing)<br>
 PRESENTATION.md&nbsp;&nbsp;this deck (+ plain-English speaker notes)<br>
 data/oligos.csv&nbsp;&nbsp;&nbsp;65 drugs · 17 design columns<br>
 data/measurements.csv&nbsp;&nbsp;<b style="color:#0E4D64">111 graded rows ← review here</b><br>
