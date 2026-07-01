@@ -87,6 +87,9 @@ section.lead .big b{ color:var(--primary); }
 .step .t{ font-size:20px; }
 .small{ font-size:17px; color:var(--muted); }
 .mono{ font-family:"DejaVu Sans Mono",monospace; font-size:16px; }
+.crit{ background:var(--panel); border:1px solid var(--line); border-left:6px solid var(--teal); border-radius:10px; padding:14px 18px; }
+.crit .h{ font-weight:800; color:var(--primary); font-size:19px; margin-bottom:5px; }
+.crit .d{ font-size:16.5px; color:var(--ink); line-height:1.38; }
 </style>
 
 <!-- _class: title -->
@@ -103,7 +106,7 @@ section.lead .big b{ color:var(--primary); }
 
 <div class="meta">
 65 oligos · 111 measurements · 35 target genes · 100% kidney-specific<br>
-Prepared for scientific review — German (biochemist) · June 2026
+Phase 2 · Data Generation · prepared for biochemistry-expert review · June 2026
 </div>
 
 <!--
@@ -118,7 +121,7 @@ Terms:
 • "Nephrotoxicity" = kidney toxicity (nephro = kidney).
 • "Per-measurement" = each row is one experimental result, the finest detail.
 • "NCATS Phase 2" = the data-generation phase of the challenge; it scores DATASETS.
-This deck is for German to review the science and sign off the toxicity grades.
+This deck is for a biochemistry expert to review the science and sign off the grades.
 -->
 
 ---
@@ -159,8 +162,8 @@ points back to the exact paper/patent table it came from.
 <div class="col">
 
 <div class="note">
-<b>The gap we fill</b><br>
-There is no open, well-structured dataset that pairs each oligo's <b>design</b> (sequence + chemistry) with a <b>graded kidney outcome</b>. That is exactly what a model would need to predict risk early — and what we assembled.
+<b>The gap Phase 2 targets</b><br>
+Most public oligo-tox data is <b>hepatic</b>; kidney-specific data is thin. No open dataset pairs each oligo's <b>design</b> (sequence + chemistry) with a <b>graded kidney outcome</b> — exactly what an <b>in-silico model</b> needs to predict risk early. That is what we assembled.
 </div>
 
 </div>
@@ -173,8 +176,10 @@ Why kidney, why now. Oligo drugs are a fast-growing, important class. The kidney
 is especially exposed because it filters the blood and concentrates whatever
 passes through, so these drugs pile up there. Several have caused real kidney
 problems. "Proteinuria" = protein leaking into urine, a classic kidney-trouble
-sign. The missing piece in the field is a tidy table linking each drug's design
-to a kidney-toxicity score — that is our contribution.
+sign. Most existing open oligo-tox data is about the LIVER; kidney is under-served
+— so an open kidney set fills a real public gap (Phase 2's "potential impact").
+The missing piece is a tidy table linking each drug's design to a kidney-toxicity
+score, ready for an in-silico model — that is our contribution.
 -->
 
 ---
@@ -331,7 +336,7 @@ nephrotox_grade plus a full source trail.
 
 ![w:1000](assets/grade-ladder.svg)
 
-<div class="small" style="margin-top:6px">Each result gets one ordinal grade by a written rubric (in <span class="mono">schema.md</span>). <b>All grades are currently flagged “provisional”</b> — confirming them is the sign-off we’re asking German for.</div>
+<div class="small" style="margin-top:6px">Each result gets one ordinal grade by a written rubric (in <span class="mono">schema.md</span>). <b>All grades are currently flagged “provisional”</b> — confirming them is the sign-off we’re asking a biochemistry expert for.</div>
 
 <!--
 SPEAKER NOTES — plain English
@@ -344,8 +349,8 @@ Our single "answer" column: a 0-to-3 severity score.
     filter units), or kidney failure.
 "Ordinal" = ranked (0<1<2<3) but gaps aren't necessarily equal. "Rubric" = the
 written rulebook for assigning grades. "Anchor" = a famous example that pins each
-level (inotersen for severe, etc.). Every grade is PROVISIONAL until an expert
-(German) confirms it.
+level (inotersen for severe, etc.). Every grade is PROVISIONAL until a biochemistry
+expert confirms it.
 -->
 
 ---
@@ -559,7 +564,7 @@ us compare species.
 
 ## What the data shows
 
-<p>Three findings worth a biochemist’s attention</p>
+<p>Three findings worth a biochemistry expert’s attention</p>
 
 ---
 
@@ -628,7 +633,44 @@ equals the human truth.
 
 <div class="kicker">Part 5</div>
 
-## Trust, limits, and the ask
+## Why it fits Phase 2 — and what's next
+
+<p>Judging criteria, trust, limitations, and the ask</p>
+
+---
+
+## Built for the four Phase-2 judging criteria
+
+<div class="cols">
+<div class="crit col"><div class="h">1 · Ability to solve</div><div class="d">A <b>model-ready</b> design — granular <b>sequence + chemistry</b> predictors against <b>graded</b>, per-condition kidney outcomes; the patent panel even puts sequence <b>and</b> toxicity in one row.</div></div>
+<div class="crit col"><div class="h">2 · Potential impact</div><div class="d">Fills a real public-domain gap: most open oligo-tox data is <b>hepatic</b> — kidney is thin. First open set linking oligo <b>design</b> to <b>graded nephrotoxicity</b>, incl. the functional phenotype.</div></div>
+</div>
+<div class="cols" style="margin-top:14px">
+<div class="crit col"><div class="h">3 · Feasibility &amp; rigor</div><div class="d">Strict <b>no-fabrication</b>, per-row provenance, controlled vocabularies and automated <b>QC</b> (0 orphans) — a set researchers can trust and reuse on release.</div></div>
+<div class="crit col"><div class="h">4 · Transparency &amp; reproducibility</div><div class="d">Open license (CC-BY) intended; every value <b>traceable</b> to source; all stats regenerate from <span class="mono">data/</span> — <b>FAIR</b>, aligned to NIH data-sharing.</div></div>
+</div>
+
+<div class="small" style="margin-top:14px">NCATS's four Phase-2 confidence factors — the dataset was <b>designed against them, not retro-fitted</b>. Submission window 1 May – 31 Dec 2026.</div>
+
+<!--
+SPEAKER NOTES — plain English
+
+NCATS scores Phase 2 on four "confidence factors"; this slide maps our work to each:
+1. Ability to solve — is the data useful for building computer models that PREDICT
+   oligo toxicity? Our design pairs each drug's sequence/chemistry with a graded
+   kidney outcome — exactly what such a model needs.
+2. Potential impact — does it fill a public gap? Most existing open oligo-tox data
+   is about the LIVER; kidney data is scarce. Ours is the first open set linking
+   oligo design to graded KIDNEY toxicity, including the easily-missed functional
+   injury.
+3. Feasibility & rigor — would researchers trust it? Yes: nothing fabricated, every
+   row sourced, controlled vocabulary, automated quality checks all passing.
+4. Transparency & reproducibility — is it open and re-checkable? Intended CC-BY open
+   license; every value traces to its source; all the numbers regenerate from the
+   data files. "FAIR" = Findable, Accessible, Interoperable, Reusable — the standard
+   for good scientific data that NIH's data-sharing policy expects.
+We designed for these four from the start, rather than fitting them afterward.
+-->
 
 ---
 
@@ -707,7 +749,7 @@ accounted for in any model.
 
 ---
 
-## What we need from German
+## What we need from the biochemistry expert
 
 <div class="step"><div class="k">1</div><div class="t"><b>Grade sign-off.</b> Check the rubric→row mapping in <span class="mono">measurements.csv</span> so we can remove the “provisional” flag. Hot spots: the <b>grade 2↔3</b> line (biomarker rise vs. true AKI) and the <b>patent words→grade</b> mapping.</div></div>
 
@@ -722,47 +764,11 @@ SPEAKER NOTES — plain English
 
 The concrete ask. (1) The big one: review our 0–3 grades against the rulebook and
 confirm/correct them — focus on the 2-vs-3 boundary and whether we converted the
-patent's word-ratings correctly; his OK lets us finalise the grades. (2) Sanity-
-check the core biology story. (3) Point out any source he'd want re-verified,
-especially the web-summary rows. Everything else (the written narrative, WS
-verification, more sequences, a second patent) is paused until he weighs in, so we
-don't polish things he might change.
--->
-
----
-
-## Roadmap
-
-<div class="cols">
-<div class="col ok">
-<div class="kicker" style="color:#2E7D32">Done</div>
-
-- 111 graded, kidney-specific rows (≥100 target met)
-- All 7 oligo families; full 0–3 severity range
-- Two-table schema, full provenance, QC passing
-- Methodology + this deck
-
-</div>
-<div class="col note">
-<div class="kicker">Next (post sign-off)</div>
-
-- Finalise grades → remove provisional flag
-- Verify the 36 WS rows against primary text
-- Backfill more sequences; mine patent N4
-- Write the ≤12-page narrative for submission
-
-</div>
-</div>
-
-<div class="small" style="margin-top:18px">Submission window: <b>1 May – 31 Dec 2026</b>. The dataset already clears the volume bar; the remaining work is verification and write-up.</div>
-
-<!--
-SPEAKER NOTES — plain English
-
-Where we are and what's left. The dataset already meets the size and coverage
-goals with full documentation. The remaining work is mostly checking (grade
-sign-off, verifying the web-sourced rows) and writing the required narrative, plus
-optional extra volume from a second patent. Submission runs May–Dec 2026.
+patent's word-ratings correctly; their sign-off lets us finalise the grades. (2)
+Sanity-check the core biology story. (3) Point out any source they'd want
+re-verified, especially the web-summary rows. Everything else (the written
+narrative, WS verification, more sequences, a second patent) is paused until they
+weigh in, so we don't polish things that might change.
 -->
 
 ---
@@ -784,8 +790,9 @@ sources/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the source PDFs + 
 <!--
 SPEAKER NOTES — plain English
 
-A map of the project folder so German knows where to look. The key file for his
-review is data/measurements.csv (the graded results); the rulebook is schema.md.
+A map of the project folder so the biochemistry expert knows where to look. The key
+file for review is data/measurements.csv (the graded results); the rulebook is
+schema.md.
 Closing point: every count on these slides comes straight out of the data files,
 so the deck can't drift from the underlying data. We'd love comments on specific
 rows, not just general impressions.
