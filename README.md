@@ -92,7 +92,7 @@ deliverable).
 | Delivery routes (systemic/gymnotic/intrathecal/intravitreal/oral) | 87 / 19 / 3 / 1 / 1 | 5 routes |
 | Study types (clinical/animal/in-vitro) | 39 / 53 / 19 | mixed |
 | Target genes | **35** | — |
-| Oligos with sequence (not TBD) | **41** | all |
+| Oligos with sequence (not TBD) | **44** | all |
 
 _Update this table in the same commit whenever rows are added._
 
