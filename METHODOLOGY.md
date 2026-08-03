@@ -112,7 +112,7 @@ Design predictors hypothesized to drive nephrotoxicity, per `oligos.csv`
 | **Backbone** | full-PS 45 · PS/PO-mix 15 · PMO-neutral 4 · mixed 1 |
 | **Conjugate** | none 48 · GalNAc 16 · PEG 1 |
 | **Development stage** | approved 19 · research panel 30 · phase 3 (incl. discontinued) 9 · phase 2 5 · phase 1 1 · class-level 1 |
-| **Sequence available** | 33 / 65 (rest `TBD`, never guessed) |
+| **Sequence available** | 46 / 65 (rest `TBD`, never guessed — 6 proprietary, 2 class-level aggregates, 11 published-but-unretrieved) |
 | **Target genes** | 35 distinct |
 
 ## 8. Dependent (indicator) variables and their distribution
@@ -160,8 +160,24 @@ Automated checks run after every ingestion round:
 ## 11. Known limitations
 
 - **Provisional grades** pending scientific (subject-matter) review.
-- **Sequence coverage 33/65**; remaining marketed-oligo sequences are published
-  (patents/INN) but were not transcribable from available summaries.
+- **Sequence coverage 46/65.** The 19 remaining `TBD` are not homogeneous:
+  **6 are proprietary and unpublishable** (the Moisan 2017 AON-A/C/D/E series and
+  the Sandelius 2020 cEt tool/control ASOs — sequences withheld by their sources),
+  **2 are class-level aggregate rows** for which a single sequence is not
+  meaningful (`OLG030` Janas GalNAc-siRNA panel, `OLG031` Crooke pooled 2′-MOE),
+  and **11 are published but not yet retrieved** (viltolarsen, patisiran,
+  revusiran, ISIS 113715, ISIS 104838, alicaforsen, fitusiran, mongersen,
+  cemdisiran, teprasiran, fazirsiran). Only the last group is actionable.
+- **Duplicate molecule, retained deliberately.** `OLG002` (SPC5001) and `OLG047`
+  (US11105794 compound 3-1) carry an **identical sequence and design** and are the
+  same molecule curated from two independent sources (Santaris/Roche clinical vs.
+  the Roche assay patent). Both rows are kept so each source's measurements remain
+  traceable, but they are cross-flagged in `notes` and **must not be treated as two
+  independent compounds when modelling.**
+- **`OLG024` (pegaptanib)** carries `length_nt = 28` against a 27-character
+  sequence: the 28th residue is a 3′-3′-linked inverted deoxythymidine cap, which
+  has no representation in a 5′→3′ string. The length is correct for the molecule;
+  the string is the 27-nt aptamer body.
 - **`WS` rows** rest on secondary search summaries of primary regulatory/trial
   sources and must be verified before release.
 - **Species translation** — animal toxicology is known to *over-predict* human

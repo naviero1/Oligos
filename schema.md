@@ -101,6 +101,30 @@ oligo may differ by model/dose. Record the rationale in `notes` when non-obvious
   `sequence_5to3` filled for 7/31 oligos (rest `TBD` pending authoritative
   retrieval — never guessed).
 
+- **2026-08-03** — Re-ran the US 11,105,794 patent-panel extraction from scratch and
+  validated all 21 compounds (`OLG045`–`OLG065`) against the patent's **formal
+  SEQUENCE LISTING** rather than the examples table alone. 19 rows match the
+  listing base-for-base; `OLG065` confirmed against its raw listing entry
+  (`LENGTH : 12`). Filled `OLG046` — its three leading glyphs are unmapped in the
+  text layer of **both** patents (render as `???`), recovered as `AAT` from the
+  rendered page and confirmed by the listing (SEQ ID NO:2, LENGTH 16). Corrected
+  `OLG065.gapmer_design` (`LNA_gapmer` → `2-8-2_MOE`) per the Table 1 footnote
+  defining bold-italic lower case as MOE units. Filled `OLG002` (SPC5001), whose
+  published sequence proved **identical to `OLG047`**, establishing that the
+  patent's PCSK9 compound 3-1 is the clinical nephrotoxin SPC5001; both rows are
+  cross-flagged as one molecule.
+  **Two extraction hazards recorded for future rounds:** (1) a naive
+  `[acgt]`-run regex over the sequence listing silently mis-parses SEQ ID NO:20 —
+  the text layer renders the bold-italic `tc` as `to`, so the regex skips it and
+  absorbs letters from the following claims text, yielding a plausible but wrong
+  14-nt sequence; always confirm against the entry's declared `LENGTH`. (2)
+  Judging letter case from rendered pixels is unreliable at x-height — an
+  apparent lower-case `c` in SEQ ID NO:1 contradicted four independent printed
+  loci reading `AATC`. Case encodes LNA vs. DNA, so resolve it from the text
+  layer and corroborating loci, not from a render.
+  After this round: all enum/FK/range checks pass; `sequence_5to3` filled for
+  **46/65** oligos.
+
 ---
 
 ## Derived table — `data/oligotox_kidney_merged.csv` (generated, not canonical)
