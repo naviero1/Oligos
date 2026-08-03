@@ -140,7 +140,11 @@ _Sequences for all anchor oligos are published (labels/INN/patents) but were lef
 - **N3/N4** patents, both *"In vitro nephrotoxicity screening assay"*:
   **US 11,479,818** = EGFR-mRNA-decrease readout; **US 11,105,794** =
   EGF-in-supernatant-increase readout. Tool reference oligo SEQ ID NO:1 =
-  `CGTcagtatgcgAATc` (β-D-oxy-LNA + PS). Assignee to confirm on the patent face.
+  `CGTcagtatgcgAATC` (β-D-oxy-LNA + PS). Assignee to confirm on the patent face.
+  _(Corrected 2026-08-03: previously transcribed here with a lower-case final
+  `c`. Both patents print `AATC` — US11105794 embodiment text + Table 1, and
+  US11479818 in three loci — and the formal sequence listing gives
+  `cgtcagtatgcgaatc`, LENGTH 16.)_
   Sibling application: **US 2015/0219625** *"In vitro assay for predicting renal
   proximal tubular cell toxicity."* Find WO/EP family via Google Patents
   "Also Published As" / Espacenet.
