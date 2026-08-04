@@ -27,7 +27,11 @@ are the chemistry/sequence/design features hypothesized to drive nephrotoxicity.
 | `gapmer_design` | string | Wing-gap-wing motif if applicable, e.g. `5-10-5_MOE`; else `NA`. |
 | `conjugate` | enum | `none` \| `GalNAc` \| `lipid` \| `peptide` \| `PEG` (e.g. `PEG_5prime`) \| `other`. (Affects renal exposure.) |
 | `ps_count` | int | Number of phosphorothioate linkages, or `TBD`. |
-| `sequence_5to3` | string | 5′→3′ sequence. **`TBD` unless from a redistribution-permitted source. Never guessed.** |
+| `sequence_5to3` | string | 5′→3′ sequence of the **active / guide strand** (the ASO itself, or an siRNA's antisense strand). **`TBD` unless from a redistribution-permitted source. Never guessed.** `NA` for class-level/pooled entries that are not a single molecule. |
+| `sequence_sense_5to3` | string | For **duplexes only**: the 5′→3′ **sense (passenger)** strand. Empty for single-stranded oligos. (Splitting the duplex across two columns keeps `sequence_5to3` a single comparable active strand across all modalities.) |
+| `sequence_source` | string | Exact provenance of the **sequence** specifically (e.g. `WHO INN Proposed List 114`, `EMA Givlaari EPAR EMA/CHMP/70703/2020 p15`, `US 11,105,794 B2 SEQ ID NO 2`). Distinct from `design_source`, which covers the rest of the design metadata. |
+| `sequence_redistribution` | enum | Rights status of the sequence string: `public_domain` (WHO INN, FDA/EMA regulatory documents, USPTO patents) \| `summary_stat` (journal-derived) \| `verify` (rights or provenance unresolved — e.g. taken from a secondary reproduction of an INN record) \| `NA`. |
+| `purity_characterization` | string | Purity / identity-characterization data for the oligo as reported by the source (e.g. HPLC, mass spec), or the literal `not_reported_in_source`. Required by the Phase 2 dataset specification; for an in-silico curation this records what the primary source states rather than newly generated analytics. |
 | `design_source` | string | Source for the design metadata (DOI / patent / label). |
 | `notes` | string | Free text. |
 

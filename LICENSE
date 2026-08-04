@@ -1,0 +1,18 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 OligoTox-Kidney contributors (Team GOG Digital Lab)
+
+The curated data tables and documentation in this repository are licensed under
+the Creative Commons Attribution 4.0 International License. You are free to
+share and adapt the material for any purpose, including commercially, provided
+you give appropriate credit, provide a link to the license, and indicate if
+changes were made.
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+NOTE ON THIRD-PARTY SOURCES: this repository curates values from published
+literature, regulatory documents, and patents. Underlying third-party full texts
+are referenced (DOI/PMID/patent number), never redistributed. Each data row
+records its rights status in the `redistribution` column: `public_domain` for
+US patents and US/EU regulatory documents, `summary_stat` for values used as
+summary statistics, and `verify` where rights are unresolved.

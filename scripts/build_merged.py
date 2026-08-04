@@ -21,22 +21,24 @@ OLIGOS = os.path.join(ROOT, "data", "oligos.csv")
 MEAS   = os.path.join(ROOT, "data", "measurements.csv")
 OUT    = os.path.join(ROOT, "data", "oligotox_kidney_merged.csv")
 
-# oligo design predictors (all oligos.csv columns except the key and its notes)
-OLIGO_PRED = ["oligo_name", "aliases", "oligo_class", "target_gene", "indication",
-              "developer", "max_phase", "length_nt", "backbone_chemistry",
-              "sugar_modifications", "gapmer_design", "conjugate", "ps_count",
-              "sequence_5to3", "design_source"]
-# measurement outcome/context columns (all measurements.csv columns except the keys and its notes)
-MEAS_COLS = ["study_type", "species", "system_model", "tissue", "delivery_method",
-             "dose_or_conc_value", "dose_or_conc_unit", "exposure_duration",
-             "readout_category", "readout_name", "readout_value", "readout_unit",
-             "effect_direction", "effect_vs_control", "nephrotox_grade",
-             "is_kidney_specific", "source_id", "source_ref", "source_table",
-             "redistribution"]
+# Column lists are DERIVED from the actual CSV headers, never hardcoded: a hardcoded
+# list silently drops any column added to a canonical table (which is how the
+# sequence-provenance columns went missing from this view once already).
+# Convention: the key columns and `notes` are placed explicitly; everything else
+# carries through in file order.
+def _passthrough(fieldnames, exclude):
+    return [c for c in fieldnames if c not in exclude]
 
 def main():
-    oligos = {r["oligo_id"]: r for r in csv.DictReader(open(OLIGOS, newline=""))}
-    meas   = list(csv.DictReader(open(MEAS, newline="")))
+    orx = csv.DictReader(open(OLIGOS, newline=""))
+    oligos = {r["oligo_id"]: r for r in orx}
+    mrx = csv.DictReader(open(MEAS, newline=""))
+    meas = list(mrx)
+
+    # oligo design predictors = every oligos.csv column except the key and its notes
+    OLIGO_PRED = _passthrough(orx.fieldnames, {"oligo_id", "notes"})
+    # measurement outcome/context = every measurements.csv column except the keys and its notes
+    MEAS_COLS = _passthrough(mrx.fieldnames, {"measurement_id", "oligo_id", "notes"})
 
     # referential-integrity guard: every measurement must reference a known oligo
     orphans = [m["measurement_id"] for m in meas if m["oligo_id"] not in oligos]
