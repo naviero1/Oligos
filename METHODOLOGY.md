@@ -77,6 +77,26 @@ Three extraction paths were used, each recorded per row via `source_id`:
    clinical trial, or nonclinical paper named in each row's `source_ref`**. These
    are flagged `source_id = WS` and should be **verified against the cited
    primary source before publication.**
+4. **WHO INN nomenclature derivation.** The WHO *Recommended INN* lists spell out
+   every residue of a named oligonucleotide longhand
+   (`2'-O-methyl-P-thiocytidylyl-(3'→5')-…`), so the base sequence is recoverable
+   by deterministic parse rather than transcription. Lists were fetched as PDFs,
+   text-extracted, and parsed by `scripts/fill_inn_sequences.py`. Two properties
+   make this safer than reading a sequence off a table:
+   - **Direction is explicit.** INN writes one strand with `(3'→5')` linkages
+     (listed 5'→3') and its partner with `(5'→3')` linkages (listed 3'→5', hence
+     reversed on output). Mis-handling this silently yields a *reversed* strand —
+     the single most dangerous failure mode here — so the parser was validated by
+     reproducing **givosiran** and **inclisiran**, already in this table from INN
+     List 76, character-for-character before any new row was written.
+   - **Results are self-checking.** Every duplex filled this way was required to
+     show its guide strand as the exact reverse complement of its sense strand
+     (ignoring 3′ overhangs), and residue counts were cross-checked against the
+     published molecular formula where the phosphorus count fixes the length
+     (e.g. viltolarsen `P20` → 21 nt; alicaforsen `P19S19` → 20 nt).
+
+   Note that path 3's network restriction was specific to earlier sessions; direct
+   fetch of `cdn.who.int` and PMC succeeded in the session that added path 4.
 
 > **No-fabrication policy (strict).** `sequence_5to3` and any toxicity
 > `readout_value` are **never invented or recalled from memory**. A sequence is
@@ -156,18 +176,29 @@ Automated checks run after every ingestion round:
   (0 orphans); no duplicate primary keys.
 - **Range checks** — `nephrotox_grade ∈ {0,1,2,3}`; booleans `TRUE/FALSE`.
 - **Sequence policy** — only explicitly-sourced sequences filled; all others `TBD`.
+- **Duplex self-consistency** — for every siRNA whose sense strand is recorded in
+  `notes`, the stored guide strand must be its exact reverse complement once 3′
+  overhangs are trimmed. This check depends on no external source being correct,
+  so it catches a plausible-but-wrong sequence that two agreeing documents would
+  not. All 6 duplexes added from WHO INN pass.
+- **Case is significant** — in gapmer rows case encodes chemistry (uppercase =
+  2′-MOE/cEt wings, lowercase = DNA gap). Sequence validators must be
+  case-insensitive; a case-sensitive `[ACGUT]+` check will report these correct
+  rows as malformed.
 
 ## 11. Known limitations
 
 - **Provisional grades** pending scientific (subject-matter) review.
-- **Sequence coverage 46/65.** The 19 remaining `TBD` are not homogeneous:
+- **Sequence coverage 55/65.** The 10 remaining `TBD` are, with one exception,
+  structurally unfillable rather than merely unretrieved:
   **6 are proprietary and unpublishable** (the Moisan 2017 AON-A/C/D/E series and
   the Sandelius 2020 cEt tool/control ASOs — sequences withheld by their sources),
   **2 are class-level aggregate rows** for which a single sequence is not
   meaningful (`OLG030` Janas GalNAc-siRNA panel, `OLG031` Crooke pooled 2′-MOE),
-  and **11 are published but not yet retrieved** (viltolarsen, patisiran,
-  revusiran, ISIS 113715, ISIS 104838, alicaforsen, fitusiran, mongersen,
-  cemdisiran, teprasiran, fazirsiran). Only the last group is actionable.
+  and **2 are Ionis development-code compounds** (`OLG025` ISIS 113715,
+  `OLG026` ISIS 104838) which never received an INN and so have no entry in the
+  WHO nomenclature lists that supplied the rest; their sequences would have to come
+  from patent sequence listings, which is the only actionable remainder.
 - **Duplicate molecule, retained deliberately.** `OLG002` (SPC5001) and `OLG047`
   (US11105794 compound 3-1) carry an **identical sequence and design** and are the
   same molecule curated from two independent sources (Santaris/Roche clinical vs.

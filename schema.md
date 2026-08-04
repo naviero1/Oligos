@@ -123,7 +123,8 @@ oligo may differ by model/dose. Record the rationale in `notes` when non-obvious
   loci reading `AATC`. Case encodes LNA vs. DNA, so resolve it from the text
   layer and corroborating loci, not from a render.
   After this round: all enum/FK/range checks pass; `sequence_5to3` filled for
-  **46/65** oligos.
+  **55/65** oligos (9 added by deterministic parse of WHO INN chemical
+  nomenclature — see METHODOLOGY §4 path 4).
 
 ---
 
