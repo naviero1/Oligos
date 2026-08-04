@@ -83,6 +83,40 @@ single oligo at a single concentration measured with KIM-1 *and* viability =
 Grade is assigned per measurement from the reported endpoint; rows for the same
 oligo may differ by model/dose. Record the rationale in `notes` when non-obvious.
 
+### In-vitro rubric extension (quantitative dose–response readouts)
+
+The 0–3 rubric above is written for clinical/histopathological endpoints. In-vitro
+rows report a **continuous value as % of control** (saline, or the innocuous
+reference compound 1-1), so grades are assigned by the explicit, deterministic
+thresholds below. Every such row records its value, its direction, and the
+resulting grade in `notes`, so any grade can be recomputed from the data.
+
+Two of these thresholds are **the source's own**, not ours: US 11,105,794 B2 /
+US 11,479,818 B2 state that toxicity is indicated by *"a 10 fold increase"* in
+KIM-1 mRNA and *"a 2 fold increase"* in KIM-1 protein over the innocuous
+compound. Those cutoffs are adopted verbatim as the grade-2 boundary.
+
+| Readout | Toxicity direction | 0 | 1 | 2 | 3 |
+|---|---|---|---|---|---|
+| `ATP` (intracellular) | decrease | ≥85 | 70–84 | 50–69 | <50 |
+| `EGFR_mRNA` | decrease | ≥75 | 50–74 | 25–49 | <25 |
+| `EGF_supernatant` | **increase** (impaired EGF consumption = tubular dysfunction) | ≤125 | 126–200 | 201–400 | >400 |
+| `KIM-1_protein` | increase | <150 | 150–199 | **200**–399 | ≥400 |
+| `KIM-1_mRNA` | increase | <300 | 300–999 | **1000**–2999 | ≥3000 |
+
+Bold = the patent's own stated toxicity threshold. All in-vitro grades are
+flagged `grade_provisional` pending subject-matter sign-off, consistent with the
+rest of the dataset.
+
+**What is deliberately excluded from the graded tables.** On-target pharmacology
+(`PCSK9_mRNA` knockdown) is *not* a toxicity readout — the source itself states
+the knockdown "does not appear to contribute to the toxicity" — so those rows are
+not graded. Vehicle/untreated controls, small-molecule reference nephrotoxicants
+(cyclosporine A, staurosporine), non-kidney systems (A549, CACO2, hepatocytes),
+and absolute-unit rows are likewise held outside the canonical strict-kidney
+tables. All exclusions are retained with their reasons in
+`data/patent_excluded_rows.json` rather than discarded silently.
+
 ## Provenance rules
 
 - Every row MUST carry `source_id` + `source_ref` + `source_table`.
