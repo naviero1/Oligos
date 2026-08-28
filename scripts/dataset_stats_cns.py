@@ -7,10 +7,12 @@ documentation cannot drift from the data. Re-run it after any change to the
 canonical tables and paste the output into the marked blocks.
 
 Usage:  python scripts/dataset_stats_cns.py
+        python scripts/dataset_stats_cns.py --check-docs
 """
 import csv
 import os
 import re
+import sys
 from collections import Counter
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,7 +41,51 @@ def table(title, counter, total=None):
     return "\n".join(out)
 
 
+def check_docs():
+    """Assert that the numbers hand-written into the docs match the data.
+
+    The counters in README-CNS.md are transcribed from this script's output, and
+    transcription is exactly the step this project distrusts everywhere else. A
+    dataset whose own README misstates its row count has no business asking anyone
+    to trust its 2,329 rows, so the claim is checked rather than assumed.
+    """
+    o, m = load()
+    facts = {
+        "oligos": len(o),
+        "measurements": len(m),
+        "grade0": sum(1 for r in m if r["neurotox_grade"] == "0"),
+        "grade3": sum(1 for r in m if r["neurotox_grade"] == "3"),
+        "invitro": sum(1 for r in m if r["study_type"] == "in_vitro"),
+        "clinical": sum(1 for r in m if r["study_type"] == "clinical"),
+        "animal": sum(1 for r in m if r["study_type"] == "animal_invivo"),
+        "lowephys": sum(1 for r in m
+                        if r["challenge_priority"] == "low_acute_electrophysiology"),
+        "hydro": sum(1 for r in m
+                     if r["challenge_priority"] == "high_hydrocephalus"),
+    }
+    bad = []
+    # README-CNS.md is the only doc that transcribes counters; METHODOLOGY-CNS.md
+    # deliberately defers its distributions to this script rather than repeating them.
+    for doc in ("README-CNS.md",):
+        path = os.path.join(ROOT, doc)
+        if not os.path.exists(path):
+            continue
+        text = open(path, encoding="utf-8").read()
+        nums = {int(x.replace(",", ""))
+                for x in re.findall(r"\b\d{1,3}(?:,\d{3})+\b|\b\d{3,5}\b", text)}
+        for name, val in facts.items():
+            # only check the counts big enough to be unambiguous in prose
+            if val >= 100 and val not in nums:
+                bad.append("%s: %s=%d appears nowhere" % (doc, name, val))
+    for b in bad:
+        print("DOC MISMATCH %s" % b)
+    print("doc check: %d mismatch(es)" % len(bad))
+    return 1 if bad else 0
+
+
 def main():
+    if "--check-docs" in sys.argv:
+        raise SystemExit(check_docs())
     o, m = load()
     n_o, n_m = len(o), len(m)
 
