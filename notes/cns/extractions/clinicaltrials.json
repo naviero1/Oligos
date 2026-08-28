@@ -1267,14 +1267,14 @@
    "readout_unit": "pct_incidence",
    "effect_direction": "increase",
    "effect_vs_control": "0.8pct_vs_0.0pct_control (2/263 vs 0/264)",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT03761849",
    "source_ref": "NCT03761849",
    "source_table": "resultsSection.adverseEventsModule.seriousEvents[70] | term='Hydrocephalus' | organSystem='Nervous system disorders' | arm=EG003 (Q8W NDC)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=2/263. arm=Q8W NDC. control arm = PLB NDC. HIGHEST-VALUE ROW FOR THE CHALLENGE. Hydrocephalus reported as a SERIOUS adverse event in the every-8-week 120 mg arm, with ZERO events in the concurrent intrathecal-placebo arm (n=264) and zero in the every-16-week arm. NOTE ON PROVENANCE: the ClinicalTrials.gov record lists this study as COMPLETED with no 'whyStopped' text, so nothing about early termination is asserted here. Graded 3 because the events met serious-adverse-event criteria; the AE table does not state whether shunting was required, so confirm before publication. grade_provisional"
+   "notes": "n_of_N=2/263. arm=Q8W NDC. control arm = PLB NDC. HIGHEST-VALUE ROW FOR THE CHALLENGE. Hydrocephalus reported as a SERIOUS adverse event in the every-8-week 120 mg arm, with ZERO events in the concurrent intrathecal-placebo arm (n=264) and zero in the every-16-week arm. NOTE ON PROVENANCE: the ClinicalTrials.gov record lists this study as COMPLETED with no 'whyStopped' text, so nothing about early termination is asserted here. Graded 3 because the events met serious-adverse-event criteria; the AE table does not state whether shunting was required, so confirm before publication. grade_provisional ;; VERIFIED[REFUTED] Same defect as CMS1296, of which this row is a duplicate: neurotox_grade=3 from serious-adverse-event coding alone, with no intervention stated at the locus. Correct grade is 2. Additionally this row and CMS1296 are the same fact recorded t ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_ct_m39",
@@ -1788,8 +1788,8 @@
    "system_model": "patient_cohort",
    "cns_region": "ventricle",
    "delivery_method": "intrathecal",
-   "dose_or_conc_value": "TBD",
-   "dose_or_conc_unit": "TBD",
+   "dose_or_conc_value": "120",
+   "dose_or_conc_unit": "mg",
    "exposure_duration": "14mo",
    "endpoint_domain": "hydrocephalus",
    "challenge_priority": "high_hydrocephalus",
@@ -1806,7 +1806,7 @@
    "source_ref": "NCT03342053",
    "source_table": "resultsSection.adverseEventsModule.seriousEvents[12] | term='Hydrocephalus' | organSystem='Nervous system disorders' | arm=EG000 (RO7234292 Monthly)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=1/23. arm=RO7234292 Monthly. control arm = RO7234292 Bimonthly. Serious hydrocephalus on MONTHLY intrathecal tominersen versus ZERO on bimonthly dosing in the same study - an independent replication of the exposure-dependent hydrocephalus signal seen in GENERATION HD1 (NCT03761849). The comparator here is the lower-frequency ACTIVE arm, not a placebo arm: this study is open-label with no placebo. Graded 3 on serious-adverse-event criteria; shunt requirement not stated in the AE table. grade_provisional"
+   "notes": "n_of_N=1/23. arm=RO7234292 Monthly. control arm = RO7234292 Bimonthly. Serious hydrocephalus on MONTHLY intrathecal tominersen versus ZERO on bimonthly dosing in the same study - an independent replication of the exposure-dependent hydrocephalus signal seen in GENERATION HD1 (NCT03761849). The comparator here is the lower-frequency ACTIVE arm, not a placebo arm: this study is open-label with no placebo. Graded 3 on serious-adverse-event criteria; shunt requirement not stated in the AE table. grade_provisional ;; VERIFIED[CONFIRMED_MINOR] neurotox_grade=3 rests on serious-adverse-event coding alone at the cited locus; the posted AE table says nothing about intervention, and the row's own notes admit 'shunt requirement not stated'. Grade 3 does happen to be correct in substan ;; corrected(dose_or_conc_value:TBD->120;dose_or_conc_unit:TBD->mg)"
   },
   {
    "measurement_id": "TMP_ct_m58",
@@ -1816,8 +1816,8 @@
    "system_model": "patient_cohort",
    "cns_region": "ventricle",
    "delivery_method": "intrathecal",
-   "dose_or_conc_value": "TBD",
-   "dose_or_conc_unit": "TBD",
+   "dose_or_conc_value": "120",
+   "dose_or_conc_unit": "mg",
    "exposure_duration": "14mo",
    "endpoint_domain": "hydrocephalus",
    "challenge_priority": "high_hydrocephalus",
@@ -1834,7 +1834,7 @@
    "source_ref": "NCT03342053",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[29] | term='Cerebral ventricle dilatation' | organSystem='Nervous system disorders' | arm=EG000 (RO7234292 Monthly)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=2/23. arm=RO7234292 Monthly. control arm = RO7234292 Bimonthly. VENTRICULOMEGALY - the exact endpoint the NCATS brief names. Two participants on monthly dosing versus ZERO on bimonthly. Non-serious coding, so graded 2 per the rubric entry 'ventriculomegaly without clinical decompensation'. Comparator is the lower-frequency active arm; no placebo arm exists in this open-label study. grade_provisional"
+   "notes": "n_of_N=2/23. arm=RO7234292 Monthly. control arm = RO7234292 Bimonthly. VENTRICULOMEGALY - the exact endpoint the NCATS brief names. Two participants on monthly dosing versus ZERO on bimonthly. Non-serious coding, so graded 2 per the rubric entry 'ventriculomegaly without clinical decompensation'. Comparator is the lower-frequency active arm; no placebo arm exists in this open-label study. grade_provisional ;; VERIFIED[CONFIRMED_MINOR] dose_or_conc_value=TBD is avoidable: the same posted record states the dose in outcomeMeasures[1] ('...Monthly and Bimonthly IT Administration of 120 mg RO7234292') and in the arm descriptions. Also exposure_duration='14mo' is the dosing du ;; corrected(dose_or_conc_value:TBD->120;dose_or_conc_unit:TBD->mg)"
   },
   {
    "measurement_id": "TMP_ct_m59",
@@ -1956,8 +1956,8 @@
    "system_model": "patient_cohort",
    "cns_region": "whole_brain",
    "delivery_method": "intrathecal",
-   "dose_or_conc_value": "TBD",
-   "dose_or_conc_unit": "TBD",
+   "dose_or_conc_value": "120",
+   "dose_or_conc_unit": "mg",
    "exposure_duration": "14mo",
    "endpoint_domain": "clinical_neuro_ae",
    "challenge_priority": "medium",
@@ -1974,7 +1974,7 @@
    "source_ref": "NCT03342053",
    "source_table": "resultsSection.adverseEventsModule.seriousEvents[11] | term='Hemiparesis' | organSystem='Nervous system disorders' | arm=EG000 (RO7234292 Monthly)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=1/23. arm=RO7234292 Monthly. control arm = RO7234292 Bimonthly. Serious hemiparesis on monthly dosing. Note the same arm also reported a serious cerebrovascular accident, so this hemiparesis is plausibly the stroke's deficit rather than a direct oligonucleotide effect - graded 2 but attribution flagged as low confidence. grade_provisional"
+   "notes": "n_of_N=1/23. arm=RO7234292 Monthly. control arm = RO7234292 Bimonthly. Serious hemiparesis on monthly dosing. Note the same arm also reported a serious cerebrovascular accident, so this hemiparesis is plausibly the stroke's deficit rather than a direct oligonucleotide effect - graded 2 but attribution flagged as low confidence. grade_provisional ;; VERIFIED[CONFIRMED] Internal inconsistency with CMS1289, which cites the same trial: this row records dose TBD while CMS1289 records 120 mg. The record does document 120 mg, so TBD is over-conservative here. ;; corrected(dose_or_conc_value:TBD->120;dose_or_conc_unit:TBD->mg)"
   },
   {
    "measurement_id": "TMP_ct_m64",
@@ -2331,14 +2331,14 @@
    "readout_unit": "pct_incidence",
    "effect_direction": "increase",
    "effect_vs_control": "6.2pct_vs_0.0pct_control (1/16 vs 0/8)",
-   "neurotox_grade": 2,
+   "neurotox_grade": "1",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT04089566",
    "source_ref": "NCT04089566",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[6] | term='Intracranial pressure increased' | organSystem='Nervous system disorders' | arm=EG004 (Part B: Later-Onset SMA: 50/28 mg Nusinersen)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=1/16. arm=Part B: Later-Onset SMA: 50/28 mg Nusinersen. control arm = Part B: Later-Onset SMA: 12/12 mg Nusinersen. DOSE-RESPONSE ROW: raised intracranial pressure at the HIGH 50/28 mg regimen versus ZERO at the approved 12 mg regimen, in the same randomised study and same later-onset SMA population. The comparator arm is the approved dose, not placebo. Grade 2 per the rubric's raised-ICP/ventriculomegaly band. grade_provisional"
+   "notes": "n_of_N=1/16. arm=Part B: Later-Onset SMA: 50/28 mg Nusinersen. control arm = Part B: Later-Onset SMA: 12/12 mg Nusinersen. DOSE-RESPONSE ROW: raised intracranial pressure at the HIGH 50/28 mg regimen versus ZERO at the approved 12 mg regimen, in the same randomised study and same later-onset SMA population. The comparator arm is the approved dose, not placebo. Grade 2 per the rubric's raised-ICP/ventriculomegaly band. grade_provisional ;; VERIFIED[CONFIRMED_MINOR] Duplicate of CMS1316 under the other source_id convention, and carries the same grade-2 concern. ;; corrected(neurotox_grade:2->1)"
   },
   {
    "measurement_id": "TMP_ct_m77",
@@ -2415,14 +2415,14 @@
    "readout_unit": "pct_incidence",
    "effect_direction": "increase",
    "effect_vs_control": "no_concurrent_control_arm",
-   "neurotox_grade": 2,
+   "neurotox_grade": "1",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT04089566",
    "source_ref": "NCT04089566",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[154] | term='CSF pressure increased' | organSystem='Investigations' | arm=EG005 (Part C: 50/28 mg Nusinersen)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=2/40. arm=Part C: 50/28 mg Nusinersen. no concurrent control arm in this study. Raised CSF (opening) pressure after a single high 50 mg intrathecal dose in participants previously stable on 12 mg. Part C is single-arm, so there is NO concurrent control. Grade 2 per the raised-ICP band. Directly relevant to the hydrocephalus endpoint the NCATS brief names. grade_provisional"
+   "notes": "n_of_N=2/40. arm=Part C: 50/28 mg Nusinersen. no concurrent control arm in this study. Raised CSF (opening) pressure after a single high 50 mg intrathecal dose in participants previously stable on 12 mg. Part C is single-arm, so there is NO concurrent control. Grade 2 per the raised-ICP band. Directly relevant to the hydrocephalus endpoint the NCATS brief names. grade_provisional ;; VERIFIED[CONFIRMED_MINOR] Grade inconsistent with CMS1236 in the same batch. CMS1236 grades asymptomatic raised lumbar opening pressure (12/34, >=28 cmH2O) as 1, with the explicit rationale that 'a raised opening pressure without symptoms, papilloedema or imaging ch ;; corrected(neurotox_grade:2->1) ;; VERIFIED[CONFIRMED_MINOR] Same grade concern as CMS1314, of which this is a duplicate under the other source_id convention: grade 2 for a non-serious Investigations-SOC pressure reading with no symptom or intervention documented; grade 1 is better supported."
   },
   {
    "measurement_id": "TMP_ct_m80",
@@ -2602,7 +2602,7 @@
    "delivery_method": "intrathecal",
    "dose_or_conc_value": 32,
    "dose_or_conc_unit": "mg",
-   "exposure_duration": "up_to_210d",
+   "exposure_duration": "up_to_196d",
    "endpoint_domain": "clinical_neuro_ae",
    "challenge_priority": "medium",
    "readout_category": "clinical_neuro_outcome",
@@ -2618,7 +2618,7 @@
    "source_ref": "NCT03225833",
    "source_table": "resultsSection.adverseEventsModule.seriousEvents[3] | term='Ataxia' | organSystem='Nervous system disorders' | arm=EG005 (WVE-120101 (32 mg))",
    "redistribution": "public_domain",
-   "notes": "n_of_N=1/10. arm=WVE-120101 (32 mg). control arm = Pooled Placebo. Serious ataxia at the TOP 32 mg dose only, with zero in pooled placebo and zero at all four lower doses (2/4/8/16 mg) - a clean top-dose-only pattern. Grade 2. Confounded by Huntington's disease progression, but the dose confinement argues for a drug effect. grade_provisional"
+   "notes": "n_of_N=1/10. arm=WVE-120101 (32 mg). control arm = Pooled Placebo. Serious ataxia at the TOP 32 mg dose only, with zero in pooled placebo and zero at all four lower doses (2/4/8/16 mg) - a clean top-dose-only pattern. Grade 2. Confounded by Huntington's disease progression, but the dose confinement argues for a drug effect. grade_provisional ;; VERIFIED[CONFIRMED_MINOR] Same exposure_duration error as CMS1404: the 32 mg cohort ran to Day 196, not Day 210. ;; corrected(exposure_duration:up_to_210d->up_to_196d)"
   },
   {
    "measurement_id": "TMP_ct_m87",
@@ -2882,7 +2882,7 @@
    "delivery_method": "intrathecal",
    "dose_or_conc_value": 32,
    "dose_or_conc_unit": "mg",
-   "exposure_duration": "up_to_210d",
+   "exposure_duration": "up_to_196d",
    "endpoint_domain": "neuroinflammation",
    "challenge_priority": "medium",
    "readout_category": "injury_biomarker",
@@ -2898,7 +2898,7 @@
    "source_ref": "NCT03225833",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[43] | term='CSF lymphocyte count increase' | organSystem='Investigations' | arm=EG005 (WVE-120101 (32 mg))",
    "redistribution": "public_domain",
-   "notes": "n_of_N=1/10. arm=WVE-120101 (32 mg). control arm = Pooled Placebo. CSF lymphocytosis at the top 32 mg dose versus zero in pooled placebo. Grade 1. Small cohort (n=10). grade_provisional"
+   "notes": "n_of_N=1/10. arm=WVE-120101 (32 mg). control arm = Pooled Placebo. CSF lymphocytosis at the top 32 mg dose versus zero in pooled placebo. Grade 1. Small cohort (n=10). grade_provisional ;; VERIFIED[CONFIRMED_MINOR] exposure_duration 'up_to_210d' is wrong for this arm. The record's AE timeframe reads 'Day 1 to end of study (Day 196 [32 mg cohort] or Day 210 [all other cohorts])'; this is the 32 mg cohort, so 196 days. ;; corrected(exposure_duration:up_to_210d->up_to_196d)"
   },
   {
    "measurement_id": "TMP_ct_m97",
@@ -3309,7 +3309,7 @@
    "readout_name": "Normal pressure hydrocephalus",
    "readout_value": 0.0,
    "readout_unit": "pct_incidence",
-   "effect_direction": "decrease",
+   "effect_direction": "no_change",
    "effect_vs_control": "0.0pct_vs_0.3pct_control (0/781 vs 2/778)",
    "neurotox_grade": 0,
    "reversibility": "not_assessed",
@@ -3318,7 +3318,7 @@
    "source_ref": "NCT03399370",
    "source_table": "resultsSection.adverseEventsModule.seriousEvents[227] | term='Normal pressure hydrocephalus' | organSystem='Nervous system disorders' | arm=EG000 (Inclisiran)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=0/781. arm=Inclisiran. control arm = Saline Solution. NON-CNS COMPARATOR ROW (is_cns_specific=FALSE): this oligonucleotide is dosed systemically and does not meaningfully cross the blood-brain barrier, so CNS-coded adverse events here index background/systemic rather than CNS-exposure-driven toxicity. Retained deliberately as a negative control. HIGH-VALUE NEGATIVE CONTROL FOR THE HYDROCEPHALUS ENDPOINT: zero hydrocephalus events on a systemically dosed GalNAc siRNA (n=781) versus TWO in the placebo arm (n=778). Incidence below control, therefore grade 0 by rule. Provides the background/spontaneous hydrocephalus rate in a large elderly cardiovascular cohort against which the intrathecal tominersen hydrocephalus rows should be read. grade_provisional"
+   "notes": "n_of_N=0/781. arm=Inclisiran. control arm = Saline Solution. NON-CNS COMPARATOR ROW (is_cns_specific=FALSE): this oligonucleotide is dosed systemically and does not meaningfully cross the blood-brain barrier, so CNS-coded adverse events here index background/systemic rather than CNS-exposure-driven toxicity. Retained deliberately as a negative control. HIGH-VALUE NEGATIVE CONTROL FOR THE HYDROCEPHALUS ENDPOINT: zero hydrocephalus events on a systemically dosed GalNAc siRNA (n=781) versus TWO in the placebo arm (n=778). Incidence below control, therefore grade 0 by rule. Provides the background/spontaneous hydrocephalus rate in a large elderly cardiovascular cohort against which the intrathecal tominersen hydrocephalus rows should be read. grade_provisional ;; VERIFIED[CONFIRMED_MINOR] effect_direction='decrease' for an arm with literally zero events is a category error - nothing decreased; 'no_change' is the honest encoding and the below-control comparison already lives in effect_vs_control. Separately, challenge_priorit ;; corrected(effect_direction:decrease->no_change)"
   },
   {
    "measurement_id": "TMP_ct_m112",

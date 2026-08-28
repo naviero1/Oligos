@@ -1,0 +1,468 @@
+{
+ "batch": "batch_digitised",
+ "verdicts": [
+  {
+   "measurement_id": "CMS0372",
+   "verdict": "REFUTED",
+   "checked": "Fetched US11851654B2 full text from patents.google.com and parsed the real HTML tables (the freepatentsonline dump in the working dir has the tables stripped to [TABLE] placeholders). Read Tables 2/6/10/14 'Acute tolerability score', the paired side-effect-rate tables (3/7/11/15), the mortality tables (4/8/12/16) and the Example 1-5 dosing/method paragraphs. Table 10 row 'ASO', 1 h column reads 7.5 +/- 0.9 - the recorded value and effect_vs_control are exactly right, and this row is NOT figure-derived (it is a printed patent table, so the batch's 'digitised' flag is wrong).",
+   "problem": "Example 4's own mortality table (TABLE 12) records ASO 2/6 mice dead within one day of dosing. The row grades this group 2 with reversibility='reversible' and never mentions the deaths. Under the schema rubric, 'moribundity/death' is grade 3, and a group with 33% one-day mortality is not 'reversible'. Secondary: the notes hard-code 'n=4-7', which is Example 1's n; Example 4 states n=4 to 5 (Table 10 footnote '(n = 4-5)'). Also dose_or_conc_value=12 with dose_or_conc_unit=TBD leaves a bare number with no unit in a numeric field.",
+   "correction": {
+    "neurotox_grade": "3",
+    "reversibility": "partially_reversible",
+    "notes_add": "Example 4 mortality (patent Table 12): ASO 2/6 mice died within 1 day; n=4-5 (not 4-7).",
+    "dose_or_conc_value": "TBD (or keep 12 only if the unit is recorded as umol/mouse in notes)"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS0380",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Fetched US11851654B2 full text from patents.google.com and parsed the real HTML tables (the freepatentsonline dump in the working dir has the tables stripped to [TABLE] placeholders). Read Tables 2/6/10/14 'Acute tolerability score', the paired side-effect-rate tables (3/7/11/15), the mortality tables (4/8/12/16) and the Example 1-5 dosing/method paragraphs. Table 10 row 'OH 26mer'... row 'OH 22mer', 6 h column reads 0 +/- 0. Value, direction, grade 0 and PBS comparator all correct. Not figure-derived.",
+   "problem": "notes state 'n=4-7' (Example 1's n); Example 4 states n=4 to 5. No deaths in the OH groups (Table 12: 0/4), so grade 0 stands.",
+   "correction": {
+    "notes_add": "n=4-5 for Example 4, not 4-7"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0388",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Fetched US11851654B2 full text from patents.google.com and parsed the real HTML tables (the freepatentsonline dump in the working dir has the tables stripped to [TABLE] placeholders). Read Tables 2/6/10/14 'Acute tolerability score', the paired side-effect-rate tables (3/7/11/15), the mortality tables (4/8/12/16) and the Example 1-5 dosing/method paragraphs. Table 10 row 'OH 26mer', 3 h column reads 0 +/- 0. Value, direction and grade 0 correct. Not figure-derived.",
+   "problem": "notes state 'n=4-7'; Example 4 states n=4 to 5.",
+   "correction": {
+    "notes_add": "n=4-5 for Example 4, not 4-7"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0424",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Fetched US11851654B2 full text from patents.google.com and parsed the real HTML tables (the freepatentsonline dump in the working dir has the tables stripped to [TABLE] placeholders). Read Tables 2/6/10/14 'Acute tolerability score', the paired side-effect-rate tables (3/7/11/15), the mortality tables (4/8/12/16) and the Example 1-5 dosing/method paragraphs. Table 14 row 'HDO', 1 h column reads 0 +/- 0. Dose 6 umol/mouse correctly picked up from Example 5 (the only example that used 6, not 12) - good catch by the extractor. Grade 0 correct; Table 16 shows 0/4 deaths in the HDO group.",
+   "problem": "notes state 'n=4-7'; Example 5 states n=4 and the Table 14 footnote says (n = 3-4).",
+   "correction": {
+    "notes_add": "n=4 per Example 5 text / 3-4 per Table 14 footnote, not 4-7"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0444",
+   "verdict": "REFUTED",
+   "checked": "Fetched US11851654B2 full text from patents.google.com and parsed the real HTML tables (the freepatentsonline dump in the working dir has the tables stripped to [TABLE] placeholders). Read Tables 2/6/10/14 'Acute tolerability score', the paired side-effect-rate tables (3/7/11/15), the mortality tables (4/8/12/16) and the Example 1-5 dosing/method paragraphs. Table 2 row 'ASO', 6 h column reads 2.4 +/- 2.9 - value and effect_vs_control exactly right. Not figure-derived. Example 1 n=4 to 7 is correctly stated here.",
+   "problem": "Example 1's mortality table (TABLE 4) records ASO 2/6 mice dead within one day. The row grades 1 ('mild, transient, reversible, no neuronal loss') and does not mention the deaths. The rubric puts death at grade 3. The high SD (+/-2.9 on a 0-11 scale) is itself the fingerprint of a bimodal group containing dead/moribund animals.",
+   "correction": {
+    "neurotox_grade": "3",
+    "notes_add": "Example 1 mortality (patent Table 4): ASO 2/6 mice died within 1 day."
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS0453",
+   "verdict": "CONFIRMED",
+   "checked": "Fetched US11851654B2 full text from patents.google.com and parsed the real HTML tables (the freepatentsonline dump in the working dir has the tables stripped to [TABLE] placeholders). Read Tables 2/6/10/14 'Acute tolerability score', the paired side-effect-rate tables (3/7/11/15), the mortality tables (4/8/12/16) and the Example 1-5 dosing/method paragraphs. Table 2 row 'HDO cRNA all PO', 6 h column reads 0 +/- 0. Value, direction, grade 0, n=4-7, dose 12 umol/mouse, ICR mouse/left lateral ventricle/0-11 11-item battery all verified against Example 1. Table 4 shows 0/4 deaths in this group. Not figure-derived.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0481",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Fetched US11851654B2 full text from patents.google.com and parsed the real HTML tables (the freepatentsonline dump in the working dir has the tables stripped to [TABLE] placeholders). Read Tables 2/6/10/14 'Acute tolerability score', the paired side-effect-rate tables (3/7/11/15), the mortality tables (4/8/12/16) and the Example 1-5 dosing/method paragraphs. Table 6 row 'HDO 10mer', 3 h column reads 0 +/- 0. Value and grade correct; Table 8 shows 0/4 deaths.",
+   "problem": "notes state 'n=4-7'; Example 2 states n=4 to 5.",
+   "correction": {
+    "notes_add": "n=4-5 for Example 2, not 4-7"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0489",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Fetched US11851654B2 full text from patents.google.com and parsed the real HTML tables (the freepatentsonline dump in the working dir has the tables stripped to [TABLE] placeholders). Read Tables 2/6/10/14 'Acute tolerability score', the paired side-effect-rate tables (3/7/11/15), the mortality tables (4/8/12/16) and the Example 1-5 dosing/method paragraphs. Table 6 row 'HDO 13mer', 1 h column reads 2.3 +/- 1.5. Value, effect_vs_control and grade 1 correct; Table 8 shows 0/4 deaths in the HDO 13mer group (the 1/5 death was in the ASO group).",
+   "problem": "notes state 'n=4-7'; Example 2 states n=4 to 5.",
+   "correction": {
+    "notes_add": "n=4-5 for Example 2, not 4-7"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1699",
+   "verdict": "CONFIRMED",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Control-003 = 0, identical to readout_value. Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. Grade (0 for score 0, 1 for 0<s<4) agrees with both the authors' 'mild (<4)' band and the schema rubric's grade 0/1.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1716",
+   "verdict": "CONFIRMED",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Validate-020 = 0, identical to readout_value. Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. Grade (0 for score 0, 1 for 0<s<4) agrees with both the authors' 'mild (<4)' band and the schema rubric's grade 0/1.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1732",
+   "verdict": "CONFIRMED",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Test-036 = 0, identical to readout_value. Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. Grade (0 for score 0, 1 for 0<s<4) agrees with both the authors' 'mild (<4)' band and the schema rubric's grade 0/1.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1741",
+   "verdict": "CONFIRMED",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Test-045 = 0, identical to readout_value. Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. Grade (0 for score 0, 1 for 0<s<4) agrees with both the authors' 'mild (<4)' band and the schema rubric's grade 0/1.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1708",
+   "verdict": "CONFIRMED",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Control-012 = 0.5, identical to readout_value. Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. Grade (0 for score 0, 1 for 0<s<4) agrees with both the authors' 'mild (<4)' band and the schema rubric's grade 0/1.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1749",
+   "verdict": "CONFIRMED",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Test-053 = 0.05, identical to readout_value. Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. Grade (0 for score 0, 1 for 0<s<4) agrees with both the authors' 'mild (<4)' band and the schema rubric's grade 0/1.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1757",
+   "verdict": "CONFIRMED",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Test-061 = 0.3, identical to readout_value. Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. Grade (0 for score 0, 1 for 0<s<4) agrees with both the authors' 'mild (<4)' band and the schema rubric's grade 0/1.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1765",
+   "verdict": "CONFIRMED",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Test-069 = 0.5, identical to readout_value. Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. Grade (0 for score 0, 1 for 0<s<4) agrees with both the authors' 'mild (<4)' band and the schema rubric's grade 0/1.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1774",
+   "verdict": "CONFIRMED",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Test-078 = 0.67, identical to readout_value. Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. Grade (0 for score 0, 1 for 0<s<4) agrees with both the authors' 'mild (<4)' band and the schema rubric's grade 0/1.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1782",
+   "verdict": "CONFIRMED",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Test-086 = 0.83, identical to readout_value. Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. Grade (0 for score 0, 1 for 0<s<4) agrees with both the authors' 'mild (<4)' band and the schema rubric's grade 0/1.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1790",
+   "verdict": "CONFIRMED",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Test-094 = 1.5, identical to readout_value. Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. Grade (0 for score 0, 1 for 0<s<4) agrees with both the authors' 'mild (<4)' band and the schema rubric's grade 0/1.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1798",
+   "verdict": "CONFIRMED",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Test-102 = 2.33, identical to readout_value. Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. Grade (0 for score 0, 1 for 0<s<4) agrees with both the authors' 'mild (<4)' band and the schema rubric's grade 0/1.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1807",
+   "verdict": "CONFIRMED",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Test-111 = 3.33, identical to readout_value. Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. Grade (0 for score 0, 1 for 0<s<4) agrees with both the authors' 'mild (<4)' band and the schema rubric's grade 0/1.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1724",
+   "verdict": "CONFIRMED",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Validate-028 = 20, identical to readout_value. Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. Grade 3 and reversibility='irreversible' are supported: the source defines a score of 20 as severe signs in all five categories including convulsions requiring euthanasia, so these animals did not recover.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1864",
+   "verdict": "CONFIRMED",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Test-168 = 20, identical to readout_value. Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. Grade 3 and reversibility='irreversible' are supported: the source defines a score of 20 as severe signs in all five categories including convulsions requiring euthanasia, so these animals did not recover.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1872",
+   "verdict": "CONFIRMED",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Test-176 = 20, identical to readout_value. Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. Grade 3 and reversibility='irreversible' are supported: the source defines a score of 20 as severe signs in all five categories including convulsions requiring euthanasia, so these animals did not recover.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1815",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Test-119 = 4, identical to readout_value (including the unrounded 10.66). Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. The author severity class quoted in notes matches the paper's published cutoffs (mild <4, moderate 4-7, marked 7-18, severe >18).",
+   "problem": "Grade-mapping tension, not a data error: the row maps 4<=s<=18 to neurotox_grade 2, but the schema rubric's grade 1 explicitly covers 'transient acute behavioural signs resolving within hours-days', and Hagedorn states signs waned 2-4 h post-dose and 'almost never' reappeared from 24 h to 7 days with no euthanasia below a score of 20. Grade 2 is arguable via the rubric's 'clinically significant but manageable/resolving neurologic adverse event' clause, but it should say so; as written the same acute reversible phenomenon is graded 1, 2 or 3 in different lanes of this dataset by different ad-hoc mappings.",
+   "correction": {
+    "notes_add": "Grade 2 justified under the rubric's 'clinically significant but resolving neurologic AE' clause; signs resolved 2-4 h with no neuronal loss."
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1823",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Test-127 = 4.67, identical to readout_value (including the unrounded 10.66). Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. The author severity class quoted in notes matches the paper's published cutoffs (mild <4, moderate 4-7, marked 7-18, severe >18).",
+   "problem": "Grade-mapping tension, not a data error: the row maps 4<=s<=18 to neurotox_grade 2, but the schema rubric's grade 1 explicitly covers 'transient acute behavioural signs resolving within hours-days', and Hagedorn states signs waned 2-4 h post-dose and 'almost never' reappeared from 24 h to 7 days with no euthanasia below a score of 20. Grade 2 is arguable via the rubric's 'clinically significant but manageable/resolving neurologic adverse event' clause, but it should say so; as written the same acute reversible phenomenon is graded 1, 2 or 3 in different lanes of this dataset by different ad-hoc mappings.",
+   "correction": {
+    "notes_add": "Grade 2 justified under the rubric's 'clinically significant but resolving neurologic AE' clause; signs resolved 2-4 h with no neuronal loss."
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1831",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Test-135 = 7, identical to readout_value (including the unrounded 10.66). Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. The author severity class quoted in notes matches the paper's published cutoffs (mild <4, moderate 4-7, marked 7-18, severe >18).",
+   "problem": "Grade-mapping tension, not a data error: the row maps 4<=s<=18 to neurotox_grade 2, but the schema rubric's grade 1 explicitly covers 'transient acute behavioural signs resolving within hours-days', and Hagedorn states signs waned 2-4 h post-dose and 'almost never' reappeared from 24 h to 7 days with no euthanasia below a score of 20. Grade 2 is arguable via the rubric's 'clinically significant but manageable/resolving neurologic adverse event' clause, but it should say so; as written the same acute reversible phenomenon is graded 1, 2 or 3 in different lanes of this dataset by different ad-hoc mappings.",
+   "correction": {
+    "notes_add": "Grade 2 justified under the rubric's 'clinically significant but resolving neurologic AE' clause; signs resolved 2-4 h with no neuronal loss."
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1839",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Test-143 = 7.67, identical to readout_value (including the unrounded 10.66). Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. The author severity class quoted in notes matches the paper's published cutoffs (mild <4, moderate 4-7, marked 7-18, severe >18).",
+   "problem": "Grade-mapping tension, not a data error: the row maps 4<=s<=18 to neurotox_grade 2, but the schema rubric's grade 1 explicitly covers 'transient acute behavioural signs resolving within hours-days', and Hagedorn states signs waned 2-4 h post-dose and 'almost never' reappeared from 24 h to 7 days with no euthanasia below a score of 20. Grade 2 is arguable via the rubric's 'clinically significant but manageable/resolving neurologic adverse event' clause, but it should say so; as written the same acute reversible phenomenon is graded 1, 2 or 3 in different lanes of this dataset by different ad-hoc mappings.",
+   "correction": {
+    "notes_add": "Grade 2 justified under the rubric's 'clinically significant but resolving neurologic AE' clause; signs resolved 2-4 h with no neuronal loss."
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1848",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Test-152 = 10.66, identical to readout_value (including the unrounded 10.66). Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. The author severity class quoted in notes matches the paper's published cutoffs (mild <4, moderate 4-7, marked 7-18, severe >18).",
+   "problem": "Grade-mapping tension, not a data error: the row maps 4<=s<=18 to neurotox_grade 2, but the schema rubric's grade 1 explicitly covers 'transient acute behavioural signs resolving within hours-days', and Hagedorn states signs waned 2-4 h post-dose and 'almost never' reappeared from 24 h to 7 days with no euthanasia below a score of 20. Grade 2 is arguable via the rubric's 'clinically significant but manageable/resolving neurologic adverse event' clause, but it should say so; as written the same acute reversible phenomenon is graded 1, 2 or 3 in different lanes of this dataset by different ad-hoc mappings.",
+   "correction": {
+    "notes_add": "Grade 2 justified under the rubric's 'clinically significant but resolving neurologic AE' clause; signs resolved 2-4 h with no neuronal loss."
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1856",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Opened the local Supplementary Table S1 workbook (/home/user/oligos/sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx), matched the row by its exact 5'->3' sequence and read column 'Acute_tolerance_score_mice'. Also read the Methods and Results in PMC9221153 for the scale definition and the severity bands. This value is TABULATED, not digitised - the batch's flag is wrong for all 22 Hagedorn rows. xlsx value for Test-160 = 13.67, identical to readout_value (including the unrounded 10.66). Source confirms: five categories scored 0-4, summed 0-20, '20 = severe signs in all categories, including convulsions resulting in euthanasia'; all ASOs dosed at 100 ug ICV; observation in the 1st hour. The author severity class quoted in notes matches the paper's published cutoffs (mild <4, moderate 4-7, marked 7-18, severe >18).",
+   "problem": "Grade-mapping tension, not a data error: the row maps 4<=s<=18 to neurotox_grade 2, but the schema rubric's grade 1 explicitly covers 'transient acute behavioural signs resolving within hours-days', and Hagedorn states signs waned 2-4 h post-dose and 'almost never' reappeared from 24 h to 7 days with no euthanasia below a score of 20. Grade 2 is arguable via the rubric's 'clinically significant but manageable/resolving neurologic adverse event' clause, but it should say so; as written the same acute reversible phenomenon is graded 1, 2 or 3 in different lanes of this dataset by different ad-hoc mappings.",
+   "correction": {
+    "notes_add": "Grade 2 justified under the rubric's 'clinically significant but resolving neurologic AE' clause; signs resolved 2-4 h with no neuronal loss."
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1881",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Read the article XML (PMC12865454), the local supplement (orourke2026_NAR_acute_inhibition_supplement.pdf: acute-inhibition scales in Supp Fig S1, statistics in Supp Tables S10/S13) and the published figure JPEG itself (gkaf1333fig3.jpg / gkaf1333fig5.jpg), measuring bar tops in pixels against the y-axis tick spacing. Fig 1A is a per-region incidence heat map (white=0/4, green=4/4 rats with paresis/paralysis), so it carries no group-mean score - readout_value=TBD is the correct and honest record. At 1000 ug the map is green through the anterior-posture row at 3-4 h, and the text confirms 'At higher doses of 700-1000 ug, both posterior and anterior regions were impacted'; grade 3 (paralysis) and reversibility='reversible' (all animals scored 0 by 16-24 h and for 2 weeks) are both supported.",
+   "problem": "Locus over-reach: source_table also cites 'Figure 1B time course', but Fig 1B is explicitly the 700 ug group ('Rats received 700 ug of ASO1'), not the 1000 ug group this row records. The notes' claim that 'the 700 ug value of 4 is stated in the text' is correct ('By 3 h, peak scores of 4 were reached') but belongs to a different dose row.",
+   "correction": {
+    "source_table": "Figure 1A heat map (1000 ug column); Fig 1B is the 700 ug time course and does not cover this dose"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1889",
+   "verdict": "REFUTED",
+   "checked": "Read the article XML (PMC12865454), the local supplement (orourke2026_NAR_acute_inhibition_supplement.pdf: acute-inhibition scales in Supp Fig S1, statistics in Supp Tables S10/S13) and the published figure JPEG itself (gkaf1333fig3.jpg / gkaf1333fig5.jpg), measuring bar tops in pixels against the y-axis tick spacing. Fig 3B rat panel: y-axis 0-7, ticks measured at 22 px/unit with zero at y=216. Rat doses are 100/300/700/1000 ug (NOT the mouse panel's 30/100/300/700). Measured bar tops: 100 ug = 0, 300 ug = 2.50, 700 ug = 3.32, 1000 ug = 3.86 (dots at 4,4,4). Supp Table S10 confirms rat n=3 at 700 and 1000 ug and P=0.0131 at 1000 ug.",
+   "problem": "The recorded group mean of 3.0 is wrong: the 700 ug rat bar sits at 3.33 (individual dots at 3, 3 and 4 with n=3), measured at 3.32 by pixel. With n=3 integer scores the only possible means are multiples of 0.33, so 3.0 was an estimate of the bar height rather than a read of the plotted points. Separately, the row assigns neurotox_grade 3 to a group that the paper's own Supp Table S10 reports as NOT significantly different from PBS (ns at 30-700 ug; only 1000 ug reached P=0.0131). Grade 3 is still defensible on the individual scores (all three rats at 3-4 = hindlimbs cannot support weight / full hindlimb paralysis, and the rubric names paralysis at grade 3), but the row should say that the group-level test was ns.",
+   "correction": {
+    "readout_value": "3.33",
+    "effect_vs_control": "3.33 vs PBS 0; Kruskal-Wallis vs PBS ns at this dose (significant only at 1000 ug, P=0.0131; Supp Table S10)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1899",
+   "verdict": "CONFIRMED",
+   "checked": "Read the article XML (PMC12865454), the local supplement (orourke2026_NAR_acute_inhibition_supplement.pdf: acute-inhibition scales in Supp Fig S1, statistics in Supp Tables S10/S13) and the published figure JPEG itself (gkaf1333fig3.jpg / gkaf1333fig5.jpg), measuring bar tops in pixels against the y-axis tick spacing. Fig 5C is the ASO5 (black) vs ASO5_PO (orange) dose response at 10/30/100/300/700 ug. At 10 ug both series sit exactly on the axis at 0; Supp Table S13 lists 5C ASO5 at 10 ug as ns. Value 0.0, effect_direction no_change, grade 0 and the ICV 0-7 scale quoted in notes all match Supp Fig S1B.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1907",
+   "verdict": "REFUTED",
+   "checked": "Read the article XML (PMC12865454), the local supplement (orourke2026_NAR_acute_inhibition_supplement.pdf: acute-inhibition scales in Supp Fig S1, statistics in Supp Tables S10/S13) and the published figure JPEG itself (gkaf1333fig3.jpg / gkaf1333fig5.jpg), measuring bar tops in pixels against the y-axis tick spacing. Fig 5E ASO2 panel: ticks at 25 px/unit with zero at y=675. The 700 ug ASO2 bar's grey top is at y=569 = 4.24; the plotted dots are at 4, 4, 4 and 5 (n=4). Supp Table S13 confirms ASO2 PS vs PO at 700 ug P=0.0286, matching the row's stated statistic.",
+   "problem": "readout_value 4.1 is wrong and is arithmetically impossible: with n=4 integer scores on an ordinal 0-7 scale the group mean must be a multiple of 0.25. The figure's mean is 4.25 (dots 4,4,4,5), which the bar top confirms to within one pixel. This is false precision produced by eyeballing a bar height instead of counting the dots. neurotox_grade 3 is unaffected (4.25 >= 4 under the row's own mapping).",
+   "correction": {
+    "readout_value": "4.25"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1916",
+   "verdict": "CONFIRMED",
+   "checked": "Read the article XML (PMC12865454), the local supplement (orourke2026_NAR_acute_inhibition_supplement.pdf: acute-inhibition scales in Supp Fig S1, statistics in Supp Tables S10/S13) and the published figure JPEG itself (gkaf1333fig3.jpg / gkaf1333fig5.jpg), measuring bar tops in pixels against the y-axis tick spacing. Fig 5E ASO3_PO panel at 30 ug: the coloured series sits exactly on the zero axis (a bar at the axis is one of the few figure readings that is exact). Supp Table S13 lists the PS-vs-PO comparison at 30 ug as ns for ASO3, ASO4 and ASO7, consistent with a score of 0. Value 0.0, no_change and grade 0 all correct.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1924",
+   "verdict": "CONFIRMED",
+   "checked": "Read the article XML (PMC12865454), the local supplement (orourke2026_NAR_acute_inhibition_supplement.pdf: acute-inhibition scales in Supp Fig S1, statistics in Supp Tables S10/S13) and the published figure JPEG itself (gkaf1333fig3.jpg / gkaf1333fig5.jpg), measuring bar tops in pixels against the y-axis tick spacing. Fig 5E ASO4_PO panel at 30 ug: the coloured series sits exactly on the zero axis (a bar at the axis is one of the few figure readings that is exact). Supp Table S13 lists the PS-vs-PO comparison at 30 ug as ns for ASO3, ASO4 and ASO7, consistent with a score of 0. Value 0.0, no_change and grade 0 all correct.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1940",
+   "verdict": "CONFIRMED",
+   "checked": "Read the article XML (PMC12865454), the local supplement (orourke2026_NAR_acute_inhibition_supplement.pdf: acute-inhibition scales in Supp Fig S1, statistics in Supp Tables S10/S13) and the published figure JPEG itself (gkaf1333fig3.jpg / gkaf1333fig5.jpg), measuring bar tops in pixels against the y-axis tick spacing. Fig 5E ASO7_PO panel at 30 ug: the coloured series sits exactly on the zero axis (a bar at the axis is one of the few figure readings that is exact). Supp Table S13 lists the PS-vs-PO comparison at 30 ug as ns for ASO3, ASO4 and ASO7, consistent with a score of 0. Value 0.0, no_change and grade 0 all correct.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1932",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Read the article XML (PMC12865454), the local supplement (orourke2026_NAR_acute_inhibition_supplement.pdf: acute-inhibition scales in Supp Fig S1, statistics in Supp Tables S10/S13) and the published figure JPEG itself (gkaf1333fig3.jpg / gkaf1333fig5.jpg), measuring bar tops in pixels against the y-axis tick spacing. Fig 5E ASO6 panel at 30 ug: ASO6_PO sits on the zero axis (ASO6 full-PS at the same dose is 0.25, dots 0,0,0,1); Supp Table S13 lists ASO6 PS vs PO at 30 ug as ns. Value 0.0 and grade 0 correct.",
+   "problem": "Panel-label imprecision: the string 'ASO6_PO (MOE)' is the key label used in Figure 5F (the sugar-modification panel, run at 100 ug), not in Figure 5E, where the series is simply 'ASO6_PO'. Same molecule, so the value stands, but the citation mixes two panels and could be read as pointing at the 5F 100 ug experiment.",
+   "correction": {
+    "source_table": "Figure 5E (ASO6_PO series, 30 ug), group mean read from the bar chart"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1949",
+   "verdict": "REFUTED",
+   "checked": "Read the article XML (PMC12865454), the local supplement (orourke2026_NAR_acute_inhibition_supplement.pdf: acute-inhibition scales in Supp Fig S1, statistics in Supp Tables S10/S13) and the published figure JPEG itself (gkaf1333fig3.jpg / gkaf1333fig5.jpg), measuring bar tops in pixels against the y-axis tick spacing. Fig 5E ASO8 panel: ticks at 25 px/unit with zero at y=924. At 100 ug the black ASO8 series is 4.0 (four dots at 4) and the pink ASO8_PO series has dots at 4, 4, 4 and 3 with its grey bar top measured at y=830-831 = 3.72-3.75. Supp Table S13 confirms ASO8 PS vs PO at 100 ug is ns (only the 30 ug comparison reached 0.0286).",
+   "problem": "readout_value 4.0 is wrong: the ASO8_PO 100 ug group mean is 3.75 (dots 4,4,4,3). The error crosses the row's own grade boundary - the notes define the mapping as '2<=s<4 -> 2; s>=4 -> 3', so the correct grade is 2, not 3. This matters beyond a rounding quibble: ASO8 is the paper's one sequence where reducing PS content did NOT mitigate acute inhibition, so its severity label is exactly the datum a model would learn from.",
+   "correction": {
+    "readout_value": "3.75",
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1957",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Read the article XML (PMC12867516), the local supplement (bravohernandez2026_NAR_acute_activation_supplement.pdf: Supp Fig S1 rendered at 300 dpi, Supp Tables S3/S5/S9) and the published figure JPEG (gkag057fig1.jpg), with the Fig 1F bar tops measured in pixels against ticks at 19.43 px/unit (zero at y=738.5). Fig 1A is the ASO A dose response (0.03/0.1/0.3/1/3 mg) in three time blocks. Supp Table S3 gives the 0.1 mg (3.3 mg/mL x 30 uL) group P=0.386558 at 0-15 min, so readout_value=TBD with effect_direction=no_change and grade 0 is defensible for this dose and time block, and TBD is the right call for a group mean that overlaps the vehicle band.",
+   "problem": "The effect_vs_control text is factually wrong about the source's own statistics. It says 'only the 3 mg group reached significance (P<0.001 at 0-15 min)'. Supp Table S3 shows that at 0-15 min the 1 mg group (P=0.040960) and the 0.3 mg group (P=0.003954) also reached significance, and that this very 0.1 mg group was significant at 30-60 min (P=0.017980). A reader would take the row as evidence that everything below 3 mg is silent, which the source contradicts.",
+   "correction": {
+    "effect_vs_control": "ns vs aCSF at 0-15 min at this dose (P=0.386558, Mann-Whitney, Supp Table S3); the same 0.1 mg group was significant at 30-60 min (P=0.017980), and 0.3 mg (P=0.003954) and 1 mg (P=0.040960) were significant at 0-15 min"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1965",
+   "verdict": "CONFIRMED",
+   "checked": "Read the article XML (PMC12867516), the local supplement (bravohernandez2026_NAR_acute_activation_supplement.pdf: Supp Fig S1 rendered at 300 dpi, Supp Tables S3/S5/S9) and the published figure JPEG (gkag057fig1.jpg), with the Fig 1F bar tops measured in pixels against ticks at 19.43 px/unit (zero at y=738.5). Fig 1F ASO A bar measured at 3.99 on the 0-7 axis; the plotted dots are 3, 3, 5, 5 (n=4), mean exactly 4.0, and the bar top is clear of the dot clusters so the reading is unambiguous. Dose 3 mg / 30 uL and BW 294 +/- 13 g match the Fig 1F legend and Supp Table S9; PBS scored 0. The notes' claim that the authors define score >=5 as severe is correct (Fig 1E legend: 'severe vocalization and/or seizures (score >=5)'), and the text's 'ranged from 2 to 6, with no clear sequence dependence' is quoted accurately.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1973",
+   "verdict": "REFUTED",
+   "checked": "Read the article XML (PMC12867516), the local supplement (bravohernandez2026_NAR_acute_activation_supplement.pdf: Supp Fig S1 rendered at 300 dpi, Supp Tables S3/S5/S9) and the published figure JPEG (gkag057fig1.jpg), with the Fig 1F bar tops measured in pixels against ticks at 19.43 px/unit (zero at y=738.5). Fig 1F ASO J bar measured at 3.53 (bar top y=670; the dot rows are at 3 and 5, so the bar top is not occluded and the reading is clean). The plotted dots are 3, 3, 3 and 5 (n=4), giving a mean of exactly 3.5 - the same profile as ASO C, whose bar sits at the identical height.",
+   "problem": "readout_value 3.0 is wrong; the Fig 1F ASO J group mean is 3.5. As with the other bar-derived rows, an n=4 integer scale can only produce multiples of 0.25 and the value is recoverable exactly by counting the dots. neurotox_grade 2 is unaffected (3<=s<5 under the row's own mapping).",
+   "correction": {
+    "readout_value": "3.5"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1992",
+   "verdict": "REFUTED",
+   "checked": "Read the article XML (PMC12867516), the local supplement (bravohernandez2026_NAR_acute_activation_supplement.pdf: Supp Fig S1 rendered at 300 dpi, Supp Tables S3/S5/S9) and the published figure JPEG (gkag057fig1.jpg), with the Fig 1F bar tops measured in pixels against ticks at 19.43 px/unit (zero at y=738.5). Supp Fig S1 rendered at 300 dpi: panel A is the siRNA B time course at 0.03-1 mg, panel B is siRNA B at 1.5 and 3 mg at 0-15 min, panel C is ASO A vs ASO B - so the row's locus citation is correct. In panel B the 3 mg group shows three animals at 5 and one at 0 (mean 3.75) with vehicle at 0. Supp Table S5 gives the 3 mg (100 mg/mL) group P=0.0845 vs PBS by Kruskal-Wallis, i.e. NOT significant, and the same for 1.5 mg.",
+   "problem": "neurotox_grade 3 is not supported by the cited figure. No siRNA B animal reached score 6 (tremors/seizure) or 7 (death) - the maximum plotted score is 5 - and the group is not statistically separable from PBS (P=0.0845, n=4). The grade rests on the row's own note that 'siRNAs produce more severe acute activation than ASOs, including prolonged and fatal seizures', but that sentence in the paper is about siRNA A's dose response, not siRNA B; what the paper says about siRNA B is only that severity was 'comparable between sequences within the same oligonucleotide class'. Under the authors' own severity definition (score >=5 = severe) and the row's own mapping (3<=s<5 -> 2), the grade is 2. readout_value=TBD is fine to keep, though the panel is readable at 3.75.",
+   "correction": {
+    "neurotox_grade": "2",
+    "readout_value": "3.75 (or keep TBD)",
+    "effect_vs_control": "mean aA score 3.75 vs PBS 0 at 0-15 min; ns vs PBS (P=0.0845, Kruskal-Wallis, Supp Table S5); max individual score 5, no seizures (6) or deaths (7) in this group"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1680",
+   "verdict": "CONFIRMED",
+   "checked": "Read the article XML (PMC11638874) and measured the published figure JPEGs (moaS/gr1.jpg, moaS/gr2.jpg) in pixels: Fig 1A y-axis 2.4 px/unit with zero at y=241; Fig 2 y-axis 2.88 px/unit with zero at y=289. Fig 1A (ASO target C9ORF72): the three mean lines measure Full PS = 35.2, PS/PO = 17.9 and PBS = 0.8. The recorded 18.0 for the PS/PO group is correct to within the row's declared +/-3 tolerance and in fact to within 0.1. The p=0.024 annotation between Full PS and PS/PO matches the row. Dose recorded as 10 mg/kg with the printed 35 nmol/mouse transparently disclosed in notes; n=6-8 matches the legend.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1688",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Read the article XML (PMC11638874) and measured the published figure JPEGs (moaS/gr1.jpg, moaS/gr2.jpg) in pixels: Fig 1A y-axis 2.4 px/unit with zero at y=241; Fig 2 y-axis 2.88 px/unit with zero at y=289. Fig 2: the four mean lines measure PS DNA = 57.3, PS 2'-O-MOE = 28.3, PS 2'-O-Me = 25.3 and PBS = 3.0. The recorded 25.0 for the PS 2'-O-Me group is right within the declared +/-3 tolerance, and n=8 matches the legend.",
+   "problem": "Two soft problems. (1) The p-value attributions in effect_vs_control do not match the bracket geometry: measuring the three significance brackets gives arms at x=312/432 (PS DNA <-> PS 2'-O-Me, p<0.0001), x=369/488 (PS 2'-O-MOE <-> PBS, p=0.0001) and x=372/484 (p=0.0005), against group centres at 312.5/369.5/426.5/483.5. The row reports these as 'PS-DNA vs PS-2'-O-MOE' and 'PS-DNA vs PS-2'-O-Me', which the drawn brackets do not support; only the p=0.0005 vs-PBS comparison is safe. (2) There is no stated grade mapping for the 0-75 EvADINT scale anywhere in the notes, and the batch grades 18.0 as 1 and 25.0 as 2 with no declared threshold between them.",
+   "correction": {
+    "effect_vs_control": "25.0 vs PBS mean ~3.0; PS 2'-O-Me vs PBS p=0.0005 (bracket geometry supports this comparison; do not attribute the p<0.0001 and p=0.0001 brackets to PS-DNA pairwise comparisons without re-reading the panel)",
+    "notes_add": "state the EvADINT 0-75 -> neurotox_grade band edges used"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1652",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Read PMC12744863 (the Figure 1 legend and Results) and the published figure JPEG (kur/gr1.jpg). Legend confirms 7-week-old female C57BL/6, n=4/group, ASO3 = 15.2 nmol = 100 ug ICV, and that ASO2- and ASO3-injected mice were sacrificed 7 days post-injection - all matching the row. Fig 1C shows the ASO3 day-7 max speed collapsed to ~0.06 m/s against ~0.36 for vehicle, supporting effect_direction=increase in toxicity, grade 3 and the 'no recovery phase was run' caveat behind reversibility=irreversible.",
+   "problem": "The stated reason for readout_value=TBD is wrong. The notes say the two day-7 peaks 'could not be assigned to individual ASOs with confidence from the colour key'. They can: the legend is a six-entry colour key (Vehicle grey, ASO1 dark blue, ASO2 medium blue, ASO3 purple, ASO4 light blue, ASO5 yellow), day 7 has exactly two non-zero bars - medium blue at ~9.2 and purple at ~7.0 - and the caption independently states that only ASO2 and ASO3 were sacrificed at day 7. So the ASO3 day-7 bar is unambiguously ~7 on the 0-15 axis. TBD is still an acceptable conservative record, but the justification in notes should not claim the figure is unreadable when it is not.",
+   "correction": {
+    "notes_add": "ASO3 day-7 tolerability score reads ~7 on the 0-15 axis (purple bar); TBD retained as a deliberate no-false-precision choice, not because the colour key is ambiguous"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1329",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Fetched the full letter from Europe PMC (PMC7894279). The text reads verbatim: 'His gait improved dramatically after a high-volume CSF tap, and lumbar infusion studies confirmed increased resistance to CSF outflow (Fig. 1E).' The Fig. 1 legend lists panel (E) 'Lumbar infusion study' with axis abbreviations only (AMP, HR, ICP, RAP) and no numeric outflow resistance - so readout_value=TBD is exactly right and effect_direction=increase is correct. Grade 3 is supported ('A ventriculoperitoneal shunt was therefore inserted'), as is the fifth-dose onset and 3-month progression.",
+   "problem": "Two provenance points. (1) dose_or_conc_value=120 mg does not appear anywhere in this source - the letter says only 'monthly intrathecal tominersen'. The 120 mg figure comes from the OLE protocol (NCT03342053), which the notes mention but source_ref does not. (2) redistribution should be cc_by: the PMC permissions block for this article carries a CC BY 4.0 licence ('This is an open access article under the terms of the CC BY License'), and the schema tracks cc_by separately precisely so raw values can be republished. The CSV currently has summary_stat.",
+   "correction": {
+    "redistribution": "cc_by",
+    "notes_add": "dose 120 mg is from NCT03342053 (the OLE protocol), not from Stoker 2021, which states only 'monthly intrathecal tominersen'"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2001",
+   "verdict": "CONFIRMED",
+   "checked": "Fetched the PubMed abstract for PMID 32794413. Group 4 reads verbatim: '(4) Neurological findings due to spinal cord injury were characterized by rapidly progressing paralysis of hind limbs. Magnetic resonance imaging revealed a focal hyperintense lesion, indicative of spinal cord necrosis.' The row's effect_vs_control reproduces this accurately; '28 IT studies conducted in 1,016 cynomolgus monkeys' matches; species, region, route, grade 3 (spinal cord necrosis / paralysis) and reversibility=irreversible are all supported, and dose/incidence are correctly left TBD.",
+   "problem": "Not a defect, but worth recording: this row is not figure-derived at all and is mis-flagged in this batch. Its abstract-only provenance is disclosed explicitly in notes, which is exactly the right handling under the brief's rule 4 - contrast with rows that cite a figure for a number taken from body text. redistribution=summary_stat is correct (Int J Toxicol is paywalled).",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS2054",
+   "verdict": "CONFIRMED",
+   "checked": "Read PMC8649108 (local sources/cns/PMC8649108.jats.xml). Figure 5 legend: '(D) LDH release assay at days 14, 21, and 28 of treatment with ASO-/-3, ASOwt4, and ASOmut4. Data are the mean +/- SD, n = 3'. Results text: 'no increase in LDH in the supernatant at days 14, 21, and 28 of ASO treatment could be identified in comparison with untreated neurons (Figure 5D)'. Locus, n=3, 5 uM free uptake started at DAI 36, direction no_change, effect_vs_control and grade 0 all verified. Licence is CC BY-NC-ND, so redistribution=summary_stat is correct (cc_by would be an over-claim).",
+   "problem": "None. This is the model row for the whole batch: the data exist only as a plot, so readout_value is TBD, effect_direction and the null result are carried from the explicit text statement, and the notes say plainly 'Values plotted only (Fig 5D) so readout_value is TBD'.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS2093",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Read PMC12148737 (local sources/cns/PMC12148737.jats.xml). The Results text reads: 'E198K neurons treated with ASO267 exhibit no change in neurite length compared to neurons treated with the scramble control (ASO267 mean: 62.68 +/- 26.27 um)', with corE198K 49.33 +/- 24.54 um and E198K 59.04 +/- 29.80 um. So the number is exact and the direction (no_change) and grade 0 are the paper's own conclusion. Dose 10 uM gymnotic, DIV11 / 1 week post single dose all match.",
+   "problem": "Two problems. (1) Locus: source_table='Fig 5E' but 62.68 is a Results-text mean; the Fig 5E legend reports MEDIANS and gives ASO267 as 57.9 um. The notes disclose this ('Means +/- SD taken from the Results text; the figure legend reports medians'), so the reader is not deceived, but the source_table field points at a locus that carries a different statistic. (2) effect_vs_control names the wrong comparators. The paper's 'no change' claim is against the scramble ASO control (60.78 +/- 22.76 um); the row instead compares to untreated E198K (59.04) and the CRISPR-corrected isogenic control (49.33), which makes the row read as a neurite-overgrowth signal rather than the null result the source reports.",
+   "correction": {
+    "source_table": "Results text (means for Fig 5E); note that the Fig 5E legend itself reports medians (ASO267 57.9 um)",
+    "effect_vs_control": "mean 62.68 um vs scramble ASO control 60.78 um (no change); untreated E198K 59.04 um and corrected isogenic control corE198K 49.33 um"
+   },
+   "severity": "minor"
+  }
+ ],
+ "summary": "50/50 rows checked against the primary source; every source was retrievable, so there are no UNVERIFIABLE rows. Verdicts: 25 CONFIRMED, 18 CONFIRMED_MINOR, 7 REFUTED (4 major, 3 minor). The batch label is largely wrong: 30 of the 50 rows are not figure-derived at all - 22 are exact reads of a supplementary spreadsheet column (Hagedorn 2022 Suppl_TableS1.xlsx, all 22 matched to the digit against the file) and 8 are exact reads of printed patent tables in US11851654B2 (Tables 2/6/10/14, all 8 matched exactly, including the correct 6 umol dose for Example 5). Only 19 rows are genuinely figure-derived. Of the 11 figure-derived rows carrying a NUMBER, I could measure 9 against the published image; four of those numbers are wrong (O'Rourke Fig 3B rat 700 ug 3.0 -> 3.33; Fig 5E ASO2 700 ug 4.1 -> 4.25; Fig 5E ASO8_PO 100 ug 4.0 -> 3.75; Bravo-Hernandez Fig 1F ASO J 3.0 -> 3.5). One of those errors (ASO8_PO) crosses the row's own grade threshold and drops it from 3 to 2. The other three major findings are not digitisation errors at all: two patent rows (CMS0372, CMS0444) grade the ASO group 1-2 and call it 'reversible' while the same Example's mortality table in the same patent records 2/6 mice dead within one day, and one Bravo-Hernandez row (CMS1992) grades siRNA B as 3 on the strength of a sentence the paper wrote about siRNA A, when the cited panel shows a maximum individual score of 5 (no seizures, no deaths) and P=0.0845 vs PBS. Disclosure test: PASSED. Every figure-derived numeric row in this batch discloses the digitisation in notes, usually with an explicit error bound. No provenance failure of that kind exists here. The one provenance mismatch runs the other way (CMS2093 cites Fig 5E for a number that is in the Results text, and the figure reports a different statistic).",
+ "systematic_issues": "1) ID DRIFT - fix this before applying any correction. All 50 measurement_ids in batch_digitised.json point at DIFFERENT rows in the shipped data/cns_measurements.csv. Matching on (source_id, source_table, oligo_name, dose, duration, value) gives a clean 1:1 remap with a drifting offset of 0 to +7: CMS0372->CMS0372, CMS0424->CMS0420, CMS0444->CMS0440, CMS0453->CMS0449, CMS0481->CMS0476, CMS0489->CMS0484, CMS1329->CMS1314, CMS1652->CMS1645, CMS1680->CMS1673, CMS1688->CMS1681, CMS1699->CMS1692 ... CMS1889->CMS1882, CMS1907->CMS1900, CMS1949->CMS1942, CMS1965->CMS1958, CMS1973->CMS1966, CMS1992->CMS1985, CMS2001->CMS1994, CMS2054->CMS2047, CMS2093->CMS2086 (every batch id after CMS0388 is offset). Applying these verdicts by batch id would corrupt 47 of 50 rows. The batch snapshot is also stale on redistribution: it shows summary_stat for 26 rows that the CSV has already upgraded to cc_by. Whatever exports these batches needs to key off the canonical CSV.\n\n2) THE REAL DIGITISATION FAILURE MODE IS EYEBALLING BAR HEIGHTS INSTEAD OF COUNTING DOTS. Every acute-behaviour figure in this batch plots individual animals as dots on an ORDINAL INTEGER scale with n=3-4 per group. That means the group mean can only be a multiple of 1/n and is recoverable EXACTLY by counting the dots - no digitisation error is necessary. All four wrong values are values that are impossible or unnecessary: 4.1 cannot be a mean of four integers; 3.0, 4.0 and 3.0 were estimates where 3.33, 3.75 and 3.5 were sitting on the page. The rows even declare a +/-0.5 tolerance that is looser than the data actually permit. Rule for the lane: for scatter-and-bar panels with visible per-animal points, read the POINTS and compute the mean; only fall back to bar height when points are not plotted.\n\n3) EXTRACTION STOPPED AT THE FIRST TABLE/PANEL AND MISSED THE ADJACENT SAFETY DATA. The two patent ASO rows read Table 2 / Table 10 ('acute tolerability score') and ignored Table 4 / Table 12 two tables later in the same Example, which record ASO mortality of 2/6 and 2/6 within one day (Example 2: 1/5; Example 5: 1/4). The rubric puts death at grade 3, so both rows are under-graded and their reversibility fields are wrong. Any other row in this dataset sourced from US11851654B2 Examples 1-5 needs the same check. The same pattern shows up in the statistics fields: CMS1957 asserts 'only the 3 mg group reached significance' when Supp Table S3 shows 0.3 mg and 1 mg also significant at 0-15 min and this very group significant at 30-60 min.\n\n4) GRADE MAPPINGS ARE PER-LANE AND MUTUALLY INCONSISTENT. The same phenomenon - acute, dose-dependent, fully reversible behavioural toxicity after central dosing - is graded by four different ad-hoc mappings: Hagedorn (0-20 scale) maps 4-18 to grade 2; O'Rourke IT (0-7) maps s>=3 straight to grade 3 with no grade 2 at all; O'Rourke ICV (0-7) maps 2-4 to 2 and >=4 to 3; Bravo-Hernandez (0-7) maps 3-5 to 2 and >=5 to 3; Moazami (0-75) declares no mapping and grades 18 as 1 and 25 as 2. Consequence: an ASO scoring 3/7 in O'Rourke's IT lane is a grade 3 while a mouse convulsing across all five Hagedorn categories at 13.67/20 is a grade 2. Publish the per-scale band edges as a table in METHODOLOGY.md and reconcile them against the rubric, whose grade 1 explicitly covers 'transient acute behavioural signs resolving within hours-days'.\n\n5) DOSE-GROUP SELECTION SKEWS TOWARD THE NULL DOSE. Five of the nine O'Rourke rows in this batch record the LOWEST dose of a dose-response panel, where every value is 0 - so within this sample the mixed PS/PO series looks uniformly safe, while the same panels show those same PO compounds at 2.0-4.25 at 300-700 ug. The full CSV does carry the other dose groups, so this is a sampling artefact of the batch rather than a dataset defect, but any downstream filter that selects one row per oligo will reproduce the bias.\n\n6) BOILERPLATE NOTES CARRY THE FIRST EXAMPLE'S PARAMETERS ACROSS ALL EXAMPLES. All eight patent rows say 'n=4-7' regardless of which Example they came from (Example 1 n=4-7, Examples 2 and 4 n=4-5, Example 5 n=4 / table footnote n=3-4). The template note was written once and pasted. Same class of error as the dose: CMS0424 got the 6 umol dose right in the field but its note still repeats the Example 1 n.\n\n7) WHAT IS WORKING - keep it. Every genuinely figure-derived numeric row discloses the digitisation and most declare an error bound; the TBD-valued rows (CMS1329, CMS1881, CMS1957, CMS1992, CMS2001, CMS2054, CMS1652) all keep effect_direction and a prose effect_vs_control, which is exactly the honest record the schema asks for. CMS2054 is the reference implementation. The one thing to fix in that group is CMS1652, whose TBD is justified by a claim that the figure is unreadable when it is not."
+}

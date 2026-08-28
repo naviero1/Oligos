@@ -447,6 +447,16 @@ def main():
                 m["source_ref"] = canon
                 m["notes"] = norm(m.get("notes")) + \
                     " ;; source_ref_as_cited=" + original
+            # Readout names arrive with inconsistent separators — a MedDRA term
+            # ("cerebral ventricle dilatation") beside a curated one
+            # ("cerebral_ventricle_dilatation"). Same concept, two spellings, which
+            # splits every group-by and lets genuine duplicates slip past the
+            # duplicate detector. Normalise the separator only; the words are left
+            # alone, because renaming a readout is a scientific judgement and not
+            # something a merge script should make.
+            rn = norm(m.get("readout_name"))
+            if rn:
+                m["readout_name"] = re.sub(r"_+", "_", rn.replace(" ", "_")).strip("_")
             lic = licences.get(canon.lower())
             if lic == "cc_by" and m.get("redistribution") in (
                     "summary_stat", "derived_features_only", "verify"):
@@ -481,7 +491,12 @@ def main():
                 key_token(m.get("dose_or_conc_unit")),
                 key_token(m.get("exposure_duration")),
                 key_token(m.get("readout_category")),
-                key_token(m.get("readout_name")),
+                # strip a trailing "_incidence"/"_increased"/"_rate" so that two
+                # lanes naming one event differently ("hydrocephalus" vs
+                # "hydrocephalus_incidence") still collide when everything else —
+                # source, arm, dose and value — is identical
+                re.sub(r"(incidence|increased|rate|events?)$", "",
+                       key_token(m.get("readout_name"))),
                 key_token(m.get("readout_value")))
 
     def richness(m):

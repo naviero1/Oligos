@@ -69,7 +69,7 @@ A single oligo at a single dose measured for NfL *and* ventricular volume =
 | `measurement_id` | string PK | Stable ID, e.g. `CMS001`. |
 | `oligo_id` | string FK | → `cns_oligos.oligo_id`. |
 | `study_type` | enum | `in_vitro` \| `animal_invivo` \| `clinical`. |
-| `species` | enum | `human` \| `monkey` \| `rat` \| `mouse` \| `multi_species` \| `NA`. |
+| `species` | enum | `human` \| `monkey` \| `rat` \| `mouse` \| `sheep` \| `multi_species` \| `NA`. `sheep` is included because published intracisternal work exists in sheep; recording it as `NA` would hide a real species from anyone filtering on one, and `NA` is documented here as *not applicable*, not *unlisted*. |
 | `system_model` | string | Cell line / model / subject, e.g. `hiPSC_motor_neuron`, `hiPSC_cortical_neuron`, `hiPSC_microglia`, `hiPSC_astrocyte`, `human_neural_progenitor`, `cerebral_organoid`, `SH-SY5Y`, `primary_cortical_neuron`, `CNS_invivo`, `patient_cohort`, `patient_case`. |
 | `cns_region` | enum | `whole_brain` \| `cortex` \| `hippocampus` \| `cerebellum` \| `brainstem` \| `striatum` \| `spinal_cord` \| `DRG` \| `ventricle` \| `CSF` \| `meninges` \| `optic_nerve` \| `peripheral_nerve` \| `systemic` \| `NA`. |
 | `delivery_method` | enum | `intrathecal` \| `intracerebroventricular` \| `intracisternal` \| `intraparenchymal` \| `intravitreal` \| `systemic_dose` \| `gymnotic_free_uptake` \| `transfection` \| `lipofection` \| `TBD`. |

@@ -1201,7 +1201,7 @@
    "source_ref": "Roche/Genentech medical-affairs slide deck, CHDI 2021, M-XX-00005115 (medically.gene.com)",
    "source_table": "slide 31, 'Led to study drug interruption' row",
    "redistribution": "verify",
-   "notes": "grade_provisional. Dose-dependent tolerability signal: 3.2x placebo on Q8W and 2.2x on Q16W, whereas outright discontinuation was not elevated - i.e. events were manageable by holding doses. 120 mg Q8W arm."
+   "notes": "grade_provisional. Dose-dependent tolerability signal: 3.2x placebo on Q8W and 2.2x on Q16W, whereas outright discontinuation was not elevated - i.e. events were manageable by holding doses. 120 mg Q8W arm. ;; VERIFIED[UNVERIFIABLE] Source unreachable. KEEP WITH CAVEAT; redistribution 'verify' is correct."
   },
   {
    "measurement_id": "TMP_cp_m33",
@@ -1593,7 +1593,7 @@
    "source_ref": "Roche/Genentech medical-affairs slide deck, CHDI 2021, M-XX-00005115 (medically.gene.com)",
    "source_table": "slide 36, 'Adverse events' table, 'Meningitis chemical' row",
    "redistribution": "verify",
-   "notes": "grade_provisional. GENERATION HD1 120 mg Q8W arm only. Slide 38 groups these as 'two patients with an AE of meningitis (chemical and aseptic)', both on Q8W."
+   "notes": "grade_provisional. GENERATION HD1 120 mg Q8W arm only. Slide 38 groups these as 'two patients with an AE of meningitis (chemical and aseptic)', both on Q8W. ;; VERIFIED[UNVERIFIABLE] Source unreachable, and the preferred term does not survive into the final posted results. Most likely an interim-cut coding difference rather than an error, but as filed the row asserts a 'Meningitis chemical' event that the public registr"
   },
   {
    "measurement_id": "TMP_cp_m47",
@@ -1621,7 +1621,7 @@
    "source_ref": "Roche/Genentech medical-affairs slide deck, CHDI 2021, M-XX-00005115 (medically.gene.com)",
    "source_table": "slide 34, 'Whole brain, caudate and ventricular volume data' - printed values at Week 69 (n=41.3% of patients with data)",
    "redistribution": "verify",
-   "notes": "grade_provisional. 120 mg Q8W arm. Dose-regimen-dependent ventricular expansion; graded 2 (ventriculomegaly without clinical decompensation - the slide notes most cases had no clinically apparent signs). Crucially, the same slide reports NO drug-related difference in whole-brain or caudate boundary shift integral, so the ventricular change is not accompanied by measurable extra parenchymal atrophy. CHDI 2022 slides 18-19 and 22 report the effect decreasing after Week 37 and after treatment cessation -> partially reversible."
+   "notes": "grade_provisional. 120 mg Q8W arm. Dose-regimen-dependent ventricular expansion; graded 2 (ventriculomegaly without clinical decompensation - the slide notes most cases had no clinically apparent signs). Crucially, the same slide reports NO drug-related difference in whole-brain or caudate boundary shift integral, so the ventricular change is not accompanied by measurable extra parenchymal atrophy. CHDI 2022 slides 18-19 and 22 report the effect decreasing after Week 37 and after treatment cessation -> partially reversible. ;; VERIFIED[UNVERIFIABLE] Source unreachable. This is the load-bearing ventriculomegaly row for tominersen at the phase 3 grain and it rests entirely on grey literature that no reader can check. KEEP WITH CAVEAT and redistribution 'verify', but it should not be pres"
   },
   {
    "measurement_id": "TMP_cp_m48",
@@ -1810,14 +1810,14 @@
    "readout_unit": "percentage-point difference vs placebo in change from baseline",
    "effect_direction": "increase",
    "effect_vs_control": "+1.2 percentage points vs placebo",
-   "neurotox_grade": 1,
+   "neurotox_grade": "0",
    "reversibility": "reversible",
    "is_cns_specific": "FALSE",
    "source_id": "CP_CHDI2023_MCCOLGAN",
    "source_ref": "Roche medical-affairs slide deck, CHDI 2023, M-XX-00013000 (medically.roche.com)",
    "source_table": "slide 21, 'GENERATION HD1: In the Q16W group, plasma NfL showed trends below placebo beyond Week 21' - printed data labels",
    "redistribution": "verify",
-   "notes": "grade_provisional. GENERATION HD1 120 mg Q8W arm, week 13. Plasma (not CSF) NfL, expressed as the difference from placebo in percentage change from baseline; is_cns_specific=FALSE because the matrix is blood. Dosing stopped in March 2021, so week 101 is an OFF-TREATMENT timepoint at which both arms fall below placebo - direct evidence of reversibility. Grading rule applied here: >=+10 points -> 2 (treatment-emergent axonal-injury signal); >0 -> 1; <=0 -> 0."
+   "notes": "grade_provisional. GENERATION HD1 120 mg Q8W arm, week 13. Plasma (not CSF) NfL, expressed as the difference from placebo in percentage change from baseline; is_cns_specific=FALSE because the matrix is blood. Dosing stopped in March 2021, so week 101 is an OFF-TREATMENT timepoint at which both arms fall below placebo - direct evidence of reversibility. Grading rule applied here: >=+10 points -> 2 (treatment-emergent axonal-injury signal); >0 -> 1; <=0 -> 0. ;; VERIFIED[UNVERIFIABLE] Source unreachable, and the grading is the bigger concern. The row applies a curator-invented rule ('>=+10 points -> 2; >0 -> 1; <=0 -> 0') that converts a +1.2 percentage-point difference from placebo - noise by any reasonable reading - in ;; corrected(neurotox_grade:1->0)"
   },
   {
    "measurement_id": "TMP_cp_m55",
@@ -2069,7 +2069,7 @@
    "source_ref": "Roche medical-affairs slide deck, CHDI 2023, M-XX-00013000 (medically.roche.com)",
    "source_table": "slide 21, 'GENERATION HD1: In the Q16W group, plasma NfL showed trends below placebo beyond Week 21' - printed data labels",
    "redistribution": "verify",
-   "notes": "grade_provisional. GENERATION HD1 120 mg Q16W arm, week 101. Plasma (not CSF) NfL, expressed as the difference from placebo in percentage change from baseline; is_cns_specific=FALSE because the matrix is blood. Dosing stopped in March 2021, so week 101 is an OFF-TREATMENT timepoint at which both arms fall below placebo - direct evidence of reversibility. Grading rule applied here: >=+10 points -> 2 (treatment-emergent axonal-injury signal); >0 -> 1; <=0 -> 0."
+   "notes": "grade_provisional. GENERATION HD1 120 mg Q16W arm, week 101. Plasma (not CSF) NfL, expressed as the difference from placebo in percentage change from baseline; is_cns_specific=FALSE because the matrix is blood. Dosing stopped in March 2021, so week 101 is an OFF-TREATMENT timepoint at which both arms fall below placebo - direct evidence of reversibility. Grading rule applied here: >=+10 points -> 2 (treatment-emergent axonal-injury signal); >0 -> 1; <=0 -> 0. ;; VERIFIED[UNVERIFIABLE] Source unreachable. The direction and grade are internally coherent - a -7.1 percentage-point difference below placebo is correctly recorded as 'decrease' and graded 0, and week 101 is correctly identified as an off-treatment timepoint afte"
   },
   {
    "measurement_id": "TMP_cp_m64",
@@ -2389,7 +2389,7 @@
    "delivery_method": "intrathecal",
    "dose_or_conc_value": "TBD",
    "dose_or_conc_unit": "mg",
-   "exposure_duration": "doses up to 16 mg",
+   "exposure_duration": "TBD",
    "endpoint_domain": "csf_biomarker",
    "challenge_priority": "medium",
    "readout_category": "functional",
@@ -2405,7 +2405,7 @@
    "source_ref": "PMID:35254632; doi:10.1007/s40259-022-00519-9",
    "source_table": "section 'Wave Life Sciences WVE-120101 and WVE-120102', paragraph 1",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional. Target-engagement (efficacy) row for context: 12.4% mean CSF mutant HTT reduction at doses up to 16 mg. At 32 mg there was NO further reduction and no dose response, which is why the programme was halted. NUMBER TAKEN FROM A REVIEW (BioDrugs 2022) citing Wave Life Sciences press releases; the primary press releases could not be fetched in this session - ir.wavelifesciences.com, streetinsider.com and neurologylive.com all return HTTP 403 behind Cloudflare and globenewswire.com returns 503."
+   "notes": "grade_provisional. Target-engagement (efficacy) row for context: 12.4% mean CSF mutant HTT reduction at doses up to 16 mg. At 32 mg there was NO further reduction and no dose response, which is why the programme was halted. NUMBER TAKEN FROM A REVIEW (BioDrugs 2022) citing Wave Life Sciences press releases; the primary press releases could not be fetched in this session - ir.wavelifesciences.com, streetinsider.com and neurologylive.com all return HTTP 403 behind Cloudflare and globenewswire.com returns 503. ;; VERIFIED[CONFIRMED_MINOR] exposure_duration is being used to hold a dose ('doses up to 16 mg'), not a time. Under the schema that field takes a duration; the dose belongs in dose_or_conc_value (which is TBD) or in notes. Also, per the brief's provenance rule the cha ;; corrected(exposure_duration:doses up to 16 mg->TBD)"
   },
   {
    "measurement_id": "TMP_cp_m76",
@@ -2509,7 +2509,7 @@
    "readout_value": 1.4,
    "readout_unit": "pct_incidence",
    "effect_direction": "increase",
-   "effect_vs_control": "2 of 147 on tofersen 100 mg vs 0 events on placebo",
+   "effect_vs_control": "1.4pct (2 of 147) on tofersen 100 mg vs 0 events on placebo",
    "neurotox_grade": 2,
    "reversibility": "reversible",
    "is_cns_specific": "TRUE",
@@ -2517,7 +2517,7 @@
    "source_ref": "PMID:40017137; doi:10.1002/mus.28372",
    "source_table": "Results section and Table 1 (Summary of Participant Narratives)",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional. Pooled multiple-ascending-dose + VALOR + open-label-extension population, 147 participants exposed to at least one 100 mg dose. Both assessed as tofersen-related. CSF WBC 144-317 cells/uL and CSF protein 95-185 mg/dL, after 5-7 doses. Treated with empiric antibiotics and antivirals, methylprednisolone and analgesics. One participant continued tofersen and one discontinued."
+   "notes": "grade_provisional. Pooled multiple-ascending-dose + VALOR + open-label-extension population, 147 participants exposed to at least one 100 mg dose. Both assessed as tofersen-related. CSF WBC 144-317 cells/uL and CSF protein 95-185 mg/dL, after 5-7 doses. Treated with empiric antibiotics and antivirals, methylprednisolone and analgesics. One participant continued tofersen and one discontinued. ;; VERIFIED[REFUTED] readout_value is 3.1 pct_incidence. The paper reports 1.4% (2/147). The row's own effect_vs_control field says '2 of 147', which is 1.36% - so the row contradicts itself. The string '3.1' does not appear anywhere in the article; the only pe ;; corrected(effect_vs_control:2 of 147 on tofersen 100 mg vs 0 events on placebo->1.4pct (2 of 147) on tofersen 100 mg vs 0 events on placebo)"
   },
   {
    "measurement_id": "TMP_cp_m80",
@@ -3962,7 +3962,7 @@
    "challenge_priority": "high_chronic_neurotox",
    "readout_category": "injury_biomarker",
    "readout_name": "NfL_plasma",
-   "readout_value": "no reduction; no rise reported",
+   "readout_value": "TBD",
    "readout_unit": "% change from baseline",
    "effect_direction": "no_change",
    "effect_vs_control": "no reduction in plasma NfL over the 6-month placebo-controlled period and no impact over 40+ weeks of open-label extension",
@@ -3973,7 +3973,7 @@
    "source_ref": "Biogen/Ionis press release, 16 May 2024, investors.biogen.com",
    "source_table": "press-release body, paragraphs 3 and 5",
    "redistribution": "verify",
-   "notes": "grade_provisional. DIRECTION IS no_change, NOT increase. BIIB105 significantly lowered CSF ataxin-2 but did NOT lower plasma NfL, and no treatment-emergent NfL rise was reported. The programme was TERMINATED FOR FUTILITY on exactly this basis - quoting Biogen: 'While BIIB105 lowered ATXN2 protein, it did not reduce neurofilament, which gives us confidence that BIIB105 did not slow the disease process.' Not a neurotoxicity grade 3. No evidence of benefit in any subgroup, including participants with an ATXN2 poly-CAG expansion."
+   "notes": "grade_provisional. DIRECTION IS no_change, NOT increase. BIIB105 significantly lowered CSF ataxin-2 but did NOT lower plasma NfL, and no treatment-emergent NfL rise was reported. The programme was TERMINATED FOR FUTILITY on exactly this basis - quoting Biogen: 'While BIIB105 lowered ATXN2 protein, it did not reduce neurofilament, which gives us confidence that BIIB105 did not slow the disease process.' Not a neurotoxicity grade 3. No evidence of benefit in any subgroup, including participants with an ATXN2 poly-CAG expansion. ;; VERIFIED[UNVERIFIABLE] Source unreachable, so the quoted sentence and the 'no reduction in plasma NfL over the 6-month placebo-controlled period' claim cannot be confirmed. KEEP WITH CAVEAT rather than drop: redistribution is already 'verify', source_table honest ;; corrected(readout_value:no reduction; no rise reported->TBD)"
   },
   {
    "measurement_id": "TMP_cp_m132",
@@ -4291,7 +4291,7 @@
    "system_model": "patient_cohort",
    "cns_region": "ventricle",
    "delivery_method": "intrathecal",
-   "dose_or_conc_value": 50,
+   "dose_or_conc_value": "TBD",
    "dose_or_conc_unit": "mg",
    "exposure_duration": "Parts B and C combined",
    "endpoint_domain": "hydrocephalus",
@@ -4309,7 +4309,7 @@
    "source_ref": "PMID:41634391; doi:10.1038/s41591-025-04193-6",
    "source_table": "Safety section, same sentence",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional. EXPLICIT NEGATIVE HYDROCEPHALUS ROW at the high-dose nusinersen regimen. Communicating hydrocephalus is a labelled warning for nusinersen at the approved 12 mg dose, so a zero-incidence statement at roughly four times the loading dose across about 85 participant-years is an informative negative. NOTE: hydrocephalus is primarily another extraction lane's scope; this row is included because it is a treatment-arm-level negative reported in a clinical publication belonging to this lane. De-duplicate at assembly if the hydrocephalus lane files the same statement."
+   "notes": "grade_provisional. EXPLICIT NEGATIVE HYDROCEPHALUS ROW at the high-dose nusinersen regimen. Communicating hydrocephalus is a labelled warning for nusinersen at the approved 12 mg dose, so a zero-incidence statement at roughly four times the loading dose across about 85 participant-years is an informative negative. NOTE: hydrocephalus is primarily another extraction lane's scope; this row is included because it is a treatment-arm-level negative reported in a clinical publication belonging to this lane. De-duplicate at assembly if the hydrocephalus lane files the same statement. ;; VERIFIED[CONFIRMED_MINOR] dose_or_conc_value=50 mg over-specifies: the sentence spans all of Parts B and C, which includes the 12/12 mg control arms, so the zero is not a property of the 50 mg regimen specifically. Also see CMS1318 - a consumer reading this row alon ;; corrected(dose_or_conc_value:50->TBD)"
   },
   {
    "measurement_id": "TMP_cp_m144",
@@ -5028,7 +5028,7 @@
    "readout_name": "any_adverse_event",
    "readout_value": 64.5,
    "readout_unit": "pct_incidence",
-   "effect_direction": "no_change",
+   "effect_direction": "TBD",
    "effect_vs_control": "20 of 31 participants in part A (single doses of BIIB094 10-150 mg or placebo; 40 participants dosed)",
    "neurotox_grade": 1,
    "reversibility": "not_assessed",
@@ -5037,7 +5037,7 @@
    "source_ref": "PMID:41876647; doi:10.1038/s41591-026-04262-4",
    "source_table": "abstract",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional. REASON phase 1 first-in-human study, NCT03976349 / EudraCT 2018-002995-42, part A: single ascending intrathecal doses of 10-150 mg. Events were mainly mild to moderate and NOT DOSE LIMITING even at 150 mg, the highest single intrathecal dose in this lane; no serious adverse events related to BIIB094 were reported. The abstract gives a denominator of 31 for the adverse-event percentage while stating 40 participants received a dose and does not reconcile the two, so dose_or_conc_value is TBD. Read from the PubMed abstract - the Nature Medicine full text is paywalled."
+   "notes": "grade_provisional. REASON phase 1 first-in-human study, NCT03976349 / EudraCT 2018-002995-42, part A: single ascending intrathecal doses of 10-150 mg. Events were mainly mild to moderate and NOT DOSE LIMITING even at 150 mg, the highest single intrathecal dose in this lane; no serious adverse events related to BIIB094 were reported. The abstract gives a denominator of 31 for the adverse-event percentage while stating 40 participants received a dose and does not reconcile the two, so dose_or_conc_value is TBD. Read from the PubMed abstract - the Nature Medicine full text is paywalled. ;; VERIFIED[CONFIRMED_MINOR] effect_direction='no_change' is not supportable from the cited locus. The abstract gives no placebo AE rate for part A, so there is nothing to compare 64.5% against; the value should be TBD. With no comparator and events described as mild-t ;; corrected(effect_direction:no_change->TBD)"
   },
   {
    "measurement_id": "TMP_cp_m170",
@@ -5437,7 +5437,7 @@
    "study_type": "clinical",
    "species": "human",
    "system_model": "patient_case",
-   "cns_region": "NA",
+   "cns_region": "ventricle",
    "delivery_method": "intrathecal",
    "dose_or_conc_value": 15,
    "dose_or_conc_unit": "mg",
@@ -5457,7 +5457,7 @@
    "source_ref": "PMID:41981306; doi:10.1038/s41591-026-04314-9",
    "source_table": "'Safety and adverse events' section, final paragraph",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional. DOSE-THRESHOLD NEGATIVE ROW. Investigational dosing was paused after the two hydrocephalus events and seizure frequency gradually returned to pretreatment baseline. A revised protocol was written using LOWER DOSES with periodic MR ventriculograms and opening-pressure measurement at every lumbar puncture, and patient 2 resumed after a two-year hiatus: two intrathecal doses (10 mg then 15 mg, two months apart) were 'safely delivered', with about 66% seizure reduction to date. The authors' working hypothesis, stated in the Discussion, is that the hydrocephalus was a DOSE-RELATED clinical side effect. dose_or_conc_value records the higher of the two resumed intrathecal doses."
+   "notes": "grade_provisional. DOSE-THRESHOLD NEGATIVE ROW. Investigational dosing was paused after the two hydrocephalus events and seizure frequency gradually returned to pretreatment baseline. A revised protocol was written using LOWER DOSES with periodic MR ventriculograms and opening-pressure measurement at every lumbar puncture, and patient 2 resumed after a two-year hiatus: two intrathecal doses (10 mg then 15 mg, two months apart) were 'safely delivered', with about 66% seizure reduction to date. The authors' working hypothesis, stated in the Discussion, is that the hydrocephalus was a DOSE-RELATED clinical side effect. dose_or_conc_value records the higher of the two resumed intrathecal doses. ;; VERIFIED[CONFIRMED_MINOR] readout_value='no recurrence' under readout_name='ventricular_volume' is an inference: the paper says the doses were 'safely delivered' and that the revised protocol added periodic MRI ventriculograms, but it does not report a ventricular v ;; corrected(cns_region:NA->ventricle)"
   },
   {
    "measurement_id": "TMP_cp_m185",

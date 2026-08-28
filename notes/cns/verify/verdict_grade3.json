@@ -1,0 +1,573 @@
+{
+ "batch": "batch_grade3",
+ "verdicts": [
+  {
+   "measurement_id": "CMS0550",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US9605263.html (full patent text). Example 12 + TABLE 15, column 'Score 8 weeks after injection'. ISIS 791663 reads 7.0 - exact match to the row. Example 12 text confirms 700 ug single ICV in wild-type C57/Bl6, n=4/group, 7-criterion FOB at 8 weeks.",
+   "problem": "Value, locus, dose, species and duration are all exact and grade 3 is correct, but the recorded RATIONALE is wrong. The notes justify grade 3 as 'a deficit persisting to 8 wk is not transient'. The 8-week column is in fact an animal-loss readout: across all 92 rows it quantises to exactly 0 / 1.8 / 3.5 / 5.3 / 7.0, i.e. 7 x (0,1,2,3,4)/4 animals at the maximum score, and every non-zero group carries either an asterisk (the patent footnote reads 'An asterisk indicates that the corresponding result is the average of 1-3 mice') or no AIF1/GFAP data at all. Grade 3 is therefore supported by the 'moribundity/death' limb of the rubric, not by a persisting behavioural deficit. Also: The patent reports NO vehicle/PBS FOB score for the MOUSE tolerability experiments (Examples 2, 3 and 12 describe only ASO-dosed groups); the statement 'Saline treated rats generally receive a score of 0' belongs to the RAT example (Example 13). effect_vs_control therefore asserts a concurrent PBS score of 0 that the cited locus does not report. A PBS group does exist in the study (AIF1/GFAP are normalised to 'PBS control (1.0)'), so the inference is reasonable but it is not sourced.",
+   "correction": {
+    "notes_rationale": "8-week score tracks animal loss (7 x fraction of group at max score), not a persisting behavioural deficit; grade 3 rests on the moribundity/death limb",
+    "effect_vs_control": "7.0 (no vehicle FOB score reported for the mouse experiments in this patent)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0636",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US9605263.html (full patent text). Example 12 + TABLE 15, column 'Score 8 weeks after injection'. ISIS 801289 reads 7.0 - exact match to the row. Example 12 text confirms 700 ug single ICV in wild-type C57/Bl6, n=4/group, 7-criterion FOB at 8 weeks.",
+   "problem": "Value, locus, dose, species and duration are all exact and grade 3 is correct, but the recorded RATIONALE is wrong. The notes justify grade 3 as 'a deficit persisting to 8 wk is not transient'. The 8-week column is in fact an animal-loss readout: across all 92 rows it quantises to exactly 0 / 1.8 / 3.5 / 5.3 / 7.0, i.e. 7 x (0,1,2,3,4)/4 animals at the maximum score, and every non-zero group carries either an asterisk (the patent footnote reads 'An asterisk indicates that the corresponding result is the average of 1-3 mice') or no AIF1/GFAP data at all. Grade 3 is therefore supported by the 'moribundity/death' limb of the rubric, not by a persisting behavioural deficit. Also: The patent reports NO vehicle/PBS FOB score for the MOUSE tolerability experiments (Examples 2, 3 and 12 describe only ASO-dosed groups); the statement 'Saline treated rats generally receive a score of 0' belongs to the RAT example (Example 13). effect_vs_control therefore asserts a concurrent PBS score of 0 that the cited locus does not report. A PBS group does exist in the study (AIF1/GFAP are normalised to 'PBS control (1.0)'), so the inference is reasonable but it is not sourced.",
+   "correction": {
+    "notes_rationale": "8-week score tracks animal loss (7 x fraction of group at max score), not a persisting behavioural deficit; grade 3 rests on the moribundity/death limb",
+    "effect_vs_control": "7.0 (no vehicle FOB score reported for the mouse experiments in this patent)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0672",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US9605263.html (full patent text). Example 12 + TABLE 15, column 'Score 8 weeks after injection'. ISIS 801297 reads 3.5 - exact match to the row. Example 12 text confirms 700 ug single ICV in wild-type C57/Bl6, n=4/group, 7-criterion FOB at 8 weeks.",
+   "problem": "Value, locus, dose, species and duration are all exact and grade 3 is correct, but the recorded RATIONALE is wrong. The notes justify grade 3 as 'a deficit persisting to 8 wk is not transient'. The 8-week column is in fact an animal-loss readout: across all 92 rows it quantises to exactly 0 / 1.8 / 3.5 / 5.3 / 7.0, i.e. 7 x (0,1,2,3,4)/4 animals at the maximum score, and every non-zero group carries either an asterisk (the patent footnote reads 'An asterisk indicates that the corresponding result is the average of 1-3 mice') or no AIF1/GFAP data at all. Grade 3 is therefore supported by the 'moribundity/death' limb of the rubric, not by a persisting behavioural deficit. Also: The patent reports NO vehicle/PBS FOB score for the MOUSE tolerability experiments (Examples 2, 3 and 12 describe only ASO-dosed groups); the statement 'Saline treated rats generally receive a score of 0' belongs to the RAT example (Example 13). effect_vs_control therefore asserts a concurrent PBS score of 0 that the cited locus does not report. A PBS group does exist in the study (AIF1/GFAP are normalised to 'PBS control (1.0)'), so the inference is reasonable but it is not sourced.",
+   "correction": {
+    "notes_rationale": "8-week score tracks animal loss (7 x fraction of group at max score), not a persisting behavioural deficit; grade 3 rests on the moribundity/death limb",
+    "effect_vs_control": "3.5 (no vehicle FOB score reported for the mouse experiments in this patent)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0688",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US9605263.html (full patent text). Example 12 + TABLE 15, column 'Score 8 weeks after injection'. ISIS 801301 reads 7.0 - exact match to the row. Example 12 text confirms 700 ug single ICV in wild-type C57/Bl6, n=4/group, 7-criterion FOB at 8 weeks.",
+   "problem": "Value, locus, dose, species and duration are all exact and grade 3 is correct, but the recorded RATIONALE is wrong. The notes justify grade 3 as 'a deficit persisting to 8 wk is not transient'. The 8-week column is in fact an animal-loss readout: across all 92 rows it quantises to exactly 0 / 1.8 / 3.5 / 5.3 / 7.0, i.e. 7 x (0,1,2,3,4)/4 animals at the maximum score, and every non-zero group carries either an asterisk (the patent footnote reads 'An asterisk indicates that the corresponding result is the average of 1-3 mice') or no AIF1/GFAP data at all. Grade 3 is therefore supported by the 'moribundity/death' limb of the rubric, not by a persisting behavioural deficit. Also: The patent reports NO vehicle/PBS FOB score for the MOUSE tolerability experiments (Examples 2, 3 and 12 describe only ASO-dosed groups); the statement 'Saline treated rats generally receive a score of 0' belongs to the RAT example (Example 13). effect_vs_control therefore asserts a concurrent PBS score of 0 that the cited locus does not report. A PBS group does exist in the study (AIF1/GFAP are normalised to 'PBS control (1.0)'), so the inference is reasonable but it is not sourced.",
+   "correction": {
+    "notes_rationale": "8-week score tracks animal loss (7 x fraction of group at max score), not a persisting behavioural deficit; grade 3 rests on the moribundity/death limb",
+    "effect_vs_control": "7.0 (no vehicle FOB score reported for the mouse experiments in this patent)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0718",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US9605263.html (full patent text). Example 12 + TABLE 15, column 'Score 8 weeks after injection'. ISIS 801307 reads 5.3 - exact match to the row. Example 12 text confirms 700 ug single ICV in wild-type C57/Bl6, n=4/group, 7-criterion FOB at 8 weeks.",
+   "problem": "Value, locus, dose, species and duration are all exact and grade 3 is correct, but the recorded RATIONALE is wrong. The notes justify grade 3 as 'a deficit persisting to 8 wk is not transient'. The 8-week column is in fact an animal-loss readout: across all 92 rows it quantises to exactly 0 / 1.8 / 3.5 / 5.3 / 7.0, i.e. 7 x (0,1,2,3,4)/4 animals at the maximum score, and every non-zero group carries either an asterisk (the patent footnote reads 'An asterisk indicates that the corresponding result is the average of 1-3 mice') or no AIF1/GFAP data at all. Grade 3 is therefore supported by the 'moribundity/death' limb of the rubric, not by a persisting behavioural deficit. Also: The patent reports NO vehicle/PBS FOB score for the MOUSE tolerability experiments (Examples 2, 3 and 12 describe only ASO-dosed groups); the statement 'Saline treated rats generally receive a score of 0' belongs to the RAT example (Example 13). effect_vs_control therefore asserts a concurrent PBS score of 0 that the cited locus does not report. A PBS group does exist in the study (AIF1/GFAP are normalised to 'PBS control (1.0)'), so the inference is reasonable but it is not sourced.",
+   "correction": {
+    "notes_rationale": "8-week score tracks animal loss (7 x fraction of group at max score), not a persisting behavioural deficit; grade 3 rests on the moribundity/death limb",
+    "effect_vs_control": "5.3 (no vehicle FOB score reported for the mouse experiments in this patent)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0730",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US9605263.html (full patent text). Example 12 + TABLE 15, column 'Score 8 weeks after injection'. ISIS 801311 reads 7.0 - exact match to the row. Example 12 text confirms 700 ug single ICV in wild-type C57/Bl6, n=4/group, 7-criterion FOB at 8 weeks.",
+   "problem": "Value, locus, dose, species and duration are all exact and grade 3 is correct, but the recorded RATIONALE is wrong. The notes justify grade 3 as 'a deficit persisting to 8 wk is not transient'. The 8-week column is in fact an animal-loss readout: across all 92 rows it quantises to exactly 0 / 1.8 / 3.5 / 5.3 / 7.0, i.e. 7 x (0,1,2,3,4)/4 animals at the maximum score, and every non-zero group carries either an asterisk (the patent footnote reads 'An asterisk indicates that the corresponding result is the average of 1-3 mice') or no AIF1/GFAP data at all. Grade 3 is therefore supported by the 'moribundity/death' limb of the rubric, not by a persisting behavioural deficit. Also: The patent reports NO vehicle/PBS FOB score for the MOUSE tolerability experiments (Examples 2, 3 and 12 describe only ASO-dosed groups); the statement 'Saline treated rats generally receive a score of 0' belongs to the RAT example (Example 13). effect_vs_control therefore asserts a concurrent PBS score of 0 that the cited locus does not report. A PBS group does exist in the study (AIF1/GFAP are normalised to 'PBS control (1.0)'), so the inference is reasonable but it is not sourced.",
+   "correction": {
+    "notes_rationale": "8-week score tracks animal loss (7 x fraction of group at max score), not a persisting behavioural deficit; grade 3 rests on the moribundity/death limb",
+    "effect_vs_control": "7.0 (no vehicle FOB score reported for the mouse experiments in this patent)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0775",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US9605263.html (full patent text). Example 12 + TABLE 15, column 'Score 8 weeks after injection'. ISIS 802462 reads 3.5 - exact match to the row. Example 12 text confirms 700 ug single ICV in wild-type C57/Bl6, n=4/group, 7-criterion FOB at 8 weeks.",
+   "problem": "Value, locus, dose, species and duration are all exact and grade 3 is correct, but the recorded RATIONALE is wrong. The notes justify grade 3 as 'a deficit persisting to 8 wk is not transient'. The 8-week column is in fact an animal-loss readout: across all 92 rows it quantises to exactly 0 / 1.8 / 3.5 / 5.3 / 7.0, i.e. 7 x (0,1,2,3,4)/4 animals at the maximum score, and every non-zero group carries either an asterisk (the patent footnote reads 'An asterisk indicates that the corresponding result is the average of 1-3 mice') or no AIF1/GFAP data at all. Grade 3 is therefore supported by the 'moribundity/death' limb of the rubric, not by a persisting behavioural deficit. Also: The patent reports NO vehicle/PBS FOB score for the MOUSE tolerability experiments (Examples 2, 3 and 12 describe only ASO-dosed groups); the statement 'Saline treated rats generally receive a score of 0' belongs to the RAT example (Example 13). effect_vs_control therefore asserts a concurrent PBS score of 0 that the cited locus does not report. A PBS group does exist in the study (AIF1/GFAP are normalised to 'PBS control (1.0)'), so the inference is reasonable but it is not sourced.",
+   "correction": {
+    "notes_rationale": "8-week score tracks animal loss (7 x fraction of group at max score), not a persisting behavioural deficit; grade 3 rests on the moribundity/death limb",
+    "effect_vs_control": "3.5 (no vehicle FOB score reported for the mouse experiments in this patent)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0832",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US9605263.html (full patent text). Example 12 + TABLE 15, column 'Score 8 weeks after injection'. ISIS 802475 reads 7.0 - exact match to the row. Example 12 text confirms 700 ug single ICV in wild-type C57/Bl6, n=4/group, 7-criterion FOB at 8 weeks.",
+   "problem": "Value, locus, dose, species and duration are all exact and grade 3 is correct, but the recorded RATIONALE is wrong. The notes justify grade 3 as 'a deficit persisting to 8 wk is not transient'. The 8-week column is in fact an animal-loss readout: across all 92 rows it quantises to exactly 0 / 1.8 / 3.5 / 5.3 / 7.0, i.e. 7 x (0,1,2,3,4)/4 animals at the maximum score, and every non-zero group carries either an asterisk (the patent footnote reads 'An asterisk indicates that the corresponding result is the average of 1-3 mice') or no AIF1/GFAP data at all. Grade 3 is therefore supported by the 'moribundity/death' limb of the rubric, not by a persisting behavioural deficit. Also: The patent reports NO vehicle/PBS FOB score for the MOUSE tolerability experiments (Examples 2, 3 and 12 describe only ASO-dosed groups); the statement 'Saline treated rats generally receive a score of 0' belongs to the RAT example (Example 13). effect_vs_control therefore asserts a concurrent PBS score of 0 that the cited locus does not report. A PBS group does exist in the study (AIF1/GFAP are normalised to 'PBS control (1.0)'), so the inference is reasonable but it is not sourced.",
+   "correction": {
+    "notes_rationale": "8-week score tracks animal loss (7 x fraction of group at max score), not a persisting behavioural deficit; grade 3 rests on the moribundity/death limb",
+    "effect_vs_control": "7.0 (no vehicle FOB score reported for the mouse experiments in this patent)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1025",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US9605263.html. Example 2 + TABLE 7 'Acute tolerability scores'. ISIS 791662 reads 5.25 - exact match. Example 2 confirms the 7 criteria (bright/alert/responsive; standing or hunched; movement without stimuli; forward movement after lifting; any movement after lifting; response to tail pinch; regular breathing), 0/1 each, summed 0-7, group mean, 700 ug single ICV, n=4/group, scored 3 h post-dose. Cross-checked against TABLE 15: this compound also shows animal loss at 8 weeks (8wk score see Table 15).",
+   "problem": "Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compound in this subset independently shows animal loss at 8 weeks in Table 15 of the same patent. Two caveats: (a) the >=5 -> grade 3 cutoff is the extractor's, not the patent's - the patent ranks tolerability but sets no severity bands; the same patent shows several compounds with 3 h scores >=5 recovering to an 8-week score of 0.0 (e.g. ISIS 801306, 6.00 -> 0.0; ISIS 801314, 4.50 -> 0.0), so a high 3 h score is not by itself evidence of an irreversible outcome. (b) The patent reports NO vehicle/PBS FOB score for the MOUSE tolerability experiments (Examples 2, 3 and 12 describe only ASO-dosed groups); the statement 'Saline treated rats generally receive a score of 0' belongs to the RAT example (Example 13). effect_vs_control therefore asserts a concurrent PBS score of 0 that the cited locus does not report. A PBS group does exist in the study (AIF1/GFAP are normalised to 'PBS control (1.0)'), so the inference is reasonable but it is not sourced.",
+   "correction": {
+    "effect_vs_control": "5.25 (no vehicle FOB score reported for the mouse experiments in this patent)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1044",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US9605263.html. Example 2 + TABLE 7 'Acute tolerability scores'. ISIS 801289 reads 7.00 - exact match. Example 2 confirms the 7 criteria (bright/alert/responsive; standing or hunched; movement without stimuli; forward movement after lifting; any movement after lifting; response to tail pinch; regular breathing), 0/1 each, summed 0-7, group mean, 700 ug single ICV, n=4/group, scored 3 h post-dose. Cross-checked against TABLE 15: this compound also shows animal loss at 8 weeks (8wk score see Table 15).",
+   "problem": "Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compound in this subset independently shows animal loss at 8 weeks in Table 15 of the same patent. Two caveats: (a) the >=5 -> grade 3 cutoff is the extractor's, not the patent's - the patent ranks tolerability but sets no severity bands; the same patent shows several compounds with 3 h scores >=5 recovering to an 8-week score of 0.0 (e.g. ISIS 801306, 6.00 -> 0.0; ISIS 801314, 4.50 -> 0.0), so a high 3 h score is not by itself evidence of an irreversible outcome. (b) The patent reports NO vehicle/PBS FOB score for the MOUSE tolerability experiments (Examples 2, 3 and 12 describe only ASO-dosed groups); the statement 'Saline treated rats generally receive a score of 0' belongs to the RAT example (Example 13). effect_vs_control therefore asserts a concurrent PBS score of 0 that the cited locus does not report. A PBS group does exist in the study (AIF1/GFAP are normalised to 'PBS control (1.0)'), so the inference is reasonable but it is not sourced.",
+   "correction": {
+    "effect_vs_control": "7.00 (no vehicle FOB score reported for the mouse experiments in this patent)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1053",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US9605263.html. Example 2 + TABLE 7 'Acute tolerability scores'. ISIS 801298 reads 5.50 - exact match. Example 2 confirms the 7 criteria (bright/alert/responsive; standing or hunched; movement without stimuli; forward movement after lifting; any movement after lifting; response to tail pinch; regular breathing), 0/1 each, summed 0-7, group mean, 700 ug single ICV, n=4/group, scored 3 h post-dose. Cross-checked against TABLE 15: this compound also shows animal loss at 8 weeks (8wk score see Table 15).",
+   "problem": "Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compound in this subset independently shows animal loss at 8 weeks in Table 15 of the same patent. Two caveats: (a) the >=5 -> grade 3 cutoff is the extractor's, not the patent's - the patent ranks tolerability but sets no severity bands; the same patent shows several compounds with 3 h scores >=5 recovering to an 8-week score of 0.0 (e.g. ISIS 801306, 6.00 -> 0.0; ISIS 801314, 4.50 -> 0.0), so a high 3 h score is not by itself evidence of an irreversible outcome. (b) The patent reports NO vehicle/PBS FOB score for the MOUSE tolerability experiments (Examples 2, 3 and 12 describe only ASO-dosed groups); the statement 'Saline treated rats generally receive a score of 0' belongs to the RAT example (Example 13). effect_vs_control therefore asserts a concurrent PBS score of 0 that the cited locus does not report. A PBS group does exist in the study (AIF1/GFAP are normalised to 'PBS control (1.0)'), so the inference is reasonable but it is not sourced.",
+   "correction": {
+    "effect_vs_control": "5.50 (no vehicle FOB score reported for the mouse experiments in this patent)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1057",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US9605263.html. Example 2 + TABLE 7 'Acute tolerability scores'. ISIS 801302 reads 6.50 - exact match. Example 2 confirms the 7 criteria (bright/alert/responsive; standing or hunched; movement without stimuli; forward movement after lifting; any movement after lifting; response to tail pinch; regular breathing), 0/1 each, summed 0-7, group mean, 700 ug single ICV, n=4/group, scored 3 h post-dose. Cross-checked against TABLE 15: this compound also shows animal loss at 8 weeks (8wk score see Table 15).",
+   "problem": "Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compound in this subset independently shows animal loss at 8 weeks in Table 15 of the same patent. Two caveats: (a) the >=5 -> grade 3 cutoff is the extractor's, not the patent's - the patent ranks tolerability but sets no severity bands; the same patent shows several compounds with 3 h scores >=5 recovering to an 8-week score of 0.0 (e.g. ISIS 801306, 6.00 -> 0.0; ISIS 801314, 4.50 -> 0.0), so a high 3 h score is not by itself evidence of an irreversible outcome. (b) The patent reports NO vehicle/PBS FOB score for the MOUSE tolerability experiments (Examples 2, 3 and 12 describe only ASO-dosed groups); the statement 'Saline treated rats generally receive a score of 0' belongs to the RAT example (Example 13). effect_vs_control therefore asserts a concurrent PBS score of 0 that the cited locus does not report. A PBS group does exist in the study (AIF1/GFAP are normalised to 'PBS control (1.0)'), so the inference is reasonable but it is not sourced.",
+   "correction": {
+    "effect_vs_control": "6.50 (no vehicle FOB score reported for the mouse experiments in this patent)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1062",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US9605263.html. Example 2 + TABLE 7 'Acute tolerability scores'. ISIS 801307 reads 5.00 - exact match. Example 2 confirms the 7 criteria (bright/alert/responsive; standing or hunched; movement without stimuli; forward movement after lifting; any movement after lifting; response to tail pinch; regular breathing), 0/1 each, summed 0-7, group mean, 700 ug single ICV, n=4/group, scored 3 h post-dose. Cross-checked against TABLE 15: this compound also shows animal loss at 8 weeks (8wk score see Table 15).",
+   "problem": "Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compound in this subset independently shows animal loss at 8 weeks in Table 15 of the same patent. Two caveats: (a) the >=5 -> grade 3 cutoff is the extractor's, not the patent's - the patent ranks tolerability but sets no severity bands; the same patent shows several compounds with 3 h scores >=5 recovering to an 8-week score of 0.0 (e.g. ISIS 801306, 6.00 -> 0.0; ISIS 801314, 4.50 -> 0.0), so a high 3 h score is not by itself evidence of an irreversible outcome. (b) The patent reports NO vehicle/PBS FOB score for the MOUSE tolerability experiments (Examples 2, 3 and 12 describe only ASO-dosed groups); the statement 'Saline treated rats generally receive a score of 0' belongs to the RAT example (Example 13). effect_vs_control therefore asserts a concurrent PBS score of 0 that the cited locus does not report. A PBS group does exist in the study (AIF1/GFAP are normalised to 'PBS control (1.0)'), so the inference is reasonable but it is not sourced.",
+   "correction": {
+    "effect_vs_control": "5.00 (no vehicle FOB score reported for the mouse experiments in this patent)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1066",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US9605263.html. Example 2 + TABLE 7 'Acute tolerability scores'. ISIS 801311 reads 5.50 - exact match. Example 2 confirms the 7 criteria (bright/alert/responsive; standing or hunched; movement without stimuli; forward movement after lifting; any movement after lifting; response to tail pinch; regular breathing), 0/1 each, summed 0-7, group mean, 700 ug single ICV, n=4/group, scored 3 h post-dose. Cross-checked against TABLE 15: this compound also shows animal loss at 8 weeks (8wk score see Table 15).",
+   "problem": "Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compound in this subset independently shows animal loss at 8 weeks in Table 15 of the same patent. Two caveats: (a) the >=5 -> grade 3 cutoff is the extractor's, not the patent's - the patent ranks tolerability but sets no severity bands; the same patent shows several compounds with 3 h scores >=5 recovering to an 8-week score of 0.0 (e.g. ISIS 801306, 6.00 -> 0.0; ISIS 801314, 4.50 -> 0.0), so a high 3 h score is not by itself evidence of an irreversible outcome. (b) The patent reports NO vehicle/PBS FOB score for the MOUSE tolerability experiments (Examples 2, 3 and 12 describe only ASO-dosed groups); the statement 'Saline treated rats generally receive a score of 0' belongs to the RAT example (Example 13). effect_vs_control therefore asserts a concurrent PBS score of 0 that the cited locus does not report. A PBS group does exist in the study (AIF1/GFAP are normalised to 'PBS control (1.0)'), so the inference is reasonable but it is not sourced.",
+   "correction": {
+    "effect_vs_control": "5.50 (no vehicle FOB score reported for the mouse experiments in this patent)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1076",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US9605263.html. Example 2 + TABLE 7 'Acute tolerability scores'. ISIS 802463 reads 6.75 - exact match. Example 2 confirms the 7 criteria (bright/alert/responsive; standing or hunched; movement without stimuli; forward movement after lifting; any movement after lifting; response to tail pinch; regular breathing), 0/1 each, summed 0-7, group mean, 700 ug single ICV, n=4/group, scored 3 h post-dose. Cross-checked against TABLE 15: this compound also shows animal loss at 8 weeks (8wk score see Table 15).",
+   "problem": "Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compound in this subset independently shows animal loss at 8 weeks in Table 15 of the same patent. Two caveats: (a) the >=5 -> grade 3 cutoff is the extractor's, not the patent's - the patent ranks tolerability but sets no severity bands; the same patent shows several compounds with 3 h scores >=5 recovering to an 8-week score of 0.0 (e.g. ISIS 801306, 6.00 -> 0.0; ISIS 801314, 4.50 -> 0.0), so a high 3 h score is not by itself evidence of an irreversible outcome. (b) The patent reports NO vehicle/PBS FOB score for the MOUSE tolerability experiments (Examples 2, 3 and 12 describe only ASO-dosed groups); the statement 'Saline treated rats generally receive a score of 0' belongs to the RAT example (Example 13). effect_vs_control therefore asserts a concurrent PBS score of 0 that the cited locus does not report. A PBS group does exist in the study (AIF1/GFAP are normalised to 'PBS control (1.0)'), so the inference is reasonable but it is not sourced.",
+   "correction": {
+    "effect_vs_control": "6.75 (no vehicle FOB score reported for the mouse experiments in this patent)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1101",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US9605263.html. Example 2 + TABLE 7 'Acute tolerability scores'. ISIS 806682 reads 5.75 - exact match. Example 2 confirms the 7 criteria (bright/alert/responsive; standing or hunched; movement without stimuli; forward movement after lifting; any movement after lifting; response to tail pinch; regular breathing), 0/1 each, summed 0-7, group mean, 700 ug single ICV, n=4/group, scored 3 h post-dose. Cross-checked against TABLE 15: this compound also shows animal loss at 8 weeks (8wk score see Table 15).",
+   "problem": "Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compound in this subset independently shows animal loss at 8 weeks in Table 15 of the same patent. Two caveats: (a) the >=5 -> grade 3 cutoff is the extractor's, not the patent's - the patent ranks tolerability but sets no severity bands; the same patent shows several compounds with 3 h scores >=5 recovering to an 8-week score of 0.0 (e.g. ISIS 801306, 6.00 -> 0.0; ISIS 801314, 4.50 -> 0.0), so a high 3 h score is not by itself evidence of an irreversible outcome. (b) The patent reports NO vehicle/PBS FOB score for the MOUSE tolerability experiments (Examples 2, 3 and 12 describe only ASO-dosed groups); the statement 'Saline treated rats generally receive a score of 0' belongs to the RAT example (Example 13). effect_vs_control therefore asserts a concurrent PBS score of 0 that the cited locus does not report. A PBS group does exist in the study (AIF1/GFAP are normalised to 'PBS control (1.0)'), so the inference is reasonable but it is not sourced.",
+   "correction": {
+    "effect_vs_control": "5.75 (no vehicle FOB score reported for the mouse experiments in this patent)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1112",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US9605263.html. Example 3, TABLE 8 'Acute tolerability scores 3h after treatment with antisense oligonucleotides from WO 2014/062691'. ISIS 576974 reads 5.67 - exact match. Example 3 text: groups of 3 mice, treated and analysed as in Example 2, and 'These results demonstrate that ISIS 576816, ISIS 576974, ISIS 577061, ISIS 577065, ISIS 577083, and ISIS 577056 were poorly tolerated.'",
+   "problem": "Value, locus and the 'poorly tolerated' quotation are all exact, and grade 3 is well supported here: these are the deselected comparator compounds that the applicant's whole tolerability argument is built against, i.e. compound-limiting on tolerability grounds. Two field caveats: n is 3 mice per group in Example 3 (not 4 as in Example 2), and The patent reports NO vehicle/PBS FOB score for the MOUSE tolerability experiments (Examples 2, 3 and 12 describe only ASO-dosed groups); the statement 'Saline treated rats generally receive a score of 0' belongs to the RAT example (Example 13). effect_vs_control therefore asserts a concurrent PBS score of 0 that the cited locus does not report. A PBS group does exist in the study (AIF1/GFAP are normalised to 'PBS control (1.0)'), so the inference is reasonable but it is not sourced.",
+   "correction": {
+    "effect_vs_control": "5.67 (no vehicle FOB score reported for the mouse experiments in this patent)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1116",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US9605263.html. Example 3, TABLE 9 'Acute tolerability scores 3h after treatment with antisense oligonucleotides from WO 2014/062691'. ISIS 577056 reads 6.5 - exact match. Example 3 text: groups of 3 mice, treated and analysed as in Example 2, and 'These results demonstrate that ISIS 576816, ISIS 576974, ISIS 577061, ISIS 577065, ISIS 577083, and ISIS 577056 were poorly tolerated.'",
+   "problem": "Value, locus and the 'poorly tolerated' quotation are all exact, and grade 3 is well supported here: these are the deselected comparator compounds that the applicant's whole tolerability argument is built against, i.e. compound-limiting on tolerability grounds. Two field caveats: n is 3 mice per group in Example 3 (not 4 as in Example 2), and The patent reports NO vehicle/PBS FOB score for the MOUSE tolerability experiments (Examples 2, 3 and 12 describe only ASO-dosed groups); the statement 'Saline treated rats generally receive a score of 0' belongs to the RAT example (Example 13). effect_vs_control therefore asserts a concurrent PBS score of 0 that the cited locus does not report. A PBS group does exist in the study (AIF1/GFAP are normalised to 'PBS control (1.0)'), so the inference is reasonable but it is not sourced.",
+   "correction": {
+    "effect_vs_control": "6.5 (no vehicle FOB score reported for the mouse experiments in this patent)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0004",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US10968453.html. Example 14 + TABLE 64 'FOB scores in Sprague-Dawley rats'. ISIS 611497: target start site 681 on SEQ ID NO: 1, chemistry '5-10-5 MOE with mixed backbone', FOB score 5 - every field an exact match. Example 14 text confirms 3 mg single IT dose, PBS control group, scoring 3 h post-dose over seven regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), and 'Control animals usually have a score of 0 or 1' - exactly as recorded in the row's notes.",
+   "problem": "Value, locus, dose, species, scale and the control-score statement all verify. Grade 3 rests on the rubric's 'paralysis' limb and on an extractor-defined cutoff (>=5) that the patent does not state; Example 14 says only that 'a score at the top end of the range would be suggestive of acute toxicity'. The strongest counter-evidence is inside the same patent: Example 16 / TABLE 67 reports 3-hour AND 8-week FOB for the same assay and shows the response largely reverses (ISIS 333611 4.9 -> 1.2; ISIS 666870 5.8 -> 0.8; ISIS 666919 3.5 -> 0.1 at 3 mg). None of these five compounds appears in Table 67, so reversibility=not_assessed is correct, but the row should not be read as evidence of persistent paralysis, and grade 2 is a defensible alternative for the score-5 rows (CMS0004/CMS0047/CMS0083) under the rubric's grade-1/2 treatment of transient acute signs.",
+   "correction": {
+    "notes_addendum": "Same patent, Example 16/Table 67, shows this 3 h IT FOB response largely reverses by 8 weeks for other compounds; grade 3 is on the acute-paralysis limb only"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0047",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US10968453.html. Example 14 + TABLE 64 'FOB scores in Sprague-Dawley rats'. ISIS 666861: target start site 679 on SEQ ID NO: 1, chemistry 'Deoxy, MOE, and cEt with mixed backbone', FOB score 5 - every field an exact match. Example 14 text confirms 3 mg single IT dose, PBS control group, scoring 3 h post-dose over seven regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), and 'Control animals usually have a score of 0 or 1' - exactly as recorded in the row's notes.",
+   "problem": "Value, locus, dose, species, scale and the control-score statement all verify. Grade 3 rests on the rubric's 'paralysis' limb and on an extractor-defined cutoff (>=5) that the patent does not state; Example 14 says only that 'a score at the top end of the range would be suggestive of acute toxicity'. The strongest counter-evidence is inside the same patent: Example 16 / TABLE 67 reports 3-hour AND 8-week FOB for the same assay and shows the response largely reverses (ISIS 333611 4.9 -> 1.2; ISIS 666870 5.8 -> 0.8; ISIS 666919 3.5 -> 0.1 at 3 mg). None of these five compounds appears in Table 67, so reversibility=not_assessed is correct, but the row should not be read as evidence of persistent paralysis, and grade 2 is a defensible alternative for the score-5 rows (CMS0004/CMS0047/CMS0083) under the rubric's grade-1/2 treatment of transient acute signs.",
+   "correction": {
+    "notes_addendum": "Same patent, Example 16/Table 67, shows this 3 h IT FOB response largely reverses by 8 weeks for other compounds; grade 3 is on the acute-paralysis limb only"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0054",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US10968453.html. Example 14 + TABLE 64 'FOB scores in Sprague-Dawley rats'. ISIS 666868: target start site 684 on SEQ ID NO: 1, chemistry 'Deoxy, MOE, and cEt with mixed backbone', FOB score 6 - every field an exact match. Example 14 text confirms 3 mg single IT dose, PBS control group, scoring 3 h post-dose over seven regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), and 'Control animals usually have a score of 0 or 1' - exactly as recorded in the row's notes.",
+   "problem": "Value, locus, dose, species, scale and the control-score statement all verify. Grade 3 rests on the rubric's 'paralysis' limb and on an extractor-defined cutoff (>=5) that the patent does not state; Example 14 says only that 'a score at the top end of the range would be suggestive of acute toxicity'. The strongest counter-evidence is inside the same patent: Example 16 / TABLE 67 reports 3-hour AND 8-week FOB for the same assay and shows the response largely reverses (ISIS 333611 4.9 -> 1.2; ISIS 666870 5.8 -> 0.8; ISIS 666919 3.5 -> 0.1 at 3 mg). None of these five compounds appears in Table 67, so reversibility=not_assessed is correct, but the row should not be read as evidence of persistent paralysis, and grade 2 is a defensible alternative for the score-5 rows (CMS0004/CMS0047/CMS0083) under the rubric's grade-1/2 treatment of transient acute signs.",
+   "correction": {
+    "notes_addendum": "Same patent, Example 16/Table 67, shows this 3 h IT FOB response largely reverses by 8 weeks for other compounds; grade 3 is on the acute-paralysis limb only"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0057",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US10968453.html. Example 14 + TABLE 64 'FOB scores in Sprague-Dawley rats'. ISIS 666871: target start site 684 on SEQ ID NO: 1, chemistry 'Deoxy, MOE, and cEt with mixed backbone', FOB score 6 - every field an exact match. Example 14 text confirms 3 mg single IT dose, PBS control group, scoring 3 h post-dose over seven regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), and 'Control animals usually have a score of 0 or 1' - exactly as recorded in the row's notes.",
+   "problem": "Value, locus, dose, species, scale and the control-score statement all verify. Grade 3 rests on the rubric's 'paralysis' limb and on an extractor-defined cutoff (>=5) that the patent does not state; Example 14 says only that 'a score at the top end of the range would be suggestive of acute toxicity'. The strongest counter-evidence is inside the same patent: Example 16 / TABLE 67 reports 3-hour AND 8-week FOB for the same assay and shows the response largely reverses (ISIS 333611 4.9 -> 1.2; ISIS 666870 5.8 -> 0.8; ISIS 666919 3.5 -> 0.1 at 3 mg). None of these five compounds appears in Table 67, so reversibility=not_assessed is correct, but the row should not be read as evidence of persistent paralysis, and grade 2 is a defensible alternative for the score-5 rows (CMS0004/CMS0047/CMS0083) under the rubric's grade-1/2 treatment of transient acute signs.",
+   "correction": {
+    "notes_addendum": "Same patent, Example 16/Table 67, shows this 3 h IT FOB response largely reverses by 8 weeks for other compounds; grade 3 is on the acute-paralysis limb only"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0083",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US10968453.html. Example 14 + TABLE 64 'FOB scores in Sprague-Dawley rats'. ISIS 684063: target start site 676 on SEQ ID NO: 1, chemistry 'Deoxy, MOE, and cEt with mixed backbone', FOB score 5 - every field an exact match. Example 14 text confirms 3 mg single IT dose, PBS control group, scoring 3 h post-dose over seven regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), and 'Control animals usually have a score of 0 or 1' - exactly as recorded in the row's notes.",
+   "problem": "Value, locus, dose, species, scale and the control-score statement all verify. Grade 3 rests on the rubric's 'paralysis' limb and on an extractor-defined cutoff (>=5) that the patent does not state; Example 14 says only that 'a score at the top end of the range would be suggestive of acute toxicity'. The strongest counter-evidence is inside the same patent: Example 16 / TABLE 67 reports 3-hour AND 8-week FOB for the same assay and shows the response largely reverses (ISIS 333611 4.9 -> 1.2; ISIS 666870 5.8 -> 0.8; ISIS 666919 3.5 -> 0.1 at 3 mg). None of these five compounds appears in Table 67, so reversibility=not_assessed is correct, but the row should not be read as evidence of persistent paralysis, and grade 2 is a defensible alternative for the score-5 rows (CMS0004/CMS0047/CMS0083) under the rubric's grade-1/2 treatment of transient acute signs.",
+   "correction": {
+    "notes_addendum": "Same patent, Example 16/Table 67, shows this 3 h IT FOB response largely reverses by 8 weeks for other compounds; grade 3 is on the acute-paralysis limb only"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0414",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US11851654.html. Example 4, results paragraph for TABLE 12: 'As for the relationship between the number of administrations and the number of deaths shown in Table 12 shows that two out of six mice in the ASO administration group died, while none of the mice in the PBS administration group (negative control) and the groups of administration of six kinds of double-stranded agent died.' Example 1 methods confirm 7-week-old female ICR mice, left lateral ventricle, and that 'the number of mice that died within one day after the administration was recorded'.",
+   "problem": "Value 2/6, direction, species, route, 24 h window and grade 3 (treatment-emergent death vs 0 in a concurrent PBS control) all verify. Two field imprecisions: (a) the PBS denominator is recorded as '0/4' but the patent states n=4 to 5 for Example 4 (n=4 to 7 in Example 1) and gives no PBS n at this locus - the correct statement is '0 deaths in the PBS group, n not stated'; (b) dose_or_conc_unit is TBD when the patent prints '12 umol per mouse' - the unit is umol/mouse (a figure that is almost certainly a typo in the patent for nmol, but it is what the document says and should be recorded as printed rather than dropped).",
+   "correction": {
+    "effect_vs_control": "2/6_vs_0/N_PBS (PBS n not stated at this locus; patent gives n=4 to 5 per group)",
+    "notes_addendum": "dose printed in the patent as 12 umol/mouse; unit not in the schema enum"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0507",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/fpo/US11851654.html. Example 2, results paragraph for TABLE 8: 'As for the relationship between the number of administrations and number of deaths shown in Table 8, one out of five mice in the ASO administration group died, while none of the mice in the PBS administration group (negative control) and the four double-stranded agent HDO administration groups died.' Example 1 methods confirm the within-one-day death window and the ICR mouse ICV model.",
+   "problem": "Value 1/5 and grade 3 (treatment-emergent death vs 0 in concurrent PBS) verify exactly. Same two field imprecisions as CMS0414: the PBS denominator '0/4' is not stated at this locus (patent gives n=4 to 5), and dose_or_conc_unit=TBD drops the patent's printed '12 umol per mouse'.",
+   "correction": {
+    "effect_vs_control": "1/5_vs_0/N_PBS (PBS n not stated at this locus; patent gives n=4 to 5 per group)",
+    "notes_addendum": "dose printed in the patent as 12 umol/mouse; unit not in the schema enum"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1878",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12865454_fulltext.xml + orourke2026 supplement. Fig. 1A is a heat map: 'The heatmap shows the number of rats/group that exhibited paresis/paralysis in the designated regions over time (white = 0/4; green = 4/4)'; Supplementary Table 4 gives Saline n=4 and ASO1 n=4 at 100 ug IT. Results text: 'Muscle weakness/paresis was present in posterior regions at 30-300 ug doses. At higher doses of 700-1000 ug, both posterior and anterior regions were impacted.' Fig. 1B (the only numeric anchor, peak score 4) is the 700 ug group, not 100 ug.",
+   "problem": "Grade 3 is not supported at the recorded dose. readout_value is TBD and the cited locus reports presence/absence only, so severity was inferred from a qualitative phrase - exactly the failure mode the brief asks about. The row's justification ('frank hindlimb paresis/paralysis') imports the 700 ug peak score of 4 into a 100 ug row; at 30-300 ug the paper reports paresis confined to posterior regions. The paper further states the response reversed by 16-24 h and animals scored 0 for the next 2 weeks 'confirming acute inhibition is transient with no long-term sequelae' - the row's own reversibility field already says 'reversible'. Correct grade is 2 (clinically significant but fully resolving neurologic effect); readout_value must stay TBD.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1889",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12865454_fulltext.xml + supplement p.16 (Supplementary Table 10) and p.3 (Supplementary Fig. S1A). The published IT scale reads: '3 Hind limbs don't support weight, but can still move' and '4 Hind paws don't move - full hindlimb paralysis'. Supplementary Table 10, Fig. 3B rat panel: PBS n=4; ASO6 30 ug ns; 100 ug ns; 300 ug ns; 700 ug n=3 ns; 1000 ug n=3 P=0.0131.",
+   "problem": "Two independent problems. (1) The grade mapping recorded in the notes, 's>=3 -> 3 (paresis/paralysis)', conflates paresis with paralysis: on this paper's own scale 3 is paraparesis (hind limbs cannot support weight but still move) and paralysis begins at 4. (2) At the dose recorded (700 ug) the rat acute-inhibition score was NOT statistically separable from the concurrent PBS control (Kruskal-Wallis/Dunn, ns; only 1000 ug reached P=0.0131) - the row's own effect_vs_control says so, yet the row is graded 3. The value 3.0 is additionally a bar-chart read; the paper publishes no numeric group means. Grade 3 is the weakest in this batch. Correct grade 2 at most, and the row should carry an explicit not-significant-vs-control flag.",
+   "correction": {
+    "neurotox_grade": "2",
+    "notes_addendum": "NOT significant vs PBS at this dose (Supplementary Table 10); score 3 on this scale is paraparesis, not paralysis"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1907",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12865454_fulltext.xml, Fig. 5E; supplement p.18 (Supplementary Table 13) confirms the ASO2 PS-vs-PO comparison at 700 ug is P=0.0286 with n=4/4, exactly as recorded. Rodent ICV acute-inhibition scale (Methods + Supplementary Fig. S1B): 0 bright/alert/responsive; 1 mild gait impairment; 2 obvious impaired gait/hunched posture; 3 moves away after lifting; 4 does not move forward after lifting but has an upright posture; 5 lying on its side, does not move after lift but responds to tail pinch; 6 does not respond to pinch but is breathing; 7 death.",
+   "problem": "Value and statistics verify; the grade does not. The mapping used ('s>=4 -> 3') turns scale point 4 - 'does not move forward after lifting but has an upright posture' - into the rubric's severe band. An upright, breathing, tail-pinch-responsive mouse is not neuronal degeneration, paralysis, moribundity or death, and the paper's central claim is that this response 'reversed within 24 h with no sequelae'; the row itself records reversibility=reversible. On this scale grade 3 should begin at 6 ('does not respond to pinch but is breathing') or 7 (death). Correct grade 2. Note also that the P value cited is full-PS vs mixed PS/PO, not vs PBS; Fig. 5E's statistics are Mann-Whitney PS vs PO only, so 'score 4.1 vs 0 in PBS-injected controls' is not tested at this locus.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1922",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12865454_fulltext.xml, Fig. 5E; supplement p.18 (Supplementary Table 13) confirms the ASO4 PS-vs-PO comparison at 300 ug is P=0.0286 with n=4/4, exactly as recorded. Rodent ICV acute-inhibition scale (Methods + Supplementary Fig. S1B): 0 bright/alert/responsive; 1 mild gait impairment; 2 obvious impaired gait/hunched posture; 3 moves away after lifting; 4 does not move forward after lifting but has an upright posture; 5 lying on its side, does not move after lift but responds to tail pinch; 6 does not respond to pinch but is breathing; 7 death.",
+   "problem": "Value and statistics verify; the grade does not. The mapping used ('s>=4 -> 3') turns scale point 4 - 'does not move forward after lifting but has an upright posture' - into the rubric's severe band. An upright, breathing, tail-pinch-responsive mouse is not neuronal degeneration, paralysis, moribundity or death, and the paper's central claim is that this response 'reversed within 24 h with no sequelae'; the row itself records reversibility=reversible. On this scale grade 3 should begin at 6 ('does not respond to pinch but is breathing') or 7 (death). Correct grade 2. Note also that the P value cited is full-PS vs mixed PS/PO, not vs PBS; Fig. 5E's statistics are Mann-Whitney PS vs PO only, so 'score 4.0 vs 0 in PBS-injected controls' is not tested at this locus.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1954",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12865454_fulltext.xml, Fig. 5F; supplement p.18 confirms 5F-LNA ASO6 PS vs PO at 100 ug, n=4/4, P=0.0286 (and 5F-cEt likewise), exactly as recorded. Results text: 'Each of the full PS modified versions elicited acute inhibition scores of 3-4, while scores for each of the mixed PO/PS versions were zero.' Rodent ICV acute-inhibition scale (Methods + Supplementary Fig. S1B): 0 bright/alert/responsive; 1 mild gait impairment; 2 obvious impaired gait/hunched posture; 3 moves away after lifting; 4 does not move forward after lifting but has an upright posture; 5 lying on its side, does not move after lift but responds to tail pinch; 6 does not respond to pinch but is breathing; 7 death.",
+   "problem": "Same mapping error as CMS1907/CMS1922: score 4 on the ICV scale is an upright, responsive, fully recovering mouse, not the rubric's severe band, and 4 is merely the top of the paper's stated 3-4 band for this comparison. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1931",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/PMC12865454_fulltext.xml, Fig. 5E (ASO6 panel); supplement p.18 confirms the ASO6 PS-vs-PO comparison at 700 ug is P=0.0286 with n=4/4, matching the row. Rodent ICV acute-inhibition scale (Methods + Supplementary Fig. S1B): 0 bright/alert/responsive; 1 mild gait impairment; 2 obvious impaired gait/hunched posture; 3 moves away after lifting; 4 does not move forward after lifting but has an upright posture; 5 lying on its side, does not move after lift but responds to tail pinch; 6 does not respond to pinch but is breathing; 7 death.",
+   "problem": "Grade 3 holds here: a group mean of 6.2 sits at or above scale point 6, 'does not respond to pinch but is breathing', i.e. moribundity, with 7 = death. Caveats: the value is read off a bar chart (the paper publishes no numeric group means, and the row states +/-0.5), and the cited P value is full-PS vs mixed PS/PO, not vs PBS, so 'score 6.2 vs 0 in PBS-injected controls' is asserted rather than tested at this locus.",
+   "correction": {
+    "notes_addendum": "group mean digitised from Fig. 5E; cited P value is full-PS vs mixed PS/PO, not vs PBS"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1939",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/PMC12865454_fulltext.xml, Fig. 5E (ASO7 panel); supplement p.18 confirms the ASO7 PS-vs-PO comparison at 700 ug is P=ns with n=4/4, matching the row. Rodent ICV acute-inhibition scale (Methods + Supplementary Fig. S1B): 0 bright/alert/responsive; 1 mild gait impairment; 2 obvious impaired gait/hunched posture; 3 moves away after lifting; 4 does not move forward after lifting but has an upright posture; 5 lying on its side, does not move after lift but responds to tail pinch; 6 does not respond to pinch but is breathing; 7 death.",
+   "problem": "Grade 3 holds here: a group mean of 6.0 sits at or above scale point 6, 'does not respond to pinch but is breathing', i.e. moribundity, with 7 = death. Caveats: the value is read off a bar chart (the paper publishes no numeric group means, and the row states +/-0.5), and the cited P value is full-PS vs mixed PS/PO, not vs PBS, so 'score 6.0 vs 0 in PBS-injected controls' is asserted rather than tested at this locus.",
+   "correction": {
+    "notes_addendum": "group mean digitised from Fig. 5E; cited P value is full-PS vs mixed PS/PO, not vs PBS"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1947",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/PMC12865454_fulltext.xml, Fig. 5E (ASO8 panel); supplement p.18 confirms ASO8 PS vs PO at 700 ug is ns with n=4/4, matching the row. Rodent ICV acute-inhibition scale (Methods + Supplementary Fig. S1B): 0 bright/alert/responsive; 1 mild gait impairment; 2 obvious impaired gait/hunched posture; 3 moves away after lifting; 4 does not move forward after lifting but has an upright posture; 5 lying on its side, does not move after lift but responds to tail pinch; 6 does not respond to pinch but is breathing; 7 death.",
+   "problem": "Grade 3 survives, but the recorded value is internally inconsistent. A group mean of exactly 7.0 on this scale means all four mice died, which the paper never reports and which contradicts both its abstract ('reversed within 24 h with no sequelae') and this row's own reversibility=reversible. The value is a chart read at the axis maximum and is more safely recorded as '>=6 (approx., digitised)'. The grade is unaffected because 6 already denotes an unresponsive animal. Same PBS-comparator caveat as CMS1931/CMS1939.",
+   "correction": {
+    "readout_value": ">=6 (digitised from Fig. 5E; 7.0 would imply 4/4 mortality, which the paper does not report)",
+    "reversibility": "TBD"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1725",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx, sheet S1, column 'Acute_tolerance_score_mice'. Sequence CAACAttcaagcCTTT (Validate set, target STC1) reads 20 - exact match. Paper methods (PMC9221153) confirm the scale verbatim: five categories scored 0-4, summed 'from 0 (no side effects) to 20 (severe signs in all categories, including convulsions resulting in euthanasia)', 100 ug single free-hand ICV bolus in 5 uL saline, n=4-6/group, 1 h observation. The author severity bands the row's mapping relies on are real and are quoted correctly: 'we divided ASO into those with mild, moderate, marked, and severe tolerability signs using score cutoffs at 4, 7, and 18'.",
+   "problem": "Value, locus, scale, dose, model and the severity banding all verify, and grade 3 is well supported: the author-defined severe class (>18) is explicitly the euthanasia band, and the paper judged these compounds to have 'an acute neurotoxic potential too high for further development', i.e. compound-limiting. Two field errors: (1) redistribution is 'summary_stat' but PMC9221153 is published under a plain CC-BY 4.0 licence ('This Open Access article is distributed under the terms of the Creative Commons License [CC-BY]... which permits unrestricted use, distribution, and reproduction'), so it should be 'cc_by' - the schema tracks that right separately and deliberately. (2) reversibility is applied inconsistently across the score-20/19.16 rows in this same block (CMS1863 at 19.16 is filed 'reversible' while the score-20 rows are 'irreversible', although both sit in the same author-defined euthanasia band).",
+   "correction": {
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1863",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx, sheet S1, column 'Acute_tolerance_score_mice'. Sequence ATAgtcactctggTGA (Test set, target Tau) reads 19.16 - exact match. Paper methods (PMC9221153) confirm the scale verbatim: five categories scored 0-4, summed 'from 0 (no side effects) to 20 (severe signs in all categories, including convulsions resulting in euthanasia)', 100 ug single free-hand ICV bolus in 5 uL saline, n=4-6/group, 1 h observation. The author severity bands the row's mapping relies on are real and are quoted correctly: 'we divided ASO into those with mild, moderate, marked, and severe tolerability signs using score cutoffs at 4, 7, and 18'.",
+   "problem": "Value, locus, scale, dose, model and the severity banding all verify, and grade 3 is well supported: the author-defined severe class (>18) is explicitly the euthanasia band, and the paper judged these compounds to have 'an acute neurotoxic potential too high for further development', i.e. compound-limiting. Two field errors: (1) redistribution is 'summary_stat' but PMC9221153 is published under a plain CC-BY 4.0 licence ('This Open Access article is distributed under the terms of the Creative Commons License [CC-BY]... which permits unrestricted use, distribution, and reproduction'), so it should be 'cc_by' - the schema tracks that right separately and deliberately. (2) reversibility is applied inconsistently across the score-20/19.16 rows in this same block (CMS1863 at 19.16 is filed 'reversible' while the score-20 rows are 'irreversible', although both sit in the same author-defined euthanasia band).",
+   "correction": {
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1866",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx, sheet S1, column 'Acute_tolerance_score_mice'. Sequence TTGtagactatTTG (Test set, target Tau) reads 20 - exact match. Paper methods (PMC9221153) confirm the scale verbatim: five categories scored 0-4, summed 'from 0 (no side effects) to 20 (severe signs in all categories, including convulsions resulting in euthanasia)', 100 ug single free-hand ICV bolus in 5 uL saline, n=4-6/group, 1 h observation. The author severity bands the row's mapping relies on are real and are quoted correctly: 'we divided ASO into those with mild, moderate, marked, and severe tolerability signs using score cutoffs at 4, 7, and 18'.",
+   "problem": "Value, locus, scale, dose, model and the severity banding all verify, and grade 3 is well supported: the author-defined severe class (>18) is explicitly the euthanasia band, and the paper judged these compounds to have 'an acute neurotoxic potential too high for further development', i.e. compound-limiting. Two field errors: (1) redistribution is 'summary_stat' but PMC9221153 is published under a plain CC-BY 4.0 licence ('This Open Access article is distributed under the terms of the Creative Commons License [CC-BY]... which permits unrestricted use, distribution, and reproduction'), so it should be 'cc_by' - the schema tracks that right separately and deliberately. (2) reversibility is applied inconsistently across the score-20/19.16 rows in this same block (CMS1863 at 19.16 is filed 'reversible' while the score-20 rows are 'irreversible', although both sit in the same author-defined euthanasia band).",
+   "correction": {
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1870",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx, sheet S1, column 'Acute_tolerance_score_mice'. Sequence ACTtgtacacgatctccGCC (Test set, target Tau) reads 20 - exact match. Paper methods (PMC9221153) confirm the scale verbatim: five categories scored 0-4, summed 'from 0 (no side effects) to 20 (severe signs in all categories, including convulsions resulting in euthanasia)', 100 ug single free-hand ICV bolus in 5 uL saline, n=4-6/group, 1 h observation. The author severity bands the row's mapping relies on are real and are quoted correctly: 'we divided ASO into those with mild, moderate, marked, and severe tolerability signs using score cutoffs at 4, 7, and 18'.",
+   "problem": "Value, locus, scale, dose, model and the severity banding all verify, and grade 3 is well supported: the author-defined severe class (>18) is explicitly the euthanasia band, and the paper judged these compounds to have 'an acute neurotoxic potential too high for further development', i.e. compound-limiting. Two field errors: (1) redistribution is 'summary_stat' but PMC9221153 is published under a plain CC-BY 4.0 licence ('This Open Access article is distributed under the terms of the Creative Commons License [CC-BY]... which permits unrestricted use, distribution, and reproduction'), so it should be 'cc_by' - the schema tracks that right separately and deliberately. (2) reversibility is applied inconsistently across the score-20/19.16 rows in this same block (CMS1863 at 19.16 is filed 'reversible' while the score-20 rows are 'irreversible', although both sit in the same author-defined euthanasia band).",
+   "correction": {
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1874",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx, sheet S1, column 'Acute_tolerance_score_mice'. Sequence TTCaggtctggcaTGG (Test set, target Tau) reads 20 - exact match. Paper methods (PMC9221153) confirm the scale verbatim: five categories scored 0-4, summed 'from 0 (no side effects) to 20 (severe signs in all categories, including convulsions resulting in euthanasia)', 100 ug single free-hand ICV bolus in 5 uL saline, n=4-6/group, 1 h observation. The author severity bands the row's mapping relies on are real and are quoted correctly: 'we divided ASO into those with mild, moderate, marked, and severe tolerability signs using score cutoffs at 4, 7, and 18'.",
+   "problem": "Value, locus, scale, dose, model and the severity banding all verify, and grade 3 is well supported: the author-defined severe class (>18) is explicitly the euthanasia band, and the paper judged these compounds to have 'an acute neurotoxic potential too high for further development', i.e. compound-limiting. Two field errors: (1) redistribution is 'summary_stat' but PMC9221153 is published under a plain CC-BY 4.0 licence ('This Open Access article is distributed under the terms of the Creative Commons License [CC-BY]... which permits unrestricted use, distribution, and reproduction'), so it should be 'cc_by' - the schema tracks that right separately and deliberately. (2) reversibility is applied inconsistently across the score-20/19.16 rows in this same block (CMS1863 at 19.16 is filed 'reversible' while the score-20 rows are 'irreversible', although both sit in the same author-defined euthanasia band).",
+   "correction": {
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1658",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml. Fig. 1 legend: 'Seven-week-old female C57BL/6 mice (n = 4 per group) were injected intracerebroventricularly with ... ASO3 (15.2 nmol, 100 ug) ... Mice injected with ASO2 and ASO3 were sacrificed 7 days postinjection'. Results: 'maximum speed (max speed) was decreased with all four ASOs (Figure 1C)'. Also checked the paper's histopathology: 'Histopathological analysis of the lumbar cord, cerebellum, and hippocampus revealed no neuronal cell death or inflammation for either ASO, indicating that severe neurodegeneration or gliosis cannot explain in vivo late-onset neurological dysfunction by ASO2' and, in the Discussion, 'Our histopathological analysis showed no neuronal cell death in CNS tissues of rats exhibiting lethal toxicity in neurobehavioral tests'. Deaths in this paper are reported only for the i.t. rat ASO2 study (1/4 on day 14) and for the PO-replacement mouse groups - not for ASO3 in mice.",
+   "problem": "Grade 3 is unsupported. The readout is an open-field maximum-speed decrement with readout_value=TBD and no numeric group mean in the source; no death, no paralysis and no dose-limiting event is reported for ASO3 in mice, and the paper's own histopathology explicitly excludes neuronal degeneration as the mechanism, which removes the only grade-3 limb the endpoint could otherwise reach. A progressive, non-resolving motor deficit is a grade 2 under this rubric. Note also that 'irreversible' is an inference the row itself flags (no recovery phase was run).",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1666",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml. The in vivo data for ASO2 with 2'-OMe at gap position 2 are Fig. 3E-3H, whose legend reads: '(E-H) Seven-week-old female C57BL/6 mice (n = 4 per group) were injected intracerebroventricularly with 19.0 nmol of ASO2, with or without 2'-OMe modification at gap position 2. Toxicity was assessed on the indicated days, and mice were sacrificed 7 days postinjection. Tolerability scores (F) and maximum speed in open-field tests (G) were documented 6 days postinjection.' Results text: '2'-OMe at gap position 2 worsened cytotoxicity (Figures 3A-3D) and late-onset neurotoxicity after i.c.v. injection into mice (Figures 3E-3H)'. No deaths are reported for this experiment; the paper names the groups that lost animals (Fig. 5C and Fig. 6H-6K) and this is not one.",
+   "problem": "Two problems. (1) exposure_duration is recorded as 11d; the cited experiment ran to a scheduled sacrifice at 7 days with behaviour scored on day 6. (The '11 days' figure belongs to the separate Fig. 4F-4J experiment.) (2) Grade 3 is unsupported: readout_value is TBD, effect_direction is relative to the parent ASO rather than vehicle, no animal in this group died, and the paper's histopathology explicitly found no neuronal cell death. Correct grade 2. Separately, source_table lists four unrelated figure ranges (2G/2H, 3E-3H, 4C-4J, 6C-6I) for a single measurement - the locus for this row is Fig. 3E-3H alone.",
+   "correction": {
+    "neurotox_grade": "2",
+    "exposure_duration": "7d",
+    "source_table": "Figures 3E-3H (in vivo 2'-OMe gap position 2 variant of ASO2)"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1670",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml. Results, PO-replacement section, verbatim: 'Specifically, two of the five mice in the PS-1(-) group, one of the five mice in the PS-3(-) group, and three of the five mice in the PS-9(-) group either succumbed to severe toxicity or were euthanized between 2 and 9 days postinjection.' 1/5 for PS-3(-) is exact. Fig. 5C-5G legend confirms 7-week-old female C57BL/6, 19.0 nmol ICV, n=5 for the variant groups and n=4 for vehicle and parent ASO2.",
+   "problem": "Value, direction and grade 3 (death) all verify. One field error: exposure_duration is recorded as 14d, but the Fig. 5C-5G legend states 'mice were sacrificed 10 days postinjection' and the deaths occurred between days 2 and 9. Also, redistribution should be 'cc_by' - PMC12744863 carries a plain CC BY 4.0 licence ('This is an open access article under the CC BY license'), not a licence needing the summary_stat restriction.",
+   "correction": {
+    "exposure_duration": "10d",
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1674",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml. Results, 5'-CP + PO section, verbatim: 'Some of the mice were sacrificed due to severe toxicity or found dead before 14 days postinjection: two of the four mice in the 5'-CP at position 1 group, all four mice in the 5'-CP at position 1 with PS-1(-) group, and one of the four mice in the 5'-CP at position 9 with PS-9(-) group.' 1/4 is exact, and the Fig. 6H-6K legend confirms 19.0 nmol ICV in 7-week-old female C57BL/6, n=4, sacrificed 14 days postinjection - so exposure_duration=14d is right.",
+   "problem": "Value, duration and grade 3 (death) verify. Only redistribution is wrong: PMC12744863 is plain CC BY 4.0 and should be 'cc_by'. Worth flagging for the curator that this compound is presented by the authors as a mitigation success ('5'-CP at position 9 with PS-9(-) reduced late-onset neurotoxicity without significantly decreasing knockdown activity') while still losing 1/4 animals; the row's notes capture that tension correctly but a downstream reader could be misled.",
+   "correction": {
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2061",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml. Fig 3B is confirmed as the LDH panel for ASO2 with 2'-OMe at gap position 2 in BE(2)-M17 cells at 20 nM, 72 h, n=4 biological replicates, expressed as percent relative to vehicle - locus, cell line, concentration and duration all match. Direction also matches the text ('2'-OMe at gap position 2 worsened cytotoxicity'; 'PO replacements at these positions in ASO2 unexpectedly increased cytotoxicity compared with the parent ASO2'). I then cross-checked the sibling rows drawn from the same figure set in batch_invitro.json.",
+   "problem": "CRITICAL grade inflation. An in vitro LDH release from a neuroblastoma cell line, with readout_value=TBD, cannot reach the rubric's grade 3 (neuronal degeneration/loss, spinal-cord or DRG degeneration, paralysis, hydrocephalus requiring intervention, moribundity/death, or dose-limiting/programme-halting neurotoxicity). Worse, the grading is internally incoherent: in the same paper and the same assay, CMS2060 (parent ASO2, 'elevated LDH vs vehicle') and CMS2081 (ASO4, 'elevated LDH at 72h') are graded 2, and CMS2072 (5'-CP position 9, lower LDH) is graded 1 - yet these two rows, whose comparator is the WEAKER one (the parent ASO rather than vehicle) and whose increment is therefore smaller, are graded 3. The paper's own histopathology found no neuronal cell death in vivo for these ASOs. Correct grade 2, matching CMS2060/CMS2081. redistribution should also be 'cc_by' (plain CC BY 4.0).",
+   "correction": {
+    "neurotox_grade": "2",
+    "redistribution": "cc_by"
+   },
+   "severity": "critical"
+  },
+  {
+   "measurement_id": "CMS2066",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml. Fig 5B is confirmed as the LDH panel for ASO2 PS-9(-) in BE(2)-M17 cells at 20 nM, 72 h, n=4 biological replicates, expressed as percent relative to vehicle - locus, cell line, concentration and duration all match. Direction also matches the text ('2'-OMe at gap position 2 worsened cytotoxicity'; 'PO replacements at these positions in ASO2 unexpectedly increased cytotoxicity compared with the parent ASO2'). I then cross-checked the sibling rows drawn from the same figure set in batch_invitro.json.",
+   "problem": "CRITICAL grade inflation. An in vitro LDH release from a neuroblastoma cell line, with readout_value=TBD, cannot reach the rubric's grade 3 (neuronal degeneration/loss, spinal-cord or DRG degeneration, paralysis, hydrocephalus requiring intervention, moribundity/death, or dose-limiting/programme-halting neurotoxicity). Worse, the grading is internally incoherent: in the same paper and the same assay, CMS2060 (parent ASO2, 'elevated LDH vs vehicle') and CMS2081 (ASO4, 'elevated LDH at 72h') are graded 2, and CMS2072 (5'-CP position 9, lower LDH) is graded 1 - yet these two rows, whose comparator is the WEAKER one (the parent ASO rather than vehicle) and whose increment is therefore smaller, are graded 3. The paper's own histopathology found no neuronal cell death in vivo for these ASOs. Correct grade 2, matching CMS2060/CMS2081. redistribution should also be 'cc_by' (plain CC BY 4.0).",
+   "correction": {
+    "neurotox_grade": "2",
+    "redistribution": "cc_by"
+   },
+   "severity": "critical"
+  },
+  {
+   "measurement_id": "CMS1975",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12867516_fulltext.xml + bravohernandez2026 supplement. Fig. 1F legend confirms 'a single IT administration of 16 ASOs, same chemistry (5-10-5 MOE gapmer, mixed backbone [PO/PS], and different sequences) in rats with body weight 294 +/- 13 g (n = 4)' and the '2 to 6' range is confirmed in the Results ('The acute neuronal activation response ranged from 2 to 6, with no clear sequence dependence'). Supplementary Table 9 lists ASO L: 4 male rats, BW 296+/-8 g, 100 mg/ml, P vs ASO A >0.9999. Table 1 gives the aA scale verbatim.",
+   "problem": "Grade 3 is not supported, and the scale is mis-described in the notes. The published Table 1 reads: '5 Severe vocalizations (high-pitched, long, unmodulated vocal emissions); 6 Any type of tremors or seizure; 7 Death' - the row's notes say '7 = requires euthanasia', which is wrong, and a score of 5 is severe pain vocalisation, not seizure and not death. The response 'peaks ~15 min after intrathecal dosing and resolves by ~120 min with no apparent sequelae' (the row's own reversibility=reversible). That is a clinically significant but fully resolving neurologic event = grade 2. Two secondary points: the value 5.0 is a bar-chart read (the paper publishes only the 2-6 range, and Supplementary Table 9 gives P values only), and Fig. 1F's statistics are Kruskal-Wallis versus ASO A, not versus vehicle, so 'PBS/aCSF vehicle scored 0' is not the tested comparison for this ASO.",
+   "correction": {
+    "neurotox_grade": "2",
+    "notes_correction": "aA scale point 7 is 'Death', not 'requires euthanasia'; point 5 is severe vocalisation, point 6 is tremors/seizure"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1990",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12867516_fulltext.xml. Verbatim: 'we reviewed more than two thousand rat entries from screening studies of our database, with ~640 different ASOs, yielding an 18.5% incidence (455 occurrences out of 2464 entries) of severe acute neuronal activation responses (vocalization/seizures; score >= 5) after IT administration of ASO into male rats of varying size.' The 455/2464 value is exact. Table 1 gives the scale (5 severe vocalisations, 6 tremors/seizure, 7 death).",
+   "problem": "The number verifies exactly; the grade does not. The response the incidence counts is explicitly transient - it peaks ~15 min after IT dosing and resolves by ~120 min 'with no apparent sequelae' - and score >=5 is severe vocalisation and/or seizure, neither of which is degeneration, paralysis, moribundity or death (the paper attributes 'prolonged and fatal seizures' to siRNA at high doses, not to the ASO database this figure comes from). Correct grade 2. Separately, this is a class-level row with no identified oligonucleotide, dose TBD and unit TBD; at grade 3 it teaches a model that an unspecified ASO at an unspecified dose is severely neurotoxic, which is the least useful shape a grade-3 training row can take.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1685",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC11638874_fulltext.xml. Table 1 gives the EvADINT weightings verbatim: Seizure 0/10/15/20 with Death = 75; hyperactivity 0/5/10/15; sternal posture 0/4/8/12/20; unstimulated movement 0/3/6/9/15; movement without ataxia 0/2/4/6/10; normal grooming 0/1/2/3/5; and 'If a mouse died, it was given a maximum score of 75.' Results: 'Even severely affected mice, unless they died, recovered fully by 24 h, and showed no further adverse effects.'",
+   "problem": "Grade 3 is not supported. A group mean of ~50 on a scale where death alone scores 75 is a severe but non-lethal outcome, and the paper states such animals recovered fully within 24 h - the row's own reversibility field says 'reversible'. No degeneration, paralysis, death or dose-limiting event is reported for this group. Correct grade 2. Two secondary issues: readout_unit 'score_0_to_75' misdescribes the instrument (the non-death maximum summing Table 1 is 85; 75 is the score assigned for death), and redistribution should be 'cc_by' - PMC11638874 carries a plain CC BY 4.0 licence. The value itself is a chart read, acknowledged in the notes as +/-3 units.",
+   "correction": {
+    "neurotox_grade": "2",
+    "redistribution": "cc_by",
+    "readout_unit": "score_weighted (death = 75; non-death maximum 85)"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS2001",
+   "verdict": "CONFIRMED",
+   "checked": "Fetched the PubMed record via NCBI eutils (PMID 32794413). Journal/volume/pages confirm the row's notes exactly: Int J Toxicol 2020;39(6):505-509, 'Range of Neurological Signs in Cynomolgus Monkeys After Intrathecal Bolus Administration of Antisense Oligonucleotides'. Abstract confirms '28 IT studies conducted in 1,016 cynomolgus monkeys' and, verbatim for group 4: '(4) Neurological findings due to spinal cord injury were characterized by rapidly progressing paralysis of hind limbs. Magnetic resonance imaging revealed a focal hyperintense lesion, indicative of spinal cord necrosis.' - an exact match to the row's effect_vs_control.",
+   "problem": "The row is accurate and honestly scoped: it declares the abstract as its locus, leaves dose, incidence and denominators TBD rather than inventing them, and grade 3 is unambiguous (hind-limb paralysis plus MRI-evident spinal cord necrosis). redistribution=summary_stat is correct for a paywalled IJT article with no PMC deposit. The only reservation is one of utility rather than accuracy: as a class-level row with no compound, dose or incidence it carries a grade-3 label that no oligonucleotide feature can be learned from. The abstract also names two further grade-3-eligible findings the dataset may be missing - group 2 (muscle tremor/spasticity where 'in two-third it required euthanasia') and group 5 (hind limb paresis or paralysis 2-18 days after dosing 'requiring euthanasia').",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1175",
+   "verdict": "CONFIRMED",
+   "checked": "Fetched the EMA Qalsody EPAR product information (SmPC) and the EPAR assessment report (EMA/276404/2024). SmPC section 5.3 Toxicology confirms the quotation word for word, including 'a female in the high dose group (35 mg; equivalent to 350 mg per IT injection in humans) that had behaviour described as muscle cramping, head/neck dorsiflexion, and opisthotonos-like-back-arching posture after IT dosing. Electroencephalogram (EEG) indicated the absence of seizure' and the NOAEL of '12 mg intrathecal administration in the 9-month nonhuman primate'. EPAR section 2.5.4.2 confirms the diazepam sentence verbatim: 'In the 9-month study, tofersen-related and relevant neurological findings and CSF inflammation were observed in animals administered 35 mg. As a diazepam treatment was considered required for the female administered 35 mg, the neurological findings were considered adverse.' The EPAR also confirms the row's note that 'The neuronal vacuoles ... were not associated with morphological evidence of necrosis.'",
+   "problem": "Fully verified, and the extractor's request for reviewer adjudication can be closed: grade 3 stands on the rubric's 'dose-limiting' limb, because this single finding is what set the 9-month NHP NOAEL at 12 mg. redistribution=public_domain is correct for an EMA regulatory document. Two presentational notes: the diazepam fact - which is what readout_name encodes - exists only in the EPAR, not in the SmPC section named first in source_table, so the EPAR should be the primary locus; and readout_value '1 female' carries no denominator (the 35 mg group size is not given at either locus).",
+   "correction": {
+    "source_table": "EPAR (EMA/276404/2024) sec 2.5.4.2 Repeat dose toxicity, 9-month NHP study; corroborated by EU SmPC sec 5.3 Toxicology"
+   },
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1237",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Could not retrieve the Biogen DHPC letter SPZ-GBR-0020 itself (the gov.uk asset URL 404s). Fetched the co-cited MHRA Drug Safety Update, 25 September 2018, 'Nusinersen (Spinraza): reports of communicating hydrocephalus; discuss symptoms with patients and carers and investigate urgently', which corroborates the substance: 'Worldwide, 5 cases of communicating hydrocephalus have been reported up to 6 July 2018 during routine clinical use of nusinersen' and 'Three of the children required cerebrospinal fluid (CSF) drainage procedures and continued nusinersen treatment (2 had ventriculoperitoneal shunts).'",
+   "problem": "The case count, the cut-off date of 6 July 2018, the VP shunt and the continuation of nusinersen all corroborate, so grade 3 (hydrocephalus requiring intervention) is supported. Two problems. (1) The individual vignette the row records - 4-month-old female with Type I SMA, enlarging head size and lethargy, CSF negative for infection - is not in the MHRA Drug Safety Update and I could not reach the DHPC locus that is cited for it, so those per-case details remain unverified; the row should be kept with that caveat, not dropped. (2) redistribution=public_domain is an over-claim: the schema reserves public_domain for US patents and FDA/EMA documents. A Biogen DHPC letter is a company communication and an MHRA Drug Safety Update is UK Crown copyright under the Open Government Licence - neither is public domain. Note also that this is an uncontrolled spontaneous report confounded by SMA itself and by repeated lumbar puncture, as the row's notes acknowledge.",
+   "correction": {
+    "redistribution": "summary_stat"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1289",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Fetched https://clinicaltrials.gov/api/v2/studies/NCT03342053. In the adverse events module, serious event 'Hydrocephalus', organ system 'Nervous system disorders': RO7234292 Monthly 1/23, RO7234292 Bimonthly 0/23 - an exact match to readout_value '1_of_23' and to effect_vs_control. Study status COMPLETED with no whyStopped, so nothing about early termination is implied.",
+   "problem": "The number and locus verify exactly and redistribution=public_domain is right for ClinicalTrials.gov. The grade does not rest on the cited source: the AE table records a serious adverse event, not an intervention, and the row reaches grade 3 only via Stoker TB et al., Mov Disord 2021;36(1):263-264, which is named in the notes but is not in source_ref. Per the brief's second attack, serious-adverse-event coding is not by itself the rubric's grade 3. Either add the Stoker citation to source_ref so the intervention claim is falsifiable, or grade this row 2 (clinically significant but manageable neurologic AE) and carry the intervention on the Stoker-sourced row.",
+   "correction": {
+    "source_ref": "NCT03342053 (ClinicalTrials.gov posted results); intervention claim requires doi:10.1002/mds.28371 (Stoker et al., Mov Disord 2021;36:263-264) to be added"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1324",
+   "verdict": "UNVERIFIABLE",
+   "checked": "Attempted to fetch the Roche/Genentech medically.gene.com CHDI 2021 Schobel presentation PDF; the URL 404s and no archived copy was reachable. The overlapping ClinicalTrials.gov rows were verified instead (NCT03761849: hydrocephalus 2/263 Q8W vs 0/264 placebo and 0/264 Q16W; NCT03342053: 1/23 monthly vs 0/23 bimonthly), which is consistent with the slide's per-study tally but does not confirm the programme-wide 4/636 denominator, which the row itself says is available from no other source.",
+   "problem": "Keep with a caveat rather than drop, but tighten it. (1) The locus is a sponsor conference slide that the sponsor itself labels 'Preliminary analyses performed on non-final data set; specific values may be subject to change' - redistribution=verify is correctly set and must be resolved before release. (2) The grade-3 justification ends '...in the arm whose benefit:risk assessment led the iDMC to stop dosing'. That sentence imports a programme-halt into the grade. The GENERATION HD1 dosing stop was an iDMC benefit-risk decision driven by clinical outcomes, not by the hydrocephalus signal, and the ClinicalTrials.gov record for NCT03761849 carries no whyStopped at all. The grade must rest solely on the symptomatic hydrocephalus cases managed with CSF diversion; the programme-halt clause should be deleted so it cannot be read as programme-halting neurotoxicity. (3) The row overlaps three other rows (m34, m48, m58) - the duplication is flagged but the grade-3 weight is still counted four times.",
+   "correction": {
+    "notes_correction": "delete the clause attributing the iDMC dosing stop to this arm's benefit:risk; grade must rest only on the symptomatic hydrocephalus cases managed with CSF diversion"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1449",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Fetched https://clinicaltrials.gov/api/v2/studies/NCT03761849. resultsSection.adverseEventsModule.seriousEvents index 70, term 'Hydrocephalus', organSystem 'Nervous system disorders': EG003 (Q8W NDC) 2 affected / 263 at risk; EG004 (Q16W NDC) 0/264; EG005 (PLB NDC) 0/264 - every element of the locus and the value verifies, including the 0.8% figure (2/263 = 0.76%). Status COMPLETED, whyStopped absent, exactly as the row's provenance note states.",
+   "problem": "Data, locus, comparator arm and redistribution are all correct, and the extractor's provenance discipline here is good. The residual issue is the one the row already flags: grade 3 requires 'hydrocephalus requiring intervention' and the AE table states only that the events met serious-adverse-event criteria. Nothing at this locus establishes shunting or CSF diversion. Either downgrade to 2 (clinically significant, manageable) or add a citable source for the intervention; leaving it at 3 on SAE coding alone is the pattern the brief warns about.",
+   "correction": {
+    "neurotox_grade": "2 unless an intervention source is added to source_ref"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1525",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Fetched the full text via Europe PMC (PMC12022754). The section 'Lessons learned from ASO toxicity studies' exists and the quoted passage is verbatim, word for word: 'Initially valeriasen was effective at reducing seizure activity in Valeria and a second patient whose treatment commenced after Valeria. Unexpectedly, the ASO resulted in the development of hydrocephalus in both patients. This adverse effect had not been observed in safety studies conducted in healthy rats, but was hypothesized to be specifically due to the pathological state of the human brain.' Licence is CC BY-NC, so redistribution=summary_stat is correct.",
+   "problem": "The quotation and locus verify exactly and grade 3 is supported by the primary source. The problem is structural, and the row admits it: this is a review's restatement that 'intentionally DUPLICATES the two primary Nature Medicine patient rows'. Under the schema's row grain (oligo x subject x region x delivery x dose x readout) the same two patients are now counted twice at grade 3, from a secondary source with no dose and no exposure duration. The review is also demonstrably second-hand on this programme: its Table 1 lists valeriasen against KCNT1 p.P924L, whereas the primary paper reports both patients carry p.R474H (c.1421G>A). De-duplicate in favour of the Nature Medicine rows, or keep this one only as a non-graded provenance/commentary record.",
+   "correction": {
+    "neurotox_grade": "drop or de-duplicate against the primary Nature Medicine rows"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1592",
+   "verdict": "CONFIRMED",
+   "checked": "Local copy sources/cns/PMC13099374.jats.xml (the primary Nature Medicine paper, PMID 41981306). The 'Safety and adverse events' section confirms every element of the row verbatim: 'No significant adverse events were noted for patient 2 through the first three doses (10 mg, 20 mg and 30 mg)'; 'A brain MRI was unremarkable (including normal ventricular size) (day 55). Lumbar puncture showed a normal opening pressure of 16 cm H2O'; 'repeat MRIs performed on days 62 and 64 showed mild increases in ventricular size. There was no evidence of obstruction'; 'patient 2 was transferred to the pediatric intensive care unit for closer neurologic monitoring, where an extraventricular drain was placed. Opening pressure was >20 cm H2O. There was persistent drainage through the extraventricular drain, and a ventriculoperitoneal shunt was placed on day 65. Ventricular dilatation gradually normalized on serial MR ventriculograms, and she was discharged to home in stable condition on day 87.' The age is confirmed in the body text: 'Patient 2 was enrolled 9 months later and was 3 years old at the time of study initiation.'",
+   "problem": "The single best row in this batch. Value, dose, timeline, intervention, reversibility and grade 3 all verify against the primary source, and attribution is explicitly addressed by the authors rather than assumed: 'Patients with early-onset KCNT1-related epilepsy commonly develop cortical atrophy, which can lead to ex vacuo ventricular size increases, but frank hydrocephalus with increased intracranial pressure is not expected... hydrocephalus was not observed in Kcnt1 knockout mice or knock-in mice... We therefore considered the serious adverse events encountered in our two patients to be attributable to dosing of the study drug.' redistribution=summary_stat is correct (CC BY-NC-ND).",
+   "correction": {},
+   "severity": "none"
+  }
+ ],
+ "summary": "55 grade-3 rows checked against the primary sources (local patent HTML/PDF, local PMC JATS, the Hagedorn supplementary xlsx, the ClinicalTrials.gov v2 API, the EMA Qalsody SmPC and EPAR, the MHRA Drug Safety Update, and Europe PMC full text). Verdicts: 3 CONFIRMED, 39 CONFIRMED_MINOR, 12 REFUTED, 1 UNVERIFIABLE. Severity: 3 none, 39 minor, 11 major, 2 critical.\n\nEvery numeric readout_value I could reach verified exactly - all 18 US9605263B2 FOB scores, all 5 US10968453B2 Table 64 scores (including target start sites and chemistry strings), both US11851654B2 mortality fractions, all 5 Hagedorn tolerability scores from the supplementary xlsx, the two Kuroda mortality fractions, the Bravo-Hernandez 455/2464 incidence, the two ClinicalTrials.gov hydrocephalus counts, the Korte group-4 description and the entire KCNT1 patient-2 narrative. Not one fabricated number was found. The failures in this batch are almost entirely GRADING failures, not extraction failures.\n\n12 rows should be downgraded. 10 of them share one cause: a severe-looking value on a transient, fully-reversible acute neurobehavioural scale was mapped to grade 3 by a numeric cutoff, at a point on the scale that does not correspond to anything the rubric's grade 3 names. 2 more (the in vitro LDH rows) are critical because they are graded above their own sibling rows from the same figures.",
+ "systematic_issues": "1. THE DOMINANT ERROR - ACUTE-SCALE CUTOFFS SET TOO LOW. Ten of the twelve downgrades are one mistake repeated: an extractor-invented numeric cutoff maps a transient acute behavioural score to grade 3 at a scale point that denotes a conscious, responsive, fully-recovering animal. The rubric's grade 3 lists degeneration, paralysis, hydrocephalus needing intervention, death and dose-limiting toxicity; its grade 1 explicitly covers 'transient acute behavioural signs resolving within hours-days'. The fix is to anchor every acute-scale cutoff to the scale's own text rather than to a fraction of its range: grade 3 only where the recorded value denotes death, euthanasia, unresponsiveness/moribundity, or frank paralysis. Concretely, on the O'Rourke rodent ICV scale grade 3 begins at 6 ('does not respond to pinch but is breathing'), not at 4 ('does not move forward after lifting but has an upright posture') - that single change fixes CMS1907, CMS1922 and CMS1954. On the O'Rourke rodent IT scale paralysis is 4 ('hind paws don't move - full hindlimb paralysis'), not 3 ('hind limbs don't support weight, but can still move') - the mapping note 's>=3 -> 3 (paresis/paralysis)' conflates the two. On the Bravo-Hernandez rat aA scale 5 is severe vocalisation, 6 is seizure, 7 is death - and the mapping notes mis-state 7 as 'requires euthanasia'. Only the two scales whose top band is DEFINED as euthanasia or death survive intact: Hagedorn (score >18 = 'severe signs in all categories, including convulsions resulting in euthanasia', with the author's own cutoffs at 4/7/18) and the patent mortality tables. This generalises directly to the ~145 unchecked grade-3 rows: any acute-scale row whose reversibility field says 'reversible' and whose value is below the scale's death/unresponsiveness band is a downgrade candidate.\n\n2. GRADE 3 ASSIGNED TO ROWS WITH readout_value = TBD. Six rows in this batch carry TBD values and a grade 3 inferred from a qualitative phrase (CMS1878, CMS1658, CMS1666, CMS2061, CMS2066, and CMS2001 which declares it honestly). Where a source publishes only a heat map, a bar chart or a 'worse than the parent' comparison, severity cannot be graded from it. Rule to apply across the dataset: a row with readout_value = TBD may not carry grade 3 unless the source states a qualifying OUTCOME (death, shunt, euthanasia, paralysis) in words.\n\n3. GRADING AGAINST THE PARENT COMPOUND INSTEAD OF VEHICLE, WHICH INVERTS THE SCALE. The two critical rows (CMS2061, CMS2066) are in vitro LDH release in BE(2)-M17 cells at 20 nM with no numeric value, compared not to vehicle but to the parent ASO - and graded 3, while the parent's own larger elevation VERSUS VEHICLE is graded 2 in the same figure set (CMS2060, CMS2081) and a variant with reduced LDH is graded 1 (CMS2072). The weaker comparator produced the higher grade. Sweep the in vitro lane for any row whose effect_vs_control is phrased 'higher/worse than parent' and check it is not graded above the parent row.\n\n4. THE GRADE-3 JUSTIFICATION OFTEN LIVES IN A SOURCE THAT IS NOT source_ref. CMS1449 and CMS1289 record hydrocephalus correctly from ClinicalTrials.gov but reach 'requiring intervention' only via Stoker et al. 2021, which is named in notes and absent from source_ref; CMS1237's per-case vignette sits in a DHPC I could not retrieve while the verifiable facts come from the co-cited MHRA update. This is the brief's second attack in practice: serious-adverse-event coding is being read as severity. Either promote the intervention source into source_ref so the claim is falsifiable, or grade 2.\n\n5. FUTILITY / BENEFIT-RISK LANGUAGE LEAKING INTO GRADES. I found no row graded 3 purely because a programme stopped - the extractors were disciplined here, and CMS1449 explicitly notes that ClinicalTrials.gov lists NCT03761849 as COMPLETED with no whyStopped. But CMS1324 ends its grade rationale with '...in the arm whose benefit:risk assessment led the iDMC to stop dosing', which imports a programme-halt into a hydrocephalus grade. The GENERATION HD1 dosing stop was an iDMC benefit-risk decision driven by clinical outcomes, not by the hydrocephalus signal. Delete that clause wherever it appears; grep the remaining grade-3 rows for 'halt', 'stopped', 'discontinued' and 'iDMC' in notes.\n\n6. redistribution SYSTEMATICALLY UNDER-CLAIMED ON CC-BY SOURCES. Twelve rows in this batch cite articles published under plain CC BY 4.0 - Kuroda 2025 (PMC12744863, 6 rows), Hagedorn 2022 (PMC9221153, 5 rows) and Moazami 2024 (PMC11638874, 1 row) - yet all are filed 'summary_stat'. The schema tracks cc_by separately and deliberately, because it is what permits whole per-oligo panels to be republished verbatim; flattening it to summary_stat silently forfeits that right for the single largest reusable panel in the CNS set (the 148-ASO Hagedorn table). Conversely CMS1237 OVER-claims: a Biogen DHPC letter plus an MHRA Drug Safety Update is neither a US patent nor an FDA/EMA document and is not public_domain. Both directions of error need a licence sweep across the whole dataset. (ORO2026 and BRA2026 are CC BY-NC and BRA/N1C/Nat Med are correctly summary_stat.)\n\n7. RIGHT GRADE, WRONG REASON - THE US9605263 8-WEEK COLUMN. All eight Table 15 rows record their value correctly and grade 3 correctly, but justify it as 'a deficit persisting to 8 wk is not transient'. The column is actually an animal-loss readout: across all 92 rows it quantises to exactly 0 / 1.8 / 3.5 / 5.3 / 7.0, i.e. 7 x (0,1,2,3,4)/4 animals at maximum score, and every non-zero group has asterisked or absent AIF1/GFAP under the patent's footnote 'An asterisk indicates that the corresponding result is the average of 1-3 mice'. The grade should be attributed to the moribundity/death limb. Worth fixing because the stated reason ('persisting deficit') is exactly the reasoning being over-applied to the transient acute rows in issue 1.\n\n8. UNSOURCED CONTROL VALUES IN effect_vs_control. All 18 US9605263B2 rows assert 'X_vs_0_PBS'. The patent reports no vehicle FOB score for any of the MOUSE experiments (Examples 2, 3, 12); the statement 'Saline treated rats generally receive a score of 0' belongs to the RAT example. Similarly both US11851654B2 rows give a PBS denominator of '0/4' where the patent states only n=4 to 5 (or 4 to 7). Harmless individually, but it manufactures a comparator the brief asks verifiers to look for.\n\n9. EXPOSURE DURATIONS DRIFTING FROM THE FIGURE LEGEND. Three of the four Kuroda in vivo rows carry a duration that does not match the cited experiment: CMS1666 says 11d where Fig. 3E-3H sacrificed at 7 days, CMS1670 says 14d where Fig. 5C-5G sacrificed at 10 days (deaths days 2-9). CMS1666's source_table also lists four unrelated figure ranges for one measurement. Where one paper contributes many rows, the per-figure timeline is being averaged rather than read per row.\n\n10. CLASS-LEVEL AND DUPLICATED ROWS CARRYING GRADE-3 WEIGHT. CMS1990 (~640 ASOs, dose TBD), CMS2001 (28 studies, 1,016 monkeys, everything TBD) and CMS1525 (a review's restatement that the notes admit 'intentionally DUPLICATES' the two primary Nature Medicine rows) all carry grade 3 while attaching to no identifiable oligonucleotide or duplicating one that already exists. CMS1324 self-declares overlap with three further rows. For a model learning 'severe neurotoxicity looks like this', these rows add weight without adding a design signal, and the duplicates multiply a single clinical event. Flag class-level rows with an is_class_level column, or exclude them from the training grade distribution."
+}

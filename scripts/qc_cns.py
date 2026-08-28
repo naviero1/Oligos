@@ -53,7 +53,7 @@ ENUMS = {
     "backbone_chemistry": {"full_PS", "PS_PO_mix", "full_PO", "PMO_neutral", "mixed", TBD},
     "conjugate": {"none", "GalNAc", "lipid", "peptide", "PEG", "divalent", "other", TBD},
     "study_type": {"in_vitro", "animal_invivo", "clinical"},
-    "species": {"human", "monkey", "rat", "mouse", "multi_species", "NA"},
+    "species": {"human", "monkey", "rat", "mouse", "sheep", "multi_species", "NA"},
     "cns_region": {"whole_brain", "cortex", "hippocampus", "cerebellum", "brainstem",
                    "striatum", "spinal_cord", "DRG", "ventricle", "CSF", "meninges",
                    "optic_nerve", "peripheral_nerve", "systemic", "NA"},

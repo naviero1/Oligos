@@ -4989,13 +4989,13 @@
    "effect_direction": "no_change",
    "effect_vs_control": "0.0 vs 0 (no-signs baseline of the scale)",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = none. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = none. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by;reversibility:reversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_nc_m7",
@@ -5213,13 +5213,13 @@
    "effect_direction": "no_change",
    "effect_vs_control": "0.0 vs 0 (no-signs baseline of the scale)",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = none. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = none. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by;reversibility:reversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_nc_m15",
@@ -5465,13 +5465,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "0.17 vs 0 (no-signs baseline of the scale)",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = mild. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = mild. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by;reversibility:reversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_nc_m24",
@@ -5638,8 +5638,8 @@
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = severe. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = severe. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Value, locus, scale, dose, model and the severity banding all verify, and grade 3 is well supported: the author-defined severe class (>18) is explicitly the euthanasia band, and the paper judged these compounds to have 'an acute neurotoxic  ;; corrected(redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_nc_m30",
@@ -5722,8 +5722,8 @@
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = severe. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = severe. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_nc_m33",
@@ -5969,13 +5969,13 @@
    "effect_direction": "no_change",
    "effect_vs_control": "0.0 vs 0 (no-signs baseline of the scale)",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = none. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = none. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by;reversibility:reversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_nc_m42",
@@ -6193,13 +6193,13 @@
    "effect_direction": "no_change",
    "effect_vs_control": "0.0 vs 0 (no-signs baseline of the scale)",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = none. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = none. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by;reversibility:reversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_nc_m50",
@@ -6445,13 +6445,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "0.17 vs 0 (no-signs baseline of the scale)",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = mild. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = mild. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by;reversibility:reversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_nc_m59",
@@ -6697,13 +6697,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "0.33 vs 0 (no-signs baseline of the scale)",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = mild. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = mild. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by;reversibility:reversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_nc_m68",
@@ -6921,13 +6921,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "0.67 vs 0 (no-signs baseline of the scale)",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = mild. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = mild. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by;reversibility:reversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_nc_m76",
@@ -7173,13 +7173,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "0.83 vs 0 (no-signs baseline of the scale)",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = mild. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = mild. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by;reversibility:reversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_nc_m85",
@@ -7425,13 +7425,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "1.33 vs 0 (no-signs baseline of the scale)",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = mild. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = mild. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by;reversibility:reversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_nc_m94",
@@ -7677,13 +7677,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "2.33 vs 0 (no-signs baseline of the scale)",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = mild. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = mild. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by;reversibility:reversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_nc_m103",
@@ -7901,13 +7901,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "3.33 vs 0 (no-signs baseline of the scale)",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = mild. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = mild. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by;reversibility:reversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_nc_m111",
@@ -8153,13 +8153,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "4.0 vs 0 (no-signs baseline of the scale)",
    "neurotox_grade": 2,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = moderate. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = moderate. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by;reversibility:reversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_nc_m120",
@@ -8405,13 +8405,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "5.0 vs 0 (no-signs baseline of the scale)",
    "neurotox_grade": 2,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = moderate. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = moderate. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by;reversibility:reversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_nc_m129",
@@ -8629,13 +8629,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "7.0 vs 0 (no-signs baseline of the scale)",
    "neurotox_grade": 2,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = moderate. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = moderate. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by;reversibility:reversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_nc_m137",
@@ -8881,13 +8881,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "8.17 vs 0 (no-signs baseline of the scale)",
    "neurotox_grade": 2,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = marked. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = marked. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by;reversibility:reversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_nc_m146",
@@ -9133,13 +9133,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "10.67 vs 0 (no-signs baseline of the scale)",
    "neurotox_grade": 2,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = marked. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = marked. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by;reversibility:reversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_nc_m155",
@@ -9385,13 +9385,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "15.0 vs 0 (no-signs baseline of the scale)",
    "neurotox_grade": 2,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = marked. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = marked. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by;reversibility:reversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_nc_m164",
@@ -9502,8 +9502,8 @@
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = severe. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = severe. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Value, locus, scale, dose, model and the severity banding all verify, and grade 3 is well supported: the author-defined severe class (>18) is explicitly the euthanasia band, and the paper judged these compounds to have 'an acute neurotoxic  ;; corrected(redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_nc_m168",
@@ -9586,8 +9586,8 @@
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = severe. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = severe. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Value, locus, scale, dose, model and the severity banding all verify, and grade 3 is well supported: the author-defined severe class (>18) is explicitly the euthanasia band, and the paper judged these compounds to have 'an acute neurotoxic  ;; corrected(redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_nc_m171",
@@ -9614,8 +9614,8 @@
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = severe. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = severe. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_nc_m172",
@@ -9698,8 +9698,8 @@
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = severe. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = severe. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Value, locus, scale, dose, model and the severity banding all verify, and grade 3 is well supported: the author-defined severe class (>18) is explicitly the euthanasia band, and the paper judged these compounds to have 'an acute neurotoxic  ;; corrected(redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_nc_m175",
@@ -9810,8 +9810,8 @@
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = severe. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = severe. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Value, locus, scale, dose, model and the severity banding all verify, and grade 3 is well supported: the author-defined severe class (>18) is explicitly the euthanasia band, and the paper judged these compounds to have 'an acute neurotoxic  ;; corrected(redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_nc_m179",
@@ -9866,8 +9866,8 @@
    "source_id": "HAG2022",
    "source_ref": "doi:10.1089/nat.2021.0071; PMID 35166597; PMC9221153",
    "source_table": "Supplementary Table S1 (Suppl_TableS1.xlsx), column 'Acute_tolerance_score_mice'",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = severe. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; C57BL/6J female mice, single free-hand ICV bolus of 100 ug in 5 uL saline, n=4-6/group, modified functional observational battery scored 0-4 in five categories (hyperactivity; decreased activity/arousal; motor dysfunction/ataxia; abnormal posture and breathing; tremor/convulsions) summed to 0-20; value is the group mean. Author severity class = severe. Grade mapping used: 0->0, 0<s<4 (mild)->1, 4<=s<=18 (moderate/marked)->2, s>18 (severe)->3. Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A); score 20 is defined by the scale as severe signs in all categories including convulsions resulting in euthanasia, so score-20 rows are filed irreversible. ;; VERIFIED[CONFIRMED_MINOR] Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv already carries cc_by for this  ;; corrected(redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_nc_m181",
@@ -10006,8 +10006,8 @@
    "source_id": "MOA2024",
    "source_ref": "doi:10.1016/j.ymthe.2024.10.024; PMID 39460376; PMC11638874",
    "source_table": "Figure 1 (panel for Malat1), group mean read from the plot",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; n=6-8 mice/group, ASO in 10 uL PBS to the right lateral ventricle. EvADINT = Evaluation of Acute Drug-Induced NeuroToxicity, a 0-75 weighted behavioural scale (death scored 75) applied by a blinded observer over 24 h after i.c.v. bolus; group mean read from the figure's scatter/mean bar (approximate, +/-3 units on an 0-80 axis); text states PBS vehicle groups never exceeded a cumulative score of 4 and that even severely affected mice, unless they died, recovered fully by 24 h. ACTUAL DOSE AS PRINTED: 35 nmol of ASO per mouse in 10 uL PBS; recorded here as 10 mg/kg because the authors state 35 nmol is equivalent to about 10 mg/kg and nmol is not in the schema unit enum."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; n=6-8 mice/group, ASO in 10 uL PBS to the right lateral ventricle. EvADINT = Evaluation of Acute Drug-Induced NeuroToxicity, a 0-75 weighted behavioural scale (death scored 75) applied by a blinded observer over 24 h after i.c.v. bolus; group mean read from the figure's scatter/mean bar (approximate, +/-3 units on an 0-80 axis); text states PBS vehicle groups never exceeded a cumulative score of 4 and that even severely affected mice, unless they died, recovered fully by 24 h. ACTUAL DOSE AS PRINTED: 35 nmol of ASO per mouse in 10 uL PBS; recorded here as 10 mg/kg because the authors state 35 nmol is equivalent to about 10 mg/kg and nmol is not in the schema unit enum. ;; VERIFIED[CONFIRMED_MINOR] Two non-critical defects. (1) the notes mis-describe the provenance: they say the mean was 'read from the figure's scatter/mean bar (approximate, +/-3 units on an 0-80 axis)'. It need not have been - Supplementary Table S4 prints every anim ;; corrected(redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_nc_m186",
@@ -10081,17 +10081,17 @@
    "readout_category": "behavioral",
    "readout_name": "acute_neurotoxicity_score",
    "readout_value": 50.0,
-   "readout_unit": "score_0_to_75",
+   "readout_unit": "score_weighted (death = 75; non-death maximum 85)",
    "effect_direction": "increase",
    "effect_vs_control": "50.0 vs PBS vehicle (vehicle cumulative score never >4); p<0.0001 vs PS/PO",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "reversible",
    "is_cns_specific": "TRUE",
    "source_id": "MOA2024",
    "source_ref": "doi:10.1016/j.ymthe.2024.10.024; PMID 39460376; PMC11638874",
    "source_table": "Figure 1 (panel for NTC), group mean read from the plot",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; n=6-8 mice/group, ASO in 10 uL PBS to the right lateral ventricle. EvADINT = Evaluation of Acute Drug-Induced NeuroToxicity, a 0-75 weighted behavioural scale (death scored 75) applied by a blinded observer over 24 h after i.c.v. bolus; group mean read from the figure's scatter/mean bar (approximate, +/-3 units on an 0-80 axis); text states PBS vehicle groups never exceeded a cumulative score of 4 and that even severely affected mice, unless they died, recovered fully by 24 h. ACTUAL DOSE AS PRINTED: 35 nmol of ASO per mouse in 10 uL PBS; recorded here as 10 mg/kg because the authors state 35 nmol is equivalent to about 10 mg/kg and nmol is not in the schema unit enum."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; n=6-8 mice/group, ASO in 10 uL PBS to the right lateral ventricle. EvADINT = Evaluation of Acute Drug-Induced NeuroToxicity, a 0-75 weighted behavioural scale (death scored 75) applied by a blinded observer over 24 h after i.c.v. bolus; group mean read from the figure's scatter/mean bar (approximate, +/-3 units on an 0-80 axis); text states PBS vehicle groups never exceeded a cumulative score of 4 and that even severely affected mice, unless they died, recovered fully by 24 h. ACTUAL DOSE AS PRINTED: 35 nmol of ASO per mouse in 10 uL PBS; recorded here as 10 mg/kg because the authors state 35 nmol is equivalent to about 10 mg/kg and nmol is not in the schema unit enum. ;; VERIFIED[REFUTED] Grade 3 is not supported. A group mean of ~50 on a scale where death alone scores 75 is a severe but non-lethal outcome, and the paper states such animals recovered fully within 24 h - the row's own reversibility field says 'reversible'. No ;; corrected(neurotox_grade:3->2;redistribution:summary_stat->cc_by;readout_unit:score_0_to_75->score_weighted (death = 75; non-death maximum 85))"
   },
   {
    "measurement_id": "TMP_nc_m189",
@@ -10248,7 +10248,7 @@
    "challenge_priority": "medium",
    "readout_category": "behavioral",
    "readout_name": "acute_neurotoxicity_score",
-   "readout_value": "TBD",
+   "readout_value": "6.67",
    "readout_unit": "score_0_to_75",
    "effect_direction": "increase",
    "effect_vs_control": "lower than the 35 nmol group for the same ASO (dose-dependence); group means not stated numerically",
@@ -10258,8 +10258,8 @@
    "source_id": "MOA2024",
    "source_ref": "doi:10.1016/j.ymthe.2024.10.024; PMID 39460376; PMC11638874",
    "source_table": "Supplementary Figure S1 (mmc1.pdf p.1)",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional (conservative: dose below the 35 nmol level, dose-dependence demonstrated but per-group means not reported numerically and the panel was not digitised); n=6/group, ASOs targeting C9orf72 (seq 1/2) or Malat1 (seq 6/7). ACTUAL DOSE AS PRINTED: 15 nmol per mouse in 10 uL PBS; no mg/kg or ug equivalent is stated for this dose level so dose value and unit are left TBD."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional (conservative: dose below the 35 nmol level, dose-dependence demonstrated but per-group means not reported numerically and the panel was not digitised); n=6/group, ASOs targeting C9orf72 (seq 1/2) or Malat1 (seq 6/7). ACTUAL DOSE AS PRINTED: 15 nmol per mouse in 10 uL PBS; no mg/kg or ug equivalent is stated for this dose level so dose value and unit are left TBD. ;; VERIFIED[CONFIRMED_MINOR] Two non-critical defects. (1) the notes assert 'per-group means not reported numerically and the panel was not digitised' - that is false. Supplementary Table S15 prints every animal's EvADINT total for this exact group ('C9orf72 full PS w/ ;; corrected(readout_value:TBD->6.67;redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_nc_m195",
@@ -10349,7 +10349,7 @@
    "measurement_id": "TMP_nc_m198",
    "oligo_id": "TMP_nc_182",
    "study_type": "animal_invivo",
-   "species": "NA",
+   "species": "sheep",
    "system_model": "CNS_invivo_sheep",
    "cns_region": "CSF",
    "delivery_method": "intracisternal",
@@ -10371,13 +10371,13 @@
    "source_ref": "doi:10.1016/j.ymthe.2024.10.024; PMID 39460376; PMC11638874",
    "source_table": "Results, 'The improved tolerability of mixed backbone ASOs applies to large brains'",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional; SPECIES IS SHEEP - the schema species enum has no sheep value so species=NA and the species is recorded here. ASO delivered into the cisterna magna via a microcatheter threaded through the intrathecal space, formulated in lactated Ringer's solution; catheter position confirmed by intracisternal contrast and cone-beam CT. Duration of the deficit not stated, hence reversibility=not_assessed."
+   "notes": "grade_provisional; SPECIES IS SHEEP - the schema species enum has no sheep value so species=NA and the species is recorded here. ASO delivered into the cisterna magna via a microcatheter threaded through the intrathecal space, formulated in lactated Ringer's solution; catheter position confirmed by intracisternal contrast and cone-beam CT. Duration of the deficit not stated, hence reversibility=not_assessed. ;; corrected: species NA -> sheep; the species was previously recoverable only from system_model, so species-based filtering dropped these rows"
   },
   {
    "measurement_id": "TMP_nc_m199",
    "oligo_id": "TMP_nc_183",
    "study_type": "animal_invivo",
-   "species": "NA",
+   "species": "sheep",
    "system_model": "CNS_invivo_sheep",
    "cns_region": "CSF",
    "delivery_method": "intracisternal",
@@ -10399,7 +10399,7 @@
    "source_ref": "doi:10.1016/j.ymthe.2024.10.024; PMID 39460376; PMC11638874",
    "source_table": "Results, 'The improved tolerability of mixed backbone ASOs applies to large brains'",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional; SPECIES IS SHEEP - the schema species enum has no sheep value so species=NA and the species is recorded here. ASO delivered into the cisterna magna via a microcatheter threaded through the intrathecal space, formulated in lactated Ringer's solution; catheter position confirmed by intracisternal contrast and cone-beam CT. Duration of the deficit not stated, hence reversibility=not_assessed."
+   "notes": "grade_provisional; SPECIES IS SHEEP - the schema species enum has no sheep value so species=NA and the species is recorded here. ASO delivered into the cisterna magna via a microcatheter threaded through the intrathecal space, formulated in lactated Ringer's solution; catheter position confirmed by intracisternal contrast and cone-beam CT. Duration of the deficit not stated, hence reversibility=not_assessed. ;; corrected: species NA -> sheep; the species was previously recoverable only from system_model, so species-based filtering dropped these rows"
   },
   {
    "measurement_id": "TMP_nc_m200",
@@ -10420,14 +10420,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "vs concurrent saline IT control group (score 0); paresis/paralysis confined to posterior regions",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "reversible",
    "is_cns_specific": "TRUE",
    "source_id": "ORO2026",
    "source_ref": "doi:10.1093/nar/gkaf1333; PMID 41494985; PMC12865454",
    "source_table": "Figure 1A heat map and Figure 1B time course (n per group in Supplementary Tables 4-5)",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional - grade 3 because the response is frank hindlimb paresis/paralysis, but it is fully reversible. n=3-4 rats/group. Rodent intrathecal acute-inhibition scale (Supplementary Fig. S1A): 0 bright/alert/responsive; 1 tail without tone; 2 drooping hind end or abnormal hindlimb gait; 3 hind limbs cannot support weight; 4 hind limbs and paws immobile; 5 cannot support anterior body weight; 6 forelimbs immobile; 7 death. Acute inhibition peaked ~3 h post-dose and reversed within 16-24 h with no sequelae out to 2 weeks (Fig. 1B). Values at 100/300/1000 ug are reported only as a presence/absence heat map, so readout_value is TBD; the 700 ug value of 4 is stated in the text."
+   "notes": "grade_provisional - grade 3 because the response is frank hindlimb paresis/paralysis, but it is fully reversible. n=3-4 rats/group. Rodent intrathecal acute-inhibition scale (Supplementary Fig. S1A): 0 bright/alert/responsive; 1 tail without tone; 2 drooping hind end or abnormal hindlimb gait; 3 hind limbs cannot support weight; 4 hind limbs and paws immobile; 5 cannot support anterior body weight; 6 forelimbs immobile; 7 death. Acute inhibition peaked ~3 h post-dose and reversed within 16-24 h with no sequelae out to 2 weeks (Fig. 1B). Values at 100/300/1000 ug are reported only as a presence/absence heat map, so readout_value is TBD; the 700 ug value of 4 is stated in the text. ;; VERIFIED[REFUTED] Grade 3 is not supported at the recorded dose. readout_value is TBD and the cited locus reports presence/absence only, so severity was inferred from a qualitative phrase - exactly the failure mode the brief asks about. The row's justificati ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_nc_m201",
@@ -10924,14 +10924,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "score 4.1 vs 0 in PBS-injected controls; full-PS vs mixed PS/PO comparison at this dose P = 0.0286 (Mann-Whitney, Supplementary Table 13)",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "reversible",
    "is_cns_specific": "TRUE",
    "source_id": "ORO2026",
    "source_ref": "doi:10.1093/nar/gkaf1333; PMID 41494985; PMC12865454",
    "source_table": "Figure 5E (ASO2 panel), group mean read from the bar chart",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional; n=4 mice/group, single ICV bolus in PBS without Ca2+/Mg2+, scored 3 h post-dose. Group-mean 3-h acute inhibition score read off the published bar chart (approximate, +/-0.5 on the 0-7 axis); the paper reports per-group P values but not the numeric means. Rodent ICV acute-inhibition scale (Supplementary Fig. S1B): 0 bright/alert/responsive; 1 mild gait impairment; 2 obvious impaired gait/hunched posture; 3 moves away after lifting; 4 does not move forward but upright; 5 lying on side, responds to tail pinch; 6 no response to pinch but breathing; 7 death. Grade mapping for this 0-7 ICV scale: 0->0; 0<s<2->1; 2<=s<4->2; s>=4->3. Reducing PS content in the wings (six PS linkages replaced by PO) lowered the score for most but not all sequences (abolished for ASO2, no significant reduction for ASO8)."
+   "notes": "grade_provisional; n=4 mice/group, single ICV bolus in PBS without Ca2+/Mg2+, scored 3 h post-dose. Group-mean 3-h acute inhibition score read off the published bar chart (approximate, +/-0.5 on the 0-7 axis); the paper reports per-group P values but not the numeric means. Rodent ICV acute-inhibition scale (Supplementary Fig. S1B): 0 bright/alert/responsive; 1 mild gait impairment; 2 obvious impaired gait/hunched posture; 3 moves away after lifting; 4 does not move forward but upright; 5 lying on side, responds to tail pinch; 6 no response to pinch but breathing; 7 death. Grade mapping for this 0-7 ICV scale: 0->0; 0<s<2->1; 2<=s<4->2; s>=4->3. Reducing PS content in the wings (six PS linkages replaced by PO) lowered the score for most but not all sequences (abolished for ASO2, no significant reduction for ASO8). ;; VERIFIED[REFUTED] Value and statistics verify; the grade does not. The mapping used ('s>=4 -> 3') turns scale point 4 - 'does not move forward after lifting but has an upright posture' - into the rubric's severe band. An upright, breathing, tail-pinch-respon ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_nc_m219",
@@ -11344,14 +11344,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "score 4.0 vs 0 in PBS-injected controls; full-PS vs mixed PS/PO comparison at this dose P = 0.0286 (Mann-Whitney, Supplementary Table 13)",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "reversible",
    "is_cns_specific": "TRUE",
    "source_id": "ORO2026",
    "source_ref": "doi:10.1093/nar/gkaf1333; PMID 41494985; PMC12865454",
    "source_table": "Figure 5E (ASO4 panel), group mean read from the bar chart",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional; n=4 mice/group, single ICV bolus in PBS without Ca2+/Mg2+, scored 3 h post-dose. Group-mean 3-h acute inhibition score read off the published bar chart (approximate, +/-0.5 on the 0-7 axis); the paper reports per-group P values but not the numeric means. Rodent ICV acute-inhibition scale (Supplementary Fig. S1B): 0 bright/alert/responsive; 1 mild gait impairment; 2 obvious impaired gait/hunched posture; 3 moves away after lifting; 4 does not move forward but upright; 5 lying on side, responds to tail pinch; 6 no response to pinch but breathing; 7 death. Grade mapping for this 0-7 ICV scale: 0->0; 0<s<2->1; 2<=s<4->2; s>=4->3. Reducing PS content in the wings (six PS linkages replaced by PO) lowered the score for most but not all sequences (abolished for ASO2, no significant reduction for ASO8)."
+   "notes": "grade_provisional; n=4 mice/group, single ICV bolus in PBS without Ca2+/Mg2+, scored 3 h post-dose. Group-mean 3-h acute inhibition score read off the published bar chart (approximate, +/-0.5 on the 0-7 axis); the paper reports per-group P values but not the numeric means. Rodent ICV acute-inhibition scale (Supplementary Fig. S1B): 0 bright/alert/responsive; 1 mild gait impairment; 2 obvious impaired gait/hunched posture; 3 moves away after lifting; 4 does not move forward but upright; 5 lying on side, responds to tail pinch; 6 no response to pinch but breathing; 7 death. Grade mapping for this 0-7 ICV scale: 0->0; 0<s<2->1; 2<=s<4->2; s>=4->3. Reducing PS content in the wings (six PS linkages replaced by PO) lowered the score for most but not all sequences (abolished for ASO2, no significant reduction for ASO8). ;; VERIFIED[REFUTED] Value and statistics verify; the grade does not. The mapping used ('s>=4 -> 3') turns scale point 4 - 'does not move forward after lifting but has an upright posture' - into the rubric's severe band. An upright, breathing, tail-pinch-respon ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_nc_m234",
@@ -12040,18 +12040,18 @@
    "challenge_priority": "medium",
    "readout_category": "behavioral",
    "readout_name": "acute_neurotoxicity_score",
-   "readout_value": 7.0,
+   "readout_value": ">=6 (digitised from Fig. 5E; 7.0 would imply 4/4 mortality, which the paper does not report)",
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "score 7.0 vs 0 in PBS-injected controls; full-PS vs mixed PS/PO comparison at this dose P = ns (Mann-Whitney, Supplementary Table 13)",
    "neurotox_grade": 3,
-   "reversibility": "reversible",
+   "reversibility": "TBD",
    "is_cns_specific": "TRUE",
    "source_id": "ORO2026",
    "source_ref": "doi:10.1093/nar/gkaf1333; PMID 41494985; PMC12865454",
    "source_table": "Figure 5E (ASO8 panel), group mean read from the bar chart",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional; n=4 mice/group, single ICV bolus in PBS without Ca2+/Mg2+, scored 3 h post-dose. Group-mean 3-h acute inhibition score read off the published bar chart (approximate, +/-0.5 on the 0-7 axis); the paper reports per-group P values but not the numeric means. Rodent ICV acute-inhibition scale (Supplementary Fig. S1B): 0 bright/alert/responsive; 1 mild gait impairment; 2 obvious impaired gait/hunched posture; 3 moves away after lifting; 4 does not move forward but upright; 5 lying on side, responds to tail pinch; 6 no response to pinch but breathing; 7 death. Grade mapping for this 0-7 ICV scale: 0->0; 0<s<2->1; 2<=s<4->2; s>=4->3. Reducing PS content in the wings (six PS linkages replaced by PO) lowered the score for most but not all sequences (abolished for ASO2, no significant reduction for ASO8)."
+   "notes": "grade_provisional; n=4 mice/group, single ICV bolus in PBS without Ca2+/Mg2+, scored 3 h post-dose. Group-mean 3-h acute inhibition score read off the published bar chart (approximate, +/-0.5 on the 0-7 axis); the paper reports per-group P values but not the numeric means. Rodent ICV acute-inhibition scale (Supplementary Fig. S1B): 0 bright/alert/responsive; 1 mild gait impairment; 2 obvious impaired gait/hunched posture; 3 moves away after lifting; 4 does not move forward but upright; 5 lying on side, responds to tail pinch; 6 no response to pinch but breathing; 7 death. Grade mapping for this 0-7 ICV scale: 0->0; 0<s<2->1; 2<=s<4->2; s>=4->3. Reducing PS content in the wings (six PS linkages replaced by PO) lowered the score for most but not all sequences (abolished for ASO2, no significant reduction for ASO8). ;; VERIFIED[CONFIRMED_MINOR] Grade 3 survives, but the recorded value is internally inconsistent. A group mean of exactly 7.0 on this scale means all four mice died, which the paper never reports and which contradicts both its abstract ('reversed within 24 h with no se ;; corrected(readout_value:7.0->>=6 (digitised from Fig. 5E; 7.0 would imply 4/4 mortality, which the paper does not report);reversibility:reversible->TBD)"
   },
   {
    "measurement_id": "TMP_nc_m259",
@@ -12184,14 +12184,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "full-PS versions scored 3-4 while every mixed PO/PS version scored zero; PS vs PO P=0.0286 for the LNA and the cEt pair (Supplementary Table 13)",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "reversible",
    "is_cns_specific": "TRUE",
    "source_id": "ORO2026",
    "source_ref": "doi:10.1093/nar/gkaf1333; PMID 41494985; PMC12865454",
    "source_table": "Figure 5F (ASO6_PS_LNA bar), group mean read from the bar chart",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional; n=3-4 mice/group. Same ASO6 base sequence with five MOE, LNA or cEt sugars in each wing and either a full PS or a mixed PO/PS backbone. The text states 2' sugar ring chemistry did not affect acute inhibition for this sequence whereas phosphate linkage chemistry did. Group-mean 3-h acute inhibition score read off the published bar chart (approximate, +/-0.5 on the 0-7 axis); the paper reports per-group P values but not the numeric means. Rodent ICV acute-inhibition scale (Supplementary Fig. S1B): 0 bright/alert/responsive; 1 mild gait impairment; 2 obvious impaired gait/hunched posture; 3 moves away after lifting; 4 does not move forward but upright; 5 lying on side, responds to tail pinch; 6 no response to pinch but breathing; 7 death."
+   "notes": "grade_provisional; n=3-4 mice/group. Same ASO6 base sequence with five MOE, LNA or cEt sugars in each wing and either a full PS or a mixed PO/PS backbone. The text states 2' sugar ring chemistry did not affect acute inhibition for this sequence whereas phosphate linkage chemistry did. Group-mean 3-h acute inhibition score read off the published bar chart (approximate, +/-0.5 on the 0-7 axis); the paper reports per-group P values but not the numeric means. Rodent ICV acute-inhibition scale (Supplementary Fig. S1B): 0 bright/alert/responsive; 1 mild gait impairment; 2 obvious impaired gait/hunched posture; 3 moves away after lifting; 4 does not move forward but upright; 5 lying on side, responds to tail pinch; 6 no response to pinch but breathing; 7 death. ;; VERIFIED[REFUTED] Same mapping error as CMS1907/CMS1922: score 4 on the ICV scale is an upright, responsive, fully recovering mouse, not the rubric's severe band, and 4 is merely the top of the paper's stated 3-4 band for this comparison. Correct grade 2. ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_nc_m264",
@@ -12352,14 +12352,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "vs PBS control; Kruskal-Wallis vs PBS ns at 30-700 ug and P=0.0131 at 1000 ug (Supplementary Table 10)",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "reversible",
    "is_cns_specific": "TRUE",
    "source_id": "ORO2026",
    "source_ref": "doi:10.1093/nar/gkaf1333; PMID 41494985; PMC12865454",
    "source_table": "Figure 3B (rat panel), group mean read from the bar chart",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional; n=3-4 rats/group. Group-mean 3-h acute inhibition score read off the published bar chart (approximate, +/-0.5 on the 0-7 axis); the paper reports per-group P values but not the numeric means. Rodent intrathecal acute-inhibition scale (Supplementary Fig. S1A): 0 bright/alert/responsive; 1 tail without tone; 2 drooping hind end or abnormal hindlimb gait; 3 hind limbs cannot support weight; 4 hind limbs and paws immobile; 5 cannot support anterior body weight; 6 forelimbs immobile; 7 death. Grade mapping for the 0-7 IT scale: 0->0; 0<s<3->1; s>=3->3 (paresis/paralysis)."
+   "notes": "grade_provisional; n=3-4 rats/group. Group-mean 3-h acute inhibition score read off the published bar chart (approximate, +/-0.5 on the 0-7 axis); the paper reports per-group P values but not the numeric means. Rodent intrathecal acute-inhibition scale (Supplementary Fig. S1A): 0 bright/alert/responsive; 1 tail without tone; 2 drooping hind end or abnormal hindlimb gait; 3 hind limbs cannot support weight; 4 hind limbs and paws immobile; 5 cannot support anterior body weight; 6 forelimbs immobile; 7 death. Grade mapping for the 0-7 IT scale: 0->0; 0<s<3->1; s>=3->3 (paresis/paralysis). ;; VERIFIED[REFUTED] Two independent problems. (1) The grade mapping recorded in the notes, 's>=3 -> 3 (paresis/paralysis)', conflates paresis with paralysis: on this paper's own scale 3 is paraparesis (hind limbs cannot support weight but still move) and paral ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_nc_m270",
@@ -12807,7 +12807,7 @@
    "source_ref": "doi:10.1093/nar/gkag057; PMID 41633500; PMC12867516",
    "source_table": "Figure 1F (ASO I bar), group mean read from the bar chart",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional; n=4 male Sprague-Dawley rats/group, body weight 294 +/- 13 g, single 3 mg intrathecal bolus in 30 uL, maximum aA score in the first 15 min. Acute neuronal activation (aA) response: shaking, muscle twitching, cramping, hyperactivity, hyperreactivity, vocalisation, tremors, convulsions and seizures, peaking ~15 min after intrathecal dosing and resolving by ~120 min with no apparent sequelae. Scored 0-7 (7 = requires euthanasia). Score >=5 is defined by the authors as severe (vocalisation and/or seizures). Group means read off the Figure 1F bar chart (approximate, +/-0.5 on the 0-7 axis); the authors report the range (2-6) but not per-ASO means. Grade mapping for the 0-7 aA scale: 0->0; 0<s<3->1; 3<=s<5->2; s>=5->3 (author-defined severe)."
+   "notes": "grade_provisional; n=4 male Sprague-Dawley rats/group, body weight 294 +/- 13 g, single 3 mg intrathecal bolus in 30 uL, maximum aA score in the first 15 min. Acute neuronal activation (aA) response: shaking, muscle twitching, cramping, hyperactivity, hyperreactivity, vocalisation, tremors, convulsions and seizures, peaking ~15 min after intrathecal dosing and resolving by ~120 min with no apparent sequelae. Scored 0-7 (7 = requires euthanasia). Score >=5 is defined by the authors as severe (vocalisation and/or seizures). Group means read off the Figure 1F bar chart (approximate, +/-0.5 on the 0-7 axis); the authors report the range (2-6) but not per-ASO means. Grade mapping for the 0-7 aA scale: 0->0; 0<s<3->1; 3<=s<5->2; s>=5->3 (author-defined severe). ;; VERIFIED[REFUTED] The oligo's sequence_5to3 is 'CTGCCagacatatatcATAA', which puts nucleotide 16 (C) in lower case, i.e. annotates it as DNA gap. It belongs to the 3' MOE wing. The printed case pattern is 5-11-4, which contradicts the row's own declared gapme"
   },
   {
    "measurement_id": "TMP_nc_m286",
@@ -12884,14 +12884,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "PBS/aCSF vehicle scored 0; across the 16 sequences the maximum aA response ranged from 2 to 6 with no clear sequence dependence (Kruskal-Wallis, Supplementary Table 9)",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "reversible",
    "is_cns_specific": "TRUE",
    "source_id": "BRA2026",
    "source_ref": "doi:10.1093/nar/gkag057; PMID 41633500; PMC12867516",
    "source_table": "Figure 1F (ASO L bar), group mean read from the bar chart",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional; n=4 male Sprague-Dawley rats/group, body weight 294 +/- 13 g, single 3 mg intrathecal bolus in 30 uL, maximum aA score in the first 15 min. Acute neuronal activation (aA) response: shaking, muscle twitching, cramping, hyperactivity, hyperreactivity, vocalisation, tremors, convulsions and seizures, peaking ~15 min after intrathecal dosing and resolving by ~120 min with no apparent sequelae. Scored 0-7 (7 = requires euthanasia). Score >=5 is defined by the authors as severe (vocalisation and/or seizures). Group means read off the Figure 1F bar chart (approximate, +/-0.5 on the 0-7 axis); the authors report the range (2-6) but not per-ASO means. Grade mapping for the 0-7 aA scale: 0->0; 0<s<3->1; 3<=s<5->2; s>=5->3 (author-defined severe)."
+   "notes": "grade_provisional; n=4 male Sprague-Dawley rats/group, body weight 294 +/- 13 g, single 3 mg intrathecal bolus in 30 uL, maximum aA score in the first 15 min. Acute neuronal activation (aA) response: shaking, muscle twitching, cramping, hyperactivity, hyperreactivity, vocalisation, tremors, convulsions and seizures, peaking ~15 min after intrathecal dosing and resolving by ~120 min with no apparent sequelae. Scored 0-7 (7 = requires euthanasia). Score >=5 is defined by the authors as severe (vocalisation and/or seizures). Group means read off the Figure 1F bar chart (approximate, +/-0.5 on the 0-7 axis); the authors report the range (2-6) but not per-ASO means. Grade mapping for the 0-7 aA scale: 0->0; 0<s<3->1; 3<=s<5->2; s>=5->3 (author-defined severe). ;; VERIFIED[REFUTED] Grade 3 is not supported, and the scale is mis-described in the notes. The published Table 1 reads: '5 Severe vocalizations (high-pitched, long, unmodulated vocal emissions); 6 Any type of tremors or seizure; 7 Death' - the row's notes say  ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_nc_m289",
@@ -13528,14 +13528,14 @@
    "readout_unit": "n_of_N",
    "effect_direction": "increase",
    "effect_vs_control": "18.5% of rat entries showed a severe acute activation response (vocalisation and/or seizures, score >=5) after IT ASO administration",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "reversible",
    "is_cns_specific": "TRUE",
    "source_id": "BRA2026",
    "source_ref": "doi:10.1093/nar/gkag057; PMID 41633500; PMC12867516",
    "source_table": "Results, 'An immediate, transient, and body-weight-dependent acute neuronal activation response...' (retrospective database analysis; Fig. 1E)",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional; CLASS-LEVEL INCIDENCE ROW, not a single compound: 455 severe events out of 2464 rat entries covering ~640 different ASOs. The response was more likely in lower-body-weight animals and did not occur in rats over 450 g; no clear sequence dependence emerged from the database. Acute neuronal activation (aA) response: shaking, muscle twitching, cramping, hyperactivity, hyperreactivity, vocalisation, tremors, convulsions and seizures, peaking ~15 min after intrathecal dosing and resolving by ~120 min with no apparent sequelae. Scored 0-7 (7 = requires euthanasia). Score >=5 is defined by the authors as severe (vocalisation and/or seizures)."
+   "notes": "grade_provisional; CLASS-LEVEL INCIDENCE ROW, not a single compound: 455 severe events out of 2464 rat entries covering ~640 different ASOs. The response was more likely in lower-body-weight animals and did not occur in rats over 450 g; no clear sequence dependence emerged from the database. Acute neuronal activation (aA) response: shaking, muscle twitching, cramping, hyperactivity, hyperreactivity, vocalisation, tremors, convulsions and seizures, peaking ~15 min after intrathecal dosing and resolving by ~120 min with no apparent sequelae. Scored 0-7 (7 = requires euthanasia). Score >=5 is defined by the authors as severe (vocalisation and/or seizures). ;; VERIFIED[REFUTED] The number verifies exactly; the grade does not. The response the incidence counts is explicitly transient - it peaks ~15 min after IT dosing and resolves by ~120 min 'with no apparent sequelae' - and score >=5 is severe vocalisation and/or ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_nc_m312",
@@ -13585,13 +13585,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "tolerability score significantly increased vs vehicle (two-sided Dunnett) with motor-function and appearance impairment and reduced open-field maximum speed; significant body-weight decrease",
    "neurotox_grade": 2,
-   "reversibility": "irreversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "KUR2025",
    "source_ref": "doi:10.1016/j.omtn.2025.102692; PMID 41467114; PMC12744863",
    "source_table": "Figure 1B (tolerability score over time) with dosing detail in the Figure 1 legend",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; 7-week-old female C57BL/6 mice, n=4/group, single ICV injection of 38.4 nmol (200 ug). readout_value is TBD because Figure 1B is a grouped bar chart in which the two day-7 peaks (group means of roughly 9 and 6.5 on the 0-15 tolerability axis) and the smaller day-14 to day-21 bars (roughly 1.5-2.5) could not be assigned to individual ASOs with confidence from the colour key. Late-ONSET CNS toxicity: signs appeared at least 3 days after a single central injection, persisted for 6 days or more and worsened over time. The authors emphasise this is distinct from acute toxicity - no acute neurotoxicity was seen with ASO1, ASO3 or ASO4, and the acute toxicity of ASO2 resolved completely within 1 day. Tolerability scoring system in Supplementary Table S2 covers consciousness, motor function (ataxia, strength) and appearance (posture, breathing, home-cage activity). No recovery/reversal phase was run: animals were killed at a scheduled time point or when they reached a humane endpoint, and signs were progressive up to that point, so reversibility is recorded as irreversible on the evidence available rather than demonstrated permanence."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; 7-week-old female C57BL/6 mice, n=4/group, single ICV injection of 38.4 nmol (200 ug). readout_value is TBD because Figure 1B is a grouped bar chart in which the two day-7 peaks (group means of roughly 9 and 6.5 on the 0-15 tolerability axis) and the smaller day-14 to day-21 bars (roughly 1.5-2.5) could not be assigned to individual ASOs with confidence from the colour key. Late-ONSET CNS toxicity: signs appeared at least 3 days after a single central injection, persisted for 6 days or more and worsened over time. The authors emphasise this is distinct from acute toxicity - no acute neurotoxicity was seen with ASO1, ASO3 or ASO4, and the acute toxicity of ASO2 resolved completely within 1 day. Tolerability scoring system in Supplementary Table S2 covers consciousness, motor function (ataxia, strength) and appearance (posture, breathing, home-cage activity). No recovery/reversal phase was run: animals were killed at a scheduled time point or when they reached a humane endpoint, and signs were progressive up to that point, so reversibility is recorded as irreversible on the evidence available rather than demonstrated permanence. ;; VERIFIED[CONFIRMED_MINOR] Two non-critical fields. (1) Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv al ;; corrected(redistribution:summary_stat->cc_by;reversibility:irreversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_nc_m314",
@@ -13724,14 +13724,14 @@
    "readout_unit": "m/s",
    "effect_direction": "decrease",
    "effect_vs_control": "maximum speed in the open-field test significantly decreased versus vehicle for all four toxic ASOs (ASO1-ASO4); distance and mobile time additionally decreased for ASO2 and ASO3",
-   "neurotox_grade": 3,
-   "reversibility": "irreversible",
+   "neurotox_grade": "2",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "KUR2025",
    "source_ref": "doi:10.1016/j.omtn.2025.102692; PMID 41467114; PMC12744863",
    "source_table": "Figure 1C (open-field maximum speed) and Figure 1D (track plots)",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; n=4 mice/group. Group means not reported numerically and the multi-group bar chart was not digitised. Late-ONSET CNS toxicity: signs appeared at least 3 days after a single central injection, persisted for 6 days or more and worsened over time. The authors emphasise this is distinct from acute toxicity - no acute neurotoxicity was seen with ASO1, ASO3 or ASO4, and the acute toxicity of ASO2 resolved completely within 1 day. Tolerability scoring system in Supplementary Table S2 covers consciousness, motor function (ataxia, strength) and appearance (posture, breathing, home-cage activity). No recovery/reversal phase was run: animals were killed at a scheduled time point or when they reached a humane endpoint, and signs were progressive up to that point, so reversibility is recorded as irreversible on the evidence available rather than demonstrated permanence."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; n=4 mice/group. Group means not reported numerically and the multi-group bar chart was not digitised. Late-ONSET CNS toxicity: signs appeared at least 3 days after a single central injection, persisted for 6 days or more and worsened over time. The authors emphasise this is distinct from acute toxicity - no acute neurotoxicity was seen with ASO1, ASO3 or ASO4, and the acute toxicity of ASO2 resolved completely within 1 day. Tolerability scoring system in Supplementary Table S2 covers consciousness, motor function (ataxia, strength) and appearance (posture, breathing, home-cage activity). No recovery/reversal phase was run: animals were killed at a scheduled time point or when they reached a humane endpoint, and signs were progressive up to that point, so reversibility is recorded as irreversible on the evidence available rather than demonstrated permanence. ;; VERIFIED[REFUTED] Grade 3 is unsupported. The readout is an open-field maximum-speed decrement with readout_value=TBD and no numeric group mean in the source; no death, no paralysis and no dose-limiting event is reported for ASO3 in mice, and the paper's own ;; corrected(neurotox_grade:3->2) ;; VERIFIED[REFUTED] neurotox_grade=3 is not defensible for this measurement. The readout is a decrease in open-field maximum speed. Grade 3 in the rubric requires neuronal degeneration/loss, spinal-cord or DRG degeneration, paralysis, hydrocephalus requiring i ;; corrected(redistribution:summary_stat->cc_by;reversibility:irreversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_nc_m319",
@@ -14107,7 +14107,7 @@
    "delivery_method": "intracerebroventricular",
    "dose_or_conc_value": 100,
    "dose_or_conc_unit": "ug",
-   "exposure_duration": "11d",
+   "exposure_duration": "7d",
    "endpoint_domain": "chronic_neurotoxicity",
    "challenge_priority": "high_chronic_neurotox",
    "readout_category": "behavioral",
@@ -14116,14 +14116,14 @@
    "readout_unit": "tolerability_score",
    "effect_direction": "increase",
    "effect_vs_control": "2'-OMe at gap position 2 WORSENED both cytotoxicity and late-onset neurotoxicity of ASO2 - the opposite of its effect on ASO1, i.e. the benefit of a given gap modification is sequence-dependent",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
    "source_id": "KUR2025",
    "source_ref": "doi:10.1016/j.omtn.2025.102692; PMID 41467114; PMC12744863",
    "source_table": "Figures 2G/2H (2'-OMe variants of ASO1), 3E-3H (2'-OMe variant of ASO2), 4C-4J (5'-CP variants) and 6C-6I (5'-CP + PO variants)",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional; single ICV injection of 19.0 nmol (equivalent to the 100 ug parent dose), 7-week-old female ICR or C57BL/6 mice, n=3-4/group. effect_direction is relative to the PARENT ASO (ASO2), not to vehicle. Tolerability-score group means are not reported numerically. Late-ONSET CNS toxicity: signs appeared at least 3 days after a single central injection, persisted for 6 days or more and worsened over time. The authors emphasise this is distinct from acute toxicity - no acute neurotoxicity was seen with ASO1, ASO3 or ASO4, and the acute toxicity of ASO2 resolved completely within 1 day. Tolerability scoring system in Supplementary Table S2 covers consciousness, motor function (ataxia, strength) and appearance (posture, breathing, home-cage activity). No recovery/reversal phase was run: animals were killed at a scheduled time point or when they reached a humane endpoint, and signs were progressive up to that point, so reversibility is recorded as irreversible on the evidence available rather than demonstrated permanence."
+   "notes": "grade_provisional; single ICV injection of 19.0 nmol (equivalent to the 100 ug parent dose), 7-week-old female ICR or C57BL/6 mice, n=3-4/group. effect_direction is relative to the PARENT ASO (ASO2), not to vehicle. Tolerability-score group means are not reported numerically. Late-ONSET CNS toxicity: signs appeared at least 3 days after a single central injection, persisted for 6 days or more and worsened over time. The authors emphasise this is distinct from acute toxicity - no acute neurotoxicity was seen with ASO1, ASO3 or ASO4, and the acute toxicity of ASO2 resolved completely within 1 day. Tolerability scoring system in Supplementary Table S2 covers consciousness, motor function (ataxia, strength) and appearance (posture, breathing, home-cage activity). No recovery/reversal phase was run: animals were killed at a scheduled time point or when they reached a humane endpoint, and signs were progressive up to that point, so reversibility is recorded as irreversible on the evidence available rather than demonstrated permanence. ;; VERIFIED[REFUTED] Two problems. (1) exposure_duration is recorded as 11d; the cited experiment ran to a scheduled sacrifice at 7 days with behaviour scored on day 6. (The '11 days' figure belongs to the separate Fig. 4F-4J experiment.) (2) Grade 3 is unsuppo ;; corrected(neurotox_grade:3->2;exposure_duration:11d->7d)"
   },
   {
    "measurement_id": "TMP_nc_m333",
@@ -14145,13 +14145,13 @@
    "effect_direction": "decrease",
    "effect_vs_control": "5'-CP at gap position 3 reduced ASO2 late-onset neurotoxicity (tolerability score, maximum speed and body weight all improved) without significantly reducing Hdac2 knockdown, and abolished the Cdkn1a induction seen with the parent ASO",
    "neurotox_grade": 1,
-   "reversibility": "irreversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "KUR2025",
    "source_ref": "doi:10.1016/j.omtn.2025.102692; PMID 41467114; PMC12744863",
    "source_table": "Figures 2G/2H (2'-OMe variants of ASO1), 3E-3H (2'-OMe variant of ASO2), 4C-4J (5'-CP variants) and 6C-6I (5'-CP + PO variants)",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; single ICV injection of 19.0 nmol (equivalent to the 100 ug parent dose), 7-week-old female ICR or C57BL/6 mice, n=3-4/group. effect_direction is relative to the PARENT ASO (ASO2), not to vehicle. Tolerability-score group means are not reported numerically. Late-ONSET CNS toxicity: signs appeared at least 3 days after a single central injection, persisted for 6 days or more and worsened over time. The authors emphasise this is distinct from acute toxicity - no acute neurotoxicity was seen with ASO1, ASO3 or ASO4, and the acute toxicity of ASO2 resolved completely within 1 day. Tolerability scoring system in Supplementary Table S2 covers consciousness, motor function (ataxia, strength) and appearance (posture, breathing, home-cage activity). No recovery/reversal phase was run: animals were killed at a scheduled time point or when they reached a humane endpoint, and signs were progressive up to that point, so reversibility is recorded as irreversible on the evidence available rather than demonstrated permanence."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; single ICV injection of 19.0 nmol (equivalent to the 100 ug parent dose), 7-week-old female ICR or C57BL/6 mice, n=3-4/group. effect_direction is relative to the PARENT ASO (ASO2), not to vehicle. Tolerability-score group means are not reported numerically. Late-ONSET CNS toxicity: signs appeared at least 3 days after a single central injection, persisted for 6 days or more and worsened over time. The authors emphasise this is distinct from acute toxicity - no acute neurotoxicity was seen with ASO1, ASO3 or ASO4, and the acute toxicity of ASO2 resolved completely within 1 day. Tolerability scoring system in Supplementary Table S2 covers consciousness, motor function (ataxia, strength) and appearance (posture, breathing, home-cage activity). No recovery/reversal phase was run: animals were killed at a scheduled time point or when they reached a humane endpoint, and signs were progressive up to that point, so reversibility is recorded as irreversible on the evidence available rather than demonstrated permanence. ;; VERIFIED[CONFIRMED_MINOR] Three non-critical defects. (1) source_table is a grab-bag - 'Figures 2G/2H, 3E-3H, 4C-4J and 6C-6I' spans four different experiments on three different compounds (2'-OMe variants of ASO1 and of ASO2, 5'-CP variants of ASO1 and of ASO2, and ;; corrected(reversibility:irreversible->not_assessed;redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_nc_m334",
@@ -14191,7 +14191,7 @@
    "delivery_method": "intracerebroventricular",
    "dose_or_conc_value": 100,
    "dose_or_conc_unit": "ug",
-   "exposure_duration": "14d",
+   "exposure_duration": "10d",
    "endpoint_domain": "chronic_neurotoxicity",
    "challenge_priority": "high_chronic_neurotox",
    "readout_category": "functional",
@@ -14206,8 +14206,8 @@
    "source_id": "KUR2025",
    "source_ref": "doi:10.1016/j.omtn.2025.102692; PMID 41467114; PMC12744863",
    "source_table": "Results, 'PS-bond replacement with a PO bond...' (Figure 5C) and 'The 5'-CP gap modification allows PS to PO replacement...' (Figures 6H-6K)",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; 7-week-old female C57BL/6 mice, single ICV injection of 19.0 nmol (100 ug) of the ASO2 variant. KEY NEGATIVE RESULT FOR THE FIELD: simply replacing a single gap PS bond with PO INCREASED mortality and cytotoxicity for this sequence, whereas combining 5'-CP with PO replacement at position 3 or 9 was tolerated. Late-ONSET CNS toxicity: signs appeared at least 3 days after a single central injection, persisted for 6 days or more and worsened over time. The authors emphasise this is distinct from acute toxicity - no acute neurotoxicity was seen with ASO1, ASO3 or ASO4, and the acute toxicity of ASO2 resolved completely within 1 day. Tolerability scoring system in Supplementary Table S2 covers consciousness, motor function (ataxia, strength) and appearance (posture, breathing, home-cage activity)."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; 7-week-old female C57BL/6 mice, single ICV injection of 19.0 nmol (100 ug) of the ASO2 variant. KEY NEGATIVE RESULT FOR THE FIELD: simply replacing a single gap PS bond with PO INCREASED mortality and cytotoxicity for this sequence, whereas combining 5'-CP with PO replacement at position 3 or 9 was tolerated. Late-ONSET CNS toxicity: signs appeared at least 3 days after a single central injection, persisted for 6 days or more and worsened over time. The authors emphasise this is distinct from acute toxicity - no acute neurotoxicity was seen with ASO1, ASO3 or ASO4, and the acute toxicity of ASO2 resolved completely within 1 day. Tolerability scoring system in Supplementary Table S2 covers consciousness, motor function (ataxia, strength) and appearance (posture, breathing, home-cage activity). ;; VERIFIED[CONFIRMED_MINOR] Value, direction and grade 3 (death) all verify. One field error: exposure_duration is recorded as 14d, but the Fig. 5C-5G legend states 'mice were sacrificed 10 days postinjection' and the deaths occurred between days 2 and 9. Also, redist ;; corrected(exposure_duration:14d->10d;redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_nc_m336",
@@ -14318,8 +14318,8 @@
    "source_id": "KUR2025",
    "source_ref": "doi:10.1016/j.omtn.2025.102692; PMID 41467114; PMC12744863",
    "source_table": "Results, 'PS-bond replacement with a PO bond...' (Figure 5C) and 'The 5'-CP gap modification allows PS to PO replacement...' (Figures 6H-6K)",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; 7-week-old female C57BL/6 mice, single ICV injection of 19.0 nmol (100 ug) of the ASO2 variant. KEY NEGATIVE RESULT FOR THE FIELD: simply replacing a single gap PS bond with PO INCREASED mortality and cytotoxicity for this sequence, whereas combining 5'-CP with PO replacement at position 3 or 9 was tolerated. Late-ONSET CNS toxicity: signs appeared at least 3 days after a single central injection, persisted for 6 days or more and worsened over time. The authors emphasise this is distinct from acute toxicity - no acute neurotoxicity was seen with ASO1, ASO3 or ASO4, and the acute toxicity of ASO2 resolved completely within 1 day. Tolerability scoring system in Supplementary Table S2 covers consciousness, motor function (ataxia, strength) and appearance (posture, breathing, home-cage activity)."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; 7-week-old female C57BL/6 mice, single ICV injection of 19.0 nmol (100 ug) of the ASO2 variant. KEY NEGATIVE RESULT FOR THE FIELD: simply replacing a single gap PS bond with PO INCREASED mortality and cytotoxicity for this sequence, whereas combining 5'-CP with PO replacement at position 3 or 9 was tolerated. Late-ONSET CNS toxicity: signs appeared at least 3 days after a single central injection, persisted for 6 days or more and worsened over time. The authors emphasise this is distinct from acute toxicity - no acute neurotoxicity was seen with ASO1, ASO3 or ASO4, and the acute toxicity of ASO2 resolved completely within 1 day. Tolerability scoring system in Supplementary Table S2 covers consciousness, motor function (ataxia, strength) and appearance (posture, breathing, home-cage activity). ;; VERIFIED[CONFIRMED_MINOR] Value, duration and grade 3 (death) verify. Only redistribution is wrong: PMC12744863 is plain CC BY 4.0 and should be 'cc_by'. Worth flagging for the curator that this compound is presented by the authors as a mitigation success ('5'-CP at ;; corrected(redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_nc_m340",
@@ -14374,8 +14374,8 @@
    "source_id": "KUR2025",
    "source_ref": "doi:10.1016/j.omtn.2025.102692; PMID 41467114; PMC12744863",
    "source_table": "Results, 'PS-bond replacement with a PO bond...' (Figure 5C) and 'The 5'-CP gap modification allows PS to PO replacement...' (Figures 6H-6K)",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; 7-week-old female C57BL/6 mice, single ICV injection of 19.0 nmol (100 ug) of the ASO2 variant. KEY NEGATIVE RESULT FOR THE FIELD: simply replacing a single gap PS bond with PO INCREASED mortality and cytotoxicity for this sequence, whereas combining 5'-CP with PO replacement at position 3 or 9 was tolerated. Late-ONSET CNS toxicity: signs appeared at least 3 days after a single central injection, persisted for 6 days or more and worsened over time. The authors emphasise this is distinct from acute toxicity - no acute neurotoxicity was seen with ASO1, ASO3 or ASO4, and the acute toxicity of ASO2 resolved completely within 1 day. Tolerability scoring system in Supplementary Table S2 covers consciousness, motor function (ataxia, strength) and appearance (posture, breathing, home-cage activity)."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; 7-week-old female C57BL/6 mice, single ICV injection of 19.0 nmol (100 ug) of the ASO2 variant. KEY NEGATIVE RESULT FOR THE FIELD: simply replacing a single gap PS bond with PO INCREASED mortality and cytotoxicity for this sequence, whereas combining 5'-CP with PO replacement at position 3 or 9 was tolerated. Late-ONSET CNS toxicity: signs appeared at least 3 days after a single central injection, persisted for 6 days or more and worsened over time. The authors emphasise this is distinct from acute toxicity - no acute neurotoxicity was seen with ASO1, ASO3 or ASO4, and the acute toxicity of ASO2 resolved completely within 1 day. Tolerability scoring system in Supplementary Table S2 covers consciousness, motor function (ataxia, strength) and appearance (posture, breathing, home-cage activity). ;; VERIFIED[CONFIRMED_MINOR] Two non-critical defects. (1) source_table cites Figure 5C, which is a DIFFERENT compound: Figure 5C is ASO2 with a bare PO replacement and no 5'-CP (n=5/group, sacrificed day 10), where 'one of the five mice in the PS-3(-) group' died. Onl ;; corrected(redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_nc_m342",
@@ -14508,14 +14508,14 @@
    "readout_unit": "n_of_N",
    "effect_direction": "increase",
    "effect_vs_control": "1/4 at 2 mg/animal vs 0/4 in the concurrent aCSF control group",
-   "neurotox_grade": 2,
+   "neurotox_grade": "1",
    "reversibility": "partially_reversible",
    "is_cns_specific": "TRUE",
    "source_id": "PET2022",
    "source_ref": "doi:10.3390/pharmaceutics14010200; PMID 35057094; PMC8780845",
    "source_table": "Table 1 (microscopic observations), cervical spinal cord rows; narrative in sections 3.14.1 and 3.14.3",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; incidence pooled across the 2 males and 2 females examined at each dose level (severity graded minimal/slight/moderate; counted here as present vs not present). Tissue: cervical spinal cord. 13-week GLP toxicity study in cynomolgus monkeys (2 males + 2 females per dose group, so n=4 per dose). aCSF vehicle control or 1, 2 or 4 mg NVP-13 per animal given intrathecally at L4/L5 on days 1, 15, 29, 43, 57, 71 and 85 (0.5 mL CSF removed first, 0.75 mL injected over ~1 min, 0.25 mL aCSF flush). A separate recovery group was necropsied after a recovery phase. NOAEL stated as at least 4 mg/animal. Authors' interpretation: mononuclear infiltration occurred at all dose levels with NO dose relationship, was perivascular and mostly meningeal, and was highest at the lumbar cord/injection site; gliosis and slight demyelination were attributed to the dosing procedure rather than the test item; minimal DRG neuronolysis was seen in a few treated animals but also in a recovery control and is known to occur spontaneously. Recovery-group necropsy showed the same pattern of CNS changes but with generally lower incidence and/or intensity, which the authors interpret as ongoing recovery - hence partially_reversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; incidence pooled across the 2 males and 2 females examined at each dose level (severity graded minimal/slight/moderate; counted here as present vs not present). Tissue: cervical spinal cord. 13-week GLP toxicity study in cynomolgus monkeys (2 males + 2 females per dose group, so n=4 per dose). aCSF vehicle control or 1, 2 or 4 mg NVP-13 per animal given intrathecally at L4/L5 on days 1, 15, 29, 43, 57, 71 and 85 (0.5 mL CSF removed first, 0.75 mL injected over ~1 min, 0.25 mL aCSF flush). A separate recovery group was necropsied after a recovery phase. NOAEL stated as at least 4 mg/animal. Authors' interpretation: mononuclear infiltration occurred at all dose levels with NO dose relationship, was perivascular and mostly meningeal, and was highest at the lumbar cord/injection site; gliosis and slight demyelination were attributed to the dosing procedure rather than the test item; minimal DRG neuronolysis was seen in a few treated animals but also in a recovery control and is known to occur spontaneously. Recovery-group necropsy showed the same pattern of CNS changes but with generally lower incidence and/or intensity, which the authors interpret as ongoing recovery - hence partially_reversible. ;; VERIFIED[REFUTED] neurotox_grade=2 is not defensible. The rubric reserves grade 2 for sustained neuroinflammation. What the source reports is a MINIMAL, perivascular, mostly meningeal mononuclear infiltrate in one of four animals examined, which the study pa ;; corrected(neurotox_grade:2->1;redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_nc_m347",
@@ -14564,14 +14564,14 @@
    "readout_unit": "n_of_N",
    "effect_direction": "increase",
    "effect_vs_control": "2/4 at 1 mg/animal vs 0/4 in the concurrent aCSF control group",
-   "neurotox_grade": 2,
+   "neurotox_grade": "1",
    "reversibility": "partially_reversible",
    "is_cns_specific": "TRUE",
    "source_id": "PET2022",
    "source_ref": "doi:10.3390/pharmaceutics14010200; PMID 35057094; PMC8780845",
    "source_table": "Table 1 (microscopic observations), thoracic spinal cord rows; narrative in sections 3.14.1 and 3.14.3",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; incidence pooled across the 2 males and 2 females examined at each dose level (severity graded minimal/slight/moderate; counted here as present vs not present). Tissue: thoracic spinal cord. 13-week GLP toxicity study in cynomolgus monkeys (2 males + 2 females per dose group, so n=4 per dose). aCSF vehicle control or 1, 2 or 4 mg NVP-13 per animal given intrathecally at L4/L5 on days 1, 15, 29, 43, 57, 71 and 85 (0.5 mL CSF removed first, 0.75 mL injected over ~1 min, 0.25 mL aCSF flush). A separate recovery group was necropsied after a recovery phase. NOAEL stated as at least 4 mg/animal. Authors' interpretation: mononuclear infiltration occurred at all dose levels with NO dose relationship, was perivascular and mostly meningeal, and was highest at the lumbar cord/injection site; gliosis and slight demyelination were attributed to the dosing procedure rather than the test item; minimal DRG neuronolysis was seen in a few treated animals but also in a recovery control and is known to occur spontaneously. Recovery-group necropsy showed the same pattern of CNS changes but with generally lower incidence and/or intensity, which the authors interpret as ongoing recovery - hence partially_reversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; incidence pooled across the 2 males and 2 females examined at each dose level (severity graded minimal/slight/moderate; counted here as present vs not present). Tissue: thoracic spinal cord. 13-week GLP toxicity study in cynomolgus monkeys (2 males + 2 females per dose group, so n=4 per dose). aCSF vehicle control or 1, 2 or 4 mg NVP-13 per animal given intrathecally at L4/L5 on days 1, 15, 29, 43, 57, 71 and 85 (0.5 mL CSF removed first, 0.75 mL injected over ~1 min, 0.25 mL aCSF flush). A separate recovery group was necropsied after a recovery phase. NOAEL stated as at least 4 mg/animal. Authors' interpretation: mononuclear infiltration occurred at all dose levels with NO dose relationship, was perivascular and mostly meningeal, and was highest at the lumbar cord/injection site; gliosis and slight demyelination were attributed to the dosing procedure rather than the test item; minimal DRG neuronolysis was seen in a few treated animals but also in a recovery control and is known to occur spontaneously. Recovery-group necropsy showed the same pattern of CNS changes but with generally lower incidence and/or intensity, which the authors interpret as ongoing recovery - hence partially_reversible. ;; VERIFIED[REFUTED] Same grading problem as CMS2007, and it is the more consequential of the two because this row carries challenge_priority=high_chronic_neurotox. neurotox_grade=2 requires sustained neuroinflammation; the source reports a MINIMAL mononuclear  ;; corrected(neurotox_grade:2->1;redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_nc_m349",
@@ -14906,8 +14906,8 @@
    "source_id": "PET2022",
    "source_ref": "doi:10.3390/pharmaceutics14010200; PMID 35057094; PMC8780845",
    "source_table": "Table 1 (microscopic observations), lumbar spinal cord rows; narrative in sections 3.14.1 and 3.14.3",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; incidence pooled across the 2 males and 2 females examined at each dose level (severity graded minimal/slight/moderate; counted here as present vs not present). Tissue: lumbar spinal cord. 13-week GLP toxicity study in cynomolgus monkeys (2 males + 2 females per dose group, so n=4 per dose). aCSF vehicle control or 1, 2 or 4 mg NVP-13 per animal given intrathecally at L4/L5 on days 1, 15, 29, 43, 57, 71 and 85 (0.5 mL CSF removed first, 0.75 mL injected over ~1 min, 0.25 mL aCSF flush). A separate recovery group was necropsied after a recovery phase. NOAEL stated as at least 4 mg/animal. Authors' interpretation: mononuclear infiltration occurred at all dose levels with NO dose relationship, was perivascular and mostly meningeal, and was highest at the lumbar cord/injection site; gliosis and slight demyelination were attributed to the dosing procedure rather than the test item; minimal DRG neuronolysis was seen in a few treated animals but also in a recovery control and is known to occur spontaneously. Recovery-group necropsy showed the same pattern of CNS changes but with generally lower incidence and/or intensity, which the authors interpret as ongoing recovery - hence partially_reversible."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; incidence pooled across the 2 males and 2 females examined at each dose level (severity graded minimal/slight/moderate; counted here as present vs not present). Tissue: lumbar spinal cord. 13-week GLP toxicity study in cynomolgus monkeys (2 males + 2 females per dose group, so n=4 per dose). aCSF vehicle control or 1, 2 or 4 mg NVP-13 per animal given intrathecally at L4/L5 on days 1, 15, 29, 43, 57, 71 and 85 (0.5 mL CSF removed first, 0.75 mL injected over ~1 min, 0.25 mL aCSF flush). A separate recovery group was necropsied after a recovery phase. NOAEL stated as at least 4 mg/animal. Authors' interpretation: mononuclear infiltration occurred at all dose levels with NO dose relationship, was perivascular and mostly meningeal, and was highest at the lumbar cord/injection site; gliosis and slight demyelination were attributed to the dosing procedure rather than the test item; minimal DRG neuronolysis was seen in a few treated animals but also in a recovery control and is known to occur spontaneously. Recovery-group necropsy showed the same pattern of CNS changes but with generally lower incidence and/or intensity, which the authors interpret as ongoing recovery - hence partially_reversible. ;; VERIFIED[CONFIRMED_MINOR] Non-critical caveats. (1) Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv alrea ;; corrected(redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_nc_m361",
@@ -15326,8 +15326,8 @@
    "source_id": "PET2022",
    "source_ref": "doi:10.3390/pharmaceutics14010200; PMID 35057094; PMC8780845",
    "source_table": "section 3.11 and Figure 6 panels D (total protein) and H (micro albumin)",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; CSF collected by lumbar puncture (L2-L6) pre-dose, in week 13 and in the last week of recovery. For every other measured CSF parameter no significant test-item-related change was seen. Absolute concentrations are shown only graphically, hence readout_value TBD. 13-week GLP toxicity study in cynomolgus monkeys (2 males + 2 females per dose group, so n=4 per dose). aCSF vehicle control or 1, 2 or 4 mg NVP-13 per animal given intrathecally at L4/L5 on days 1, 15, 29, 43, 57, 71 and 85 (0.5 mL CSF removed first, 0.75 mL injected over ~1 min, 0.25 mL aCSF flush). A separate recovery group was necropsied after a recovery phase. NOAEL stated as at least 4 mg/animal."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; CSF collected by lumbar puncture (L2-L6) pre-dose, in week 13 and in the last week of recovery. For every other measured CSF parameter no significant test-item-related change was seen. Absolute concentrations are shown only graphically, hence readout_value TBD. 13-week GLP toxicity study in cynomolgus monkeys (2 males + 2 females per dose group, so n=4 per dose). aCSF vehicle control or 1, 2 or 4 mg NVP-13 per animal given intrathecally at L4/L5 on days 1, 15, 29, 43, 57, 71 and 85 (0.5 mL CSF removed first, 0.75 mL injected over ~1 min, 0.25 mL aCSF flush). A separate recovery group was necropsied after a recovery phase. NOAEL stated as at least 4 mg/animal. ;; VERIFIED[CONFIRMED_MINOR] Two non-critical defects. (1) Article licence read from the archived full text: this is a CC BY 4.0 article, so per the schema's provenance rules redistribution must be `cc_by`, not `summary_stat`. NOTE: the live data/cns_measurements.csv a ;; corrected(redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_nc_m376",

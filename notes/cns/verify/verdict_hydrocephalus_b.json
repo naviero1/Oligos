@@ -1,0 +1,505 @@
+{
+ "batch": "batch_hydrocephalus_b",
+ "verdicts": [
+  {
+   "measurement_id": "CMS1293",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03342053); outcomeMeasures[5] 'Mean Percentage Change in Whole Brain Volume Boundary Shift Integral From Baseline to 15 Months', group OG000 'RO7234292 Monthly' = 1.63, SD 1.41, denominator 20/18 -> whole-brain denominators are n=13 (monthly) and n=18 (bimonthly); ventricular BSI outcomeMeasures[3] = 46.09 (SD 32.14, n=20) and 18.77 (SD 10.36, n=18). All figures, units (Percentage change), arm label, 15-month window and the no-placebo statement match exactly.",
+   "problem": "neurotox_grade=1 is assigned while effect_direction=TBD. The row itself concedes the BSI sign convention is undetermined, so no adverse direction is established and an adverse grade cannot follow from it. The sponsor deck for the same programme (CHDI 2021 Schobel slide 34, which I downloaded and read this session) states 'No drug-related difference in whole brain or caudate BSI observed when compared with placebo', which argues for grade 0 on this readout.",
+   "correction": {
+    "neurotox_grade": "0"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1418",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03342053); resultsSection.adverseEventsModule.otherEvents[29] confirmed as term='Cerebral ventricle dilatation', organSystem='Nervous system disorders', EG000 (RO7234292 Monthly) 2/23 = 8.7%, EG001 (Bimonthly) 0/23. Array index, term, SOC, arm labels and both numerators/denominators all match.",
+   "problem": "dose_or_conc_value=TBD is avoidable: the same posted record states the dose in outcomeMeasures[1] ('...Monthly and Bimonthly IT Administration of 120 mg RO7234292') and in the arm descriptions. Also exposure_duration='14mo' is the dosing duration from the arm description; the adverse-events module's own timeFrame is 'From baseline to up to 18 months'.",
+   "correction": {
+    "dose_or_conc_value": "120",
+    "dose_or_conc_unit": "mg"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1423",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03342053); resultsSection.adverseEventsModule.seriousEvents[12] confirmed as term='Hydrocephalus', organSystem='Nervous system disorders', EG000 (Monthly) 1/23 = 4.3%, EG001 (Bimonthly) 0/23. Cross-checked against Stoker 2021 (PMC7894279, fetched) and against CHDI 2021 slide 35 (PDF downloaded), both of which identify this single OLE-monthly case.",
+   "problem": "neurotox_grade=3 rests on serious-adverse-event coding alone at the cited locus; the posted AE table says nothing about intervention, and the row's own notes admit 'shunt requirement not stated'. Grade 3 does happen to be correct in substance, but only because Stoker 2021 (PMC7894279) documents that this same single case received a ventriculoperitoneal shunt and CHDI 2021 slide 35 footnotes it to Stoker - neither is cited on this row. Also dose_or_conc_value=TBD is recoverable as 120 mg. And this row and CMS1328 are the SAME PATIENT recorded twice.",
+   "correction": {
+    "dose_or_conc_value": "120",
+    "dose_or_conc_unit": "mg"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1294",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03761849); adverseEventsModule.seriousEvents[70] term='Hydrocephalus', SOC 'Nervous system disorders': EG000 PLB ODC 0/36, EG001 Q4W ODC 0/36, EG002 Q8W ODC 0/36, EG003 Q8W NDC 2/263, EG004 Q16W NDC 0/264, EG005 PLB NDC 0/264. frequencyThreshold=5 (non-serious only); serious events posted in full. Row's 0_of_264 for the Q16W NDC arm and its comparator string (2/263 Q8W NDC; placebo 0/264 NDC and 0/36 ODC) match exactly. exposure_duration matches the module timeFrame 'For ODC Up to 13 Months. For NDC Approximately Up to 137 Weeks'.",
+   "problem": "Exact duplicate in substance of CMS1450 (same trial, same term, same arm, same numbers) filed under a different source_id convention.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1295",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03761849); adverseEventsModule.seriousEvents[70] term='Hydrocephalus', SOC 'Nervous system disorders': EG000 PLB ODC 0/36, EG001 Q4W ODC 0/36, EG002 Q8W ODC 0/36, EG003 Q8W NDC 2/263, EG004 Q16W NDC 0/264, EG005 PLB NDC 0/264. frequencyThreshold=5 (non-serious only); serious events posted in full. Row's 0_of_36 for the Q4W ODC arm matches EG001 exactly.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1296",
+   "verdict": "REFUTED",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03761849); adverseEventsModule.seriousEvents[70] term='Hydrocephalus', SOC 'Nervous system disorders': EG000 PLB ODC 0/36, EG001 Q4W ODC 0/36, EG002 Q8W ODC 0/36, EG003 Q8W NDC 2/263, EG004 Q16W NDC 0/264, EG005 PLB NDC 0/264. frequencyThreshold=5 (non-serious only); serious events posted in full. readout_value 2_of_263 for the Q8W NDC arm is correct, as is the comparator (0/264 Q16W NDC, 0/264 placebo NDC).",
+   "problem": "neurotox_grade=3 is not supported by the cited locus. The rubric reserves grade 3 for 'hydrocephalus requiring intervention'; the ClinicalTrials.gov serious-AE table records only that the events met serious-AE criteria and says nothing about shunting or any other intervention (the row's own notes concede this: 'the AE table does not state whether shunting was required'). The alternative grade-3 route, 'programme-halting neurotoxicity', is also unavailable here: the posted record lists the study as COMPLETED with no whyStopped, and the sponsor's own CHDI 2021 deck (downloaded this session) states the iDMC recommendation to stop dosing was 'based on an overall benefit:risk assessment', not a hydrocephalus finding. Correct grade is 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1449",
+   "verdict": "REFUTED",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03761849); adverseEventsModule.seriousEvents[70] term='Hydrocephalus', SOC 'Nervous system disorders': EG000 PLB ODC 0/36, EG001 Q4W ODC 0/36, EG002 Q8W ODC 0/36, EG003 Q8W NDC 2/263, EG004 Q16W NDC 0/264, EG005 PLB NDC 0/264. frequencyThreshold=5 (non-serious only); serious events posted in full. 0.8 pct_incidence for EG003 (Q8W NDC) is 2/263 = 0.76%, correctly rounded; array index seriousEvents[70], term, SOC and arm label all verified.",
+   "problem": "Same defect as CMS1296, of which this row is a duplicate: neurotox_grade=3 from serious-adverse-event coding alone, with no intervention stated at the locus. Correct grade is 2. Additionally this row and CMS1296 are the same fact recorded twice under two source_id conventions (CT_NCT03761849 vs CNSSRC_CTG_NCT03761849), which double-weights the single highest-profile row in the submission.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1450",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03761849); adverseEventsModule.seriousEvents[70] term='Hydrocephalus', SOC 'Nervous system disorders': EG000 PLB ODC 0/36, EG001 Q4W ODC 0/36, EG002 Q8W ODC 0/36, EG003 Q8W NDC 2/263, EG004 Q16W NDC 0/264, EG005 PLB NDC 0/264. frequencyThreshold=5 (non-serious only); serious events posted in full. 0.0 pct_incidence for EG004 (Q16W NDC) = 0/264, concurrent placebo NDC 0/264. Verified.",
+   "problem": "Duplicate in substance of CMS1294.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1303",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03761849); outcomeMeasures[17] 'Change From Baseline in Whole and Regional Brain Volumes, as Detrmined by Structural Magnetic Resonance Imaging (MRI)', unitOfMeasure=mL, paramType=LEAST_SQUARES_MEAN, dispersion=Standard Error. Class 'Week 13 Change from Baseline in: Ventricle Volume (mL)': OG000 Placebo ODC 1.537 (0.686), OG001 RO7234292 Q4W ODC 3.785 (0.718), OG002 Q8W ODC 2.011 (0.700). Class 'Week 13 Change from Baseline in: Whole Brain Volume (mL)': OG000 +0.189 (0.119), OG001 -0.184 (0.123), OG002 -0.133 (0.121). Posted denominators: OG000 34, OG001 31, OG002 32, NDC arms 0. Row's 3.785 mL, SE 0.718, n=31 and the arm label 'RO7234292 Q4W ODC' are exactly right, and the concurrent placebo-ODC comparator (1.537 mL, SE 0.686, n=34) is correctly represented. This is a genuine measured dose-frequency ladder with a real concurrent placebo arm.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1304",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03761849); outcomeMeasures[17] 'Change From Baseline in Whole and Regional Brain Volumes, as Detrmined by Structural Magnetic Resonance Imaging (MRI)', unitOfMeasure=mL, paramType=LEAST_SQUARES_MEAN, dispersion=Standard Error. Class 'Week 13 Change from Baseline in: Ventricle Volume (mL)': OG000 Placebo ODC 1.537 (0.686), OG001 RO7234292 Q4W ODC 3.785 (0.718), OG002 Q8W ODC 2.011 (0.700). Class 'Week 13 Change from Baseline in: Whole Brain Volume (mL)': OG000 +0.189 (0.119), OG001 -0.184 (0.123), OG002 -0.133 (0.121). Posted denominators: OG000 34, OG001 31, OG002 32, NDC arms 0. Row's 2.011 mL, SE 0.700, n=32, arm 'RO7234292 Q8W ODC' verified against the placebo-ODC comparator.",
+   "problem": "neurotox_grade=1: the Q8W-minus-placebo difference is 0.474 mL against standard errors of 0.700 and 0.686, i.e. entirely inside the noise, and no statistical comparison is posted. Grading a difference that is indistinguishable from the concurrent control as a (mild) toxicity signal is at the edge of defensibility; grade 0 is the safer read. The row's notes do disclose the reasoning.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1305",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03761849); outcomeMeasures[17] 'Change From Baseline in Whole and Regional Brain Volumes, as Detrmined by Structural Magnetic Resonance Imaging (MRI)', unitOfMeasure=mL, paramType=LEAST_SQUARES_MEAN, dispersion=Standard Error. Class 'Week 13 Change from Baseline in: Ventricle Volume (mL)': OG000 Placebo ODC 1.537 (0.686), OG001 RO7234292 Q4W ODC 3.785 (0.718), OG002 Q8W ODC 2.011 (0.700). Class 'Week 13 Change from Baseline in: Whole Brain Volume (mL)': OG000 +0.189 (0.119), OG001 -0.184 (0.123), OG002 -0.133 (0.121). Posted denominators: OG000 34, OG001 31, OG002 32, NDC arms 0. Row's -0.184 mL, SE 0.123, n=31, arm 'RO7234292 Q4W ODC' vs placebo ODC +0.189 mL (SE 0.119, n=34) verified exactly. I additionally confirmed the row's interpretation against CHDI 2021 slide 34 (PDF downloaded this session), which states 'No drug-related difference in whole brain or caudate BSI observed when compared with placebo'.",
+   "problem": "effect_direction=no_change encodes direction-relative-to-placebo, but the schema defines effect_direction as the direction of the readout, and the readout itself is -0.184 mL. The BSI sign-convention caveat in the notes is legitimate and honestly stated, but the field as populated conflates two different meanings of 'direction'. grade 0 is correct and independently corroborated by the sponsor slide.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1306",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03761849); outcomeMeasures[17] 'Change From Baseline in Whole and Regional Brain Volumes, as Detrmined by Structural Magnetic Resonance Imaging (MRI)', unitOfMeasure=mL, paramType=LEAST_SQUARES_MEAN, dispersion=Standard Error. Class 'Week 13 Change from Baseline in: Ventricle Volume (mL)': OG000 Placebo ODC 1.537 (0.686), OG001 RO7234292 Q4W ODC 3.785 (0.718), OG002 Q8W ODC 2.011 (0.700). Class 'Week 13 Change from Baseline in: Whole Brain Volume (mL)': OG000 +0.189 (0.119), OG001 -0.184 (0.123), OG002 -0.133 (0.121). Posted denominators: OG000 34, OG001 31, OG002 32, NDC arms 0. Row's -0.133 mL, SE 0.121, n=32, arm 'RO7234292 Q8W ODC' vs placebo ODC +0.189 mL verified exactly; same corroboration from CHDI 2021 slide 34.",
+   "problem": "Same effect_direction issue as CMS1305: no_change is direction-vs-placebo, not the direction of the -0.133 mL readout.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1307",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03842969); arms EG000 Tominersen 120mg Q4W (n=14), EG001 120 mg Q8W (n=143), EG002 120 mg Q16W (n=88); no placebo arm. otherEvents 'Cerebral ventricle dilatation' (SYSTEMATIC_ASSESSMENT): 1/14, 4/143, 1/88. seriousEvents 'Normal pressure hydrocephalus': 0/14, 1/143, 0/88. timeFrame 'Up to Approx. 3 Years'. Row's 1_of_88 for the Q16W arm verified.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1308",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03842969); arms EG000 Tominersen 120mg Q4W (n=14), EG001 120 mg Q8W (n=143), EG002 120 mg Q16W (n=88); no placebo arm. otherEvents 'Cerebral ventricle dilatation' (SYSTEMATIC_ASSESSMENT): 1/14, 4/143, 1/88. seriousEvents 'Normal pressure hydrocephalus': 0/14, 1/143, 0/88. timeFrame 'Up to Approx. 3 Years'. Row's 4_of_143 for the Q8W arm verified.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1309",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03842969); arms EG000 Tominersen 120mg Q4W (n=14), EG001 120 mg Q8W (n=143), EG002 120 mg Q16W (n=88); no placebo arm. otherEvents 'Cerebral ventricle dilatation' (SYSTEMATIC_ASSESSMENT): 1/14, 4/143, 1/88. seriousEvents 'Normal pressure hydrocephalus': 0/14, 1/143, 0/88. timeFrame 'Up to Approx. 3 Years'. Row's 1_of_14 for the Q4W arm verified. n=14 is tiny and the row says so.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1311",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03842969); arms EG000 Tominersen 120mg Q4W (n=14), EG001 120 mg Q8W (n=143), EG002 120 mg Q16W (n=88); no placebo arm. otherEvents 'Cerebral ventricle dilatation' (SYSTEMATIC_ASSESSMENT): 1/14, 4/143, 1/88. seriousEvents 'Normal pressure hydrocephalus': 0/14, 1/143, 0/88. timeFrame 'Up to Approx. 3 Years'. Row's 0_of_88 for the Q16W arm verified.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1312",
+   "verdict": "REFUTED",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03842969); arms EG000 Tominersen 120mg Q4W (n=14), EG001 120 mg Q8W (n=143), EG002 120 mg Q16W (n=88); no placebo arm. otherEvents 'Cerebral ventricle dilatation' (SYSTEMATIC_ASSESSMENT): 1/14, 4/143, 1/88. seriousEvents 'Normal pressure hydrocephalus': 0/14, 1/143, 0/88. timeFrame 'Up to Approx. 3 Years'. readout_value 1_of_143 for the Q8W arm is correct and the arm labels and denominators are right.",
+   "problem": "neurotox_grade=3 is not supported at the cited locus. The posted serious-AE table records one event coded 'Normal pressure hydrocephalus' and says nothing about shunting or any other intervention, which is what the rubric's grade 3 requires; CHDI 2021 slide 35 (downloaded this session) classifies the same GEN-EXTEND Q8W case only as a SUSAR and likewise reports no intervention. Correct grade is 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1313",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03842969); arms EG000 Tominersen 120mg Q4W (n=14), EG001 120 mg Q8W (n=143), EG002 120 mg Q16W (n=88); no placebo arm. otherEvents 'Cerebral ventricle dilatation' (SYSTEMATIC_ASSESSMENT): 1/14, 4/143, 1/88. seriousEvents 'Normal pressure hydrocephalus': 0/14, 1/143, 0/88. timeFrame 'Up to Approx. 3 Years'. Row's 0_of_14 for the Q4W arm verified.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1314",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT04089566); frequencyThreshold=0 (all AEs posted). seriousEvents[49] 'Acquired macrocephaly' (SOC Musculoskeletal and connective tissue disorders): EG000 0/6, EG001 Part B infantile 12/12 mg 0/25, EG002 Part B infantile 50/28 mg 1/50, EG003 0/8, EG004 0/16, EG005 0/40. otherEvents[6] 'Intracranial pressure increased' (Nervous system disorders): EG004 Part B later-onset 50/28 mg 1/16, all other groups 0. otherEvents[154] 'CSF pressure increased' (Investigations): EG005 Part C 2/40, all other groups 0. Module timeFrame: Part A up to Day 389, Part B up to Day 399, Part C up to Day 361. Row's 2_of_40 for Part C 50/28 mg and the 'no concurrent control in Part C' statement are correct.",
+   "problem": "Two things. (1) neurotox_grade=2 is generous for a NON-serious event coded under the Investigations SOC ('CSF pressure increased') with no symptoms, no intervention and no clinical sequela reported; the rubric's grade 2 requires a 'clinically significant but manageable/resolving' event, and grade 1 fits an isolated pressure elevation better. (2) exposure_duration omits the posted Part C follow-up window (up to Day 361). Also duplicated by CMS1457.",
+   "correction": {
+    "neurotox_grade": "1"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1315",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT04089566); frequencyThreshold=0 (all AEs posted). seriousEvents[49] 'Acquired macrocephaly' (SOC Musculoskeletal and connective tissue disorders): EG000 0/6, EG001 Part B infantile 12/12 mg 0/25, EG002 Part B infantile 50/28 mg 1/50, EG003 0/8, EG004 0/16, EG005 0/40. otherEvents[6] 'Intracranial pressure increased' (Nervous system disorders): EG004 Part B later-onset 50/28 mg 1/16, all other groups 0. otherEvents[154] 'CSF pressure increased' (Investigations): EG005 Part C 2/40, all other groups 0. Module timeFrame: Part A up to Day 389, Part B up to Day 399, Part C up to Day 361. Row's 0_of_8 for Part B later-onset 12/12 mg and the 1/16 comparator verified; grade 0 correct.",
+   "problem": "exposure_duration says 'up to Day 394'; the posted adverse-events timeFrame for Part B is up to Day 399. Minor transcription slip repeated across CMS1315-CMS1318.",
+   "correction": {
+    "exposure_duration": "up to Day 399 (12/12 mg regimen)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1316",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT04089566); frequencyThreshold=0 (all AEs posted). seriousEvents[49] 'Acquired macrocephaly' (SOC Musculoskeletal and connective tissue disorders): EG000 0/6, EG001 Part B infantile 12/12 mg 0/25, EG002 Part B infantile 50/28 mg 1/50, EG003 0/8, EG004 0/16, EG005 0/40. otherEvents[6] 'Intracranial pressure increased' (Nervous system disorders): EG004 Part B later-onset 50/28 mg 1/16, all other groups 0. otherEvents[154] 'CSF pressure increased' (Investigations): EG005 Part C 2/40, all other groups 0. Module timeFrame: Part A up to Day 389, Part B up to Day 399, Part C up to Day 361. Row's 1_of_16 (6.3%) for Part B later-onset 50/28 mg vs 0/8 on 12/12 mg verified exactly.",
+   "problem": "Same grade concern as CMS1314: a single NON-serious 'Intracranial pressure increased' against an 8-patient comparator arm is graded 2; grade 1 is the better fit absent any reported symptom or intervention. Also 'up to Day 394' should be Day 399. Duplicated by CMS1459.",
+   "correction": {
+    "neurotox_grade": "1",
+    "exposure_duration": "up to Day 399 (50/28 mg regimen)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1317",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT04089566); frequencyThreshold=0 (all AEs posted). seriousEvents[49] 'Acquired macrocephaly' (SOC Musculoskeletal and connective tissue disorders): EG000 0/6, EG001 Part B infantile 12/12 mg 0/25, EG002 Part B infantile 50/28 mg 1/50, EG003 0/8, EG004 0/16, EG005 0/40. otherEvents[6] 'Intracranial pressure increased' (Nervous system disorders): EG004 Part B later-onset 50/28 mg 1/16, all other groups 0. otherEvents[154] 'CSF pressure increased' (Investigations): EG005 Part C 2/40, all other groups 0. Module timeFrame: Part A up to Day 389, Part B up to Day 399, Part C up to Day 361. Row's 0_of_25 for Part B infantile 12/12 mg verified; regimen description ('4 x 12 mg loading then 2 x 12 mg maintenance') matches the posted arm description; grade 0 correct.",
+   "problem": "'up to Day 394' should be 'up to Day 399' per the posted Part B timeFrame.",
+   "correction": {
+    "exposure_duration": "up to Day 399 (4 x 12 mg loading then 2 x 12 mg maintenance)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1318",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT04089566); frequencyThreshold=0 (all AEs posted). seriousEvents[49] 'Acquired macrocephaly' (SOC Musculoskeletal and connective tissue disorders): EG000 0/6, EG001 Part B infantile 12/12 mg 0/25, EG002 Part B infantile 50/28 mg 1/50, EG003 0/8, EG004 0/16, EG005 0/40. otherEvents[6] 'Intracranial pressure increased' (Nervous system disorders): EG004 Part B later-onset 50/28 mg 1/16, all other groups 0. otherEvents[154] 'CSF pressure increased' (Investigations): EG005 Part C 2/40, all other groups 0. Module timeFrame: Part A up to Day 389, Part B up to Day 399, Part C up to Day 361. Row's 1_of_50 for Part B infantile 50/28 mg vs 0/25 on 12/12 mg verified; serious-AE coding verified; regimen description matches the posted arm description.",
+   "problem": "'up to Day 394' should be 'up to Day 399'. Worth flagging for the assembler that this row and CMS1538 come from the same trial and appear to conflict on a superficial read: the Nature Medicine DEVOTE paper states 'Across Parts B and C, there were no AEs of meningitis, hydrocephalus...' while this row records a serious acquired macrocephaly. They are reconcilable (different MedDRA terms, and macrocephaly sits in the Musculoskeletal SOC), but nothing in either row's notes says so.",
+   "correction": {
+    "exposure_duration": "up to Day 399 (2 x 50 mg loading then 2 x 28 mg maintenance)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1319",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT04089566); frequencyThreshold=0 (all AEs posted). seriousEvents[49] 'Acquired macrocephaly' (SOC Musculoskeletal and connective tissue disorders): EG000 0/6, EG001 Part B infantile 12/12 mg 0/25, EG002 Part B infantile 50/28 mg 1/50, EG003 0/8, EG004 0/16, EG005 0/40. otherEvents[6] 'Intracranial pressure increased' (Nervous system disorders): EG004 Part B later-onset 50/28 mg 1/16, all other groups 0. otherEvents[154] 'CSF pressure increased' (Investigations): EG005 Part C 2/40, all other groups 0. Module timeFrame: Part A up to Day 389, Part B up to Day 399, Part C up to Day 361. Verified that no hydrocephalus, macrocephaly, intracranial-pressure or CSF-pressure term is reported for EG000 (Part A 28/28 mg, n=6) in either the serious or the non-serious posted table, and that frequencyThreshold=0 so the zero is a true zero rather than a reporting cut-off. Regimen and Day 389 window match the posted record.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1457",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT04089566); frequencyThreshold=0 (all AEs posted). seriousEvents[49] 'Acquired macrocephaly' (SOC Musculoskeletal and connective tissue disorders): EG000 0/6, EG001 Part B infantile 12/12 mg 0/25, EG002 Part B infantile 50/28 mg 1/50, EG003 0/8, EG004 0/16, EG005 0/40. otherEvents[6] 'Intracranial pressure increased' (Nervous system disorders): EG004 Part B later-onset 50/28 mg 1/16, all other groups 0. otherEvents[154] 'CSF pressure increased' (Investigations): EG005 Part C 2/40, all other groups 0. Module timeFrame: Part A up to Day 389, Part B up to Day 399, Part C up to Day 361. Array index otherEvents[154], term, SOC 'Investigations' and arm EG005 (Part C 50/28 mg) verified; 5.0 pct = 2/40 exactly.",
+   "problem": "Same grade concern as CMS1314, of which this is a duplicate under the other source_id convention: grade 2 for a non-serious Investigations-SOC pressure reading with no symptom or intervention documented; grade 1 is better supported.",
+   "correction": {
+    "neurotox_grade": "1"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1459",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT04089566); frequencyThreshold=0 (all AEs posted). seriousEvents[49] 'Acquired macrocephaly' (SOC Musculoskeletal and connective tissue disorders): EG000 0/6, EG001 Part B infantile 12/12 mg 0/25, EG002 Part B infantile 50/28 mg 1/50, EG003 0/8, EG004 0/16, EG005 0/40. otherEvents[6] 'Intracranial pressure increased' (Nervous system disorders): EG004 Part B later-onset 50/28 mg 1/16, all other groups 0. otherEvents[154] 'CSF pressure increased' (Investigations): EG005 Part C 2/40, all other groups 0. Module timeFrame: Part A up to Day 389, Part B up to Day 399, Part C up to Day 361. Array index otherEvents[6], term, SOC and arm EG004 verified; 6.2 pct = 1/16 exactly; comparator 0/8 on the 12/12 mg arm correct.",
+   "problem": "Duplicate of CMS1316 under the other source_id convention, and carries the same grade-2 concern.",
+   "correction": {
+    "neurotox_grade": "1"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1398",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03070119); adverseEventsModule.seriousEvents[60] term='Intracranial pressure increased', SOC 'Nervous system disorders': EG000 (Part C prior placebo) 1/32, EG001 (Part C prior BIIB067 100 mg) 1/63, EG002 (Parts A and B all doses) 1/44. Module timeFrame 'up to Week 364'. All three event groups received BIIB067 100 mg in this extension per the posted arm descriptions, so 'no concurrent control arm' is correct. 1.6 pct = 1/63 for EG001; array index, term, SOC, arm label, dose (100 mg) and 364-week window all verified.",
+   "problem": "Not a defect in this row, but the batch records EG001 (1.6%) and EG002 (2.3%) and omits EG000 (prior placebo), which at 1/32 = 3.1% is the highest of the three arms. Check that it is covered in another batch.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1399",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03070119); adverseEventsModule.seriousEvents[60] term='Intracranial pressure increased', SOC 'Nervous system disorders': EG000 (Part C prior placebo) 1/32, EG001 (Part C prior BIIB067 100 mg) 1/63, EG002 (Parts A and B all doses) 1/44. Module timeFrame 'up to Week 364'. All three event groups received BIIB067 100 mg in this extension per the posted arm descriptions, so 'no concurrent control arm' is correct. 2.3 pct = 1/44 for EG002; the posted arm description confirms that this Parts A+B roll-over group received 100 mg in the extension, so dose_or_conc_value=100 mg is right despite the 10-100 mg parent-study doses.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1432",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "ClinicalTrials.gov API v2 record fetched this session (https://clinicaltrials.gov/api/v2/studies/NCT03399370); adverseEventsModule.seriousEvents[227] term='Normal pressure hydrocephalus', SOC 'Nervous system disorders': EG000 Inclisiran 0/781, EG001 Saline Solution 2/778. Array index, term, both arms and 18-month timeFrame verified. Incidence below concurrent control, so grade 0 is right by rule, and is_cns_specific=FALSE is correctly set for a systemically dosed non-CNS comparator.",
+   "problem": "effect_direction='decrease' for an arm with literally zero events is a category error - nothing decreased; 'no_change' is the honest encoding and the below-control comparison already lives in effect_vs_control. Separately, challenge_priority='high_hydrocephalus' on a deliberately non-CNS comparator row will inflate the high-priority row count that reviewers will read as CNS hydrocephalus evidence.",
+   "correction": {
+    "effect_direction": "no_change"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1322",
+   "verdict": "CONFIRMED",
+   "checked": "I located and downloaded the actual source: medically.gene.com sitemap -> /global/en/unrestricted/neuroscience/CHDI-2021/chdi-2021-presentation-schobel-an-update-from-the-tomin.html -> CHDI-2021-presentation-schobel-an-update-from-the-tominersen-global-clinical-development-programme.pdf (43 pages, title slide 'Preliminary results from GENERATION HD1, a Phase III trial of tominersen in individuals with manifest HD', Scott A Schobel, date of preparation April 2021, document code M-XX-00005115). Parsed page by page with pymupdf. PDF page 34 reads verbatim: 'No drug-related difference in whole brain or caudate BSI observed when compared with placebo' and 'Drug-related increase in ventricular volume observed - 24.3 % (Q8W); 17.3% (Q16W); 11.4% (placebo) at Week 69 (n=41.3% of the patients)', with the footer 'Preliminary analyses performed on non-final data set; specific values may be subject to change. Data points represent least-squares mean values and their 95% confidence interval based on the analysis of mixed-effect model repeated measure.' Row's 24.3 % for 120 mg Q8W vs 11.4% placebo at Week 69 matches the printed slide exactly, redistribution='verify' is correct for a sponsor conference deck, and the notes carry the mandatory 'preliminary / non-final data set' caveat and the 41.3% completeness limitation.",
+   "problem": "Duplicated by CMS1632 under a different source_id.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1323",
+   "verdict": "CONFIRMED",
+   "checked": "I located and downloaded the actual source: medically.gene.com sitemap -> /global/en/unrestricted/neuroscience/CHDI-2021/chdi-2021-presentation-schobel-an-update-from-the-tomin.html -> CHDI-2021-presentation-schobel-an-update-from-the-tominersen-global-clinical-development-programme.pdf (43 pages, title slide 'Preliminary results from GENERATION HD1, a Phase III trial of tominersen in individuals with manifest HD', Scott A Schobel, date of preparation April 2021, document code M-XX-00005115). Parsed page by page with pymupdf. PDF page 34 reads verbatim: 'No drug-related difference in whole brain or caudate BSI observed when compared with placebo' and 'Drug-related increase in ventricular volume observed - 24.3 % (Q8W); 17.3% (Q16W); 11.4% (placebo) at Week 69 (n=41.3% of the patients)', with the footer 'Preliminary analyses performed on non-final data set; specific values may be subject to change. Data points represent least-squares mean values and their 95% confidence interval based on the analysis of mixed-effect model repeated measure.' Row's 17.3 % for 120 mg Q16W vs 11.4% placebo at Week 69 matches exactly; same correct 'verify' flag and preliminary-data caveat.",
+   "problem": "Duplicated by CMS1633.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1324",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "I located and downloaded the actual source: medically.gene.com sitemap -> /global/en/unrestricted/neuroscience/CHDI-2021/chdi-2021-presentation-schobel-an-update-from-the-tomin.html -> CHDI-2021-presentation-schobel-an-update-from-the-tominersen-global-clinical-development-programme.pdf (43 pages, title slide 'Preliminary results from GENERATION HD1, a Phase III trial of tominersen in individuals with manifest HD', Scott A Schobel, date of preparation April 2021, document code M-XX-00005115). Parsed page by page with pymupdf. PDF page 35 reads verbatim: 'As of 1 March 2021, there were 4/636 (0.6%) total symptomatic cases of hydrocephalus in 120 mg Q8W'; 'No hydrocephalus cases observed in patients treated with 120 mg Q16W'; 'There were an additional 16 asymptomatic radiographic cases and 5 adverse events of cerebral ventricle dilatation'. The per-study table on the same slide reads GENERATION HD1 Q8W: 3 hydrocephalus (one SUSAR, one SAE, one non-serious AE), Q16W 0, Placebo 0; OLE CS2 Q4W: 1 hydrocephalus (SUSAR, footnoted to Stoker 2021), Q8W 0; GEN-EXTEND 120 mg Q4W->Q8W 0, Q4W->Q16W 0, Q8W->Q8W: 1 hydrocephalus (SUSAR). Row's 4_of_636 and the whole per-study breakdown reproduced in its notes are verbatim correct, including the Q16W zero. redistribution='verify' is correct and the preliminary-data caveat is present.",
+   "problem": "Two unsupported statements in notes. (1) 'at least two managed with CSF diversion' appears nowhere on the deck - the word shunt does not occur in the 43 pages, and the only documented CSF diversion is the single Stoker case footnoted on the slide. (2) reversibility='partially_reversible' is not stated on slide 35 either. Separately, the notes justify grade 3 partly by 'the arm whose benefit:risk assessment led the iDMC to stop dosing'; the deck does say the iDMC recommendation was 'based on an overall benefit:risk assessment', but that does not establish a neurotoxicity-driven programme halt, so grade 3 here should rest on 'symptomatic hydrocephalus' plus the shunted Stoker case, which is sufficient.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1325",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "I located and downloaded the actual source: medically.gene.com sitemap -> /global/en/unrestricted/neuroscience/CHDI-2021/chdi-2021-presentation-schobel-an-update-from-the-tomin.html -> CHDI-2021-presentation-schobel-an-update-from-the-tominersen-global-clinical-development-programme.pdf (43 pages, title slide 'Preliminary results from GENERATION HD1, a Phase III trial of tominersen in individuals with manifest HD', Scott A Schobel, date of preparation April 2021, document code M-XX-00005115). Parsed page by page with pymupdf. PDF page 35 reads verbatim: 'As of 1 March 2021, there were 4/636 (0.6%) total symptomatic cases of hydrocephalus in 120 mg Q8W'; 'No hydrocephalus cases observed in patients treated with 120 mg Q16W'; 'There were an additional 16 asymptomatic radiographic cases and 5 adverse events of cerebral ventricle dilatation'. The per-study table on the same slide reads GENERATION HD1 Q8W: 3 hydrocephalus (one SUSAR, one SAE, one non-serious AE), Q16W 0, Placebo 0; OLE CS2 Q4W: 1 hydrocephalus (SUSAR, footnoted to Stoker 2021), Q8W 0; GEN-EXTEND 120 mg Q4W->Q8W 0, Q4W->Q16W 0, Q8W->Q8W: 1 hydrocephalus (SUSAR). Row's '16' cases and the honest statement that the denominator is not given both match the slide exactly; grade 2 for asymptomatic radiographic ventriculomegaly is right per the rubric.",
+   "problem": "readout_name='ventricular_volume' with readout_value='16' and readout_unit='cases' is off-schema: this is an event count, not a volume, and 'cases' is not in the readout_unit vocabulary. It should be readout_name='cerebral_ventricle_dilatation' (or hydrocephalus_incidence) with readout_unit='n_of_N' and a TBD denominator.",
+   "correction": {
+    "readout_name": "cerebral_ventricle_dilatation",
+    "readout_unit": "n_of_N"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1632",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "I located and downloaded the actual source: medically.gene.com sitemap -> /global/en/unrestricted/neuroscience/CHDI-2021/chdi-2021-presentation-schobel-an-update-from-the-tomin.html -> CHDI-2021-presentation-schobel-an-update-from-the-tominersen-global-clinical-development-programme.pdf (43 pages, title slide 'Preliminary results from GENERATION HD1, a Phase III trial of tominersen in individuals with manifest HD', Scott A Schobel, date of preparation April 2021, document code M-XX-00005115). Parsed page by page with pymupdf. PDF page 34 reads verbatim: 'No drug-related difference in whole brain or caudate BSI observed when compared with placebo' and 'Drug-related increase in ventricular volume observed - 24.3 % (Q8W); 17.3% (Q16W); 11.4% (placebo) at Week 69 (n=41.3% of the patients)', with the footer 'Preliminary analyses performed on non-final data set; specific values may be subject to change. Data points represent least-squares mean values and their 95% confidence interval based on the analysis of mixed-effect model repeated measure.' 24.3 vs 11.4 placebo, Week 69, 41.3%-with-data qualifier and the M-XX-00005115 document code all verified against the PDF.",
+   "problem": "reversibility='partially_reversible' is sourced in the notes to 'CHDI 2022 slides 18-19 and 22' - a different document that appears in neither source_ref nor source_table. That is a provenance failure: a field value taken from an uncited source. The row also omits the deck's mandatory caveat that these are preliminary analyses on a non-final data set (the parallel row CMS1322 carries it). Duplicate of CMS1322.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1633",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "I located and downloaded the actual source: medically.gene.com sitemap -> /global/en/unrestricted/neuroscience/CHDI-2021/chdi-2021-presentation-schobel-an-update-from-the-tomin.html -> CHDI-2021-presentation-schobel-an-update-from-the-tominersen-global-clinical-development-programme.pdf (43 pages, title slide 'Preliminary results from GENERATION HD1, a Phase III trial of tominersen in individuals with manifest HD', Scott A Schobel, date of preparation April 2021, document code M-XX-00005115). Parsed page by page with pymupdf. PDF page 34 reads verbatim: 'No drug-related difference in whole brain or caudate BSI observed when compared with placebo' and 'Drug-related increase in ventricular volume observed - 24.3 % (Q8W); 17.3% (Q16W); 11.4% (placebo) at Week 69 (n=41.3% of the patients)', with the footer 'Preliminary analyses performed on non-final data set; specific values may be subject to change. Data points represent least-squares mean values and their 95% confidence interval based on the analysis of mixed-effect model repeated measure.' 17.3 vs 11.4 placebo verified against the PDF.",
+   "problem": "Same two defects as CMS1632: reversibility sourced to an uncited CHDI 2022 deck, and the preliminary/non-final-data caveat is missing. Duplicate of CMS1323.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1634",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "I located and downloaded the actual source: medically.gene.com sitemap -> /global/en/unrestricted/neuroscience/CHDI-2021/chdi-2021-presentation-schobel-an-update-from-the-tomin.html -> CHDI-2021-presentation-schobel-an-update-from-the-tominersen-global-clinical-development-programme.pdf (43 pages, title slide 'Preliminary results from GENERATION HD1, a Phase III trial of tominersen in individuals with manifest HD', Scott A Schobel, date of preparation April 2021, document code M-XX-00005115). Parsed page by page with pymupdf. PDF page 34 reads verbatim: 'No drug-related difference in whole brain or caudate BSI observed when compared with placebo' and 'Drug-related increase in ventricular volume observed - 24.3 % (Q8W); 17.3% (Q16W); 11.4% (placebo) at Week 69 (n=41.3% of the patients)', with the footer 'Preliminary analyses performed on non-final data set; specific values may be subject to change. Data points represent least-squares mean values and their 95% confidence interval based on the analysis of mixed-effect model repeated measure.' The 11.4% placebo value is correct and is a genuine concurrent placebo arm.",
+   "problem": "Structurally malformed even though the number is right. (1) It files a PLACEBO arm as a measurement of oligo_id CNS014 (tominersen) at dose_or_conc_value=0 mg - a model trained on this sees 'tominersen at 0 mg'. (2) effect_vs_control='11.4pct_vs_11.4pct_placebo' compares the arm with itself. (3) The notes are a verbatim copy of the two drug rows and directly contradict this row's own fields: they say 'graded 2' and describe partial reversibility, while the row is neurotox_grade=0 and reversibility='not_assessed'. (4) Missing the deck's preliminary-data caveat.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1649",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "I located and downloaded the actual source: medically.gene.com sitemap -> /global/en/unrestricted/neuroscience/CHDI-2021/chdi-2021-presentation-schobel-an-update-from-the-tomin.html -> CHDI-2021-presentation-schobel-an-update-from-the-tominersen-global-clinical-development-programme.pdf (43 pages, title slide 'Preliminary results from GENERATION HD1, a Phase III trial of tominersen in individuals with manifest HD', Scott A Schobel, date of preparation April 2021, document code M-XX-00005115). Parsed page by page with pymupdf. PDF pages 9 and 10 both carry the title 'Phase I/IIa: other effects on CSF NfL, Tau and ventricular volume (BSI) at high doses observed', with no printed numeric values, confirming readout_value=TBD as the honest entry. redistribution='verify' and the rights caveat are correct.",
+   "problem": "neurotox_grade=2 is assigned from a purely qualitative slide heading with no magnitude, no denominator and no comparator ('effect_vs_control: TBD - no numeric comparator printed on the slide'). A moderate-toxicity label cannot be derived from 'effects ... observed'. The row should either be graded TBD/flagged as qualitative-only or dropped; as written it contributes a graded training label with no underlying measurement.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1327",
+   "verdict": "REFUTED",
+   "checked": "Europe PMC full text PMC12060635 (PMID 40017137, doi 10.1002/mus.28372, licence CC BY-NC-ND) fetched and parsed this session. Table 1 'Summary of Participant Narratives' column 'CSF opening pressure during event (cm H2O)' gives, for the four papilledema/ICH participants: participant 4 = 38; participant 8 = '18/20 (21, 2 months later)'; participant 9 = 25.5; participant 10 = 28. Results text: 'Four participants (2.7%) experienced SAEs of papilledema and/or ICH, all related to tofersen as assessed by the Investigator... a range of 7 to 18 doses of tofersen prior to the onset... CSF WBC ranged from 23 to 131 cells/uL, and the CSF protein from 77 to 197 mg/dL.' 147 participants exposed to 100 mg over 312.56 participant-years as of July 15, 2022.",
+   "problem": "readout_value '18-28.5' cmH2O does not appear in the source. No opening pressure of 28.5 is recorded anywhere in Table 1, and the true range across the four affected participants is 18 to 38 cm H2O - the row's upper bound understates the maximum by 25%. The stated top value is also internally contradicted by this dataset's own CMS1585 notes, which correctly cite 38 cm H2O as 'the highest raised opening pressure recorded in the entire tofersen serious-neurologic-event series'. Secondary error: effect_vs_control says opening pressure was 'documented in 3 of the 4 participants'; it is documented for all four (participant 8's entry is '18/20 (21, 2 months later)'). Everything else on the row - 100 mg, onset after 7-18 doses, 4/147 = 2.7%, grade 2 - is correct.",
+   "correction": {
+    "readout_value": "18-38",
+    "readout_unit": "cm H2O",
+    "effect_vs_control": "CSF opening pressure documented in all 4 participants with intracranial hypertension/papilledema (38, 18/20 rising to 21, 25.5, 28 cm H2O); 4/147 (2.7%) affected overall"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1503",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Europe PMC full text PMC12060635 (PMID 40017137, doi 10.1002/mus.28372, licence CC BY-NC-ND) fetched and parsed this session. Table 1 'Summary of Participant Narratives' column 'CSF opening pressure during event (cm H2O)' gives, for the four papilledema/ICH participants: participant 4 = 38; participant 8 = '18/20 (21, 2 months later)'; participant 9 = 25.5; participant 10 = 28. Results text: 'Four participants (2.7%) experienced SAEs of papilledema and/or ICH, all related to tofersen as assessed by the Investigator... a range of 7 to 18 doses of tofersen prior to the onset... CSF WBC ranged from 23 to 131 cells/uL, and the CSF protein from 77 to 197 mg/dL.' 147 participants exposed to 100 mg over 312.56 participant-years as of July 15, 2022. Row's 2.7 pct = 4/147, the 312.56 participant-year exposure and the 15 Jul 2022 cut are exact. I also verified every claim in the notes: 'no imaging evidence of hydrocephalus in any participants, as distinguished from what has been described with other intrathecal ASOs'; '2 of the 4 events ... were in participants with a medical history of obesity, a known risk factor for elevated ICP'; 'Venous sinus thrombosis was not identified'; treatment with acetazolamide/methylprednisolone/analgesics. Grade 2 is exactly the rubric's papilledema band.",
+   "problem": "effect_vs_control asserts 'vs 0 events on placebo'. The paper reports only the pooled 100 mg tofersen population (MAD + VALOR + OLE, n=147) and never states a placebo event count; the nearest supporting statement is that the serious neurologic AEs 'all... occurred in participants receiving 100 mg of tofersen'. The zero is inferred, not read.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1511",
+   "verdict": "CONFIRMED",
+   "checked": "Europe PMC full text PMC12060635 (PMID 40017137, doi 10.1002/mus.28372, licence CC BY-NC-ND) fetched and parsed this session. Table 1 'Summary of Participant Narratives' column 'CSF opening pressure during event (cm H2O)' gives, for the four papilledema/ICH participants: participant 4 = 38; participant 8 = '18/20 (21, 2 months later)'; participant 9 = 25.5; participant 10 = 28. Results text: 'Four participants (2.7%) experienced SAEs of papilledema and/or ICH, all related to tofersen as assessed by the Investigator... a range of 7 to 18 doses of tofersen prior to the onset... CSF WBC ranged from 23 to 131 cells/uL, and the CSF protein from 77 to 197 mg/dL.' 147 participants exposed to 100 mg over 312.56 participant-years as of July 15, 2022. Row's 28.0 cm H2O for participant 10 matches Table 1 exactly ('Intracranial hypertension/papilledema', 9 doses prior, opening pressure 28, action: Continued). Comparator note about participant 8's 18-21 cm H2O is consistent with the table entry '18/20 (21, 2 months later)'. summary_stat is correct for a CC BY-NC-ND article.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1512",
+   "verdict": "CONFIRMED",
+   "checked": "Europe PMC full text PMC12060635 (PMID 40017137, doi 10.1002/mus.28372, licence CC BY-NC-ND) fetched and parsed this session. Table 1 'Summary of Participant Narratives' column 'CSF opening pressure during event (cm H2O)' gives, for the four papilledema/ICH participants: participant 4 = 38; participant 8 = '18/20 (21, 2 months later)'; participant 9 = 25.5; participant 10 = 28. Results text: 'Four participants (2.7%) experienced SAEs of papilledema and/or ICH, all related to tofersen as assessed by the Investigator... a range of 7 to 18 doses of tofersen prior to the onset... CSF WBC ranged from 23 to 131 cells/uL, and the CSF protein from 77 to 197 mg/dL.' 147 participants exposed to 100 mg over 312.56 participant-years as of July 15, 2022. Row's 38.0 cm H2O for participant 4 matches Table 1 exactly ('Bilateral papilledema/intracranial hypertension', 14 doses prior, opening pressure 38, action: Continued).",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1513",
+   "verdict": "CONFIRMED",
+   "checked": "Europe PMC full text PMC12060635 (PMID 40017137, doi 10.1002/mus.28372, licence CC BY-NC-ND) fetched and parsed this session. Table 1 'Summary of Participant Narratives' column 'CSF opening pressure during event (cm H2O)' gives, for the four papilledema/ICH participants: participant 4 = 38; participant 8 = '18/20 (21, 2 months later)'; participant 9 = 25.5; participant 10 = 28. Results text: 'Four participants (2.7%) experienced SAEs of papilledema and/or ICH, all related to tofersen as assessed by the Investigator... a range of 7 to 18 doses of tofersen prior to the onset... CSF WBC ranged from 23 to 131 cells/uL, and the CSF protein from 77 to 197 mg/dL.' 147 participants exposed to 100 mg over 312.56 participant-years as of July 15, 2022. Row's 25.5 cm H2O for participant 9 matches Table 1 exactly ('Intracranial hypertension/papilledema', 18 doses prior, opening pressure 25.5).",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1560",
+   "verdict": "CONFIRMED",
+   "checked": "Europe PMC full text PMC12723595 (PMID 41661214, doi 10.1001/jamaneurol.2025.4946, JAMA Neurology 2026, CC BY-NC-ND) fetched this session. Table 3 'Summary of Adverse Events', column 'VALOR and OLE Tofersen, 100 mg (N = 104)': 'Serious neurologic events 9 (8.7)' with sub-rows 'Myelitis 4 (3.9), Papilledema 3 (2.9), Aseptic meningitis 2 (1.9), Radiculitis 1 (1.0)'. Footnote e: 'papilledema includes the preferred term intracranial pressure increased'. Safety text: '104 of 108 participants from VALOR received 1 or more dose of tofersen, 100 mg, and were exposed to tofersen over approximately 305.35 participant-years (median exposure, approximately 181.71 weeks)'. Row's 2.9 pct, N=104, exposure figures and the single-column no-placebo structure all verified; grade 2 matches 'manageable with local standard of care and resolved'.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1328",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Europe PMC full text PMC7894279 (Stoker TB et al., Mov Disord 2021;36(1):263-264, PMID 33125799, doi 10.1002/mds.28359) fetched this session. Verified: 54-year-old man on monthly intrathecal tominersen in the open-label extension; gait difficulty after the fifth monthly dose, deterioration over a further 3 months; 'Serial brain magnetic resonance imaging revealed increasing ventricular dilation, with periventricular edema, consistent with hydrocephalus (Fig. 1C,D)'; 'lumbar infusion studies confirmed increased resistance to CSF outflow (Fig. 1E)'; 'A ventriculoperitoneal shunt was therefore inserted, and his mobility improved to his baseline state.' Row's 1_of_1, the Figure 1C,D locus, the 5-doses-to-onset / 3-months-deterioration timing and grade 3 (VP shunt = intervention) are all correct, and the notes correctly flag that the 120 mg figure came from the trial record rather than the paper.",
+   "problem": "redistribution is wrong in the conservative direction: this article is published under CC BY 4.0 (the JATS carries 'https://creativecommons.org/licenses/by/4.0/' and pmc-license-ref CC BY), so it qualifies for cc_by, which the schema says is a materially stronger right that is tracked separately and must not be flattened into summary_stat. Also note this is the same single patient as CMS1423 (NCT03342053 monthly arm, 1/23) - two rows, one event.",
+   "correction": {
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1329",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Europe PMC full text PMC7894279 (Stoker TB et al., Mov Disord 2021;36(1):263-264, PMID 33125799, doi 10.1002/mds.28359) fetched this session. Verified: 54-year-old man on monthly intrathecal tominersen in the open-label extension; gait difficulty after the fifth monthly dose, deterioration over a further 3 months; 'Serial brain magnetic resonance imaging revealed increasing ventricular dilation, with periventricular edema, consistent with hydrocephalus (Fig. 1C,D)'; 'lumbar infusion studies confirmed increased resistance to CSF outflow (Fig. 1E)'; 'A ventriculoperitoneal shunt was therefore inserted, and his mobility improved to his baseline state.' Row's Figure 1E locus, the 'increased resistance to CSF outflow' statement, readout_value=TBD (no numeric resistance is printed) and grade 3 are all correct; the notes correctly declare this is the same patient as the incidence row, not an independent event.",
+   "problem": "Same redistribution under-claim as CMS1328: the article is CC BY 4.0 and should be cc_by, not summary_stat.",
+   "correction": {
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1331",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Europe PMC record for PMID 31889567 (Tozawa T et al., Brain Dev 2020;42:311-314, doi 10.1016/j.braindev.2019.12.006) retrieved this session; the article is not open access (no PMCID, isOpenAccess=N) so only the structured abstract is readable, exactly as the row's source_table declares. Abstract confirms: SMA patient, permanent invasive ventilation from 2 months, 'developed a progressive hydrocephalus and underwent placement of a VPS in infancy', nusinersen started at age 7, 'Twelve months have passed since the start of nusinersen treatment and no AEs have been observed.' 0_of_1, 12 months, grade 0 and effect_direction=no_change are all right, and the notes correctly emphasise that the hydrocephalus PRECEDED the drug.",
+   "problem": "dose_or_conc_value=12 mg is not in the abstract and no provenance is given for it (it is the approved dose, but this is the one abstract-only row where a dose was filled in without saying where from). Also source_table 'abstract, Case Report and Conclusion' reads as if the full text's Case Report section was consulted; those are headings of the structured abstract, and the phrasing should say so to avoid the exact provenance confusion the brief warns about.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1320",
+   "verdict": "CONFIRMED",
+   "checked": "Europe PMC search on DOI 10.1016/j.ymthe.2026.01.034 and on PMID 41612697 both resolve to 'Prevention of hydrocephalus with a small oligonucleotide', Molecular Therapy 2026, with no PMCID (not open access), corroborating the row's statement that only the abstract was retrievable. Abstract verbatim: 'Mice that produce mutant human SETBP1 show hydrocephalus in over 50% of cases and do not live long. Treatment of mice with injections of antisense oligonucleotides targeting SETBP1 prevented or led to a significant reduction of hydrocephalus compared to mock-treated controls and improved long-term survival.' Both quoted phrases in effect_vs_control match word for word. readout_value=TBD, route/dose/duration=TBD, grade 0 with effect_direction=decrease (therapeutic direction, not toxicity) are all handled correctly, and redistribution=summary_stat is right for a paywalled article.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1321",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "DailyMed setid dd70cd5f-b0fc-4ba4-a5ea-89a34778bd94 fetched with a browser User-Agent this session; label 'Revised: 3/2026'. Section 6.2 Postmarketing Experience reads verbatim as quoted in the notes: 'Serious infections associated with lumbar puncture, such as meningitis, have been reported. Hydrocephalus, aseptic meningitis, hypersensitivity reactions (e.g. angioedema, urticaria, rash), and arachnoiditis have also been reported.' I also confirmed the notes' regulatory-asymmetry claim: Warnings and Precautions contains only 5.1 Thrombocytopenia and Coagulation Abnormalities and 5.2 Renal Toxicity. redistribution=public_domain is correct for an FDA label.",
+   "problem": "Three soft over-reads on the most confounded row in the batch. (1) dose_or_conc_value=12 mg: section 6.2 attributes the reports to no dose, and the 3/2026 label now covers 12 mg, 28 mg and 50 mg regimens. (2) effect_direction=increase and neurotox_grade=2 are inferences from a bare spontaneous-report listing that the label itself prefixes with 'it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure'. (3) No background-rate caveat: SMA carries an elevated hydrocephalus rate independently of nusinersen, and this is precisely the row where a naive consumer will read a causal claim into a postmarketing term. The lane's own extraction notes say the Optum SMA background-rate study (PMC8105953) was read - it should be cross-referenced here.",
+   "correction": {
+    "dose_or_conc_value": "TBD"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1525",
+   "verdict": "CONFIRMED",
+   "checked": "Europe PMC full text PMC12022754 (PMID 40277082, doi 10.1093/nar/gkaf346, Nucleic Acids Research 2025, licence CC BY-NC) fetched this session. Section title 'Lessons learned from ASO toxicity studies' exists exactly as cited, and the paragraph reads verbatim as quoted: 'Initially valeriasen was effective at reducing seizure activity in Valeria and a second patient whose treatment commenced after Valeria. Unexpectedly, the ASO resulted in the development of hydrocephalus in both patients. This adverse effect had not been observed in safety studies conducted in healthy rats, but was hypothesized to be specifically due to the pathological state of the human brain.' 2_of_2, no control arm, dose/duration TBD and summary_stat (CC BY-NC is not CC BY) are all correct.",
+   "problem": "The row openly declares that it duplicates CMS1586 and CMS1592. That honesty is the right call, but the assembler must actually de-duplicate: as filed, the same two patients contribute three grade-3 hydrocephalus rows. reversibility='partially_reversible' is also imported from the primary source rather than read at this locus.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1538",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Europe PMC full text PMC13004686 (PMID 41634391, doi 10.1038/s41591-025-04193-6, Nature Medicine 2026, CC BY-NC-ND) fetched this session. Safety section reads verbatim: 'Across Parts B and C, there were no AEs of meningitis, hydrocephalus, thrombocytopenia or renal/liver failure reported, and no clinically relevant trends related to nusinersen in laboratory evaluations, electrocardiograms or vital signs.' It is the only occurrence of 'hydroceph' in the paper. readout_value 0, effect_direction no_change, grade 0 and summary_stat are all correct.",
+   "problem": "dose_or_conc_value=50 mg over-specifies: the sentence spans all of Parts B and C, which includes the 12/12 mg control arms, so the zero is not a property of the 50 mg regimen specifically. Also see CMS1318 - a consumer reading this row alongside the ClinicalTrials.gov rows from the same trial (acquired macrocephaly 1/50, intracranial pressure increased 1/16, CSF pressure increased 2/40) needs to be told they are reconcilable rather than contradictory.",
+   "correction": {
+    "dose_or_conc_value": "TBD"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1582",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy /home/user/oligos/sources/cns/PMC13099374.jats.xml read directly (PMID 41981306, doi 10.1038/s41591-026-04314-9, Nature Medicine, licence CC BY-NC-ND - so summary_stat is the correct flag, not cc_by). Both identifiers verified against the article-id block. Dosing verified from the 'Clinical trial and initial responses' section: patient 1 received IT 10/20/30/40 mg at weeks 0/2/4/6, then 40 mg q8w from week 10, increased to 60 mg q8w from week 26 (so her 9th dose was 60 mg); patient 2 received IT 10/20/30/40 mg (4th dose = 40 mg). Final paragraph of 'Safety and adverse events' reads: 'Two IT doses (10 mg and 15 mg, spaced 2 months apart) and five ICV doses (3 mg, 3 mg, 6 mg, 6 mg, 9 mg, spaced 2 months apart) were safely delivered, with a reduction in seizures of ~66% to date.' The 15 mg IT dose, the 2-dose two-months-apart schedule, the 2-year hiatus and grade 0 are all supported.",
+   "problem": "readout_value='no recurrence' under readout_name='ventricular_volume' is an inference: the paper says the doses were 'safely delivered' and that the revised protocol added periodic MRI ventriculograms, but it does not report a ventricular volume or explicitly state that ventriculomegaly did not recur. The inference is reasonable but should be marked as such. Also cns_region='NA' is inconsistent with the sibling rows, which all use 'ventricle'.",
+   "correction": {
+    "cns_region": "ventricle"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1583",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy /home/user/oligos/sources/cns/PMC13099374.jats.xml read directly (PMID 41981306, doi 10.1038/s41591-026-04314-9, Nature Medicine, licence CC BY-NC-ND - so summary_stat is the correct flag, not cc_by). Both identifiers verified against the article-id block. Dosing verified from the 'Clinical trial and initial responses' section: patient 1 received IT 10/20/30/40 mg at weeks 0/2/4/6, then 40 mg q8w from week 10, increased to 60 mg q8w from week 26 (so her 9th dose was 60 mg); patient 2 received IT 10/20/30/40 mg (4th dose = 40 mg). The five ICV doses (3, 3, 6, 6, 9 mg, two months apart) are exactly as printed, the 9 mg is correctly recorded as the highest, delivery_method='intracerebroventricular' correctly reflects the route change, and the notes correctly caveat that route change and dose reduction are confounded.",
+   "problem": "Same inference issue as CMS1582: 'no recurrence' is derived from 'safely delivered', not from a reported ventricular measurement.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1585",
+   "verdict": "CONFIRMED",
+   "checked": "Local copy /home/user/oligos/sources/cns/PMC13099374.jats.xml read directly (PMID 41981306, doi 10.1038/s41591-026-04314-9, Nature Medicine, licence CC BY-NC-ND - so summary_stat is the correct flag, not cc_by). Both identifiers verified against the article-id block. Dosing verified from the 'Clinical trial and initial responses' section: patient 1 received IT 10/20/30/40 mg at weeks 0/2/4/6, then 40 mg q8w from week 10, increased to 60 mg q8w from week 26 (so her 9th dose was 60 mg); patient 2 received IT 10/20/30/40 mg (4th dose = 40 mg). Patient 1 narrative reads: 'An endoscopic third ventriculostomy with choroid plexus cauterization was performed, showing a CSF opening pressure of 55 cm H2O.' Value, unit, the 60 mg 9th-dose attribution and grade 3 all verified. The cross-reference in the notes to 38 cm H2O as the tofersen-series maximum is also correct (see CMS1327, which contradicts it).",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1586",
+   "verdict": "CONFIRMED",
+   "checked": "Local copy /home/user/oligos/sources/cns/PMC13099374.jats.xml read directly (PMID 41981306, doi 10.1038/s41591-026-04314-9, Nature Medicine, licence CC BY-NC-ND - so summary_stat is the correct flag, not cc_by). Both identifiers verified against the article-id block. Dosing verified from the 'Clinical trial and initial responses' section: patient 1 received IT 10/20/30/40 mg at weeks 0/2/4/6, then 40 mg q8w from week 10, increased to 60 mg q8w from week 26 (so her 9th dose was 60 mg); patient 2 received IT 10/20/30/40 mg (4th dose = 40 mg). Patient 1: vomiting and discomfort 8 weeks after the 9th IT dose; imaging 2 days later showed 'severe communicating hydrocephalus with T2 white matter changes representing transependymal flow'; endoscopic third ventriculostomy with choroid plexus cauterization performed with no improvement over 2 days; family withdrew to palliative care and she died under hospice 3 months after the final dose. Grade 3 is squarely 'hydrocephalus requiring intervention' plus a fatal outcome, and attribution is the authors' own ('a review of preclinical and clinical findings led to our working hypothesis that hydrocephalus was a dose-related clinical side effect').",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1590",
+   "verdict": "CONFIRMED",
+   "checked": "Local copy /home/user/oligos/sources/cns/PMC13099374.jats.xml read directly (PMID 41981306, doi 10.1038/s41591-026-04314-9, Nature Medicine, licence CC BY-NC-ND - so summary_stat is the correct flag, not cc_by). Both identifiers verified against the article-id block. Dosing verified from the 'Clinical trial and initial responses' section: patient 1 received IT 10/20/30/40 mg at weeks 0/2/4/6, then 40 mg q8w from week 10, increased to 60 mg q8w from week 26 (so her 9th dose was 60 mg); patient 2 received IT 10/20/30/40 mg (4th dose = 40 mg). Patient 2 narrative: 'A brain MRI was unremarkable (including normal ventricular size) (day 55). Lumbar puncture showed a normal opening pressure of 16 cm H2O.' The 40 mg 4th dose, the day-55 timing, grade 0 and the follow-on '>20 cm H2O at extraventricular drain placement' in effect_vs_control all verified.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1592",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy /home/user/oligos/sources/cns/PMC13099374.jats.xml read directly (PMID 41981306, doi 10.1038/s41591-026-04314-9, Nature Medicine, licence CC BY-NC-ND - so summary_stat is the correct flag, not cc_by). Both identifiers verified against the article-id block. Dosing verified from the 'Clinical trial and initial responses' section: patient 1 received IT 10/20/30/40 mg at weeks 0/2/4/6, then 40 mg q8w from week 10, increased to 60 mg q8w from week 26 (so her 9th dose was 60 mg); patient 2 received IT 10/20/30/40 mg (4th dose = 40 mg). Patient 2: repeat MRIs on days 62 and 64 showed mild increases in ventricular size with no obstruction; extraventricular drain placed (opening pressure >20 cm H2O); ventriculoperitoneal shunt placed on day 65; ventricular dilatation gradually normalised and she was discharged on day 87. Grade 3 (intervention) with reversibility='reversible' is exactly right and well reasoned.",
+   "problem": "readout_name='ventricular_volume' carries readout_value='1_of_1' and readout_unit='n_of_N' - an incidence filed under a volume readout name. Should be readout_name='hydrocephalus_incidence' (or 'cerebral_ventricle_dilatation').",
+   "correction": {
+    "readout_name": "hydrocephalus_incidence"
+   },
+   "severity": "minor"
+  }
+ ],
+ "summary": "56 rows checked against the primary sources: all six ClinicalTrials.gov records (NCT03342053, NCT03761849, NCT03842969, NCT04089566, NCT03070119, NCT03399370) via the v2 JSON API; five Europe PMC full texts (PMC7894279 Stoker, PMC12060635 Lovett, PMC12723595 Miller, PMC13004686 DEVOTE, PMC12022754 N=1 Collaborative); the local PMC13099374 KCNT1 JATS; the SPINRAZA DailyMed label; two abstract-only records (Tozawa PMID 31889567, SETBP1 PMID 41612697); and - importantly - the CHDI 2021 Schobel slide deck itself, which I tracked down through the medically.gene.com sitemap and parsed page by page, so none of the eight sponsor-deck rows had to be left unverifiable. Verdicts: 23 CONFIRMED, 29 CONFIRMED_MINOR, 4 REFUTED, 0 UNVERIFIABLE. The four REFUTED rows are CMS1327 (tofersen CSF opening-pressure range 18-28.5 cm H2O; 28.5 appears nowhere in Lovett Table 1 and the true range is 18-38, a number this dataset's own CMS1585 notes cite correctly) and CMS1296 / CMS1449 / CMS1312, all grade-3 hydrocephalus rows resting on serious-adverse-event coding alone with no intervention documented at the cited locus. The headline good news: the tominersen ventricular-volume claims survive scrutiny. The GENERATION HD1 Week-13 ladder (Q4W 3.785 mL, Q8W 2.011 mL, placebo ODC 1.537 mL, n=31/32/34) is a real posted least-squares-mean outcome with a real concurrent placebo arm and correct arm labels, and the CHDI slide-34 Week-69 ladder (24.3% Q8W / 17.3% Q16W / 11.4% placebo, n=41.3% of patients) is printed verbatim on the slide. Every sponsor-deck row is flagged redistribution='verify' - none is mislabelled public_domain - and slide 35's 4/636 tally and the 16 asymptomatic radiographic cases are verbatim correct. Attribution is generally handled better than expected: the Tozawa row correctly records a shunt that preceded the drug, the inclisiran row supplies a genuine 2/778-over-18-months background rate, and every tominersen row carries either a placebo or a lower-frequency active comparator.",
+ "systematic_issues": "1) DUPLICATE ROWS ACROSS TWO EXTRACTION LANES. The hydrocephalus lane (source_id prefix CNSSRC_*) and the clinical_programs lane (prefix CP_*/CT_*) independently extracted the same facts and both sets survive into the batch. In 56 rows I found nine duplicate pairs: CMS1294/CMS1450, CMS1296/CMS1449, CMS1314/CMS1457, CMS1316/CMS1459, CMS1322/CMS1632, CMS1323/CMS1633, CMS1423/CMS1328 (same single patient via two sources), CMS1525/CMS1586+CMS1592 (self-declared), and CMS1327 partially duplicating CMS1511-1513. That is ~16% duplication concentrated on exactly the rows a reviewer will read first, and it double-weights the tominersen hydrocephalus signal. This is a whole-dataset problem: the two lanes were given overlapping remits (the clinical_programs extraction_notes say so explicitly) and nothing de-duplicated them. Every hydrocephalus and clinical row in the dataset needs a cross-lane de-duplication pass keyed on (trial, term, arm) and (paper, table, row), not on source_id.\n\n2) GRADE-3 INFLATION FROM SERIOUS-ADVERSE-EVENT CODING. Eleven rows in this batch are grade 3; four of them (CMS1296, CMS1449, CMS1312, and CMS1423 at its own locus) derive grade 3 from a ClinicalTrials.gov serious-AE table alone. Three of those rows' own notes admit the intervention is not stated. The rubric requires 'hydrocephalus requiring intervention', and 'serious' in ICH terms only means hospitalisation/disability/etc. Rule to apply dataset-wide: a registry serious-AE count is grade 2 unless a document states shunting, EVD, third ventriculostomy or equivalent. Note the contrast with the four grade-3 rows that ARE properly evidenced - CMS1328/1329 (VP shunt in Stoker), CMS1586 (endoscopic third ventriculostomy, death), CMS1592 (EVD then VP shunt) - which shows the extractors know the standard and applied it inconsistently.\n\n3) sources/SOURCES-CNS.md DOES NOT EXIST. The schema states every source_id resolves to an entry in sources/SOURCES-CNS.md; the file is absent from the repo (sources/ contains only SOURCES.md, which has zero CHDI/Schobel hits). No source_id in this batch - or, presumably, in the dataset - currently resolves. Two competing conventions are also in use for the same document (CNSSRC_CTG_NCT03342053 vs CT_NCT03342053; CNSSRC_CHDI2021_SCHOBEL vs CP_CHDI2021_SCHOBEL), so the registry will need to reconcile them.\n\n4) effect_direction IS USED WITH TWO INCOMPATIBLE MEANINGS. Some rows encode the direction of the readout (CMS1303: +3.785 mL -> increase); others encode the direction relative to control (CMS1305/1306: readout is -0.184 and -0.133 mL but effect_direction='no_change' because it does not differ adversely from placebo; CMS1432: zero events coded 'decrease' because control had two). The schema defines it as the readout's direction and makes it a grading input. This will teach a model the wrong mapping wherever the two disagree, and it disagrees most often on exactly the imaging and zero-event rows.\n\n5) NOTES COPY-PASTED ACROSS SIBLING ROWS UNTIL THEY CONTRADICT THE FIELDS. CMS1634 is a placebo arm filed as a tominersen measurement at 0 mg whose notes - copied verbatim from the two drug rows - say 'graded 2' and 'partially_reversible' while the row is grade 0 / not_assessed, and whose effect_vs_control compares the arm with itself. CMS1303/1304 and CMS1305/1306 share note blocks that describe both rows, so a per-row reader cannot tell which sentence applies. Any downstream use of the notes column as text is being fed contradictions.\n\n6) FIELD VALUES SOURCED FROM DOCUMENTS THAT ARE NOT CITED. CMS1632/CMS1633 set reversibility='partially_reversible' on the authority of 'CHDI 2022 slides 18-19 and 22', which appears in neither source_ref nor source_table. CMS1324 asserts 'at least two managed with CSF diversion' - the word shunt does not occur anywhere in the 43-page CHDI 2021 deck. CMS1331 and CMS1321 fill in 12 mg doses their sources never state. The falsifiable claim the schema is built on (this number is at this locus) breaks whenever a field is filled from elsewhere without saying so.\n\n7) REDISTRIBUTION IS CONSERVATIVE, NOT OVER-CLAIMED - BUT CHECK THE CC BY CASES. No sponsor-deck or press-release row is mislabelled public_domain (all eight CHDI rows are correctly 'verify' and carry sponsor caveats, except that CMS1632/1633/1634 drop the deck's mandatory 'preliminary analyses on non-final data set' warning). The one systematic error runs the other way: Stoker 2021 (Mov Disord, PMC7894279) is CC BY 4.0 and both its rows are flagged summary_stat. The schema says cc_by is a materially stronger right tracked separately and must not be flattened. Every journal-sourced row in the dataset should have its licence re-read from the JATS <license> block rather than defaulted to summary_stat - I checked six here and the other five (CC BY-NC-ND x4, CC BY-NC x1) were correctly summary_stat, so this is a spot-check failure rather than a blanket one.\n\n8) endpoint_domain='hydrocephalus' IS APPLIED TO RAISED-ICP ROWS FROM A DRUG WHOSE SOURCE EXPLICITLY REPORTS NO HYDROCEPHALUS. Seven tofersen rows (CMS1327, 1398, 1399, 1503, 1511, 1512, 1513, 1560) are filed under endpoint_domain='hydrocephalus' / challenge_priority='high_hydrocephalus', while Lovett states 'there was no imaging evidence of hydrocephalus in any participants, as distinguished from what has been described with other intrathecal ASOs'. The same applies to the inclisiran negative control, a systemically dosed non-CNS oligo also flagged high_hydrocephalus. This is defensible under a 'hydrocephalus / ventriculomegaly / raised ICP' scope, but a reviewer filtering endpoint_domain=='hydrocephalus' will read it as a hydrocephalus count. Either add a sub-field distinguishing raised-ICP-without-hydrocephalus, or say so in the schema.\n\n9) SMALL RECURRING TRANSCRIPTION SLIP: four DEVOTE rows (CMS1315-1318) record the Part B window as 'up to Day 394'; the posted timeFrame is Day 399. Harmless individually, but it suggests the exposure_duration strings were written from memory of the arm schedule rather than copied from the record.\n\n10) COVERAGE GAP WORTH CHECKING IN THE OTHER BATCHES: for NCT03070119 the batch records the two tofersen arms with 1.6% and 2.3% serious raised ICP and omits EG000 (233AS101 Part C prior placebo), which at 1/32 = 3.1% is the highest of the three. And no row anywhere in this batch carries the placebo-arm ventricular volume from NCT03761849 (1.537 mL, Placebo ODC, n=34) as a row in its own right, even though CMS1634 does that job for the CHDI slide's 11.4% placebo value."
+}

@@ -138,7 +138,7 @@ cited source for a value.
 | `HDBuzz report of the Roche/Genentech announcement of ...` | Other / grey literature | 2 | `verify` | clinical 2 |
 | `NCT04849741` | ClinicalTrials.gov | 2 | `verify` | clinical 2 |
 | `Roche medical-affairs slide deck, CHDI 2022, M-XX-000...` | Other / grey literature | 2 | `verify` | clinical 2 |
-| `doi:10.1002/mds.28359` | Journal article | 2 | `summary_stat` | clinical 2 |
+| `doi:10.1002/mds.28359` | Journal article | 2 | `cc_by` | clinical 2 |
 | `doi:10.1016/j.braindev.2019.12.006` | Journal article | 2 | `summary_stat` | clinical 2 |
 | `doi:10.3233/jnd-221667` | Journal article | 2 | `summary_stat` | clinical 2 |
 | `doi:10.3389/fgene.2022.791416` | Journal article | 2 | `cc_by` | in_vitro 2 |
@@ -161,7 +161,7 @@ cited source for a value.
 
 ## Archived source documents
 
-43 files under `sources/cns/` (83 MB), so every derivation can be re-run without network access.
+44 files under `sources/cns/` (89 MB), so every derivation can be re-run without network access.
 
 
 ## Known gaps in the source base
