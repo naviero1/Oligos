@@ -60,7 +60,7 @@ cited source for a value.
 | `doi:10.1089/nat.2021.0071` | Journal article | 357 | `cc_by` | animal_invivo 181, in_vitro 176 |
 | `US10968453B2` | US patent | 327 | `public_domain` | animal_invivo 327 |
 | `US11851654B2` | US patent | 133 | `public_domain` | animal_invivo 133 |
-| `doi:10.1093/nar/gkaf1333` | Journal article | 78 | `summary_stat` | animal_invivo 78 |
+| `doi:10.1093/nar/gkaf1333` | Journal article | 78 | `cc_by`, `summary_stat` | animal_invivo 78 |
 | `doi:10.1016/j.omtn.2025.102692` | Journal article | 54 | `cc_by` | animal_invivo 29, in_vitro 25 |
 | `Roche/Genentech medical-affairs slide deck, CHDI 2021...` | Other / grey literature | 43 | `verify` | clinical 43 |
 | `doi:10.3390/pharmaceutics14010200` | Journal article | 39 | `cc_by` | animal_invivo 39 |

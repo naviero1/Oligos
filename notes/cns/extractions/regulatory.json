@@ -1423,7 +1423,7 @@
    "source_ref": "FDA_NDA209531",
    "source_table": "US label Table 3 (sec 6.1), Later-Onset SMA Study 2, row 'Back pain'",
    "redistribution": "public_domain",
-   "notes": "Denominators n=84 vs n=42. Zero in the sham-procedure arm despite the sham arm undergoing a skin-prick sham procedure (no dural puncture), so this is route/needle attributable rather than parenchymal. grade_provisional"
+   "notes": "Denominators n=84 vs n=42. Zero in the sham-procedure arm despite the sham arm undergoing a skin-prick sham procedure (no dural puncture), so this is route/needle attributable rather than parenchymal. grade_provisional ;; VERIFIED[REFUTED] ;; ADVISORY(not applied, not a value): neurotox_grade=drop row (regulatory-procedure record, not a measurement); grade not assignable from a PRAC agenda The quotation is verbatim-exact: 'Nusinersen - SPINRAZA (CAP) - EMEA/H/C/004312/II/0004, Orphan / Applicant: Biogen Idec Ltd / PRAC Rapporteur: Qun-Ying Yue / Scope: Update of section 4.8 of the SmPC to include new safety information relate"
   },
   {
    "measurement_id": "TMP_reg_m45",
@@ -1563,7 +1563,7 @@
    "source_ref": "EMEA/H/C/004312/II/0004",
    "source_table": "PRAC draft agenda 11-14 June 2018 (EMA/PRAC/395628/2018), item 5.3.21",
    "redistribution": "public_domain",
-   "notes": "Regulatory-action corroboration row for the hydrocephalus signal. Verbatim from the PRAC agenda: 'Nusinersen - SPINRAZA (CAP) - EMEA/H/C/004312/II/0004, Orphan. Applicant: Biogen Idec Ltd. PRAC Rapporteur: Qun-Ying Yue. Scope: Update of section 4.8 of the SmPC to include new safety information related to hydrocephalus. The package leaflet and the RMP (version 7.0) are updated accordingly.' Kept as a separate row because it evidences the date and procedure of the signal, not a patient count. No incidence is stated. grade_provisional ;; VERIFIED[REFUTED] ;; ADVISORY(not applied, not a value): neurotox_grade=drop row (regulatory-procedure record, not a measurement); grade not assignable from a PRAC agenda The quotation is verbatim-exact: 'Nusinersen - SPINRAZA (CAP) - EMEA/H/C/004312/II/0004, Orphan / Applicant: Biogen Idec Ltd / PRAC Rapporteur: Qun-Ying Yue / Scope: Update of section 4.8 of the SmPC to include new safety information relate"
+   "notes": "Regulatory-action corroboration row for the hydrocephalus signal. Verbatim from the PRAC agenda: 'Nusinersen - SPINRAZA (CAP) - EMEA/H/C/004312/II/0004, Orphan. Applicant: Biogen Idec Ltd. PRAC Rapporteur: Qun-Ying Yue. Scope: Update of section 4.8 of the SmPC to include new safety information related to hydrocephalus. The package leaflet and the RMP (version 7.0) are updated accordingly.' Kept as a separate row because it evidences the date and procedure of the signal, not a patient count. No incidence is stated. grade_provisional"
   },
   {
    "measurement_id": "TMP_reg_m50",

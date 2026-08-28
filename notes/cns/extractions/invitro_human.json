@@ -2124,8 +2124,8 @@
    "source_id": "S_CNS_IV_LATEONSET2025",
    "source_ref": "10.1016/j.omtn.2025.102692",
    "source_table": "Fig 3B",
-   "redistribution": "cc_by",
-   "notes": "grade_provisional; Parent ASO2 membrane-damage readout matching the cell-number loss. ;; VERIFIED[CONFIRMED_MINOR] Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flat ;; corrected(redistribution:summary_stat->cc_by)"
+   "redistribution": "summary_stat",
+   "notes": "grade_provisional; Parent ASO2 membrane-damage readout matching the cell-number loss."
   },
   {
    "measurement_id": "TMP_iv_m47",
@@ -2202,14 +2202,14 @@
    "readout_unit": "% of vehicle",
    "effect_direction": "increase",
    "effect_vs_control": "higher LDH than parent ASO2",
-   "neurotox_grade": "2",
+   "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "S_CNS_IV_LATEONSET2025",
    "source_ref": "10.1016/j.omtn.2025.102692",
    "source_table": "Fig 3B",
-   "redistribution": "cc_by",
-   "notes": "grade_provisional; Matched LDH arm for the 2'-OMe position-2 variant. ;; VERIFIED[REFUTED] CRITICAL grade inflation. An in vitro LDH release from a neuroblastoma cell line, with readout_value=TBD, cannot reach the rubric's grade 3 (neuronal degeneration/loss, spinal-cord or DRG degeneration, paralysis, hydrocephalus requiring int ;; corrected(neurotox_grade:3->2;redistribution:summary_stat->cc_by)"
+   "redistribution": "summary_stat",
+   "notes": "grade_provisional; Matched LDH arm for the 2'-OMe position-2 variant."
   },
   {
    "measurement_id": "TMP_iv_m50",
@@ -2264,8 +2264,8 @@
    "source_id": "S_CNS_IV_LATEONSET2025",
    "source_ref": "10.1016/j.omtn.2025.102692",
    "source_table": "Fig 5B",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; Single PS->PO replacement PS-1(-) unexpectedly INCREASED cytotoxicity; matched ICV study showed higher mortality for all three PO-replacement variants. Counter-intuitive result: reducing PS content did not de-risk this sequence."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; Single PS->PO replacement PS-1(-) unexpectedly INCREASED cytotoxicity; matched ICV study showed higher mortality for all three PO-replacement variants. Counter-intuitive result: reducing PS content did not de-risk this sequence. ;; VERIFIED[CONFIRMED_MINOR] Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flat ;; corrected(redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_iv_m52",
@@ -2314,14 +2314,14 @@
    "readout_unit": "% of vehicle",
    "effect_direction": "decrease",
    "effect_vs_control": "cytotoxicity increased vs parent ASO2",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "S_CNS_IV_LATEONSET2025",
    "source_ref": "10.1016/j.omtn.2025.102692",
    "source_table": "Fig 5B",
-   "redistribution": "summary_stat",
-   "notes": "grade_provisional; Single PS->PO replacement PS-3(-) unexpectedly INCREASED cytotoxicity; matched ICV study showed higher mortality for all three PO-replacement variants. Counter-intuitive result: reducing PS content did not de-risk this sequence."
+   "redistribution": "cc_by",
+   "notes": "grade_provisional; Single PS->PO replacement PS-3(-) unexpectedly INCREASED cytotoxicity; matched ICV study showed higher mortality for all three PO-replacement variants. Counter-intuitive result: reducing PS content did not de-risk this sequence. ;; VERIFIED[REFUTED] CRITICAL grade inflation. An in vitro LDH release from a neuroblastoma cell line, with readout_value=TBD, cannot reach the rubric's grade 3 (neuronal degeneration/loss, spinal-cord or DRG degeneration, paralysis, hydrocephalus requiring int ;; corrected(neurotox_grade:3->2;redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_iv_m54",
@@ -3097,7 +3097,7 @@
    "readout_value": 62.68,
    "readout_unit": "um",
    "effect_direction": "no_change",
-   "effect_vs_control": "mean 62.68 um vs untreated E198K 59.04 um and CRISPR-corrected isogenic control 49.33 um",
+   "effect_vs_control": "mean 62.68 um vs scramble ASO control 60.78 um (no change); untreated E198K 59.04 um and corrected isogenic control corE198K 49.33 um",
    "neurotox_grade": 0,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -3105,7 +3105,7 @@
    "source_ref": "10.1016/j.xhgg.2025.100450",
    "source_table": "Fig 5E",
    "redistribution": "cc_by",
-   "notes": "grade_provisional; no change vs scramble; least potent and least allele-selective of the three. Means +/- SD taken from the Results text; the figure legend reports medians (which differ, e.g. ASO243 DIV11 median 29.8 um) - flagged for the assembler. ;; VERIFIED[CONFIRMED_MINOR] Same source_table provenance issue as CMS2090 (mean is from the Results text; Fig 5E plots medians). Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_b ;; corrected(redistribution:summary_stat->cc_by)"
+   "notes": "grade_provisional; no change vs scramble; least potent and least allele-selective of the three. Means +/- SD taken from the Results text; the figure legend reports medians (which differ, e.g. ASO243 DIV11 median 29.8 um) - flagged for the assembler. ;; VERIFIED[CONFIRMED_MINOR] Two problems. (1) Locus: source_table='Fig 5E' but 62.68 is a Results-text mean; the Fig 5E legend reports MEDIANS and gives ASO267 as 57.9 um. The notes disclose this ('Means +/- SD taken from the Results text; the figure legend reports me ;; corrected(effect_vs_control:mean 62.68 um vs untreated E198K 59.04 um and CRISPR-corrected isogenic control 49.33 um->mean 62.68 um vs scramble ASO control 60.78 um (no change); untreated E198K 59.04 um and corrected isogenic control corE198K 49.33 um) ;; VERIFIED[CONFIRMED_MINOR] Same source_table provenance issue as CMS2090 (mean is from the Results text; Fig 5E plots medians). Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_b ;; corrected(redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_iv_m82",

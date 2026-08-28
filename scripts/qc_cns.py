@@ -203,6 +203,38 @@ def main():
                 m["challenge_priority"] != "high_hydrocephalus":
             warn(f"{mid}: hydrocephalus endpoint not flagged high_hydrocephalus")
 
+    # --- ordinal-score plausibility ---------------------------------------
+    # A group mean of n integer scores must be a multiple of 1/n. Behavioural
+    # rows on ordinal scales are typically n=3-6 animals, so a value like 4.1 is
+    # arithmetically impossible and betrays a bar-height estimate read off a plot
+    # rather than the plotted per-animal points. This is a cheap check that
+    # catches a whole class of silently-wrong digitised values.
+    # Scoped to values the curator says were read off a figure. Applying it to
+    # every ordinal score would fire on exactly-transcribed spreadsheet values and
+    # on ordinary 2-dp rounding, and a check that cries wolf is a check people
+    # learn to ignore. The tolerance likewise allows for a value reported to two
+    # decimal places rather than demanding exact rational equality.
+    for m in meas:
+        if not m["readout_unit"].startswith("score_0_to"):
+            continue
+        if not re.search(r"digitis|digitiz|read from|bar height|estimated from",
+                         m["notes"] or "", re.I):
+            continue
+        v = m["readout_value"]
+        if not v or v == TBD:
+            continue
+        try:
+            x = float(v)
+        except ValueError:
+            continue
+        if x == int(x):
+            continue
+        if not any(abs(x - round(x * k) / k) <= 0.005 for k in range(2, 13)):
+            warn(f"{m['measurement_id']}: digitised ordinal score {x} is not a "
+                 f"multiple of 1/n for any n<=12 — impossible as a group mean of "
+                 f"integer scores, so it was read from bar height rather than from "
+                 f"the plotted per-animal points")
+
     # --- sequence sanity --------------------------------------------------
     seq_re = re.compile(r"^[ACGTUacgtu]+$")
     filled = 0

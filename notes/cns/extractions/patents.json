@@ -5585,7 +5585,7 @@
    "readout_value": 7.0,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "7.00 (no vehicle FOB score reported for the mouse experiments in this patent)",
+   "effect_vs_control": "7.00_vs_0_PBS",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -5593,7 +5593,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 801289",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compoun ;; corrected(effect_vs_control:7.00_vs_0_PBS->7.00 (no vehicle FOB score reported for the mouse experiments in this patent))"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
   },
   {
    "measurement_id": "TMP_pat_m27",
@@ -5781,7 +5781,7 @@
    "readout_value": 6.25,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "6.25_vs_0_PBS",
+   "effect_vs_control": "7.00 (no vehicle FOB score reported for the mouse experiments in this patent)",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -5789,7 +5789,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 801296",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compoun ;; corrected(effect_vs_control:6.25_vs_0_PBS->7.00 (no vehicle FOB score reported for the mouse experiments in this patent))"
   },
   {
    "measurement_id": "TMP_pat_m34",
@@ -5837,7 +5837,7 @@
    "readout_value": 5.5,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "5.50 (no vehicle FOB score reported for the mouse experiments in this patent)",
+   "effect_vs_control": "5.50_vs_0_PBS",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -5845,7 +5845,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 801298",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compoun ;; corrected(effect_vs_control:5.50_vs_0_PBS->5.50 (no vehicle FOB score reported for the mouse experiments in this patent))"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
   },
   {
    "measurement_id": "TMP_pat_m36",
@@ -5949,7 +5949,7 @@
    "readout_value": 6.5,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "6.50 (no vehicle FOB score reported for the mouse experiments in this patent)",
+   "effect_vs_control": "6.50_vs_0_PBS",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -5957,7 +5957,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 801302",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compoun ;; corrected(effect_vs_control:6.50_vs_0_PBS->6.50 (no vehicle FOB score reported for the mouse experiments in this patent))"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
   },
   {
    "measurement_id": "TMP_pat_m40",
@@ -6033,7 +6033,7 @@
    "readout_value": 6.0,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "6.00_vs_0_PBS",
+   "effect_vs_control": "5.50 (no vehicle FOB score reported for the mouse experiments in this patent)",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -6041,7 +6041,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 801305",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compoun ;; corrected(effect_vs_control:6.00_vs_0_PBS->5.50 (no vehicle FOB score reported for the mouse experiments in this patent))"
   },
   {
    "measurement_id": "TMP_pat_m43",
@@ -6145,7 +6145,7 @@
    "readout_value": 7.0,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "7.00_vs_0_PBS",
+   "effect_vs_control": "6.50 (no vehicle FOB score reported for the mouse experiments in this patent)",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -6153,7 +6153,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 801309",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compoun ;; corrected(effect_vs_control:7.00_vs_0_PBS->6.50 (no vehicle FOB score reported for the mouse experiments in this patent))"
   },
   {
    "measurement_id": "TMP_pat_m47",
@@ -6201,7 +6201,7 @@
    "readout_value": 5.5,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "5.50 (no vehicle FOB score reported for the mouse experiments in this patent)",
+   "effect_vs_control": "5.50_vs_0_PBS",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -6209,7 +6209,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 801311",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compoun ;; corrected(effect_vs_control:5.50_vs_0_PBS->5.50 (no vehicle FOB score reported for the mouse experiments in this patent))"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
   },
   {
    "measurement_id": "TMP_pat_m49",
@@ -6397,7 +6397,7 @@
    "readout_value": 6.75,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "6.75_vs_0_PBS",
+   "effect_vs_control": "5.50 (no vehicle FOB score reported for the mouse experiments in this patent)",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -6405,7 +6405,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 802460",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compoun ;; corrected(effect_vs_control:6.75_vs_0_PBS->5.50 (no vehicle FOB score reported for the mouse experiments in this patent))"
   },
   {
    "measurement_id": "TMP_pat_m56",
@@ -33194,14 +33194,14 @@
    "readout_unit": "score_0_to_11",
    "effect_direction": "increase",
    "effect_vs_control": "2.4\u00b12.9_vs_0_PBS",
-   "neurotox_grade": 1,
+   "neurotox_grade": "3",
    "reversibility": "partially_reversible",
    "is_cns_specific": "TRUE",
    "source_id": "P7",
    "source_ref": "US11851654B2",
    "source_table": "Table 2 \"Acute tolerability score\" (Example 1), row \"ASO\", 6h column",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-week-old female ICR mice, single injection into the left lateral ventricle; 11-item behavioural battery scored 0=normal / 1=abnormal per item, summed 0-11, PBS controls 0+/-0; value is mean +/- SD (2.4 \u00b1 2.9), n=4-7; mapping uses the same proportional band edges as the 0-7 FOB scale: 0-<1=>0, 1-<5=>1, 5-<8=>2, >=8=>3; DOSE printed as \"12 umol/mouse\" - reproduced as printed, and the unit left TBD because the schema dose-unit enum has no molar-amount unit (the figure is very likely a nmol/umol typo in the patent, so it was NOT converted)"
+   "notes": "grade_provisional;7-week-old female ICR mice, single injection into the left lateral ventricle; 11-item behavioural battery scored 0=normal / 1=abnormal per item, summed 0-11, PBS controls 0+/-0; value is mean +/- SD (2.4 \u00b1 2.9), n=4-7; mapping uses the same proportional band edges as the 0-7 FOB scale: 0-<1=>0, 1-<5=>1, 5-<8=>2, >=8=>3; DOSE printed as \"12 umol/mouse\" - reproduced as printed, and the unit left TBD because the schema dose-unit enum has no molar-amount unit (the figure is very likely a nmol/umol typo in the patent, so it was NOT converted) ;; VERIFIED[REFUTED] Example 1's mortality table (TABLE 4) records ASO 2/6 mice dead within one day. The row grades 1 ('mild, transient, reversible, no neuronal loss') and does not mention the deaths. The rubric puts death at grade 3. The high SD (+/-2.9 on a 0 ;; corrected(neurotox_grade:1->3)"
   },
   {
    "measurement_id": "TMP_pat_m1013",
@@ -35042,14 +35042,14 @@
    "readout_unit": "score_0_to_11",
    "effect_direction": "increase",
    "effect_vs_control": "7.5\u00b10.9_vs_0_PBS",
-   "neurotox_grade": 2,
-   "reversibility": "reversible",
+   "neurotox_grade": "3",
+   "reversibility": "partially_reversible",
    "is_cns_specific": "TRUE",
    "source_id": "P7",
    "source_ref": "US11851654B2",
    "source_table": "Table 10 \"Acute tolerability score\" (Example 4), row \"ASO\", 1h column",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-week-old female ICR mice, single injection into the left lateral ventricle; 11-item behavioural battery scored 0=normal / 1=abnormal per item, summed 0-11, PBS controls 0+/-0; value is mean +/- SD (7.5 \u00b1 0.9), n=4-7; mapping uses the same proportional band edges as the 0-7 FOB scale: 0-<1=>0, 1-<5=>1, 5-<8=>2, >=8=>3; DOSE printed as \"12 umol/mouse\" - reproduced as printed, and the unit left TBD because the schema dose-unit enum has no molar-amount unit (the figure is very likely a nmol/umol typo in the patent, so it was NOT converted)"
+   "notes": "grade_provisional;7-week-old female ICR mice, single injection into the left lateral ventricle; 11-item behavioural battery scored 0=normal / 1=abnormal per item, summed 0-11, PBS controls 0+/-0; value is mean +/- SD (7.5 \u00b1 0.9), n=4-7; mapping uses the same proportional band edges as the 0-7 FOB scale: 0-<1=>0, 1-<5=>1, 5-<8=>2, >=8=>3; DOSE printed as \"12 umol/mouse\" - reproduced as printed, and the unit left TBD because the schema dose-unit enum has no molar-amount unit (the figure is very likely a nmol/umol typo in the patent, so it was NOT converted) ;; VERIFIED[REFUTED] ;; ADVISORY(not applied, not a value): dose_or_conc_value=TBD (or keep 12 only if the unit is recorded as umol/mouse in notes) Example 4's own mortality table (TABLE 12) records ASO 2/6 mice dead within one day of dosing. The row grades this group 2 with reversibility='reversible' and never mentions the deaths. Under the schema rubric, 'moribundity/death' is grade  ;; corrected(neurotox_grade:2->3;reversibility:reversible->partially_reversible)"
   },
   {
    "measurement_id": "TMP_pat_m1079",

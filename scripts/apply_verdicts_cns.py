@@ -115,6 +115,13 @@ def main():
         lanes[lane] = (p, d)
         names = {o["oligo_id"]: o.get("oligo_name", "") for o in d.get("oligos", [])}
         for m in d.get("measurements", []):
+            # Idempotency: drop any annotation a previous run of this script left
+            # behind, so re-running reproduces one clean set rather than stacking
+            # duplicate VERIFIED/ADVISORY blocks onto the notes.
+            n = norm(m.get("notes"))
+            if n:
+                n = re.split(r"\s;;\s(?:VERIFIED\[|ADVISORY\(|corrected\()", n)[0]
+                m["notes"] = n
             index[row_key(m, names.get(m.get("oligo_id"), ""))].append((lane, m))
 
     # ---- apply ------------------------------------------------------------
