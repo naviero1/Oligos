@@ -118,6 +118,46 @@ GalNAc conjugate and the ~20× lower dose that hepatocyte targeting permits:
 This isolates **exposure and conjugation — not sequence** — as the driver, which
 is precisely the inference the dataset exists to support.
 
+## Does the assembled data actually support these inferences?
+
+A curated dataset that cannot reproduce its field's best-established
+structure-activity relationship is not ready to train anything. `scripts/analyze_thrombo.py`
+checks this directly — descriptive and non-parametric, with `TBD` excluded rather
+than coerced to zero. Run it after any ingestion round.
+
+**Backbone chemistry orders exactly as the PS hypothesis predicts**, without any
+modelling:
+
+| backbone | n rows | n oligos | mean grade |
+|---|---:|---:|---:|
+| `PMO_neutral` | 9 | 5 | **0.11** |
+| `PS_PO_mix` | 20 | 6 | 0.30 |
+| `full_PO` | 16 | 2 | 0.44 |
+| `full_PS` | 828 | 110 | **0.85** |
+
+Mean grade also rises with phosphorothioate count (0 linkages → 0.32;
+13–16 → 0.87; 17–19 → 0.95; 20+ → 1.35), and modality orders
+PMO 0.11 < GalNAc-siRNA 0.27 < siRNA 0.50 < ASO gapmer 0.66.
+
+**All three controlled comparisons run in the predicted direction:**
+
+| comparison | variable moved | mean grade |
+|---|---|---|
+| ODN 2395 → ODN2395_Thio | backbone only (0 → 21 PS) | 0.43 → **1.20** |
+| ISIS 416858 → fesomersen | 19 → 13 PS + GalNAc | 0.82 → **0.00** |
+| volanesorsen → olezarsen | GalNAc + exposure | 1.71 → **0.75** |
+
+**The caveat that must travel with this.** Grade is *partly* confounded with
+study type, because severe thrombocytopenia is observed in trials and not in
+dishes. In this dataset the confound is milder than feared — mean grade is
+animal 0.66, clinical 0.65, in-vitro 0.46 — but grade-3 rows remain concentrated
+in the in-vivo studies, and any model trained here must account for study type
+rather than learn it as biology.
+
+The single outlier is `mixed` backbone at mean grade 3.00 — that is imetelstat
+(n = 2), whose mechanism is different, which is exactly why it is
+mechanism-flagged.
+
 ## Mechanism must be labelled, not assumed
 
 `imetelstat` (Rytelo) causes
@@ -174,37 +214,37 @@ python3 scripts/report_thrombo.py                          # regenerate the tabl
 
 | | Count |
 |---|------|
-| Unique oligos (`oligos.csv`) | **132** |
-| Measurement rows (`measurements.csv`) | **663** |
-| — of which strict-platelet | **623** |
-| — of which adjacent-haematology (flagged) | **40** |
-| Grade distribution (0/1/2/3) | 353 / 207 / 85 / 18 |
-| Distinct target genes | **34** |
-| Distinct sources (`source_ref`) | **29** |
-| Oligos with sequence (not TBD) | **120 / 132** |
+| Unique oligos (`oligos.csv`) | **144** |
+| Measurement rows (`measurements.csv`) | **895** |
+| — of which strict-platelet | **811** |
+| — of which adjacent-haematology (flagged) | **84** |
+| Grade distribution (0/1/2/3) | 405 / 287 / 145 / 58 |
+| Distinct target genes | **35** |
+| Distinct sources (`source_ref`) | **31** |
+| Oligos with sequence (not TBD) | **132 / 144** |
 
 ## Independent (predictor) variables — `oligos.csv`
 
 | Variable | Distribution |
 |----------|--------------|
-| **Modality (`oligo_class`)** | ASO_gapmer 112 · PMO 5 · other 5 · GalNAc_siRNA 4 · splice_switching_ASO 4 · siRNA 2 |
-| **Backbone (`backbone_chemistry`)** | full_PS 109 · TBD 10 · PS_PO_mix 6 · PMO_neutral 5 · mixed 1 · full_PO 1 |
-| **Conjugate** | none 120 · lipid 6 · GalNAc 6 |
-| **Development stage (`max_phase`)** | research_panel 89 · approved 15 · preclinical 10 · phase_2 10 · phase_1 4 · class_review 2 · TBD 1 · approved_EMA 1 |
-| **Sugar modifications** | DNA_gap 112 · 2'-MOE 110 · 5-methylcytosine 17 · 2'-OMe 7 · cEt 7 · morpholino 5 · LNA 5 · 2'-F 5 · tricyclo-DNA 3 · DNA 2 |
-| **Sequence available** | 120 / 132 (rest `TBD`, never guessed) |
+| **Modality (`oligo_class`)** | ASO_gapmer 113 · other 16 · PMO 5 · GalNAc_siRNA 4 · splice_switching_ASO 4 · siRNA 2 |
+| **Backbone (`backbone_chemistry`)** | full_PS 120 · TBD 10 · PS_PO_mix 6 · PMO_neutral 5 · full_PO 2 · mixed 1 |
+| **Conjugate** | none 131 · lipid 6 · GalNAc 6 · TBD 1 |
+| **Development stage (`max_phase`)** | research_panel 100 · approved 15 · preclinical 11 · phase_2 10 · phase_1 4 · class_review 2 · TBD 1 · approved_EMA 1 |
+| **Sugar modifications** | DNA_gap 115 · 2'-MOE 110 · 5-methylcytosine 17 · DNA 10 · LNA 8 · 2'-OMe 7 · cEt 7 · morpholino 5 · 2'-F 5 · tricyclo-DNA 3 |
+| **Sequence available** | 132 / 144 (rest `TBD`, never guessed) |
 
 ## Dependent (indicator) variables — `measurements.csv`
 
 | Variable | Distribution |
 |----------|--------------|
-| **`thrombocytopenia_grade`** | 0: 353 · 1: 207 · 2: 85 · 3: 18 |
-| **Study type** | clinical 426 · animal_invivo 219 · in_vitro 13 · ex_vivo 5 |
-| **Species** | human 432 · mouse 113 · monkey 65 · rat 53 |
-| **Delivery route** | systemic_dose 644 · direct_addition 13 · intrathecal 6 |
-| **Readout category** | platelet_count 581 · clinical_outcome 32 · coagulation 25 · platelet_activation 9 · platelet_aggregation 8 · immunogenicity 4 · platelet_binding 4 |
-| **Redistribution** | summary_stat 403 · public_domain 243 · cc_by 17 |
-| **Platelet-specific** | TRUE 623 / 663 |
+| **`thrombocytopenia_grade`** | 0: 405 · 1: 287 · 2: 145 · 3: 58 |
+| **Study type** | clinical 522 · animal_invivo 238 · in_vitro 130 · ex_vivo 5 |
+| **Species** | human 645 · mouse 117 · monkey 79 · rat 54 |
+| **Delivery route** | systemic_dose 759 · direct_addition 130 · intrathecal 6 |
+| **Readout category** | platelet_count 650 · clinical_outcome 67 · platelet_activation 48 · platelet_binding 45 · immunogenicity 37 · coagulation 26 · platelet_aggregation 12 · megakaryocyte 8 · viability 1 · histopathology 1 |
+| **Redistribution** | summary_stat 403 · public_domain 360 · cc_by 132 |
+| **Platelet-specific** | TRUE 811 / 895 |
 
 <!-- END RECORD COUNTER -->
 

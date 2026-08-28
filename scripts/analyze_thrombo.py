@@ -1,0 +1,167 @@
+#!/usr/bin/env python3
+"""Fitness-for-purpose analysis of the OligoTox-Thrombocytopenia dataset.
+
+This is NOT a predictive model — the challenge deliverable is a dataset. This
+script asks a narrower question: **does the assembled data actually support the
+inferences the dataset claims to enable?** A curated dataset that cannot
+reproduce the field's best-established structure-activity relationship is not
+ready to train anything, and that is worth knowing before release rather than
+after.
+
+Four checks, each corresponding to a claim made in README.md:
+
+  1. Does phosphorothioate content track platelet effect?  (the core hypothesis)
+  2. Does backbone chemistry separate the grade distribution?
+  3. Is grade confounded with study type?  (a known structural risk — severe
+     events are observed in trials, not in dishes)
+  4. Are the controlled comparisons actually present and consistent?
+
+Everything here is descriptive and non-parametric: no distributional assumptions,
+no imputation, and `TBD` is always excluded rather than coerced to zero.
+
+Usage:  python3 scripts/analyze_thrombo.py
+"""
+import csv, os, collections, statistics
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE = os.path.join(ROOT, "thrombocytopenia", "data")
+
+
+def load():
+    with open(os.path.join(BASE, "oligos.csv"), newline="", encoding="utf-8") as f:
+        oligos = {r["oligo_id"]: r for r in csv.DictReader(f)}
+    with open(os.path.join(BASE, "measurements.csv"), newline="", encoding="utf-8") as f:
+        meas = list(csv.DictReader(f))
+    return oligos, meas
+
+
+def num(v):
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return None
+
+
+def bar(counts, width=34):
+    """Render a 0-3 grade distribution as a compact stacked bar."""
+    tot = sum(counts) or 1
+    out = ""
+    for ch, n in zip(".-+#", counts):
+        out += ch * max(0, round(width * n / tot))
+    return out.ljust(width)
+
+
+def grade_profile(rows):
+    c = collections.Counter(int(r["thrombocytopenia_grade"]) for r in rows)
+    return [c.get(i, 0) for i in range(4)]
+
+
+def mean_grade(rows):
+    g = [int(r["thrombocytopenia_grade"]) for r in rows]
+    return statistics.mean(g) if g else float("nan")
+
+
+def section(t):
+    print(f"\n{'=' * 74}\n{t}\n{'=' * 74}")
+
+
+def main():
+    oligos, meas = load()
+    print(f"{len(oligos)} oligos · {len(meas)} measurements")
+    print("legend: grade 0='.'  1='-'  2='+'  3='#'")
+
+    # ---------------------------------------------------------------- 1. PS count
+    section("1. Does phosphorothioate content track platelet effect?")
+    print("The central hypothesis. ps_count is binned; oligos with ps_count=TBD are")
+    print("EXCLUDED, not treated as zero.\n")
+    bins = [(0, 0, "0 (neutral)"), (1, 12, "1-12"), (13, 16, "13-16"),
+            (17, 19, "17-19"), (20, 99, "20+")]
+    print(f"{'PS linkages':<14} {'n rows':>6} {'n oligos':>9} {'mean grade':>11}  distribution")
+    for lo, hi, label in bins:
+        rows = [m for m in meas
+                if (p := num(oligos.get(m["oligo_id"], {}).get("ps_count"))) is not None
+                and lo <= p <= hi]
+        if not rows:
+            continue
+        n_ol = len({m["oligo_id"] for m in rows})
+        print(f"{label:<14} {len(rows):>6} {n_ol:>9} {mean_grade(rows):>11.2f}  "
+              f"{bar(grade_profile(rows))}")
+    unknown = [m for m in meas
+               if num(oligos.get(m["oligo_id"], {}).get("ps_count")) is None]
+    print(f"\n  ({len(unknown)} rows excluded: ps_count is TBD — never imputed)")
+
+    # ------------------------------------------------------------- 2. backbone
+    section("2. Does backbone chemistry separate the grade distribution?")
+    by = collections.defaultdict(list)
+    for m in meas:
+        by[oligos.get(m["oligo_id"], {}).get("backbone_chemistry", "TBD")].append(m)
+    print(f"{'backbone':<14} {'n rows':>6} {'n oligos':>9} {'mean grade':>11}  distribution")
+    for k, rows in sorted(by.items(), key=lambda kv: -mean_grade(kv[1])):
+        n_ol = len({m["oligo_id"] for m in rows})
+        print(f"{k:<14} {len(rows):>6} {n_ol:>9} {mean_grade(rows):>11.2f}  "
+              f"{bar(grade_profile(rows))}")
+
+    # ------------------------------------------------------------- 3. confound
+    section("3. Is grade confounded with study type?")
+    print("A known structural risk: severe thrombocytopenia is observed in trials,")
+    print("not in dishes, so grade may partly encode study design rather than biology.")
+    print("Any model trained on this data must account for it.\n")
+    by = collections.defaultdict(list)
+    for m in meas:
+        by[m["study_type"]].append(m)
+    print(f"{'study type':<16} {'n rows':>6} {'mean grade':>11} {'% grade 3':>10}  distribution")
+    for k, rows in sorted(by.items(), key=lambda kv: -mean_grade(kv[1])):
+        g3 = 100.0 * sum(1 for r in rows if r["thrombocytopenia_grade"] == "3") / len(rows)
+        print(f"{k:<16} {len(rows):>6} {mean_grade(rows):>11.2f} {g3:>9.1f}%  "
+              f"{bar(grade_profile(rows))}")
+
+    # -------------------------------------------------------------- 4. modality
+    section("4. Modality contrast")
+    by = collections.defaultdict(list)
+    for m in meas:
+        by[oligos.get(m["oligo_id"], {}).get("oligo_class", "TBD")].append(m)
+    print(f"{'modality':<22} {'n rows':>6} {'n oligos':>9} {'mean grade':>11}  distribution")
+    for k, rows in sorted(by.items(), key=lambda kv: -mean_grade(kv[1])):
+        n_ol = len({m["oligo_id"] for m in rows})
+        print(f"{k:<22} {len(rows):>6} {n_ol:>9} {mean_grade(rows):>11.2f}  "
+              f"{bar(grade_profile(rows))}")
+
+    # ------------------------------------------------- 5. controlled comparisons
+    section("5. Are the controlled comparisons present and consistent?")
+    print("Each pair should share a sequence (or differ in exactly one design")
+    print("variable). These are the dataset's most distinctive content.\n")
+    # match on the same normalized key the assembler joins on, so a spacing or
+    # punctuation variant ("ODN 2395" vs "ODN2395") does not read as "missing"
+    def nk(s):
+        return "".join(c for c in s.lower() if c.isalnum())
+
+    byname = {nk(o["oligo_name"]): o for o in oligos.values()}
+    pairs = [("odn2395", "odn2395thio", "backbone only (non-PS vs PS)"),
+             ("isis416858", "fesomersen", "PS count + GalNAc conjugate"),
+             ("volanesorsen", "olezarsen", "GalNAc conjugate + exposure")]
+    for a, b, what in pairs:
+        oa, ob = byname.get(a), byname.get(b)
+        if not (oa and ob):
+            print(f"  [missing] {a} / {b} — not both present")
+            continue
+        ra = [m for m in meas if m["oligo_id"] == oa["oligo_id"]]
+        rb = [m for m in meas if m["oligo_id"] == ob["oligo_id"]]
+        same = (oa["sequence_5to3"] == ob["sequence_5to3"]
+                and oa["sequence_5to3"] not in ("", "TBD"))
+        print(f"  {oa['oligo_name']} vs {ob['oligo_name']}  ({what})")
+        print(f"    same sequence: {'YES' if same else 'no/unknown'}"
+              f"   PS {oa['ps_count']} vs {ob['ps_count']}"
+              f"   conjugate {oa['conjugate']} vs {ob['conjugate']}")
+        print(f"    mean grade {mean_grade(ra):.2f} (n={len(ra)})  vs  "
+              f"{mean_grade(rb):.2f} (n={len(rb)})")
+
+    section("Interpretation")
+    print("Read the PS-count and backbone tables together. If mean grade rises with")
+    print("PS content and full_PS separates from PMO_neutral, the dataset reproduces")
+    print("the field's established structure-activity relationship from curation")
+    print("alone — which is the evidence that it is fit to train a model on.")
+    print("Check 3 is the caveat that must travel with any such claim.")
+
+
+if __name__ == "__main__":
+    main()
