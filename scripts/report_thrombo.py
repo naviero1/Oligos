@@ -8,7 +8,15 @@ round and paste the output into the docs (or diff it against them).
 
 Usage:  python3 scripts/report_thrombo.py
 """
-import csv, os, collections
+import csv, os, collections, signal
+
+# This script is meant to be piped (`| head`, `| less`), so a closed downstream
+# pipe is normal, not an error. Restore the default SIGPIPE disposition that
+# Python overrides, so the process exits quietly instead of dumping a traceback.
+try:
+    signal.signal(signal.SIGPIPE, signal.SIG_DFL)
+except (AttributeError, ValueError):
+    pass  # not POSIX, or not on the main thread
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = os.path.join(ROOT, "thrombocytopenia", "data")
