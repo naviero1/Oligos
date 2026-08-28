@@ -69,7 +69,7 @@ A single oligo at a single dose reporting platelet count *and* P-selectin =
 | `source_id` | string | → entry in `SOURCES.md` (e.g. `T1`). |
 | `source_ref` | string | DOI, PMID/PMCID, patent number, or regulatory label ID. |
 | `source_table` | string | Exact locus, e.g. `Table 2`, `Fig 3B`, `Claim 7`, `label sec 5.1`. |
-| `redistribution` | enum | `public_domain` \| `derived_features_only` \| `summary_stat` \| `verify`. |
+| `redistribution` | enum | `public_domain` \| `cc_by` \| `derived_features_only` \| `summary_stat` \| `verify`. |
 | `notes` | string | Free text (e.g. `recovered_after_discontinuation`). |
 
 ---
@@ -100,9 +100,18 @@ event described**, and the incidence is carried in `readout_value`.
 ## Provenance rules
 
 - Every row MUST carry `source_id` + `source_ref` + `source_table`.
-- `redistribution` governs whether raw values may be published: patents and
-  FDA/EMA regulatory documents are `public_domain`; journal-derived statistics
-  are `summary_stat` or `derived_features_only`; use `verify` when unresolved.
+- `redistribution` governs whether raw values may be published:
+  - `public_domain` — USPTO patents and FDA/EMA regulatory documents. Values may
+    be reproduced without restriction.
+  - `cc_by` — the source article is Creative Commons Attribution licensed (e.g.
+    PLOS, many PMC open-access articles). Raw values **may be reproduced with
+    attribution**; this is materially more permissive than `summary_stat` and
+    should be used wherever the licence is confirmed rather than assumed.
+    Confirm from the article's own licence field (Europe PMC `license`, or the
+    article's rights statement) — not from the fact that it is free to read.
+  - `derived_features_only` / `summary_stat` — copyrighted journal content where
+    only derived features or summary statistics are reproduced under fair use.
+  - `verify` — rights unresolved; must be settled before release.
 - `sequence_5to3` and any toxicity `readout_value` are **never fabricated**.
   Use `TBD` and fetch the source.
 

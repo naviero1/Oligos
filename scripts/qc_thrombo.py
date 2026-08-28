@@ -49,7 +49,8 @@ ENUMS = {
                          "clinical_outcome", "histopathology", "viability", "coagulation"},
     "effect_direction": {"increase", "decrease", "no_change", "TBD"},
     "is_platelet_specific": {"TRUE", "FALSE"},
-    "redistribution": {"public_domain", "derived_features_only", "summary_stat", "verify"},
+    "redistribution": {"public_domain", "cc_by", "derived_features_only",
+                       "summary_stat", "verify"},
 }
 
 SEQ_RE = re.compile(r"^[ACGTUacgtu]+$")
