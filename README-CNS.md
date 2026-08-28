@@ -204,6 +204,12 @@ Lane outputs are retained under `notes/cns/extractions/`, source documents under
 - **Modality skew.** CNS-delivered oligonucleotides are overwhelmingly gapmers and
   splice-switching ASOs, and the table reflects that.
 
+**`NEXT-STEPS-CNS.md`** turns those limitations into a gap analysis: what the
+published literature is actually missing, confirmed by searching for it and
+finding nothing, and what a Data Generation phase should therefore fund. The
+headline is that the literature is richest exactly where the challenge assigns
+lowest priority and close to empty where it assigns highest.
+
 See `METHODOLOGY-CNS.md` for the full methodology, extraction hazards, grading
 disciplines, and quality-control results, and `sources/SOURCES-CNS.md` for the
 source registry.
