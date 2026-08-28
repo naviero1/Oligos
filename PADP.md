@@ -1,9 +1,13 @@
 # Public Access & Dissemination Plan (PADP)
 
-**OligoTox-Kidney dataset — NIH/NCATS Oligonucleotide Toxicity (OligoTox) Open
+**OligoTox datasets — NIH/NCATS Oligonucleotide Toxicity (OligoTox) Open
 Data Challenge, Phase 2 (Data Generation).**
 
-This plan describes how the OligoTox-Kidney dataset is licensed, made publicly
+Covers all four curated datasets in this repository — kidney toxicity,
+thrombocytopenia, chronic neurotoxicity and hydrocephalus. See [`README.md`](README.md)
+for the toxicity register.
+
+This plan describes how these datasets are licensed, made publicly
 accessible, and disseminated, and — as required by the Challenge — **how the U.S.
 Government can allow interested parties to use the dataset even if the submitting
 team does not itself continue to use or distribute it.** It is a required component
@@ -18,12 +22,19 @@ The solution is the **curated, openly-releasable dataset** and its documentation
 
 | Artifact | Description |
 |---|---|
-| `data/oligos.csv` | 65 oligonucleotides — identity + design predictors (17 columns) |
-| `data/measurements.csv` | 111 graded per-measurement nephrotoxicity records (23 columns) |
-| `schema.md` | Full data dictionary, controlled vocabularies, and the 0–3 grade rubric |
-| `METHODOLOGY.md` | How the dataset was assembled (sources → extraction → grading → QC) |
-| `sources/SOURCES.md` | Source registry (16 source IDs), redistribution status, acquisition state |
-| `README.md`, `PRESENTATION.md` | Overview and findings deck |
+| `kidney-toxicity/data/` | 71 oligonucleotides (21 columns) · 769 graded per-measurement nephrotoxicity records (23 columns) |
+| `thrombocytopenia/data/` | 252 oligonucleotides (17 columns) · 1,786 graded platelet-toxicity records (23 columns) |
+| `chronic-neurotoxicity/data/` | 573 oligonucleotides (17 columns) · 2,393 graded CNS-toxicity records (26 columns) |
+| `hydrocephalus/data/` | 13 oligonucleotides (17 columns) · 147 graded hydrocephalus records (26 columns) |
+| Per-endpoint `schema` files | Data dictionary, controlled vocabularies and the 0–3 grade rubric for each dataset — `kidney-toxicity/schema.md`, `thrombocytopenia/schema.md`, `chronic-neurotoxicity/schema-cns.md` (which also governs `hydrocephalus/`) |
+| Per-endpoint `METHODOLOGY` files | How each dataset was assembled (sources → extraction → grading → QC) |
+| Per-endpoint `SOURCES` files | Source registries, redistribution status, acquisition state |
+| `README.md` | Repository overview and the toxicity register |
+| `REVIEW-2026-08.md` | Strict review of the kidney lineage, August 2026 |
+| `kidney-toxicity/presentation/` | Findings deck (source and built binaries) |
+
+**Totals: 909 oligonucleotides and 5,095 graded measurements across four of the Challenge's
+named endpoints.** The plan below applies to every dataset in the table.
 
 The dataset is a **curation of already-published data**. It contains **no human-
 subjects data, no personally identifiable information, and no protected health

@@ -1,0 +1,483 @@
+{
+ "batch": "batch_clinical",
+ "verdicts": [
+  {
+   "measurement_id": "CMS1138",
+   "verdict": "CONFIRMED",
+   "checked": "Fetched EMA Qalsody EPAR public assessment report (EMA/276404/2024, 181pp) and located Table 36 'Adverse events by preferred term occurring in 10% or more subjects in any pooled group - data presented for Pool RC and ABCL1 - safety population (as of 15 Jul 2022)'. Row 'Headache': tofersen 100 mg (N=72) 33 (45.8%); placebo (N=36) 16 (44.4%). Numerator, denominator, comparator and cut-off all match exactly. Grade 0 is correct under the at-or-below-control rule.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1146",
+   "verdict": "CONFIRMED",
+   "checked": "Same EPAR, Table 37 'Adverse reactions for pooled group ABCL1 - safety population (cut-off 28 Feb 2023)'. Row 'Neuralgia 7/147 (4.8)', frequency category 'Common'. Exact match. ABCL1 is a single-arm pooled tofersen population, so 'no_concurrent_control_arm' is correct.",
+   "problem": "Minor: the row's note asserts the neuralgia was 'non-serious'. Table 37 is an ADR frequency table and does not classify by seriousness; the claim is an inference from the absence of neuralgia from the related-SAE table (Table 38). Not wrong, but not stated at the cited locus.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1244",
+   "verdict": "CONFIRMED",
+   "checked": "Same EPAR, Table 38 'Related serious adverse events by system organ class and preferred term - safety population (cut-off: 28 Feb 2023)', extracted with pdfplumber to recover the column alignment that plain text extraction garbles. Row 'Intracranial pressure increased': Pool RC1 tofersen 100 mg (N=72) 0; Pool RC2 placebo (N=36) 0; Pool ABCL1 (N=147) 3 (2.0); Pool ABCL2 all doses (N=166) 3 (1.8). readout_value 3_of_147, the 2.0%/1.8% pair, and the placebo 0/36 comparator are all exact. Also confirmed the US label text the note quotes ('Four patients developed elevated intracranial pressure and/or papilledema') in the local DailyMed capture of QALSODY sec 5.2. Grade 2 correct.",
+   "problem": "Worth adding, not an error: the tofersen 100 mg arm of the placebo-controlled period (Pool RC1, N=72) also reported 0 related serious ICP-increased events. All 3 events come from the open-label/earlier-parts pool, which strengthens rather than weakens the row but is not stated.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1227",
+   "verdict": "CONFIRMED",
+   "checked": "Read the local DailyMed capture of the QALSODY US PI (sources/cns/QALSODY_tofersen_label_dailymed.htm). Section 14 Table 2 'Biomarker Results of QALSODY in Study 1 Part C at Week 28', CSF SOD1 Protein, ITT population N=72/N=36: adjusted geometric mean ratio to baseline 0.65 (QALSODY) and 0.98 (placebo); QALSODY-to-placebo difference in GMR 0.66 (0.57, 0.77); nominal p<0.0001. Every figure matches. Target-protein lowering graded 0 with direction 'decrease' is correct - this is pharmacology, not toxicity.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1179",
+   "verdict": "CONFIRMED",
+   "checked": "Fetched the current EXONDYS 51 (eteplirsen) SPL from DailyMed (setid 33bff678-7829-479e-9110-b8e33a0bc0aa) and read sections 5 and 6.2 in full. Section 5 contains only '5.1 Hypersensitivity Reactions'. Section 6.2 Postmarketing Experience lists exactly: bronchospasm, cyanosis of the lips, malaise, pyrexia, flushing, protein urine present, dehydration. No CNS or neurologic warning or postmarketing neurologic reaction anywhere. Dose 30 mg/kg weekly IV confirmed in sec 2.1. Grade 0 label-absence row is correct and the negative control is legitimate.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1199",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Fetched the ONPATTRO (patisiran) SPL from DailyMed (setid e87ec36f-...). Section 6.1 Table 1 header reads 'ONPATTRO N=148 % | Placebo N=77 %'; row 'Vertigo | 5 | 1'. Exact match, denominators exact. Vertigo is indeed the only nervous-system-type term in the whole table (the others are URTI, infusion-related reaction, dyspepsia, dyspnea, muscle spasms, arthralgia, erythema, bronchitis). 0.3 mg/kg appears in the label.",
+   "problem": "cns_region is set to 'brainstem'. The label does not localise the event and vertigo of this kind is a peripheral vestibular symptom; MedDRA files it under 'Ear and labyrinth disorders' (confirmed in the APOLLO ClinicalTrials.gov record). Assigning a brainstem locus injects an anatomical claim the source does not make into a CNS dataset.",
+   "correction": {
+    "cns_region": "NA"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1207",
+   "verdict": "CONFIRMED",
+   "checked": "Fetched the TEGSEDI (inotersen) SPL from DailyMed (setid 8513207e-...). Section 5.5 'Inflammatory and Immune Effects', subheading 'Neurologic Serious Adverse Reactions', contains the quoted passage verbatim, including 'elevated protein, a lymphocyte-predominant pleocytosis, and testing that was negative for infection' and 'The patient recovered after empiric therapy (high-dose steroids, antibiotics) and resumed TEGSEDI without recurrence of symptoms'. 284 mg weekly SC dose confirmed in the label. Grade 2, reversible, is correct. is_cns_specific=FALSE is right for a subcutaneously dosed ASO.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1217",
+   "verdict": "CONFIRMED",
+   "checked": "Fetched the LEQVIO (inclisiran) SPL from DailyMed (setid 6fc0afca-...). Section 6.1 'Adverse Reactions in Pediatric Patients with HeFH' contains verbatim: 'In pediatric patients with HeFH, the incidence of headache was 6% among patients who received placebo versus 13% of LEQVIO-treated patients during the double-blind study period.' Same paragraph states 141 patients enrolled, 93 received 284 mg LEQVIO in Part 1, 48 switched from placebo - so the placebo denominator of 48 the row flags as derived is arithmetically forced (141-93=48) and the derivation flag is honest. This is indeed the only neurologic imbalance in the label; the adult pooled table (N=1833 vs 1822) lists only injection site reaction, arthralgia and bronchitis. Grade 1 correct.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1168",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Downloaded the EMA Spinraza EPAR product information PDF (EU/1/17/1188) and extracted section 4.8 Table 3 'Adverse reactions related to Spinraza administration': Nervous system disorders = Headache** (Very common), Aseptic meningitis (Not known), Arachnoiditis (Not known). Section 4.4 'Lumbar puncture procedure' matches the note verbatim, including the MRI sentence. Cross-checked the US SPINRAZA SPL sec 6.2, which also lists arachnoiditis. 'frequency_not_known' and readout_value TBD are correct.",
+   "problem": "Procedure-vs-drug attribution is incomplete. SmPC section 4.4 introduces arachnoiditis explicitly as 'a risk of adverse reactions occurring as part of the lumbar puncture procedure (e.g. arachnoiditis, headache, back pain, vomiting)'. The row quotes 4.4 but records the event as oligonucleotide neuroinflammation without carrying that procedural attribution into effect_vs_control or the grading rationale. Grade 2 is still defensible for a clinically significant neuro AE, but the row should say the regulator attributes it to the LP procedure.",
+   "correction": {
+    "notes_addendum": "EU SmPC sec 4.4 attributes arachnoiditis to the lumbar puncture procedure, not to nusinersen itself; procedural confounding must be assumed."
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1369",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Pulled NCT02623699 from the ClinicalTrials.gov v2 API. otherEvents[106] term='Headache', organSystem='Nervous system disorders': EG006 'Part B-MAD: Cohort 5: BIIB067 20 mg' 4/10 = 40.0%; EG005 'Part B-MAD: Combined Placebo' 7/12 = 58.3%. Exact. Direction 'decrease' and grade 0 are correct - the drug arm is below the concurrent intrathecal-placebo arm, so this is a genuine grade-0 anchor, not manufactured toxicity.",
+   "problem": "The note claims headache was 'at or below the concurrent intrathecal-placebo arm at every dose level'. It was not: EG009 (100 mg) is 6/10 = 60.0%, marginally above the 58.3% placebo rate. 20 mg 40.0%, 40 mg 22.2%, 60 mg 44.4% are all below. The row's own value is unaffected.",
+   "correction": {
+    "notes_correction": "headache at or below placebo at 20/40/60 mg; 100 mg was 6/10 (60.0%) vs 58.3% placebo"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1378",
+   "verdict": "CONFIRMED",
+   "checked": "NCT02623699 otherEvents[81] term='Csf protein increased', organSystem='Investigations': EG008 'Part B-MAD: Cohort 7: BIIB067 60 mg' 3/9 = 33.3%; EG005 combined placebo 1/12 = 8.3%. Exact, including the array index. Grade 1 for an isolated CSF-protein elevation with no neuronal loss is correct under the rubric.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1387",
+   "verdict": "CONFIRMED",
+   "checked": "NCT02623699 seriousEvents[5] term='Myelitis', organSystem='Infections and infestations': EG011 'Part C-Pivotal: BIIB067 100 mg' 1/72 = 1.4%; EG010 'Part C-Pivotal: Placebo' 0/36. Exact. Absent from the concurrent intrathecal-placebo arm, so procedural attribution is excluded. exposure_duration '24wk' is right - Miller 2026 confirms VALOR randomised treatment 'over a 24-week period'. Grade 2 correct; myelitis is a labelled warning (QALSODY sec 5.1, read in the local capture).",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1395",
+   "verdict": "CONFIRMED",
+   "checked": "NCT03070119 seriousEvents[24] term='Meningitis aseptic', organSystem='Infections and infestations': EG000 '233AS101: Part C (Prior Placebo)' 1/32 = 3.1%; 0/63 and 0/44 in the other two groups. Exact. NCT03070119 is the open-label extension, so 'no concurrent control arm' is correct. Grade 2 correct.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1280",
+   "verdict": "CONFIRMED",
+   "checked": "NCT03070119 seriousEvents[6] 'Papilloedema' (Eye disorders): 1/32, 0/63, 0/44; otherEvents[4] 'Papilloedema': 2/32, 3/63, 1/44. Both the serious count carried in readout_value and every non-serious count quoted in effect_vs_control match exactly. The 5% non-serious frequency threshold the note warns about is confirmed in the record (frequencyThreshold=5). Grade 2 correct.",
+   "problem": "Cosmetic: source_table says 'Eye disorders / Nervous system disorders'. The 'Papilloedema' preferred term sits under Eye disorders only; 'Intracranial pressure increased' is the Nervous system disorders term (seriousEvents[60], 1/32, 1/63, 1/44) and is a separate row.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1263",
+   "verdict": "CONFIRMED",
+   "checked": "NCT02519036 outcome measure 5 'Change From Baseline in CSF Neurofilament Light Chain Concentration' (ng/L, MEAN with SD). Class 'Change from Baseline': placebo +324 (SD 371, n=12), 10 mg +77, 30 mg +202, 60 mg +274, 90 mg +1161 (SD 2980, n=9), 120 mg +628 (SD 1128, n=10). Class 'Baseline': placebo 2774, 90 mg 2328. Every number in readout_value, effect_vs_control and the note's grade ladder matches exactly, and the note's grade-0 claim for 10/30/60 mg is internally correct (all below the +324 placebo rise). Direction 'increase' with grade 2 is the correct handling of a treatment-emergent NfL rise above concurrent placebo.",
+   "problem": "Not an error, but the row's own caveat understates the problem: with SD 2980 on n=9 the 90 mg mean has a standard error near 1000, so the 837 ng/L excess over placebo is well under one standard error. The grade-2 label at 90 mg rests on a point estimate that is statistically indistinguishable from placebo. The row says so and carries grade_provisional; it should not be consumed as a confident grade 2.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1272",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "NCT02519036 outcome measure 6 'Ventricular Volume as Assessed by Structural MRI' (mL, MEAN/SD). Day 197 60 mg = 34.57 (n=6); Screening 60 mg = 31.90; placebo 35.58 -> 36.46 (n=12). All six curator-computed screening-to-Day-197 changes in the note reproduce exactly from the posted means (placebo +0.88, 10 mg +1.81, 30 mg +1.80, 60 mg +2.67, 90 mg +5.10, 120 mg +5.49). The disclosure that the change is curator-computed and unposted is accurate and important.",
+   "problem": "reversibility='irreversible' is not supportable. Day 197 is a single post-treatment timepoint; the study never followed long enough to establish irreversibility, and the note itself concedes it means only 'no recovery was observed within the study' - with the placebo arm also rising. 'not_assessed' is the honest value.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1289",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "NCT03342053 seriousEvents[12] term='Hydrocephalus', organSystem='Nervous system disorders': EG000 'RO7234292 Monthly' 1/23 (1 event); EG001 'RO7234292 Bimonthly' 0/23. Exact. The 120 mg dose is documented in the record (outcome-measure titles name '120 mg RO7234292'), so the dose attribution is sourced. Both arms received 120 mg, so the dose-frequency framing is right.",
+   "problem": "The grade-3 assignment ('hydrocephalus requiring intervention') rests entirely on Stoker TB et al., Mov Disord 2021, which is named in the note but is not in source_ref or source_table. The cited locus supports only 'serious hydrocephalus'. Either add the Stoker citation to the provenance chain or drop the grade to 2 with the shunt claim removed. exposure_duration '14mo' matches the arm description; the AE timeframe on the record is 'baseline to up to 18 months'.",
+   "correction": {
+    "source_table_addendum": "grade 3 derived from Stoker TB et al., Mov Disord 2021;36(1):263-264, which is not in source_ref"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1422",
+   "verdict": "CONFIRMED",
+   "checked": "NCT03342053 seriousEvents[11] term='Hemiparesis': EG000 'RO7234292 Monthly' 1/23 = 4.3%; EG001 Bimonthly 0/23. Exact. The attribution caveat is well founded: the same arm also reports seriousEvents[10] 'Cerebrovascular accident' 1/23, so the hemiparesis is plausibly the stroke's deficit. Grade 2 with low-confidence attribution flagged is appropriate.",
+   "problem": "Internal inconsistency with CMS1289, which cites the same trial: this row records dose TBD while CMS1289 records 120 mg. The record does document 120 mg, so TBD is over-conservative here.",
+   "correction": {
+    "dose_or_conc_value": "120",
+    "dose_or_conc_unit": "mg"
+   },
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1298",
+   "verdict": "CONFIRMED",
+   "checked": "NCT03761849 outcome measure 18 'Change From Baseline in CSF Neurofilament Light Chain (NfL) Proteint Level', GEOMETRIC_MEAN with 95% CI, unit as posted 'ng/mL'. Class Week 21: OG002 'RO7234292 Q8W ODC' 16.553 (4.497, 29.999) n=27; OG000 'Placebo ODC' 12.233 (0.729, 25.050) n=28. Exact including denominators. Group description confirms 'RO7234292 120 mg Q8W'. Direction 'increase' is the correct handling and grade 1 rather than 2 for a near-complete CI overlap with placebo is a defensible conservative call.",
+   "problem": "For context, not an error: the much larger NDC cohort at the same visit shows a far cleaner separation (Q8W NDC 31.893 (24.946, 39.226) n=224 vs placebo NDC 3.365 (-2.077, 9.109) n=225). The ODC row alone understates the programme-level CSF NfL signal. The posted unit 'ng/mL' is almost certainly a sponsor typo for pg/mL; the row correctly reproduces what is posted.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1439",
+   "verdict": "CONFIRMED",
+   "checked": "NCT03761849 otherEvents[19] term='Dizziness': EG003 'Q8W NDC' 20/263 = 7.6%; EG005 'PLB NDC' 17/264 = 6.4%. Exact. Grade 0 correct under the at-or-below-control rule.",
+   "problem": "Data-cut linkage gap: CMS1623 records the same preferred term in the same trial at the CHDI 2021 interim cut (7.7% vs 5.8%, n=260) and is marked 'duplicate_also_in_lane=clinical_programs'; this row carries no reciprocal marker. The two are the same event at two cuts and must not be treated as independent.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1448",
+   "verdict": "CONFIRMED",
+   "checked": "NCT03761849 seriousEvents[64] term='Demyelination', organSystem='Nervous system disorders': EG003 'Q8W NDC' 1/263 = 0.4% (1 event); EG005 'PLB NDC' 0/264; zero in all four other arms. Exact. Grade 2 with the 'could be 3 if it left a persisting deficit' flag is the right call on an AE table that carries no outcome data.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1307",
+   "verdict": "CONFIRMED",
+   "checked": "NCT03842969 (GEN-EXTEND) otherEvents[43] term='Cerebral ventricle dilatation': EG002 'Tominersen 120 mg Q16W' 1/88 = 1.1% (2 events); EG001 Q8W 4/143 = 2.8%; EG000 Q4W 1/14 = 7.1%. All three rates in the note reproduce exactly. No placebo arm exists in this roll-over study, as the row says, and the prior-exposure confound is correctly flagged. Grade 2 for asymptomatic ventriculomegaly is correct.",
+   "problem": "Minor schema quibble: readout_category is 'imaging' but the source is an investigator-reported adverse-event term, not an imaging measurement; 'clinical_neuro_outcome' would be more faithful.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1254",
+   "verdict": "CONFIRMED",
+   "checked": "NCT01703988 posted results confirm frequencyThreshold=0 (all TEAEs reported, so zero is a true zero) and arms 'Nusinersen 3 mg' n=8, 6 mg n=8, 9 mg n=9, 12 mg n=9. I enumerated all 89 otherEvents and all 3 seriousEvents terms: no hydrocephalus, ventricular, macrocephaly, intracranial-pressure, CSF-pressure or papilloedema term at any dose. 0_of_8 at 3 mg is correct, as is 'no events at every dose from 3 to 12 mg'. Mean treatment duration 82.9 days matches the posted timeframe.",
+   "problem": "Cosmetic: the parenthetical in source_table ('only Skin papilloma matched any ventricular/CSF search term') is a search artefact - 'papilloma' matching a 'papilledema' pattern - and reads as if a relevant event were found. It should be removed.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1315",
+   "verdict": "CONFIRMED",
+   "checked": "NCT04089566 (DEVOTE) otherEvents[6] term='Intracranial pressure increased': EG003 'Part B: Later-Onset SMA: 12/12 mg' 0/8; EG004 'Part B: Later-Onset SMA: 50/28 mg' 1/16 = 6.3%. Exact, and frequencyThreshold=0 is confirmed in the record so the zero is real. Grade 0 correct.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1457",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "NCT04089566 otherEvents[154] term='CSF pressure increased', organSystem='Investigations': EG005 'Part C: 50/28 mg Nusinersen' 2/40 = 5.0%; zero in all five other groups. Exact. Part C is single-arm so 'no_concurrent_control_arm' is correct.",
+   "problem": "Grade inconsistent with CMS1236 in the same batch. CMS1236 grades asymptomatic raised lumbar opening pressure (12/34, >=28 cmH2O) as 1, with the explicit rationale that 'a raised opening pressure without symptoms, papilloedema or imaging change does not meet the grade-2 definition'. This row grades the same phenomenon - a non-serious 'Investigations' AE of raised CSF pressure, with no reported symptoms, imaging or outcome - as 2, citing a 'raised-ICP band' that is not in the rubric. One of the two must move. On the rubric as written, grade 1 is the consistent value here.",
+   "correction": {
+    "neurotox_grade": "1"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1404",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "NCT03225833 otherEvents[43] term='CSF lymphocyte count increase', organSystem='Investigations': EG005 'WVE-120101 (32 mg)' 1/10 = 10.0%; EG000 'Pooled Placebo' 0/16; zero at 2/4/8/16 mg. Exact. Grade 1 correct.",
+   "problem": "exposure_duration 'up_to_210d' is wrong for this arm. The record's AE timeframe reads 'Day 1 to end of study (Day 196 [32 mg cohort] or Day 210 [all other cohorts])'; this is the 32 mg cohort, so 196 days.",
+   "correction": {
+    "exposure_duration": "up_to_196d"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1413",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "NCT03225833 seriousEvents[3] term='Ataxia', organSystem='Nervous system disorders': EG005 'WVE-120101 (32 mg)' 1/10 = 10.0%; 0 in pooled placebo (n=16) and 0 at all four lower doses. The top-dose-only pattern the row describes is exactly what the record shows. Grade 2 correct, and the Huntington's-progression confound is properly flagged.",
+   "problem": "Same exposure_duration error as CMS1404: the 32 mg cohort ran to Day 196, not Day 210.",
+   "correction": {
+    "exposure_duration": "up_to_196d"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1334",
+   "verdict": "CONFIRMED",
+   "checked": "NCT00607373 otherEvents[72] term='Headache', organSystem='Nervous system disorders': EG001 'Mipomersen' 5/34 = 14.7%; EG000 'Placebo' 2/17 = 11.8%. Exact including the array index. Arm description confirms 'mipomersen 200 mg as a subcutaneous injection once a week for 26 weeks', so dose and exposure_duration are sourced. frequencyThreshold=0. Grade 0 negative control is correct and the deliberate retention of a non-CNS comparator is good practice.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1343",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "NCT01960348 (APOLLO) otherEvents[32] term='Paraesthesia': EG000 'Patisiran (ALN-TTR02)' 8/148 = 5.4% (23 events); EG001 'Placebo' 3/77 = 3.9% (5 events). Exact. Timeframe confirms 'through End of Study (Day 567)'. Grade 0 correct.",
+   "problem": "dose_or_conc_value '0.3 mg/kg' is not at the cited locus. The APOLLO ClinicalTrials.gov record contains no 'mg/kg' string anywhere - the arm descriptions are empty. The dose is right (it is in the ONPATTRO label, which CMS1199 cites) but it did not come from NCT01960348.",
+   "correction": {
+    "source_table_addendum": "dose 0.3 mg/kg not stated in NCT01960348; sourced from ONPATTRO label sec 2.1"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1352",
+   "verdict": "CONFIRMED",
+   "checked": "NCT02211209 (APPROACH) otherEvents[51] term='Paraesthesia': EG001 'Volanesorsen' 2/33 = 6.1%; EG000 'Placebo' 0/33. Exact. Arm description confirms 'Volanesorsen 300 mg administered subcutaneously once-weekly for 52 weeks'. Grade 1 for a small excess over a zero placebo rate is defensible, though 2/33 vs 0/33 is fragile at these denominators.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1360",
+   "verdict": "CONFIRMED",
+   "checked": "NCT02310906 otherEvents[78] term='Lethargy': EG005 'Part 2a: Total Golodirsen Group' 2/25 = 8.0%; EG006 'Part 2b: Untreated Group (Natural History of Non-exon 53)' 1/14 = 7.1%. Exact. The comparator caveat the row states - an unrandomised, genotype-unmatched untreated natural-history group rather than placebo - is exactly what the arm labels say. Grade 0 correct.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1430",
+   "verdict": "CONFIRMED",
+   "checked": "NCT03399370 seriousEvents[220] term='Headache': EG000 'Inclisiran' 1/781 = 0.1%; EG001 'Saline Solution' 1/778 = 0.1%. Exact. Arm description confirms inclisiran sodium 300 mg SC over 18 months. Grade 0 negative control correct. Note this is inclisiran sodium 300 mg, equivalent to the 284 mg free-acid figure used in CMS1217 - not a contradiction.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1501",
+   "verdict": "REFUTED",
+   "checked": "Fetched Lovett A et al., Muscle Nerve 2025;71(6):1006-1015 via PMC12060635 (full text). Results section states verbatim: 'Two participants (1.4%) experienced SAEs of aseptic meningitis, both related to tofersen as assessed by the Investigator.' Every other field checks out exactly - baseline CSF WBC 0-2 and protein 32-67.5, 5 to 7 doses before onset, CSF WBC 144-317 and protein 95-185 during the event, treatment with empiric antibiotics/antivirals/methylprednisolone/analgesics, one continued and one discontinued (Table 1 participants 7 and 8), 147 exposed, 312.56 participant-years, 15 Jul 2022 cut, 'No similar events were experienced by participants receiving placebo'. Grade 2 and direction are right.",
+   "problem": "readout_value is 3.1 pct_incidence. The paper reports 1.4% (2/147). The row's own effect_vs_control field says '2 of 147', which is 1.36% - so the row contradicts itself. The string '3.1' does not appear anywhere in the article; the only percentages in it are 1.4, 2.7, 6.8, 8.8, 16.3, 24.5, 79.6, 89.7 and 98.6. 3.1% is the value of CMS1395 (1/32 aseptic meningitis in NCT03070119), which looks like the source of the copy. As filed the row overstates a labelled tofersen adverse reaction by 2.3-fold.",
+   "correction": {
+    "readout_value": "1.4",
+    "effect_vs_control": "1.4pct (2 of 147) on tofersen 100 mg vs 0 events on placebo"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1509",
+   "verdict": "CONFIRMED",
+   "checked": "Same article, Results: 'of the 147 participants exposed to tofersen 100 mg, 79.6% had at least 1 CSF WBC value > 10 cells/uL and 89.7% had a shift to high in CSF protein.' Exact. The note's local-lab ULN range of 30-60 mg/dL is confirmed in the Methods. Grade 1 for an isolated CSF-protein elevation is correct.",
+   "problem": "Cosmetic: readout_name 'CSF_total_protein' with readout_value 89.7 reads like a concentration until you reach readout_unit='pct_incidence'. The value is a shift-to-high incidence, not a protein level.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1518",
+   "verdict": "CONFIRMED",
+   "checked": "Same article, Table 1 'Summary of Participant Narratives', participant 3: event myelitis, clinical features 'Asymptomatic (hospitalized for CSF pleocytosis; imaging findings suggested myelitis)', investigator relatedness 'Related', 7 doses prior to event, baseline CSF WBC 1 cells/uL, baseline CSF protein 44 mg/dL, CSF WBC during event 23 (rising to 94 after 2 weeks), CSF protein during event 58 (rising to 149 after 2 weeks), opening pressure 'Not measured/not reported', action 'Continued'. Every field in the row and its note matches the table cell for cell. Grade 2 for the pleocytosis is correct.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1553",
+   "verdict": "CONFIRMED",
+   "checked": "Fetched Miller TM et al., JAMA Neurol via PMC12723595; article-id block confirms PMID 41661214 and doi 10.1001/jamaneurol.2025.4946 exactly as cited. Results subsection 'Cerebrospinal Fluid SOD1 Protein': 'Early reductions in CSF SOD1 concentrations were sustained at week 148, with a reduction of 21% and 25% in the early-start and placebo/delayed-start groups, respectively' and 'became apparent by approximately 8 weeks'. Exact. Direction 'decrease' with grade 0 is correct - target engagement, not toxicity.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1562",
+   "verdict": "CONFIRMED",
+   "checked": "Same article, Table 3 'Summary of Adverse Events', VALOR and OLE Tofersen 100 mg (N=104): 'Serious neurologic events 9 (8.7)', broken down as Myelitis 4 (3.9), Papilledema 3 (2.9), Aseptic meningitis 2 (1.9), Radiculitis 1 (1.0). Footnote e matches the note verbatim. Body text confirms '9 participants (8.7%) reported 10 serious neurological AEs... manageable with local standard of care and resolved. One myelitis event and 1 chemical meningitis event led to treatment discontinuation.' Exposure figures confirmed: 104 of 108, 305.35 participant-years, median 181.71 weeks, OLE completed August 2024, median follow-up opportunity 4.9 years. Grade 2 correct.",
+   "problem": "This row is the model for data-cut handling in the batch: it states outright that it is a different cut and population from the 147-participant Muscle & Nerve rows and that the two are not additive. The reciprocal note is missing from CMS1501/CMS1509/CMS1518.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1536",
+   "verdict": "CONFIRMED",
+   "checked": "Fetched via PMC13004686; article-ids confirm PMID 41634391 and doi 10.1038/s41591-025-04193-6. Results subsection 'Part B cohort with infantile-onset SMA: neurodegeneration': 'Reduction in plasma neurofilament light chain (NfL) levels from baseline at day 183 were significantly greater in the 50/28 mg group (94% reduction) compared with the ENDEAR matched sham group (32% reduction) (P < 0.0001)'. Exact, including the referenced Table 2 and Fig. 2b. Direction 'decrease' with grade 0 is the correct NfL handling. The comparator is correctly identified as the ENDEAR matched SHAM, and the row correctly warns that the sham arm also falls 32% (age-related NfL decline in infants), so the drug effect is the difference, not the raw 94%.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1544",
+   "verdict": "CONFIRMED",
+   "checked": "Same article, Table 3 'Parts B and C: overall safety summary', Part B infantile-onset columns: AE leading to death 10 (20.0) for 50/28 mg (n=50) vs 11 (55.0) for Matched sham (ENDEAR) (n=20). Exact. The claim that every rate is at or below the matched sham holds across the whole column (any AE 90.0 vs 100; treatment-related AE 6.0 vs 20.0; SAE 60.0 vs 95.0; treatment-related SAE 0 vs 0; AE leading to death 20.0 vs 55.0). Body text confirms 'only one participant in the Part B infantile-onset 12/12 mg group experienced a treatment-related SAE (respiratory failure)' and the 50.06 / 21.44 participant-year figures. Grade 0 with direction 'decrease' is correct.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1492",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Fetched via PMC10287562. Section 'Primary endpoint of safety': 'Adverse events (AEs) were reported in 94% of participants treated with MAPTRx and 75% of participants treated with placebo; all events were considered mild (88%) or moderate (12%) in severity'. Discussion confirms 'AEs considered potentially related to study drug... 15 (44%) versus 0'. Table 1 header confirms the cohort sizes exactly as the note states: placebo N=12, MAPTRx N=34, 10 mg monthly N=6, 30 mg monthly N=6, 60 mg monthly Q4W N=9, 115 mg quarterly N=13. 13-week treatment plus 23-week post-treatment confirmed. Both arms received real intrathecal bolus administrations, so the comparison is LP-matched and the excess is not a sham artefact. Grade 1 correct.",
+   "problem": "redistribution is wrong. The PMC permissions block reads 'https://creativecommons.org/licenses/by/4.0/ ... Creative Commons Attribution 4.0 International License'. This is a CC-BY article and the schema, and the dataset's own SOURCES-CNS.md rights table, require redistribution='cc_by' for it. Filing it as summary_stat is an under-claim that silently forfeits the right to republish the raw values. It is the only CC-BY article in the batch - the other seven journal sources I licence-checked are CC-BY-NC-ND, Thieme all-rights-reserved, NEJM, an NIHMS author manuscript, or Springer exclusive-licence, all correctly summary_stat.",
+   "correction": {
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1571",
+   "verdict": "CONFIRMED",
+   "checked": "Fetched via PMC12920120; article-ids confirm PMID 41673497 and doi 10.1038/s43587-025-01031-9. Table 3 'Summary of TEAEs during the LTE (safety population)', N=33: 'Participants with >=1 AE, n (%) 31 (93.9)'. Exact. Every claim in the long note is verbatim-accurate against the source: 4 (12.1%) serious TEAEs all assessed as unrelated to treatment or procedure; 3 (9.1%) discontinuations comprising four events (one participant with paranoia and aggression, two with dementia Alzheimer's type); one of those four (dementia Alzheimer's type) possibly related to study treatment; one severe TEAE (pain in extremity); no deaths; 24 (72.7%) with at least one procedure-related event, all mild or moderate and non-serious; and the full common-event list (back pain 39.4, pain in extremity 27.3, headache 24.2, dizziness 15.2, procedural pain 15.2, confusional state 12.1, fatigue 12.1, post-LP syndrome 12.1). CC-BY-NC-ND, so summary_stat is correct. Grade 1 correct, and the procedural dominance of the AE profile is properly recorded.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1579",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Full text is paywalled (Nature Medicine, 'under exclusive licence to Springer Nature'), no PMC deposit. Fetched the PubMed record for PMID 41876647: Nat Med. 2026 Apr;32(4):1421-1431, doi 10.1038/s41591-026-04262-4 - both identifiers real and exactly as cited. Abstract states 'In part A, 40 participants received single doses of BIIB094 10-150 mg or placebo' and 'Adverse events were reported by 64.5% (20/31) of participants in part A'. readout_value 64.5, the 20/31, the 40-dosed figure, 'mainly mild to moderate and not dose limiting', 'No serious adverse events related to BIIB094', NCT03976349 and EudraCT 2018-002995-42 all match. The row's flag that the abstract does not reconcile 31 against 40 is accurate. source_table honestly says 'abstract', so there is no provenance mislabel.",
+   "problem": "effect_direction='no_change' is not supportable from the cited locus. The abstract gives no placebo AE rate for part A, so there is nothing to compare 64.5% against; the value should be TBD. With no comparator and events described as mild-to-moderate and not dose limiting, grade 1 is also generous - grade 0 or 1 with the absent-comparator caveat would both be defensible.",
+   "correction": {
+    "effect_direction": "TBD"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1527",
+   "verdict": "CONFIRMED",
+   "checked": "Fetched the author manuscript via PMC12407188; article-ids confirm PMID 40414239 and doi 10.1016/S0140-6736(25)00513-6. Summary Findings: 'The concentration of NfL in CSF was reduced by up to 82.8% after 6 months of treatment.' Exact, direction 'decrease', grade 0 - the correct handling of intended pharmacology for a FUS-lowering ASO. The note's further claims are verbatim: 'one showed unprecedented, objective functional recovery after 10 months, and another remained asymptomatic, with documented improvement in electromyographic abnormalities'. The Methods confirm the dose caveat the row raises: doses ranged 20-120 mg across participants and only the last-enrolled received 120 mg monthly throughout, so the -82.8% maximum is genuinely not attributable to a single dose level. Expanded-access programme via single-patient INDs, so 'no control arm' is right. NIHMS manuscript under fair-use terms, so summary_stat is correct.",
+   "problem": "Note that the article names the drug 'jacifusen' throughout; 'ulefnersen' is the INN and does not appear in the source. That is an oligo-table aliasing question, not a defect in this measurement row.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1588",
+   "verdict": "CONFIRMED",
+   "checked": "Fetched via PMC13099374; article-ids confirm PMID 41981306 and doi 10.1038/s41591-026-04314-9. 'Safety and adverse events' section, patient 2 narrative: 'A few days after her 40 mg dose... A brain MRI was unremarkable (including normal ventricular size) (day 55). Lumbar puncture showed a normal opening pressure of 16 cm H2O. CSF WBCs and protein were slightly elevated at 28 cells mm-3 and 83 mg dl-1, respectively (and follow-up cell counts and protein levels were normal).' Exact - value, unit, dose, day, and the reversibility basis. The preceding sentence confirms 'Over the study's first 10 months, CSF and blood safety lab results were unremarkable', and the later sentence confirms 'CSF testing was negative for inflammatory biomarkers (albumin, IgG index, oligoclonal bands and neoptyrin)'. The drug name valeriasen is used in the article. Grade 1, reversible, is correct for the pleocytosis itself.",
+   "problem": "Context for the assembler, not an error in this row: the same patient went on to develop ventriculomegaly on days 62-64, an extraventricular drain, and a ventriculoperitoneal shunt on day 65 - grade-3 territory under the rubric. Since grade is assigned per measurement, the shunt must be carried on a separate hydrocephalus row or the patient's severity will be understated by this row alone.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1474",
+   "verdict": "CONFIRMED",
+   "checked": "No PMC deposit (NEJM). Fetched the PubMed record for PMID 31059641. Abstract RESULTS: '...a dose-dependent reduction in the concentration of mutant huntingtin in CSF (mean percentage change from baseline, 10% in the placebo group and -20%, -25%, -28%, -42%, and -38% in the HTTRx 10-mg, 30-mg, 60-mg, 90-mg, and 120-mg dose groups, respectively)', with '12 were randomly assigned to receive placebo' and dosing 'every 4 weeks for four doses'. readout_value 10, direction increase, n=12, and the ~16wk exposure all match. Grade 0 is correct: this is the concurrent placebo arm, retained as a comparator. source_table honestly says 'abstract, RESULTS'; summary_stat is correct for NEJM.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1236",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "No PMC deposit (Thieme, paywalled). Fetched the PubMed record for PMID 33578442, doi 10.1055/s-0040-1722687. Abstract: '34 patients with SMA types 1 to 3 undergoing treatment with nusinersen... the LOP was >20 cm H2O in 25 patients (70.5%), and within this group >=28 cm H2O in 12 patients (35.3%), in two patients, it was increased prior to treatment initiation.' readout_value 12_of_34, the 35.3%, the absence of an untreated comparator and the pre-treatment-elevation confound all match exactly. source_table honestly says 'abstract'; summary_stat is correct.",
+   "problem": "The note's grade-1 rationale overstates the negative findings. It says the raised opening pressure was 'without symptoms, papilloedema or imaging change'. The abstract says no patient reported symptoms of raised ICP, but also that 'Signs of increased intracranial pressure in ophthalmological assessments or brain imaging were only seen in one patient'. Grade 1 for the cohort is still the right call; the rationale needs the one-patient exception.",
+   "correction": {
+    "notes_correction": "none symptomatic, but 1 of 34 had signs of raised ICP on ophthalmological assessment or brain imaging"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1465",
+   "verdict": "UNVERIFIABLE",
+   "checked": "The cited source is a Biogen/Ionis investor press release of 16 May 2024. investors.biogen.com refuses connections from this environment (curl returns 000) and WebFetch returns HTTP 503; the release could not be retrieved by any route available to me. No independent primary publication of the BIIB105 phase 1/2 result was reachable either.",
+   "problem": "Source unreachable, so the quoted sentence and the 'no reduction in plasma NfL over the 6-month placebo-controlled period' claim cannot be confirmed. KEEP WITH CAVEAT rather than drop: redistribution is already 'verify', source_table honestly names the press-release body, and the row's substantive judgement is the one the brief asks for - the programme stopped for FUTILITY, not neurotoxicity, and the row grades it 0 with direction no_change rather than 3. Separately, readout_value holds a free-text sentence ('no reduction; no rise reported') where the schema wants a number or TBD.",
+   "correction": {
+    "readout_value": "TBD"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1325",
+   "verdict": "UNVERIFIABLE",
+   "checked": "Cited source is the Roche/Genentech CHDI 2021 Schobel slide deck (M-XX-00005115) on medically.gene.com. Every URL pattern I tried on medically.gene.com and medically.roche.com returns 404, the sites are JS-gated healthcare-professional portals with no sitemap, and web search quota was exhausted. Slide 35 could not be retrieved. Partial corroboration only: the final ClinicalTrials.gov posting for GENERATION HD1 (NCT03761849) contains no 'Cerebral ventricle dilatation' preferred term at all, while GEN-EXTEND (NCT03842969) posts 6 such events across its three arms - so a programme-wide tally of 5 as of 1 Mar 2021 is plausible but not confirmable, and the 16 radiographic cases have no public counterpart.",
+   "problem": "Sponsor conference deck, explicitly marked preliminary and non-final, not retrievable. KEEP WITH CAVEAT: redistribution is already 'verify', the row states there is no denominator and therefore uses readout_unit 'cases' rather than n_of_N, and it tells the consumer to prefer the ClinicalTrials.gov rows where they overlap. All of that is the right handling. But a grade-2 row whose numerator has no denominator and whose source cannot be reached should not be trained on without the caveat travelling with it.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1614",
+   "verdict": "UNVERIFIABLE",
+   "checked": "Roche/Genentech CHDI 2021 Schobel deck (M-XX-00005115), slide 31 - not retrievable (see CMS1325). ClinicalTrials.gov does not post 'AE leading to dose interruption' for NCT03761849, so there is no cross-check. The row is internally consistent (11.2/3.5 = 3.2x, matching the note's '3.2x placebo on Q8W').",
+   "problem": "Source unreachable. KEEP WITH CAVEAT; redistribution 'verify' is correct.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1623",
+   "verdict": "UNVERIFIABLE",
+   "checked": "Roche/Genentech CHDI 2021 Schobel deck, slide 32 - not retrievable. Cross-checked against the final ClinicalTrials.gov posting of the same trial: NCT03761849 otherEvents[19] 'Dizziness' gives Q8W NDC 20/263 = 7.6% and PLB NDC 17/264 = 6.4%, against the slide's reported 7.7% vs 5.8% on n=260. The small differences are consistent with the CHDI deck being a 5 Feb 2021 interim cut and the registry being the final cut, not with a transcription error.",
+   "problem": "Source unreachable; the value is corroborated to within a data cut by public registry data. KEEP WITH CAVEAT. This row correctly carries 'duplicate_also_in_lane=clinical_programs'; its counterpart CMS1439 does not carry the reciprocal marker, so a consumer reading CMS1439 alone would not know the same event appears twice at two cuts.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1632",
+   "verdict": "UNVERIFIABLE",
+   "checked": "Roche/Genentech CHDI 2021 Schobel deck, slide 34 - not retrievable. Ventricular boundary-shift-integral data are not posted on ClinicalTrials.gov for NCT03761849, so no cross-check exists for 24.3% vs 11.4% at Week 69. The reversibility claim additionally rests on a second unretrievable deck (CHDI 2022, slides 18-19 and 22).",
+   "problem": "Source unreachable. This is the load-bearing ventriculomegaly row for tominersen at the phase 3 grain and it rests entirely on grey literature that no reader can check. KEEP WITH CAVEAT and redistribution 'verify', but it should not be presented as a confirmed grade-2 imaging finding; the peer-reviewed and registry record for GENERATION HD1 does not contain it.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1641",
+   "verdict": "UNVERIFIABLE",
+   "checked": "Roche/Genentech CHDI 2021 Schobel deck, slide 36 - not retrievable. Cross-check against the final ClinicalTrials.gov posting of NCT03761849: there is no 'Meningitis chemical' preferred term in the posted results at all; the record has seriousEvents[22] 'Meningitis aseptic' at 1/263 in Q8W NDC, 0/264 Q16W NDC, 0/264 PLB NDC. So the registry corroborates one meningitis event on Q8W and none on Q16W or placebo, but under a different preferred term and against denominators of 263/264/264 rather than the slide's 260/261/260.",
+   "problem": "Source unreachable, and the preferred term does not survive into the final posted results. Most likely an interim-cut coding difference rather than an error, but as filed the row asserts a 'Meningitis chemical' event that the public registry does not show. KEEP WITH CAVEAT, and note the term/denominator divergence from the final cut so it is not double-counted against CMS1395 or the aseptic-meningitis rows.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1597",
+   "verdict": "UNVERIFIABLE",
+   "checked": "Roche CHDI 2023 McColgan deck (M-XX-00013000), slide 21 - medically.roche.com returns 404 for every path tried and the CHDI 2023 landing page renders no material. Not retrievable. No plasma-NfL percentage-point-difference data are posted for NCT03761849, so no cross-check.",
+   "problem": "Source unreachable, and the grading is the bigger concern. The row applies a curator-invented rule ('>=+10 points -> 2; >0 -> 1; <=0 -> 0') that converts a +1.2 percentage-point difference from placebo - noise by any reasonable reading - into a grade-1 neurotoxicity label with effect_direction 'increase'. That is precisely the failure mode of manufacturing toxicity that does not exist, and because it is a stated rule it will have been applied to every row in the lane that uses it. KEEP ONLY IF the threshold rule is replaced by one that requires separation from placebo, or the row is regraded 0.",
+   "correction": {
+    "neurotox_grade": "0"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1606",
+   "verdict": "UNVERIFIABLE",
+   "checked": "Roche CHDI 2023 McColgan deck, slide 21 - not retrievable (see CMS1597). No registry cross-check exists.",
+   "problem": "Source unreachable. The direction and grade are internally coherent - a -7.1 percentage-point difference below placebo is correctly recorded as 'decrease' and graded 0, and week 101 is correctly identified as an off-treatment timepoint after dosing stopped in March 2021. KEEP WITH CAVEAT; redistribution 'verify' is correct.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1483",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Fetched the BioDrugs 2022 review via PMC8899000 (PMID 35254632, doi 10.1007/s40259-022-00519-9). Section 'Wave Life Sciences WVE-120101 and WVE-120102', paragraph 1, contains verbatim: 'In participants receiving WVE-120102, there was a statistically significant mean reduction of 12.4% in CSF mtHTT across dosage groups and no changes in CSF NfL were observed [88].' The same paragraph confirms 'the maximum dosages administered in these trials was 16 mg', and paragraph 2 confirms the 32 mg arms were halted 'due to a failure to consistently lower mtHTT' with 'the lack of a dose response'. Locus, value and framing are all exact. Springer exclusive-licence article, so summary_stat is correct. The row is honest that this is a review citing a company press release, and that the primary press releases were unreachable.",
+   "problem": "exposure_duration is being used to hold a dose ('doses up to 16 mg'), not a time. Under the schema that field takes a duration; the dose belongs in dose_or_conc_value (which is TBD) or in notes. Also, per the brief's provenance rule the chain here is review -> press release, i.e. two steps from any primary record, which is worth surfacing more prominently than in free-text notes.",
+   "correction": {
+    "exposure_duration": "TBD"
+   },
+   "severity": "minor"
+  }
+ ],
+ "summary": "55 clinical rows checked against re-fetched primary sources: 14 ClinicalTrials.gov records via the v2 API, 5 FDA prescribing informations via DailyMed, the EMA Qalsody EPAR (EMA/276404/2024) and the EMA Spinraza SmPC (EU/1/17/1188) as PDFs, 8 journal articles as PMC full text, and 3 PubMed abstracts where no full text exists. Verdicts: 33 CONFIRMED, 13 CONFIRMED_MINOR, 1 REFUTED, 8 UNVERIFIABLE. Severity: 32 none, 21 minor, 2 major. \n\nThe one REFUTED row is CMS1501: tofersen aseptic meningitis is filed at 3.1 pct_incidence when Lovett 2025 (Muscle & Nerve 2025;71(6):1006-1015, PMC12060635) states 'Two participants (1.4%) experienced SAEs of aseptic meningitis'. The row's own effect_vs_control field ('2 of 147') contradicts its readout_value; 3.1% is the value of CMS1395 (1/32 in NCT03070119), so this looks like a cross-row copy. The correct value is 1.4. Everything else in that row - the CSF ranges, dose counts, relatedness, placebo comparison, participant-years and data cut - is verbatim-exact. \n\nThe other major-severity finding is CMS1597, a grading rather than a value problem: a +1.2 percentage-point difference from placebo in plasma NfL is graded 1 with effect_direction 'increase' under a curator-invented threshold rule ('>=+10 points -> 2; >0 -> 1; <=0 -> 0'). A 1.2-point difference is noise, and because this is a stated rule it will have produced the same false-positive grade wherever the lane applied it. \n\nFindings against the four attack grounds I was given: (1) NUMERATOR/DENOMINATOR/COMPARATOR - every one of the 20 ClinicalTrials.gov-sourced rows reproduces exactly, including array indices, arm labels and both denominators. All ten rows where the drug rate sits at or below the concurrent control (CMS1138 45.8 vs 44.4, CMS1334 14.7 vs 11.8, CMS1343 5.4 vs 3.9, CMS1360 8.0 vs 7.1, CMS1369 40.0 vs 58.3, CMS1430 0.1 vs 0.1, CMS1439 7.6 vs 6.4, CMS1544 20 vs 55, CMS1254 and CMS1315 zero-event arms) are correctly graded 0. No manufactured toxicity of that kind was found. (2) PROCEDURE VERSUS DRUG - the two sham-controlled rows (CMS1536, CMS1544, both DEVOTE vs the ENDEAR matched sham) are efficacy and mortality endpoints where the sham comparison favours the drug, so no procedural inflation is possible; both name the sham explicitly. CMS1492 (MAPTRx) is LP-matched on both arms. CMS1571 (BIIB080 LTE) correctly reports that 72.7% of participants had procedure-related events and that back pain and post-LP syndrome dominate. One row needs the attribution added: CMS1168 grades nusinersen arachnoiditis 2 while quoting SmPC section 4.4, which introduces arachnoiditis as 'a risk of adverse reactions occurring as part of the lumbar puncture procedure'. (3) NfL DIRECTION - all seven NfL rows are correct. Falls after HTT-, SOD1- and FUS-lowering ASOs are graded 0 with 'decrease' (CMS1527 -82.8% CSF, CMS1536 -94% plasma, CMS1606 -7.1 points); treatment-emergent rises above concurrent placebo are graded 2 and 1 with 'increase' (CMS1263 +1161 ng/L vs +324 placebo, CMS1298 16.553 vs 12.233); the BIIB105 futility discontinuation is graded 0 with 'no_change' and is explicitly NOT treated as a neurotoxicity grade 3 (CMS1465). No NfL row is filed with direction TBD. This is the single cleanest result in the batch. (4) DATA-CUT CONFUSION - handled on one side of each pair only; see systematic_issues. (5) PROVENANCE KIND - no mislabelled provenance found. Every row that read a number from an abstract says 'abstract' in source_table (CMS1236, CMS1474, CMS1527, CMS1579); the review-sourced row says so and flags the press-release chain underneath (CMS1483); the press-release row says so (CMS1465). (6) REDISTRIBUTION - no over-claims. All FDA, EMA and ClinicalTrials.gov rows are public_domain, correctly. I read the licence statement in each journal source: seven are CC-BY-NC-ND, Thieme all-rights-reserved, NEJM, an NIHMS author manuscript or Springer exclusive-licence, all correctly summary_stat. The single mismatch is the opposite of an over-claim: CMS1492 (Mummery 2023, Nat Med) is CC BY 4.0 and is filed summary_stat, which forfeits a right the schema and the dataset's own SOURCES-CNS.md rights table say should be recorded as cc_by.",
+ "systematic_issues": "1. GREY LITERATURE IS THE LARGEST UNVERIFIABLE BLOCK, AND IT CARRIES DISPROPORTIONATE GRADE WEIGHT. Seven of the eight UNVERIFIABLE rows (CMS1325, CMS1597, CMS1606, CMS1614, CMS1623, CMS1632, CMS1641) cite Roche/Genentech medical-affairs slide decks on medically.gene.com and medically.roche.com, and the eighth (CMS1465) cites a Biogen investor press release. None is retrievable: every URL pattern returns 404 or 503, the portals are JS-gated with no sitemap, and the decks are explicitly marked 'preliminary analyses performed on non-final data set'. redistribution='verify' is set correctly on all of them, which is good practice. But these rows are not peripheral - CMS1632 is the load-bearing tominersen ventriculomegaly row at the phase 3 grain (24.3% vs 11.4% vBSI) and CMS1325 is the row the curator says 'matters disproportionately because it shows the SYMPTOMATIC case count understates the imaging signal roughly fivefold'. Where I could cross-check them against the public registry the divergences are consistent with different data cuts rather than transcription error (CMS1623's 7.7 vs 5.8 on n=260 against the registry's 7.6 vs 6.4 on n=263/264), with one exception: CMS1641 asserts a 'Meningitis chemical' event that does not exist as a preferred term anywhere in the final NCT03761849 posting, which instead posts 'Meningitis aseptic' 1/263. Recommendation: label the whole grey-literature class as unverifiable-by-a-third-party in the row itself, not just via the rights column, and prefer the registry row wherever one exists. This extrapolates to the 43 CHDI-2021, 12 CHDI-2023, 2 CHDI-2022 and 3 press-release rows the source registry counts across the clinical lane - about 60 rows, roughly an eighth of the clinical set.\n\n2. A MECHANICAL '>0 MEANS GRADE 1' THRESHOLD MANUFACTURES TOXICITY FROM NOISE. CMS1597 and CMS1606 both state the rule verbatim: '>=+10 points -> 2 (treatment-emergent axonal-injury signal); >0 -> 1; <=0 -> 0'. Applied to a +1.2 percentage-point plasma NfL difference from placebo, it yields a grade-1 neurotoxicity label with effect_direction 'increase' for a difference no one would call a signal. The rule ignores dispersion entirely. The same weakness shows up without a stated rule at CMS1263, where grade 2 rests on a mean of +1161 ng/L with SD 2980 on n=9 - a standard error near 1000 against an 837 ng/L excess over placebo - and at CMS1272, where grade 1 rests on a curator-computed +2.67 mL versus +0.88 mL with no posted dispersion for the change and no statistical test. Every one of these rows flags its own fragility in notes and carries grade_provisional, which is honest, but the grade field itself does not encode the uncertainty and that is what a model trains on. Recommendation: any continuous-endpoint grade above 0 should require separation from the concurrent control, not merely a larger point estimate; where dispersion is unavailable the grade should be capped or the row marked low-confidence in a structured field.\n\n3. DATA-CUT CROSS-REFERENCES ARE ASYMMETRIC. The lane clearly understands the problem - CMS1562 says outright 'DIFFERENT DATA CUT AND DIFFERENT POPULATION from the 147-participant Muscle & Nerve rows - the two sets are not additive', and CMS1244 and CMS1280 both carry 'Flagged for the assembler to de-duplicate against the tofersen label-extraction lane'. But the marker is only ever on one side of the pair. The three Lovett rows (CMS1501/1509/1518, N=147, cut 15 Jul 2022) carry no reciprocal pointer back to Miller 2026 (N=104, cut Aug 2024); CMS1623 is marked 'duplicate_also_in_lane=clinical_programs' while its registry counterpart CMS1439 is not. The tofersen neuro-AE tally in particular now exists at five overlapping grains in this batch alone - the QALSODY label's undifferentiated 'four patients', EPAR Table 37 (papilloedema 7/147, myelitis 4/147, aseptic meningitis 6/147 at 28 Feb 2023), EPAR Table 38 related SAEs (3/147 ICP increased), ClinicalTrials.gov NCT03070119 per-group counts, Lovett's 10 participants/12 events at 15 Jul 2022, and Miller's 9 participants/10 events at Aug 2024. A consumer summing any two of these double-counts the same patients. Recommendation: make the cross-reference a structured bidirectional field (e.g. same_events_as=<measurement_id list>) rather than free text on whichever row was curated second.\n\n4. ONE GRADING RULE IS APPLIED TWO DIFFERENT WAYS TO THE SAME PHENOMENON. Raised intracranial/CSF opening pressure without symptoms is graded 1 at CMS1236 with an explicit rationale ('a raised opening pressure without symptoms, papilloedema or imaging change does not meet the grade-2 definition') and graded 2 at CMS1457 citing a 'raised-ICP band' that does not exist in the rubric - even though CMS1457 is a non-serious Investigations-SOC AE with no reported symptoms or imaging. The rubric's grade-2 examples are aseptic meningitis, radiculitis, myelitis and papilledema; raised pressure per se is not among them. Because raised ICP is one of the two named priority endpoints for this dataset, this inconsistency will propagate widely. Recommendation: write the rule down once - asymptomatic pressure elevation = 1, pressure elevation with papilloedema, symptoms, imaging change or serious-AE status = 2, requiring intervention = 3 - and re-sweep every intracranial_pressure and CSF_pressure row against it.\n\n5. DOSE AND ANATOMY ARE OCCASIONALLY SUPPLIED FROM OUTSIDE THE CITED LOCUS. CMS1343 records patisiran 0.3 mg/kg against NCT01960348, whose record contains no 'mg/kg' string anywhere; CMS1289 grades hydrocephalus 3 on the strength of a shunt reported in Stoker 2021, which is named in notes but absent from source_ref and source_table; CMS1199 assigns cns_region 'brainstem' to a label row for vertigo that the label does not localise. Each value is defensible in itself, but the falsifiable claim the schema makes - this number is at this place in this document - is not true of them. Recommendation: any field not readable at the cited locus needs its own citation, not a mention in notes.\n\n6. WHAT IS WORKING, AND SHOULD BE PRESERVED. Numerator/denominator/comparator fidelity on registry rows is essentially perfect across 20 rows; the at-or-below-control-means-grade-0 rule is applied consistently across ten rows and no alarming-sounding term was inflated; NfL direction is right on all seven NfL rows including the futility-not-toxicity case; provenance kind is declared honestly on every abstract-, review- and press-release-sourced row; and rights are read from the licence statement in the document rather than assumed from the publisher, with CC-BY-NC-ND correctly refused an upgrade to cc_by. The one rights defect (CMS1492) is an under-claim, not a legal exposure. Whatever process produced these habits should be left alone."
+}

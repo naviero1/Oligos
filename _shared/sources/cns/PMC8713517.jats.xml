@@ -1,0 +1,1808 @@
+<?xml version="1.0"  ?><!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd"><pmc-articleset><article xml:lang="en" article-type="research-article" dtd-version="1.4"><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Nucleic Acid Ther</journal-id><journal-id journal-id-type="iso-abbrev">Nucleic Acid Ther</journal-id><journal-id journal-id-type="pmc-domain-id">1588</journal-id><journal-id journal-id-type="pmc-domain">nat</journal-id><journal-id journal-id-type="nlm-id">101562758</journal-id><journal-id journal-id-type="publisher-id">nat</journal-id><journal-title-group><journal-title>Nucleic Acid Therapeutics</journal-title></journal-title-group><issn pub-type="ppub">2159-3337</issn><issn pub-type="epub">2159-3345</issn><publisher><publisher-name>SAGE Publications</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC8713517</article-id><article-id pub-id-type="pmcid-ver">PMC8713517.1</article-id><article-id pub-id-type="pmcaid">8713517</article-id><article-id pub-id-type="pmcaiid">8713517</article-id><article-id pub-id-type="pmid">34520257</article-id><article-id pub-id-type="doi">10.1089/nat.2021.0021</article-id><article-id pub-id-type="publisher-id">10.1089/nat.2021.0021</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="heading"><subject>Article</subject></subj-group></article-categories><title-group><article-title>Oligonucleotides Targeting DNA Repeats Downregulate
+<italic toggle="yes">Huntingtin</italic> Gene Expression in Huntington's
+Patient-Derived Neural Model System</article-title><alt-title alt-title-type="left-running-head">UMEK ET AL.</alt-title><alt-title alt-title-type="right-running-head">OLIGONUCLEOTIDES DOWNREGULATING
+HUNTINGTIN</alt-title></title-group><contrib-group><contrib contrib-type="author"><name name-style="western"><surname>Umek</surname><given-names initials="T">Tea</given-names></name><xref rid="aff1" ref-type="aff">
+<sup>1,</sup>
+</xref><xref rid="fn1" ref-type="author-notes">
+<sup>*</sup>
+</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Olsson</surname><given-names initials="T">Thomas</given-names></name><xref rid="aff2" ref-type="aff">
+<sup>2,</sup>
+</xref><xref rid="aff3" ref-type="aff">
+<sup>3,</sup>
+</xref><xref rid="fn1" ref-type="author-notes">
+<sup>*</sup>
+</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Gissberg</surname><given-names initials="O">Olof</given-names></name><xref rid="aff1" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Saher</surname><given-names initials="O">Osama</given-names></name><xref rid="aff1" ref-type="aff">
+<sup>1,</sup>
+</xref><xref rid="aff4" ref-type="aff">
+<sup>4</sup>
+</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Zaghloul</surname><given-names initials="EM">Eman M.</given-names></name><xref rid="aff1" ref-type="aff">
+<sup>1,</sup>
+</xref><xref rid="aff5" ref-type="aff">
+<sup>5</sup>
+</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Lundin</surname><given-names initials="KE">Karin E.</given-names></name><xref rid="aff1" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Wengel</surname><given-names initials="J">Jesper</given-names></name><xref rid="aff6" ref-type="aff">
+<sup>6</sup>
+</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Hanse</surname><given-names initials="E">Eric</given-names></name><xref rid="aff2" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Zetterberg</surname><given-names initials="H">Henrik</given-names></name><xref rid="aff7" ref-type="aff">
+<sup>7,</sup>
+</xref><xref rid="aff8" ref-type="aff">
+<sup>8,</sup>
+</xref><xref rid="aff9" ref-type="aff">
+<sup>9,</sup>
+</xref><xref rid="aff10" ref-type="aff">
+<sup>10</sup>
+</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Vizlin-Hodzic</surname><given-names initials="D">Dzeneta</given-names></name><xref rid="aff2" ref-type="aff">
+<sup>2,</sup>
+</xref><xref rid="aff7" ref-type="aff">
+<sup>7,</sup>
+</xref><xref rid="corr1" ref-type="corresp">
+<sup>†</sup>
+</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Smith</surname><given-names initials="CIE">C. I. Edvard</given-names></name><xref rid="aff1" ref-type="aff">
+<sup>1,</sup>
+</xref><xref rid="corr2" ref-type="corresp">
+<sup>†</sup>
+</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Zain</surname><given-names initials="R">Rula</given-names></name><xref rid="aff1" ref-type="aff">
+<sup>1,</sup>
+</xref><xref rid="aff11" ref-type="aff">
+<sup>11,</sup>
+</xref><xref rid="corr3" ref-type="corresp">
+<sup>†</sup>
+</xref></contrib><aff id="aff1"><label><sup>1</sup></label>Department of Laboratory Medicine,
+Clinical Research Center, Karolinska Institutet, Karolinska University Hospital
+Huddinge, Huddinge, Sweden.</aff><aff id="aff2"><label><sup>2</sup></label>Department of Physiology, Institute of
+Neuroscience and Physiology, the Sahlgrenska Academy at the University of
+Gothenburg, Gothenburg, Sweden.</aff><aff id="aff3"><label><sup>3</sup></label>Department of Clinical Pathology and
+Cytology, Sahlgrenska University Hospital, Gothenburg, Sweden.</aff><aff id="aff4"><label><sup>4</sup></label>Department of Pharmaceutics and Industrial
+Pharmacy, Faculty of Pharmacy, Cairo University, Cairo, Egypt.</aff><aff id="aff5"><label><sup>5</sup></label>Department of Pharmaceutics, Faculty of
+Pharmacy, Alexandria University, Alexandria, Egypt.</aff><aff id="aff6"><label><sup>6</sup></label>Department of Physics, Chemistry and
+Pharmacy, Biomolecular Nanoscale Engineering Center, University of Southern
+Denmark, Odense M, Denmark.</aff><aff id="aff7"><label><sup>7</sup></label>Department of Psychiatry and
+Neurochemistry, Institute of Neuroscience and Physiology, the Sahlgrenska
+Academy at the University of Gothenburg, Gothenburg, Sweden.</aff><aff id="aff8"><label><sup>8</sup></label>Department of Neurodegenerative Disease,
+Institute of Neurology, University College London, London, United Kingdom.</aff><aff id="aff9"><label><sup>9</sup></label>Clinical Neurochemistry Laboratory,
+Sahlgrenska University Hospital, Mölndal, Sweden.</aff><aff id="aff10"><label><sup>10</sup></label>UK Dementia Research Institute at UCL,
+London, United Kingdom.</aff><aff id="aff11"><label><sup>11</sup></label>Department of Clinical Genetics, Center
+for Rare Diseases, Karolinska University Hospital, Stockholm, Sweden.</aff></contrib-group><author-notes><fn id="fn1" fn-type="equal"><label>
+<sup>*</sup>
+</label><p>These authors contributed equally to this work.</p></fn><corresp id="corr1">Address correspondence to: Dzeneta Vizlin-Hodzic, PhD,
+Department of Psychiatry and Neurochemistry, Institute of Neuroscience and
+Physiology, the Sahlgrenska Academy at the University of Gothenburg, Gothenburg
+SE-405 30, Sweden <email>dzeneta.vizlin@neuro.gu.se</email></corresp><corresp id="corr2">C. I. Edvard Smith, MD, PhD, Department of Laboratory Medicine,
+Clinical Research Center, Karolinska Institutet, Karolinska University Hospital
+Huddinge, Huddinge SE-141 86, Sweden <email>edvard.smith@ki.se</email></corresp><corresp id="corr3">Rula Zain, PhD, Department of Clinical Genetics, Centre for Rare
+Diseases, Karolinska University Hospital, Stockholm SE-171 76, Sweden
+<email>rula.zain@ki.se</email></corresp></author-notes><pub-date pub-type="ppub"><day>01</day><month>12</month><year>2021</year><string-date>December 2021</string-date></pub-date><pub-date pub-type="epub"><day>10</day><month>12</month><year>2021</year></pub-date><volume>31</volume><issue>6</issue><issue-id pub-id-type="pmc-issue-id">396672</issue-id><fpage>443</fpage><lpage>456</lpage><history><date date-type="received"><day>03</day><month>4</month><year>2021</year><string-date>Received for publication April 3, 2021</string-date></date><date date-type="accepted"><day>30</day><month>7</month><year>2021</year><string-date>accepted after revision July 30, 2021</string-date></date></history><pub-history><event event-type="pmc-release"><date><day>10</day><month>12</month><year>2021</year></date></event><event event-type="pmc-live"><date><day>29</day><month>12</month><year>2021</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2021-12-30 00:16:42.917"><day>30</day><month>12</month><year>2021</year></date></event></pub-history><permissions><copyright-statement>© Tea Umek et al. 2021; Published by Mary Ann Liebert,
+Inc.</copyright-statement><copyright-year>2021</copyright-year><copyright-holder>Tea Umek et al. </copyright-holder><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This Open Access article is distributed under the terms of the
+Creative Commons License [CC-BY] (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0</ext-link>), which permits
+unrestricted use, distribution, and reproduction in any medium, provided the
+original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="nat.2021.0021.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="nat.2021.0021.pdf"/><abstract><p>Huntington's disease (HD) is one of the most common, dominantly inherited
+neurodegenerative disorders. It affects the striatum, cerebral cortex, and other
+subcortical structures leading to involuntary movement abnormalities, emotional
+disturbances, and cognitive impairments. HD is caused by a CAG•CTG
+trinucleotide-repeat expansion in exon 1 of the <italic toggle="yes">huntingtin</italic>
+(<italic toggle="yes">HTT</italic>) gene leading to the formation of mutant HTT (mtHTT)
+protein aggregates. Besides the toxicity of the mutated protein, there is also
+evidence that mt<italic toggle="yes">HTT</italic> transcripts contribute to the disease.
+Thus, the reduction of both mutated mRNA and protein would be most beneficial as
+a treatment. Previously, we designed a novel anti-gene oligonucleotide
+(AGO)-based strategy directly targeting the <italic toggle="yes">HTT</italic>
+trinucleotide-repeats in DNA and reported downregulation of mRNA and protein in
+HD patient fibroblasts. In this study, we differentiate HD patient-derived
+induced pluripotent stem cells to investigate the efficacy of the AGO, a
+DNA/Locked Nucleic Acid mixmer with phosphorothioate backbone, to modulate
+<italic toggle="yes">HTT</italic> transcription during neural <italic toggle="yes">in vitro</italic>
+development. For the first time, we demonstrate downregulation of
+<italic toggle="yes">HTT</italic> mRNA following both naked and magnetofected delivery
+into neural stem cells (NSCs) and show that neither emergence of neural rosette
+structures nor self-renewal of NSCs is compromised. Furthermore, the inhibition
+potency of both <italic toggle="yes">HTT</italic> mRNA and protein without off-target effects
+is confirmed in neurons. These results further validate an anti-gene approach
+for the treatment of HD.</p></abstract><kwd-group kwd-group-type="author"><kwd>gene therapy</kwd><kwd>anti-gene</kwd><kwd>antisense</kwd><kwd>human induced pluripotent stem cells</kwd><kwd>gymnosis</kwd></kwd-group><counts><fig-count count="5"/><ref-count count="68"/><page-count count="14"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta></custom-meta-group></article-meta></front><body><sec sec-type="intro" id="s001"><title>Introduction</title><p>Huntington's disease (HD) is one of the most common dominantly inherited
+neurodegenerative disorders. It affects the striatum, cerebral cortex, and other
+subcortical structures, leading to clinical symptoms such as involuntary movement
+abnormalities, emotional disturbance, and cognitive impairment. The therapies
+currently available to HD patients offer only moderate symptom relief, and the
+affected individuals typically die 15–20 years postdiagnosis due to
+complications such as pneumonia, dysphagia, heart disease, or suicide.</p><p>HD is caused by a dominant mutation, an expansion of CAG•CTG
+trinucleotide-repeat in exon 1 of the <italic toggle="yes">huntingtin</italic> gene
+(<italic toggle="yes">HTT</italic>), leading to the formation of mutant HTT (mtHTT) protein
+that aggregates in the nucleus and cytoplasm of striatal and cortical neurons,
+disrupting important cellular functions [<xref rid="B1" ref-type="bibr">1</xref>,<xref rid="B2" ref-type="bibr">2</xref>]. The toxic gain of function
+of mtHTT is generally considered as the primary cause of disease [<xref rid="B3" ref-type="bibr">3</xref>,<xref rid="B4" ref-type="bibr">4</xref>], and
+accordingly, it has been shown in mice that deleting the expanded allele or
+decreasing the expression of the protein can halt the progression of HD [<xref rid="B5" ref-type="bibr">5</xref>,<xref rid="B6" ref-type="bibr">6</xref>].
+Furthermore, several studies suggest that reducing mtHTT, as well as wild-type HTT
+(wtHTT), is well tolerated in adult mice and larger animals [<xref rid="B4" ref-type="bibr">4</xref>,<xref rid="B7" ref-type="bibr">7–9</xref>], but
+the loss of wtHTT is lethal to the mouse embryo [<xref rid="B10" ref-type="bibr">10</xref>]. However, in a human embryonic stem cell-derived neuronal model,
+decreasing wtHTT by 90% does not affect normal phenotype, whereas a
+10%–20% reduction of the mtHTT alone is sufficient to result in
+a significant reduction of toxicity [<xref rid="B11" ref-type="bibr">11</xref>].
+Thus, lowering mtHTT at the expense of a partial loss of wtHTT seems to be
+acceptable. This has led to the development of several promising disease-modifying
+oligonucleotides (ONs), which entered clinical trials, aiming for the degradation of
+the mRNA [<xref rid="B12" ref-type="bibr">12</xref>]. Even if Tominersen (formerly
+known as IONIS-HTT<sub>RX</sub>), a non-allele-specific antisense ON (ASO), did not
+exhibit any beneficial clinical effects, it resulted in a dose-dependent reduction
+of mtHTT in participants' cerebrospinal fluid [<xref rid="B13" ref-type="bibr">13</xref>].</p><p>Besides the toxicity of the mutated protein, an increasing body of evidence indicates
+that mt<italic toggle="yes">HTT</italic> mRNA contributes to striatal and cortical atrophy [<xref rid="B14" ref-type="bibr">14</xref>]. RNA stable hairpin structures, formed in
+the CAG•CTG expanded region, interact with specific proteins leading to
+dysregulated splicing [<xref rid="B3" ref-type="bibr">3</xref>,<xref rid="B15" ref-type="bibr">15–18</xref>]. Furthermore, secondary structures
+formed by the repeats can be cleaved by Dicer producing toxic small RNAs [<xref rid="B15" ref-type="bibr">15</xref>,<xref rid="B19" ref-type="bibr">19</xref>].
+Thus, targeting the most proximal cause of the disease, the <italic toggle="yes">HTT</italic>
+gene itself, thereby affecting both of the abovementioned disease-causing
+macromolecules, may be the most beneficial form of treatment. Previously, we have
+designed novel anti-gene ONs (AGOs), directly targeting the <italic toggle="yes">HTT</italic>
+gene through binding of the trinucleotide-repeat region in genomic DNA, and showed
+efficient downregulation of mRNA and protein in HD patient fibroblasts [<xref rid="B20" ref-type="bibr">20</xref>]. The ONs, 12 to 19 nucleotides in length,
+with phosphorothioate (PS) backbone, were designed as mixmers of DNA and Locked
+Nucleic Acid (LNA), thereby improving the ON's capacity of strand invasion
+into double-strand DNA [<xref rid="B21" ref-type="bibr">21</xref>] and subsequent
+inhibition of transcription.</p><p>Although AGOs decreased <italic toggle="yes">HTT</italic> mRNA and protein levels in
+patient-derived fibroblasts, neither delivery of the ONs nor their downregulating
+effect in human neural stem cells (NSCs) or neurons was investigated. Until
+recently, research with this aim in focus was hampered by the inaccessibility of the
+viable neurons from patients. Fortunately, the discovery of induced pluripotent stem
+cells (iPSCs) [<xref rid="B22" ref-type="bibr">22–24</xref>],
+together with the development of neural differentiation protocols [<xref rid="B25" ref-type="bibr">25</xref>], made it possible to address this issue.
+This approach has been used to generate <italic toggle="yes">in vitro</italic> models for several
+genetic as well as sporadic conditions [<xref rid="B26" ref-type="bibr">26–31</xref>]. In particular, a number of
+studies have reported that iPSCs reprogrammed from HD patient samples and
+subsequently differentiated to either striatal or cortical neurons can be used for
+disease modeling and for evaluating downstream effects of gene correcting approaches
+[<xref rid="B32" ref-type="bibr">32–35</xref>].</p><p>In this report, we neuralized HD patient-derived iPSCs to investigate the
+transcriptional inhibition potency of CAG19, a 19-nucleotide DNA/LNA mixmer ON with
+PS backbone, during neural <italic toggle="yes">in vitro</italic> development. We demonstrate
+efficient downregulation of <italic toggle="yes">HTT</italic> mRNA following both magnetofection
+as well as naked delivery, later termed gymnosis, without adverse effects on the
+capacity of NSCs to organize into neural rosette structures or on the maintenance of
+the NSC pool. Furthermore, the <italic toggle="yes">HTT</italic> mRNA and protein inhibition
+potency of CAG19 is confirmed in neurons without off-target effects on four
+additional CAG•CTG trinucleotide repeat-containing genes, <italic toggle="yes">POU3F2,
+ATN1, ATXN2, AR,</italic> and two CUG repeat-containing transcripts,
+<italic toggle="yes">BRI3BP</italic> and <italic toggle="yes">DMPK</italic>. These results further
+validate LNA/DNA PS AGOs as a potent therapeutic strategy for transcriptional
+inhibition of the <italic toggle="yes">HTT</italic> gene.</p></sec><sec sec-type="methods" id="s002"><title>Methods</title><sec id="s003"><title>Oligonucleotides</title><p>DNA/LNA ONs were synthesized at the Nucleic Acid Center, University of Southern
+Denmark, as previously reported [<xref rid="B20" ref-type="bibr">20</xref>]. The
+CAG19 ON has a PS backbone and was designed to target the CTG repeats in the DNA
+template strand of the <italic toggle="yes">HTT</italic> gene. The sequence of CAG19 is
+5′-cAgCAgCAgCAgCAgCAgc with LNA bases written in capital letters while
+DNA in small. Two DNA/LNA mixmers with PS backbone nontargeting scrambled repeat
+ONs were synthesized and used as controls: SCR14 (5′-gAcGAcGAcGAcGA) and
+SCR19 (5′-gAcGAcGAcGAcGAcGAcg). All cells used in this report are
+commercially available and therefore no special permits are needed. The report
+is not a clinical trial.</p></sec><sec id="s004"><title>Culture of iPSC lines</title><p>The following cell lines were obtained from the National Institute of
+Neurological Disorders and Stroke (NINDS) Human Cell and Data Repository at the
+Coriell Institute for Medical Research and the NINDS Human Cell and Data
+Repository at RUCDR Infinite Biologics: ND41658 and ND42223. ND41658 (WT iPSC
+line) harbors 17/18 CAG•CTG repeats and ND42223 (HD iPSC line) harbors
+109 CAG•CTG repeats. Cells were cultured under feeder-free conditions in
+mTeSR™1 culturing systems (STEMCELL™ Technologies) at 37°C
+in a humidified atmosphere of 5% CO<sub>2</sub> in air. Mycoplasma test
+was performed using previously described protocol [<xref rid="B36" ref-type="bibr">36</xref>] as well as during confocal imaging. The detection
+revealed no mycoplasma contamination.</p></sec><sec id="s005"><title>Neural induction of iPSC lines</title><p>Neural induction was initiated with the formation of embryoid bodies (EBs) using
+AggreWell™ 800 plates (STEMCELL Technologies) and previously described
+neural maintenance media [<xref rid="B25" ref-type="bibr">25</xref>] (NMM)
+supplemented with 10 μM SB43154 (STEMCELL Technologies) and
+10 μM Dorsomorphin (STEMCELL Technologies). After 6–8 days,
+EBs were collected, replated on human recombinant laminin 521 (BioLamina)-coated
+plates and maintained in NMM until the appearance of neural rosette structures.
+NSCs were then expanded by supplementing NMM with 20 ng
+mL<sup>−1</sup> fibroblast growth factor 2 (FGF2) (PeproTech), which
+was withdrawn after 4 days. Cultures were manually picked or passaged using
+Dispase (STEMCELL Technologies) and maintained in NMM until frozen at day
+23–30 postinitiation of neural induction.</p><p>For neural differentiation, BrainPhys™ Neuronal Media (STEMCELL
+Technologies) supplemented with B27™ (Gibco), 2 mM
+GlutaMAX™ (Gibco), 50 U mL<sup>−1</sup> Pen/Strep,
+200 nM ascorbic acid (PeproTech), 20 ng mL<sup>−1</sup>
+human recombinant brain-derived neurotrophic factor (BDNF) (STEMCELL
+Technologies), and 20 ng mL<sup>−1</sup> human recombinant
+glial-derived neurotrophic factor (GDNF) (STEMCELL Technologies) were used.</p></sec><sec id="s006"><title>Gymnotic delivery of ON</title><p>ONs (final concentration of 2 μM) were added into the culturing
+media during the neural induction and maturation progress. At indicated time
+points, cells were collected using Accutase (STEMCELL Technologies) and stored
+in 350 μL RNA Protect (Qiagen).</p></sec><sec id="s007"><title>ON magnetofection in NSCs</title><p>NSC and early neurons were transfected using NeuroMag Transfection reagent (OZ
+Biosciences) according to the manufacturer's protocol. Around
+5 × 10<sup>4</sup> cells were cultured in NMM and
+transfected 24 h postseeding with ON formulated with three different
+volume ratios of transfection reagent. The final concentration of the ONs was
+100 nM. Forty-eight hours posttransfection, 350 μL RNA
+Protect (Qiagen) was added to the cells for storage.</p></sec><sec id="s008"><title>Allele-specific PCR of gDNA</title><p>gDNA was isolated using DNeasy (Qiagen) according to the manufacturer's
+protocol. The Hot-StarTaq Master Mix Kit (Qiagen) was used for the PCR according
+to the manufacturer's protocol. Detailed information can be found in the
+<xref rid="SD1" ref-type="supplementary-material">Supplementary Table
+S1</xref>.</p><p>Gel electrophoresis was performed using 1% Agarose gel in
+1 × Tris-Acetate-EDTA (TAE) buffer (40 mM Tris,
+20 mM acetate, and 1 mM EDTA, pH 8.3), at 90 V for
+1 h.</p></sec><sec id="s009"><title>Quantitative reverse transcriptase PCR</title><p>Total RNA was isolated from iPSC, NSCs, and neurons using Qiagen RNeasy (Qiagen)
+according to the manufacturer's protocol.</p><p>For analysis of neural induction, cDNA was synthesized from 1 μg of
+total RNA using the RevertAid H Minus First-Strand cDNA Synthesis Kit (Thermo
+Fisher Scientific). <italic toggle="yes">OCT4</italic> and <italic toggle="yes">PAX6</italic> mRNA levels
+were analyzed using Universal SYBR Green Supermix (Bio-Rad) according to the
+manufacturer's instructions on the StepOnePlus<sup>®</sup>
+Real-time PCR system (Applied Biosystems, Sweden). The relative level of gene
+expression was determined with d0 as the calibrator and <italic toggle="yes">RPLP</italic>
+and <italic toggle="yes">GUSB</italic> as endogenous references.</p><p>Analysis of the <italic toggle="yes">HTT, ATN1, POU3F2</italic>, <italic toggle="yes">ATXN2, AR,
+BRI3BP,</italic> and <italic toggle="yes">DMPK</italic> mRNA levels was performed using
+the QuantiFast<sup>®</sup> Multiplex RT-PCR Kit (Qiagen) according to the
+manufacturer's instructions using 10 or 20 ng of total RNA.
+Annealing temperature for <italic toggle="yes">HTT, ATN1, POU3F2, ATXN2, AR,</italic> and
+<italic toggle="yes">BRI3BP</italic> was set to 60°C and for <italic toggle="yes">DMPK</italic>
+it was set to 55°C. StepOnePlus Real-time PCR system (Applied Biosystems,
+Sweden) was used for <italic toggle="yes">HTT</italic> and CFX96 Touch Real-Time PCR
+Detection System (Bio-Rad Laboratories) for <italic toggle="yes">ATN1, POU3F2, ATXN2, AR,
+BRI3BP,</italic> and <italic toggle="yes">DMPK</italic>. The relative level of gene
+expression was determined using the ΔΔCt method, with nontreated
+as the calibrator and <italic toggle="yes">HPRT1</italic> as endogenous reference.</p><p>All the primer pairs and TaqMan probes can be found in <xref rid="SD1" ref-type="supplementary-material">Supplementary Table
+S1</xref>.</p></sec><sec id="s010"><title>Immunofluorescence analysis</title><p>iPSCs were plated onto Matrigel (Corning)-coated coverslips and cultured until
+confluency in mTeSR1™ culturing system (STEMCELL Technologies).
+NSCs/neurons were plated on human recombinant laminin 521 (BioLamina)-coated
+coverslips and maintained in NMM or supplemented BrainPhys Neuronal Media
+(STEMCELL Technologies) until day 22 or day 38–53 postinduction,
+respectively. The cells were fixed with 4%
+paraformaldehyde/phosphate-buffered saline (PBS) for 20 min, washed in
+0.1% Tween 20/PBS, and permeabilized with 0.25% Triton X-100/PBS
+for 10 min and blocked by 10% FBS/0.1% Tween 20/PBS for
+1 h. Primary and secondary antibodies (Abs) (<xref rid="SD1" ref-type="supplementary-material">Supplementary Table S2</xref>)
+diluted in blocking solution were added for incubation overnight and 1 h,
+respectively, each followed by washes in 0.1% Tween 20/PBS. Nuclei were
+counterstained with DAPI (1:10,000, Thermo Fisher Scientific). Slides were
+mounted, and confocal imaging was performed on LSM META 710 Scanning Confocal
+(Zeiss). The raw images were exported as TIFF files by using Zen Lite software
+(Zeiss Microscopy). ZEN Lite software was used to measure the diameter of
+rosette structures. The number of Ki67-, PAX6-, and S100-positive cells were
+counted either using Fiji software [<xref rid="B37" ref-type="bibr">37</xref>]
+or manually.</p></sec><sec id="s011"><title>Western blotting</title><p>Cells were lysed and total protein extracted using the Minute™ Total
+Protein Extraction Kit for Animal Cultured Cells and Tissues (Invent
+Biotechnologies, Inc.) according to the manufacturer's protocol. The
+Pierce BCA Protein Assay Kit (Thermo Fisher Scientific) was used to determine
+protein concentration.</p><p>Proteins were separated on NuPAGE™ 3%–8% Tris-Acetate
+Gels (Invitrogen) (for detection of HTT and GAPDH) or NuPAGE
+4%–12% Bis-Tris Gel (Invitrogen) (for detection of cleaved
+caspase 3) at 150V for 1 h and electrotransferred onto polyvinylidene
+difluoride (PVDF) membranes (iBlot<sup>®</sup> Gel Transfer Stacks PVDF,
+Invitrogen) using iBlot system (Invitrogen). The membranes were blocked using
+5% nonfat dry milk diluted in 0.1% Tween 20/PBS. Primary and
+secondary Abs (<xref rid="SD2" ref-type="supplementary-material">Supplementary
+Table S3</xref>) diluted in blocking solution were added for incubation
+overnight at 4°C and 1 h RT, respectively. Primary Ab directed
+against HTT detects both mHTT (upper band) and wtHTT (lower band) protein. The
+bands were detected using SuperSignal™ West PicoPLUS Chemiluminescent
+Substrate (Thermo Scientific) and visualized using ImageQuant™ LAS4000
+(GE Health care). Each technical treatment replicate was blotted three times and
+differences in HTT and GAPDH protein levels were quantified using ImageJ
+software.</p></sec><sec id="s012"><title>Statistical analysis</title><p>Statistical analysis was conducted using GraphPad Prism 8.4.3. Two-way ANOVA
+(<xref rid="f1" ref-type="fig">Fig. 1</xref>) was used to assess differences
+in <italic toggle="yes">OCT4</italic> and <italic toggle="yes">PAX6</italic> levels during neural
+induction progress and between WT and HD genotype
+(****<italic toggle="yes">P</italic> &lt; 0.0001, ns indicates
+nonsignificant). One-way ANOVA (<xref rid="f2" ref-type="fig">Figs. 2</xref> and
+<xref rid="f3" ref-type="fig">3</xref>), Tukey's multiple comparison
+test, assessed significant differences among SCR14-, SCR19-, and CAG19-treated
+groups (*<italic toggle="yes">P</italic> &lt; 0.05,
+**<italic toggle="yes">P</italic> &lt; 0.01***<italic toggle="yes">P</italic> &lt; 0.001,
+****<italic toggle="yes">P</italic> &lt; 0.0001 and ns indicates
+nonsignificant differences).</p><fig position="float" id="f1" fig-type="figure" orientation="portrait"><label>FIG. 1.</label><caption><p>WT and HD patient-specific iPSCs readily differentiate into NSCs and
+subsequently neurons. <bold>(A)</bold> Schematic illustration of the
+main steps of the used method for generating NSCs from iPSC cultured as
+EBs. <bold>(B)</bold> (<bold>i</bold>) Representative
+immunocytochemistry images of WT and HD iPSC lines at d0 confirming
+presence of pluripotency markers OCT4 (<italic toggle="yes">violet</italic>) and
+SSEA4 (<italic toggle="yes">green</italic>). Nuclei were counterstained with DAPI
+(<italic toggle="yes">blue</italic>). Scale bars represent 10 μm.
+(<bold>ii</bold>) Neural rosette structures become prominent during
+the progress of neural differentiation of iPSCs and are positive for
+PAX6 (<italic toggle="yes">violet</italic>). Nuclei were counterstained with DAPI
+(<italic toggle="yes">blue</italic>). Scale bars represent 50 μm.
+(<bold>iii</bold>) Further differentiation results in the appearance
+of neuron-specific β-III tubulin-positive neurons
+(<italic toggle="yes">violet</italic>). Nuclei were counterstained with DAPI.
+Scale bars represent 20 μm. <bold>(C)</bold> During the
+process of differentiation both WT and HD iPSC lines terminate the
+pluripotency program and initiate neural differentiation. The
+<italic toggle="yes">OCT4</italic> and <italic toggle="yes">PAX6</italic> mRNA levels in both
+WT (<italic toggle="yes">black</italic>) and HD (<italic toggle="yes">magenta</italic>) lines were
+analyzed using RT-qPCR during the neural induction progress, that is, at
+day 0, 8, 12, and 22. Data are represented as mean and SD. Statistical
+analysis was performed using two-way ANOVA
+(****<italic toggle="yes">P</italic> &lt; 0.0001). NSC, neural stem
+cell; EB, embryoid body; iPSC, induced pluripotent stem cell; WT,
+wild-type.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nat.2021.0021_figure1.jpg"/></fig><fig position="float" id="f2" fig-type="figure" orientation="portrait"><label>FIG. 2.</label><caption><p>Gymnotic delivery of CAG19 induces efficient downregulation of
+<italic toggle="yes">HTT</italic> gene expression during the neural induction
+process. SCR14, SCR19, and CAG19 ONs (2 μM) were delivered
+using gymnosis into HD and WT lines during the progress of neural
+induction. The <italic toggle="yes">HTT</italic> mRNA expression, in both HD
+<bold>(A–C)</bold> and WT <bold>(D)</bold> cell lines, was
+analyzed at day 8, 12, and 22. The sample CAG19–10d represents
+the long-term effects of CAG19 on the <italic toggle="yes">HTT</italic> mRNA levels.
+The expression of <italic toggle="yes">HTT</italic> mRNA was normalized to
+<italic toggle="yes">HPRT1</italic> and the expression in nontreated cells was
+set to 100. Data are represented as mean and SD, and the symbols
+indicate the number of separate experiments. Statistical analysis was
+performed using one-way ANOVA Tukey's multiple comparisons test
+(*<italic toggle="yes">P</italic> &lt; 0.05,
+**<italic toggle="yes">P</italic> &lt; 0.01,
+***<italic toggle="yes">P</italic> &lt; 0.001,
+****<italic toggle="yes">P</italic> &lt; 0.0001 and ns
+indicates nonsignificant differences).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nat.2021.0021_figure2.jpg"/></fig><fig position="float" id="f3" fig-type="figure" orientation="portrait"><label>FIG. 3.</label><caption><p>CAG19 does not have adverse effect on <italic toggle="yes">in vitro</italic> NSC
+organization into neural rosette structures and NSC self-renewal.
+<bold>(A)</bold> Representative images of HD line confirming
+presence of neural rosette structures and self-renewal of NSCs in
+nontreated SCR19 and CAG19-treated cells. NSCs stain positive for PAX6
+(<italic toggle="yes">green</italic>) and the cell cycle marker Ki67
+(<italic toggle="yes">violet</italic>). Nuclei were counterstained with DAPI
+(<italic toggle="yes">blue</italic>). Scale bars represent 20 μm
+and scale bars in <italic toggle="yes">insets</italic> represent 10 μm.
+<bold>(B)</bold> Quantification of the size of neural rosette
+structures and the number of PAX6/Ki67-positive cells/neural rosette
+structure in nontreated, SCR19 and CAG19-treated cells. The diameter and
+the number of Ki67-positive cells was quantified in 35 neural rosette
+structures per experiment (<italic toggle="yes">n</italic> = 2).
+Data are represented as mean and SD.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nat.2021.0021_figure3.jpg"/></fig><p>The differences in <italic toggle="yes">HTT</italic> (<xref rid="f4" ref-type="fig">Fig.
+4B</xref><italic toggle="yes">), ATN, POU3F2, ATXN2, AR, BRI3BP,</italic> and
+<italic toggle="yes">DMPK</italic> mRNA levels at d43–d53 (<xref rid="f5" ref-type="fig">Fig. 5</xref>) and HTT protein levels between SCR19 and CAG19
+(<xref rid="f4" ref-type="fig">Fig. 4C</xref>) were assessed using unpaired
+Student's <italic toggle="yes">t</italic>-test.</p><fig position="float" id="f4" fig-type="figure" orientation="portrait"><label>FIG. 4.</label><caption><p>Gymnotic delivery of CAG19 induces efficient downregulation of
+<italic toggle="yes">HTT</italic> gene expression during the differentiation
+progress. <bold>(A)</bold> Representative immunocytochemistry images
+(<italic toggle="yes">n</italic> = 2) of maturing neural
+population at day 43, 48, and 53 postneural induction confirming
+presence of PAX6 (<italic toggle="yes">violet</italic>, <italic toggle="yes">upper
+panel</italic>), neuron-specific β-III tubulin-
+(<italic toggle="yes">green</italic>, <italic toggle="yes">upper panel</italic>),
+MAP2ab-positive neurons (<italic toggle="yes">green</italic>, <italic toggle="yes">lower
+panel</italic>), and S100-positive astrocytes
+(<italic toggle="yes">violet</italic>, <italic toggle="yes">lower panel</italic>). Nuclei were
+counterstained with DAPI (<italic toggle="yes">blue</italic>). Scale bars represent
+20 μm. <bold>(B, C)</bold> SCR19 and CAG19 ONs
+(2 μM) were delivered into HD line during the progress of
+differentiation. <bold>(B)</bold>
+<italic toggle="yes">HTT</italic> mRNA levels in HD cell line were analyzed at day 43
+(5 days of treatment), 45 (7 days of treatment), and 53 (15 days of
+treatment) of neural induction. The sample CAG19–7d represents
+the long-term effects of CAG19 on the <italic toggle="yes">HTT</italic> mRNA levels.
+The analysis of <italic toggle="yes">HTT</italic> mRNA was performed using primer
+probe sets spanning regions downstream of CAG•CTG repeats,
+normalized to <italic toggle="yes">HPRT1</italic>, and the expression in nontreated
+cells was set to 100%. Data are represented as mean and SD and
+the symbols indicate the number of separate experiments. Statistical
+analysis was performed using unpaired two-tailed Student's
+<italic toggle="yes">t</italic>-test between groups in the same day
+(**<italic toggle="yes">P</italic> &lt; 0.01,
+***<italic toggle="yes">P</italic> &lt; 0.001).
+<bold>(C)</bold> Western blot analysis of HTT and cleaved Caspase 3
+proteins in maturing neural cultures following CAG19 treatment. Cleaved
+caspase 3 (cl. Casp. 3) was used to investigate whether the CAG19 itself
+or its effect on HTT resulted in apoptosis. The relative HTT protein
+levels quantified using ImageJ and normalized to GAPDH are shown. Data
+are represented as mean and SD and the symbols indicate the number of
+technical replicates. Statistical analysis was performed using
+Student's <italic toggle="yes">t</italic>-test
+(*<italic toggle="yes">P</italic> &lt; 0.05).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nat.2021.0021_figure4.jpg"/></fig><fig position="float" id="f5" fig-type="figure" orientation="portrait"><label>FIG. 5.</label><caption><p>CAG19 ON does not affect <bold>(A)</bold>
+<italic toggle="yes">ATN1</italic>, <italic toggle="yes">POU3F2</italic>, <italic toggle="yes">ATXN2,
+AR</italic> or <bold>(B)</bold>
+<italic toggle="yes">BRI3BP</italic> and <italic toggle="yes">DMPK</italic> gene expression during
+the differentiation progress. SCR19 and CAG19 ONs (2 μM)
+were delivered into HD line during the progress of differentiation. mRNA
+expression was analyzed at day 43 (5 days of treatment), 45 (7 days of
+treatment), and 53 (15 days of treatment) of neural induction
+(<italic toggle="yes">n</italic> = 3). The sample
+CAG19–7d represents the long-term effects of CAG19 on the
+<italic toggle="yes">HTT</italic> mRNA levels. The analysis of mRNA levels was
+performed using primer probe sets spanning regions downstream of
+CAG•CTG repeats, the results were normalized to
+<italic toggle="yes">HPRT1</italic>, and the expression in nontreated cells was
+set to 100. Data are represented as mean and SD and the symbols indicate
+the number of separate experiments. Statistical analysis was performed
+using unpaired two-tailed Student's <italic toggle="yes">t</italic>-test
+between groups in the same day
+(***<italic toggle="yes">P</italic> &lt; 0.001).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="nat.2021.0021_figure5.jpg"/></fig><p>The data are represented as mean and SD and the symbols indicate either the
+number of separate experiments (<xref rid="f2" ref-type="fig">Fig. 2</xref>) or
+neural differentiations (<xref rid="f4" ref-type="fig">Figs. 4</xref> and <xref rid="f5" ref-type="fig">5</xref>).</p></sec></sec><sec sec-type="results" id="s013"><title>Results</title><sec id="s014"><title>Healthy control and HD patient-derived iPSCs are differentiated into neural
+lineage</title><p>Integration-free WT and HD iPSC lines were exposed to a stepwise differentiation
+protocol mimicking human neural development (<xref rid="f1" ref-type="fig">Fig.
+1A</xref>) to be used as a model for investigating the efficiency of the
+CAG19 ON to downregulate <italic toggle="yes">HTT</italic> gene expression in the early
+stages of neural development. Before differentiation, the pluripotency of iPSC
+lines was confirmed using immunofluorescence and confocal microscopy. Both WT
+and HD iPSC lines were positive for SSEA4, a glycolipid carbohydrate antigen
+expressed on the surface of human pluripotent cells, and the cell lines
+exhibited intense nuclear immunostaining for pluripotency marker OCT4 (<xref rid="f1" ref-type="fig">Fig. 1B</xref>: panel i, and <xref rid="SD3" ref-type="supplementary-material">Supplementary Fig. S1A</xref>).
+The WT and HD iPSC lines were cultured as EBs and neuralized by dual inhibition
+of SMAD combined with retinoid signaling to differentiate the iPSC lines into
+the neuroectodermal fate. At day 8, 12, and 22 postneural induction,
+confirmation of directed iPSC differentiation was investigated by expression
+levels of <italic toggle="yes">OCT4</italic> and <italic toggle="yes">PAX6</italic>. As expected, already
+on day 8, both lines showed <italic toggle="yes">PAX6</italic> neuroectodermal acquisition
+while <italic toggle="yes">OCT4</italic> expression was decreased (<xref rid="f1" ref-type="fig">Fig. 1C</xref>), suggesting that the cells have terminated the
+pluripotency program and initiated neural differentiation. Furthermore, on day
+8, both lines formed neural rosette structures with a morphology characteristic
+of early neuroepithelium and a feature of iPSC-derived NSCs [<xref rid="B38" ref-type="bibr">38–41</xref>]. This was further
+confirmed by immunofluorescence analysis showing the presence of PAX6 (<xref rid="f1" ref-type="fig">Fig. 1B</xref>: panel ii and <xref rid="SD3" ref-type="supplementary-material">Supplementary Fig. S1B</xref>).
+Subsequently, NSCs differentiated into neurons, as confirmed by the presence of
+early neuron-specific β-III tubulin-positive cells (<xref rid="f1" ref-type="fig">Fig. 1B</xref>: panel iii).</p><p>Taken together, these results demonstrate the successful differentiation of both
+WT and HD iPSC lines into NSCs and, subsequently, neurons.</p></sec><sec id="s015"><title>Gymnoticaly delivered CAG19 ON downregulates <italic toggle="yes">HTT</italic> mRNA during
+the iPSC differentiation</title><p>Having confirmed the differentiation potency of WT and HD iPSC lines, we
+investigated whether the CAG19 ON, designed to target the template strand of
+<italic toggle="yes">HTT</italic> repeat region, efficiently downregulates
+<italic toggle="yes">HTT</italic> gene expression during the neural induction process.
+This ON has previously shown to decrease the <italic toggle="yes">HTT</italic> mRNA levels
+with some selectivity toward mutant allele in comparison to other investigated
+shorter ONs [<xref rid="B20" ref-type="bibr">20</xref>].</p><p>The CAG•CTG repeat-expanded alleles are unstable in both the germline and
+somatic cells [<xref rid="B42" ref-type="bibr">42–44</xref>],
+which can result in the expansion, deletion, and contraction of the repeat
+region [<xref rid="B43" ref-type="bibr">43</xref>]. Therefore, we confirmed the
+presence of an expanded mt allele in the HD iPSC line, and in the first stages
+of neural induction (<xref rid="SD4" ref-type="supplementary-material">Supplementary Fig. S2</xref>).</p><p>Since ON delivery to the central nervous system (CNS) typically involves direct
+injection/infusion techniques, such as intrathecal or intracerebroventricular
+infusion [<xref rid="B45" ref-type="bibr">45</xref>], the most clinically
+relevant uptake mechanism to study <italic toggle="yes">in vitro</italic> would be the
+gymnosis delivery strategy [<xref rid="B46" ref-type="bibr">46</xref>].
+Therefore, WT and HD iPSC lines were treated with CAG19 ON, using gymnosis.
+Control ONs having the same chemical modification, but nontargeting sequences
+(scrambled repeat ONs, SCR14, and SCR19) were also delivered using gymnosis.
+SCR14 was previously tested on HD fibroblasts together with another scrambled ON
+and several mismatch controls, all showing no significant effect on
+<italic toggle="yes">HTT</italic> mRNA and HTT protein [<xref rid="B20" ref-type="bibr">20</xref>], whereas SCR19 was included in this study to have a control with
+the same number of nucleotides as CAG19. Cell treatment started at day 0 of
+neural induction and maintained during the progress of differentiation until day
+22 (<xref rid="f1" ref-type="fig">Fig. 1A</xref> for developmental stages). The
+total concentration of ONs was kept at 2 μM by the addition of ONs
+each time the culturing medium was exchanged. To determine the expression levels
+of the <italic toggle="yes">HTT</italic> gene, the treated cells were harvested at three
+separate time points, that is, end of neural induction of EBs (day 8), prominent
+neural rosette structures (day 12), and NSCs and early neurons (day 22).
+<italic toggle="yes">HTT</italic> mRNA levels were significantly decreased following the
+CAG19 ON treatment, compared with SCR14 and SCR19 at all analyzed developmental
+stages in the HD cell line with a maximum of 50% downregulation at day 12
+and 22 (<xref rid="f2" ref-type="fig">Fig. 2A–C</xref>). This indicates
+that the effect observed in the CAG19-treated cells results from specific
+targeting of the <italic toggle="yes">HTT</italic> gene. Since CAG19 cannot discriminate
+between the wt and mt <italic toggle="yes">HTT</italic> alleles, that is, allele-nonspecific,
+<italic toggle="yes">HTT</italic> mRNA levels were also decreased in the WT cell line
+(<xref rid="f2" ref-type="fig">Fig. 2D</xref>).</p><p>To evaluate the long-term effects of the CAG19, the HD cells were treated during
+the first 12 days with the ON, followed by cultivation in CAG19-free media for
+the following 10 days. Cells were harvested for analysis of <italic toggle="yes">HTT</italic>
+gene expression at day 22. There is an indication that the <italic toggle="yes">HTT</italic>
+mRNA expression increases after omitting CAG19 from the culturing media for 10
+days. However, this potential alteration, that is, the difference of
+<italic toggle="yes">HTT</italic> mRNA levels between the CAG19 and CAG19–10d
+treatments, did not reach statistical significance (<xref rid="f2" ref-type="fig">Fig. 2C</xref>, CAG19 -10d).</p><p>These results indicate that the CAG19 ON efficiently downregulates
+<italic toggle="yes">HTT</italic> gene expression during the directed neural
+differentiation of iPSCs.</p></sec><sec id="s016"><title>CAG19 ON treatment does not affect <italic toggle="yes">in vitro</italic> NSC organization
+into neural rosette structures or the NSC pool</title><p>Since ONs may cause adverse effects by either affecting the target or through
+off-targeting, we next investigated whether the CAG19 induces <italic toggle="yes">in
+vitro</italic> neurodevelopmental toxicity. For this purpose, the capacity
+of NSCs to self-organize into neural rosette structures, generated during a
+critical morphogenetic process during both <italic toggle="yes">in vivo</italic> and
+<italic toggle="yes">in vitro</italic> neural development [<xref rid="B38" ref-type="bibr">38–41</xref>], was assessed as
+functional/morphologic endpoint. As in the above-described experiments, gymnotic
+treatment of cells with CAG19 was initiated at day 0 and maintained during the
+differentiation progress. Immunofluorescence analysis, combined with confocal
+microscopy, revealed the presence of PAX6-positive neural rosette structures
+regardless of CAG19 treatment (<xref rid="f3" ref-type="fig">Fig. 3A</xref>,
+DAPI/PAX6).</p><p>During this developmental stage, neural rosette structures serve as a niche for
+the maintenance and proliferation, that is, self-renewal, of NSCs with the
+capacity to differentiate into neurons and glia during subsequent developmental
+stages. To investigate whether the CAG19 affects NSC proliferation within neural
+rosette structures, and consequently, the future neural pool, that is, number of
+neuronal and glial cells, immunofluorescence analysis using the cell cycle
+marker Ki67 was employed. The Ki67-positive cells were observed in the apical
+part of neural rosette structures (<xref rid="f3" ref-type="fig">Fig. 3A</xref>,
+PAX6/Ki67), suggesting active proliferation of NSCs. Furthermore, quantification
+of Ki67-positive cells localized solely to the apical part of rosette structures
+indicates similar number of Ki67-positive cells regardless of CAG19 treatment
+(<xref rid="f3" ref-type="fig">Fig. 3B</xref>). In addition, the size, that
+is, diameter, of the rosette structures was measured suggesting that CAG19 ON
+does not affect NSC proliferation (<xref rid="f3" ref-type="fig">Fig.
+3B</xref>).</p><p>Taken together, these results suggest that the CAG19 ON does not have adverse
+effects on either NSC organization into neural rosette structures or NSC
+pool.</p></sec><sec id="s017"><title>CAG19 ON downregulates HTT mRNA in NSC following magnetofection</title><p>For targeted <italic toggle="yes">in vitro</italic> and <italic toggle="yes">in vivo</italic> gene therapy
+application, magnetofection-based technology using biocompatible nanoparticles
+can be used [<xref rid="B47" ref-type="bibr">47</xref>]. Given that
+magnetofection delivers genetic material to otherwise hard-to-transfect NSCs and
+early neurons [<xref rid="B48" ref-type="bibr">48–50</xref>], we
+sought to evaluate it as an AGO delivery strategy. Therefore, 100 nM of
+CAG19 ON, as well as control nontargeting SCR14 and SCR19 ONs were associated
+with superparamagnetic nanoparticles at different volume ratios and delivered to
+NSCs and neurons (d37) by application of a magnetic field. <italic toggle="yes">HTT</italic>
+gene expression levels were analyzed 48 h postmagnetofection revealing
+significantly decreased <italic toggle="yes">HTT</italic> mRNA levels (<xref rid="SD5" ref-type="supplementary-material">Supplementary Fig.
+S3</xref>).</p><p>These data indicate efficient CAG19 ON delivery using magnetofection as a
+delivery strategy and further confirms its <italic toggle="yes">HTT</italic> downregulating
+potency.</p></sec><sec id="s018"><title>CAG19 ON gymnotic delivery downregulates HTT mRNA in neurons without
+affecting the expression of other CAG•CTG repeat-containing genes</title><p>HD cells were further differentiated into neurons and astrocytes to assess the
+CAG19 ON potency to silence <italic toggle="yes">HTT</italic> gene expression during the
+neural differentiation process. BrainPhys Neuronal Medium supplemented with BDNF
+and GDNF was used to enhance neuronal maturation [<xref rid="B51" ref-type="bibr">51</xref>]. At day 43, 48, and 53 postneural induction,
+confirmation of neural differentiation was performed using immunofluorescence
+analysis combined with confocal microscopy. As expected, during all investigated
+developmental stages, the presence of
+PAX6-(45% ± 18% at day 43,
+43% ± 10% at day 48, and
+35% ± 12% at day 53), β−III
+Tub-(ratio between %area of β−III Tub and DAPI:
+1.48 ± 0.29 at day 43, 1.56 ± 0.48 at
+day 48, and 1.4 ± 0.3 at day 53), and mature
+neuron-specific microtubule-associated protein 2, isoforms a and b (MAP2ab)-
+(ratio between %area of MAP2 and DAPI: 1.73 ± 0.19
+at day 43, 1.4 ± 0.53 at day 48, and
+2.2 ± 1 at day 53), and astrocyte-specific S100
+calcium-binding protein (S100) (0.19% ± 0.19%
+at day 43, 0.22% ± 0.38% at day 48, and
+0.72% ± 0.8% at day 53)-positive cells was
+confirmed (<xref rid="f4" ref-type="fig">Fig. 4A</xref>, upper and lower panel).
+These results indicate the presence of NSCs and neurons but also astrocytes at
+indicated time points.</p><p>At these developmental stages, the culture, predominated by young and mature
+neurons sensitive to any microenvironmental changes, was treated using gymnosis
+with 2 μM CAG19 ON and nontargeting SCR19 ON, as it has the same
+number of nucleotides as CAG19. The treatment was initiated at day 38 of neural
+induction and maintained for 15 days during maturation. To determine the
+expression levels of the <italic toggle="yes">HTT</italic> gene, treated cells were harvested
+after 5, 7, and 15 days (day 43, 45, and 53 postinduction, respectively).
+<italic toggle="yes">HTT</italic> mRNA levels were significantly decreased following
+CAG19 ON, in comparison to SCR19, treatment during all analyzed time points,
+with a maximum of 61% downregulation at day 15 (<xref rid="f4" ref-type="fig">Fig. 4B</xref>). Furthermore, the CAG19 ON long-term effect was
+evaluated, revealing the remaining <italic toggle="yes">HTT</italic> mRNA downregulation to
+be significant and stable during the assessed time (<xref rid="f4" ref-type="fig">Fig. 4B</xref>, 15d, CAG19–7d).</p><p>Based on the persistent <italic toggle="yes">HTT</italic> mRNA downregulation at this
+developmental stage and reported HTT-lowering effect in fibroblasts [<xref rid="B20" ref-type="bibr">20</xref>], we investigated the hypothesis that
+CAG19 ON treatment decreases HTT protein levels in the above-described cultures.
+Western blot was performed 15 days after initiation of the treatment.
+Quantification using ImageJ revealed that the HTT protein decrease is
+nonsignificant compared with SCR19-treated cells, while the decrease is
+significant compared with nontreated cells (<xref rid="f4" ref-type="fig">Fig.
+4C</xref>). Furthermore, the absence of cleaved caspase 3 (Cl. Casp. 3),
+suggests that the observed HTT protein decrease is neither dependent on, nor
+accompanied by apoptosis (<xref rid="f4" ref-type="fig">Fig. 4C</xref>).</p><p>In addition to <italic toggle="yes">HTT</italic>, several other genes contain a region of
+CAG•CTG trinucleotide repeats representing potential off-targets for
+CAG19 ON and could result in adverse effects. By selecting four genes with
+either proximally or distally located CAG•CTG trinucleotide repeats,
+potential CAG19 ON off-targets were addressed; the POU-homeodomain transcription
+factor BRN2, encoded by <italic toggle="yes">POU3F2</italic>, involved in neural formation
+and cell fate determination [<xref rid="B52" ref-type="bibr">52</xref>],
+migration [<xref rid="B53" ref-type="bibr">53</xref>], neurogenesis, and
+positioning of cortical neurons [<xref rid="B54" ref-type="bibr">54</xref>,<xref rid="B55" ref-type="bibr">55</xref>] and the transcriptional corepressor
+Atrophin-1, encoded by <italic toggle="yes">ATN1</italic> and mutated in
+dentatorubral–pallidoluysian atrophy; Ataxin 2, an RNA-binding protein
+encoded by <italic toggle="yes">ATXN2</italic>, and implicated in amyotrophic lateral
+sclerosis and spinocerebellar ataxia-2 [<xref rid="B56" ref-type="bibr">56</xref>]; and androgen receptor, encoded by <italic toggle="yes">AR</italic> and
+implicated in transcriptional regulation and proliferation [<xref rid="B57" ref-type="bibr">57</xref>]. Gymnotic treatment was performed as in
+the above-described experiments. Using quantitative reverse transcriptase PCR
+(RT-qPCR) quantification with different primer-probe sets spanning regions
+downstream (<xref rid="f5" ref-type="fig">Fig. 5</xref>) or upstream (<xref rid="SD6" ref-type="supplementary-material">Supplementary Fig. S4</xref>) of
+the CAG•CTG repeats revealed that CAG19 ON, compared with SCR19,
+treatment does not significantly affect the expression levels of <italic toggle="yes">POU3F2,
+ATN1, ATXN2,</italic> or <italic toggle="yes">AR</italic> (<xref rid="f5" ref-type="fig">Fig. 5A</xref> and <xref rid="SD6" ref-type="supplementary-material">Supplementary Fig. S4</xref>).</p><p>The CAG19 ON off-target effects on CUG repeat-containing transcripts, that is,
+steric block antisense efficiency, was investigated using two genes:
+BRI3-binding protein (BRI3BP) [<xref rid="B58" ref-type="bibr">58</xref>], with
+CTG•CAG repeats in exon 1 and DM1 protein kinase (DMPK), a nonreceptor
+serine/threonine protein kinase, with the CTG•CAG repeats in the
+3′ untranslated region (3’UTR) [<xref rid="B59" ref-type="bibr">59</xref>]. RT-qPCR analysis revealed no significant downregulation of
+<italic toggle="yes">BRI3BP</italic> compared with SCR19 (<xref rid="f5" ref-type="fig">Fig. 5B</xref>, panel <italic toggle="yes">BRI3BP</italic>). After 5 days we observed
+significant downregulation of <italic toggle="yes">DMPK</italic>, however, this effect
+disappeared at day 7 and 15 (<xref rid="f5" ref-type="fig">Fig. 5B</xref>, panel
+DMPK).</p><p>These results indicate that CAG19 ON exerts a specific downregulating effect on
+<italic toggle="yes">HTT</italic> gene expression without affecting additionally
+investigated CAG•CTG repeat-containing genes or CUG repeat-containing
+transcripts following gymnotic delivery in the patient-specific NSCs, neurons,
+and astrocytes.</p></sec></sec><sec sec-type="discussion" id="s019"><title>Discussion</title><p>In this report, we neuralized WT and HD patient-derived iPSCs to investigate the
+transcriptional inhibition potency of CAG19 ON during neural <italic toggle="yes">in
+vitro</italic> development. Furthermore, the CAG19 ON off-targeting and its
+effect on neural rosette formation were assessed. To resemble intended neuronal
+target cells, we studied an HD patient-derived iPSC line carrying 109 repeats in the
+disease allele. Thus, although a 109-repeat allele is considerably shorter than most
+somatically expanded alleles [<xref rid="B60" ref-type="bibr">60</xref>], this was
+the largest number of repeats in an iPSC line that we could obtain.</p><p>CAG19 ON, a DNA/LNA mixmer with a PS backbone, is designed to target the
+<italic toggle="yes">HTT</italic> gene through binding of the trinucleotide-repeat DNA and
+was previously shown to efficiently downregulate expression of <italic toggle="yes">HTT</italic>
+mRNA and protein in HD patient fibroblasts [<xref rid="B20" ref-type="bibr">20</xref>]. The mechanism of action involves strand invasion into dsDNA,
+binding to the template strand and, consequently, transcriptional inhibition. The
+<italic toggle="yes">HTT</italic> mRNA downregulation is observed during several stages of
+neural differentiation (<xref rid="f2" ref-type="fig">Figs. 2A–C</xref>,
+<xref rid="f4" ref-type="fig">4B</xref>) and is in accordance with the
+previously reported effect in HD patient fibroblasts [<xref rid="B20" ref-type="bibr">20</xref>]. However, the effect of the CAG19 on the HTT protein level
+was not pronounced (<xref rid="f4" ref-type="fig">Fig. 4C</xref>). This might depend
+on the culture's heterogeneity, but further studies investigating this
+difference in detail are needed.</p><p>CAG19 ON also downregulates <italic toggle="yes">HTT</italic> expression in the WT cell line
+(<xref rid="f2" ref-type="fig">Fig. 2D</xref>). This finding is expected since
+CAG19 ON is targeting the CAG•CTG repeat sequence in the first exon of
+<italic toggle="yes">HTT</italic> gene found in both wt and mt alleles and suggests that its
+mechanism of action is not dependent on the repeat length. However, the
+allele-nonspecific reduction of total <italic toggle="yes">HTT</italic> mRNA is shown to be well
+tolerated in several <italic toggle="yes">in vitro</italic> and <italic toggle="yes">in vivo</italic> studies
+and, importantly, in clinical trials [<xref rid="B7" ref-type="bibr">7–9</xref>,<xref rid="B11" ref-type="bibr">11</xref>,<xref rid="B13" ref-type="bibr">13</xref>], and thus is considered acceptable.</p><p>The anti-gene off-targeting analysis indicates unaffected mRNA expression of four
+other CAG•CTG repeat-containing genes. The repeats are located either
+proximally or distally to the promoter: <italic toggle="yes">ATXN2</italic> (&lt;30
+CAG•CTG repeats exon 1), <italic toggle="yes">AR</italic> (8–37 CAG•CTG
+repeats exon 1), <italic toggle="yes">POU3F2</italic> (6 CAG•CTG repeats in exon 1), and
+<italic toggle="yes">ATN1</italic> (15–35 CAG•CTG repeats in exon 5) (<xref rid="f5" ref-type="fig">Fig. 5A</xref>). These results further confirm that the
+CAG19 ON´s mechanism of action is not dependent on the distance between
+different regulatory elements and the CAG19 ON targeted site and suggest
+<italic toggle="yes">HTT</italic> specificity. The CAG19 downregulating potency might depend
+on chromatin changes affecting the accessibility of ONs within the repeat region.
+Furthermore, we evaluated antisense off-target effect by selecting
+<italic toggle="yes">BRI3BP</italic> (9–10 repeats CTG•CAG repeats in exon 1)
+and <italic toggle="yes">DMPK</italic> (5–38 CTG•CAG repeats in 3'UTR). The
+CAG19 ON is an LNA/DNA mixmer and would therefore work as a steric block ASO. These
+generally mask splicing signals, AUG start codon, or polyadenylations signal to
+exert their function [<xref rid="B61" ref-type="bibr">61–63</xref>].
+We observed only minor changes in the expression of <italic toggle="yes">DMPK</italic> at day 5
+and no effect on <italic toggle="yes">BRI3BP</italic> (<xref rid="f5" ref-type="fig">Fig.
+5B</xref>). Although we did not detect any anti-gene or antisense off-targeting
+in this study, further study using RNA sequencing would be necessary to enable more
+detailed evaluation.</p><p>The CAG19 ON effect on <italic toggle="yes">HTT</italic> downregulation is persistent during the
+treatment period, although a nonsignificant increase in <italic toggle="yes">HTT</italic>
+expression is observed when investigating long-term effects in NSCs and in neurons
+(<xref rid="f2" ref-type="fig">Figs. 2C</xref>, <xref rid="f4" ref-type="fig">4B</xref>). This is in accordance with previous results in the HD fibroblasts
+[<xref rid="B20" ref-type="bibr">20</xref>], since constant <italic toggle="yes">HTT</italic>
+downregulation could still be detected here for 10 and 7 days after dosing,
+respectively. This indicates that the ON remains active for a more extended period,
+which is not surprising since PS-modified ONs resist degradation by endo- and
+exonucleases [<xref rid="B64" ref-type="bibr">64</xref>,<xref rid="B65" ref-type="bibr">65</xref>]. In <italic toggle="yes">in vivo</italic> experiments or in clinical
+settings, it is reasonable to assume based on ASO treatment strategies in clinical
+trials, that the CAG19 ON effect will become transient as time progresses. This is
+advantageous if an unwanted outcome, such as excessive downregulation of either
+wt<italic toggle="yes">HTT</italic> or off-targets occurs.</p><p>Moreover, we investigated the CAG19 ON adverse effects related to the NSC
+organization into neural rosette structures, a critical morphogenetic process during
+neural development. The CAG19 treatment achieving 35%–50%
+<italic toggle="yes">HTT</italic> downregulation (<xref rid="f2" ref-type="fig">Fig.
+2A–C</xref>), neither compromises the emergence of neural rosette
+structures (<xref rid="f3" ref-type="fig">Fig. 3A</xref>) nor the NSC proliferation
+(<xref rid="f3" ref-type="fig">Fig. 3</xref>), essential for the neuronal and
+glial pool. These results indicate that the CAG19 ON is not adversely affecting
+mechanisms important for this developmental stage and could also suggest possible
+CAG19 ON downregulating effects on adult NSC pool, as it is proposed that a
+neurogenic ventricular zone persists in the adult mammalian brain [<xref rid="B66" ref-type="bibr">66</xref>]. However, further studies using
+transcriptome sequencing are needed to investigate these crucial questions in
+detail.</p><p>To effectively treat HD, ONs, or any other therapeutic molecules must be efficiently
+delivered to the cell type affected by the disorder. Stem cells, in general, and
+neurons, in particular, are cell types that are hard to transfect. In our
+experiments, CAG19 ON shows the ability to exert downregulation of
+<italic toggle="yes">HTT</italic> gene expression in NSCs and neurons without the aid of
+potentially toxic transfection reagents. Gymnotic delivery is the most clinically
+relevant since, in general, ONs delivered to CNS using such routes have shown
+half-lives of several weeks and a broad distribution across brain regions [<xref rid="B13" ref-type="bibr">13</xref>]. Furthermore, it shows good correlation
+between <italic toggle="yes">in vitro</italic> and <italic toggle="yes">in vivo</italic> results [<xref rid="B46" ref-type="bibr">46</xref>]. DNA targeting ONs, like other ONs, are
+entering cells through endocytosis [<xref rid="B67" ref-type="bibr">67</xref>].
+Thus, the concentration of ONs is substantially reduced as it is eventually
+degraded. Our treatment and differentiation experiments are executed in a 3D
+environment during the first 8 days, that is, as EBs (<xref rid="f1" ref-type="fig">Fig. 1A</xref>), but significant <italic toggle="yes">HTT</italic> mRNA downregulation is
+achieved (<xref rid="f2" ref-type="fig">Fig. 2A</xref>). Hence, the CAG19 ON and the
+HD model system could also be used to investigate whether ONs are delivered to cells
+in the intrasphere 3D environment through exosomes, which could be important for
+several research fields.</p><p>In addition to gymnosis, we sought to evaluate a magnetofection-based technology
+[<xref rid="B47" ref-type="bibr">47</xref>] as an ON delivery strategy.
+Magnetofection can potentiate the efficacy of any vector up to several hundred-folds
+and allow reduction of the duration of gene delivery [<xref rid="B47" ref-type="bibr">47</xref>], and, in comparison to gymnosis, decreased amounts of
+administered ON are needed. Importantly, it can deliver genetic material to
+otherwise hard-to-transfect NSCs and early neurons. The achieved
+40%–45% <italic toggle="yes">HTT</italic> mRNA downregulation (<xref rid="SD5" ref-type="supplementary-material">Supplementary Fig. S3</xref>) is
+consistent with the gymnosis experiments, further strengthening the anti-gene
+concept.</p><p>In summary, we differentiated HD patient-derived and healthy control iPSCs to
+investigate the transcriptional inhibition potency of AGOs during <italic toggle="yes">in
+vitro</italic> human neurodevelopment. CAG19 ON targets the DNA template strand
+of the CAG•CTG trinucleotide-repeats in the <italic toggle="yes">HTT</italic> gene. We
+demonstrate efficient downregulation of <italic toggle="yes">HTT</italic> mRNA following gymnosis
+into NSCs and neurons, suggesting that NSCs and, importantly, neurons can be
+targeted under conditions resembling the clinical method of choice for treating CNS
+disorders [<xref rid="B45" ref-type="bibr">45</xref>,<xref rid="B68" ref-type="bibr">68</xref>]. Furthermore, we show that the CAG19 ON treatment does not
+compromise the emergence of neural rosette structures, self-renewal of NSCs, or
+<italic toggle="yes">ATN1</italic>, <italic toggle="yes">POU3F2, ATXN2, AR, BRI3BP,</italic> and
+<italic toggle="yes">DMPK</italic> expression. Thus, these results further validate the
+LNA/DNA CAG19 ON-based anti-gene strategy as a potent therapeutic concept for
+transcriptional inhibition of the <italic toggle="yes">HTT</italic> gene.</p></sec><sec sec-type="supplementary-material"><title>Supplementary Material</title><supplementary-material id="SD1" position="float" content-type="local-data" orientation="portrait"><caption><title>Supplemental data</title></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Supp_TableS1-S2.pdf" id="d96e1529" position="anchor" orientation="portrait"/></supplementary-material><supplementary-material id="SD2" position="float" content-type="local-data" orientation="portrait"><caption><title>Supplemental data</title></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Supp_TableS3.pdf" id="d96e1533" position="anchor" orientation="portrait"/></supplementary-material><supplementary-material id="SD3" position="float" content-type="local-data" orientation="portrait"><caption><title>Supplemental data</title></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Supp_FigS1.pdf" id="d96e1537" position="anchor" orientation="portrait"/></supplementary-material><supplementary-material id="SD4" position="float" content-type="local-data" orientation="portrait"><caption><title>Supplemental data</title></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Supp_FigS2.pdf" id="d96e1541" position="anchor" orientation="portrait"/></supplementary-material><supplementary-material id="SD5" position="float" content-type="local-data" orientation="portrait"><caption><title>Supplemental data</title></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Supp_FigS3.pdf" id="d96e1545" position="anchor" orientation="portrait"/></supplementary-material><supplementary-material id="SD6" position="float" content-type="local-data" orientation="portrait"><caption><title>Supplemental data</title></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="Supp_FigS4.pdf" id="d96e1549" position="anchor" orientation="portrait"/></supplementary-material></sec></body><back><ack><title>Acknowledgments</title><p>The authors would like to thank Carolina Wieczorek-Ervik for technical assistance.
+The authors thank the NINDS Human Cell and Data Repository at the Coriell Institute
+for Medical Research and the NINDS Human Cell and Data Repository at RUCDR Infinite
+Biologics for providing human WT (ND41658) and HD (ND4223) iPSC lines.</p></ack><sec sec-type="COI-statement" id="s020"><title>Author Disclosure Statement</title><p>C.I.E.S., E.M.Z., J.W., K.E.L., O.G., and R.Z. have a pending patent application
+entitled”: Therapeutic method for Huntington's disease.”</p></sec><sec id="s021"><title>Funding Information</title><p>T.U. is funded by the European Union's Horizon 2020 research and innovation
+290 program under the Marie Sklodowska-Curie grant agreement No 721613 (grant to
+CIES). R.Z. and C.I.E.S. are supported by the Swedish Research Council
+(#2017–02131), Vinnova/SweLife, Hjärnfonden, and Region Stockholm.
+H.Z. is a Wallenberg Scholar supported by grants from the Swedish Research Council
+(#2018–02532), the European Research Council (#681712), Swedish State Support
+for Clinical Research (#ALFGBG-720931), and the UK Dementia Research Institute at
+UCL. E.H. is supported by grants from the Swedish Research Council
+(#2016–00986), Swedish State Support for Clinical Research (#ALFGBG-427611),
+and Alzheimerfonden (#AF-640391). T.O. is supported by grants from the
+Göteborg Medical Society (#GLS-779611 and #GLS-878401). D.V.H. is supported
+by a grant from the Åhlén foundation (#mC34 h18). O.S. is supported by
+a PhD grant from the Egyptian Ministry of Higher Education.</p></sec><sec id="s022"><title>Supplementary Material</title><p>
+<xref rid="SD1" ref-type="supplementary-material">Supplementary Table S1</xref>
+</p><p>
+<xref rid="SD1" ref-type="supplementary-material">Supplementary Table S2</xref>
+</p><p>
+<xref rid="SD2" ref-type="supplementary-material">Supplementary Table S3</xref>
+</p><p>
+<xref rid="SD3" ref-type="supplementary-material">Supplementary Figure S1</xref>
+</p><p>
+<xref rid="SD4" ref-type="supplementary-material">Supplementary Figure S2</xref>
+</p><p>
+<xref rid="SD5" ref-type="supplementary-material">Supplementary Figure S3</xref>
+</p><p>
+<xref rid="SD6" ref-type="supplementary-material">Supplementary Figure S4</xref>
+</p></sec><ref-list content-type="parsed"><title>References</title><ref id="B1"><label>1.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>MacDonald</surname>
+<given-names>ME</given-names></string-name>,
+<string-name name-style="western"><given-names>CM</given-names>
+<surname>Ambrose</surname></string-name>,
+<string-name name-style="western"><given-names>MP</given-names>
+<surname>Duyao</surname></string-name>,
+<string-name name-style="western"><given-names>RH</given-names>
+<surname>Myers</surname></string-name>,
+<string-name name-style="western"><given-names>C</given-names>
+<surname>Lin</surname></string-name>,
+<string-name name-style="western"><given-names>L</given-names>
+<surname>Srinidhi</surname></string-name>,
+<string-name name-style="western"><given-names>G</given-names>
+<surname>Barnes</surname></string-name>,
+<string-name name-style="western"><given-names>SA</given-names>
+<surname>Taylor</surname></string-name>,
+<string-name name-style="western"><given-names>M</given-names>
+<surname>James</surname></string-name>, <etal><italic toggle="yes">et
+al.</italic></etal></person-group> (<year>1993</year>). <article-title>A
+novel gene containing a trinucleotide repeat that is expanded and unstable
+on Huntington's disease chromosomes</article-title>.
+<source>Cell</source>
+<volume>72</volume>:<fpage>971</fpage>–<lpage>983</lpage>.<pub-id pub-id-type="pmid">8458085</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/0092-8674(93)90585-e</pub-id></mixed-citation></ref><ref id="B2"><label>2.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Gutekunst</surname>
+<given-names>CA</given-names></string-name>,
+<string-name name-style="western"><given-names>SH</given-names>
+<surname>Li</surname></string-name>,
+<string-name name-style="western"><given-names>H</given-names>
+<surname>Yi</surname></string-name>,
+<string-name name-style="western"><given-names>JS</given-names>
+<surname>Mulroy</surname></string-name>,
+<string-name name-style="western"><given-names>S</given-names>
+<surname>Kuemmerle</surname></string-name>,
+<string-name name-style="western"><given-names>R</given-names>
+<surname>Jones</surname></string-name>,
+<string-name name-style="western"><given-names>D</given-names>
+<surname>Rye</surname></string-name>,
+<string-name name-style="western"><given-names>RJ</given-names>
+<surname>Ferrante</surname></string-name>,
+<string-name name-style="western"><given-names>SM</given-names>
+<surname>Hersch</surname></string-name> and
+<string-name name-style="western"><given-names>XJ</given-names>
+<surname>Li</surname></string-name></person-group>. (<year>1999</year>).
+<article-title>Nuclear and neuropil aggregates in Huntington's
+disease: relationship to neuropathology</article-title>. <source>J
+Neurosci</source>
+<volume>19</volume>:<fpage>2522</fpage>–<lpage>2534</lpage>.<pub-id pub-id-type="pmid">10087066</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1523/JNEUROSCI.19-07-02522.1999</pub-id><pub-id pub-id-type="pmcid">PMC6786077</pub-id></mixed-citation></ref><ref id="B3"><label>3.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Rue</surname>
+<given-names>L</given-names></string-name>,
+<string-name name-style="western"><given-names>M</given-names>
+<surname>Banez-Coronel</surname></string-name>,
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Creus-Muncunill</surname></string-name>,
+<string-name name-style="western"><given-names>A</given-names>
+<surname>Giralt</surname></string-name>,
+<string-name name-style="western"><given-names>R</given-names>
+<surname>Alcala-Vida</surname></string-name>,
+<string-name name-style="western"><given-names>G</given-names>
+<surname>Mentxaka</surname></string-name>,
+<string-name name-style="western"><given-names>B</given-names>
+<surname>Kagerbauer</surname></string-name>,
+<string-name name-style="western"><given-names>MT</given-names>
+<surname>Zomeno-Abellan</surname></string-name>,
+<string-name name-style="western"><given-names>Z</given-names>
+<surname>Aranda</surname></string-name>, <etal><italic toggle="yes">et
+al.</italic></etal></person-group> (<year>2016</year>).
+<article-title>Targeting CAG repeat RNAs reduces Huntington's disease
+phenotype independently of huntingtin levels</article-title>. <source>J Clin
+Invest</source>
+<volume>126</volume>:<fpage>4319</fpage>–<lpage>4330</lpage>.<pub-id pub-id-type="pmid">27721240</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1172/JCI83185</pub-id><pub-id pub-id-type="pmcid">PMC5096913</pub-id></mixed-citation></ref><ref id="B4"><label>4.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Rubinsztein</surname>
+<given-names>DC</given-names></string-name> and
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Carmichael</surname></string-name></person-group>.
+(<year>2003</year>). <article-title>Huntington's disease: molecular
+basis of neurodegeneration</article-title>. <source>Expert Rev Mol
+Med</source>
+<volume>5</volume>:<fpage>1</fpage>–<lpage>21</lpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1017/S1462399403006549</pub-id><pub-id pub-id-type="pmid">14585171</pub-id></mixed-citation></ref><ref id="B5"><label>5.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Yamamoto</surname>
+<given-names>A</given-names></string-name>,
+<string-name name-style="western"><given-names>JJ</given-names>
+<surname>Lucas</surname></string-name> and
+<string-name name-style="western"><given-names>R</given-names>
+<surname>Hen</surname></string-name></person-group>.
+(<year>2000</year>). <article-title>Reversal of neuropathology and motor
+dysfunction in a conditional model of Huntington's
+disease</article-title>. <source>Cell</source>
+<volume>101</volume>:<fpage>57</fpage>–<lpage>66</lpage>.<pub-id pub-id-type="pmid">10778856</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/S0092-8674(00)80623-6</pub-id></mixed-citation></ref><ref id="B6"><label>6.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Diaz-Hernandez</surname>
+<given-names>M</given-names></string-name>,
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Torres-Peraza</surname></string-name>,
+<string-name name-style="western"><given-names>A</given-names>
+<surname>Salvatori-Abarca</surname></string-name>,
+<string-name name-style="western"><given-names>MA</given-names>
+<surname>Moran</surname></string-name>,
+<string-name name-style="western"><given-names>P</given-names>
+<surname>Gomez-Ramos</surname></string-name>,
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Alberch</surname></string-name> and
+<string-name name-style="western"><given-names>JJ</given-names>
+<surname>Lucas</surname></string-name></person-group>.
+(<year>2005</year>). <article-title>Full motor recovery despite striatal
+neuron loss and formation of irreversible amyloid-like inclusions in a
+conditional mouse model of Huntington's disease</article-title>.
+<source>J Neurosci</source>
+<volume>25</volume>:<fpage>9773</fpage>–<lpage>9781</lpage>.<pub-id pub-id-type="pmid">16237181</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1523/JNEUROSCI.3183-05.2005</pub-id><pub-id pub-id-type="pmcid">PMC6725739</pub-id></mixed-citation></ref><ref id="B7"><label>7.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Boudreau</surname>
+<given-names>RL</given-names></string-name>,
+<string-name name-style="western"><given-names>JL</given-names>
+<surname>McBride</surname></string-name>,
+<string-name name-style="western"><given-names>I</given-names>
+<surname>Martins</surname></string-name>,
+<string-name name-style="western"><given-names>S</given-names>
+<surname>Shen</surname></string-name>,
+<string-name name-style="western"><given-names>Y</given-names>
+<surname>Xing</surname></string-name>,
+<string-name name-style="western"><given-names>BJ</given-names>
+<surname>Carter</surname></string-name> and
+<string-name name-style="western"><given-names>BL</given-names>
+<surname>Davidson</surname></string-name></person-group>.
+(<year>2009</year>). <article-title>Nonallele-specific silencing of mutant
+and wild-type huntingtin demonstrates therapeutic efficacy in
+Huntington's disease mice</article-title>. <source>Mol Ther</source>
+<volume>17</volume>:<fpage>1053</fpage>–<lpage>1063</lpage>.<pub-id pub-id-type="pmid">19240687</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/mt.2009.17</pub-id><pub-id pub-id-type="pmcid">PMC2835182</pub-id></mixed-citation></ref><ref id="B8"><label>8.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Grondin</surname>
+<given-names>R</given-names></string-name>,
+<string-name name-style="western"><given-names>MD</given-names>
+<surname>Kaytor</surname></string-name>,
+<string-name name-style="western"><given-names>Y</given-names>
+<surname>Ai</surname></string-name>,
+<string-name name-style="western"><given-names>PT</given-names>
+<surname>Nelson</surname></string-name>,
+<string-name name-style="western"><given-names>DR</given-names>
+<surname>Thakker</surname></string-name>,
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Heisel</surname></string-name>,
+<string-name name-style="western"><given-names>MR</given-names>
+<surname>Weatherspoon</surname></string-name>,
+<string-name name-style="western"><given-names>JL</given-names>
+<surname>Blum</surname></string-name>,
+<string-name name-style="western"><given-names>EN</given-names>
+<surname>Burright</surname></string-name>, <etal><italic toggle="yes">et
+al.</italic></etal></person-group> (<year>2012</year>).
+<article-title>Six-month partial suppression of Huntingtin is well tolerated
+in the adult rhesus striatum</article-title>. <source>Brain</source>
+<volume>135</volume>:<fpage>1197</fpage>–<lpage>1209</lpage>.<pub-id pub-id-type="pmid">22252996</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/brain/awr333</pub-id><pub-id pub-id-type="pmcid">PMC3326247</pub-id></mixed-citation></ref><ref id="B9"><label>9.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>McBride</surname>
+<given-names>JL</given-names></string-name>,
+<string-name name-style="western"><given-names>MR</given-names>
+<surname>Pitzer</surname></string-name>,
+<string-name name-style="western"><given-names>RL</given-names>
+<surname>Boudreau</surname></string-name>,
+<string-name name-style="western"><given-names>B</given-names>
+<surname>Dufour</surname></string-name>,
+<string-name name-style="western"><given-names>T</given-names>
+<surname>Hobbs</surname></string-name>,
+<string-name name-style="western"><given-names>SR</given-names>
+<surname>Ojeda</surname></string-name> and
+<string-name name-style="western"><given-names>BL</given-names>
+<surname>Davidson</surname></string-name></person-group>.
+(<year>2011</year>). <article-title>Preclinical safety of RNAi-mediated HTT
+suppression in the rhesus macaque as a potential therapy for
+Huntington's disease</article-title>. <source>Mol Ther</source>
+<volume>19</volume>:<fpage>2152</fpage>–<lpage>2162</lpage>.<pub-id pub-id-type="pmid">22031240</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/mt.2011.219</pub-id><pub-id pub-id-type="pmcid">PMC3242667</pub-id></mixed-citation></ref><ref id="B10"><label>10.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Zeitlin</surname>
+<given-names>S</given-names></string-name>,
+<string-name name-style="western"><given-names>JP</given-names>
+<surname>Liu</surname></string-name>,
+<string-name name-style="western"><given-names>DL</given-names>
+<surname>Chapman</surname></string-name>,
+<string-name name-style="western"><given-names>VE</given-names>
+<surname>Papaioannou</surname></string-name> and
+<string-name name-style="western"><given-names>A</given-names>
+<surname>Efstratiadis</surname></string-name></person-group>.
+(<year>1995</year>). <article-title>Increased apoptosis and early embryonic
+lethality in mice nullizygous for the Huntington's disease gene
+homologue</article-title>. <source>Nat Genet</source>
+<volume>11</volume>:<fpage>155</fpage>–<lpage>163</lpage>.<pub-id pub-id-type="pmid">7550343</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/ng1095-155</pub-id></mixed-citation></ref><ref id="B11"><label>11.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Lu</surname>
+<given-names>B</given-names></string-name> and
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Palacino</surname></string-name></person-group>.
+(<year>2013</year>). <article-title>A novel human embryonic stem
+cell-derived Huntington's disease neuronal model exhibits mutant
+huntingtin (mHTT) aggregates and soluble mHTT-dependent
+neurodegeneration</article-title>. <source>FASEB J</source>
+<volume>27</volume>:<fpage>1820</fpage>–<lpage>1829</lpage>.<pub-id pub-id-type="pmid">23325320</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1096/fj.12-219220</pub-id></mixed-citation></ref><ref id="B12"><label>12.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Magen</surname>
+<given-names>I</given-names></string-name> and
+<string-name name-style="western"><given-names>E</given-names>
+<surname>Hornstein</surname></string-name></person-group>.
+(<year>2014</year>). <article-title>Oligonucleotide-based therapy for
+neurodegenerative diseases</article-title>. <source>Brain Res</source>
+<volume>1584</volume>:<fpage>116</fpage>–<lpage>128</lpage>.<pub-id pub-id-type="pmid">24727531</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.brainres.2014.04.005</pub-id></mixed-citation></ref><ref id="B13"><label>13.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Tabrizi</surname>
+<given-names>SJ</given-names></string-name>,
+<string-name name-style="western"><given-names>BR</given-names>
+<surname>Leavitt</surname></string-name>,
+<string-name name-style="western"><given-names>GB</given-names>
+<surname>Landwehrmeyer</surname></string-name>,
+<string-name name-style="western"><given-names>EJ</given-names>
+<surname>Wild</surname></string-name>,
+<string-name name-style="western"><given-names>C</given-names>
+<surname>Saft</surname></string-name>,
+<string-name name-style="western"><given-names>RA</given-names>
+<surname>Barker</surname></string-name>,
+<string-name name-style="western"><given-names>NF</given-names>
+<surname>Blair</surname></string-name>,
+<string-name name-style="western"><given-names>D</given-names>
+<surname>Craufurd</surname></string-name>,
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Priller</surname></string-name>, <etal><italic toggle="yes">et
+al.</italic></etal></person-group> (<year>2019</year>).
+<article-title>Targeting huntingtin expression in patients with
+huntington's disease</article-title>. <source>N Engl J Med</source>
+<volume>380</volume>:<fpage>2307</fpage>–<lpage>2316</lpage>.<pub-id pub-id-type="pmid">31059641</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1056/NEJMoa1900907</pub-id></mixed-citation></ref><ref id="B14"><label>14.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>de la
+Monte</surname>
+<given-names>SM</given-names></string-name>,
+<string-name name-style="western"><given-names>JP</given-names>
+<surname>Vonsattel</surname></string-name> and
+<string-name name-style="western"><given-names>EP</given-names>
+<surname>Richardson, Jr.</surname></string-name></person-group>
+(<year>1988</year>). <article-title>Morphometric demonstration of atrophic
+changes in the cerebral cortex, white matter, and neostriatum in
+Huntington's disease</article-title>. <source>J Neuropathol Exp
+Neurol</source>
+<volume>47</volume>:<fpage>516</fpage>–<lpage>525</lpage>.<pub-id pub-id-type="pmid">2971785</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/00005072-198809000-00003</pub-id></mixed-citation></ref><ref id="B15"><label>15.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Banez-Coronel</surname>
+<given-names>M</given-names></string-name>,
+<string-name name-style="western"><given-names>S</given-names>
+<surname>Porta</surname></string-name>,
+<string-name name-style="western"><given-names>B</given-names>
+<surname>Kagerbauer</surname></string-name>,
+<string-name name-style="western"><given-names>E</given-names>
+<surname>Mateu-Huertas</surname></string-name>,
+<string-name name-style="western"><given-names>L</given-names>
+<surname>Pantano</surname></string-name>,
+<string-name name-style="western"><given-names>I</given-names>
+<surname>Ferrer</surname></string-name>,
+<string-name name-style="western"><given-names>M</given-names>
+<surname>Guzman</surname></string-name>,
+<string-name name-style="western"><given-names>X</given-names>
+<surname>Estivill</surname></string-name> and
+<string-name name-style="western"><given-names>E</given-names>
+<surname>Marti.</surname></string-name></person-group>
+(<year>2012</year>). <article-title>A pathogenic mechanism in
+Huntington's disease involves small CAG-repeated RNAs with neurotoxic
+activity</article-title>. <source>PLoS Genet</source>
+<volume>8</volume>:<fpage>e1002481</fpage>.<pub-id pub-id-type="pmid">22383888</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pgen.1002481</pub-id><pub-id pub-id-type="pmcid">PMC3285580</pub-id></mixed-citation></ref><ref id="B16"><label>16.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Schilling</surname>
+<given-names>J</given-names></string-name>,
+<string-name name-style="western"><given-names>M</given-names>
+<surname>Broemer</surname></string-name>,
+<string-name name-style="western"><given-names>I</given-names>
+<surname>Atanassov</surname></string-name>,
+<string-name name-style="western"><given-names>Y</given-names>
+<surname>Duernberger</surname></string-name>,
+<string-name name-style="western"><given-names>I</given-names>
+<surname>Vorberg</surname></string-name>,
+<string-name name-style="western"><given-names>C</given-names>
+<surname>Dieterich</surname></string-name>,
+<string-name name-style="western"><given-names>A</given-names>
+<surname>Dagane</surname></string-name>,
+<string-name name-style="western"><given-names>G</given-names>
+<surname>Dittmar</surname></string-name>,
+<string-name name-style="western"><given-names>E</given-names>
+<surname>Wanker</surname></string-name>, <etal><italic toggle="yes">et
+al.</italic></etal></person-group> (<year>2019</year>).
+<article-title>Deregulated splicing is a major mechanism of RNA-induced
+toxicity in huntington's disease</article-title>. <source>J Mol
+Biol</source>
+<volume>431</volume>:<fpage>1869</fpage>–<lpage>1877</lpage>.<pub-id pub-id-type="pmid">30711541</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jmb.2019.01.034</pub-id></mixed-citation></ref><ref id="B17"><label>17.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>de
+Mezer</surname>
+<given-names>M</given-names></string-name>,
+<string-name name-style="western"><given-names>M</given-names>
+<surname>Wojciechowska</surname></string-name>,
+<string-name name-style="western"><given-names>M</given-names>
+<surname>Napierala</surname></string-name>,
+<string-name name-style="western"><given-names>K</given-names>
+<surname>Sobczak</surname></string-name> and
+<string-name name-style="western"><given-names>WJ</given-names>
+<surname>Krzyzosiak</surname></string-name></person-group>.
+(<year>2011</year>). <article-title>Mutant CAG repeats of Huntingtin
+transcript fold into hairpins, form nuclear foci and are targets for RNA
+interference</article-title>. <source>Nucleic Acids Res</source>
+<volume>39</volume>:<fpage>3852</fpage>–<lpage>3863</lpage>.<pub-id pub-id-type="pmid">21247881</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/nar/gkq1323</pub-id><pub-id pub-id-type="pmcid">PMC3089464</pub-id></mixed-citation></ref><ref id="B18"><label>18.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Busan</surname>
+<given-names>S</given-names></string-name> and
+<string-name name-style="western"><given-names>KM</given-names>
+<surname>Weeks</surname></string-name></person-group>.
+(<year>2013</year>). <article-title>Role of context in RNA structure:
+flanking sequences reconfigure CAG motif folding in huntingtin exon 1
+transcripts</article-title>. <source>Biochemistry</source>
+<volume>52</volume>:<fpage>8219</fpage>–<lpage>8225</lpage>.<pub-id pub-id-type="pmid">24199621</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1021/bi401129r</pub-id><pub-id pub-id-type="pmcid">PMC4890576</pub-id></mixed-citation></ref><ref id="B19"><label>19.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Creus-Muncunill</surname>
+<given-names>J</given-names></string-name>,
+<string-name name-style="western"><given-names>A</given-names>
+<surname>Guisado-Corcoll</surname></string-name>,
+<string-name name-style="western"><given-names>V</given-names>
+<surname>Venturi</surname></string-name>,
+<string-name name-style="western"><given-names>L</given-names>
+<surname>Pantano</surname></string-name>,
+<string-name name-style="western"><given-names>G</given-names>
+<surname>Escaramis</surname></string-name>,
+<string-name name-style="western"><given-names>M</given-names>
+<surname>Garcia de Herreros</surname></string-name>,
+<string-name name-style="western"><given-names>M</given-names>
+<surname>Solaguren-Beascoa</surname></string-name>,
+<string-name name-style="western"><given-names>A</given-names>
+<surname>Gamez-Valero</surname></string-name>,
+<string-name name-style="western"><given-names>C</given-names>
+<surname>Navarrete</surname></string-name>, <etal><italic toggle="yes">et
+al.</italic></etal></person-group> (<year>2021</year>).
+<article-title>Huntington's disease brain-derived small RNAs
+recapitulate associated neuropathology in mice</article-title>. <source>Acta
+Neuropathol</source>
+<volume>141</volume>:<fpage>565</fpage>–<lpage>584</lpage>.<pub-id pub-id-type="pmid">33547932</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s00401-021-02272-9</pub-id></mixed-citation></ref><ref id="B20"><label>20.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Zaghloul</surname>
+<given-names>EM</given-names></string-name>,
+<string-name name-style="western"><given-names>O</given-names>
+<surname>Gissberg</surname></string-name>,
+<string-name name-style="western"><given-names>PMD</given-names>
+<surname>Moreno</surname></string-name>,
+<string-name name-style="western"><given-names>L</given-names>
+<surname>Siggens</surname></string-name>,
+<string-name name-style="western"><given-names>M</given-names>
+<surname>Hallbrink</surname></string-name>,
+<string-name name-style="western"><given-names>AS</given-names>
+<surname>Jorgensen</surname></string-name>,
+<string-name name-style="western"><given-names>K</given-names>
+<surname>Ekwall</surname></string-name>,
+<string-name name-style="western"><given-names>R</given-names>
+<surname>Zain</surname></string-name>,
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Wengel</surname></string-name>, <etal><italic toggle="yes">et
+al.</italic></etal></person-group> (<year>2017</year>).
+<article-title>CTG repeat-targeting oligonucleotides for down-regulating
+Huntingtin expression</article-title>. <source>Nucleic Acids Res</source>
+<volume>45</volume>:<fpage>5153</fpage>–<lpage>5169</lpage>.<pub-id pub-id-type="pmid">28334749</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/nar/gkx111</pub-id><pub-id pub-id-type="pmcid">PMC5435994</pub-id></mixed-citation></ref><ref id="B21"><label>21.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Moreno</surname>
+<given-names>PM</given-names></string-name>,
+<string-name name-style="western"><given-names>S</given-names>
+<surname>Geny</surname></string-name>,
+<string-name name-style="western"><given-names>YV</given-names>
+<surname>Pabon</surname></string-name>,
+<string-name name-style="western"><given-names>H</given-names>
+<surname>Bergquist</surname></string-name>,
+<string-name name-style="western"><given-names>EM</given-names>
+<surname>Zaghloul</surname></string-name>,
+<string-name name-style="western"><given-names>CS</given-names>
+<surname>Rocha</surname></string-name>,
+<string-name name-style="western"><surname>Oprea</surname>,
+<given-names>II</given-names></string-name>,
+<string-name name-style="western"><given-names>B</given-names>
+<surname>Bestas</surname></string-name>,
+<string-name name-style="western"><given-names>SE</given-names>
+<surname>Andaloussi</surname></string-name>, <etal><italic toggle="yes">et
+al.</italic></etal></person-group> (<year>2013</year>).
+<article-title>Development of bis-locked nucleic acid (bisLNA)
+oligonucleotides for efficient invasion of supercoiled duplex
+DNA</article-title>. <source>Nucleic Acids Res</source>
+<volume>41</volume>:<fpage>3257</fpage>–<lpage>3273</lpage>.<pub-id pub-id-type="pmid">23345620</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/nar/gkt007</pub-id><pub-id pub-id-type="pmcid">PMC3597675</pub-id></mixed-citation></ref><ref id="B22"><label>22.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Takahashi</surname>
+<given-names>K</given-names></string-name> and
+<string-name name-style="western"><given-names>S</given-names>
+<surname>Yamanaka</surname></string-name></person-group>.
+(<year>2006</year>). <article-title>Induction of pluripotent stem cells from
+mouse embryonic and adult fibroblast cultures by defined
+factors</article-title>. <source>Cell</source>
+<volume>126</volume>:<fpage>663</fpage>–<lpage>676</lpage>.<pub-id pub-id-type="pmid">16904174</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.cell.2006.07.024</pub-id></mixed-citation></ref><ref id="B23"><label>23.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Park</surname>
+<given-names>IH</given-names></string-name>,
+<string-name name-style="western"><given-names>R</given-names>
+<surname>Zhao</surname></string-name>,
+<string-name name-style="western"><given-names>JA</given-names>
+<surname>West</surname></string-name>,
+<string-name name-style="western"><given-names>A</given-names>
+<surname>Yabuuchi</surname></string-name>,
+<string-name name-style="western"><given-names>H</given-names>
+<surname>Huo</surname></string-name>,
+<string-name name-style="western"><given-names>TA</given-names>
+<surname>Ince</surname></string-name>,
+<string-name name-style="western"><given-names>PH</given-names>
+<surname>Lerou</surname></string-name>,
+<string-name name-style="western"><given-names>MW</given-names>
+<surname>Lensch</surname></string-name> and
+<string-name name-style="western"><given-names>GQ</given-names>
+<surname>Daley</surname></string-name></person-group>.
+(<year>2008</year>). <article-title>Reprogramming of human somatic cells to
+pluripotency with defined factors</article-title>. <source>Nature</source>
+<volume>451</volume>:<fpage>141</fpage>–<lpage>146</lpage>.<pub-id pub-id-type="pmid">18157115</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nature06534</pub-id></mixed-citation></ref><ref id="B24"><label>24.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Yu</surname>
+<given-names>J</given-names></string-name>,
+<string-name name-style="western"><given-names>MA</given-names>
+<surname>Vodyanik</surname></string-name>,
+<string-name name-style="western"><given-names>K</given-names>
+<surname>Smuga-Otto</surname></string-name>,
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Antosiewicz-Bourget</surname></string-name>,
+<string-name name-style="western"><given-names>JL</given-names>
+<surname>Frane</surname></string-name>,
+<string-name name-style="western"><given-names>S</given-names>
+<surname>Tian</surname></string-name>,
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Nie</surname></string-name>,
+<string-name name-style="western"><given-names>GA</given-names>
+<surname>Jonsdottir</surname></string-name>,
+<string-name name-style="western"><given-names>V</given-names>
+<surname>Ruotti</surname></string-name>, <etal><italic toggle="yes">et
+al.</italic></etal></person-group> (<year>2007</year>).
+<article-title>Induced pluripotent stem cell lines derived from human
+somatic cells</article-title>. <source>Science</source>
+<volume>318</volume>:<fpage>1917</fpage>–<lpage>1920</lpage>.<pub-id pub-id-type="pmid">18029452</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1126/science.1151526</pub-id></mixed-citation></ref><ref id="B25"><label>25.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Shi</surname>
+<given-names>Y</given-names></string-name>,
+<string-name name-style="western"><given-names>P</given-names>
+<surname>Kirwan</surname></string-name> and
+<string-name name-style="western"><given-names>FJ</given-names>
+<surname>Livesey</surname></string-name></person-group>.
+(<year>2012</year>). <article-title>Directed differentiation of human
+pluripotent stem cells to cerebral cortex neurons and neural
+networks</article-title>. <source>Nat Protoc</source>
+<volume>7</volume>:<fpage>1836</fpage>–<lpage>1846</lpage>.<pub-id pub-id-type="pmid">22976355</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nprot.2012.116</pub-id></mixed-citation></ref><ref id="B26"><label>26.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Ebert</surname>
+<given-names>AD</given-names></string-name>,
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Yu</surname></string-name>,
+<string-name name-style="western"><given-names>FF</given-names>
+<surname>Rose</surname><suffix>Jr.</suffix></string-name>,
+<string-name name-style="western"><given-names>VB</given-names>
+<surname>Mattis</surname></string-name>,
+<string-name name-style="western"><given-names>CL</given-names>
+<surname>Lorson</surname></string-name>,
+<string-name name-style="western"><given-names>JA</given-names>
+<surname>Thomson</surname></string-name> and
+<string-name name-style="western"><given-names>CN</given-names>
+<surname>Svendsen</surname></string-name></person-group>.
+(<year>2009</year>). <article-title>Induced pluripotent stem cells from a
+spinal muscular atrophy patient</article-title>. <source>Nature</source>
+<volume>457</volume>:<fpage>277</fpage>–<lpage>280</lpage>.<pub-id pub-id-type="pmid">19098894</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nature07677</pub-id><pub-id pub-id-type="pmcid">PMC2659408</pub-id></mixed-citation></ref><ref id="B27"><label>27.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Lee</surname>
+<given-names>G</given-names></string-name>,
+<string-name name-style="western"><given-names>EP</given-names>
+<surname>Papapetrou</surname></string-name>,
+<string-name name-style="western"><given-names>H</given-names>
+<surname>Kim</surname></string-name>,
+<string-name name-style="western"><given-names>SM</given-names>
+<surname>Chambers</surname></string-name>,
+<string-name name-style="western"><given-names>MJ</given-names>
+<surname>Tomishima</surname></string-name>,
+<string-name name-style="western"><given-names>CA</given-names>
+<surname>Fasano</surname></string-name>,
+<string-name name-style="western"><given-names>YM</given-names>
+<surname>Ganat</surname></string-name>,
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Menon</surname></string-name>,
+<string-name name-style="western"><given-names>F</given-names>
+<surname>Shimizu</surname></string-name>, <etal><italic toggle="yes">et
+al.</italic></etal></person-group> (<year>2009</year>).
+<article-title>Modelling pathogenesis and treatment of familial dysautonomia
+using patient-specific iPSCs</article-title>. <source>Nature</source>
+<volume>461</volume>:<fpage>402</fpage>–<lpage>406</lpage>.<pub-id pub-id-type="pmid">19693009</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nature08320</pub-id><pub-id pub-id-type="pmcid">PMC2784695</pub-id></mixed-citation></ref><ref id="B28"><label>28.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Marchetto</surname>
+<given-names>MC</given-names></string-name>,
+<string-name name-style="western"><given-names>C</given-names>
+<surname>Carromeu</surname></string-name>,
+<string-name name-style="western"><given-names>A</given-names>
+<surname>Acab</surname></string-name>,
+<string-name name-style="western"><given-names>D</given-names>
+<surname>Yu</surname></string-name>,
+<string-name name-style="western"><given-names>GW</given-names>
+<surname>Yeo</surname></string-name>,
+<string-name name-style="western"><given-names>Y</given-names>
+<surname>Mu</surname></string-name>,
+<string-name name-style="western"><given-names>G</given-names>
+<surname>Chen</surname></string-name>,
+<string-name name-style="western"><given-names>FH</given-names>
+<surname>Gage</surname></string-name> and
+<string-name name-style="western"><given-names>AR</given-names>
+<surname>Muotri</surname></string-name></person-group>.
+(<year>2010</year>). <article-title>A model for neural development and
+treatment of Rett syndrome using human induced pluripotent stem
+cells</article-title>. <source>Cell</source>
+<volume>143</volume>:<fpage>527</fpage>–<lpage>539</lpage>.<pub-id pub-id-type="pmid">21074045</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.cell.2010.10.016</pub-id><pub-id pub-id-type="pmcid">PMC3003590</pub-id></mixed-citation></ref><ref id="B29"><label>29.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Wernig</surname>
+<given-names>M</given-names></string-name>,
+<string-name name-style="western"><given-names>JP</given-names>
+<surname>Zhao</surname></string-name>,
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Pruszak</surname></string-name>,
+<string-name name-style="western"><given-names>E</given-names>
+<surname>Hedlund</surname></string-name>,
+<string-name name-style="western"><given-names>D</given-names>
+<surname>Fu</surname></string-name>,
+<string-name name-style="western"><given-names>F</given-names>
+<surname>Soldner</surname></string-name>,
+<string-name name-style="western"><given-names>V</given-names>
+<surname>Broccoli</surname></string-name>,
+<string-name name-style="western"><given-names>M</given-names>
+<surname>Constantine-Paton</surname></string-name>,
+<string-name name-style="western"><given-names>O</given-names>
+<surname>Isacson</surname></string-name> and
+<string-name name-style="western"><given-names>R</given-names>
+<surname>Jaenisch</surname></string-name></person-group>.
+(<year>2008</year>). <article-title>Neurons derived from reprogrammed
+fibroblasts functionally integrate into the fetal brain and improve symptoms
+of rats with Parkinson's disease</article-title>. <source>Proc Natl
+Acad Sci U S A</source>
+<volume>105</volume>:<fpage>5856</fpage>–<lpage>5861</lpage>.<pub-id pub-id-type="pmid">18391196</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1073/pnas.0801677105</pub-id><pub-id pub-id-type="pmcid">PMC2311361</pub-id></mixed-citation></ref><ref id="B30"><label>30.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Yagi</surname>
+<given-names>T</given-names></string-name>,
+<string-name name-style="western"><given-names>D</given-names>
+<surname>Ito</surname></string-name>,
+<string-name name-style="western"><given-names>Y</given-names>
+<surname>Okada</surname></string-name>,
+<string-name name-style="western"><given-names>W</given-names>
+<surname>Akamatsu</surname></string-name>,
+<string-name name-style="western"><given-names>Y</given-names>
+<surname>Nihei</surname></string-name>,
+<string-name name-style="western"><given-names>T</given-names>
+<surname>Yoshizaki</surname></string-name>,
+<string-name name-style="western"><given-names>S</given-names>
+<surname>Yamanaka</surname></string-name>,
+<string-name name-style="western"><given-names>H</given-names>
+<surname>Okano</surname></string-name> and
+<string-name name-style="western"><given-names>N</given-names>
+<surname>Suzuki</surname></string-name></person-group>.
+(<year>2011</year>). <article-title>Modeling familial Alzheimer's
+disease with induced pluripotent stem cells</article-title>. <source>Hum Mol
+Genet</source>
+<volume>20</volume>:<fpage>4530</fpage>–<lpage>4539</lpage>.<pub-id pub-id-type="pmid">21900357</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/hmg/ddr394</pub-id></mixed-citation></ref><ref id="B31"><label>31.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Vizlin-Hodzic</surname>
+<given-names>D</given-names></string-name>,
+<string-name name-style="western"><given-names>Q</given-names>
+<surname>Zhai</surname></string-name>,
+<string-name name-style="western"><given-names>S</given-names>
+<surname>Illes</surname></string-name>,
+<string-name name-style="western"><given-names>K</given-names>
+<surname>Sodersten</surname></string-name>,
+<string-name name-style="western"><given-names>K</given-names>
+<surname>Truve</surname></string-name>,
+<string-name name-style="western"><given-names>TZ</given-names>
+<surname>Parris</surname></string-name>,
+<string-name name-style="western"><given-names>PK</given-names>
+<surname>Sobhan</surname></string-name>,
+<string-name name-style="western"><given-names>S</given-names>
+<surname>Salmela</surname></string-name>,
+<string-name name-style="western"><given-names>ST</given-names>
+<surname>Kosalai</surname></string-name>, <etal><italic toggle="yes">et
+al.</italic></etal></person-group> (<year>2017</year>).
+<article-title>Early onset of inflammation during ontogeny of bipolar
+disorder: the NLRP2 inflammasome gene distinctly differentiates between
+patients and healthy controls in the transition between iPS cell and neural
+stem cell stages</article-title>. <source>Transl Psychiatry</source>
+<volume>7</volume>:<fpage>e1010</fpage>.<pub-id pub-id-type="pmid">28117838</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/tp.2016.284</pub-id><pub-id pub-id-type="pmcid">PMC5545741</pub-id></mixed-citation></ref><ref id="B32"><label>32.</label><mixed-citation publication-type="journal">
+<collab>Consortium HDi</collab>. (<year>2012</year>). <article-title>Induced
+pluripotent stem cells from patients with Huntington's disease show
+CAG-repeat-expansion-associated phenotypes</article-title>. <source>Cell
+Stem Cell</source>
+<volume>11</volume>:<fpage>264</fpage>–<lpage>278</lpage>.<pub-id pub-id-type="pmid">22748968</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.stem.2012.04.027</pub-id><pub-id pub-id-type="pmcid">PMC3804072</pub-id></mixed-citation></ref><ref id="B33"><label>33.</label><mixed-citation publication-type="journal">
+<collab>Consortium HDi</collab>. (<year>2017</year>).
+<article-title>Developmental alterations in Huntington's disease
+neural cells and pharmacological rescue in cells and mice</article-title>.
+<source>Nat Neurosci</source>
+<volume>20</volume>:<fpage>648</fpage>–<lpage>660</lpage>.<pub-id pub-id-type="pmid">28319609</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nn.4532</pub-id><pub-id pub-id-type="pmcid">PMC5610046</pub-id></mixed-citation></ref><ref id="B34"><label>34.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>An</surname>
+<given-names>MC</given-names></string-name>,
+<string-name name-style="western"><given-names>N</given-names>
+<surname>Zhang</surname></string-name>,
+<string-name name-style="western"><given-names>G</given-names>
+<surname>Scott</surname></string-name>,
+<string-name name-style="western"><given-names>D</given-names>
+<surname>Montoro</surname></string-name>,
+<string-name name-style="western"><given-names>T</given-names>
+<surname>Wittkop</surname></string-name>,
+<string-name name-style="western"><given-names>S</given-names>
+<surname>Mooney</surname></string-name>,
+<string-name name-style="western"><given-names>S</given-names>
+<surname>Melov</surname></string-name> and
+<string-name name-style="western"><given-names>LM</given-names>
+<surname>Ellerby</surname></string-name></person-group>.
+(<year>2012</year>). <article-title>Genetic correction of
+Huntington's disease phenotypes in induced pluripotent stem
+cells</article-title>. <source>Cell Stem Cell</source>
+<volume>11</volume>:<fpage>253</fpage>–<lpage>263</lpage>.<pub-id pub-id-type="pmid">22748967</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.stem.2012.04.026</pub-id><pub-id pub-id-type="pmcid">PMC3608272</pub-id></mixed-citation></ref><ref id="B35"><label>35.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Mehta</surname>
+<given-names>SR</given-names></string-name>,
+<string-name name-style="western"><given-names>CM</given-names>
+<surname>Tom</surname></string-name>,
+<string-name name-style="western"><given-names>Y</given-names>
+<surname>Wang</surname></string-name>,
+<string-name name-style="western"><given-names>C</given-names>
+<surname>Bresee</surname></string-name>,
+<string-name name-style="western"><given-names>D</given-names>
+<surname>Rushton</surname></string-name>,
+<string-name name-style="western"><given-names>PP</given-names>
+<surname>Mathkar</surname></string-name>,
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Tang</surname></string-name> and
+<string-name name-style="western"><given-names>VB</given-names>
+<surname>Mattis</surname></string-name></person-group>.
+(<year>2018</year>). <article-title>Human huntington's disease
+iPSC-derived cortical neurons display altered transcriptomics, morphology,
+and maturation</article-title>. <source>Cell Rep
+25:1081–1096</source>
+<fpage>e1086</fpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.celrep.2018.09.076</pub-id><pub-id pub-id-type="pmid">30355486</pub-id></mixed-citation></ref><ref id="B36"><label>36.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>van
+Kuppeveld</surname>
+<given-names>FJ</given-names></string-name>,
+<string-name name-style="western"><given-names>KE</given-names>
+<surname>Johansson</surname></string-name>,
+<string-name name-style="western"><given-names>JM</given-names>
+<surname>Galama</surname></string-name>,
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Kissing</surname></string-name>,
+<string-name name-style="western"><given-names>G</given-names>
+<surname>Bolske</surname></string-name>,
+<string-name name-style="western"><given-names>JT</given-names>
+<surname>van der Logt</surname></string-name> and
+<string-name name-style="western"><given-names>WJ</given-names>
+<surname>Melchers</surname></string-name></person-group>.
+(<year>1994</year>). <article-title>Detection of mycoplasma contamination in
+cell cultures by a mycoplasma group-specific PCR</article-title>.
+<source>Appl Environ Microbiol</source>
+<volume>60</volume>:<fpage>149</fpage>–<lpage>152</lpage>.<pub-id pub-id-type="pmid">7509584</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1128/aem.60.1.149-152.1994</pub-id><pub-id pub-id-type="pmcid">PMC201282</pub-id></mixed-citation></ref><ref id="B37"><label>37.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Schindelin</surname>
+<given-names>J</given-names></string-name>,
+<string-name name-style="western"><given-names>I</given-names>
+<surname>Arganda-Carreras</surname></string-name>,
+<string-name name-style="western"><given-names>E</given-names>
+<surname>Frise</surname></string-name>,
+<string-name name-style="western"><given-names>V</given-names>
+<surname>Kaynig</surname></string-name>,
+<string-name name-style="western"><given-names>M</given-names>
+<surname>Longair</surname></string-name>,
+<string-name name-style="western"><given-names>T</given-names>
+<surname>Pietzsch</surname></string-name>,
+<string-name name-style="western"><given-names>S</given-names>
+<surname>Preibisch</surname></string-name>,
+<string-name name-style="western"><given-names>C</given-names>
+<surname>Rueden</surname></string-name>,
+<string-name name-style="western"><given-names>S</given-names>
+<surname>Saalfeld</surname></string-name>, <etal><italic toggle="yes">et
+al.</italic></etal></person-group> (<year>2012</year>).
+<article-title>Fiji: an open-source platform for biological-image
+analysis</article-title>. <source>Nat Methods</source>
+<volume>9</volume>:<fpage>676</fpage>–<lpage>682</lpage>.<pub-id pub-id-type="pmid">22743772</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nmeth.2019</pub-id><pub-id pub-id-type="pmcid">PMC3855844</pub-id></mixed-citation></ref><ref id="B38"><label>38.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Harding</surname>
+<given-names>MJ</given-names></string-name>,
+<string-name name-style="western"><given-names>HF</given-names>
+<surname>McGraw</surname></string-name> and
+<string-name name-style="western"><given-names>A</given-names>
+<surname>Nechiporuk</surname></string-name></person-group>.
+(<year>2014</year>). <article-title>The roles and regulation of
+multicellular rosette structures during morphogenesis</article-title>.
+<source>Development</source>
+<volume>141</volume>:<fpage>2549</fpage>–<lpage>2558</lpage>.<pub-id pub-id-type="pmid">24961796</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1242/dev.101444</pub-id><pub-id pub-id-type="pmcid">PMC4067956</pub-id></mixed-citation></ref><ref id="B39"><label>39.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Elkabetz</surname>
+<given-names>Y</given-names></string-name>,
+<string-name name-style="western"><given-names>G</given-names>
+<surname>Panagiotakos</surname></string-name>,
+<string-name name-style="western"><given-names>G</given-names>
+<surname>Al Shamy</surname></string-name>,
+<string-name name-style="western"><given-names>ND</given-names>
+<surname>Socci</surname></string-name>,
+<string-name name-style="western"><given-names>V</given-names>
+<surname>Tabar</surname></string-name> and
+<string-name name-style="western"><given-names>L</given-names>
+<surname>Studer</surname></string-name></person-group>.
+(<year>2008</year>). <article-title>Human ES cell-derived neural rosettes
+reveal a functionally distinct early neural stem cell stage</article-title>.
+<source>Genes Dev</source>
+<volume>22</volume>:<fpage>152</fpage>–<lpage>165</lpage>.<pub-id pub-id-type="pmid">18198334</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1101/gad.1616208</pub-id><pub-id pub-id-type="pmcid">PMC2192751</pub-id></mixed-citation></ref><ref id="B40"><label>40.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Curchoe</surname>
+<given-names>CL</given-names></string-name>,
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Russo</surname></string-name> and
+<string-name name-style="western"><given-names>AV</given-names>
+<surname>Terskikh</surname></string-name></person-group>.
+(<year>2012</year>). <article-title>hESC derived neuro-epithelial rosettes
+recapitulate early mammalian neurulation events; an in vitro
+model</article-title>. <source>Stem Cell Res</source>
+<volume>8</volume>:<fpage>239</fpage>–<lpage>246</lpage>.<pub-id pub-id-type="pmid">22265743</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.scr.2011.11.003</pub-id></mixed-citation></ref><ref id="B41"><label>41.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Banda</surname>
+<given-names>E</given-names></string-name>,
+<string-name name-style="western"><given-names>A</given-names>
+<surname>McKinsey</surname></string-name>,
+<string-name name-style="western"><given-names>N</given-names>
+<surname>Germain</surname></string-name>,
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Carter</surname></string-name>,
+<string-name name-style="western"><given-names>NC</given-names>
+<surname>Anderson</surname></string-name> and
+<string-name name-style="western"><given-names>L</given-names>
+<surname>Grabel</surname></string-name></person-group>.
+(<year>2015</year>). <article-title>Cell polarity and neurogenesis in
+embryonic stem cell-derived neural rosettes</article-title>. <source>Stem
+Cells Dev</source>
+<volume>24</volume>:<fpage>1022</fpage>–<lpage>1033</lpage>.<pub-id pub-id-type="pmid">25472739</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1089/scd.2014.0415</pub-id></mixed-citation></ref><ref id="B42"><label>42.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Trottier</surname>
+<given-names>Y</given-names></string-name>,
+<string-name name-style="western"><given-names>V</given-names>
+<surname>Biancalana</surname></string-name> and
+<string-name name-style="western"><given-names>JL</given-names>
+<surname>Mandel</surname></string-name></person-group>.
+(<year>1994</year>). <article-title>Instability of CAG repeats in
+Huntington's disease: relation to parental transmission and age of
+onset</article-title>. <source>J Med Genet</source>
+<volume>31</volume>:<fpage>377</fpage>–<lpage>382</lpage>.<pub-id pub-id-type="pmid">8064815</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/jmg.31.5.377</pub-id><pub-id pub-id-type="pmcid">PMC1049869</pub-id></mixed-citation></ref><ref id="B43"><label>43.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Wheeler</surname>
+<given-names>VC</given-names></string-name>,
+<string-name name-style="western"><given-names>F</given-names>
+<surname>Persichetti</surname></string-name>,
+<string-name name-style="western"><given-names>SM</given-names>
+<surname>McNeil</surname></string-name>,
+<string-name name-style="western"><given-names>JS</given-names>
+<surname>Mysore</surname></string-name>,
+<string-name name-style="western"><given-names>SS</given-names>
+<surname>Mysore</surname></string-name>,
+<string-name name-style="western"><given-names>ME</given-names>
+<surname>MacDonald</surname></string-name>,
+<string-name name-style="western"><given-names>RH</given-names>
+<surname>Myers</surname></string-name>,
+<string-name name-style="western"><given-names>JF</given-names>
+<surname>Gusella</surname></string-name>,
+<string-name name-style="western"><given-names>NS</given-names>
+<surname>Wexler</surname></string-name> and
+<string-name name-style="western"><given-names>US-VCR</given-names>
+<surname>Group</surname></string-name></person-group>.
+(<year>2007</year>). <article-title>Factors associated with HD CAG repeat
+instability in Huntington disease</article-title>. <source>J Med
+Genet</source>
+<volume>44</volume>:<fpage>695</fpage>–<lpage>701</lpage>.<pub-id pub-id-type="pmid">17660463</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/jmg.2007.050930</pub-id><pub-id pub-id-type="pmcid">PMC2705129</pub-id></mixed-citation></ref><ref id="B44"><label>44.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Telenius</surname>
+<given-names>H</given-names></string-name>,
+<string-name name-style="western"><given-names>B</given-names>
+<surname>Kremer</surname></string-name>,
+<string-name name-style="western"><given-names>YP</given-names>
+<surname>Goldberg</surname></string-name>,
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Theilmann</surname></string-name>,
+<string-name name-style="western"><given-names>SE</given-names>
+<surname>Andrew</surname></string-name>,
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Zeisler</surname></string-name>,
+<string-name name-style="western"><given-names>S</given-names>
+<surname>Adam</surname></string-name>,
+<string-name name-style="western"><given-names>C</given-names>
+<surname>Greenberg</surname></string-name>,
+<string-name name-style="western"><given-names>EJ</given-names>
+<surname>Ives</surname></string-name>, <etal><italic toggle="yes">et
+al.</italic></etal></person-group> (<year>1994</year>).
+<article-title>Somatic and gonadal mosaicism of the Huntington disease gene
+CAG repeat in brain and sperm</article-title>. <source>Nat Genet</source>
+<volume>6</volume>:<fpage>409</fpage>–<lpage>414</lpage>.<pub-id pub-id-type="pmid">8054984</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/ng0494-409</pub-id></mixed-citation></ref><ref id="B45"><label>45.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Khorkova</surname>
+<given-names>O</given-names></string-name> and
+<string-name name-style="western"><given-names>C</given-names>
+<surname>Wahlestedt</surname></string-name></person-group>.
+(<year>2017</year>). <article-title>Oligonucleotide therapies for disorders
+of the nervous system</article-title>. <source>Nat Biotechnol</source>
+<volume>35</volume>:<fpage>249</fpage>–<lpage>263</lpage>.<pub-id pub-id-type="pmid">28244991</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nbt.3784</pub-id><pub-id pub-id-type="pmcid">PMC6043900</pub-id></mixed-citation></ref><ref id="B46"><label>46.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Stein</surname>
+<given-names>CA</given-names></string-name>,
+<string-name name-style="western"><given-names>JB</given-names>
+<surname>Hansen</surname></string-name>,
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Lai</surname></string-name>,
+<string-name name-style="western"><given-names>S</given-names>
+<surname>Wu</surname></string-name>,
+<string-name name-style="western"><given-names>A</given-names>
+<surname>Voskresenskiy</surname></string-name>,
+<string-name name-style="western"><given-names>A</given-names>
+<surname>Hog</surname></string-name>,
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Worm</surname></string-name>,
+<string-name name-style="western"><given-names>M</given-names>
+<surname>Hedtjarn</surname></string-name>,
+<string-name name-style="western"><given-names>N</given-names>
+<surname>Souleimanian</surname></string-name>, <etal><italic toggle="yes">et
+al.</italic></etal></person-group> (<year>2010</year>).
+<article-title>Efficient gene silencing by delivery of locked nucleic acid
+antisense oligonucleotides, unassisted by transfection
+reagents</article-title>. <source>Nucleic Acids Res</source>
+<volume>38</volume>:<fpage>e3</fpage>.<pub-id pub-id-type="pmid">19854938</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/nar/gkp841</pub-id><pub-id pub-id-type="pmcid">PMC2800216</pub-id></mixed-citation></ref><ref id="B47"><label>47.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Scherer</surname>
+<given-names>F</given-names></string-name>,
+<string-name name-style="western"><given-names>M</given-names>
+<surname>Anton</surname></string-name>,
+<string-name name-style="western"><given-names>U</given-names>
+<surname>Schillinger</surname></string-name>,
+<string-name name-style="western"><given-names>J</given-names>
+<surname>Henke</surname></string-name>,
+<string-name name-style="western"><given-names>C</given-names>
+<surname>Bergemann</surname></string-name>,
+<string-name name-style="western"><given-names>A</given-names>
+<surname>Kruger</surname></string-name>,
+<string-name name-style="western"><given-names>B</given-names>
+<surname>Gansbacher</surname></string-name> and
+<string-name name-style="western"><given-names>C</given-names>
+<surname>Plank</surname></string-name></person-group>.
+(<year>2002</year>). <article-title>Magnetofection: enhancing and targeting
+gene delivery by magnetic force in vitro and in vivo</article-title>.
+<source>Gene Ther</source>
+<volume>9</volume>:<fpage>102</fpage>–<lpage>109</lpage>.<pub-id pub-id-type="pmid">11857068</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/sj.gt.3301624</pub-id></mixed-citation></ref><ref id="B48"><label>48.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Buerli</surname>
+<given-names>T</given-names></string-name>,
+<string-name name-style="western"><given-names>C</given-names>
+<surname>Pellegrino</surname></string-name>,
+<string-name name-style="western"><given-names>K</given-names>
+<surname>Baer</surname></string-name>,
+<string-name name-style="western"><given-names>B</given-names>
+<surname>Lardi-Studler</surname></string-name>,
+<string-name name-style="western"><given-names>I</given-names>
+<surname>Chudotvorova</surname></string-name>,
+<string-name name-style="western"><given-names>JM</given-names>
+<surname>Fritschy</surname></string-name>,
+<string-name name-style="western"><given-names>I</given-names>
+<surname>Medina</surname></string-name> and
+<string-name name-style="western"><given-names>C</given-names>
+<surname>Fuhrer</surname></string-name></person-group>.
+(<year>2007</year>). <article-title>Efficient transfection of DNA or shRNA
+vectors into neurons using magnetofection</article-title>. <source>Nat
+Protoc</source>
+<volume>2</volume>:<fpage>3090</fpage>–<lpage>3101</lpage>.<pub-id pub-id-type="pmid">18079708</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nprot.2007.445</pub-id></mixed-citation></ref><ref id="B49"><label>49.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Fallini</surname>
+<given-names>C</given-names></string-name>,
+<string-name name-style="western"><given-names>GJ</given-names>
+<surname>Bassell</surname></string-name> and
+<string-name name-style="western"><given-names>W</given-names>
+<surname>Rossoll.</surname></string-name></person-group>
+(<year>2010</year>). <article-title>High-efficiency transfection of cultured
+primary motor neurons to study protein localization, trafficking, and
+function</article-title>. <source>Mol Neurodegener</source>
+<volume>5</volume>:<fpage>17</fpage>.<pub-id pub-id-type="pmid">20406490</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/1750-1326-5-17</pub-id><pub-id pub-id-type="pmcid">PMC2867961</pub-id></mixed-citation></ref><ref id="B50"><label>50.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Titze de
+Almeida</surname>
+<given-names>SS</given-names></string-name>,
+<string-name name-style="western"><given-names>CH</given-names>
+<surname>Horst</surname></string-name>,
+<string-name name-style="western"><given-names>C</given-names>
+<surname>Soto-Sanchez</surname></string-name>,
+<string-name name-style="western"><given-names>E</given-names>
+<surname>Fernandez</surname></string-name> and
+<string-name name-style="western"><given-names>R</given-names>
+<surname>Titze de Almeida</surname></string-name></person-group>.
+(<year>2018</year>). <article-title>Delivery of miRNA-targeted
+oligonucleotides in the rat striatum by magnetofection with
+Neuromag((R))</article-title>. <source>Molecules</source>
+<volume>23</volume>:<fpage>1825</fpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/molecules23071825</pub-id><pub-id pub-id-type="pmcid">PMC6099620</pub-id><pub-id pub-id-type="pmid">30041414</pub-id></mixed-citation></ref><ref id="B51"><label>51.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Satir</surname>
+<given-names>TM</given-names></string-name>,
+<string-name name-style="western"><given-names>FH</given-names>
+<surname>Nazir</surname></string-name>,
+<string-name name-style="western"><given-names>D</given-names>
+<surname>Vizlin-Hodzic</surname></string-name>,
+<string-name name-style="western"><given-names>E</given-names>
+<surname>Hardselius</surname></string-name>,
+<string-name name-style="western"><given-names>K</given-names>
+<surname>Blennow</surname></string-name>,
+<string-name name-style="western"><given-names>S</given-names>
+<surname>Wray</surname></string-name>,
+<string-name name-style="western"><given-names>H</given-names>
+<surname>Zetterberg</surname></string-name>,
+<string-name name-style="western"><given-names>L</given-names>
+<surname>Agholme</surname></string-name> and
+<string-name name-style="western"><given-names>P</given-names>
+<surname>Bergström</surname></string-name></person-group>.
+(<year>2020</year>). <article-title>Accelerated neuronal and synaptic
+maturation by BrainPhys medium increases Aβ secretion and alters
+Aβ peptide ratios from iPSC-derived cortical neurons</article-title>.
+<source>Sci Rep</source>
+<volume>10</volume>:<fpage>601</fpage>.<pub-id pub-id-type="pmid">31953468</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41598-020-57516-7</pub-id><pub-id pub-id-type="pmcid">PMC6969066</pub-id></mixed-citation></ref><ref id="B52"><label>52.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Hauptmann</surname>
+<given-names>G</given-names></string-name> and
+<string-name name-style="western"><given-names>T</given-names>
+<surname>Gerster</surname></string-name></person-group>.
+(<year>2000</year>). <article-title>Combinatorial expression of zebrafish
+Brn-1- and Brn-2-related POU genes in the embryonic brain, pronephric
+primordium, and pharyngeal arches</article-title>. <source>Dev Dyn</source>
+<volume>218</volume>:<fpage>345</fpage>–<lpage>358</lpage>.<pub-id pub-id-type="pmid">10842361</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/(SICI)1097-0177(200006)218:2&lt;345::AID-DVDY8&gt;3.0.CO;2-V</pub-id></mixed-citation></ref><ref id="B53"><label>53.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>McEvilly</surname>
+<given-names>RJ</given-names></string-name>,
+<string-name name-style="western"><given-names>MO</given-names>
+<surname>de Diaz</surname></string-name>,
+<string-name name-style="western"><given-names>MD</given-names>
+<surname>Schonemann</surname></string-name>,
+<string-name name-style="western"><given-names>F</given-names>
+<surname>Hooshmand</surname></string-name> and
+<string-name name-style="western"><given-names>MG</given-names>
+<surname>Rosenfeld</surname></string-name></person-group>.
+(<year>2002</year>). <article-title>Transcriptional regulation of cortical
+neuron migration by POU domain factors</article-title>.
+<source>Science</source>
+<volume>295</volume>:<fpage>1528</fpage>–<lpage>1532</lpage>.<pub-id pub-id-type="pmid">11859196</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1126/science.1067132</pub-id></mixed-citation></ref><ref id="B54"><label>54.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Dominguez</surname>
+<given-names>MH</given-names></string-name>,
+<string-name name-style="western"><given-names>AE</given-names>
+<surname>Ayoub</surname></string-name> and
+<string-name name-style="western"><given-names>P</given-names>
+<surname>Rakic</surname></string-name></person-group>.
+(<year>2013</year>). <article-title>POU-III transcription factors (Brn1,
+Brn2, and Oct6) influence neurogenesis, molecular identity, and migratory
+destination of upper-layer cells of the cerebral cortex</article-title>.
+<source>Cereb Cortex</source>
+<volume>23</volume>:<fpage>2632</fpage>–<lpage>2643</lpage>.<pub-id pub-id-type="pmid">22892427</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/cercor/bhs252</pub-id><pub-id pub-id-type="pmcid">PMC3792741</pub-id></mixed-citation></ref><ref id="B55"><label>55.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Sugitani</surname>
+<given-names>M</given-names></string-name>,
+<string-name name-style="western"><given-names>T</given-names>
+<surname>Sugai</surname></string-name> and
+<string-name name-style="western"><given-names>N</given-names>
+<surname>Onoda</surname></string-name></person-group>.
+(<year>2002</year>). <article-title>Postsynaptic activity of metabotropic
+glutamate receptors in the piriform cortex</article-title>.
+<source>Neuroreport</source>
+<volume>13</volume>:<fpage>1473</fpage>–<lpage>1476</lpage>.<pub-id pub-id-type="pmid">12167776</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/00001756-200208070-00025</pub-id></mixed-citation></ref><ref id="B56"><label>56.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Ostrowski</surname>
+<given-names>LA</given-names></string-name>,
+<string-name name-style="western"><given-names>AC</given-names>
+<surname>Hall</surname></string-name> and
+<string-name name-style="western"><given-names>K</given-names>
+<surname>Mekhail.</surname></string-name></person-group>
+(<year>2017</year>). <article-title>Ataxin-2: from RNA Control to Human
+Health and Disease</article-title>. <source>Genes (Basel)</source>
+<volume>8</volume>:<fpage>157</fpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.3390/genes8060157</pub-id><pub-id pub-id-type="pmcid">PMC5485521</pub-id><pub-id pub-id-type="pmid">28587229</pub-id></mixed-citation></ref><ref id="B57"><label>57.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Davey</surname>
+<given-names>RA</given-names></string-name> and
+<string-name name-style="western"><given-names>M</given-names>
+<surname>Grossmann</surname></string-name></person-group>.
+(<year>2016</year>). <article-title>Androgen Receptor Structure, Function
+and Biology: from Bench to Bedside</article-title>. <source>Clin Biochem
+Rev</source>
+<volume>37</volume>:<fpage>3</fpage>–<lpage>15</lpage>.<pub-id pub-id-type="pmid">27057074</pub-id><pub-id pub-id-type="pmcid">PMC4810760</pub-id></mixed-citation></ref><ref id="B58"><label>58.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Lin</surname>
+<given-names>L</given-names></string-name>,
+<string-name name-style="western"><given-names>Y</given-names>
+<surname>Wu</surname></string-name>,
+<string-name name-style="western"><given-names>C</given-names>
+<surname>Li</surname></string-name> and
+<string-name name-style="western"><given-names>S</given-names>
+<surname>Zhao</surname></string-name></person-group>.
+(<year>2001</year>). <article-title>Cloning, tissue expression pattern, and
+chromosome location of a novel human gene BRI3BP</article-title>.
+<source>Biochem Genet</source>
+<volume>39</volume>:<fpage>369</fpage>–<lpage>377</lpage>.<pub-id pub-id-type="pmid">11860200</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1023/a:1013807518791</pub-id></mixed-citation></ref><ref id="B59"><label>59.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Kaliman</surname>
+<given-names>P</given-names></string-name> and
+<string-name name-style="western"><given-names>E</given-names>
+<surname>Llagostera</surname></string-name></person-group>.
+(<year>2008</year>). <article-title>Myotonic dystrophy protein kinase (DMPK)
+and its role in the pathogenesis of myotonic dystrophy 1</article-title>.
+<source>Cell Signal</source>
+<volume>20</volume>:<fpage>1935</fpage>–<lpage>1941</lpage>.<pub-id pub-id-type="pmid">18583094</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.cellsig.2008.05.005</pub-id></mixed-citation></ref><ref id="B60"><label>60.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Kennedy</surname>
+<given-names>L</given-names></string-name>,
+<string-name name-style="western"><given-names>E</given-names>
+<surname>Evans</surname></string-name>,
+<string-name name-style="western"><given-names>CM</given-names>
+<surname>Chen</surname></string-name>,
+<string-name name-style="western"><given-names>L</given-names>
+<surname>Craven</surname></string-name>,
+<string-name name-style="western"><given-names>PJ</given-names>
+<surname>Detloff</surname></string-name>,
+<string-name name-style="western"><given-names>M</given-names>
+<surname>Ennis</surname></string-name> and
+<string-name name-style="western"><given-names>PF</given-names>
+<surname>Shelbourne</surname></string-name></person-group>.
+(<year>2003</year>). <article-title>Dramatic tissue-specific mutation length
+increases are an early molecular event in Huntington disease
+pathogenesis</article-title>. <source>Hum Mol Genet</source>
+<volume>12</volume>:<fpage>3359</fpage>–<lpage>3367</lpage>.<pub-id pub-id-type="pmid">14570710</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/hmg/ddg352</pub-id></mixed-citation></ref><ref id="B61"><label>61.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Touznik</surname>
+<given-names>A</given-names></string-name>,
+<string-name name-style="western"><given-names>R</given-names>
+<surname>Maruyama</surname></string-name>,
+<string-name name-style="western"><given-names>K</given-names>
+<surname>Hosoki</surname></string-name>,
+<string-name name-style="western"><given-names>Y</given-names>
+<surname>Echigoya</surname></string-name> and
+<string-name name-style="western"><given-names>T</given-names>
+<surname>Yokota.</surname></string-name></person-group>
+(<year>2017</year>). <article-title>LNA/DNA mixmer-based antisense
+oligonucleotides correct alternative splicing of the SMN2 gene and restore
+SMN protein expression in type 1 SMA fibroblasts</article-title>.
+<source>Sci Rep</source>
+<volume>7</volume>:<fpage>3672</fpage>.<pub-id pub-id-type="pmid">28623256</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41598-017-03850-2</pub-id><pub-id pub-id-type="pmcid">PMC5473822</pub-id></mixed-citation></ref><ref id="B62"><label>62.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Boiziau</surname>
+<given-names>C</given-names></string-name>,
+<string-name name-style="western"><given-names>R</given-names>
+<surname>Kurfurst</surname></string-name>,
+<string-name name-style="western"><given-names>C</given-names>
+<surname>Cazenave</surname></string-name>,
+<string-name name-style="western"><given-names>V</given-names>
+<surname>Roig</surname></string-name>,
+<string-name name-style="western"><given-names>NT</given-names>
+<surname>Thuong</surname></string-name> and
+<string-name name-style="western"><given-names>J-J</given-names>
+<surname>Toulmé</surname></string-name></person-group>.
+(<year>1991</year>). <article-title>Inhibition of translation initiation by
+antisense oligonucleotides via an RNase-H independent
+mechanism</article-title>. <source>Nucleic Acids Res</source>
+<volume>19</volume>:<fpage>1113</fpage>–<lpage>1119</lpage>.<pub-id pub-id-type="pmid">1850511</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/nar/19.5.1113</pub-id><pub-id pub-id-type="pmcid">PMC333789</pub-id></mixed-citation></ref><ref id="B63"><label>63.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Vickers</surname>
+<given-names>TA</given-names></string-name>,
+<string-name name-style="western"><given-names>JR</given-names>
+<surname>Wyatt</surname></string-name>,
+<string-name name-style="western"><given-names>T</given-names>
+<surname>Burckin</surname></string-name>,
+<string-name name-style="western"><given-names>CF</given-names>
+<surname>Bennett</surname></string-name> and
+<string-name name-style="western"><given-names>SM</given-names>
+<surname>Freier</surname></string-name></person-group>.
+(<year>2001</year>). <article-title>Fully modified 2′ MOE
+oligonucleotides redirect polyadenylation</article-title>. <source>Nucleic
+Acids Res</source>
+<volume>29</volume>:<fpage>1293</fpage>–<lpage>1299</lpage>.<pub-id pub-id-type="pmid">11238995</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/nar/29.6.1293</pub-id><pub-id pub-id-type="pmcid">PMC29745</pub-id></mixed-citation></ref><ref id="B64"><label>64.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Fisher</surname>
+<given-names>TL</given-names></string-name>,
+<string-name name-style="western"><given-names>T</given-names>
+<surname>Terhorst</surname></string-name>,
+<string-name name-style="western"><given-names>X</given-names>
+<surname>Cao</surname></string-name> and
+<string-name name-style="western"><given-names>RW</given-names>
+<surname>Wagner</surname></string-name></person-group>.
+(<year>1993</year>). <article-title>Intracellular disposition and metabolism
+of fluorescently-labeled unmodified and modified oligonucleotides
+microinjected into mammalian cells</article-title>. <source>Nucleic Acids
+Res</source>
+<volume>21</volume>:<fpage>3857</fpage>–<lpage>3865</lpage>.<pub-id pub-id-type="pmid">8396239</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/nar/21.16.3857</pub-id><pub-id pub-id-type="pmcid">PMC309908</pub-id></mixed-citation></ref><ref id="B65"><label>65.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Eder</surname>
+<given-names>PS</given-names></string-name>,
+<string-name name-style="western"><given-names>RJ</given-names>
+<surname>DeVine</surname></string-name>,
+<string-name name-style="western"><given-names>JM</given-names>
+<surname>Dagle</surname></string-name> and
+<string-name name-style="western"><given-names>JA</given-names>
+<surname>Walder</surname></string-name></person-group>.
+(<year>1991</year>). <article-title>Substrate specificity and kinetics of
+degradation of antisense oligonucleotides by a 3’ exonuclease in
+plasma</article-title>. <source>Antisense Res Dev</source>
+<volume>1</volume>:<fpage>141</fpage>–<lpage>151</lpage>.<pub-id pub-id-type="pmid">1841656</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1089/ard.1991.1.141</pub-id></mixed-citation></ref><ref id="B66"><label>66.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Mirzadeh</surname>
+<given-names>Z</given-names></string-name>,
+<string-name name-style="western"><given-names>FT</given-names>
+<surname>Merkle</surname></string-name>,
+<string-name name-style="western"><given-names>M</given-names>
+<surname>Soriano-Navarro</surname></string-name>,
+<string-name name-style="western"><given-names>JM</given-names>
+<surname>Garcia-Verdugo</surname></string-name> and
+<string-name name-style="western"><given-names>A</given-names>
+<surname>Alvarez-Buylla</surname></string-name></person-group>.
+(<year>2008</year>). <article-title>Neural stem cells confer unique pinwheel
+architecture to the ventricular surface in neurogenic regions of the adult
+brain</article-title>. <source>Cell Stem Cell</source>
+<volume>3</volume>:<fpage>265</fpage>–<lpage>278</lpage>.<pub-id pub-id-type="pmid">18786414</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.stem.2008.07.004</pub-id><pub-id pub-id-type="pmcid">PMC2613692</pub-id></mixed-citation></ref><ref id="B67"><label>67.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Yakubov</surname>
+<given-names>LA</given-names></string-name>,
+<string-name name-style="western"><given-names>EA</given-names>
+<surname>Deeva</surname></string-name>,
+<string-name name-style="western"><given-names>VF</given-names>
+<surname>Zarytova</surname></string-name>,
+<string-name name-style="western"><given-names>EM</given-names>
+<surname>Ivanova</surname></string-name>,
+<string-name name-style="western"><given-names>AS</given-names>
+<surname>Ryte</surname></string-name>,
+<string-name name-style="western"><given-names>LV</given-names>
+<surname>Yurchenko</surname></string-name> and
+<string-name name-style="western"><given-names>VV</given-names>
+<surname>Vlassov</surname></string-name></person-group>.
+(<year>1989</year>). <source>Mechanism of oligonucleotide uptake by cells:
+involvement of specific receptors? Proc Natl Acad Sci U S A</source>
+<volume>86</volume>:<fpage>6454</fpage>–<lpage>6458</lpage>.<pub-id pub-id-type="pmid">2549537</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1073/pnas.86.17.6454</pub-id><pub-id pub-id-type="pmcid">PMC297862</pub-id></mixed-citation></ref><ref id="B68"><label>68.</label><mixed-citation publication-type="journal">
+<person-group person-group-type="author"><string-name name-style="western"><surname>Zain</surname>
+<given-names>R</given-names></string-name> and
+<string-name name-style="western"><given-names>CIE</given-names>
+<surname>Smith</surname></string-name></person-group>.
+(<year>2019</year>). <article-title>Targeted Oligonucleotides for Treating
+Neurodegenerative Tandem Repeat Diseases</article-title>.
+<source>Neurotherapeutics</source>
+<volume>16</volume>:<fpage>248</fpage>–<lpage>262</lpage>.<pub-id pub-id-type="pmid">31098852</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s13311-019-00712-9</pub-id><pub-id pub-id-type="pmcid">PMC6554256</pub-id></mixed-citation></ref></ref-list></back></article></pmc-articleset>

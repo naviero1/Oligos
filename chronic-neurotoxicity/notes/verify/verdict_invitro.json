@@ -1,0 +1,435 @@
+{
+ "batch": "batch_invitro",
+ "verdicts": [
+  {
+   "measurement_id": "CMS2042",
+   "verdict": "CONFIRMED",
+   "checked": "Local PMC8649108.jats.xml (Molecular Therapy Nucleic Acids 2022, doi 10.1016/j.omtn.2021.11.015). Fig 5 legend: '(A-C) Transcript analysis of ATXN3 (A), TUJ (B), and MAP2 (C) performed by qRT-PCR at days 7, 14, 21, and 28'. Results: 'No obvious differences in expression of TUJ and MAPT could be detected when comparing treated with untreated neurons (Figures 5B and 5C).' Discussion: 'no negative effect on TUJ and MAP2 expression up to 4 weeks'. Methods confirm 5 uM added to medium at DAI 36 with no transfection reagent ('these ASOs can simply be added to the supernatant and do not need transfection procedures') = gymnotic free uptake. ASO-/-3 sequence TAGTAACTCCTCCTTC matches the Methods ASO table exactly. Grade 0 rests on an actual qRT-PCR measurement at four timepoints, not on silence.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS2045",
+   "verdict": "CONFIRMED",
+   "checked": "Same source. Fig 5C is the MAP2 transcript panel per the figure legend and the Methods primer table (MAP2 primers listed). The Results text writes 'MAPT' but the legend, Discussion and primer table all say MAP2, so the row's readout_name is right and the Results text is the paper's own slip. Concentration, delivery and duration verified as for CMS2042. Legitimate measured negative.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS2048",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source. Fig 5D legend: 'LDH release assay at days 14, 21, and 28 of treatment with ASO-/-3, ASOwt4, and ASOmut4. Data are the mean +/- SD, n = 3'. Methods: LDH-Glo Cytotoxicity Assay, supernatant collected 14/21/28 d after ASO treatment, triplicate. Results: 'no increase in LDH in the supernatant at days 14, 21, and 28 of ASO treatment could be identified in comparison with untreated neurons'. Dose 5 uM, DAI 36 start, free uptake, n=3 all verified. Real assay, legitimate grade 0.",
+   "problem": "exposure_duration '14d' captures only the earliest of three measured timepoints; the null holds to 28 d (Discussion: 'unchanged LDH release up to 4 weeks'), so the row understates the exposure actually covered by the cited figure.",
+   "correction": {
+    "exposure_duration": "14d/21d/28d (row records earliest; null extends to 28d)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2051",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source and same Fig 5D locus, ASOmut4 arm. Allele-specific ASO pair 4 sequences verified against the Methods table: ASOmut4 = GGTCCCGCTGCTGC (14 nt), matching the row exactly.",
+   "problem": "Same timepoint understatement as CMS2048 (LDH measured at days 14, 21 and 28).",
+   "correction": {
+    "exposure_duration": "14d/21d/28d (row records earliest; null extends to 28d)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2054",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source and Fig 5D locus, ASOwt4 arm. Methods table gives ASOwt4 = GGTCCCCCTGCTGC (14 nt), matching the row exactly.",
+   "problem": "Same timepoint understatement as CMS2048.",
+   "correction": {
+    "exposure_duration": "14d/21d/28d (row records earliest; null extends to 28d)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2057",
+   "verdict": "CONFIRMED",
+   "checked": "Same source, Fig 5E. Results: 'immunocytochemical staining of SCA3 neurons with TUJ demonstrated no obvious morphological changes upon ASO treatment, with a stable and robust neuronal network present after 14 days of treatment (Figure 5E)'. Discussion repeats 'after 14 days of treatment'. Methods are decisive: 'iPSC-derived neurons were fixed on DAI 50 (ASO treatment day 14)'. The row's 14 d is therefore correct.",
+   "problem": "Worth recording for the assembler: the Fig 5E legend itself says 'after 7 days of treatment', contradicting the Methods, Results and Discussion, which all say 14 days. The row follows the 3-to-1 majority and the Methods arithmetic (DAI 36 start, DAI 50 fixation), which is the right call, but the discrepancy is in the source and should be noted rather than silently resolved.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS2060",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local PMC12744863.jats.xml (Mol Ther Nucleic Acids 2025, doi 10.1016/j.omtn.2025.102692) plus the local supplement kuroda2025_MTNA_late_onset_neurotoxicity_supplement.pdf. Fig 3 legend: '(A-C) BE(2)-M17 cells were transfected with 20 nM ASO2, with or without 2'-OMe modification at gap position 2. Cell number (A), LDH release in medium (B), and CDKN1A mRNA levels (C) ... as a percentage relative to vehicle (n = 4 biological replicates per group).' Fig 3B is therefore the LDH panel at the stated cell line, dose and duration. Parent ASO2 is one of the paper's five confirmed neurotoxic ASOs. Fig S17/S21 legends confirm '# and * indicates significance against vehicle and ASO2, respectively', so a vehicle-relative sign is available in the figure.",
+   "problem": "Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right. Also note the internal grade scale: the parent ASO2 gets grade 2 here while its worse-performing derivatives get grade 3, i.e. grading is relative to the parent rather than absolute.",
+   "correction": {
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2063",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source. Fig 3C is the CDKN1A mRNA panel (BE(2)-M17, 20 nM, 72 h, n=4, % of vehicle). Results: '2'-OMe at gap position 2 worsened cytotoxicity (Figures 3A-3D) and late-onset neurotoxicity after i.c.v. injection into mice (Figures 3E-3H)'. The locus, direction and comparator all check out.",
+   "problem": "neurotox_grade 3 is not defensible under the rubric for this readout. CDKN1A is a p53-activation transcriptional biomarker in an immortalised neuroblastoma line; grade 3 is reserved for neuronal degeneration/loss, paralysis, death, or dose-limiting/programme-halting toxicity. It also outranks the parent ASO2's actual cell-death readout (CMS2060, grade 2), which is incoherent. Secondary: endpoint_domain 'chronic_neurotoxicity' cannot be supported by a 72 h transfection readout. Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "neurotox_grade": "2",
+    "endpoint_domain": "cytotoxicity",
+    "challenge_priority": "medium",
+    "redistribution": "cc_by"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS2066",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source. Fig 5B legend: 'BE(2)-M17 cells were transfected with 20 nM ASO2 with or without replacement of PS bond 5'-adjacent to a DNA monomer at gap positions 1, 3, or 9 with a PO bond ... Cell number and LDH release 72 h post-transfection ... (n = 4)'. Results: 'PO replacements at these positions in ASO2 unexpectedly increased cytotoxicity compared with the parent ASO2 (Figures 5A, 5B, and S17)'. Supplement Fig S17 legend confirms the same panel with both comparators annotated.",
+   "problem": "The comparator recorded in effect_vs_control is the parent ASO2 while readout_unit is '% of vehicle'; the figure annotates both (# vs vehicle, * vs ASO2), so the vehicle-relative direction is recoverable and should be stated explicitly rather than left implicit. Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "redistribution": "cc_by",
+    "effect_vs_control": "higher LDH than parent ASO2 (comparator = parent ASO2, not vehicle)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2069",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same Fig 5B locus, cell-number arm. The row's note is verified verbatim in the Results: PS-1(-), PS-3(-) and PS-9(-) 'unexpectedly increased cytotoxicity compared with the parent ASO2', and in vivo 'three of the five mice in the PS-9(-) group either succumbed to severe toxicity or were euthanized between 2 and 9 days postinjection'. The counter-intuitive PS-reduction finding is real.",
+   "problem": "Same parent-vs-vehicle comparator ambiguity as CMS2066. Also, the grade-3 rationale in the notes is imported from the matched ICV mouse study; grade should be assigned from the in vitro measurement itself (cell loss in a neuroblastoma line does map to grade 3, so the grade survives, but the stated rationale does not belong to this row). Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2072",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source. Fig 6G legend: 'Neuro-2a cells were transfected with 2 nM ASOs and BE(2)-M17 cells for 20 nM ASOs: ASO2; ASO2 2'-OMe position 2; and ASO2 5'-CP position 1, 3, or 9 with or without PO replacement (n = 4)'. The supplementary equivalent Fig S21C is the LDH panel specifically. Results verbatim: \"5'-CP at position 3, 5'-CP at position 3 with PS-3(-), 5'-CP at position 9, and 5'-CP at position 9 with PS-9(-) exhibited higher cell viability and lower LDH release compared with the parent ASO2, indicating a trend toward reduced cytotoxicity (Figures 6G and S21).\" Locus, oligo identity and full-PS backbone all correct.",
+   "problem": "effect_direction 'decrease' is measured against the parent ASO2 while readout_unit is '% of vehicle'. A consumer reading (readout_name=LDH_release, effect_direction=decrease, readout_unit=% of vehicle) will infer the oligo lowered LDH below vehicle, which the source does not support - the paper claims only 'a trend toward reduced cytotoxicity' relative to a toxic parent and makes no vehicle-relative claim for these variants. The sign is effectively inverted relative to the declared unit. Fig S21C annotates # (vs vehicle) so the correct vehicle-relative direction is retrievable. Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "redistribution": "cc_by",
+    "effect_vs_control": "lower LDH release than parent ASO2 (comparator = parent ASO2); vehicle-relative direction not stated in text, read from Fig S21C"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS2075",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same Fig 6G / Fig S21B locus, cell-number arm, ASO2 5'-CP position 3 with PS-3(-) (PS_PO_mix backbone correct). Same Results sentence supports 'higher cell viability ... compared with the parent ASO2'.",
+   "problem": "Same sign problem as CMS2072 and more misleading here: effect_direction 'increase' on readout_name 'cell_number' with readout_unit '% of vehicle' reads as a cell-number rise above vehicle, i.e. a benign or proliferative effect, whereas the source only claims partial mitigation of a toxic parent. The extractor's own note ('graded 1 rather than 0 because the comparison is to the toxic parent, not to vehicle') shows the ambiguity was recognised for the grade but not carried into effect_direction. Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "redistribution": "cc_by",
+    "effect_vs_control": "higher cell number than parent ASO2 (comparator = parent ASO2); vehicle-relative direction not stated in text, read from Fig S21B"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS2078",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source. Fig 7 legend: '(B and C) BE(2)-M17 cells were transfected for 3 h with 200 nM of ASO1; ASO1 modified with 2'-OMe at gap position 2; or 5'-CP at gap position 1, 3, or 9. (B) Representative microscopic immunostaining images of p54nrb. (C) Percentage of p54nrb mislocalization to nucleoli in BE(2)-M17 cells ... mean +/- SEM of different microscopic images within the same well (n = 6 per group).' Cell line, 200 nM, 3 h and n=6 all match the row exactly. Supplement Table S1 confirms ASO1 targets Mapt.",
+   "problem": "endpoint_domain 'chronic_neurotoxicity' and challenge_priority 'high_chronic_neurotox' are not supportable by a 3-hour transfection readout; p54nrb mislocalization is the paper's *proposed mechanism* of late-onset toxicity, but the measurement itself is acute. This inflates the high-priority chronic bucket. Also worth recording: ASO1 targets mouse Mapt and is assayed here in a human cell line, so this readout is hybridisation-independent. Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "endpoint_domain": "cytotoxicity",
+    "challenge_priority": "medium",
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2081",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source plus the local supplement PDF. Figure S7 legend (supplement p.9) reads in full: 'BE(2)-M17 cells were transfected with 50 nM ASO4. (A) Representative microscopic images of cells 24 and 72 h after transfection. (B) cell number 24 h and 72 h post-transfection. (C) LDH release in medium 24 and 72 h post-transfection ... as a percentage relative to the vehicle (n = 4 per group). # indicates significance against vehicle.' Main-text Results confirm elevated LDH: 'Mouse Neuro-2a or human BE(2)-M17 neuronal cells treated with ASO1 or ASO4, respectively, exhibited abnormal morphology, reduced cell numbers, and elevated lactate dehydrogenase (LDH) release, with these effects becoming pronounced at 72 h post-transfection (Figures 2A-2C and S7).' Direction, cell line and 72 h all confirmed.",
+   "problem": "dose_or_conc_value was left TBD but is recoverable and stated: 50 nM. The supplement was already in the local sources directory, so 'not retrieved' was avoidable. Supplement Table S1 also resolves the oligo record: ASO4 targets SNCA (recorded as TBD) with sequence 5'-C(5)C(5)ATTTATATACAAAC(5)AC(5)A (19 nt). The LDH panel is specifically Fig S7C. Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "dose_or_conc_value": "50",
+    "dose_or_conc_unit": "nM",
+    "source_table": "Fig S7C",
+    "redistribution": "cc_by",
+    "_oligo.target_gene": "SNCA",
+    "_oligo.length_nt": "19"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2084",
+   "verdict": "CONFIRMED",
+   "checked": "Local PMC12925542.jats.xml (Mol Ther Nucleic Acids 2026, doi 10.1016/j.omtn.2026.102848). Results verbatim: 'For ASO APGS, the IC50 for APP was 1.60 nM (Figure 4E) and the IC50 for GSK3-beta was 1.28 nM (Figure 4F). Silencing persisted for 72 h after treatment (Figure 4G), and dose-dependent reduction in cell viability was significant at doses >40 nM (Figure 4H).' Fig 4 legend: 'Cell viability assessed by MTS assay 48 h after BAMT (D) or APGS (H) ASO treatment. Values are mean +/- SEM, n = 3'. Cell line SH-SY5Y, MTS assay, 48 h and the >40 nM threshold all match. The grade-0 call at 20 nM is a sound inference from an actual dose-response viability assay, and the notes disclose that it is an inference. system_model honestly records SH-SY5Y as a neuroblastoma line rather than dressing it up as an iPSC neuron. Licence is CC BY-NC-ND, so summary_stat is correct.",
+   "problem": "Context worth carrying, not an error: the same oligo at the same 20 nM dose DID reduce viability in the companion HEK293 APPswe experiment ('A reduction in cell viability was observed from 20 nM onwards (Figure 3H)'). The grade 0 is model-specific and should not be generalised across the paper's two cell lines.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS2087",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local PMC12148737.jats.xml (HGG Advances 2025, doi 10.1016/j.xhgg.2025.100450). Results verbatim: 'After 1 week of treatment with ASO243, ASO249, and ASO267, the E198K neurons exhibited significant knockdown of the K198 mutant allele (56%, 70%, and 37%, respectively) and minimal knockdown of the E198 allele (0%, 16%, and 4%, respectively) compared to a non-targeting scramble ASO control (Figure 5C).' ASO243 = 0% E198 knockdown, exactly as recorded. Delivery confirmed as gymnotic uptake at 10 uM. The row is correctly framed as an on-target liability against the non-pathogenic allele, not as efficacy.",
+   "problem": "effect_direction 'decrease' with readout_value 0 (% knockdown) is self-contradictory: 0% knockdown of the E198 allele is a null result and the direction should be no_change. Also: the notes on this row group describe '4 weeks of continuous exposure', but Methods state a single dose - 'On day 3 of iNGN2 neuronal culture, ASO treatment was initiated by adding 10 uM ASOs ... the medium was changed three times a week by removing half of the medium and adding half fresh medium.' Exposure is a single 10 uM bolus with progressive washout, not continuous re-dosing, which materially weakens the 'selectivity degrades under chronic exposure' framing. Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "effect_direction": "no_change",
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2090",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source. Results verbatim: 'corE198K mean: 49.33 +/- 24.54 um; E198K mean: 59.04 +/- 29.80 um ... E198K neurons treated with the scrambled ASO control show no difference in neurite outgrowth compared to untreated E198K neurons (scramble ASO control mean: 60.78 +/- 22.76 um; Figure 5E).' All three numbers in effect_vs_control match to the decimal. MEDIAN CROSS-CHECK: Fig 5E legend medians are corE198K 45.3, E198K no ASO 55, scramble 56.1 um - the 'no difference vs untreated' conclusion holds under medians as well, so this row does not flip.",
+   "problem": "Provenance: the three means are in the Results text, not in Fig 5E. Fig 5E is a per-neurite scatter whose plotted line is the MEDIAN (56.1 um for this arm), so a reader sent to Fig 5E will not find 60.78. source_table should say so. Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "source_table": "Results text (neurite outgrowth at DIV11); data plotted in Fig 5E, whose line is the median (56.1 um)",
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2093",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source. Results verbatim: 'E198K neurons treated with ASO267 exhibit no change in neurite length compared to neurons treated with the scramble control (ASO267 mean: 62.68 +/- 26.27 um).' Value and direction exact. MEDIAN CROSS-CHECK: Fig 5E medians ASO267 57.9 vs scramble 56.1 um - no_change holds under medians; this row does not flip.",
+   "problem": "Same source_table provenance issue as CMS2090 (mean is from the Results text; Fig 5E plots medians). Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "source_table": "Results text (neurite outgrowth at DIV11); data plotted in Fig 5E, whose line is the median (57.9 um)",
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2096",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source. Results verbatim: 'After 4 weeks of treatment with ASO243, ASO249, and ASO267, we observed increased knockdown of the K198 mutant allele (81%, 79%, and 53%, respectively), although we also observed more knockdown of the E198 allele (36%, 55%, and 19%, respectively) compared to the scramble ASO control (Figure 5F).' ASO267 = 19%, exactly as recorded. Locus Fig 5F correct.",
+   "problem": "Also: the notes on this row group describe '4 weeks of continuous exposure', but Methods state a single dose - 'On day 3 of iNGN2 neuronal culture, ASO treatment was initiated by adding 10 uM ASOs ... the medium was changed three times a week by removing half of the medium and adding half fresh medium.' Exposure is a single 10 uM bolus with progressive washout, not continuous re-dosing, which materially weakens the 'selectivity degrades under chronic exposure' framing. Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2099",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source. Results verbatim: 'corE198K mean: 123.9 +/- 67.24 um; E198K mean: 148.5 +/- 81.33 um ... After 4 weeks of treatment with ASO243 and ASO249, we observed complete rescue of the neurite overgrowth phenotype ... (ASO243 mean: 126.9 +/- 68.65 um; ASO249 mean: 127.1 +/- 66.87 um; Figure 5H).' All three numbers exact. The E198K phenotype is neurite OVERgrowth, so the ASO-driven shortening toward the isogenic control is a rescue and grade 0 is the right call - correctly NOT filed as toxicity. MEDIAN CROSS-CHECK: Fig 5H medians corE198K 108.3, E198K no ASO 138.5, scramble 140.7, ASO249 115.3 um - ASO249 still lands above the corrected control, so the rescue reading survives and this row does not flip.",
+   "problem": "Same source_table provenance issue (means from Results text; Fig 5H plots medians). Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "source_table": "Results text (neurite outgrowth at DIV35); data plotted in Fig 5H, whose line is the median (115.3 um)",
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2102",
+   "verdict": "REFUTED",
+   "checked": "Same source. The cited locus exists and is quoted correctly - Methods, 'ASO design and treatment': 'E198K NSCs were treated with 10 uM ASOs 1 day after the cells were passaged and maintained in culture with the ASOs for 72 h. The required fresh medium was added to the culture at 48 h.' But that sentence describes dosing only. No viability assay, morphology assessment, DEG count or any other toxicity readout exists for this arm anywhere in the paper. The only result reported for it is an EFFICACY negative: 'Treatment of E198K NSCs with ASOs for 72 h did not result in significant knockdown, likely due to the highly proliferative nature of the NSCs leading to rapid dilution of the ASO among daughter cells (Figures 2D, 2E, and S4D)'. The Fig 2D/2E it points to are baseline KI67+ and EdU+ proliferation comparisons between untreated genotypes, not ASO-treated measurements.",
+   "problem": "This is a grade-0 row resting entirely on silence: 'the paper did not report toxicity' recorded as 'the paper measured toxicity and found none'. readout_value, effect_direction and effect_vs_control are all TBD, and the extractor's own note concedes 'the grade-0 call rests only on the absence of a reported adverse observation'. A grade-0 label with no measurement behind it will train a model to treat unmeasured arms as safe.",
+   "correction": {
+    "neurotox_grade": "TBD",
+    "recommendation": "drop the row; no toxicity endpoint was measured for the NSC arm"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS2105",
+   "verdict": "REFUTED",
+   "checked": "Local PMC12847787.jats.xml (Nat Commun 2025, doi 10.1038/s41467-025-67725-1). The readout itself checks out exactly - Results: 'treatment with r6-MO resulted in enhanced basal activity compared to untreated SMA SCOs (r6-MO 1.843 +/- 0.4396 Hz vs. untreated 1.067 +/- 0.1623 Hz, p < 0.0001; Fig. 5f, g)', n = 23 organoids. Grade 0 is also right and the direction is correctly NOT read as excitotoxicity: SMA organoids are HYPO-active relative to controls (Fig 4b,c: 'CTRL 1.956 +/- 0.5354 Hz vs. SMA 1.355 +/- 0.6807 Hz, p = 0.0127'), so the rise to 1.843 Hz is normalisation toward the control value. readout_category=electrophysiology and challenge_priority=low_acute_electrophysiology are correctly applied.",
+   "problem": "delivery_method 'intraparenchymal' is wrong. Methods: 'The solution containing 2.4 nmol MO or r6-MO was added directly to each well and incubated for 48 h.' The morpholino was added to organoid culture medium - unfacilitated (CPP-conjugated) free uptake, not an in vivo parenchymal injection. Any delivery-stratified analysis would misclassify this row. Secondary: the regimen escalates (2.4 nmol, then 2.4 nmol, then 4.8 nmol after a 72 h washout), so recording 2.4 alone understates the final dose, and dose_or_conc_unit 'NA' silently drops the unit because the schema enum has no 'nmol' (a vocabulary gap worth raising).",
+   "correction": {
+    "delivery_method": "gymnotic_free_uptake",
+    "dose_or_conc_value": "2.4 (x2) then 4.8",
+    "dose_or_conc_unit": "nmol per well (not in schema enum)"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS2108",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local PMC12855289.jats.xml (Nat Commun 2026, doi 10.1038/s41467-025-67752-y). Methods: 'ASOs were diluted in DPBS and used at a final concentration of 10 uM to be incorporated via gymnosis. Cells were treated with 10 uM of ASOs on day 7 of differentiation ... For Fig. 4, on DIV35 of differentiation ... cells were fixed and stained for neurite outgrowth analysis.' Dose, gymnotic delivery and the DIV7-DIV35 4-week window are exact. Fig 4D is the neurite-outgrowth quantification (n = 96 MAP2+ outgrowths for ASO 1144). Direction is right: the patient phenotype is SHORT neurites ('neurons with pathogenic KIF1A variants exhibited a statistically significant reduction in neurite outgrowth lengths compared to isogenic controls'), and the ASO restores length, so effect_direction=increase is correct and grade 0 (rescue, not toxicity) is the right call. The note about unquantified WT-allele knockdown is verified: 'all ASOs tested exhibiting at least some degree of knockdown for the non-targeted allele'.",
+   "problem": "Two things. (1) The '60% allele-specific knockdown' attributed to ASO 1144 is not attributable from the text: the paper says only 'the ASOs targeting rs1063353 in cis with the mutant allele had 74% and 60% allele-specific knockdown of the pathogenic allele (Fig. 4C)' without saying which ASO is which. Mark it as inferred or drop the figure. (2) endpoint_domain 'chronic_neurotoxicity' with challenge_priority 'high_chronic_neurotox' is applied to a pure disease-phenotype rescue endpoint. The row is a tolerability inference (neurons survived 4 weeks at 10 uM and improved), not a toxicity measurement, and filing it in the high-priority chronic bucket inflates that bucket.",
+   "correction": {
+    "challenge_priority": "medium",
+    "notes": "60% knockdown figure is inferred; source states 74% and 60% without attributing either to a named ASO"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2111",
+   "verdict": "REFUTED",
+   "checked": "Local PMC13099374.jats.xml (Nat Med 2026, doi 10.1038/s41591-026-04314-9). The cited Methods sentence exists and is quoted accurately: 'Following initial ASO screening via lipofectamine transfection, secondary ASO validation was used via gymnosis or free uptake. ASOs were added directly to the culture medium at concentrations ranging from 0.3 uM to 10 uM. BE(2)-M17 and SH-SY5Y cells were cultured for 2-14 days, and human iPSC-derived neurons were cultured ~14 days post-doxycycline before treatment with ASOs (1-2 weeks).' But it reports no toxicity or viability outcome of any kind, and no viability assay for this arm exists in the paper.",
+   "problem": "Grade-0 row resting on silence, with readout_value, effect_direction and effect_vs_control all TBD - the extractor's own note concedes it. It is also over-specified: the generic Methods sentence covers three cell types and all ASOs, yet the row pins it to KT777ps in the p.R474H patient line. What makes this the clearest miss in the batch is that the SAME paper contains two properly-sourced measured negatives that should have been used instead, both for KT777 (mixed PS/PO backbone), not KT777ps: (i) Fig 1g / Suppl Table 5 - transcriptome-wide RNA-seq after 2 weeks of gymnotic 10 uM treatment of human iPSC-derived neurons, where 'KCNT1 downregulated at an adjusted P value (Padj) = 1.7 x 10-34; 11 additional downregulated genes nominally significant at Padj < 0.05', none of the computationally predicted off-targets perturbed, and 'no overall changes in the expression of specific biological pathways'; and (ii) Extended Data Fig 2e-g - 'Patient neurons treated with ASOs for up to 3 weeks appeared healthy and showed normal neurite morphology'.",
+   "correction": {
+    "neurotox_grade": "TBD",
+    "recommendation": "drop and replace with a KT777 row at Fig 1g / Suppl Table 5 (readout_name off_target_DEGs, readout_value 11, n_genes, 10 uM gymnotic, 2wk, hiPSC neuron) and/or a neurite-morphology row at Extended Data Fig 2e-g (3wk)"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS2114",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local PMC8713517.jats.xml (Nucleic Acid Therapeutics 2021, doi 10.1089/nat.2021.0021). Fig 3 legend: 'CAG19 does not have adverse effect on in vitro NSC organization into neural rosette structures and NSC self-renewal ... (B) Quantification of the size of neural rosette structures and the number of PAX6/Ki67-positive cells/neural rosette structure in nontreated, SCR19 and CAG19-treated cells. The diameter and the number of Ki67-positive cells was quantified in 35 neural rosette structures per experiment (n = 2).' SCR19 is one of the three arms in Fig 3B, so the oligo assignment is valid. Methods: 'ONs (final concentration of 2 uM) were added into the culturing media during the neural induction and maturation progress' = gymnotic free uptake at 2 uM, as recorded. SCR19 sequence gAcGAcGAcGAcGAcGAcg (19 nt) matches the Methods exactly. Grade 0 rests on a real cell count, not silence.",
+   "problem": "The row is filed under SCR19 but effect_vs_control describes the other arm: 'similar number of Ki67+ NSCs regardless of CAG19 treatment'. Both arms are null so the substance survives, but the sentence should name SCR19. Also the NSC/rosette immunofluorescence was performed at day 22 per Methods ('maintained in NMM or supplemented BrainPhys ... until day 22 or day 38-53 postinduction, respectively'), not '~23-30d'. Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "effect_vs_control": "similar number of Ki67+ NSCs per rosette in SCR19-treated vs nontreated cells",
+    "exposure_duration": "continuous from day 0 of neural induction, assessed at day 22",
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2117",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source. Locus is exact - Statistical analysis section: 'The differences in HTT (Fig. 4B), ATN, POU3F2, ATXN2, AR, BRI3BP, and DMPK mRNA levels at d43-d53 (Fig. 5) ... were assessed using unpaired Student's t-test.' Fig 5 title: 'CAG19 ON does not affect (A) ATN1, POU3F2, ATXN2, AR or (B) BRI3BP and DMPK gene expression during the differentiation progress. SCR19 and CAG19 ONs (2 uM) were delivered into HD line ... mRNA expression was analyzed at day 43 (5 days of treatment), 45 (7 days of treatment), and 53 (15 days of treatment) of neural induction (n = 3).' Exposure exact: 'The treatment was initiated at day 38 of neural induction and maintained for 15 days during maturation.' The 61% figure is exact: 'HTT mRNA levels were significantly decreased ... with a maximum of 61% downregulation at day 15 (Fig. 4B).' The six-gene panel and its CAG/CTG vs CUG split match the Introduction summary verbatim. Cell line ND42223 (HD, 109 CAG) and the mixed neuron/S100+ astrocyte culture are both accurately described. A real targeted qPCR panel, so the grade 0 is a measured negative.",
+   "problem": "Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right. One qualifier for the assembler, already flagged in the row's own notes: this is a homology-selected six-gene panel, not a transcriptome-wide screen, so 'no off-target effect' is bounded by the panel.",
+   "correction": {
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2120",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local PMC11555823.jats.xml (Hum Mol Genet 2024, doi 10.1093/hmg/ddae135). Results verbatim: 'We detected no baseline difference, nor change upon ASO treatment, in soma size between unaffected control and MDS iNeurons (Fig. 6D).' Fig 6 legend: '(D) Quantification of soma area per analyzed neuron. In total 23 neurons from unaffected control lines treated with 20 uM scramble ASO ..., 22-23 neurons from MDS lines treated with 20 uM scramble ASO ..., and 21 neurons MDS lines treated with 20 uM MECP2 ASO#1 ... were analyzed using the Neurolucida software.' The row's '(21 vs 22-23 neurons)' is exact. Methods confirm free uptake: 'ASOs were added directly to the media ... ASOs were added at each half-media change to achieve the same final initial concentration', 20 uM, 'ASO treatment was continued for 2 weeks'. The oligo record is fully corroborated: MECP2 ASO #1 = 5'-TGGCACTTTCTCAGACTGTT-3', 20-mer 5-10-5 MOE gapmer, mixed PS/PO backbone ('1-PS, 4-PO, 10-PS, 2-PO, and 2-PS'). Grade 0 rests on an actual morphometric quantification. This is one of the strongest rows in the batch.",
+   "problem": "Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2123",
+   "verdict": "REFUTED",
+   "checked": "Local PMC12581821.jats.xml (Hum Mol Genet 2025, doi 10.1093/hmg/ddaf153). The cited Results section exists and reads in full: 'iPSC-derived neuronal cells from control cell line C1.1 were transfected with a scrambled AON or an AON designed to induce exon skipping within APP, ATXN3 or HTT (Fig. 1). Cell death was observed in the ATXN3-AON-transfected samples as was confirmed by a lower RNA yield (Fig. S1A).' Transfection conditions verified in Methods for all rows from this source: 'At day 11 after the start of neuronal maturation, cells were transfected during 4 hours with AONs diluted to 200 nM concentration in Opti-MEM medium ... with 0.3% Lipofectamine 2000. After this, medium was replaced to BrainPhys medium and cells were harvested 3 days later.' 200 nM, lipofection, 4 h + 72 h all exact.",
+   "problem": "The paper reports cell death for the ATXN3-AON only. It nowhere states that HTT-AON produced no cell death. The row converts that omission into readout_value 'none observed' with effect_direction no_change and neurotox_grade 0 - the row's own effect_vs_control field even says 'no cell death reported', which is an admission that the basis is silence rather than measurement. This is the same failure mode as CMS2102 and CMS2111. Note the contrast within the same paper: for the validation experiment the authors DO state an explicit measured negative - 'For ATXN3-AON2, no cell death was observed' - which would make a legitimate grade-0 row. Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "neurotox_grade": "TBD",
+    "recommendation": "drop, or re-source to Fig S1A and record the actual HTT-AON RNA-yield value if the supplementary figure plots one; a defensible replacement grade-0 row exists for ATXN3-AON2 ('For ATXN3-AON2, no cell death was observed')",
+    "redistribution": "cc_by"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS2126",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source. Results verbatim: 'Similar to what was observed in cell line C1.1, cell death upon transfection and a lower number of reads assigned to a gene were observed for ATXN3-AON in cell line C2, but less so in cell line C1.2. (Fig. S4, Fig. S5).' The row's effect_vs_control is a faithful paraphrase, the locus is right, and grade 2 for observed cell death is defensible. Transfection conditions verified in Methods for all rows from this source: 'At day 11 after the start of neuronal maturation, cells were transfected during 4 hours with AONs diluted to 200 nM concentration in Opti-MEM medium ... with 0.3% Lipofectamine 2000. After this, medium was replaced to BrainPhys medium and cells were harvested 3 days later.' 200 nM, lipofection, 4 h + 72 h all exact. ATXN3-AON sequence AUAGGUCCCGCUGCUGCU (18 nt) matches Table 9.",
+   "problem": "Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2129",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source, Table 1 parsed from the XML: 'Scrambled AON vs. HTT-AON | Significant 11 387 | Up 5776 | Up |LFC|>1 778 | Down 5611 | Down |LFC|>1 841'. Every number in the row matches, and the denominator is exact too - Results: 'After filtering out the genes with a low expression level, we tested 25 124 genes in total.' The comparator is a chemistry-matched scrambled AON, as the notes claim.",
+   "problem": "Grade inconsistency across rows from this same paper: 11 387 DEGs (45% of the 25 124 genes tested) is graded 1 here, while CMS2138's 9 385 DEGs from the same experimental series is graded 2. The DEG-count-to-grade mapping is inverted between the two rows. There is no declared DEG threshold anywhere in the schema, so DEG-based grades are not comparable row to row and a model will learn a non-monotonic relationship between transcriptome perturbation and severity. Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "neurotox_grade": "2 (for consistency with CMS2138), or declare an explicit DEG-count-to-grade threshold and apply it uniformly",
+    "redistribution": "cc_by"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS2132",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source, Table 2: 'Number of significant results obtained by both rMATS and whippet per event type', HTT-AON column - Exon skipping 842, Alt splice donor 14, Alt splice acceptor 9, Retained intron 2, Total 867. Value and the 'called by both rMATS and Whippet' qualifier are both exact. Transfection conditions verified in Methods for all rows from this source: 'At day 11 after the start of neuronal maturation, cells were transfected during 4 hours with AONs diluted to 200 nM concentration in Opti-MEM medium ... with 0.3% Lipofectamine 2000. After this, medium was replaced to BrainPhys medium and cells were harvested 3 days later.' 200 nM, lipofection, 4 h + 72 h all exact.",
+   "problem": "Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2135",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source, Table 4 row 'Scr. AON vs. HTT-AON': total splicing events All 867 / Specific 545; events matching predicted binding sites for the scrambled AON All 31 / Specific 14; for the targeting AON All 5 / Specific 4. The row's '4 AON-specific events (of 5 total matching a predicted binding site)' is exact. The <2% claim in the notes checks out (5/867 = 0.6%).",
+   "problem": "Minor caveat worth carrying: one of those 5 binding-site-matched events is the INTENDED HTT exon-12 event (Table 3 marks HTT-AON as having 1 zero-mismatch site, footnoted 'intended binding site'), so the genuinely off-target hybridisation-dependent count is smaller still. Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2138",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source, Table 6 row 'Scrambled AON2 vs. ATXN3-AON': cell line C1.2 Up 139 / Down 87; cell line C2 Up 4650 / Down 4735; shared Up 119 / Down 49. The row's '4650 up / 4735 down vs scrambled AON2 in line C2' is exact. The extractor's flag that Table 6's caption names 'ATXN3-AON10.4/10.A/10.h' while the row labels say 'ATXN3-AON' is a real inconsistency in the source and is correctly disclosed in the oligo aliases.",
+   "problem": "readout_value 9385 is the extractor's sum of the up and down columns and is not printed anywhere in the table; it is disclosed in effect_vs_control, so this is transparent rather than fabricated, but it should be marked as derived. See CMS2129 for the grade-inversion problem this row is the other half of. Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "readout_value": "9385 (derived: 4650 up + 4735 down; not printed in Table 6)",
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2141",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local PMC11040766.jats.xml (Mol Neurodegener 2024, doi 10.1186/s13024-024-00725-9). Results verbatim: 'The APOE ASO-1 with a 1.25 uM dose had 9 DEGs and with a 20 uM dose 194 DEGs at both timepoints (Suppl Fig. 13A, Suppl Table 8).' Locus, value, dose and the 24 h/48 h conservation criterion all exact, and the comparator matches - 'Transcriptional changes were evaluated comparing the lead ASOs to the untreated condition with microarray'. Free uptake confirmed ('after unfacilitated free delivery'). The notes' IC50 claim checks out: 'a dose-dependent reduction following APOE ASO-1 and ASO-13 treatment with an IC50 of 11 and 33 nM, respectively', so 1.25 uM is ~114x the 11 nM IC50. A real microarray measurement, so grade 0 is a measured negative.",
+   "problem": "Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2144",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source. Results verbatim: 'The TREM2 ASO-171 ASO at a 1.25 uM dose had 1 DEG and with a 20 uM dose 11 DEGs at both timepoints (Suppl Fig. 13B, Suppl Table 9).' Exact. The notes' second claim is also exact: 'For the TREM2 ASOs, upon a 20 uM dose and conserved over the timepoints, 2 out of 11 DEGs are conserved', and the authors conclude 'our lead TREM2 ASO is highly selective for its intended target'. Grade 0 at 20 uM is well supported.",
+   "problem": "Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2147",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source. Results verbatim: 'Treatment with various concentrations of TREM2 ASO-171 did not elicit any significant dose-dependent electrophysiological alterations that may represent a CNS hazard (Suppl Fig. 13D).' The row's effect_vs_control is near-verbatim. The 90 min incubation is confirmed ('after 90 min of incubation with various concentrations'). readout_category=electrophysiology and challenge_priority=low_acute_electrophysiology are correctly applied, so this row is properly filterable under the brief's deprioritisation. species=rat is correct.",
+   "problem": "Three notes. (1) The paper says 'rat primary neuron cultures'; 'cortical' in system_model is the extractor's addition and is not stated. (2) The '[invitro_human]' lane tag in the notes sits on a rat row - harmless as a lane label but confusing on inspection. (3) IMPORTANT for the assembler: the matched POSITIVE arm of this same assay is a real, gradeable finding that must not be lost - 'Treatment with APOE ASO-1 resulted in decreased action potential weighted mean firing rates, decreased number of neural network bursts and a decreased area under cross correlation and were significant at higher concentrations (starting at 1 uM) ... The observed changes were consistent with an inhibitory/sedative CNS hazard (Suppl Fig. 13C).' Confirm an APOE ASO-1 row exists at Suppl Fig 13C; this row's own note presupposes it. Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "system_model": "rat_primary_neuron_culture_MEA",
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2150",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source. Results: 'We confirmed these findings in freshly isolated human whole blood from 4 independent donors, using TLR-7 and TLR-8 agonists as positive control (Suppl Fig. 14C).' Methods confirm the panel is genuinely 7-plex: IL-1beta, IL-6, IL-8, IL-10, IL-12p70, IFN-gamma and TNF-alpha by MSD electrochemiluminescence, 'For the 7-plex cytokine assay'. 24 h confirmed ('One day later, samples were collected'). 4 donors confirmed. is_cns_specific=FALSE is correctly set for a peripheral blood comparator. Real assay, so grade 0 is a measured negative.",
+   "problem": "Two dose issues. (1) Methods state the ASOs were tested at three concentrations - 'The ASOs and positive controls ... were added to the blood immediately after plating at 3 different concentrations (1, 2.5 and 10 uM)' - so recording only 1 uM captures the weakest arm; the strongest null is at 10 uM. (2) The '(at 10 uM)' in effect_vs_control actually qualifies the TLR agonist positive control ('whole blood treated with TLR-7 and TLR-8 agonists at 10 uM were used as a positive control'), not the ASO dose, and reads as the latter. Reword. Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "dose_or_conc_value": "1; 2.5; 10 (row records lowest only)",
+    "effect_vs_control": "no cytokine induction at 1, 2.5 or 10 uM ASO; TLR-7/TLR-8 agonists at 10 uM served as the positive control",
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2153",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Same source and same Suppl Fig 14C locus, TREM2 ASO-171 arm. All conditions verified as for CMS2150. Supported by 'The APOE and TREM2 ASOs did not induce the secretion of cytokines' and the summary conclusion 'our lead ASOs do not elicit a proinflammatory response by human microglia'.",
+   "problem": "Identical dose-recording and comparator-wording issues as CMS2150. Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "dose_or_conc_value": "1; 2.5; 10 (row records lowest only)",
+    "effect_vs_control": "no cytokine induction at 1, 2.5 or 10 uM ASO; TLR-7/TLR-8 agonists at 10 uM served as the positive control",
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS2156",
+   "verdict": "REFUTED",
+   "checked": "Local PMC11571808.jats.xml (RNA 2024, doi 10.1261/rna.080220.124). The cited Results sentence reads in full: 'Under identical conditions, a similarly modified fluorescent control ASO (BLOCK-iT Fluorescent Oligo) achieved ~50%-75% transfection efficiency with no cell death observed at concentrations BELOW 250 nM (Supplemental Fig. S2A).' Lipofection is confirmed (Lipofectamine 3000, Methods), SH-SY5Y is confirmed, and the sbASO dose range actually run was 1.5, 5, 50 and 125 nM. Licence is CC BY-NC, so summary_stat is correct.",
+   "problem": "dose_or_conc_value is recorded as 250 nM, which is precisely the concentration the source EXCLUDES. The paper establishes a no-cell-death ceiling below 250 nM; it makes no claim at 250 nM. As filed, the row asserts a grade-0 measured negative at a dose the source does not cover, and a model reading (dose=250 nM, effect=no_change, grade=0) learns the opposite of what the paper bounds. Secondary: 'no cell death observed' is a qualitative microscopy observation attached to a transfection-efficiency figure (Suppl Fig S2A), not a viability assay, so even at a corrected dose the grade-0 support is weak and should be marked as such.",
+   "correction": {
+    "dose_or_conc_value": "125",
+    "dose_or_conc_unit": "nM",
+    "effect_vs_control": "no cell death observed at concentrations below 250 nM (highest concentration with data: 125 nM)",
+    "notes": "qualitative microscopy observation tied to a transfection-efficiency figure, not a viability assay"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS2159",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local PMC11428300.jats.xml (Biomedicines 2024, doi 10.3390/biomedicines12091933). Results verbatim: 'When we treated iPSC-derived neuronal cultures with increasing concentrations of a FAM-labeled ASO using gymnotic uptake, CEM, and lipofectamine, there was a significant reduction in the number of nuclei only after lipofectamine transfection (Figure 1A,B).' The row's 'only delivery method producing a significant loss' is exact. Methods confirm the exposure exactly: 'ASO suspension was made with 500 nM ASO and 2.5 uL Lipofectamine 2000 ... incubated at 37 C for 4 h, after which the medium was changed to complete BrainPhys Neuronal medium and incubated for a total of 72 h.' system_model is honest - the culture is 'a mixture of MAP2-positive neurons and GFAP-positive-astrocytes'. The notes correctly attribute the toxicity to the delivery vehicle rather than the oligo, which is the right reading since the same oligo was non-toxic by gymnotic uptake and by calcium-enhanced medium.",
+   "problem": "Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flattening it to summary_stat forfeits that right.",
+   "correction": {
+    "redistribution": "cc_by"
+   },
+   "severity": "minor"
+  }
+ ],
+ "summary": "40/40 rows adjudicated against the primary sources; every one of the 13 cited papers was available locally in /home/user/oligos/sources/cns/ (11 PMC JATS files plus the Kuroda supplement PDF), so nothing was UNVERIFIABLE. Verdicts: 4 CONFIRMED, 31 CONFIRMED_MINOR, 5 REFUTED, 0 UNVERIFIABLE. Severity: 0 critical, 9 major, 27 minor, 4 none. Convention used: REFUTED is reserved for rows where the cited locus does not support the claim (silence-based grade 0, wrong dose, wrong delivery route). Rows where the number and locus are right but the grade is not rubric-defensible, or a comparator/sign is ambiguous, are CONFIRMED_MINOR with severity major and an explicit correction. \n\nThe 5 REFUTED rows: CMS2102 (PPP2R5D NSC arm), CMS2111 (KCNT1 free-uptake dose range) and CMS2123 (Kuijper HTT-AON cell death) are grade-0 rows resting on silence rather than measurement. CMS2105 (SMA organoid) records delivery_method=intraparenchymal for a morpholino that Methods say was 'added directly to each well' - it is gymnotic free uptake. CMS2156 (sbASO BLOCK-iT control) records dose 250 nM when the source says 'no cell death observed at concentrations BELOW 250 nM' - the row asserts a negative at exactly the concentration the paper excludes. \n\nEFFICACY MISFILED AS TOXICITY: none found. This lane handled the trap well. Every knockdown/rescue row is graded 0 - the PPP2R5D neurite rescue (CMS2099), the KIF1A neurite rescue (CMS2108) and the SMA organoid firing-rate normalisation (CMS2105) are all correctly recorded as benefit, not hazard. CMS2105 in particular could easily have been misread: an INCREASE in neuronal firing looks like excitotoxicity until you check Fig 4b,c, where SMA organoids are hypo-active vs control (1.355 vs 1.956 Hz), making the treated 1.843 Hz a normalisation. The extractor got that right. Two rows do inflate the high-priority chronic bucket with what are really efficacy or acute endpoints (CMS2108 - a pure disease-phenotype rescue filed as chronic_neurotoxicity/high_chronic_neurotox; CMS2078 - a 3-hour transfection readout filed as chronic_neurotoxicity), but neither records efficacy as a toxicity signal. \n\nGRADE-0 ROWS RESTING ON SILENCE: three, all in the same shape - the source_table points at a Methods dosing sentence, readout_value/effect_direction/effect_vs_control are TBD, and the grade-0 comes from the paper not having mentioned harm. CMS2102 (PPP2R5D E198K NSCs, 10 uM, 72 h): the only result reported for that arm is an efficacy negative (no significant knockdown, attributed to ASO dilution in proliferating cells); the Fig 2D/2E it cites are baseline untreated-genotype proliferation comparisons. CMS2111 (KCNT1 KT777ps, 0.3-10 uM free uptake): the Methods sentence is quoted accurately but reports no outcome - and the same paper contains two properly-sourced measured negatives for KT777 that should have been used instead (Fig 1g/Suppl Table 5: only 11 additional downregulated genes beyond KCNT1 after 2 weeks gymnotic 10 uM in human iPSC neurons; Extended Data Fig 2e-g: normal neurite morphology at 3 weeks). CMS2123 (Kuijper HTT-AON): the paper reports cell death for the ATXN3-AON only and never states an HTT-AON negative; the row's own effect_vs_control says 'no cell death reported', which concedes the point. The same paper does supply an explicit measured negative for ATXN3-AON2 ('For ATXN3-AON2, no cell death was observed') that would make a legitimate grade-0 row. \n\nPPP2R5D MEAN/MEDIAN CONFLICT - RESOLVED. Both statistics are in the fetched paper: the Results text reports means, the Fig 5E/5H legends report the plotted medians. The three neurite rows in MY batch all survive the median reading: CMS2090 scramble (mean 60.78 vs untreated 59.04; medians 56.1 vs 55 - no change either way), CMS2093 ASO267 (mean 62.68; medians 57.9 vs 56.1 - no change either way), CMS2099 ASO249 at DIV35 (mean 127.1 vs corrected control 123.9; medians 115.3 vs 108.3 - still above the corrected control, so still a rescue). The row that flips is an ASO243 neurite row, which is NOT in my 40 but exists in the wider set. ASO243 is the only arm whose mean and median disagree materially, and it disagrees at BOTH timepoints and in the same direction: DIV11 mean 54.78 vs corE198K 49.33 (above control, reads as partial rescue) but median 29.8 vs corE198K 45.3 (34% BELOW the healthy control); DIV35 mean 126.9 vs corE198K 123.9 (above control, the paper's 'complete rescue') but median 102.7 vs corE198K 108.3 (below control). The mean-minus-median gap for ASO243 is ~25 um at both timepoints against ~4-6 um for every other arm, i.e. a uniquely skewed or bimodal distribution - which is itself a neurite-retraction signature in a subpopulation. Under a median reading, ASO243 does not normalise neurite length; it shortens neurites below the CRISPR-corrected control, which is a toxicity signal (grade 1-2), not a grade-0 rescue. I cannot adjudicate which statistic is correct without the per-neurite source data, and the authors plot medians while arguing entirely from means. RECOMMENDATION: any ASO243 neurite-outgrowth row must carry both statistics, cite the Results text (not Fig 5E/5H) as the source of the mean, and be marked disputed/grade_provisional - it must not be filed as a clean grade-0 rescue. \n\nDELIVERY MODE (check 3): verified individually for all 40. Correct everywhere except CMS2105 (see above). Free-uptake claims all check out - SCA3 5 uM 'added to the supernatant... do not need transfection procedures'; PPP2R5D 'gymnotic uptake at a 10 uM final concentration'; KIF1A '10 uM to be incorporated via gymnosis'; MECP2 'ASOs were added directly to the media'; Kotowska-Zimmer '2 uM added into the culturing media'; microglia 'unfacilitated free delivery'. Forced-delivery rows are also correctly labelled: Kuroda (Lipofectamine 2000), Kuijper (0.3% Lipofectamine 2000, 200 nM, 4 h), sbASO (Lipofectamine 3000), van Roon-Mom (Lipofectamine 2000, 500 nM). One exposure-design correction: the PPP2R5D notes describe '4 weeks of continuous exposure', but Methods specify a single 10 uM bolus at DIV3 followed by half-medium changes three times a week - progressive washout, not continuous dosing. That materially weakens the 'selectivity degrades under chronic exposure' framing on CMS2087/CMS2096. \n\nCELL MODEL HONESTY (check 4): clean. No neuroblastoma line is dressed up as an iPSC neuron. BE(2)-M17 and SH-SY5Y rows say so; hiPSC rows name the donor/patient line (AX2, C1.1, C2, ND42223, E198K, P305L, R474H); the Kuijper C1.1/C2 lines are correctly not claimed as patient-derived (the paper calls them control iPSCs); the van Roon-Mom row correctly says neuron/astrocyte coculture; CMS2147 is correctly marked species=rat. Only nit: CMS2147 says 'cortical', which the paper does not state ('rat primary neuron cultures'). \n\nELECTROPHYSIOLOGY FLAGGING (check 5): both MEA/activity rows are correct. CMS2105 and CMS2147 both carry readout_category=electrophysiology and challenge_priority=low_acute_electrophysiology, so the brief's deprioritised material is filterable in one predicate as the schema intends. \n\nPREPRINTS (check 6): none. All 13 sources are peer-reviewed journal articles with PMC records and explicit licence statements (Mol Neurodegener, Biomedicines, Hum Mol Genet x2, RNA, HGG Advances, Mol Ther Nucleic Acids x3, Nat Commun x2, Nat Med, Nucleic Acid Therapeutics). No row needs redistribution=verify.",
+ "systematic_issues": "1. REDISTRIBUTION SYSTEMATICALLY UNDER-CLAIMED - 29 of 40 rows (73%). Every row in this batch carries redistribution=summary_stat, but 7 of the 13 source papers are CC BY 4.0 and should be cc_by: Kuroda 2025 (8 rows), Kuijper 2025 (6 rows), PPP2R5D 2025 (6 rows), microglia 2024 (5 rows), Kotowska-Zimmer 2021 (2 rows), MECP2-duplication 2024 (1 row), van Roon-Mom 2024 (1 row). The remaining 11 rows are correctly summary_stat (CC BY-NC-ND: SCA3 2022, SMA organoid 2025, KIF1A 2026, AD multigene 2026, KCNT1 2026; CC BY-NC: sbASO 2024). This is the mirror image of the over-claim the brief warns about and is not cosmetic: the schema tracks cc_by separately because it is what permits whole per-oligo panels to be republished verbatim with attribution. Flattening it forfeits that right across most of the lane. Fix mechanically: read the <license> element of each PMC record rather than defaulting to summary_stat. Expect the same ~70% under-claim across the ~80 in vitro rows outside this sample, since open-access CC BY dominates this literature. \n\n2. GRADE-0 FROM SILENCE - 3 of 40 (7.5%), and the pattern is mechanically detectable. Every instance has the same fingerprint: source_table names a Methods section rather than a figure or table, AND readout_value/effect_direction/effect_vs_control are all TBD, AND neurotox_grade=0. Run that predicate over the full in vitro set and quarantine every hit - I would expect ~6 more among the unchecked ~80. A rule worth adopting: a grade-0 row must cite a figure, table or a Results sentence that reports an outcome; a Methods dosing sentence can never support one. Two of the three were avoidable - the KCNT1 and Kuijper papers both contained properly-sourced measured negatives elsewhere that the extractor walked past. The extractor did flag two of the three as 'Weak row - flagged', so the judgement was partly right; the fix is to drop rather than downgrade. \n\n3. COMPARATOR AMBIGUITY IN MITIGATION-STUDY ROWS - 5 of 8 Kuroda rows, and this will recur in any SAR/chemistry-optimisation paper. In these papers the meaningful comparator is the toxic parent oligo, but readout_unit is '% of vehicle'. The result is rows where effect_direction is measured against the parent while the unit points at vehicle. On CMS2072 (LDH, decrease) and CMS2075 (cell_number, increase) this inverts the sign relative to the declared unit: both read as protective/benign against vehicle, when the source claims only 'a trend toward reduced cytotoxicity' relative to a toxic parent and makes no vehicle-relative claim at all. The source figures actually annotate BOTH comparators ('# and * indicates significance against vehicle and ASO2, respectively'), so the vehicle-relative sign is recoverable - it just was not recorded. Fix: make the comparator explicit in effect_vs_control, or add a comparator field. Any oligo whose name encodes a modification of a named parent (PS-n(-), 5'-CP position n, 2'-OMe gap position n) is a candidate. \n\n4. NO DECLARED DEG-COUNT-TO-GRADE MAPPING, producing inverted grades. Within the same paper (Kuijper), 11 387 DEGs (45% of the 25 124 genes tested) is graded 1 (CMS2129) while 9 385 DEGs is graded 2 (CMS2138). More broadly the lane grades transcriptomic burden inconsistently: 9 and 11 DEGs grade 0 (microglia), 867 splicing events grade 1, 11 387 DEGs grade 1, 9 385 DEGs grade 2. A model trained on this learns a non-monotonic relationship between transcriptome perturbation and severity. Declare an explicit threshold (or normalise DEGs to genes tested) and apply it uniformly across all transcriptomic rows in the dataset. \n\n5. IN VITRO GRADES 2 AND 3 ARE NOT ANCHORED TO THE RUBRIC. The rubric is written for in vivo/clinical endpoints (degeneration, paralysis, hydrocephalus, dose-limiting toxicity) and has no in vitro mapping, so grades drift. Clearest case: CMS2063 grades a CDKN1A mRNA rise in a neuroblastoma line as 3, outranking the parent oligo's actual cell-death readout at 2 (CMS2060). Elsewhere grade-3 rationales are imported from the matched in vivo mouse study (CMS2069) rather than from the in vitro measurement being graded. Recommend an explicit in vitro annex to the rubric - e.g. cell loss / LDH release above vehicle = 2, with 3 reserved for near-complete culture loss - and re-grade the whole in vitro lane against it. All 40 rows carry 'grade_provisional', so this is expected work, not a surprise. \n\n6. ENDPOINT_DOMAIN INFLATES THE HIGH-PRIORITY CHRONIC BUCKET. Rows are filed as chronic_neurotoxicity/high_chronic_neurotox on exposures that are not chronic and endpoints that are not toxicity: CMS2078 (3-hour transfection), CMS2063 (72 h), CMS2108 (a disease-phenotype rescue). Since NCATS weights this bucket most heavily, a defensible minimum exposure for 'chronic' (the genuinely chronic rows here are 14-28 d: SCA3, MECP2-duplication, Kotowska-Zimmer, KIF1A) should be declared and applied, and pure efficacy-rescue endpoints should not sit in it. \n\n7. SUPPLEMENTARY MATERIAL MARKED 'NOT RETRIEVED' THAT IS ALREADY ON DISK. CMS2081 left dose_or_conc_value=TBD and its oligo record left target_gene/sequence TBD citing 'Table S1 (supplementary, not retrieved)', but the Kuroda supplement is in /home/user/oligos/sources/cns/ and answers both: Fig S7 is at 50 nM, and Table S1 gives ASO4 target SNCA, sequence 5'-C(5)C(5)ATTTATATACAAAC(5)AC(5)A (19 nt), plus ASO1 (Mapt, 17 nt) and ASO2 (Hdac2, 16 nt). Since Kuroda is CC BY, those sequences are redistributable. Sweep every 'not retrieved' note in the lane against the local sources directory before release. \n\n8. SOURCE_TABLE POINTS AT FIGURES THAT DO NOT CONTAIN THE QUOTED NUMBER. All four PPP2R5D neurite rows cite Fig 5E/5H, but those figures plot MEDIANS while the recorded values are MEANS taken from the Results text. The numbers are right and the extractor disclosed the discrepancy in notes, but the locus is not falsifiable as written - a verifier sent to Fig 5E will not find 60.78. Point source_table at the text that carries the number and mention the figure separately. \n\n9. TWO MATCHED-PAIR ARMS TO CHECK FOR OUTSIDE THIS SAMPLE (both are positive/toxic arms whose negative comparator IS in my batch, so their absence would bias the lane toward null): (a) APOE ASO-1 in the rat MEA assay, Suppl Fig 13C of the microglia paper - decreased weighted mean firing rate, fewer network bursts, decreased area under cross-correlation, significant from 1 uM, called 'consistent with an inhibitory/sedative CNS hazard'. CMS2147's own note presupposes this row exists. (b) The APGS viability row in HEK293 APPswe at 20 nM (Fig 3H of the AD multigene paper), where 'a reduction in cell viability was observed from 20 nM onwards' - the same oligo at the same dose that is graded 0 in SH-SY5Y (CMS2084). \n\nWHAT THIS LANE GOT RIGHT, and which should be preserved when fixing the above: no efficacy was misfiled as toxicity anywhere in 40 rows; both electrophysiology rows are correctly deprioritised; delivery mode is right on 39/40; cell models are described honestly; the extractor declined to create sbASO rows where no viability assay existed; and the PPP2R5D mean/median conflict was flagged in-line rather than silently resolved, which is what made it resolvable here."
+}
