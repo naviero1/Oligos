@@ -186,6 +186,20 @@ def main():
             oligo_by_key[k]["notes"] = "stub;design_metadata_not_yet_curated"
             all_stats["stub_oligos"] += 1
 
+    # --- drop oligos that no surviving measurement references --------------------
+    # oligos.csv is the predictor table: a row with design metadata but no outcome
+    # contributes nothing to modelling and inflates the compound count. This happens
+    # when an agent describes a panel member whose readouts were not extractable, or
+    # whose only rows were rejected by the verifier or dropped as duplicates.
+    # Dropping is reported, never silent.
+    referenced = {norm_name(m.get("oligo_name")) for m in deduped}
+    unreferenced = sorted(k for k in oligo_by_key if k not in referenced)
+    for k in unreferenced:
+        all_stats["oligo_dropped_no_measurements"] += 1
+    dropped_names = [oligo_by_key[k]["oligo_name"] for k in unreferenced]
+    for k in unreferenced:
+        del oligo_by_key[k]
+
     # --- assign stable IDs (deterministic: sorted by name) -----------------------
     ordered = sorted(oligo_by_key.items(), key=lambda kv: kv[1]["oligo_name"].lower())
     for i, (k, row) in enumerate(ordered, start=1):
@@ -219,6 +233,9 @@ def main():
     print(f"oligos.csv        {len(ordered)} rows")
     print(f"measurements.csv  {len(deduped)} rows")
     print("verdicts:", dict(all_stats))
+    if dropped_names:
+        print(f"dropped {len(dropped_names)} oligo(s) with no measurement rows: "
+              f"{dropped_names[:8]}")
     if conflicts:
         print(f"\n{len(conflicts)} merge conflict(s) needing review:")
         for c in conflicts[:25]:
