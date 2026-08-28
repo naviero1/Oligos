@@ -250,11 +250,29 @@ done.
 
 ### Independent known-answer test
 
-Separately from the agent pipeline, the inotersen FDA label was retrieved and
-parsed directly, and its platelet figures recorded in advance as ground truth.
-Agent output for that compound was then checked against it — a held-out
-correctness probe on the extraction process itself, rather than on any single
-row.
+Separately from the agent pipeline, and **before any extraction agent ran**, the
+inotersen FDA label was retrieved and parsed directly by the curator and its
+platelet figures written down as ground truth. The assembled dataset was then
+checked against that held-out record — a correctness probe on the extraction
+*process*, not on any single row.
+
+**Result: 6 / 6 match.** Every figure independently read off the label appears in
+the assembled data with the same value, at the correct grade, against the
+correct locus:
+
+| Ground-truth figure (TEGSEDI label) | Value | In dataset | Grade |
+|---|---|---|---|
+| platelet count < 100 × 10⁹/L | 25 % (vs 2 % placebo) | ✓ | 2 |
+| platelet count < 75 × 10⁹/L | 14 % (vs 0 %) | ✓ | 2 |
+| nadir < 75 × 10⁹/L, baseline < 200 × 10⁹/L | 39 % (vs 6 %) | ✓ | 2 |
+| sudden severe thrombocytopenia < 25 × 10⁹/L | 3 % | ✓ | 3 |
+| treatment-emergent antiplatelet IgG in severe cases | 3 / 3 | ✓ | 3 |
+| fatal intracranial haemorrhage | 1 patient | ✓ | 3 |
+
+The grading also separates correctly along the bimodal split the rubric was
+designed for: the mild-mode incidence rows land at grade 2 and the
+severe/antibody/fatal rows at grade 3, with no inflation of the former or
+softening of the latter.
 
 ## 11. Known limitations
 
