@@ -86,7 +86,7 @@ cited source for a value.
 | `NCT03225833` | ClinicalTrials.gov | 12 | `public_domain` | clinical 12 |
 | `NCT04089566` | ClinicalTrials.gov | 12 | `public_domain` | clinical 12 |
 | `Roche medical-affairs slide deck, CHDI 2023, M-XX-000...` | Other / grey literature | 12 | `verify` | clinical 12 |
-| `FDA_NDA215887` | FDA document | 11 | `public_domain` | clinical 11 |
+| `FDA_NDA215887` | FDA document | 11 | `public_domain`, `verify` | clinical 11 |
 | `US11834660B2` | US patent | 10 | `public_domain` | animal_invivo 10 |
 | `doi:10.1056/NEJMoa1900907` | Journal article | 8 | `summary_stat` | clinical 8 |
 | `FDA_NDA211172` | FDA document | 7 | `public_domain` | clinical 7 |
@@ -99,7 +99,7 @@ cited source for a value.
 | `NCT03399370` | ClinicalTrials.gov | 6 | `public_domain` | clinical 6 |
 | `doi:10.1038/s41591-023-02326-3` | Journal article | 6 | `summary_stat` | clinical 6 |
 | `doi:10.1177/1091581820948454` | Journal article | 6 | `summary_stat` | animal_invivo 6 |
-| `Biogen/MHRA Direct Healthcare Professional Communicat...` | Other / grey literature | 5 | `public_domain` | clinical 5 |
+| `Biogen/MHRA Direct Healthcare Professional Communicat...` | Other / grey literature | 5 | `verify` | clinical 5 |
 | `EMA/276404/2024, Qalsody EPAR public assessment repor...` | EMA document | 5 | `public_domain` | clinical 5 |
 | `EMA/289068/2017` | EMA document | 5 | `public_domain` | animal_invivo 5 |
 | `FDA_NDA211970` | FDA document | 5 | `public_domain` | clinical 4, animal_invivo 1 |

@@ -281,12 +281,98 @@ non-commercial and no-derivatives terms; their facts are quoted as
   chemistry, so a case-sensitive validator would reject correct rows), with
   length cross-checked against `length_nt`.
 
-One QC rule was itself corrected during development: a check flagging "grade 0
-with an increase in an injury readout" fired on every *rescued* phenotype — more
-neurons, longer neurites — and on the tominersen NfL rows where the drug arm rose
-less than placebo. A check that cries wolf trains the curator to ignore it, so it
-now excludes readouts where a rise is recovery and rows that cite a control
-comparison.
+Two further invariants were added after verification showed what they catch:
+
+- **Death is grade 3, without interpretation.** Any row recording a non-zero
+  death count must be graded 3. This is the one grading rule needing no
+  judgement, so drift here means a grading pass has gone wrong somewhere less
+  obvious.
+- **A group mean of n integer scores is a multiple of 1/n.** An ordinal score of
+  4.1 is arithmetically impossible for a four-animal group, and betrays a value
+  read off a bar's height rather than off the plotted per-animal points. Scoped to
+  values the notes declare as figure-derived.
+
+Two QC rules were themselves corrected during development, which is worth
+recording because a bad check is worse than no check. The "grade 0 with an
+increase in an injury readout" rule fired on every *rescued* phenotype — more
+neurons, longer neurites — and on tominersen NfL rows where the drug arm rose
+less than placebo; it now excludes readouts where a rise is recovery and rows
+citing a control comparison. The 1/n rule initially fired on exactly-transcribed
+spreadsheet values and on ordinary two-decimal rounding. A check that cries wolf
+trains the curator to ignore it.
+
+## 8a. Independent adversarial verification
+
+The dataset was then verified by agents instructed to **refute rather than
+confirm**, to default to `REFUTED` where they could not confirm, and to re-fetch
+the cited source rather than rely on recall. Sampling was stratified by risk —
+every hydrocephalus row, every grade-3 row, all figure-digitised values, the
+largest lane, plus samples of the clinical, in-vitro and animal strata.
+
+**614 verdicts over 11 batches: 229 CONFIRMED, 223 CONFIRMED_MINOR, 149 REFUTED,
+13 UNVERIFIABLE. 253 rows corrected.** Full detail in `VERIFICATION-CNS.md`.
+
+Three mechanisms made this safe to apply, and each exists because of a way it
+could have gone wrong:
+
+1. **Verdicts are re-keyed onto rows by content, never by `measurement_id`.**
+   Assembly renumbers ids, and the verification batches were exported from an
+   earlier assembly, so applying a correction by a stale id would have written it
+   onto an unrelated row. Two verifiers independently warned that their batch ids
+   no longer matched the live tables; because the applier re-keys on canonical
+   source, locus, readout, oligo, value and dose, the drift was a non-event.
+   Verdicts whose re-key is ambiguous are reported and skipped, never guessed.
+2. **Corrections are type-checked before being applied.** Verifiers legitimately
+   write prose recommendations — `"neurotox_grade": "2 unless source_ref is
+   amended to co-cite …"` — which are useful arguments and catastrophic cell
+   values. 16 such were recorded as `ADVISORY` in the row's notes instead of being
+   written into grade and dose columns.
+3. **Verifier claims are leads, not findings.** At least one reported a defect
+   that had already been fixed, working from a stale export. The most serious
+   correction of the round was accepted only after reading the source document
+   directly.
+
+### What verification changed
+
+- **A fabricated exposure figure was removed from 17 rows.** They attributed
+  "median 119.4wk (range 4-212wk)" to the Qalsody EPAR; full-text extraction of
+  that 181-page document returns **zero** hits for either number. The EPAR gives
+  Pool ABCL1 — the n=147 population every affected row uses — a median total
+  exposure of 148.4 weeks and a maximum treatment duration of 245 weeks.
+- **Grade 3 fell from 199 rows to 133.** The dominant error was *scale
+  anchoring*: cutoffs set at a fraction of a scale's numeric range rather than at
+  what the scale's own text says the value means. A rodent score of 4 ("does not
+  move forward after lifting but has an upright posture") had been graded severe
+  on a scale whose severe band begins at 6 ("does not respond to pinch but is
+  breathing") and whose 7 is death.
+- **A large block of rows carried an inherited claim.** In one patent, an 8-week
+  behavioural score turned out to be an *animal-loss* readout rather than a
+  persisting deficit: across all 92 compounds the scores sit on a 7×k/4 grid for
+  four-mouse groups, every zero-scoring group has unasterisked four-mouse RT-PCR
+  data, and every group scoring the full 7 has no tissue at all. Those rows keep
+  grade 3 — but as mortality, which is what they actually mean.
+- **`reversibility` is now `not_assessed` on 1,929 of 2,331 rows.** This is a
+  correction, not a gap. A large panel's rows claimed `reversible` although the
+  animals were observed for one hour after a single dose and never re-examined —
+  the paper's recovery language is explicitly fenced to a different cohort of
+  nine ASOs. Separately, adverse-event *incidence* loci had been promoting "did
+  not lead to discontinuation" into `reversible`; those tables carry no outcome
+  field at all.
+- **A rights over-claim was corrected.** Rows citing a Direct Healthcare
+  Professional Communication were marked `public_domain`; a DHPC is issued by the
+  marketing-authorisation holder, not the regulator, so it is not a government
+  work.
+
+### What verification says about the extraction
+
+The extraction was mostly right, and wrong in a structured way. Arithmetic
+fidelity was high — registry counts, denominators, table values and sequence
+strings verified almost universally, and one verifier re-derived an entire
+131-row lane from a fresh API fetch with 131/131 agreement. Where rows failed,
+they failed at *interpretation*: a grade band anchored to the wrong thing, a
+comparator chosen badly, a claim of recovery imported from adjacent prose. That
+is the more tractable class of error, because it can be corrected by rule rather
+than by re-extraction — which is what was done.
 
 ## 9. Independent variables
 
@@ -301,7 +387,21 @@ on every matched CNS readout.
 
 ## 10. Known limitations
 
-- **Grades are provisional**, pending subject-matter review.
+- **Grades are provisional**, pending subject-matter review. Verification checked
+  whether each grade follows from its source under the stated rubric; it cannot
+  substitute for a toxicologist's judgement about the rubric itself.
+- **Verification was a stratified sample, not a census.** Rows outside the sampled
+  strata carry the systematic risks named in `VERIFICATION-CNS.md` in proportion
+  to how far they resemble the rows that were checked.
+- **Recovery was rarely assessed.** `reversibility` is `not_assessed` on 1,929 of
+  2,331 rows, because most sources simply never looked. This limits how much the
+  dataset can say about the acute-versus-chronic distinction on any individual
+  row, even though that distinction is central to the endpoint — and it is a
+  concrete gap that new data generation could close cheaply, by adding a recovery
+  arm to studies that already run.
+- **Grey literature cannot be re-verified.** Rows citing sponsor medical-affairs
+  slide decks are marked `redistribution=verify` and are the weakest evidence in
+  the dataset; one of them is load-bearing for a headline hydrocephalus figure.
 - **Hydrocephalus is thinly and unevenly sourced, and must not be overstated.**
   The evidence is almost entirely clinical: no published animal study was found in
   which an oligonucleotide *caused* hydrocephalus, and no in vitro model of CSF

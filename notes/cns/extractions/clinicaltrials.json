@@ -372,13 +372,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "45.8pct_vs_44.4pct_control (33/72 vs 16/36)",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT02623699",
    "source_ref": "NCT02623699",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[106] | term='Headache' | organSystem='Nervous system disorders' | arm=EG011 (Part C-Pivotal: BIIB067 100 mg)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=33/72. arm=Part C-Pivotal: BIIB067 100 mg. control arm = Part C-Pivotal: Placebo. Incidence essentially identical to the concurrent placebo arm, which received the same intrathecal bolus injections. Headache is therefore procedure-related (lumbar puncture), not oligonucleotide-related. Grade 0 negative control. grade_provisional"
+   "notes": "n_of_N=33/72. arm=Part C-Pivotal: BIIB067 100 mg. control arm = Part C-Pivotal: Placebo. Incidence essentially identical to the concurrent placebo arm, which received the same intrathecal bolus injections. Headache is therefore procedure-related (lumbar puncture), not oligonucleotide-related. Grade 0 negative control. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m7",
@@ -400,13 +400,13 @@
    "effect_direction": "decrease",
    "effect_vs_control": "18.1pct_vs_30.6pct_control (13/72 vs 11/36)",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT02623699",
    "source_ref": "NCT02623699",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[63] | term='Post lumbar puncture syndrome' | organSystem='Injury, poisoning and procedural complications' | arm=EG011 (Part C-Pivotal: BIIB067 100 mg)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=13/72. arm=Part C-Pivotal: BIIB067 100 mg. control arm = Part C-Pivotal: Placebo. PROCEDURE-RELATED: post-lumbar-puncture syndrome is caused by the CSF leak from the injection, not by the oligonucleotide. Incidence is BELOW the intrathecal-placebo arm, so grade 0. grade_provisional"
+   "notes": "n_of_N=13/72. arm=Part C-Pivotal: BIIB067 100 mg. control arm = Part C-Pivotal: Placebo. PROCEDURE-RELATED: post-lumbar-puncture syndrome is caused by the CSF leak from the injection, not by the oligonucleotide. Incidence is BELOW the intrathecal-placebo arm, so grade 0. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m8",
@@ -512,13 +512,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "20.8pct_vs_5.6pct_control (15/72 vs 2/36)",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT02623699",
    "source_ref": "NCT02623699",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[91] | term='Back pain' | organSystem='Musculoskeletal and connective tissue disorders' | arm=EG011 (Part C-Pivotal: BIIB067 100 mg)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=15/72. arm=Part C-Pivotal: BIIB067 100 mg. control arm = Part C-Pivotal: Placebo. PROCEDURE-RELATED in part (lumbar puncture at the same level), but the rate is ~4x the intrathecal-placebo arm which received identical injections, so a drug contribution is plausible. Graded 1 (mild, non-serious). grade_provisional"
+   "notes": "n_of_N=15/72. arm=Part C-Pivotal: BIIB067 100 mg. control arm = Part C-Pivotal: Placebo. PROCEDURE-RELATED in part (lumbar puncture at the same level), but the rate is ~4x the intrathecal-placebo arm which received identical injections, so a drug contribution is plausible. Graded 1 (mild, non-serious). grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m12",
@@ -540,13 +540,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "26.4pct_vs_16.7pct_control (19/72 vs 6/36)",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT02623699",
    "source_ref": "NCT02623699",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[102] | term='Pain in extremity' | organSystem='Musculoskeletal and connective tissue disorders' | arm=EG011 (Part C-Pivotal: BIIB067 100 mg)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=19/72. arm=Part C-Pivotal: BIIB067 100 mg. control arm = Part C-Pivotal: Placebo. Non-serious; rate above the intrathecal-placebo arm. Possible radicular component. Graded 1. grade_provisional"
+   "notes": "n_of_N=19/72. arm=Part C-Pivotal: BIIB067 100 mg. control arm = Part C-Pivotal: Placebo. Non-serious; rate above the intrathecal-placebo arm. Possible radicular component. Graded 1. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m13",
@@ -568,13 +568,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "5.6pct_vs_0.0pct_control (4/72 vs 0/36)",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT02623699",
    "source_ref": "NCT02623699",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[113] | term='Neuralgia' | organSystem='Nervous system disorders' | arm=EG011 (Part C-Pivotal: BIIB067 100 mg)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=4/72. arm=Part C-Pivotal: BIIB067 100 mg. control arm = Part C-Pivotal: Placebo. Zero events in the concurrent intrathecal-placebo arm. Non-serious, graded 1. grade_provisional"
+   "notes": "n_of_N=4/72. arm=Part C-Pivotal: BIIB067 100 mg. control arm = Part C-Pivotal: Placebo. Zero events in the concurrent intrathecal-placebo arm. Non-serious, graded 1. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m14",
@@ -680,13 +680,13 @@
    "effect_direction": "decrease",
    "effect_vs_control": "40.0pct_vs_58.3pct_control (4/10 vs 7/12)",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT02623699",
    "source_ref": "NCT02623699",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[106] | term='Headache' | organSystem='Nervous system disorders' | arm=EG006 (Part B-MAD: Cohort 5: BIIB067 20 mg)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=4/10. arm=Part B-MAD: Cohort 5: BIIB067 20 mg. control arm = Part B-MAD: Combined Placebo. Part B multiple-ascending-dose cohort. Headache incidence at or below the concurrent intrathecal-placebo arm at every dose level, i.e. no dose-response; procedure-related (lumbar puncture). Grade 0. grade_provisional"
+   "notes": "n_of_N=4/10. arm=Part B-MAD: Cohort 5: BIIB067 20 mg. control arm = Part B-MAD: Combined Placebo. Part B multiple-ascending-dose cohort. Headache incidence at or below the concurrent intrathecal-placebo arm at every dose level, i.e. no dose-response; procedure-related (lumbar puncture). Grade 0. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility ;; VERIFIED[REFUTED] reversibility=reversible cannot come from this locus. A ClinicalTrials.gov adverseEventsModule entry contains only term, organSystem, sourceVocabulary, assessmentType and per-arm numAffected/numAtRisk - there is no outcome, duration or reso"
   },
   {
    "measurement_id": "TMP_ct_m18",
@@ -708,13 +708,13 @@
    "effect_direction": "decrease",
    "effect_vs_control": "22.2pct_vs_58.3pct_control (2/9 vs 7/12)",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT02623699",
    "source_ref": "NCT02623699",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[106] | term='Headache' | organSystem='Nervous system disorders' | arm=EG007 (Part B-MAD: Cohort 6: BIIB067 40 mg)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=2/9. arm=Part B-MAD: Cohort 6: BIIB067 40 mg. control arm = Part B-MAD: Combined Placebo. Part B multiple-ascending-dose cohort. Headache incidence at or below the concurrent intrathecal-placebo arm at every dose level, i.e. no dose-response; procedure-related (lumbar puncture). Grade 0. grade_provisional"
+   "notes": "n_of_N=2/9. arm=Part B-MAD: Cohort 6: BIIB067 40 mg. control arm = Part B-MAD: Combined Placebo. Part B multiple-ascending-dose cohort. Headache incidence at or below the concurrent intrathecal-placebo arm at every dose level, i.e. no dose-response; procedure-related (lumbar puncture). Grade 0. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m19",
@@ -736,13 +736,13 @@
    "effect_direction": "decrease",
    "effect_vs_control": "44.4pct_vs_58.3pct_control (4/9 vs 7/12)",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT02623699",
    "source_ref": "NCT02623699",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[106] | term='Headache' | organSystem='Nervous system disorders' | arm=EG008 (Part B-MAD: Cohort 7: BIIB067 60 mg)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=4/9. arm=Part B-MAD: Cohort 7: BIIB067 60 mg. control arm = Part B-MAD: Combined Placebo. Part B multiple-ascending-dose cohort. Headache incidence at or below the concurrent intrathecal-placebo arm at every dose level, i.e. no dose-response; procedure-related (lumbar puncture). Grade 0. grade_provisional"
+   "notes": "n_of_N=4/9. arm=Part B-MAD: Cohort 7: BIIB067 60 mg. control arm = Part B-MAD: Combined Placebo. Part B multiple-ascending-dose cohort. Headache incidence at or below the concurrent intrathecal-placebo arm at every dose level, i.e. no dose-response; procedure-related (lumbar puncture). Grade 0. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m20",
@@ -764,13 +764,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "60.0pct_vs_58.3pct_control (6/10 vs 7/12)",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT02623699",
    "source_ref": "NCT02623699",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[106] | term='Headache' | organSystem='Nervous system disorders' | arm=EG009 (Part B-MAD: Cohort 8: BIIB067 100 mg)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=6/10. arm=Part B-MAD: Cohort 8: BIIB067 100 mg. control arm = Part B-MAD: Combined Placebo. Part B multiple-ascending-dose cohort. Headache incidence at or below the concurrent intrathecal-placebo arm at every dose level, i.e. no dose-response; procedure-related (lumbar puncture). Grade 0. grade_provisional"
+   "notes": "n_of_N=6/10. arm=Part B-MAD: Cohort 8: BIIB067 100 mg. control arm = Part B-MAD: Combined Placebo. Part B multiple-ascending-dose cohort. Headache incidence at or below the concurrent intrathecal-placebo arm at every dose level, i.e. no dose-response; procedure-related (lumbar puncture). Grade 0. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m21",
@@ -1212,13 +1212,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "no_concurrent_control_arm",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT03070119",
    "source_ref": "NCT03070119",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[58] | term='Post lumbar puncture syndrome' | organSystem='Injury, poisoning and procedural complications' | arm=EG001 (233AS101: Part C (Prior BIIB067 100 mg))",
    "redistribution": "public_domain",
-   "notes": "n_of_N=15/63. arm=233AS101: Part C (Prior BIIB067 100 mg). no concurrent control arm in this study. PROCEDURE-RELATED: attributable to repeated lumbar punctures over up to 364 weeks rather than to the oligonucleotide. Graded 1 and flagged; in the placebo-controlled parent study this term was BELOW the intrathecal-placebo rate. No concurrent control here. grade_provisional"
+   "notes": "n_of_N=15/63. arm=233AS101: Part C (Prior BIIB067 100 mg). no concurrent control arm in this study. PROCEDURE-RELATED: attributable to repeated lumbar punctures over up to 364 weeks rather than to the oligonucleotide. Graded 1 and flagged; in the placebo-controlled parent study this term was BELOW the intrathecal-placebo rate. No concurrent control here. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility ;; VERIFIED[REFUTED] reversibility=reversible cannot come from this locus. A ClinicalTrials.gov adverseEventsModule entry contains only term, organSystem, sourceVocabulary, assessmentType and per-arm numAffected/numAtRisk - there is no outcome, duration or reso"
   },
   {
    "measurement_id": "TMP_ct_m37",
@@ -1240,13 +1240,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "no_concurrent_control_arm",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT03070119",
    "source_ref": "NCT03070119",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[81] | term='Back pain' | organSystem='Musculoskeletal and connective tissue disorders' | arm=EG001 (233AS101: Part C (Prior BIIB067 100 mg))",
    "redistribution": "public_domain",
-   "notes": "n_of_N=27/63. arm=233AS101: Part C (Prior BIIB067 100 mg). no concurrent control arm in this study. PROCEDURE-RELATED in large part (repeated lumbar punctures at the same level). Graded 1. No concurrent control. grade_provisional"
+   "notes": "n_of_N=27/63. arm=233AS101: Part C (Prior BIIB067 100 mg). no concurrent control arm in this study. PROCEDURE-RELATED in large part (repeated lumbar punctures at the same level). Graded 1. No concurrent control. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m38",
@@ -1520,13 +1520,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "23.2pct_vs_22.3pct_control (61/263 vs 59/264)",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT03761849",
    "source_ref": "NCT03761849",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[20] | term='Headache' | organSystem='Nervous system disorders' | arm=EG003 (Q8W NDC)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=61/263. arm=Q8W NDC. control arm = PLB NDC. Rate essentially identical to the concurrent intrathecal-placebo arm, which received the same lumbar punctures. PROCEDURE-RELATED, not drug-related. Grade 0 negative control. grade_provisional"
+   "notes": "n_of_N=61/263. arm=Q8W NDC. control arm = PLB NDC. Rate essentially identical to the concurrent intrathecal-placebo arm, which received the same lumbar punctures. PROCEDURE-RELATED, not drug-related. Grade 0 negative control. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m48",
@@ -1548,13 +1548,13 @@
    "effect_direction": "decrease",
    "effect_vs_control": "21.6pct_vs_22.3pct_control (57/264 vs 59/264)",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT03761849",
    "source_ref": "NCT03761849",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[20] | term='Headache' | organSystem='Nervous system disorders' | arm=EG004 (Q16W NDC)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=57/264. arm=Q16W NDC. control arm = PLB NDC. Headache BELOW the concurrent intrathecal-placebo rate at Q16W. Grade 0 negative control. PROCEDURE-RELATED. grade_provisional"
+   "notes": "n_of_N=57/264. arm=Q16W NDC. control arm = PLB NDC. Headache BELOW the concurrent intrathecal-placebo rate at Q16W. Grade 0 negative control. PROCEDURE-RELATED. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility ;; VERIFIED[REFUTED] reversibility=reversible cannot come from this locus. A ClinicalTrials.gov adverseEventsModule entry contains only term, organSystem, sourceVocabulary, assessmentType and per-arm numAffected/numAtRisk - there is no outcome, duration or reso"
   },
   {
    "measurement_id": "TMP_ct_m49",
@@ -1576,13 +1576,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "9.1pct_vs_8.0pct_control (24/263 vs 21/264)",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT03761849",
    "source_ref": "NCT03761849",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[13] | term='Post lumbar puncture syndrome' | organSystem='Injury, poisoning and procedural complications' | arm=EG003 (Q8W NDC)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=24/263. arm=Q8W NDC. control arm = PLB NDC. PROCEDURE-RELATED: caused by the lumbar puncture, not the oligonucleotide. Rate is within ~1 percentage point of the concurrent intrathecal-placebo arm, confirming procedural rather than drug causation. Grade 0. grade_provisional"
+   "notes": "n_of_N=24/263. arm=Q8W NDC. control arm = PLB NDC. PROCEDURE-RELATED: caused by the lumbar puncture, not the oligonucleotide. Rate is within ~1 percentage point of the concurrent intrathecal-placebo arm, confirming procedural rather than drug causation. Grade 0. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m50",
@@ -1604,13 +1604,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "21.7pct_vs_18.6pct_control (57/263 vs 49/264)",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT03761849",
    "source_ref": "NCT03761849",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[17] | term='Back pain' | organSystem='Musculoskeletal and connective tissue disorders' | arm=EG003 (Q8W NDC)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=57/263. arm=Q8W NDC. control arm = PLB NDC. PROCEDURE-RELATED (repeated lumbar punctures). Rate only marginally above the concurrent intrathecal-placebo arm, which received identical procedures. Grade 0. grade_provisional"
+   "notes": "n_of_N=57/263. arm=Q8W NDC. control arm = PLB NDC. PROCEDURE-RELATED (repeated lumbar punctures). Rate only marginally above the concurrent intrathecal-placebo arm, which received identical procedures. Grade 0. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m51",
@@ -1772,13 +1772,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "0.4pct_vs_0.0pct_control (1/264 vs 0/264)",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT03761849",
    "source_ref": "NCT03761849",
    "source_table": "resultsSection.adverseEventsModule.seriousEvents[71] | term='Intracranial hypotension' | organSystem='Nervous system disorders' | arm=EG004 (Q16W NDC)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=1/264. arm=Q16W NDC. control arm = PLB NDC. PROCEDURE-RELATED: intracranial hypotension is the physiological consequence of a persistent post-lumbar-puncture CSF leak, i.e. caused by the injection procedure rather than the oligonucleotide. Graded 1 despite serious coding for that reason. Note this is the OPPOSITE direction to the raised-ICP/hydrocephalus signal. grade_provisional"
+   "notes": "n_of_N=1/264. arm=Q16W NDC. control arm = PLB NDC. PROCEDURE-RELATED: intracranial hypotension is the physiological consequence of a persistent post-lumbar-puncture CSF leak, i.e. caused by the injection procedure rather than the oligonucleotide. Graded 1 despite serious coding for that reason. Note this is the OPPOSITE direction to the raised-ICP/hydrocephalus signal. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m57",
@@ -2136,13 +2136,13 @@
    "effect_direction": "decrease",
    "effect_vs_control": "17.4pct_vs_21.7pct_control (4/23 vs 5/23)",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT03342053",
    "source_ref": "NCT03342053",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[18] | term='Post lumbar puncture syndrome' | organSystem='Injury, poisoning and procedural complications' | arm=EG000 (RO7234292 Monthly)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=4/23. arm=RO7234292 Monthly. control arm = RO7234292 Bimonthly. PROCEDURE-RELATED. Incidence is LOWER on the monthly (more frequent lumbar puncture) regimen than on bimonthly, i.e. no exposure-response at all. Grade 0 negative control. grade_provisional"
+   "notes": "n_of_N=4/23. arm=RO7234292 Monthly. control arm = RO7234292 Bimonthly. PROCEDURE-RELATED. Incidence is LOWER on the monthly (more frequent lumbar puncture) regimen than on bimonthly, i.e. no exposure-response at all. Grade 0 negative control. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m70",
@@ -2164,13 +2164,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "28.6pct_vs_7.1pct_control (24/84 vs 3/42)",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT02292537",
    "source_ref": "NCT02292537",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[20] | term='Headache' | organSystem='Nervous system disorders' | arm=EG001 (Nusinersen)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=24/84. arm=Nusinersen. control arm = Sham Procedure. PROCEDURE-RELATED. IMPORTANT CONFOUND: the control was a SHAM PROCEDURE - per the study record, 'small needle prick on the lower back at the location where the IT injection is normally made' - NOT a real lumbar puncture. The control arm therefore had no dural puncture, no CSF removal and no intrathecal volume load, so any excess in the nusinersen arm reflects the LUMBAR PUNCTURE PROCEDURE as much as the oligonucleotide. Graded conservatively for that reason. grade_provisional"
+   "notes": "n_of_N=24/84. arm=Nusinersen. control arm = Sham Procedure. PROCEDURE-RELATED. IMPORTANT CONFOUND: the control was a SHAM PROCEDURE - per the study record, 'small needle prick on the lower back at the location where the IT injection is normally made' - NOT a real lumbar puncture. The control arm therefore had no dural puncture, no CSF removal and no intrathecal volume load, so any excess in the nusinersen arm reflects the LUMBAR PUNCTURE PROCEDURE as much as the oligonucleotide. Graded conservatively for that reason. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m71",
@@ -2192,13 +2192,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "25.0pct_vs_0.0pct_control (21/84 vs 0/42)",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT02292537",
    "source_ref": "NCT02292537",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[16] | term='Back pain' | organSystem='Musculoskeletal and connective tissue disorders' | arm=EG001 (Nusinersen)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=21/84. arm=Nusinersen. control arm = Sham Procedure. PROCEDURE-RELATED. Zero back-pain events in the sham arm is exactly what a needle-prick sham predicts. IMPORTANT CONFOUND: the control was a SHAM PROCEDURE - per the study record, 'small needle prick on the lower back at the location where the IT injection is normally made' - NOT a real lumbar puncture. The control arm therefore had no dural puncture, no CSF removal and no intrathecal volume load, so any excess in the nusinersen arm reflects the LUMBAR PUNCTURE PROCEDURE as much as the oligonucleotide. Graded conservatively for that reason. grade_provisional"
+   "notes": "n_of_N=21/84. arm=Nusinersen. control arm = Sham Procedure. PROCEDURE-RELATED. Zero back-pain events in the sham arm is exactly what a needle-prick sham predicts. IMPORTANT CONFOUND: the control was a SHAM PROCEDURE - per the study record, 'small needle prick on the lower back at the location where the IT injection is normally made' - NOT a real lumbar puncture. The control arm therefore had no dural puncture, no CSF removal and no intrathecal volume load, so any excess in the nusinersen arm reflects the LUMBAR PUNCTURE PROCEDURE as much as the oligonucleotide. Graded conservatively for that reason. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m72",
@@ -2248,13 +2248,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "1.2pct_vs_0.0pct_control (1/84 vs 0/42)",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT02292537",
    "source_ref": "NCT02292537",
    "source_table": "resultsSection.adverseEventsModule.seriousEvents[16] | term='Post lumbar puncture syndrome' | organSystem='Injury, poisoning and procedural complications' | arm=EG001 (Nusinersen)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=1/84. arm=Nusinersen. control arm = Sham Procedure. PROCEDURE-RELATED by definition - post-lumbar-puncture syndrome cannot occur in the needle-prick sham arm because no dural puncture is performed, so the 0/42 comparator is structurally uninformative. Graded 1 despite serious coding. IMPORTANT CONFOUND: the control was a SHAM PROCEDURE - per the study record, 'small needle prick on the lower back at the location where the IT injection is normally made' - NOT a real lumbar puncture. The control arm therefore had no dural puncture, no CSF removal and no intrathecal volume load, so any excess in the nusinersen arm reflects the LUMBAR PUNCTURE PROCEDURE as much as the oligonucleotide. Graded conservatively for that reason. grade_provisional"
+   "notes": "n_of_N=1/84. arm=Nusinersen. control arm = Sham Procedure. PROCEDURE-RELATED by definition - post-lumbar-puncture syndrome cannot occur in the needle-prick sham arm because no dural puncture is performed, so the 0/42 comparator is structurally uninformative. Graded 1 despite serious coding. IMPORTANT CONFOUND: the control was a SHAM PROCEDURE - per the study record, 'small needle prick on the lower back at the location where the IT injection is normally made' - NOT a real lumbar puncture. The control arm therefore had no dural puncture, no CSF removal and no intrathecal volume load, so any excess in the nusinersen arm reflects the LUMBAR PUNCTURE PROCEDURE as much as the oligonucleotide. Graded conservatively for that reason. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m74",
@@ -2388,13 +2388,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "25.0pct_vs_0.0pct_control (4/16 vs 0/8)",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT04089566",
    "source_ref": "NCT04089566",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[78] | term='Procedural headache' | organSystem='Injury, poisoning and procedural complications' | arm=EG004 (Part B: Later-Onset SMA: 50/28 mg Nusinersen)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=4/16. arm=Part B: Later-Onset SMA: 50/28 mg Nusinersen. control arm = Part B: Later-Onset SMA: 12/12 mg Nusinersen. PROCEDURE-RELATED by MedDRA coding ('procedural headache'), i.e. the investigator attributed it to the lumbar puncture rather than to nusinersen. Higher at the high-dose regimen, but note the high-dose arm also received more sham procedures. Grade 1. Comparator is the approved dose, not placebo. grade_provisional"
+   "notes": "n_of_N=4/16. arm=Part B: Later-Onset SMA: 50/28 mg Nusinersen. control arm = Part B: Later-Onset SMA: 12/12 mg Nusinersen. PROCEDURE-RELATED by MedDRA coding ('procedural headache'), i.e. the investigator attributed it to the lumbar puncture rather than to nusinersen. Higher at the high-dose regimen, but note the high-dose arm also received more sham procedures. Grade 1. Comparator is the approved dose, not placebo. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m79",
@@ -2472,13 +2472,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "no_concurrent_control_arm",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT04089566",
    "source_ref": "NCT04089566",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[78] | term='Procedural headache' | organSystem='Injury, poisoning and procedural complications' | arm=EG005 (Part C: 50/28 mg Nusinersen)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=13/40. arm=Part C: 50/28 mg Nusinersen. no concurrent control arm in this study. PROCEDURE-RELATED by MedDRA coding - attributed to the lumbar puncture, not the oligonucleotide. Part C is single-arm, no concurrent control. Grade 1. grade_provisional"
+   "notes": "n_of_N=13/40. arm=Part C: 50/28 mg Nusinersen. no concurrent control arm in this study. PROCEDURE-RELATED by MedDRA coding - attributed to the lumbar puncture, not the oligonucleotide. Part C is single-arm, no concurrent control. Grade 1. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m82",
@@ -2528,13 +2528,13 @@
    "effect_direction": "decrease",
    "effect_vs_control": "13.3pct_vs_40.0pct_control (2/15 vs 4/10)",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT02386553",
    "source_ref": "NCT02386553",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[155] | term='Post lumbar puncture syndrome' | organSystem='Injury, poisoning and procedural complications' | arm=EG000 (ISIS 396443 2 SMN2 Copies)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=2/15. arm=ISIS 396443 2 SMN2 Copies. control arm = ISIS 396443 3 SMN2 Copies. PROCEDURE-RELATED. Incidence LOWER in the 2-copy arm than the 3-copy arm despite identical dosing, i.e. noise. Both arms received nusinersen; no placebo arm. Grade 0. grade_provisional"
+   "notes": "n_of_N=2/15. arm=ISIS 396443 2 SMN2 Copies. control arm = ISIS 396443 3 SMN2 Copies. PROCEDURE-RELATED. Incidence LOWER in the 2-copy arm than the 3-copy arm despite identical dosing, i.e. noise. Both arms received nusinersen; no placebo arm. Grade 0. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m84",
@@ -2556,13 +2556,13 @@
    "effect_direction": "decrease",
    "effect_vs_control": "20.0pct_vs_30.0pct_control (3/15 vs 3/10)",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT02386553",
    "source_ref": "NCT02386553",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[261] | term='Headache' | organSystem='Nervous system disorders' | arm=EG000 (ISIS 396443 2 SMN2 Copies)",
    "redistribution": "public_domain",
-   "notes": "n_of_N=3/15. arm=ISIS 396443 2 SMN2 Copies. control arm = ISIS 396443 3 SMN2 Copies. PROCEDURE-RELATED. Comparable between the two active genotype arms. Both arms received nusinersen; no placebo arm. Grade 0. grade_provisional"
+   "notes": "n_of_N=3/15. arm=ISIS 396443 2 SMN2 Copies. control arm = ISIS 396443 3 SMN2 Copies. PROCEDURE-RELATED. Comparable between the two active genotype arms. Both arms received nusinersen; no placebo arm. Grade 0. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m85",
@@ -2780,13 +2780,13 @@
    "effect_direction": "decrease",
    "effect_vs_control": "22.2pct_vs_31.2pct_control (2/9 vs 5/16)",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT03225833",
    "source_ref": "NCT03225833",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[64] | term='Headache' | organSystem='Nervous system disorders' | arm=EG003 (WVE-120101 (8 mg))",
    "redistribution": "public_domain",
-   "notes": "n_of_N=2/9. arm=WVE-120101 (8 mg). control arm = Pooled Placebo. PROCEDURE-RELATED. Headache incidence at the 8 mg dose is BELOW the pooled intrathecal-placebo arm, which received identical lumbar punctures. Grade 0 negative control. grade_provisional"
+   "notes": "n_of_N=2/9. arm=WVE-120101 (8 mg). control arm = Pooled Placebo. PROCEDURE-RELATED. Headache incidence at the 8 mg dose is BELOW the pooled intrathecal-placebo arm, which received identical lumbar punctures. Grade 0 negative control. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m93",
@@ -2808,13 +2808,13 @@
    "effect_direction": "decrease",
    "effect_vs_control": "0.0pct_vs_12.5pct_control (0/10 vs 2/16)",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CT_NCT03225833",
    "source_ref": "NCT03225833",
    "source_table": "resultsSection.adverseEventsModule.otherEvents[28] | term='Post lumbar puncture syndrome' | organSystem='Injury, poisoning and procedural complications' | arm=EG005 (WVE-120101 (32 mg))",
    "redistribution": "public_domain",
-   "notes": "n_of_N=0/10. arm=WVE-120101 (32 mg). control arm = Pooled Placebo. PROCEDURE-RELATED. ZERO events at the top 32 mg dose versus 12.5% in the pooled intrathecal-placebo arm - a clear demonstration that this term tracks the procedure, not the oligonucleotide. Grade 0 negative control. grade_provisional"
+   "notes": "n_of_N=0/10. arm=WVE-120101 (32 mg). control arm = Pooled Placebo. PROCEDURE-RELATED. ZERO events at the top 32 mg dose versus 12.5% in the pooled intrathecal-placebo arm - a clear demonstration that this term tracks the procedure, not the oligonucleotide. Grade 0 negative control. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_ct_m94",

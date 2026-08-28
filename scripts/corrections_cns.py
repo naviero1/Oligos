@@ -76,6 +76,59 @@ ICP_NOTE = ("corrected: range 18-28.5 replaced with 18-38; 28.5 does not appear 
             "and disagreed with the range")
 
 
+# ---------------------------------------------------------------------------
+# C5. Reversibility claimed where recovery was never assessed.
+#
+# `reversibility` is not decoration in this dataset: the challenge names CHRONIC
+# neurotoxicity as an endpoint, so this column helps decide whether a row
+# represents the high-priority endpoint at all. A wrongly-asserted `reversible`
+# materially softens a toxicity finding.
+#
+# Two classes were asserting recovery that their sources never measured.
+#
+# (a) The mouse ICV acute-tolerability panel (doi:10.1089/nat.2021.0071). Its
+#     Methods read: "For 1 h following the single bolus injection of ASO, animals
+#     were observed for behavioral side effects". The paper's recovery language
+#     ("waned anywhere between 2 and 4 h post-dose ... from 24 h and out to 7 days
+#     we almost never observed any acute behavior reappearing") is explicitly
+#     fenced to a DIFFERENT cohort - "observations of an initial set of 9 ASOs",
+#     and "also, for this initial set, mice were injected with doses ranging from
+#     12.5 to 200 ug". The scored panel was watched for one hour and never
+#     re-examined; its supplementary table has no recovery, mortality or
+#     follow-up column at all. So the claim was imported from adjacent prose.
+#
+#     Exception, kept deliberately: a score of exactly 20.0 is that scale's top
+#     anchor, defined as "severe signs in all categories, including convulsions
+#     resulting in euthanasia". That is a property of the animals actually scored,
+#     not prose about others, so those rows keep `irreversible`.
+#
+# (b) Adverse-event INCIDENCE loci - ClinicalTrials.gov adverseEventsModule
+#     entries, FDA label adverse-reaction tables, EPAR TEAE tables. These report
+#     counts and have no outcome field whatsoever; the registry schema does not
+#     even carry one. "Did not lead to discontinuation" and "all events were mild
+#     or moderate" had been promoted into `reversible`, and neither is
+#     reversibility. Resolution narratives in these documents attach to individual
+#     SERIOUS events, and those rows are left alone.
+# ---------------------------------------------------------------------------
+HAG_PANEL = "10.1089/nat.2021.0071"
+HAG_NOTE = ("corrected: reversibility -> not_assessed. The scored panel was observed "
+            "for 1 h after a single ICV bolus and never re-examined; the paper's "
+            "recovery statement is fenced to a separate initial set of 9 ASOs, and "
+            "the supplementary table has no recovery or follow-up column")
+
+AE_INCIDENCE = re.compile(r"adverseEventsModule|adverse[- ]reaction|adverse event|"
+                          r"TEAE|Table 3[67]|otherEvents|seriousEvents", re.I)
+AE_NOTE = ("corrected: reversibility -> not_assessed. This is an adverse-event "
+           "INCIDENCE locus, which reports counts and carries no outcome field; "
+           "'did not lead to discontinuation' and 'mild or moderate' are not "
+           "reversibility")
+
+# C6. A grade-0 row has no finding to reverse, so asserting recovery is
+# meaningless there and quietly implies a resolved toxicity that never existed.
+G0_NOTE = ("corrected: reversibility -> not_assessed on a grade-0 row; there is no "
+           "finding to reverse")
+
+
 def main():
     dry = "--dry-run" in sys.argv
     stats = Counter()
@@ -118,6 +171,52 @@ def main():
                      "recoverable only from system_model, so species-based filtering "
                      "dropped these rows")
                 stats["C4_sheep_species"] += 1
+                changed = True
+
+            # C5a ----------------------------------------------------------
+            if HAG_PANEL in ref and norm(m.get("study_type")) == "animal_invivo" \
+                    and norm(m.get("reversibility")) in ("reversible", "irreversible") \
+                    and norm(m.get("readout_value")) not in ("20", "20.0"):
+                m["reversibility"] = "not_assessed"
+                m["notes"] = norm(m.get("notes")) + " ;; " + HAG_NOTE
+                stats["C5a_hagedorn_reversibility"] += 1
+                changed = True
+
+            # C5b ----------------------------------------------------------
+            if norm(m.get("reversibility")) == "reversible" and \
+                    AE_INCIDENCE.search(norm(m.get("source_table"))) and \
+                    "serious" not in norm(m.get("readout_name")).lower():
+                m["reversibility"] = "not_assessed"
+                m["notes"] = norm(m.get("notes")) + " ;; " + AE_NOTE
+                stats["C5b_ae_incidence_reversibility"] += 1
+                changed = True
+
+            # C6 -----------------------------------------------------------
+            if norm(m.get("neurotox_grade")) == "0" and \
+                    norm(m.get("reversibility")) in ("reversible", "irreversible",
+                                                     "partially_reversible"):
+                m["reversibility"] = "not_assessed"
+                m["notes"] = norm(m.get("notes")) + " ;; " + G0_NOTE
+                stats["C6_grade0_reversibility"] += 1
+                changed = True
+
+            # C7 -----------------------------------------------------------
+            # A Direct Healthcare Professional Communication is written and issued
+            # by the marketing-authorisation holder and distributed through the
+            # regulator; it is a company communication, not a government work, so
+            # `public_domain` over-claims a right we do not have. Over-claiming
+            # redistribution is a legal problem rather than a cosmetic one, and the
+            # dataset tracks rights precisely so that it can be relied on.
+            if norm(m.get("redistribution")) == "public_domain" and \
+                    re.search(r"DHPC|Direct Healthcare Professional|press release|"
+                              r"slide deck", ref + norm(m.get("source_table")), re.I):
+                m["redistribution"] = "verify"
+                m["notes"] = norm(m.get("notes")) + \
+                    (" ;; corrected: redistribution public_domain -> verify; a Direct "
+                     "Healthcare Professional Communication is issued by the marketing "
+                     "authorisation holder, not by the regulator, so it is not a "
+                     "government work")
+                stats["C7_dhpc_rights_overclaim"] += 1
                 changed = True
 
             # C3 -----------------------------------------------------------

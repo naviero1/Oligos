@@ -203,6 +203,30 @@ def main():
                 m["challenge_priority"] != "high_hydrocephalus":
             warn(f"{mid}: hydrocephalus endpoint not flagged high_hydrocephalus")
 
+    # --- mortality invariant ----------------------------------------------
+    # Death is grade 3 under the rubric, without exception and without
+    # interpretation. This is the one grading rule that needs no judgement, so it
+    # is worth asserting: any drift here means a grading pass has gone wrong
+    # somewhere less obvious too.
+    for m in meas:
+        if not re.search(r"mortalit|death", m["readout_name"], re.I):
+            continue
+        v = m["readout_value"].strip()
+        killed = re.match(r"^\s*([0-9.]+)\s*[/_]\s*of?\s*[_]?\s*([0-9.]+)", v) or \
+            re.match(r"^\s*([0-9.]+)[/_]([0-9.]+)", v)
+        if not killed:
+            continue
+        try:
+            n = float(killed.group(1))
+        except ValueError:
+            continue
+        if n > 0 and m["neurotox_grade"] != "3":
+            err(f"{m['measurement_id']}: {n:g} death(s) recorded but "
+                f"neurotox_grade={m['neurotox_grade']}; death is grade 3")
+        if n == 0 and m["neurotox_grade"] == "3":
+            warn(f"{m['measurement_id']}: zero deaths recorded but graded 3 — "
+                 f"verify the grade rests on something other than this readout")
+
     # --- ordinal-score plausibility ---------------------------------------
     # A group mean of n integer scores must be a multiple of 1/n. Behavioural
     # rows on ordinal scales are typically n=3-6 animals, so a value like 4.1 is

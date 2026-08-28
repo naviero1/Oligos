@@ -5081,7 +5081,7 @@
    "readout_value": 6.0,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "6.00_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -5089,7 +5089,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 791663",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Grade 3 stands, but on the scale's wording rather than on the row's stated cutoff rule. Two field defects: (a) effect_vs_control \"6.00_vs_0_PBS\" and the notes' claim that \"PBS controls score 0\" are not in this patent - no mouse vehicle FOB  ;; corrected(effect_vs_control:6.00_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m9",
@@ -5137,15 +5137,15 @@
    "readout_value": 5.75,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "5.75_vs_0_PBS",
-   "neurotox_grade": 3,
+   "effect_vs_control": "TBD",
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P1",
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 791665",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[REFUTED] Grade 3 unsupported: 5.75 of 7 falls in the band where criterion (6) \"responded to a tail pinch\" and (7) \"regular breathing\" are still met on average - the animals were still responsive and breathing. That is a severe but responsive acute r ;; corrected(neurotox_grade:3->2;effect_vs_control:5.75_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m11",
@@ -5333,7 +5333,7 @@
    "readout_value": 6.0,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "6.00_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -5341,7 +5341,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 801280",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Grade 3 stands, but on the scale's wording rather than on the row's stated cutoff rule. Two field defects: (a) effect_vs_control \"6.00_vs_0_PBS\" and the notes' claim that \"PBS controls score 0\" are not in this patent - no mouse vehicle FOB  ;; corrected(effect_vs_control:6.00_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m18",
@@ -5613,7 +5613,7 @@
    "readout_value": 6.0,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "6.00_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -5621,7 +5621,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 801290",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Grade 3 stands, but on the scale's wording rather than on the row's stated cutoff rule. Two field defects: (a) effect_vs_control \"6.00_vs_0_PBS\" and the notes' claim that \"PBS controls score 0\" are not in this patent - no mouse vehicle FOB  ;; corrected(effect_vs_control:6.00_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m28",
@@ -5781,7 +5781,7 @@
    "readout_value": 6.25,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "7.00 (no vehicle FOB score reported for the mouse experiments in this patent)",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -5789,7 +5789,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 801296",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compoun ;; corrected(effect_vs_control:6.25_vs_0_PBS->7.00 (no vehicle FOB score reported for the mouse experiments in this patent))"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compoun ;; corrected(effect_vs_control:6.25_vs_0_PBS->7.00 (no vehicle FOB score reported for the mouse experiments in this patent)) ;; VERIFIED[CONFIRMED_MINOR] Grade 3 stands, but on the scale's wording rather than on the row's stated cutoff rule. Two field defects: (a) effect_vs_control \"6.25_vs_0_PBS\" and the notes' claim that \"PBS controls score 0\" are not in this patent - no mouse vehicle FOB  ;; corrected(effect_vs_control:7.00 (no vehicle FOB score reported for the mouse experiments in this patent)->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m34",
@@ -5865,7 +5865,7 @@
    "readout_value": 6.25,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "6.25_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -5873,7 +5873,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 801299",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Grade 3 stands, but on the scale's wording rather than on the row's stated cutoff rule. Two field defects: (a) effect_vs_control \"6.25_vs_0_PBS\" and the notes' claim that \"PBS controls score 0\" are not in this patent - no mouse vehicle FOB  ;; corrected(effect_vs_control:6.25_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m37",
@@ -5893,15 +5893,15 @@
    "readout_value": 5.0,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "5.00_vs_0_PBS",
-   "neurotox_grade": 3,
+   "effect_vs_control": "TBD",
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P1",
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 801300",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[REFUTED] Grade 3 unsupported: 5 of 7 falls in the band where criterion (6) \"responded to a tail pinch\" and (7) \"regular breathing\" are still met on average - the animals were still responsive and breathing. That is a severe but responsive acute reac ;; corrected(neurotox_grade:3->2;effect_vs_control:5.00_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m38",
@@ -5921,7 +5921,7 @@
    "readout_value": 6.0,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "6.00_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -5929,7 +5929,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 801301",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Grade 3 stands, but on the scale's wording rather than on the row's stated cutoff rule. Two field defects: (a) effect_vs_control \"6.00_vs_0_PBS\" and the notes' claim that \"PBS controls score 0\" are not in this patent - no mouse vehicle FOB  ;; corrected(effect_vs_control:6.00_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m39",
@@ -6005,15 +6005,15 @@
    "readout_value": 5.25,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "5.25_vs_0_PBS",
-   "neurotox_grade": 3,
+   "effect_vs_control": "TBD",
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P1",
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 801304",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[REFUTED] Grade 3 unsupported: 5.25 of 7 falls in the band where criterion (6) \"responded to a tail pinch\" and (7) \"regular breathing\" are still met on average - the animals were still responsive and breathing. That is a severe but responsive acute r ;; corrected(neurotox_grade:3->2;effect_vs_control:5.25_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m42",
@@ -6033,7 +6033,7 @@
    "readout_value": 6.0,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "5.50 (no vehicle FOB score reported for the mouse experiments in this patent)",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -6041,7 +6041,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 801305",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compoun ;; corrected(effect_vs_control:6.00_vs_0_PBS->5.50 (no vehicle FOB score reported for the mouse experiments in this patent))"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compoun ;; corrected(effect_vs_control:6.00_vs_0_PBS->5.50 (no vehicle FOB score reported for the mouse experiments in this patent)) ;; VERIFIED[CONFIRMED_MINOR] Grade 3 stands, but on the scale's wording rather than on the row's stated cutoff rule. Two field defects: (a) effect_vs_control \"6.00_vs_0_PBS\" and the notes' claim that \"PBS controls score 0\" are not in this patent - no mouse vehicle FOB  ;; corrected(effect_vs_control:5.50 (no vehicle FOB score reported for the mouse experiments in this patent)->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m43",
@@ -6061,7 +6061,7 @@
    "readout_value": 6.0,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "6.00_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -6069,7 +6069,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 801306",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Grade 3 stands, but on the scale's wording rather than on the row's stated cutoff rule. Two field defects: (a) effect_vs_control \"6.00_vs_0_PBS\" and the notes' claim that \"PBS controls score 0\" are not in this patent - no mouse vehicle FOB  ;; corrected(effect_vs_control:6.00_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m44",
@@ -6117,7 +6117,7 @@
    "readout_value": 6.0,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "6.00_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -6125,7 +6125,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 801308",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Grade 3 stands, but on the scale's wording rather than on the row's stated cutoff rule. Two field defects: (a) effect_vs_control \"6.00_vs_0_PBS\" and the notes' claim that \"PBS controls score 0\" are not in this patent - no mouse vehicle FOB  ;; corrected(effect_vs_control:6.00_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m46",
@@ -6145,7 +6145,7 @@
    "readout_value": 7.0,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "6.50 (no vehicle FOB score reported for the mouse experiments in this patent)",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -6153,7 +6153,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 801309",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compoun ;; corrected(effect_vs_control:7.00_vs_0_PBS->6.50 (no vehicle FOB score reported for the mouse experiments in this patent))"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compoun ;; corrected(effect_vs_control:7.00_vs_0_PBS->6.50 (no vehicle FOB score reported for the mouse experiments in this patent)) ;; VERIFIED[CONFIRMED_MINOR] Grade 3 stands, but on the scale's wording rather than on the row's stated cutoff rule. Two field defects: (a) effect_vs_control \"7.00_vs_0_PBS\" and the notes' claim that \"PBS controls score 0\" are not in this patent - no mouse vehicle FOB  ;; corrected(effect_vs_control:6.50 (no vehicle FOB score reported for the mouse experiments in this patent)->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m47",
@@ -6257,15 +6257,15 @@
    "readout_value": 5.25,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "5.25_vs_0_PBS",
-   "neurotox_grade": 3,
+   "effect_vs_control": "TBD",
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P1",
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 801313",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[REFUTED] Grade 3 unsupported: 5.25 of 7 falls in the band where criterion (6) \"responded to a tail pinch\" and (7) \"regular breathing\" are still met on average - the animals were still responsive and breathing. That is a severe but responsive acute r ;; corrected(neurotox_grade:3->2;effect_vs_control:5.25_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m51",
@@ -6397,7 +6397,7 @@
    "readout_value": 6.75,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "5.50 (no vehicle FOB score reported for the mouse experiments in this patent)",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -6405,7 +6405,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 802460",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compoun ;; corrected(effect_vs_control:6.75_vs_0_PBS->5.50 (no vehicle FOB score reported for the mouse experiments in this patent))"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Value and locus exact. Grade 3 is defensible (a mean of 5-7 on this scale means the animal fails at minimum 'shows any movement after being lifted', and at >=6 also tail-pinch response and/or regular breathing = moribund), and every compoun ;; corrected(effect_vs_control:6.75_vs_0_PBS->5.50 (no vehicle FOB score reported for the mouse experiments in this patent)) ;; VERIFIED[CONFIRMED_MINOR] Grade 3 stands, but on the scale's wording rather than on the row's stated cutoff rule. Two field defects: (a) effect_vs_control \"6.75_vs_0_PBS\" and the notes' claim that \"PBS controls score 0\" are not in this patent - no mouse vehicle FOB  ;; corrected(effect_vs_control:5.50 (no vehicle FOB score reported for the mouse experiments in this patent)->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m56",
@@ -6453,15 +6453,15 @@
    "readout_value": 5.75,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "5.75_vs_0_PBS",
-   "neurotox_grade": 3,
+   "effect_vs_control": "TBD",
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P1",
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 802462",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[REFUTED] Grade 3 unsupported: 5.75 of 7 falls in the band where criterion (6) \"responded to a tail pinch\" and (7) \"regular breathing\" are still met on average - the animals were still responsive and breathing. That is a severe but responsive acute r ;; corrected(neurotox_grade:3->2;effect_vs_control:5.75_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m58",
@@ -6789,15 +6789,15 @@
    "readout_value": 5.25,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "5.25_vs_0_PBS",
-   "neurotox_grade": 3,
+   "effect_vs_control": "TBD",
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P1",
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 802474",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[REFUTED] Grade 3 unsupported: 5.25 of 7 falls in the band where criterion (6) \"responded to a tail pinch\" and (7) \"regular breathing\" are still met on average - the animals were still responsive and breathing. That is a severe but responsive acute r ;; corrected(neurotox_grade:3->2;effect_vs_control:5.25_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m70",
@@ -6845,15 +6845,15 @@
    "readout_value": 5.5,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "5.50_vs_0_PBS",
-   "neurotox_grade": 3,
+   "effect_vs_control": "TBD",
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P1",
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 802476",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[REFUTED] Grade 3 unsupported: 5.5 of 7 falls in the band where criterion (6) \"responded to a tail pinch\" and (7) \"regular breathing\" are still met on average - the animals were still responsive and breathing. That is a severe but responsive acute re ;; corrected(neurotox_grade:3->2;effect_vs_control:5.50_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m72",
@@ -6901,7 +6901,7 @@
    "readout_value": 6.25,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "6.25_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -6909,7 +6909,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 802478",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Grade 3 stands, but on the scale's wording rather than on the row's stated cutoff rule. Two field defects: (a) effect_vs_control \"6.25_vs_0_PBS\" and the notes' claim that \"PBS controls score 0\" are not in this patent - no mouse vehicle FOB  ;; corrected(effect_vs_control:6.25_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m74",
@@ -7433,7 +7433,7 @@
    "readout_value": 6.25,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "6.25_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -7441,7 +7441,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 7 (Example 2), ISIS 806691",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;7-criterion mouse FOB summed 0-7, group mean, PBS controls score 0; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Grade 3 stands, but on the scale's wording rather than on the row's stated cutoff rule. Two field defects: (a) effect_vs_control \"6.25_vs_0_PBS\" and the notes' claim that \"PBS controls score 0\" are not in this patent - no mouse vehicle FOB  ;; corrected(effect_vs_control:6.25_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m93",
@@ -7461,7 +7461,7 @@
    "readout_value": 7.0,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "7.00_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -7469,7 +7469,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 8 (Example 3), ISIS 576816",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;patent states these compounds were \"poorly tolerated\";7-criterion mouse FOB 0-7, group mean; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;patent states these compounds were \"poorly tolerated\";7-criterion mouse FOB 0-7, group mean; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Grade 3 stands, but on the scale's wording rather than on the row's stated cutoff rule. Two field defects: (a) effect_vs_control \"7.00_vs_0_PBS\" and the notes' claim that \"PBS controls score 0\" are not in this patent - no mouse vehicle FOB  ;; corrected(effect_vs_control:7.00_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m94",
@@ -7517,7 +7517,7 @@
    "readout_value": 7.0,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "7.00_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -7525,7 +7525,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 8 (Example 3), ISIS 577061",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;patent states these compounds were \"poorly tolerated\";7-criterion mouse FOB 0-7, group mean; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;patent states these compounds were \"poorly tolerated\";7-criterion mouse FOB 0-7, group mean; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Grade 3 stands, but on the scale's wording rather than on the row's stated cutoff rule. Two field defects: (a) effect_vs_control \"7.00_vs_0_PBS\" and the notes' claim that \"PBS controls score 0\" are not in this patent - no mouse vehicle FOB  ;; corrected(effect_vs_control:7.00_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m96",
@@ -7545,7 +7545,7 @@
    "readout_value": 6.0,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "6.00_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -7553,7 +7553,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 8 (Example 3), ISIS 577065",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;patent states these compounds were \"poorly tolerated\";7-criterion mouse FOB 0-7, group mean; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;patent states these compounds were \"poorly tolerated\";7-criterion mouse FOB 0-7, group mean; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Grade 3 stands, but on the scale's wording rather than on the row's stated cutoff rule. Two field defects: (a) effect_vs_control \"6.00_vs_0_PBS\" and the notes' claim that \"PBS controls score 0\" are not in this patent - no mouse vehicle FOB  ;; corrected(effect_vs_control:6.00_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m97",
@@ -7573,7 +7573,7 @@
    "readout_value": 7.0,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "7.00_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
@@ -7581,7 +7581,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 8 (Example 3), ISIS 577083",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;patent states these compounds were \"poorly tolerated\";7-criterion mouse FOB 0-7, group mean; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3"
+   "notes": "grade_provisional;patent states these compounds were \"poorly tolerated\";7-criterion mouse FOB 0-7, group mean; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3 ;; VERIFIED[CONFIRMED_MINOR] Grade 3 stands, but on the scale's wording rather than on the row's stated cutoff rule. Two field defects: (a) effect_vs_control \"7.00_vs_0_PBS\" and the notes' claim that \"PBS controls score 0\" are not in this patent - no mouse vehicle FOB  ;; corrected(effect_vs_control:7.00_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m98",
@@ -7629,7 +7629,7 @@
    "readout_value": 3.5,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "3.50_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
@@ -7637,7 +7637,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 15 (Example 12), ISIS 791656, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; VERIFIED[REFUTED] The value and locus are right and grade 3 survives, but the row means something else than it claims. readout_name \"FOB_score_8wk\" with readout_unit \"score_0_to_7\" and effect_direction \"increase\" present an animal-loss count as a graded 8-we ;; corrected(effect_vs_control:3.50_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m100",
@@ -7769,7 +7769,7 @@
    "readout_value": 3.5,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "3.50_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
@@ -7777,7 +7777,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 15 (Example 12), ISIS 791657, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; VERIFIED[REFUTED] The value and locus are right and grade 3 survives, but the row means something else than it claims. readout_name \"FOB_score_8wk\" with readout_unit \"score_0_to_7\" and effect_direction \"increase\" present an animal-loss count as a graded 8-we ;; corrected(effect_vs_control:3.50_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m105",
@@ -8469,7 +8469,7 @@
    "readout_value": 5.3,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "5.30_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
@@ -8477,7 +8477,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 15 (Example 12), ISIS 791662, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; VERIFIED[REFUTED] The value and locus are right and grade 3 survives, but the row means something else than it claims. readout_name \"FOB_score_8wk\" with readout_unit \"score_0_to_7\" and effect_direction \"increase\" present an animal-loss count as a graded 8-we ;; corrected(effect_vs_control:5.30_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m130",
@@ -8777,7 +8777,7 @@
    "readout_value": 3.5,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "3.50_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
@@ -8785,7 +8785,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 15 (Example 12), ISIS 791665, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; VERIFIED[REFUTED] The value and locus are right and grade 3 survives, but the row means something else than it claims. readout_name \"FOB_score_8wk\" with readout_unit \"score_0_to_7\" and effect_direction \"increase\" present an animal-loss count as a graded 8-we ;; corrected(effect_vs_control:3.50_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m141",
@@ -9057,7 +9057,7 @@
    "readout_value": 3.5,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "3.50_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
@@ -9065,7 +9065,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 15 (Example 12), ISIS 801275, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; VERIFIED[REFUTED] The value and locus are right and grade 3 survives, but the row means something else than it claims. readout_name \"FOB_score_8wk\" with readout_unit \"score_0_to_7\" and effect_direction \"increase\" present an animal-loss count as a graded 8-we ;; corrected(effect_vs_control:3.50_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m151",
@@ -9757,7 +9757,7 @@
    "readout_value": 5.3,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "5.30_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
@@ -9765,7 +9765,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 15 (Example 12), ISIS 801280, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; VERIFIED[REFUTED] The value and locus are right and grade 3 survives, but the row means something else than it claims. readout_name \"FOB_score_8wk\" with readout_unit \"score_0_to_7\" and effect_direction \"increase\" present an animal-loss count as a graded 8-we ;; corrected(effect_vs_control:5.30_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m176",
@@ -11885,7 +11885,7 @@
    "readout_value": 7.0,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "7.00_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
@@ -11893,7 +11893,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 15 (Example 12), ISIS 801296, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; VERIFIED[REFUTED] The value and locus are right and grade 3 survives, but the row means something else than it claims. readout_name \"FOB_score_8wk\" with readout_unit \"score_0_to_7\" and effect_direction \"increase\" present an animal-loss count as a graded 8-we ;; corrected(effect_vs_control:7.00_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m252",
@@ -12193,7 +12193,7 @@
    "readout_value": 5.3,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "5.30_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
@@ -12201,7 +12201,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 15 (Example 12), ISIS 801308, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; VERIFIED[REFUTED] The value and locus are right and grade 3 survives, but the row means something else than it claims. readout_name \"FOB_score_8wk\" with readout_unit \"score_0_to_7\" and effect_direction \"increase\" present an animal-loss count as a graded 8-we ;; corrected(effect_vs_control:5.30_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m263",
@@ -12333,7 +12333,7 @@
    "readout_value": 7.0,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "7.00_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
@@ -12341,7 +12341,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 15 (Example 12), ISIS 801309, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; VERIFIED[REFUTED] The value and locus are right and grade 3 survives, but the row means something else than it claims. readout_name \"FOB_score_8wk\" with readout_unit \"score_0_to_7\" and effect_direction \"increase\" present an animal-loss count as a graded 8-we ;; corrected(effect_vs_control:7.00_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m268",
@@ -12669,7 +12669,7 @@
    "readout_value": 3.5,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "3.50_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
@@ -12677,7 +12677,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 15 (Example 12), ISIS 801313, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; VERIFIED[REFUTED] The value and locus are right and grade 3 survives, but the row means something else than it claims. readout_name \"FOB_score_8wk\" with readout_unit \"score_0_to_7\" and effect_direction \"increase\" present an animal-loss count as a graded 8-we ;; corrected(effect_vs_control:3.50_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m280",
@@ -13229,7 +13229,7 @@
    "readout_value": 3.5,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "3.50_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
@@ -13237,7 +13237,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 15 (Example 12), ISIS 801298, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; VERIFIED[REFUTED] The value and locus are right and grade 3 survives, but the row means something else than it claims. readout_name \"FOB_score_8wk\" with readout_unit \"score_0_to_7\" and effect_direction \"increase\" present an animal-loss count as a graded 8-we ;; corrected(effect_vs_control:3.50_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m300",
@@ -13369,7 +13369,7 @@
    "readout_value": 5.3,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "5.30_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
@@ -13377,7 +13377,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 15 (Example 12), ISIS 801299, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; VERIFIED[REFUTED] The value and locus are right and grade 3 survives, but the row means something else than it claims. readout_name \"FOB_score_8wk\" with readout_unit \"score_0_to_7\" and effect_direction \"increase\" present an animal-loss count as a graded 8-we ;; corrected(effect_vs_control:5.30_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m305",
@@ -13509,7 +13509,7 @@
    "readout_value": 3.5,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "3.50_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
@@ -13517,7 +13517,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 15 (Example 12), ISIS 801300, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; VERIFIED[REFUTED] The value and locus are right and grade 3 survives, but the row means something else than it claims. readout_name \"FOB_score_8wk\" with readout_unit \"score_0_to_7\" and effect_direction \"increase\" present an animal-loss count as a graded 8-we ;; corrected(effect_vs_control:3.50_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m310",
@@ -13677,7 +13677,7 @@
    "readout_value": 5.3,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "5.30_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
@@ -13685,7 +13685,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 15 (Example 12), ISIS 801302, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; VERIFIED[REFUTED] The value and locus are right and grade 3 survives, but the row means something else than it claims. readout_name \"FOB_score_8wk\" with readout_unit \"score_0_to_7\" and effect_direction \"increase\" present an animal-loss count as a graded 8-we ;; corrected(effect_vs_control:5.30_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m316",
@@ -14097,7 +14097,7 @@
    "readout_value": 5.3,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "5.30_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
@@ -14105,7 +14105,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 15 (Example 12), ISIS 801305, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; VERIFIED[REFUTED] The value and locus are right and grade 3 survives, but the row means something else than it claims. readout_name \"FOB_score_8wk\" with readout_unit \"score_0_to_7\" and effect_direction \"increase\" present an animal-loss count as a graded 8-we ;; corrected(effect_vs_control:5.30_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m331",
@@ -16897,7 +16897,7 @@
    "readout_value": 5.3,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "5.30_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
@@ -16905,7 +16905,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 15 (Example 12), ISIS 806691, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; VERIFIED[REFUTED] The value and locus are right and grade 3 survives, but the row means something else than it claims. readout_name \"FOB_score_8wk\" with readout_unit \"score_0_to_7\" and effect_direction \"increase\" present an animal-loss count as a graded 8-we ;; corrected(effect_vs_control:5.30_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m431",
@@ -17205,7 +17205,7 @@
    "readout_value": 3.5,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "3.50_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
@@ -17213,7 +17213,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 15 (Example 12), ISIS 802461, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; VERIFIED[REFUTED] The value and locus are right and grade 3 survives, but the row means something else than it claims. readout_name \"FOB_score_8wk\" with readout_unit \"score_0_to_7\" and effect_direction \"increase\" present an animal-loss count as a graded 8-we ;; corrected(effect_vs_control:3.50_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m442",
@@ -17485,7 +17485,7 @@
    "readout_value": 7.0,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "7.00_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
@@ -17493,7 +17493,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 15 (Example 12), ISIS 802463, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; VERIFIED[REFUTED] The value and locus are right and grade 3 survives, but the row means something else than it claims. readout_name \"FOB_score_8wk\" with readout_unit \"score_0_to_7\" and effect_direction \"increase\" present an animal-loss count as a graded 8-we ;; corrected(effect_vs_control:7.00_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m452",
@@ -18633,7 +18633,7 @@
    "readout_value": 3.5,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "3.50_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
@@ -18641,7 +18641,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 15 (Example 12), ISIS 802472, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; VERIFIED[REFUTED] The value and locus are right and grade 3 survives, but the row means something else than it claims. readout_name \"FOB_score_8wk\" with readout_unit \"score_0_to_7\" and effect_direction \"increase\" present an animal-loss count as a graded 8-we ;; corrected(effect_vs_control:3.50_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m493",
@@ -19361,7 +19361,7 @@
    "readout_value": 3.5,
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
-   "effect_vs_control": "3.50_vs_0_PBS",
+   "effect_vs_control": "TBD",
    "neurotox_grade": 3,
    "reversibility": "irreversible",
    "is_cns_specific": "TRUE",
@@ -19369,7 +19369,7 @@
    "source_ref": "US9605263B2",
    "source_table": "Table 15 (Example 12), ISIS 802478, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same 7-criterion mouse FOB read at 8 weeks; a deficit persisting to 8 wk is not transient so the mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; VERIFIED[REFUTED] The value and locus are right and grade 3 survives, but the row means something else than it claims. readout_name \"FOB_score_8wk\" with readout_unit \"score_0_to_7\" and effect_direction \"increase\" present an animal-loss count as a graded 8-we ;; corrected(effect_vs_control:3.50_vs_0_PBS->TBD)"
   },
   {
    "measurement_id": "TMP_pat_m519",
@@ -19531,13 +19531,13 @@
    "effect_direction": "no_change",
    "effect_vs_control": "0.0_vs_0_saline",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P1",
    "source_ref": "US9605263B2",
    "source_table": "Table 16 (Example 13), ISIS 801287, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat 7-body-part paralysis score read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;rat 7-body-part paralysis score read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_pat_m525",
@@ -20035,13 +20035,13 @@
    "effect_direction": "no_change",
    "effect_vs_control": "0.0_vs_0_saline",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P1",
    "source_ref": "US9605263B2",
    "source_table": "Table 16 (Example 13), ISIS 806679, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat 7-body-part paralysis score read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;rat 7-body-part paralysis score read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_pat_m543",
@@ -20203,13 +20203,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "0.3_vs_0_saline",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P1",
    "source_ref": "US9605263B2",
    "source_table": "Table 16 (Example 13), ISIS 806680, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat 7-body-part paralysis score read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;rat 7-body-part paralysis score read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_pat_m549",
@@ -20371,13 +20371,13 @@
    "effect_direction": "no_change",
    "effect_vs_control": "0.0_vs_0_saline",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P1",
    "source_ref": "US9605263B2",
    "source_table": "Table 16 (Example 13), ISIS 806690, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat 7-body-part paralysis score read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;rat 7-body-part paralysis score read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_pat_m555",
@@ -20539,13 +20539,13 @@
    "effect_direction": "no_change",
    "effect_vs_control": "0.0_vs_0_saline",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P1",
    "source_ref": "US9605263B2",
    "source_table": "Table 16 (Example 13), ISIS 802459, column \"Score 8 weeks after injection\"",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat 7-body-part paralysis score read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;rat 7-body-part paralysis score read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_pat_m561",
@@ -24122,14 +24122,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "5_vs_0_or_1_PBS",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 64 (Example 14), ISIS 684063",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 676 on SEQ ID NO: 1"
+   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 676 on SEQ ID NO: 1 ;; VERIFIED[REFUTED] Grade 3 is not supported by this scale's own wording: 5/7 abnormal regions is not death, moribundity, unresponsiveness, frank paralysis or reported degeneration. The row's own notes record the cutoff rule actually used - \"mapping 0-<1=>0, 1 ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_pat_m689",
@@ -24234,14 +24234,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "5_vs_0_or_1_PBS",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 64 (Example 14), ISIS 684067",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 676 on SEQ ID NO: 1"
+   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 676 on SEQ ID NO: 1 ;; VERIFIED[REFUTED] Grade 3 is not supported by this scale's own wording: 5/7 abnormal regions is not death, moribundity, unresponsiveness, frank paralysis or reported degeneration. The row's own notes record the cutoff rule actually used - \"mapping 0-<1=>0, 1 ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_pat_m693",
@@ -24374,14 +24374,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "7_vs_0_or_1_PBS",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 64 (Example 14), ISIS 612947",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 679 on SEQ ID NO: 1"
+   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 679 on SEQ ID NO: 1 ;; VERIFIED[REFUTED] Grade 3 is not supported by this scale's own wording: 7/7 abnormal regions is not death, moribundity, unresponsiveness, frank paralysis or reported degeneration. The row's own notes record the cutoff rule actually used - \"mapping 0-<1=>0, 1 ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_pat_m698",
@@ -24542,14 +24542,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "5_vs_0_or_1_PBS",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 64 (Example 14), ISIS 666861",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 679 on SEQ ID NO: 1"
+   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 679 on SEQ ID NO: 1 ;; VERIFIED[REFUTED] Grade 3 is not supported by this scale's own wording: 5/7 abnormal regions is not death, moribundity, unresponsiveness, frank paralysis or reported degeneration. The row's own notes record the cutoff rule actually used - \"mapping 0-<1=>0, 1 ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_pat_m704",
@@ -24654,14 +24654,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "5_vs_0_or_1_PBS",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 64 (Example 14), ISIS 666865",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 679 on SEQ ID NO: 1"
+   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 679 on SEQ ID NO: 1 ;; VERIFIED[REFUTED] Grade 3 is not supported by this scale's own wording: 5/7 abnormal regions is not death, moribundity, unresponsiveness, frank paralysis or reported degeneration. The row's own notes record the cutoff rule actually used - \"mapping 0-<1=>0, 1 ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_pat_m708",
@@ -24682,14 +24682,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "5_vs_0_or_1_PBS",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 64 (Example 14), ISIS 611497",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"5-10-5 MOE with mixed\";target start site 681 on SEQ ID NO: 1"
+   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"5-10-5 MOE with mixed\";target start site 681 on SEQ ID NO: 1 ;; VERIFIED[REFUTED] Grade 3 is not supported by this scale's own wording: 5/7 abnormal regions is not death, moribundity, unresponsiveness, frank paralysis or reported degeneration. The row's own notes record the cutoff rule actually used - \"mapping 0-<1=>0, 1 ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_pat_m709",
@@ -24738,14 +24738,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "7_vs_0_or_1_PBS",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 64 (Example 14), ISIS 666847",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"5-10-5 MOE with mixed\";target start site 681 on SEQ ID NO: 1"
+   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"5-10-5 MOE with mixed\";target start site 681 on SEQ ID NO: 1 ;; VERIFIED[REFUTED] Grade 3 is not supported by this scale's own wording: 7/7 abnormal regions is not death, moribundity, unresponsiveness, frank paralysis or reported degeneration. The row's own notes record the cutoff rule actually used - \"mapping 0-<1=>0, 1 ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_pat_m711",
@@ -24822,14 +24822,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "6_vs_0_or_1_PBS",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 64 (Example 14), ISIS 666866",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 684 on SEQ ID NO: 1"
+   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 684 on SEQ ID NO: 1 ;; VERIFIED[REFUTED] Grade 3 is not supported by this scale's own wording: 6/7 abnormal regions is not death, moribundity, unresponsiveness, frank paralysis or reported degeneration. The row's own notes record the cutoff rule actually used - \"mapping 0-<1=>0, 1 ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_pat_m714",
@@ -24850,14 +24850,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "6_vs_0_or_1_PBS",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 64 (Example 14), ISIS 666867",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 684 on SEQ ID NO: 1"
+   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 684 on SEQ ID NO: 1 ;; VERIFIED[REFUTED] Grade 3 is not supported by this scale's own wording: 6/7 abnormal regions is not death, moribundity, unresponsiveness, frank paralysis or reported degeneration. The row's own notes record the cutoff rule actually used - \"mapping 0-<1=>0, 1 ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_pat_m715",
@@ -24878,14 +24878,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "6_vs_0_or_1_PBS",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 64 (Example 14), ISIS 666868",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 684 on SEQ ID NO: 1"
+   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 684 on SEQ ID NO: 1 ;; VERIFIED[REFUTED] Grade 3 is not supported by this scale's own wording: 6/7 abnormal regions is not death, moribundity, unresponsiveness, frank paralysis or reported degeneration. The row's own notes record the cutoff rule actually used - \"mapping 0-<1=>0, 1 ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_pat_m716",
@@ -24906,14 +24906,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "6_vs_0_or_1_PBS",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 64 (Example 14), ISIS 666869",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 684 on SEQ ID NO: 1"
+   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 684 on SEQ ID NO: 1 ;; VERIFIED[REFUTED] Grade 3 is not supported by this scale's own wording: 6/7 abnormal regions is not death, moribundity, unresponsiveness, frank paralysis or reported degeneration. The row's own notes record the cutoff rule actually used - \"mapping 0-<1=>0, 1 ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_pat_m717",
@@ -24934,14 +24934,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "6_vs_0_or_1_PBS",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 64 (Example 14), ISIS 666870",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 684 on SEQ ID NO: 1"
+   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 684 on SEQ ID NO: 1 ;; VERIFIED[REFUTED] Grade 3 is not supported by this scale's own wording: 6/7 abnormal regions is not death, moribundity, unresponsiveness, frank paralysis or reported degeneration. The row's own notes record the cutoff rule actually used - \"mapping 0-<1=>0, 1 ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_pat_m718",
@@ -24962,14 +24962,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "6_vs_0_or_1_PBS",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 64 (Example 14), ISIS 666871",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 684 on SEQ ID NO: 1"
+   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 684 on SEQ ID NO: 1 ;; VERIFIED[REFUTED] Grade 3 is not supported by this scale's own wording: 6/7 abnormal regions is not death, moribundity, unresponsiveness, frank paralysis or reported degeneration. The row's own notes record the cutoff rule actually used - \"mapping 0-<1=>0, 1 ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_pat_m719",
@@ -24990,14 +24990,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "6_vs_0_or_1_PBS",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 64 (Example 14), ISIS 666872",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 684 on SEQ ID NO: 1"
+   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 684 on SEQ ID NO: 1 ;; VERIFIED[REFUTED] Grade 3 is not supported by this scale's own wording: 6/7 abnormal regions is not death, moribundity, unresponsiveness, frank paralysis or reported degeneration. The row's own notes record the cutoff rule actually used - \"mapping 0-<1=>0, 1 ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_pat_m720",
@@ -25018,14 +25018,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "6_vs_0_or_1_PBS",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 64 (Example 14), ISIS 666873",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 684 on SEQ ID NO: 1"
+   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 684 on SEQ ID NO: 1 ;; VERIFIED[REFUTED] Grade 3 is not supported by this scale's own wording: 6/7 abnormal regions is not death, moribundity, unresponsiveness, frank paralysis or reported degeneration. The row's own notes record the cutoff rule actually used - \"mapping 0-<1=>0, 1 ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_pat_m721",
@@ -25046,14 +25046,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "5_vs_0_or_1_PBS",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 64 (Example 14), ISIS 666874",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 684 on SEQ ID NO: 1"
+   "notes": "grade_provisional;rat functional observational battery, 7 regions (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0-7; patent states control animals usually score 0 or 1; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3;patent chemistry class=\"Deoxy, MOE, and cEt with\";target start site 684 on SEQ ID NO: 1 ;; VERIFIED[REFUTED] Grade 3 is not supported by this scale's own wording: 5/7 abnormal regions is not death, moribundity, unresponsiveness, frank paralysis or reported degeneration. The row's own notes record the cutoff rule actually used - \"mapping 0-<1=>0, 1 ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_pat_m722",
@@ -29947,13 +29947,13 @@
    "effect_direction": "no_change",
    "effect_vs_control": "0.0_vs_0_or_1_PBS",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 67 (Example 16), ISIS 333611, \"8 week FOB / 1 mg\" column",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same rat FOB read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same rat FOB read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_pat_m897",
@@ -30059,13 +30059,13 @@
    "effect_direction": "no_change",
    "effect_vs_control": "0.0_vs_0_or_1_PBS",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 67 (Example 16), ISIS 666853, \"8 week FOB / 1 mg\" column",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same rat FOB read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same rat FOB read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_pat_m901",
@@ -30115,13 +30115,13 @@
    "effect_direction": "no_change",
    "effect_vs_control": "0.0_vs_0_or_1_PBS",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 67 (Example 16), ISIS 666853, \"8 week FOB / 3 mg\" column",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same rat FOB read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same rat FOB read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_pat_m903",
@@ -30171,13 +30171,13 @@
    "effect_direction": "no_change",
    "effect_vs_control": "0.0_vs_0_or_1_PBS",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 67 (Example 16), ISIS 666859, \"8 week FOB / 1 mg\" column",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same rat FOB read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same rat FOB read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_pat_m905",
@@ -30227,13 +30227,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "0.3_vs_0_or_1_PBS",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 67 (Example 16), ISIS 666859, \"8 week FOB / 3 mg\" column",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same rat FOB read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same rat FOB read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_pat_m907",
@@ -30283,13 +30283,13 @@
    "effect_direction": "no_change",
    "effect_vs_control": "0.0_vs_0_or_1_PBS",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 67 (Example 16), ISIS 666870, \"8 week FOB / 1 mg\" column",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same rat FOB read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same rat FOB read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_pat_m909",
@@ -30310,14 +30310,14 @@
    "readout_unit": "score_0_to_7",
    "effect_direction": "increase",
    "effect_vs_control": "5.8_vs_0_or_1_PBS",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "reversible",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 67 (Example 16), ISIS 666870, \"3 hour FOB / 3 mg\" column",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;rat 7-region FOB 0-7; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3; reversibility from the paired 8-week score in the same table"
+   "notes": "grade_provisional;rat 7-region FOB 0-7; mapping 0-<1=>0, 1-<3=>1, 3-<5=>2, >=5=>3; reversibility from the paired 8-week score in the same table ;; VERIFIED[REFUTED] Grade 3 unsupported: 5.8 denotes \"5.8 of 7 regions did not exhibit normal function at 3 h\", and the paired 8-week FOB of 0.8 in the same table shows it resolved. No death, moribundity, unresponsiveness or paralysis is reported. The row's ow ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_pat_m910",
@@ -30339,13 +30339,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "0.8_vs_0_or_1_PBS",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 67 (Example 16), ISIS 666870, \"8 week FOB / 3 mg\" column",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same rat FOB read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same rat FOB read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_pat_m911",
@@ -30395,13 +30395,13 @@
    "effect_direction": "no_change",
    "effect_vs_control": "0.0_vs_0_or_1_PBS",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 67 (Example 16), ISIS 666919, \"8 week FOB / 1 mg\" column",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same rat FOB read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same rat FOB read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_pat_m913",
@@ -30451,13 +30451,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "0.1_vs_0_or_1_PBS",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P2",
    "source_ref": "US10968453B2",
    "source_table": "Table 67 (Example 16), ISIS 666919, \"8 week FOB / 3 mg\" column",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;same rat FOB read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3"
+   "notes": "grade_provisional;same rat FOB read at 8 weeks; persisting deficit so mapping skips grade 1: 0-<1=>0, 1-<3=>2, >=3=>3 ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_pat_m915",
@@ -34371,13 +34371,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "0.5\u00b12.9_vs_0_PBS",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P7",
    "source_ref": "US11851654B2",
    "source_table": "Table 6 \"Acute tolerability score\" (Example 2), row \"HDO 13mer\", 6h column",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-week-old female ICR mice, single injection into the left lateral ventricle; 11-item behavioural battery scored 0=normal / 1=abnormal per item, summed 0-11, PBS controls 0+/-0; value is mean +/- SD (0.5 \u00b1 2.9), n=4-7; mapping uses the same proportional band edges as the 0-7 FOB scale: 0-<1=>0, 1-<5=>1, 5-<8=>2, >=8=>3; DOSE printed as \"12 umol/mouse\" - reproduced as printed, and the unit left TBD because the schema dose-unit enum has no molar-amount unit (the figure is very likely a nmol/umol typo in the patent, so it was NOT converted)"
+   "notes": "grade_provisional;7-week-old female ICR mice, single injection into the left lateral ventricle; 11-item behavioural battery scored 0=normal / 1=abnormal per item, summed 0-11, PBS controls 0+/-0; value is mean +/- SD (0.5 \u00b1 2.9), n=4-7; mapping uses the same proportional band edges as the 0-7 FOB scale: 0-<1=>0, 1-<5=>1, 5-<8=>2, >=8=>3; DOSE printed as \"12 umol/mouse\" - reproduced as printed, and the unit left TBD because the schema dose-unit enum has no molar-amount unit (the figure is very likely a nmol/umol typo in the patent, so it was NOT converted) ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_pat_m1055",
@@ -34399,13 +34399,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "75pct_vs_0pct_PBS",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P7",
    "source_ref": "US11851654B2",
    "source_table": "Table 7 \"Side-effect event rate (%)\" (Example 2), row \"HDO 13mer\", 6h column",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;percentage of mice showing an abnormality in any one of the 11 behavioural items at this timepoint (PBS = 0%%); this is the incidence expression of the SAME observation graded in the paired acute_neurotoxicity_score row, so it carries that row's grade"
+   "notes": "grade_provisional;percentage of mice showing an abnormality in any one of the 11 behavioural items at this timepoint (PBS = 0%%); this is the incidence expression of the SAME observation graded in the paired acute_neurotoxicity_score row, so it carries that row's grade ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_pat_m1056",
@@ -35049,7 +35049,7 @@
    "source_ref": "US11851654B2",
    "source_table": "Table 10 \"Acute tolerability score\" (Example 4), row \"ASO\", 1h column",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-week-old female ICR mice, single injection into the left lateral ventricle; 11-item behavioural battery scored 0=normal / 1=abnormal per item, summed 0-11, PBS controls 0+/-0; value is mean +/- SD (7.5 \u00b1 0.9), n=4-7; mapping uses the same proportional band edges as the 0-7 FOB scale: 0-<1=>0, 1-<5=>1, 5-<8=>2, >=8=>3; DOSE printed as \"12 umol/mouse\" - reproduced as printed, and the unit left TBD because the schema dose-unit enum has no molar-amount unit (the figure is very likely a nmol/umol typo in the patent, so it was NOT converted) ;; VERIFIED[REFUTED] ;; ADVISORY(not applied, not a value): dose_or_conc_value=TBD (or keep 12 only if the unit is recorded as umol/mouse in notes) Example 4's own mortality table (TABLE 12) records ASO 2/6 mice dead within one day of dosing. The row grades this group 2 with reversibility='reversible' and never mentions the deaths. Under the schema rubric, 'moribundity/death' is grade  ;; corrected(neurotox_grade:2->3;reversibility:reversible->partially_reversible)"
+   "notes": "grade_provisional;7-week-old female ICR mice, single injection into the left lateral ventricle; 11-item behavioural battery scored 0=normal / 1=abnormal per item, summed 0-11, PBS controls 0+/-0; value is mean +/- SD (7.5 \u00b1 0.9), n=4-7; mapping uses the same proportional band edges as the 0-7 FOB scale: 0-<1=>0, 1-<5=>1, 5-<8=>2, >=8=>3; DOSE printed as \"12 umol/mouse\" - reproduced as printed, and the unit left TBD because the schema dose-unit enum has no molar-amount unit (the figure is very likely a nmol/umol typo in the patent, so it was NOT converted) ;; VERIFIED[REFUTED] ;; ADVISORY(not applied, not a value): dose_or_conc_value=TBD (or keep 12 only if the unit is recorded as umol/mouse in notes) Example 4's own mortality table (TABLE 12) records ASO 2/6 mice dead within one day of dosing. The row grades this group 2 with reversibility='reversible' and never mentions the deaths. Under the schema rubric, 'moribundity/death' is grade ;; corrected(neurotox_grade:2->3;reversibility:reversible->partially_reversible) ;; VERIFIED[REFUTED] reversibility=reversible overstates the source. At the last observed timepoint the finding had not resolved - the patent says in terms that the rise \"remained up to 6 hours\", half the animals still had signs, and a third of the group died. "
   },
   {
    "measurement_id": "TMP_pat_m1079",
@@ -35155,13 +35155,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "0.5\u00b12.3_vs_0_PBS",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P7",
    "source_ref": "US11851654B2",
    "source_table": "Table 10 \"Acute tolerability score\" (Example 4), row \"ASO\", 6h column",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-week-old female ICR mice, single injection into the left lateral ventricle; 11-item behavioural battery scored 0=normal / 1=abnormal per item, summed 0-11, PBS controls 0+/-0; value is mean +/- SD (0.5 \u00b1 2.3), n=4-7; mapping uses the same proportional band edges as the 0-7 FOB scale: 0-<1=>0, 1-<5=>1, 5-<8=>2, >=8=>3; DOSE printed as \"12 umol/mouse\" - reproduced as printed, and the unit left TBD because the schema dose-unit enum has no molar-amount unit (the figure is very likely a nmol/umol typo in the patent, so it was NOT converted)"
+   "notes": "grade_provisional;7-week-old female ICR mice, single injection into the left lateral ventricle; 11-item behavioural battery scored 0=normal / 1=abnormal per item, summed 0-11, PBS controls 0+/-0; value is mean +/- SD (0.5 \u00b1 2.3), n=4-7; mapping uses the same proportional band edges as the 0-7 FOB scale: 0-<1=>0, 1-<5=>1, 5-<8=>2, >=8=>3; DOSE printed as \"12 umol/mouse\" - reproduced as printed, and the unit left TBD because the schema dose-unit enum has no molar-amount unit (the figure is very likely a nmol/umol typo in the patent, so it was NOT converted) ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_pat_m1083",
@@ -35183,13 +35183,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "50pct_vs_0pct_PBS",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P7",
    "source_ref": "US11851654B2",
    "source_table": "Table 11 \"Side-effect event rate (%)\" (Example 4), row \"ASO\", 6h column",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;percentage of mice showing an abnormality in any one of the 11 behavioural items at this timepoint (PBS = 0%%); this is the incidence expression of the SAME observation graded in the paired acute_neurotoxicity_score row, so it carries that row's grade"
+   "notes": "grade_provisional;percentage of mice showing an abnormality in any one of the 11 behavioural items at this timepoint (PBS = 0%%); this is the incidence expression of the SAME observation graded in the paired acute_neurotoxicity_score row, so it carries that row's grade ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_pat_m1084",
@@ -36527,13 +36527,13 @@
    "effect_direction": "no_change",
    "effect_vs_control": "0\u00b10_vs_0_PBS",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P7",
    "source_ref": "US11851654B2",
    "source_table": "Table 14 \"Acute tolerability score\" (Example 5), row \"ASO\", 6h column",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;7-week-old female ICR mice, single injection into the left lateral ventricle; 11-item behavioural battery scored 0=normal / 1=abnormal per item, summed 0-11, PBS controls 0+/-0; value is mean +/- SD (0 \u00b1 0), n=4-7; mapping uses the same proportional band edges as the 0-7 FOB scale: 0-<1=>0, 1-<5=>1, 5-<8=>2, >=8=>3; DOSE printed as \"6 umol/mouse\" - reproduced as printed, and the unit left TBD because the schema dose-unit enum has no molar-amount unit (the figure is very likely a nmol/umol typo in the patent, so it was NOT converted)"
+   "notes": "grade_provisional;7-week-old female ICR mice, single injection into the left lateral ventricle; 11-item behavioural battery scored 0=normal / 1=abnormal per item, summed 0-11, PBS controls 0+/-0; value is mean +/- SD (0 \u00b1 0), n=4-7; mapping uses the same proportional band edges as the 0-7 FOB scale: 0-<1=>0, 1-<5=>1, 5-<8=>2, >=8=>3; DOSE printed as \"6 umol/mouse\" - reproduced as printed, and the unit left TBD because the schema dose-unit enum has no molar-amount unit (the figure is very likely a nmol/umol typo in the patent, so it was NOT converted) ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_pat_m1132",
@@ -36555,13 +36555,13 @@
    "effect_direction": "no_change",
    "effect_vs_control": "0pct_vs_0pct_PBS",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "P7",
    "source_ref": "US11851654B2",
    "source_table": "Table 15 \"Side-effect event rate (%)\" (Example 5), row \"ASO\", 6h column",
    "redistribution": "public_domain",
-   "notes": "grade_provisional;percentage of mice showing an abnormality in any one of the 11 behavioural items at this timepoint (PBS = 0%%); this is the incidence expression of the SAME observation graded in the paired acute_neurotoxicity_score row, so it carries that row's grade"
+   "notes": "grade_provisional;percentage of mice showing an abnormality in any one of the 11 behavioural items at this timepoint (PBS = 0%%); this is the incidence expression of the SAME observation graded in the paired acute_neurotoxicity_score row, so it carries that row's grade ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_pat_m1133",

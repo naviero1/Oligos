@@ -661,13 +661,13 @@
    "effect_direction": "no_change",
    "effect_vs_control": "45.8pct(33/72)_vs_44.4pct(16/36)_placebo",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "R3",
    "source_ref": "EMA/276404/2024",
    "source_table": "EPAR Table 36 (TEAEs >=10% in any pooled group, cut-off 15 Jul 2022), row 'Headache'",
    "redistribution": "public_domain",
-   "notes": "GRADE 0 NEGATIVE ANCHOR: incidence essentially identical to concurrent placebo (45.8% vs 44.4%), so per the contract this is a grade-0 row, not a grade-2 row. Reflects the lumbar-puncture procedure, not the oligonucleotide. grade_provisional"
+   "notes": "GRADE 0 NEGATIVE ANCHOR: incidence essentially identical to concurrent placebo (45.8% vs 44.4%), so per the contract this is a grade-0 row, not a grade-2 row. Reflects the lumbar-puncture procedure, not the oligonucleotide. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility ;; VERIFIED[REFUTED] reversibility=reversible is not at the cited locus. Also semantically empty here: the row is graded 0 as a negative anchor because the incidence is at the placebo rate, so there is no drug-attributable finding for a reversibility value to d"
   },
   {
    "measurement_id": "TMP_reg_m18",
@@ -717,13 +717,13 @@
    "effect_direction": "decrease",
    "effect_vs_control": "18.1pct(13/72)_vs_30.6pct(11/36)_placebo",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "R3",
    "source_ref": "EMA/276404/2024",
    "source_table": "EPAR Table 36, row 'Post lumbar puncture syndrome'",
    "redistribution": "public_domain",
-   "notes": "GRADE 0 NEGATIVE ANCHOR: incidence BELOW concurrent placebo (both arms underwent identical LP procedures). grade_provisional"
+   "notes": "GRADE 0 NEGATIVE ANCHOR: incidence BELOW concurrent placebo (both arms underwent identical LP procedures). grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_reg_m20",
@@ -946,8 +946,8 @@
    "source_id": "R1",
    "source_ref": "FDA_NDA215887",
    "source_table": "US label Table 2 (sec 14) and sec 12.2, CSF SOD1 protein ITT rows",
-   "redistribution": "public_domain",
-   "notes": "Target engagement: 35% reduction in total CSF SOD1 protein (GMR 0.65, N=72) vs 2% decrease on placebo (GMR 0.98, N=36); nominal p<0.0001. Target-protein reduction is efficacy, not toxicity -> grade 0. grade_provisional"
+   "redistribution": "verify",
+   "notes": "Target engagement: 35% reduction in total CSF SOD1 protein (GMR 0.65, N=72) vs 2% decrease on placebo (GMR 0.98, N=36); nominal p<0.0001. Target-protein reduction is efficacy, not toxicity -> grade 0. grade_provisional ;; VERIFIED[UNVERIFIABLE] The per-case narrative for a 4-month-old female with Type I SMA (3 doses) cannot be checked against any reachable document, so the individual case rows are unverifiable as written. KEEP WITH A CAVEAT rather than drop: the class fact they en ;; corrected(redistribution:public_domain->verify)"
   },
   {
    "measurement_id": "TMP_reg_m28",
@@ -1417,13 +1417,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "25pct_vs_0pct_sham_control",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "R4",
    "source_ref": "FDA_NDA209531",
    "source_table": "US label Table 3 (sec 6.1), Later-Onset SMA Study 2, row 'Back pain'",
    "redistribution": "public_domain",
-   "notes": "Denominators n=84 vs n=42. Zero in the sham-procedure arm despite the sham arm undergoing a skin-prick sham procedure (no dural puncture), so this is route/needle attributable rather than parenchymal. grade_provisional ;; VERIFIED[REFUTED] ;; ADVISORY(not applied, not a value): neurotox_grade=drop row (regulatory-procedure record, not a measurement); grade not assignable from a PRAC agenda The quotation is verbatim-exact: 'Nusinersen - SPINRAZA (CAP) - EMEA/H/C/004312/II/0004, Orphan / Applicant: Biogen Idec Ltd / PRAC Rapporteur: Qun-Ying Yue / Scope: Update of section 4.8 of the SmPC to include new safety information relate"
+   "notes": "Denominators n=84 vs n=42. Zero in the sham-procedure arm despite the sham arm undergoing a skin-prick sham procedure (no dural puncture), so this is route/needle attributable rather than parenchymal. grade_provisional ;; VERIFIED[REFUTED] ;; ADVISORY(not applied, not a value): neurotox_grade=drop row (regulatory-procedure record, not a measurement); grade not assignable from a PRAC agenda The quotation is verbatim-exact: 'Nusinersen - SPINRAZA (CAP) - EMEA/H/C/004312/II/0004, Orphan / Applicant: Biogen Idec Ltd / PRAC Rapporteur: Qun-Ying Yue / Scope: Update of section 4.8 of the SmPC to include new safety information relate ;; VERIFIED[REFUTED] reversibility=reversible is not stated anywhere at the cited locus. An adverse-reaction incidence table does not assess recovery. Correct value: not_assessed. ;; corrected(reversibility:reversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_reg_m45",
@@ -2257,13 +2257,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "no_control_single_case",
    "neurotox_grade": 2,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "FALSE",
    "source_id": "R9",
    "source_ref": "FDA_NDA211172",
    "source_table": "US label sec 5.5 Inflammatory and Immune Effects, 'Neurologic Serious Adverse Reactions'",
    "redistribution": "public_domain",
-   "notes": "Verbatim: 'Another patient developed progressive lumbar pain, weight loss, headache, vomiting, and impaired speech 7 months after starting TEGSEDI. Cerebrospinal fluid analysis findings included elevated protein, a lymphocyte-predominant pleocytosis, and testing that was negative for infection. The patient recovered after empiric therapy (high-dose steroids, antibiotics) and resumed TEGSEDI without recurrence of symptoms.' A CSF inflammatory syndrome from a SUBCUTANEOUSLY dosed ASO - notable because it shows CNS inflammation is not exclusive to intrathecal delivery. grade_provisional"
+   "notes": "Verbatim: 'Another patient developed progressive lumbar pain, weight loss, headache, vomiting, and impaired speech 7 months after starting TEGSEDI. Cerebrospinal fluid analysis findings included elevated protein, a lymphocyte-predominant pleocytosis, and testing that was negative for infection. The patient recovered after empiric therapy (high-dose steroids, antibiotics) and resumed TEGSEDI without recurrence of symptoms.' A CSF inflammatory syndrome from a SUBCUTANEOUSLY dosed ASO - notable because it shows CNS inflammation is not exclusive to intrathecal delivery. grade_provisional ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_reg_m75",

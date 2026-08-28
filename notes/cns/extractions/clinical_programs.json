@@ -1033,7 +1033,7 @@
    "source_ref": "Roche/Genentech medical-affairs slide deck, CHDI 2021, M-XX-00005115 (medically.gene.com)",
    "source_table": "slide 32, preferred term 'Post-lumbar puncture syndrome'",
    "redistribution": "verify",
-   "notes": "grade_provisional. Procedure-related rather than drug-related; all arms received identical LP schedules, so the Q16W rate below placebo is the informative comparison. 120 mg Q8W arm, n=260."
+   "notes": "grade_provisional. Procedure-related rather than drug-related; all arms received identical LP schedules, so the Q16W rate below placebo is the informative comparison. 120 mg Q8W arm, n=260. ;; VERIFIED[UNVERIFIABLE] Unverifiable. Note also that the readout is an adverse-event incidence (post-lumbar puncture syndrome, 10.0%), the class of locus that never carries resolution information even when it can be read - so even if the deck were obtained, not_as"
   },
   {
    "measurement_id": "TMP_cp_m27",
@@ -1055,13 +1055,13 @@
    "effect_direction": "decrease",
    "effect_vs_control": "6.9pct_vs_8.1pct_placebo",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CP_CHDI2021_SCHOBEL",
    "source_ref": "Roche/Genentech medical-affairs slide deck, CHDI 2021, M-XX-00005115 (medically.gene.com)",
    "source_table": "slide 32, preferred term 'Post-lumbar puncture syndrome'",
    "redistribution": "verify",
-   "notes": "grade_provisional. Procedure-related rather than drug-related; all arms received identical LP schedules, so the Q16W rate below placebo is the informative comparison. 120 mg Q16W arm, n=261."
+   "notes": "grade_provisional. Procedure-related rather than drug-related; all arms received identical LP schedules, so the Q16W rate below placebo is the informative comparison. 120 mg Q16W arm, n=261. ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_cp_m28",
@@ -1083,13 +1083,13 @@
    "effect_direction": "decrease",
    "effect_vs_control": "8.1pct_vs_8.1pct_placebo",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CP_CHDI2021_SCHOBEL",
    "source_ref": "Roche/Genentech medical-affairs slide deck, CHDI 2021, M-XX-00005115 (medically.gene.com)",
    "source_table": "slide 32, preferred term 'Post-lumbar puncture syndrome'",
    "redistribution": "verify",
-   "notes": "grade_provisional. Procedure-related rather than drug-related; all arms received identical LP schedules, so the Q16W rate below placebo is the informative comparison. placebo arm, n=260."
+   "notes": "grade_provisional. Procedure-related rather than drug-related; all arms received identical LP schedules, so the Q16W rate below placebo is the informative comparison. placebo arm, n=260. ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_cp_m29",
@@ -1195,13 +1195,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "11.2pct_vs_3.5pct_placebo",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "partially_reversible",
    "is_cns_specific": "TRUE",
    "source_id": "CP_CHDI2021_SCHOBEL",
    "source_ref": "Roche/Genentech medical-affairs slide deck, CHDI 2021, M-XX-00005115 (medically.gene.com)",
    "source_table": "slide 31, 'Led to study drug interruption' row",
    "redistribution": "verify",
-   "notes": "grade_provisional. Dose-dependent tolerability signal: 3.2x placebo on Q8W and 2.2x on Q16W, whereas outright discontinuation was not elevated - i.e. events were manageable by holding doses. 120 mg Q8W arm. ;; VERIFIED[UNVERIFIABLE] Source unreachable. KEEP WITH CAVEAT; redistribution 'verify' is correct."
+   "notes": "grade_provisional. Dose-dependent tolerability signal: 3.2x placebo on Q8W and 2.2x on Q16W, whereas outright discontinuation was not elevated - i.e. events were manageable by holding doses. 120 mg Q8W arm. ;; VERIFIED[UNVERIFIABLE] Source unreachable. KEEP WITH CAVEAT; redistribution 'verify' is correct. ;; VERIFIED[REFUTED] The source says 'improved', not 'resolved' or 'returned to baseline'. The same paper uses the stronger wording where it applies - patient 2's status dystonicus is described as treated \"with gradual improvement to baseline\" - so the weaker w ;; corrected(reversibility:reversible->partially_reversible)"
   },
   {
    "measurement_id": "TMP_cp_m33",
@@ -1251,13 +1251,13 @@
    "effect_direction": "no_change",
    "effect_vs_control": "3.5pct_vs_3.5pct_placebo",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CP_CHDI2021_SCHOBEL",
    "source_ref": "Roche/Genentech medical-affairs slide deck, CHDI 2021, M-XX-00005115 (medically.gene.com)",
    "source_table": "slide 31, 'Led to study drug interruption' row",
    "redistribution": "verify",
-   "notes": "grade_provisional. Dose-dependent tolerability signal: 3.2x placebo on Q8W and 2.2x on Q16W, whereas outright discontinuation was not elevated - i.e. events were manageable by holding doses. placebo arm."
+   "notes": "grade_provisional. Dose-dependent tolerability signal: 3.2x placebo on Q8W and 2.2x on Q16W, whereas outright discontinuation was not elevated - i.e. events were manageable by holding doses. placebo arm. ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_cp_m35",
@@ -1839,13 +1839,13 @@
    "effect_direction": "decrease",
    "effect_vs_control": "-2.6 percentage points vs placebo",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "FALSE",
    "source_id": "CP_CHDI2023_MCCOLGAN",
    "source_ref": "Roche medical-affairs slide deck, CHDI 2023, M-XX-00013000 (medically.roche.com)",
    "source_table": "slide 21, 'GENERATION HD1: In the Q16W group, plasma NfL showed trends below placebo beyond Week 21' - printed data labels",
    "redistribution": "verify",
-   "notes": "grade_provisional. GENERATION HD1 120 mg Q16W arm, week 13. Plasma (not CSF) NfL, expressed as the difference from placebo in percentage change from baseline; is_cns_specific=FALSE because the matrix is blood. Dosing stopped in March 2021, so week 101 is an OFF-TREATMENT timepoint at which both arms fall below placebo - direct evidence of reversibility. Grading rule applied here: >=+10 points -> 2 (treatment-emergent axonal-injury signal); >0 -> 1; <=0 -> 0."
+   "notes": "grade_provisional. GENERATION HD1 120 mg Q16W arm, week 13. Plasma (not CSF) NfL, expressed as the difference from placebo in percentage change from baseline; is_cns_specific=FALSE because the matrix is blood. Dosing stopped in March 2021, so week 101 is an OFF-TREATMENT timepoint at which both arms fall below placebo - direct evidence of reversibility. Grading rule applied here: >=+10 points -> 2 (treatment-emergent axonal-injury signal); >0 -> 1; <=0 -> 0. ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_cp_m56",
@@ -1901,7 +1901,7 @@
    "source_ref": "Roche medical-affairs slide deck, CHDI 2023, M-XX-00013000 (medically.roche.com)",
    "source_table": "slide 21, 'GENERATION HD1: In the Q16W group, plasma NfL showed trends below placebo beyond Week 21' - printed data labels",
    "redistribution": "verify",
-   "notes": "grade_provisional. GENERATION HD1 120 mg Q16W arm, week 21. Plasma (not CSF) NfL, expressed as the difference from placebo in percentage change from baseline; is_cns_specific=FALSE because the matrix is blood. Dosing stopped in March 2021, so week 101 is an OFF-TREATMENT timepoint at which both arms fall below placebo - direct evidence of reversibility. Grading rule applied here: >=+10 points -> 2 (treatment-emergent axonal-injury signal); >0 -> 1; <=0 -> 0."
+   "notes": "grade_provisional. GENERATION HD1 120 mg Q16W arm, week 21. Plasma (not CSF) NfL, expressed as the difference from placebo in percentage change from baseline; is_cns_specific=FALSE because the matrix is blood. Dosing stopped in March 2021, so week 101 is an OFF-TREATMENT timepoint at which both arms fall below placebo - direct evidence of reversibility. Grading rule applied here: >=+10 points -> 2 (treatment-emergent axonal-injury signal); >0 -> 1; <=0 -> 0. ;; VERIFIED[UNVERIFIABLE] Unverifiable, and the reversibility reasoning is internally inconsistent on its face. The row is a WEEK-21, ON-TREATMENT plasma NfL point, but the notes justify 'reversible' with a week-101 OFF-TREATMENT observation ('Dosing stopped in Marc"
   },
   {
    "measurement_id": "TMP_cp_m58",
@@ -1951,13 +1951,13 @@
    "effect_direction": "decrease",
    "effect_vs_control": "-1.9 percentage points vs placebo",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "FALSE",
    "source_id": "CP_CHDI2023_MCCOLGAN",
    "source_ref": "Roche medical-affairs slide deck, CHDI 2023, M-XX-00013000 (medically.roche.com)",
    "source_table": "slide 21, 'GENERATION HD1: In the Q16W group, plasma NfL showed trends below placebo beyond Week 21' - printed data labels",
    "redistribution": "verify",
-   "notes": "grade_provisional. GENERATION HD1 120 mg Q16W arm, week 37. Plasma (not CSF) NfL, expressed as the difference from placebo in percentage change from baseline; is_cns_specific=FALSE because the matrix is blood. Dosing stopped in March 2021, so week 101 is an OFF-TREATMENT timepoint at which both arms fall below placebo - direct evidence of reversibility. Grading rule applied here: >=+10 points -> 2 (treatment-emergent axonal-injury signal); >0 -> 1; <=0 -> 0."
+   "notes": "grade_provisional. GENERATION HD1 120 mg Q16W arm, week 37. Plasma (not CSF) NfL, expressed as the difference from placebo in percentage change from baseline; is_cns_specific=FALSE because the matrix is blood. Dosing stopped in March 2021, so week 101 is an OFF-TREATMENT timepoint at which both arms fall below placebo - direct evidence of reversibility. Grading rule applied here: >=+10 points -> 2 (treatment-emergent axonal-injury signal); >0 -> 1; <=0 -> 0. ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_cp_m60",
@@ -2007,13 +2007,13 @@
    "effect_direction": "decrease",
    "effect_vs_control": "-4.0 percentage points vs placebo",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "FALSE",
    "source_id": "CP_CHDI2023_MCCOLGAN",
    "source_ref": "Roche medical-affairs slide deck, CHDI 2023, M-XX-00013000 (medically.roche.com)",
    "source_table": "slide 21, 'GENERATION HD1: In the Q16W group, plasma NfL showed trends below placebo beyond Week 21' - printed data labels",
    "redistribution": "verify",
-   "notes": "grade_provisional. GENERATION HD1 120 mg Q16W arm, week 69. Plasma (not CSF) NfL, expressed as the difference from placebo in percentage change from baseline; is_cns_specific=FALSE because the matrix is blood. Dosing stopped in March 2021, so week 101 is an OFF-TREATMENT timepoint at which both arms fall below placebo - direct evidence of reversibility. Grading rule applied here: >=+10 points -> 2 (treatment-emergent axonal-injury signal); >0 -> 1; <=0 -> 0."
+   "notes": "grade_provisional. GENERATION HD1 120 mg Q16W arm, week 69. Plasma (not CSF) NfL, expressed as the difference from placebo in percentage change from baseline; is_cns_specific=FALSE because the matrix is blood. Dosing stopped in March 2021, so week 101 is an OFF-TREATMENT timepoint at which both arms fall below placebo - direct evidence of reversibility. Grading rule applied here: >=+10 points -> 2 (treatment-emergent axonal-injury signal); >0 -> 1; <=0 -> 0. ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_cp_m62",
@@ -2035,13 +2035,13 @@
    "effect_direction": "decrease",
    "effect_vs_control": "-4.2 percentage points vs placebo",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "FALSE",
    "source_id": "CP_CHDI2023_MCCOLGAN",
    "source_ref": "Roche medical-affairs slide deck, CHDI 2023, M-XX-00013000 (medically.roche.com)",
    "source_table": "slide 21, 'GENERATION HD1: In the Q16W group, plasma NfL showed trends below placebo beyond Week 21' - printed data labels",
    "redistribution": "verify",
-   "notes": "grade_provisional. GENERATION HD1 120 mg Q8W arm, week 101. Plasma (not CSF) NfL, expressed as the difference from placebo in percentage change from baseline; is_cns_specific=FALSE because the matrix is blood. Dosing stopped in March 2021, so week 101 is an OFF-TREATMENT timepoint at which both arms fall below placebo - direct evidence of reversibility. Grading rule applied here: >=+10 points -> 2 (treatment-emergent axonal-injury signal); >0 -> 1; <=0 -> 0."
+   "notes": "grade_provisional. GENERATION HD1 120 mg Q8W arm, week 101. Plasma (not CSF) NfL, expressed as the difference from placebo in percentage change from baseline; is_cns_specific=FALSE because the matrix is blood. Dosing stopped in March 2021, so week 101 is an OFF-TREATMENT timepoint at which both arms fall below placebo - direct evidence of reversibility. Grading rule applied here: >=+10 points -> 2 (treatment-emergent axonal-injury signal); >0 -> 1; <=0 -> 0. ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_cp_m63",
@@ -2063,13 +2063,13 @@
    "effect_direction": "decrease",
    "effect_vs_control": "-7.1 percentage points vs placebo",
    "neurotox_grade": 0,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "FALSE",
    "source_id": "CP_CHDI2023_MCCOLGAN",
    "source_ref": "Roche medical-affairs slide deck, CHDI 2023, M-XX-00013000 (medically.roche.com)",
    "source_table": "slide 21, 'GENERATION HD1: In the Q16W group, plasma NfL showed trends below placebo beyond Week 21' - printed data labels",
    "redistribution": "verify",
-   "notes": "grade_provisional. GENERATION HD1 120 mg Q16W arm, week 101. Plasma (not CSF) NfL, expressed as the difference from placebo in percentage change from baseline; is_cns_specific=FALSE because the matrix is blood. Dosing stopped in March 2021, so week 101 is an OFF-TREATMENT timepoint at which both arms fall below placebo - direct evidence of reversibility. Grading rule applied here: >=+10 points -> 2 (treatment-emergent axonal-injury signal); >0 -> 1; <=0 -> 0. ;; VERIFIED[UNVERIFIABLE] Source unreachable. The direction and grade are internally coherent - a -7.1 percentage-point difference below placebo is correctly recorded as 'decrease' and graded 0, and week 101 is correctly identified as an off-treatment timepoint afte"
+   "notes": "grade_provisional. GENERATION HD1 120 mg Q16W arm, week 101. Plasma (not CSF) NfL, expressed as the difference from placebo in percentage change from baseline; is_cns_specific=FALSE because the matrix is blood. Dosing stopped in March 2021, so week 101 is an OFF-TREATMENT timepoint at which both arms fall below placebo - direct evidence of reversibility. Grading rule applied here: >=+10 points -> 2 (treatment-emergent axonal-injury signal); >0 -> 1; <=0 -> 0. ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse ;; VERIFIED[UNVERIFIABLE] Source unreachable. The direction and grade are internally coherent - a -7.1 percentage-point difference below placebo is correctly recorded as 'decrease' and graded 0, and week 101 is correctly identified as an off-treatment timepoint afte"
   },
   {
    "measurement_id": "TMP_cp_m64",
@@ -2623,13 +2623,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "TBD - the placebo rate for these MedDRA terms is not given in this paper",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CP_LOVETT2025_MUSNERVE",
    "source_ref": "PMID:40017137; doi:10.1002/mus.28372",
    "source_table": "Results, same paragraph",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional. MedDRA preferred term reported as an adverse event by the investigator, out of 147 participants exposed to tofersen 100 mg. None of these adverse events led to study-drug discontinuation or study withdrawal."
+   "notes": "grade_provisional. MedDRA preferred term reported as an adverse event by the investigator, out of 147 participants exposed to tofersen 100 mg. None of these adverse events led to study-drug discontinuation or study withdrawal. ;; VERIFIED[REFUTED] 'did not lead to discontinuation' is not 'resolved'. The paper reports CSF protein trajectories by visit (Fig 2) but never states that these AEs resolved, and the paper's resolution statement ('All events but one resolved') is about the 12  ;; corrected(reversibility:reversible->not_assessed)"
   },
   {
    "measurement_id": "TMP_cp_m84",
@@ -2986,14 +2986,14 @@
    "readout_unit": "n_of_N",
    "effect_direction": "increase",
    "effect_vs_control": "no similar events occurred in any placebo recipient across the tofersen trials",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "partially_reversible",
    "is_cns_specific": "TRUE",
    "source_id": "CP_LOVETT2025_MUSNERVE",
    "source_ref": "PMID:40017137; doi:10.1002/mus.28372",
    "source_table": "Table 1, Summary of Participant Narratives, participant 1",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional. PER-PATIENT CLINICAL-SEVERITY ROW for tofersen participant 1, companion to that participant's CSF_WBC row (same event - do not double count). Clinical features: rapidly progressive weakness, numbness, pain and LOSS OF AMBULATION; investigator causality recorded as Unrelated and reported as neurosarcoidosis in a participant with pre-existing systemic sarcoidosis that was quiescent at enrolment apart from uveitis. The authors include the case for completeness given the other myelitis cases in the programme. Action taken: tofersen continued for about 6 months then discontinued. Graded 3 rather than 2 because these are the two events in the whole tofersen serious-neurologic series with a major persisting motor deficit at onset (loss of ambulation; paraplegia) AND both ended in permanent discontinuation of tofersen. Treatment across the myelitis cases included intravenous methylprednisolone with an oral taper, plasma exchange, mycophenolate mofetil and TNF-alpha monoclonal antibody therapy. The paper states that all events in the series but one resolved and that none was life-threatening or fatal, so reversibility is recorded as partially_reversible rather than irreversible; the per-patient recovery trajectory is not given."
+   "notes": "grade_provisional. PER-PATIENT CLINICAL-SEVERITY ROW for tofersen participant 1, companion to that participant's CSF_WBC row (same event - do not double count). Clinical features: rapidly progressive weakness, numbness, pain and LOSS OF AMBULATION; investigator causality recorded as Unrelated and reported as neurosarcoidosis in a participant with pre-existing systemic sarcoidosis that was quiescent at enrolment apart from uveitis. The authors include the case for completeness given the other myelitis cases in the programme. Action taken: tofersen continued for about 6 months then discontinued. Graded 3 rather than 2 because these are the two events in the whole tofersen serious-neurologic series with a major persisting motor deficit at onset (loss of ambulation; paraplegia) AND both ended in permanent discontinuation of tofersen. Treatment across the myelitis cases included intravenous methylprednisolone with an oral taper, plasma exchange, mycophenolate mofetil and TNF-alpha monoclonal antibody therapy. The paper states that all events in the series but one resolved and that none was life-threatening or fatal, so reversibility is recorded as partially_reversible rather than irreversible; the per-patient recovery trajectory is not given. ;; VERIFIED[REFUTED] Every field verifies, but the grade does not. The rubric names myelitis EXPLICITLY as a grade-2 exemplar ('a clinically significant but manageable/resolving neurologic adverse event (aseptic meningitis, radiculitis, myelitis, papilledema)') ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_cp_m97",
@@ -3631,13 +3631,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "rise from the patient's own pre-treatment baseline; no control arm",
    "neurotox_grade": 2,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CP_JNEUROL2025_MTX",
    "source_ref": "PMID:41144002; doi:10.1007/s00415-025-13415-3",
    "source_table": "'Case presentation' and 'Immune-mediated adverse events' sections with Fig. 1a,b and Fig. 2",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional. 40-year-old woman with a likely pathogenic SOD1 variant (c.-358-10T>G), German early-access programme then approved use; dosing on days 1, 14 and 28 then 29 maintenance doses at a median 29-day interval, most recent March 2025. Progressively worsening prolonged holocephalic headache from the third dose; between the 20th and 23rd doses she had transient fever, shivering, fatigue and radiating leg pain after each intrathecal administration. Gradually increasing CSF pleocytosis and protein, new intrathecal IgM synthesis with a rising CSF/serum IgM ratio after the 7th dose, and spinal MRI before the 15th dose showing contrast enhancement of the caudal fibres and partial cervical-root involvement. Managed with intravenous methylprednisolone 1000 mg for 3 days at doses 15, 16 and 20 plus oral methotrexate 10 mg/week from dose 19 and 20 mg/week from dose 20; TOFERSEN WAS CONTINUED throughout -> reversible and manageable. Numeric CSF cell counts and protein values appear only in figures, so readout_value=TBD."
+   "notes": "grade_provisional. 40-year-old woman with a likely pathogenic SOD1 variant (c.-358-10T>G), German early-access programme then approved use; dosing on days 1, 14 and 28 then 29 maintenance doses at a median 29-day interval, most recent March 2025. Progressively worsening prolonged holocephalic headache from the third dose; between the 20th and 23rd doses she had transient fever, shivering, fatigue and radiating leg pain after each intrathecal administration. Gradually increasing CSF pleocytosis and protein, new intrathecal IgM synthesis with a rising CSF/serum IgM ratio after the 7th dose, and spinal MRI before the 15th dose showing contrast enhancement of the caudal fibres and partial cervical-root involvement. Managed with intravenous methylprednisolone 1000 mg for 3 days at doses 15, 16 and 20 plus oral methotrexate 10 mg/week from dose 19 and 20 mg/week from dose 20; TOFERSEN WAS CONTINUED throughout -> reversible and manageable. Numeric CSF cell counts and protein values appear only in figures, so readout_value=TBD. ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_cp_m120",
@@ -3687,13 +3687,13 @@
    "effect_direction": "decrease",
    "effect_vs_control": "5 of 79 (6.3pct) on BIIB078 vs 3 of 27 (11.1pct) on placebo",
    "neurotox_grade": 0,
-   "reversibility": "irreversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CP_VANDENBERG2024_LANCETNEUROL",
    "source_ref": "PMID:39059407; doi:10.1016/S1474-4422(24)00216-3",
    "source_table": "abstract, FINDINGS",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional. Deaths on BIIB078: respiratory failure (10 mg), ALS worsening in two participants (35 mg), traumatic intracerebral haemorrhage (35 mg) and pulmonary embolism (60 mg); on placebo: respiratory failure in three participants. ALL deaths were assessed as NOT related to study treatment by the reporting investigator and the rate was below placebo -> grade 0. The traumatic intracerebral haemorrhage is the only CNS-localised death and was traumatic in origin. Read from the abstract."
+   "notes": "grade_provisional. Deaths on BIIB078: respiratory failure (10 mg), ALS worsening in two participants (35 mg), traumatic intracerebral haemorrhage (35 mg) and pulmonary embolism (60 mg); on placebo: respiratory failure in three participants. ALL deaths were assessed as NOT related to study treatment by the reporting investigator and the rate was below placebo -> grade 0. The traumatic intracerebral haemorrhage is the only CNS-localised death and was traumatic in origin. Read from the abstract. ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_cp_m122",
@@ -3883,13 +3883,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "no control arm",
    "neurotox_grade": 0,
-   "reversibility": "irreversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CP_SHNEIDER2025_LANCET",
    "source_ref": "PMID:40414239; doi:10.1016/S0140-6736(25)00513-6",
    "source_table": "abstract, FINDINGS",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional. 'Two participant deaths were recorded during the programme, both thought to be unrelated to the investigational drug' - in a uniformly fatal motor neuron disease -> grade 0. Read from the abstract."
+   "notes": "grade_provisional. 'Two participant deaths were recorded during the programme, both thought to be unrelated to the investigational drug' - in a uniformly fatal motor neuron disease -> grade 0. Read from the abstract. ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_cp_m129",
@@ -5171,13 +5171,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "no control arm",
    "neurotox_grade": 0,
-   "reversibility": "irreversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CP_LAUX2026_NEJM",
    "source_ref": "PMID:41780062; doi:10.1056/NEJMoa2506295",
    "source_table": "abstract, RESULTS",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional. Two patients died from sudden unexpected death in epilepsy (SUDEP) and one from malnutrition. The abstract states that the risk of SUDEP is higher in Dravet syndrome than in the general epilepsy population and does not attribute the deaths to zorevunersen -> grade 0, but the attribution should be confirmed against the full text. Also reported: one patient with suspected unexpected serious adverse reactions and one adverse event leading to study withdrawal."
+   "notes": "grade_provisional. Two patients died from sudden unexpected death in epilepsy (SUDEP) and one from malnutrition. The abstract states that the risk of SUDEP is higher in Dravet syndrome than in the general epilepsy population and does not attribute the deaths to zorevunersen -> grade 0, but the attribution should be confirmed against the full text. Also reported: one patient with suspected unexpected serious adverse reactions and one adverse event leading to study withdrawal. ;; corrected: reversibility -> not_assessed on a grade-0 row; there is no finding to reverse"
   },
   {
    "measurement_id": "TMP_cp_m175",
@@ -5255,13 +5255,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "no control arm",
    "neurotox_grade": 3,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CP_KCNT1_NATMED2026",
    "source_ref": "PMID:41981306; doi:10.1038/s41591-026-04314-9",
    "source_table": "'Safety and adverse events' section, patient 2 narrative; Extended Data Fig. 6c",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional. PATIENT 2, also a girl aged 3 with KCNT1 p.R474H, enrolled 9 months after patient 1 and about 2 months before hydrocephalus was detected in patient 1. Escalating intrathecal doses of 10, 20, 30 and 40 mg. Brain MRI on day 55 was UNREMARKABLE with normal ventricular size and a normal lumbar opening pressure of 16 cm H2O; repeat MRIs on days 62 and 64 showed MILD INCREASES IN VENTRICULAR SIZE with no evidence of obstruction. Given the finding in patient 1 she was transferred to intensive care for neurologic monitoring, an extraventricular drain was placed (opening pressure >20 cm H2O), drainage was persistent, and a VENTRICULOPERITONEAL SHUNT WAS PLACED ON DAY 65. Ventricular dilatation gradually normalised on serial MR ventriculograms and she was discharged home in stable condition on day 87. GRADE 3 (hydrocephalus requiring intervention) despite complete radiological reversal - the grade reflects the intervention, and reversibility=reversible records the outcome."
+   "notes": "grade_provisional. PATIENT 2, also a girl aged 3 with KCNT1 p.R474H, enrolled 9 months after patient 1 and about 2 months before hydrocephalus was detected in patient 1. Escalating intrathecal doses of 10, 20, 30 and 40 mg. Brain MRI on day 55 was UNREMARKABLE with normal ventricular size and a normal lumbar opening pressure of 16 cm H2O; repeat MRIs on days 62 and 64 showed MILD INCREASES IN VENTRICULAR SIZE with no evidence of obstruction. Given the finding in patient 1 she was transferred to intensive care for neurologic monitoring, an extraventricular drain was placed (opening pressure >20 cm H2O), drainage was persistent, and a VENTRICULOPERITONEAL SHUNT WAS PLACED ON DAY 65. Ventricular dilatation gradually normalised on serial MR ventriculograms and she was discharged home in stable condition on day 87. GRADE 3 (hydrocephalus requiring intervention) despite complete radiological reversal - the grade reflects the intervention, and reversibility=reversible records the outcome. ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_cp_m178",
@@ -5339,13 +5339,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "CSF and blood safety laboratory results had been unremarkable over the study's first 10 months",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CP_KCNT1_NATMED2026",
    "source_ref": "PMID:41981306; doi:10.1038/s41591-026-04314-9",
    "source_table": "'Safety and adverse events' section, patient 2 narrative",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional. Patient 2, day 55 lumbar puncture: CSF white cells 28 cells/mm3 and CSF protein 83 mg/dL, both slightly elevated; FOLLOW-UP CELL COUNTS AND PROTEIN LEVELS WERE NORMAL -> reversible, grade 1. Importantly, CSF testing was negative for inflammatory biomarkers (albumin, IgG index, oligoclonal bands and neopterin), which argues against a classical inflammatory mechanism for the ventriculomegaly and supports the authors' dose-related, possibly CSF-dynamics, hypothesis."
+   "notes": "grade_provisional. Patient 2, day 55 lumbar puncture: CSF white cells 28 cells/mm3 and CSF protein 83 mg/dL, both slightly elevated; FOLLOW-UP CELL COUNTS AND PROTEIN LEVELS WERE NORMAL -> reversible, grade 1. Importantly, CSF testing was negative for inflammatory biomarkers (albumin, IgG index, oligoclonal bands and neopterin), which argues against a classical inflammatory mechanism for the ventriculomegaly and supports the authors' dose-related, possibly CSF-dynamics, hypothesis. ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_cp_m181",
@@ -5367,13 +5367,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "normal on follow-up sampling in the same patient",
    "neurotox_grade": 1,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CP_KCNT1_NATMED2026",
    "source_ref": "PMID:41981306; doi:10.1038/s41591-026-04314-9",
    "source_table": "'Safety and adverse events' section, patient 2 narrative",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional. Companion row to the CSF_WBC row from the same day-55 lumbar puncture in patient 2."
+   "notes": "grade_provisional. Companion row to the CSF_WBC row from the same day-55 lumbar puncture in patient 2. ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_cp_m182",
@@ -5395,13 +5395,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "no control arm",
    "neurotox_grade": 2,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CP_KCNT1_NATMED2026",
    "source_ref": "PMID:41981306; doi:10.1038/s41591-026-04314-9",
    "source_table": "'Safety and adverse events' section, patient 1 narrative; Extended Data Fig. 6b",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional. PATIENT 1 developed dystonia between the 4th and 5th dose, noticed on examination before the 5th dose and reported as a SERIOUS ADVERSE EVENT OF UNCERTAIN CORRELATION with the investigational therapy, because dystonia and status dystonicus can be part of the KCNT1-related epilepsy phenotype itself. She was assessed by movement-disorder, physiatry and physical-therapy specialists, treated for status dystonicus with clonazepam, baclofen and gabapentin, and improved -> grade 2, reversible. cns_region is recorded as striatum as the presumed anatomical substrate of dystonia; the paper does not localise the finding."
+   "notes": "grade_provisional. PATIENT 1 developed dystonia between the 4th and 5th dose, noticed on examination before the 5th dose and reported as a SERIOUS ADVERSE EVENT OF UNCERTAIN CORRELATION with the investigational therapy, because dystonia and status dystonicus can be part of the KCNT1-related epilepsy phenotype itself. She was assessed by movement-disorder, physiatry and physical-therapy specialists, treated for status dystonicus with clonazepam, baclofen and gabapentin, and improved -> grade 2, reversible. cns_region is recorded as striatum as the presumed anatomical substrate of dystonia; the paper does not localise the finding. ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_cp_m183",
@@ -5423,13 +5423,13 @@
    "effect_direction": "increase",
    "effect_vs_control": "the same syndrome occurred in BOTH treated patients at the same 40 mg dose level",
    "neurotox_grade": 2,
-   "reversibility": "reversible",
+   "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "CP_KCNT1_NATMED2026",
    "source_ref": "PMID:41981306; doi:10.1038/s41591-026-04314-9",
    "source_table": "'Safety and adverse events' section, patient 2 narrative",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional. PATIENT 2: a few days after her 40 mg dose she developed increased muscle tone with intermittently sustained upward eye movement, diagnosed as status dystonicus. Plasma creatine kinase was initially within normal limits, then ROSE TO 5,794 U/L within two days and normalised over several days. Treated with hydration and trials of diphenhydramine, benzodiazepines, baclofen, carbidopa-levodopa and trihexyphenidyl, with gradual improvement to baseline. THE FACT THAT BOTH PATIENTS DEVELOPED THE SAME SYNDROME AT THE SAME DOSE LEVEL materially strengthens the causal attribution relative to patient 1 considered alone, where the investigators recorded the causality as uncertain."
+   "notes": "grade_provisional. PATIENT 2: a few days after her 40 mg dose she developed increased muscle tone with intermittently sustained upward eye movement, diagnosed as status dystonicus. Plasma creatine kinase was initially within normal limits, then ROSE TO 5,794 U/L within two days and normalised over several days. Treated with hydration and trials of diphenhydramine, benzodiazepines, baclofen, carbidopa-levodopa and trihexyphenidyl, with gradual improvement to baseline. THE FACT THAT BOTH PATIENTS DEVELOPED THE SAME SYNDROME AT THE SAME DOSE LEVEL materially strengthens the causal attribution relative to patient 1 considered alone, where the investigators recorded the causality as uncertain. ;; corrected: reversibility -> not_assessed. This is an adverse-event INCIDENCE locus, which reports counts and carries no outcome field; 'did not lead to discontinuation' and 'mild or moderate' are not reversibility"
   },
   {
    "measurement_id": "TMP_cp_m184",

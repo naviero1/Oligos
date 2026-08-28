@@ -2174,14 +2174,14 @@
    "readout_unit": "% of vehicle",
    "effect_direction": "decrease",
    "effect_vs_control": "worsened cytotoxicity vs parent ASO2",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "S_CNS_IV_LATEONSET2025",
    "source_ref": "10.1016/j.omtn.2025.102692",
    "source_table": "Fig 3A",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional; 2'-OMe at gap position 2 INCREASED toxicity for this sequence (opposite to its effect on ASO1) and increased in vivo late-onset neurotoxicity after ICV dosing - a clean demonstration that gap-modification SAR is sequence-dependent. Graded 3 because the matched in vivo arm was programme-limiting."
+   "notes": "grade_provisional; 2'-OMe at gap position 2 INCREASED toxicity for this sequence (opposite to its effect on ASO1) and increased in vivo late-onset neurotoxicity after ICV dosing - a clean demonstration that gap-modification SAR is sequence-dependent. Graded 3 because the matched in vivo arm was programme-limiting. ;; VERIFIED[REFUTED] CRITICAL grade inflation. An in vitro viability/LDH readout in a neuroblastoma line, with readout_value=TBD, cannot reach the rubric's grade 3 (neuronal degeneration/loss, spinal-cord or DRG degeneration, paralysis, hydrocephalus requiring  ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_iv_m49",
@@ -2258,14 +2258,14 @@
    "readout_unit": "% of vehicle",
    "effect_direction": "decrease",
    "effect_vs_control": "cytotoxicity increased vs parent ASO2",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "S_CNS_IV_LATEONSET2025",
    "source_ref": "10.1016/j.omtn.2025.102692",
    "source_table": "Fig 5B",
    "redistribution": "cc_by",
-   "notes": "grade_provisional; Single PS->PO replacement PS-1(-) unexpectedly INCREASED cytotoxicity; matched ICV study showed higher mortality for all three PO-replacement variants. Counter-intuitive result: reducing PS content did not de-risk this sequence. ;; VERIFIED[CONFIRMED_MINOR] Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flat ;; corrected(redistribution:summary_stat->cc_by)"
+   "notes": "grade_provisional; Single PS->PO replacement PS-1(-) unexpectedly INCREASED cytotoxicity; matched ICV study showed higher mortality for all three PO-replacement variants. Counter-intuitive result: reducing PS content did not de-risk this sequence. ;; VERIFIED[REFUTED] CRITICAL grade inflation. An in vitro viability/LDH readout in a neuroblastoma line, with readout_value=TBD, cannot reach the rubric's grade 3 (neuronal degeneration/loss, spinal-cord or DRG degeneration, paralysis, hydrocephalus requiring ;; corrected(neurotox_grade:3->2) ;; VERIFIED[CONFIRMED_MINOR] Article is CC BY 4.0 (license statement in the PMC record), so redistribution should be 'cc_by', not 'summary_stat'. The schema tracks cc_by separately precisely because it permits verbatim republication of raw values with attribution; flat ;; corrected(redistribution:summary_stat->cc_by)"
   },
   {
    "measurement_id": "TMP_iv_m52",
@@ -2286,14 +2286,14 @@
    "readout_unit": "% of vehicle",
    "effect_direction": "increase",
    "effect_vs_control": "higher LDH than parent ASO2",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "S_CNS_IV_LATEONSET2025",
    "source_ref": "10.1016/j.omtn.2025.102692",
    "source_table": "Fig 5B",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional; Matched LDH arm for PS-1(-)."
+   "notes": "grade_provisional; Matched LDH arm for PS-1(-). ;; VERIFIED[REFUTED] CRITICAL grade inflation. An in vitro viability/LDH readout in a neuroblastoma line, with readout_value=TBD, cannot reach the rubric's grade 3 (neuronal degeneration/loss, spinal-cord or DRG degeneration, paralysis, hydrocephalus requiring  ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_iv_m53",
@@ -2321,7 +2321,7 @@
    "source_ref": "10.1016/j.omtn.2025.102692",
    "source_table": "Fig 5B",
    "redistribution": "cc_by",
-   "notes": "grade_provisional; Single PS->PO replacement PS-3(-) unexpectedly INCREASED cytotoxicity; matched ICV study showed higher mortality for all three PO-replacement variants. Counter-intuitive result: reducing PS content did not de-risk this sequence. ;; VERIFIED[REFUTED] CRITICAL grade inflation. An in vitro LDH release from a neuroblastoma cell line, with readout_value=TBD, cannot reach the rubric's grade 3 (neuronal degeneration/loss, spinal-cord or DRG degeneration, paralysis, hydrocephalus requiring int ;; corrected(neurotox_grade:3->2;redistribution:summary_stat->cc_by)"
+   "notes": "grade_provisional; Single PS->PO replacement PS-3(-) unexpectedly INCREASED cytotoxicity; matched ICV study showed higher mortality for all three PO-replacement variants. Counter-intuitive result: reducing PS content did not de-risk this sequence. ;; VERIFIED[REFUTED] CRITICAL grade inflation. An in vitro LDH release from a neuroblastoma cell line, with readout_value=TBD, cannot reach the rubric's grade 3 (neuronal degeneration/loss, spinal-cord or DRG degeneration, paralysis, hydrocephalus requiring int ;; corrected(neurotox_grade:3->2;redistribution:summary_stat->cc_by) ;; VERIFIED[REFUTED] CRITICAL grade inflation. An in vitro viability/LDH readout in a neuroblastoma line, with readout_value=TBD, cannot reach the rubric's grade 3 (neuronal degeneration/loss, spinal-cord or DRG degeneration, paralysis, hydrocephalus requiring "
   },
   {
    "measurement_id": "TMP_iv_m54",
@@ -2342,14 +2342,14 @@
    "readout_unit": "% of vehicle",
    "effect_direction": "increase",
    "effect_vs_control": "higher LDH than parent ASO2",
-   "neurotox_grade": 3,
+   "neurotox_grade": "2",
    "reversibility": "not_assessed",
    "is_cns_specific": "TRUE",
    "source_id": "S_CNS_IV_LATEONSET2025",
    "source_ref": "10.1016/j.omtn.2025.102692",
    "source_table": "Fig 5B",
    "redistribution": "summary_stat",
-   "notes": "grade_provisional; Matched LDH arm for PS-3(-)."
+   "notes": "grade_provisional; Matched LDH arm for PS-3(-). ;; VERIFIED[REFUTED] CRITICAL grade inflation. An in vitro viability/LDH readout in a neuroblastoma line, with readout_value=TBD, cannot reach the rubric's grade 3 (neuronal degeneration/loss, spinal-cord or DRG degeneration, paralysis, hydrocephalus requiring  ;; corrected(neurotox_grade:3->2)"
   },
   {
    "measurement_id": "TMP_iv_m55",
