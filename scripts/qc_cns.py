@@ -158,11 +158,15 @@ def main():
         if g not in {"0", "1", "2", "3"}:
             err(f"{mid}: neurotox_grade='{g}' not in 0..3")
         d = m["dose_or_conc_value"]
-        if d and d != TBD:
+        # `NA` is a real value here, not a gap: a disease-background row records a
+        # rate in an untreated population, so no dose was given. It is distinct
+        # from TBD, which means a dose exists and we have not read it. The unit
+        # column already admits NA for the same reason.
+        if d and d not in (TBD, "NA"):
             try:
                 float(d)
             except ValueError:
-                err(f"{mid}: dose_or_conc_value='{d}' is neither numeric nor TBD")
+                err(f"{mid}: dose_or_conc_value='{d}' is neither numeric, NA nor TBD")
         for col in ("source_id", "source_ref", "source_table"):
             if not (m[col] or "").strip() or m[col] == TBD:
                 err(f"{mid}: provenance column {col} is empty/TBD")

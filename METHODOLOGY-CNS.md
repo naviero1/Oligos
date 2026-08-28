@@ -363,6 +363,33 @@ could have gone wrong:
   marketing-authorisation holder, not the regulator, so it is not a government
   work.
 
+### The regulatory nonclinical reviews, and what they settled
+
+The FDA nonclinical review documents had been recorded as unobtainable — the host
+returns HTTP 404 to non-browser clients, and a bare 404 was read as absence. They
+are reachable with a browser User-Agent, and they turned out to be the most
+valuable single source class in the project, because they are the one document
+type that routinely includes a **designated recovery group**.
+
+They contribute 177 rows, 58 of which have `reversibility` determined by an
+actual recovery arm, and they settle a contrast nothing else in the dataset
+could: hippocampal neuronal vacuolation from nusinersen **persists** unchanged
+through 12-week (3 mg: 3/3 → 2/2 males, 4/4 → 2/2 females) and 26-week recovery,
+while the same lesion from tofersen is **absent** after its 13-week recovery
+period. Same route, same class, opposite recovery behaviour — the
+chronic-versus-transient distinction the named endpoint turns on.
+
+They also supply the regulators' own severity anchors, which makes our grades
+auditable rather than editorial: NOAELs of 0.3 mg/dose for nusinersen in both the
+14-week and 53-week monkey studies (with the reviewer noting no CSF safety
+margin), and 12 mg for tofersen in both its 13-week and 9-month studies.
+
+Two honest limits are recorded on the rows themselves. The tofersen review
+summarises its monkey studies in **prose only** — dose, timepoint and recovery
+splits are real but per-dose incidences are `TBD`, and no sex split exists. And
+several nusinersen tables are **image-only**, so they were rendered and read
+visually rather than text-extracted, which each affected row states.
+
 ### What verification says about the extraction
 
 The extraction was mostly right, and wrong in a structured way. Arithmetic
@@ -393,8 +420,9 @@ on every matched CNS readout.
 - **Verification was a stratified sample, not a census.** Rows outside the sampled
   strata carry the systematic risks named in `VERIFICATION-CNS.md` in proportion
   to how far they resemble the rows that were checked.
-- **Recovery was rarely assessed.** `reversibility` is `not_assessed` on 1,929 of
-  2,331 rows, because most sources simply never looked. This limits how much the
+- **Recovery is rarely assessed.** `reversibility` is `not_assessed` on 2,082 of
+  2,540 rows, because most sources simply never looked. 398 rows do carry a real
+  recovery assessment, nearly all of them from regulatory nonclinical reviews. This limits how much the
   dataset can say about the acute-versus-chronic distinction on any individual
   row, even though that distinction is central to the endpoint — and it is a
   concrete gap that new data generation could close cheaply, by adding a recovery

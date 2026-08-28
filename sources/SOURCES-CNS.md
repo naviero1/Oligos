@@ -43,11 +43,11 @@ Reviews were used to *find* primary sources and to cross-check them, not as the
 cited source for a value.
 
 
-## Source registry — 102 documents, 2329 rows
+## Source registry — 108 documents, 2540 rows
 
 | Source class | Documents |
 |---|---:|
-| Journal article | 46 |
+| Journal article | 52 |
 | ClinicalTrials.gov | 22 |
 | FDA document | 10 |
 | EMA document | 9 |
@@ -60,6 +60,8 @@ cited source for a value.
 | `doi:10.1089/nat.2021.0071` | Journal article | 357 | `cc_by` | animal_invivo 181, in_vitro 176 |
 | `US10968453B2` | US patent | 327 | `public_domain` | animal_invivo 327 |
 | `US11851654B2` | US patent | 133 | `public_domain` | animal_invivo 133 |
+| `FDA_NDA209531` | FDA document | 122 | `public_domain` | animal_invivo 113, clinical 9 |
+| `FDA_NDA215887` | FDA document | 79 | `public_domain`, `verify` | clinical 48, animal_invivo 31 |
 | `doi:10.1093/nar/gkaf1333` | Journal article | 78 | `cc_by`, `summary_stat` | animal_invivo 78 |
 | `doi:10.1016/j.omtn.2025.102692` | Journal article | 54 | `cc_by` | animal_invivo 29, in_vitro 25 |
 | `Roche/Genentech medical-affairs slide deck, CHDI 2021...` | Other / grey literature | 43 | `verify` | clinical 43 |
@@ -76,7 +78,6 @@ cited source for a value.
 | `doi:10.1093/hmg/ddaf153` | Journal article | 19 | `cc_by` | in_vitro 19 |
 | `doi:10.1016/j.ymthe.2024.10.024` | Journal article | 18 | `cc_by` | animal_invivo 18 |
 | `doi:10.1038/s41591-025-04193-6` | Journal article | 18 | `summary_stat` | clinical 18 |
-| `FDA_NDA209531` | FDA document | 17 | `public_domain` | animal_invivo 10, clinical 7 |
 | `doi:10.1001/jamaneurol.2025.4946` | Journal article | 17 | `summary_stat` | clinical 17 |
 | `doi:10.1016/j.omtn.2021.11.015` | Journal article | 16 | `summary_stat` | in_vitro 16 |
 | `NCT02519036` | ClinicalTrials.gov | 15 | `public_domain` | clinical 15 |
@@ -86,14 +87,16 @@ cited source for a value.
 | `NCT03225833` | ClinicalTrials.gov | 12 | `public_domain` | clinical 12 |
 | `NCT04089566` | ClinicalTrials.gov | 12 | `public_domain` | clinical 12 |
 | `Roche medical-affairs slide deck, CHDI 2023, M-XX-000...` | Other / grey literature | 12 | `verify` | clinical 12 |
-| `FDA_NDA215887` | FDA document | 11 | `public_domain`, `verify` | clinical 11 |
 | `US11834660B2` | US patent | 10 | `public_domain` | animal_invivo 10 |
+| `doi:10.1186/1471-2202-8-26` | Journal article | 10 | `cc_by` | animal_invivo 8, in_vitro 2 |
+| `doi:10.1212/NXG.0000000000200193` | Journal article | 9 | `summary_stat` | clinical 9 |
 | `doi:10.1056/NEJMoa1900907` | Journal article | 8 | `summary_stat` | clinical 8 |
 | `FDA_NDA211172` | FDA document | 7 | `public_domain` | clinical 7 |
 | `NCT01737398` | ClinicalTrials.gov | 7 | `public_domain` | clinical 7 |
 | `NCT03842969` | ClinicalTrials.gov | 7 | `public_domain` | clinical 7 |
 | `doi:10.1007/s40259-022-00519-9` | Journal article | 7 | `summary_stat` | clinical 7 |
 | `doi:10.1016/S0140-6736(25` | Journal article | 7 | `summary_stat` | clinical 7 |
+| `doi:10.1016/j.omtn.2026.103035` | Journal article | 7 | `summary_stat` | clinical 7 |
 | `EMA_EU/1/23/1783` | EMA document | 6 | `public_domain` | clinical 4, animal_invivo 2 |
 | `NCT01960348` | ClinicalTrials.gov | 6 | `public_domain` | clinical 6 |
 | `NCT03399370` | ClinicalTrials.gov | 6 | `public_domain` | clinical 6 |
@@ -105,8 +108,10 @@ cited source for a value.
 | `FDA_NDA211970` | FDA document | 5 | `public_domain` | clinical 4, animal_invivo 1 |
 | `NCT02292537` | ClinicalTrials.gov | 5 | `public_domain` | clinical 5 |
 | `Schobel SA, 'An update from the tominersen global cli...` | Other / grey literature | 5 | `verify` | clinical 5 |
+| `doi:10.1002/cns.71063` | Journal article | 5 | `cc_by` | clinical 5 |
 | `doi:10.1038/s43587-025-01031-9` | Journal article | 5 | `summary_stat` | clinical 5 |
 | `doi:10.1089/nat.2021.0021` | Journal article | 5 | `cc_by` | in_vitro 5 |
+| `doi:10.1186/s13023-021-01822-4` | Journal article | 5 | `cc_by` | clinical 5 |
 | `FDA_NDA206488` | FDA document | 4 | `public_domain` | clinical 3, animal_invivo 1 |
 | `NCT01703988` | ClinicalTrials.gov | 4 | `public_domain` | clinical 4 |
 | `NCT02211209` | ClinicalTrials.gov | 4 | `public_domain` | clinical 4 |
@@ -140,6 +145,7 @@ cited source for a value.
 | `Roche medical-affairs slide deck, CHDI 2022, M-XX-000...` | Other / grey literature | 2 | `verify` | clinical 2 |
 | `doi:10.1002/mds.28359` | Journal article | 2 | `cc_by` | clinical 2 |
 | `doi:10.1016/j.braindev.2019.12.006` | Journal article | 2 | `summary_stat` | clinical 2 |
+| `doi:10.1126/scitranslmed.adx3491` | Journal article | 2 | `summary_stat` | animal_invivo 2 |
 | `doi:10.3233/jnd-221667` | Journal article | 2 | `summary_stat` | clinical 2 |
 | `doi:10.3389/fgene.2022.791416` | Journal article | 2 | `cc_by` | in_vitro 2 |
 | `EMA Spinraza EPAR product information (SmPC), EMEA/H/...` | EMA document | 1 | `public_domain` | clinical 1 |
@@ -161,7 +167,7 @@ cited source for a value.
 
 ## Archived source documents
 
-44 files under `sources/cns/` (89 MB), so every derivation can be re-run without network access.
+46 files under `sources/cns/` (109 MB), so every derivation can be re-run without network access.
 
 
 ## Known gaps in the source base
