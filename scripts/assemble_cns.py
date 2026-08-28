@@ -354,6 +354,25 @@ def main():
             else:
                 tok_owner[t] = i
 
+    # Secondary rule: identical name AND identical sequence is the same molecule.
+    # Both halves are required. Sequence alone would fuse genuine design variants
+    # that share a nucleobase sequence but differ in wing placement (ISIS 791656 vs
+    # 791657); name alone would fuse two papers' "ASO1". Together they are safe, and
+    # they let a lane that re-reports the same compounds from the same panel — for
+    # instance the paired in-vitro arm of a study whose in-vivo arm is already in —
+    # attach to the existing rows instead of duplicating them.
+    pair_owner = {}
+    for i, (lane, o) in enumerate(records):
+        seq = norm(o.get("sequence_5to3"))
+        name = norm(o.get("oligo_name")).lower()
+        if is_empty(seq) or not name:
+            continue
+        k = (name, seq.upper())
+        if k in pair_owner:
+            uf.union(pair_owner[k], i)
+        else:
+            pair_owner[k] = i
+
     groups = defaultdict(list)
     for i, (lane, o) in enumerate(records):
         groups[uf.find(i)].append(i)

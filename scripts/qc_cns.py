@@ -77,6 +77,13 @@ ENUMS = {
                        "summary_stat", "verify"},
 }
 
+# Readouts where a RISE is recovery, not injury. Without this the grade-0 check
+# fires on every rescued phenotype — more neurons, longer neurites, higher
+# viability — and trains the curator to ignore its own warnings.
+HIGHER_IS_BETTER = ("neurite", "tuj1", "map2", "viability", "neuron_count",
+                    "differentiation", "synap", "rotarod", "grip_strength",
+                    "latency", "motor_function")
+
 errors, warnings = [], []
 
 
@@ -186,8 +193,12 @@ def main():
             err(f"{mid}: challenge_priority=low_acute_electrophysiology on a "
                 f"non-electrophysiology readout ({m['readout_category']})")
         if m["neurotox_grade"] == "0" and m["effect_direction"] == "increase" \
-                and m["readout_category"] in {"injury_biomarker", "histopathology"}:
-            warn(f"{mid}: grade 0 with an increase in an injury readout — verify grading")
+                and m["readout_category"] in {"injury_biomarker", "histopathology"} \
+                and not any(k in rn for k in HIGHER_IS_BETTER) \
+                and not re.search(r"placebo|control|untreated|sham|vehicle",
+                                  m["effect_vs_control"], re.I):
+            warn(f"{mid}: grade 0 with an increase in an injury readout and no "
+                 f"control comparison in effect_vs_control — verify grading")
         if m["endpoint_domain"] == "hydrocephalus" and \
                 m["challenge_priority"] != "high_hydrocephalus":
             warn(f"{mid}: hydrocephalus endpoint not flagged high_hydrocephalus")
