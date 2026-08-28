@@ -122,6 +122,22 @@ def main():
             f"table/figure (paywalled full text) — verify before release: "
             f"{abstract_only[:5]}")
 
+    # --- CONTROL-ARM rows carrying a non-zero grade ----------------------------
+    # These are correctly graded: the rubric grades the OBSERVED band regardless of
+    # study arm, and a placebo subject whose platelets genuinely fell below 75 K/uL
+    # did have that event. But a model joining grade to DESIGN FEATURES would read
+    # them as the compound causing an effect at zero dose. The canonical filter is
+    # `dose_or_conc_value == "0"`; surfacing the count here keeps the hazard visible
+    # instead of buried in prose.
+    ctrl_nonzero = [m["measurement_id"] for m in meas
+                    if str(m.get("dose_or_conc_value", "")).strip() in {"0", "0.0"}
+                    and m.get("thrombocytopenia_grade") not in {"0", ""}]
+    if ctrl_nonzero:
+        warnings.append(
+            f"{len(ctrl_nonzero)} CONTROL-ARM row(s) (dose 0) carry grade > 0 — correct "
+            f"per the rubric, but MODELS MUST EXCLUDE dose_or_conc_value=='0' before "
+            f"joining grade to design features: {ctrl_nonzero[:5]}")
+
     # --- sequence policy (case-insensitive; case encodes chemistry) -------------
     for o in oligos:
         s = o.get("sequence_5to3", "")

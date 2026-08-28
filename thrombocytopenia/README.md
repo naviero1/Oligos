@@ -168,6 +168,27 @@ as biology.
 
 <!-- END FITNESS ANALYSIS -->
 
+## Two things a modeller must do before using this
+
+Both are correct properties of the data, not defects — but both will mislead a
+naive join, and `qc_thrombo.py` reports each on every run.
+
+1. **Exclude `dose_or_conc_value == "0"` before joining grade to design
+   features.** 31 control-arm rows carry grade 1–2. That is right — the rubric
+   grades the *observed* band regardless of arm, and a placebo subject whose
+   platelets fell below 75 × 10⁹/L did have that event — but joined naively it
+   teaches a model that a compound caused an effect at zero dose. The rows are
+   kept because they carry the comparator denominators.
+
+2. **Account for study type; do not learn it as biology.** Severe
+   thrombocytopenia is observed in trials, not in dishes, so grade is partly
+   confounded with study design. The generated table above quantifies it.
+
+A third, narrower caveat: the `< 0.5 × BSLN` relative-decline band is graded 2
+under the rubric's "requiring monitoring" clause. That is a documented judgement
+call, applied uniformly across all 23 such rows; a reviewer could reasonably set
+it to 1, and doing so is a one-line filter.
+
 ## Mechanism must be labelled, not assumed
 
 `imetelstat` (Rytelo) causes

@@ -105,6 +105,17 @@ missing row. Such rows record in `notes` which grade the band *would* have
 carried had events occurred, so severe-band cells remain findable and the
 denominator is not lost.
 
+**Control arms are graded on what was observed, so models must filter them.**
+A placebo subject whose platelets genuinely fell below 75 × 10⁹/L *had* that
+event, and the rubric grades the observed band regardless of study arm. The
+dataset therefore contains **control-arm rows carrying grade 1–2**, correctly.
+But a model joining grade to *design features* would read them as the compound
+causing an effect at zero dose. **The canonical filter is
+`dose_or_conc_value == "0"`**, and `qc_thrombo.py` reports the count on every run
+so the hazard stays visible. Placebo rows are retained rather than dropped
+because they carry the comparator denominators that make the treated rows
+interpretable.
+
 Grade is assigned **per measurement** from the reported endpoint; rows for the
 same oligo may differ by model, dose, or readout. Record the rationale in `notes`
 when the assignment is non-obvious. Where a source reports an incidence
