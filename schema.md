@@ -126,6 +126,32 @@ oligo may differ by model/dose. Record the rationale in `notes` when non-obvious
   **55/65** oligos (9 added by deterministic parse of WHO INN chemical
   nomenclature — see METHODOLOGY §4 path 4).
 
+- **2026-08-28** — Two corrections to `oligos.csv`, both found while building the
+  companion **OligoTox-CNS** dataset (`schema-cns.md`) and both confirmed against
+  two independent public documents rather than against one another.
+  - **`OLG017` (tofersen)** was recorded as `full_PS` with `ps_count = 19`. The
+    QALSODY US label §11 states the molecule has nineteen internucleotide
+    linkages of which **fifteen are phosphorothioate and four are phosphate
+    diesters**, and the WHO INN List 81 molecular formula
+    `C230H317N72O123P19S15` independently fixes the same counts (P19 → a 20-mer;
+    S15 → 15 PS). Corrected to `PS_PO_mix` / `15`. The sequence was also recased
+    to `CAGGAtacatttctaCAGCT` so that case encodes the 5-10-5 MOE wing/gap
+    structure, and its terminal residue is written `T`: a
+    2′-MOE-5-methyluridine is thymine *as a nucleobase*, and the sugar is already
+    carried by `sugar_modifications`.
+  - **`OLG018` (eplontersen)** had `ps_count = TBD` and its sequence spelled
+    `UCUUGGTTACATGAAAUCCC`. WHO INN List 85 gives `C296H437N77O156P20S13`, so
+    `ps_count = 13` (P20 = 19 internucleotide linkages + 1 GalNAc linker).
+    The sequence is now written `TCTTGGTTACATGAAATCCC`.
+  - **Why the second one mattered more than it looks.** Eplontersen and inotersen
+    (`OLG001`) carry the *same nucleobase sequence* — eplontersen is the
+    GalNAc-conjugated successor — but were spelled in two different alphabets, so
+    the two rows did not compare equal. Any model keyed on sequence would have
+    treated one molecule as two, and any dedup check would have missed the
+    relationship. Base letters across both datasets now use one alphabet, with
+    chemistry carried by `sugar_modifications`, `backbone_chemistry` and letter
+    case rather than by the choice of T versus U.
+
 ---
 
 ## Derived table — `data/oligotox_kidney_merged.csv` (generated, not canonical)
