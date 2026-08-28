@@ -221,16 +221,18 @@ lane blind to the others, then **per-source extraction** against verified full
 text, then an **adversarial verification** stage in which an independent agent is
 instructed to *refute* every extracted row against its cited source.
 
-> **Verification status: outstanding.** The verification stage is implemented and
-> wired into the assembler, but its agents terminated on an API session limit
-> before completing, so **every row currently carries `unverified` status** and
-> the dataset must not yet be described as adversarially verified. What has been
-> done instead: an independent **known-answer test** (6/6 against the inotersen
-> label, held back before extraction ran), **cross-dataset sequence agreement**
-> against independently INN-validated records (zero conflicts), automated QC
-> gating, and three data-integrity defects found and fixed by hand — two of which
-> produced structurally valid data that pointed the *wrong way scientifically*.
-> See `METHODOLOGY.md` for both the defects and what remains outstanding.
+> **Verification status: 659 of 1,336 rows (49 %) verified.** The two largest
+> blocks have been through adversarial verification — an independent agent
+> instructed to *refute* each row against its cited source:
+> **Crooke 2017 pooled clinical, 387 rows → 382 confirmed / 5 corrected / 0
+> rejected**, and the **in-vitro human platelet block, 272 rows → 246 confirmed /
+> 26 corrected / 0 rejected**, where all 115 Sewing values were recomputed from
+> the paper's raw per-replicate workbook and every mean, SD and n reproduced
+> exactly. No value error survived in either block. The remaining **677 rows are
+> still `unverified`** — chiefly patent-derived and regulatory-review blocks — so
+> the dataset is *partially* verified, not fully. Verified rows carry a
+> `verified_against_source` marker in `notes`. See `METHODOLOGY.md` for the
+> per-block detail and the four data-integrity defects found and fixed.
 
 Network egress was open in this session, so primary sources were retrieved
 directly (PMC/E-utilities, Europe PMC, DailyMed SPL, EMA, USPTO, FDA
@@ -258,8 +260,8 @@ python3 scripts/refresh_docs.py                             # regenerate the tab
 |---|------|
 | Unique oligos (`oligos.csv`) | **191** |
 | Measurement rows (`measurements.csv`) | **1336** |
-| — of which strict-platelet | **1203** |
-| — of which adjacent-haematology (flagged) | **133** |
+| — of which strict-platelet | **1195** |
+| — of which adjacent-haematology (flagged) | **141** |
 | Grade distribution (0/1/2/3) | 563 / 379 / 262 / 132 |
 | Distinct target genes | **40** |
 | Distinct sources (`source_ref`) | **39** |
@@ -286,7 +288,7 @@ python3 scripts/refresh_docs.py                             # regenerate the tab
 | **Delivery route** | systemic_dose 1026 · direct_addition 284 · TBD 9 · gymnotic_free_uptake 9 · intrathecal 6 · intravitreal 2 |
 | **Readout category** | platelet_count 834 · clinical_outcome 148 · platelet_activation 99 · immunogenicity 71 · platelet_binding 62 · platelet_aggregation 60 · coagulation 29 · megakaryocyte 22 · viability 10 · histopathology 1 |
 | **Redistribution** | public_domain 628 · summary_stat 565 · cc_by 143 |
-| **Platelet-specific** | TRUE 1203 / 1336 |
+| **Platelet-specific** | TRUE 1195 / 1336 |
 
 <!-- END RECORD COUNTER -->
 

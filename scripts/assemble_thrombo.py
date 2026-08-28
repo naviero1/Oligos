@@ -102,15 +102,25 @@ NAME_DISAMBIGUATION = [
 ]
 
 
-def disambiguate(rows):
-    """Remap names that mean different molecules in different sources."""
+def disambiguate(rows, src_field="source_ref"):
+    """Remap names that mean different molecules in different sources.
+
+    Applied to BOTH measurements (keyed on `source_ref`) and oligo entries (keyed
+    on `design_source`). Doing only the measurements is not enough and was in fact
+    the first attempt at this fix: the oligo-level merge unions `aliases` and
+    `design_source` by design, so the PS form's identity (`ISIS 818290`,
+    `PS-ODN 2395`, the Haematologica table) leaked onto the phosphodiester record
+    that asserts ps_count=0. Anyone resolving by alias would then map the PS
+    reagent onto the PO record and get the central predictor backwards — the exact
+    error the measurement-level remap was meant to prevent.
+    """
     fixed = collections.Counter()
     for r in rows:
         nk = norm_name(r.get("oligo_name"))
         for rule in NAME_DISAMBIGUATION:
             if nk != rule["name"]:
                 continue
-            src = str(r.get("source_ref", ""))
+            src = str(r.get(src_field, ""))
             if any(tok in src for tok in rule["keep_if_source_contains"]):
                 continue
             r["oligo_name"] = rule["else_rename_to"]
@@ -232,6 +242,7 @@ def main():
 
     for lane in lanes:
         lname = lane.get("lane", "?")
+        disambiguate(lane.get("oligos") or [], src_field="design_source")
         for o in lane.get("oligos") or []:
             k = norm_name(o.get("oligo_name"))
             if not k:

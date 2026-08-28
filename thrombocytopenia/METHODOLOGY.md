@@ -215,38 +215,40 @@ round so the documentation cannot drift from the data.*
 - **Length consistency** — `length_nt` is cross-checked against
   `len(sequence_5to3)` and mismatches are surfaced as warnings.
 
-### Adversarial verification — DESIGNED AND BUILT, NOT YET RUN
+### Adversarial verification — RUN ON THE TWO LARGEST BLOCKS
 
-**Status: outstanding.** This is stated plainly because the rest of this document
-would otherwise imply a check that has not happened.
-
-The pipeline includes an adversarial verification stage: every extracted row is
-passed to an **independent agent instructed to refute it** — to fetch the cited
-source and confirm it actually contains the claimed value at the claimed locus,
-that the grade follows the rubric, and that the row is genuinely about platelets.
-Verdicts are `CONFIRMED`, `CORRECTED` (real finding, wrong field — corrections
-applied) or `REJECTED` (unsupported — row dropped), and
-`scripts/assemble_thrombo.py` applies them mechanically so a rejected row cannot
+Every extracted row is passed to an **independent agent instructed to refute it**:
+to fetch the cited source and confirm it actually contains the claimed value at
+the claimed locus, that the grade follows the rubric, and that the row is
+genuinely about platelets. Verdicts are `CONFIRMED`, `CORRECTED` (real finding,
+wrong field — corrections applied) or `REJECTED` (unsupported — row dropped), and
+`scripts/apply_verdicts.py` applies them mechanically so a rejected row cannot
 survive by oversight.
 
-The stage is implemented and wired in, but the verification agents **terminated
-on an API session limit before completing**. Consequently:
+**Status: 659 of 1,336 rows (49 %) verified against their primary sources.**
 
-- **Every row currently in the dataset is `unverified`.** The assembler reports
-  this count on each run rather than presenting the rows as confirmed.
-- The dataset must **not** be described as adversarially verified until that
-  stage completes and its verdicts are folded in.
+| Block | Rows | Result | Method |
+|---|---:|---|---|
+| Crooke 2017 pooled clinical | 387 | **382 CONFIRMED · 5 CORRECTED · 0 REJECTED** | every source cell transcribed into an independent machine-readable reference, then a checker parsed each row's locus and compared value, n/N, dose band and grade (377 rows); 10 by hand against the figure image |
+| In-vitro human platelet (Sewing 2017 + Haematologica) | 272 | **246 CONFIRMED · 26 CORRECTED · 0 REJECTED** | all 115 Sewing values **recomputed from the S1 raw per-replicate workbook** — every mean, SD and n reproduces exactly; Haematologica values matched to Results prose, inset tables and a 600 dpi figure render |
 
-What *has* been done in place of it: an independent **known-answer test** (below,
-6/6), **cross-dataset sequence agreement** against independently INN-validated
-records (zero conflicts), automated **QC gating**, and three specific
-data-integrity defects found and fixed by hand (below). These are real checks,
-but they are not a substitute for re-reading every cited source.
+**Zero rows were rejected**, and no value error survived in either block —
+including through Crooke's multiple-denominator structure (2,363 vs 2,368;
+1,877/1,878/1,788) and the Table 3 vs Supp S6 population split.
 
-The failure mode this stage exists to catch is the most dangerous one available
-to an LLM-assisted curation: **a plausible number attached to a real citation
-that does not contain it.** Schema validation cannot catch that; only re-reading
-the source can. Until the stage runs, that risk is open.
+The remaining **677 rows are still `unverified`** — chiefly the patent-derived
+and regulatory-review blocks. The dataset should be described as *partially*
+verified until those complete.
+
+Two corrections the verifiers made to *this document's own assumptions*, recorded
+because being wrong in the methodology is worse than being wrong in a row:
+
+- The Haematologica Table 1 "bitmap" caveat was **overstated**. The table is a
+  bitmap in the JATS XML but is **fully text-extractable from the publisher PDF**,
+  and the extractor had already used it. Sequences there were not lost.
+- Two verifier corrections were vocabulary collisions, not data errors: 18 rows
+  used `IL8_release`/`MCP1_release` where the identical Sewing readout is
+  hyphenated, and 8 LDH rows needed `is_platelet_specific = FALSE`.
 
 ### Data-integrity defects found and corrected
 
@@ -275,12 +277,24 @@ structural validity and correctness are different properties.
    structure-activity tests only — the rows remain in the dataset, and the
    exclusion is stated in the analysis output and in `README.md`.
 
-3. **A controlled-vocabulary typo** (`public_documain`) that left one row's
+3. **A half-finished fix — the same collision, one level up.** Correcting the
+   `ODN 2395` collision in `measurements.csv` was **not sufficient**. The
+   oligo-level merge unions `aliases` and `design_source` by design, so the PS
+   form's identity (`ISIS 818290`, `PS-ODN 2395`, the Haematologica source) had
+   already leaked onto the **phosphodiester** record asserting `ps_count = 0`.
+   Anyone resolving by alias would map the PS reagent onto the PO record and get
+   the central predictor backwards — precisely the error the first fix was meant
+   to prevent. Found by the in-vitro verifier, which checked the mapping
+   *functionally* (re-deriving each record's values from the raw workbook) rather
+   than by name. Fixed in the data and in the assembler, which now applies
+   disambiguation to oligo entries as well as measurements.
+
+4. **A controlled-vocabulary typo** (`public_documain`) that left one row's
    rights status unparseable. Now corrected from an explicit table of unambiguous
    near-misses, with every correction reported; anything not in that table still
    fails QC, which is the right outcome for a value whose meaning is unclear.
 
-Defects 1 and 2 share a lesson worth generalising: **both produced structurally
+Defects 1–3 share a lesson worth generalising: **both produced structurally
 valid data that pointed the wrong way scientifically.** Neither would have been
 caught by schema validation, referential integrity, or range checks. They were
 caught by asking whether the assembled data still reproduced a relationship the
