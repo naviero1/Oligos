@@ -66,6 +66,15 @@ VOCAB_FIXES = {
                              "True": "TRUE", "False": "FALSE"},
     "effect_direction": {"increased": "increase", "decreased": "decrease",
                          "unchanged": "no_change", "none": "no_change"},
+    "backbone_chemistry": {
+        # mononucleotide controls have no internucleotide linkage at all; the
+        # extractor spelled this out in prose. "NA" is the schema's term for it,
+        # and is deliberately distinct from "TBD" (chemistry unknown).
+        "NA (mononucleotides, no internucleotide linkage)": "NA",
+        "none": "NA", "n/a": "NA",
+    },
+    "species": {"Gottingen minipig": "minipig", "gottingen minipig": "minipig",
+                "Go\u0308ttingen minipig": "minipig", "swine": "minipig", "pig": "minipig"},
     "study_type": {"invitro": "in_vitro", "in vitro": "in_vitro",
                    "exvivo": "ex_vivo", "ex vivo": "ex_vivo",
                    "animal_in_vivo": "animal_invivo", "in_vivo": "animal_invivo"},
@@ -130,6 +139,36 @@ def disambiguate(rows, src_field="source_ref"):
             fixed[f"{rule['name']} -> {rule['else_rename_to']}"] += 1
     return fixed
 
+
+SEQ_OK = re.compile(r"^[ACGTUacgtu]+$")
+# Per-residue modification notation, e.g.
+#   G*C*G*A*C*T*...            (* = phosphorothioate linkage)
+#   mG*mC*mG*mA*mC*T*A*...     (leading letter = 2'-modified residue: m/f/d/l/e/k)
+# The schema stores the BASE sequence with case encoding chemistry, so the
+# annotated form is normalized to bases and preserved verbatim in `notes` rather
+# than discarded — the annotation is richer than the column can hold, and throwing
+# it away would lose real chemistry information.
+ANNOT_RESIDUE = re.compile(r"^[A-Za-z]?([ACGTUacgtu])$")
+
+
+def normalize_sequence(seq, notes):
+    """Return (sequence, notes). Strips per-residue modification notation."""
+    s = (seq or "").strip()
+    if not s or s == "TBD" or SEQ_OK.match(s):
+        return s or "TBD", notes
+    if s.upper().startswith("NA"):
+        # e.g. "NA (mononucleotides)" — no sequence exists for this entity
+        return "NA", (notes or "") + f";sequence_not_applicable:{s}"
+    if "*" in s:
+        toks = [x for x in s.split("*") if x]
+        bases = []
+        for x in toks:
+            m = ANNOT_RESIDUE.match(x)
+            if not m:
+                return s, notes          # unrecognized — leave it for QC to flag
+            bases.append(m.group(1))
+        return "".join(bases), (notes or "") + f";sequence_as_printed:{s}"
+    return s, notes
 
 def norm_name(n):
     """Normalize an oligo name to a join key: case- and punctuation-insensitive."""
@@ -333,13 +372,22 @@ def main():
                                 clean(m.get("source_table")).lower(),
                                 clean(m.get("readout_name")).lower()))
 
-    vocab_fixed = []
+    vocab_fixed, seq_fixed = [], []
     os.makedirs(BASE, exist_ok=True)
     with open(os.path.join(BASE, "oligos.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=OLIGO_COLS)
         w.writeheader()
         for _, row in ordered:
-            w.writerow({c: row.get(c, "TBD") for c in OLIGO_COLS})
+            out = {c: row.get(c, "TBD") for c in OLIGO_COLS}
+            seq, nts = normalize_sequence(out.get("sequence_5to3"), out.get("notes"))
+            if seq != out.get("sequence_5to3"):
+                seq_fixed.append(f"{out['oligo_name']}: {out['sequence_5to3'][:34]!r} -> {seq!r}")
+                out["sequence_5to3"], out["notes"] = seq, nts
+            for col, fixes in VOCAB_FIXES.items():
+                if col in out and out[col] in fixes:
+                    vocab_fixed.append(f"{col}: {out[col]!r} -> {fixes[out[col]]!r}")
+                    out[col] = fixes[out[col]]
+            w.writerow(out)
 
     with open(os.path.join(BASE, "measurements.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=MEAS_COLS)
@@ -372,6 +420,11 @@ def main():
         print(f"corrected {len(vocab_fixed)} controlled-vocabulary typo(s):")
         for k, n in cnt.most_common(10):
             print(f"    {k}  (x{n})")
+    if seq_fixed:
+        print(f"normalized {len(seq_fixed)} sequence(s) from per-residue notation "
+              f"(original preserved in notes):")
+        for x in seq_fixed[:6]:
+            print("   ", x)
     if kept_unref:
         print(f"kept {len(kept_unref)} curated oligo(s) with no individual measurement "
               f"(pooled-cohort outcomes): {kept_unref[:8]}")

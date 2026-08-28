@@ -33,13 +33,19 @@ MEAS_COLS = ["measurement_id", "oligo_id", "study_type", "species", "system_mode
 ENUMS = {
     "oligo_class": {"ASO_gapmer", "siRNA", "GalNAc_siRNA", "splice_switching_ASO",
                     "PMO", "aptamer", "other"},
-    "backbone_chemistry": {"full_PS", "PS_PO_mix", "full_PO", "PMO_neutral", "mixed", "TBD"},
+    # "NA" = no internucleotide linkage exists (mononucleotide controls used as
+    # negative comparators in the PF4/aptamer work) - distinct from "TBD" (unknown).
+    "backbone_chemistry": {"full_PS", "PS_PO_mix", "full_PO", "PMO_neutral",
+                           "mixed", "NA", "TBD"},
     "conjugate": {"none", "GalNAc", "lipid", "peptide", "PEG", "other", "TBD"},
     "max_phase": {"approved", "approved_EMA", "phase_3", "phase_3_discontinued",
                   "phase_2", "phase_2_discontinued", "phase_1", "preclinical",
                   "research_panel", "class_review", "TBD"},
     "study_type": {"in_vitro", "ex_vivo", "animal_invivo", "clinical"},
-    "species": {"human", "monkey", "rat", "mouse", "dog", "multi_species", "NA", "TBD"},
+    # minipig: the Gottingen minipig is an established regulatory tox species and
+    # appears here with its own GPVI/PF4 ontogeny data.
+    "species": {"human", "monkey", "rat", "mouse", "dog", "minipig",
+                "multi_species", "NA", "TBD"},
     "delivery_method": {"direct_addition", "gymnotic_free_uptake", "transfection",
                         "conjugate_mediated", "systemic_dose", "intrathecal",
                         "intravitreal", "oral", "subcutaneous", "TBD"},
@@ -141,9 +147,9 @@ def main():
     # --- sequence policy (case-insensitive; case encodes chemistry) -------------
     for o in oligos:
         s = o.get("sequence_5to3", "")
-        if s and s != "TBD" and not SEQ_RE.match(s):
+        if s and s not in ("TBD", "NA") and not SEQ_RE.match(s):
             errors.append(f"oligos {o['oligo_id']}: sequence_5to3 has non-ACGTU chars: {s!r}")
-        if s and s != "TBD" and o.get("length_nt", "TBD") not in ("TBD", "", str(len(s))):
+        if s and s not in ("TBD", "NA") and o.get("length_nt", "TBD") not in ("TBD", "", str(len(s))):
             warnings.append(
                 f"oligos {o['oligo_id']}: length_nt={o['length_nt']} != len(sequence)={len(s)}")
 

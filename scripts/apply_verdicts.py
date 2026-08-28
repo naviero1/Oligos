@@ -39,6 +39,23 @@ def main():
         cols, rows = rdr.fieldnames, list(rdr)
     by_id = {r["measurement_id"]: r for r in rows}
 
+    # Natural-key index, so verdicts survive the renumbering that a re-assembly
+    # causes. freeze_verdicts.py stamps this key onto each verdict; when present
+    # it is preferred over the volatile measurement_id.
+    onames = {}
+    opath = os.path.join(os.path.dirname(MEAS), "oligos.csv")
+    with open(opath, newline="", encoding="utf-8") as f:
+        onames = {r["oligo_id"]: r["oligo_name"] for r in csv.DictReader(f)}
+
+    def nkey(r):
+        return "|".join([norm(onames.get(r["oligo_id"], "")), norm(r.get("source_ref")),
+                         norm(r.get("source_table")), norm(r.get("readout_name")),
+                         norm(r.get("dose_or_conc_value"))])
+
+    by_nk = {}
+    for r in rows:
+        by_nk.setdefault(nkey(r), []).append(r)
+
     verdicts = []
     for p in args:
         try:
@@ -56,9 +73,21 @@ def main():
     drop, mismatches = set(), []
     for v in verdicts:
         mid = v.get("measurement_id")
-        row = by_id.get(mid)
+        row = None
+        if v.get("natural_key"):
+            cands = by_nk.get(v["natural_key"]) or []
+            if len(cands) == 1:
+                row = cands[0]
+                stats["matched_by_natural_key"] += 1
+            elif len(cands) > 1:
+                stats["ambiguous_natural_key"] += 1
+                continue
+        if row is None:
+            row = by_id.get(mid)
+            if row is not None:
+                stats["matched_by_id"] += 1
         if not row:
-            stats["id_not_found"] += 1
+            stats["not_found"] += 1
             continue
         # ID stability guard: the row must still be the one the verifier described
         if (norm(v.get("oligo_name")) and norm(v.get("oligo_name")) != norm(row["oligo_id"])
@@ -69,7 +98,7 @@ def main():
             continue
         d = (v.get("verdict") or "").upper()
         if d == "REJECTED":
-            drop.add(mid)
+            drop.add(row["measurement_id"])
             stats["rejected"] += 1
         elif d == "CORRECTED":
             for c in v.get("corrections") or []:

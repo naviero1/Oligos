@@ -146,22 +146,22 @@ with no modelling:
 |---|---:|---:|---:|
 | `PMO_neutral` | 10 | 6 | 0.10 |
 | `PS_PO_mix` | 20 | 6 | 0.30 |
-| `full_PO` | 22 | 3 | 0.59 |
-| `full_PS` | 1165 | 156 | 0.92 |
+| `full_PO` | 66 | 8 | 0.44 |
+| `full_PS` | 1480 | 166 | 0.99 |
 
-Mean grade also rises with phosphorothioate count (0 → 0.44; 13–16 → 0.69; 17–19 → 1.04; 20+ → 1.11 linkages).
+Mean grade also rises with phosphorothioate count (0 → 0.39; 13–16 → 0.61; 17–19 → 1.09; 20+ → 1.47 linkages).
 
-Modality orders PMO 0.10 < GalNAc_siRNA 0.27 < siRNA 0.50 < splice_switching_ASO 0.67 < ASO_gapmer 0.89 < other 1.07 < aptamer 1.14.
+Modality orders PMO 0.10 < GalNAc_siRNA 0.27 < siRNA 0.50 < splice_switching_ASO 0.67 < ASO_gapmer 0.89 < other 1.17 < aptamer 1.60.
 
 **The caveat that must travel with this.** Grade is partly confounded with
 study type — severe thrombocytopenia is observed in trials, not in dishes:
 
 | study type | n rows | mean grade | % grade 3 |
 |---|---:|---:|---:|
-| clinical | 643 | 1.02 | 10.6% |
-| ex_vivo | 5 | 1.00 | 0.0% |
-| in_vitro | 287 | 0.91 | 1.4% |
-| animal_invivo | 308 | 0.65 | 6.5% |
+| ex_vivo | 26 | 1.38 | 15.4% |
+| in_vitro | 478 | 1.07 | 7.3% |
+| clinical | 773 | 1.00 | 11.1% |
+| animal_invivo | 416 | 0.70 | 6.5% |
 
 Any model trained here must account for study type rather than learn it
 as biology.
@@ -258,37 +258,37 @@ python3 scripts/refresh_docs.py                             # regenerate the tab
 
 | | Count |
 |---|------|
-| Unique oligos (`oligos.csv`) | **191** |
-| Measurement rows (`measurements.csv`) | **1336** |
-| — of which strict-platelet | **1195** |
-| — of which adjacent-haematology (flagged) | **141** |
-| Grade distribution (0/1/2/3) | 563 / 379 / 262 / 132 |
-| Distinct target genes | **40** |
-| Distinct sources (`source_ref`) | **39** |
-| Oligos with sequence (not TBD) | **170 / 191** |
+| Unique oligos (`oligos.csv`) | **252** |
+| Measurement rows (`measurements.csv`) | **1786** |
+| — of which strict-platelet | **1595** |
+| — of which adjacent-haematology (flagged) | **191** |
+| Grade distribution (0/1/2/3) | 756 / 466 / 372 / 192 |
+| Distinct target genes | **60** |
+| Distinct sources (`source_ref`) | **47** |
+| Oligos with sequence (not TBD) | **193 / 252** |
 
 ## Independent (predictor) variables — `oligos.csv`
 
 | Variable | Distribution |
 |----------|--------------|
-| **Modality (`oligo_class`)** | ASO_gapmer 155 · other 19 · PMO 6 · GalNAc_siRNA 4 · splice_switching_ASO 4 · siRNA 2 · aptamer 1 |
-| **Backbone (`backbone_chemistry`)** | full_PS 165 · TBD 9 · PMO_neutral 6 · PS_PO_mix 6 · full_PO 3 · mixed 2 |
-| **Conjugate** | none 177 · lipid 6 · GalNAc 6 · PEG 1 · TBD 1 |
-| **Development stage (`max_phase`)** | research_panel 102 · preclinical 48 · approved 16 · phase_2 10 · class_review 7 · phase_1 5 · phase_3 1 · TBD 1 · approved_EMA 1 |
-| **Sugar modifications** | DNA_gap 149 · 2'-MOE 132 · cEt 37 · 5-methylcytosine 19 · DNA 11 · 2'-OMe 10 · TBD 10 · LNA 8 · morpholino 7 · 2'-F 6 |
-| **Sequence available** | 170 / 191 (rest `TBD`, never guessed) |
+| **Modality (`oligo_class`)** | ASO_gapmer 186 · other 45 · PMO 6 · aptamer 5 · GalNAc_siRNA 4 · splice_switching_ASO 4 · siRNA 2 |
+| **Backbone (`backbone_chemistry`)** | full_PS 190 · TBD 34 · PS_PO_mix 10 · full_PO 8 · PMO_neutral 6 · mixed 3 · NA 1 |
+| **Conjugate** | none 225 · GalNAc 14 · lipid 6 · TBD 5 · other 1 · PEG 1 |
+| **Development stage (`max_phase`)** | research_panel 136 · preclinical 52 · phase_1 24 · approved 16 · phase_2 10 · class_review 8 · phase_3 4 · TBD 1 · approved_EMA 1 |
+| **Sugar modifications** | DNA_gap 174 · 2'-MOE 155 · cEt 37 · 5-methylcytosine 19 · TBD 19 · DNA 15 · 2'-OMe 11 · LNA 9 · DNA_deoxyribose 8 · morpholino 7 |
+| **Sequence available** | 193 / 252 (rest `TBD`, never guessed) |
 
 ## Dependent (indicator) variables — `measurements.csv`
 
 | Variable | Distribution |
 |----------|--------------|
-| **`thrombocytopenia_grade`** | 0: 563 · 1: 379 · 2: 262 · 3: 132 |
-| **Study type** | clinical 722 · animal_invivo 316 · in_vitro 291 · ex_vivo 7 |
-| **Species** | human 1003 · mouse 141 · monkey 112 · rat 76 · multi_species 2 · dog 1 · NA 1 |
-| **Delivery route** | systemic_dose 1026 · direct_addition 284 · TBD 9 · gymnotic_free_uptake 9 · intrathecal 6 · intravitreal 2 |
-| **Readout category** | platelet_count 834 · clinical_outcome 148 · platelet_activation 99 · immunogenicity 71 · platelet_binding 62 · platelet_aggregation 60 · coagulation 29 · megakaryocyte 22 · viability 10 · histopathology 1 |
-| **Redistribution** | public_domain 628 · summary_stat 565 · cc_by 143 |
-| **Platelet-specific** | TRUE 1195 / 1336 |
+| **`thrombocytopenia_grade`** | 0: 756 · 1: 466 · 2: 372 · 3: 192 |
+| **Study type** | clinical 852 · in_vitro 482 · animal_invivo 424 · ex_vivo 28 |
+| **Species** | human 1291 · mouse 175 · monkey 174 · rat 85 · minipig 52 · multi_species 4 · NA 4 · dog 1 |
+| **Delivery route** | systemic_dose 1264 · direct_addition 496 · TBD 9 · gymnotic_free_uptake 9 · intrathecal 6 · intravitreal 2 |
+| **Readout category** | platelet_count 977 · platelet_activation 195 · clinical_outcome 191 · platelet_binding 117 · platelet_aggregation 114 · immunogenicity 94 · coagulation 49 · megakaryocyte 24 · histopathology 14 · viability 11 |
+| **Redistribution** | summary_stat 841 · public_domain 742 · cc_by 203 |
+| **Platelet-specific** | TRUE 1595 / 1786 |
 
 <!-- END RECORD COUNTER -->
 

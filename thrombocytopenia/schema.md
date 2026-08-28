@@ -29,7 +29,7 @@ features hypothesized to drive toxicity.
 | `developer` | string | Sponsor/developer. |
 | `max_phase` | enum | `approved` \| `approved_EMA` \| `phase_3` \| `phase_3_discontinued` \| `phase_2` \| `phase_2_discontinued` \| `phase_1` \| `preclinical` \| `research_panel` \| `class_review`. |
 | `length_nt` | int | Oligonucleotide length in nucleotides. |
-| `backbone_chemistry` | enum | `full_PS` \| `PS_PO_mix` \| `full_PO` \| `PMO_neutral` \| `mixed` \| `TBD`. |
+| `backbone_chemistry` | enum | `full_PS` \| `PS_PO_mix` \| `full_PO` \| `PMO_neutral` \| `mixed` \| `NA` (no internucleotide linkage exists — mononucleotide controls; distinct from `TBD` = unknown) \| `TBD`. |
 | `sugar_modifications` | string | `;`-separated, e.g. `2'-MOE;2'-OMe;cEt;LNA;2'-F;morpholino;DNA_gap`. |
 | `gapmer_design` | string | Wing-gap-wing motif if applicable, e.g. `5-10-5_MOE`; else `NA`. |
 | `conjugate` | enum | `none` \| `GalNAc` \| `lipid` \| `peptide` \| `PEG` \| `other`. |
@@ -51,7 +51,7 @@ A single oligo at a single dose reporting platelet count *and* P-selectin =
 | `measurement_id` | string PK | Stable ID, e.g. `TMSR001`. |
 | `oligo_id` | string FK | → `oligos.oligo_id`. |
 | `study_type` | enum | `in_vitro` \| `ex_vivo` \| `animal_invivo` \| `clinical`. |
-| `species` | enum | `human` \| `monkey` \| `rat` \| `mouse` \| `dog` \| `multi_species` \| `NA`. |
+| `species` | enum | `human` \| `monkey` \| `rat` \| `mouse` \| `dog` \| `minipig` (Göttingen minipig — an established regulatory tox species with its own GPVI/PF4 ontogeny data here) \| `multi_species` \| `NA`. |
 | `system_model` | string | e.g. `washed_human_platelets`, `human_PRP`, `human_whole_blood`, `CD34_derived_megakaryocytes`, `MEG-01`, `bone_marrow`, `patient_cohort`, `healthy_volunteer`, `cynomolgus_invivo`, `mouse_invivo`. |
 | `tissue` | string | `platelet` \| `blood` \| `plasma` \| `bone_marrow` \| `spleen` \| `NA`. |
 | `delivery_method` | enum | `direct_addition` (in-vitro spike into platelets/blood) \| `gymnotic_free_uptake` \| `transfection` \| `conjugate_mediated` \| `systemic_dose` \| `intrathecal` \| `intravitreal` \| `oral` \| `TBD`. |
