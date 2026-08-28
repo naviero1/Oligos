@@ -109,6 +109,19 @@ def main():
             if not m.get(col) or m[col] in {"", "TBD", "NA"}:
                 errors.append(f"measurements {m['measurement_id']}: missing provenance {col}")
 
+    # --- provenance STRENGTH (not a failure, but must stay visible) -------------
+    # A row citing a paywalled paper's abstract is legitimately sourced — an
+    # abstract is a specific, retrievable locus — but it is weaker evidence than a
+    # numbered table and must be re-verified against full text before release.
+    # Surfacing the count here stops that caveat from being buried in a notes field.
+    abstract_only = [m["measurement_id"] for m in meas
+                     if "abstract" in (m.get("source_table") or "").lower()]
+    if abstract_only:
+        warnings.append(
+            f"{len(abstract_only)} row(s) cite an abstract rather than a numbered "
+            f"table/figure (paywalled full text) — verify before release: "
+            f"{abstract_only[:5]}")
+
     # --- sequence policy (case-insensitive; case encodes chemistry) -------------
     for o in oligos:
         s = o.get("sequence_5to3", "")
