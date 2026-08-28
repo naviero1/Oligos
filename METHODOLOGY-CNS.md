@@ -431,6 +431,14 @@ on every matched CNS readout.
   slide decks are marked `redistribution=verify` and are the weakest evidence in
   the dataset; one of them is load-bearing for a headline hydrocephalus figure.
 - **Hydrocephalus is thinly and unevenly sourced, and must not be overstated.**
+  The untreated-disease baseline is now carried as data (an incidence-rate ratio
+  of 4.7, 95% CI 2.4-10.2, from a matched cohort whose study window closes before
+  nusinersen approval, so no participant was oligonucleotide-exposed). One
+  frequently-cited disease-baseline cohort turned out on inspection **not** to be
+  untreated — 76% of its patients were on nusinersen and it was not
+  treatment-stratified — so its rows are fenced with an oligo entry whose name
+  begins "MIXED / NOT TREATMENT-STRATIFIED" and are graded 0, to make them
+  unusable as evidence of a drug effect.
   The evidence is almost entirely clinical: no published animal study was found in
   which an oligonucleotide *caused* hydrocephalus, and no in vitro model of CSF
   dynamics for oligonucleotide toxicity exists at all. The nusinersen signal is

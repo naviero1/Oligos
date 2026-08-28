@@ -198,11 +198,24 @@ Lane outputs are retained under `notes/cns/extractions/`, source documents under
 - **Grades are provisional**, flagged `grade_provisional`, pending
   subject-matter review.
 - **Hydrocephalus is thinly sourced and must not be overstated.** The evidence is
-  almost entirely clinical; no published animal study was found in which an
-  oligonucleotide *caused* hydrocephalus, and no in vitro CSF-dynamics model for
-  oligonucleotide toxicity exists. The nusinersen signal is confounded by the fact
-  that spinal muscular atrophy itself carries an elevated hydrocephalus rate. The
-  tominersen exposure-dependent ventricular-volume finding is the better anchor.
+  almost entirely clinical. The dataset now carries the untreated-disease baseline
+  as data rather than prose: in a matched cohort studied entirely *before*
+  nusinersen was approved — so nobody was oligonucleotide-exposed by construction
+  — spinal muscular atrophy itself carries an incidence-rate ratio of **4.7
+  (95% CI 2.4–10.2)** for hydrocephalus. Any ventriculomegaly row in an SMA
+  patient has to be read against that.
+
+  The mechanistic floor is close to empty, and the one animal study that looks
+  like an exception does not survive reading. An ICV antisense against Gαi2 does
+  dilate rat ventricles — but its own base-composition-matched mismatch control
+  produced no effect, the dilatation was strictly unilateral, the molecule is an
+  **unmodified phosphodiester DNA 18-mer** sharing no chemistry with any clinical
+  ASO, and the effect required continuous minipump infusion where a single bolus
+  did nothing. It supports "knocking down Gαi2 dilates rat ventricles". It does
+  not support "intrathecal ASOs cause hydrocephalus", and the row says so.
+
+  The tominersen exposure-dependent ventricular-volume finding, which has a
+  concurrent placebo arm, remains the better anchor.
 - **Human in vitro data is scarce**, and that is a finding rather than an
   omission: systematic searching found almost no study whose *purpose* is
   oligonucleotide toxicity in human iPSC-derived neural cells. Nearly every human
