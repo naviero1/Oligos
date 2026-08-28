@@ -48,6 +48,29 @@ MEAS_COLS = ["measurement_id", "oligo_id", "study_type", "species", "system_mode
 
 EMPTY = {"", None, "TBD", "NA", "n/a", "N/A", "null", "None", "unknown"}
 
+# Controlled-vocabulary near-misses. Extraction agents occasionally mistype an enum
+# value ("public_documain"), and a single bad cell fails QC for the whole dataset.
+# These are corrected here and every correction is REPORTED — the point is to fix
+# unambiguous typos without hiding them. Anything not listed still reaches
+# qc_thrombo.py and still fails, which is what should happen to a value whose
+# intended meaning is not obvious.
+VOCAB_FIXES = {
+    "redistribution": {
+        "public_documain": "public_domain", "public domain": "public_domain",
+        "publicdomain": "public_domain", "public_domian": "public_domain",
+        "cc-by": "cc_by", "ccby": "cc_by", "cc by": "cc_by",
+        "summary_stats": "summary_stat", "summary stat": "summary_stat",
+        "derived_features": "derived_features_only",
+    },
+    "is_platelet_specific": {"true": "TRUE", "false": "FALSE",
+                             "True": "TRUE", "False": "FALSE"},
+    "effect_direction": {"increased": "increase", "decreased": "decrease",
+                         "unchanged": "no_change", "none": "no_change"},
+    "study_type": {"invitro": "in_vitro", "in vitro": "in_vitro",
+                   "exvivo": "ex_vivo", "ex vivo": "ex_vivo",
+                   "animal_in_vivo": "animal_invivo", "in_vivo": "animal_invivo"},
+}
+
 
 def norm_name(n):
     """Normalize an oligo name to a join key: case- and punctuation-insensitive."""
@@ -248,6 +271,7 @@ def main():
                                 clean(m.get("source_table")).lower(),
                                 clean(m.get("readout_name")).lower()))
 
+    vocab_fixed = []
     os.makedirs(BASE, exist_ok=True)
     with open(os.path.join(BASE, "oligos.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=OLIGO_COLS)
@@ -260,6 +284,11 @@ def main():
         w.writeheader()
         for i, m in enumerate(deduped, start=1):
             row = {c: clean(m.get(c)) for c in MEAS_COLS}
+            for col, fixes in VOCAB_FIXES.items():
+                v = row.get(col)
+                if v in fixes:
+                    vocab_fixed.append(f"{col}: {v!r} -> {fixes[v]!r}")
+                    row[col] = fixes[v]
             row["measurement_id"] = f"TMSR{i:03d}"
             row["oligo_id"] = keymap.get(norm_name(m.get("oligo_name")), "TBD")
             if row["source_id"] in EMPTY:
@@ -271,6 +300,12 @@ def main():
     print("verdicts:", dict(all_stats))
     if dropped_names:
         print(f"dropped {len(dropped_names)} empty stub oligo(s): {dropped_names[:8]}")
+    if vocab_fixed:
+        import collections as _c
+        cnt = _c.Counter(vocab_fixed)
+        print(f"corrected {len(vocab_fixed)} controlled-vocabulary typo(s):")
+        for k, n in cnt.most_common(10):
+            print(f"    {k}  (x{n})")
     if kept_unref:
         print(f"kept {len(kept_unref)} curated oligo(s) with no individual measurement "
               f"(pooled-cohort outcomes): {kept_unref[:8]}")

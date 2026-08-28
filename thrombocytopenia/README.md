@@ -215,12 +215,12 @@ python3 scripts/report_thrombo.py                          # regenerate the tabl
 | | Count |
 |---|------|
 | Unique oligos (`oligos.csv`) | **144** |
-| Measurement rows (`measurements.csv`) | **895** |
-| — of which strict-platelet | **811** |
-| — of which adjacent-haematology (flagged) | **84** |
-| Grade distribution (0/1/2/3) | 405 / 287 / 145 / 58 |
+| Measurement rows (`measurements.csv`) | **1010** |
+| — of which strict-platelet | **916** |
+| — of which adjacent-haematology (flagged) | **94** |
+| Grade distribution (0/1/2/3) | 416 / 327 / 178 / 89 |
 | Distinct target genes | **35** |
-| Distinct sources (`source_ref`) | **31** |
+| Distinct sources (`source_ref`) | **32** |
 | Oligos with sequence (not TBD) | **132 / 144** |
 
 ## Independent (predictor) variables — `oligos.csv`
@@ -238,13 +238,13 @@ python3 scripts/report_thrombo.py                          # regenerate the tabl
 
 | Variable | Distribution |
 |----------|--------------|
-| **`thrombocytopenia_grade`** | 0: 405 · 1: 287 · 2: 145 · 3: 58 |
-| **Study type** | clinical 522 · animal_invivo 238 · in_vitro 130 · ex_vivo 5 |
-| **Species** | human 645 · mouse 117 · monkey 79 · rat 54 |
-| **Delivery route** | systemic_dose 759 · direct_addition 130 · intrathecal 6 |
-| **Readout category** | platelet_count 650 · clinical_outcome 67 · platelet_activation 48 · platelet_binding 45 · immunogenicity 37 · coagulation 26 · platelet_aggregation 12 · megakaryocyte 8 · viability 1 · histopathology 1 |
-| **Redistribution** | summary_stat 403 · public_domain 360 · cc_by 132 |
-| **Platelet-specific** | TRUE 811 / 895 |
+| **`thrombocytopenia_grade`** | 0: 416 · 1: 327 · 2: 178 · 3: 89 |
+| **Study type** | clinical 633 · animal_invivo 242 · in_vitro 130 · ex_vivo 5 |
+| **Species** | human 756 · mouse 117 · monkey 83 · rat 54 |
+| **Delivery route** | systemic_dose 874 · direct_addition 130 · intrathecal 6 |
+| **Readout category** | platelet_count 726 · clinical_outcome 95 · platelet_activation 48 · platelet_binding 47 · immunogenicity 45 · coagulation 27 · platelet_aggregation 12 · megakaryocyte 8 · viability 1 · histopathology 1 |
+| **Redistribution** | public_domain 475 · summary_stat 403 · cc_by 132 |
+| **Platelet-specific** | TRUE 916 / 1010 |
 
 <!-- END RECORD COUNTER -->
 
