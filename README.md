@@ -23,9 +23,10 @@ These scaffolding files (`README.md`, `schema.md`, `sources/SOURCES.md`, and
 the **header-only** data CSVs) have been **reconstructed faithfully from the
 project specification** and **committed + pushed immediately** so they are now
 durably persisted. **No oligo identities, sequences, or toxicity values were
-re-invented** — those must be restored from a backup of the prior files or
-re-derived from primary sources (see `sources/SOURCES.md`). The current record
-counter therefore reflects reality: **0 measurement rows**.
+re-invented** — those had to be restored from a backup of the prior files or
+re-derived from primary sources (see `sources/SOURCES.md`). As of that date the
+dataset therefore stood at **0 measurement rows**; everything now in `data/` was
+curated after this note — see the record counter below.
 
 ---
 
@@ -79,6 +80,23 @@ Curation methodology, extraction methods, variable distributions, provenance,
 QC, and limitations are documented in **`METHODOLOGY.md`** (Phase 2 methodology
 deliverable).
 
+## Toxicity register (see `toxicity/` for the per-endpoint index)
+
+The Challenge names **eight toxicities of interest**: hepatotoxicity, kidney
+toxicity, thrombocytopenia, complement activation, coagulopathy, immunotoxicity,
+chronic neurotoxicity, and hydrocephalus. This repository holds **data for one of
+them** — kidney toxicity, the 111 measurement rows described above. The other seven
+are documented rather than populated: each has a short dossier recording whatever
+material the repo actually holds for it — source PDFs acquired but not yet
+extracted, background-only mentions inside multi-endpoint reference material, or
+nothing at all.
+
+**[`toxicity/`](toxicity/README.md)** is where that coverage is visible at a glance:
+one dossier per endpoint, plus a table showing which endpoints have rows, which have
+sources waiting on extraction, and which are not addressed. The dossiers are an index
+over artifacts that already exist — `data/`, `schema.md` and `sources/` remain the
+source of truth.
+
 ## Record counter
 
 | | Count | Target |
@@ -92,7 +110,7 @@ deliverable).
 | Delivery routes (systemic/gymnotic/intrathecal/intravitreal/oral) | 87 / 19 / 3 / 1 / 1 | 5 routes |
 | Study types (clinical/animal/in-vitro) | 39 / 53 / 19 | mixed |
 | Target genes | **35** | — |
-| Oligos with sequence (not TBD) | **44** | all |
+| Oligos with sequence (not TBD) | **55** of 65 | all |
 
 _Update this table in the same commit whenever rows are added._
 
