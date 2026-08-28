@@ -73,7 +73,8 @@ ENUMS = {
     "reversibility": {"reversible", "partially_reversible", "irreversible",
                       "not_assessed", TBD},
     "is_cns_specific": {"TRUE", "FALSE"},
-    "redistribution": {"public_domain", "derived_features_only", "summary_stat", "verify"},
+    "redistribution": {"public_domain", "cc_by", "derived_features_only",
+                       "summary_stat", "verify"},
 }
 
 errors, warnings = [], []

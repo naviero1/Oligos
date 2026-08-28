@@ -90,7 +90,7 @@ A single oligo at a single dose measured for NfL *and* ventricular volume =
 | `source_id` | string | → entry in `sources/SOURCES-CNS.md`. |
 | `source_ref` | string | DOI / PMID / patent number / NCT number / FDA application number. |
 | `source_table` | string | Exact locus, e.g. `Table 2`, `Fig 3B`, `label sec 5.1`, `Claim 7`, `Supp Table S1 row 14`. |
-| `redistribution` | enum | `public_domain` \| `derived_features_only` \| `summary_stat` \| `verify`. |
+| `redistribution` | enum | `public_domain` \| `cc_by` \| `derived_features_only` \| `summary_stat` \| `verify`. |
 | `notes` | string | Free text (e.g. `resolved without discontinuation`, `grade_provisional`). |
 
 ---
@@ -122,9 +122,18 @@ grading input, not decoration, and no NfL row may be filed with
 ## Provenance rules
 
 - Every row MUST carry `source_id` + `source_ref` + `source_table`.
-- `redistribution` governs whether raw values may be published: US patents and
-  FDA/EMA regulatory documents are `public_domain`; journal-derived numbers are
-  `summary_stat` or `derived_features_only`; unresolved rights use `verify`.
+- `redistribution` governs whether raw values may be published:
+  - `public_domain` — US patents, FDA/EMA regulatory documents. Reproduce freely.
+  - `cc_by` — the source article is Creative Commons Attribution licensed, which
+    permits **unrestricted reproduction of the raw values with attribution**.
+    This is a materially stronger right than `summary_stat` and is tracked
+    separately rather than being conservatively flattened into it, because it is
+    what allows whole per-oligo panels to be republished verbatim in an open
+    dataset. Every `cc_by` row's `source_ref` carries the citation that
+    attribution requires.
+  - `summary_stat` / `derived_features_only` — numbers quoted from a source whose
+    licence does not clearly permit bulk reproduction.
+  - `verify` — rights unresolved; must be settled before public release.
 - `sequence_5to3` and any toxicity `readout_value` are **never fabricated**.
   Use `TBD` and fetch the source.
 - Values recalled from model memory are not acceptable provenance. Every number

@@ -1,0 +1,205 @@
+PATENTS LANE — OligoTox-CNS. All rows are US granted patents, redistribution=public_domain.
+
+=== 1. DOCUMENTS ACTUALLY FETCHED AND READ ===
+Full text was read from FreePatentsOnline mirrors of the USPTO grant text (HTML,
+structured <table> elements), saved to sources/cns/fpo/. Rows come from seven US
+grants:
+  P1  US 9,605,263 B2  — Ionis, "Compositions for modulating C9ORF72 expression".
+                          Tables 6, 7, 8, 9, 15, 16, 17 (Examples 2, 3, 12, 13, 14).
+  P2  US 10,968,453 B2 — Biogen MA, "Compositions for modulating SOD-1 expression".
+                          Tables 64, 65, 67, 69, 70 (Examples 14, 16, 18). Contains
+                          ISIS 666853 = tofersen (BIIB067), so max_phase=approved for
+                          that one compound; every other compound is research_panel.
+  P3  US 9,683,235 B2  — Ionis, "Compositions for modulating Tau expression".
+                          Tables 67, 68 (Example 20).
+  P4  US 11,834,660 B2 — Ionis, "Compositions for modulating Ataxin 2 expression".
+                          Tables 7, 10 (Example 2).
+  P5  US 11,339,393 B2 — Ionis, "Compositions for modulating C9ORF72 expression"
+                          (later continuation). Tables 32, 33, 34, 36 (Example 7).
+                          Its tables do NOT overlap the P1 tables used here.
+  P6  US 12,241,065 B2 — Bristol-Myers Squibb, "Antisense oligonucleotides targeting
+                          alpha-synuclein and uses thereof". Tables 5, 6, 7 (Example 5).
+  P7  US 11,851,654 B2 — Tokyo Medical and Dental University, "Nucleic acid with
+                          reduced toxicity" — a category-1 patent (a METHOD OF REDUCING
+                          the CNS toxicity of an oligonucleotide). Tables 1-16
+                          (Examples 1, 2, 4, 5).
+Also fetched and read but yielding no rows, with reasons:
+  - US 10,815,483 B2 and US 10,138,482 B2 (same C9ORF72 family as P1): used only as
+    independent cross-checks. Their Table 6 is byte-identical to P1's across all 93
+    compounds, and their Table 15 header disambiguates P1's (see section 3).
+    Not emitted separately, to avoid double-counting the same measurements under
+    three patent numbers.
+  - US 10,385,341 B2 / US 10,669,546 B2 (SOD-1 family siblings of P2): searched for the
+    64 Table-64 compounds whose sequences P2 does not print. They do not print them
+    either, so those sequences stay TBD.
+  - US 11,761,951 B2 — Bristol-Myers Squibb, "Methods of selecting therapeutic
+    molecules". This IS a category-1 patent (in vitro neuronal calcium-oscillation
+    assay used to predict in vivo CNS tolerability of ASOs) and describes the scoring
+    system and dosing (100 ug i.c.v. in mice; 900-1500 ug i.t. in rats), but its
+    per-compound sequence/score/calcium data live in FIGURES 4-6, which carry no text
+    layer in any full-text source reachable here. NO ROWS EXTRACTED — the numbers were
+    not readable, and are not guessed. NOTE FOR THE ASSEMBLER: another lane appears to
+    have already fetched the journal version of exactly this dataset
+    (sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx,
+    the 148-ASO mouse ICV tolerability panel behind Hagedorn et al. 2022 Nucleic Acid
+    Ther), so the gap left here is probably already covered from the literature side —
+    but as `summary_stat`, not `public_domain`.
+  - US 11,629,348 B2 (Ionis, "Linkage modified oligomeric compounds") mentions CNS
+    tolerability but its examples were not per-compound CNS tox tables. Not used.
+Failed fetches: patents.google.com returned HTTP 503 to WebFetch and served an
+anti-bot page to curl throughout the session; Espacenet returned 403. USPTO
+image-ppubs print PDFs were downloaded (sources/cns/US10815483.pdf, US9605263.pdf,
+US10138482.pdf) but are IMAGE-ONLY — pymupdf extracts zero characters from every
+page — so they could not be used and no value was taken from a rendered image.
+USPTO PSIPS (seqdata.uspto.gov/viewservice/api) returns 404 for all of these grants:
+it only holds ST.26 listings filed from 2022, so the formal SEQUENCE LISTING of the
+older grants was NOT reachable. See section 3 for what was used instead.
+
+=== 2. GRADE MAPPING (the assembler needs this for the methodology write-up) ===
+Four distinct source scales are mapped onto neurotox_grade 0-3. Every row also
+carries its own mapping sentence in `notes`. All grades are grade_provisional.
+
+(a) RODENT 7-ITEM TOLERABILITY / FOB SCORE, 0-7 — P1, P2, P3, P5.
+    Mouse i.c.v. version: 7 criteria (bright/alert/responsive; standing or hunched;
+    movement without stimuli; forward movement after lifting; any movement after
+    lifting; response to tail pinch; regular breathing), 0 if met / 1 if not, summed
+    per mouse, averaged per group. Rat i.t. version: 7 body parts (tail, posterior
+    posture, hind limbs, hind paws, forepaws, anterior posture, head), 0 if moving /
+    1 if paralysed. Both patents state saline/PBS controls score 0 (the SOD-1 patent
+    says rat controls "usually have a score of 0 or 1").
+      ACUTE reading (3 h):   0-<1 => 0 | 1-<3 => 1 | 3-<5 => 2 | >=5 => 3
+      8-WEEK reading:        0-<1 => 0 | 1-<3 => 2 | >=3 => 3
+    The 8-week ladder deliberately SKIPS grade 1, because grade 1 in the rubric is
+    defined as transient signs resolving in hours to days, and a deficit still
+    measurable at 8 weeks is by definition not transient.
+
+(b) GLIAL MARKER LEVEL vs CONCURRENT PBS/SALINE CONTROL — AIF1/Iba1 (microglia) and
+    GFAP (astrocytes), reported by the patents either as fold (control = 1.0) or as
+    % of control or as % increase. All are converted to fold before grading
+    (% / 100; % increase -> 1 + %/100); readout_value and readout_unit keep the
+    patent's own form.
+      <1.5x => 0 | 1.5-<2.0x => 1 | >=2.0x => 2
+    CAPPED AT 2 ON PURPOSE: the rubric reserves grade 3 for degeneration/loss,
+    paralysis, death or programme-halting toxicity, none of which a marker level on
+    its own establishes.
+    effect_direction on these rows: >=1.15x = increase, <=0.85x = decrease, else
+    no_change.
+
+(c) MOTOR PERFORMANCE vs CONCURRENT CONTROL — rotarod latency to fall, hindlimb grip
+    strength (P4, P5). Graded on the shortfall against the concurrent control arm of
+    the same strain/row:
+      within -15% => 0 | -15% to -30% => 1 | worse than -30% => 2
+    Direction matters here the same way it does for NfL: in the ATXN2-Q127 disease
+    model a LONGER rotarod latency is the intended pharmacology, not toxicity, so only
+    a shortfall against the strain-matched saline arm is graded as a CNS signal. The
+    wild-type arm of that table is the true tolerability comparison and is flagged
+    high_chronic_neurotox; the disease-model arms are flagged medium.
+
+(d) OTHER SCALES, mapped to the SAME PROPORTIONAL BAND EDGES as scale (a) so the
+    columns stay comparable:
+    - P6 Bristol-Myers Squibb 0-20 scale (Table 5): 5 categories — hyperactivity/
+      stereotypies, decreased vigilance/exploration/responsiveness, motor coordination
+      and strength, posture/appearance/breathing, tremor/hyperactivity/convulsion —
+      each 0-4, summed, max 20.
+        0-<1 => 0 | 1-<9 => 1 | 9-<15 => 2 | >=15 => 3
+    - P7 Tokyo Medical and Dental University 0-11 scale: the 7 mouse criteria above
+      plus no hyperactivity, no motor dysfunction/ataxia, normal posture, no tremors/
+      convulsions; 1 point per abnormal item; PBS controls 0 +/- 0.
+        0-<1 => 0 | 1-<5 => 1 | 5-<8 => 2 | >=8 => 3
+    - P7 "side-effect event rate (%)" is the INCIDENCE expression of the same
+      observation as the paired 0-11 severity score at the same timepoint, so each
+      such row carries the grade of its paired score row rather than a separate
+      incidence ladder.
+    - P7 "number of deaths / number of doses": any treatment-emergent death after CNS
+      dosing => grade 3 per the rubric ("moribundity/death"); 0/N => grade 0. The
+      concurrent PBS denominator is recorded in effect_vs_control.
+
+=== 3. SEQUENCE VERIFICATION — the two kidney-round hazards ===
+HAZARD (a), a naive [acgt]-run regex mis-parsing an entry. It bit here too, in a
+different medium: FreePatentsOnline wraps a long table cell across two or three
+<tr>s, so a bare regex reads ISIS 333611 as "CCGTCGCCCT" (10 nt) instead of
+"CCGTCGCCCTTCAGCACGCA" (20 nt), and tofersen as "CAGGATACAT" instead of
+"CAGGATACATTTCTACAGCT". The extractor therefore re-joins continuation rows and then
+REJECTS any reconstructed sequence that disagrees with ANY length declaration printed
+in the same table row. Available declarations, used as the substitute for the
+sequence listing's LENGTH field (PSIPS does not hold these grants — section 1):
+    - target start site and stop site      -> stop - start + 1
+    - gapmer motif                         -> e.g. 5-10-5 sums to 20
+    - chemistry code (e=2'-MOE, d=DNA, k=cEt) -> string length
+    - linkage code (s=phosphorothioate, o=phosphodiester) -> length + 1
+    - for P6/P7, the length stated in prose ("has 17 nucleotides") or in the compound
+      name ("13mer", "26mer")
+No sequence is emitted on fewer than one such check, and where several exist they all
+had to agree. Coverage actually achieved:
+    - P1 Table 6: all 93 sequences agree 3 ways (span, motif sum, linkage+1), and
+      the 93 rows are BYTE-IDENTICAL across three independently published grants
+      (US9605263, US10138482, US10815483). The 93 rows use 35 SEQ ID NOs with zero
+      inter-row disagreement among rows sharing a SEQ ID NO.
+    - P1 Tables 8/9 (6 comparator ASOs): span + declared 5-10-5 motif.
+    - P2: tofersen agrees 4 ways (chemistry code, linkage code, motif, span).
+    - P3/P4/P5: 2-4 ways each; P4's ATXN2 compounds carry two independent spans
+      (mRNA and genomic coordinates) plus the uniform declared 20-nucleoside design.
+    - P7: every reconstructed strand equals the "Nmer" declared in its own name.
+HAZARD (b), judging case from pixels. Not applicable to P1-P5: those Ionis/Biogen
+tables print sequences in a single case and encode chemistry in separate Motif /
+Linkage / Chemistry columns, which are recorded verbatim in oligo notes. It IS
+applicable to P6 and P7, where case is the chemistry. Both were resolved from the
+TEXT LAYER only:
+    - P6 ASO-005459 = AtTcctttacaccACAC. Upper = LNA, lower = DNA. Corroborated three
+      further ways in the same text: the printed design string LDLDDDDDDDDDDLLLL; the
+      sentence "each of the first nucleotide, the third nucleotide, and the 14th-17th
+      nucleotides from the 5' end is a modified nucleotide" (positions 1,3,14-17 are
+      exactly the upper-case positions); and "has 17 nucleotides".
+    - P7 strands carry explicit "(L)" LNA markers per residue in the text, so
+      upper+(L)=LNA, upper=RNA, lower=DNA is read, not inferred. The verbatim printed
+      string is kept in each oligo's notes.
+Sequences filled: 191 of 256 oligos. The 65 TBDs are honest gaps, not omissions:
+64 of them are P2 Table-64 compounds whose nucleobase sequences are printed nowhere
+in US10968453 / US10385341 / US10669546 (only ISIS number, target start site and
+chemistry class), and one is ISIS 571883 in P5, for which Example 7 gives the design
+and target start site but not the sequence.
+
+=== 4. THINGS THE ASSEMBLER SHOULD RE-CHECK ===
+- P1 Table 15 column header. In P1 itself the header reads cleanly as
+  ISIS No. | Score 8 weeks after injection | AIF1 (spinal cord) | AIF1 (cerebellum) |
+  GFAP (spinal cord) | GFAP (cortex) | SEQ ID NO., and US10138482 typesets it
+  identically. In US10815483 the same header is typeset with a stray wrapped "cord)"
+  under the AIF1 (cerebellum) column, which would invite a mis-read. P1's reading was
+  used. Note the prose of Example 12 says only "the cortex and spinal cord were
+  collected", which does not mention cerebellum — the table header and the prose are
+  in mild tension in the patent itself. Flagged, not silently resolved.
+- P6 Table 7 (28-day, all-zero scores): the patent does NOT state which study it
+  reports. The surrounding text describes both a 3.13-50 ug i.c.v. dose-response in
+  A53T-PAC mice and a separate 100 ug i.c.v. study in wild-type C57BL/6 mice followed
+  for 4 weeks. dose_or_conc_value/unit are TBD and system_model is the generic
+  mouse_CNS_invivo rather than a guessed strain.
+- P7 dose. The patent prints "12 umol per mouse" (Examples 1, 2, 4) and "6 umol/mouse"
+  (Example 5) for an i.c.v. injection of 5-7 uL. That is almost certainly a nmol/umol
+  slip in the translation, but the printed figure is reproduced unconverted, with
+  dose_or_conc_unit left TBD because the schema's dose-unit enum has no molar-amount
+  unit. Someone should confirm against the JP priority document.
+- P5 Tables 33/34 (rotarod, grip strength) do not state the dose for that
+  sub-experiment; dose_or_conc_value/unit are TBD. P5 Table 36 does not state the
+  time point; exposure_duration is TBD.
+- The same "ASO (BACE1) 13mer" is dosed in P7 Examples 1, 2 and 4 and returns
+  different scores each time (7.4/6.0/2.4 vs 6.0/5.0/2.4 vs 7.5/5.5/0.5). These are
+  independent replicate experiments in the patent, filed as separate rows and
+  distinguished by source_table; they are not duplicates and should not be de-duped.
+- Body-weight rows were deliberately NOT filed. P2 Table 69 and P5 Table 37 report
+  body weight after i.c.v./i.t. dosing, but body weight is a systemic tolerability
+  readout with no CNS endpoint_domain in the schema; the P2 values are preserved in
+  the notes of the paired FOB row instead.
+- No hydrocephalus / ventriculomegaly row was found in ANY patent examined. Searches
+  for "hydrocephalus" and "ventriculomegaly" alongside antisense/intrathecal returned
+  only clinical literature (tominersen, KCNT1 ASO, nusinersen post-marketing), which
+  belongs to the clinical lanes, not here. challenge_priority=high_hydrocephalus is
+  therefore unused in this lane.
+- No in vitro row and no human-model row is present in this lane: none of the patents
+  with per-compound CNS tox tables reported an iPSC/organoid neurotoxicity readout in
+  a machine-readable table. NCATS's preferred human in vitro systems must come from
+  the other lanes.
+- challenge_priority=low_acute_electrophysiology is unused: no electrophysiology
+  readout was extracted (the one candidate, P1's calcium-oscillation sibling
+  US11761951, had unreadable figure data — section 1).
+- source_id values P1-P7 are placeholders; SOURCES-CNS.md does not exist yet and needs
+  entries created for each of the seven grants.
