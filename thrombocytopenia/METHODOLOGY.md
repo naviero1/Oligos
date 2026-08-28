@@ -231,6 +231,23 @@ available to an LLM-assisted curation: **a plausible number attached to a real
 citation that does not contain it.** Schema validation cannot catch that; only
 re-reading the source can.
 
+### A failure mode worth recording: the structured-output ceiling
+
+The richest single source in the dataset (Crooke 2017, the pooled Ionis safety
+database) initially **failed to extract**, and the failure was not a research
+failure: the agent had read the source and verified its values, then exceeded a
+**64,000-token cap on a single structured response** while trying to return them
+all at once. The symptom — a dead agent and no rows — looks identical to "the
+source had nothing", which is exactly why it is worth naming.
+
+The fix, and the pattern used for every high-yield source thereafter, is to have
+the agent **write its output to a file incrementally** rather than return it as
+one structured response. File-writing agents in this project handled 211-row
+payloads without difficulty. The practical rule: *the size of an extraction
+should not be bounded by the size of a model's reply.* A secondary benefit is
+that a failure late in a long extraction no longer discards the work already
+done.
+
 ### Independent known-answer test
 
 Separately from the agent pipeline, the inotersen FDA label was retrieved and
