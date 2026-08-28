@@ -16,6 +16,11 @@ of the Phase 2 submission and is written to align with NIH Scientific Data Shari
 
 The solution is the **curated, openly-releasable dataset** and its documentation:
 
+The solution is now **two curated datasets** covering two named OligoTox
+endpoints, sharing one schema design, one provenance discipline and one licence.
+
+**Kidney (nephrotoxicity):**
+
 | Artifact | Description |
 |---|---|
 | `data/oligos.csv` | 65 oligonucleotides — identity + design predictors (17 columns) |
@@ -24,6 +29,19 @@ The solution is the **curated, openly-releasable dataset** and its documentation
 | `METHODOLOGY.md` | How the dataset was assembled (sources → extraction → grading → QC) |
 | `sources/SOURCES.md` | Source registry (16 source IDs), redistribution status, acquisition state |
 | `README.md`, `PRESENTATION.md` | Overview and findings deck |
+
+**CNS (chronic neurotoxicity and hydrocephalus):**
+
+| Artifact | Description |
+|---|---|
+| `data/cns_oligos.csv` | 585 oligonucleotides — identity + design predictors (same 17-column layout, so the two datasets union without re-mapping) |
+| `data/cns_measurements.csv` | 2,331 graded per-measurement CNS-toxicity records (26 columns) |
+| `data/oligotox_cns_merged.csv` | Generated analysis-ready denormalised view |
+| `schema-cns.md` | Data dictionary, vocabularies, and the 0–3 `neurotox_grade` rubric |
+| `METHODOLOGY-CNS.md` | Assembly, extraction hazards, grading disciplines, QC |
+| `sources/SOURCES-CNS.md` | Source registry (102 documents), generated from the data |
+| `README-CNS.md` | Overview, record counter, and stated limitations |
+| `scripts/` | The full pipeline: ingest → assemble → QC → merged view → statistics |
 
 The dataset is a **curation of already-published data**. It contains **no human-
 subjects data, no personally identifiable information, and no protected health
@@ -45,10 +63,18 @@ redistribution.
   CC0 1.0 can be substituted at NCATS's preference.)*
 - **Underlying third-party full texts are never redistributed.** Journal articles
   are **referenced by DOI/PMID**, not copied. Values reproduced in the tables are
-  limited to (a) **public-domain** sources — USPTO patents and U.S./EU regulatory
-  labels — and (b) **summary statistics** used under fair use. Every row records
-  its rights status in the `redistribution` column (`public_domain` or
-  `summary_stat`).
+  limited to (a) **public-domain** sources — USPTO patents, U.S./EU regulatory
+  documents and ClinicalTrials.gov; (b) **CC-BY** sources, whose licence expressly
+  permits reproducing raw values with attribution; and (c) **summary statistics**
+  used under fair use. Every row records its rights status in the
+  `redistribution` column (`public_domain`, `cc_by`, `summary_stat`, or `verify`).
+- **Rights are read, not assumed.** For the CNS dataset the `redistribution` value
+  is taken from the licence statement inside the source document archived under
+  `sources/cns/`. **CC-BY-NC and CC-BY-ND sources are deliberately not treated as
+  freely reproducible**, because republishing their tables inside a CC-BY dataset
+  would conflict with their non-commercial and no-derivatives terms; their facts
+  are quoted as `summary_stat` instead. Rows still marked `verify` are the
+  outstanding rights work to be closed before public release.
 - **No patents, trade secrets, or restrictive IP** are or will be claimed over the
   dataset. There is no proprietary component whose withdrawal could remove public
   access.
