@@ -231,6 +231,46 @@ available to an LLM-assisted curation: **a plausible number attached to a real
 citation that does not contain it.** Schema validation cannot catch that; only
 re-reading the source can.
 
+### Three table-extraction hazards, all of which occurred
+
+Patent and review tables are the highest-volume sources here and also the most
+dangerous, because every failure mode below produces **plausible, well-formed,
+wrong data** rather than an error. Two were inherited as warnings from the sister
+kidney dataset; the third was discovered here. All three were caught, and they
+are recorded because anyone re-running this pipeline will meet them again.
+
+1. **Line-wrapped sequence cells truncate silently.** A naive `[ACGT]`-run regex
+   over a patent table returns a plausible short sequence when a cell wraps — one
+   run produced **94 corrupted sequences** this way, and Table 50 of the PKK
+   patent wraps *every* cell, yielding 8–10-mers from 16–20-mers. *Guard:* accept
+   a sequence only after it matches an **independently declared length** — the
+   `LENGTH` field, the target start/stop span, or the gapmer-motif sum. Across
+   the APOL1 patent, 2,631 sequences passed dual validation (span *and* motif
+   sum) with zero conflicts.
+
+2. **Chemistry encoding is invisible to a renderer.** Letter case encodes
+   modified wings vs DNA gap; in one paper chemistry is encoded by **font
+   colour**, and phosphorothioate vs phosphodiester by **underline**. *Guard:*
+   resolve encoding from the PDF **text layer** (PyMuPDF span attributes), never
+   from rendered pixels — and where the text layer cannot carry it, as with the
+   underline, leave `backbone_chemistry`/`ps_count` as `TBD` rather than guess.
+
+3. **Header/row misalignment silently returns the wrong analyte** *(discovered
+   here, and the most dangerous of the three)*. In three of five tables in the
+   APOL1 patent, the header row **omits the leading row-label cell**, so
+   addressing a column by header name is off by one — which returned **RBC counts
+   where platelet counts were intended in 35 of 55 rows**. Nothing about the
+   result looks wrong: the values are real haematology numbers of plausible
+   magnitude from the correct study. *Guard:* three independent checks —
+   right-alignment of the numeric block, an assertion against the units row, and
+   a magnitude sanity check — after which all 55 values were re-verified against
+   an independent manual transcription (55/55), and the 9 PKK values matched
+   Google Patents cell-for-cell.
+
+The general lesson: for tabular extraction, **validate every value against
+something outside the parse** — a declared length, a units row, a second host, or
+a hand transcription. A parser that is merely self-consistent will fail silently.
+
 ### Cross-dataset sequence agreement
 
 Because the two endpoints in this repository share many compounds, sequences
