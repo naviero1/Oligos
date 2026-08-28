@@ -249,7 +249,7 @@ row.
   This is a property of the underlying literature (severe thrombocytopenia is
   observed in trials, not in dishes), and it means grade is partially confounded
   with study type. Models must account for this rather than learn it as biology.
-- **Negative results are under-reported at source.** Compounds with no platelet
+
   signal frequently generate no publication, so the grade-0 class is
   systematically harder to populate than the positive classes and is drawn
   disproportionately from regulatory labels, where safety monitoring is reported
@@ -260,6 +260,35 @@ row.
   any acute in-vitro activation readout. The dataset labels both so the
   distinction can be modelled, but no claim is made that the former predicts the
   latter.
+- **The megakaryocyte / production axis is a documented empty set, not an
+  unsearched one.** A dedicated lane looked for oligonucleotides applied to
+  CD34⁺-derived megakaryocytes, MEG-01/Dami/K562 megakaryocytic lines,
+  iPSC-derived megakaryocytes or bone-marrow cultures with megakaryocyte
+  readouts (number, ploidy, proplatelet formation, differentiation). Six
+  targeted searches returned nothing, and none of the 21 regulatory documents
+  parsed reported bone-marrow megakaryocyte histopathology. The lane was left
+  **empty rather than padded**. This matters for interpretation: the dataset
+  currently characterises platelet **clearance and activation**, and cannot
+  distinguish impaired **production** as a mechanism. It is the clearest gap a
+  wet-lab contribution to this challenge could fill.
+  *(One partial exception was captured elsewhere: cord-blood-derived
+  megakaryocyte proplatelet counts in PMC8804562.)*
+- **Aptamer coverage is thin.** The pegaptanib FDA pharmacology review is an
+  image-only scan (≈1.9 KB of extractable text across 114 pages), so that route
+  yielded nothing; aptamer rows come from the PF4-complex literature instead.
+- **Some rows cite an abstract, not a table.** Where a primary paper's full text
+  is paywalled (several Ionis nonhuman-primate studies), values were taken from
+  the PubMed abstract and the locus recorded honestly as `Abstract (Results)`.
+  An abstract is a specific, retrievable locus, so these rows are legitimately
+  sourced — but they are weaker evidence than a numbered table, `qc_thrombo.py`
+  reports their count as a standing warning, and they should be re-verified
+  against full text before release.
+- **Negative results are under-reported at source.** A compound with no platelet
+  signal usually generates no publication, so grade-0 rows come
+  disproportionately from regulatory review documents, where haematology
+  monitoring is reported whether or not it was eventful. **Label silence was
+  never converted into a grade-0 row** — absence of mention is not a measured
+  zero, and `scan_labels_platelet.py` states this in its own output.
 - **Patent-derived rows require care** — the sister kidney dataset documented two
   concrete extraction hazards in patent sequence listings: a naive `[acgt]`-run
   regex silently mis-parses entries whose modified residues render oddly in the
