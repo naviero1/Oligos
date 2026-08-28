@@ -86,7 +86,7 @@ A single oligo at a single dose measured for NfL *and* ventricular volume =
 | `effect_vs_control` | string | Quantified effect vs control (e.g. `3.2x`, `-45%`, `12pct_vs_2pct_placebo`), else `TBD`. |
 | `neurotox_grade` | int 0–3 | Graded label (rubric below). |
 | `reversibility` | enum | `reversible` \| `partially_reversible` \| `irreversible` \| `not_assessed` \| `TBD`. Central to separating transient acute effects from **chronic** neurotoxicity. |
-| `is_cns_specific` | bool | `TRUE` = strict-CNS row; `FALSE` = non-CNS/systemic comparator row (flagged, e.g. a negative-control systemic oligo with no CNS exposure). |
+| `is_cns_specific` | bool | `TRUE` = the readout is a measurement **in the CNS compartment**. `FALSE` = a comparator or peripheral readout, flagged so it cannot be mistaken for one. `FALSE` covers two distinct cases and both matter: a systemically dosed oligonucleotide with no CNS exposure (a negative control), **and** a CNS-delivered oligonucleotide whose readout was taken outside the CNS — plasma neurofilament light after intrathecal dosing is a legitimate translational readout but is not a CNS-compartment measurement, and conflating the two would let a peripheral value stand in for a central one. |
 | `source_id` | string | → entry in `sources/SOURCES-CNS.md`. |
 | `source_ref` | string | DOI / PMID / patent number / NCT number / FDA application number. |
 | `source_table` | string | Exact locus, e.g. `Table 2`, `Fig 3B`, `label sec 5.1`, `Claim 7`, `Supp Table S1 row 14`. |

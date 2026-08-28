@@ -434,6 +434,27 @@ def main():
         for l, o in members:
             tmp_to_cns[(l, o["oligo_id"])] = cns_id
 
+    # Lanes cross-reference each other's compounds by placeholder id
+    # ("derivative of ASO2 (TMP_iv_13)"). Those ids are internal scaffolding and
+    # mean nothing to a consumer of the published table, so resolve them to the
+    # CNS ids they became. A dangling internal identifier in a public column is a
+    # small thing that makes a dataset look unfinished.
+    tmp_by_id = {}
+    for (lane, tmp), cns in tmp_to_cns.items():
+        tmp_by_id.setdefault(tmp, set()).add(cns)
+    tmp_re = re.compile(r"TMP_[A-Za-z0-9]+_\d+")
+
+    def resolve_tmp(text):
+        def sub(mt):
+            hits = tmp_by_id.get(mt.group(0))
+            return sorted(hits)[0] if hits and len(hits) == 1 else "internal_ref"
+        return tmp_re.sub(sub, text)
+
+    for row in merged_oligos:
+        for col in ("aliases", "notes", "design_source"):
+            if "TMP_" in row[col]:
+                row[col] = resolve_tmp(row[col])
+
     # ---------------- collect + dedupe measurements ---------------------
     licences = load_licences()
     upgraded = 0
