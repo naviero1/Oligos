@@ -198,6 +198,66 @@ def merge_field(field, candidates, notes_sink):
     return winner
 
 
+NCT_RE = re.compile(r"\b(NCT\d{8})\b", re.I)
+PAT_RE = re.compile(r"\b(US\s?\d{7,8}\s?[AB]\d?)\b", re.I)
+DOI_RE = re.compile(r"\b(10\.\d{4,9}/[^\s,;)\]]+)")
+PMID_RE = re.compile(r"\bPMID[:\s]*(\d{6,9})\b", re.I)
+
+
+def canon_source_ref(ref):
+    """Reduce a source reference to its canonical identifier.
+
+    Lanes cite the same document in different prose — `NCT03761849` and
+    `NCT03761849 (GENERATION HD1), ClinicalTrials.gov posted results` are one
+    trial. Left unnormalised this inflates the apparent source count, breaks
+    per-source analysis, and — worse — defeats cross-lane de-duplication, since
+    the duplicate detector keys on the reference.
+    """
+    s = norm(ref)
+    m = NCT_RE.search(s)
+    if m:
+        return m.group(1).upper()
+    m = PAT_RE.search(s)
+    if m:
+        return re.sub(r"\s+", "", m.group(1)).upper()
+    m = DOI_RE.search(s)
+    if m:
+        return "doi:" + m.group(1).rstrip(".,;")
+    m = PMID_RE.search(s)
+    if m:
+        return "PMID:" + m.group(1)
+    return s
+
+
+def load_licences():
+    """Map DOI -> Creative Commons licence, read from the archived source XMLs.
+
+    Redistribution rights are asserted from the licence statement in the
+    document we actually archived, not from an assumption about the journal.
+    Only plain CC-BY permits reproducing raw values in a CC-BY dataset; CC-BY-NC
+    and CC-BY-ND do not, so those stay at `summary_stat` (facts quoted, not the
+    table republished).
+    """
+    lic = {}
+    for path in glob.glob(os.path.join(ROOT, "sources", "cns", "*.xml")):
+        try:
+            t = open(path, encoding="utf-8", errors="replace").read()
+        except OSError:
+            continue
+        doi = re.search(r'<article-id pub-id-type="doi">([^<]+)', t)
+        if not doi:
+            continue
+        codes = {a.lower() for a, _ in
+                 re.findall(r"creativecommons\.org/licenses/([a-z\-]+)/([0-9.]+)", t)}
+        if not codes:
+            continue
+        # plain "by" only; anything with nc or nd is not bulk-redistributable here
+        free = any(c == "by" for c in codes) and not any(
+            "nc" in c or "nd" in c for c in codes)
+        lic["doi:" + doi.group(1).strip().lower()] = "cc_by" if free else "restricted"
+    return lic
+
+
 def merge_sequence(candidates, notes_sink):
     """Reconcile sequences reported by several lanes for the same molecule.
 
@@ -356,9 +416,25 @@ def main():
             tmp_to_cns[(l, o["oligo_id"])] = cns_id
 
     # ---------------- collect + dedupe measurements ---------------------
+    licences = load_licences()
+    upgraded = 0
     raw = []
     for lane, d in lanes:
         for m in d.get("measurements", []):
+            m = dict(m)
+            original = norm(m.get("source_ref"))
+            canon = canon_source_ref(original)
+            if canon != original:
+                m["source_ref"] = canon
+                m["notes"] = norm(m.get("notes")) + \
+                    " ;; source_ref_as_cited=" + original
+            lic = licences.get(canon.lower())
+            if lic == "cc_by" and m.get("redistribution") in (
+                    "summary_stat", "derived_features_only", "verify"):
+                m["redistribution"] = "cc_by"
+                m["notes"] = norm(m.get("notes")) + \
+                    " ;; redistribution_upgraded_to_cc_by_from_archived_licence_statement"
+                upgraded += 1
             cns = tmp_to_cns.get((lane, m.get("oligo_id")))
             if cns is None:
                 print("WARN dropping %s/%s: oligo_id %r not found in its lane's oligos"
@@ -447,6 +523,7 @@ def main():
             w.writerow(r)
 
     # ---------------- report ---------------------------------------------
+    print("redistribution upgraded to cc_by from archived licences: %d rows" % upgraded)
     print("lanes            : %d (%s)" % (
         len(lanes), ", ".join("%s:%d/%d" % (l, len(d.get('oligos', [])),
                                             len(d.get('measurements', [])))
