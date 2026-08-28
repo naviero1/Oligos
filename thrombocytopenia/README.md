@@ -145,13 +145,13 @@ with no modelling:
 | backbone | n rows | n oligos | mean grade |
 |---|---:|---:|---:|
 | `PMO_neutral` | 10 | 6 | 0.10 |
-| `PS_PO_mix` | 20 | 6 | 0.30 |
-| `full_PO` | 66 | 8 | 0.44 |
-| `full_PS` | 1480 | 166 | 0.99 |
+| `PS_PO_mix` | 26 | 6 | 0.27 |
+| `full_PO` | 57 | 6 | 0.44 |
+| `full_PS` | 1483 | 167 | 0.99 |
 
-Mean grade also rises with phosphorothioate count (0 → 0.39; 13–16 → 0.61; 17–19 → 1.09; 20+ → 1.47 linkages).
+Mean grade also rises with phosphorothioate count (0 → 0.39; 13–16 → 0.60; 17–19 → 1.09; 20+ → 1.47 linkages).
 
-Modality orders PMO 0.10 < GalNAc_siRNA 0.27 < siRNA 0.50 < splice_switching_ASO 0.67 < ASO_gapmer 0.89 < other 1.17 < aptamer 1.60.
+Modality orders PMO 0.10 < GalNAc_siRNA 0.27 < siRNA 0.50 < ASO_gapmer 0.89 < splice_switching_ASO 0.90 < other 1.17 < aptamer 1.60.
 
 **The caveat that must travel with this.** Grade is partly confounded with
 study type — severe thrombocytopenia is observed in trials, not in dishes:
@@ -258,25 +258,25 @@ python3 scripts/refresh_docs.py                             # regenerate the tab
 
 | | Count |
 |---|------|
-| Unique oligos (`oligos.csv`) | **252** |
+| Unique oligos (`oligos.csv`) | **251** |
 | Measurement rows (`measurements.csv`) | **1786** |
 | — of which strict-platelet | **1595** |
 | — of which adjacent-haematology (flagged) | **191** |
 | Grade distribution (0/1/2/3) | 756 / 466 / 372 / 192 |
 | Distinct target genes | **60** |
 | Distinct sources (`source_ref`) | **47** |
-| Oligos with sequence (not TBD) | **193 / 252** |
+| Oligos with sequence (not TBD) | **192 / 251** |
 
 ## Independent (predictor) variables — `oligos.csv`
 
 | Variable | Distribution |
 |----------|--------------|
-| **Modality (`oligo_class`)** | ASO_gapmer 186 · other 45 · PMO 6 · aptamer 5 · GalNAc_siRNA 4 · splice_switching_ASO 4 · siRNA 2 |
-| **Backbone (`backbone_chemistry`)** | full_PS 190 · TBD 34 · PS_PO_mix 10 · full_PO 8 · PMO_neutral 6 · mixed 3 · NA 1 |
-| **Conjugate** | none 225 · GalNAc 14 · lipid 6 · TBD 5 · other 1 · PEG 1 |
-| **Development stage (`max_phase`)** | research_panel 136 · preclinical 52 · phase_1 24 · approved 16 · phase_2 10 · class_review 8 · phase_3 4 · TBD 1 · approved_EMA 1 |
+| **Modality (`oligo_class`)** | ASO_gapmer 186 · other 43 · PMO 6 · aptamer 5 · splice_switching_ASO 5 · GalNAc_siRNA 4 · siRNA 2 |
+| **Backbone (`backbone_chemistry`)** | full_PS 191 · TBD 34 · PS_PO_mix 10 · full_PO 6 · PMO_neutral 6 · mixed 3 · NA 1 |
+| **Conjugate** | none 225 · GalNAc 14 · lipid 5 · TBD 5 · other 1 · PEG 1 |
+| **Development stage (`max_phase`)** | research_panel 135 · preclinical 52 · phase_1 24 · approved 16 · phase_2 10 · class_review 8 · phase_3 4 · TBD 1 · approved_EMA 1 |
 | **Sugar modifications** | DNA_gap 174 · 2'-MOE 155 · cEt 37 · 5-methylcytosine 19 · TBD 19 · DNA 15 · 2'-OMe 11 · LNA 9 · DNA_deoxyribose 8 · morpholino 7 |
-| **Sequence available** | 193 / 252 (rest `TBD`, never guessed) |
+| **Sequence available** | 192 / 251 (rest `TBD`, never guessed) |
 
 ## Dependent (indicator) variables — `measurements.csv`
 

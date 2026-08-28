@@ -17,6 +17,37 @@ Usage:  python3 scripts/merge_lane_files.py out.json in1.json in2.json ...
 import json, sys
 
 
+# ---------------------------------------------------------------------------
+# DETERMINISTIC LANE PRECEDENCE.
+#
+# assemble_thrombo resolves a scalar conflict between two real values by keeping
+# the FIRST one seen, so the merged output depended on the order lanes were passed
+# in — globbing `lanes/*.json` gave a different oligos.csv than the ingest
+# script's hand-written order. Same inputs, different result: a reproducibility
+# defect, and one that quietly picked `TNFA` over the HGNC-canonical `TNF`.
+#
+# Lanes are therefore sorted by an explicit precedence before merging, so any
+# caller gets identical output. Precedence runs from most-curated to bulk
+# extraction: design records validated against WHO INN nomenclature and patent
+# sequence listings outrank curator-verified regulatory rows, which outrank
+# agent-extracted panels, which outrank the bulk workflow harvest.
+LANE_PRECEDENCE = [
+    "kidney_design_enrichment",      # INN- and patent-validated design metadata
+    "curated_regulatory_labels",     # curator-verified, canonical vocabulary
+    "preclinical_and_negatives",
+    "patents_and_panels",
+    "patents2_reviews_aptamers",
+    "crooke2017_pooled_clinical",
+]
+
+
+def lane_rank(lane):
+    name = lane.get("lane", "")
+    for i, key in enumerate(LANE_PRECEDENCE):
+        if name.startswith(key):
+            return (i, name)
+    return (len(LANE_PRECEDENCE), name)   # workflow:* and anything else, then by name
+
 def normalize(path):
     """Return a list of lane dicts from one input file."""
     try:
@@ -55,16 +86,21 @@ def main():
         sys.exit(__doc__)
     out_path, inputs = sys.argv[1], sys.argv[2:]
 
-    lanes, tot_o, tot_m, tot_v = [], 0, 0, 0
+    collected = []
     for p in inputs:
-        for ln in normalize(p):
-            no, nm = len(ln["oligos"]), len(ln["measurements"])
-            nv = len(((ln.get("verified") or {}).get("verdicts")) or [])
-            tot_o += no
-            tot_m += nm
-            tot_v += nv
-            lanes.append(ln)
-            print(f"  {ln['lane']:<34} oligos={no:>4}  measurements={nm:>4}  verdicts={nv:>4}")
+        collected.extend(normalize(p))
+
+    # sort before reporting, so the printed order is the order actually merged
+    lanes = sorted(collected, key=lane_rank)
+
+    tot_o = tot_m = tot_v = 0
+    for ln in lanes:
+        no, nm = len(ln["oligos"]), len(ln["measurements"])
+        nv = len(((ln.get("verified") or {}).get("verdicts")) or [])
+        tot_o += no
+        tot_m += nm
+        tot_v += nv
+        print(f"  {ln['lane']:<34} oligos={no:>4}  measurements={nm:>4}  verdicts={nv:>4}")
 
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump({"lanes": lanes}, f)

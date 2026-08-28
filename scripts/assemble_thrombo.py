@@ -111,6 +111,45 @@ NAME_DISAMBIGUATION = [
 ]
 
 
+# ---------------------------------------------------------------------------
+# SYNONYM NAMES — the inverse of a collision: one molecule, two names.
+#
+# Different papers name the same reagent differently, and joining on the name
+# alone splits one compound into two records with the outcome evidence divided
+# between them. Each entry below was confirmed by CONTENT, not by the names
+# looking similar: identical sequence, identical backbone, identical ps_count,
+# and both sources explicitly describing the same variant.
+#
+#   ODN2395_nonmod (Flierl 2015, 18 rows) == ODN2395 (Sewing 2017, 6 rows)
+#     Both are the PHOSPHODIESTER variant of ODN2395:
+#     TCGTCGTTTTCGGCGCGCGCCG, full_PO, ps_count 0. Flierl's Methods give
+#     "ODN2395 ... with and without PS backbone"; Sewing's Table 2 prints it
+#     without thioate marks. Kept separate they would look like two independent
+#     negative controls when they are one compound measured twice.
+#
+# Note this is the OPPOSITE hazard to NAME_DISAMBIGUATION above, which splits one
+# name that means two molecules. Both are needed; neither implies the other.
+NAME_ALIASES = {
+    "odn2395nonmod": "ODN2395",
+}
+
+
+def canonicalize_names(rows):
+    """Fold synonym names onto one canonical name. Reports what it folded."""
+    folded = collections.Counter()
+    for r in rows:
+        nk = norm_name(r.get("oligo_name"))
+        if nk in NAME_ALIASES:
+            was = r["oligo_name"]
+            r["oligo_name"] = NAME_ALIASES[nk]
+            note = clean(r.get("notes"))
+            r["notes"] = ((note if note != "TBD" else "")
+                          + f";name_canonicalized_from:{was}"
+                          + ";same molecule as the canonical record - identical sequence,"
+                            " backbone and ps_count, confirmed by content not by name")
+            folded[f"{was} -> {r['oligo_name']}"] += 1
+    return folded
+
 def disambiguate(rows, src_field="source_ref"):
     """Remap names that mean different molecules in different sources.
 
@@ -282,6 +321,7 @@ def main():
     for lane in lanes:
         lname = lane.get("lane", "?")
         disambiguate(lane.get("oligos") or [], src_field="design_source")
+        canonicalize_names(lane.get("oligos") or [])
         for o in lane.get("oligos") or []:
             k = norm_name(o.get("oligo_name"))
             if not k:
@@ -300,6 +340,7 @@ def main():
             meas_rows.append(m)
 
     name_fixes = disambiguate(meas_rows)
+    alias_fixes = canonicalize_names(meas_rows)
 
     # --- deduplicate measurements on their natural key --------------------------
     seen, deduped = {}, []
@@ -408,6 +449,10 @@ def main():
     print(f"oligos.csv        {len(ordered)} rows")
     print(f"measurements.csv  {len(deduped)} rows")
     print("verdicts:", dict(all_stats))
+    if alias_fixes:
+        print("synonym names folded (one molecule, two names):")
+        for k, n in alias_fixes.most_common():
+            print(f"    {k}  (x{n})")
     if name_fixes:
         print("name disambiguations applied:")
         for k, n in name_fixes.most_common():

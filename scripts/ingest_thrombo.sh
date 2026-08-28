@@ -55,12 +55,26 @@ python3 scripts/merge_lane_files.py "$SCRATCH/merged_final.json" \
     "${LANES[@]}" "$SCRATCH/kidney_lane.json" >/dev/null
 python3 scripts/assemble_thrombo.py "$SCRATCH/merged_final.json"
 
+# Re-assembly renumbers measurement_ids, so verification markers written into the
+# previous CSV are gone by this point. The committed verdicts carry a natural key
+# drawn from row content, so they survive that renumbering and are re-applied here
+# automatically — otherwise every ingestion round would silently discard the
+# verification work and the dataset would quietly regress to "unverified".
 echo
-echo "== 5. QC (gates the round) =="
+echo "== 5. re-apply committed verification verdicts =="
+VERDICTS=(thrombocytopenia/curation/verdicts/*.json)
+if [[ -e "${VERDICTS[0]}" ]]; then
+  python3 scripts/apply_verdicts.py "${VERDICTS[@]}"
+else
+  echo "   (no verdict files committed yet — all rows will read as unverified)"
+fi
+
+echo
+echo "== 6. QC (gates the round) =="
 python3 scripts/qc_thrombo.py
 
 echo
-echo "== 6. rebuild derived view + generated docs =="
+echo "== 7. rebuild derived view + generated docs =="
 python3 scripts/build_merged_thrombo.py
 python3 scripts/refresh_docs.py
 

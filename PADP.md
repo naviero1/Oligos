@@ -14,7 +14,10 @@ of the Phase 2 submission and is written to align with NIH Scientific Data Shari
 
 ## 1. Scope — the "solution" covered by this plan
 
-The solution is the **curated, openly-releasable dataset** and its documentation:
+The solution is **two curated, openly-releasable endpoint datasets** and their
+documentation. Both are covered by this plan on identical terms.
+
+### 1a. OligoTox-Kidney (nephrotoxicity)
 
 | Artifact | Description |
 |---|---|
@@ -22,8 +25,27 @@ The solution is the **curated, openly-releasable dataset** and its documentation
 | `data/measurements.csv` | 111 graded per-measurement nephrotoxicity records (23 columns) |
 | `schema.md` | Full data dictionary, controlled vocabularies, and the 0–3 grade rubric |
 | `METHODOLOGY.md` | How the dataset was assembled (sources → extraction → grading → QC) |
-| `sources/SOURCES.md` | Source registry (16 source IDs), redistribution status, acquisition state |
+| `sources/SOURCES.md` | Source registry, redistribution status, acquisition state |
 | `README.md`, `PRESENTATION.md` | Overview and findings deck |
+
+### 1b. OligoTox-Thrombocytopenia (platelet toxicity)
+
+| Artifact | Description |
+|---|---|
+| `thrombocytopenia/data/oligos.csv` | 251 oligonucleotides — identity + design predictors (17 columns) |
+| `thrombocytopenia/data/measurements.csv` | 1,786 graded per-measurement platelet-toxicity records (23 columns), 628 carrying a `verified_against_source` marker |
+| `thrombocytopenia/data/oligotox_thrombo_merged.csv` | generated denormalized analysis view (regenerated, never hand-edited) |
+| `thrombocytopenia/schema.md` | Data dictionary, controlled vocabularies, and the 0–3 grade rubric |
+| `thrombocytopenia/METHODOLOGY.md` | Assembly, grading conventions, QC, verification status, and known limitations |
+| `thrombocytopenia/SOURCES.md` | Source registry with per-source redistribution class |
+| `thrombocytopenia/README.md` | Overview, the five controlled comparisons, and the fitness-for-purpose analysis |
+| `thrombocytopenia/curation/` | **the full curation record** — raw agent extractions, verification verdicts, and the source sweep |
+
+The thrombocytopenia dataset commits its curation record so the published tables
+are **reproducible from their inputs**, not merely re-checkable against their
+citations. That record contains no third-party full texts — sources are
+referenced by identifier and exact locus, never redistributed — so it inherits
+the same licensing position as the tables themselves.
 
 The dataset is a **curation of already-published data**. It contains **no human-
 subjects data, no personally identifiable information, and no protected health
