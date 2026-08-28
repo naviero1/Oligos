@@ -31,6 +31,10 @@ LABELS = {
     "olezarsen":  ("FDA_label_TRYNGOLZA_SPL_olezarsen", "TRYNGOLZA (olezarsen sodium), Ionis Pharmaceuticals"),
     "nusinersen": ("FDA_label_SPINRAZA_SPL_nusinersen", "SPINRAZA (nusinersen), Biogen"),
     "imetelstat": ("FDA_label_RYTELO_SPL_imetelstat", "RYTELO (imetelstat sodium), Geron Corporation"),
+    # Volanesorsen was never FDA-approved (Complete Response Letter), so it has no
+    # DailyMed SPL; the EMA SmPC is the authoritative label. Retrieved this session as
+    # waylivra-epar-product-information_en.pdf and parsed with PyMuPDF.
+    "volanesorsen": ("EMA_SmPC_WAYLIVRA_EPAR_product_information", "WAYLIVRA (volanesorsen), EMA SmPC / EPAR product information"),
 }
 
 # ---------------------------------------------------------------------------
@@ -140,6 +144,61 @@ row(oligo_name="imetelstat", dose_or_conc_value="7.1", dose_or_conc_unit="mg/kg"
     readout_value="6", readout_unit="weeks", effect_vs_control="range_2_to_88_weeks",
     thrombocytopenia_grade=3, source_ref=IME, source_table="label sec 5.1",
     notes="kinetics row;median time to recovery to grade<=2 was 1.3 weeks;on-target myelosuppression;grade_provisional")
+
+
+# --- volanesorsen (WAYLIVRA, EMA) — the naked half of the matched pair -------
+# Same base sequence and chemistry as olezarsen; differs only by the absence of the
+# GalNAc conjugate and the ~20x higher dose that entails. Dose-limiting toxicity.
+VOL = LABELS["volanesorsen"][0]
+row(oligo_name="volanesorsen", dose_or_conc_value="285", exposure_duration="weekly",
+    readout_category="platelet_count", readout_name="confirmed_platelet_count_below_140x10e9_per_L",
+    readout_value="75", effect_vs_control="75pct_vs_24pct_placebo",
+    thrombocytopenia_grade=2, source_ref=VOL, source_table="SmPC sec 4.8 APPROACH Phase 3",
+    notes="pivotal APPROACH study in FCS;grade_provisional")
+row(oligo_name="volanesorsen", dose_or_conc_value="285", exposure_duration="weekly",
+    readout_category="platelet_count", readout_name="confirmed_platelet_count_below_100x10e9_per_L",
+    readout_value="47", effect_vs_control="47pct_vs_0pct_placebo",
+    thrombocytopenia_grade=2, source_ref=VOL, source_table="SmPC sec 4.8 APPROACH Phase 3",
+    notes="no placebo patient affected;grade_provisional")
+row(oligo_name="volanesorsen", dose_or_conc_value="285", exposure_duration="weekly",
+    readout_category="clinical_outcome", readout_name="discontinuation_due_to_platelet_level",
+    readout_value="5", readout_unit="patients",
+    effect_vs_control="2_patients_below_25x10e9_per_L;3_patients_50-75x10e9_per_L",
+    thrombocytopenia_grade=3, source_ref=VOL, source_table="SmPC sec 4.8 APPROACH Phase 3",
+    notes="DOSE-LIMITING;2 patients reached the severe (<25x10e9/L) range;grade_provisional")
+row(oligo_name="volanesorsen", dose_or_conc_value="285", exposure_duration="weekly",
+    readout_category="clinical_outcome", readout_name="thrombocytopenia_adverse_reaction",
+    readout_value="12", effect_vs_control="12pct_4of33_vs_0pct_placebo",
+    thrombocytopenia_grade=2, source_ref=VOL, source_table="SmPC sec 4.8 APPROACH Phase 3",
+    notes="grade_provisional")
+row(oligo_name="volanesorsen", dose_or_conc_value="285", exposure_duration="chronic",
+    readout_category="platelet_count", readout_name="confirmed_platelet_count_below_100x10e9_per_L",
+    readout_value="50", effect_vs_control="50pct_33of66_overall;48pct_24of50_treatment_naive",
+    thrombocytopenia_grade=2, source_ref=VOL, source_table="SmPC sec 4.8 open-label extension CS7",
+    notes="open-label extension;reproduces the APPROACH rate in a second cohort;grade_provisional")
+row(oligo_name="volanesorsen", dose_or_conc_value="285", exposure_duration="chronic",
+    readout_category="clinical_outcome", readout_name="recovery_after_discontinuation",
+    readout_value="11", readout_unit="patients", effect_direction="decrease",
+    effect_vs_control="11_discontinued;0_major_bleeding;ALL_recovered_to_normal",
+    thrombocytopenia_grade=2, source_ref=VOL, source_table="SmPC sec 4.8 open-label extension CS7",
+    notes="REVERSIBILITY row: all 11 recovered to normal platelet count after discontinuation (+ glucocorticoids where indicated) and none had major bleeding - the mild/moderate mode is reversible;grade_provisional")
+row(oligo_name="volanesorsen", dose_or_conc_value="285", exposure_duration="chronic",
+    readout_category="clinical_outcome", readout_name="immune_thrombocytopenic_purpura",
+    readout_value="TBD", readout_unit="frequency_category",
+    effect_vs_control="listed_as_Common_1pct_to_10pct",
+    thrombocytopenia_grade=3, source_ref=VOL, source_table="SmPC sec 4.8 Table 2",
+    notes="ITP listed as a Common adverse reaction - the immune-mediated severe mode, as with inotersen;exact incidence not numerically stated in the SmPC so readout_value is TBD;grade_provisional")
+row(oligo_name="volanesorsen", dose_or_conc_value="285", exposure_duration="chronic",
+    readout_category="platelet_count", readout_name="body_weight_under_70kg_risk_factor",
+    readout_value="TBD", readout_unit="NA",
+    effect_vs_control="stated_qualitatively_as_increased_susceptibility",
+    thrombocytopenia_grade=2, source_ref=VOL, source_table="SmPC sec 4.4",
+    notes="RISK-FACTOR row: patients under 70 kg are more prone to thrombocytopenia - consistent with an exposure-driven (mg/kg) mechanism and a modellable covariate;grade_provisional")
+row(oligo_name="volanesorsen", dose_or_conc_value="285", exposure_duration="12mo",
+    readout_category="immunogenicity", readout_name="anti_drug_antibody_positive",
+    readout_value="33", effect_vs_control="33pct_at_12mo;16pct_at_6mo",
+    thrombocytopenia_grade=1, source_ref=VOL, source_table="SmPC sec 4.8 Immunogenicity",
+    notes="CONTRAST WITH INOTERSEN: these are anti-DRUG antibodies, and the SmPC states no altered safety profile was associated with them - NOT the same as inotersen's anti-PLATELET IgG, which did track with severe thrombocytopenia. Graded 1 because ADA positivity alone carried no platelet consequence here;grade_provisional")
 
 
 def main():
