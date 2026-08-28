@@ -231,6 +231,35 @@ available to an LLM-assisted curation: **a plausible number attached to a real
 citation that does not contain it.** Schema validation cannot catch that; only
 re-reading the source can.
 
+### Cross-dataset sequence agreement
+
+Because the two endpoints in this repository share many compounds, sequences
+curated here can be checked against the sister kidney dataset's records — which
+were independently validated there against **WHO INN chemical nomenclature** and
+**patent sequence listings**, including a duplex reverse-complement self-check.
+
+`scripts/enrich_from_kidney.py` merges those design records in (oligos only —
+kidney *outcomes* are never carried across, since a renal finding is not a
+platelet finding), and `assemble_thrombo.py` reports any field where two sources
+disagree.
+
+**Result: zero sequence conflicts.** Every sequence independently extracted here
+— from FDA label chemical names, patent sequence listings, and journal methods
+sections — agrees base-for-base with the independently validated record. Two
+different derivation paths reaching the same string is meaningful evidence that
+neither is a transcription artefact, which matters for this project because
+mis-parsed sequences are its most likely silent failure. Sequence coverage rose
+from 112 to **120 of 132** oligos through this merge, without a single value
+being guessed.
+
+The merge also corrects **stale development stages**. `max_phase` means the
+*maximum* phase a compound reached, so two sources disagreeing usually means one
+is simply older: Crooke 2017 lists inotersen as phase 1 (it predates the 2018
+approval) and mipomersen as phase 3 (Kynamro was approved in 2013). The
+assembler therefore merges `max_phase` by taking the most advanced value rather
+than the first-seen one, and unions `;`-separated list fields such as
+`sugar_modifications` instead of discarding the fuller value.
+
 ### A failure mode worth recording: the structured-output ceiling
 
 The richest single source in the dataset (Crooke 2017, the pooled Ionis safety

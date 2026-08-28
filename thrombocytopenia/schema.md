@@ -55,7 +55,7 @@ A single oligo at a single dose reporting platelet count *and* P-selectin =
 | `system_model` | string | e.g. `washed_human_platelets`, `human_PRP`, `human_whole_blood`, `CD34_derived_megakaryocytes`, `MEG-01`, `bone_marrow`, `patient_cohort`, `healthy_volunteer`, `cynomolgus_invivo`, `mouse_invivo`. |
 | `tissue` | string | `platelet` \| `blood` \| `plasma` \| `bone_marrow` \| `spleen` \| `NA`. |
 | `delivery_method` | enum | `direct_addition` (in-vitro spike into platelets/blood) \| `gymnotic_free_uptake` \| `transfection` \| `conjugate_mediated` \| `systemic_dose` \| `intrathecal` \| `intravitreal` \| `oral` \| `TBD`. |
-| `dose_or_conc_value` | float | Numeric concentration or dose, or `TBD`. |
+| `dose_or_conc_value` | float *or band string* | Numeric concentration or dose, or `TBD`. **May also carry a dose *band* exactly as printed** (e.g. `>175-275`, `>475`) where the source reports incidence per dose band rather than at a point dose — as the large pooled clinical tables do. Bands are recorded verbatim rather than converted to invented midpoints; a consumer that needs a numeric column should parse or bin these explicitly rather than coercing them silently. |
 | `dose_or_conc_unit` | enum | `uM` \| `nM` \| `ug/mL` \| `mg/kg` \| `mg` (total dose) \| `fold_Cmax` \| `NA`. |
 | `exposure_duration` | string | e.g. `15min`, `72h`, `13wk`, `chronic`; or `TBD`. |
 | `readout_category` | enum | `platelet_count` \| `platelet_activation` \| `platelet_aggregation` \| `platelet_binding` \| `megakaryocyte` \| `immunogenicity` \| `clinical_outcome` \| `histopathology` \| `viability` \| `coagulation`. |
@@ -89,7 +89,21 @@ preserve that distinction rather than average it away:
 | **0** | No platelet signal at tested exposure — platelet count unchanged, no activation, no bleeding. | No activation, aggregation, or binding above vehicle control at tested concentration. |
 | **1** | **Mild / reversible** — platelet count decline that remains ≥ 100 × 10⁹/L (CTCAE grade 1), or a statistically significant but clinically non-actionable mean decline; no intervention. | Platelet **activation marker** rise (CD62P/P-selectin, PAC-1) or binding **without** aggregation, at supra-clinical concentration only. |
 | **2** | **Moderate** — platelet count 50–99 × 10⁹/L (CTCAE grade 2–3 lower band), requiring monitoring, dose interruption, or dose reduction; or megakaryocyte/bone-marrow findings in animals. | Clear **aggregation** or activation at a **clinically relevant** concentration (≤ ~10× human Cmax); or dose-dependent megakaryocyte effect. |
-| **3** | **Severe** — platelet count < 50 × 10⁹/L, CTCAE **grade 4** (< 25 × 10⁹/L), immune-mediated thrombocytopenia with confirmed anti-platelet antibodies, bleeding/hemorrhagic event, treatment discontinuation, or death. *(e.g. inotersen — boxed warning; volanesorsen — dose-limiting.)* | Aggregation/activation at or below therapeutic plasma concentration, or demonstrated antibody-mediated platelet clearance. |
+| **3** | **Severe** — platelet count < 50 × 10⁹/L, CTCAE **grade 4** (< 25 × 10⁹/L), immune-mediated thrombocytopenia with confirmed anti-platelet antibodies, a **bleeding/haemorrhagic event attributable to thrombocytopenia**, treatment discontinuation for a platelet event, or death. *(e.g. inotersen — boxed warning; volanesorsen — dose-limiting.)* | Aggregation/activation at or below therapeutic plasma concentration, or demonstrated antibody-mediated platelet clearance. |
+
+**Bleeding is graded on attribution, not on the word "bleeding".** Grade 3
+requires a haemorrhagic event *attributable to thrombocytopenia*. A trial that
+reports mild bleeding events at an incidence **at or below placebo** is
+reporting a background rate, not a drug-induced platelet injury, and such rows
+are graded on what was actually observed (typically 0–1) with the deviation
+stated in `notes`. Grading them 3 on the keyword alone would manufacture severe
+events out of a null result — the single easiest way to corrupt this endpoint.
+
+**An explicit zero is grade 0, and it is evidence.** Where a source tabulates a
+severe band and reports no events in it, that cell is a grade-0 row, not a
+missing row. Such rows record in `notes` which grade the band *would* have
+carried had events occurred, so severe-band cells remain findable and the
+denominator is not lost.
 
 Grade is assigned **per measurement** from the reported endpoint; rows for the
 same oligo may differ by model, dose, or readout. Record the rationale in `notes`

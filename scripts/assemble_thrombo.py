@@ -108,6 +108,18 @@ def apply_verdicts(lane):
     return kept, stats
 
 
+# `max_phase` is by definition the MAXIMUM development stage a compound reached,
+# so two sources disagreeing is usually not a conflict at all — it is one source
+# being older. Crooke 2017 lists inotersen as phase 1 because it predates the 2018
+# approval. Taking the later stage is the semantically correct merge; "keep first"
+# would silently under-report every compound that advanced after its oldest source.
+PHASE_RANK = {
+    "TBD": -1, "research_panel": 0, "preclinical": 1, "phase_1": 2, "phase_2": 3,
+    "phase_2_discontinued": 3, "phase_3": 4, "phase_3_discontinued": 4,
+    "approved_EMA": 5, "approved": 6, "class_review": 0,
+}
+
+
 def merge_oligo(dst, src, conflicts):
     """Merge src into dst field-by-field, preferring real values over TBD."""
     for col in OLIGO_COLS:
@@ -120,7 +132,11 @@ def merge_oligo(dst, src, conflicts):
         if d in EMPTY:
             dst[col] = s
         elif d != s:
-            if col in ("aliases", "notes", "design_source"):
+            if col == "max_phase":
+                if PHASE_RANK.get(s, -1) > PHASE_RANK.get(d, -1):
+                    dst[col] = s
+                continue
+            if col in ("aliases", "notes", "design_source", "sugar_modifications"):
                 parts = [p for p in (d.split(";") + s.split(";")) if p and p not in EMPTY]
                 dst[col] = ";".join(dict.fromkeys(parts))
             elif col == "sequence_5to3":
@@ -186,19 +202,39 @@ def main():
             oligo_by_key[k]["notes"] = "stub;design_metadata_not_yet_curated"
             all_stats["stub_oligos"] += 1
 
-    # --- drop oligos that no surviving measurement references --------------------
-    # oligos.csv is the predictor table: a row with design metadata but no outcome
-    # contributes nothing to modelling and inflates the compound count. This happens
-    # when an agent describes a panel member whose readouts were not extractable, or
-    # whose only rows were rejected by the verifier or dropped as duplicates.
-    # Dropping is reported, never silent.
+    # --- handle oligos that no surviving measurement references ------------------
+    # Two very different cases hide here, and collapsing them loses real data:
+    #
+    #  (a) A bare stub — no sequence, no design source. Nothing to learn from and
+    #      nothing to predict; dropped.
+    #  (b) A fully curated compound with a sourced sequence and design metadata that
+    #      simply has no *individual* outcome row, because its source reported a
+    #      POOLED outcome across a cohort (e.g. the 16 named ASOs in the Crooke
+    #      pooled safety database, whose outcomes are recorded against the
+    #      "2'-MOE ASO class pool" pseudo-oligo). These are kept: the sequences are
+    #      hard-won, independently length-validated predictors, and the identity of
+    #      the compounds making up a pooled cohort is itself information. A modeller
+    #      wanting only rows with outcomes gets them from the join, for free.
+    #
+    # Both counts are reported; qc_thrombo surfaces the kept ones as a warning.
     referenced = {norm_name(m.get("oligo_name")) for m in deduped}
     unreferenced = sorted(k for k in oligo_by_key if k not in referenced)
+    dropped_names, kept_unref = [], []
     for k in unreferenced:
-        all_stats["oligo_dropped_no_measurements"] += 1
-    dropped_names = [oligo_by_key[k]["oligo_name"] for k in unreferenced]
-    for k in unreferenced:
-        del oligo_by_key[k]
+        row = oligo_by_key[k]
+        substantive = (row.get("sequence_5to3") not in EMPTY
+                       or row.get("design_source") not in EMPTY)
+        if substantive:
+            note = row.get("notes", "")
+            row["notes"] = ((note if note not in EMPTY else "")
+                            + ";no_individual_measurement_row"
+                            + ";outcome_reported_only_at_cohort_level_by_its_source")
+            kept_unref.append(row["oligo_name"])
+            all_stats["oligo_kept_no_measurements"] += 1
+        else:
+            dropped_names.append(row["oligo_name"])
+            all_stats["oligo_dropped_empty_stub"] += 1
+            del oligo_by_key[k]
 
     # --- assign stable IDs (deterministic: sorted by name) -----------------------
     ordered = sorted(oligo_by_key.items(), key=lambda kv: kv[1]["oligo_name"].lower())
@@ -234,8 +270,10 @@ def main():
     print(f"measurements.csv  {len(deduped)} rows")
     print("verdicts:", dict(all_stats))
     if dropped_names:
-        print(f"dropped {len(dropped_names)} oligo(s) with no measurement rows: "
-              f"{dropped_names[:8]}")
+        print(f"dropped {len(dropped_names)} empty stub oligo(s): {dropped_names[:8]}")
+    if kept_unref:
+        print(f"kept {len(kept_unref)} curated oligo(s) with no individual measurement "
+              f"(pooled-cohort outcomes): {kept_unref[:8]}")
     if conflicts:
         print(f"\n{len(conflicts)} merge conflict(s) needing review:")
         for c in conflicts[:25]:

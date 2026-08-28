@@ -174,37 +174,37 @@ python3 scripts/report_thrombo.py                          # regenerate the tabl
 
 | | Count |
 |---|------|
-| Unique oligos (`oligos.csv`) | **119** |
-| Measurement rows (`measurements.csv`) | **276** |
-| — of which strict-platelet | **269** |
-| — of which adjacent-haematology (flagged) | **7** |
-| Grade distribution (0/1/2/3) | 147 / 67 / 44 / 18 |
-| Distinct target genes | **23** |
-| Distinct sources (`source_ref`) | **28** |
-| Oligos with sequence (not TBD) | **98 / 119** |
+| Unique oligos (`oligos.csv`) | **132** |
+| Measurement rows (`measurements.csv`) | **663** |
+| — of which strict-platelet | **623** |
+| — of which adjacent-haematology (flagged) | **40** |
+| Grade distribution (0/1/2/3) | 353 / 207 / 85 / 18 |
+| Distinct target genes | **34** |
+| Distinct sources (`source_ref`) | **29** |
+| Oligos with sequence (not TBD) | **120 / 132** |
 
 ## Independent (predictor) variables — `oligos.csv`
 
 | Variable | Distribution |
 |----------|--------------|
-| **Modality (`oligo_class`)** | ASO_gapmer 100 · PMO 5 · GalNAc_siRNA 4 · splice_switching_ASO 4 · other 4 · siRNA 2 |
-| **Backbone (`backbone_chemistry`)** | full_PS 95 · TBD 11 · PS_PO_mix 6 · PMO_neutral 5 · mixed 1 · full_PO 1 |
-| **Conjugate** | none 107 · lipid 6 · GalNAc 6 |
-| **Development stage (`max_phase`)** | research_panel 89 · approved 14 · preclinical 9 · phase_2 3 · class_review 1 · phase_1 1 · TBD 1 · approved_EMA 1 |
-| **Sugar modifications** | 2'-MOE 97 · DNA_gap 97 · cEt 7 · 2'-OMe 6 · morpholino 5 · LNA 4 · 2'-F 4 · tricyclo-DNA 3 · DNA 2 · TBD 1 |
-| **Sequence available** | 98 / 119 (rest `TBD`, never guessed) |
+| **Modality (`oligo_class`)** | ASO_gapmer 112 · PMO 5 · other 5 · GalNAc_siRNA 4 · splice_switching_ASO 4 · siRNA 2 |
+| **Backbone (`backbone_chemistry`)** | full_PS 109 · TBD 10 · PS_PO_mix 6 · PMO_neutral 5 · mixed 1 · full_PO 1 |
+| **Conjugate** | none 120 · lipid 6 · GalNAc 6 |
+| **Development stage (`max_phase`)** | research_panel 89 · approved 15 · preclinical 10 · phase_2 10 · phase_1 4 · class_review 2 · TBD 1 · approved_EMA 1 |
+| **Sugar modifications** | DNA_gap 112 · 2'-MOE 110 · 5-methylcytosine 17 · 2'-OMe 7 · cEt 7 · morpholino 5 · LNA 5 · 2'-F 5 · tricyclo-DNA 3 · DNA 2 |
+| **Sequence available** | 120 / 132 (rest `TBD`, never guessed) |
 
 ## Dependent (indicator) variables — `measurements.csv`
 
 | Variable | Distribution |
 |----------|--------------|
-| **`thrombocytopenia_grade`** | 0: 147 · 1: 67 · 2: 44 · 3: 18 |
-| **Study type** | animal_invivo 219 · clinical 39 · in_vitro 13 · ex_vivo 5 |
-| **Species** | mouse 113 · monkey 65 · rat 53 · human 45 |
-| **Delivery route** | systemic_dose 257 · direct_addition 13 · intrathecal 6 |
-| **Readout category** | platelet_count 242 · clinical_outcome 9 · platelet_activation 9 · platelet_aggregation 8 · immunogenicity 4 · platelet_binding 4 |
-| **Redistribution** | public_domain 243 · cc_by 17 · summary_stat 16 |
-| **Platelet-specific** | TRUE 269 / 276 |
+| **`thrombocytopenia_grade`** | 0: 353 · 1: 207 · 2: 85 · 3: 18 |
+| **Study type** | clinical 426 · animal_invivo 219 · in_vitro 13 · ex_vivo 5 |
+| **Species** | human 432 · mouse 113 · monkey 65 · rat 53 |
+| **Delivery route** | systemic_dose 644 · direct_addition 13 · intrathecal 6 |
+| **Readout category** | platelet_count 581 · clinical_outcome 32 · coagulation 25 · platelet_activation 9 · platelet_aggregation 8 · immunogenicity 4 · platelet_binding 4 |
+| **Redistribution** | summary_stat 403 · public_domain 243 · cc_by 17 |
+| **Platelet-specific** | TRUE 623 / 663 |
 
 <!-- END RECORD COUNTER -->
 
