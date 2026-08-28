@@ -27,6 +27,39 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = os.path.join(ROOT, "thrombocytopenia", "data")
 
 
+# ---------------------------------------------------------------------------
+# Compounds EXCLUDED from the phosphorothioate structure-activity tests, with
+# reasons. This is not cherry-picking: the hypothesis under test is that platelet
+# effects are driven by PS-backbone binding to GPVI. A compound whose
+# thrombocytopenia has a different, known mechanism is not evidence for or
+# against that hypothesis, and including it inverts the result.
+#
+#   imetelstat — a 13-mer N3'->P5' THIOPHOSPHORAMIDATE. Its `ps_count` is 0
+#   because it carries no phosphorothioate linkages in the strict sense, yet its
+#   backbone is fully thio-substituted, so 0 reads as "neutral" when it is not.
+#   More decisively, its thrombocytopenia is ON-TARGET TELOMERASE-INHIBITOR
+#   MYELOSUPPRESSION in MDS, not platelet binding. Left in, its 93 high-grade
+#   rows made up 74% of the zero-PS bucket and pushed that bucket's mean grade
+#   ABOVE every phosphorothioate bucket — a textbook confound.
+#
+# Excluded rows are still IN the dataset; they are excluded only from this
+# hypothesis test, and the exclusion is reported in the output.
+MECHANISM_EXCLUDED = {
+    "imetelstat": "on-target telomerase-inhibitor myelosuppression, not PS-backbone "
+                  "binding; N3'-P5' thiophosphoramidate backbone is thio-substituted "
+                  "despite ps_count=0",
+}
+
+
+def split_excluded(oligos, meas):
+    """Return (kept, excluded) measurement rows, splitting on MECHANISM_EXCLUDED."""
+    kept, excl = [], []
+    for m in meas:
+        nm = (oligos.get(m["oligo_id"], {}).get("oligo_name") or "").lower()
+        (excl if nm in MECHANISM_EXCLUDED else kept).append(m)
+    return kept, excl
+
+
 def load():
     with open(os.path.join(BASE, "oligos.csv"), newline="", encoding="utf-8") as f:
         oligos = {r["oligo_id"]: r for r in csv.DictReader(f)}
@@ -68,6 +101,15 @@ def section(t):
 def emit_markdown(oligos, meas):
     """Emit the README's fitness-for-purpose section, so its numbers are generated
     from the data rather than hand-transcribed and left to drift."""
+    meas, excluded = split_excluded(oligos, meas)
+    if excluded:
+        names = sorted({oligos[m["oligo_id"]]["oligo_name"] for m in excluded})
+        print(f"*Structure-activity tests below exclude {len(excluded)} rows from "
+              f"**{', '.join(names)}**, whose thrombocytopenia has a different, known "
+              "mechanism (see `MECHANISM_EXCLUDED` in `scripts/analyze_thrombo.py`). "
+              "Those rows remain in the dataset; they are excluded only from this "
+              "hypothesis test, because a different mechanism is evidence neither for "
+              "nor against the phosphorothioate hypothesis.*\n")
     print("**Backbone chemistry orders as the phosphorothioate hypothesis predicts**,")
     print("with no modelling:\n")
     print("| backbone | n rows | n oligos | mean grade |")
@@ -116,7 +158,13 @@ def emit_markdown(oligos, meas):
 
 def main():
     oligos, meas = load()
-    print(f"{len(oligos)} oligos · {len(meas)} measurements")
+    meas_all = meas
+    meas, excluded = split_excluded(oligos, meas)
+    print(f"{len(oligos)} oligos · {len(meas_all)} measurements")
+    if excluded:
+        names = sorted({oligos[m["oligo_id"]]["oligo_name"] for m in excluded})
+        print(f"EXCLUDED from structure-activity tests: {len(excluded)} rows "
+              f"({', '.join(names)}) — different known mechanism")
     print("legend: grade 0='.'  1='-'  2='+'  3='#'")
 
     # ---------------------------------------------------------------- 1. PS count

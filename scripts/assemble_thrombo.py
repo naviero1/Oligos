@@ -72,6 +72,55 @@ VOCAB_FIXES = {
 }
 
 
+# ---------------------------------------------------------------------------
+# Cross-source NAME COLLISIONS.
+#
+# The join key is the compound name, which assumes a name means the same molecule
+# everywhere. That assumption broke once, silently, and on the dataset's central
+# predictor:
+#
+#   "ODN 2395" is a standard CpG reagent that is FULLY PHOSPHOROTHIOATE. Sewing
+#   2017 uniquely synthesised a phosphodiester variant and named it "ODN2395",
+#   reserving "ODN2395_Thio" for the PS form. Every OTHER source using the bare
+#   name means the standard PS compound. Merging on the bare name therefore
+#   attached 38 rows describing an ACTIVE PS compound to an oligo record asserting
+#   ps_count=0 / full_PO — inflating the zero-PS bucket's mean grade and directly
+#   undercutting the phosphorothioate hypothesis the dataset exists to test.
+#
+# Rule: (normalized name, source predicate) -> canonical name. Applied to
+# measurements before the join, and every remap is reported.
+NAME_DISAMBIGUATION = [
+    {
+        "name": "odn2395",
+        # Sewing (PMC5673186 / journal.pone.0187574) is the ONLY source whose bare
+        # "ODN2395" means the phosphodiester variant; it names the PS form
+        # explicitly. Any other source means the standard PS reagent.
+        "keep_if_source_contains": ["PMC5673186", "0187574"],
+        "else_rename_to": "ODN2395_Thio",
+        "why": "bare 'ODN 2395' outside Sewing 2017 is the standard fully-PS reagent",
+    },
+]
+
+
+def disambiguate(rows):
+    """Remap names that mean different molecules in different sources."""
+    fixed = collections.Counter()
+    for r in rows:
+        nk = norm_name(r.get("oligo_name"))
+        for rule in NAME_DISAMBIGUATION:
+            if nk != rule["name"]:
+                continue
+            src = str(r.get("source_ref", ""))
+            if any(tok in src for tok in rule["keep_if_source_contains"]):
+                continue
+            r["oligo_name"] = rule["else_rename_to"]
+            note = clean(r.get("notes"))
+            r["notes"] = ((note if note != "TBD" else "")
+                          + f";name_disambiguated:{rule['why']}")
+            fixed[f"{rule['name']} -> {rule['else_rename_to']}"] += 1
+    return fixed
+
+
 def norm_name(n):
     """Normalize an oligo name to a join key: case- and punctuation-insensitive."""
     return re.sub(r"[^a-z0-9]", "", (n or "").lower())
@@ -200,6 +249,8 @@ def main():
             m["_lane"] = lname
             meas_rows.append(m)
 
+    name_fixes = disambiguate(meas_rows)
+
     # --- deduplicate measurements on their natural key --------------------------
     seen, deduped = {}, []
     for m in meas_rows:
@@ -298,6 +349,10 @@ def main():
     print(f"oligos.csv        {len(ordered)} rows")
     print(f"measurements.csv  {len(deduped)} rows")
     print("verdicts:", dict(all_stats))
+    if name_fixes:
+        print("name disambiguations applied:")
+        for k, n in name_fixes.most_common():
+            print(f"    {k}  (x{n})")
     if dropped_names:
         print(f"dropped {len(dropped_names)} empty stub oligo(s): {dropped_names[:8]}")
     if vocab_fixed:

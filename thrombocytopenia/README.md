@@ -146,19 +146,19 @@ with no modelling:
 |---|---:|---:|---:|
 | `PMO_neutral` | 10 | 6 | 0.10 |
 | `PS_PO_mix` | 20 | 6 | 0.30 |
-| `full_PO` | 61 | 3 | 0.87 |
-| `full_PS` | 1126 | 156 | 0.91 |
+| `full_PO` | 22 | 3 | 0.59 |
+| `full_PS` | 1165 | 156 | 0.92 |
 
-Mean grade also rises with phosphorothioate count (0 → 0.76; 13–16 → 0.69; 17–19 → 1.04; 20+ → 1.16 linkages).
+Mean grade also rises with phosphorothioate count (0 → 0.44; 13–16 → 0.69; 17–19 → 1.04; 20+ → 1.11 linkages).
 
-Modality orders PMO 0.10 < GalNAc_siRNA 0.27 < siRNA 0.50 < splice_switching_ASO 0.67 < ASO_gapmer 0.89 < other 1.09 < aptamer 1.14.
+Modality orders PMO 0.10 < GalNAc_siRNA 0.27 < siRNA 0.50 < splice_switching_ASO 0.67 < ASO_gapmer 0.89 < other 1.07 < aptamer 1.14.
 
 **The caveat that must travel with this.** Grade is partly confounded with
 study type — severe thrombocytopenia is observed in trials, not in dishes:
 
 | study type | n rows | mean grade | % grade 3 |
 |---|---:|---:|---:|
-| clinical | 645 | 1.03 | 10.9% |
+| clinical | 643 | 1.02 | 10.6% |
 | ex_vivo | 5 | 1.00 | 0.0% |
 | in_vitro | 287 | 0.91 | 1.4% |
 | animal_invivo | 308 | 0.65 | 6.5% |
@@ -197,8 +197,19 @@ A **ten-lane parallel multi-agent sweep** (clinical, regulatory, in-vitro human
 platelet, mechanism/immune, preclinical NHP, non-ASO negative controls, patents,
 reviews/meta-analyses, megakaryocyte models, sequence-chemistry panels), each
 lane blind to the others, then **per-source extraction** against verified full
-text, then **adversarial verification** in which an independent agent is
+text, then an **adversarial verification** stage in which an independent agent is
 instructed to *refute* every extracted row against its cited source.
+
+> **Verification status: outstanding.** The verification stage is implemented and
+> wired into the assembler, but its agents terminated on an API session limit
+> before completing, so **every row currently carries `unverified` status** and
+> the dataset must not yet be described as adversarially verified. What has been
+> done instead: an independent **known-answer test** (6/6 against the inotersen
+> label, held back before extraction ran), **cross-dataset sequence agreement**
+> against independently INN-validated records (zero conflicts), automated QC
+> gating, and three data-integrity defects found and fixed by hand — two of which
+> produced structurally valid data that pointed the *wrong way scientifically*.
+> See `METHODOLOGY.md` for both the defects and what remains outstanding.
 
 Network egress was open in this session, so primary sources were retrieved
 directly (PMC/E-utilities, Europe PMC, DailyMed SPL, EMA, USPTO, FDA
@@ -225,12 +236,12 @@ python3 scripts/refresh_docs.py                             # regenerate the tab
 | | Count |
 |---|------|
 | Unique oligos (`oligos.csv`) | **191** |
-| Measurement rows (`measurements.csv`) | **1245** |
-| — of which strict-platelet | **1115** |
-| — of which adjacent-haematology (flagged) | **130** |
-| Grade distribution (0/1/2/3) | 552 / 350 / 249 / 94 |
+| Measurement rows (`measurements.csv`) | **1336** |
+| — of which strict-platelet | **1203** |
+| — of which adjacent-haematology (flagged) | **133** |
+| Grade distribution (0/1/2/3) | 563 / 379 / 262 / 132 |
 | Distinct target genes | **40** |
-| Distinct sources (`source_ref`) | **38** |
+| Distinct sources (`source_ref`) | **39** |
 | Oligos with sequence (not TBD) | **170 / 191** |
 
 ## Independent (predictor) variables — `oligos.csv`
@@ -248,13 +259,13 @@ python3 scripts/refresh_docs.py                             # regenerate the tab
 
 | Variable | Distribution |
 |----------|--------------|
-| **`thrombocytopenia_grade`** | 0: 552 · 1: 350 · 2: 249 · 3: 94 |
-| **Study type** | clinical 645 · animal_invivo 308 · in_vitro 287 · ex_vivo 5 |
-| **Species** | human 920 · mouse 140 · monkey 105 · rat 76 · multi_species 2 · dog 1 · NA 1 |
-| **Delivery route** | systemic_dose 941 · direct_addition 278 · TBD 9 · gymnotic_free_uptake 9 · intrathecal 6 · intravitreal 2 |
-| **Readout category** | platelet_count 791 · clinical_outcome 108 · platelet_activation 99 · immunogenicity 71 · platelet_binding 62 · platelet_aggregation 60 · coagulation 27 · megakaryocyte 17 · viability 9 · histopathology 1 |
-| **Redistribution** | summary_stat 565 · public_domain 537 · cc_by 143 |
-| **Platelet-specific** | TRUE 1115 / 1245 |
+| **`thrombocytopenia_grade`** | 0: 563 · 1: 379 · 2: 262 · 3: 132 |
+| **Study type** | clinical 722 · animal_invivo 316 · in_vitro 291 · ex_vivo 7 |
+| **Species** | human 1003 · mouse 141 · monkey 112 · rat 76 · multi_species 2 · dog 1 · NA 1 |
+| **Delivery route** | systemic_dose 1026 · direct_addition 284 · TBD 9 · gymnotic_free_uptake 9 · intrathecal 6 · intravitreal 2 |
+| **Readout category** | platelet_count 834 · clinical_outcome 148 · platelet_activation 99 · immunogenicity 71 · platelet_binding 62 · platelet_aggregation 60 · coagulation 29 · megakaryocyte 22 · viability 10 · histopathology 1 |
+| **Redistribution** | public_domain 628 · summary_stat 565 · cc_by 143 |
+| **Platelet-specific** | TRUE 1203 / 1336 |
 
 <!-- END RECORD COUNTER -->
 

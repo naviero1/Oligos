@@ -215,21 +215,77 @@ round so the documentation cannot drift from the data.*
 - **Length consistency** — `length_nt` is cross-checked against
   `len(sequence_5to3)` and mismatches are surfaced as warnings.
 
-### Adversarial verification
+### Adversarial verification — DESIGNED AND BUILT, NOT YET RUN
 
-Extraction accuracy is not assumed. Every extracted row is passed to an
-**independent verification agent whose instruction is to refute it** — to fetch
-the cited source and check that it actually contains the claimed value at the
-claimed locus, that the grade follows the rubric, and that the row is genuinely
-about platelets. Verdicts are `CONFIRMED`, `CORRECTED` (real finding, wrong
-field — corrections applied), or `REJECTED` (unsupported — row dropped).
-`scripts/assemble_thrombo.py` applies these verdicts mechanically before the
-CSVs are written, so a rejected row cannot survive into the dataset by oversight.
+**Status: outstanding.** This is stated plainly because the rest of this document
+would otherwise imply a check that has not happened.
 
-The failure mode this specifically defends against is the most dangerous one
-available to an LLM-assisted curation: **a plausible number attached to a real
-citation that does not contain it.** Schema validation cannot catch that; only
-re-reading the source can.
+The pipeline includes an adversarial verification stage: every extracted row is
+passed to an **independent agent instructed to refute it** — to fetch the cited
+source and confirm it actually contains the claimed value at the claimed locus,
+that the grade follows the rubric, and that the row is genuinely about platelets.
+Verdicts are `CONFIRMED`, `CORRECTED` (real finding, wrong field — corrections
+applied) or `REJECTED` (unsupported — row dropped), and
+`scripts/assemble_thrombo.py` applies them mechanically so a rejected row cannot
+survive by oversight.
+
+The stage is implemented and wired in, but the verification agents **terminated
+on an API session limit before completing**. Consequently:
+
+- **Every row currently in the dataset is `unverified`.** The assembler reports
+  this count on each run rather than presenting the rows as confirmed.
+- The dataset must **not** be described as adversarially verified until that
+  stage completes and its verdicts are folded in.
+
+What *has* been done in place of it: an independent **known-answer test** (below,
+6/6), **cross-dataset sequence agreement** against independently INN-validated
+records (zero conflicts), automated **QC gating**, and three specific
+data-integrity defects found and fixed by hand (below). These are real checks,
+but they are not a substitute for re-reading every cited source.
+
+The failure mode this stage exists to catch is the most dangerous one available
+to an LLM-assisted curation: **a plausible number attached to a real citation
+that does not contain it.** Schema validation cannot catch that; only re-reading
+the source can. Until the stage runs, that risk is open.
+
+### Data-integrity defects found and corrected
+
+Three defects were found *after* rows had passed schema QC — a reminder that
+structural validity and correctness are different properties.
+
+1. **A cross-source name collision on the central predictor.** The join key is
+   the compound name, which assumes a name denotes one molecule everywhere.
+   `ODN 2395` is a standard CpG reagent that is **fully phosphorothioate**, but
+   Sewing 2017 uniquely synthesised a phosphodiester variant and named it
+   `ODN2395`, reserving `ODN2395_Thio` for the PS form. Merging on the bare name
+   therefore attached **39 rows describing an active PS compound** to an oligo
+   record asserting `ps_count = 0` / `full_PO`. This inflated the zero-PS
+   bucket's mean grade and *directly undercut the phosphorothioate hypothesis the
+   dataset exists to test.* Fixed by a documented, source-aware disambiguation
+   rule in the assembler; every remap is reported.
+
+2. **A mechanism confound inverting the headline result.** `imetelstat` carries
+   `ps_count = 0` — literally correct, since its N3′→P5′ **thiophosphoramidate**
+   backbone contains no phosphorothioate linkages, but misleading, because that
+   backbone *is* fully thio-substituted. Its 93 high-grade rows made up **74 % of
+   the zero-PS bucket** and pushed that bucket's mean grade **above every
+   phosphorothioate bucket**. Its thrombocytopenia is on-target
+   telomerase-inhibitor myelosuppression, so it is evidence neither for nor
+   against the backbone hypothesis. It is now excluded from the
+   structure-activity tests only — the rows remain in the dataset, and the
+   exclusion is stated in the analysis output and in `README.md`.
+
+3. **A controlled-vocabulary typo** (`public_documain`) that left one row's
+   rights status unparseable. Now corrected from an explicit table of unambiguous
+   near-misses, with every correction reported; anything not in that table still
+   fails QC, which is the right outcome for a value whose meaning is unclear.
+
+Defects 1 and 2 share a lesson worth generalising: **both produced structurally
+valid data that pointed the wrong way scientifically.** Neither would have been
+caught by schema validation, referential integrity, or range checks. They were
+caught by asking whether the assembled data still reproduced a relationship the
+field already knows — which is the reason `analyze_thrombo.py` exists and is run
+after every ingestion round.
 
 ### Three table-extraction hazards, all of which occurred
 
