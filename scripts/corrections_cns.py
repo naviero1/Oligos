@@ -136,6 +136,27 @@ def main():
     for path in sorted(glob.glob(os.path.join(EXTRACT_DIR, "*.json"))):
         d = json.load(open(path, encoding="utf-8"))
         changed = False
+
+        # C8. Grade-0 rows resting on SILENCE rather than on a measurement.
+        #
+        # "The paper did not report toxicity" is not "the paper measured toxicity
+        # and found none", and only the second is a legitimate negative control.
+        # The tell is a Methods-section locus with readout value, direction and
+        # comparator all TBD, and a grade of 0 asserted anyway. Such a row claims
+        # an outcome no measurement supports, which is more damaging than a
+        # missing row: a model trained on it learns a false negative.
+        before = len(d.get("measurements", []))
+        d["measurements"] = [
+            m for m in d.get("measurements", [])
+            if not (norm(m.get("neurotox_grade")) == "0"
+                    and norm(m.get("readout_value")) == "TBD"
+                    and norm(m.get("effect_direction")) == "TBD"
+                    and re.search(r"method", norm(m.get("source_table")), re.I))]
+        dropped = before - len(d["measurements"])
+        if dropped:
+            stats["C8_silence_grade0_dropped"] += dropped
+            changed = True
+
         for m in d.get("measurements", []):
             ref = norm(m.get("source_ref"))
             dur = norm(m.get("exposure_duration"))

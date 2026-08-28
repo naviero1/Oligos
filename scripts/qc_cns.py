@@ -203,6 +203,18 @@ def main():
                 m["challenge_priority"] != "high_hydrocephalus":
             warn(f"{mid}: hydrocephalus endpoint not flagged high_hydrocephalus")
 
+    # --- a grade must rest on a measurement -------------------------------
+    # "The source did not report toxicity" is not "the source measured toxicity
+    # and found none", and only the second is a negative control. A grade-0 row
+    # whose value, direction and comparator are all TBD and whose locus is a
+    # Methods section is asserting an outcome nothing supports.
+    for m in meas:
+        if m["neurotox_grade"] == "0" and m["readout_value"] == TBD \
+                and m["effect_direction"] == TBD \
+                and re.search(r"method", m["source_table"], re.I):
+            err(f"{m['measurement_id']}: grade 0 with no value, no direction and a "
+                f"Methods-section locus — this is silence, not a measured negative")
+
     # --- mortality invariant ----------------------------------------------
     # Death is grade 3 under the rubric, without exception and without
     # interpretation. This is the one grading rule that needs no judgement, so it

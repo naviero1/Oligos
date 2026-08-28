@@ -43,7 +43,7 @@ Reviews were used to *find* primary sources and to cross-check them, not as the
 cited source for a value.
 
 
-## Source registry — 102 documents, 2331 rows
+## Source registry — 102 documents, 2329 rows
 
 | Source class | Documents |
 |---|---:|
@@ -79,10 +79,10 @@ cited source for a value.
 | `FDA_NDA209531` | FDA document | 17 | `public_domain` | animal_invivo 10, clinical 7 |
 | `doi:10.1001/jamaneurol.2025.4946` | Journal article | 17 | `summary_stat` | clinical 17 |
 | `doi:10.1016/j.omtn.2021.11.015` | Journal article | 16 | `summary_stat` | in_vitro 16 |
-| `doi:10.1016/j.xhgg.2025.100450` | Journal article | 16 | `cc_by` | in_vitro 16 |
 | `NCT02519036` | ClinicalTrials.gov | 15 | `public_domain` | clinical 15 |
-| `doi:10.1038/s41591-026-04314-9` | Journal article | 15 | `summary_stat` | clinical 11, in_vitro 4 |
+| `doi:10.1016/j.xhgg.2025.100450` | Journal article | 15 | `cc_by` | in_vitro 15 |
 | `doi:10.1186/s13024-024-00725-9` | Journal article | 15 | `cc_by` | in_vitro 15 |
+| `doi:10.1038/s41591-026-04314-9` | Journal article | 14 | `summary_stat` | clinical 11, in_vitro 3 |
 | `NCT03225833` | ClinicalTrials.gov | 12 | `public_domain` | clinical 12 |
 | `NCT04089566` | ClinicalTrials.gov | 12 | `public_domain` | clinical 12 |
 | `Roche medical-affairs slide deck, CHDI 2023, M-XX-000...` | Other / grey literature | 12 | `verify` | clinical 12 |

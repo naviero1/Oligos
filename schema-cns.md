@@ -119,6 +119,20 @@ grading input, not decoration, and no NfL row may be filed with
 
 ---
 
+### Sequence case, and what is authoritative
+
+Where a source printed a sequence with chemistry-encoding case, that case is
+preserved: uppercase marks a modified wing (2′-MOE / cEt / LNA), lowercase the
+DNA gap. But **268 of the 463 stored sequences are case-encoded and 176 are
+stored in flat upper case** — because their source printed them that way, and
+re-casing them from the design motif would be inference dressed as transcription.
+
+So the rule for a consumer is: **`gapmer_design` is authoritative for wing/gap
+structure; case is a convenience that is present when the source provided it.**
+A validator must be case-insensitive — a case-sensitive `[ACGT]+` check reports
+the correct case-encoded rows as malformed — and any model that wants wing/gap
+structure should read it from `gapmer_design` rather than infer it from case.
+
 ## Provenance rules
 
 - Every row MUST carry `source_id` + `source_ref` + `source_table`.

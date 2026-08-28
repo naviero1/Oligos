@@ -351,7 +351,7 @@ could have gone wrong:
   four-mouse groups, every zero-scoring group has unasterisked four-mouse RT-PCR
   data, and every group scoring the full 7 has no tissue at all. Those rows keep
   grade 3 — but as mortality, which is what they actually mean.
-- **`reversibility` is now `not_assessed` on 1,929 of 2,331 rows.** This is a
+- **`reversibility` is now `not_assessed` on 1,927 of 2,329 rows.** This is a
   correction, not a gap. A large panel's rows claimed `reversible` although the
   animals were observed for one hour after a single dose and never re-examined —
   the paper's recovery language is explicitly fenced to a different cohort of

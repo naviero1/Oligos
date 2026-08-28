@@ -231,9 +231,9 @@ These cite sources that could not be re-fetched — mostly sponsor medical-affai
 
 | | Rows |
 |---|---:|
-| Carrying a verification verdict | 268 |
+| Carrying a verification verdict | 266 |
 | With at least one field corrected | 236 |
-| Carrying an advisory (prose, not applied) | 10 |
+| Carrying an advisory (prose, not applied) | 8 |
 
 Fields corrected:
 
