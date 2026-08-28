@@ -21,7 +21,7 @@ no imputation, and `TBD` is always excluded rather than coerced to zero.
 
 Usage:  python3 scripts/analyze_thrombo.py
 """
-import csv, os, collections, statistics
+import csv, os, sys, collections, statistics
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = os.path.join(ROOT, "thrombocytopenia", "data")
@@ -63,6 +63,55 @@ def mean_grade(rows):
 
 def section(t):
     print(f"\n{'=' * 74}\n{t}\n{'=' * 74}")
+
+
+def emit_markdown(oligos, meas):
+    """Emit the README's fitness-for-purpose section, so its numbers are generated
+    from the data rather than hand-transcribed and left to drift."""
+    print("**Backbone chemistry orders as the phosphorothioate hypothesis predicts**,")
+    print("with no modelling:\n")
+    print("| backbone | n rows | n oligos | mean grade |")
+    print("|---|---:|---:|---:|")
+    by = collections.defaultdict(list)
+    for m in meas:
+        by[oligos.get(m["oligo_id"], {}).get("backbone_chemistry", "TBD")].append(m)
+    order = ["PMO_neutral", "PS_PO_mix", "full_PO", "full_PS"]
+    for k in order:
+        rows = by.get(k)
+        if not rows:
+            continue
+        print(f"| `{k}` | {len(rows)} | {len({m['oligo_id'] for m in rows})} | "
+              f"{mean_grade(rows):.2f} |")
+
+    ps_bins, parts = [(0, 0, "0"), (13, 16, "13–16"), (17, 19, "17–19"), (20, 99, "20+")], []
+    for lo, hi, label in ps_bins:
+        rows = [m for m in meas
+                if (p := num(oligos.get(m["oligo_id"], {}).get("ps_count"))) is not None
+                and lo <= p <= hi]
+        if rows:
+            parts.append(f"{label} → {mean_grade(rows):.2f}")
+    print(f"\nMean grade also rises with phosphorothioate count "
+          f"({'; '.join(parts)} linkages).\n")
+
+    bym = collections.defaultdict(list)
+    for m in meas:
+        bym[oligos.get(m["oligo_id"], {}).get("oligo_class", "TBD")].append(m)
+    mod = sorted(((k, mean_grade(v)) for k, v in bym.items() if len(v) >= 5),
+                 key=lambda kv: kv[1])
+    print("Modality orders " + " < ".join(f"{k} {g:.2f}" for k, g in mod) + ".\n")
+
+    print("**The caveat that must travel with this.** Grade is partly confounded with")
+    print("study type — severe thrombocytopenia is observed in trials, not in dishes:\n")
+    print("| study type | n rows | mean grade | % grade 3 |")
+    print("|---|---:|---:|---:|")
+    bys = collections.defaultdict(list)
+    for m in meas:
+        bys[m["study_type"]].append(m)
+    for k, rows in sorted(bys.items(), key=lambda kv: -mean_grade(kv[1])):
+        g3 = 100.0 * sum(1 for r in rows if r["thrombocytopenia_grade"] == "3") / len(rows)
+        print(f"| {k} | {len(rows)} | {mean_grade(rows):.2f} | {g3:.1f}% |")
+    print("\nAny model trained here must account for study type rather than learn it")
+    print("as biology.")
 
 
 def main():
@@ -154,6 +203,10 @@ def main():
               f"   conjugate {oa['conjugate']} vs {ob['conjugate']}")
         print(f"    mean grade {mean_grade(ra):.2f} (n={len(ra)})  vs  "
               f"{mean_grade(rb):.2f} (n={len(rb)})")
+
+    if "--markdown" in sys.argv:
+        emit_markdown(oligos, meas)
+        return
 
     section("Interpretation")
     print("Read the PS-count and backbone tables together. If mean grade rises with")

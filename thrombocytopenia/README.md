@@ -137,38 +137,36 @@ structure-activity relationship is not ready to train anything. `scripts/analyze
 checks this directly — descriptive and non-parametric, with `TBD` excluded rather
 than coerced to zero. Run it after any ingestion round.
 
-**Backbone chemistry orders exactly as the PS hypothesis predicts**, without any
-modelling:
+<!-- BEGIN FITNESS ANALYSIS -->
+
+**Backbone chemistry orders as the phosphorothioate hypothesis predicts**,
+with no modelling:
 
 | backbone | n rows | n oligos | mean grade |
 |---|---:|---:|---:|
-| `PMO_neutral` | 9 | 5 | **0.11** |
+| `PMO_neutral` | 10 | 6 | 0.10 |
 | `PS_PO_mix` | 20 | 6 | 0.30 |
-| `full_PO` | 16 | 2 | 0.44 |
-| `full_PS` | 828 | 110 | **0.85** |
+| `full_PO` | 23 | 3 | 0.65 |
+| `full_PS` | 1006 | 153 | 0.93 |
 
-Mean grade also rises with phosphorothioate count (0 linkages → 0.32;
-13–16 → 0.87; 17–19 → 0.95; 20+ → 1.35), and modality orders
-PMO 0.11 < GalNAc-siRNA 0.27 < siRNA 0.50 < ASO gapmer 0.66.
+Mean grade also rises with phosphorothioate count (0 → 0.48; 13–16 → 0.69; 17–19 → 1.10; 20+ → 1.35 linkages).
 
-**All three controlled comparisons run in the predicted direction:**
+Modality orders PMO 0.10 < GalNAc_siRNA 0.27 < siRNA 0.50 < splice_switching_ASO 0.67 < ASO_gapmer 0.91 < other 1.13 < aptamer 1.14.
 
-| comparison | variable moved | mean grade |
-|---|---|---|
-| ODN 2395 → ODN2395_Thio | backbone only (0 → 21 PS) | 0.43 → **1.20** |
-| ISIS 416858 → fesomersen | 19 → 13 PS + GalNAc | 0.82 → **0.00** |
-| volanesorsen → olezarsen | GalNAc + exposure | 1.71 → **0.75** |
+**The caveat that must travel with this.** Grade is partly confounded with
+study type — severe thrombocytopenia is observed in trials, not in dishes:
 
-**The caveat that must travel with this.** Grade is *partly* confounded with
-study type, because severe thrombocytopenia is observed in trials and not in
-dishes. In this dataset the confound is milder than feared — mean grade is
-animal 0.66, clinical 0.65, in-vitro 0.46 — but grade-3 rows remain concentrated
-in the in-vivo studies, and any model trained here must account for study type
-rather than learn it as biology.
+| study type | n rows | mean grade | % grade 3 |
+|---|---:|---:|---:|
+| clinical | 645 | 1.03 | 10.9% |
+| in_vitro | 130 | 1.01 | 3.1% |
+| ex_vivo | 5 | 1.00 | 0.0% |
+| animal_invivo | 308 | 0.65 | 6.5% |
 
-The single outlier is `mixed` backbone at mean grade 3.00 — that is imetelstat
-(n = 2), whose mechanism is different, which is exactly why it is
-mechanism-flagged.
+Any model trained here must account for study type rather than learn it
+as biology.
+
+<!-- END FITNESS ANALYSIS -->
 
 ## Mechanism must be labelled, not assumed
 
@@ -215,7 +213,7 @@ python3 scripts/curate_labels_lane.py > labels_lane.json   # curated public-doma
 python3 scripts/assemble_thrombo.py  <curation.json>       # apply verdicts, dedupe, assign keys
 python3 scripts/qc_thrombo.py                              # gate: enums, FK, ranges, provenance
 python3 scripts/build_merged_thrombo.py                    # regenerate the analysis view
-python3 scripts/report_thrombo.py                          # regenerate the tables below
+python3 scripts/refresh_docs.py                             # regenerate the tables below
 ```
 
 <!-- BEGIN RECORD COUNTER -->
