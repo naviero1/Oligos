@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "NO ADVERSE EVENT",
+      "count": 347
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 296
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 225
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 221
+    },
+    {
+      "term": "DEATH",
+      "count": 205
+    },
+    {
+      "term": "PYREXIA",
+      "count": 182
+    },
+    {
+      "term": "FATIGUE",
+      "count": 158
+    },
+    {
+      "term": "MUSCULAR WEAKNESS",
+      "count": 145
+    },
+    {
+      "term": "VOMITING",
+      "count": 143
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 132
+    },
+    {
+      "term": "RASH",
+      "count": 111
+    },
+    {
+      "term": "COVID-19",
+      "count": 110
+    },
+    {
+      "term": "HEADACHE",
+      "count": 109
+    },
+    {
+      "term": "NAUSEA",
+      "count": 104
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 95
+    },
+    {
+      "term": "PRODUCT DOSE OMISSION ISSUE",
+      "count": 95
+    },
+    {
+      "term": "GASTROINTESTINAL DISORDER",
+      "count": 90
+    },
+    {
+      "term": "WEIGHT INCREASED",
+      "count": 90
+    },
+    {
+      "term": "CONSTIPATION",
+      "count": 84
+    },
+    {
+      "term": "NASOPHARYNGITIS",
+      "count": 81
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 79
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 76
+    },
+    {
+      "term": "RESPIRATORY TRACT INFECTION",
+      "count": 76
+    },
+    {
+      "term": "URINARY TRACT INFECTION",
+      "count": 75
+    },
+    {
+      "term": "COUGH",
+      "count": 72
+    },
+    {
+      "term": "INFLUENZA",
+      "count": 71
+    },
+    {
+      "term": "FALL",
+      "count": 65
+    },
+    {
+      "term": "PRODUCT STORAGE ERROR",
+      "count": 65
+    },
+    {
+      "term": "ABDOMINAL PAIN UPPER",
+      "count": 64
+    },
+    {
+      "term": "ABDOMINAL DISCOMFORT",
+      "count": 62
+    },
+    {
+      "term": "MALAISE",
+      "count": 60
+    },
+    {
+      "term": "DYSPHAGIA",
+      "count": 57
+    },
+    {
+      "term": "RESPIRATORY FAILURE",
+      "count": 54
+    },
+    {
+      "term": "ABDOMINAL PAIN",
+      "count": 49
+    },
+    {
+      "term": "PAIN",
+      "count": 49
+    },
+    {
+      "term": "RESPIRATORY DISORDER",
+      "count": 49
+    },
+    {
+      "term": "NEPHROLITHIASIS",
+      "count": 47
+    },
+    {
+      "term": "UPPER RESPIRATORY TRACT INFECTION",
+      "count": 44
+    },
+    {
+      "term": "ARTHRALGIA",
+      "count": 41
+    },
+    {
+      "term": "HEART RATE INCREASED",
+      "count": 41
+    },
+    {
+      "term": "ILL-DEFINED DISORDER",
+      "count": 40
+    },
+    {
+      "term": "TACHYCARDIA",
+      "count": 40
+    },
+    {
+      "term": "ILLNESS",
+      "count": 39
+    },
+    {
+      "term": "SCOLIOSIS",
+      "count": 38
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 37
+    },
+    {
+      "term": "DISEASE PROGRESSION",
+      "count": 37
+    },
+    {
+      "term": "RESPIRATORY SYNCYTIAL VIRUS INFECTION",
+      "count": 35
+    },
+    {
+      "term": "SEIZURE",
+      "count": 35
+    },
+    {
+      "term": "ABDOMINAL DISTENSION",
+      "count": 34
+    },
+    {
+      "term": "MOTOR DYSFUNCTION",
+      "count": 33
+    },
+    {
+      "term": "OXYGEN SATURATION DECREASED",
+      "count": 31
+    },
+    {
+      "term": "PNEUMONIA ASPIRATION",
+      "count": 31
+    },
+    {
+      "term": "HEPATIC ENZYME INCREASED",
+      "count": 29
+    },
+    {
+      "term": "INCORRECT DOSE ADMINISTERED",
+      "count": 29
+    },
+    {
+      "term": "SEPSIS",
+      "count": 29
+    },
+    {
+      "term": "CARDIAC ARREST",
+      "count": 28
+    },
+    {
+      "term": "PRODUCT CONTAINER ISSUE",
+      "count": 28
+    },
+    {
+      "term": "RHINORRHOEA",
+      "count": 28
+    },
+    {
+      "term": "BACK PAIN",
+      "count": 27
+    },
+    {
+      "term": "INFECTION",
+      "count": 27
+    },
+    {
+      "term": "OROPHARYNGEAL PAIN",
+      "count": 27
+    },
+    {
+      "term": "DEHYDRATION",
+      "count": 26
+    },
+    {
+      "term": "DIZZINESS",
+      "count": 26
+    },
+    {
+      "term": "TREMOR",
+      "count": 26
+    },
+    {
+      "term": "PAIN IN EXTREMITY",
+      "count": 25
+    },
+    {
+      "term": "PARAESTHESIA",
+      "count": 25
+    },
+    {
+      "term": "HYPOKALAEMIA",
+      "count": 24
+    },
+    {
+      "term": "PHOTOSENSITIVITY REACTION",
+      "count": 24
+    },
+    {
+      "term": "SPINAL MUSCULAR ATROPHY",
+      "count": 24
+    },
+    {
+      "term": "MATERNAL EXPOSURE DURING PREGNANCY",
+      "count": 23
+    },
+    {
+      "term": "VIRAL INFECTION",
+      "count": 23
+    },
+    {
+      "term": "PNEUMOTHORAX",
+      "count": 22
+    },
+    {
+      "term": "ERYTHEMA",
+      "count": 21
+    },
+    {
+      "term": "HYPOGLYCAEMIA",
+      "count": 21
+    },
+    {
+      "term": "INSOMNIA",
+      "count": 21
+    },
+    {
+      "term": "SPINAL DISORDER",
+      "count": 21
+    },
+    {
+      "term": "APHTHOUS ULCER",
+      "count": 20
+    },
+    {
+      "term": "ATELECTASIS",
+      "count": 20
+    },
+    {
+      "term": "FEMUR FRACTURE",
+      "count": 20
+    },
+    {
+      "term": "GENERAL PHYSICAL HEALTH DETERIORATION",
+      "count": 20
+    },
+    {
+      "term": "HYPERTENSION",
+      "count": 20
+    },
+    {
+      "term": "MYALGIA",
+      "count": 20
+    },
+    {
+      "term": "PRURITUS",
+      "count": 20
+    },
+    {
+      "term": "ACCIDENTAL EXPOSURE TO PRODUCT",
+      "count": 19
+    },
+    {
+      "term": "ANXIETY",
+      "count": 19
+    },
+    {
+      "term": "BRONCHITIS",
+      "count": 19
+    },
+    {
+      "term": "CARDIO-RESPIRATORY ARREST",
+      "count": 19
+    },
+    {
+      "term": "FEELING ABNORMAL",
+      "count": 19
+    },
+    {
+      "term": "FLATULENCE",
+      "count": 19
+    },
+    {
+      "term": "GASTROENTERITIS",
+      "count": 19
+    },
+    {
+      "term": "LOWER RESPIRATORY TRACT INFECTION",
+      "count": 19
+    },
+    {
+      "term": "ALANINE AMINOTRANSFERASE INCREASED",
+      "count": 18
+    },
+    {
+      "term": "ALOPECIA",
+      "count": 18
+    },
+    {
+      "term": "ASPIRATION",
+      "count": 18
+    },
+    {
+      "term": "LOWER LIMB FRACTURE",
+      "count": 18
+    },
+    {
+      "term": "RESPIRATORY DISTRESS",
+      "count": 18
+    },
+    {
+      "term": "DRUG INTERACTION",
+      "count": 17
+    },
+    {
+      "term": "FOETAL EXPOSURE DURING PREGNANCY",
+      "count": 17
+    },
+    {
+      "term": "GASTRIC DISORDER",
+      "count": 17
+    },
+    {
+      "term": "HYPOXIA",
+      "count": 17
+    }
+  ]
+}

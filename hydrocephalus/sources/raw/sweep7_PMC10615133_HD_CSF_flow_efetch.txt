@@ -1,0 +1,330 @@
+pmcAnn NeurolAnn Neurol319nihpa7707449Annals of neurology0364-51341531-8249pmc-is-collection-domainyespmc-collection-titleNIHPA Author ManuscriptsPMC10615133PMC10615133.3191061513310615133NIHMS19376373749334210.1002/ana.26749NIHMS1937637NIHPA1937637319ArticleCerebrospinal fluid flow in patients with Huntington’s diseaseHettKilian1*EismaJarrod J.1HernandezAdreanna B.1McKnightColin D.2SongAlexander1ElenbergerJason1ConsidineCiaran1DonahueManus J.13ClaassenDaniel O.11Department of Neurology, Vanderbilt University Medical Center, Nashville, TN, USA2Department of Radiology and Radiological Sciences, Vanderbilt University Medical Center, Nashville, TN, USA3Department of Psychiatry and Behavioral Sciences, Vanderbilt University Medical Center, Nashville, TN, USA*Corresponding Author Kilian Hett, PhD, 1500 21st Ave South, Village at Vanderbilt, Suite 2600, Vanderbilt University Medical Center, Department of Neurology, Division of Behavioral and Cognitive Neurology, Nashville, TN, 37212 USA, Tel: +1 (615) 977 5052, kilian.hett.1@vumc.orgAuthor contributionsKH, DOC, MJD, CC, and CJM contributed to the conception and design of the study. KH, AS, ABH, JE, and JJE contributed to the acquisition and analysis of data. KH, DOC, and MJD contributed to drafting the text or preparing the figures.11202307820239454481348858942210202301112024011120243110202301112024This file is available for text mining. It may also be used consistent with the principles of fair use under the copyright law.
+
+### Objective
+Investigations of cerebrospinal fluid (CSF) flow aberrations in Huntington’s disease (HD) are of growing interest as impaired CSF flow may contribute to mutant Huntington (mHTT) retention and observed heterogeneous responsiveness to intrathecally administered therapies.
+
+### Method
+We assessed net cerebral aqueduct CSF flow and velocity in 29 HD participants (17 premanifest and 12 manifest) and 51 age and sex matched non-HD control participants using 3 tesla MRI methods. Regression models were applied to test hypotheses regarding (i) net CSF flow and cohort, (ii) net CSF flow and disease severity (CAP-score), and (iii) CSF volume after correcting for age and sex.
+
+### Results
+Group-wise analyses support a decrease in net CSF flow in HD (mean=0.14+/−0.27 mL/min) relative to control (mean=0.32+/−0.20 mL/min) participants (p=0.02), with lowest flow in the manifest HD cohort (mean=0.04+/−0.25 mL/min). This finding was explained by hyperdynamic CSF movement, manifesting as higher caudal systolic CSF flow velocity and higher diastolic cranial CSF flow velocity across the cardiac cycle, in HD (caudal flow: 0.17+/−0.07 mL/s, cranial flow: 0.14+/−0.08 mL/s) compared to control (caudal flow: 0.13+/−0.06 mL/s, cranial flow: 0.11+/−0.04 mL/s) participants. A positive correlation between cranial diastolic flow and disease severity was observed (p=0.02).
+
+### Interpretations
+Findings support aqueductal CSF flow dynamics changing with disease severity in HD. These accelerated changes are consistent with changes observed over the typical adult lifespan and may have relevance to mHTT retention and intrathecally administered therapeutics responsiveness.Huntington’s diseaseCSF flowCerebral aqueductPhase Contrast MRIpmc-status-qastatus0pmc-status-liveyespmc-status-embargonopmc-status-releasedyespmc-prop-open-accessnopmc-prop-olfnopmc-prop-manuscriptyespmc-prop-open-manuscriptyespmc-prop-legally-suppressednopmc-prop-has-pdfyespmc-prop-has-supplementnopmc-prop-pdf-onlynopmc-prop-suppress-copyrightnopmc-prop-is-real-versionnopmc-prop-is-scanned-articlenopmc-prop-preprintnopmc-prop-in-epmcyes1.
+
+### Introduction
+Huntington’s disease (HD) is a neurogenerative disorder caused by a polyglutamine encoding an abnormal CAG repeat expansion in the huntingtin gene1 leading to mutant huntingtin (mHTT) protein transcription. It is hypothesized that mHTT protein is necessary for the neurodegenerative sequelae of HD and current therapeutic approaches attempt to lower mHTT levels in an effort to slow or halt disease progression.2,3While mHTT is produced in neuronal cells and released in the brain parenchyma, it is cleared from the cerebrospinal fluid (CSF) by active transport mechanisms.4 CSF is primarily produced in the atria of the lateral ventricles where the majority of choroid plexus resides. Following production, CSF flows from the third to the fourth ventricles, passing through the cerebral aqueduct. It then traverses the foramina of Luschka and Magendie to enter the subarachnoid space. In addition, CSF may also enter the brain parenchymal interstitial space as mediated by aquaporin-4 (AQ-4) water channels located at the border of the astrocytic end-feet and periarterial space.5,6 AQ-4 channels facilitate the influx of fluid from the periarterial space to the parenchymal interstitial space, as well as the passage of fluid from the interstitial space to the perivenous space. This fluid ultimately exits the central nervous system via multiple routes.7-12CSF flow aberrations in HD may be fundamental to disease pathophysiology. The role of huntingtin protein in the regulation of CSF homeostasis has been established through its effect on motile ciliary function and knockout of wildtype huntingtin protein (wHTT) in mice results in congenital hydrocephalus13,14. The role of motile cilia function and CSF movement is also hypothesized to contribute to other disorders, like hydrocephalus15. In HD, mutant huntingtin protein (mHTT) results in a defective primary cilia structure, which can lead to autophagy deficits16. In therapeutic trials, the response heterogeneity to intrathecally administered antisense oligonucleotides (ASOs)17 further highlights the need for more rigorous investigations to characterize CSF flow and related CSF transport aberrations. The increase in ventricular volume and greater neurofilament light chain levels in treated patients raised safety concerns to these therapy classes17; ventricular volume may be related to reductions in wHTT, mHTT, or from other off target effects from the ASO. Intrathecally-delivered therapies must penetrate subcortical structures,17,18 and intact CSF flow is likely necessary for drug distribution. Finally, as HD is characterized by an abnormal ventricular volume increase secondary to caudate atrophy, such increased ventricular volume could alter the CSF flow resistance and therefore CSF flow dynamics.19,20Quantitative CSF flow assessments can be made non-invasively in vivo at the level of the cerebral aqueduct using cardiac-phase corrected phase-contrast MRI (PC-MRI).21 These measurements can include net flow (e.g., net volume of CSF traversing from the third to the fourth ventricle) and velocity (mean, maximum, and minimum velocity over the cardiac cycle).22,23 Across the human lifespan, there is a positive correlation between CSF peak velocity and age,22 yet a decrease in overall net CSF flow with age, which also parallels a reduction in choroid plexus perfusion with age.24 In HD, fewer investigations into CSF flow have been performed,25 yet understanding whether HD manifests with aberrant CSF flow may have fundamental relevance to both understanding mechanisms of HTT retention and efficacy of intrathecally administered therapies.Here, we assess premanifest and manifest-HD patients and age-matched non-HD control participants to further quantify CSF flow dynamics. We test the hypothesis that persons with HD have reduced net CSF flow and increased peak CSF velocity, consistent with accelerated trends that manifest over the broader adult lifespan.2.
+
+### Materials and Methods
+
+### Participants
+Participants provided informed, written consent in accordance with the local institutional review board (IRB) and consistent with the Declaration of Helsinki and its amendments. Inclusion criteria for both HD and non-HD control participants included no history of cerebrovascular disease (prior stroke or major cervical or intracranial arterial stenosis &gt; 70%), anemia, psychiatric or neurological disorder including but not limited to prior overt stroke, sickle cell anemia, schizophrenia, bipolar disorder, existing neuro-degenerative disorder, or multiple sclerosis. Clinical history and assessment were performed by a board-certified neurologist (DOC) and anatomical imaging and angiography by a board-certified neuroradiologist (CDM).HD participants underwent a clinical evaluation with detailed motor, cognitive, and functional assessment. The CAG-age-product (CAP) score was calculated using standard procedures.26 Participants were considered premanifest or manifest based on the diagnostic confidence level of the Unified Huntington Disease Rating Scale (UHDRS).27 Diagnostic confidence level is a scale from 0 (normal) to 4 (unequivocal presence of movement disorder in a participant at risk of HD). Participants with ratings less than 4 were considered as premanifest whereas others were categorized as manifest-HD.
+
+### Imaging sequence
+All participants were scanned on the same 3 Tesla scanner (Philips Healthcare, Best, The Netherlands) using body coil radiofrequency transmission and phased array 32-channel reception. All participants received the same protocol, which included standard anatomical imaging consisting of 3D T2-weighted volume isotropic-turbo-spin-echo-acquisition (VISTA) (echo time=331ms, repetition time=2500ms, and spatial resolution=0.78x0.78x0.78mm), 3D T1-weighted magnetization-prepared-rapid-gradient-echo (MPRAGE) (echo time=3.7ms, repetition time=8.1ms, flip angle=8°, spatial resolution=1x1x1mm), 2D T2-weighted FLAIR (echo time=120ms, repetition time=11,000ms, spatial resolution=1x1x4mm), 3D time-of-flight magnetic resonance angiography (echo time=3.45ms, repetition time=23ms, spatial resolution=0.39x0.39x1.4mm), and diffusion weighted imaging (DWI) (echo time=83ms, repetition time= 2,923ms, directions=3, b-value=1,000s/mm2; spatial resolution=1.8x1.8x4mm). Anatomical scans were primarily used for confirming inclusion criteria.
+
+### PC-MRI analysis for CSF flow determination
+The PC-MRI sequence (Table 1) was utilized for CSF flow determination within the cerebral aqueduct. To achieve this, four MR-compatible ECG electrodes were placed on the chest to enable retrospective cardiac phase correction. A single slice orthogonal to the cerebral aqueduct was placed above the location of the fourth ventricle, where the aqueduct is bound by the tectum posteriorly and mid-brain anteriorly (Figure 1). A velocity encoding gradient (venc) of 12 cm/s was applied, and measurements were acquired for approximately six minutes, depending on the cardiac frequency with signal averaging over a total of 12 full data measurements across the cardiac cycle. A region of interest was selected along the outer border of the aqueduct (Figure 1). Local phase correction was applied during reconstruction of the PC-MRI acquisition to correct for phase offset due to eddy currents. A phase aliasing correction was implemented by unwrapping the wrapped phase values that exceeded the velocity encoding value of 12 cm/s.
+
+### CSF flow measures
+The primary measures recorded for hypothesis testing were net CSF flow (i.e., difference, in mL/min, of the amount of CSF flowing caudally during systole and cranially during diastole), peak velocity (i.e., maximum CSF velocity, in cm/s, separately quantified during systole and diastole). Secondary measures included maximum cranial and caudal flow (i.e., maximum CSF flow in each direction per minute), expressed as cm/s for velocity, and mL/min for volumetric flow. Of note, net flow and maximum velocity measurements are relatively insensitive to the region of interest, as maximum velocity occurs in the center of the region, and net flow is accurate so long as the region of interest overestimates the cross-section of the aqueduct (i.e. net flow outside the aqueduct is null); additional intra- and inter-rater reliability metrics have been reported in the literature. 28
+
+### Brain volumetrics
+Striatal structure volumes of the caudate, putamen, and globus pallidus, as well as CSF cisterns defined as lateral, third and fourth ventricles, and sub-arachnoid space volume were all extracted from T1-weighted MRI using AssemblyNet,29 a large ensemble of convolutional neural networks providing segmentation of brain structure following Neuromorphometrics brainCOLOR protocol.30
+
+### Statistical analysis and hypothesis testing
+Pre-requisite statistical tests were applied to evaluate differences in demographic parameters. A Kruskal-Wallis test or chi-squared test was applied to evaluate potential differences in continuous and categorical variables, respectively, with significance criterion two-sided p&lt;0.05.First, we tested the first hypothesis that, after accounting for age and sex, net CSF flow is reduced in HD participants relative to healthy controls. We hypothesized that this reduction in net CSF flow can be explained by hyperdynamic flow profiles characterized by higher caudal systolic CSF flow velocity and higher cranial diastolic CSF velocity. A related sub-hypothesis is that this finding is more prominent in manifest vs. premanifest HD. To test this hypothesis, we used a generalized linear model (GLM) with net CSF flow and peak velocity as dependent variable, pathological status as independent variable, age, and sex as covariates.Second, we tested the hypothesis that, after accounting for age and sex, the hyperdynamic CSF flow, quantified as maximum caudal and cranial CSF flow, correlates directly with disease exposure quantified using the CAP score.26 To test this hypothesis, we first performed Spearman-rank correlation to evaluate direct correlation maximum CSF flow increase in both directions CAP scores. Then, to consider potential demographics that could co-found the effects, analyses using GLM with flow measures as dependent variable, CAP as independent variable with age and sex as covariates.Third, we tested the hypothesis that, after accounting for age and sex, the volume of the third and fourth ventricles directly correlates with the net CSF flow reduction in HD. To test this hypothesis, we first performed Spearman-rank correlation to evaluate direct correlation between CSF volumes and phase contrast MRI measures. To consider potential demographics that could confound the effects, analyses using GLM with PC-MRI measures as dependent variables, volumetric measures as independent variable with age and sex as covariates.For all statistical testing, significance was evaluated with a threshold of 0.05. P-values were corrected (pcorr)for multiple comparisons using the false discovery rate (FDR) correction method with significance threshold set to 0.05.313.
+
+### Results
+
+### Demographics and brain volumetric data
+Participant information is summarized in Table 1. Of the 80 participants scanned, 29 were diagnosed with premanifest (n=17) or motor manifest (n=12) HD, and 51 were age-matched non-HD controls. The premanifest group had a lower CAP score (less than 400) consistent with the premise that motor symptoms manifest at or above a CAP score of 400.32Structurally, no group differences in intracranial volume, total gray matter volume, or white matter volume were observed between non-HD and HD cohorts. Striatal gray matter structures (caudate, putamen, and globus pallidus) were reduced in HD relative to non-HD cohorts (p&lt;0.001). Lateral and third ventricles, as well as subarachnoid space volumes were larger in HD compared to the non-HD (p&lt;0.001 for each volume) cohorts (Table 2). Although total CSF volume was not significantly different between the non-HD and total HD cohort, group differences were observed between the non-HD and manifest-HD cohorts (p&lt;0.001). The cross-sectional surface of the cerebral aqueduct was also observed to be larger in HD relative to non-HD participants (p&lt;0.001).
+
+### Hypothesis (1). Reduction of net CSF flow and increase in peak CSF velocity in HD
+Figure 2 illustrates group distributions for net CSF flow (mL/min) and peak CSF velocity (cm/s). Net CSF flow was significantly decreased in the cumulative premanifest and manifest HD cohorts (p-value&lt;0.01, pcorr&lt;0.05) relative to the non-HD control cohort, with greatest reduction in the manifest HD cohort (p-value&lt;0.01, pcorr&lt;0.05) compared to pre-manifest HD cohort (p-value&lt;0.05, pcorr&lt;0.05). No difference was observed when comparing the premanifest and manifest HD cohorts. Similarly, analysis of peak velocity revealed a significant increase in CSF velocity in HD participants (p-value&lt;0.01, pcorr&lt;0.01). This observation was significantly different when comparing non-HD control to manifest (p-value&lt;0.01, pcorr&lt;0.01) and premanifest (p-value&lt;0.05, pcorr=0.05) HD cohorts, and when comparing manifest to premanifest (p-value&lt;0.01, pcorr&lt;0.01). Figure A2 illustrates results from a secondary analysis of maximum cranial and caudal CSF flow (see supplementary materials). A significant increase in maximum caudal flow in HD participants (pcorr&lt;0.01), with greater increases seen in motor manifest (pcorr&lt;0.05) than the premanifest cohorts (pcorr&lt;0.05), was observed. Similarly, a significant increase in maximum cranial flow in HD participants (pcorr&lt;0.01), with greater increases observed in motor manifest (pcorr0.01) than in the premanifest cohorts (pcorr&lt;0.05), was observed. These data are consistent with no statistical difference in the maximum caudal and cranial CSF flow between premanifest and manifest HD participants (pcorr=0.64 and 0.24, respectively).
+
+### Hypothesis (2). CSF flow and CAG-Age-Product (CAP) score
+We evaluated the relationship between the CAP score and two flow measurement from the PC-MRI readouts: maximum cranial flow and maximum caudal flow, the two measures of increased hyperdynamic flow, to assess the relationship between exposure to CAG repeat and hyperdynamic of CSF flow (Figure 3). A non-significant trend for an increase of maximum systolic caudal flow (ρ=0.31; pcorr=0.14) was observed, whereas maximum diastolic cranial flow was positively correlated with CAP score (ρ= 0.42; pcorr&lt;0.05).
+
+### Hypothesis (3). CSF flow and volumetry
+Table 3 summarizes the correlation coefficients for ventricle volumes and investigated PC-MRI measures in HD participants. A positive correlation between peak CSF flow velocity and third and fourth ventricular volumes ρ3rd = 0.6 (pcorr&lt;0.05) and ρ4th = 0.6 (pcorr&lt;0.05) was observed. Similar observations were made in maximum caudal and cranial CSF flow, as significant correlations are seen with the third ventricle volume, ρ3rd = 0.57 (pcorr&lt;0.03) for maximum caudal flow and ρ3rd = 0.55 (pcorr&lt;0.05) for maximum cranial flow, respectively. To account for potential confounding effects, an additional analysis investigating possible relationships between third and fourth ventricular volumes and peak velocity was conducted with sex and age as covariates. Peak velocity was observed to be significantly related to the volume of third and fourth ventricles (β=1.5 and 1.9; pcorr&lt;0.05, for third and fourth ventricle volumes, respectively). Furthermore, data suggest that ventricular volume explains 40 percent of the variability seen in the peak velocity, 20 percent in the maximum caudal flow and 22 percent in the maximum cranial flow (see Table 3). An interaction analysis suggests that this correlation is disease specific with pathology interaction terms obtaining corrected p-values inferior to 0.01 for peak velocity, maximum caudal and cranial flow (pcorr&lt;0.01, pcorr =0.02, and pcorr =0.02, for peak velocity, maximum caudal, and cranial flow, respectively).We also observed correlations between cross-sectional aqueduct surface area and peak velocity ρ=0.28; pcorr=0.08, max caudal flow ρ=0.58; pcorr=0.03, and max cranial flow ρ=0.60; pcorr=0.03 (Table 3). These results are comparable to correlation values found in the non-HD control population. No relationship between cross-sectional aqueduct surface and net CSF flow was observed.4.
+
+### Discussion
+In this study, reduced net caudal CSF flow through the cerebral aqueduct was reported in HD relative to non-HD participants. This reduced net caudal CSF flow, averaged over the cardiac cycle, was accompanied by larger caudal and cranial flow velocities through the cerebral aqueduct. It is noteworthy that these changes were in HD gene carriers in stage 1 and 2 of the HD staging system, and these stages precede functional decline in many participants. These findings suggest that disease-related CSF production and CSF flow may be altered early in the course of disease. Study results may have relevance for understanding routes of emerging therapeutic interventions (e.g., intrathecal interventions) and for furthering our understanding of neurodegeneration pathophysiology and mHTT retention in HD. More broadly, these results support future investigations that assess neurofluid alterations in neurodegeneration.
+
+### Cerebrospinal fluid flow in Huntington’s disease
+Few investigations of CSF production have been performed in patients with HD, despite prior evidence suggesting that neuroprotective choroid plexus transplantation reduces lesion recovery and has potential for lessen symptoms in HD.33 One previous study assessed differences in CSF velocity measured in the cerebral aqueduct in a smaller group of 10 healthy and 10 HD participants, but the flow differences did not meet criteria for significance (p=0.10).25 Our data extend this work by increasing the number of observations to 80 and including premanifest and manifest HD participants, as well as non-HD controls. Our findings are consistent with reduced net CSF flow through the cerebral aqueduct in HD, with greater increase of cranial flow compared to caudal flow increase in HD, a finding that can be explained by overall hyperdynamic flow. This difference of maximum cranial and caudal CSF flow becomes more prominent in manifest participants. Additionally, when taken together, the positive correlation with peak velocity and ventricular size, but not net flow, indicates that there are multiple contributors to CSF flow pathophysiology in HD.The relationship between ventricular volume and CSF flow in the cerebral aqueduct was assessed to determine how CSF flow was impacted by ventricle size. In non-HD participants, we did not find a significant relationship between CSF volume and flow. However, we note a significant correlation between peak velocity and third and fourth ventricle volume size in manifest HD participants. Noticeable volumetric increases in third ventricle have been described in HD, but increases in fourth ventricle volume have not been identified.34,35 As such, in HD, an increase in third ventricle volume is more pronounced than that seen in the aqueduct region. This disproportionate difference may increase the pressure gradient and subsequently increase the peak fluid velocity, which results in a more turbulent CSF movement through the cerebral aqueduct. Additional studies in more patients are necessary to support this possibility.
+
+### Pathophysiology and treatment implications
+Importantly, we observed an increase in absolute CSF flow velocity, both during systole and diastole, suggesting bi-directional hyperdynamic CSF flow in HD. In a subset of extreme cases, some participants had evidence of reversed net CSF flow, where the net volume of CSF traversed cranially instead of the expected caudal direction. Previous studies investigating idiopathic normal pressure hydrocephalus (iNPH), using similar imaging methods, also report a cranial flow, which reverts caudal after shunt intervention.36-38 Previous reports of cranial flow are described in patients where there is an obstruction to the CSF flow gradient, or pronounced neuroinflammatory environment and CSF absorption through the ependymal surface.39,40 It is possible that reduced CSF net flow may be in response to altered CSF absorptions profiles in HD, as CSF production becomes down-regulated and deviated to extra-ventricular sources.38 Future studies should assess if cranial CSF flow is associated with signs of transependymal flow such as increased fluid signal in the periventricular white matter signs or alternative egress pathways as possibly manifested by increased perivascular spaces.41Study results may have important implications to studies that employ CSF-based interventions, such as intrathecal delivery. The most concerning safety observations in recent intrathecal trials noted greater ventricle size, and greater neurofilament light chain concentrations in response to treatment, and these were associated with greater motor and cognitive decline.17,18 The patterns of altered CSF flow, velocities, and transit direction, have direct implications to drug delivery, pharmacokinetic properties of intrathecal therapies, and may also inform inclusion criteria for future studies employing intrathecal delivery. Additionally, these observations should provide an impetus to understand the impact of alterations to CSF dynamics in neurodegenerative disease. HD is unique in that the disease is fully penetrant, offering opportunities for understanding early makers of disease pathology in premanifest participants. With greater interest in CSF metabolic process, and waste protein clearance,42 a focus on CSF production, flow, and absorption, are necessary in more common neurodegenerative disorders.Intrathecally administered ASOs have gained great interest as a disease-modifying treatment in HD, however, high inter-subject response variability highlights the need to further understand ASO mechanisms and to select patients predisposed for greatest response. Given the growing relevance of neurofluid circulation dysfunction in other neurodegenerative disorders, it is logical that trial heterogeneity may be explained by CSF flow dysfunction. As such, this study should also be considered in light of recent failures of current ASO candidates in HD.43 Although, we only measured abnormal CSF flow in the cerebral aqueduct, generalizable alterations to CSF flow could impact tissue penetrance, uneven delivery, and altered pharmacokinetic properties. With reports of an abnormal increase in ventricular volumes, especially five confirmed cases of hydrocephaly, there is a potential impact of intrathecal therapeutics on CSF dynamic flow. Given that we see a third of participants with a net cranial flow, these changes could dramatically impact transport properties of intrathecal therapies, or potentiate greater changes in CSF absorption profiles as see in conditions like NPH37,38. Therefore, measure of flow in the cerebral aqueduct could be potentially used for inclusion and safety monitoring of these therapies.
+
+### Limitations
+First, the sample size for HD sub-group (i.e., premanifest, and manifest) limits our power of detection to control for multiple covariates. Nevertheless, the changes observed in our data are larger than recent reports from others and in line with previously reported trends suggesting a possible increase of peak velocity in participant suffering from HD compared to healthy individuals. Second, the velocity encoding used in the study was set to 12 cm/s, which could be lower than the maximum velocity of CSF in some participants. This value was chosen given that CSF flow will be faster in the center of the aqueduct relative to the perimeter and a lower venc, such as this, can therefore accurately measure velocity profiles near the perimeter; in the case of higher central flow, we performed phase aliasing correction given the known directionality of movement to reduce measurement uncertainty in participants with high flow profiles as is commonly performed.37,44,45 Finally, volumetric assessment of brain structure indicates that enrolled participants at the premanifest HD stage present no difference in CSF volume. This may be explained by the fact that in our premanifest cohort a third of the patients where in stage 0 of HD-ISS (i.e., no noticeable difference in volumetric assessment using imaging technique) while the rest of the cohort were in stage 1 (i.e., noticeable striatum volume reduction).5.
+
+### Conclusion
+We observed reduced net CSF flow through the cerebral aqueduct in participants with versus without HD, which was explained by a larger increase of cranial flow compared to caudal flow across the cardiac cycle. These findings may have relevance for explaining heterogeneity of responsiveness to intrathecally administered therapies and may provide a basis for using personalized signatures of CSF flow for entry into emerging treatment trials in HD.
+
+### Acknowledgments
+This study has been funded in part by the American National Institute of Health (NIH) via grant awarded from the NIA (R01-AG062574 and K24-AG064114), NINR (R01-NR015079), NCCIH (R01-AT011456), and the Huntington's Disease Society of America (HDSA) HD Human Biology Project Fellowship. This study was approved by the Vanderbilt University Medical Center Institutional Review Board.Potential Conflicts of InterestAuthors have nothing to report.
+
+### Data Availability
+Anonymized data presented within this article will be made available by request from qualified investigator.10.
+
+### References
+1.CaronNS, DorseyER &amp; HaydenMR
+Therapeutic approaches to Huntington disease: from the bench to the clinic. Nat. Rev. Drug Discov. 2018
+1710
+17, 729–750 (2018).10.1038/nrd.2018.133302374542.SouthwellAL
+
+Huntingtin suppression restores cognitive function in a mouse model of Huntington’s disease. Sci. Transl. Med
+10, 3959 (2018).10.1126/scitranslmed.aar3959302826953.CaronNS
+
+Potent and sustained huntingtin lowering via AAV5 encoding miRNA preserves striatal volume and cognitive function in a humanized mouse model of Huntington disease. Nucleic Acids Res. 48, 36–54 (2020).3174554810.1093/nar/gkz976PMC71456824.CaronNS
+
+Mutant Huntingtin Is Cleared from the Brain via Active Mechanisms in Huntington Disease. J. Neurosci
+41, 780–796 (2021).3331075310.1523/JNEUROSCI.1865-20.2020PMC78427495.MaderS &amp; BrimbergL
+Aquaporin-4 Water Channel in the Brain and Its Implication for Health and Disease. Cells 2019, Vol. 8, Page 90
+8, 90 (2019).10.3390/cells8020090PMC6406241306912356.IliffJJ
+
+A paravascular pathway facilitates CSF flow through the brain parenchyma and the clearance of interstitial solutes, including amyloid β. Sci. Transl. Med
+4, (2012).10.1126/scitranslmed.3003748PMC3551275228966757.HettK
+
+Parasagittal dural space and cerebrospinal fluid (CSF) flow across the lifespan in healthy adults. Fluids Barriers CNS
+1–33 (2022) doi:10.1186/s12987-022-00320-4.35313906PMC89356968.RingstadG &amp; EidePK
+Cerebrospinal fluid tracer efflux to parasagittal dura in humans. Nat. Commun
+11, 1–9 (2020).3195339910.1038/s41467-019-14195-xPMC69690409.HladkySB &amp; BarrandMA
+Elimination of substances from the brain parenchyma: efflux via perivascular pathways and via the blood–brain barrier. Fluids Barriers CNS 2018
+151
+15, 1–73 (2018).10.1186/s12987-018-0113-6PMC61946913034061410.MehtaNH
+
+The Brain-Nose Interface: A Potential Cerebrospinal Fluid Clearance Site in Humans. Front. Physiol
+12, 2318 (2022).10.3389/fphys.2021.769948PMC87641683505879411.EideK, AreS, VatneholS, EmblemKE &amp; RingstadG
+Magnetic resonance imaging provides evidence of glymphatic drainage from human brain to cervical lymph nodes. doi:10.1038/s41598-018-25666-4.PMC59407932974012112.EidePK
+
+Clinical application of intrathecal gadobutrol for assessment of cerebrospinal fluid tracer clearance to blood. JCI Insight
+6, (2021).10.1172/jci.insight.147063PMC82623183382276913.MitchisonHM &amp; ValenteEM
+Motile and non-motile cilia in human pathology: from function to phenotypes. J. Pathol
+241, 294–309 (2017).2785925810.1002/path.484314.DietrichP, ShanmugasundaramR, ShuyuE &amp; DragatsisI
+Congenital hydrocephalus associated with abnormal subcommissural organ in mice lacking huntingtin in Wnt1 cell lineages. Hum. Mol. Genet
+18, 142–150 (2009).1883846310.1093/hmg/ddn324PMC329886715.KumarV
+
+The regulatory roles of motile cilia in CSF circulation and hydrocephalus. Fluids Barriers CNS 2021
+181
+18, 1–11 (2021).10.1186/s12987-021-00265-0PMC82619473423370516.KaliszewskiM, KnottAB &amp; Bossy-WetzelE
+Primary cilia and autophagic dysfunction in Huntington’s disease. Cell Death Differ. 2015
+229
+22, 1413–1424 (2015).10.1038/cdd.2015.80PMC45327812616007017.RookME &amp; SouthwellAL
+Antisense Oligonucleotide Therapy: From Design to the Huntington Disease Clinic. BioDrugs 2022
+362
+36, 105–119 (2022).10.1007/s40259-022-00519-9PMC88990003525463218.KingwellK
+Double setback for ASO trials in Huntington disease. Nat. Rev. Drug Discov doi:10.1038/d41573-021-00088-6.3401200019.WalkerFO
+Huntington’s disease. Lancet
+369, 218–228 (2007).1724028910.1016/S0140-6736(07)60111-120.PaulsenJS
+
+Brain Structure in Preclinical Huntington’s Disease. Biol. Psychiatry
+59, 57–63 (2006).1611265510.1016/j.biopsych.2005.06.00321.YamadaS
+
+Current and Emerging MR Imaging Techniques for the Diagnosis and Management of CSF Flow Disorders: A Review of Phase-Contrast and Time–Spatial Labeling Inversion Pulse. Am. J. Neuroradiol
+36, 623–630 (2015).2501267210.3174/ajnr.A4030PMC796430722.SartorettiT
+
+Sex and Age Dependencies of Aqueductal Cerebrospinal Fluid Dynamics Parameters in Healthy Subjects. Front. Aging Neurosci
+0, 199 (2019).10.3389/fnagi.2019.00199PMC66881903142795623.SakhareAR, BarisanoG &amp; PaJ
+Assessing test–retest reliability of phase contrast MRI for measuring cerebrospinal fluid and cerebral blood flow dynamics. Magn. Reson. Med
+82, 658–670 (2019).3102072110.1002/mrm.27752PMC651061724.EismaJ
+
+Choroid plexus perfusion and bulk cerbrospinal fluid flow across the adult lifespan. J. Cereb. Blood Flow Metab (2022) doi:10.1177/0271678X221129101.PMC99032243620047325.RodriguesFB
+
+Cerebrospinal fluid flow dynamics in Huntington’s disease evaluated by phase contrast MRI. Eur. J. Neurosci
+49, 1632–1639 (2019).3068796110.1111/ejn.14356PMC661829626.ZhangY
+
+Indexing disease progression at study entry with individuals at-risk for Huntington disease. Am. J. Med. Genet. Part B Neuropsychiatr. Genet
+156, 751–763 (2011).10.1002/ajmg.b.31232PMC31744942185892127.KremerHPH &amp; Hungtington Study Group, X.
+Unified Huntington’s disease rating scale: reliability and consistency. Mov. Disord
+11, 136–142 (1996).868438210.1002/mds.87011020428.KoerteI
+
+Inter- and intra-rater reliability of blood and cerebrospinal fluid flow quantification by phase-contrast MRI. J. Magn. Reson. Imaging
+38, 655–662 (2013).2337182110.1002/jmri.24013PMC364431129.CoupéP
+
+AssemblyNet: A large ensemble of CNNs for 3D Whole Brain MRI Segmentation. Neuroimage
+219, 117026 (2019).10.1016/j.neuroimage.2020.1170263252266530.KleinA &amp; TourvilleJ
+101 labeled brain images and a consistent human cortical labeling protocol. Front. Neurosci
+0, 171 (2012).10.3389/fnins.2012.00171PMC35145402322700131.BenjaminiY &amp; HochbergY
+Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing. J. R. Stat. Soc. Ser. B
+57, 289–300 (1995).32.RossCA
+
+Huntington disease: natural history, biomarkers and prospects for therapeutics. Nat. Publ. Gr
+10, 204–216 (2014).10.1038/nrneurol.2014.242461451633.SkinnerSJM
+
+Choroid plexus transplants in the treatment of brain diseases. Xenotransplantation
+13, 284–288 (2006).1676872110.1111/j.1399-3089.2006.00310.x34.SonesonC
+
+Early changes in the hypothalamic region in prodromal Huntington disease revealed by MRI analysis. Neurobiol. Dis
+40, 531–543 (2010).2068234010.1016/j.nbd.2010.07.013PMC295578135.WijeratnePA
+
+An image-based model of brain volume biomarker changes in Huntington’s disease. Ann. Clin. Transl. Neurol
+5, 570–582 (2018).2976112010.1002/acn3.558PMC594596236.PennRD, BasatiS, SweetmanB, GuoX &amp; LinningerA
+Ventricle wall movements and cerebrospinal fluid flow in hydrocephalus: Clinical article. J. Neurosurg
+115, 159–164 (2011).2127556310.3171/2010.12.JNS1092637.RingstadG, EmblemKE &amp; EidePK
+Phase-contrast magnetic resonance imaging reveals net retrograde aqueductal flow in idiopathic normal pressure hydrocephalus. J. Neurosurg
+124, 1850–1857 (2016).2663638510.3171/2015.6.JNS1549638.LindstrømEK, RingstadG, MardalKA &amp; EidePK
+Cerebrospinal fluid volumetric net flow rate and direction in idiopathic normal pressure hydrocephalus. NeuroImage Clin. 20, 731–741 (2018).3023891710.1016/j.nicl.2018.09.006PMC615445639.BERINGEA &amp; SATOO
+Hydrocephalus: Changes in Formation and Absorption of Cerebrospinal Fluid Within the Cerebral Ventricles. J. Neurosurg
+20, 1050–1063 (1963).1418610710.3171/jns.1963.20.12.105040.SaharA, HochwaldGM &amp; RansohoffJ
+Alternate pathway for cerebrospinal fluid absorption in animals with experimental obstructive hydrocephalus. Exp. Neurol
+25, 200–206 (1969).539449810.1016/0014-4886(69)90044-241.ChanST, MercaldoND, RavinaB, HerschSM &amp; RosasHD
+Association of Dilated Perivascular Spaces and Disease Severity in Patients With Huntington Disease. Neurology
+96, e890–e894 (2021).3310638810.1212/WNL.0000000000011121PMC810590042.McKnightCD, RouleauRM, DonahueMJ &amp; ClaassenDO
+The Regulation of Cerebral Spinal Fluid Flow and Its Relevance to the Glymphatic System. Curr. Neurol. Neurosci. Reports 2020
+2012
+20, 1–9 (2020).10.1007/s11910-020-01077-9PMC78642233307439943.KingwellK
+Double setback for ASO trials in Huntington disease. Nat. Rev. Drug Discov
+20, 412–413 (2021).3401200010.1038/d41573-021-00088-644.FlórezYN
+
+Semiautomatic analysis of phase contrast magnetic resonance imaging of cerebrospinal fluid flow through the aqueduct of Sylvius. Magn. Reson. Mater. Physics, Biol. Med
+19, 78–87 (2006).10.1007/s10334-006-0030-61677956345.BouillotP
+
+3D phase contrast MRI: Partial volume correction for robust blood flow quantification in small intracranial vessels. Magn. Reson. Med
+79, 129–140 (2018).2824413210.1002/mrm.26637Figure 1.(A) Description of the phase contrast magnetic resonance imaging (MRI) planning for the quantification of cerebrospinal fluid (CSF) flow in the cerebral aqueduct. Sequences were planned at the level of the tectum and midbrain in a plane perpendicular to the narrowest aspect of the cerebral aqueduct. (B) Regions of interest were manually identified by the MRI operator around the cerebral aqueduct. The bottom row illustrates the planned acquisition recording movement of CSF flow over the cardiac cycle (C-D). As CSF flows bi-directionally in the cerebral aqueduct in a manner that varies with cardiac cycle phase, caudal flow is encoded by positive values (i.e., movement of CSF from the third to the fourth ventricle). Cranial flow, encoded with negative values, represents CSF flowing from the fourth ventricle to the third ventricle.Figure 2.Evaluation of net CSF flow (mL/min) and peak velocity (cm/s). Group-wise comparisons have been conducted using a general linear model with p-values corrected for multiple comparison. Encapsulated boxplots extend from 25th to 75th percentiles (white line = median). Outer violin plots estimate data distribution. Findings suggest a progressive decrease in net CSF flow in premanifest and finally manifest HD relative to non-HD healthy controls in this cross-sectional analysis. This gradient of reducing net CSF flow parallels a progressive increase in peak velocity across these same cohorts, consistent with flow becoming more hyperdynamic in more progressive stages of disease. Stages 0 to 3 correspond to HD-ISS staging system.Figure 3.From left to right, evaluation of the relationship between CAG-age-product (CAP) score with maximum cranial and caudal flow (mL/min) using the Spearman-rank correlation method. Analysis indicates a correlation of 0.31 (p-value=0.11) using maximum caudal flow, and 0.42 (p-value=0.02) using maximum cranial flow, respectively.Figure 4.Illustration of proposed cerebrospinal fluid (CSF) flow changes in Huntington's disease based on in vivo data. (A) A graphic of the major CSF producing regions, including the lateral ventricles, third ventricle, and fourth ventricle; in this study, CSF flow dynamics at the level of the cerebral aqueduct were assessed, where CSF flows caudally en route from the third to fourth ventricles during systole, but exhibits a smaller retrograde cranial flow during diastole in healthy individuals (e.g., Panel B). From progression across the stages of disease (i.e., healthy, premanifest, and manifest-HD; Panels B-D), summarized here from cross-sectional data, net CSF flow down the aqueduct reduces and absolute maximum caudal and cranial flow increases. In a subgroup of manifest HD participants, evidence of net caudal flow across the cardiac cycle can be detected.Table 1Phase contrast scan parameters used for calculating cerebrospinal fluid flow metrics at the level of the cerebral aqueduct.| | Parameter name| Value
+| Field of view (FoV)| 150 x 150 mm
+| In-plane spatial resolution| 0.58 x 0.83 mm
+| Slice thickness| 4 mm
+| Repetition time (TR)| 12 ms
+| Echo time (TE)| 7.8 ms
+| Flip angle| 15°
+| Receiver bandwidth| 217 Hz/pixel
+| Velocity encoding gradient (venc)| 12 cm/s
+| Cardiac synchronization| 4-lead electrocardiogram corrected
+| Heart phases| 12
+| Acquisition time| 5-7 min
+Table 2.Descriptions of the demographics, volumetrics, and CSF dynamic assessed using phase contrast MRI of participants involved in this study. Means and standard deviations (Std) are provided for each group (i.e., Healthy control and Huntington’s disease, HD) and subgroup (i.e., Premanifest and Manifest-HD).| | | Healthy controlMean (Std)| Pre-manifestMean (Std)| ManifestMean (Std)| HDMean (Std)| p-value
+| 
+
+Demographic
+
+| | | | | 
+| Number| 51| 17| 12| 29| -
+| Age, years| 46.6 (12.9)| 41.5 (9.4)| 45.9 (11.4)| 43.5 (10.4)| 0.43
+| Sex, F/M| 28/23| 12/5| 5/7| 17/12| p&lt;0.001†
+| CAG, number repeats| &lt;37| 42 (1.8)| 45 (4.2)| 43 (3.5)| -
+| CAP-score| -| 319 (75.4)| 516.2 (101.5)| 407.1 (131.6)| -
+| 
+
+Brain Volumetry
+
+| | | | | 
+| 
+
+Macrostructures
+
+| | | | | 
+| Intracranial volume, cm3| 1,411.9 (124.7)| 1,370.8 (112.8)| 1,396.8 (120.6)| 1,385.7 (114.2)| 0.19
+| Total GM, cm3| 726.1 (64.1)| 716.2 (56.5)| 700.4 (51.1)| 709.5 (53.8)| 0.17
+| Cerebral GM, cm3| 614.4 (57.0)| 600.9 (53.3)| 581.1 (39.9)| 592.6 (49.2)| 0.12
+| Total WM, cm3| 442.3 (50.5)| 444.1 (54.1)| 405.4 (41.8)| 427.8 (52.1)| 0.17
+| Cerebral WM, cm3| 415.9 (48.2)| 414.7 (51.8)| 380.8 (36.1)| 400.5 (48.8)| 0.12
+| 
+
+Striatum
+
+| | | | | 
+| Putamen, cm3| 8.7 (1.2)| 7.4 (1.5)| 5.5 (0.9)| 6.6 (1.6)| p&lt;0.001*
+| Caudate, cm3| 5.8 (0.9)| 4.9 (0.9)| 3.2 (0.7)| 4.3 (1.2)| p&lt;0.001*
+| Globus Pallidus, cm3| 3.2 (0.4)| 2.8 (0.5)| 2.1 (0.2)| 2.5 (0.5)| p&lt;0.001*
+| 
+
+CSF Volumetry
+
+| | | | | 
+| Total CSF, cm3| 225.1 (69.0)| 193.1 (21.9)| 274.4 (120.6)| 227.5 (52.7)| 0.87
+| 
+
+Ventricular CSF
+
+| | | | | 
+| Lateral ventricle, cm3| 29.6 (18.6)| 20.1 (10.0)| 38.5 (17.7)| 27.3 (16.2)| 0.71
+| Third ventricle, cm3| 0.8 (0.8)| 0.9 (0.3)| 1.8 (0.8)| 1.3 (0.7)| p&lt;0.001*
+| Fourth ventricle, cm3| 1.5 (0.6)| 1.3 (0.4)| 1.9 (0.6)| 1.5 (0.6)| 0.85
+| 
+
+Extra-axial CSF
+
+| | | | | 
+| Subarachnoid, cm3| 193.9 (54.8)| 145.4 (21.4)| 214.0 (41.8)| 174.4 (46.4)| p&lt;0.001*
+| 
+
+Cerebral aqueduct
+
+| | | | | 
+| Cross-section, mm2| 9.1 (3.8)| 12.5 (3.6)| 13.6 (3.4)| 12.9 (3.6)| p&lt;0.001*
+| 
+
+Phase contrast
+
+| | | | | 
+| 
+
+CSF flow
+
+| | | | | 
+| Net flow, mL/min| 0.32 (0.20)| 0.21 (0.27)| 0.04 (0.25)| 0.14 (0.27)| 0.02*
+| Max caudal, mL/s| 0.13 (0.06)| 0.16 (0.07)| 0.18 (0.08)| 0.17 (0.08)| 0.03*
+| Max cranial, mL/s| 0.11 (0.04)| 0.13 (0.07)| 0.16 (0.08)| 0.14 (0.07)| 0.04*
+| 
+
+CSF velocity
+
+| | | | | 
+| Peak velocity, cm/s| 3.15 (1.26)| 3.76 (1.70)| 4.96 (2.22)| 4.26 (2.02)| 0.01*
+CAG: Cytosine-Adenine-Guanine trinucleotide; CAP: CAG-Age-Product (disease exposure); CSF: Cerebrospinal fluid. Statistical testing: (†) Chi-squared test; (*) Kruskal-Wallis’s test; (-) Not relevant for statistical testing.Table 3Analysis of the relationship between CSF volumes (measured in cm3) and phase contrast measure of CSF flow parameters in the cerebral aqueduct in the HD cohort using Spearman’s rank correlation coefficient. Bolded and underlined values indicate significant correlations after multiple comparison correction.| | | Peak velocityρ (pcorr)| Net flowρ (pcorr)| Max caudal flowρ (pcorr)| Max cranial flowρ (pcorr)
+| Lateral ventricles| −0.24 (0.29)| −0.23 (0.62)| 0.36 (0.11)| 0.32 (0.17)
+| Third ventricle| 
+
+0.60 (0.01)
+
+| −0.01 (0.97)| 
+
+0.57 (0.03)
+
+| 
+
+0.55 (0.03)
+
+| Fourth ventricle| 
+
+0.60 (0.01)
+
+| 0.01 (0.97)| 0.46 (0.06)| 0.40 (0.12)
+| Subarachnoid| 0.25 (0.29)| −0.24 (0.62)| 0.33 (0.13)| 0.26 (0.24)
+| Aqueduct surface| 
+
+0.28 (0.08)
+
+| −0.04 (0.97)| 
+
+0.58 (0.03)
+
+| 
+
+0.60 (0.03)
+
+| Total CSF| 0.30 (0.27)| −0.25 (0.62)| 0.40 (0.09)| 0.32 (0.17)
+
+### Summary for social media
+
+### Twitter handle
+
+@claassenlabvumc
+
+@VUMCneurology
+
+### Current knowledge on the topic
+Huntington’s disease (HD) is a neurogenerative disorder caused by an abnormal CAG repeat expansion in the huntingtin gene leading to mutant huntingtin protein transcription. While previous studies have shown in animal models that mutant huntingtin protein is cleared out from the brain via active mechanisms implying the cerebrospinal fluid circuit, little is known about fluid movement in humans with HD.
+
+### What question did this study address
+The present study aims to understand how HD impacts the movement of cerebrospinal fluid in the cerebral aqueduct, an essential structure for the transport of fluid from the deep ventricular cisterns, where it is produced, to the fourth ventricle and subarachnoid space.
+
+### What does this study add to our knowledge
+Conducted analyses support a decrease in net CSF flow in HD with lowest flow in the manifest HD cohort. This finding was explained by hyperdynamic CSF movement, manifesting as higher caudal systolic CSF flow velocity and higher diastolic cranial CSF flow velocity across the cardiac cycle, with a positive correlation between cranial diastolic flow and disease severity.
+
+### How might this potentially impact on the practice of neurology
+Findings support aqueductal CSF flow dynamics changing with disease severity in HD, which may have relevance to mutant huntingtin protein retention and intrathecally administered therapeutics responsiveness.
