@@ -296,7 +296,7 @@ asserting; every one traces to a row and a locus.
 | `data/measurements.csv` | One row per oligo × population/model × route × readout × arm |
 | `data/sources.csv` | Provenance registry; row counts recomputed, never typed |
 | `data/hydrocephalus_merged.csv` | **Generated** denormalized join. Never hand-edit; regenerate with `scripts/assemble.py` |
-| `scripts/` | The four extraction components, the assembler and the doc renderer |
+| `scripts/` | The six extraction and build components, the assembler and the doc renderer |
 | `qc/validate.py` | Quality-control suite; exits non-zero on failure and writes `qc/stats.json` |
 | `sources/raw/` | Every retrieved payload, committed, so any value can be re-derived offline |
 | `notes/` | Per-component audit trails |
@@ -339,7 +339,10 @@ and every value it takes is actually used by rows in the table.
 ## Status
 
 **v0.1.** All grades ship `grade_status = provisional` pending subject-matter
-expert review. Known gaps, including the absence of published sequences and of
-nonclinical animal rows, are stated as numbered open items in
+expert review. Known gaps are stated as numbered open items in
 [`METHODOLOGY.md`](METHODOLOGY.md#open-items) rather than left for a reader to
-discover.
+discover — chiefly that no clinical or marketed compound carries a published
+sequence (OI-02), that nonclinical coverage is five qualitative rows (OI-03), and
+that only one compound in the release is a designed control (OI-08). A further
+100 verified sources were retrieved but not extracted; they are listed in
+[`notes/source_backlog.md`](notes/source_backlog.md).

@@ -19,7 +19,7 @@ The previous version of this dossier set three conditions for advancing the endp
 | Tier-A rows that are explicit measured negatives | 328 |
 | Grade-3 (severe) rows | 22 |
 | Distinct sources | 53 |
-| Oligonucleotides with a published sequence | 4 of 34 — all research reagents; see `METHODOLOGY.md` OI-02 |
+| Oligonucleotides with a published sequence | 4 of 35 — all research reagents; see `METHODOLOGY.md` OI-02 |
 | QC checks run / failed | 30 / 0 |
 
 Every figure above is computed by the dataset's QC suite into `qc/stats.json` and rendered into its `README.md`. They are **transcribed** here and will drift if the dataset changes; [`./hydrocephalus/README.md`](./hydrocephalus/README.md) is authoritative.
@@ -28,7 +28,7 @@ Every figure above is computed by the dataset's QC suite into `qc/stats.json` an
 
 | Condition set by the previous dossier | How it was met |
 |---|---|
-| "acquiring a primary source" | 52 sources across six modalities: ClinicalTrials.gov posted adverse-event tables, ClinicalTrials.gov pre-specified MRI outcome measures, openFDA FAERS, US DailyMed labels, EU EMA Summaries of Product Characteristics, and primary full-text literature including a disease-epidemiology cohort. Every payload is committed under `hydrocephalus/sources/raw/`, so the dataset rebuilds offline. |
+| "acquiring a primary source" | 53 sources across six modalities: ClinicalTrials.gov posted adverse-event tables, ClinicalTrials.gov pre-specified MRI outcome measures, openFDA FAERS, US DailyMed labels, EU EMA Summaries of Product Characteristics, and primary full-text literature including a disease-epidemiology cohort. Every payload is committed under `hydrocephalus/sources/raw/`, so the dataset rebuilds offline. |
 | "adding CNS terms to the `tissue` and `readout_category` vocabularies" | Deliberately **not** done. Adding CNS terms to the renal vocabularies would have modified the delivered kidney dataset. The new dataset declares its own `cns_compartment` and `readout_category` vocabularies instead, leaving the renal ones untouched. |
 | "writing a separate graded column with its own rubric" | `hydroceph_grade` (0–3), with a rubric written in ventricular and CSF terms at [`SCHEMA.md`](./hydrocephalus/SCHEMA.md). It is not a reuse of `nephrotox_grade` and is not transferable to it. |
 
