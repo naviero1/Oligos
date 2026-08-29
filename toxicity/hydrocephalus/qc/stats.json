@@ -2,6 +2,9 @@
   "n_measurements": 914,
   "n_oligos": 35,
   "n_sources": 53,
+  "n_modification_positions": 122,
+  "n_oligos_with_position_map": 6,
+  "n_oligos_with_length": 6,
   "n_oligos_with_measurements": 30,
   "by_endpoint_tier": {
     "A": 389,
@@ -144,6 +147,6 @@
   "grade3_rows": 22,
   "duplexes_checked": 4,
   "oligos_with_sequence": 4,
-  "checks_run": 30,
+  "checks_run": 39,
   "checks_failed": 0
 }

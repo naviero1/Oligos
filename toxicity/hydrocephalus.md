@@ -20,7 +20,9 @@ The previous version of this dossier set three conditions for advancing the endp
 | Grade-3 (severe) rows | 22 |
 | Distinct sources | 53 |
 | Oligonucleotides with a published sequence | 4 of 35 — all research reagents; see `METHODOLOGY.md` OI-02 |
-| QC checks run / failed | 30 / 0 |
+| Per-position modification records | 122, over 6 oligonucleotides |
+| Oligonucleotides with a known length | 6 of 35 |
+| QC checks run / failed | 39 / 0 |
 
 Every figure above is computed by the dataset's QC suite into `qc/stats.json` and rendered into its `README.md`. They are **transcribed** here and will drift if the dataset changes; [`./hydrocephalus/README.md`](./hydrocephalus/README.md) is authoritative.
 
@@ -30,6 +32,8 @@ Every figure above is computed by the dataset's QC suite into `qc/stats.json` an
 |---|---|
 | "acquiring a primary source" | 53 sources across six modalities: ClinicalTrials.gov posted adverse-event tables, ClinicalTrials.gov pre-specified MRI outcome measures, openFDA FAERS, US DailyMed labels, EU EMA Summaries of Product Characteristics, and primary full-text literature including a disease-epidemiology cohort. Every payload is committed under `hydrocephalus/sources/raw/`, so the dataset rebuilds offline. |
 | "adding CNS terms to the `tissue` and `readout_category` vocabularies" | Deliberately **not** done. Adding CNS terms to the renal vocabularies would have modified the delivered kidney dataset. The new dataset declares its own `cns_compartment` and `readout_category` vocabularies instead, leaving the renal ones untouched. |
+| "the sequences of all oligos tested, as well as the location of all chemical modifications in each oligo" (Phase 2 brief) | Partly. [`data/modifications.csv`](./hydrocephalus/data/modifications.csv) gives the location of every modification for the two intrathecal ASOs whose labels state their motif in words, and the base at every position of the four sequenced siRNA duplexes — 122 position rows. It is **not** met for the 25 clinical and marketed compounds, whose sequences are not published in any label; that gap is OI-02. |
+| "the methods used to purify and characterize oligo identity" (Phase 2 brief) | Recorded as `NOT_REPORTED` throughout, from evidence: a full-text sweep of all 16 committed US labels finds no drug-substance purity, purification or identity statement in any of them. The same finding as the sibling CNS release. |
 | "writing a separate graded column with its own rubric" | `hydroceph_grade` (0–3), with a rubric written in ventricular and CSF terms at [`SCHEMA.md`](./hydrocephalus/SCHEMA.md). It is not a reuse of `nephrotox_grade` and is not transferable to it. |
 
 ## What changed since the `not-addressed` sweep
@@ -70,6 +74,7 @@ Three findings bear on how the rest of this register should be read.
 - **Only one designed control** (OI-08): the AQP4 study's scrambled non-targeting siRNA. Every other negative in the dataset is a comparator arm, a reported zero or a silent label — the same weakness a review found in the sibling kidney dataset, now at least recorded in `arm_role` and `ascertainment` rather than glossed.
 - ~~253 tier-A negatives rest on an unverified absence argument~~ — **resolved.** 42 CFR 11.48(a)(4)(ii)(A) requires a results submission to table *all* serious adverse events with no frequency threshold, so absence of a tier-A term from a posted serious-adverse-event table is a reported zero for serious events. The regulation is committed and cited per row. Two limits remain in-row: a non-serious ventricular event below the 5 percent threshold of subparagraph (B) would not appear, and none of this evidences that ventricular imaging was done.
 - **The counts in this dossier are transcribed**, not regenerated, and will drift if the dataset changes.
+- **The Phase 2 submission is not complete for this endpoint.** The dataset and its documentation exist; the ML analysis, the narrative PDF, the methodology PDF and the PADP do not. See the shared work plan.
 - **100 further verified sources are retrieved but not extracted**, listed in [`hydrocephalus/notes/source_backlog.md`](./hydrocephalus/notes/source_backlog.md) — EudraVigilance, WHO VigiBase, EMA CHMP assessment reports, FDA pharmacology/toxicology reviews, PMDA documents and two patent families among them. This is the release's completeness limit, stated rather than left to be discovered.
 - **EMA rows carry `redistribution = verify`.** Reuse terms for EMA product information were not established; the verbatim text is quoted as evidence, but a redistributor should resolve the licence before republishing those eight rows' values.
 - **One compound row is a composite** (OI-07): `casimersen_or_golodirsen` covers a trial whose posted table does not separate the two compounds.

@@ -56,154 +56,82 @@ precisely so the pooling is a stated choice rather than an accident.
 
 ---
 
-## Table 1 — `data/oligos.csv`
+## Column definitions — where they live, and why not here
 
-Column names and vocabularies are kept **compatible with OligoTox-CNS
-`oligos.csv`** so that the two endpoint tables can be concatenated.
+**The authoritative column list is [`scripts/data_dictionary.py`](scripts/data_dictionary.py).**
+It is rendered as the `data_dictionary` sheet of
+`OligoTox-Hydrocephalus_Dataset.xlsx`, and `qc/validate.py` asserts both
+directions: every column present in every CSV has an entry, and every entry
+corresponds to a real column.
 
-| Column | Type | Definition / controlled vocabulary |
-|---|---|---|
-| `oligo_id` | string PK | Stable identifier, prefixed with the source id, e.g. `T1-OLG-0001`. Never reused. |
-| `oligo_name` | string | Common or INN name. |
-| `aliases` | string | Other names, `;` separated. |
-| `oligo_class` | enum | `ASO_gapmer` \| `ASO_mixmer` \| `splice_switching_ASO` \| `siRNA` \| `divalent_siRNA` \| `PMO` \| `aptamer` \| `vehicle_control` \| `other` |
-| `modality` | enum | `single_stranded_ASO` \| `double_stranded_siRNA` \| `vehicle` |
-| `target_gene` | string | Intended target gene symbol, or `none_no_transcriptome_match` for scrambles. |
-| `indication` | string | Disease or research context. |
-| `developer` | string | Originating organisation. |
-| `max_phase` | enum | `approved` \| `approved_EMA` \| `phase_3` \| `phase_3_discontinued` \| `phase_2` \| `phase_1` \| `preclinical` \| `research_panel` |
-| `length_nt` | int | Length in nucleotides, or `NOT_REPORTED`. |
-| `sequence_5to3_asprinted` | string | Sequence **exactly** as printed by the source, preserving any case convention that encodes chemistry. `NOT_REPORTED` unless an explicit string was retrieved. **Never guessed.** |
-| `sequence_base` | string | Nucleobase sequence, upper case, chemistry stripped. |
-| `sequence_source` | string | Exact document and locus the sequence came from, or `NOT_REPORTED`. |
-| `backbone_chemistry` | enum | `full_PS` \| `mixed_PO_PS` \| `no_PS` \| `PMO_neutral` \| `NOT_REPORTED` |
-| `sugar_modifications` | string | Sugar chemistry summary, `;` separated, e.g. `2'-MOE;DNA_gap`. |
-| `modification_pattern` | string | The design motif in the source's own terms, e.g. `5-10-5_MOE_gapmer`. |
-| `gapmer_shape` | enum | `gapmer` \| `mixmer` \| `uniform` \| `NOT_APPLICABLE` |
-| `conjugate` | string | Conjugated moiety, or `none`. |
-| `route_of_administration` | string | The route the compound is dosed by in its clinical or study use. **Context, not an endpoint claim.** |
-| `dose_regimen_asapproved` | string | Approved or trial dosing regimen where stated. |
-| `purity_pct` | string | Reported purity percentage, or `NOT_REPORTED`. |
-| `purity_method` | string | Purification method, verbatim from the source, or `NOT_REPORTED`. |
-| `identity_confirmation` | string | How identity was confirmed, verbatim, or `NOT_REPORTED`. |
-| `formulation` | string | Vehicle the oligo was dosed in. |
-| `source_id` | string FK | → `sources.source_id`. |
-| `source_location` | string | Exact table/figure/section within the source. |
-| `notes` | string | Free text. |
+The definitions are deliberately **not** duplicated in this file. An earlier
+version of this schema listed `purity_pct`, `purity_method` and
+`identity_confirmation` as columns of `oligos.csv` while the builder emitted none
+of them, and nothing caught it — the same documentation-versus-data drift the
+sibling kidney dataset was reviewed for, reproduced here. Prose cannot be
+enforced; a module that the QC suite imports can be. What follows is the part of
+the schema that is conceptual rather than enumerative.
 
 ---
 
-## Table 2 — `data/measurements.csv`
+## The four tables
 
-One row per **oligo × population or model × route × dose × readout × arm**. A
-trial that reports hydrocephalus in a treated arm and in its placebo arm yields
-**two rows**, so that the comparator is data rather than a footnote.
-
-### Identity and context
-
-| Column | Type | Definition / controlled vocabulary |
+| File | Grain | Key |
 |---|---|---|
-| `measurement_id` | string PK | e.g. `T1-MSR-00001`. |
-| `oligo_id` | string FK | → `oligos.oligo_id`. |
-| `source_id` | string FK | → `sources.source_id`. |
-| `study_type` | enum | `clinical_trial` \| `clinical_case` \| `pharmacovigilance` \| `animal_invivo` \| `in_vitro` \| `background_epidemiology` |
-| `species` | enum | `human` \| `mouse` \| `rat` \| `monkey` \| `pig` \| `multi_species` |
-| `strain` | string | Strain, sex and age where stated, or `NOT_APPLICABLE`. |
-| `system_model` | string | The trial design, cohort, animal model or culture system. |
-| `is_human_system` | bool | `TRUE` if measured in a human or human-derived system. The Challenge prioritises these. |
-| `indication_population` | string | The disease population dosed — the confounding variable for this endpoint. |
-| `cns_compartment` | string | `lateral_ventricles` \| `whole_ventricular_system` \| `CSF` \| `choroid_plexus` \| `ependyma` \| `subarachnoid_space` \| `CSF_and_neuraxis` \| `NOT_APPLICABLE` |
-| `delivery_route` | enum | `intrathecal_lumbar` \| `intracerebroventricular` \| `intraparenchymal` \| `intravenous` \| `subcutaneous` \| `in_culture_medium` \| `NOT_APPLICABLE` |
-| `dose_value` / `dose_unit` | float / string | Dose as stated. `NOT_REPORTED` where the source does not give one. |
-| `dose_interval` | string | e.g. `Q8W`, `Q16W`, `3 loading doses 14 days apart then Q4M`. |
-| `exposure_duration` | string | Duration of exposure as stated. |
-| `timepoint` | string | When the readout was taken. |
+| `data/oligos.csv` | one row per oligonucleotide — identity and design predictors | `oligo_id` (PK) |
+| `data/measurements.csv` | one row per oligo × population/model × route × readout × arm | `measurement_id` (PK), `oligo_id` (FK) |
+| `data/modifications.csv` | **one row per nucleotide position** — the per-position chemistry | (`oligo_id`, `strand`, `position_5to3`) |
+| `data/sources.csv` | provenance registry | `source_id` (PK) |
 
-### The endpoint
+`data/hydrocephalus_merged.csv` is a **generated** denormalized join of the first
+two, produced by `scripts/assemble.py`. It is never hand-edited.
 
-| Column | Type | Definition / controlled vocabulary |
-|---|---|---|
-| `endpoint_tier` | enum | `A` \| `B`. See §"Endpoint definition and tiers". |
-| `readout_category` | enum | `hydrocephalus_event` \| `ventricular_morphometry` \| `shunt_or_drain_intervention` \| `csf_pressure` \| `csf_composition` \| `csf_dynamics` \| `procedure_complication` \| `histopathology_choroid_ependyma` |
-| `readout_name` | string | The specific readout, e.g. `hydrocephalus_serious_AE`, `ventricular_volume_change`, `intracranial_pressure_increased_AE`, `papilloedema_AE`, `CSF_protein`, `meningitis_aseptic_AE`, `post_lumbar_puncture_syndrome_AE`, `shunt_placement`. |
-| `readout_value` | float/string | The value **exactly** as reported, or `NOT_REPORTED`. |
-| `readout_unit` | string | e.g. `participants`, `reports`, `mL`, `pct_change`, `mg/dL`, `cases_per_1000_person_years`. |
-| `readout_is_qualitative` | bool | `TRUE` where the source reports the result only in words or only as a figure. **No number is ever read off a figure.** |
+### Why `modifications.csv` exists
 
-### Numerator, denominator and comparator
+The Challenge brief requires the dataset to contain *"the sequences of all oligos
+tested, as well as the location of all chemical modifications in each oligo"*. A
+per-oligo motif string such as `5-10-5` states the design; it does not state the
+location. This table states the location, one row per position.
 
-The single most common defect in a toxicity dataset is a numerator without its
-denominator. These five columns are mandatory for every incidence row.
+It is filled **per dimension, not per oligo**: a row may carry a known sugar and
+an unknown base, or the reverse.
 
-| Column | Type | Definition |
-|---|---|---|
-| `n_affected` | int | Participants/animals with the event in this arm. |
-| `n_at_risk` | int | Participants/animals at risk in this arm — the denominator. |
-| `comparator_arm` | string | What this arm is compared against, or `NOT_APPLICABLE` (e.g. single-arm). |
-| `n_affected_comparator` | int | Events in the comparator arm. |
-| `n_at_risk_comparator` | int | Denominator of the comparator arm. |
-| `statistic` | string | Dispersion, CI or significance **as stated by the source**. `NOT_REPORTED` where the source gives none — this dataset computes no inferential statistic of its own. |
-| `effect_direction` | enum | `increase` \| `decrease` \| `no_change` \| `NOT_APPLICABLE` |
-| `effect_vs_control` | string | The comparison as stated, including the comparator value. |
+- Where a label states the motif in words — tofersen's *"five MOE nucleosides at
+  the 5′ and 3′-ends of the molecule flanking a gap of ten 2′-deoxynucleosides"*
+  for a 20-mer — the **sugar** at every position is fixed without naming a single
+  base.
+- Where a sequence is published, the **nucleobase** at every position is known
+  even if the source states no modification at all.
 
-### Grading
+Both cases are marked in `basis`, and `qc/validate.py` checks that positions run
+contiguously 1..n, that n equals `oligos.length_nt`, and that the bases in this
+table reproduce `oligos.sequence_5to3_asprinted` exactly where one is stored.
 
-| Column | Type | Definition |
-|---|---|---|
-| `hydroceph_grade` | int 0–3 | Ordinal severity, rubric below. Blank where the readout is continuous and not graded. |
-| `grade_basis` | string | **The exact rule that produced this grade**, quoted or named. A grade with no stated basis is a defect. |
-| `grade_status` | enum | `provisional` \| `expert_confirmed` \| `not_graded` |
+The four morpholinos contribute **no** rows. Their labels give a molecular formula
+but the phosphorus count is P = n for eteplirsen, golodirsen and casimersen and
+P = n−1 for viltolarsen, because some carry a 5′-piperazine bearing an extra
+phosphorus and some do not. Length is therefore ambiguous for that class, and a
+per-position table cannot be built on an ambiguous length.
 
-### Ascertainment and attribution — the two columns this endpoint turns on
+### On `length_nt`
 
-A prior review of the sibling kidney dataset found that grade 0 silently conflated
-"measured and null" with "nobody looked". For hydrocephalus that conflation would
-be fatal, because most sources never image the ventricles at all. These two
-columns keep the distinction in the data.
+Length is recorded with a `length_nt_basis` saying how it was established:
+stated in the label, counted from a published sequence, or derived from the
+label's molecular formula. The derivation is legitimate only because the tofersen
+label states **both** a 20-mer and P19, pinning P = n−1 for that chemistry class;
+it is applied to nusinersen (P17, S17 → 18 residues) and to nothing else.
 
-| Column | Type | Definition / controlled vocabulary |
-|---|---|---|
-| `ascertainment` | enum | `measured_positive` — the endpoint was assessed and found.<br>`measured_null` — the endpoint was actively assessed and **not** found.<br>`reported_threshold_limited` — the source reports adverse events only above a frequency threshold, so absence is not evidence of absence.<br>`not_assessed` — the endpoint was not looked for; the row exists for the exposure context only. |
-| `ascertainment_basis` | string | How the above was established, citing the source's own statement (e.g. the AE reporting threshold it declares). |
-| `attribution_as_stated` | enum | `drug_attributed` \| `procedure_attributed` \| `disease_attributed` \| `multifactorial` \| `undetermined` \| `not_discussed`. **What the SOURCE concluded**, never this dataset's own inference. |
-| `attribution_evidence` | string | The source's stated reasoning, quoted or summarised, with its locus. |
-| `tox_axis` | enum | `ventricular_enlargement` \| `csf_pressure_disturbance` \| `csf_composition_disturbance` \| `delivery_procedure_complication` \| `disease_background_rate` \| `therapeutic_ventricular_effect` |
+### On purity and identity characterisation
 
-`tox_axis = disease_background_rate` marks rows that carry **no drug exposure at
-all** — untreated-population incidence figures. `tox_axis =
-therapeutic_ventricular_effect` marks oligonucleotides whose measured ventricular
-effect is *protective*. Both are deliberate control classes; both must be excluded
-from any "toxicity of exposed compounds" analysis, and `oligo_id` is
-`NOT_APPLICABLE` for background rows with no compound.
-
-### Provenance
-
-| Column | Type | Definition |
-|---|---|---|
-| `source_ref` | string | Citation key, DOI, PMID, NCT id, DailyMed set id, or FAERS query. |
-| `source_location` | string | **Exact locus** — `Table 2`, `Fig 3B`, `PI section 5.4`, `adverseEventsModule.seriousEvents["Hydrocephalus"]`. A category word such as `results` is not acceptable. |
-| `redistribution` | enum | `public_domain` \| `cc_by` \| `cc_by_nc` \| `summary_stat_only` \| `derived_features_only` \| `verify` |
-| `notes` | string | Free text. |
-
----
-
-## Table 3 — `data/sources.csv`
-
-| Column | Definition |
-|---|---|
-| `source_id` | Primary key, e.g. `T1`, `C1`, `F1`. |
-| `source_key` | Short citation key, e.g. `GENERATION_HD1_NCT03761849`. |
-| `citation` | Full citation. |
-| `first_author`, `year`, `journal` | Bibliographic fields, or `NOT_APPLICABLE` for registry/regulatory sources. |
-| `doi`, `pmid`, `pmcid`, `nct_id`, `url` | Identifiers; empty where none exists. |
-| `access` | `open_access` \| `public_domain` \| `subscription` \| `api` |
-| `license` | The licence as stated by the source. |
-| `redistribution` | Rights status governing reproduction of values from this source. |
-| `evidence_tier` | `regulatory_primary` \| `registry_results` \| `primary_fulltext` \| `primary_supplementary_data` \| `pharmacovigilance_api` \| `case_report` \| `epidemiology` \| `review_secondary` |
-| `retrieved_via` | The exact retrieval route used, so any value can be re-fetched. |
-| `retrieved_date` | Date of retrieval. |
-| `n_oligos`, `n_measurements` | Rows this source contributes. Recomputed by the QC suite, never typed. |
-| `notes` | Free text. |
+The Challenge asks specifically for *"the methods used to purify and characterize
+oligo identity"*. A full-text sweep of all sixteen committed US labels for
+purity, purification, chromatography, mass-spectrometry, identity and
+characterisation language returns **no statement about the drug substance in any
+of them** — every hit is a patient baseline characteristic or an efficacy assay.
+`purity_pct` is therefore `NOT_REPORTED` for every compound in this release, and
+`purity_method` / `identity_confirmation` are `NOT_REPORTED` except where a
+research source names a supplier. This is a property of the published record, and
+the sibling OligoTox-CNS release reports the same for all 1,839 of its compounds.
 
 ---
 

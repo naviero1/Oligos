@@ -30,7 +30,7 @@ one."* This directory is that second dataset.
 | Tier-A rows that are explicit measured negatives | 328 |
 | Grade-3 (severe) rows | 22 |
 | Oligonucleotides with a published sequence | 4 |
-| QC checks run / failed | 30 / 0 |
+| QC checks run / failed | 39 / 0 |
 
 **Endpoint tier** — **A** = hydrocephalus (communicating, obstructive or normal-pressure), ventriculomegaly / ventricular dilatation, shunt or drain placement. **B** = raised intracranial pressure, papilloedema, aseptic or chemical meningitis, arachnoiditis, CSF leak or protein rise, post-lumbar-puncture syndrome.
 
@@ -294,12 +294,15 @@ asserting; every one traces to a row and a locus.
 | [`METHODOLOGY.md`](METHODOLOGY.md) | How the dataset was assembled; source-study methods kept separate from curation methods; open items |
 | `data/oligos.csv` | One row per oligonucleotide — identity and design predictors |
 | `data/measurements.csv` | One row per oligo × population/model × route × readout × arm |
+| `data/modifications.csv` | **One row per nucleotide position** — the location of each chemical modification |
 | `data/sources.csv` | Provenance registry; row counts recomputed, never typed |
 | `data/hydrocephalus_merged.csv` | **Generated** denormalized join. Never hand-edit; regenerate with `scripts/assemble.py` |
 | `scripts/` | The six extraction and build components, the assembler and the doc renderer |
 | `qc/validate.py` | Quality-control suite; exits non-zero on failure and writes `qc/stats.json` |
 | `sources/raw/` | Every retrieved payload, committed, so any value can be re-derived offline |
 | `notes/` | Per-component audit trails |
+| `OligoTox-Hydrocephalus_Dataset.xlsx` | The dataset as a single workbook — README, Summary, data_dictionary, oligos, measurements, modifications, sources — in the same sheet layout as the sibling CNS release |
+| [`scripts/data_dictionary.py`](scripts/data_dictionary.py) | The authoritative column definitions, enforced by QC in both directions |
 
 ## Reproducing the dataset
 
@@ -314,12 +317,15 @@ python3 scripts/build_literature.py       # curated full-text and EMA SmPC rows
 python3 scripts/build_nonclinical.py      # curated rodent rows (both effect directions)
 python3 scripts/build_oligos.py           # design predictors parsed from labels
 python3 scripts/assemble.py               # canonical tables + provenance registry + merged view
-python3 qc/validate.py                    # 30 checks; writes qc/stats.json
+python3 scripts/build_modifications.py    # per-position chemistry (needs the keys assemble assigns)
+python3 qc/validate.py                    # 39 checks; writes qc/stats.json
 python3 scripts/render_docs.py            # regenerates the counts in this file
+python3 scripts/export_xlsx.py            # the .xlsx workbook (needs openpyxl)
 ```
 
 Every network call is cached under `sources/raw/`, so a re-run is offline and
-deterministic. No dependency beyond the Python standard library.
+deterministic. The only dependency outside the standard library is `openpyxl`,
+and only for the final workbook export.
 
 ## Provenance and licensing
 

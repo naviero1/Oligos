@@ -146,10 +146,36 @@ be parsed; each comes from prose a human read. Each row therefore stores the
 **verbatim sentence** it was taken from in `attribution_evidence`, so the value
 and its evidence travel together.
 
+**4.4b Per-position chemistry (`scripts/build_modifications.py`, 122 rows).** The
+Challenge requires the location of every chemical modification, not a motif
+string. Sugar chemistry is resolved at all twenty tofersen positions and all
+eighteen nusinersen positions from the labels' own words; nucleobase is resolved
+at all twenty-one positions of each sequenced SPAK duplex. The morpholinos are
+excluded because their length is ambiguous from the published formula. See
+`SCHEMA.md` §"Why `modifications.csv` exists".
+
 **4.5 Design predictors (`scripts/build_oligos.py`).** Chemistry is parsed from
 section 11 DESCRIPTION of the committed labels by high-precision patterns, and
 every filled value stores the sentence it matched in `design_source_text`.
 Identity for unapproved compounds comes from the ClinicalTrials.gov records.
+
+### Purification and identity characterisation
+
+The Challenge asks specifically for the methods used to purify and characterise
+oligo identity. Because the compounds were made by their sponsors and not here,
+what can be reported is what each source states — and for this release the answer
+is almost nothing. A full-text sweep of all sixteen committed US labels for
+purity, purification, chromatography, mass-spectrometry, identity and
+characterisation language returns **no statement about the drug substance in any
+of them**; every hit is a patient baseline characteristic or an efficacy assay.
+`purity_pct` is `NOT_REPORTED` for all 35 compounds. The two research-reagent
+sources name a supplier (GenePharma, Shanghai) but no purification or
+identity-confirmation method. No purity value has been estimated, inferred from a
+synthesis platform, or carried across from another compound.
+
+This matches the sibling OligoTox-CNS release, which reports the same for all
+1,839 of its oligonucleotides, and is a property of the published literature
+rather than of the curation.
 
 ### Experimental and reporting methods of the source studies
 
@@ -235,7 +261,7 @@ from the disease-baseline rows, which is exactly why both are in the dataset.
 
 ## 7. Quality control
 
-`qc/validate.py` runs **29 checks** and exits non-zero on any failure. They cover
+`qc/validate.py` runs **39 checks** and exits non-zero on any failure. They cover
 primary-key uniqueness and non-emptiness on all three tables; referential
 integrity on both foreign keys; controlled-vocabulary conformance on ten columns;
 grade range; the requirement that every graded row state its rule; the
@@ -244,6 +270,19 @@ grade; presence of `source_ref` and a `source_location` that is a locus rather
 than a category word; `n_affected ≤ n_at_risk`; the no-fabricated-sequence rule;
 the requirement that background-rate rows carry no compound; and byte-identical
 regeneration of the derived merged view.
+
+Two checks close the defect class this release was itself caught by. The data
+dictionary lives in `scripts/data_dictionary.py`, and the suite asserts in **both
+directions** that every column in every CSV has an entry and every entry
+corresponds to a real column. An earlier version of `SCHEMA.md` declared
+`purity_pct`, `purity_method` and `identity_confirmation` while the builder
+emitted none of them, and nothing caught it — exactly the documentation-versus-
+data drift the sibling kidney dataset was reviewed for. Prose cannot be enforced;
+an imported module can.
+
+Three further checks cover the per-position table: positions must run contiguously
+1..n, n must equal `oligos.length_nt`, and the bases recorded there must
+reproduce `oligos.sequence_5to3_asprinted` exactly wherever a sequence is stored.
 
 One check is a genuine cross-source consistency test rather than a format test:
 for every compound whose label publishes **both** a molecular formula and a

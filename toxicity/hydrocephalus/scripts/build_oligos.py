@@ -203,6 +203,54 @@ SEQ_SOURCE = ("Nature Communications 2025, PMC12246246, Methods section 'Materia
               "the four SPAK siRNA duplexes are printed in full with sense and "
               "antisense strands.")
 
+# Lengths derivable from the label's own molecular formula. A linear
+# oligonucleotide of n residues with no terminal phosphate carries n-1
+# internucleoside linkages, hence n-1 phosphorus atoms. The tofersen label states
+# BOTH a 20-mer and C230H317N72O123P19S15, which pins that relationship (P = n-1)
+# for this chemistry class. Applying it to nusinersen -- same manufacturer, same
+# uniform 2'-MOE/PS chemistry, no terminal phosphate stated -- gives 18 residues
+# from P17, corroborated by S17 (every one of the 17 linkages is thio, exactly as
+# the label's wording requires).
+#
+# It is NOT applied to the morpholinos: their formulas give P = n for eteplirsen,
+# golodirsen and casimersen but P = n-1 for viltolarsen, because some carry a
+# 5'-piperazine bearing an extra phosphorus and some do not. The relationship is
+# therefore ambiguous for that class and their length stays NOT_REPORTED.
+# Purification, identity confirmation and synthesis platform, per source.
+# A full-text sweep of all 16 committed US labels for purity / purification /
+# chromatography / mass-spectrometry / identity / characterisation language returns
+# NO statement about the drug substance in any of them -- every hit is a patient
+# baseline characteristic or an efficacy assay. purity_pct is therefore
+# NOT_REPORTED for every compound in this release, which is the same finding the
+# sibling OligoTox-CNS release reports for all 1,839 of its oligonucleotides:
+# per-compound purity is almost never published alongside toxicity data. The two
+# research-reagent sources name a supplier but no method.
+PURITY = {
+    # name: (purity_method, identity_confirmation, synthesis_platform)
+    "SPAK_siRNA1": ("NOT_REPORTED", "NOT_REPORTED",
+                    "GenePharma (Shanghai); commercial synthesis, platform not stated"),
+    "SPAK_siRNA2": ("NOT_REPORTED", "NOT_REPORTED",
+                    "GenePharma (Shanghai); commercial synthesis, platform not stated"),
+    "SPAK_siRNA3": ("NOT_REPORTED", "NOT_REPORTED",
+                    "GenePharma (Shanghai); commercial synthesis, platform not stated"),
+    "SPAK_siRNA4": ("NOT_REPORTED", "NOT_REPORTED",
+                    "GenePharma (Shanghai); commercial synthesis, platform not stated"),
+    "AQP4_siRNA": ("NOT_REPORTED", "NOT_REPORTED",
+                   "GenePharma (Shanghai); commercial synthesis, platform not stated"),
+    "negative_control_siRNA": ("NOT_REPORTED", "NOT_REPORTED",
+                               "GenePharma (Shanghai); commercial synthesis, "
+                               "platform not stated"),
+}
+
+LENGTH_FROM_FORMULA = {
+    "nusinersen": (18, "derived_from_molecular_formula: the label gives "
+                       "C234H323N61O128P17S17; 17 phosphorothioate linkages imply 18 "
+                       "residues, using the P = n-1 relationship the tofersen label "
+                       "confirms by stating both 20-mer and P19. Not stated by the "
+                       "label as a number."),
+}
+
+
 def flat(el):
     return re.sub(r"\s+", " ", "".join(el.itertext())).strip()
 
@@ -282,7 +330,16 @@ def main():
             oligo_name=name, aliases=aliases, oligo_class=klass, modality=modality,
             target_gene=target, indication=indication, developer=developer,
             max_phase=phase, route_of_administration=route,
-            length_nt=parsed.get("length_nt", "NOT_REPORTED"),
+            length_nt=(parsed.get("length_nt")
+                       or (str(len(SEQUENCES[name][0])) if name in SEQUENCES else None)
+                       or (str(LENGTH_FROM_FORMULA[name][0])
+                           if name in LENGTH_FROM_FORMULA else "NOT_REPORTED")),
+            length_nt_basis=("stated_in_label" if parsed.get("length_nt")
+                             else "counted_from_published_sequence"
+                             if name in SEQUENCES
+                             else LENGTH_FROM_FORMULA[name][1]
+                             if name in LENGTH_FROM_FORMULA
+                             else "NOT_REPORTED"),
             sequence_5to3_asprinted=SEQUENCES.get(name, ("NOT_REPORTED",))[0],
             sequence_base=SEQUENCES.get(name, ("NOT_REPORTED",))[0].replace("U", "T")
             if name in SEQUENCES else "NOT_REPORTED",
@@ -300,6 +357,10 @@ def main():
             molecular_weight=parsed.get("molecular_weight", "NOT_REPORTED"),
             conjugate="NOT_REPORTED",
             formulation=parsed.get("formulation", "NOT_REPORTED"),
+            purity_pct="NOT_REPORTED",
+            purity_method=PURITY.get(name, ("NOT_REPORTED",) * 3)[0],
+            identity_confirmation=PURITY.get(name, ("NOT_REPORTED",) * 3)[1],
+            synthesis_platform=PURITY.get(name, ("NOT_REPORTED",) * 3)[2],
             design_source_text=json.dumps(evidence)[:1800] if evidence else "NOT_REPORTED",
             identity_source=identity_source,
             source_location=source_loc,
@@ -325,6 +386,9 @@ def main():
             modification_pattern="NOT_APPLICABLE", gapmer_shape="NOT_APPLICABLE",
             molecular_formula="NOT_APPLICABLE", molecular_weight="NOT_APPLICABLE",
             conjugate="NOT_APPLICABLE", formulation="NOT_APPLICABLE",
+            length_nt_basis="NOT_APPLICABLE", purity_pct="NOT_APPLICABLE",
+            purity_method="NOT_APPLICABLE", identity_confirmation="NOT_APPLICABLE",
+            synthesis_platform="NOT_APPLICABLE",
             design_source_text="NOT_APPLICABLE", identity_source="NOT_APPLICABLE",
             source_location="NOT_APPLICABLE", redistribution="NOT_APPLICABLE",
             notes=why))

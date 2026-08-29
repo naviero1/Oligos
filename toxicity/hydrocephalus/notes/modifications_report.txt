@@ -1,0 +1,15 @@
+modifications.csv build report
+============================================================
+122 position rows over 6 oligonucleotides
+
+tofersen                 20 positions, sugar resolved, base NOT_REPORTED
+nusinersen               18 positions, sugar resolved, base NOT_REPORTED
+SPAK_siRNA1              21 positions, base resolved, chemistry NOT_REPORTED
+SPAK_siRNA2              21 positions, base resolved, chemistry NOT_REPORTED
+SPAK_siRNA3              21 positions, base resolved, chemistry NOT_REPORTED
+SPAK_siRNA4              21 positions, base resolved, chemistry NOT_REPORTED
+eteplirsen               EXCLUDED — morpholino; length ambiguous from formula (P = n vs n-1 across class)
+golodirsen               EXCLUDED — morpholino; length ambiguous from formula
+viltolarsen              EXCLUDED — morpholino; length ambiguous from formula
+casimersen               EXCLUDED — morpholino; length ambiguous from formula
+valeriasen               EXCLUDED — sequence and per-position chemistry exist in the source's Extended Data Table 1 but are published as an image whose bold/underline 2'-MOE encoding does not survive text extraction; not transcribed (METHODOLOGY.md OI-02)

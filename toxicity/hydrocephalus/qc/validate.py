@@ -17,6 +17,10 @@ import re
 import subprocess
 import sys
 
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(
+    os.path.abspath(__file__))), "scripts"))
+from data_dictionary import DICTIONARY
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 DATA = os.path.join(ROOT, "data")
@@ -66,6 +70,7 @@ def main():
     m = load("measurements.csv")
     o = load("oligos.csv")
     s = load("sources.csv")
+    mods = load("modifications.csv")
 
     # 1 primary keys ------------------------------------------------------
     for tbl, rows, key in (("measurements", m, "measurement_id"),
@@ -185,6 +190,67 @@ def main():
     check("siRNA duplex guide == reverse complement of sense", not dup_bad,
           "checked %d; mismatches %s" % (dup_checked, dup_bad))
 
+    # 11c per-position modifications table ---------------------------------
+    oid = {r["oligo_id"] for r in o}
+    bad = sorted({r["oligo_id"] for r in mods if r["oligo_id"] not in oid})
+    check("FK modifications.oligo_id -> oligos", not bad, "orphans: %s" % bad[:4])
+
+    by_oligo = collections.defaultdict(list)
+    for r in mods:
+        by_oligo[r["oligo_id"]].append(int(r["position_5to3"]))
+    bad = [k for k, v_ in by_oligo.items() if sorted(v_) != list(range(1, len(v_) + 1))]
+    check("modifications positions are contiguous 1..n", not bad,
+          "offending oligo_ids: %s" % bad[:4])
+
+    lengths = {r["oligo_id"]: r["length_nt"] for r in o}
+    bad = ["%s: %d rows vs length_nt=%s" % (k, len(v_), lengths.get(k))
+           for k, v_ in by_oligo.items() if lengths.get(k) != str(len(v_))]
+    check("modifications row count equals oligos.length_nt", not bad, "; ".join(bad[:4]))
+
+    allowed_base = {"A", "C", "G", "T", "U", "NOT_REPORTED"}
+    bad = sorted({r["nucleobase"] for r in mods if r["nucleobase"] not in allowed_base})
+    check("vocabulary: modifications.nucleobase", not bad, "unexpected: %s" % bad[:6])
+
+    allowed_sugar = {"2'-MOE", "DNA_2prime_deoxy", "LNA", "morpholino", "2'-OMe",
+                     "2'-F", "RNA_2prime_OH", "NOT_REPORTED"}
+    bad = sorted({r["sugar_chemistry"] for r in mods
+                  if r["sugar_chemistry"] not in allowed_sugar})
+    check("vocabulary: modifications.sugar_chemistry", not bad, "unexpected: %s" % bad[:6])
+
+    bad = [r["oligo_id"] for r in mods if not r["basis"].strip()
+           or not r["source_location"].strip()]
+    check("every modification position states its basis and locus", not bad,
+          "offending: %s" % bad[:4])
+
+    # A sequenced oligo's modification bases must reproduce its stored sequence.
+    seqs = {r["oligo_id"]: r["sequence_5to3_asprinted"] for r in o}
+    bad = []
+    built_by = collections.defaultdict(list)
+    for r in sorted((x for x in mods if x["nucleobase"] != "NOT_REPORTED"),
+                    key=lambda x: (x["oligo_id"], int(x["position_5to3"]))):
+        built_by[r["oligo_id"]].append(r["nucleobase"])
+    for k, bases in built_by.items():
+        built = "".join(bases)
+        if seqs.get(k) not in (None, "NOT_REPORTED", "NOT_APPLICABLE") and built != seqs[k]:
+            bad.append("%s: %s vs %s" % (k, built, seqs[k]))
+    check("modifications bases reproduce oligos.sequence_5to3_asprinted", not bad,
+          "; ".join(bad[:3]))
+
+    # 11d the data dictionary covers every column, and only real columns ----
+    #     This is the check whose absence let SCHEMA.md promise purity_pct,
+    #     purity_method and identity_confirmation while the builder emitted none.
+    tables = {"oligos": o, "measurements": m, "modifications": mods, "sources": s}
+    undocumented, phantom = [], []
+    for tname, rows_ in tables.items():
+        actual = set(rows_[0].keys())
+        documented = set(DICTIONARY.get(tname, {}))
+        undocumented += ["%s.%s" % (tname, c) for c in sorted(actual - documented)]
+        phantom += ["%s.%s" % (tname, c) for c in sorted(documented - actual)]
+    check("every column has a data-dictionary entry", not undocumented,
+          "undocumented: %s" % undocumented[:8])
+    check("data dictionary documents no column that does not exist", not phantom,
+          "phantom: %s" % phantom[:8])
+
     # 12 background rows carry no compound ---------------------------------
     bad = [r["measurement_id"] for r in m
            if r["tox_axis"] == "disease_background_rate"
@@ -209,6 +275,10 @@ def main():
                                    if r["event_cluster_id"] != "NOT_APPLICABLE")
     stats = dict(
         n_measurements=len(m), n_oligos=len(o), n_sources=len(s),
+        n_modification_positions=len(mods),
+        n_oligos_with_position_map=len({r["oligo_id"] for r in mods}),
+        n_oligos_with_length=sum(1 for r in o if r["length_nt"] not in
+                                 ("NOT_REPORTED", "NOT_APPLICABLE")),
         n_oligos_with_measurements=len({r["oligo_id"] for r in m
                                         if r["oligo_name"] not in
                                         ("NOT_APPLICABLE", "placebo_or_sham_control")}),
