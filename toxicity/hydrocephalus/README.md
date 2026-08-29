@@ -22,13 +22,13 @@ one."* This directory is that second dataset.
 
 | | Count |
 |---|---:|
-| Measurement rows | **680** |
+| Measurement rows | **899** |
 | Oligonucleotides described | **28** |
 | — of which carry at least one measurement | 26 |
-| Distinct sources | 46 |
-| Tier-A rows with a positive finding | 25 |
-| Tier-A rows that are explicit measured negatives | 253 |
-| Grade-3 (severe) rows | 15 |
+| Distinct sources | 50 |
+| Tier-A rows with a positive finding | 53 |
+| Tier-A rows that are explicit measured negatives | 325 |
+| Grade-3 (severe) rows | 18 |
 | Oligonucleotides with a published sequence | 0 |
 | QC checks run / failed | 29 / 0 |
 
@@ -36,8 +36,8 @@ one."* This directory is that second dataset.
 
 | Tier | Rows |
 |---|---:|
-| A | 278 |
-| B | 402 |
+| A | 379 |
+| B | 520 |
 
 **Study type**
 
@@ -45,75 +45,77 @@ one."* This directory is that second dataset.
 |---|---:|
 | background_epidemiology | 3 |
 | clinical_case | 5 |
-| clinical_trial | 326 |
-| pharmacovigilance | 266 |
-| regulatory_label | 80 |
+| clinical_trial | 347 |
+| pharmacovigilance | 456 |
+| regulatory_label | 88 |
 
 **Ascertainment** — how the endpoint's presence or absence was established. A grade of 0 is only permitted where this is `measured_null`
 
 | Ascertainment | Rows |
 |---|---:|
-| measured_null | 520 |
-| measured_positive | 160 |
+| measured_null | 693 |
+| measured_positive | 205 |
+| not_assessed | 1 |
 
 **Attribution, as stated by the source** — what the SOURCE concluded about causation. `not_discussed` dominates because registry and pharmacovigilance records carry no causality assessment at all — that is a property of those sources, not an omission here
 
 | Attribution | Rows |
 |---|---:|
 | disease_attributed | 3 |
-| drug_attributed | 13 |
-| not_discussed | 664 |
+| drug_attributed | 19 |
+| not_discussed | 877 |
 
 **Toxicity axis** — `disease_background_rate` rows carry no compound; `delivery_procedure_complication` rows are attributable to the lumbar puncture rather than to any molecule
 
 | Axis | Rows |
 |---|---:|
-| csf_composition_disturbance | 138 |
+| csf_composition_disturbance | 198 |
 | csf_dynamics | 1 |
-| csf_pressure_disturbance | 84 |
-| delivery_procedure_complication | 179 |
+| csf_pressure_disturbance | 123 |
+| delivery_procedure_complication | 198 |
 | disease_background_rate | 3 |
-| ventricular_enlargement | 275 |
+| ventricular_enlargement | 376 |
 
 **Severity grade** — rubric in [`SCHEMA.md`](SCHEMA.md#hydroceph_grade-rubric-03); all grades are provisional
 
 | `hydroceph_grade` | Rows |
 |---|---:|
-| *(not graded)* | 3 |
-| 0 | 520 |
-| 1 | 94 |
-| 2 | 48 |
-| 3 | 15 |
+| *(not graded)* | 24 |
+| 0 | 693 |
+| 1 | 100 |
+| 2 | 64 |
+| 3 | 18 |
 
 **Delivery route** — systemically dosed oligonucleotides are included as a deliberate route contrast
 
 | Route | Rows |
 |---|---:|
 | NOT_APPLICABLE | 3 |
-| intrathecal_lumbar | 356 |
-| intravenous | 144 |
-| intravitreal | 14 |
-| subcutaneous | 163 |
+| intrathecal_lumbar | 404 |
+| intravenous | 214 |
+| intravitreal | 24 |
+| subcutaneous | 254 |
 
 **Readout category**
 
 | Category | Rows |
 |---|---:|
-| csf_composition | 116 |
-| csf_dynamics | 44 |
-| csf_pressure | 84 |
-| hydrocephalus_event | 217 |
-| procedure_complication | 158 |
-| shunt_or_drain_intervention | 1 |
-| ventricular_morphometry | 60 |
+| csf_composition | 176 |
+| csf_dynamics | 63 |
+| csf_pressure | 123 |
+| hydrocephalus_event | 220 |
+| procedure_complication | 177 |
+| shunt_or_drain_intervention | 40 |
+| ventricular_morphometry | 100 |
 
 **Redistribution rights** — tracked per row
 
 | Rights | Rows |
 |---|---:|
 | cc_by | 8 |
-| public_domain | 669 |
+| public_domain | 880 |
 | summary_stat_only | 3 |
+| verify | 8 |
 
 **Event clusters** — rows sharing an `event_cluster_id` describe **one** clinical episode and must not be counted as independent events.
 
@@ -123,18 +125,18 @@ one."* This directory is that second dataset.
 | `L2-BASELINE` | 3 |
 | `L3-TOFERSEN-SAE` | 3 |
 
-**Largest sources** (top 10 of 46)
+**Largest sources** (top 10 of 50)
 
 | `source_id` | Rows |
 |---|---:|
-| `FAERS_openFDA` | 266 |
+| `FAERS_openFDA` | 456 |
+| `NCT02519036` | 36 |
 | `NCT02594124` | 36 |
 | `NCT02623699` | 36 |
 | `NCT03070119` | 24 |
 | `NCT03761849` | 24 |
 | `NCT03186989` | 22 |
 | `NCT03225846` | 21 |
-| `NCT02519036` | 18 |
 | `NCT05032196` | 18 |
 | `NCT03842969` | 15 |
 
@@ -180,6 +182,18 @@ which is what makes it trainable.
 These are observations recorded in the tables, not conclusions this project is
 asserting; every one traces to a row and a locus.
 
+- **Ventricular volume rose with tominersen dose, measured by protocol-specified
+  MRI against a concurrent placebo arm.** The phase 1/2a trial (NCT02519036) made
+  ventricular volume a pre-specified MRI outcome. From screening to day 197 the
+  placebo arm moved 35.58 → 36.46 mL (+2.5%, n=12), while the two highest dose
+  arms moved 39.33 → 44.43 mL (+13.0%, n=9) and 27.53 → 33.02 mL (+19.9%, n=10).
+  In the open-label extension (NCT03342053) the ventricular-volume boundary shift
+  integral rose **46.1% on monthly dosing against 18.8% on bimonthly** at 15
+  months. These are the only rows in the dataset where the ventricles were
+  *measured* rather than incidentally observed, and they are the reason the
+  adverse-event counts below should not be read as the whole signal. Group sizes
+  are small and the dataset computes no test statistic — the values are recorded
+  exactly as published.
 - **Hydrocephalus among CNS-delivered oligonucleotides is tominersen-specific in
   the trial record.** Serious hydrocephalus or normal-pressure hydrocephalus
   adverse events appear in three separate tominersen studies (NCT03761849,
@@ -197,10 +211,27 @@ asserting; every one traces to a row and a locus.
   A, and it is why the two tiers are recorded together but never pooled silently.
 - **The other intrathecal ASOs show the pressure axis without the ventricular
   one.** The QALSODY label carries papilloedema, elevated intracranial pressure
-  and aseptic meningitis (sections 5.1–5.2); the SPINRAZA label names
-  hydrocephalus, aseptic meningitis and arachnoiditis in **section 6.2
-  Postmarketing Experience** — that is, from spontaneous reports, not from the
-  trials, whose posted results contain no hydrocephalus term.
+  and aseptic meningitis (sections 5.1–5.2); the EU SmPC quantifies them —
+  serious increased intracranial pressure and/or papilloedema in 2.7% and aseptic
+  meningitis in 1.4% of tofersen-treated participants, with CSF white blood cells
+  increased in 27.9% and CSF protein increased in 26.5% (n=147) — and names no
+  hydrocephalus at all.
+- **The two regulators read the same nusinersen evidence differently, and the
+  dataset records both.** The FDA label mentions hydrocephalus only in **section
+  6.2 Postmarketing Experience**. The EMA gives it **its own subheading under
+  section 4.4 Special warnings and precautions for use**: *"communicating
+  hydrocephalus not related to meningitis or bleeding … Some patients were
+  implanted with a ventriculo-peritoneal shunt."* A jurisdiction contrast on an
+  identical molecule is a datum about how strong the signal is judged to be, not
+  a discrepancy to be resolved away. Meanwhile nusinersen's own posted trial
+  results contain no hydrocephalus term — the signal is entirely post-marketing,
+  which is exactly what the FAERS rows (22 hydrocephalus reports) show.
+- **The successor trial made the endpoint a primary outcome.** GENERATION HD2
+  (NCT05686551) specifies, as a *primary* outcome, change from baseline in
+  structural MRI "assessing any new abnormalities including radiographic features
+  consistent with hydrocephalus". Results are not posted. That row carries no
+  grade and `ascertainment = not_assessed`: it is evidence about how this endpoint
+  is now ascertained, not about the endpoint.
 - **Route contrasts.** Systemically dosed oligonucleotides are included
   deliberately so the intrathecal signal is testable rather than assumed. Their
   FAERS hydrocephalus counts are ~1 report against thousands, and the two
@@ -232,14 +263,15 @@ asserting; every one traces to a row and a locus.
 From a clean checkout, in order:
 
 ```bash
-python3 scripts/extract_ctgov.py      # ClinicalTrials.gov posted adverse-event tables
-python3 scripts/extract_faers.py      # openFDA FAERS  (cached; re-runs cost no quota)
-python3 scripts/extract_labels.py     # DailyMed Structured Product Labels
-python3 scripts/build_literature.py   # curated full-text rows
-python3 scripts/build_oligos.py       # design predictors parsed from labels
-python3 scripts/assemble.py           # canonical tables + provenance registry + merged view
-python3 qc/validate.py                # 29 checks; writes qc/stats.json
-python3 scripts/render_docs.py        # regenerates the counts in this file
+python3 scripts/extract_ctgov.py          # ClinicalTrials.gov posted adverse-event tables
+python3 scripts/extract_ctgov_outcomes.py # pre-specified ventricular MRI outcome measures
+python3 scripts/extract_faers.py          # openFDA FAERS  (cached; re-runs cost no quota)
+python3 scripts/extract_labels.py         # DailyMed Structured Product Labels
+python3 scripts/build_literature.py       # curated full-text and EMA SmPC rows
+python3 scripts/build_oligos.py           # design predictors parsed from labels
+python3 scripts/assemble.py               # canonical tables + provenance registry + merged view
+python3 qc/validate.py                    # 29 checks; writes qc/stats.json
+python3 scripts/render_docs.py            # regenerates the counts in this file
 ```
 
 Every network call is cached under `sources/raw/`, so a re-run is offline and
@@ -253,10 +285,12 @@ figure/table locus. Category words such as "results" are rejected by the QC
 suite.
 
 The overwhelming majority of the dataset is **public domain**: US Government
-works (ClinicalTrials.gov, FAERS, DailyMed labels). The remainder is CC BY, or
-carried as summary statistics only where a licence carries a no-derivatives
-term. `redistribution` records this per row, and every value it takes is actually
-used.
+works (ClinicalTrials.gov, FAERS, DailyMed labels). The remainder is CC BY;
+`summary_stat_only` where a licence carries a no-derivatives term; and `verify`
+for the EMA rows, whose reuse terms were not established in this session — the
+verbatim text is quoted as evidence and a redistributor should resolve the
+licence before republishing those values. `redistribution` records this per row,
+and every value it takes is actually used by rows in the table.
 
 ## Status
 

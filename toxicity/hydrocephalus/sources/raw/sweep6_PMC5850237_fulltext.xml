@@ -1,0 +1,575 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article article-type="research-article" xml:lang="en" dtd-version="1.4"><?da-xref-anchor-style autodetect?><front><journal-meta><journal-id journal-id-type="nlm-ta">J Am Heart Assoc</journal-id><journal-id journal-id-type="iso-abbrev">J Am Heart Assoc</journal-id><journal-id journal-id-type="pmc-domain-id">1888</journal-id><journal-id journal-id-type="pmc-domain">jaha</journal-id><journal-id journal-id-type="publisher-id">JAH3</journal-id><journal-title-group><journal-title>Journal of the American Heart Association: Cardiovascular and Cerebrovascular Disease</journal-title></journal-title-group><issn pub-type="epub">2047-9980</issn><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC5850237</article-id><article-id pub-id-type="pmcid-ver">PMC5850237.1</article-id><article-id pub-id-type="pmcaid">5850237</article-id><article-id pub-id-type="pmcaiid">5850237</article-id><article-id pub-id-type="pmid">29386206</article-id><article-id pub-id-type="doi">10.1161/JAHA.117.007192</article-id><article-id pub-id-type="publisher-id">JAH32853</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Original Research</subject></subj-group><subj-group subj-group-type="heading"><subject>Original Research</subject><subj-group subj-group-type="heading"><subject>Stroke</subject></subj-group></subj-group></article-categories><title-group><article-title>Targeting Germinal Matrix Hemorrhage–Induced Overexpression of Sodium‐Coupled Bicarbonate Exchanger Reduces Posthemorrhagic Hydrocephalus Formation in Neonatal Rats</article-title><alt-title alt-title-type="left-running-head">Li et al</alt-title></title-group><contrib-group><contrib id="jah32853-cr-0001" contrib-type="author"><name name-style="western"><surname>Li</surname><given-names initials="Q">Qian</given-names></name><degrees>MD</degrees><xref ref-type="aff" rid="jah32853-aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib id="jah32853-cr-0002" contrib-type="author"><name name-style="western"><surname>Ding</surname><given-names initials="Y">Yan</given-names></name><degrees>PhD</degrees><xref ref-type="aff" rid="jah32853-aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib id="jah32853-cr-0003" contrib-type="author"><name name-style="western"><surname>Krafft</surname><given-names initials="P">Paul</given-names></name><degrees>MD</degrees><xref ref-type="aff" rid="jah32853-aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib id="jah32853-cr-0004" contrib-type="author"><name name-style="western"><surname>Wan</surname><given-names initials="W">Weifeng</given-names></name><degrees>MD</degrees><xref ref-type="aff" rid="jah32853-aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib id="jah32853-cr-0005" contrib-type="author"><name name-style="western"><surname>Yan</surname><given-names initials="F">Feng</given-names></name><degrees>MD</degrees><xref ref-type="aff" rid="jah32853-aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib id="jah32853-cr-0006" contrib-type="author"><name name-style="western"><surname>Wu</surname><given-names initials="G">Guangyong</given-names></name><degrees>MD</degrees><xref ref-type="aff" rid="jah32853-aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib id="jah32853-cr-0007" contrib-type="author"><name name-style="western"><surname>Zhang</surname><given-names initials="Y">Yixin</given-names></name><degrees>MD</degrees><xref ref-type="aff" rid="jah32853-aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib id="jah32853-cr-0008" contrib-type="author"><name name-style="western"><surname>Zhan</surname><given-names initials="Q">Qunling</given-names></name><degrees>MD</degrees><xref ref-type="aff" rid="jah32853-aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib id="jah32853-cr-0009" contrib-type="author" corresp="yes"><name name-style="western"><surname>Zhang</surname><given-names initials="JH">John H.</given-names></name><degrees>MD, PhD</degrees><address><email>johnzhang3910@yahoo.com</email></address><xref ref-type="aff" rid="jah32853-aff-0002">
+<sup>2</sup>
+</xref><xref ref-type="aff" rid="jah32853-aff-0003">
+<sup>3</sup>
+</xref></contrib></contrib-group><aff id="jah32853-aff-0001">
+<label><sup>1</sup></label>
+<named-content content-type="organisation-division">Department of Neurology</named-content>
+<institution>The Fifth People's Hospital of Chongqing</institution>
+<named-content content-type="country-part">Chongqing</named-content>
+<country country="CN">China</country>
+</aff><aff id="jah32853-aff-0002">
+<label><sup>2</sup></label>
+<named-content content-type="organisation-division">Department of Physiology and Pharmacology</named-content>
+<institution>Loma Linda University School of Medicine</institution>
+<named-content content-type="city">Loma Linda</named-content>
+<named-content content-type="country-part">CA</named-content>
+</aff><aff id="jah32853-aff-0003">
+<label><sup>3</sup></label>
+<named-content content-type="organisation-division">Department of Anesthesiology</named-content>
+<institution>Loma Linda University School of Medicine</institution>
+<named-content content-type="city">Loma Linda</named-content>
+<named-content content-type="country-part">CA</named-content>
+</aff><author-notes><corresp id="correspondenceTo"><label>*</label><bold>Correspondence to:</bold> John H. Zhang, MD, PhD, Department of Anesthesiology, Loma Linda University, Loma Linda, CA 92354. E‐mail: <email>johnzhang3910@yahoo.com</email></corresp></author-notes><pub-date pub-type="epub"><day>31</day><month>1</month><year>2018</year></pub-date><pub-date pub-type="collection"><month>2</month><year>2018</year></pub-date><volume>7</volume><issue>3</issue><issue-id pub-id-type="pmc-issue-id">308334</issue-id><issue-id pub-id-type="doi">10.1002/jah3.2018.7.issue-3</issue-id><elocation-id>e007192</elocation-id><history><date date-type="received"><day>18</day><month>7</month><year>2017</year></date><date date-type="accepted"><day>21</day><month>11</month><year>2017</year></date></history><pub-history><event event-type="pmc-release"><date><day>01</day><month>02</month><year>2018</year></date></event><event event-type="pmc-live"><date><day>21</day><month>03</month><year>2018</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2024-07-19 20:25:14.750"><day>19</day><month>07</month><year>2024</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2018 The Authors. Published on behalf of the American Heart Association, Inc., by Wiley.</copyright-statement><license license-type="creativeCommonsBy-nc"><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbynclicense">https://creativecommons.org/licenses/by-nc/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution‐NonCommercial</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited and is not used for commercial purposes.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="JAH3-7-e007192.pdf"><?pdf-name JAH3-7-e007192.pdf?><?pdf-size 2709824?><?pdf-md5 350c213a1935cafc8f913288fd1e1d46?><?pdf-image-server-status NEVER_LOAD?><?pdf-cloudpmc-urn urn:app:62de/5850237/350c213a1935/JAH3-7-e007192.pdf?></self-uri><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:JAH3-7-e007192.pdf"/><abstract id="jah32853-abs-0001"><sec id="jah32853-sec-0001"><title>Background</title><p>Germinal matrix hemorrhage (<styled-content style="fixed-case">GMH</styled-content>) is a leading cause of mortality and lifelong morbidity in preterm infants. Posthemorrhagic hydrocephalus (<styled-content style="fixed-case">PHH</styled-content>) is a common complication of <styled-content style="fixed-case">GMH</styled-content>. A sodium‐coupled bicarbonate exchanger (<styled-content style="fixed-case">NCBE</styled-content>) encoded by solute carrier family 4 member 10 gene is expressed on the choroid plexus basolateral membrane and may play a role in cerebrospinal fluid production and the development of <styled-content style="fixed-case">PHH</styled-content>. Following <styled-content style="fixed-case">GMH</styled-content>, iron degraded from hemoglobin has been linked to <styled-content style="fixed-case">PHH</styled-content>. Choroid plexus epithelial cells also contain iron‐responsive element‐binding proteins (<styled-content style="fixed-case">IRP</styled-content>s), <styled-content style="fixed-case">IRP</styled-content>1, and <styled-content style="fixed-case">IRP</styled-content>2 that bind to <styled-content style="fixed-case">mRNA</styled-content> iron‐responsive elements. The present study aims to resolve the following issues: (1) whether the expression of <styled-content style="fixed-case">NCBE</styled-content> is regulated by <styled-content style="fixed-case">IRP</styled-content>s; (2) whether <styled-content style="fixed-case">NCBE</styled-content> regulates the formation of <styled-content style="fixed-case">GMH</styled-content>‐induced hydrocephalus; and (3) whether inhibition of <styled-content style="fixed-case">NCBE</styled-content> reduces <styled-content style="fixed-case">PHH</styled-content> development.</p></sec><sec id="jah32853-sec-0002"><title>Methods and Results</title><p>
+<styled-content style="fixed-case">GMH</styled-content> model was established in P7 rat pups by injecting bacterial collagenase into the right ganglionic eminence. Another group received iron trichloride injections instead of collagenase. Deferoxamine was administered intraperitoneally for 3 consecutive days after <styled-content style="fixed-case">GMH</styled-content>/iron trichloride. Solute carrier family 4 member 10 small interfering RNA or scrambled small interfering RNA was administered by intracerebroventricular injection 24 hours before <styled-content style="fixed-case">GMH</styled-content> and followed with an injection every 7 days over 21 days. <styled-content style="fixed-case">NCBE</styled-content> expression increased while <styled-content style="fixed-case">IRP</styled-content>2 expression decreased after <styled-content style="fixed-case">GMH</styled-content>/iron trichloride. Deferoxamine ameliorated both the <styled-content style="fixed-case">GMH</styled-content>‐induced and iron trichloride–induced decrease of <styled-content style="fixed-case">IRP</styled-content>2 and decreased <styled-content style="fixed-case">NCBE</styled-content> expressions. Deferoxamine and solute carrier family 4 member 10 small interfering RNA improved cognitive and motor functions at 21 to 28 days post <styled-content style="fixed-case">GMH</styled-content> and reduced cerebrospinal fluid production as well as the degree of hydrocephalus at 28 days after <styled-content style="fixed-case">GMH</styled-content>.</p></sec><sec id="jah32853-sec-0003"><title>Conclusions</title><p>Targeting iron‐induced overexpression of <styled-content style="fixed-case">NCBE</styled-content> may be a translatable therapeutic strategy for the treatment of <styled-content style="fixed-case">PHH</styled-content> following <styled-content style="fixed-case">GMH</styled-content>.</p></sec></abstract><kwd-group kwd-group-type="author-generated"><kwd id="jah32853-kwd-0001">brain</kwd><kwd id="jah32853-kwd-0002">germinal matrix hemorrhage</kwd><kwd id="jah32853-kwd-0003">hemorrhage</kwd><kwd id="jah32853-kwd-0004">iron overload</kwd><kwd id="jah32853-kwd-0005">iron‐responsive element‐binding protein 2</kwd><kwd id="jah32853-kwd-0006">neonatal ischemia</kwd><kwd id="jah32853-kwd-0007">slc4a10</kwd></kwd-group><kwd-group kwd-group-type="subject-categories"><title>Subject Categories</title><kwd>Animal Models of Human Disease</kwd><kwd>Basic Science Research</kwd><kwd>Developmental biology</kwd><kwd>Oxidant Stress</kwd></kwd-group><funding-group><award-group><funding-source>National Institutes of Health</funding-source><award-id>R01 NS078755</award-id></award-group></funding-group><counts><fig-count count="7"/><table-count count="0"/><page-count count="17"/><word-count count="6449"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY-NC</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>component-id</meta-name><meta-value>jah32853</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>February 2018</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_NLMPMC version:version=5.3.2.2 mode:remove_FC converted:06.02.2018</meta-value></custom-meta></custom-meta-group></article-meta><notes><p content-type="self-citation">
+<mixed-citation publication-type="journal" id="jah32853-cit-1001">(<source>J Am Heart Assoc</source>. <year>2018</year>;<volume>7</volume>:<elocation-id>e007192</elocation-id> DOI: <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1161/JAHA.117.007192">10.1161/JAHA.117.007192</ext-link>.)29386206</mixed-citation>
+</p></notes></front><body><p>
+<boxed-text position="anchor" content-type="box" id="jah32853-blkfxd-0001" orientation="portrait"><sec id="jah32853-sec-0005"><title>Clinical Perspective</title><sec id="jah32853-sec-0006"><title>What Is New?</title><p>
+<list list-type="bullet" id="jah32853-list-0001"><list-item><p>This is the first study that related iron overload with a sodium transporter on the choroid plexus epithelial cells.</p></list-item></list>
+</p></sec><sec id="jah32853-sec-0007"><title>What Are the Clinical Implications?</title><p>
+<list list-type="bullet" id="jah32853-list-0002"><list-item><p>It revealed a potential novel mechanism that leads to cerebrospinal fluid overproduction and hydrocephalus and highlighted the role of sodium‐coupled bicarbonate exchanger in cerebrospinal fluid production, which can be a novel therapeutic target for posthemorrhagic hydrocephalus.</p></list-item></list>
+</p></sec></sec></boxed-text>
+</p><sec id="jah32853-sec-0008"><title>Introduction</title><p>Germinal matrix hemorrhage (GMH) develops secondary to the rupture of fragile blood vessels within the subependymal brain tissue. It affects between 12.5% and 22% of infants with birth weights &lt;1500 g.<xref rid="jah32853-bib-0001" ref-type="ref">1</xref>, <xref rid="jah32853-bib-0002" ref-type="ref">2</xref> Immature blood vessels in the germinal matrix are deficient in autoregulatory mechanisms and may therefore rupture in response to abnormal fluctuations of cerebral blood flow, caused by cardiorespiratory instability, among others, in the perinatal period.<xref rid="jah32853-bib-0003" ref-type="ref">3</xref> Long‐term consequences of GMH include developmental delays, cerebral palsy, and posthemorrhagic hydrocephalus (PHH), which pose a relevant social and economic burden on those affected.<xref rid="jah32853-bib-0002" ref-type="ref">2</xref>, <xref rid="jah32853-bib-0004" ref-type="ref">4</xref>, <xref rid="jah32853-bib-0005" ref-type="ref">5</xref> Approximately 25% of premature infants who have GMH will develop progressive PHH and 40% of those who survive the initial events will require surgery for permanent cerebrospinal fluid (CSF) diversion.<xref rid="jah32853-bib-0002" ref-type="ref">2</xref> The need for CSF diversion, however, is an independent risk factor for poor neurological outcome following GMH.<xref rid="jah32853-bib-0006" ref-type="ref">6</xref> Insufficient advancements targeting the development of PHH have been made. Noninvasive treatment strategies that effectively reduce PHH formation after GMH would greatly benefit this patient population.</p><p>PHH is believed to be caused by an obstruction within the CSF circulation and/or by an imbalance between CSF formation and absorption.<xref rid="jah32853-bib-0007" ref-type="ref">7</xref> Impaired CSF absorption may be explained by mechanical and inflammatory destruction of the arachnoid granulations; however, the mechanisms of increased CSF production after GMH are not well understood. A sodium‐coupled bicarbonate exchanger (NCBE) encoded by the solute carrier family 4 member 10 (slc4a10) gene is expressed on the basolateral side of choroid plexus epithelial cells, which is reputed to play a role in CSF production.<xref rid="jah32853-bib-0008" ref-type="ref">8</xref> Indeed, mice with targeted disruption of the slc4a10 gene developed cerebroventricular systems of small volume, suggesting a pertinent role of this specific ion transporter in CSF.<xref rid="jah32853-bib-0009" ref-type="ref">9</xref> The choroid plexus epithelial cells also contain iron‐responsive element‐binding protein (IRP) 1 and IRP2, which bind to sequences of mRNA known as iron‐responsive elements, thereby regulating the translation of iron storage and transport proteins. An important consequence of intraventricular hemorrhage is the release of iron from hemoglobin molecules of lysed erythrocytes, which creates a neurotoxic oxidative environment.<xref rid="jah32853-bib-0010" ref-type="ref">10</xref> High iron concentrations have been shown to reduce the binding affinity of IRP1 to iron‐responsive elements and may even cause degradation of IRP2.<xref rid="jah32853-bib-0011" ref-type="ref">11</xref> Synthesis of the iron storage protein, ferritin, and the iron transporter protein, transferrin, is greatly dependent on IRPs, and thus may be impaired following GMH.<xref rid="jah32853-bib-0012" ref-type="ref">12</xref>, <xref rid="jah32853-bib-0013" ref-type="ref">13</xref>
+</p><p>The present study aims to determine whether GMH‐induced or iron trichloride (FeCl<sub>3</sub>)–induced iron overload decreases IRP1 and IRP2 expressions and increases NCBE expression for possible roles in CSF production and development of PHH. We hypothesize that iron overload decreases IRP1/IRP2 and increases NCBE expression, while increasing CSF production and PHH. Our results confirm our hypotheses and suggest a noncanonical relationship between decreased IRP1/IRP2 levels and increased NCBE levels. Our findings suggest that combined iron chelation and slc4a10 knockout may be effective in decreasing CSF production and hydrocephalus formation in patients with GMH.</p></sec><sec id="jah32853-sec-0009"><title>Materials and Methods</title><p>The data, analytic methods, and study materials have been made available to other researchers for purposes of reproducing the results or replicating the procedure. The data that support the findings of this study are available from the corresponding author upon request. Authors will be responsible for maintaining availability.</p><sec id="jah32853-sec-0010"><title>GMH Modeling and Treatment</title><p>All procedures were in compliance with the National Institutes of Health guidelines for the handling of laboratory animals and approved by the Institutional Animal Care and Use Committee at Loma Linda University.</p><p>P7 Sprague‐Dawley rat pups (stage of brain development is comparable to an infant at 30–32 weeks of gestation) were implemented in this study. We used stereotactic infusion of 0.3 U of bacterial collagenase into the right ganglionic eminence to induce grade III and IV GMH, as previously described.<xref rid="jah32853-bib-0014" ref-type="ref">14</xref> Briefly, rat pups were anesthetized with 3% isoflurane (in mixed air and oxygen) and placed prone onto a stereotactic head frame. Aseptic techniques were used for all animal surgeries. Following a small longitudinal midline scalp incision, the bregma was identified. A 1‐mm burr hole was made 1.6 mm rostral and 1.5 mm right lateral relative to the bregma. A 27‐gauge needle was inserted stereotactically through the burr hole 2.7 mm in depth and collagenase was infused. Following that, the needle was left in place for an additional 5 minutes to prevent backflow of collagenase along the needle tract. After removal of the syringe, the burr hole was sealed with bone wax and the incision was closed with sutures. Sham animals were subjected to the same procedure excluding infusion of collagenase. A subgroup of naïve animals received intracerebral injections of FeCl<sub>3</sub>, instead of collagenase<sub>.</sub>
+</p><p>Deferoxamine (100 mg/kg) or its vehicle (PBS) was injected intraperitoneally every 12 hours, starting 1 hour after GMH induction. slc4a10 small interfering RNA (siRNA) or scrambled siRNA was injected intracerebroventricularly at the following coordinates relative to the bregma: 1.6 mm (rostral), 1.5 mm (left lateral), and 1.7 mm (in depth). slc4a10 siRNA was administered 1 day before GMH induction and then every 7 days thereafter for 21 consecutive days (for the long‐term experiments). slc4a10 siRNA (Applied Biological Materials Inc.) was packaged in lentivirus targeting multiple sequences, including 1598CCACCGAAGGTCGTATAAGTGCAATCGAA;1839TTCCCTTGTCTGCTATATCACCCGGTTCA;2623GCAGCCACTGTCCTCTCCATCACTCATGT;3060 GTTGATGGACTTCTTGTTTACCAAACGGG.</p></sec><sec id="jah32853-sec-0011"><title>Experiment 1</title><p>To determine the time course of IRP2 and NCBE expressions following GMH, animals subjected to GMH were euthanized on days 1, 3, 5, or 7 after surgery and brain tissues were collected for Western blotting and real‐time polymerase chain reaction (PCR). A sham group was included for comparison (n=6 for each group per time point).</p></sec><sec id="jah32853-sec-0012"><title>Experiment 2</title><p>We tested the effects of iron toxicity on IRP1, IRP2, and NCBE expression levels at 3 days after GMH as well as the long‐term effects of iron toxicity on neurological deficits at 21 to 28 days after GMH, the rate of CSF production, and the extent of PHH at 28 days after GMH. We administered deferoxamine to chelate iron after GMH/FeCl<sub>3</sub>. The following experimental groups were used: sham, GMH+vehicle, GMH+deferoxamine, FeCl<sub>3</sub>+vehicle, and FeCl<sub>3</sub>+deferoxamine. On day 3 after GMH, a subgroup of animals was euthanized for Western blotting, real‐time PCR (n=6 for each group), and immunofluorescence staining (n=4 for sham, GMH+vehicle, GMH+deferoxamine group). All other animals (n=6 for sham, GMH+vehicle, GMH+deferoxamine group), as well as sham+deferoxamine, were included in the long‐term experiments to evaluate neurological deficits at 21 to 28 days after GMH. Sham, GMH+vehicle, and GMH+deferoxamine animals were also used to measure the rate of CSF production, as well as the extent of PHH at 28 days after GMH.</p></sec><sec id="jah32853-sec-0013"><title>Experiment 3</title><p>To determine whether knockdown of slc4a10 ameliorates CSF overproduction and hydrocephalus formation, thereby improving long‐term neurological deficits after GMH, the following experimental groups were selected: sham, GMH, GMH+scrambled siRNA, and GMH+slc4a10 siRNA. On day 3 after GMH, a subgroup of animals was euthanized for Western blotting, real‐time PCR (n=6 for each group), and immunofluorescence staining (n=4 for sham, GMH+scrambled siRNA, GMH+slc4a10 siRNA group). All other animals (n=6 for each group), as well as sham+slc4a10 siRNA, were included in the long‐term experiments to evaluate neurological deficits at 21 to 28 days after GMH. Sham, GMH+scrambled siRNA, and GMH+slc4a10 siRNA groups were used to measure the rate of CSF production, as well as the extent of PHH at 28 days after GMH.</p></sec><sec id="jah32853-sec-0014"><title>Preparation of Brain Tissue</title><p>At 3 and 28 days after GMH induction, deeply anesthetized (5% isoflurane) animals were subjected to transcardiac perfusion with ice‐cold PBS for Western blotting, real‐time PCR, or ice‐cold PBS followed by 10% formalin for immunohistochemistry and other histological evaluation. Brains were snap‐frozen in liquid nitrogen and stored at −80°C (for Western blotting and real‐time PCR) or post‐fixed in 10% formalin overnight then dehydrated with a sucrose solution (30%) for an additional 3 days at 4°C (for histology studies). Forebrain samples used for staining were then embedded in optimal cutting temperature compound and stored at −20°C.</p></sec><sec id="jah32853-sec-0015"><title>Protein Extraction and Western Blotting</title><p>Forebrain samples were homogenized in RIPA lysis buffer (Santa Cruz Biotechnology) and supernatants from the homogenates were collected after centrifugation at 20817 g, at 4°C for 30 minutes. The protein concentration was determined using a detergent compatibility assay (Bio‐Rad). Thirty micrograms of protein per sample were loaded, run for 30 minutes at 80 V, then 60 minutes at 120 V, followed by protein transfer onto nitrocellulose membranes at 0.45 mm for 120 minutes (Bio‐Rad). Membranes were incubated for 2 hours in 5% nonfat milk in Tris‐buffered saline containing 0.1% Tween 20. The following primary antibodies were incubated overnight at 4°C: anti‐IRP1 and anti‐IRP2 (1:1000; Abcam), anti‐NCBE (1:500; Origene) and anti–β‐Actin (1:1000; Santa Cruz Biotechnology). The membranes were washed and then incubated with the appropriate secondary antibodies (1:4000, Santa Cruz Biotechnology) for 1 hour at room temperature. Enhanced chemiluminescent solution (GE Healthcare and Life Science) was then applied to the membranes and the protein bands were exposed onto radiography films. ImageJ software (4.0, Media Cybernetics) was used to analyze the relative density of the resultant protein immunoblots.</p></sec><sec id="jah32853-sec-0016"><title>RNA Extraction and Real‐Time PCR</title><p>RNA was extracted from forebrain homogenates using the Quick‐RNA MiniPrep kit (Genesee Scientific) according to the manufacturer's instructions. RNA concentrations were determined by photometric measurement via the NanoDrop 2000 spectrophotometer (Peqlab Biotechnologie GmbH). First‐strand cDNA Synthesis Kit (ThermoFisher) was used for reverse transcription. Three micrograms of RNA was reverse transcribed per the manufacturer's instructions. Quantitative real‐time PCR was performed on a CFX96 Touch Real‐Time PCR Detection System machine using iTaq Universal SYBR Green Supermix (Bio‐Rad) according to the manufacturer's instructions. Primers used in the study were as follows: slc4a10 forward primer 5′‐GCA AGG TGC TTT TTC CAG AGG‐3′, reverse primer 5′‐GCT CTT TCT TCC ACC AAG CG‐3′, IRP1 forward primer 5′‐GAC CCA ATG AGG TAC CA GGC‐3′, reverse primer 5′‐TGC TCA TCT TGC TAG CAC CC‐3′, IRP2 forward primer 5′‐ACT CCC CAA GTG CAG GAT AC‐3′, and reverse primer 5′‐CAG CTT CCA ATA GGA CCC GT‐3′. GAPDH was used as internal control. The primers were GAPDH forward 5′‐CTT CAT TGA CCT CAA CTA CAT G‐3′ and reverse 5′‐GAC TGT GCC GTT GAA CTT GC‐3′. The PCR amplification phase consists of 40 cycles of amplification using a plateau of 95°C for 30 seconds for denaturation, followed by a plateau of 60°C for 1 minute for annealing, and a plateau of 72°C for 30 seconds for amplification. All real‐time PCRs were performed in triplicates. Results were quantitated using ΔΔCt method.</p></sec><sec id="jah32853-sec-0017"><title>Immunohistochemistry and Volumetric Analysis</title><p>Following postfixation of the brain samples in formalin, 10‐μm thick coronal sections were cut using a cryostat (Leica Microsystems LM3050S). Brain sections revealing choroid plexus were used for immunohistochemical staining as previously described.<xref rid="jah32853-bib-0015" ref-type="ref">15</xref> Briefly, these brain sections were incubated overnight at 4°C with the following primary antibodies: anti‐IRP1 (1:200, Abcam), anti‐IRP2 (1:100, Abcam), anti‐NCBE (1:50, Origene), and antitransthyretin (1:50, Abcam). Sections were then washed and incubated with the appropriate secondary antibodies (1:100, Jackson ImmunoResearch Labs) for 2 hours at room temperature. The tissue slides were then stained with 4’,6‐diamidino‐2‐phenylindole (Vector Laboratories), fixed in paramount, and visualized using a fluorescence microscope (Olympus BX51, Olympus Corporation). For histological, volumetric analysis, 16‐μm thick coronal brain sections were cut at 2.5 mm, 1.2 mm, 0.7 mm rostral, and 2.9 mm caudal of the bregma. These brain slices were stained with Nissl and morphometrically analyzed using ImageJ 4.0 (Media Cybernetics) assisted delineation of brain structures, as previously described.<xref rid="jah32853-bib-0016" ref-type="ref">16</xref> The ventricle volume was calculated as average ventricular areas on each slide multiplied by the depth of the cerebroventricular system.</p></sec><sec id="jah32853-sec-0018"><title>Neurobehavioral Assessment</title><p>Morris water maze and rotarod tests were performed in a blinded manner to evaluate cognitive and sensorimotor deficits in rats between 21 and 28 days after GMH induction, as previously described.<xref rid="jah32853-bib-0017" ref-type="ref">17</xref>, <xref rid="jah32853-bib-0018" ref-type="ref">18</xref> Briefly, for the water maze test, rats were placed in a round pool (110 cm in diameter) filled with water and trained to find a visible platform (11 cm in diameter). After these cued trials, the platform was slightly submerged and the rats were allowed to find the location of the platform on 10 trials per day for 4 consecutive days. Additionally, at the end of each test day, the platform was removed from the pool (Probe trial). An overhead camera with a computerized tracking system (Noldus Ethovision) recorded the swim path and measured the swim distance and time spent within the probe quadrant. Briefly, for the rotarod test, rats were placed onto a rotarod (Columbus Instruments), consisting of a rotating horizontal cylinder (7 cm in diameter). Rats had to move along with the rotating cylinder to avoid falling. Rotarod testing started at either 5 or 10 RPM with an acceleration of 2 RPM every 5 seconds. A photobeam circuit detected the fall off the cylinder and the latency to this event was recorded for each animal.</p></sec><sec id="jah32853-sec-0019"><title>Measuring CSF Production</title><p>CSF production was measured by the ventriculo‐cisternal perfusion method.<xref rid="jah32853-bib-0019" ref-type="ref">19</xref> Briefly, after introduction of the micropipette in the contralateral lateral ventricle to the GMH site, a second micropipette held in a horizontal position was inserted into the cisterna magna micropipette. After observing CSF in the cisterna magna micropipette, the perfusion was started. The lateral ventricle was perfused with artificial CSF containing 10 mg/mL of fluorescein isothiocyanate dextran (500 000 MW, ThermoFisher) with a total volume of 100 and 80 μL fluid in the cisterna magna was collected. This procedure lasted for 40 minutes. Sham‐operated animals also received the same infusion and withdrawal of fluid. The rate of CSF production was calculated from the equation V<sub>f</sub>=r<sub>i</sub> (C<sub>i</sub>−C<sub>o</sub>)/C<sub>o</sub>. V<sub>f</sub> was the CSF production rate (μL/min), r<sub>i</sub> was the infusion rate (1 μL/min), C<sub>i</sub> was the dextran concentration of inflow solution (10 mg/mL), and C<sub>o</sub> was the dextran concentration of outflow solution. Absorbance of the fluid collected was measured at 498 nm. Concentrations of the solution were calculated based on a standard curve.</p></sec><sec id="jah32853-sec-0020"><title>Statistical Analysis</title><p>Statistical analysis was performed using Sigma Plot10.0 and Sigma Stat3.5 (Systat Software). Data were presented as mean±SEM and evaluated by 1‐way ANOVA followed by Tukey or Student–Newman–Keuls tests. <italic toggle="yes">P</italic> values &lt;0.05 were considered statistically significant.</p></sec></sec><sec id="jah32853-sec-0021"><title>Results</title><sec id="jah32853-sec-0022"><title>GMH Decreased IRP2 Expression and Increased NCBE Expression</title><p>A time‐course study was conducted to determine IRP2 and NCBE protein expression and gene transcription in the forebrain of rats on 1, 3, 5, and 7 days following GMH induction. We found that IRP2 protein expression was significantly decreased in GMH animals starting from day 1 to day 5 compared with the sham group or GMH animals euthanized on day 7 after surgery (<italic toggle="yes">P</italic>&lt;0.05; Figure <xref rid="jah32853-fig-0001" ref-type="fig">1</xref>A). IRP2 protein expression was found to be similar on day 7 after GMH compared with the sham group (<italic toggle="yes">P</italic>&gt;0.05). Reversely, the expression of the NCBE was found to be significantly elevated following GMH between day 1 and day 5 compared with the sham or GMH day 7 group (<italic toggle="yes">P</italic>&lt;0.05; Figure <xref rid="jah32853-fig-0001" ref-type="fig">1</xref>B) but was found to be similar to sham on day 7 after GMH (<italic toggle="yes">P</italic>&gt;0.05). IRP2 and slc4a10 mRNA levels were also measured in the tissue samples collected on 1, 3, 5, and 7 days following GMH induction. The real‐time PCR data revealed that IRP2 mRNA levels were significantly decreased while slc4a10 mRNA levels were significantly elevated on days 1, 3, and 5 after GMH compared with sham or the GMH day 7 group (<italic toggle="yes">P</italic>&lt;0.05; Figure <xref rid="jah32853-fig-0001" ref-type="fig">1</xref>C and <xref rid="jah32853-fig-0001" ref-type="fig">1</xref>D). IRP2 expression as well as gene transcription was negatively associated with NCBE expression and slc4a10 gene transcription following GMH.</p><fig fig-type="Figure" xml:lang="en" id="jah32853-fig-0001" orientation="portrait" position="float"><label>Figure 1</label><caption><p>Germinal matrix hemorrhage (GMH) decreased indicates iron‐responsive element‐binding protein 2 (IRP2) expression and increased sodium‐coupled bicarbonate exchanger (NCBE) expression following <styled-content style="fixed-case">GMH</styled-content>. A and B, Representative image of Western blot and quantitative of <styled-content style="fixed-case">NCBE</styled-content> and <styled-content style="fixed-case">IRP</styled-content>2 in rat brain after different time of <styled-content style="fixed-case">GMH</styled-content>. C and D, Quantification of the relative <styled-content style="fixed-case">mRNA</styled-content> levels of solute carrier family 4 member 10 (slc4a10) and <styled-content style="fixed-case">IRP</styled-content>2. N=6 per group. Data are expressed as mean±<styled-content style="fixed-case">SEM</styled-content>. One‐way <styled-content style="fixed-case">ANOVA</styled-content> followed by Tukey test. *<italic toggle="yes">P</italic>&lt;0.05 vs sham. <sup>@</sup>
+<italic toggle="yes">P</italic>&lt;0.05 vs day 7. </p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="nlm-graphic-1" position="float" orientation="portrait" xlink:href="JAH3-7-e007192-g001.jpg"><?image-name JAH3-7-e007192-g001.jpg?><?image-size 97151?><?image-md5 e26860716a254e5261795e5d1cb06d1d?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 916?><?image-original-width 1064?><?image-scaled-height 610?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/62de/5850237/e26860716a25/JAH3-7-e007192-g001.jpg?><?thumb-name JAH3-7-e007192-g001.gif?><?thumb-size 17135?><?thumb-md5 b749577675f8c29914d28d03233a0939?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 86?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/62de/5850237/b749577675f8/JAH3-7-e007192-g001.gif?></graphic></fig></sec><sec id="jah32853-sec-0023"><title>Iron Toxicity Increased Expression of NCBE After GMH/FeCl<sub>3</sub>
+</title><p>The protein expression of NCBE as well as slc4a10 gene transcription was measured on day 3 after surgery in the following groups: sham, GMH+vehicle, FeCl<sub>3</sub>+vehicle, GMH+deferoxamine, and FeCl<sub>3</sub>+deferoxamine. Interestingly, GMH as well as FeCl<sub>3</sub> administration resulted in a significant increase in both protein and mRNA level of NCBE/slc4a10 (<italic toggle="yes">P</italic>&lt;0.05; Figure <xref rid="jah32853-fig-0002" ref-type="fig">2</xref>A and <xref rid="jah32853-fig-0002" ref-type="fig">2</xref>B) compared with the sham group. The iron chelator deferoxamine significantly decreased the protein expression of NCBE after GMH (<italic toggle="yes">P</italic>&lt;0.05 versus GMH+vehicle; Figure <xref rid="jah32853-fig-0002" ref-type="fig">2</xref>A) as well as after FeCl<sub>3</sub> administration (<italic toggle="yes">P</italic>&lt;0.05 compared with FeCl<sub>3</sub>+vehicle). Similarly, deferoxamine decreased the mRNA level of slc4a10 after GMH (<italic toggle="yes">P</italic>&lt;0.05; Figure <xref rid="jah32853-fig-0002" ref-type="fig">2</xref>B) and FeCl<sub>3</sub> administration (<italic toggle="yes">P</italic>&lt;0.05) compared with the respective vehicle group. The expression of NCBE in the choroid plexus was evaluated via immunohistochemical staining of forebrain at 3 days after surgery. The following groups were compared: sham, GMH+vehicle, and GMH+deferoxamine. As expected, NCBE localized basolateral membrane in choroid plexus cells (Figure <xref rid="jah32853-fig-0002" ref-type="fig">2</xref>C). Representative microphotographs demonstrated seemingly increased expression of NCBE after GMH administration (GMH+vehicle), which was reduced after deferoxamine treatment.</p><fig fig-type="Figure" xml:lang="en" id="jah32853-fig-0002" orientation="portrait" position="float"><label>Figure 2</label><caption><p>Upregulation of sodium‐coupled bicarbonate exchanger (NCBE) induced by germinal matrix hemorrhage (GMH)/iron trichloride (FeCl<sub>3</sub>) was related to iron. A, Representative image of Western blot and quantitative of <styled-content style="fixed-case">NCBE</styled-content> in rat brain treated by deferoxamine (DFX) after <styled-content style="fixed-case">GMH</styled-content> or FeCl<sub>3</sub>. B, Quantification of the relative <styled-content style="fixed-case">mRNA</styled-content> levels of solute carrier family 4 member 10 (slc4a10). C, Representative immunostaining images of <styled-content style="fixed-case">NCBE</styled-content> on choroid plexus (CP) basolateral membrane. Scale bars, 100 μm. N=4 to 6 per group. Data are expressed as mean±<styled-content style="fixed-case">SEM</styled-content>. One‐way <styled-content style="fixed-case">ANOVA</styled-content> followed by Tukey test. *<italic toggle="yes">P</italic>&lt;0.05 vs sham; <sup>#</sup>
+<italic toggle="yes">P</italic>&lt;0.05 vs <styled-content style="fixed-case">GMH</styled-content>+vehicle; <sup>&amp;</sup>
+<italic toggle="yes">P</italic>&lt;0.05 vs FeCl<sub>3</sub>+vehicle. DAPI indicates 4′,6‐diamidino‐2‐phenylindole. </p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="nlm-graphic-3" position="float" orientation="portrait" xlink:href="JAH3-7-e007192-g002.jpg"><?image-name JAH3-7-e007192-g002.jpg?><?image-size 85486?><?image-md5 f416ce4585c20677ed0a066d9708d6e6?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 868?><?image-original-width 1064?><?image-scaled-height 578?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/62de/5850237/f416ce4585c2/JAH3-7-e007192-g002.jpg?><?thumb-name JAH3-7-e007192-g002.gif?><?thumb-size 18755?><?thumb-md5 b5ced9c5624d3b1c0e9b7184f577ed78?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 82?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/62de/5850237/b5ced9c5624d/JAH3-7-e007192-g002.gif?></graphic></fig></sec><sec id="jah32853-sec-0024"><title>Deferoxamine Restored GMH/FeCl<sub>3</sub> Reduced IRP2 Expression</title><p>The protein and mRNA levels of IRP1 and IRP2 were measured on day 3 after surgery in the following groups: sham, GMH+vehicle, FeCl<sub>3</sub>+vehicle, GMH+deferoxamine, and FeCl<sub>3</sub>+deferoxamine. No significant changes in IRP1 protein expression nor in IRP1 mRNA were identified between all groups (<italic toggle="yes">P</italic>&gt;0.05; Figure <xref rid="jah32853-fig-0003" ref-type="fig">3</xref>A and <xref rid="jah32853-fig-0003" ref-type="fig">3</xref>C). The protein expression of IRP2, however, was found to be significantly decreased in the GMH+vehicle and FeCl<sub>3</sub>+vehicle group compared with sham (<italic toggle="yes">P</italic>&lt;0.05; Figure <xref rid="jah32853-fig-0003" ref-type="fig">3</xref>B). The decrease in IRP2 expression after GMH and FeCl<sub>3</sub> administration was effectively reversed by deferoxamine compared with the respective vehicle groups (<italic toggle="yes">P</italic>&lt;0.05). Similarly, the level of IRP2 mRNA was significantly decreased in the GMH+vehicle and FeCl<sub>3</sub>+vehicle group compared with sham (<italic toggle="yes">P</italic>&lt;0.05; Figure <xref rid="jah32853-fig-0003" ref-type="fig">3</xref>D). The decrease in IRP2 mRNA after GMH and FeCl<sub>3</sub> administration was also reversed by deferoxamine, compared with the respective vehicle groups (<italic toggle="yes">P</italic>&lt;0.05). The expression of IRP2 within the choroid plexus was evaluated via immunohistochemical staining of forebrain slides obtained at 3 days after surgery. The following groups were compared: sham, GMH+vehicle, and GMH+deferoxamine. Antitransthyretin antibody was used to identify the choroid plexus within the brain. IRP2 and antitransthyretin were colocalized within the same cells (Figure <xref rid="jah32853-fig-0003" ref-type="fig">3</xref>E). Representative microphotographs demonstrated seemingly decreased expressions of IRP2 after GMH (GMH+vehicle), which was ameliorated after deferoxamine treatment.</p><fig fig-type="Figure" xml:lang="en" id="jah32853-fig-0003" orientation="portrait" position="float"><label>Figure 3</label><caption><p>Downregulation of iron‐responsive element‐binding protein 2 (<styled-content style="fixed-case">IRP</styled-content>2) but not <styled-content style="fixed-case">IRP</styled-content>1 was related to iron overload after germinal matrix hemorrhage (GMH)/iron trichloride (FeCl<sub>3</sub>). A and B, Representative image of Western blot and quantitative of <styled-content style="fixed-case">IRP</styled-content>1 and <styled-content style="fixed-case">IRP</styled-content>2 in rat brain treated by deferoxamine (DFX) after <styled-content style="fixed-case">GMH</styled-content> or FeCl<sub>3</sub>. C and D, Quantification of the relative <styled-content style="fixed-case">mRNA</styled-content> levels of <styled-content style="fixed-case">IRP</styled-content>1 and <styled-content style="fixed-case">IRP</styled-content>2. E, Representative immunostaining images of <styled-content style="fixed-case">IRP</styled-content>2 on choroid plexus (CP). Scale bars, 100 μm. N=4 to 6 per group. Data are expressed as mean±<styled-content style="fixed-case">SEM</styled-content>. One‐way <styled-content style="fixed-case">ANOVA</styled-content> followed by Tukey test. *<italic toggle="yes">P</italic>&lt;0.05 vs sham; <sup>#</sup>
+<italic toggle="yes">P</italic>&lt;0.05 vs <styled-content style="fixed-case">GMH</styled-content>+vehicle; <sup>&amp;</sup>
+<italic toggle="yes">P</italic>&lt;0.05 vs FeCl<sub>3</sub>+vehicle. DAPI indicates 4′,6‐diamidino‐2‐phenylindole. </p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="nlm-graphic-5" position="float" orientation="portrait" xlink:href="JAH3-7-e007192-g003.jpg"><?image-name JAH3-7-e007192-g003.jpg?><?image-size 141288?><?image-md5 2f97b1751eb841729a3f0ec24bab6ed4?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1465?><?image-original-width 1064?><?image-scaled-height 976?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/62de/5850237/2f97b1751eb8/JAH3-7-e007192-g003.jpg?><?thumb-name JAH3-7-e007192-g003.gif?><?thumb-size 21963?><?thumb-md5 c087d6c7f2fe9ad5d2168fb076762bd6?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 138?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/62de/5850237/c087d6c7f2fe/JAH3-7-e007192-g003.gif?></graphic></fig></sec><sec id="jah32853-sec-0025"><title>slc4a10 Gene Silencing Decreased NCBE Expression After GMH</title><p>The effectiveness of intracerebroventricular injection of slc4a10 siRNA was evaluated. One day before GMH surgery, slc4a10 siRNA or its control was injected into the left lateral ventricle of rat pups. Western blot and real‐time PCR were conducted at 3 days after GMH induction to evaluate the effectiveness of slc4a10 knockdown. The protein expression of NCBE was significantly decreased after slc4a10 siRNA injection compared with the vehicle and vehicle+scrambled siRNA groups (<italic toggle="yes">P</italic>&lt;0.05; Figure <xref rid="jah32853-fig-0004" ref-type="fig">4</xref>A). Similarly, slc4a10 mRNA was significantly decreased after siRNA injection compared with the vehicle and vehicle+scramble siRNA groups (<italic toggle="yes">P</italic>&lt;0.05; Figure <xref rid="jah32853-fig-0004" ref-type="fig">4</xref>B). The expression of slc4a10 within the choroid plexus was evaluated via immunohistochemical staining of forebrain slides obtained at 3 days after surgery. The following groups were compared: sham, GMH+scrambled siRNA, and GMH+slc4a10 siRNA. NCBE localized basolateral membrane in choroid plexus cells (Figure <xref rid="jah32853-fig-0004" ref-type="fig">4</xref>C). Representative microphotographs demonstrated increased expression of NCBE after scramble siRNA injection; however, slc4a10 siRNA effectively reduced NCBE expression within the choroid plexus after GMH induction.</p><fig fig-type="Figure" xml:lang="en" id="jah32853-fig-0004" orientation="portrait" position="float"><label>Figure 4</label><caption><p>Intracerebroventricular injection of solute carrier family 4 member 10 (slc4a10) small interfering RNA (si<styled-content style="fixed-case">RNA)</styled-content> 24 hours before germinal matrix hemorrhage (GMH) decreased sodium‐coupled bicarbonate exchanger (NCBE) expression. A, Representative image of Western blot and quantitative of <styled-content style="fixed-case">NCBE</styled-content> in rat brain after treated by si<styled-content style="fixed-case">RNA</styled-content>. B, Quantification of the relative <styled-content style="fixed-case">mRNA</styled-content> levels of slc4a10. C, Representative immunostaining images of <styled-content style="fixed-case">NCBE</styled-content> on choroid plexus (CP). N=4 to 6 per group. Data are expressed as mean±<styled-content style="fixed-case">SEM</styled-content>. One‐way <styled-content style="fixed-case">ANOVA</styled-content> followed by Tukey test. *<italic toggle="yes">P</italic>&lt;0.05 vs sham; <sup>#</sup>
+<italic toggle="yes">P</italic>&lt;0.05 vs <styled-content style="fixed-case">GMH</styled-content>+scrambled si<styled-content style="fixed-case">RNA</styled-content>. DAPI indicates 4′,6‐diamidino‐2‐phenylindole. </p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="nlm-graphic-7" position="float" orientation="portrait" xlink:href="JAH3-7-e007192-g004.jpg"><?image-name JAH3-7-e007192-g004.jpg?><?image-size 73556?><?image-md5 41e3dc0320efc4150892d1b6f42bee3e?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 916?><?image-original-width 1064?><?image-scaled-height 610?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/62de/5850237/41e3dc0320ef/JAH3-7-e007192-g004.jpg?><?thumb-name JAH3-7-e007192-g004.gif?><?thumb-size 14554?><?thumb-md5 e0f8027702615e39281c187900ae8abf?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 86?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/62de/5850237/e0f802770261/JAH3-7-e007192-g004.gif?></graphic></fig></sec><sec id="jah32853-sec-0026"><title>Deferoxamine and slc4a10 Knockdown Improved Neurological Function After GMH</title><p>Neurobehavioral deficits were evaluated between day 21 and 28 after GMH. The following groups were compared: sham, sham+deferoxamine, GMH+vehicle, GMH+deferoxamine, sham+slc4a10 siRNA, GMH+scrambled siRNA, and GMH+slc4a10 siRNA. During the Morris water maze trials, GMH+vehicle animals required significantly longer periods to find the platform compared with sham (<italic toggle="yes">P</italic>&lt;0.05; Figure <xref rid="jah32853-fig-0005" ref-type="fig">5</xref>A, block 3). GMH+vehicle and GMH+scramble siRNA animals performed significantly worse than sham animals (<italic toggle="yes">P</italic>&lt;0.05; Figure <xref rid="jah32853-fig-0005" ref-type="fig">5</xref>A, block 4). The greater amount of time required by vehicle animals to find the platform during water maze testing was significantly reduced by administration of slc4a10 siRNA in block 3 and by administration of deferoxamine or slc4a10 siRNA in block 4 compared with the respective vehicle groups (<italic toggle="yes">P</italic>&lt;0.05). Furthermore, rodents of the GMH+vehicle and GMH+scrambled siRNA groups spent less time in the correct quadrant during the probe trials compared with either the sham group or animals of the respective vehicle groups (<italic toggle="yes">P</italic>&lt;0.05; Figure <xref rid="jah32853-fig-0005" ref-type="fig">5</xref>B), which indicated a significant loss of special memory in GMH animals. The latter was effectively ameliorated by deferoxamine treatment and slc4a10 gene silencing. Similarly, GMH animals (GMH+vehicle and GMH+scramble siRNA) fell faster off the rotating cylinder at a starting speed of 5 RPM compared with the sham, GMH+deferoxamine, and GMH+slc4a10 siRNA groups (<italic toggle="yes">P</italic>&lt;0.05; Figure <xref rid="jah32853-fig-0005" ref-type="fig">5</xref>C). GMH animals demonstrated a worse performance than sham animals during rotarod testing at a starting speed of 10 RPM (<italic toggle="yes">P</italic>&lt;0.05); however, no significant improvement was found after deferoxamine treatment or slc4a10 knockdown (<italic toggle="yes">P</italic>&gt;0.05). In general, deferoxamine and slc4a10 siRNA had no effect on sham‐operated animals.</p><fig fig-type="Figure" xml:lang="en" id="jah32853-fig-0005" orientation="portrait" position="float"><label>Figure 5</label><caption><p>Deferoxamine (DFX) and solute carrier family 4 member 10 (slc4a10) knockdown improved neurological function 21 to 28 days after germinal matrix hemorrhage (GMH). A, Latency to platform of rat after <styled-content style="fixed-case">GMH</styled-content>. B, Probe phase data of time rat spent in the southwest (SW) quadrant. C, Rotarod data of the long‐term sensorimotor function of rat. N=6 per group. Data are expressed as mean±<styled-content style="fixed-case">SEM</styled-content>. One‐way <styled-content style="fixed-case">ANOVA</styled-content> followed by Tukey test. *<italic toggle="yes">P</italic>&lt;0.05 vs sham; <sup>@</sup>
+<italic toggle="yes">P</italic>&lt;0.05 vs Sham+DFX; <sup>$</sup>
+<italic toggle="yes">P</italic>&lt;0.05 vs Sham+slc4a10 siRNA; <sup>#</sup>
+<italic toggle="yes">P</italic>&lt;0.05 vs <styled-content style="fixed-case">GMH</styled-content>+vehicle; <sup>&amp;</sup>
+<italic toggle="yes">P</italic>&lt;0.05 vs <styled-content style="fixed-case">GMH</styled-content>+scrambled small interfering RNA (si<styled-content style="fixed-case">RNA</styled-content>).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="nlm-graphic-9" position="float" orientation="portrait" xlink:href="JAH3-7-e007192-g005.jpg"><?image-name JAH3-7-e007192-g005.jpg?><?image-size 90096?><?image-md5 70783894e975c90f0440652cee144c75?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 735?><?image-original-width 1064?><?image-scaled-height 490?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/62de/5850237/70783894e975/JAH3-7-e007192-g005.jpg?><?thumb-name JAH3-7-e007192-g005.gif?><?thumb-size 12403?><?thumb-md5 c48dc4ef24b549583f0309a7245b8d0f?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 79?><?thumb-scaled-width 115?><?thumb-cloudpmc-urn urn:cdn:blobs/62de/5850237/c48dc4ef24b5/JAH3-7-e007192-g005.gif?></graphic></fig></sec><sec id="jah32853-sec-0027"><title>Deferoxamine and slc4a10 Gene Silencing Reduced CSF Production After GMH</title><p>CSF production was evaluated in sham, GMH+vehicle, GMH+deferoxamine, GMH+scramble siRNA, and GMH+slc4a10 siRNA animals at 28 days after surgery. CSF production rate was found to be significantly increased in untreated GMH animals (GMH+vehicle and GMH+scrambled siRNA) compared with sham animals (<italic toggle="yes">P</italic>&lt;0.05; Figure <xref rid="jah32853-fig-0006" ref-type="fig">6</xref>). Deferoxamine treatment and slc4a10 gene silencing resulted in significantly reduced CSF production rates compared with the respective vehicle group (<italic toggle="yes">P</italic>&lt;0.05).</p><fig fig-type="Figure" xml:lang="en" id="jah32853-fig-0006" orientation="portrait" position="float"><label>Figure 6</label><caption><p>Deferoxamine (DFX) and solute carrier family 4 member 10 (slc4a10) knockdown reduced cerebrospinal fluid (CSF) production 28 days after germinal matrix hemorrhage (GMH). N=6 per group. Data are expressed as mean±<styled-content style="fixed-case">SEM</styled-content>. One‐way <styled-content style="fixed-case">ANOVA</styled-content> followed by Tukey test. *<italic toggle="yes">P</italic>&lt;0.05 vs sham. <sup>#</sup>
+<italic toggle="yes">P</italic>&lt;0.05 vs <styled-content style="fixed-case">GMH</styled-content>+vehicle. <sup>&amp;</sup>
+<italic toggle="yes">P</italic>&lt;0.05 vs <styled-content style="fixed-case">GMH</styled-content>+scrambled small interfering RNA (si<styled-content style="fixed-case">RNA)</styled-content>. </p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="nlm-graphic-11" position="float" orientation="portrait" xlink:href="JAH3-7-e007192-g006.jpg"><?image-name JAH3-7-e007192-g006.jpg?><?image-size 85208?><?image-md5 738505b6648f70aa23ff4a8564b2a71f?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1028?><?image-original-width 1064?><?image-scaled-height 685?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/62de/5850237/738505b6648f/JAH3-7-e007192-g006.jpg?><?thumb-name JAH3-7-e007192-g006.gif?><?thumb-size 13182?><?thumb-md5 f7e00bbbba017d5a402bfa6721b61fd7?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 97?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/62de/5850237/f7e00bbbba01/JAH3-7-e007192-g006.gif?></graphic></fig></sec><sec id="jah32853-sec-0028"><title>Deferoxamine and slc4a10 Knockdown Ameliorated PHH After GMH</title><p>The extent of PHH was evaluated in sham, GMH+vehicle, GMH+deferoxamine, GMH+scrambled siRNA, and GMH+slc4a10 siRNA animals at 28 days after surgery. Representative microphotographs of Nissl‐stained coronal brain sections were obtained (Figure <xref rid="jah32853-fig-0007" ref-type="fig">7</xref>A). Volumetric analysis of coronal brain slides demonstrated significantly increased volumes of the cerebroventricular system of untreated GMH animals (GMH+vehicle and GMH+scrambled siRNA) compared with either sham or GMH+deferoxamine and GMH+slc4a10 siRNA animals (<italic toggle="yes">P</italic>&lt;0.05; Figure <xref rid="jah32853-fig-0007" ref-type="fig">7</xref>B). GMH+vehicle and GMH+scrambled siRNA animals were also found to have decreased cortical thicknesses compared with the sham group (<italic toggle="yes">P</italic>&lt;0.05; Figure <xref rid="jah32853-fig-0007" ref-type="fig">7</xref>C). Deferoxamine treatment and slc4a10 gene silencing tended to ameliorate the loss of cortical thickness after GMH; however, no significant difference was achieved (<italic toggle="yes">P</italic>&gt;0.05). Furthermore, GMH+vehicle and GMH+scrambled siRNA animals demonstrated significant white matter losses compared with the sham group (<italic toggle="yes">P</italic>&lt;0.05; Figure <xref rid="jah32853-fig-0007" ref-type="fig">7</xref>D). Deferoxamine treatment and slc4a10 gene silencing tended to ameliorate the white matter loss after GMH; however, no significant difference was achieved (<italic toggle="yes">P</italic>&gt;0.05).</p><fig fig-type="Figure" xml:lang="en" id="jah32853-fig-0007" orientation="portrait" position="float"><label>Figure 7</label><caption><p>Deferoxamine (DFX) and solute carrier family 4 member 10 (slc4a10) knockdown reduced posthemorrhagic hydrocephalus 28 days after germinal matrix hemorrhage (GMH). Representative microphotographs of Nissl‐stained brain sections. (A) Quantification of (B) ventricular volume, (C) cortical thickness, and (D) white matter loss at 28 days after GMH. N=6 per group. Values are expressed as mean±<styled-content style="fixed-case">SEM</styled-content>. One‐way <styled-content style="fixed-case">ANOVA</styled-content> followed by Tukey test. *<italic toggle="yes">P</italic>&lt;0.05 vs sham, <sup>#</sup>
+<italic toggle="yes">P</italic>&lt;0.05 vs <styled-content style="fixed-case">GMH</styled-content>+vehicle, <sup>&amp;</sup>
+<italic toggle="yes">P</italic>&lt;0.05 vs <styled-content style="fixed-case">GMH</styled-content>+scrambled small interfering RNA (si<styled-content style="fixed-case">RNA)</styled-content>. </p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="nlm-graphic-13" position="float" orientation="portrait" xlink:href="JAH3-7-e007192-g007.jpg"><?image-name JAH3-7-e007192-g007.jpg?><?image-size 102830?><?image-md5 30b6bf60208e06b1030a2daee0b1f3f1?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 851?><?image-original-width 1064?><?image-scaled-height 567?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/62de/5850237/30b6bf60208e/JAH3-7-e007192-g007.jpg?><?thumb-name JAH3-7-e007192-g007.gif?><?thumb-size 17669?><?thumb-md5 4cbef3ac800c1fea52b5ac9631f9f13d?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 80?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/62de/5850237/4cbef3ac800c/JAH3-7-e007192-g007.gif?></graphic></fig></sec></sec><sec id="jah32853-sec-0029"><title>Discussion</title><p>The formation of PHH is a well‐described and common complication following GMH.<xref rid="jah32853-bib-0002" ref-type="ref">2</xref> Currently, there is no effective treatment for PHH other than surgical shunting. In fact, the need for CSF diversion via ventriculoperitoneal or ventriculopleural shunt placement is an independent risk factor for an adverse neurological outcome following GMH.<xref rid="jah32853-bib-0006" ref-type="ref">6</xref> While PHH is believed to be caused by an obstruction within the CSF circulation and/or by an imbalance between CSF formation and absorption,<xref rid="jah32853-bib-0007" ref-type="ref">7</xref> insufficient advancements have been made targeting or preventing its formation. Intracerebroventricular accumulation of iron, resulting from degraded hemoglobin, has been linked to the development of PHH.<xref rid="jah32853-bib-0010" ref-type="ref">10</xref> Using a preclinical rat pup model of GMH, which has been shown to induce PHH,<xref rid="jah32853-bib-0014" ref-type="ref">14</xref>, <xref rid="jah32853-bib-0018" ref-type="ref">18</xref> we attempted to investigate whether GMH‐induced iron overload decreases IRP1 and IRP2 expressions, and increases NCBE overexpression, resulting in increased CSF production and consequent PHH formation. We further attempted to evaluate whether iron chelation via deferoxamine or slc4a10 knockdown decreases the rate of CSF production, thereby decreasing hydrocephalus formation and improving neurobehavioral outcomes after GMH.</p><p>Our data showed that mRNA and protein levels of slc4a10/NCBE significantly increased on days 1, 3, and 5 after GMH. Furthermore, IRP2 mRNA and protein levels were inversely related to slc4a10/NCBE. Interestingly, IRP1 expression was preserved after GMH. We further demonstrated increased NCBE expression localized on the choroid plexus basolateral membrane, the main source of CSF production. Since NCBE protein is significantly involved in CSF production, under pathophysiological circumstances, overexpression of the transporter could result in increased CSF production, thereby promoting PHH formation following GMH. Indeed, the CSF production rate significantly increased after GMH. Furthermore, iron chelation via deferoxamine and slc4a10 knockdown reduced the CSF production rate, which was associated with decreased ventricular dilation and improved neurobehavioral outcomes. These findings suggest that NCBE upregulation seems to be linked to iron toxicity, since improvements were observed after deferoxamine treatment, and possibly associated with IRP2. However, GMH did not significantly alter the expression of IRP1. The mechanism still needs to be further identified.</p><p>The choroid plexus is an epithelial layer in the ventricles specialized for CSF production.<xref rid="jah32853-bib-0020" ref-type="ref">20</xref>, <xref rid="jah32853-bib-0021" ref-type="ref">21</xref> It has relatively high expression of iron transport and iron‐dependent metabolic proteins relative to other brain regions.<xref rid="jah32853-bib-0022" ref-type="ref">22</xref> IRP1 and IRP2 are sensitive to cellular iron content and mediate changes in iron metabolism by binding to iron response elements on target mRNAs to alter their translation. Specifically, in the setting of iron overloading, IRP1 undergoes conformational changes, whereas IRP2 undergoes proteasomal degradation, both of which decrease IRP activity.<xref rid="jah32853-bib-0011" ref-type="ref">11</xref> While IRP1 is more abundant in most cell types, IRP2 is strongly expressed in brain.<xref rid="jah32853-bib-0023" ref-type="ref">23</xref> In red blood cells, at least, lack of IRP2 is not fully compensated by IRP1.<xref rid="jah32853-bib-0024" ref-type="ref">24</xref> Following GMH, red blood cells enter the cerebroventricular system and release heme iron, which may adversely alter choroid plexus function. CSF secretion at the choroid plexus involves several ion transporters on both the basolateral and luminal membranes in which ions are pumped into the cerebroventricular system while water follows the osmotic gradient.<xref rid="jah32853-bib-0025" ref-type="ref">25</xref> NCBE expressed on the choroid plexus plays an important role in CSF production. slc4a10 knockout seems to be more deleterious than the knockouts of other transporters implemented in CSF secretion.<xref rid="jah32853-bib-0025" ref-type="ref">25</xref>, <xref rid="jah32853-bib-0026" ref-type="ref">26</xref> Indeed, mice with targeted slc4a10 gene disruption have smaller cerebrovascular systems compared with wild types.<xref rid="jah32853-bib-0009" ref-type="ref">9</xref> There are multiple ion transporters expressed within the epithelial cells of the choroid plexus, such as sodium bicarbonate cotransporter 1, sodium<italic toggle="yes">‐</italic>proton exchanger protein, and aquaporin 1, contributing to CSF secretion. However, NCBE might play a prominent role in CSF production since it is the only major transporter on the basolateral side of the epithelial cells.<xref rid="jah32853-bib-0025" ref-type="ref">25</xref>, <xref rid="jah32853-bib-0026" ref-type="ref">26</xref>, <xref rid="jah32853-bib-0027" ref-type="ref">27</xref> While genes of similar ion transporters, such as slc11a2 and slc40a1, are regulated by IRPs through iron responsive elements,<xref rid="jah32853-bib-0028" ref-type="ref">28</xref>, <xref rid="jah32853-bib-0029" ref-type="ref">29</xref> no such association between IRPs and NCBE is known.</p><sec id="jah32853-sec-0030"><title>Study Limitations</title><p>One of the limitations of this study is that we mainly focused on how iron overload is associated with NCBE, a major transporter located on the basolateral side. However, aquaporin 1 and Na+‐K+‐ATPase, located on the luminal side of the epithelial cells, also play a role in CSF production. Whether GMH causes any functional changes on the luminal side or whether there are any compensatory mechanisms with NCBE knockdown warrants further investigation.</p></sec></sec><sec id="jah32853-sec-0031"><title>Conclusions</title><p>In the present study, we demonstrated that GMH‐induced iron overload decreases IRP2 expression, which was associated with an overexpression of NCBE. The latter was, at least in part, likely responsible for an increase in CSF production and consequent PHH formation. We believe that targeting the cereventricular iron and choroid plexus NCBE is a potential treatment strategy to decrease CSF production and hydrocephalus formation may improve neurological outcomes after GMH.</p></sec><sec id="jah32853-sec-0032"><title>Sources of Funding</title><p>This research was supported by National Institutes of Health grant R01 NS078755 to J.H. Zhang.</p></sec><sec id="jah32853-sec-0033"><title>Disclosures</title><p>None.</p></sec></body><back><ref-list content-type="cited-references" id="jah32853-bibl-0001"><title>References</title><ref id="jah32853-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="jah32853-cit-0001">
+<string-name name-style="western">
+<surname>Hefti</surname>
+<given-names>MM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Trachtenberg</surname>
+<given-names>FL</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Haynes</surname>
+<given-names>RL</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hassett</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Volpe</surname>
+<given-names>JJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kinney</surname>
+<given-names>HC</given-names>
+</string-name>. <article-title>A century of germinal matrix intraventricular hemorrhage in autopsied premature infants: a historical account</article-title>. <source>Pediatr Dev Pathol</source>. <year>2016</year>;<volume>19</volume>:<fpage>108</fpage>–<lpage>114</lpage>.<pub-id pub-id-type="pmid">26372101</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.2350/15-06-1663-OA.1</pub-id></mixed-citation></ref><ref id="jah32853-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="jah32853-cit-0002">
+<string-name name-style="western">
+<surname>Murphy</surname>
+<given-names>BP</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Inder</surname>
+<given-names>TE</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rooks</surname>
+<given-names>V</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Taylor</surname>
+<given-names>GA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Anderson</surname>
+<given-names>NJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Mogridge</surname>
+<given-names>N</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Horwood</surname>
+<given-names>LJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Volpe</surname>
+<given-names>JJ</given-names>
+</string-name>. <article-title>Posthaemorrhagic ventricular dilatation in the premature infant: natural history and predictors of outcome</article-title>. <source>Arch Dis Child Fetal Neonatal Ed</source>. <year>2002</year>;<volume>87</volume>:<fpage>F37</fpage>–<lpage>F41</lpage>.<pub-id pub-id-type="pmid">12091289</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/fn.87.1.F37</pub-id><pub-id pub-id-type="pmcid">PMC1721419</pub-id></mixed-citation></ref><ref id="jah32853-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="jah32853-cit-0003">
+<string-name name-style="western">
+<surname>Ballabh</surname>
+<given-names>P</given-names>
+</string-name>. <article-title>Pathogenesis and prevention of intraventricular hemorrhage</article-title>. <source>Clin Perinatol</source>. <year>2014</year>;<volume>41</volume>:<fpage>47</fpage>–<lpage>67</lpage>.<pub-id pub-id-type="pmid">24524446</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.clp.2013.09.007</pub-id><pub-id pub-id-type="pmcid">PMC3925310</pub-id></mixed-citation></ref><ref id="jah32853-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="jah32853-cit-0004">
+<string-name name-style="western">
+<surname>Vohr</surname>
+<given-names>BR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Wright</surname>
+<given-names>LL</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Dusick</surname>
+<given-names>AM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Mele</surname>
+<given-names>L</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Verter</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Steichen</surname>
+<given-names>JJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Simon</surname>
+<given-names>NP</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Wilson</surname>
+<given-names>DC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Broyles</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bauer</surname>
+<given-names>CR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Delaney‐Black</surname>
+<given-names>V</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Yolton</surname>
+<given-names>KA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Fleisher</surname>
+<given-names>BE</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Papile</surname>
+<given-names>LA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kaplan</surname>
+<given-names>MD</given-names>
+</string-name>. <article-title>Neurodevelopmental and functional outcomes of extremely low birth weight infants in the National Institute of Child Health and Human Development Neonatal Research Network, 1993–1994</article-title>. <source>Pediatrics</source>. <year>2000</year>;<volume>105</volume>:<fpage>1216</fpage>–<lpage>1226</lpage>.<pub-id pub-id-type="pmid">10835060</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1542/peds.105.6.1216</pub-id></mixed-citation></ref><ref id="jah32853-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="jah32853-cit-0005">
+<article-title>The Vermont‐Oxford Trials Network: very low birth weight outcomes for 1990. Investigators of the Vermont‐Oxford Trials Network Database Project</article-title>. <source>Pediatrics</source>. <year>1993</year>;<volume>91</volume>:<fpage>540</fpage>–<lpage>545</lpage>.<pub-id pub-id-type="pmid">8441556</pub-id></mixed-citation></ref><ref id="jah32853-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="jah32853-cit-0006">
+<string-name name-style="western">
+<surname>Adams‐Chapman</surname>
+<given-names>I</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hansen</surname>
+<given-names>NI</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Stoll</surname>
+<given-names>BJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Higgins</surname>
+<given-names>R</given-names>
+</string-name>; <collab collab-type="authors">NICHD Research Network</collab>
+. <article-title>Neurodevelopmental outcome of extremely low birth weight infants with posthemorrhagic hydrocephalus requiring shunt insertion</article-title>. <source>Pediatrics</source>. <year>2008</year>;<volume>121</volume>:<fpage>e1167</fpage>–<lpage>e1177</lpage>.<pub-id pub-id-type="pmid">18390958</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1542/peds.2007-0423</pub-id><pub-id pub-id-type="pmcid">PMC2803352</pub-id></mixed-citation></ref><ref id="jah32853-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="jah32853-cit-0007">
+<string-name name-style="western">
+<surname>Symss</surname>
+<given-names>NP</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Oi</surname>
+<given-names>S</given-names>
+</string-name>. <article-title>Theories of cerebrospinal fluid dynamics and hydrocephalus: historical trend</article-title>. <source>J Neurosurg Pediatr</source>. <year>2013</year>;<volume>11</volume>:<fpage>170</fpage>–<lpage>177</lpage>.<pub-id pub-id-type="pmid">23215851</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.3171/2012.3.PEDS0934</pub-id></mixed-citation></ref><ref id="jah32853-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="jah32853-cit-0008">
+<string-name name-style="western">
+<surname>Damkier</surname>
+<given-names>HH</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Brown</surname>
+<given-names>PD</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Praetorius</surname>
+<given-names>J</given-names>
+</string-name>. <article-title>Cerebrospinal fluid secretion by the choroid plexus</article-title>. <source>Physiol Rev</source>. <year>2013</year>;<volume>93</volume>:<fpage>1847</fpage>–<lpage>1892</lpage>.<pub-id pub-id-type="pmid">24137023</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1152/physrev.00004.2013</pub-id></mixed-citation></ref><ref id="jah32853-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="jah32853-cit-0009">
+<string-name name-style="western">
+<surname>Jacobs</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ruusuvuori</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Sipila</surname>
+<given-names>ST</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Haapanen</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Damkier</surname>
+<given-names>HH</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kurth</surname>
+<given-names>I</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hentschke</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Schweizer</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rudhard</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Laatikainen</surname>
+<given-names>LM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tyynela</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Praetorius</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Voipio</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hubner</surname>
+<given-names>CA</given-names>
+</string-name>. <article-title>Mice with targeted Slc4a10 gene disruption have small brain ventricles and show reduced neuronal excitability</article-title>. <source>Proc Natl Acad Sci USA</source>. <year>2008</year>;<volume>105</volume>:<fpage>311</fpage>–<lpage>316</lpage>.<pub-id pub-id-type="pmid">18165320</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1073/pnas.0705487105</pub-id><pub-id pub-id-type="pmcid">PMC2224208</pub-id></mixed-citation></ref><ref id="jah32853-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="jah32853-cit-0010">
+<string-name name-style="western">
+<surname>Xiong</surname>
+<given-names>XY</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Wang</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Qian</surname>
+<given-names>ZM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Yang</surname>
+<given-names>QW</given-names>
+</string-name>. <article-title>Iron and intracerebral hemorrhage: from mechanism to translation</article-title>. <source>Transl Stroke Res</source>. <year>2014</year>;<volume>5</volume>:<fpage>429</fpage>–<lpage>441</lpage>.<pub-id pub-id-type="pmid">24362931</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s12975-013-0317-7</pub-id></mixed-citation></ref><ref id="jah32853-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="jah32853-cit-0011">
+<string-name name-style="western">
+<surname>Muckenthaler</surname>
+<given-names>MU</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Galy</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hentze</surname>
+<given-names>MW</given-names>
+</string-name>. <article-title>Systemic iron homeostasis and the iron‐responsive element/iron‐regulatory protein (IRE/IRP) regulatory network</article-title>. <source>Annu Rev Nutr</source>. <year>2008</year>;<volume>28</volume>:<fpage>197</fpage>–<lpage>213</lpage>.<pub-id pub-id-type="pmid">18489257</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1146/annurev.nutr.28.061807.155521</pub-id></mixed-citation></ref><ref id="jah32853-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="jah32853-cit-0012">
+<string-name name-style="western">
+<surname>Casey</surname>
+<given-names>JL</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Koeller</surname>
+<given-names>DM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ramin</surname>
+<given-names>VC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Klausner</surname>
+<given-names>RD</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Harford</surname>
+<given-names>JB</given-names>
+</string-name>. <article-title>Iron regulation of transferrin receptor mRNA levels requires iron‐responsive elements and a rapid turnover determinant in the 3′ untranslated region of the mRNA</article-title>. <source>EMBO J</source>. <year>1989</year>;<volume>8</volume>:<fpage>3693</fpage>–<lpage>3699</lpage>.<pub-id pub-id-type="pmid">2583116</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/j.1460-2075.1989.tb08544.x</pub-id><pub-id pub-id-type="pmcid">PMC402052</pub-id></mixed-citation></ref><ref id="jah32853-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="jah32853-cit-0013">
+<string-name name-style="western">
+<surname>Hentze</surname>
+<given-names>MW</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Caughman</surname>
+<given-names>SW</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rouault</surname>
+<given-names>TA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Barriocanal</surname>
+<given-names>JG</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Dancis</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Harford</surname>
+<given-names>JB</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Klausner</surname>
+<given-names>RD</given-names>
+</string-name>. <article-title>Identification of the iron‐responsive element for the translational regulation of human ferritin mRNA</article-title>. <source>Science</source>. <year>1987</year>;<volume>238</volume>:<fpage>1570</fpage>–<lpage>1573</lpage>.<pub-id pub-id-type="pmid">3685996</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1126/science.3685996</pub-id></mixed-citation></ref><ref id="jah32853-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="jah32853-cit-0014">
+<string-name name-style="western">
+<surname>Lekic</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Manaenko</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rolland</surname>
+<given-names>W</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Krafft</surname>
+<given-names>PR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Peters</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hartman</surname>
+<given-names>RE</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Altay</surname>
+<given-names>O</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tang</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Zhang</surname>
+<given-names>JH</given-names>
+</string-name>. <article-title>Rodent neonatal germinal matrix hemorrhage mimics the human brain injury, neurological consequences, and post‐hemorrhagic hydrocephalus</article-title>. <source>Exp Neurol</source>. <year>2012</year>;<volume>236</volume>:<fpage>69</fpage>–<lpage>78</lpage>.<pub-id pub-id-type="pmid">22524990</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.expneurol.2012.04.003</pub-id><pub-id pub-id-type="pmcid">PMC3367039</pub-id></mixed-citation></ref><ref id="jah32853-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="jah32853-cit-0015">
+<string-name name-style="western">
+<surname>Ostrowski</surname>
+<given-names>RP</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Colohan</surname>
+<given-names>AR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Zhang</surname>
+<given-names>JH</given-names>
+</string-name>. <article-title>Mechanisms of hyperbaric oxygen‐induced neuroprotection in a rat model of subarachnoid hemorrhage</article-title>. <source>J Cereb Blood Flow Metab</source>. <year>2005</year>;<volume>25</volume>:<fpage>554</fpage>–<lpage>571</lpage>.<pub-id pub-id-type="pmid">15703702</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/sj.jcbfm.9600048</pub-id></mixed-citation></ref><ref id="jah32853-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="jah32853-cit-0016">
+<string-name name-style="western">
+<surname>Huang</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Krafft</surname>
+<given-names>PR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ma</surname>
+<given-names>Q</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rolland</surname>
+<given-names>WB</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Caner</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lekic</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Manaenko</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Le</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tang</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Zhang</surname>
+<given-names>JH</given-names>
+</string-name>. <article-title>Fibroblast growth factors preserve blood‐brain barrier integrity through RhoA inhibition after intracerebral hemorrhage in mice</article-title>. <source>Neurobiol Dis</source>. <year>2012</year>;<volume>46</volume>:<fpage>204</fpage>–<lpage>214</lpage>.<pub-id pub-id-type="pmid">22300708</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.nbd.2012.01.008</pub-id><pub-id pub-id-type="pmcid">PMC3299916</pub-id></mixed-citation></ref><ref id="jah32853-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="jah32853-cit-0017">
+<string-name name-style="western">
+<surname>Flores</surname>
+<given-names>JJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Klebe</surname>
+<given-names>D</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rolland</surname>
+<given-names>WB</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lekic</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Krafft</surname>
+<given-names>PR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Zhang</surname>
+<given-names>JH</given-names>
+</string-name>. <article-title>PPARgamma‐induced upregulation of CD36 enhances hematoma resolution and attenuates long‐term neurological deficits after germinal matrix hemorrhage in neonatal rats</article-title>. <source>Neurobiol Dis</source>. <year>2016</year>;<volume>87</volume>:<fpage>124</fpage>–<lpage>133</lpage>.<pub-id pub-id-type="pmid">26739391</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.nbd.2015.12.015</pub-id><pub-id pub-id-type="pmcid">PMC4724557</pub-id></mixed-citation></ref><ref id="jah32853-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="jah32853-cit-0018">
+<string-name name-style="western">
+<surname>Klebe</surname>
+<given-names>D</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Krafft</surname>
+<given-names>PR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hoffmann</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lekic</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Flores</surname>
+<given-names>JJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rolland</surname>
+<given-names>W</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Zhang</surname>
+<given-names>JH</given-names>
+</string-name>. <article-title>Acute and delayed deferoxamine treatment attenuates long‐term sequelae after germinal matrix hemorrhage in neonatal rats</article-title>. <source>Stroke</source>. <year>2014</year>;<volume>45</volume>:<fpage>2475</fpage>–<lpage>2479</lpage>.<pub-id pub-id-type="pmid">24947291</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1161/STROKEAHA.114.005079</pub-id><pub-id pub-id-type="pmcid">PMC4116458</pub-id></mixed-citation></ref><ref id="jah32853-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="jah32853-cit-0019">
+<string-name name-style="western">
+<surname>Oshio</surname>
+<given-names>K</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Watanabe</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Song</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Verkman</surname>
+<given-names>AS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Manley</surname>
+<given-names>GT</given-names>
+</string-name>. <article-title>Reduced cerebrospinal fluid production and intracranial pressure in mice lacking choroid plexus water channel Aquaporin‐1</article-title>. <source>FASEB J</source>. <year>2005</year>;<volume>19</volume>:<fpage>76</fpage>–<lpage>78</lpage>.<pub-id pub-id-type="pmid">15533949</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1096/fj.04-1711fje</pub-id></mixed-citation></ref><ref id="jah32853-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="jah32853-cit-0020">
+<string-name name-style="western">
+<surname>Lee</surname>
+<given-names>JY</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Keep</surname>
+<given-names>RF</given-names>
+</string-name>, <string-name name-style="western">
+<surname>He</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Sagher</surname>
+<given-names>O</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hua</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Xi</surname>
+<given-names>G</given-names>
+</string-name>. <article-title>Hemoglobin and iron handling in brain after subarachnoid hemorrhage and the effect of deferoxamine on early brain injury</article-title>. <source>J Cereb Blood Flow Metab</source>. <year>2010</year>;<volume>30</volume>:<fpage>1793</fpage>–<lpage>1803</lpage>.<pub-id pub-id-type="pmid">20736956</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/jcbfm.2010.137</pub-id><pub-id pub-id-type="pmcid">PMC2970675</pub-id></mixed-citation></ref><ref id="jah32853-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="jah32853-cit-0021">
+<string-name name-style="western">
+<surname>Simard</surname>
+<given-names>PF</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tosun</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Melnichenko</surname>
+<given-names>L</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ivanova</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gerzanich</surname>
+<given-names>V</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Simard</surname>
+<given-names>JM</given-names>
+</string-name>. <article-title>Inflammation of the choroid plexus and ependymal layer of the ventricle following intraventricular hemorrhage</article-title>. <source>Transl Stroke Res</source>. <year>2011</year>;<volume>2</volume>:<fpage>227</fpage>–<lpage>231</lpage>.<pub-id pub-id-type="pmid">21731590</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s12975-011-0070-8</pub-id><pub-id pub-id-type="pmcid">PMC3128335</pub-id></mixed-citation></ref><ref id="jah32853-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="jah32853-cit-0022">
+<string-name name-style="western">
+<surname>Rouault</surname>
+<given-names>TA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Zhang</surname>
+<given-names>DL</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Jeong</surname>
+<given-names>SY</given-names>
+</string-name>. <article-title>Brain iron homeostasis, the choroid plexus, and localization of iron transport proteins</article-title>. <source>Metab Brain Dis</source>. <year>2009</year>;<volume>24</volume>:<fpage>673</fpage>–<lpage>684</lpage>.<pub-id pub-id-type="pmid">19851851</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s11011-009-9169-y</pub-id><pub-id pub-id-type="pmcid">PMC2788140</pub-id></mixed-citation></ref><ref id="jah32853-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="jah32853-cit-0023">
+<string-name name-style="western">
+<surname>Henderson</surname>
+<given-names>BR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Seiser</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kuhn</surname>
+<given-names>LC</given-names>
+</string-name>. <article-title>Characterization of a second RNA‐binding protein in rodents with specificity for iron‐responsive elements</article-title>. <source>J Biol Chem</source>. <year>1993</year>;<volume>268</volume>:<fpage>27327</fpage>–<lpage>27334</lpage>.<pub-id pub-id-type="pmid">8262972</pub-id></mixed-citation></ref><ref id="jah32853-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="jah32853-cit-0024">
+<string-name name-style="western">
+<surname>Cooperman</surname>
+<given-names>SS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Meyron‐Holtz</surname>
+<given-names>EG</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Olivierre‐Wilson</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ghosh</surname>
+<given-names>MC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>McConnell</surname>
+<given-names>JP</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rouault</surname>
+<given-names>TA</given-names>
+</string-name>. <article-title>Microcytic anemia, erythropoietic protoporphyria, and neurodegeneration in mice with targeted deletion of iron‐regulatory protein 2</article-title>. <source>Blood</source>. <year>2005</year>;<volume>106</volume>:<fpage>1084</fpage>–<lpage>1091</lpage>.<pub-id pub-id-type="pmid">15831703</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1182/blood-2004-12-4703</pub-id><pub-id pub-id-type="pmcid">PMC1895161</pub-id></mixed-citation></ref><ref id="jah32853-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="jah32853-cit-0025">
+<string-name name-style="western">
+<surname>Damkier</surname>
+<given-names>HH</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Praetorius</surname>
+<given-names>J</given-names>
+</string-name>. <article-title>Genetic ablation of Slc4a10 alters the expression pattern of transporters involved in solute movement in the mouse choroid plexus</article-title>. <source>Am J Physiol Cell Physiol</source>. <year>2012</year>;<volume>302</volume>:<fpage>C1452</fpage>–<lpage>C1459</lpage>.<pub-id pub-id-type="pmid">22357733</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1152/ajpcell.00285.2011</pub-id></mixed-citation></ref><ref id="jah32853-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="jah32853-cit-0026">
+<string-name name-style="western">
+<surname>Keep</surname>
+<given-names>RF</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Smith</surname>
+<given-names>DE</given-names>
+</string-name>. <article-title>Choroid plexus transport: gene deletion studies</article-title>. <source>Fluids Barriers CNS</source>. <year>2011</year>;<volume>8</volume>:<fpage>26</fpage>.<pub-id pub-id-type="pmid">22053861</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/2045-8118-8-26</pub-id><pub-id pub-id-type="pmcid">PMC3231976</pub-id></mixed-citation></ref><ref id="jah32853-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="jah32853-cit-0027">
+<string-name name-style="western">
+<surname>Praetorius</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Nejsum</surname>
+<given-names>LN</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Nielsen</surname>
+<given-names>S</given-names>
+</string-name>. <article-title>A SCL4A10 gene product maps selectively to the basolateral plasma membrane of choroid plexus epithelial cells</article-title>. <source>Am J Physiol Cell Physiol</source>. <year>2004</year>;<volume>286</volume>:<fpage>C601</fpage>–<lpage>C610</lpage>.<pub-id pub-id-type="pmid">14592810</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1152/ajpcell.00240.2003</pub-id></mixed-citation></ref><ref id="jah32853-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="jah32853-cit-0028">
+<string-name name-style="western">
+<surname>Gunshin</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Allerson</surname>
+<given-names>CR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Polycarpou‐Schwarz</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rofts</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rogers</surname>
+<given-names>JT</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kishi</surname>
+<given-names>F</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hentze</surname>
+<given-names>MW</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rouault</surname>
+<given-names>TA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Andrews</surname>
+<given-names>NC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hediger</surname>
+<given-names>MA</given-names>
+</string-name>. <article-title>Iron‐dependent regulation of the divalent metal ion transporter</article-title>. <source>FEBS Lett</source>. <year>2001</year>;<volume>509</volume>:<fpage>309</fpage>–<lpage>316</lpage>.<pub-id pub-id-type="pmid">11741608</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/s0014-5793(01)03189-1</pub-id></mixed-citation></ref><ref id="jah32853-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="jah32853-cit-0029">
+<string-name name-style="western">
+<surname>Lymboussaki</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Pignatti</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Montosi</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Garuti</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Haile</surname>
+<given-names>DJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Pietrangelo</surname>
+<given-names>A</given-names>
+</string-name>. <article-title>The role of the iron responsive element in the control of ferroportin1/IREG1/MTP1 gene expression</article-title>. <source>J Hepatol</source>. <year>2003</year>;<volume>39</volume>:<fpage>710</fpage>–<lpage>715</lpage>.<pub-id pub-id-type="pmid">14568251</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/s0168-8278(03)00408-2</pub-id></mixed-citation></ref></ref-list></back></article>

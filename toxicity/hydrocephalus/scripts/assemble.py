@@ -47,6 +47,7 @@ MEASUREMENT_COLS = [
 
 COMPONENTS = [
     ("_ctgov_measurements.csv", "registry_results"),
+    ("_ctgov_outcome_measurements.csv", "registry_results"),
     ("_faers_measurements.csv", "pharmacovigilance_api"),
     ("_label_measurements.csv", "regulatory_primary"),
     ("_literature_measurements.csv", "primary_fulltext"),

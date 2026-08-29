@@ -53,8 +53,8 @@ was added, which is the point of keeping them apart.
 | [Complement activation](./complement-activation.md) | background-only | 0 | 0 | 0 | none |
 | [Coagulopathy](./coagulopathy.md) | background-only | 0 | 0 | 0 | none |
 | [Chronic neurotoxicity](./chronic-neurotoxicity.md) | not-addressed | 0 | 0 | 0 | none |
-| [Hydrocephalus](./hydrocephalus.md) | **delivered — separate dataset** | 28 | 680 | 0 | n/a — 46 sources in its own registry, [`hydrocephalus/data/sources.csv`](./hydrocephalus/data/sources.csv) |
-| **Total** | — | **93** | **791** | **13** | **16** into `../data/measurements.csv`; 46 into the hydrocephalus registry |
+| [Hydrocephalus](./hydrocephalus.md) | **delivered — separate dataset** | 28 | 899 | 0 | n/a — 50 sources in its own registry, [`hydrocephalus/data/sources.csv`](./hydrocephalus/data/sources.csv) |
+| **Total** | — | **93** | **1,010** | **13** | **16** into `../data/measurements.csv`; 50 into the hydrocephalus registry |
 
 `sources/` holds 18 PDFs in total: the 13 endpoint-dedicated files counted above, 4
 cross-cutting reference files, and 1 off-topic file in `sources/_unrelated/`.

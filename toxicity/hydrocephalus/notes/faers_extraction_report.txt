@@ -1,5 +1,5 @@
 openFDA FAERS extraction audit trail
-retrieved 2026-08-28
+retrieved 2026-08-29
 ============================================================
 total reports  nusinersen         7655
 total reports  tofersen            503
@@ -22,3 +22,30 @@ total reports  pegaptanib          403
 total reports  defibrotide        3548
 total reports  imetelstat          176
 total reports  fomivirsen            0
+vocabulary OK   HYDROCEPHALUS                                  5367 reports database-wide
+vocabulary OK   NORMAL PRESSURE HYDROCEPHALUS                   402 reports database-wide
+vocabulary DROP COMMUNICATING HYDROCEPHALUS                not a term string FAERS knows
+vocabulary OK   CONGENITAL HYDROCEPHALUS                        507 reports database-wide
+vocabulary OK   HYPERTENSIVE HYDROCEPHALUS                       23 reports database-wide
+vocabulary DROP VENTRICULOMEGALY                           not a term string FAERS knows
+vocabulary OK   CEREBRAL VENTRICLE DILATATION                  1146 reports database-wide
+vocabulary OK   CEREBRAL VENTRICLE COLLAPSE                      75 reports database-wide
+vocabulary OK   CSF VOLUME INCREASED                            118 reports database-wide
+vocabulary OK   CEREBROSPINAL FLUID CIRCULATION DISORDER         70 reports database-wide
+vocabulary OK   CEREBROSPINAL FLUID RESERVOIR PLACEMENT          16 reports database-wide
+vocabulary OK   CEREBROSPINAL FLUID DRAINAGE                     26 reports database-wide
+vocabulary DROP CEREBROSPINAL FLUID SHUNT INSERTION        not a term string FAERS knows
+vocabulary OK   INTRACRANIAL PRESSURE INCREASED                5498 reports database-wide
+vocabulary OK   CSF PRESSURE INCREASED                          266 reports database-wide
+vocabulary OK   CSF PRESSURE DECREASED                           32 reports database-wide
+vocabulary OK   PAPILLOEDEMA                                   4473 reports database-wide
+vocabulary OK   MENINGITIS ASEPTIC                             4416 reports database-wide
+vocabulary OK   MENINGITIS CHEMICAL                             218 reports database-wide
+vocabulary OK   ARACHNOIDITIS                                   684 reports database-wide
+vocabulary OK   CSF PROTEIN INCREASED                           819 reports database-wide
+vocabulary OK   CSF WHITE BLOOD CELL COUNT INCREASED            187 reports database-wide
+vocabulary OK   CSF CELL COUNT INCREASED                        146 reports database-wide
+vocabulary OK   CSF LYMPHOCYTE COUNT INCREASED                   61 reports database-wide
+vocabulary OK   CEREBROSPINAL FLUID LEAKAGE                    1821 reports database-wide
+vocabulary OK   POST LUMBAR PUNCTURE SYNDROME                  1027 reports database-wide
+vocabulary OK   TRAUMATIC LUMBAR PUNCTURE                        50 reports database-wide

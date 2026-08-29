@@ -253,6 +253,145 @@ L3_ROWS = [
          location="Abstract, Methods and Results"),
 ]
 
+
+# --------------------------------------------------------------------------
+# L4 — European Medicines Agency Summaries of Product Characteristics.
+#      Included because the EU and US regulators reached MATERIALLY DIFFERENT
+#      positions on the same evidence: the EMA gives hydrocephalus its own
+#      subheading under section 4.4 "Special warnings and precautions for use"
+#      for nusinersen, whereas the US label mentions it only in section 6.2
+#      Postmarketing Experience. A jurisdiction contrast on an identical
+#      molecule is a genuine datum about how strong the signal is judged to be.
+#
+#      Rights: EMA product information is publicly available, but the terms of
+#      reuse were not established in this session, so every L4 row is marked
+#      redistribution = verify rather than assumed public domain. The verbatim
+#      text is quoted as evidence; a redistributor should resolve the licence
+#      before republishing these rows' values.
+# --------------------------------------------------------------------------
+L4_ROWS = [
+    dict(oligo="nusinersen", source_key="EMA_SmPC_Spinraza",
+         file="sources/raw/sweep4_ema_smpc_spinraza.txt",
+         tier="A", cat="hydrocephalus_event", axis="ventricular_enlargement",
+         readout="ema_label_statement_hydrocephalus",
+         value="communicating hydrocephalus not related to meningitis or bleeding",
+         unit="verbatim_label_text", qualitative="TRUE",
+         n_aff="NOT_REPORTED", n_risk="NOT_REPORTED", grade=3,
+         basis=("3 = the EU label states that some affected patients required a "
+                "ventriculo-peritoneal shunt, i.e. permanent CSF diversion "
+                "(SCHEMA.md rubric grade 3)."),
+         asc="measured_positive",
+         evidence=('"Hydrocephalus. There have been reports of communicating '
+                   'hydrocephalus not related to meningitis or bleeding in patients '
+                   'treated with nusinersen 12 mg in the post-marketing setting. Some '
+                   'patients were implanted with a ventriculo-peritoneal shunt. In '
+                   'patients with decreased consciousness, an evaluation for '
+                   'hydrocephalus should be considered."'),
+         loc=("Annex I SmPC section 4.4 Special warnings and precautions for use, "
+              "under its own subheading 'Hydrocephalus'")),
+    dict(oligo="nusinersen", source_key="EMA_SmPC_Spinraza",
+         file="sources/raw/sweep4_ema_smpc_spinraza.txt",
+         tier="A", cat="shunt_or_drain_intervention", axis="ventricular_enlargement",
+         readout="ema_label_statement_vp_shunt",
+         value="ventriculo-peritoneal shunt implantation", unit="verbatim_label_text",
+         qualitative="TRUE", n_aff="NOT_REPORTED", n_risk="NOT_REPORTED", grade=3,
+         basis="3 = permanent CSF diversion (SCHEMA.md rubric grade 3).",
+         asc="measured_positive",
+         evidence=('"Some patients were implanted with a ventriculo-peritoneal shunt. '
+                   '... The benefits and risks of nusinersen treatment in patients with '
+                   'a ventriculo-peritoneal shunt are unknown at present and the '
+                   'maintenance of treatment needs to be carefully considered."'),
+         loc="Annex I SmPC section 4.4, subheading 'Hydrocephalus'"),
+    dict(oligo="tofersen", source_key="EMA_SmPC_Qalsody",
+         file="sources/raw/sweep4_ema_smpc_qalsody.pdf",
+         tier="B", cat="csf_pressure", axis="csf_pressure_disturbance",
+         readout="ema_serious_ICP_or_papilloedema_pct", value="2.7",
+         unit="pct_of_participants", qualitative="FALSE",
+         n_aff="NOT_REPORTED", n_risk=147, grade=2,
+         basis=("2 = serious increased intracranial pressure and/or papilloedema, "
+                "named at SCHEMA.md rubric grade 2."),
+         asc="measured_positive",
+         evidence=('"The serious adverse reactions in tofersen-treated participants '
+                   'were myelitis (4.1%), increase intracranial pressure and/or '
+                   'papilloedema (2.7%), radiculitis (1.4%) and aseptic meningitis '
+                   '(1.4%)." Section 4.4 adds: "Serious cases of increased '
+                   'intracranial pressure and/or papilloedema have been reported in '
+                   'patients treated with tofersen."'),
+         loc="Annex I SmPC sections 4.8 Undesirable effects and 4.4"),
+    dict(oligo="tofersen", source_key="EMA_SmPC_Qalsody",
+         file="sources/raw/sweep4_ema_smpc_qalsody.pdf",
+         tier="B", cat="csf_composition", axis="csf_composition_disturbance",
+         readout="ema_serious_aseptic_meningitis_pct", value="1.4",
+         unit="pct_of_participants", qualitative="FALSE",
+         n_aff="NOT_REPORTED", n_risk=147, grade=2,
+         basis="2 = serious aseptic meningitis, named at SCHEMA.md rubric grade 2.",
+         asc="measured_positive",
+         evidence=('"The serious adverse reactions in tofersen-treated participants '
+                   'were myelitis (4.1%), increase intracranial pressure and/or '
+                   'papilloedema (2.7%), radiculitis (1.4%) and aseptic meningitis '
+                   '(1.4%)."'),
+         loc="Annex I SmPC section 4.8 Undesirable effects, Summary of safety profile"),
+    dict(oligo="tofersen", source_key="EMA_SmPC_Qalsody",
+         file="sources/raw/sweep4_ema_smpc_qalsody.pdf",
+         tier="B", cat="csf_composition", axis="csf_composition_disturbance",
+         readout="ema_csf_white_blood_cell_increased_pct", value="27.9",
+         unit="pct_of_participants", qualitative="FALSE",
+         n_aff="NOT_REPORTED", n_risk=147, grade=1,
+         basis=("1 = a CSF composition change reported as a common adverse reaction "
+                "with no stated symptom or intervention (SCHEMA.md rubric grade 1)."),
+         asc="measured_positive",
+         evidence=('"The most common adverse reactions reported in tofersen-treated '
+                   'participants who received 100 mg (n=147) were pain (68.7%), '
+                   'arthralgia (36.7%), fatigue (30.6%), CSF white blood cell increased '
+                   '(27.9%), CSF protein increased (26.5%), myalgia (22.4%) and pyrexia '
+                   '(20.4%)."'),
+         loc="Annex I SmPC section 4.8, Summary of safety profile"),
+    dict(oligo="tofersen", source_key="EMA_SmPC_Qalsody",
+         file="sources/raw/sweep4_ema_smpc_qalsody.pdf",
+         tier="B", cat="csf_composition", axis="csf_composition_disturbance",
+         readout="ema_csf_protein_increased_pct", value="26.5",
+         unit="pct_of_participants", qualitative="FALSE",
+         n_aff="NOT_REPORTED", n_risk=147, grade=1,
+         basis=("1 = a CSF composition change reported as a common adverse reaction "
+                "with no stated symptom or intervention (SCHEMA.md rubric grade 1)."),
+         asc="measured_positive",
+         evidence=('"... CSF white blood cell increased (27.9%), CSF protein increased '
+                   '(26.5%), myalgia (22.4%) and pyrexia (20.4%)."'),
+         loc="Annex I SmPC section 4.8, Summary of safety profile"),
+    dict(oligo="tofersen", source_key="EMA_SmPC_Qalsody",
+         file="sources/raw/sweep4_ema_smpc_qalsody.pdf",
+         tier="A", cat="hydrocephalus_event", axis="ventricular_enlargement",
+         readout="ema_label_statement_hydrocephalus", value="NOT_REPORTED",
+         unit="verbatim_label_text", qualitative="TRUE",
+         n_aff=0, n_risk="NOT_REPORTED", grade=0,
+         basis=("0 = the EU label for this product contains no occurrence of the "
+                "string 'hydrocephal' anywhere in its 48,316 extracted characters, "
+                "while naming four other CNS adverse reactions explicitly "
+                "(SCHEMA.md rubric grade 0)."),
+         asc="measured_null",
+         evidence=("The label names myelitis, radiculitis, increased intracranial "
+                   "pressure and/or papilloedema, and aseptic meningitis as serious "
+                   "adverse reactions, and no hydrocephalus. A regulator that itemises "
+                   "four CNS risks and omits a fifth is a stronger negative than "
+                   "silence about the whole organ system."),
+         loc="whole Annex I SmPC, full-text sweep for 'hydrocephal' (0 hits)"),
+    dict(oligo="inotersen", source_key="EMA_SmPC_Tegsedi",
+         file="sources/raw/sweep4_ema_smpc_tegsedi.txt",
+         tier="A", cat="hydrocephalus_event", axis="ventricular_enlargement",
+         readout="ema_label_statement_hydrocephalus", value="NOT_REPORTED",
+         unit="verbatim_label_text", qualitative="TRUE",
+         n_aff=0, n_risk="NOT_REPORTED", grade=0,
+         basis=("0 = full-text sweep of the EU label returns zero occurrences of "
+                "'hydrocephal', 'intracranial pressure', 'papilloedema' and 'aseptic "
+                "meningitis' (SCHEMA.md rubric grade 0)."),
+         asc="measured_null",
+         evidence=("Nothing in the label bears on this endpoint. inotersen is dosed "
+                   "subcutaneously, so this row also serves as a route contrast: the "
+                   "systemic ASO label is silent where both intrathecal ASO labels are "
+                   "not."),
+         loc="whole Annex I SmPC, full-text sweep (0 hits for all four concepts)"),
+]
+
 BLANK = dict(
     strain="NOT_APPLICABLE", dose_value="NOT_REPORTED", dose_unit="NOT_APPLICABLE",
     timepoint="NOT_REPORTED", seriousness="NOT_REPORTED",
@@ -391,6 +530,55 @@ def main():
                    "not participants. Full text at "
                    "sources/raw/sweep1_tofersen_seriousAE_PMC12060635.xml. Retrieved "
                    "%s." % TODAY),
+        ))
+
+    # ---- L4: EMA Summaries of Product Characteristics --------------------
+    for r in L4_ROWS:
+        rows.append(row(
+            oligo_name=r["oligo"], source_key=r["source_key"],
+            study_type="regulatory_label", species="human",
+            system_model="EMA Annex I Summary of Product Characteristics",
+            is_human_system="TRUE",
+            indication_population=("spinal_muscular_atrophy" if r["oligo"] == "nusinersen"
+                                   else "SOD1_amyotrophic_lateral_sclerosis"
+                                   if r["oligo"] == "tofersen"
+                                   else "hereditary_transthyretin_amyloidosis"),
+            arm_label="EU labelled population", arm_description="NOT_APPLICABLE",
+            arm_role="exposed",
+            cns_compartment=("NOT_APPLICABLE" if r["oligo"] == "inotersen"
+                             else "CSF_and_neuraxis"),
+            delivery_route=("subcutaneous" if r["oligo"] == "inotersen"
+                            else "intrathecal_lumbar"),
+            exposure_duration="NOT_APPLICABLE", timepoint="NOT_APPLICABLE",
+            endpoint_tier=r["tier"], readout_category=r["cat"],
+            readout_name=r["readout"], readout_value=r["value"],
+            readout_unit=r["unit"], readout_is_qualitative=r["qualitative"],
+            n_affected=r["n_aff"], n_at_risk=r["n_risk"],
+            statistic=("denominator n=147 is stated by the label for its "
+                       "common-adverse-reaction sentence; the serious-reaction "
+                       "percentages are consistent with the same denominator "
+                       "(2.7% x 147 = 4.0; 1.4% x 147 = 2.1) but the label does not "
+                       "restate it, so this consistency is corroboration, not a "
+                       "denominator the label asserts for those rows."
+                       if r["n_risk"] == 147 else "NOT_REPORTED"),
+            effect_direction=("no_change" if r["grade"] == 0 else "increase"),
+            effect_vs_control="NOT_REPORTED",
+            hydroceph_grade=r["grade"], grade_basis=r["basis"],
+            grade_status="provisional", ascertainment=r["asc"],
+            ascertainment_basis=(
+                "A regulatory label states identified risks. It is not a record of "
+                "everything looked for and not found, so a silent label is a weaker "
+                "negative than a trial-arm zero - except where, as here, the same "
+                "label itemises several neighbouring risks and omits this one."),
+            attribution_as_stated=("drug_attributed" if r["grade"] else "not_discussed"),
+            attribution_evidence=r["evidence"], tox_axis=r["axis"],
+            event_cluster_id="NOT_APPLICABLE", source_ref=r["source_key"],
+            source_location=r["loc"], redistribution="verify",
+            notes=("EMA product information. Rights of reuse were not established in "
+                   "this session, so redistribution is 'verify': the verbatim text is "
+                   "quoted as evidence and a redistributor should resolve the licence "
+                   "before republishing the value. Retrieved document at %s. "
+                   "Retrieved %s." % (r["file"], TODAY)),
         ))
 
     out = os.path.join(DATA, "_literature_measurements.csv")

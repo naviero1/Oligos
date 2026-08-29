@@ -68,7 +68,8 @@ epidemiological cohort finds the disease baseline.
 |---|---|---|
 | Trial registry | ClinicalTrials.gov v2 API, `/api/v2/studies/<NCT>` | Per-arm adverse-event counts **with denominators and comparator arms**, including explicitly reported zeros |
 | Pharmacovigilance | openFDA `drug/event` API | Post-marketing reporting proportions across the whole marketed oligonucleotide class |
-| Regulatory labelling | DailyMed v2 API, `spls/<setid>.xml` | Verbatim, regulator-adjudicated risk statements with LOINC-coded sections |
+| Regulatory labelling (US) | DailyMed v2 API, `spls/<setid>.xml` | Verbatim, regulator-adjudicated risk statements with LOINC-coded sections |
+| Regulatory labelling (EU) | EMA Annex I Summaries of Product Characteristics | The EU position on the same molecules, which differs materially from the US one, plus quantified incidences the US label does not give |
 | Primary literature | Europe PMC REST `fullTextXML` | The index case and its mechanism; the disease baseline |
 | Disease epidemiology | Europe PMC REST `fullTextXML` | Untreated-population incidence — the confounder control |
 
@@ -96,12 +97,41 @@ trial → compound map. MedDRA terms are matched case-insensitively but never
 normalised or spelling-corrected — `Meningitis asceptic` is preserved as the
 source prints it in NCT04617860.
 
-**4.2 openFDA FAERS (`scripts/extract_faers.py`, 266 rows).** One exact query per
+**4.1b ClinicalTrials.gov outcome measures (`scripts/extract_ctgov_outcomes.py`,
+21 rows).** Kept as a separate component because the epistemics differ. An
+adverse-event count is a clinician noticing something and coding it; a
+pre-specified outcome measure is a quantity the protocol required to be measured
+in every participant, on a schedule, by an instrument. These are the only rows in
+the dataset where the ventricles were measured rather than incidentally observed,
+and the only continuous ones. Selection is an **explicit allow-list**, not a
+pattern match: a pattern over this field for "CSF" sweeps in cerebrospinal-fluid
+pharmacokinetics and neurofilament biomarkers, which are drug exposure and
+neuronal injury, not CSF dynamics. Values are recorded exactly as published; no
+change score or test statistic is computed.
+
+**4.2 openFDA FAERS (`scripts/extract_faers.py`, 456 rows).** One exact query per
 (drug, MedDRA term) pair. An aggregation counting drugs within a term was tried
 first and rejected: openFDA caps a `count` aggregation at 100 buckets without an
 API key, which silently drops precisely the rare drug/term pairs this endpoint is
 about. The direct pair query returns `meta.results.total` with no cap, so a zero
 is a real zero. Transport failures are retried and **never cached as zeros**.
+
+The term strings themselves are validated before use, and this caught a real
+defect. FAERS stores several CSF preferred terms in an abbreviated form — `CSF
+PROTEIN INCREASED`, not `CEREBROSPINAL FLUID PROTEIN INCREASED` — and the two are
+not interchangeable: the expanded string matches nothing, and an earlier version
+of this component queried it and recorded a zero for all nineteen drugs. A
+pre-flight check now queries every term database-wide before it is used and drops
+any string FAERS does not know, with a line in `notes/faers_extraction_report.txt`
+saying so, rather than letting an unknown string manufacture false negatives.
+Three of the twenty-seven candidate terms were dropped this way
+(`COMMUNICATING HYDROCEPHALUS`, `VENTRICULOMEGALY`,
+`CEREBROSPINAL FLUID SHUNT INSERTION`).
+
+For context rather than as rows: database-wide, FAERS holds 5,367 reports
+carrying `HYDROCEPHALUS` against 20,692,690 reports in total. Anyone wanting a
+disproportionality measure has the numerator, the drug denominator and this
+background in the dataset and its audit trail; the dataset computes none itself.
 
 **4.3 DailyMed labels (`scripts/extract_labels.py`, 80 rows).** Parses the SPL
 XML and records the matching sentence verbatim with its section title and LOINC
@@ -305,10 +335,16 @@ would populate `tox_axis = therapeutic_ventricular_effect`, which is declared in
 the schema and currently used by no row. They are the natural negative-direction
 control class.
 
-**OI-05 — EMA and other regulators not covered.** Labelling evidence is US FDA
-only. EMA SmPCs and EPAR nonclinical sections would add both statements and, for
-compounds withdrawn from the US market such as inotersen — for which DailyMed
-returned no current label — the only available regulatory text.
+**OI-05 — PARTIALLY CLOSED.** EMA Summaries of Product Characteristics are now
+carried for nusinersen, tofersen and inotersen (8 rows), and they proved to be
+more than a duplicate of the US labels: the EMA gives hydrocephalus its own
+subheading under section 4.4 for nusinersen where the FDA confines it to section
+6.2, and the EU tofersen SmPC quantifies incidences the US label does not.
+Inotersen, for which DailyMed returns no current US label, is covered only by its
+EU label. Still open: the EPAR nonclinical assessment reports, other EMA products,
+and non-EU/US regulators (PMDA, MHRA). One MHRA Drug Safety Update on
+nusinersen-associated communicating hydrocephalus was identified during source
+discovery and is **not** yet extracted.
 
 **OI-06 — grades are provisional.** Every row ships `grade_status = provisional`.
 No subject-matter expert has reviewed the rubric or its application.

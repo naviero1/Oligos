@@ -45,21 +45,45 @@ API = "https://api.fda.gov/drug/event.json"
 # --------------------------------------------------------------------------
 TERMS = [
     # term, tier, readout_category, tox_axis
+    # ---- Tier A: ventricular / CSF-volume outcome, or a CSF-diversion procedure
     ("HYDROCEPHALUS", "A", "hydrocephalus_event", "ventricular_enlargement"),
     ("NORMAL PRESSURE HYDROCEPHALUS", "A", "hydrocephalus_event", "ventricular_enlargement"),
     ("COMMUNICATING HYDROCEPHALUS", "A", "hydrocephalus_event", "ventricular_enlargement"),
     ("CONGENITAL HYDROCEPHALUS", "A", "hydrocephalus_event", "ventricular_enlargement"),
+    ("HYPERTENSIVE HYDROCEPHALUS", "A", "hydrocephalus_event", "ventricular_enlargement"),
     ("VENTRICULOMEGALY", "A", "ventricular_morphometry", "ventricular_enlargement"),
     ("CEREBRAL VENTRICLE DILATATION", "A", "ventricular_morphometry", "ventricular_enlargement"),
+    ("CEREBRAL VENTRICLE COLLAPSE", "A", "ventricular_morphometry", "ventricular_enlargement"),
+    ("CSF VOLUME INCREASED", "A", "ventricular_morphometry", "ventricular_enlargement"),
+    ("CEREBROSPINAL FLUID CIRCULATION DISORDER", "A", "csf_dynamics", "ventricular_enlargement"),
+    ("CEREBROSPINAL FLUID RESERVOIR PLACEMENT", "A", "shunt_or_drain_intervention", "ventricular_enlargement"),
+    ("CEREBROSPINAL FLUID DRAINAGE", "A", "shunt_or_drain_intervention", "ventricular_enlargement"),
+    ("CEREBROSPINAL FLUID SHUNT INSERTION", "A", "shunt_or_drain_intervention", "ventricular_enlargement"),
+    # ---- Tier B: pressure / composition / flow / procedure
     ("INTRACRANIAL PRESSURE INCREASED", "B", "csf_pressure", "csf_pressure_disturbance"),
+    ("CSF PRESSURE INCREASED", "B", "csf_pressure", "csf_pressure_disturbance"),
+    ("CSF PRESSURE DECREASED", "B", "csf_pressure", "csf_pressure_disturbance"),
     ("PAPILLOEDEMA", "B", "csf_pressure", "csf_pressure_disturbance"),
     ("MENINGITIS ASEPTIC", "B", "csf_composition", "csf_composition_disturbance"),
     ("MENINGITIS CHEMICAL", "B", "csf_composition", "csf_composition_disturbance"),
     ("ARACHNOIDITIS", "B", "csf_dynamics", "csf_composition_disturbance"),
+    ("CSF PROTEIN INCREASED", "B", "csf_composition", "csf_composition_disturbance"),
+    ("CSF WHITE BLOOD CELL COUNT INCREASED", "B", "csf_composition", "csf_composition_disturbance"),
+    ("CSF CELL COUNT INCREASED", "B", "csf_composition", "csf_composition_disturbance"),
+    ("CSF LYMPHOCYTE COUNT INCREASED", "B", "csf_composition", "csf_composition_disturbance"),
     ("CEREBROSPINAL FLUID LEAKAGE", "B", "csf_dynamics", "delivery_procedure_complication"),
-    ("CEREBROSPINAL FLUID PROTEIN INCREASED", "B", "csf_composition", "csf_composition_disturbance"),
     ("POST LUMBAR PUNCTURE SYNDROME", "B", "procedure_complication", "delivery_procedure_complication"),
+    ("TRAUMATIC LUMBAR PUNCTURE", "B", "procedure_complication", "delivery_procedure_complication"),
 ]
+
+# NOTE ON TERM STRINGS. FAERS stores some CSF preferred terms in the abbreviated
+# form ("CSF PROTEIN INCREASED"), not the expanded one ("CEREBROSPINAL FLUID
+# PROTEIN INCREASED"), and the two are not interchangeable: the expanded string
+# matches nothing and would silently produce a zero for every drug. Every term
+# above is therefore verified against FAERS itself by the pre-flight check in
+# main() before it is used, and any term the database does not know is dropped
+# with a line in the audit report rather than contributing false zeros.
+
 
 # --------------------------------------------------------------------------
 # Oligonucleotide therapeutics. `route` is the approved/clinical route and is
@@ -152,13 +176,26 @@ def main():
         totals[generic] = total
         report.append("total reports  %-14s %8d" % (generic, total))
 
+    # ---- pre-flight: does FAERS know each term string at all? ------------
+    live_terms = []
+    for term, tier, category, axis in TERMS:
+        slug = term.lower().replace(" ", "_")
+        payload = fetch({"search": 'patient.reaction.reactionmeddrapt.exact:"%s"' % term,
+                         "limit": 1}, "faers_vocab_%s.json" % slug)
+        total = (payload.get("meta", {}).get("results", {}) or {}).get("total", 0)
+        if total:
+            live_terms.append((term, tier, category, axis))
+            report.append("vocabulary OK   %-42s %8d reports database-wide" % (term, total))
+        else:
+            report.append("vocabulary DROP %-42s not a term string FAERS knows" % term)
+
     # ---- numerators: one EXACT query per (drug, term) ---------------------
     # An aggregation counting drugs within a term truncates at openFDA's 100-bucket
     # cap, which silently drops exactly the rare drug/term pairs this dataset is
     # about. A direct search for the pair returns meta.results.total with no cap,
     # so a zero here is a real zero.
     rows = []
-    for term, tier, category, axis in TERMS:
+    for term, tier, category, axis in live_terms:
         slug = term.lower().replace(" ", "_")
         for generic, brands, route in DRUGS:
             payload = fetch(
