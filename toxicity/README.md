@@ -36,6 +36,14 @@ Counts recomputed from [`data/oligos.csv`](../data/oligos.csv) (65 rows × 17 co
 held" counts only PDFs filed to that endpoint alone; the 4 multi-endpoint reference PDFs are
 excluded here and listed in the cross-cutting file instead.
 
+**Two endpoints are now delivered, by two independent datasets that share no table.** The
+kidney rows live in `../data/`; the hydrocephalus rows live in
+[`./hydrocephalus/data/`](./hydrocephalus/README.md), with their own schema, their own graded
+column and their own source registry. The last two columns of the table below are therefore
+about `../data/measurements.csv` only, and read `n/a` for hydrocephalus — its sources reach
+its own registry, not that file. Nothing about the kidney dataset changed when hydrocephalus
+was added, which is the point of keeping them apart.
+
 | Endpoint | Status | Oligos | Measurement rows | Source PDFs held | `source_id`s reaching `measurements.csv` |
 |---|---|---:|---:|---:|---|
 | [Kidney toxicity (nephrotoxicity)](./kidney-nephrotoxicity.md) | delivered | 65 | 111 | 7 | 16 — WS, N3, M1, N2, K1, REV, A1–A10 |
@@ -45,8 +53,8 @@ excluded here and listed in the cross-cutting file instead.
 | [Complement activation](./complement-activation.md) | background-only | 0 | 0 | 0 | none |
 | [Coagulopathy](./coagulopathy.md) | background-only | 0 | 0 | 0 | none |
 | [Chronic neurotoxicity](./chronic-neurotoxicity.md) | not-addressed | 0 | 0 | 0 | none |
-| [Hydrocephalus](./hydrocephalus.md) | not-addressed | 0 | 0 | 0 | none |
-| **Total** | — | **65** | **111** | **13** | **16** |
+| [Hydrocephalus](./hydrocephalus.md) | **delivered — separate dataset** | 28 | 680 | 0 | n/a — 46 sources in its own registry, [`hydrocephalus/data/sources.csv`](./hydrocephalus/data/sources.csv) |
+| **Total** | — | **93** | **791** | **13** | **16** into `../data/measurements.csv`; 46 into the hydrocephalus registry |
 
 `sources/` holds 18 PDFs in total: the 13 endpoint-dedicated files counted above, 4
 cross-cutting reference files, and 1 off-topic file in `sources/_unrelated/`.
@@ -67,8 +75,13 @@ oligo counts and the local-PDF mapping are in
 | `background-only` | No dedicated source was acquired. The endpoint appears only inside multi-endpoint reference material held for other reasons. |
 | `not-addressed` | No dedicated source, no row, no doc section, no slide, and no scope decision on record. At most an incidental passage inside a volume held for another endpoint. Listed so the allocation is exhaustive against the brief's eight-item list. |
 
-Only the kidney dossier describes a dataset. The other seven describe source inventories and
-extraction backlogs; they are deliberately short, and they are not peers of the kidney file.
+Two dossiers now describe datasets — kidney and hydrocephalus — and they are peers. The other
+six describe source inventories and extraction backlogs; they are deliberately short, and they
+are not peers of the two populated files.
+
+`delivered — separate dataset` means the endpoint has its own tables, schema, grading rubric
+and source registry in a subdirectory of this one, and contributes no row to `../data/`. It is
+the shape any further endpoint should take, for the reason given in the next section.
 
 ## What this reorganization changed
 
@@ -99,8 +112,13 @@ Three facts about the data model that this index makes visible rather than chang
   CSVs above. It is not a third dataset and is not curated independently.
 
 Because both the endpoint flag and the grade column are kidney-shaped, a seven-endpoint
-register cannot be produced by re-slicing the existing tables. That is why seven of the eight
-dossiers report zero rows rather than a subset.
+register cannot be produced by re-slicing the existing tables. That is why six of the eight
+dossiers still report zero rows rather than a subset — and why the seventh,
+[hydrocephalus](./hydrocephalus.md), was built as a separate dataset in
+[`./hydrocephalus/`](./hydrocephalus/README.md) rather than as new rows here. It declares its
+own `hydroceph_grade` with its own rubric, its own CNS vocabularies, and its own provenance
+registry, and it changed no file in `../data/`, `../schema.md`, `../sources/` or
+`../scripts/`.
 
 ## Related files
 
