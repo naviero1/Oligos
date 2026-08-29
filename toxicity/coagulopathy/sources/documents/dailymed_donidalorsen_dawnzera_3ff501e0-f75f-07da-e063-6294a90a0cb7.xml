@@ -1,0 +1,2093 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="3f909bfc-3281-a444-e063-6294a90a221f"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>These highlights do not include all the information needed to use DAWNZERA™ (donidalorsen) safely and effectively. See full prescribing information for DAWNZERA.
+ <br/>
+DAWNZERA™ (donidalorsen) injection, for subcutaneous use
+ <br/>
+Initial U.S. Approval: 2025
+</title>
+   <effectiveTime value="20250924"/>
+   <setId root="3ff501e0-f75f-07da-e063-6294a90a0cb7"/>
+   <versionNumber value="1"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="011829916"/>
+            <name>Ionis Pharmaceuticals Inc.</name>
+            <assignedEntity>
+               <assignedOrganization/>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="3ff65e67-872a-03b4-e063-6394a90ab3b2"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20250924"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="71860-103" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>DAWNZERA</name>
+                        <formCode code="C42945" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INJECTION, SOLUTION"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>donidalorsen</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3980JIH2SW" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM PHOSPHATE, MONOBASIC, UNSPECIFIED FORM</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="22ADO53M6F" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM PHOSPHATE, DIBASIC, ANHYDROUS</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="451W47IQ8X" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM CHLORIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="QTT17582CB" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYDROCHLORIC ACID</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="55X04QC32I" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM HYDROXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="059QF0KO0R" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>WATER</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator unit="mg" value="80"/>
+                              <denominator unit="mL" value="0.8"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="Y30VEG5PH1" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>DONIDALORSEN SODIUM</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="ZD4D8M32TL" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>DONIDALORSEN</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="0.8" unit="mL"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43203" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="SYRINGE, GLASS"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="71860-103-01" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20250821"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C102835" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 2: Prefilled Drug Delivery Device/System (syringe, patch, etc.)" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NDA219407" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73594" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20250821"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38299" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="SUBCUTANEOUS"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="La2b411e6-fcb3-4564-8913-bb36d4f9583c">
+               <id root="3f909bfc-3282-a444-e063-6294a90a221f"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>1 INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph>DAWNZERA™ is indicated for prophylaxis to prevent attacks of hereditary angioedema (HAE) in adult and pediatric patients 12 years of age and older.</paragraph>
+               </text>
+               <effectiveTime value="20250902"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>DAWNZERA is a prekallikrein directed antisense oligonucleotide indicated for prophylaxis to prevent attacks of hereditary angioedema (HAE) in adult and pediatric patients 12 years of age and older. (
+ 
+    <linkHtml href="#La2b411e6-fcb3-4564-8913-bb36d4f9583c">1</linkHtml>)
+
+   </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="Ldaa4fe44-af31-4082-9be3-2d56e38b99f1">
+               <id root="3f909bfc-3283-a444-e063-6294a90a221f"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>2 DOSAGE AND ADMINISTRATION</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20250827"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>The recommended dosage of DAWNZERA is 80 mg administered subcutaneously every 4 weeks.</paragraph>
+                        <list listType="unordered">
+                           <item>A dosage of 80 mg every 8 weeks may also be considered. (
+  
+     <linkHtml href="#Lfee7ad99-b2b8-40f5-abc3-039109cf870c">2.1</linkHtml>)
+ 
+    </item>
+                           <item>See full prescribing information for administration instructions. (
+  
+     <linkHtml href="#L6e0006bc-cecd-45c5-b6fe-d4f02460a144">2.2</linkHtml>)
+ 
+    </item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="Lfee7ad99-b2b8-40f5-abc3-039109cf870c">
+                     <id root="3f909bfc-3284-a444-e063-6294a90a221f"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.1 Recommended Dosage</title>
+                     <text>
+                        <paragraph>The recommended dosage of DAWNZERA is 80 mg administered subcutaneously every 4 weeks.</paragraph>
+                        <list listType="unordered">
+                           <item>A dosage of 80 mg administered subcutaneously every 8 weeks may be considered.</item>
+                        </list>
+                        <paragraph>
+                           <content styleCode="underline">Missed Dose(s)</content>
+                        </paragraph>
+                        <paragraph>If a dose of DAWNZERA is missed, administer DAWNZERA as soon as possible. Resume treatment at the recommended dosing frequency from the date of the most recently administered dose.</paragraph>
+                     </text>
+                     <effectiveTime value="20250827"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="L6e0006bc-cecd-45c5-b6fe-d4f02460a144">
+                     <id root="3f909bfc-3285-a444-e063-6294a90a221f"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.2 Administration Instructions</title>
+                     <text>
+                        <list listType="unordered">
+                           <item>For subcutaneous use.</item>
+                           <item>DAWNZERA is intended for self-administration or administration by a caregiver. Prior to treatment initiation, train patients and/or caregivers on proper preparation and subcutaneous administration technique of DAWNZERA autoinjector
+  
+   <content styleCode="italics">[see
+   
+    <linkHtml href="#L7f17fd53-1994-4c4a-92f1-0a9a6cb3bfb5">Instructions for Use</linkHtml>]
+  
+   </content>.
+ 
+  </item>
+                           <item>Remove the single‑dose autoinjector from the refrigerator 30 minutes prior to the injection and allow to warm to room temperature. Do not use other warming methods.</item>
+                           <item>Inspect DAWNZERA visually for particulate matter and discoloration prior to administration. The solution should appear clear and colorless to yellow. Do not use if cloudiness, particulate matter, or discoloration is observed prior to administration.</item>
+                           <item>Administer DAWNZERA subcutaneously into the abdomen or upper thigh region. The back of the upper arm can also be used as an injection site if a caregiver or healthcare provider administers the injection.</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20250825"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="L65fccdea-11c7-4456-a358-de370742b2cc">
+               <id root="3f909bfc-3286-a444-e063-6294a90a221f"/>
+               <code code="43678-2" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION"/>
+               <title>3 DOSAGE FORMS AND STRENGTHS</title>
+               <text>
+                  <paragraph>Injection: 80 mg/0.8 mL of donidalorsen as a sterile, clear, colorless to yellow solution in a single-dose autoinjector.</paragraph>
+               </text>
+               <effectiveTime value="20250825"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Injection: 80 mg/0.8 mL solution in a single-dose autoinjector. (
+ 
+    <linkHtml href="#L65fccdea-11c7-4456-a358-de370742b2cc">3</linkHtml>)
+
+   </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="L2e807dd3-ce91-450c-8eee-68ba11cdc059">
+               <id root="3f909bfc-3287-a444-e063-6294a90a221f"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>4 CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>DAWNZERA is contraindicated in patients with a history of serious hypersensitivity reactions, including anaphylaxis, to donidalorsen or any of the excipients in DAWNZERA
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#L136692ed-191e-41a9-b674-f642859c60c8">Warnings and Precautions (5.1)</linkHtml>and
+  
+   <linkHtml href="#L426036ce-e4ae-42a6-bffd-db580d20294c">Adverse Reactions (6)</linkHtml>]
+ 
+  </content>.
+
+ </paragraph>
+               </text>
+               <effectiveTime value="20250829"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>History of serious hypersensitivity reactions, including anaphylaxis, to donidalorsen or any of the excipients in DAWNZERA.</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="L5bb3ee3f-abe7-4b31-84c3-090e5d7439d6">
+               <id root="3f909bfc-3288-a444-e063-6294a90a221f"/>
+               <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+               <title>5 WARNINGS AND PRECAUTIONS</title>
+               <text/>
+               <effectiveTime value="20250820"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Hypersensitivity reactions including anaphylaxis have been reported following use of DAWNZERA. Advise patients to discontinue DAWNZERA and seek immediate medical attention if serious hypersensitivity reactions occur. (
+ 
+    <linkHtml href="#L136692ed-191e-41a9-b674-f642859c60c8">5.1</linkHtml>)
+
+   </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="L136692ed-191e-41a9-b674-f642859c60c8">
+                     <id root="3f909bfc-3289-a444-e063-6294a90a221f"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.1 Risk of Hypersensitivity Reactions, Including Anaphylaxis</title>
+                     <text>
+                        <paragraph>Hypersensitivity reactions, including anaphylaxis, have been reported in patients treated with DAWNZERA
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#L2f62b46e-ae7e-49fc-9fa2-8e50653df922">Adverse Reactions (6.1)</linkHtml>]
+ 
+  </content>. If signs and symptoms of serious hypersensitivity reactions occur, discontinue DAWNZERA and institute appropriate therapy.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20250820"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="L426036ce-e4ae-42a6-bffd-db580d20294c">
+               <id root="3f909bfc-328a-a444-e063-6294a90a221f"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>6 ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>The following clinically significant adverse reactions are discussed elsewhere in the labeling:</paragraph>
+                  <list listType="unordered">
+                     <item>Risk of Hypersensitivity Reactions, Including Anaphylaxis
+  
+   <content styleCode="italics">[see
+   
+    <linkHtml href="#L136692ed-191e-41a9-b674-f642859c60c8">Warnings and Precautions (5.1)</linkHtml>]
+  
+   </content>
+                     </item>
+                  </list>
+               </text>
+               <effectiveTime value="20250829"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Most common adverse reactions (incidence ≥ 5%) are injection site reactions, upper respiratory tract infection, urinary tract infection, and abdominal discomfort. (
+ 
+    <linkHtml href="#L2f62b46e-ae7e-49fc-9fa2-8e50653df922">6.1</linkHtml>)
+
+   </paragraph>
+                        <paragraph/>
+                        <paragraph>
+                           <content styleCode="bold">To report SUSPECTED ADVERSE REACTIONS, contact Ionis Pharmaceuticals at 1-833-644-6647 or FDA at 1-800-FDA-1088 or
+  
+     <linkHtml href="http://www.fda.gov/medwatch">www.fda.gov/medwatch</linkHtml>.
+ 
+    </content>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="L2f62b46e-ae7e-49fc-9fa2-8e50653df922">
+                     <id root="3f909bfc-328b-a444-e063-6294a90a221f"/>
+                     <code code="90374-0" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL TRIALS EXPERIENCE SECTION"/>
+                     <title>6.1 Clinical Trials Experience</title>
+                     <text>
+                        <paragraph>Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.</paragraph>
+                        <paragraph>The safety of DAWNZERA reflects the exposure in a total of 171 adult and pediatric patients 12 years and older with hereditary angioedema (HAE) from a placebo-controlled trial (OASIS-HAE)
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#L127ff34e-c1c6-490b-9a56-62e24c5b1b61">Clinical Studies (14)</linkHtml>]
+ 
+  </content>, and 2 other clinical studies. The average duration of DAWNZERA treatment exposure across the 3 clinical studies was 14 months.
+
+ </paragraph>
+                        <paragraph>The safety data below is based on the 24-week multicenter, randomized, double-blind, placebo-controlled trial (OASIS-HAE), in which patients received at least one subcutaneous dose of DAWNZERA 80 mg once every 4 weeks (n=45), DAWNZERA 80 mg once every 8 weeks (n=23), or matching placebo (n=22). Demographics of the patients in OASIS-HAE are summarized in Clinical Studies
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#L127ff34e-c1c6-490b-9a56-62e24c5b1b61">Clinical Studies (14)</linkHtml>]
+ 
+  </content>.
+
+ </paragraph>
+                        <paragraph>Table 1 provides the most common adverse reactions with DAWNZERA with incidence ≥5% and more common than placebo.</paragraph>
+                        <table width="85%">
+                           <caption>Table 1: Adverse Reactions with DAWNZERA with Incidence ≥5% and More Common than Placebo in Patients with HAE (OASIS-HAE)</caption>
+                           <tfoot>
+                              <tr styleCode="First Last">
+                                 <td colspan="4">N = number of patients; n = number of patients experiencing the event; q4wks = every 4 weeks; q8wks = every 8 weeks. 
+     <br/>  * Injection site reactions include: erythema, discoloration, pain, pruritus, induration, bruising, haematoma, hypersensitivity, swelling, reaction, and urticaria. 
+     <br/>  † All injection site reactions were mild, nonserious, and the majority of them resolved without receiving any treatment.
+    </td>
+                              </tr>
+                           </tfoot>
+                           <tbody>
+                              <tr valign="bottom">
+                                 <td rowspan="3" styleCode="Botrule Lrule Rrule Toprule">
+                                    <content styleCode="bold">  Adverse Reaction</content>
+                                 </td>
+                                 <td colspan="2" align="center" styleCode="Botrule Lrule Rrule Toprule">
+                                    <content styleCode="bold">DAWNZERA</content>
+                                 </td>
+                                 <td rowspan="2" align="center" styleCode="Botrule Lrule Rrule Toprule">
+                                    <paragraph>
+                                       <content styleCode="bold">Placebo</content>
+                                       <br/>
+                                       <content styleCode="bold">(N=22)</content>
+                                    </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">
+                                    <paragraph>
+                                       <content styleCode="bold">80 mg q4wks 
+       <br/>  (N=45)
+      </content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">
+                                    <paragraph>
+                                       <content styleCode="bold">80 mg q8wks 
+       <br/>  (N=23)
+      </content>
+                                    </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">
+                                    <content styleCode="bold">n (%)</content>
+                                 </td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">
+                                    <content styleCode="bold">n (%)</content>
+                                 </td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">
+                                    <content styleCode="bold">n (%)</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Botrule Lrule Rrule Toprule">  Injection site reactions*†</td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">11 (24)</td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">1 (4)</td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">1 (5)</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Botrule Lrule Rrule Toprule">  Upper respiratory tract infection</td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">4 (9)</td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">2 (9)</td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">1 (5)</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule">  Urinary tract infection</td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">4 (9)</td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">2 (9)</td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">0</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Botrule Lrule Rrule Toprule">  Abdominal discomfort</td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">3 (7)</td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">0</td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">0</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <content styleCode="underline">Specific Adverse Reactions</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Hypersensitivity Reactions, Including Anaphylaxis</content>
+                        </paragraph>
+                        <paragraph>In clinical trials, hypersensitivity reactions, including anaphylaxis, have occurred. Symptoms included generalized rash, dyspnea, chest pain, and peri-oral swelling.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Laboratory Tests</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Decrease in Platelet Count</content>: DAWNZERA can cause reductions in platelet count. In OASIS-HAE, the mean platelet count at baseline was 266,000/mm
+ 
+  <sup>3</sup>for the DAWNZERA 80 mg every 4 weeks group, 265,000/mm
+ 
+  <sup>3</sup>for the DAWNZERA 80 mg every 8 weeks group, and 245,000/mm
+ 
+  <sup>3</sup>for the placebo group. The mean percent change in platelet count at Week 25 was -9.6% for the DAWNZERA 80 mg every 4 weeks group, -7.9% for the DAWNZERA 80 mg every 8 weeks group, and -1.4% for the placebo group. In OASIS-HAE and 2 other clinical studies no DAWNZERA-treated patient had a platelet count of &lt;50,000/mm
+ 
+  <sup>3</sup>, and there were no major bleeding events associated with a low platelet count.
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Increase in Liver Function Tests</content>: Increases from baseline in liver enzymes (alanine aminotransferase, aspartate aminotransferase, and gamma-glutamyl transferase) were observed with DAWNZERA use. The increased levels were generally below 3 times the upper limit of normal and stabilized. Discontinuations due to liver function test increases were infrequent.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20250829"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="L13a52f98-9f9a-4599-b3f3-4b4ed927fe3a">
+               <id root="3f909bfc-328c-a444-e063-6294a90a221f"/>
+               <code code="43684-0" codeSystem="2.16.840.1.113883.6.1" displayName="USE IN SPECIFIC POPULATIONS SECTION"/>
+               <title>8 USE IN SPECIFIC POPULATIONS</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20250820"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Hepatic Impairment: Use in patients with moderate and severe hepatic impairment is not recommended. (
+ 
+    <linkHtml href="#L2fb1cd01-0b69-4ed5-8e3d-c57de41c8f38">8.7</linkHtml>)
+
+   </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="L29c84964-b6a4-4601-8288-53fea53338e9">
+                     <id root="3f909bfc-328d-a444-e063-6294a90a221f"/>
+                     <code code="42228-7" codeSystem="2.16.840.1.113883.6.1" displayName="PREGNANCY SECTION"/>
+                     <title>8.1 Pregnancy</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Risk Summary</content>
+                        </paragraph>
+                        <paragraph>There are no available data on DAWNZERA use in pregnant women to evaluate for a drug-associated risk of major birth defects, miscarriage, or other adverse maternal or fetal outcomes.</paragraph>
+                        <paragraph>In animal reproduction studies, subcutaneous administration of donidalorsen or a pharmacologically active mouse‑specific surrogate in a combined fertility and embryo‑fetal development study in mice and a pre‑ and postnatal development study in mice with F0 parental doses up to 5 times the maximum recommended human dose (MRHD, 80 mg) on a body surface area (BSA, mg/m
+ 
+  <sup>2</sup>) basis did not result in any adverse effects on embryofetal development, or behavioral, fertility, and reproductive development in the F1 offspring. Donidalorsen does not cross the placental barrier
+ 
+  <content styleCode="italics">(see Data)</content>.
+
+ </paragraph>
+                        <paragraph>The estimated background risk of major birth defects and miscarriage for the indicated population(s) is unknown. All pregnancies have a background risk of birth defect, loss, or other adverse outcomes. In the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2% to 4% and 15% to 20%, respectively.</paragraph>
+                        <paragraph styleCode="PIHeading2">
+                           <content styleCode="underline">Data</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Animal Data</content>
+                        </paragraph>
+                        <paragraph>In reproductive toxicity studies with donidalorsen, the unconjugated form was not detected (below the limit of quantitation) in fetal tissues. Donidalorsen does not cross the placental barrier.</paragraph>
+                        <paragraph>In a combined fertility and embryofetal development study, subcutaneous administration of donidalorsen (up to 10 mg/kg/week [2.5-times the MRHD on a BSA basis]) or a mouse‑specific surrogate (4 mg/kg/week) to male and female F0 mice weekly, prior to and during mating, and continuing every other day in females throughout the periods of implantation and organogenesis (Gestation Days 0 to 16), resulted in no adverse effects on embryofetal development. There was no evidence of maternal toxicity with doses up to 10 mg/kg/week.</paragraph>
+                        <paragraph>In a pre- and postnatal development study, subcutaneous administration of donidalorsen (up to 20 mg/kg/week [5-times the MRHD on a BSA basis]) or a mouse-specific surrogate (5 mg/kg/week) to F0 female mice every other day throughout pregnancy (from Gestation Day 6 to 18) and weekly throughout lactation (from Lactation Day 1 to 20) produced no adverse effects on behavioral, fertility, and reproductive development in the F1 offspring. There was no evidence of maternal toxicity with doses up to 20 mg/kg/week.</paragraph>
+                     </text>
+                     <effectiveTime value="20250820"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="L8a617dd0-dc43-49b0-9edd-90a3dd2caac3">
+                     <id root="3f909bfc-328e-a444-e063-6294a90a221f"/>
+                     <code code="77290-5" codeSystem="2.16.840.1.113883.6.1" displayName="LACTATION SECTION"/>
+                     <title>8.2 Lactation</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Risk Summary</content>
+                        </paragraph>
+                        <paragraph>There are no data on the presence of donidalorsen in human milk, the effects on the breast‑fed infant, or the effects on milk production. Donidalorsen was excreted into the milk of lactating mice; however, due to species-specific differences in lactation physiology, animal lactation data may not reliably predict levels in human milk
+ 
+  <content styleCode="italics">(see Data)</content>. The developmental and health benefits of breastfeeding should be considered along with the mother’s clinical need for DAWNZERA and any potential adverse effects on the breast‑fed infant from DAWNZERA or from the underlying maternal condition.
+
+ </paragraph>
+                        <paragraph styleCode="PIHeading2">
+                           <content styleCode="underline">Data</content>
+                        </paragraph>
+                        <paragraph styleCode="PIHeading2">
+                           <content styleCode="italics">Animal Data</content>
+                        </paragraph>
+                        <paragraph>In the mouse pre‑ and postnatal development study, the concentrations of donidalorsen in breast milk from lactating mice on Lactation Day 15 increased in a dose‑dependent manner at doses ≥10 mg/kg/week, but these concentrations of donidalorsen in breast milk were lower than the observed concentrations in the liver where the drug is preferentially taken up. Even though donidalorsen was detected in the maternal mouse milk, systemic exposure in pups was not expected due to the lack of oral absorption of donidalorsen.</paragraph>
+                     </text>
+                     <effectiveTime value="20250820"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="L60406b9b-0cec-4c02-a1f3-6b0e3bb61ed6">
+                     <id root="3f909bfc-328f-a444-e063-6294a90a221f"/>
+                     <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+                     <title>8.4 Pediatric Use</title>
+                     <text>
+                        <paragraph>The safety and effectiveness of DAWNZERA for prophylaxis to prevent attacks of HAE have been established in pediatric patients aged 12 years and older. Use of DAWNZERA for this indication is supported by evidence from an adequate and well‑controlled trial (OASIS-HAE) that included 7 pediatric patients (aged 12 to 17 years) who received DAWNZERA 80 mg subcutaneously every 4 weeks (n=4) or every 8 weeks (n=3). The safety and effectiveness of DAWNZERA in pediatric patients aged 12 years and older is extrapolated from adults from OASIS-HAE with support from pharmacokinetic analysis and pharmacodynamic response
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#Ld721d2f8-c74b-4e64-a480-745c2bacb94a">Clinical Pharmacology (12.2</linkHtml>,
+  
+   <linkHtml href="#Lf98e00c5-e8ee-45f5-b8cd-84994222e660">12.3)</linkHtml>and
+  
+   <linkHtml href="#L127ff34e-c1c6-490b-9a56-62e24c5b1b61">Clinical Studies (14)</linkHtml>]
+ 
+  </content>. No new safety signals were identified in pediatric patients aged 12 years and older who received DAWNZERA
+ 
+  <content styleCode="italics">[see 
+  
+   <linkHtml href="#L2f62b46e-ae7e-49fc-9fa2-8e50653df922">Adverse Reactions (6.1)</linkHtml>]
+ 
+  </content>.
+
+ </paragraph>
+                        <paragraph>The safety and effectiveness of DAWNZERA have not been established in pediatric patients younger than 12 years of age.</paragraph>
+                     </text>
+                     <effectiveTime value="20250820"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Le3e1a906-2376-49e6-ba92-78f008b7c7f5">
+                     <id root="3f909bfc-3290-a444-e063-6294a90a221f"/>
+                     <code code="34082-8" codeSystem="2.16.840.1.113883.6.1" displayName="GERIATRIC USE SECTION"/>
+                     <title>8.5 Geriatric Use</title>
+                     <text>
+                        <paragraph>Clinical studies of DAWNZERA did not include sufficient numbers of patients 65 years of age and older to determine whether they respond differently from younger adult patients.</paragraph>
+                     </text>
+                     <effectiveTime value="20250820"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Lcbb2c92b-8e4a-4ebd-a905-45c93ab02f92">
+                     <id root="3f909bfc-3291-a444-e063-6294a90a221f"/>
+                     <code code="88828-9" codeSystem="2.16.840.1.113883.6.1" displayName="RENAL IMPAIRMENT SUBSECTION"/>
+                     <title>8.6 Renal Impairment</title>
+                     <text>
+                        <paragraph>No dosage adjustment of DAWNZERA is recommended for patients with mild renal impairment (estimated glomerular filtration rate [eGFR] ≥60 to &lt;90 mL/min/1.73 m
+ 
+  <sup>2</sup>)
+ 
+  <content styleCode="italics">[see 
+  
+   <linkHtml href="#Lf98e00c5-e8ee-45f5-b8cd-84994222e660">Clinical Pharmacology (12.3)</linkHtml>]
+ 
+  </content>.
+
+ </paragraph>
+                        <paragraph>DAWNZERA has not been studied in patients with moderate or severe renal impairment or end‑stage renal disease.</paragraph>
+                     </text>
+                     <effectiveTime value="20250820"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="L2fb1cd01-0b69-4ed5-8e3d-c57de41c8f38">
+                     <id root="3f909bfc-3292-a444-e063-6294a90a221f"/>
+                     <code code="88829-7" codeSystem="2.16.840.1.113883.6.1" displayName="HEPATIC IMPAIRMENT SUBSECTION"/>
+                     <title>8.7 Hepatic Impairment</title>
+                     <text>
+                        <paragraph>No dosage adjustment of DAWNZERA is required for patients with mild hepatic impairment (defined by National Cancer Institute Organ Dysfunction Working Group [NCI-ODWG] Criteria: total bilirubin ≤1 × upper limit of normal [ULN] and aspartate aminotransferase [AST] &gt;1 × ULN, or total bilirubin &gt;1 to 1.5 × ULN and any AST level)
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#Lf98e00c5-e8ee-45f5-b8cd-84994222e660">Clinical Pharmacology (12.3)</linkHtml>]
+ 
+  </content>.
+
+ </paragraph>
+                        <paragraph>DAWNZERA has not been studied in patients with moderate or severe hepatic impairment. Use of DAWNZERA is not recommended in patients with moderate or severe hepatic impairment (defined by NCI-ODWG Criteria: total bilirubin &gt;1.5 x ULN regardless of AST level).</paragraph>
+                     </text>
+                     <effectiveTime value="20250820"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="L14e2c220-5978-4b93-beb4-3e5ed232b6e6">
+               <id root="3f909bfc-3293-a444-e063-6294a90a221f"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>11 DESCRIPTION</title>
+               <text>
+                  <paragraph/>
+                  <paragraph>Donidalorsen is a prekallikrein-directed antisense oligonucleotide (ASO) covalently linked to a ligand containing three
+ 
+  <content styleCode="italics">N</content>‑acetyl galactosamine (GalNAc) residues to facilitate delivery of the ASO to hepatocytes.
+
+ </paragraph>
+                  <paragraph>DAWNZERA contains donidalorsen sodium as the active ingredient. Donidalorsen sodium is a white to yellow solid and it is freely soluble in water and in sodium phosphate buffer. The molecular formula of donidalorsen sodium is C
+ 
+  <sub>296</sub>H
+ 
+  <sub>415</sub>N
+ 
+  <sub>83</sub>O
+ 
+  <sub>151</sub>P
+ 
+  <sub>20</sub>S
+ 
+  <sub>15</sub>Na
+ 
+  <sub>20</sub>and the molecular weight is 9112.27 daltons. The chemical name of donidalorsen is DNA, d([2′-
+ 
+  <content styleCode="italics">O</content>-(2-methoxyethyl)]m
+ 
+  <sup>5</sup>rU-s
+ 
+  <sup>p</sup>-[2′-
+ 
+  <content styleCode="italics">O</content>-(2-methoxyethyl)]rG-s
+ 
+  <sup>p</sup>-[2′-
+ 
+  <content styleCode="italics">O</content>-(2-methoxyethyl)]m
+ 
+  <sup>5</sup>rC-[2′-
+ 
+  <content styleCode="italics">O</content>-(2-methoxyethyl)]rA-[2′-
+ 
+  <content styleCode="italics">O</content>-(2-methoxyethyl)]rA-s
+ 
+  <sup>p</sup>-G-s
+ 
+  <sup>p</sup>-T-s
+ 
+  <sup>p</sup>-m
+ 
+  <sup>5</sup>C-s
+ 
+  <sup>p</sup>-T-s
+ 
+  <sup>p</sup>-m
+ 
+  <sup>5</sup>C-s
+ 
+  <sup>p</sup>-T-s
+ 
+  <sup>p</sup>-T-s
+ 
+  <sup>p</sup>-G-s
+ 
+  <sup>p</sup>-G-s
+ 
+  <sup>p</sup>-m
+ 
+  <sup>5</sup>C-s
+ 
+  <sup>p</sup>-[2′-
+ 
+  <content styleCode="italics">O</content>-(2-methoxyethyl)]rA-[2′-
+ 
+  <content styleCode="italics">O</content>-(2-methoxyethyl)]rA-[2′-
+ 
+  <content styleCode="italics">O</content>-(2methoxyethyl)]rA-s
+ 
+  <sup>p</sup>-[2′-
+ 
+  <content styleCode="italics">O</content>-(2-methoxyethyl)]m
+ 
+  <sup>5</sup>rC-s
+ 
+  <sup>p</sup>-[2′-
+ 
+  <content styleCode="italics">O</content>-(2-methoxyethyl)]rA), 5′-[26-[[2-(acetylamino)-2-deoxy-β-d-galactopyranosyl]oxy]-14,14-bis[[3-[[6-[[2-(acetylamino)-2-deoxy-β-d-galactopyranosyl]oxy]hexyl]amino]-3-oxopropoxy]methyl]-8,12,19-trioxo-16-oxa-7,13,20-triazahexacos-1-yl hydrogen phosphate], sodium salt (1:20).
+
+ </paragraph>
+                  <paragraph>The chemical structure of donidalorsen sodium is presented below:</paragraph>
+                  <paragraph/>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L53086484-0ea5-4351-8696-f321c8d67d47"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>DAWNZERA (donidalorsen) injection is a sterile, preservative‑free solution for subcutaneous injection supplied as a single-dose autoinjector. Each single‑dose autoinjector contains 80 mg of donidalorsen (equivalent to 84 mg donidalorsen sodium) in 0.8 mL of solution. The solution also contains disodium hydrogen phosphate; sodium chloride; sodium dihydrogen phosphate; water for injection; and may include hydrochloric acid and/or sodium hydroxide for pH adjustment between 6.9 to 7.9. Each dose of DAWNZERA injection contains 6 mg of phosphorous and 5 mg of sodium.</paragraph>
+               </text>
+               <effectiveTime value="20250829"/>
+               <component>
+                  <observationMedia ID="L53086484-0ea5-4351-8696-f321c8d67d47">
+                     <text>Chemical structure.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="Chemical structure.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="L450b7740-fa7f-4627-b253-8498d6bb231a">
+               <id root="3f909bfc-3294-a444-e063-6294a90a221f"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>12 CLINICAL PHARMACOLOGY</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20250829"/>
+               <component>
+                  <section ID="L55a01688-1f37-45a3-b5b4-ba95a107d61c">
+                     <id root="3f909bfc-3295-a444-e063-6294a90a221f"/>
+                     <code code="43679-0" codeSystem="2.16.840.1.113883.6.1" displayName="MECHANISM OF ACTION SECTION"/>
+                     <title>12.1 Mechanism of Action</title>
+                     <text>
+                        <paragraph>Donidalorsen is an ASO‑GalNAc conjugate that causes ribonuclease H1 (RNase H1)‑mediated degradation of PKK mRNA through binding to PKK mRNA, which results in reduced production of PKK protein. PKK is a pro‑enzyme for plasma kallikrein, which results in the release of bradykinin, a potent vasodilator causing swelling and pain in HAE. In patients with HAE, C1‑inhibitor (C1‑INH) deficiency or dysfunction leads to excessive plasma kallikrein activity, bradykinin generation, and angioedema attacks. Donidalorsen lowers PKK concentration, preventing excessive bradykinin production in patients with HAE.</paragraph>
+                     </text>
+                     <effectiveTime value="20250829"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Ld721d2f8-c74b-4e64-a480-745c2bacb94a">
+                     <id root="3f909bfc-3296-a444-e063-6294a90a221f"/>
+                     <code code="43681-6" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACODYNAMICS SECTION"/>
+                     <title>12.2 Pharmacodynamics</title>
+                     <text>
+                        <paragraph>In OASIS-HAE in adult and pediatric patients (≥12 years) with HAE‑1 or HAE‑2
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#L127ff34e-c1c6-490b-9a56-62e24c5b1b61">Clinical Studies (14)</linkHtml>]
+ 
+  </content>, a decrease in plasma PKK concentrations was observed at the first assessment (Week 4) following treatment with DAWNZERA 80 mg. The mean percentage reduction from baseline at Week 4 across both treatment groups was 48%. The mean percentage change from baseline to Week 24 in trough plasma PKK concentrations indicated reductions of 73% and 47% following treatment with DAWNZERA 80 mg every 4 weeks and every 8 weeks, respectively, compared with a slight increase (2%) observed in the placebo group.
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Cardiac Electrophysiology</content>
+                        </paragraph>
+                        <paragraph>At the maximum recommended dose of DAWNZERA 80 mg every 4 weeks, clinically significant QTc interval prolongation was not observed.</paragraph>
+                     </text>
+                     <effectiveTime value="20250820"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Lf98e00c5-e8ee-45f5-b8cd-84994222e660">
+                     <id root="3f909bfc-3297-a444-e063-6294a90a221f"/>
+                     <code code="43682-4" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACOKINETICS SECTION"/>
+                     <title>12.3 Pharmacokinetics</title>
+                     <text>
+                        <paragraph>The pharmacokinetic properties of DAWNZERA were evaluated following subcutaneous administration of multiple doses every 4 weeks in healthy subjects and every 4 weeks or every 8 weeks in patients with HAE. The pharmacokinetics of DAWNZERA were similar between healthy subjects and patients with HAE.</paragraph>
+                        <paragraph>Donidalorsen exposure (area under the plasma concentration‑time curve [AUC]) at steady state following subcutaneous administration in healthy subjects increased in a greater than dose‑proportional manner over the dose range of 0.25 times the maximum recommended dosage to 80 mg every 4 weeks.</paragraph>
+                        <paragraph>Geometric Mean (Coefficient of Variation [CV%]) of steady‑state maximum plasma concentration (C
+ 
+  <sub>max,ss</sub>), trough plasma concentration (C
+ 
+  <sub>trough,ss</sub>), and area under the plasma concentration‑time curve over the dosing interval (AUC
+ 
+  <sub>τ</sub>
+                           <sub>,ss</sub>) are presented in Table 2. No accumulation of donidalorsen C
+ 
+  <sub>max</sub>and AUC was observed in plasma after repeated dosing every 4 weeks. However, a 2-fold increase of plasma donidalorsen C
+ 
+  <sub>trough</sub>was observed following repeated dosing every 4 weeks.
+
+ </paragraph>
+                        <table width="85%">
+                           <caption>Table 2: Summary of Geometric Mean (CV%) Steady-State Donidalorsen Pharmacokinetic Parameters Following Dosage of DAWNZERA 80 mg Every 4 Weeks or 80 mg Every 8 Weeks in Patients with HAE</caption>
+                           <tfoot>
+                              <tr styleCode="First Last">
+                                 <td colspan="3">AUC
+    
+     <sub>τ,ss</sub>= area under the plasma concentration time curve over each dosing interval at steady state; C
+    
+     <sub>max,ss</sub>= maximum plasma concentration at steady state; C
+    
+     <sub>trough,ss</sub>= trough plasma concentration at steady state; q4wks = every 4 weeks; q8wks = every 8 weeks.
+   
+    </td>
+                              </tr>
+                           </tfoot>
+                           <tbody>
+                              <tr>
+                                 <td rowspan="2" align="center" styleCode="Botrule Lrule Rrule Toprule">
+                                    <content styleCode="bold">  Pharmacokinetic Parameters 
+      <br/>    (Geometric Mean)
+     </content>
+                                 </td>
+                                 <td colspan="2" align="center" styleCode="Botrule Lrule Rrule Toprule">
+                                    <content styleCode="bold">DAWNZERA  </content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">
+                                    <content styleCode="bold">80 mg q4wks</content>
+                                 </td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">
+                                    <content styleCode="bold">80 mg q8wks </content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Botrule Lrule Rrule Toprule">  C
+    
+     <sub>max,ss</sub>(ng/mL) 
+   
+    </td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">417 (81%)</td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">416 (78%)</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Botrule Lrule Rrule Toprule">  C
+    
+     <sub>trough,ss</sub>(ng/mL) 
+   
+    </td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 0.755 (63%)</td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">0.255 (73%)</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Botrule Lrule Rrule Toprule">  AUC
+    
+     <sub>τ,ss</sub>(ng·h/mL)
+   
+    </td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">5240 (52%)</td>
+                                 <td align="center" styleCode="Botrule Lrule Rrule Toprule">5210 (52%)</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <content styleCode="underline"/>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Absorption</content>
+                        </paragraph>
+                        <paragraph>Following subcutaneous administration, donidalorsen is absorbed with the median (range) time to maximum plasma concentration of approximately 2 (0.25, 8) hours post dose.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Distribution</content>
+                        </paragraph>
+                        <paragraph>Donidalorsen is expected to distribute primarily to the liver and kidney cortex after subcutaneous dosing. The apparent volume of distribution for the central (V
+ 
+  <sub>c</sub>/F) and peripheral (V
+ 
+  <sub>p</sub>/F) compartment were 69.8 L and 1840 L, respectively. Donidalorsen is highly bound to human plasma proteins (&gt;98% bound) in vitro.
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Elimination</content>
+                        </paragraph>
+                        <paragraph>The terminal plasma elimination half-life of donidalorsen in a typical patient with HAE is approximately 1 month. The half-life of the initial rapid clearance phase, reflecting tissue distribution, was approximately 5 hours.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Metabolism</content>
+                        </paragraph>
+                        <paragraph>The oligonucleotide moiety of donidalorsen is expected to be metabolized by endo‑ and exonucleases to short oligonucleotide fragments of varying sizes within the liver. Based on
+ 
+  <content styleCode="italics">in vitro</content>studies, donidalorsen is not a substrate of cytochrome P450 (CYP) enzymes.
+
+ </paragraph>
+                        <paragraph>The linker that covalently connects the ASO to the GalNAc residues is cleaved via hydrolysis and undergoes dephosphorylation and subsequent oxidative metabolism to form inactive metabolites, which are minimally released in circulation. The most abundant linker-related metabolite (M8) is a substrate of CYP3A4.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Excretion</content>
+                        </paragraph>
+                        <paragraph>The mean fraction of unchanged ASO eliminated in urine was less than 1% of the administered dose in healthy subjects within 24 hours post-dose. The renal route of elimination is minor for linker-related metabolites.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Specific Populations</content>
+                        </paragraph>
+                        <paragraph>No clinically meaningful differences in the pharmacokinetics or pharmacodynamics of donidalorsen were observed based on age (12 to 68 years), body weight (37 to 152 kg), sex, race (68% White, 24% Black, and 4% Asian), ethnicity, disease status (healthy subjects or subjects with HAE), mild renal impairment (eGFR ≥60 to &lt;90 mL/min/1.73 m
+ 
+  <sup>2</sup>), or mild hepatic impairment (defined using NCI-ODWG Criteria: total bilirubin ≤1 × ULN and AST &gt;1 × ULN, or total bilirubin &gt;1 to 1.5 × ULN and any AST).
+
+ </paragraph>
+                        <paragraph>Donidalorsen has not been studied in patients with moderate or severe renal impairment, end‑stage renal disease, or moderate or severe hepatic impairment.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Drug Interaction Studies</content>
+                        </paragraph>
+                        <paragraph>No clinical drug‑drug interaction studies have been performed with donidalorsen.
+ 
+  <content styleCode="italics">In vitro</content>studies show that donidalorsen is not a substrate or inhibitor of transporters, does not interact with highly plasma protein bound drugs, and is not an inhibitor/inducer of CYP enzymes. In vitro studies show that linker-related metabolite M8 is not an inhibitor or inducer of CYP enzymes. M8 is a substrate of transporters bile salt export pump (BSEP) and organic anion transporting polypeptide 1B3 (OATP1B3), and is an inhibitor of multidrug and toxin extrusion protein 1 (MATE1) transporter.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20250829"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="L25c8d2ef-3907-4565-8730-7791547cde70">
+                     <id root="3f909bfc-3298-a444-e063-6294a90a221f"/>
+                     <code code="88830-5" codeSystem="2.16.840.1.113883.6.1" displayName="IMMUNOGENICITY"/>
+                     <title>12.6 Immunogenicity</title>
+                     <text>
+                        <paragraph>The observed incidence of anti‑drug antibodies (ADAs) is highly dependent on the sensitivity and specificity of the assay. Differences in assay methods preclude meaningful comparisons of the incidence of anti-drug antibodies in the studies described below with the incidence of anti-drug antibodies in other studies, including those of donidalorsen or of other donidalorsen products.</paragraph>
+                        <paragraph>In OASIS-HAE, with a treatment duration up to 24 weeks, the incidence rate of treatment‑emergent ADAs in adult and pediatric patients (≥12 years of age) with HAE was 20% (9 of 45 patients) in the DAWNZERA 80 mg every 4 weeks group and 22% (5 of 23 patients) in the DAWNZERA 80 mg every 8 weeks group. In an open‑label extension trial, patients that rolled over from OASIS-HAE continued treatment with DAWNZERA in the 80 mg every 4 weeks or every 8 weeks groups for up to 3 years (median exposure duration of 227 days). The incidence rate of treatment‑emergent ADAs was 35% (22 of 63 patients) in the DAWNZERA 80 mg every 4 weeks group, including patients initially randomized to DAWNZERA 80 mg every 4 weeks in OASIS-HAE (36%, 16/44) and patients initially randomized to placebo in OASIS-HAE (32%, 6/19). The incidence rate of treatment-emergent ADAs was 21% (3 of 14 patients) among patients who received DAWNZERA 80 mg every 8 weeks in OASIS-HAE and open-label extension.</paragraph>
+                        <paragraph>In general, the development of ADAs was not found to affect the pharmacodynamics, safety, or efficacy of DAWNZERA. An increase in donidalorsen plasma C
+ 
+  <sub>trough</sub>was observed in ADA-positive patients with high titers. Because of small sample size, the effect of ADA on the pharmacokinetics, pharmacodynamics, safety and effectiveness of DAWNZERA is inconclusive.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20250818"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="L9c68da0a-d504-4959-8aea-63a41dcb531b">
+               <id root="3f909bfc-3299-a444-e063-6294a90a221f"/>
+               <code code="43680-8" codeSystem="2.16.840.1.113883.6.1" displayName="NONCLINICAL TOXICOLOGY SECTION"/>
+               <title>13 NONCLINICAL TOXICOLOGY</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20250818"/>
+               <component>
+                  <section ID="Lb91914b8-1f24-45ce-98e2-d97f24ffa1a4">
+                     <id root="3f909bfc-329a-a444-e063-6294a90a221f"/>
+                     <code code="34083-6" codeSystem="2.16.840.1.113883.6.1" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title>13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Carcinogenesis</content>
+                        </paragraph>
+                        <paragraph>In a 6-month carcinogenicity study in transgenic (Tg.rasH2) mice, subcutaneous administration of donidalorsen, up to the highest dose tested (20 mg/kg in males and 60 mg/kg in females) or a mouse-specific surrogate (10 mg/kg) once every 2 weeks did not result in an increase in malignant tumors.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Mutagenesis</content>
+                        </paragraph>
+                        <paragraph>Donidalorsen was negative for genotoxicity in the
+ 
+  <content styleCode="italics">in vitro</content>bacterial reverse mutation test and chromosomal aberration assay in Chinese hamster lung cells and
+ 
+  <content styleCode="italics">in vivo</content>mouse bone marrow micronucleus assay.
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Fertility</content>
+                        </paragraph>
+                        <paragraph>Fertility and reproductive performance were unaffected by subcutaneous administration of donidalorsen (up to 10 mg/kg/week [2.5-times the MRHD on a BSA basis]) or a mouse‑specific surrogate (4 mg/kg/week) to male and female mice weekly, prior to and during mating, and continuing every other day in females throughout the periods of implantation and organogenesis.</paragraph>
+                     </text>
+                     <effectiveTime value="20250818"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="L127ff34e-c1c6-490b-9a56-62e24c5b1b61">
+               <id root="3f909bfc-329b-a444-e063-6294a90a221f"/>
+               <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+               <title>14 CLINICAL STUDIES</title>
+               <text>
+                  <paragraph>The efficacy of DAWNZERA for prophylaxis to prevent attacks of hereditary angioedema (HAE) in adult and pediatric patients 12 years of age and older was evaluated in a 24‑week multicenter, randomized, double‑blind, placebo‑controlled trial (OASIS-HAE [
+ 
+  <linkHtml href="https://clinicaltrials.gov/ct2/show/record/NCT05139810">NCT05139810</linkHtml>]).
+
+ </paragraph>
+                  <paragraph>The trial (OASIS-HAE) included 90 adult and pediatric patients 12 years of age and older with Type I and Type II HAE, who had at least 2 investigator‑confirmed attacks during the 8‑week run‑in period. Patients were randomized to receive DAWNZERA 80 mg once every 4 weeks (n=45), DAWNZERA 80 mg once every 8 weeks (n=23), or matching placebo (n=22). Patients were required to discontinue other prophylactic HAE medications, except androgens and tranexamic acid, prior to entering the trial; all patients were allowed to use rescue medications for treatment of breakthrough HAE attacks.</paragraph>
+                  <paragraph>The demographics and baseline characteristics of OASIS-HAE trial are provided in Table 3.</paragraph>
+                  <table width="85%">
+                     <caption>Table 3: Demographics and Baseline Characteristics of Patients in the OASIS-HAE Trial </caption>
+                     <tfoot>
+                        <tr styleCode="First Last">
+                           <td colspan="2">* Within 5 half-lives of screening (up to 10 weeks). 
+     <br/>  **Period from screening to first dose.
+    </td>
+                        </tr>
+                     </tfoot>
+                     <tbody>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule"/>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">
+                              <content styleCode="bold">OASIS-HAE (N=90)</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule"> Female, n (%)</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">48 (53)</td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Botrule Lrule Rrule Toprule"> Race, n (%)  </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule">   Asian</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 1 (1)</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule">   Black or African American</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 2 (2)</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule">   White</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 82 (91)</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule">   American Indian or Alaskan Native Asian</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 3 (3)</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule">   Multiple</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 1(1)</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule">   Other</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 1(1)</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule"> Hispanic or Latino, n (%)</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 6 (7) </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule"> Mean age, years (SD)</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 37 (14)</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule">    ≤ 17 years, n (%)</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">7 (8)</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule">    &gt; 17 years, n (%)</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 83 (92)</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule"> C1-INH HAE Type 1, n (%)</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">  84 (93)</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule"> Prior HAE prophylaxis*, n (%)</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">16 (18)</td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Botrule Lrule Rrule Toprule"> Baseline HAE attack rate**, n (%) </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule">    ≤ 2 attacks/4 weeks</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">28 (31)</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule">   2 to 5 attacks/4 weeks</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">  48 (53)</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule">   ≥ 5 attacks/4 weeks</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">14 (16)</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>The primary endpoint for OASIS-HAE was the HAE attack rate (number of investigator-confirmed HAE attacks per 4 weeks) from Week 0 to Week 24. As shown in Table 4, DAWNZERA 80 mg administered subcutaneously every 4 or 8 weeks demonstrated statistically significant reductions in the HAE attack rate compared to placebo.</paragraph>
+                  <table width="85%">
+                     <caption>Table 4:  HAE Attack Rate (Attacks/4 Weeks) at Week 24 in OASIS-HAE</caption>
+                     <tfoot>
+                        <tr styleCode="First Last">
+                           <td colspan="4">CI = confidence interval; HAE = hereditary angioedema; LS = least square; N = number of patients in the specific treatment group; q4wks = every 4 weeks; q8wks = every 8 weeks. 
+     <br/>  * Primary efficacy endpoint = comparison of the time-normalized number of investigator-confirmed HAE attacks per 4 weeks from Week 0 to Week 24 between the DAWNZERA 80 mg q4wks group and the placebo group. 
+     <br/>  † Calculated as the ratio of the model-based treatment period HAE attack rates (donidalorsen/placebo) minus 1 multiplied by 100.
+    </td>
+                        </tr>
+                     </tfoot>
+                     <tbody>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule"/>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">
+                              <content styleCode="bold">DAWNZERA 80 mg q4wks</content>
+                              <br/>
+                              <content styleCode="bold">(N=45)</content>
+                           </td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">
+                              <content styleCode="bold">DAWNZERA 80 mg q8wks</content>
+                              <br/>
+                              <content styleCode="bold">(N=23)</content>
+                           </td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">
+                              <content styleCode="bold">Placebo</content>
+                              <br/>
+                              <content styleCode="bold">(N=22)</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="4" styleCode="Botrule Lrule Rrule Toprule">
+                              <content styleCode="bold">HAE Attack Rate per 4 Weeks from Week 0 to Week 24*</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule">  LS mean (95% CI) attack rate</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">0.44 
+     <br/>  (0.27, 0.73)
+    </td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">1.02 
+     <br/>  (0.65, 1.59)
+    </td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">2.26 
+     <br/>  (1.66, 3.09)
+    </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule">  % Reduction (95% CI) relative to placebo†</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">-81 
+     <br/>  (-89, -65)
+    </td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> -55 
+     <br/>  (-74, -22)
+    </td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">--</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule">  Wald chi-square p-value</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> &lt;0.001</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 0.004</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> --</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>The mean decreases from baseline in the HAE attack rate observed throughout the treatment period in the DAWNZERA treatment groups are shown in Figure 1.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Figure 1:  Mean (± SEM) Investigator‑confirmed HAE Attack Rate (Attacks/4 Weeks) in OASIS-HAE</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="L34a34627-2945-4714-a300-10a49fd1cb73"/>
+                  </paragraph>
+                  <paragraph>HAE = hereditary angioedema; q4wks = every 4 weeks; q8wks = every 8 weeks; SC = subcutaneous; SEM = standard error of the mean.</paragraph>
+                  <paragraph/>
+                  <paragraph>Pre-defined secondary endpoints were assessed from Week 4 to Week 24. The moderate or severe HAE attack rate was 0.12 for the DAWNZERA 80 mg every 4 weeks group, 0.68 for the DAWNZERA 80 mg every 8 weeks group, and 1.15 for the placebo group, representing a reduction of 89% (95% CI: 66, 97) and 41% (95% CI: -26, 72) in moderate or severe HAE attack rate relative to placebo, respectively. The HAE attacks requiring acute therapy was 0.15 for the DAWNZERA 80 mg every 4 weeks group, 0.59 for the DAWNZERA 80 mg every 8 weeks group, and 1.80 for the placebo group, representing a reduction of 92% (95% CI: 77, 97) and 67% (95% CI: 29, 85) in HAE attacks requiring acute therapy relative to placebo, respectively.</paragraph>
+                  <paragraph>The proportion of patients who were attack-free from Week 4 to Week 24 were 53% in the DAWNZERA 80 mg every 4 weeks group, 35% in the DAWNZERA 80 mg every 8 weeks group, and 9% in the placebo group, representing an odds ratio of being attack-free of 11.79 (95% CI: 2.34, 59.36) and 3.23 (95% CI: 0.46, 22.85), respectively.</paragraph>
+                  <paragraph>The proportion of patients with a ≥50%, ≥70%, and ≥90% reduction from baseline to Week 4 through Week 24 was 93%, 82%, and 62% in the DAWNZERA 80 mg every 4 weeks group, 83%, 65%, and 48% in the DAWNZERA 80 mg every 8 weeks group, and 27%, 18%, and 9% in the placebo group, respectively.</paragraph>
+               </text>
+               <effectiveTime value="20250829"/>
+               <component>
+                  <observationMedia ID="L34a34627-2945-4714-a300-10a49fd1cb73">
+                     <text>Figure 1.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="Figure 1.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="L1cd45f79-56c3-40de-a132-ce49800512e4">
+               <id root="3f909bfc-329c-a444-e063-6294a90a221f"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <title>16 HOW SUPPLIED/STORAGE AND HANDLING</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="underline">How Supplied</content>
+                  </paragraph>
+                  <paragraph>DAWNZERA (donidalorsen) 80 mg/0.8 mL injection is a sterile, preservative‑free, clear, colorless to yellow solution supplied in a single‑dose autoinjector. Each autoinjector of DAWNZERA is filled to deliver 0.8 mL of solution containing 80 mg of donidalorsen. Table 5 provides the presentation and strength for DAWNZERA.</paragraph>
+                  <table width="85%">
+                     <caption>Table 5: Presentation and Strength for DAWNZERA </caption>
+                     <tbody>
+                        <tr>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">
+                              <content styleCode="bold"> Presentation</content>
+                           </td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">
+                              <content styleCode="bold"> Strength</content>
+                           </td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">
+                              <content styleCode="bold"> Unit Count</content>
+                           </td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">
+                              <content styleCode="bold"> NDC</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> Autoinjector</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 80 mg/0.8 mL</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 1</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 71860-103-01</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>
+                     <content styleCode="underline">Storage and</content>
+                     <content styleCode="underline">Handling</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>Store the DAWNZERA autoinjector in the refrigerator between 36°F to 46°F (2°C to 8°C) in the original carton.</item>
+                     <item>The DAWNZERA autoinjector can be stored at room temperature up to 86°F (30°C) in the original carton for up to 6 weeks; if not used within the 6 weeks stored at room temperature, discard DAWNZERA.</item>
+                     <item>Do not freeze. Do not expose to heat. Protect from direct light.</item>
+                  </list>
+               </text>
+               <effectiveTime value="20250829"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L12285ae8-a2a7-4acd-a5d9-fe0b137dfb1d">
+               <id root="3f909bfc-329d-a444-e063-6294a90a221f"/>
+               <code code="88436-1" codeSystem="2.16.840.1.113883.6.1" displayName="PATIENT COUNSELING INFORMATION"/>
+               <title>17 PATIENT COUNSELING INFORMATION</title>
+               <text>
+                  <paragraph>Advise the patient to read the FDA‑approved patient labeling (Patient Information and Instructions for Use).</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Administration Instructions</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>Instruct patients that DAWNZERA is for subcutaneous use and intended for self-administration or administration by a caregiver.</item>
+                     <item>Instruct patients and/or caregivers on proper preparation and subcutaneous administration technique of DAWNZERA autoinjector
+  
+   <content styleCode="italics">[see</content>
+                        <content styleCode="italics">
+                           <linkHtml href="#L6e0006bc-cecd-45c5-b6fe-d4f02460a144">Dosage and Administration (2.2)</linkHtml>and Instructions for Use]
+  
+   </content>.
+ 
+  </item>
+                     <item>Instruct patients to administer DAWNZERA subcutaneously into the abdomen or upper thigh region for self-administration. The back of the upper arm can be used as an injection site if a caregiver or healthcare provider administers DAWNZERA.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="underline">Missed Dose(s)</content>
+                  </paragraph>
+                  <paragraph>Instruct patients to use DAWNZERA as prescribed. If a dose is missed, instruct patients to administer DAWNZERA as soon as they remember. Instruct patients to resume treatment at the recommended dosing frequency (every 4 weeks or every 8 weeks) from the date of the most recently administered dose
+ 
+  <content styleCode="italics">[see</content>
+                     <content styleCode="italics">
+                        <linkHtml href="#Lfee7ad99-b2b8-40f5-abc3-039109cf870c">Dosage and Administration (2.1)</linkHtml>]
+ 
+  </content>.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Risk of Hypersensitivity Reactions, Including Anaphylaxis</content>
+                  </paragraph>
+                  <paragraph>Advise patients hypersensitivity reactions, including anaphylaxis, have been reported following administration of DAWNZERA. Instruct patients to immediately discontinue DAWNZERA and seek medical attention if they experience signs and symptoms of serious hypersensitivity reaction
+ 
+  <content styleCode="italics">[see</content>
+                     <content styleCode="italics">
+                        <linkHtml href="#L136692ed-191e-41a9-b674-f642859c60c8">Warnings and Precautions (5.1)</linkHtml>]
+ 
+  </content>.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Distributed by</content>: Ionis Pharmaceuticals Inc., Carlsbad, CA 92010
+
+ </paragraph>
+                  <paragraph>DAWNZERA is a trademark of Ionis Pharmaceuticals Inc. All other trademarks are the property of their respective owners.</paragraph>
+                  <paragraph>©2025 Ionis Pharmaceuticals Inc.</paragraph>
+               </text>
+               <effectiveTime value="20250827"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L7f17fd53-1994-4c4a-92f1-0a9a6cb3bfb5">
+               <id root="3f909bfc-329e-a444-e063-6294a90a221f"/>
+               <code code="59845-8" codeSystem="2.16.840.1.113883.6.1" displayName="INSTRUCTIONS FOR USE SECTION"/>
+               <title>Instructions for Use</title>
+               <text>
+                  <table width="100%">
+                     <caption/>
+                     <tbody>
+                        <tr>
+                           <td colspan="2" align="center" styleCode="Botrule Lrule Rrule Toprule">
+                              <paragraph>
+                                 <content styleCode="bold">INSTRUCTIONS FOR USE</content>
+                              </paragraph>
+                              <paragraph>
+                                 <content styleCode="bold">DAWNZERA
+      
+       <sup>TM</sup>[dawn-ZAIR-ah]
+     
+      </content>
+                              </paragraph>
+                              <paragraph>
+                                 <content styleCode="bold">(donidalorsen)</content>
+                              </paragraph>
+                              <paragraph>
+                                 <content styleCode="bold">injection, for subcutaneous use</content>
+                              </paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Lrule Rrule Toprule">
+                              <paragraph>This Instructions for Use contains information on how to inject
+     
+      <content styleCode="bold">DAWNZERA</content>using the autoinjector.
+    
+     </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">Read this Instructions for Use before you start using your DAWNZERA autoinjector and each time you get a refill. There may be new information.</content>This information does not take the place of talking to your healthcare provider about your medical condition or treatment. Your healthcare provider should show you or your caregiver how to use the DAWNZERA autoinjector the right way. If you or your caregiver have any questions, talk to your healthcare provider.
+    
+     </paragraph>
+                              <paragraph/>
+                           </td>
+                        </tr>
+                        <tr align="center" valign="middle">
+                           <td colspan="2" styleCode="Lrule Rrule">
+                              <paragraph>
+                                 <renderMultiMedia referencedObject="L9cad516d-94ab-4878-90f3-e63778172f44"/>
+                              </paragraph>
+                              <paragraph/>
+                              <paragraph/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Botrule Lrule Rrule Toprule">
+                              <content styleCode="bold">Important information:</content>
+                              <br/>
+                              <list listType="unordered">
+                                 <item>DAWNZERA is injected under the skin (subcutaneous use) only.</item>
+                                 <item>Each autoinjector contains 1 single-dose and can only be used 1 time.</item>
+                                 <item>
+                                    <content styleCode="bold">Do not</content>remove the clear cap until you are ready to inject DAWNZERA (See Step 5).
+     
+      </item>
+                                 <item>
+                                    <content styleCode="bold">Do not</content>share your autoinjector with anyone.
+     
+      </item>
+                                 <item>
+                                    <content styleCode="bold">Do not</content>use if the autoinjector appears damaged.
+     
+      </item>
+                              </list>
+                              <br/>
+                              <content styleCode="bold">Storage information:</content>
+                              <br/>
+                              <list listType="unordered">
+                                 <item>Store the autoinjector in the refrigerator between 36°F to 46°F (2°C to 8°C) in the original carton.</item>
+                                 <item>If needed, DAWNZERA can be storedat room temperature up to 86°F (30°C) in the original carton for up to 6 weeks.</item>
+                                 <item>
+                                    <content styleCode="bold">Do not</content>store DAWNZERA at room temperatures above 86°F.
+     
+      </item>
+                                 <item>Throw away the DAWNZERA if kept at room temperature longer than 6 weeks.</item>
+                                 <item>
+                                    <content styleCode="bold">Do not</content>freeze.
+     
+      </item>
+                                 <item>
+                                    <content styleCode="bold">Do</content>
+                                    <content styleCode="bold">not</content>expose the autoinjector to heat.
+     
+      </item>
+                                 <item>Protect from direct light.</item>
+                                 <item>Keep the autoinjector in the carton until ready to use.</item>
+                                 <item>
+                                    <content styleCode="bold">Do not</content>store the autoinjector with the clear cap removed.
+     
+      </item>
+                              </list>
+                              <paragraph>
+                                 <content styleCode="bold">Keep</content>
+                                 <content styleCode="bold">DAWNZERA and all medicine out of the reach of children. </content>
+                              </paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule">
+                              <paragraph>
+                                 <content styleCode="bold">Parts of your DAWNZERA </content>
+                                 <content styleCode="bold">autoinjector</content>
+                              </paragraph>
+                              <paragraph/>
+                           </td>
+                           <td styleCode="Rrule"/>
+                        </tr>
+                        <tr>
+                           <td align="center" styleCode="Lrule" valign="middle">
+                              <content styleCode="bold">Single-dose autoinjector</content>
+                           </td>
+                           <td align="center" styleCode="Rrule">
+                              <renderMultiMedia referencedObject="L3ca10ba6-75b1-4e89-b1e9-8b638f3a46ae"/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" styleCode="Lrule" valign="middle">
+                              <content styleCode="bold">Other supplies (not included)</content>
+                           </td>
+                           <td styleCode="Rrule">
+                              <renderMultiMedia referencedObject="Ld65dd64f-1b20-4d1a-87e2-6d5f3842703b"/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule">
+                              <content styleCode="bold">Preparing to inject DAWNZERA</content>
+                           </td>
+                           <td styleCode="Botrule Rrule"/>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule Toprule">
+                              <paragraph>
+                                 <content styleCode="bold">Step 1</content>
+                                 <content styleCode="bold">Remove from</content>
+                                 <content styleCode="bold">the refrigerator 30 minutes before you inject</content>
+                              </paragraph>
+                              <paragraph>
+                                 <br/>
+                                 <content styleCode="bold">a) </content>Remove the autoinjector from the refrigerator.
+    
+     </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">b) </content>
+                                 <content styleCode="bold">Keep the autoinjector in the original carton</content>and let the autoinjector come to room temperature for 30 minutes before injecting.
+    
+     </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">Do not</content>try to speed up the warming process using other heat sources, such as a microwave or hot water.
+    
+     </paragraph>
+                              <paragraph/>
+                           </td>
+                           <td align="center" styleCode="Rrule">
+                              <renderMultiMedia referencedObject="L6f238fc9-fcc3-4134-8cdd-9b83c3a61cd0"/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule">
+                              <paragraph>
+                                 <content styleCode="bold">Step 2 Check the medicine</content>
+                              </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">a)</content>Check the expiration (EXP) date.
+    
+     </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">b)</content>Check the medicine through the viewing window. The DAWNZERA medicine should be clear and colorless to yellow. There should be no particles. It is normal to see air bubbles in the solution.
+    
+     </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">Do not</content>use the autoinjector if the:
+    
+     </paragraph>
+                              <list listType="unordered">
+                                 <item>clear cap is missing or not attached.</item>
+                                 <item>expiration (EXP) date has passed.</item>
+                                 <item>medicine looks cloudy, discolored, or has particles.</item>
+                                 <item>autoinjector appears damaged.</item>
+                              </list>
+                           </td>
+                           <td align="center" styleCode="Rrule">
+                              <renderMultiMedia referencedObject="L451fee47-4e11-4530-90ad-5b4d7ea4ba9b"/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule">
+                              <paragraph>
+                                 <content styleCode="bold">Step 3 Choose the injection site</content>
+                              </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">a)</content>Choose an injection site on the stomach or the front of the thigh.
+    
+     </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">b)</content> Only healthcare providers or caregivers may choose the back of the upper arm.
+    
+     </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">Do not</content>inject:
+    
+     </paragraph>
+                              <list listType="unordered">
+                                 <item>within 2 inches of the belly button (navel).</item>
+                                 <item>into skin that is bruised, tender, red, or hard.</item>
+                                 <item>into scars or damaged skin.</item>
+                              </list>
+                           </td>
+                           <td align="center" styleCode="Rrule">
+                              <renderMultiMedia referencedObject="L65e2ae9e-2979-4814-9f24-9e626443c456"/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule">
+                              <paragraph>
+                                 <content styleCode="bold">Step 4 Wash hands and clean the injection site</content>
+                              </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">a)</content>Wash your hands with soap and water.
+    
+     </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">b)</content>Clean the injection site with an alcohol wipe in a circular motion. Let the skin air dry.
+    
+     </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">Do not</content>touch the cleaned skin before injecting.
+    
+     </paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule Rrule">
+                              <renderMultiMedia referencedObject="L8297bb41-7a64-4ccf-acba-8f7cfa7d3262"/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule Toprule">
+                              <paragraph>
+                                 <content styleCode="bold">Injecting DAWNZERA</content>
+                              </paragraph>
+                              <paragraph/>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">Step 5 Remove and throw away the clear cap</content>
+                              </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">a)</content>Hold the autoinjector by the middle with the clear cap facing away from you.
+    
+     </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">b)</content>Remove the clear cap by pulling it straight off.
+     
+      <content styleCode="bold">Do not</content>twist it off. The needle is inside the orange needle shield.
+    
+     </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">c)</content>Throw away the clear cap in the trash or sharps container.
+    
+     </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">Do no</content>t remove the clear cap until right before you inject. 
+      <br/>
+                                 <content styleCode="bold">Do not</content>recap the autoinjector. 
+      <br/>
+                                 <content styleCode="bold">Do not</content>push the orange needle shield against the hand or finger.
+    
+     </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule">
+                              <renderMultiMedia referencedObject="Lf42222c3-259f-45b5-84f9-eb41f03e242b"/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule Toprule">
+                              <paragraph>
+                                 <content styleCode="bold">Step 6 Begin injection</content>
+                              </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">a)</content>Hold the autoinjector in 1 hand. Place the orange needle shield at a 90 degree angle against your skin. Make sure you can see the viewing window.
+    
+     </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">b)</content>Push firmly and hold the autoinjector straight against the skin. You will hear a click as the injection starts.
+    
+     </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">You may hear a second click. This is normal. The procedure is not finished.</content>
+                              </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">c)</content>Hold the autoinjector against the skin for 10 seconds to make sure the full dose has been given.
+    
+     </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">Do not</content>move, turn, or change the angle of the autoinjector during the injection.
+    
+     </paragraph>
+                              <paragraph/>
+                              <paragraph/>
+                           </td>
+                           <td align="center" styleCode="Rrule Toprule">
+                              <renderMultiMedia referencedObject="L105b1c34-96f8-45a8-a96d-8458acd02f9e"/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule">
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">Step 7 Finish injection</content>
+                              </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">a</content>
+                                 <content styleCode="bold">)</content>Check that the orange plunger rod
+    
+     </paragraph>
+                              <paragraph>has moved down to fill the entire viewing window.</paragraph>
+                              <list listType="unordered">
+                                 <item>If the orange plunger rod does not fill the viewing window, you may not have received the full dose.</item>
+                                 <item>If this happens or if you have other concerns, contact your healthcare provider.</item>
+                              </list>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">b)</content>Remove the autoinjector by lifting it straight up. After removal from the skin, the orange needle shield locks into place and covers the needle.
+    
+     </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">c)</content>There may be a small amount of blood or liquid where you injected. This is normal.
+    
+     </paragraph>
+                              <paragraph/>
+                              <paragraph>If needed, press a cotton ball or gauze on the area and apply a small bandage.</paragraph>
+                              <paragraph/>
+                              <paragraph>The autoinjector contains 1 dose.
+     
+      <content styleCode="bold">Do not</content>reuse the autoinjector.
+    
+     </paragraph>
+                              <paragraph/>
+                           </td>
+                           <td align="center" styleCode="Rrule">
+                              <renderMultiMedia referencedObject="L22cc2cb3-e8b1-4556-b6bb-80e1e7493208"/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule Toprule">
+                              <paragraph>
+                                 <content styleCode="bold">Step 8 Throwing away autoinjector</content>
+                              </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">a)</content>Put the used autoinjector in a sharps container right away after use.
+    
+     </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">Do not</content>throw away the autoinjector in your household trash. 
+      <br/>
+                                 <content styleCode="bold">Do not</content>recycle your used sharps disposal container. 
+      <br/>
+                                 <content styleCode="bold">Do not</content>reuse the autoinjector or clear cap.
+    
+     </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Toprule">
+                              <renderMultiMedia referencedObject="L1b8ba4a1-528f-485c-9605-e9c494e668c2"/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Lrule Rrule">
+                              <paragraph>If you do not have an FDA-cleared sharps container, you may use a household container that is:</paragraph>
+                              <list listType="unordered">
+                                 <item>made of a heavy-duty plastic,</item>
+                                 <item>can be closed with a tight-fitting, puncture-resistant lid, without sharps being able to come out,</item>
+                                 <item>upright and stable during use,</item>
+                                 <item>leak-resistant, and</item>
+                                 <item>properly labelled to warn of hazardous waste inside the container.</item>
+                              </list>
+                              <paragraph>When your sharps disposal container is almost full, you will need to follow your community guidelines for the right way to dispose of your sharps disposal container. There may be state or local laws about how you should throw away used autoinjectors.</paragraph>
+                              <paragraph/>
+                              <paragraph>For more information about safe sharps disposal, and specific information about sharps disposal in the state that you live in, go to the FDA's website at: http://www.fda.gov/safesharpsdisposal.</paragraph>
+                              <paragraph>
+                                 <br/>
+                                 <content styleCode="bold">Do not</content>throw away your used sharps disposal container in your household trash unless your community guidelines permit this.
+     
+      <content styleCode="bold">Do not</content>recycle your used sharps disposal container.
+    
+     </paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Lrule Rrule Toprule">
+                              <paragraph>For more information, go to https://www.DAWNZERA.com or call 1-833-644-6647. If you still have questions, contact your healthcare provider.</paragraph>
+                              <paragraph/>
+                              <paragraph>Distributed by: Ionis Pharmaceuticals, Inc., Carlsbad, CA 92010</paragraph>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>This Instructions for Use has been approved by the U.S. Food and Drug Administration                                                          Approved: 08/2025</paragraph>
+               </text>
+               <effectiveTime value="20250829"/>
+               <component>
+                  <observationMedia ID="L9cad516d-94ab-4878-90f3-e63778172f44">
+                     <text>1_autoinjector.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="1_autoinjector.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L3ca10ba6-75b1-4e89-b1e9-8b638f3a46ae">
+                     <text>2_autoinjector parts.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="2_autoinjector parts.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Ld65dd64f-1b20-4d1a-87e2-6d5f3842703b">
+                     <text>wipe-container-cotton-bandage.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="wipe-container-cotton-bandage.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L6f238fc9-fcc3-4134-8cdd-9b83c3a61cd0">
+                     <text>7_out of the fridge.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="7_out of the fridge.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L451fee47-4e11-4530-90ad-5b4d7ea4ba9b">
+                     <text>8_expiry.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="8_expiry.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L65e2ae9e-2979-4814-9f24-9e626443c456">
+                     <text>9_injection site.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="9_injection site.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L8297bb41-7a64-4ccf-acba-8f7cfa7d3262">
+                     <text>10_wash hands.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="10_wash hands.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="Lf42222c3-259f-45b5-84f9-eb41f03e242b">
+                     <text>11_injecting.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="11_injecting.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L105b1c34-96f8-45a8-a96d-8458acd02f9e">
+                     <text>12_ begin injection.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="12_ begin injection.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L22cc2cb3-e8b1-4556-b6bb-80e1e7493208">
+                     <text>13_finishing injection_orange plunger rod.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="13_finishing injection_orange plunger rod.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="L1b8ba4a1-528f-485c-9605-e9c494e668c2">
+                     <text>14_throw away.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="14_throw away.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="Le4a1e965-c856-4a0f-ac17-4cd907d6aa43">
+               <id root="3f909bfc-329f-a444-e063-6294a90a221f"/>
+               <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+               <title>Patient Information</title>
+               <text>
+                  <paragraph/>
+                  <table width="100%">
+                     <caption/>
+                     <tbody>
+                        <tr>
+                           <td colspan="2" align="center" styleCode="Botrule Lrule Rrule">
+                              <content styleCode="bold">PATIENT INFORMATION</content>
+                              <br/>
+                              <content styleCode="bold">DAWNZERA</content>
+                              <sup>TM </sup>(dawn-ZAIR-ah) 
+     <br/>  (donidalorsen) 
+     <br/>  injection, for subcutaneous use 
+   
+    </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Botrule Lrule Rrule">
+                              <paragraph>
+                                 <content styleCode="bold">What is DAWNZERA?</content>
+                              </paragraph>
+                              <paragraph> DAWNZERA is a prescription medicine used to prevent hereditary angioedema (HAE) attacks in adults and children 12 years of age and older.</paragraph>
+                              <paragraph>It is not known if DAWNZERA is safe and effective in children under 12 years of age.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Botrule Lrule Rrule">
+                              <content styleCode="bold">Do not use DAWNZERA if you:</content>
+                              <br/>
+                              <list listType="unordered">
+                                 <item>have had a serious allergic reaction, including anaphylaxis to donidalorsen or any of the ingredients in DAWNZERA. See the end of this Patient Information leaflet for a complete list of ingredients in DAWNZERA. </item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Botrule Lrule Rrule">
+                              <content styleCode="bold">Before using DAWNZERA, tell your healthcare provider about all your medical conditions, including if you:</content>
+                              <list listType="unordered">
+                                 <item>are pregnant or plan to become pregnant. It is not known if DAWNZERA can harm your unborn baby. Tell your healthcare provider if you become pregnant during treatment with DAWNZERA.</item>
+                                 <item>are breastfeeding or plan to breastfeed. It is not known if DAWNZERA passes into your breast milk. Talk to your healthcare provider about the best way to feed your baby while using DAWNZERA.</item>
+                              </list>
+                              <paragraph>
+                                 <content styleCode="bold"> Tell your healthcare provider about any other medications you take,</content>including prescription and over‑the‑counter medicines, vitamins, and herbal supplements. Know the medicines you take. Keep a list of them to show your healthcare provider and pharmacist when you get a new medicine.
+    
+     </paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Botrule Lrule Rrule">
+                              <content styleCode="bold">How should I use DAWNZERA?</content>
+                              <list listType="unordered">
+                                 <item>Read the detailed Instructions for Use that comes with your DAWNZERA single-dose autoinjector.</item>
+                                 <item>Your healthcare provider will show you and your caregiver how to inject DAWNZERA the first time.</item>
+                                 <item>DAWNZERA is injected under your skin (subcutaneous use) in your stomach area (abdomen) or the front of your upper legs (thighs). Only a healthcare provider or caregiver may give you an injection in the back of your upper arm.</item>
+                                 <item>Use DAWNZERA exactly as your healthcare provider tells you to take it.</item>
+                                 <item>You, your caregiver, or healthcare provider should inject DAWNZERA 1 time every 4 weeks or 1 time every 8 weeks depending on your prescribed dosing frequency.</item>
+                                 <item>If you miss a dose of DAWNZERA, take the missed dose as soon as possible. Then inject DAWNZERA on the regular dosing schedule from the date of the most recently injected dose.</item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Lrule Rrule">
+                              <paragraph>
+                                 <content styleCode="bold">What are the possible side effects of DAWNZERA?</content>
+                              </paragraph>
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold"> DAWNZERA can cause serious side effects, including:</content>
+                              </paragraph>
+                              <list listType="unordered">
+                                 <item>
+                                    <content styleCode="bold">Allergic reactions.</content>DAWNZERA can cause allergic reactions. Stop taking DAWNZERA and call your healthcare provider or go to your nearest emergency room right away if you have symptoms of serious allergic reaction. Symptoms of serious allergic reaction may include:
+     
+      </item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule">    o  rash 
+     <br/>      o  trouble breathing 
+     <br/>      o  fainting, dizziness, feeling lightheaded (low blood pressure)
+    </td>
+                           <td styleCode="Rrule">    o  swelling of your face, lips, or tongue 
+     <br/>      o  chest pain 
+     <br/>      o  itching
+    </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Lrule Rrule">
+                              <paragraph/>
+                              <paragraph>
+                                 <content styleCode="bold">The most common side effects of DAWNZERA</content>include: 
+    
+     </paragraph>
+                              <paragraph/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule">    o  injection site reactions 
+     <br/>      o  upper respiratory tract infection
+    </td>
+                           <td styleCode="Rrule">    o  urinary tract infection 
+     <br/>      o  abdominal discomfort
+    </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Lrule Rrule">
+                              <paragraph/>
+                              <paragraph>These are not the only possible side effects of DAWNZERA. Tell your healthcare provider if you have any side effect that bothers you or that does not go away while using DAWNZERA.</paragraph>
+                              <paragraph/>
+                              <paragraph>Call your doctor for medical advice about side effects. You may report side effects to FDA at 1-800-FDA-1088.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Lrule Rrule Toprule">
+                              <content styleCode="bold">How should I store DAWNZERA?</content>
+                              <br/>
+                              <list listType="unordered">
+                                 <item>Store DAWNZERA in the refrigerator between 36°F to 46°F (2°C to 8°C) in the original carton.</item>
+                                 <item>If needed, DAWNZERA can be stored at room temperature up to 86°F (30°C) in the original carton for up to 6 weeks. If not used within 6 weeks, throw away DAWNZERA.</item>
+                                 <item>Do not freeze.</item>
+                                 <item>Do not expose the autoinjector to heat.</item>
+                                 <item>Protect from direct light.</item>
+                              </list>
+                              <content styleCode="bold">Keep DAWNZERA and all medicines out of the reach of children. </content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Lrule Rrule Toprule">
+                              <content styleCode="bold">General information about the safe and effective use of DAWNZERA.</content>
+                              <br/>  Medicines are sometimes prescribed for purposes other than those listed in a Patient Information leaflet. Do not use DAWNZERA for a condition for which it was not prescribed. Do not give DAWNZERA to other people, even if they have the same symptoms or condition that you have. It may harm them. You can ask your pharmacist or healthcare provider for information about DAWNZERA that is written for health professionals. 
+   
+    </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Lrule Rrule Toprule">
+                              <content styleCode="bold">What are the ingredients in DAWNZERA?</content>
+                              <br/>
+                              <content styleCode="bold"> Active ingredients</content>: donidalorsen
+    
+     <paragraph>
+                                 <content styleCode="bold"> Inactive ingredients</content>: disodium hydrogen phosphate; sodium chloride; sodium dihydrogen phosphate; water for injection; and may include hydrochloric acid or sodium hydroxide. Phosphorous and sodium.
+    
+     </paragraph>
+                              <paragraph>Distributed by: Ionis Pharmaceuticals Inc.</paragraph>
+                              <paragraph/>
+                              <paragraph> DAWNZERA is a trademark of Ionis Pharmaceuticals Inc.</paragraph>
+                              <paragraph/>
+                              <paragraph> For more information go to www.DAWNZERA.com or call 1-833-644-6647. If you still have questions, contact your healthcare provider.</paragraph>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>This Patient Information has been approved by the U.S. Food and Drug Administration                                                              Issued: 08/2025</paragraph>
+               </text>
+               <effectiveTime value="20250829"/>
+            </section>
+         </component>
+         <component>
+            <section ID="L1ca249ae-6a93-4656-a76d-165aed8bf036">
+               <id root="3f909bfc-32a0-a444-e063-6294a90a221f"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">DAWNZERA™</content>
+                  </paragraph>
+                  <paragraph>(donidalorsen) 80mg/0.8mL 
+  <br/>  injection for subcutaneous use
+ </paragraph>
+                  <paragraph>                                                                                            1 single-dose autoinjector</paragraph>
+                  <paragraph>Each Dawnzera autoinjector contains 80 mg donidalorsen (equivalent to 84 mg donidalorsen 
+  <br/>  sodium) in 0.8 mL of solution, single-dose, and is for the treatment of adult and adolescent 
+  <br/>  patients with HAE. 
+  <br/>  Store refrigerated at 2ºC to 8ºC (36ºC to 46ºC) in the orignal container and protect from direct light. 
+  <br/>  Do not freeze.
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">IONIS</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">
+                        <renderMultiMedia referencedObject="L90c3253b-018f-4b2d-8246-d49029314221"/>
+                     </content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20250829"/>
+               <component>
+                  <observationMedia ID="L90c3253b-018f-4b2d-8246-d49029314221">
+                     <text>Autoinjector Carton</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="Dawnzera_ 80mg_carton.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <section ID="L225abe47-eac6-406c-b47a-472d22d5f8ff">
+                     <id root="3f909bfc-32a1-a444-e063-6294a90a221f"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Rx Only            DAWNZERA™</content>(donidalorsen) 80 mg/0.8ml
+
+ </paragraph>
+                        <paragraph>                        injection for subcutaneous use</paragraph>
+                        <paragraph/>
+                        <paragraph>    Each Dawnzera autoinjector contains 80 mg donidalorsen 
+  <br/>                            (equivalent to 84 mg donialorsen sodium) 
+  <br/>                   Store refrigerated at 2ºC to 8ºC (36ºC to 46ºC) 
+  <br/>                                                     in the original container
+ </paragraph>
+                        <paragraph/>
+                        <paragraph>Distributed by:                            NDC71860-103-01 
+  <br/>  Ionis Pharmaceuticals Inc. 
+  <br/>  2855 Gazelle Ct, Carlsbad, CA 92010, 
+  <br/>  United States                                             
+ 
+  <content styleCode="bold">   IONIS</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">
+                              <renderMultiMedia referencedObject="L1182ac81-1f1a-4075-9e4f-be5708c703aa"/>
+                           </content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20250829"/>
+                     <component>
+                        <observationMedia ID="L1182ac81-1f1a-4075-9e4f-be5708c703aa">
+                           <text>Autoinjector Label</text>
+                           <value mediaType="image/jpeg" xsi:type="ED">
+                              <reference value="Dawnzera_ 80mg_label.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

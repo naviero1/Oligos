@@ -1,0 +1,621 @@
+
+ pmc Hemasphere Hemasphere 3722 hemasphere 101740619 HEM3 HemaSphere 2572-9241 Wiley PMC13146349 PMC13146349.1 13146349 13146349 42100790 10.1002/hem3.70376 HEM370376 1 Thrombosis and Hemostasis Article Article Fitusiran treatment modulates the ratio between alpha‐ and beta‐antithrombin isoforms McCluskey Geneviève 
+ 1 
+ ^ 
+ Maynadié Hortense 
+ 1 
+ 2 
+ ^ 
+ Borgel Delphine 
+ 1 
+ 3 
+ Frenzel Laurent 
+ 4 
+ Harroche Annie 
+ 5 
+ Bianchini Elsa 
+ 1 
+ Roullet Stephanie 
+ 1 
+ 6 
+ Christophe Olivier D. 
+ 1 
+ Denis Cecile V. 
+ 1 
+ 7 
+ Casari Caterina 
+ 1 
+ Lenting Peter J. https://orcid.org/0000-0002-7937-3429 
+ 1 
+ peter.lenting@inserm.fr 
+ 1 
+ INSERM, Hémostase Inflammation Thrombose HITh U1176 
+ Université Paris‐Saclay 
+ Le Kremlin‐Bicêtre 
+ France 
+ 2 
+ Centre de Référence de l'Hémophilie et des Maladies Hémorragiques Constitutionnelles rares, Hôpital Bicêtre AP‐HP 
+ Université Paris‐Saclay 
+ Le Kremlin‐Bicêtre 
+ France 
+ 3 
+ Service d'Hématologie Biologique 
+ Hôpital Necker Enfants Malades AP‐HP 
+ Paris 
+ France 
+ 4 
+ Service d'Hématologie Adulte 
+ Hôpital Necker Enfants Malades AP‐HP 
+ Paris 
+ France 
+ 5 
+ Centre de Traitement de l'Hémophilie, AP‐HP, Hôpital Necker Enfants Malades 
+ Paris 
+ France 
+ 6 
+ Service d'Anesthésie‐Réanimation 
+ Hôpital Paul Brousse, AP‐HP 
+ Villejuif 
+ France 
+ 7 
+ Centre Hospitalier Régional Universitaire de Nancy 
+ Nancy 
+ France 
+ * 
+ Correspondence: Peter J. Lenting ( peter.lenting@inserm.fr ) 
+ ^ Geneviève McCluskey and Hortense Maynadié contributed equally to this study. 06 5 2026 5 2026 10 5 512562 10.1002/hem3.v10.5 e70376 
+ 01 4 2026 
+ 04 3 2026 
+ 06 4 2026 
+ 06 05 2026 07 05 2026 31 07 2026 © 2026 The Author(s). HemaSphere published by John Wiley & Sons Ltd on behalf of European Hematology Association. https://creativecommons.org/licenses/by-nc-nd/4.0/ This is an open access article under the terms of the http://creativecommons.org/licenses/by-nc-nd/4.0/ License, which permits use and distribution in any medium, provided the original work is properly cited, the use is non‐commercial and no modifications or adaptations are made. Abstract Antithrombin (AT) circulates as two distinct isoforms, alpha‐ and beta‐AT, which differ in their glycosylation profiles; alpha‐AT is fully glycosylated at positions Asn 128 , Asn 167 , Asn 187 , and Asn 224 , whereas beta‐AT lacks Asn 167 glycosylation. The ratio of alpha‐AT/beta‐AT is approximately 9:1 in plasma, with beta‐AT being a stronger inhibitor due to its increased affinity for heparin. Post‐transcriptional silencing of AT via fitusiran has been shown to efficiently ameliorate the hemostatic balance in hemophilia. In this study, we analyzed if and how fitusiran affected the distribution of alpha‐AT and beta‐AT. Using different experimental approaches (isoform‐specific activity, antigen, and immunoprecipitation assays), we were able to distinguish beta‐AT and alpha‐AT. Fitusiran treatment reduced the total AT activity to less than 20% of normal in both F8 
+ −/− ‐mice and hemophilia A patients. Compared to controls, a 3.8‐ and 3.3‐fold increase in the amount of beta‐AT activity relative to residual total AT activity was detected in F8 
+ −/− ‐mice and fitusiran‐treated patients, respectively (P < 0.0001). Furthermore, the ratio of beta‐AT/total AT antigen levels increased 1.8‐fold in the human patient samples (from 0.09 ± 0.03 to 0.16 ± 0.01; P = 0.003), which coincided with an increased intensity of the beta‐AT band detected in immunoprecipitation assays. It is noteworthy that this increase in the beta‐AT/total AT ratio significantly increased its anticoagulant potential. Finally, we measured beta‐AT/total AT ratios also in unrelated pathologies: congenital AT deficiency and advanced liver cirrhosis. Both conditions were also associated with an up to twofold higher ratio of beta‐AT/total AT. Altogether, our results demonstrate that reduced AT production modulates the ratio between beta‐AT and alpha‐AT. 
+ Sanofi Genzyme 
+ [[TABLE]] pmc-status-qastatus 0 pmc-status-live yes pmc-status-embargo no pmc-status-released yes pmc-prop-open-access yes pmc-prop-olf no pmc-prop-manuscript no pmc-prop-legally-suppressed no pmc-prop-has-pdf yes pmc-prop-has-supplement no pmc-prop-pdf-only no pmc-prop-suppress-copyright no pmc-prop-is-real-version no pmc-prop-is-scanned-article no pmc-prop-preprint no pmc-prop-in-epmc yes pmc-license-ref CC BY-NC-ND source-schema-version-number 2.0 cover-date May 2026 details-of-publishers-convertor Converter:WILEY_ML3GV2_TO_JATSPMC version:6.8.4 mode:remove_FC converted:30.07.2026 INTRODUCTION Antithrombin (AT) is a plasma glycoprotein belonging to the serine proteinase inhibitor (Serpin) family, and is encoded by the SERPINC1 gene. It inactivates several enzymes of the coagulation system, with thrombin and activated factor X (FXa) being the most prominent targets. 
+ 1 
+ Its physiological relevance is illustrated by the increased thrombotic risk that is associated with reduced levels of AT. 
+ 2 
+ Hepatocytes are the main source of AT, which circulates at plasma concentrations of 150 μg/mL (2.6 μM, assuming a molecular weight of 58 kDa). 
+ 3 
+ , 
+ 4 
+ AT contains four potential N‐linked glycosylation sites at positions Asn 128 , Asn 167 , Asn 187 , and Asn 224 . 
+ 5 
+ Positions Asn 128 , Asn 187 , and Asn 224 are part of the Asn–Xxx–Thr consensus motif for N‐linked glycosylation (where Xxx may be any amino acid except Pro), whereas Asn 167 is included in the Asn–Xxx–Ser motif. Asn–Xxx–Thr sequons are generally glycosylated more efficiently (up to threefold) than Asn–Xxx–Ser motifs. 
+ 6 
+ It is not surprising therefore that two glyco‐isoforms of AT can be found in plasma 
+ 5 
+ : First, alpha‐AT, which is fully glycosylated at positions Asn 128 , Asn 167 , Asn 187 , and Asn 224 , and second, beta‐AT, which contains N‐linked glycans at positions Asn 128 , Asn 187 , and Asn 224 , with Asn 167 being unoccupied. The lack of glycosylation at Asn 167 results in a smaller protein (56 kDa vs. 58 kDa). 
+ 7 
+ In addition, beta‐AT displays 5–10‐fold higher affinity for heparin compared to alpha‐AT, resulting in a 2‐fold higher anti‐FXa activity when heparin availability is limited. 5 , 8 , 9 , 10 The increased affinity for heparin can be used to distinguish between alpha‐AT and beta‐AT in adapted activity assays. Whereas under physiological conditions, both alpha‐AT and beta‐AT will contribute to its activity in the presence of heparin, this changes under high‐salt conditions (0.8–1 M NaCl). Under these conditions, heparin binding to alpha‐AT is impaired, and so alpha‐AT contributes only to a minor extent to the measured AT activity. 
+ 11 
+ Alpha‐AT and beta‐AT also differ in their biodistribution. Whereas the ratio of alpha‐AT/beta‐AT is approximately 9:1 in plasma, this ratio seems to be more equilibrated when both isoforms are complexed with proteoglycans at the vascular wall or in the subendothelium. 
+ 12 
+ Isolated reduced AT levels are associated with an increased risk of thrombosis. However, a combined deficiency of AT and coagulation factor VIII (FVIII) or IX (FIX) has been shown to enhance thrombin generation and to be associated with decreased bleeding tendency. 13 , 14 , 15 These observations have led to the development of rebalancing agents, which target anticoagulant proteins in order to restore the hemostatic balance in FVIII or FIX deficiency. An example hereof is fitusiran, a small interfering RNA (siRNA) that mediates post‐transcriptional silencing of AT. Lower AT concentrations result in increased thrombin generation in hemophilia patients, thereby compensating for the deficiency of factors VIII or IX. 
+ 16 
+ Indeed, three completed phase 3 studies have shown the clinical benefit of fitusiran in hemophilia A and B patients, with or without inhibitors. 17 , 18 , 19 
+ During fitusiran treatment, residual AT activity levels are targeted to be between 15% and 35% of normal. We hypothesized that this reduction in AT levels may not only modulate its anticoagulant capacity but also the ratio between alpha‐AT and beta‐AT. This is relevant, as an excess of heparin is used in routine assays, overshadowing the higher inhibitory activity of beta‐AT. In vivo, however, heparin and heparan sulfate are present in limited amounts, suggesting that an increased ratio of beta‐AT/alpha‐AT may provide a higher antithrombotic potential than anticipated from in vitro activity assays. In this study, we therefore analyzed if and how the ratio of alpha‐AT and beta‐AT in plasma is affected upon fitusiran treatment. Our results demonstrate that fitusiran treatment modulates the ratio between alpha‐AT and beta‐AT isoforms. MATERIALS AND METHODS Ethics statement Animal housing and experiments were performed in accordance with French regulations and the experimental guidelines of the European Community. This project was approved by the local ethical committee of Université Paris‐Saclay (Comité d'Ethique en Expérimentation Animale n°26, protocol APAFIS#39643‐2022120117122791‐v4). Samples from fitusiran‐treated severe hemophilia A patients and from patients with AT deficiency were obtained as part of routine care of these patients at the Necker Hospital, with excess being stored for research (The Hôpital Necker's hemophilia bio‐library/Necker Biobank, registration number: DC‐2009‐955). Four hemophilia A patients were included in this study, and samples were obtained at 6‐month intervals. No thrombotic events occurred in these patients. Samples from patients with liver cirrhosis and controls were obtained as part of an observational study ( NCT06050993 ), which was conducted over an 8‐month period (April 2024 to January 2025) at the Hepato‐Biliary Centre of Paul Brousse Hospital (AP‐HP, Université Paris‐Saclay). No thrombotic events were observed in these patients. The protocol was approved by the institutional ethics committee (Comité de Protection des Personnes Sud‐Méditerranée III, 2023‐A00064‐41, April 20, 2023). Informed consent was obtained from all participants in accordance with the Declaration of Helsinki. Fitusiran treatment regime in the mouse model Fitusiran (Sanofi‐Aventis, Gentilly, France) was administered subcutaneously twice to FVIII‐deficient mice ( F8 
+ −/− ‐mice) at a dose of 10 mg/kg at a 1‐week interval to achieve AT levels similar to those in humans. AT levels were measured in plasma samples obtained 7 days after the second injection. Fitusiran targets a sequence in AT mRNA that is identical for humans and mice. Blood sampling in mice Blood samples were taken via retro‐orbital puncture from isoflurane‐anesthetized mice. Blood was collected in citrate (1 vol 0.138 M citrate + 9 vol blood) for activity, thrombin generation, and immunoprecipitation assays. Tail vein transection model The tail vein transection (TVT) model was applied as previously described. 
+ 20 
+ The post‐incision observation time was set at 45 min. Saphenous vein puncture model The saphenous vein puncture (SVP) model was developed as described elsewhere. 
+ 21 
+ Under observation with an operating microscope, the saphenous vein was exposed, and the initial injury was inflicted by puncturing the saphenous vein with a 23‐gauge needle. Once hemostasis occurred, the injury was enlarged using micro‐scissors. When the bleeding ceased, the formed clot was physically dislodged with a humified compress to reinitiate bleeding. The total number of clots formed (hemostatic events) within a 30‐min period was recorded. In this model, higher numbers of reforming clots correspond to better hemostatic control/capacity. Thrombin generation assay Thrombin generation in platelet‐poor murine plasma was measured in a microtiter plate fluorometer according to the method described previously. 
+ 22 
+ Thrombin generation was initiated by the addition of purified factor XIa (125 pM) in the presence of 4 μM phospholipids. In experiments testing the influence of the beta‐AT/alpha‐AT ratio, human AT‐deficient plasma was rendered FVIII‐deficient by incubating for 1 h at 37°C with the monoclonal human anti‐FVIII antibody BO2C11 at 1 µg/mL. Different ratios of AT isoforms alpha/beta‐AT were then added, 90/10, 80/20, and 70/30 (alpha‐AT/beta‐AT), at a final concentration of 20 µg/mL, to match that of fitusiran‐treated patients. AT activity Plasma was diluted 1/40, before the addition of human FXa (Cryopep, Montpellier, France, cat# 9‐HCXA‐0060) and heparin pentasaccharide (fondaparinux, obtained from Viatris, Paris, France) to a final concentration of 0.1 and 10 µg/mL, respectively, and incubated for 7 min at 37°C. The substrate pNAPEP‐1065 (Cryopep; cat# 61011065) specific to FXa was added to a final concentration of 0.5 mM for 7 min at 37°C, before stopping the reaction with 20% acetic acid. Absorbance was read at 405 nm. AT activity in physiological or “low”‐salt conditions was measured in buffer Tris 50 mM (pH 7.4)/NaCl 150 mM/CaCl 2 50 mM/PEG‐8000 0.1%/bovine serum albumin (BSA) 0.1%. High‐salt activity was measured in the same buffer at a concentration of 1.1 M NaCl. Total AT antigen ELISA Total AT antigen was measured using the AT BioAssay ELISA kit according to the manufacturer's instructions (US Biological, Salem, MA; cat# A2298‐19). Beta‐AT antigen ELISA Levels of beta‐AT were measured using the recombinant antibody TPP2009, which was produced in‐house. 
+ 23 
+ TPP2009 binds efficiently to an as yet unidentified epitope in human AT, but is unable to bind murine AT. In brief, wells were coated with 2 µg/mL TPP2009 in carbonate buffer (pH 9.8) overnight at 4°C. Wells were then blocked with phosphate‐buffered saline (PBS)/Tween‐20 0.1% (PBST) supplemented with BSA 1% for 90 min at 37°C. Fitusiran‐treated patient samples were diluted 1/160‐1/320‐1/640 and healthy controls were diluted 1/640‐1/1280‐1/2560 in PBST, and preincubated with fondaparinux 50 µg/mL. Samples were added for 90 min at 37°C, before washing the plate four times in PBST. Bound beta‐AT was probed using peroxidase‐labeled polyclonal anti‐AT antibody (US Biological Lifesciences), added for 1 h at 37°C, and detected via hydrolysis of TMB. Immunoprecipitation of AT Plasmas diluted 1/200 were incubated for 1 h at 4°C with 50 µL of protein G‐Dynabeads (Invitrogen, Sain‐Aubin, France; cat# 10004D) to remove immunoglobulins. Protein G‐beads (50 µL) were incubated with 3 µg of polyclonal rabbit anti‐AT antibodies (Abcam, Paris, France; cat# ab79934) or normal rabbit IgG (Merck, Fontenay‐sous‐Bois, France; cat# 12‐370) in 200 µL of PBST and incubated while rotating for 30 min at room temperature. The beads were washed in PBST once, before adding the samples for 1 h at 4°C. Beads were washed 5 times with PBST, before eluting the antigen with 18 µL 2× Laemmli‐buffer supplemented with 2 μL of dithiothreitol. Purified alpha‐AT and beta‐AT were used at concentrations of 1.7 µg/mL. Alpha‐AT was purified from plasma using heparin‐sepharose as described. 
+ 24 
+ Recombinant beta‐AT (containing the p.Asn 167 Gln mutation) was produced in HEK293 cells and purified via heparin‐sepharose as described previously. 
+ 25 
+ Western blot Nitrocellulose membranes were incubated overnight at 4°C with polyclonal rabbit anti‐AT antibodies (Abcam; cat# ab79934). After washing three times for 7 min in PBST, AT was probed with peroxidase‐labeled polyclonal anti‐rabbit antibodies (1 h at room temperature) and detected using the Supersignal west pico PLUS chemiluminescent substrate (ThermoScientific, Asnières‐sur‐Seine, France; cat# 34580). Bands were visualized using the Azure‐300 chemiluminescent imaging system (Azure Biosystems, Dublin, CA). Diluted prothrombin time AT‐deficient plasma was rendered FVIII‐deficient by incubating for 1 h at 37°C with the monoclonal human anti‐FVIII antibody BO2C11 antibody at 1 µg/mL. Different ratios of AT isoforms alpha/beta‐AT were then added, 100/0, 90/10, 80/20, 70/30, and 0/100 (alpha‐AT/beta‐AT), at a final concentration of 20 µg/mL, to match that of fitusiran‐treated patients. Unfractionated heparin was added at a final concentration of 0.1 IU/mL to the plasma mixes. Subsequently, on the StatClot (Stago, Asnières‐Sur‐Seine, France), 50 µL of plasma/AT/heparin mix was incubated at 37°C with Neoplastine (Stago, Asnières‐Sur‐Seine, France, cat#00 665) diluted 1/4000 for 240 s. Clotting was instigated and time was measured after the addition of 50 µL of 0.025 M CaCl 2 . Hepatocyte cell culture Primary hepatocytes (Thermo Fisher Scientific, Madrid, Spain, cat# COA_HMCPTS_Hu8450_2) were thawed and seeded according to the manufacturer's protocols at 0.8 × 10 6 cells/mL in collagen‐coated 24‐well plates (Thermo Fisher Scientific, Madrid, Spain, cat# A11428‐02) in William's E medium (Thermo Fisher Scientific, cat# A1217601) with maintenance supplements (Thermo Fisher Scientific, cat# CM4000) that was refreshed daily. Cells were treated with fitusiran at Day 3 (1 μg/0.8 × 10 6 cells) for 8 h. After washing, the supernatant was analyzed for AT production after 4 days. Statistical analysis All data are presented as mean ± standard deviation (mean ± SD) unless indicated otherwise. Number ( n ) refers to the number of independent experiments or animals. The statistical analysis was performed using Prism10 software for Mac (GraphPad, La Jolla, CA). One‐way analysis of variance (1‐way ANOVA), followed by Tukey's or Dunnett's multiple comparison test, was performed to compare multiple groups. Pairwise analysis was performed using an unpaired Student's t ‐test, with Welch correction where appropriate. RESULTS Fitusiran treatment increases thrombin generation in F8 −/− 
+ ‐mice In a first series of experiments, different doses and dosing regimens of fitusiran were tested to achieve residual AT levels within the recommended therapeutic range for patients. We finally applied a protocol in which F8 
+ −/− ‐mice were injected with two doses of fitusiran (10 mg/kg) at a 1‐week interval. AT activity was 97% ± 11% in vehicle‐treated mice and decreased to 17% ± 3% in fitusiran‐treated mice 7 days after the second dosing (P < 0.0001). Samples obtained from vehicle‐ and fitusiran‐treated mice were then analyzed for their thrombin‐generating capacity. In comparison to vehicle‐treated mice, fitusiran‐treated mice had a markedly increased endogenous thrombin potential (ETP) (709 ± 483 nM vs. 2000 ± 574 nM, P < 0.0001; Figure  1A ) and peak thrombin (29 ± 25 nM vs. 56 ± 17 nM, P = 0.017; Figure  1B ). In addition, we observed a significant correlation between peak thrombin generation and residual AT levels ( r  = −0.41, P = 0.0002; Figure  1C ), as well as one between ETP and AT activity ( r  = −0.49, P < 0.0001; Figure  1D ), on combining several doses and dose frequencies that were tested. These data show that a fitusiran‐induced decrease in AT activity is associated with increased thrombin generation in F8 
+ −/− ‐mice. Figure 1 
+ Effect of fitusiran treatment on thrombin generation and bleeding tendency in F8 
+ −/− 
+ ‐mice. (A, B) 
+ F8 
+ −/− ‐mice received two doses of vehicle (blue circles) or fitusiran (FIT; 10 mg/kg; red circles) at a 1‐week interval. Seven days after the second dose, plasma samples were prepared for thrombin generation analysis. Endogenous thrombin potential (ETP; A) and thrombin peak (B) were determined. (C, D) During protocol development, different doses and dosing intervals were tested. Plasmas were tested for residual antithrombin (AT) activity and thrombin generation. The correlation between residual AT levels versus ETP (C) or thrombin peak (D) is presented. (E, F) 
+ F8 
+ −/− ‐mice received two doses of vehicle (blue circles) or fitusiran (10 mg/kg; red circles) at a 1‐week interval. Seven days after the second dose, the tail vein transection bleeding model was applied. During a 45‐min observation period, periods of bleeding (black) and bleeding arrest (white) were noted (E) . The amount of blood shed during these 45 min was determined for both vehicle‐treated F8 
+ −/− ‐mice (F; blue circles) and fitusiran‐treated F8 
+ −/− ‐mice (F; FIT; red circles). (G) After a similar treatment schedule as that shown for (E) and (F), a saphenous vein puncture model was performed. The number of clots generated over a 30‐min period was noted for vehicle‐treated F8 
+ −/− ‐mice (blue circles) and fitusiran‐treated F8 
+ −/− ‐mice (FIT; red circles). For all panels, each data point represents an individual mouse. Statistical analysis was performed using a Student's unpaired t ‐test. Welch correction was applied where appropriate. Fitusiran treatment results in increased in vivo hemostasis in F8 −/− 
+ ‐mice We next examined the effect of fitusiran treatment on the hemostatic response in vivo. For this, we used two distinct bleeding models: the TVT model and the SVP model, with the former being less severe than the latter. 
+ 26 
+ In the TVT assay, spontaneous rebleeds were observed in two out of six fitusiran‐treated mice, compared to four out of four vehicle‐treated mice (Figure  1E ). Fitusiran‐treated mice lost significantly less blood than vehicle‐treated mice (158 ± 225 μL vs. 688 ± 95 µL; P = 0.0095; Figure  1F ). Regarding the SVP model, the main readout is the number of clots formed over a 30‐min observation period, with a better hemostatic profile resulting in the formation of more clots. In fitusiran‐treated mice, 8 ± 5 clots formed over the 30‐min period, whereas only 1 ± 1 clots formed in vehicle‐treated mice (P < 0.0001, Figure  1G ). Thus, fitusiran treatment efficiently promotes hemostasis in F8 
+ −/− ‐mice, making it a valid model to further explore the impact of fitusiran on the levels of alpha‐AT and beta‐AT. Fitusiran correlates with an increase in beta‐AT activity in F8 −/− 
+ ‐mice To determine whether fitusiran treatment affects plasma levels of the AT isoforms in fitusiran‐treated mice, AT activity was measured under physiological salt conditions (which measures both alpha‐ and beta‐AT activity) and high‐salt conditions (which measures predominantly beta‐AT activity). Relative to the plasma reference (plasma pool of 20 C57Bl/6 wild‐type mice), AT activities of vehicle‐ and fitusiran‐treated F8 
+ −/− ‐mice under low‐salt conditions were 97% ± 11% and 17% ± 3%, respectively (P < 0.0001), and 91% ± 17% and 65% ± 28% under high‐salt conditions (Figure  2A,B ). Interestingly, on comparing the relative high/low‐salt ratio for vehicle‐ and fitusiran‐treated mice, we observed that it was significantly increased in the fitusiran‐treated mice (1.0 ± 0.2 vs. 3.8 ± 1.1; P < 0.0001; Figure  2C ). Since this may be indicative of higher relative beta‐AT activity after fitusiran treatment, we attempted to visualize this in non‐quantitative immunoprecipitation experiments. These experiments indeed revealed that the AT band corresponding to beta‐AT was more pronounced in samples from fitusiran‐treated mice compared to those of vehicle‐treated mice (Figure  2D ). Apparently, fitusiran treatment is associated with a higher proportion of beta‐AT in circulation. Figure 2 
+ Residual antithrombin (AT) activity in fitusiran‐treated F8 
+ −/− 
+ ‐mice. 
+ F8 
+ −/− ‐mice received two doses of vehicle (blue circles) or fitusiran (FIT; 10 mg/kg; red circles) at a 1‐week interval. Seven days after the second dose, plasma samples were prepared, and AT activity under conditions of low salt (A) or high salt (B) was measured. The residual activity is presented as the percentage of activity in normal pooled mouse plasma (NPP). (C) The ratio of residual activity under high‐ and low‐salt conditions is presented for vehicle‐treated F8 
+ −/− ‐mice (blue circles) and fitusiran‐treated F8 
+ −/− ‐mice (FIT; red circles). (D) Normal pooled mouse plasma (mNPP) and plasma from fitusiran‐treated F8 
+ −/− ‐mice (FIT) were incubated with polyclonal anti‐AT antibodies coupled onto sepharose beads. Bound proteins were collected into SDS‐PAGE sample buffer and used for Western blotting. AT bands were visualized using polyclonal anti‐AT antibodies. Molecular weight markers are indicated on the left (65 and 50 kDa). Both alpha‐AT and beta‐AT bands are indicated. Statistical analysis was performed using a Student's unpaired t ‐test. Welch correction was applied where appropriate. Relative increase of beta‐AT over alpha‐AT in fitusiran‐treated patients This unexpected finding prompted us to explore whether a similar redistribution of alpha‐AT and beta‐AT was also present in plasma of hemophilia A patients treated with fitusiran. Therefore, their plasma was tested in several assays. First, in the physiological salt activity assay, the mean residual anti‐Xa AT activity of the patients was 14% ± 2% (21 ± 3 μg/mL) compared to 100% ± 10% (150 ± 15 μg/mL) in controls (P < 0.0001; Figure  3A ). Total antigen levels were 9% ± 1% (13 ± 2 µg/mL) versus 100% ± 22% (150 ± 32 µg/mL) in controls (P < 0.0001; Figure  3B ). This resulted in a small though significant increase in the total activity/antigen ratio for AT in fitusiran‐treated patients versus controls (1.6 ± 0.2 vs. 1.0 ± 0.2 for patients and controls, respectively; P = 0.0002; Figure  3C ), suggesting that the AT in circulation may have higher potency following fitusiran treatment. To establish whether this higher potency was due to a relative increase of beta‐AT, we tested the plasma AT activity also under high‐salt conditions. Relative to normal pooled human plasma, beta‐AT activity was 111% ± 11% in control plasma samples versus 45% ± 11% in samples from fitusiran‐treated patients (Figure  4A ). Combined with the activity levels determined under low‐salt conditions, this resulted in high/low‐salt ratios of 1.1 ± 0.1 in controls versus 3.3 ± 0.8 in fitusiran‐treated patients (P = 0.0002; Figure  4B ). Figure 3 
+ Residual antithrombin (AT) activity and antigen in fitusiran‐treated hemophilia A patients. Plasma samples of healthy controls (blue circles) and fitusiran‐treated hemophilia A patients (red circles) were analyzed for AT activity under conditions of low salt (A) and AT antigen (B) . The residual activity or antigen is presented as the percentage of activity in normal human plasma (NHP). (C) The ratio of residual activity over antigen is presented. Each symbol represents a single individual. Statistical analysis was performed using a Student's unpaired t ‐test. Welch correction was applied where appropriate. Figure 4 
+ Residual beta‐antithrombin (AT) levels in fitusiran‐treated hemophilia A patients. (A) Plasma samples of healthy controls (blue circles) and fitusiran‐treated hemophilia A patients (red circles) were analyzed for AT activity under conditions of high salt. The residual activity is presented as the percentage of activity in normal pooled human plasma (NHP). (B) Ratios of high‐salt activity over low‐salt activity (data obtained from Figure  3A ) were calculated for controls (red circles) and fitusiran‐treated hemophilia A patients (red circles). (C) Beta‐AT antigen levels were measured using the beta‐AT‐specific antibody TPP2009 in plasma of controls and (red circles) and fitusiran‐treated hemophilia A patients (red circles). Purified recombinant beta‐AT was used as a reference. (D) The ratio of beta‐AT antigen over total AT antigen (data obtained from Figure  3B ) was calculated for controls (red circles) and fitusiran‐treated hemophilia A patients (red circles). To calculate the ratio, antigen values were converted into μg/mL, assuming that 100% AT antigen corresponds to 150 μg/mL. (E) NHP and plasma from fitusiran‐treated hemophilia A patients (FIT1, FIT2, and FIT3) were incubated with polyclonal anti‐AT antibodies coupled onto sepharose beads. Bound proteins were collected into SDS‐PAGE sample buffer and used for Western blotting. AT bands were visualized using polyclonal anti‐AT antibodies. Molecular weight markers are indicated on the left (65 and 50 kDa). Both alpha‐AT and beta‐AT bands are indicated. As control, recombinant beta‐AT was used. Statistical analysis was performed using a Student's unpaired t ‐test. Welch correction was applied where appropriate. The amount of beta‐AT in circulation was also determined in a beta‐AT‐specific ELISA, using the previously described monoclonal antibody TPP2009. 
+ 23 
+ Beta‐AT antigen levels in controls were 12.6 ± 3.4 μg/mL, whereas fitusiran‐treated patients' beta‐AT levels were reduced to 2.0 ± 0.3 μg/mL (P < 0.0001; Figure  4C ). Interestingly, the proportion of beta‐AT relative to total AT antigen in patients was 0.16 ± 0.01 μg/μg, which was significantly higher than that of the controls (0.09 ± 0.03 μg/μg, P = 0.003, Figure  4D ). This further confirms the higher proportion of beta‐AT among AT in circulation in fitusiran‐treated patients. Plasmas from fitusiran‐treated patients were further analyzed in immunoprecipitation assays. Similar to the murine data, there was a significant increase in the lower band representing the beta‐AT isoform (Figure  4E ). Overall, three different experimental approaches all point to a relative increase of the beta‐AT/alpha‐AT ratio in plasma of fitusiran‐treated patients. The AT isoform ratio increases anticoagulation in circulation Given that beta‐AT has a higher anti‐FXa activity compared to alpha‐AT, we wanted to test whether the (relatively small) change in the beta‐AT/alpha‐AT ratio would affect its anticoagulant potential. Different ratios of the isoforms were spiked in AT‐deficient plasma containing an inhibitory anti‐FVIII antibody to achieve residual FVIII activity of <1%, thereby mimicking hemophilia A plasma. No heparin was added to the plasma in order to mimic conditions of limited heparin. Total AT concentrations were 20 μg/mL (similar to the AT concentration in fitusiran‐treated patients), containing only alpha‐AT, and either alpha‐AT in combination with 10%, 20%, or 30% beta‐AT (i.e., 18 + 2 μg/mL alpha‐AT/beta‐AT, 16 + 4 μg/mL alpha‐AT/beta‐AT, and 14 + 6 μg/mL alpha‐AT/beta‐AT, respectively). Subsequently, a diluted prothrombin time assay was performed. Whereas a minor yet statistically insignificant increase in clotting time was observed in the presence of 10% beta‐AT compared to the condition with only alpha‐AT, the clotting time was significantly increased in the presence of 20% and 30% beta‐AT (Figure  5A ). A similar approach was used to analyze different ratios (90/10, 80/20, and 70/30) of alpha‐AT/beta‐AT in the thrombin generation assay. Increasing amounts of beta‐AT were associated with a higher inhibitory potential also in this assay (Figure  5B ). Thus, an increased beta‐AT/alpha‐AT ratio is associated with a more effective anticoagulant response, which becomes particularly relevant at low concentrations of AT and limiting amounts of heparin. Figure 5 
+ Beta‐antithrombin (AT) affects prothrombin clotting time and thrombin generation. AT‐deficient plasma was incubated with an inhibitory anti‐FVIII antibody (residual FVIII activity < 1%) and spiked with different amounts of alpha‐AT and beta‐AT to a final total AT antigen concentration of 20 μg/mL total AT antigen. (A) For the prothrombin clotting time, the following ratios were used: 20 μg/mL alpha‐AT without beta‐AT (0% beta‐AT), 18 μg/mL alpha‐AT + 2 μg/mL beta‐AT (10% beta‐AT), 16 μg/mL alpha‐AT + 4 μg/mL beta‐AT (20% beta‐AT), and 14 μg/mL alpha‐AT + 6 μg/mL beta‐AT (30% beta‐AT). Six independent measurements were performed for each condition. The relative prolongation of the clotting time compared to the 0% beta‐AT condition is presented. Statistical analysis was performed using one‐way analysis of variance (ANOVA) with Tukey's correction for multiple comparisons. (B) For the thrombin generation assay, the following ratios were used: 18 μg/mL alpha‐AT + 2 μg/mL beta‐AT (10% beta‐AT), 16 μg/mL alpha‐AT + 4 μg/mL beta‐AT (20% beta‐AT), and 14 μg/mL alpha‐AT + 6 μg/mL beta‐AT (30% beta‐AT). Three independent measurements were performed for each condition. The relative reduction of the thrombin peak relative to the 10% beta‐AT condition is presented. Fitusiran treatment modulates the synthesis of the isoforms alpha/beta‐AT After establishing that there was a higher proportion of beta‐AT after fitusiran treatment, we explored to what extent fitusiran affects the production of beta‐AT in primary hepatocytes. These cells were incubated with fitusiran (1 μg/0.8 × 10 6 cells) for 8 h. After removing excess of fitusiran, AT production was monitored for 4 days. Total AT antigen expression was reduced by 29% ± 18% (P = 0.0171) relative to vehicle‐treated hepatocytes, whereas beta‐AT antigen production was reduced by 22% ± 15% (P = 0.0126, Figure  6A,B ). This accumulated into a slightly but significantly 1.4‐fold increased beta‐AT/total AT antigen ratio of 0.28 ± 0.06 for fitusiran‐treated cells compared to 0.20 ± 0.02 for vehicle‐treated cells (P = 0.0199; Figure  6C ). Apparently, reduced AT expression is associated with less efficient glycosylation of Asn 167 , thereby modulating the ratio of beta‐AT/total AT that is secreted by hepatocytes. Figure 6 
+ Antithrombin (AT) expression in hepatocytes in the presence of fitusiran. Primary hepatocytes were treated with vehicle (blue symbols) or fitusiran (1 μg/0.8 × 10 6 cells; red symbols) for 8 h. Total AT and beta‐AT antigen production was determined at Day 4, and untreated cells were used as controls. (A) Total AT antigen expression relative to untreated cells. (B) Beta‐AT antigen expression relative to untreated cells. (C) Ratio beta‐AT/total AT antigen (μg/μg). Statistical analysis in (A) – (C) was performed using an unpaired Student's t ‐test. Changes in the beta‐AT/alpha‐AT ratio are also detected in other pathologies Since the change in the beta‐AT/total AT ratio at least in part occurs during synthesis, we hypothesized that this change could also be present in other pathologies (unrelated to hemophilia) that are associated with reduced AT production, such as individuals with impaired liver function or patients with congenital Type 1 AT deficiency. AT activity was determined in two patients of the latter group. AT activity under physiological conditions (low‐salt activity) corresponded to 60.1 μg/mL (40.1%) and 64.0 μg/mL (42.7%), respectively, compared to 150 μg/mL (100%) for normal human plasma (NHP). High‐salt activity levels were 12.9 and 8.8 μg/mL, compared to 12.6 μg/mL in NHP. As such, the ratio of beta‐AT/alpha‐AT was calculated to be 0.22 and 0.14 μg/μg, respectively, a 1.5–2.4‐fold increase compared to NHP. In a second series of experiments, we analyzed samples of non‐hemophilic individuals with different stages of liver cirrhosis: 8 individuals with Child‐Pugh A, 10 individuals with Child‐Pugh B, and 10 individuals with Child‐Pugh C liver cirrhosis. Total AT antigen levels decreased progressively in individuals with advanced liver cirrhosis (172 ± 48, 108 ± 27, and 81 ± 26 µg/mL for Child‐Pugh A, B, and C, respectively; P‐trend < 0.0001; Figure  7A ). Surprisingly, this decrease was not observed for beta‐AT antigen levels (P‐trend = 0.2156; Figure  7B ). Consequently, as cirrhosis was more severe, the beta‐AT/total AT ratio increased from 0.07 ± 0.02 μg/μg in Child‐Pugh A patients to 0.12 ± 0.04 μg/μg in Child‐Pugh C patients (P‐trend = 0.0192; Figure  7C ). In combination with the data obtained from the fitusiran‐treated patients, we noticed an inverse non‐linear correlation between total AT antigen levels and the ratio of beta‐AT/total AT antigen, with the ratio starting to increase when total antigen was reduced to 100 μg/mL or below (Figure  7D ). Figure 7 
+ Increased ratio beta‐antithrombin (AT) antigen over total AT antigen in non‐hemophilic patients. Plasma of patients with different stages of liver cirrhosis (CHILD A: green symbols; CHILD B: blue symbols; and CHILD C: red symbols) was analyzed for total AT antigen (A) (presented as percentage of normal human plasma; NHP) and beta‐AT antigen (B) (presented in μg/mL using purified recombinant beta‐AT as reference). (C) The ratio of beta‐AT antigen over total AT antigen was calculated for each patient. To calculate the ratio, antigen values were converted into μg/mL, assuming that 100% AT antigen corresponds to 150 μg/mL. (D) The ratio of beta‐AT over total AT calculated for cirrhosis patients (using the same color scheme), healthy controls (gray symbols), two antithrombin‐deficient patients (orange symbols), and fitusiran‐treated hemophilia A patients (black symbols) was plotted against total AT. Statistical analysis in (A) – (C) was performed using one‐way analysis of variance (ANOVA) with Tukey's correction for multiple comparisons. For (D) , the Spearman correlation was determined. DISCUSSION Post‐transcriptional silencing of AT via fitusiran has been shown to efficiently ameliorate the hemostatic balance in hemophilia A and B. 17 , 18 , 19 Given that the plasma population of AT consists of two isoforms (alpha‐AT and beta‐AT), it was unclear whether reduction of AT expression would affect the levels of both isoforms in the circulation. Here, we demonstrate that reduced expression of AT changes the relative proportion of beta‐AT from 9% to 16%. Importantly, changes in alpha‐AT/beta‐AT ratios were also found in two other, fully distinct pathologies, that is, congenital AT deficiency and conditions of advanced liver cirrhosis associated with AT deficiency. We initially explored the effect of fitusiran in F8 
+ −/− ‐mice. F8 
+ −/− ‐mice were chosen for two reasons. First, fitusiran is used for the treatment of hemophilia, and second, wild‐type mice do not survive a strong reduction in AT levels. 
+ 16 
+ To mimic the human situation, a dosing schedule was used that resulted in residual AT activity levels of 17% ± 3%, which is within the current target range (15%–35%) recommended for hemophilia patients. 
+ 27 
+ Fitusiran treatment was associated not only with increased thrombin generation but also with a markedly reduced bleeding tendency in two different models: the TVT and the SVP (Figure  1 ). It is noteworthy that the increase in the number of hemostatic events/30 min (1 ± 1 to 8 ± 5) that we observed is within the same range as that previously reported by Sehgal et al. (4 and 12 events/30 min for untreated and fitusiran‐treated mice, respectively). 
+ 16 
+ No correlation was observed between residual total AT activity and the number of clots, probably due to the low number of mice ( n  = 11) and the narrow range of residual AT (all between 10% and 20% of normal). Having validated the activity of fitusiran in the F8 
+ −/− ‐mouse model, we were able to compare the relative presence of alpha‐AT and beta‐AT in both human and murine plasma samples. To this end, we first used an activity‐based approach taking advantage of the different capacities of alpha‐AT and beta‐AT to interact with heparin under physiological and high‐salt conditions. In separate control experiments using purified alpha‐AT and beta‐AT, we noticed that more than 75% of the activity under high‐salt conditions originates from beta‐AT, irrespective of whether activity was measured using normal or reduced AT levels. Our observation is in line with the original publication by de la Morena‐Barrio et al., who found that under high‐salt conditions, plasma‐derived alpha‐AT displays less than 35% residual activity. 
+ 11 
+ In plasma samples from patients and mice treated with fitusiran, the residual AT activity was reduced to a lesser extent in the high‐salt activity assay compared to the physiological (low) salt activity assay (Figures  2 and  4 ). Importantly, the high‐salt/low‐salt activity ratio in human control samples (1.1 ± 0.1) was within the distribution range reported previously (0.8–1.2). 
+ 11 
+ Another common factor between murine and human samples was that increased high‐salt activity coincided with an increase in the intensity of the faster migrating AT band, which was detected in immunoprecipitation assays (Figures  2 and  4 ). The molecular weight of the lower band corresponds to that of beta‐AT, as was confirmed by using recombinant beta‐AT as the control. We would like to emphasize that the immunoprecipitation results are non‐quantitative, as the experimental setup was designed to accumulate residual AT on anti‐AT antibody‐coated beads. Nevertheless, both the activity and the immunoprecipitation assays point to a proportional increase of beta‐AT over alpha‐AT at lower AT concentrations following fitusiran treatment. To validate the potential shift in the beta‐AT/alpha‐AT ratio, we used a monoclonal antibody specific for beta‐AT, that is, TPP2009. This antibody recognizes heparin‐bound beta‐AT but not heparin‐bound alpha‐AT nor free beta‐AT or alpha‐AT. 
+ 23 
+ Using this antibody, we again detected a shift in the ratio of beta‐AT/total AT antigen in the plasma of fitusiran‐treated patients (0.16 ± 0.01 and 0.09 ± 0.03 μg/μg for patients and controls, respectively; Figure  4D ). These data confirm that levels of beta‐AT in the circulation decrease to a lesser extent compared to alpha‐AT upon treatment with fitusiran. The effect of fitusiran treatment was also explored in primary hepatocytes. We observed a slight but significant increase in the relative proportion of beta‐AT, suggesting that at least part of the altered ratio is due to the reduced glycosylation efficiency of Asn 167 during the intracellular processing of AT. To determine whether the altered N ‐glycosylation site occupancy was unique to fitusiran treatment, we analyzed the ratio of beta‐AT/total AT in the plasma of non‐hemophilic patients with other causes of reduced AT expression. First, in two patients with congenital AT deficiency, we observed an increased beta‐AT/alpha‐AT ratio (0.22 and 0.14 vs. 0.09 μg/μg). This ratio was based on the residual activity in the high‐ and low‐salt activity assays, rather than on the beta‐AT antigen measured using the TPP2009 antibody, to exclude any potential influence of mutations in the AT protein on the exposure of the epitope for TPP2009. In contrast, when analyzing plasma AT levels of patients with liver cirrhosis, we opted to use the antigen‐based assays, since a dysbalanced hemostasis system in these patients may affect the AT activity assay. We confirmed that total AT antigen levels were reduced to a different extent, depending on the severity of the cirrhotic condition (Figure  7 ). Interestingly, such a decrease was not observed for beta‐AT. Consequently, the lower the total AT, the higher the ratio of beta‐AT/total AT (Figure  7 ). This was particularly apparent at AT concentrations of 100 μg/mL or below (i.e., ≤67% of normal). It thus seems possible that the association between low AT levels and increased beta‐AT/total AT ratios is a common feature rather than a fitusiran‐related event. For now, we can only speculate as to why Asn 167 is less well glycosylated when AT expression is reduced. Besides AT, plasma levels of other hepatocyte‐derived proteins are also reduced in patients with liver cirrhosis, including transferrin and, to a lesser extent, alpha‐1‐antitrypsin. 
+ 28 
+ , 
+ 29 
+ Interestingly, Hülsmeier and colleagues found that transferrin (containing 2 N‐glycosylation sites) and alpha‐1‐antitrypsin (containing 3 N‐linked glycosylation sites) also displayed reduced occupancy of N‐linked glycosylation sites under these conditions, with transferrin being more prone to under‐glycosylation than alpha‐1‐antitrypsin. 
+ 30 
+ The reduced occupancy of N‐linked glycosylation sites in patients with liver cirrhosis has been proposed to be caused by an impaired glycosylation machinery, akin to that in patients with congenital disorders of glycosylation. 
+ 30 
+ However, in patients with congenital AT deficiency and hemophilia patients treated with fitusiran, the glycosylation pathway is most likely unaffected, suggesting that other mechanisms could play a role. Another potential explanation could be related to the translation velocity of these proteins. Intuitively, one would expect that reduced protein expression would allow for more efficient post‐translational modifications. However, when expression levels of a specific protein are reduced, the ratio of chaperone/protein will increase, allowing faster folding and transition through the ER–Golgi system. 
+ 31 
+ , 
+ 32 
+ Since N‐glycosylation requires the protein to be still partially unfolded, 
+ 33 
+ the time for the oligosaccharyltransferase complex to add N‐glycans to the folding protein will be shortened. Consequently, a small but significant portion (up to 10%) of a specific glycosylation site will no longer be occupied. Additional studies, which are beyond the scope of this study, will be needed to confirm if this mechanism contributes to the reduced occupancy of N‐glycosylation sites in individuals with reduced protein expression. A final consideration is whether the observed shift in ratio is of clinical relevance. Previously, individuals were described in whom Asn 167 was mutated to a Thr, thereby eliminating this glycosylation site. 
+ 34 
+ Despite having low AT levels (below 70%), no venous thrombotic events were apparent in these individuals, confirming that beta‐AT indeed displays efficient anticoagulant activity. Interestingly, this effect seems to be specific to Asn 167 , as mutation of the glycosylation site Asn 224 (p.Asn 224 His) has an opposite effect. Although this AT variant comprises three instead of four glycans like beta‐AT, this variant has reduced AT activity and is associated with early and recurrent thrombosis. 
+ 35 
+ In the fitusiran‐treated patients, the reduction in AT is much more pronounced, but compensated by a lack of procoagulant activity by the tenase complex. In the initial stages of fitusiran's clinical evaluation, a number of thrombotic events were reported, particularly in patients in whom AT levels were persistently below 10%, for whom an odds ratio for thrombotic risk of 5.9 was calculated. 
+ 36 
+ This risk became negligible when residual levels were above 20%. 
+ 36 
+ Accordingly, treatment schedules have been adapted to ensure that residual AT is between 15% and 35%. Under these conditions, we have now observed a proportional increase in the ratio of beta‐AT/total AT. Although this shift seems to be minor, it does have a significant effect in activity assays. Using similar residual AT concentrations (20 μg/mL), we found that the anticoagulant capacity in a diluted PT assay increased by about 20% on changing the alpha‐AT/beta‐AT ratio from 10% to 20% (P = 0.0095; Figure  5 ). In addition, reduced thrombin generation capacity was observed on changing the ratio of alpha‐AT/beta‐AT from 9:1 to 8:2 (Figure  5 ). It should be noted that these differences are detected when using activity assays in which heparin concentrations are limited, similar to conditions that are generally found in vivo. The increased beta‐AT/alpha‐AT ratio may therefore be of relevance to provide sufficient anticoagulant activity, at least, if residual AT levels are maintained above 15% of normal. Another aspect worth considering relates to the functions of AT beyond hemostasis. It has previously been shown that beta‐AT, but not alpha‐AT, dampens inflammatory responses, while it has also been established that thrombotic complications are often linked to inflammatory events. 
+ 37 
+ , 
+ 38 
+ It is conceivable, therefore, that a relative increase in the beta‐AT/alpha‐AT ratio provides a mechanism to decrease inflammatory‐related thrombotic complications. Altogether, our investigation shows that reduced levels of AT have an impact on the ratio of beta‐AT/total AT, with a proportional increase in beta‐AT. This increase is not only detectable via beta‐AT‐specific activity assays but is also reflected in an increased total activity/total antigen ratio (Figure  3 ). Routine clinical monitoring of fitusiran is based on measurement of AT activity, even though there is considerable inter‐laboratory variability. 
+ 39 
+ Despite this variability, quantification of AT activity should be recommended, as AT antigen measurements would underestimate the true AT anticoagulant potential in these patients. AUTHOR CONTRIBUTIONS 
+ Geneviève McCluskey : Investigation; writing—review and editing; writing—original draft; formal analysis. Hortense Maynadié : Investigation; writing—original draft; writing—review and editing; formal analysis. Delphine Borgel : Writing—review and editing; resources. Laurent Frenzel : Writing—review and editing; resources. Annie Harroche : Writing—review and editing; resources. Elsa Bianchini : Writing—review and editing; resources; formal analysis. Stephanie Roullet : Writing—review and editing; resources. Olivier D. Christophe : Writing—review and editing; supervision; formal analysis. Cecile V. Denis : Writing—review and editing; project administration; formal analysis; supervision; conceptualization. Caterina Casari : Conceptualization; writing—review and editing; formal analysis; supervision. Peter J. Lenting : Conceptualization; funding acquisition; writing—original draft; writing—review and editing; formal analysis; supervision. CONFLICT OF INTEREST STATEMENT P.J.L. received research support to the institute from Sanofi for this study. The remaining authors declare no competing financial interests. ETHICS STATEMENT Animal housing and experiments were performed in accordance with French regulations and the experimental guidelines of the European Community. This project was approved by the local ethical committee of Université Paris‐Saclay (Comité d'Ethique en Expérimentation Animale n°26, protocol APAFIS#39643‐2022120117122791‐v4). Samples from fitusiran‐treated severe hemophilia A patients and from patients with antithrombin deficiency were obtained as part of routine care of these patients at the Necker Hospital, with excess being stored for research (The Hôpital Necker's hemophilia bio‐library/Necker Biobank, registration number: DC‐2009‐955). Four hemophilia A patients were included in this study, and samples were obtained at 6‐month intervals. No thrombotic events occurred in these patients. Samples from patients with liver cirrhosis and controls were obtained as part of an observational study ( NCT06050993 ), which was conducted over an 8‐month period (April 2024 to January 2025) at the Hepato‐Biliary Centre of Paul Brousse Hospital (AP‐HP, Université Paris‐Saclay). No thrombotic events were observed in these patients. The protocol was approved by the institutional ethics committee (Comité de Protection des Personnes Sud‐Méditerranée III, 2023‐A00064‐41, April 20, 2023). Informed consent was obtained from all participants in accordance with the Declaration of Helsinki. FUNDING This work was supported by Sanofi Genzyme. ACKNOWLEDGMENTS The authors thank the Institut Biomédical du Val‐de‐Bièvre (IBVB‐ UMS44) for technical and facility support. DATA AVAILABILITY STATEMENT The data that support the findings of this study are available from the corresponding author upon reasonable request. REFERENCES 1 
+ Jin 
+ L 
+ , 
+ Abrahams 
+ JP 
+ , 
+ Skinner 
+ R 
+ , 
+ Petitou 
+ M 
+ , 
+ Pike 
+ RN 
+ , 
+ Carrell 
+ RW 
+ . The anticoagulant activation of antithrombin by heparin . Proc Natl Acad Sci . 1997 ; 94 ( 26 ): 14683 ‐ 14688 . 9405673 
+ 10.1073/pnas.94.26.14683 PMC25092 2 
+ Lijfering 
+ WM 
+ , 
+ Brouwer 
+ JLP 
+ , 
+ Veeger 
+ NJGM 
+ , et al. Selective testing for thrombophilia in patients with first venous thrombosis: results from a retrospective family cohort study on absolute thrombotic risk for currently known thrombophilic defects in 2479 relatives . Blood . 2009 ; 113 ( 21 ): 5314 ‐ 5322 . 19139080 
+ 10.1182/blood-2008-10-184879 3 
+ Léon 
+ M 
+ , 
+ Aiach 
+ M 
+ , 
+ Coezy 
+ E 
+ , 
+ Guennec 
+ JY 
+ , 
+ Fiessinger 
+ JN 
+ . Antithrombin III synthesis in rat liver parenchymal cells . Thromb Res . 1983 ; 30 ( 4 ): 369 ‐ 375 . 6612676 
+ 10.1016/0049-3848(83)90228-1 4 
+ Conard 
+ J 
+ , 
+ Brosstad 
+ F 
+ , 
+ Lie Larsen 
+ M 
+ , 
+ Samama 
+ M 
+ , 
+ Abildgaard 
+ U 
+ . Molar antithrombin concentration in normal human plasma . Haemostasis . 1983 ; 13 ( 6 ): 363 ‐ 368 . 6667903 
+ 10.1159/000214823 5 
+ Peterson 
+ CB 
+ , 
+ Blackburn 
+ MN 
+ . Isolation and characterization of an antithrombin III variant with reduced carbohydrate content and enhanced heparin binding . J Biol Chem . 1985 ; 260 ( 1 ): 610 ‐ 615 . 3965464 
+ 6 
+ Kasturi 
+ L 
+ , 
+ Eshleman 
+ JR 
+ , 
+ Wunner 
+ WH 
+ , 
+ Shakin‐Eshleman 
+ SH 
+ . The hydroxy amino acid in an Asn‐X‐Ser/Thr sequon can influence N‐linked core glycosylation efficiency and the level of expression of a cell surface glycoprotein . J Biol Chem . 1995 ; 270 ( 24 ): 14756 ‐ 14761 . 7782341 
+ 10.1074/jbc.270.24.14756 7 
+ Aguila 
+ S 
+ , 
+ Martinez‐Martinez 
+ I 
+ , 
+ Dichiara 
+ G 
+ , et al. Increased N‐glycosylation efficiency by generation of an aromatic sequon on N135 of antithrombin . PLoS One . 2014 ; 9 ( 12 ): e114454 . 25485983 
+ 10.1371/journal.pone.0114454 PMC4259341 8 
+ Turko 
+ IV 
+ , 
+ Fan 
+ B 
+ , 
+ Gettins 
+ PGW 
+ . Carbohydrate isoforms of antithrombin variant N135Q with different heparin affinities . FEBS Lett . 1993 ; 335 ( 1 ): 9 ‐ 12 . 8243674 
+ 10.1016/0014-5793(93)80429-x 9 
+ Turk 
+ B 
+ , 
+ Brieditis 
+ I 
+ , 
+ Bock 
+ SC 
+ , 
+ Olson 
+ ST 
+ , 
+ Björk 
+ I 
+ . The oligosaccharide side chain on Asn‐135 of α‐antithrombin, absent in β‐antithrombin, decreases the heparin affinity of the inhibitor by affecting the heparin‐induced conformational change . Biochemistry . 1997 ; 36 ( 22 ): 6682 ‐ 6691 . 9184148 
+ 10.1021/bi9702492 10 
+ Picard 
+ V 
+ , 
+ Ersdal‐Badju 
+ E 
+ , 
+ Bock 
+ SC 
+ . Partial glycosylation of antithrombin III asparagine‐135 is caused by the serine in the third position of its N‐glycosylation consensus sequence and is responsible for production of the beta‐antithrombin III isoform with enhanced heparin affinity . Biochemistry . 1995 ; 34 ( 26 ): 8433 ‐ 8440 . 7599134 
+ 10.1021/bi00026a026 11 
+ de la Morena‐Barrio 
+ ME 
+ , 
+ García 
+ A 
+ , 
+ Martínez‐Martínez 
+ I 
+ , et al. A new method to quantify β‐antithrombin glycoform in plasma reveals increased levels during the acute stroke event . Thromb Res . 2015 ; 136 ( 3 ): 634 ‐ 641 . 26186963 
+ 10.1016/j.thromres.2015.06.039 12 
+ Witmer 
+ MR 
+ , 
+ Hatton 
+ MW 
+ . Antithrombin III‐beta associates more readily than antithrombin III‐alpha with uninjured and de‐endothelialized aortic wall in vitro and in vivo . Arterioscler Thromb . 1991 ; 11 ( 3 ): 530 ‐ 539 . 2029494 
+ 10.1161/01.atv.11.3.530 13 
+ Shetty 
+ S 
+ , 
+ Vora 
+ S 
+ , 
+ Kulkarni 
+ B 
+ , et al. Contribution of natural anticoagulant and fibrinolytic factors in modulating the clinical severity of haemophilia patients . Br J Haematol . 2007 ; 138 ( 4 ): 541 ‐ 544 . 17659055 
+ 10.1111/j.1365-2141.2007.06693.x 14 
+ Di Micco 
+ B 
+ , 
+ Caen 
+ J 
+ , 
+ Colonna 
+ G 
+ , et al. Inhibition of antithrombin by protein SV‐IV normalizes the coagulation of hemophilic blood . Eur J Pharmacol . 2000 ; 391 ( 1‐2 ): 1 ‐ 9 . 10720629 
+ 10.1016/s0014-2999(00)00020-0 15 
+ Bolliger 
+ D 
+ , 
+ Szlam 
+ F 
+ , 
+ Suzuki 
+ N 
+ , 
+ Matsushita 
+ T 
+ , 
+ Tanaka 
+ K 
+ . Heterozygous antithrombin deficiency improves in vivo haemostasis in factor VIII‐deficient mice . Thromb Haemost . 2010 ; 103 ( 6 ): 1233 ‐ 1238 . 20352163 
+ 10.1160/TH09-10-0732 16 
+ Sehgal 
+ A 
+ , 
+ Barros 
+ S 
+ , 
+ Ivanciu 
+ L 
+ , et al. An RNAi therapeutic targeting antithrombin to rebalance the coagulation system and promote hemostasis in hemophilia . Nat Med . 2015 ; 21 ( 5 ): 492 ‐ 497 . 25849132 
+ 10.1038/nm.3847 17 
+ Young 
+ G 
+ , 
+ Srivastava 
+ A 
+ , 
+ Kavakli 
+ K 
+ , et al. Efficacy and safety of fitusiran prophylaxis in people with haemophilia A or haemophilia B with inhibitors (ATLAS‐INH): a multicentre, open‐label, randomised phase 3 trial . Lancet . 2023 ; 401 ( 10386 ): 1427 ‐ 1437 . 37003287 
+ 10.1016/S0140-6736(23)00284-2 18 
+ Srivastava 
+ A 
+ , 
+ Rangarajan 
+ S 
+ , 
+ Kavakli 
+ K 
+ , et al. Fitusiran prophylaxis in people with severe haemophilia A or haemophilia B without inhibitors (ATLAS‐A/B): a multicentre, open‐label, randomised, phase 3 trial . Lancet Haematol . 2023 ; 10 ( 5 ): e322 ‐ e332 . 37003278 
+ 10.1016/S2352-3026(23)00037-6 19 
+ Kenet 
+ G 
+ , 
+ Nolan 
+ B 
+ , 
+ Zulfikar 
+ B 
+ , et al. Fitusiran prophylaxis in people with hemophilia A or B who switched from prior BPA/CFC prophylaxis: the ATLAS‐PPX trial . Blood . 2024 ; 143 ( 22 ): 2256 ‐ 2269 . 38452197 
+ 10.1182/blood.2023021864 PMC11181353 20 
+ Johansen 
+ PB 
+ , 
+ Tranholm 
+ M 
+ , 
+ Haaning 
+ J 
+ , 
+ Knudsen 
+ T 
+ . Development of a tail vein transection bleeding model in fully anaesthetized haemophilia A mice—characterization of two novel FVIII molecules . Haemophilia . 2016 ; 22 ( 4 ): 625 ‐ 631 . 26936336 
+ 10.1111/hae.12907 21 
+ Pastoft 
+ AE 
+ , 
+ Lykkesfeldt 
+ J 
+ , 
+ Ezban 
+ M 
+ , 
+ Tranholm 
+ M 
+ , 
+ Whinna 
+ HC 
+ , 
+ Lauritzen 
+ B 
+ . A sensitive venous bleeding model in haemophilia A mice: effects of two recombinant FVIII products (N8 and Advate((R)) . Haemophilia . 2012 ; 18 ( 5 ): 782 ‐ 788 . 22500820 
+ 10.1111/j.1365-2516.2012.02780.x 22 
+ Hemker 
+ HC 
+ , 
+ Giesen 
+ P 
+ , 
+ AlDieri 
+ R 
+ , et al. The calibrated automated thrombogram (CAT): a universal routine test for hyper‐ and hypocoagulability . Pathophysiol Haemost Thromb . 2002 ; 32 ( 5‐6 ): 249 ‐ 253 . 13679651 
+ 10.1159/000073575 23 
+ Jin 
+ Y 
+ , 
+ Yegneswaran 
+ S 
+ , 
+ Gu 
+ JM 
+ , et al. Identification and function probing of an antithrombin IIIβ conformation‐specific antibody . J Thromb Haemostasis . 2016 ; 14 ( 2 ): 356 ‐ 365 . 26581031 
+ 10.1111/jth.13198 24 
+ Carlson 
+ TH 
+ , 
+ Atencio 
+ AC 
+ . Isolation and partial characterization of two distinct types of antithrombin III from rabbit . Thromb Res . 1982 ; 27 ( 1 ): 23 ‐ 34 . 7123512 
+ 10.1016/0049-3848(82)90274-2 25 
+ Bianchini 
+ EP 
+ , 
+ Fazavana 
+ J 
+ , 
+ Picard 
+ V 
+ , 
+ Borgel 
+ D 
+ . Development of a recombinant antithrombin variant as a potent antidote to fondaparinux and other heparin derivatives . Blood . 2011 ; 117 ( 6 ): 2054 ‐ 2060 . 21048158 
+ 10.1182/blood-2010-06-288522 26 
+ Sefiane 
+ T 
+ , 
+ McCluskey 
+ G 
+ , 
+ Clavel 
+ M 
+ , et al. Erratum to: “Consistent clinical factor VIII equivalency is unlikely for non‐factor therapies in hemophilic mice” . Haematologica . 2025 ; 110 ( 9 ): 3182 ‐ 3183 . 41321265 
+ 10.3324/haematol.2025.289135 PMC12666289 27 
+ Young 
+ G 
+ , 
+ Kavakli 
+ K 
+ , 
+ Klamroth 
+ R 
+ , et al. Safety and efficacy of a fitusiran antithrombin‐based dose regimen in people with hemophilia A or B: the ATLAS‐OLE study . Blood . 2025 ; 145 ( 25 ): 2966 ‐ 2977 . 40053895 
+ 10.1182/blood.2024027008 PMC12824673 28 
+ Viveiros 
+ A 
+ , 
+ Finkenstedt 
+ A 
+ , 
+ Schaefer 
+ B 
+ , et al. Transferrin as a predictor of survival in cirrhosis . Liver Transpl . 2018 ; 24 ( 3 ): 343 ‐ 351 . 29149510 
+ 10.1002/lt.24981 PMC5873434 29 
+ Cho 
+ HJ 
+ , 
+ Kim 
+ SS 
+ , 
+ Ahn 
+ SJ 
+ , et al. Serum transferrin as a liver fibrosis biomarker in patients with chronic hepatitis B . Clin Mol Hepatol . 2014 ; 20 ( 4 ): 347 ‐ 354 . 25548740 
+ 10.3350/cmh.2014.20.4.347 PMC4278065 30 
+ Hülsmeier 
+ AJ 
+ , 
+ Paesold‐Burda 
+ P 
+ , 
+ Hennet 
+ T 
+ . N‐glycosylation site occupancy in serum glycoproteins using multiple reaction monitoring liquid chromatography‐mass spectrometry . Mol Cell Proteomics . 2007 ; 6 ( 12 ): 2132 ‐ 2138 . 17823199 
+ 10.1074/mcp.M700361-MCP200 31 
+ Shiber 
+ A 
+ , 
+ Döring 
+ K 
+ , 
+ Friedrich 
+ U 
+ , et al. Cotranslational assembly of protein complexes in eukaryotes revealed by ribosome profiling . Nature . 2018 ; 561 ( 7722 ): 268 ‐ 272 . 30158700 
+ 10.1038/s41586-018-0462-y PMC6372068 32 
+ Kramer 
+ G 
+ , 
+ Shiber 
+ A 
+ , 
+ Bukau 
+ B 
+ . Mechanisms of cotranslational maturation of newly synthesized proteins . Annu Rev Biochem . 2019 ; 88 : 337 ‐ 364 . 30508494 
+ 10.1146/annurev-biochem-013118-111717 33 
+ Helenius 
+ A 
+ , 
+ Aebi 
+ M 
+ . Roles of N‐linked glycans in the endoplasmic reticulum . Annu Rev Biochem . 2004 ; 73 : 1019 ‐ 1049 . 15189166 
+ 10.1146/annurev.biochem.73.011303.073752 34 
+ Bayston 
+ TA 
+ , 
+ Tripodi 
+ A 
+ , 
+ Mannucci 
+ PM 
+ , et al. Familial overexpression of β antithrombin caused by an Asn135Thr substitution . Blood . 1999 ; 93 ( 12 ): 4242 ‐ 4247 . 10361121 
+ 35 
+ de la Morena‐Barrio 
+ ME 
+ , 
+ Suchon 
+ P 
+ , 
+ Jacobsen 
+ EM 
+ , et al. Two SERPINC1 variants affecting N‐glycosylation of Asn224 cause severe thrombophilia not detected by functional assays . Blood . 2022 ; 140 ( 2 ): 140 ‐ 151 . 35486842 
+ 10.1182/blood.2021014708 PMC9283966 36 
+ Young 
+ G 
+ , 
+ Lenting 
+ PJ 
+ , 
+ Croteau 
+ SE 
+ , 
+ Nolan 
+ B 
+ , 
+ Srivastava 
+ A 
+ . Antithrombin lowering in hemophilia: a closer look at fitusiran . Res Pract Thromb Haemost . 2023 ; 7 ( 4 ): 100179 . 37358958 
+ 10.1016/j.rpth.2023.100179 PMC10285540 37 
+ Papareddy 
+ P 
+ , 
+ Rossnagel 
+ M 
+ , 
+ Doreen Hollwedel 
+ F 
+ , et al. A human antithrombin isoform dampens inflammatory responses and protects from organ damage during bacterial infection . Nat Microbiol . 2019 ; 4 ( 12 ): 2442 ‐ 2455 . 31548687 
+ 10.1038/s41564-019-0559-6 38 
+ Rayes 
+ J 
+ , 
+ Brill 
+ A 
+ . Hot under the clot: venous thrombogenesis is an inflammatory process . Blood . 2024 ; 144 ( 5 ): 477 ‐ 489 . 38728383 
+ 10.1182/blood.2023022522 39 
+ Chhabra 
+ ES 
+ , 
+ Sadeghi‐Khomami 
+ A 
+ , 
+ Liu 
+ M 
+ , et al. Global comparative antithrombin field study: impact of laboratory assay variability on the assessment of antithrombin activity measurement at fitusiran clinical decision‐making points . Haemophilia . 2025 ; 31 ( 3 ): 566 ‐ 574 . 40254822 
+ 10.1111/hae.70045 PMC12175104 

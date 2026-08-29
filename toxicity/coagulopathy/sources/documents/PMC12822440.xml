@@ -1,0 +1,1469 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="advs72133" xml:lang="en" article-type="research-article" dtd-version="1.4"><?da-xref-anchor-style superscripted?><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Adv Sci (Weinh)</journal-id><journal-id journal-id-type="iso-abbrev">Adv Sci (Weinh)</journal-id><journal-id journal-id-type="pmc-domain-id">2933</journal-id><journal-id journal-id-type="pmc-domain">advsci</journal-id><journal-id journal-id-type="nlm-id">101664569</journal-id><journal-id journal-id-type="publisher-id">ADVS</journal-id><journal-title-group><journal-title>Advanced Science</journal-title></journal-title-group><issn pub-type="epub">2198-3844</issn><?publisher_abbrev blackwell?><publisher><publisher-name>Wiley</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC12822440</article-id><article-id pub-id-type="pmcid-ver">PMC12822440.1</article-id><article-id pub-id-type="pmcaid">12822440</article-id><article-id pub-id-type="pmcaiid">12822440</article-id><article-id pub-id-type="pmid">41053535</article-id><article-id pub-id-type="doi">10.1002/advs.202509867</article-id><article-id pub-id-type="publisher-id">ADVS72133</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Research Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Research Article</subject></subj-group></article-categories><title-group><article-title>An Aptamer‐Based EXACT Anticoagulant as a Sustainable, Animal‐Free Alternative to Unfractionated Heparin</article-title></title-group><contrib-group><contrib id="advs72133-cr-0001" contrib-type="author" corresp="yes"><name name-style="western"><surname>Yu</surname><given-names initials="H">Haixiang</given-names></name><xref rid="advs72133-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="advs72133-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref><address><email>haixiangyu@cpu.edu.cn</email></address></contrib><contrib id="advs72133-cr-0002" contrib-type="author"><name name-style="western"><surname>Pitoc</surname><given-names initials="G">George</given-names></name><xref rid="advs72133-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="advs72133-cr-0003" contrib-type="author"><name name-style="western"><surname>Zhang</surname><given-names initials="M">Manqi</given-names></name><xref rid="advs72133-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib><contrib id="advs72133-cr-0004" contrib-type="author"><name name-style="western"><surname>Clancy</surname><given-names initials="J">Jeffrey</given-names></name><xref rid="advs72133-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="advs72133-cr-0005" contrib-type="author"><name name-style="western"><surname>Frederiksen</surname><given-names initials="J">James</given-names></name><xref rid="advs72133-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="advs72133-cr-0006" contrib-type="author"><name name-style="western"><surname>Yan</surname><given-names initials="A">Amy</given-names></name><xref rid="advs72133-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="advs72133-cr-0007" contrib-type="author"><name name-style="western"><surname>Francis</surname><given-names initials="S">Samuel</given-names></name><xref rid="advs72133-aff-0004" ref-type="aff">
+<sup>4</sup>
+</xref></contrib><contrib id="advs72133-cr-0008" contrib-type="author"><name name-style="western"><surname>Sullenger</surname><given-names initials="R">Rebecca</given-names></name><xref rid="advs72133-aff-0005" ref-type="aff">
+<sup>5</sup>
+</xref></contrib><contrib id="advs72133-cr-0009" contrib-type="author"><name name-style="western"><surname>Rempel</surname><given-names initials="R">Rachel</given-names></name><xref rid="advs72133-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="advs72133-cr-0010" contrib-type="author"><name name-style="western"><surname>Gammell</surname><given-names initials="S">Susannah</given-names></name><xref rid="advs72133-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="advs72133-cr-0011" contrib-type="author"><name name-style="western"><surname>Caiazzi</surname><given-names initials="J">Jillian</given-names></name><xref rid="advs72133-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="advs72133-cr-0012" contrib-type="author" corresp="yes"><name name-style="western"><surname>Sullenger</surname><given-names initials="BA">Bruce A.</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">https://orcid.org/0000-0002-5113-5541</contrib-id><xref rid="advs72133-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><xref rid="advs72133-aff-0006" ref-type="aff">
+<sup>6</sup>
+</xref><address><email>bruce.sullenger@duke.edu</email></address></contrib></contrib-group><aff id="advs72133-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<named-content content-type="organisation-division">Department of Surgery</named-content>
+<institution>Duke University</institution>
+<city>Durham</city>
+<named-content content-type="country-part">NC</named-content>
+<postal-code>27710</postal-code>
+<country country="US">USA</country>
+</aff><aff id="advs72133-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<named-content content-type="organisation-division">Department of Biochemistry</named-content>
+<named-content content-type="organisation-division">School of Life Science and Technology</named-content>
+<institution>China Pharmaceutical University</institution>
+<city>Nanjing</city>
+<postal-code>211198</postal-code>
+<country country="CN">China</country>
+</aff><aff id="advs72133-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<named-content content-type="organisation-division">Department of Medicine</named-content>
+<institution>Duke University</institution>
+<city>Durham</city>
+<named-content content-type="country-part">NC</named-content>
+<postal-code>27710</postal-code>
+<country country="US">USA</country>
+</aff><aff id="advs72133-aff-0004">
+<label>
+<sup>4</sup>
+</label>
+<named-content content-type="organisation-division">Department of Emergency Medicine</named-content>
+<institution>Duke University Hospital</institution>
+<city>Durham</city>
+<named-content content-type="country-part">NC</named-content>
+<postal-code>27710</postal-code>
+<country country="US">USA</country>
+</aff><aff id="advs72133-aff-0005">
+<label>
+<sup>5</sup>
+</label>
+<named-content content-type="organisation-division">School of Medicine</named-content>
+<institution>Duke University</institution>
+<city>Durham</city>
+<named-content content-type="country-part">NC</named-content>
+<postal-code>27710</postal-code>
+<country country="US">USA</country>
+</aff><aff id="advs72133-aff-0006">
+<label>
+<sup>6</sup>
+</label>
+<named-content content-type="organisation-division">Departments of Pharmacology &amp; Cancer Biology</named-content>
+<named-content content-type="organisation-division">Cell Biology and Biomedical Engineering</named-content>
+<institution>Duke University</institution>
+<city>Durham</city>
+<named-content content-type="country-part">NC</named-content>
+<postal-code>27710</postal-code>
+<country country="US">USA</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>E‐mail: <email>haixiangyu@cpu.edu.cn</email>; <email>bruce.sullenger@duke.edu</email>
+<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>06</day><month>10</month><year>2025</year></pub-date><pub-date pub-type="collection"><month>1</month><year>2026</year></pub-date><volume>13</volume><issue seq="210">4</issue><issue-id pub-id-type="pmc-issue-id">505758</issue-id><issue-id pub-id-type="doi">10.1002/advs.v13.4</issue-id><elocation-id>e09867</elocation-id><history>
+<date date-type="rev-recd"><day>21</day><month>8</month><year>2025</year></date>
+<date date-type="received"><day>29</day><month>5</month><year>2025</year></date>
+</history><pub-history><event event-type="pmc-release"><date><day>06</day><month>10</month><year>2025</year></date></event><event event-type="pmc-live"><date><day>22</day><month>01</month><year>2026</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2026-01-22 10:25:14.347"><day>22</day><month>01</month><year>2026</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2025 The Author(s). Advanced Science published by Wiley‐VCH GmbH</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="ADVS-13-e09867.pdf"><?pdf-name ADVS-13-e09867.pdf?><?pdf-size 2291405?><?pdf-md5 ccc813c460bc568b88a8334082d97c74?><?pdf-image-server-status NEVER_LOAD?><?pdf-cloudpmc-urn urn:app:4154/12822440/ccc813c460bc/ADVS-13-e09867.pdf?></self-uri><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:ADVS-13-e09867.pdf"/><abstract><title>Abstract</title><p>Unfractionated heparin (UFH), designated as an essential medicine by the World Health Organization (WHO), is indispensable in cardiac surgery and various clinical applications. However, its production depends on the farming of over a billion large animals annually, posing sustainability challenges, especially amidst increasing efforts to mitigate greenhouse gas (GHG) emissions by reducing animal farming. The rising demand for UFH has outpaced its supply, and previous attempts to develop synthetic alternatives have fallen short because of their limited potency and reversibility. Here, HD1‐12dmA‐DAB is presented, a novel synthetic anticoagulant developed through chemical conjugation of a thrombin exosite‐binding aptamer (HD1) with a thrombin active‐site inhibitor (dabigatran). By optimizing dual‐site synergistic binding, HD1‐12dmA‐DAB achieves an enhancement of over three orders of magnitude in thrombin‐binding affinity and specificity compared to HD1 alone. It also demonstrates superior plasma stability and anticoagulant efficacy comparable to UFH, as validated in in vitro, in vivo, and ex vivo clotting models. This breakthrough highlights a promising step toward a sustainable, animal‐free alternative to UFH, addressing the growing clinical demand and advancing environmental sustainability objectives.</p></abstract><abstract id="advs72133-abs-0001" abstract-type="graphical"><p>By simply conjugating thrombin's active‐site inhibitor, dabigatran, with an exosite inhibitor, aptamer HD1, the resulting EXosite‐ACTive site (EXACT) inhibitors show two orders of magnitude higher potency and selectivity via synergistic binding, while maintaining the aptamer's antidote‐reversible trait, yielding a potential substitute for the animal‐derived heparin used in millions of heart surgeries annually.
+<boxed-text position="anchor" content-type="graphic" orientation="portrait"><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="ADVS-13-e09867-g002.jpg"><?image-name ADVS-13-e09867-g002.jpg?><?image-size 22666?><?image-md5 590066be93617235b7eabafb113f66c3?><?image-image-server-status NEVER_LOAD?><?image-original-height 170?><?image-original-width 180?><?image-scaled-height 170?><?image-scaled-width 180?><?image-cloudpmc-urn urn:cdn:blobs/4154/12822440/590066be9361/ADVS-13-e09867-g002.jpg?></graphic></boxed-text>
+</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="advs72133-kwd-0001">anticoagulation</kwd><kwd id="advs72133-kwd-0002">aptamers</kwd><kwd id="advs72133-kwd-0003">cooperative effects</kwd><kwd id="advs72133-kwd-0004">drug design</kwd><kwd id="advs72133-kwd-0005">sustainability</kwd></kwd-group><funding-group><award-group id="funding-0001"><funding-source>
+<institution-wrap><institution>American Heart Association</institution><institution-id institution-id-type="doi">10.13039/100000968</institution-id></institution-wrap>
+</funding-source><award-id>23POST1018721</award-id></award-group><award-group id="funding-0002"><funding-source>
+<institution-wrap><institution>National Heart, Lung, and Blood Institute</institution><institution-id institution-id-type="doi">10.13039/100000050</institution-id></institution-wrap>
+</funding-source><award-id>P01‐HL139420</award-id></award-group></funding-group><counts><fig-count count="5"/><table-count count="0"/><page-count count="11"/><word-count count="7929"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>19 January 2026</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.6.8 mode:remove_FC converted:19.01.2026</meta-value></custom-meta></custom-meta-group></article-meta><notes><p content-type="self-citation">
+<mixed-citation publication-type="journal" id="advs72133-cit-0001">
+<string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Yu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Pitoc</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Zhang</surname>
+</string-name>, et al. “<article-title>An Aptamer‐Based EXACT Anticoagulant as a Sustainable, Animal‐Free Alternative to Unfractionated Heparin</article-title>.” <source>Adv. Sci.</source>
+<volume>13</volume>, no. <issue>4</issue> (<year>2026</year>): <elocation-id>e09867</elocation-id>. <pub-id pub-id-type="doi">10.1002/advs.202509867</pub-id>
+<pub-id pub-id-type="pmcid">PMC12822440</pub-id><pub-id pub-id-type="pmid">41053535</pub-id></mixed-citation>
+</p></notes></front><body><sec id="advs72133-sec-0010"><label>1</label><title>Introduction</title><p>Unfractionated heparin (UFH) is the most widely used rapid‐onset anticoagulant and has helped save millions of lives. When administered, it potentiates the endogenous anticoagulant antithrombin, which irreversibly inhibits thrombin and other coagulation factors. For the past 70 years, UFH has been an essential medicine and the gold standard anticoagulant in heart surgeries, dialysis, and other medical interventions due to its high potency and antidote‐reversibility via protamine sulfate.<sup>[</sup>
+<xref rid="advs72133-bib-0001" ref-type="bibr">
+<sup>1</sup>
+</xref>
+<sup>]</sup>
+</p><p>Nevertheless, the sustainability of UFH production is of increasing concern because of the growing global demand for heparin and its reliance on large‐scale pig farming. Annually, over 1.1 billion pigs are required to meet the world's need for UFH and related products such as low‐molecular‐weight heparin.<sup>[</sup>
+<xref rid="advs72133-bib-0002" ref-type="bibr">
+<sup>2</sup>
+</xref>
+<sup>]</sup> This figure already matches the current global pig production capacity of one billion, and UFH demand is expected to increase.<sup>[</sup>
+<xref rid="advs72133-bib-0003" ref-type="bibr">
+<sup>3</sup>
+</xref>
+<sup>]</sup> As an animal derived product, the production of UFH also generates a heavy carbon footprint: 1 gram of crude heparin is estimated to result in 23.5 to 38.1 kg of CO<sub>2</sub> emissions.<sup>[</sup>
+<xref rid="advs72133-bib-0002" ref-type="bibr">
+<sup>2</sup>
+</xref>
+<sup>]</sup> The need to expand the pig farming industry to supply life‐saving heparin conflicts with the growing recognition of the need to cut greenhouse gas (GHG) emissions by reducing large‐animal agriculture. Moreover, as the ongoing bird‐flu pandemic and the 2009 H1N1 swine flu outbreak underscore, infectious agents can rapidly destroy large numbers of domesticated animals making the supply chain of heparin insecure.</p><p>In addition to its unsustainable and vulnerable production, UFH's indirect and irreversible anticoagulation mechanism can result in variable and sometimes harmful patient responses. Furthermore, UFH's immunogenicity causes a potentially lethal condition, heparin‐induced thrombocytopenia (HIT),<sup>[</sup>
+<xref rid="advs72133-bib-0004" ref-type="bibr">
+<sup>4</sup>
+</xref>
+<sup>]</sup> in ≈3% of patients. The intensive medical resources required for monitoring and managing UFH exacerbate the production challenges of this century‐old drug. Finding a rapid‐onset anticoagulant with comparable potency and antidote reversibility to UFH is an important unmet medical and environmental need.</p><p>Nucleic acid aptamers have recently emerged as promising, more sustainable, and secure candidates for rapid‐onset anticoagulants.<sup>[</sup>
+<xref rid="advs72133-bib-0005" ref-type="bibr">
+<sup>5</sup>
+</xref>
+<sup>]</sup> Their direct inhibitory mechanism results in more predictable pharmacology and helps to preserve the body's capacity for normal hemostasis following reversal. Aptamers also provide high specificity, low immunogenicity, and the potential for rapid reversal using complementary oligonucleotides.<sup>[</sup>
+<xref rid="advs72133-bib-0006" ref-type="bibr">
+<sup>6</sup>
+</xref>, <xref rid="advs72133-bib-0007" ref-type="bibr">
+<sup>7</sup>
+</xref>
+<sup>]</sup> Unlike UFH, aptamers can be mass‐produced by chemical synthesis without GHG‐intensive and infectious agent‐susceptible large‐animal farming.<sup>[</sup>
+<xref rid="advs72133-bib-0008" ref-type="bibr">
+<sup>8</sup>
+</xref>
+<sup>]</sup> In addition, the rapid development of RNA therapeutics has greatly improved the sustainability and scalability of oligonucleotide production.<sup>[</sup>
+<xref rid="advs72133-bib-0009" ref-type="bibr">
+<sup>9</sup>
+</xref>
+<sup>]</sup> Yet, the inability of aptamers to inhibit protease catalytic sites limits their potency, preventing them from replacing UFH in isolation.<sup>[</sup>
+<xref rid="advs72133-bib-0005" ref-type="bibr">
+<sup>5</sup>
+</xref>, <xref rid="advs72133-bib-0010" ref-type="bibr">
+<sup>10</sup>
+</xref>, <xref rid="advs72133-bib-0011" ref-type="bibr">
+<sup>11</sup>
+</xref>, <xref rid="advs72133-bib-0012" ref-type="bibr">
+<sup>12</sup>
+</xref>, <xref rid="advs72133-bib-0013" ref-type="bibr">
+<sup>13</sup>
+</xref>, <xref rid="advs72133-bib-0014" ref-type="bibr">
+<sup>14</sup>
+</xref>, <xref rid="advs72133-bib-0015" ref-type="bibr">
+<sup>15</sup>
+</xref>, <xref rid="advs72133-bib-0016" ref-type="bibr">
+<sup>16</sup>
+</xref>, <xref rid="advs72133-bib-0017" ref-type="bibr">
+<sup>17</sup>
+</xref>, <xref rid="advs72133-bib-0018" ref-type="bibr">
+<sup>18</sup>
+</xref>, <xref rid="advs72133-bib-0019" ref-type="bibr">
+<sup>19</sup>
+</xref>, <xref rid="advs72133-bib-0020" ref-type="bibr">
+<sup>20</sup>
+</xref>
+<sup>]</sup>
+</p><p>In an effort to increase aptamer potency and inspired by the bivalent binding mode of hirudin and other hematophagy‐derived anticoagulants, we devised a new approach to design potent anticoagulants using EXosite‐ACTive site (EXACT) inhibitors.<sup>[</sup>
+<xref rid="advs72133-bib-0021" ref-type="bibr">
+<sup>21</sup>
+</xref>
+<sup>]</sup> This strategy involves chemically conjugating an exosite‐binding aptamer with a small‐molecule active‐site inhibitor. The synergy between the aptamer and the small‐molecule significantly enhances the binding affinity and inhibition potency of the conjugate. Despite this conceptual promise, our initial EXACT inhibitors were not as potent as heparin.<sup>[</sup>
+<xref rid="advs72133-bib-0021" ref-type="bibr">
+<sup>21</sup>
+</xref>
+<sup>]</sup> In this study, we describe the design, creation, and evaluation of a novel EXACT inhibitor, HD1‐12dmA‐DAB, and interrogate its potential as a rapid‐onset anticoagulant in heart surgeries by using a series of in vitro, in vivo, and ex vivo clotting model systems. Our results reveal that this new EXACT inhibitor achieves 1) over three orders of magnitude higher affinity, specificity, and inhibition potency compared to the aptamer and small‐molecule inhibitor alone, 2) higher anticoagulant potency than UFH, first generation EXACT inhibitors, and other clinically used direct thrombin inhibitors such as bivalirudin, 3) sufficient stability in plasma and whole blood for rapid‐onset anticoagulation in vitro and in vivo, and 4) rapid and effective antidote‐mediated reversal. Importantly, HD1‐12dmA‐DAB is the first aptameric anticoagulant achieving UFH anticoagulation potency in an ex vivo extracorporeal membrane oxygenation (ECMO) circuit, a setting that mimics the highly coagulable state encountered during open‐heart surgeries. Thus, HD1‐12dmA‐DAB represents a potent yet controllable alternative to UFH that would not require ten billion large animals to produce over the next decade.</p></sec><sec id="advs72133-sec-0020"><label>2</label><title>Results and Discussion</title><sec id="advs72133-sec-0030"><label>2.1</label><title>In Silico Assisted Design of the Bivalent Aptameric EXACT Inhibitor with Potent Thrombin Inhibition</title><p>Hirudin, the major anticoagulant from leeches and one of the most potent and specific thrombin inhibitors known, comprises an active site‐binding N‐terminus and an exosite I‐binding C‐terminus (<bold>Figure</bold>
+<xref rid="advs72133-fig-0001" ref-type="fig">
+<bold>1</bold>a</xref>). The synergy between the two domains enhances the thrombin binding affinity of bivalent hirudin by over 3000‐fold compared with either of its active site or exosite‐binding domains alone, achieving a 10<sup>−11</sup>M inhibition constant (K<sub>i</sub>).<sup>[</sup>
+<xref rid="advs72133-bib-0023" ref-type="bibr">
+<sup>23</sup>
+</xref>, <xref rid="advs72133-bib-0024" ref-type="bibr">
+<sup>24</sup>
+</xref>
+<sup>]</sup> We designed a hirudin‐like aptamer EXACT inhibitor, termed HD1‐12A‐DAB, by conjugating dabigatran, an FDA‐approved direct thrombin inhibitor, to the 3' terminus of a thrombin exosite I‐binding aptamer HD1<sup>[</sup>
+<xref rid="advs72133-bib-0025" ref-type="bibr">
+<sup>25</sup>
+</xref>, <xref rid="advs72133-bib-0026" ref-type="bibr">
+<sup>26</sup>
+</xref>
+<sup>]</sup> (Figure <xref rid="advs72133-fig-0001" ref-type="fig">1</xref>; Table <xref rid="advs72133-supinfo-0001" ref-type="">S1</xref>, Supporting Information). A poly (12) adenosine linker was used, as suggested by molecular modeling (Figure <xref rid="advs72133-fig-0001" ref-type="fig">1a</xref>; Figure <xref rid="advs72133-supinfo-0001" ref-type="">S1</xref>, Note <xref rid="advs72133-supinfo-0001" ref-type="">S1</xref>, and Table <xref rid="advs72133-supinfo-0001" ref-type="">S1</xref>, Supporting Information).</p><fig position="float" fig-type="Figure" id="advs72133-fig-0001" orientation="portrait"><label>Figure 1</label><caption><p>Development and characterization of aptamer hirudin HD1‐12dmA‐DAB. a) Structures of thrombin (left) and thrombin‐hirudin complex (middle) obtained from previously reported X‐ray crystallography data (PDB ID: 4HTC),<sup>[</sup>
+<xref rid="advs72133-bib-0022" ref-type="bibr">
+<sup>22</sup>
+</xref>
+<sup>]</sup> and thrombin‐HD1‐12A‐DAB complex (right) obtained from molecular modeling. Thrombin is colored white with its exosite I colored green and its active‐site colored magenta. The active site‐binding, exosite‐binding, and linker domains of hirudin and HD1‐12A‐DAB are colored cyan, orange, and yellow, respectively. b) Thrombin inhibition of HD1‐12A‐DAB was compared with that of HD1, DAB, and their equimolar mixture in a fluorescent peptidyl substrate cleavage assay (<italic toggle="yes">n</italic> = 3), showing the high inhibitory potency of HD1‐12A‐DAB via synergistic binding. c) Binding curve of <sup>32</sup>P labeled HD1 and HD1‐12A‐DAB in the presence of different concentrations of thrombin and prothrombin in a filter binding assay (<italic toggle="yes">n</italic> = 2) indicated that HD1‐12A‐DAB has a much higher thrombin binding affinity and specificity than HD1. d) Inhibition of thrombin cleavage of fibrinogen by HD1 and HD1‐12A‐DAB in the absence and presence of excessive prothrombin (<italic toggle="yes">n</italic> = 3), showing that HD1‐12A‐DAB's inhibition potency is independent of the presence of prothrombin. e) Reversal of different concentrations of HD1‐12A‐DAB by a specific antidote, AO (2 µ<sc>m</sc>), in a fluorescent peptidyl substrate cleavage assay (<italic toggle="yes">n</italic> = 3). Bivalirudin was used as a control revealing its weaker inhibitory potency and lack of reversibility by AO. f,g) Plasma stability (f) and thrombin inhibition potency (g) of HD1‐12A‐DAB, HD1‐12dmA‐DAB, and HD1‐12mA‐DAB were assessed via PAGE analysis and a fluorogenic peptidyl substrate cleavage assay (<italic toggle="yes">n</italic> = 3), respectively. Data were presented as mean ± SD.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="ADVS-13-e09867-g005.jpg"><?image-name ADVS-13-e09867-g005.jpg?><?image-size 195627?><?image-md5 7cfd3175eded9390726d717f9406453b?><?image-image-server-status NEVER_LOAD?><?image-original-height 709?><?image-original-width 700?><?image-scaled-height 709?><?image-scaled-width 700?><?image-cloudpmc-urn urn:cdn:blobs/4154/12822440/7cfd3175eded/ADVS-13-e09867-g005.jpg?><?thumb-name ADVS-13-e09867-g005.gif?><?thumb-size 8962?><?thumb-md5 a8611b17ac4019d28b9fc7ae8115f07c?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 101?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/4154/12822440/a8611b17ac40/ADVS-13-e09867-g005.gif?></graphic></fig><p>The thrombin‐inhibitory potency of HD1‐12A‐DAB was assessed using a fluorogenic peptidyl substrate cleavage assay (Figure <xref rid="advs72133-fig-0001" ref-type="fig">1b</xref>). In this assay, dabigatran inhibited thrombin with an IC<sub>50</sub> of ≈100 n<sc>m</sc>. In contrast, HD1 binds to thrombin exosite I and does not inhibit but rather modestly enhances thrombin cleavage of the fluorogenic tripeptide substrate, possibly due to allosteric effects on the active site. The equimolar mixture of HD1 and dabigatran showed slightly lower potency than dabigatran alone. In stark contrast, HD1‐12A‐DAB potently inhibited thrombin, with an IC<sub>50</sub> of 0.1 n<sc>m</sc>, 1000‐fold better than that of dabigatran, both with and without the unconjugated aptamer.</p></sec><sec id="advs72133-sec-0040"><label>2.2</label><title>Synergistic Binding Mechanism Grants HD1‐12A‐DAB Exceptional Specificity</title><p>One potential limitation of HD1 is its cross‐reactivity to thrombin's zymogen prothrombin, which also presents exosite I.<sup>[</sup>
+<xref rid="advs72133-bib-0027" ref-type="bibr">
+<sup>27</sup>
+</xref>
+<sup>]</sup> HD1 binds both thrombin (K<sub>D</sub> = 110 n<sc>m</sc>) and prothrombin (K<sub>D</sub> = 992 n<sc>m</sc>) with only a ninefold difference in apparent K<sub>D</sub> (Figure <xref rid="advs72133-fig-0001" ref-type="fig">1c</xref>). Therefore, the effectiveness of HD1 in inhibiting trace amounts of circulating thrombin could be mitigated in the presence of excess prothrombin (1.4 µ<sc>m</sc> in normal plasma). However, we found that the low selectivity of HD1 for thrombin over prothrombin can be overcome by the addition of an active site binding motif, since thrombin, but not prothrombin, presents the active site. As a result, HD1‐12A‐DAB EXACT inhibitor bound to thrombin and prothrombin with K<sub>D</sub>s of 13.1 p<sc>m</sc> and 296 n<sc>m</sc>, respectively, demonstrating a &gt; 22 600‐fold selectivity for thrombin (Figure <xref rid="advs72133-fig-0001" ref-type="fig">1c</xref>). Thus, bivalent binding not only improves the affinity of the inhibitor but also enhances its specificity.</p><p>The high specificity of HD1‐12A‐DAB resulted in potent thrombin inhibition in the presence of prothrombin (Figure <xref rid="advs72133-fig-0001" ref-type="fig">1d</xref>). Thrombin (2.5 n<sc>m</sc>) rapidly cleaves fibrinogen, yielding a fibrin clot with a clotting time (t<sub>50</sub>) of 8 min. In the presence of aptamer HD1 (250n<sc>m</sc>), t<sub>50</sub> was prolonged to 60 min, indicating strong inhibition. However, the inhibitory effect of HD1 was significantly reduced in the presence of prothrombin, with a t<sub>50</sub> of 30 min. The EXACT inhibitor HD1‐12A‐DAB (5n<sc>m</sc>) markedly prolonged t<sub>50</sub> to &gt;120 min, regardless of prothrombin presence, indicating robust inhibition. The high potency and thrombin specificity of HD1‐12A‐DAB make this EXACT inhibitor an attractive candidate for rapid‐onset anticoagulation.</p></sec><sec id="advs72133-sec-0050"><label>2.3</label><title>The High Potency of HD1‐12A‐DAB can be Reversed by an Antidote</title><p>We compared thrombin inhibition of HD1‐12A‐DAB to bivalirudin,<sup>[</sup>
+<xref rid="advs72133-bib-0028" ref-type="bibr">
+<sup>28</sup>
+</xref>
+<sup>]</sup> a bivalent peptide engineered from hirudin, used in patients requiring cardiopulmonary bypass (CPB) that are allergic to UFH.<sup>[</sup>
+<xref rid="advs72133-bib-0029" ref-type="bibr">
+<sup>29</sup>
+</xref>
+<sup>]</sup> The HD1‐12A‐DAB EXACT inhibitor was 1000‐fold more potent than bivalirudin in the thrombin cleavage assay (Figure <xref rid="advs72133-fig-0001" ref-type="fig">1e</xref>), probably because of its higher affinity. Even more importantly, unlike bivalirudin and other direct thrombin inhibitors, which lack specific reversal agents, the high potency of HD1‐12A‐DAB can be reversed by an antidote oligonucleotide (AO) (Figure <xref rid="advs72133-fig-0001" ref-type="fig">1e</xref>).</p></sec><sec id="advs72133-sec-0060"><label>2.4</label><title>HD1‐12A‐DAB More Effectively Inhibits Clot‐Bound Thrombin than UFH</title><p>Despite systematic anticoagulation with UFH, thrombin bound to fibrin in clots continues to drive thromboinflammation.<sup>[</sup>
+<xref rid="advs72133-bib-0030" ref-type="bibr">
+<sup>30</sup>
+</xref>
+<sup>]</sup> Although UFH is effective in inhibiting free thrombin, the high molecular weight of UFH‐antithrombin (ATIII) complex (≈80 KDa) makes it challenging to inhibit clot‐bound thrombin, limiting its anticoagulation effectiveness on the surface of clots.<sup>[</sup>
+<xref rid="advs72133-bib-0031" ref-type="bibr">
+<sup>31</sup>
+</xref>
+<sup>]</sup> This spatial limitation can be observed in the fluorogenic peptidyl substrate cleavage assay (Figure <xref rid="advs72133-supinfo-0001" ref-type="">S2</xref>, Supporting Information). Although the UFH‐ATIII complex (1 µ<sc>m</sc>) fully inhibits free thrombin activity, it only inhibits clot‐bound thrombin by 25%. In contrast, the smaller DAB (471 Da) equally inhibited free and clot‐bound thrombin. The HD1‐12A‐DAB (1 µ<sc>m</sc>) EXACT inhibitor (9.3 kDa) limited clot‐bound thrombin activity (65%) more effectively than UFH‐ATIII.</p></sec><sec id="advs72133-sec-0070"><label>2.5</label><title>Linker Modification Greatly Improves Plasma Stability of HD1‐12A‐DAB</title><p>One challenge in developing DNA aptamers for therapeutic applications is their limited plasma stability. When HD1‐12A‐DAB was incubated in human plasma at 37 °C, degradation products appeared within 1 min, and most of the EXACT inhibitor was degraded within 6 h (Figure <xref rid="advs72133-fig-0001" ref-type="fig">1f</xref>). To improve plasma stability, we incorporated 2'OMe modifications into the linker backbone. Replacing all deoxy‐As with 2'OMe‐ribo‐As in the linker (termed HD1‐12mA‐DAB) resulted in enhanced plasma stability, with limited degradation observed over 6 h (Figure <xref rid="advs72133-fig-0001" ref-type="fig">1f</xref>). However, this modification also resulted in a tenfold reduction in potency (IC<sub>50</sub> = 1 n<sc>m</sc>) in the fluorogenic assay (Figure <xref rid="advs72133-fig-0001" ref-type="fig">1g</xref>). Therefore, we created another derivative in which only half of the deoxy‐As in the linker were replaced with 2'OMe‐ribo‐As. This inhibitor, termed HD1‐12dmA‐DAB, showed similar plasma stability as HD1‐12mA‐DAB while preserving higher potency (IC<sub>50</sub> = 0.3 n<sc>m</sc>) (Figure <xref rid="advs72133-fig-0001" ref-type="fig">1f,g</xref>).</p></sec><sec id="advs72133-sec-0080"><label>2.6</label><title>EXACT Inhibitor HD1‐12dmA‐DAB is a Potent and Reversible Anticoagulant in Plasma and Whole Blood</title><p>HD1‐12dmA‐DAB dose‐dependently prolongs plasma prothrombin time (PT) and activated partial thromboplastin time (aPTT) (<bold>Figure</bold>
+<xref rid="advs72133-fig-0002" ref-type="fig">
+<bold>2</bold>a</xref>). At a concentration of 500 n<sc>m</sc>, both clotting times exceeded the maximum readout of both assays (999 seconds). This activity not only greatly exceeds those of aptamer HD1 and dabigatran alone or combined but is also significantly higher than bivalirudin and a first‐generation EXACT inhibitor HD22‐7A‐DAB that utilizes a thrombin exosite II binding aptamer (Figure <xref rid="advs72133-fig-0002" ref-type="fig">2b</xref>).<sup>[</sup>
+<xref rid="advs72133-bib-0021" ref-type="bibr">
+<sup>21</sup>
+</xref>
+<sup>]</sup> HD1‐12dmA‐DAB also yielded a longer PT than 5 U mL<sup>−1</sup> UFH, the standard heparin dose used during CPB surgery. The significantly higher anticoagulation activity of HD1‐12dmA‐DAB compared to HD22‐7A‐DAB highlights the advantage of inhibiting thrombin exosite I with the aptamer, as exosite I, which binds fibrinogen, more directly impacts fibrin generation and clotting than exosite II. Importantly, the anticoagulation activity of HD1‐12dmA‐DAB can be reversed with the antidote oligonucleotide to a near‐control level within 5 min in both clotting assays (Figure <xref rid="advs72133-fig-0002" ref-type="fig">2a</xref>).</p><fig position="float" fig-type="Figure" id="advs72133-fig-0002" orientation="portrait"><label>Figure 2</label><caption><p>In vitro anticoagulant activity of the EXACT inhibitor HD1‐12dmA‐DAB. a) HD1‐12dmA‐DAB dose‐dependently prolonged clotting times in PT and aPTT assays in human plasma, which was reversed by AO (2 µ<sc>m</sc>) addition (<italic toggle="yes">n</italic> = 4). b) HD1‐12dmA‐DAB demonstrated enhanced anticoagulant activity in PT and aPTT assays compared to UFH (5 U mL<sup>−1</sup>) and other anticoagulants (500 n<sc>m</sc>), (<italic toggle="yes">n</italic> = 4). c) In human whole blood, HD1‐12dmA‐DAB significantly prolonged clotting in an ACT assay (n ≥ 3), showing greater anticoagulant activity than other anticoagulants. This anticoagulation effect was reversed by AO (2 µ<sc>m</sc>) addition. d) Evaluation of anticoagulation of human whole blood using TEG assay (n ≥ 3). HD1‐12dmA‐DAB was compared with other anticoagulants (1 µ<sc>m</sc>). AO (2 µ<sc>m</sc>) treatment rapidly restored normal clotting in HD1‐12dmA‐DAB treated blood. e) Anticoagulants used in clotting assays. Data were presented as mean ± SD. Multiple group comparisons were performed using ordinary one‐way ANOVA, followed by Tukey's post hoc test. P values were categorized in the plots as follows: &gt;0.1234 (ns), &lt;0.0332 (*), &lt;0.0021 (**), &lt;0.0002 (***), &lt;0.0001 (****).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="ADVS-13-e09867-g004.jpg"><?image-name ADVS-13-e09867-g004.jpg?><?image-size 70493?><?image-md5 19a2fb4dec54ef5dc16ef2d82031b24d?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 605?><?image-original-width 820?><?image-scaled-height 403?><?image-scaled-width 546?><?image-cloudpmc-urn urn:cdn:blobs/4154/12822440/19a2fb4dec54/ADVS-13-e09867-g004.jpg?><?thumb-name ADVS-13-e09867-g004.gif?><?thumb-size 6608?><?thumb-md5 151b7dbe670316dd6fecc54737da8199?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 80?><?thumb-scaled-width 108?><?thumb-cloudpmc-urn urn:cdn:blobs/4154/12822440/151b7dbe6703/ADVS-13-e09867-g004.gif?></graphic></fig><p>We then evaluated the anticoagulation activity of HD1‐12dmA‐DAB in whole blood by measuring activated clotting times (ACT), a point‐of‐care assessment of anticoagulation used to monitor UFH during heart surgeries. The EXACT inhibitor HD1‐12‐dmA‐DAB (500 n<sc>m</sc>) achieved a significantly longer clotting time than the aptamer, dabigatran, or their combination (Figure <xref rid="advs72133-fig-0002" ref-type="fig">2c</xref>). Moreover, the addition of AO effectively reversed the effect of the EXACT inhibitor. When the concentration of HD1‐12dmA‐DAB was increased to 1 µ<sc>m</sc>, the ACT exceeded the upper limit of the assay (999 s), which was significantly higher than the clotting time obtained with 5 U mL<sup>−1</sup> UFH and exosite II‐targeted HD22‐7A‐DAB (Figure <xref rid="advs72133-fig-0002" ref-type="fig">2c</xref>).</p><p>Finally, we evaluated the anticoagulation effect of HD1‐12dmA‐DAB in a whole‐blood thromboelastogram (TEG) assay (Figure <xref rid="advs72133-fig-0002" ref-type="fig">2d</xref>; Figure <xref rid="advs72133-supinfo-0001" ref-type="">S3</xref>, Supporting Information). In the absence of any anticoagulant, normal human blood had a clotting time (R‐time) of 6.8 ± 2.6 min (Figure <xref rid="advs72133-fig-0002" ref-type="fig">2d</xref>). The HD1 aptamer or dabigatran alone (1µ<sc>m</sc>) modestly prolonged the clotting time to 12.6 ± 6.1 min and 24.7 ± 9.6 min, respectively, whereas their combination prolonged the clotting time to 85.2 ± 37.1 min and limited the clot stiffness (Figure <xref rid="advs72133-supinfo-0001" ref-type="">S3</xref>, Supporting Information). Strikingly, HD1‐12dmA‐DAB treatment prolonged the clot time to over 180 min, the maximum time of the assay, a level that rivals 5 U mL<sup>−1</sup> UFH,<sup>[</sup>
+<xref rid="advs72133-bib-0019" ref-type="bibr">
+<sup>19</sup>
+</xref>
+<sup>]</sup> and is significantly higher than the first generation EXACT inhibitor HD22‐7A‐DAB. Such prolonged clotting in the TEG assay not only highlights HD1‐12dmA‐DAB's exceptional anticoagulation activity but also demonstrates its high stability in whole blood. To test the efficacy and kinetics of the reversal agent, we performed the same assay with HD1‐12dmA‐DAB (1 µ<sc>m</sc>) but added AO (2 µ<sc>m</sc>) at the 60‐min time point. Normal clotting occurred rapidly after AO addition, with a clotting time similar to that of the anticoagulant‐free blood control (4.9 ± 0.9 min, Figure <xref rid="advs72133-fig-0002" ref-type="fig">2d</xref>; Figure <xref rid="advs72133-supinfo-0001" ref-type="">S3</xref>, Supporting Information). Thus, HD1‐12dmA‐DAB is a highly potent and rapidly reversible anticoagulant in whole blood that rivals or even supersedes UFH.</p></sec><sec id="advs72133-sec-0090"><label>2.7</label><title>EXACT Inhibitor HD1‐12dmA‐DAB is a Potent Antithrombotic Agent in Mice</title><p>The antithrombotic activity of HD1‐12dmA‐DAB was evaluated in a murine carotid artery injury‐induced thrombosis model (<bold>Figure</bold>
+<xref rid="advs72133-fig-0003" ref-type="fig">
+<bold>3</bold>a</xref>).<sup>[</sup>
+<xref rid="advs72133-bib-0032" ref-type="bibr">
+<sup>32</sup>
+</xref>
+<sup>]</sup> The right carotid artery was damaged by placing a 10% FeCl<sub>3</sub> soaked filter over the artery for 3 min. In the absence of any anticoagulant, a thrombus formed and blocked blood flow in 5.1 ± 0.5 min (Figure <xref rid="advs72133-fig-0003" ref-type="fig">3b</xref>). Administration of HD1‐12dmA‐DAB prior to damage prevented vessel occlusion, as monitored by continuous blood flow over 30 min and histological analyses (Figure <xref rid="advs72133-fig-0003" ref-type="fig">3b,c</xref>). In contrast, administration of DAB or HD1‐12dmA‐NH<sub>2</sub>, a variant of HD1‐12dmA‐DAB in which the DAB moiety is replaced with a non‐functional amine group, did not show significant anticoagulant effect (Figure <xref rid="advs72133-fig-0003" ref-type="fig">3b,c</xref>). This result, consistent with the in vitro clotting assay, demonstrates the importance of synergistic inhibition of the exosite and the active site. Importantly, bivalirudin administration only delayed but did not prevent occlusive clot formation, with an average occlusion time of 8.4 ± 2.4 min (Figure <xref rid="advs72133-fig-0003" ref-type="fig">3b</xref>). Histological analysis of bivalirudin‐treated animals confirmed that the artery was completely occluded (Figure <xref rid="advs72133-fig-0003" ref-type="fig">3c</xref>) by 30 min. Thus, the EXACT inhibitor exhibits potent antithrombotic activity in mice.</p><fig position="float" fig-type="Figure" id="advs72133-fig-0003" orientation="portrait"><label>Figure 3</label><caption><p>In vivo antithrombotic activity of HD1‐12dmA‐DAB. a) Experimental setup for the murine carotid artery injury thrombosis model. A Doppler flow probe was placed on the isolated right carotid artery (top panel arrow), and a ferric chloride (FeCl<sub>3</sub>) patch (white) was applied to induce thrombosis (bottom). b) Experimental timeline (top) and arterial blood flow under treatment with saline, HD1‐12dmA‐DAB, HD1‐12dmA‐NH<sub>2</sub>, DAB, or bivalirudin (<italic toggle="yes">n</italic> = 3 for each group), normalized to pre‐FeCl<sub>3</sub> values. c) Representative histopathology of carotid arteries from mice treated with saline, HD1‐12dmA‐DAB, HD1‐12dmA‐NH<sub>2</sub>, DAB, or bivalirudin, compared to uninjured arteries (no‐patch).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-7" orientation="portrait" xlink:href="ADVS-13-e09867-g003.jpg"><?image-name ADVS-13-e09867-g003.jpg?><?image-size 208733?><?image-md5 bc1d9e8493c580e89f88ac21463d1ebe?><?image-image-server-status NEVER_LOAD?><?image-original-height 759?><?image-original-width 700?><?image-scaled-height 759?><?image-scaled-width 700?><?image-cloudpmc-urn urn:cdn:blobs/4154/12822440/bc1d9e8493c5/ADVS-13-e09867-g003.jpg?><?thumb-name ADVS-13-e09867-g003.gif?><?thumb-size 10018?><?thumb-md5 427a4042c9b0f126ab9345f7ded9cf9a?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 108?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/4154/12822440/427a4042c9b0/ADVS-13-e09867-g003.gif?></graphic></fig></sec><sec id="advs72133-sec-0100"><label>2.8</label><title>HD1‐12dmA‐DAB Achieves UFH‐Rivaling and Bivalirudin‐Exceeding Anticoagulant Activity in ECMO Circuits</title><p>To closely mimic a clinically relevant setting where UFH is the standard of care and potent anticoagulation is required, we tested the ability of EXACT inhibitor HD1‐12dmA‐DAB to maintain the patency of an ex vivo ECMO circuit, which is utilized to oxygenate blood for critically ill patients or those undergoing cardiac surgery. Previously, we have observed that no single aptamer can maintain these highly procoagulant circuits clot free.<sup>[</sup>
+<xref rid="advs72133-bib-0033" ref-type="bibr">
+<sup>33</sup>
+</xref>
+<sup>]</sup> Freshly collected blood is circulated through an oxygenator membrane with a constant flow rate (50 mL min<sup>−1</sup>) for 2 h while the blood pressure is monitored. The contact of blood with foreign materials and the shear force generated from the pump strongly stimulate the coagulation cascade, creating a prothrombotic challenge similar to that encountered in many open‐heart surgeries requiring CPB; thus this model is a stringent test for an anticoagulant.<sup>[</sup>
+<xref rid="advs72133-bib-0033" ref-type="bibr">
+<sup>33</sup>
+</xref>
+<sup>]</sup>
+</p><p>As a positive control, blood was treated with a potent dose of UFH (5 U mL<sup>−1</sup>). As expected, this dose of UFH was able to maintain the ECMO circuit clot‐free at a stable pressure for at least 2 h (<bold>Figure</bold>
+<xref rid="advs72133-fig-0004" ref-type="fig">
+<bold>4</bold>a</xref>). Similarly, HD1‐12dmA‐DAB (2 µ<sc>m</sc>) can also maintain circuit pressure and patency for over 2 h (Figure <xref rid="advs72133-fig-0004" ref-type="fig">4a</xref>). In contrast, bivalirudin (2 µ<sc>m</sc>)‐based anticoagulation is unable to maintain circuit pressure (≈100mmHg) beyond 30 min. This inability coincides with the development of large thrombi on the oxygenator membrane and in the blood reservoir in the circuit (Figure <xref rid="advs72133-fig-0004" ref-type="fig">4a,b</xref>; Figure <xref rid="advs72133-supinfo-0001" ref-type="">S4</xref>, Supporting Information). Bivalirudin's ineffective anticoagulation may come from its insufficient potency, and its degradation by proteases.<sup>[</sup>
+<xref rid="advs72133-bib-0034" ref-type="bibr">
+<sup>34</sup>
+</xref>
+<sup>]</sup> In contrast, no significant clot was observed on the oxygenator membrane or in the circuits when either HD1‐12dmA‐DAB or UFH was used as the anticoagulant (Figure <xref rid="advs72133-fig-0004" ref-type="fig">4b</xref>; Figure <xref rid="advs72133-supinfo-0001" ref-type="">S4</xref>, Supporting Information).</p><fig position="float" fig-type="Figure" id="advs72133-fig-0004" orientation="portrait"><label>Figure 4</label><caption><p>Anticoagulant activity of HD1‐12dmA‐DAB in an ex vivo ECMO circuit. a) Blood pressure during ECMO circulation with blood treated with 5 U mL<sup>−1</sup> UFH, 2 µ<sc>m</sc> HD1‐12dmA‐DAB, or 2 µ<sc>m</sc> bivalirudin (<italic toggle="yes">n </italic>= 4 for each group). b) SEM images (100× and 500× magnification) of oxygenator membranes at the end of ECMO experiments with different anticoagulants. c) ACT measurements of blood samples collected before and during ECMO circulation with various anticoagulants (<italic toggle="yes">n</italic> = 3 for each group). d) ACT measurements of blood samples from HD1‐12dmA‐DAB‐treated circuits, further treated with AO (4 µ<sc>m</sc>) for 3 min. e) Hemolysis of plasma samples before and after 2‐h ECMO circulation in each anticoagulant group (<italic toggle="yes">n</italic> = 3). f–m) Coagulation biomarkers prothrombin fragment F1 + 2 (f), fibrinogen (g), and TAT (h); fibrinolysis biomarker D‐dimer (i); platelet activation markers sCD40L (j) and p‐selectin (k); and inflammation markers IL‐6 (l) and IL‐8 (m) in plasma samples collected before and after the 2‐h ECMO circulation were measured using immunoassays (<italic toggle="yes">n</italic> = 3 per group). Data were presented as mean ± SD. Multiple group comparisons were performed using ordinary one‐way ANOVA, followed by Tukey's post hoc test. P values were categorized in the plots as follows: &gt;0.1234 (ns), &lt;0.0332 (*), &lt;0.0021 (**), &lt;0.0002 (***), &lt;0.0001 (****).</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-9" orientation="portrait" xlink:href="ADVS-13-e09867-g001.jpg"><?image-name ADVS-13-e09867-g001.jpg?><?image-size 187286?><?image-md5 0a801b8ebbc053a4530924ae700e1f98?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 852?><?image-original-width 700?><?image-scaled-height 852?><?image-scaled-width 700?><?image-cloudpmc-urn urn:cdn:blobs/4154/12822440/0a801b8ebbc0/ADVS-13-e09867-g001.jpg?><?thumb-name ADVS-13-e09867-g001.gif?><?thumb-size 9397?><?thumb-md5 d511eaaefe116ea47627b8a9757612d2?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 122?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/4154/12822440/d511eaaefe11/ADVS-13-e09867-g001.gif?></graphic></fig><p>To assess the anticoagulation of blood in the circuit more directly, ACT assays were performed on blood samples taken at different time points. With UFH (5 U mL<sup>−1</sup>), the ACT of the blood initially rose to 569 ± 107 s and then gradually dropped to 339 ± 88 s over 120 min. EXACT inhibitor HD1‐12dmA‐DAB (2 µ<sc>m</sc>) treatment prolonged the ACT to over 999 s at the beginning of the circulation and maintained potent anticoagulation of the blood until the end of the study (ACT of 864 ± 270 s at 2 h) (Figure <xref rid="advs72133-fig-0004" ref-type="fig">4c,d</xref>). Conversely, blood treated with bivalirudin started with a much lower ACT (283 ± 61 s), but the ACT rapidly increased within 30 min, exceeding 999 s by 60 min. This increase likely results because the coagulation potential of the blood is completely depleted as large thrombi have been formed over time, which consumes many coagulation factors including prothrombin, an issue that can be problematic in the clinic.<sup>[</sup>
+<xref rid="advs72133-bib-0035" ref-type="bibr">
+<sup>35</sup>
+</xref>
+<sup>]</sup> To confirm that prothrombin was not depleted in blood containing HD1‐12dmA‐DAB, we treated the circulated blood at different time points with AO (4 µ<sc>m</sc>). Within 3 min, AO addition returned ACT levels to normal (Figure <xref rid="advs72133-fig-0004" ref-type="fig">4d</xref>). These results indicate that HD1‐12dmA‐DAB prevents the consumption of coagulation factors, and that the addition of AO can rapidly restore normal hemostasis to blood following circulation. In addition, no significant degradation of HD1‐12dmA‐DAB was observed in the samples collected from the circuit over time (Figure <xref rid="advs72133-supinfo-0001" ref-type="">S5</xref>, Supporting Information). HD1‐12dmA‐DAB treatment also reduced hemolysis, a common side effect of ECMO as effectively as UFH but better than bivalirudin (Figure <xref rid="advs72133-fig-0004" ref-type="fig">4e</xref>).<sup>[</sup>
+<xref rid="advs72133-bib-0036" ref-type="bibr">
+<sup>36</sup>
+</xref>
+<sup>]</sup>
+</p></sec><sec id="advs72133-sec-0110"><label>2.9</label><title>HD1‐12dmA‐DAB Preserves Coagulation Factors as Effectively as UFH in Blood Subject to ECMO</title><p>Finally, we measured various biomarkers for thrombin activation (prothrombin F1 + 2), thrombin activity (fibrinogen), thrombin deactivation (thrombin‐antithrombin complex, TAT), fibrinolysis (D‐dimer), platelet activation (sCD40L and p‐selectin), and inflammation (IL‐6 and IL‐8) before and after circulation in the presence of different anticoagulants using immunoassays. We found that HD1‐12dmA‐DAB (2 µ<sc>m</sc>) was able to maintain the levels of thromboinflammatory markers as effectively as UFH (5 U mL<sup>−1</sup>) (Figure <xref rid="advs72133-fig-0004" ref-type="fig">4f–m</xref>). In contrast, most of these biomarkers are significantly altered when bivalirudin is used as an anticoagulant. Here, the significantly elevated prothrombin F1 + 2 and TAT levels (Figure <xref rid="advs72133-fig-0004" ref-type="fig">4f,h</xref>) and reduced fibrinogen levels (Figure <xref rid="advs72133-fig-0004" ref-type="fig">4g</xref>) indicate a depletion of coagulant capacity. These results correlate with the clots observed on the ECMO membranes in the bivalirudin‐anticoagulated samples (Figure <xref rid="advs72133-fig-0004" ref-type="fig">4b</xref>). They also confirmed that the unusually high ACT of bivalirudin‐treated blood samples at later time points was due to the exhaustion of clotting capacity (Figure <xref rid="advs72133-fig-0004" ref-type="fig">4c</xref>). Bivalirudin anticoagulated blood also shows higher levels of platelet activation and inflammation markers (Figure <xref rid="advs72133-fig-0004" ref-type="fig">4j–m</xref>) than blood anticoagulated with UFH or the EXACT inhibitor. In summary, the ECMO circuit data indicates that HD1‐12dmA‐DAB has a high anticoagulation potency that is at least comparable to UFH and significantly higher than that of bivalirudin in a clinically relevant, highly prothrombotic setting. Moreover, the EXACT inhibitor can match UFH's ability to preserve coagulation/anticoagulation capacity and significantly limit inflammation during ECMO. Equally important, the anticoagulant activity of the EXACT inhibitor can be rapidly and effectively reversed by an antidote oligonucleotide.</p></sec></sec><sec id="advs72133-sec-0120"><label>3</label><title>Conclusion</title><p>The unsustainable and insecure production of UFH has become a serious supply chain and environmental challenge, especially with the rising incidence of cardiovascular disease and increasing demand for potent onset anticoagulants. Unfortunately, the development of UFH replacements has been challenging, and bivalirudin, the only FDA‐approved UFH alternative used as a last resort in open‐heart surgeries, suffers from limited potency and the lack of a reversal agent.</p><p>In this study, we describe an optimized nucleic acid‐based bivalent thrombin EXACT inhibitor, HD1‐12dmA‐DAB. This second generation EXACT inhibitor retains synergy‐mediated high binding affinity, inhibitory potency, and antidote‐reversibility associated with first generation EXACT inhibitors but also has greatly improved properties. This new type of protease inhibitor reveals that: 1) The small‐molecule inhibitor domain, in addition to the aptamer domain, significantly contributes to the selectivity of the EXACT inhibitor, which allows the HD1‐based EXACT inhibitor to selectively target thrombin in the presence of high prothrombin concentrations. 2) The binding location of the aptamer on the protease, in addition to its affinity, impacts the potency of the EXACT inhibitor. 3) The low molecular weight of the EXACT inhibitor allows it to penetrate biomatrices, such as plasma clots more effectively than UFH. 4) The plasma stability of the EXACT inhibitor can be significantly improved by chemical modification of the linker domain. These properties enable the optimized EXACT inhibitor HD1‐12dmA‐DAB to achieve anticoagulant activity equal to or exceeding that of UFH and significantly surpassing that of bivalirudin and the first‐generation EXACT inhibitor HD22‐7A‐DAB in vitro, in vivo, and ex vivo. These results not only highlight the potential of HD1‐12dmA‐DAB as a potent and safe UFH alternative in hypercoagulable settings, such as ECMO and cardiopulmonary bypass surgery, but also provide guidance for the future construction of EXACT inhibitors targeting other proteases or enzymes.</p><p>Nucleic acid therapeutics have important manufacturing advantages over UFH. Aptamer‐based EXACT inhibitors can be produced on a large scale by chemical synthesis, which does not require large animals. Therefore, they promise to deliver an essential anticoagulant medicine that can replace heparin for many clinical procedures without requiring the farming of tens of billions of GHG‐producing and pathogenically vulnerable large animals in the coming decades. Several mRNA vaccines developed during the COVID‐19 pandemic have demonstrated such record‐breaking manufacturing speed and capacity.<sup>[</sup>
+<xref rid="advs72133-bib-0037" ref-type="bibr">
+<sup>37</sup>
+</xref>
+<sup>]</sup> The main development and translational challenge for such a more sustainable medicine is that UFH is inexpensive and entrenched. Thus, it shares many qualities with the replacement of fossil fuels.</p></sec><sec id="advs72133-sec-0130"><label>4</label><title>Experimental Section</title><sec id="advs72133-sec-0160"><title>Materials</title><p>Unmodified DNA oligos were purchased from Integrated DNA Technologies. Oligonucleotides with 2'‐O‐methyl modifications were synthesized in‐house using a Mermade oligo synthesizer, followed by high‐performance liquid chromatography (HPLC) purification. UFH (1000 U mL<sup>−1</sup>) was obtained from Duke Hospital Pharmacy. Thrombin, fibrinogen, and the thrombin fluorogenic substrate (SN‐17a) were obtained from Prolytix. Dabigatran was acquired from AK Scientific Inc. Bivalirudin trifluoroacetate salt (SML1051), 1‐Ethyl‐3‐[3‐dimethylaminopropyl] carbodiimide hydrochloride (EDC), and N‐hydroxysuccinimide (NHS) were purchased from Sigma. PT‐excel and aPTT reagents were obtained from Diagnostica Stago. ACT cartridges (JACT+) were purchased from Werfen. TEG cups, pins, and kaolin were acquired from Haemonetics. The small animal ECMO circuit apparatus and ECMO membrane (10 cm × 10 cm) were purchased from Martin Humbs. The LegendPlex human thrombosis panel (10‐plex) (cat. 740891) and human Fibrinolysis Panel (5‐plex) (cat. 740760) multi‐analyte flow assay kits were obtained from BioLegend. Enzygnost F 1 + 2 (monoclonal) and Enzygnost TAT micro assay kits were obtained from Siemens Healthineers. Pooled normal human plasma was purchased from George King Biomedical. Human whole blood was collected from healthy male and female donors under Duke IRB protocol (Pro00007265). Murine in vivo studies were conducted using 20‐week‐old female C57BL/6 mice obtained from Jackson Laboratory.</p></sec><sec id="advs72133-sec-0170"><title>Ethics</title><p>This research complies with ethical regulations under Duke University Health System (DUHS) Institutional Review Board for Clinical Investigations with Federal wide Assurance No: FWA 0000902, and Duke Institutional Animal Care and Use Committee (IACUC) with protocol registry number A109‐24‐05.</p></sec><sec id="advs72133-sec-0180"><title>Synthesis of EXACT Inhibitor</title><p>EXACT inhibitors were synthesized as described previously.<sup>[</sup>
+<xref rid="advs72133-bib-0021" ref-type="bibr">
+<sup>21</sup>
+</xref>
+<sup>]</sup> Briefly, EDC (1 µmol), NHS (4 µmol), and DAB (1.2 µmol) were mixed in 250 µL DMSO at room temperature for 30 min. The oligonucleotide with a 3' amine end label (5 µmol), dissolved in 60 µL triethylamine (TEA)/HCl buffer (420 m<sc>m</sc> TEA, pH 10), was then added to the mixture and incubated overnight at room temperature. The EXACT inhibitor was purified by ethanol precipitation and HPLC. The purity of the final product was confirmed by denaturing PAGE.</p></sec><sec id="advs72133-sec-0190"><title>Fluorogenic Peptidyl Substrate Cleavage Assay</title><p>The fluorogenic substrate assay was conducted as previously described.<sup>[</sup>
+<xref rid="advs72133-bib-0021" ref-type="bibr">
+<sup>21</sup>
+</xref>
+<sup>]</sup> Briefly, thrombin (final concentration 0.5 n<sc>m</sc>) and the test inhibitor were mixed in 15 µL of reaction buffer (20 m<sc>m</sc> HEPES, 150 m<sc>m</sc> NaCl, 2 m<sc>m</sc> CaCl<sub>2</sub>, 0.02% Tween 20, pH 7.5) and loaded onto a 384‐well opaque microplate. After incubation for 5 min at 28 °C, 10 µL of fluorogenic substrate (final concentration 50 µ<sc>m</sc>) was added and rapidly mixed by pipetting. The rate of fluorescence increase (λex = 352 nm, λem = 470 nm) over the first 15 min was measured using a SpectraMax i3 microplate reader (Molecular Devices). A 100% thrombin activity control was established in each experiment by measuring the fluorescence increase rate without any inhibitor. Each experiment was performed in triplicate. IC<sub>50</sub> and maximum inhibition values were determined by fitting the inhibition curves using the Hill equation.</p></sec><sec id="advs72133-sec-0200"><title>Molecular Dynamics Simulation</title><p>The initial structures of HD1 with linker domains of varying lengths complexed with the thrombin heavy chain were constructed based on the published X‐ray crystal structure of the HD1‐thrombin complex (PDBID 4dii).<sup>[</sup>
+<xref rid="advs72133-bib-0026" ref-type="bibr">
+<sup>26</sup>
+</xref>
+<sup>]</sup> The missing residues of the thrombin heavy chain in the crystal structure were refined using AlphaFold 3.<sup>[</sup>
+<xref rid="advs72133-bib-0038" ref-type="bibr">
+<sup>38</sup>
+</xref>
+<sup>]</sup> The linker domains were added by extending the 3' terminus of HD1 with a B‐DNA structure using BIOVIA Discovery Studio Visualizer. The coarse‐grained structures of the complexes were then generated using the Martinize 2 tool<sup>[</sup>
+<xref rid="advs72133-bib-0039" ref-type="bibr">
+<sup>39</sup>
+</xref>
+<sup>]</sup> with elastic network constraints on the HD1 domain and the thrombin heavy chain. A two‐step steered molecular dynamics simulation was then performed for each structure using GROMACS with the Martini3 force field.<sup>[</sup>
+<xref rid="advs72133-bib-0040" ref-type="bibr">
+<sup>40</sup>
+</xref>, <xref rid="advs72133-bib-0041" ref-type="bibr">
+<sup>41</sup>
+</xref>
+<sup>]</sup>
+</p><p>In the first step, the HD1 motif was constrained to its binding site, while the 3' end of the linker was steered toward 1 nm from the active center of thrombin (centered on residues N102, I174, and G219) at a constant rate over 2 ns using umbrella pull (1000 kJ mol<sup>−1</sup> nm<sup>−2</sup>). The linker terminus was constrained toward the thrombin active center for an additional 8 ns to equilibrate the linker domain. In the second step, while the constraint toward the active center of thrombin was maintained, the constraint on the HD1 domain at its thrombin‐binding site was removed for a 10 ns simulation. The distance between the linker terminus and the active center of thrombin, as well as the RMSD of the HD1 domain from its original structure, were recorded every 100 ps.</p><p>The all‐atom structure of the complex at the end of the simulation was back‐mapped using the backward tool.<sup>[</sup>
+<xref rid="advs72133-bib-0042" ref-type="bibr">
+<sup>42</sup>
+</xref>
+<sup>]</sup> Dabigatran was added to the structure by superimposing the published dabigatran‐thrombin complex structure (PDBID 1kts) onto the simulated thrombin heavy chain.<sup>[</sup>
+<xref rid="advs72133-bib-0043" ref-type="bibr">
+<sup>43</sup>
+</xref>
+<sup>]</sup>
+</p></sec><sec id="advs72133-sec-0210"><title>Nitrocellulose Filter Binding Assay</title><p>The apparent dissociation constants (K<sub>D</sub>) of HD1 and HD1‐12A‐DAB were determined as previously reported.<sup>[</sup>
+<xref rid="advs72133-bib-0044" ref-type="bibr">
+<sup>44</sup>
+</xref>
+<sup>]</sup> Briefly, <sup>32</sup>P 5′‐end radiolabeled HD1 or HD1‐12A‐DAB (final concentration 500 CPM µL<sup>−1</sup>) was incubated with different concentrations of protein in the selection buffer for 5 min at room temperature. The mixtures were filtered through a nitrocellulose blotting membrane over a nylon hybridization transfer membrane to trap the protein‐bound and unbound RNA, respectively. The fraction of protein‐bound RNA was quantified using a Storm 840 phosphoimager (GE Healthcare) for K<sub>D</sub> calculation. All samples were measured in duplicate.</p></sec><sec id="advs72133-sec-0220"><title>Fibrinogen Cleavage Assay</title><p>The fibrinogen turbidity assay was performed as previously described.<sup>[</sup>
+<xref rid="advs72133-bib-0021" ref-type="bibr">
+<sup>21</sup>
+</xref>
+<sup>]</sup> Briefly, thrombin (final concentration 2.5 n<sc>m</sc>), prothrombin (final concentration 1250 n<sc>m</sc>), and the test inhibitor (250 n<sc>m</sc> HD1 or 50 n<sc>m</sc> HD1‐12A‐DAB) were mixed in 30 µL reaction buffer. The mixture was loaded onto a 384‐well clear‐bottom plate and incubated at 37 °C for 5 min. Then, 20 µL of fibrinogen (final concentration 0.8 mg mL<sup>−1</sup>) was added to the well and rapidly mixed by pipetting. The absorbance at 550 nm was monitored over 2 h using a SpectraMax i3 microplate reader. Each experiment was performed in triplicate.</p></sec><sec id="advs72133-sec-0230"><title>Inhibition of Clot‐Bound Thrombin</title><p>Plasma clots were prepared in a 96‐well plate by adding 20 µL of citrated pooled human plasma (George King Bio‐Medical) to 20 µL of 25 m<sc>m</sc> CaCl<sub>2</sub> solution. The recalcified plasma was incubated at 37 °C for 60 min, allowing a solid clot to form at the bottom of each well. The clot was then washed every 15 min with 250 µL of reaction buffer over the course of 4 h to completely remove free thrombin. The final wash buffer was collected and analyzed using the fluorogenic substrate assay to confirm the absence of thrombin activity.</p><p>After removing all wash buffer, 50 µL of reaction buffer containing 2 µ<sc>m</sc> DAB, HD1‐12dmA‐DAB, or a mixture of 2 µ<sc>m</sc> ATIII and 10 U mL<sup>−1</sup> UFH was added to the clot and incubated for 5 min at 28 °C. Next, 50 µL of reaction buffer containing 100 µ<sc>m</sc> fluorogenic substrate was added to each well to monitor the rate of fluorescence increase. A 100% thrombin activity control was established in each experiment by measuring the fluorescence increase rate without any inhibitor. Each experiment was performed in triplicate.</p></sec><sec id="advs72133-sec-0240"><title>Plasma Stability Assay</title><p>The plasma stability of EXACT inhibitors was characterized as previously reported.<sup>[</sup>
+<xref rid="advs72133-bib-0044" ref-type="bibr">
+<sup>44</sup>
+</xref>
+<sup>]</sup> The EXACT inhibitor (final concentration 500 n<sc>m</sc>) was mixed with 200 µL of plasma anticoagulated with 10 U mL<sup>−1</sup> UFH and incubated at 37 °C for 6 h. Plasma samples (10 µL) were collected at various time points (1, 10, 30, 60, 120, and 360 min) into 300 µL of a water: chloroform mixture (1:1:1, v: v: v) and vortexed to deactivate nucleases. The aqueous phase containing oligonucleotides was collected and lyophilized after centrifugation at 500 rcf for 20 min at 4 °C. The sample was reconstituted in water, analyzed on a 15% polyacrylamide gel containing 7 <sc>m</sc> urea and stained with 1× SYBR gold.</p></sec><sec id="advs72133-sec-0250"><title>Plasma Clotting Assays</title><p>PT and aPTT assays were performed using pooled normal human plasma, as previously described,<sup>[</sup>
+<xref rid="advs72133-bib-0021" ref-type="bibr">
+<sup>21</sup>
+</xref>
+<sup>]</sup> using an ST4 coagulometer (Diagnostica Stago). For the PT assay, 50 µL of plasma was mixed with 5 µL of the inhibitor dissolved in the reaction buffer. After 5 min, 100 µL of TriniCLOT PT Excel S reagent was added to initiate the assay. For the aPTT assay, 50 µL of plasma was mixed with 5 µL of the inhibitor dissolved in the reaction buffer. After 5 min, 50 µL of TriniCLOT aPTT S reagent was added, followed by another 5 min of incubation. Then, 50 µL of 0.2 <sc>m</sc> CaCl<sub>2</sub> was added to initiate clotting. To test the antidote effect, 5 µL of AO (final concentration 2 µ<sc>m</sc>) in reaction buffer was added 5 min after the EXACT inhibitor, followed by an additional 5‐min incubation. All assays were performed in quadruplicate.</p></sec><sec id="advs72133-sec-0260"><title>Whole Blood Clotting Assays</title><p>ACT was performed as previously described,<sup>[</sup>
+<xref rid="advs72133-bib-0021" ref-type="bibr">
+<sup>21</sup>
+</xref>
+<sup>]</sup> using ACT+ cuvettes and a Hemochron Jr Signature coagulation analyzer. Briefly, 72 µL of freshly collected citrated whole blood was mixed with 6 µL of the inhibitors in reaction buffer at room temperature for 3 min. Then, 2.1 µL of CaCl<sub>2</sub> (245 m<sc>m</sc>) was added to the mixture, and the blood sample was immediately tested for ACT. To test the antidote effect, the EXACT inhibitor and AO (final concentration 2 µ<sc>m</sc>) were reconstituted together in 6 µL of reaction buffer and added to the blood sample simultaneously. All assays were performed in triplicate or more.</p><p>TEG was performed as previously described using a Thromboelastograph Analyzer (Haemonetics).<sup>[</sup>
+<xref rid="advs72133-bib-0019" ref-type="bibr">
+<sup>19</sup>
+</xref>
+<sup>]</sup> Briefly, 320 µL of freshly collected citrated whole blood was mixed with the test anticoagulant reconstituted in 10 µL of reaction buffer and 10 µL of kaolin (Haemonetics). Then, 20 µL of 0.2 <sc>m</sc> CaCl<sub>2</sub> was added, and the mixture was immediately loaded into a TEG test cup to initiate the assay. Clot formation was monitored for 180 min. To test the antidote effect, 2 µL of AO (final concentration 2 µ<sc>m</sc>) was added to the blood sample 60 min after the assay began. All assays were performed in triplicate or more.</p></sec><sec id="advs72133-sec-0270"><title>Murine Carotid Artery Injury Thrombosis Model</title><p>The in vivo experiments were modified from a previously described method<sup>[</sup>
+<xref rid="advs72133-bib-0045" ref-type="bibr">
+<sup>45</sup>
+</xref>
+<sup>]</sup> and approved by the Duke University Institutional Animal Care and Use Committee. Mice were anesthetized with isoflurane and tribromoethanol (Avertin) and then subjected to mechanical ventilation while positioned supine on a temperature‐monitoring board. The left external jugular vein was isolated, catheterized, and connected to a syringe pump (Harvard Apparatus, USA) for drug administration. The right common carotid artery was also isolated and fitted with a Doppler flow probe (Transonic Systems, USA). Baseline carotid flow was recorded prior to drug administration.</p><p>Mice were treated with HD1‐12dmA‐DAB, DAB, HD1‐12dmA‐NH<sub>2</sub>, or bivalirudin dissolved in saline (0.9% NaCl) via a bolus injection (80 nmol kg<sup>−1</sup>) followed by a continuous infusion (16 nmol kg<sup>−1</sup> min<sup>−1</sup>) or with negative control (saline). One minute after the bolus injection, a 1 mm × 2 mm Whatman paper patch presoaked in 10% ferric chloride was placed on the carotid artery for 3 min. Subsequently, the patch was removed, and the injured site was rinsed with 100 µL saline. Drug infusion was stopped 15 min after patch removal, and carotid blood flow was recorded for another 15 min. At the end of the study, the tested artery was harvested for further histological analysis by Histowiz, and the animals were euthanized.</p></sec><sec id="advs72133-sec-0280"><title>Ex Vivo ECMO Circuit</title><p>The circuit experiments were conducted as previously described,<sup>[</sup>
+<xref rid="advs72133-bib-0019" ref-type="bibr">
+<sup>19</sup>
+</xref>
+<sup>]</sup> using a small animal membrane oxygenator apparatus with a mechanical roller pump (MasterFlex) and a miniature 100 cm<sup>2</sup> membrane oxygenator. Freshly collected blood (30 mL) was mixed with different anticoagulants and immediately introduced into the circuit for continuous circulation over 120 min, under oxygenation with 95% O<sub>2</sub> and 5% CO<sub>2</sub> gas. Blood pressure and flow were monitored throughout the experiment. Blood samples were collected before starting the circuit and at 5, 30, 60, 90, and 120 min after circulation commenced to measure ACT. Plasma samples were prepared from these blood samples using 3.2% sodium citrate as an anticoagulant, followed by centrifugation at 1800 rcf for 20 min.</p></sec><sec id="advs72133-sec-0290"><title>Hemolysis</title><p>Hemolysis during the ECMO circuit study was assessed using plasma samples collected at different time points, as previously reported.<sup>[</sup>
+<xref rid="advs72133-bib-0046" ref-type="bibr">
+<sup>46</sup>
+</xref>
+<sup>]</sup> Briefly, plasma samples were diluted 2× with 1× PBS, and the absorbance of hemoglobin was measured at 571 nm using a NanoDrop. Hemolysis percentages were calibrated using 0% and 10% hemolysis reference samples prepared from citrated blood collected from the same donor on the same day of study. The 0% hemolysis sample was prepared by centrifuging citrated blood at 1800 rcf for 20 min and diluting the plasma 2× with 1× PBS. The 10% hemolysis sample was prepared by mixing citrated blood with an equal volume of deionized water for 30 min, followed by centrifugation at 1800 rcf for 20 min, and diluting the plasma 10× with the 0% hemolysis sample.</p></sec><sec id="advs72133-sec-0300"><title>Immunoassays</title><p>All immunoassays were performed according to the manufacturers' protocols using plasma samples collected from the ECMO circuit study and quantified using the standards provided in the assay kits. The LegendPlex kits were read on a Cytoflex cytometer (Beckman Coulter, USA), while the Enzygnost assays were read on a SpectraMax i3 microplate reader (Molecular Devices). All standard and test samples were processed in duplicate.</p></sec><sec id="advs72133-sec-0310"><title>Statistical Analysis</title><p>Data were analyzed using GraphPad Prism version 9.4.1 and are expressed as mean ± standard deviation (SD). Multiple group comparisons were performed using ordinary one‐way ANOVA, followed by Tukey's post hoc test. P values were categorized in the plots as follows: &gt;0.1234 (ns), &lt;0.0332 (*), &lt;0.0021 (**), &lt;0.0002 (***), &lt;0.0001 (****). Sample sizes (n) were determined based on previous experience and are stated in figure captions.</p></sec></sec><sec sec-type="COI-statement" id="advs72133-sec-0330"><title>Conflict of Interest</title><p>Duke University has submitted patent applications on the concept of EXACT inhibitors and Dr. Sullenger and Dr. Yu are listed as inventors on these patent applications.</p></sec><sec id="advs72133-sec-0340"><title>Author Contributions</title><p>Experiments were designed and conceived by H.Y., G.P., and B.A.S. Experiments were performed by: H.Y., G.P., M.Z, J. Clancy, S.G., and J. Caiazzi. Collection of blood reagents was supported by G.P., R.R., and S.F. Synthesis and purification of oligonucleotides was supported by A.Y. Data were analyzed by H.Y., G.P., J.W.F., R.R., R.S., and B.A.S. H.Y. and B.A.S. conceived the idea and wrote the manuscript. B.A.S. acquired the funding, provided resources, and supervision. All of the authors contributed to editing of the manuscript and support the conclusions.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="advs72133-supinfo-0001" position="float" content-type="local-data" orientation="portrait"/><supplementary-material id="advs72133-supitem-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>Supporting Information</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="ADVS-13-e09867-s001.docx" position="float" orientation="portrait"><?suppdata-name ADVS-13-e09867-s001.docx?><?suppdata-size 927562?><?suppdata-md5 b87053047efe71161f3c06542bb830bf?><?suppdata-image-server-status NEVER_LOAD?><?suppdata-mime-type application?><?suppdata-mime-sub-type vnd.openxmlformats-officedocument.wordprocessingml.document?><?suppdata-cloudpmc-urn urn:app:4154/12822440/b87053047efe/ADVS-13-e09867-s001.docx?></media></supplementary-material></sec></body><back><ack id="advs72133-sec-0320"><title>Acknowledgements</title><p>This work was supported by a US National Institutes of Health grant (P01‐HL139420) to B.A.S. and an American Heart Association postdoctoral fellowship (23POST1018721) to H.Y.</p></ack><sec sec-type="data-availability" id="advs72133-sec-0360"><title>Data Availability Statement</title><p>The data that support the findings of this study are available from the corresponding author upon reasonable request.</p></sec><ref-list id="advs72133-bibl-0001"><ref id="advs72133-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="advs72133-cite-0001">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Tan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H. D.</given-names>
+<surname>White</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Layland</surname>
+</string-name>, <source>Eur. Heart J.</source>
+<year>2022</year>, <volume>43</volume>, <fpage>1008</fpage>.<pub-id pub-id-type="pmid">35048118</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/eurheartj/ehab896</pub-id></mixed-citation></ref><ref id="advs72133-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="advs72133-cite-0002">
+<string-name name-style="western">
+<given-names>B. E.</given-names>
+<surname>Fan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. J.</given-names>
+<surname>Favaloro</surname>
+</string-name>, <source>Lancet Haematol.</source>
+<year>2022</year>, <volume>9</volume>, <elocation-id>469</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/S2352-3026(22)00171-5</pub-id><pub-id pub-id-type="pmid">35688174</pub-id></mixed-citation></ref><ref id="advs72133-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="advs72133-cite-0003">
+<string-name name-style="western">
+<given-names>S. W.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Gormley</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. B.</given-names>
+<surname>Jang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. E.</given-names>
+<surname>Duarte</surname>
+</string-name>, <source>Anim. Biosci.</source>
+<year>2024</year>, <volume>37</volume>, <fpage>719</fpage>.<pub-id pub-id-type="pmid">37946421</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.5713/ab.23.0367</pub-id><pub-id pub-id-type="pmcid">PMC11016693</pub-id></mixed-citation></ref><ref id="advs72133-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="advs72133-cite-0004">
+<string-name name-style="western">
+<given-names>G. M.</given-names>
+<surname>Arepally</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. B.</given-names>
+<surname>Cines</surname>
+</string-name>, <source>Transl. Res.</source>
+<year>2020</year>, <volume>225</volume>, <fpage>131</fpage>.<pub-id pub-id-type="pmid">32417430</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.trsl.2020.04.014</pub-id><pub-id pub-id-type="pmcid">PMC7487042</pub-id></mixed-citation></ref><ref id="advs72133-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="advs72133-cite-0005">
+<string-name name-style="western">
+<given-names>H. X.</given-names>
+<surname>Yu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Frederiksen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>Sullenger</surname>
+</string-name>, <source>RNA</source>
+<year>2023</year>, <volume>29</volume>, <fpage>455</fpage>.<pub-id pub-id-type="pmid">36697262</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1261/rna.079503.122</pub-id><pub-id pub-id-type="pmcid">PMC10019365</pub-id></mixed-citation></ref><ref id="advs72133-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="advs72133-cite-0006">
+<string-name name-style="western">
+<given-names>K. M.</given-names>
+<surname>Bompiani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. S.</given-names>
+<surname>Woodruff</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. C.</given-names>
+<surname>Becker</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. M.</given-names>
+<surname>Nimjee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>Sullenger</surname>
+</string-name>, <source>Curr. Pharm. Biotechnol.</source>
+<year>2012</year>, <volume>13</volume>, <fpage>1924</fpage>.<pub-id pub-id-type="pmid">22352726</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2174/138920112802273137</pub-id></mixed-citation></ref><ref id="advs72133-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="advs72133-cite-0007">
+<string-name name-style="western">
+<given-names>R. S.</given-names>
+<surname>Woodruff</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>Sullenger</surname>
+</string-name>, <source>Arterioscler. Thromb. Vasc. Biol.</source>
+<year>2015</year>, <volume>35</volume>, <fpage>2083</fpage>.<pub-id pub-id-type="pmid">26315404</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1161/ATVBAHA.115.300131</pub-id><pub-id pub-id-type="pmcid">PMC5304947</pub-id></mixed-citation></ref><ref id="advs72133-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="advs72133-cite-0008">
+<string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Amasawa</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Kuroda</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Okamura</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Badr</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Sugiyama</surname>
+</string-name>, <source>ACS Sustainable Chem. Eng.</source>
+<year>2021</year>, <volume>9</volume>, <elocation-id>14012</elocation-id>.</mixed-citation></ref><ref id="advs72133-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="advs72133-cite-0009">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Obexer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Nassir</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. R.</given-names>
+<surname>Moody</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. S.</given-names>
+<surname>Baran</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. L.</given-names>
+<surname>Lovelock</surname>
+</string-name>, <source>Science</source>
+<year>2024</year>, <volume>384</volume>, <elocation-id>adl4015</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1126/science.adl4015</pub-id><pub-id pub-id-type="pmid">38603508</pub-id></mixed-citation></ref><ref id="advs72133-bib-0010"><label>10</label><mixed-citation publication-type="journal" id="advs72133-cite-0010">
+<string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Padmanabhan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. P.</given-names>
+<surname>Padmanabhan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. D.</given-names>
+<surname>Ferrara</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. E.</given-names>
+<surname>Sadler</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Tulinsky</surname>
+</string-name>, <source>J. Biol. Chem.</source>
+<year>1993</year>, <volume>268</volume>, <elocation-id>17651</elocation-id>.<pub-id pub-id-type="pmid">8102368</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.2210/pdb1hut/pdb</pub-id></mixed-citation></ref><ref id="advs72133-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="advs72133-cite-0011">
+<string-name name-style="western">
+<given-names>S. B.</given-names>
+<surname>Long</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. B.</given-names>
+<surname>Long</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. R.</given-names>
+<surname>White</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>Sullenger</surname>
+</string-name>, <source>RNA</source>
+<year>2008</year>, <volume>14</volume>, <fpage>2504</fpage>.<pub-id pub-id-type="pmid">18971322</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1261/rna.1239308</pub-id><pub-id pub-id-type="pmcid">PMC2590953</pub-id></mixed-citation></ref><ref id="advs72133-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="advs72133-cite-0012">
+<string-name name-style="western">
+<given-names>S. K.</given-names>
+<surname>Buddai</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Layzer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. M.</given-names>
+<surname>Lu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. P.</given-names>
+<surname>Rusconi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>Sullenger</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. M.</given-names>
+<surname>Monroe</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Krishnaswamy</surname>
+</string-name>, <source>J. Biol. Chem.</source>
+<year>2010</year>, <volume>285</volume>, <fpage>5212</fpage>.<pub-id pub-id-type="pmid">20022942</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1074/jbc.M109.049833</pub-id><pub-id pub-id-type="pmcid">PMC2820749</pub-id></mixed-citation></ref><ref id="advs72133-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="advs72133-cite-0013">
+<string-name name-style="western">
+<given-names>K. M.</given-names>
+<surname>Bompiani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. M.</given-names>
+<surname>Monroe</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F. C.</given-names>
+<surname>Church</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>Sullenger</surname>
+</string-name>, <source>J. Thromb. Haemost.</source>
+<year>2012</year>, <volume>10</volume>, <fpage>870</fpage>.<pub-id pub-id-type="pmid">22385910</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/j.1538-7836.2012.04679.x</pub-id><pub-id pub-id-type="pmcid">PMC3636572</pub-id></mixed-citation></ref><ref id="advs72133-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="advs72133-cite-0014">
+<string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Sullenger</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Woodruff</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. M.</given-names>
+<surname>Monroe</surname>
+</string-name>, <source>J. Biol. Chem.</source>
+<year>2012</year>, <volume>287</volume>, <elocation-id>12779</elocation-id>.<pub-id pub-id-type="pmid">22334679</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1074/jbc.M111.300772</pub-id><pub-id pub-id-type="pmcid">PMC3340003</pub-id></mixed-citation></ref><ref id="advs72133-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="advs72133-cite-0015">
+<string-name name-style="western">
+<given-names>R. S.</given-names>
+<surname>Woodruff</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Xu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Layzer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Wu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. L.</given-names>
+<surname>Ogletree</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>Sullenger</surname>
+</string-name>, <source>J. Thromb. Haemost.</source>
+<year>2013</year>, <volume>11</volume>, <fpage>1364</fpage>.<pub-id pub-id-type="pmid">23692437</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/jth.12302</pub-id><pub-id pub-id-type="pmcid">PMC3816843</pub-id></mixed-citation></ref><ref id="advs72133-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="advs72133-cite-0016">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Bel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Borik</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Davidson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Helies</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Stimmer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Fremes</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Zelenkofske</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Rusconi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Alexander</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Alexander</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Menasché</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Pepper</surname>
+</string-name>, <source>Eur. J. Cardiothorac. Surg.</source>
+<year>2016</year>, <volume>49</volume>, <fpage>682</fpage>.<pub-id pub-id-type="pmid">25953802</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/ejcts/ezv159</pub-id></mixed-citation></ref><ref id="advs72133-bib-0017"><label>17</label><mixed-citation publication-type="journal" id="advs72133-cite-0017">
+<string-name name-style="western">
+<given-names>R. S.</given-names>
+<surname>Woodruff</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Ivanov</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I. M.</given-names>
+<surname>Verhamme</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. F.</given-names>
+<surname>Sun</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Gailani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>Sullenger</surname>
+</string-name>, <source>Thromb. Res.</source>
+<year>2017</year>, <volume>156</volume>, <fpage>134</fpage>.<pub-id pub-id-type="pmid">28644959</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.thromres.2017.06.015</pub-id><pub-id pub-id-type="pmcid">PMC5697752</pub-id></mixed-citation></ref><ref id="advs72133-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="advs72133-cite-0018">
+<string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Gunaratne</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Kumar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. W.</given-names>
+<surname>Frederiksen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Stayrook</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. L.</given-names>
+<surname>Lohrmann</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Perry</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. M.</given-names>
+<surname>Bompiani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. V.</given-names>
+<surname>Chabata</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N. K.</given-names>
+<surname>Thalji</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. D.</given-names>
+<surname>Ho</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Arepally</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. M.</given-names>
+<surname>Camire</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Krishnaswamy</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>Sullenger</surname>
+</string-name>, <source>Nat. Biotechnol.</source>
+<year>2018</year>, <volume>36</volume>, <fpage>606</fpage>.<pub-id pub-id-type="pmid">29863725</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nbt.4153</pub-id><pub-id pub-id-type="pmcid">PMC6349032</pub-id></mixed-citation></ref><ref id="advs72133-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="advs72133-cite-0019">
+<string-name name-style="western">
+<given-names>C. V.</given-names>
+<surname>Chabata</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. W.</given-names>
+<surname>Frederiksen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. B.</given-names>
+<surname>Olson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I. A.</given-names>
+<surname>Naqvi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. E.</given-names>
+<surname>Hall</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Gunaratne</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. D.</given-names>
+<surname>Kraft</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. G.</given-names>
+<surname>Que</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. Y.</given-names>
+<surname>Chen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>Sullenger</surname>
+</string-name>, <source>Nucleic Acid Ther.</source>
+<year>2022</year>, <volume>32</volume>, <fpage>139</fpage>.<pub-id pub-id-type="pmid">35021888</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1089/nat.2021.0077</pub-id><pub-id pub-id-type="pmcid">PMC9221171</pub-id></mixed-citation></ref><ref id="advs72133-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="advs72133-cite-0020">
+<string-name name-style="western">
+<given-names>V. N.</given-names>
+<surname>Kolyadko</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Layzer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Perry</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>Sullenger</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Krishnaswamy</surname>
+</string-name>, <source>Proc. Natl. Acad. Sci. USA</source>
+<year>2024</year>, <volume>121</volume>, <elocation-id>2401136121</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1073/pnas.2401136121</pub-id><pub-id pub-id-type="pmcid">PMC11260126</pub-id><pub-id pub-id-type="pmid">38985762</pub-id></mixed-citation></ref><ref id="advs72133-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="advs72133-cite-0021">
+<string-name name-style="western">
+<given-names>H. X.</given-names>
+<surname>Yu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Kumar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. W.</given-names>
+<surname>Frederiksen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V. N.</given-names>
+<surname>Kolyadko</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Pitoc</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Layzer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. M. Y.</given-names>
+<surname>Yan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Rempel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Francis</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Krishnaswamy</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>Sullenger</surname>
+</string-name>, <source>Nat. Commun.</source>
+<year>2024</year>, <volume>15</volume> , <fpage>3977</fpage>.<pub-id pub-id-type="pmid">38730234</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41467-024-48211-6</pub-id><pub-id pub-id-type="pmcid">PMC11087511</pub-id></mixed-citation></ref><ref id="advs72133-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="advs72133-cite-0022">
+<string-name name-style="western">
+<given-names>T. J.</given-names>
+<surname>Rydel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Tulinsky</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Bode</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Huber</surname>
+</string-name>, <source>J. Mol. Biol.</source>
+<year>1991</year>, <volume>221</volume>, <fpage>583</fpage>.<pub-id pub-id-type="pmid">1920434</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/0022-2836(91)80074-5</pub-id></mixed-citation></ref><ref id="advs72133-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="advs72133-cite-0023">
+<string-name name-style="western">
+<given-names>J.‐Y.</given-names>
+<surname>Chang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.‐M.</given-names>
+<surname>Schlaeppi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. R.</given-names>
+<surname>Stone</surname>
+</string-name>, <source>FEBS Lett.</source>
+<year>2001</year>, <volume>260</volume>, <fpage>209</fpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/0014-5793(90)80105-r</pub-id><pub-id pub-id-type="pmid">2404798</pub-id></mixed-citation></ref><ref id="advs72133-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="advs72133-cite-0024">
+<string-name name-style="western">
+<given-names>J. L.</given-names>
+<surname>Krstenansky</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. J. T.</given-names>
+<surname>Mao</surname>
+</string-name>, <source>FEBS Lett.</source>
+<year>2001</year>, <volume>211</volume>, <fpage>10</fpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/0014-5793(87)81264-4</pub-id><pub-id pub-id-type="pmid">3803584</pub-id></mixed-citation></ref><ref id="advs72133-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="advs72133-cite-0025">
+<string-name name-style="western">
+<given-names>L. C.</given-names>
+<surname>Bock</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. C.</given-names>
+<surname>Griffin</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. A.</given-names>
+<surname>Latham</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. H.</given-names>
+<surname>Vermaas</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. J.</given-names>
+<surname>Toole</surname>
+</string-name>, <source>Nature</source>
+<year>1992</year>, <volume>355</volume>, <fpage>564</fpage>.<pub-id pub-id-type="pmid">1741036</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/355564a0</pub-id></mixed-citation></ref><ref id="advs72133-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="advs72133-cite-0026">
+<string-name name-style="western">
+<given-names>I. Russo</given-names>
+<surname>Krauss</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Merlino</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Randazzo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Novellino</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Mazzarella</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Sica</surname>
+</string-name>, <source>Nucleic Acids Res.</source>
+<year>2012</year>, <volume>40</volume>, <fpage>8119</fpage>.<pub-id pub-id-type="pmid">22669903</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/nar/gks512</pub-id><pub-id pub-id-type="pmcid">PMC3439905</pub-id></mixed-citation></ref><ref id="advs72133-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="advs72133-cite-0027">
+<string-name name-style="western">
+<given-names>C. A.</given-names>
+<surname>Kretz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. R.</given-names>
+<surname>Stafford</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. C.</given-names>
+<surname>Fredenburgh</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. I.</given-names>
+<surname>Weitz</surname>
+</string-name>, <source>J. Biol. Chem.</source>
+<year>2006</year>, <volume>281</volume>, <elocation-id>37477</elocation-id>.<pub-id pub-id-type="pmid">17046833</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1074/jbc.M607359200</pub-id></mixed-citation></ref><ref id="advs72133-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="advs72133-cite-0028">
+<string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Maraganore</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Bourdon</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Jablonski</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. L.</given-names>
+<surname>Ramachandran</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. W.</given-names>
+<surname>Fenton</surname>
+</string-name>, <source>Biochemistry</source>
+<year>2002</year>, <volume>29</volume>, <fpage>7095</fpage>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.1021/bi00482a021</pub-id><pub-id pub-id-type="pmid">2223763</pub-id></mixed-citation></ref><ref id="advs72133-bib-0029"><label>29</label><mixed-citation publication-type="journal" id="advs72133-cite-0029">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Koster</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C. M.</given-names>
+<surname>Dyke</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Aldea</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N. G.</given-names>
+<surname>Smedira</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H. L.</given-names>
+<surname>McCarthy</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Aronson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Hetzer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Avery</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Spiess</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. M.</given-names>
+<surname>Lincoff</surname>
+</string-name>, <source>Ann. Thorac. Surg.</source>
+<year>2007</year>, <volume>83</volume>, <fpage>572</fpage>.<pub-id pub-id-type="pmid">17257990</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.athoracsur.2006.09.038</pub-id></mixed-citation></ref><ref id="advs72133-bib-0030"><label>30</label><mixed-citation publication-type="journal" id="advs72133-cite-0030">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>van Ryn</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Hauel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Waldmann</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Wienen</surname>
+</string-name>, <source>Blood</source>
+<year>2007</year>, <volume>110</volume>, <fpage>3998</fpage>.</mixed-citation></ref><ref id="advs72133-bib-0031"><label>31</label><mixed-citation publication-type="journal" id="advs72133-cite-0031">
+<string-name name-style="western">
+<given-names>J. I.</given-names>
+<surname>Weitz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Hudoba</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Massel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Maraganore</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Hirsh</surname>
+</string-name>, <source>J. Clin. Invest.</source>
+<year>1990</year>, <volume>86</volume>, <fpage>385</fpage>.<pub-id pub-id-type="pmid">2384594</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1172/JCI114723</pub-id><pub-id pub-id-type="pmcid">PMC296739</pub-id></mixed-citation></ref><ref id="advs72133-bib-0032"><label>32</label><mixed-citation publication-type="journal" id="advs72133-cite-0032">
+<string-name name-style="western">
+<given-names>S. M.</given-names>
+<surname>Nimjee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. D.</given-names>
+<surname>Lohrmann</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H. C.</given-names>
+<surname>Wang</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. J.</given-names>
+<surname>Snyder</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T. J.</given-names>
+<surname>Cummings</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. C.</given-names>
+<surname>Becker</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Oney</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>Sullenger</surname>
+</string-name>, <source>Mol. Ther.</source>
+<year>2012</year>, <volume>20</volume>, <fpage>391</fpage>.<pub-id pub-id-type="pmid">22086230</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/mt.2011.226</pub-id><pub-id pub-id-type="pmcid">PMC3277228</pub-id></mixed-citation></ref><ref id="advs72133-bib-0033"><label>33</label><mixed-citation publication-type="journal" id="advs72133-cite-0033">
+<string-name name-style="western">
+<given-names>K. M.</given-names>
+<surname>Bompiani</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. L.</given-names>
+<surname>Lohrmann</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. A.</given-names>
+<surname>Pitoc</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. W.</given-names>
+<surname>Frederiksen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. B.</given-names>
+<surname>Mackensen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>Sullenger</surname>
+</string-name>, <source>Chem. Biol.</source>
+<year>2014</year>, <volume>21</volume>, <fpage>935</fpage>.<pub-id pub-id-type="pmid">25065530</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.chembiol.2014.05.016</pub-id><pub-id pub-id-type="pmcid">PMC4134678</pub-id></mixed-citation></ref><ref id="advs72133-bib-0034"><label>34</label><mixed-citation publication-type="journal" id="advs72133-cite-0034">
+<string-name name-style="western">
+<given-names>J. I.</given-names>
+<surname>Witting</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Bourdon</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. V.</given-names>
+<surname>Brezniak</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Maraganore</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. W.</given-names>
+<surname>Fenton</surname>
+</string-name>, <source>Biochem. J.</source>
+<year>1992</year>, <volume>283</volume>, <fpage>737</fpage>.<pub-id pub-id-type="pmid">1290488</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1042/bj2830737</pub-id><pub-id pub-id-type="pmcid">PMC1130947</pub-id></mixed-citation></ref><ref id="advs72133-bib-0035"><label>35</label><mixed-citation publication-type="journal" id="advs72133-cite-0035">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Koster</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Chew</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Gründel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Bauer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Kuppe</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. D.</given-names>
+<surname>Spiess</surname>
+</string-name>, <source>Anesth. Analg.</source>
+<year>2003</year>, <volume>96</volume>, <fpage>383</fpage>.<pub-id pub-id-type="pmid">12538181</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/00000539-200302000-00015</pub-id></mixed-citation></ref><ref id="advs72133-bib-0036"><label>36</label><mixed-citation publication-type="journal" id="advs72133-cite-0036">
+<string-name name-style="western">
+<given-names>G.</given-names>
+<surname>Makdisi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I. W.</given-names>
+<surname>Wang</surname>
+</string-name>, <source>J. Thorac. Dis.</source>
+<year>2015</year>, <volume>7</volume>, <fpage>E166</fpage>.<pub-id pub-id-type="pmid">26380745</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3978/j.issn.2072-1439.2015.07.17</pub-id><pub-id pub-id-type="pmcid">PMC4522501</pub-id></mixed-citation></ref><ref id="advs72133-bib-0037"><label>37</label><mixed-citation publication-type="journal" id="advs72133-cite-0037">
+<string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Warne</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Ruesch</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Siwik</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Mensah</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Ludwig</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Hripcsak</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Godavarti</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Prigodich</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Dolsten</surname>
+</string-name>, <source>Nat. Biotechnol.</source>
+<year>2023</year>, <volume>41</volume>, <fpage>183</fpage>.<pub-id pub-id-type="pmid">36732478</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41587-022-01643-1</pub-id></mixed-citation></ref><ref id="advs72133-bib-0038"><label>38</label><mixed-citation publication-type="journal" id="advs72133-cite-0038">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Abramson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Adler</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Dunger</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Evans</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Green</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Pritzel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>O.</given-names>
+<surname>Ronneberger</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Willmore</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. J.</given-names>
+<surname>Ballard</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Bambrick</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. W.</given-names>
+<surname>Bodenstein</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. A.</given-names>
+<surname>Evans</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.‐C.</given-names>
+<surname>Hung</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>O'Neill</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Reiman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Tunyasuvunakool</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Wu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Žemgulytė</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Arvaniti</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Beattie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>O.</given-names>
+<surname>Bertolli</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Bridgland</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Cherepanov</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Congreve</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. I.</given-names>
+<surname>Cowen‐Rivers</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Cowie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Figurnov</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F. B.</given-names>
+<surname>Fuchs</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Gladman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Jain</surname>
+</string-name>, et al., <source>Nature</source>
+<year>2024</year>, <volume>630</volume>, <fpage>493</fpage>.<pub-id pub-id-type="pmid">38718835</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41586-024-07487-w</pub-id><pub-id pub-id-type="pmcid">PMC11168924</pub-id></mixed-citation></ref><ref id="advs72133-bib-0039"><label>39</label><mixed-citation publication-type="journal" id="advs72133-cite-0039">
+<string-name name-style="western">
+<given-names>P. C.</given-names>
+<surname>Kroon</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Grunewald</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Barnoud</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>van Tilburg</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. C. T.</given-names>
+<surname>Souza</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T. A.</given-names>
+<surname>Wassenaar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. J.</given-names>
+<surname>Marrink</surname>
+</string-name>, <source>eLife</source>
+<year>2024</year>, <volume>12</volume>, <elocation-id>RP90627</elocation-id>.<pub-id pub-id-type="doi" assigning-authority="pmc">10.7554/eLife.90627</pub-id><pub-id pub-id-type="pmcid">PMC12634043</pub-id><pub-id pub-id-type="pmid">41263305</pub-id></mixed-citation></ref><ref id="advs72133-bib-0040"><label>40</label><mixed-citation publication-type="journal" id="advs72133-cite-0040">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Pronk</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Páll</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Schulz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Larsson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Bjelkmar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Apostolov</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. R.</given-names>
+<surname>Shirts</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. C.</given-names>
+<surname>Smith</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. M.</given-names>
+<surname>Kasson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>van der Spoel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B.</given-names>
+<surname>Hess</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Lindahl</surname>
+</string-name>, <source>Bioinformatics</source>
+<year>2013</year>, <volume>29</volume>, <fpage>845</fpage>.<pub-id pub-id-type="pmid">23407358</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/bioinformatics/btt055</pub-id><pub-id pub-id-type="pmcid">PMC3605599</pub-id></mixed-citation></ref><ref id="advs72133-bib-0041"><label>41</label><mixed-citation publication-type="journal" id="advs72133-cite-0041">
+<string-name name-style="western">
+<given-names>P. C. T.</given-names>
+<surname>Souza</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Alessandri</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Barnoud</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Thallmair</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Faustino</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Grünewald</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Patmanidis</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Abdizadeh</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. M. H.</given-names>
+<surname>Bruininks</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T. A.</given-names>
+<surname>Wassenaar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. C.</given-names>
+<surname>Kroon</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Melcr</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Nieto</surname>
+</string-name>, <string-name name-style="western">
+<given-names>V.</given-names>
+<surname>Corradi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H. M.</given-names>
+<surname>Khan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Domanski</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Javanainen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Martinez‐Seara</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Reuter</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. B.</given-names>
+<surname>Best</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Vattulainen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Monticelli</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Periole</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. P.</given-names>
+<surname>Tieleman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. H.</given-names>
+<surname>de Vries</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. J.</given-names>
+<surname>Marrink</surname>
+</string-name>, <source>Nat. Methods</source>
+<year>2021</year>, <volume>18</volume>, <fpage>382</fpage>.<pub-id pub-id-type="pmid">33782607</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/s41592-021-01098-3</pub-id><pub-id pub-id-type="pmcid">PMC12554258</pub-id></mixed-citation></ref><ref id="advs72133-bib-0042"><label>42</label><mixed-citation publication-type="journal" id="advs72133-cite-0042">
+<string-name name-style="western">
+<given-names>T. A.</given-names>
+<surname>Wassenaar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Pluhackova</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. A.</given-names>
+<surname>Böckmann</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. J.</given-names>
+<surname>Marrink</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. P.</given-names>
+<surname>Tieleman</surname>
+</string-name>, <source>J. Chem. Theory Comput.</source>
+<year>2014</year>, <volume>10</volume>, <fpage>676</fpage>.<pub-id pub-id-type="pmid">26580045</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1021/ct400617g</pub-id></mixed-citation></ref><ref id="advs72133-bib-0043"><label>43</label><mixed-citation publication-type="journal" id="advs72133-cite-0043">
+<string-name name-style="western">
+<given-names>N. H.</given-names>
+<surname>Hauel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Nar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Priepke</surname>
+</string-name>, <string-name name-style="western">
+<given-names>U.</given-names>
+<surname>Ries</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Stassen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Wienen</surname>
+</string-name>, <source>J. Med. Chem.</source>
+<year>2002</year>, <volume>45</volume>, <fpage>1757</fpage>.<pub-id pub-id-type="pmid">11960487</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1021/jm0109513</pub-id></mixed-citation></ref><ref id="advs72133-bib-0044"><label>44</label><mixed-citation publication-type="journal" id="advs72133-cite-0044">
+<string-name name-style="western">
+<given-names>E. E.</given-names>
+<surname>Soule</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H. X.</given-names>
+<surname>Yu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Olson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>I.</given-names>
+<surname>Naqvi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Kumar</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Krishnaswamy</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>Sullenger</surname>
+</string-name>, <source>Cell Chem. Biol.</source>
+<year>2022</year>, <volume>29</volume>, <fpage>215</fpage>.<pub-id pub-id-type="pmid">35114109</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.chembiol.2022.01.009</pub-id><pub-id pub-id-type="pmcid">PMC8808741</pub-id></mixed-citation></ref><ref id="advs72133-bib-0045"><label>45</label><mixed-citation publication-type="journal" id="advs72133-cite-0045">
+<string-name name-style="western">
+<given-names>S. M.</given-names>
+<surname>Nimjee</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Dornbos</surname>
+</string-name>, <string-name name-style="western">
+<given-names>G. A.</given-names>
+<surname>Pitoc</surname>
+</string-name>, <string-name name-style="western">
+<given-names>D. G.</given-names>
+<surname>Wheeler</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Layzer</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Venetos</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Huttinger</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S. E.</given-names>
+<surname>Talentino</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N. J.</given-names>
+<surname>Musgrave</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Moody</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. E.</given-names>
+<surname>Rempel</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Jones</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Carlisle</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Wilson</surname>
+</string-name>, <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Bratton</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. E.</given-names>
+<surname>Joseph</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Khan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. R.</given-names>
+<surname>Hoffman</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Sommerville</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. C.</given-names>
+<surname>Becker</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J. L.</given-names>
+<surname>Zweier</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. A.</given-names>
+<surname>Sullenger</surname>
+</string-name>, <source>Mol. Ther.</source>
+<year>2019</year>, <volume>27</volume>, <fpage>1228</fpage>.<pub-id pub-id-type="pmid">30987839</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.ymthe.2019.03.016</pub-id><pub-id pub-id-type="pmcid">PMC6612779</pub-id></mixed-citation></ref><ref id="advs72133-bib-0046"><label>46</label><mixed-citation publication-type="journal" id="advs72133-cite-0046">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Ishiguro</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Nishioka</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Morishige</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Kawano</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Kobayashi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Fujinaga</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Takagi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Kogo</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Morikawa</surname>
+</string-name>, <string-name name-style="western">
+<given-names>N.</given-names>
+<surname>Okayama</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Mizuno</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Aihara</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Suehiro</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Yamasaki</surname>
+</string-name>, <source>Clin. Chim. Acta</source>
+<year>2020</year>, <volume>510</volume>, <fpage>15</fpage>.<pub-id pub-id-type="pmid">32621815</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.cca.2020.06.046</pub-id></mixed-citation></ref></ref-list></back></article>

@@ -1,0 +1,1424 @@
+<?xml version="1.0" encoding="UTF-8"?><article xml:lang="en" article-type="research-article"><front><journal-meta><journal-id journal-id-type="pmc-domain-id">4</journal-id><journal-id journal-id-type="pmc-domain">nar</journal-id><journal-title-group><journal-title>Nucleic Acids Research</journal-title><abbrev-journal-title>Nucleic Acids Res</abbrev-journal-title></journal-title-group><publisher><publisher-name>Oxford University Press</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC8754652</article-id><article-id pub-id-type="pmcaid">8754652</article-id><article-id pub-id-type="pmcaiid">8754652</article-id><article-id pub-id-type="pmid">34893881</article-id><article-id pub-id-type="doi">10.1093/nar/gkab1199</article-id><title-group><article-title>Palmitic acid conjugation enhances potency of tricyclo-DNA splice switching
+oligonucleotides</article-title></title-group><contrib-group content-type="author"><contrib><name name-style="western"><surname>Relizani</surname><given-names initials="K">Karima</given-names></name><xref ref-type="aff" rid="aff1">1</xref><xref ref-type="aff" rid="aff2">2</xref></contrib><contrib><name name-style="western"><surname>Echevarría</surname><given-names initials="L">Lucía</given-names></name><xref ref-type="aff" rid="aff3">3</xref><xref ref-type="aff" rid="aff4">4</xref></contrib><contrib><name name-style="western"><surname>Zarrouki</surname><given-names initials="F">Faouzi</given-names></name><xref ref-type="aff" rid="aff5">5</xref><xref ref-type="aff" rid="aff6">6</xref></contrib><contrib><name name-style="western"><surname>Gastaldi</surname><given-names initials="C">Cécile</given-names></name><xref ref-type="aff" rid="aff7">7</xref></contrib><contrib><name name-style="western"><surname>Dambrune</surname><given-names initials="C">Chloe</given-names></name><xref ref-type="aff" rid="aff8">8</xref></contrib><contrib><name name-style="western"><surname>Aupy</surname><given-names initials="P">Philippine</given-names></name><xref ref-type="aff" rid="aff9">9</xref></contrib><contrib><name name-style="western"><surname>Haeberli</surname><given-names initials="A">Adrian</given-names></name><xref ref-type="aff" rid="aff10">10</xref></contrib><contrib><name name-style="western"><surname>Komisarski</surname><given-names initials="M">Marek</given-names></name><xref ref-type="aff" rid="aff11">11</xref></contrib><contrib><name name-style="western"><surname>Tensorer</surname><given-names initials="T">Thomas</given-names></name><xref ref-type="aff" rid="aff12">12</xref><xref ref-type="aff" rid="aff13">13</xref></contrib><contrib><name name-style="western"><surname>Larcher</surname><given-names initials="T">Thibaut</given-names></name><xref ref-type="aff" rid="aff14">14</xref></contrib><contrib><name name-style="western"><surname>Svinartchouk</surname><given-names initials="F">Fedor</given-names></name><xref ref-type="aff" rid="aff15">15</xref></contrib><contrib><name name-style="western"><surname>Vaillend</surname><given-names initials="C">Cyrille</given-names></name><xref ref-type="aff" rid="aff16">16</xref></contrib><contrib><name name-style="western"><surname>Garcia</surname><given-names initials="L">Luis</given-names></name><xref ref-type="aff" rid="aff17">17</xref><xref ref-type="aff" rid="aff18">18</xref><xref rid="COR2" ref-type="author-notes">✉</xref></contrib><contrib><name name-style="western"><surname>Goyenvalle</surname><given-names initials="A">Aurélie</given-names></name><xref ref-type="aff" rid="aff19">19</xref><xref ref-type="aff" rid="aff20">20</xref><xref rid="COR1" ref-type="author-notes">✉</xref></contrib></contrib-group><aff id="aff1"><label>1</label>
+Université Paris-Saclay, UVSQ, Inserm, END-ICAP, 78000
+Versailles, France</aff><aff id="aff2"><label>2</label>
+SQY Therapeutics, UVSQ, 78180 Montigny le
+Bretonneux, France</aff><aff id="aff3"><label>3</label>
+Université Paris-Saclay, UVSQ, Inserm, END-ICAP, 78000
+Versailles, France</aff><aff id="aff4"><label>4</label>
+SQY Therapeutics, UVSQ, 78180 Montigny le
+Bretonneux, France</aff><aff id="aff5"><label>5</label>
+Université Paris-Saclay, UVSQ, Inserm, END-ICAP, 78000
+Versailles, France</aff><aff id="aff6"><label>6</label>
+Université Paris-Saclay, CNRS, Institut des Neurosciences Paris
+Saclay, 91190, Gif-sur-Yvette, France</aff><aff id="aff7"><label>7</label>
+LIA BAHN, centre scientifique de Monaco,
+98000, Monaco</aff><aff id="aff8"><label>8</label>
+Université Paris-Saclay, UVSQ, Inserm, END-ICAP, 78000
+Versailles, France</aff><aff id="aff9"><label>9</label>
+Université Paris-Saclay, UVSQ, Inserm, END-ICAP, 78000
+Versailles, France</aff><aff id="aff10"><label>10</label>
+SYNTHENA AG, Bern, Switzerland</aff><aff id="aff11"><label>11</label>
+SYNTHENA AG, Bern, Switzerland</aff><aff id="aff12"><label>12</label>
+SQY Therapeutics, UVSQ, 78180 Montigny le
+Bretonneux, France</aff><aff id="aff13"><label>13</label>
+SYNTHENA AG, Bern, Switzerland</aff><aff id="aff14"><label>14</label>
+INRAE Oniris, UMR 703 PAnTher, Nantes,
+France</aff><aff id="aff15"><label>15</label>
+SQY Therapeutics, UVSQ, 78180 Montigny le
+Bretonneux, France</aff><aff id="aff16"><label>16</label>
+Université Paris-Saclay, CNRS, Institut des Neurosciences Paris
+Saclay, 91190, Gif-sur-Yvette, France</aff><aff id="aff17"><label>17</label>
+Université Paris-Saclay, UVSQ, Inserm, END-ICAP, 78000
+Versailles, France</aff><aff id="aff18"><label>18</label>
+LIA BAHN, centre scientifique de Monaco,
+98000, Monaco</aff><aff id="aff19"><label>19</label>
+Université Paris-Saclay, UVSQ, Inserm, END-ICAP, 78000
+Versailles, France</aff><aff id="aff20"><label>20</label>
+LIA BAHN, centre scientifique de Monaco,
+98000, Monaco</aff><author-notes><fn id="COR1"><label>✉</label><p>To whom correspondence should be addressed. Tel: +33 170429432; Email:
+<email>aurelie.goyenvalle@uvsq.fr</email></p></fn><fn id="COR2"><label>✉</label><p>Correspondence may also be addressed to Luis Garcia. Tel: +33 170429416;
+Email: <email>luis.garcia@uvsq.fr</email></p></fn></author-notes><pub-date><day>10</day><month>12</month><year>2021</year></pub-date><volume>50</volume><issue>1</issue><fpage>17</fpage><page-range>17–34</page-range><pub-history><event event-type="pmc-release"><date><day>13</day><month>1</month><year>2022</year></date></event></pub-history><permissions><copyright-statement>© The Author(s) 2021. Published by Oxford University Press on behalf of
+Nucleic Acids Research.</copyright-statement><license><license-p>This is an Open Access article distributed under the terms of the Creative
+Commons Attribution License (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://creativecommons.org/licenses/by/4.0/" ext-link-type="uri">https://creativecommons.org/licenses/by/4.0/</ext-link>), which permits unrestricted
+reuse, distribution, and reproduction in any medium, provided the original work is
+properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="gkab1199.pdf" content-type="pmc-pdf"><?cloudpmc-path 9113/8754652/a4a1835f4bdb/gkab1199.pdf?><?cloudpmc-bucket app?><?size 6872871?></self-uri><abstract id="abstract1"><title>Abstract</title><p>Tricyclo-DNA (tcDNA) is a conformationally constrained oligonucleotide analog that has
+demonstrated great therapeutic potential as antisense oligonucleotide (ASO) for several
+diseases. Like most ASOs in clinical development, tcDNA were modified with
+phosphorothioate (PS) backbone for therapeutic purposes in order to improve their
+biodistribution by enhancing association with plasma and cell protein. Despite the
+advantageous protein binding properties, systemic delivery of PS-ASO remains limited and
+PS modifications can result in dose limiting toxicities in the clinic. Improving
+extra-hepatic delivery of ASO is highly desirable for the treatment of a variety of
+diseases including neuromuscular disorders such as Duchenne muscular dystrophy. We
+hypothesized that conjugation of palmitic acid to tcDNA could facilitate the delivery of
+the ASO from the bloodstream to the interstitium of the muscle tissues. We demonstrate
+here that palmitic acid conjugation enhances the potency of tcDNA-ASO in skeletal and
+cardiac muscles, leading to functional improvement in dystrophic mice with significantly
+reduced dose of administered ASO. Interestingly, palmitic acid-conjugated tcDNA with a
+full phosphodiester backbone proved effective with a particularly encouraging safety
+profile, offering new perspectives for the clinical development of PS-free tcDNA-ASO for
+neuromuscular diseases.</p></abstract><custom-meta-group><custom-meta><meta-name>status</meta-name><meta-value>released</meta-value></custom-meta><custom-meta><meta-name>display-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>is-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>is-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>is-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>is-journal-matter</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>is-scanned</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>is-retracted</meta-name><meta-value>no</meta-value></custom-meta></custom-meta-group></article-meta><notes notes-type="article-notes"><sec id="historyarticle-meta1" sec-type="history" disp-level="2"><p>Accepted 2021 Dec 2; Revised 2021 Nov 12; Received 2021 Aug 30; Collection date 2022 Jan 11.</p></sec></notes></front><body><sec id="SEC1" disp-level="1"><title>INTRODUCTION</title><p>Antisense Oligonucleotides (ASOs)-based therapeutics have made tremendous progress in the
+past few decades and represent very attractive drugs for a variety of diseases. Several ASOs
+have been approved for use in the clinic and many more are in the preclinical or clinical
+pipeline. However, systemically delivered ASOs mostly distribute to liver, kidney and spleen
+whilst other tissues of interest such as skeletal and cardiac muscles remain challenging
+targets. This is exemplified by the discontinuation of several clinical programs for
+myotonic dystrophy type I (DM1) (<xref rid="B1" ref-type="bibr">1</xref>) and Duchenne
+muscular dystrophy (DMD) using various chemistries (<xref rid="B2" ref-type="bibr">2</xref>). Most ASOs in clinical development are modified using the phosphorothioate (PS)
+backbone which improves metabolic stability and allows association with plasma and cell
+surface proteins (<xref rid="B3" ref-type="bibr">3</xref>,<xref rid="B4" ref-type="bibr">4</xref>). PS-ASOs have been shown to reach muscle tissues in mouse models of muscle
+disease but the doses required are generally much higher than those needed for other organs
+like liver, which may result in dose-limiting toxicities in the clinic as seen for
+drisapersen (a 2’-<italic>O</italic>-methyl-PS ASO developed for DMD therapy). While several
+neuromuscular diseases (NMD) are particularly amenable for ASO-based treatment, clinical
+development for these disorders has proven difficult mostly due to the abundance of skeletal
+muscle and the poor distribution to muscle tissues. Apart from the evident success of
+nusinersen, a 2’-<italic>O</italic>-methoxyethyl (2’MOE) ASO which is administered
+intrathecally to treat spinal muscular atrophy (SMA), the development of nucleic acid
+therapy for NMDs has been accompanied by several failures, highlighting problems of safety,
+efficacy, and tissue targeting that need to be overcome (<xref rid="B2" ref-type="bibr">2</xref>). Moreover, the mechanism of action of ASO for NMDs which is often splice
+switching, requires localization of ASO in the nucleus in contrast with RNA degradation
+mechanisms, adding another delivery challenge.</p><p>Extra-hepatic delivery of ASOs is an active line of research, where various backbone
+modifications and different types of conjugates are being evaluated (<xref rid="B5" ref-type="bibr">5</xref>). For example conjugation of ASOs to cell-penetrating peptides or
+antibodies targeting specific receptors (such as the transferrin receptor) has shown
+promising results (<xref rid="B2" ref-type="bibr">2</xref>). Phosphorodiamidate morpholino
+(PMO) are so far the only ASO approved for the systemic treatment of DMD but the functional
+benefit in DMD patients is still minimal. Preliminary results from a phase 2 clinical trial
+in DMD patients using peptide conjugated PMO (PPMO) revealed higher levels of dystrophin
+restoration than with their naked PMO counterpart (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://investorrelations.sarepta.com/news-releases/news-release-details/sarepta-therapeutics-reports-positive-clinical-results-phase-2" ext-link-type="uri">https://investorrelations.sarepta.com/news-releases/news-release-details/sarepta-therapeutics-reports-positive-clinical-results-phase-2</ext-link>).</p><p>Among developments of alternative chemistries, we have previously demonstrated that
+tricyclo-DNA (tcDNA)-ASOs display unprecedented uptake in many tissues including cardiac
+muscle and the central nervous system (CNS) after systemic administration in mouse models of
+DMD (<xref rid="B6" ref-type="bibr">6</xref>,<xref rid="B7" ref-type="bibr">7</xref>) and
+SMA (<xref rid="B8" ref-type="bibr">8</xref>). The antisense strategy for DMD aims to
+eliminate one or several exons, by masking key splicing sites, to restore the reading frame
+and generate a shorter but functional dystrophin. Systemic delivery of full PS-tcDNA allows
+restoration of dystrophin in skeletal and cardiac muscles and to a lower extent in the brain
+of dystrophic mice, leading to muscle function improvement and correction of behavioral
+features linked to the loss of brain dystrophin. Still, as for all PS-ASOs, high doses of
+PS-tcDNA may lead to undesirable effects mainly due to their capacity to bind plasma
+proteins (<xref rid="B9" ref-type="bibr">9</xref>). Effects of PS backbones may include
+immune cell activation (<xref rid="B10" ref-type="bibr">10</xref>), complement activation
+(mostly reported in monkey studies) (<xref rid="B11" ref-type="bibr">11</xref>) or
+prolongation of clotting times (<xref rid="B9" ref-type="bibr">9</xref>,<xref rid="B12" ref-type="bibr">12</xref>), known to normalize as ASOs are cleared from the
+bloodstream. In particular it has been shown that low-level, but sustained, complement
+activation may lead to depletion of complement and damage to the vascular system and kidney
+(<xref rid="B13" ref-type="bibr">13</xref>,<xref rid="B14" ref-type="bibr">14</xref>).
+Moreover, the increased association between PS-ASO and proteins prevents their rapid
+excretion in the urine as they form larger complexes that impair their filtration by the
+glomerulus. Therefore, repeated systemic administrations of PS-ASOs are likely to cause
+cellular toxicity in typical target organs like kidney and liver, where they accumulate. In
+this context, development of PS-free ASOs is an attractive alternative particularly for
+tcDNAs which are stable in their full phosphodiester (PO) version as opposed to other
+phosphodiester based ASOs which require PS bonds for stability (<xref rid="B15" ref-type="bibr">15</xref>,<xref rid="B16" ref-type="bibr">16</xref>).</p><p>Unfortunately, when exploring the potential of minimizing PS content, we previously
+demonstrated that tcDNA-PO display poor biodistribution and efficacy (<xref rid="B17" ref-type="bibr">17</xref>). In order to compensate the lack of PS linkages which are known to
+bind serum albumin with dissociation constants in the low micromolar range (<xref rid="B18" ref-type="bibr">18</xref>), we investigated the conjugation of tcDNA-ASO to
+palmitic acid. We hypothesized that palmitic acid could facilitate tcDNA-ASO transport
+across the continuous capillary endothelium in the skeletal and cardiac muscle through
+improved binding of the conjugated-tcDNA to serum albumin (<xref rid="B19" ref-type="bibr">19</xref>).</p><p>In this study, we describe the impact of palmitic acid conjugation to tcDNA-ASOs, in their
+full phosphodiester (PO) or full phosphorothioate (PS) versions, using the DMD mouse
+(<italic>mdx</italic>) as model. We demonstrate that these conjugates show enhanced
+potency in skeletal and cardiac muscles, which allows a significant reduction of the
+administered dose. We also report the functional improvement in dystrophic mice and the
+safety profile following a long-term treatment with these conjugated compounds as well as
+the persistence of the treatment efficacy after a recovery period. Overall, our data suggest
+that palmitic acid conjugation can safely and effectively substitute for PS linkages
+offering new perspectives for the clinical development of PS-free tcDNA-ASO.</p></sec><sec id="SEC2" disp-level="1"><title>MATERIALS AND METHODS</title><sec id="SEC2-1" disp-level="2"><title>Antisense oligonucleotides and animal experiments</title><p>Animal procedures were performed in accordance with national and European legislation,
+approved by the French government (Ministère de l’Enseignement Supérieur et de la
+Recherche, Autorisation APAFiS #6518). <italic>Mdx</italic>
+(C57BL/10ScSn-Dmd<sup>mdx</sup>/J) mice were bred in our animal facility at the
+Plateforme 2Care, UFR des Sciences de la santé, Université de Versailles Saint Quentin and
+were maintained in a standard 12-h light/dark cycle with free access to food and water.
+Mice were weaned at weeks 4–5 postnatal and 2–5 individuals were housed per cage.</p><p>All tcDNA-ASO targeting the donor splice site of exon 23 of the mouse dystrophin
+pre-mRNA, used in this study are detailed in Figure <xref rid="F1" ref-type="fig">1A</xref> and were synthesized by SYNTHENA (Bern, Switzerland). Palmitic acid was
+conjugated at the 5’end of tcDNA-PO or tcDNA-PS ASO via a C6-amino linker and a
+phosphorothioate bond.</p><fig id="F1" position="float"><?disp-level 3?><label>Figure 1.</label><caption><p>Palmitic acid conjugation enhances the biodistribution and efficacy of tcDNA-ASO.
+(<bold>A</bold>) Sequences of the different tcDNA-ASOs and schematic design
+representing the conjugation of the palmitic acid at the 5’ end of tcDNA (tcDNA-PO,
+tcDNA-PS) using a C6-amino linker and a PS bond. (<bold>B</bold>) Experimental
+pharmacokinetics protocol (upper panel): <italic>mdx</italic> mice received a single
+intravenous dose of 10 μmol/kg of unconjugated (tcDNA-PO or tcDNA-PS) or conjugated
+tcDNA (palm-tcDNA-PO or palm-tcDNA-PS) and blood samples were collected at different
+time points (<italic>t</italic> = 0, 0.08 h (i.e. 5 min), 0.33 h (i.e. 15 min), 0.5 h
+(i.e. 30 min), 1, 4, 8, 16 and 24 h) after the administration. Semi-log plots of serum
+concentration of each tcDNA-ASO versus time from mice treated with 10 μmol/kg of
+unconjugated (tcDNA-PO or tcDNA-PS) or conjugated tcDNA (palm-tcDNA-PO or
+palm-tcDNA-PS). Data are represented as mean, <italic>n</italic> = 3/time point).
+(<bold>C</bold>) Quantification of tcDNA-ASO content in various tissues by
+fluorescent hybridization assay following a 4-week treatment at the dose of 10
+μmol/kg/week. D) Detection of exon 23–skipped dystrophin mRNA by nested RT-PCR (right)
+and quantification of exon 23 skipping levels by qRT-PCR (bottom) in the different
+muscle tissues following a 4-week treatment at the dose of 10 μmol/kg/week (TA:
+tibialis anterior, gas: gastrocnemius, quad: quadriceps, Tri: triceps, Bi: biceps;
+Dia: diaphragm). Results are expressed as mean ± SEM; <italic>n</italic> = 4 mice per
+group.</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" xlink:href="gkab1199fig1.jpg"><?cloudpmc-path blobs/9113/8754652/166f4aebe3e4/gkab1199fig1.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 1876?><?original-width 1673?><?scaled-height 750?><?scaled-width 669?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="gkab1199fig1.gif"><?cloudpmc-path blobs/9113/8754652/9f9517b58c85/gkab1199fig1.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig><p>For pharmacokinetics studies, 6–8 week-old <italic>mdx</italic> mice received a single
+intravenous injection of 10 μmol/kg of unconjugated (tcDNA-PO or tcDNA-PS) or conjugated
+tcDNA (palm-tcDNA-PO or palm-tcDNA-PS) under general anesthesia using 1.5–2% isoflurane.
+Blood samples were collected at different time points (<italic>t</italic> = 0, 5 min, 15
+min, 30 min, 1 h, 4 h, 8 h, 16 h and 24 h) after the administration
+(<italic>n</italic> = 3/time point). Pharmacokinetics was analysed using WinNonlin 8.1
+software (Pharsight Corporation, Mountain View, CA). Semilogarithmic plots of tcDNA-ASOs
+serum level means versus time indicated biexponential decrease.</p><p>For repeated injection protocol, 6–8 week-old <italic>mdx</italic> mice were injected
+intravenously, under general anesthesia using 1.5–2% isoflurane, once a week with the
+corresponding tcDNA-ASO for a period of 4–12 weeks. Age-matched <italic>mdx</italic>
+groups receiving an equivalent volume of sterile saline were included as controls and
+C57BL/10 mice were included as wild-type controls. One hour after the first injection,
+blood samples were collected to measure complement C3. Additional blood samples were
+collected at the end of the treatment when animals were euthanized for MYOM-3 and
+biochemistry analysis. Animals were euthanized 2 weeks or 12 weeks after the last
+injection and muscles and tissues were harvested and snap-frozen in liquid nitrogen–cooled
+isopentane and stored at −80°C before further analysis. To assess the safety of the
+palm-tcDNA-ASO treatment, liver and kidney were sampled at the end of the protocol (2
+weeks or 12 weeks after the last dose), fixed in 10% neutral buffered formalin, and
+embedded in paraffin wax. 5-μm-thick sections were then stained with routine
+hematoxylin-eosin-saffron (HES) for histopathological evaluation which was further
+performed by a veterinary pathologist blind to treatment. Hepatocytic nuclear pleomorphism
+and atypias were scored on a scale of 0 to 3 (0 = no lesion, 1 = mild pleomorphism,
+2 = mild pleomorphism with some atypias, 3 = severe pleomorphism with trabecular
+disorganization).</p><p>Sample sizes and n values are indicated in each figure legend. Investigators were blinded
+for RNA and protein analysis.</p></sec><sec id="SEC2-2" disp-level="2"><title>TcDNA quantification by fluorescent hybridization assay and LCMS</title><p>Tissues were homogenized using the Precellys 24 (Bertin Instruments, France) in lysis
+buffer (100 mmol/l Tris–HCl, pH 8.5, 200 mmol/l NaCl, 5 mmol/l EDTA, 0.2% sodium dodecyl
+sulfate) containing 2 mg/ml of proteinase K (Invitrogen) (50 mg tissue/ ml of buffer),
+followed by incubation overnight at 55°C in a hybridization oven. After centrifugation at
+14 000 rpm (Sorval ST 8R centrifuge, 75005719 rotor) for 15 min, the supernatant was used
+in the assay. Quantification of tcDNA was performed using a hybridization assay with a
+molecular beacon probe, as previously described (<xref rid="B17" ref-type="bibr">17</xref>). Briefly, 10 μl of tissue lysates or serum were incubated with a 5’ Cy3-DNA
+complementary probe conjugated with HBQ quencher at 3’ in a black non-binding 96-well
+plates (Fischer Scientific). PBS was added to a final volume of 100 μl per well and
+fluorescence was measured on a spectrophotometer (Ex 544 nm/Em 590 nm using FluoStar
+Omega). The amount of tcDNA in tissues was determined using a standard curve build on the
+measurement of known tcDNA quantities dissolved in the respective tissue lysates of
+mock-injected animals.</p><p>Quantification of tcDNA-ASO was also performed by LC/MS analysis on an Agilent 1100 HPLC
+system coupled to an Agilent 6530 TOF-MS mass spectrometer. Standard curves of each ASO
+were established in Milli-Q water (2μM) with 3 different injection volumes (2, 4, 10 μl).
+TcDNA-ASO from tissue lysate (50 μl) was extracted by solid-phase extraction (SPE) using
+Oasis HLB 1cc (10 mg) Extraction Cartridges (Waters). Eluate was collected in a single 1.5
+ml Eppendorf tube and lyophilized to dryness in a speed-vac. 50 μl of Milli-Q water was
+added to the lyophilized sample. Mixture was transferred to a VWR HPLC vial with inlet and
+injected on LC/MS. Briefly, separation was accomplished using an HPLCMS system consisting
+of a quaternary pump, UV detector, a column oven, an autosampler and a Q-TOF mass
+spectrometer. An ion-pair method was applied. Samples were injected on an ACQUITY UPLC
+Oligonucleotide BEH C18 Column (130Å, 1.7 μm, 2.1 mm × 100 mm, Waters). The column was
+maintained at 75°C. A buffer (400 mM HFIP, 15 mM TEA, + 10% Methanol) prepared in advance
+and Methanol were used as the mobile phase at a flow rate of 0.2 ml/min. Two gradients
+were performed in the same analysis method. The first one was used to separate potential
+metabolites that have lost 5’end palmitoyl moiety. Methanol was increased from 5% to 25%
+over 19min. The second gradient was used to isolate the palmitoyl conjugated-ASO. Methanol
+was increased from 50% to 60% over 9min.</p><p>Manual evaluation was performed by comparing a table of calculated
+<italic>m</italic>/<italic>z</italic> values corresponding to potential metabolites with
+the peaks present in TIC chromatograms. Peak areas from UV chromatograms were determined
+for ASOs and concentrations were calculated using the calibration curves. As a control and
+for really low values, quantifications of ASOs in tissues were also determined from
+extracted ion chromatograms (EIC).</p><p>Plasma pharmacokinetics were compared by non-compartmental analysis via sparse sampling
+design using Phoenix Winnonlin 8.1 (Pharsight, Mountain View, CA).</p></sec><sec id="SEC2-3" disp-level="2"><title>Serum and urine analysis</title><p>Analyses of serum creatine kinase (CK), alanine aminotransferase (ALT), aspartate
+aminotransferase (AST), alkaline phosphatase (ALP), bilirubin, creatinine, urea and
+albumin levels were performed by the pathology laboratory at Mary Lyon Centre, Medical
+Research Council, Harwell, Oxfordshire, UK.</p><p>Coagulation assays: human plasma from healthy volunteers was obtained from the French
+Blood Donors Organization (EFS, Etablissement Français du Sang). Mouse or Human citrated
+plasma samples were incubated <italic>in vitro</italic> with 2 mg/ml of tcDNA for 20 min
+at 37°C, then prothrombin time (PT) and activated partial thromboplastin time (aPTT)
+assays were performed on a semi-automated START max coagulometer (Stago) following
+manufacturer's instructions.</p><p>For <italic>in vitro</italic> complement activation studies, tcDNA was incubated with
+mouse or human serum at 37°C for 45 min. Determination of complement activation was
+evaluated using mouse C3a elisa kit (Teco Medical, Switzerland) and human C3aPlus kit
+(Quidel Co., San Diego CA, USA). 5 mg/ml Zymosan (Complement Technology, Inc, Texas, USA)
+was used as positive control.</p><p>Urines were collected using metabolic cages over 24 h, directly in refrigerated tubes
+(4°C). Upon collection, urines were centrifuged at 10 000 g for 10 min and supernatants
+were aliquots were frozen at –80°C for further analysis. Urine creatinine was measured
+using Creatinine assay kit (R&amp;D Systems, Inc, Minneapolis, MN) following
+manufacturer's instructions. Total protein in urine samples was measured as previously
+described (<xref rid="B20" ref-type="bibr">20</xref>). Briefly, proteins were precipitated
+from urine samples by adding 40 μl dH<sub>2</sub>O and 200 μl of prechilled acetone to 10
+μl of urine. Samples were then incubated at –20°C for 30 min, then centrifuged at 14
+000 g, 4°C for 15 min. Pellets were resuspended in 40 μl dH<sub>2</sub>O and protein
+concentration was measured using Pierce BCA assay (Thermo Scientific, Rockford, IL).
+Albumin from urine samples was measured using the albumin ELISA kit (Bethy Laboratories,
+Montgomery, TX) following manufacturer's instructions. Acute kidney injury (AKI)
+biomarkers levels were analysed by multiplex assays, using the Luminex® technology. The
+multiplex kidney injury panels (MKI1MAG-94K, MKI2MAG-94K, Merck-Millipore) were used
+according to the manufacturer's instructions to measure levels of β-2-microglobulin (B2M),
+Renin, Kidney Injury Molecule 1 (KIM-1), interferon-gamma induced protein 10 (IP-10),
+Vascular endothelial growth factor (VEGF), Cystatin C, epidermal growth factor (EGF),
+Lipocalin-2-NGAL, Clusterin and Osteopontin (OPN). The results were read using a Bio-Plex
+MAGPIX Multiplex reader and analysed with the Bio-Plex manager 6.1 software (Bio-Rad,
+France).</p></sec><sec id="SEC2-4" disp-level="2"><title>RNA analysis</title><p>Total RNA was isolated from intervening muscle sections collected during cryosection
+using TRIzol reagent according to the manufacturer's instructions (Thermo Fisher
+Scientific, USA). Aliquots of 500 ng of total RNA were used for RT-PCR analysis using the
+Access RT-PCR System (Promega, USA) in a 50 μl reaction using the external primers Ex 20Fo
+(5′-CAGAATTCTGCCAATTGCTGAG-3′) and Ex 26Ro (5′-TTCTTCAGCTTGTGTCATCC-3′). The cDNA
+synthesis was carried out at 45°C for 45 min, directly followed by the primary PCR of 30
+cycles of 95°C (30 s), 55°C (1 min) and 72°C (2 min). 2 μl of these reactions were then
+re-amplified in nested PCRs by 22 cycles of 95°C (30 s), 55°C (1 min) and 72°C (2 min)
+using the internal primers Ex 20Fi (5′-CCCAGTCTACCACCCTATCAGAGC-3′) and Ex 26Ri (5′-
+CCTGCCTTTAAGGCTTCCTT-3′). PCR products were analyzed on 2% agarose gels. Exon 23 skipping
+was also measured by Taqman quantitative PCR as previously described (<xref rid="B21" ref-type="bibr">21</xref>) using Taqman assays designed against the exon 23–24
+junction (assay Mm.PT.58.43432707: Forward: 5’-CAGGCCATTCCTCTTTCAGG -3’; reverse:
+5’-GAAACTTTCCTCCCAGTTGGT-3’; Probe: 5’-TCAACTTCAGCCATCCATTTCTGTAAGGT-3’) and exon 22–24
+junction (Forward: 5’- CTGAATATGAAATAATGGAGGAGAGACTCG-3’; reverse:
+5’-CTTCAGCCATCCATTTCTGTAAGGT-3’; Probe: 5’-ATGTGATTCTGTAATTTCC-3’) (Integrated DNA
+technology). 150 ng of cDNA was used as input per reaction and all assays were carried out
+in triplicate. Assays were performed under fast cycling conditions on a Biorad CFX384
+Touch Real-Time PCR Detection System, and all data were analyzed using the absolute copy
+number method. For a given sample the copy number of skipped product (exon 22–24 assay)
+and unskipped product (exon 23–24 assay) were determined using the standards Ex20–26 and
+Ex20–26Delta23 respectively (gBlocks gene fragments from Integrated DNA technology). Exon
+23 skipping was then expressed as a percentage of total dystrophin (calculated by the
+addition of exon 22–23 and exon 22–24 copy numbers).</p></sec><sec id="SEC2-5" disp-level="2"><title>Western blot analysis</title><p>Protein lysates were obtained from pooled muscle sections homogenized using the Precellys
+24 (Bertin Instruments, France) in RIPA buffer (Thermo Fisher Scientific, USA)
+complemented with SDS powder (5% final) (Bio-Rad, France) and protease inhibitor cocktail
+(ThermoFisher Scientific, USA). Protein extracts were denatured at 100°C for 3 min and
+centrifuged at 13 000 rpm for 10 min at 10°C. Supernatants were collected and the total
+protein concentration was determined with the BCA Protein Assay Kit (Thermo Fisher
+Scientific, USA). 25 μg of protein were loaded onto NuPAGE 3–8% Tris-acetate protein gels
+(Invitrogen), following manufacturer instructions. Dystrophin protein was detected by
+probing the membrane with NCL-DYS1 primary monoclonal antibody (NCL-DYS1; Novocastra,
+Newcastle, UK) and vinculin, used as internal control, was detected with the hVin-1
+primary antibody (Sigma), followed by incubation with a goat anti-mouse secondary antibody
+(IRDye 800CW Goat anti-mouse IgG, Li-Cor, Germany). Bands were visualized using the
+Odyssey CLx system (Li-Cor, Germany) and quantification was done using the Empiria Studio
+software (Li-Cor, Germany) based on a standard curve specific of each muscle and made of a
+mix of WT and <italic>mdx</italic> control lysates to obtain defined % of dystrophin.</p><p>For Myomesin-3 detection, mouse sera were diluted at 1:20 before loading onto 3–8%
+Criterion™ XT Tris-Acetate Protein Gel, following manufacturer's instructions (Biorad,
+France). Myomesin-3 protein was detected by probing the nitrocellulose membrane with MYOM3
+primary rabbit polyclonal antibody (MYOM3, Proteintech, Manchester, UK), followed by
+incubation with a goat anti-rabbit secondary antibody (IRDye 800CW Goat anti-rabbit IgG,
+Li-Cor, Germany). Bands were visualized using the Odyssey Imaging System (Biosciences,
+Lincoln, USA). Signals intensity in treated samples were quantified and normalized to PBS
+control mice signals using the Image Studio software (Li-Cor, Germany).</p></sec><sec id="SEC2-6" disp-level="2"><title>Immunohistochemistry analysis</title><p>Sections of 10 μm were cut from at least two-thirds of the muscle length of the various
+tissues (quadriceps, diaphragm, and cardiac muscle) at 100 μm intervals. Cryosections were
+examined for dystrophin expression using the rabbit polyclonal antibody Dystrophin
+(dilution 1:500; cat. number RB-9024-P Thermo Scientific), which was then detected by goat
+anti-rabbit IgGs Alexa 488 (dilution 1:500; Thermo Scientific). Controls prepared by
+omitting primary antibody showed no specific staining. Images were taken at equivalent
+locations and exposure times using a Leica DMI-4000 microscope (Leica Microsystems, ×20
+objective) equipped with a Zyla 5.5 sCMOS camera (Oxford Instruments Group). Images were
+cropped and scale bars of 100 μm were added using ImageJ software.</p><p>Brain fresh-frozen 30 μm-thick cryosections were collected onto Superfrost+<sup>®</sup>
+slides, thawed for 2 min at room temperature (RT), fixed in acetone/methanol (1:1) for 5
+min at –20°C, washed in PBS, incubated first in a blocking solution for 45 min (10% normal
+goat serum, 0.3% Triton X-100 and 1% BSA), then overnight at 4°C with a monoclonal
+anti-dystrophin primary antibody (DYS1 Leica; dilution: neat) and washed and incubated
+with secondary antibody Alexa 647 (1:400, 1 h at RT). Controls prepared by omitting the
+primary antibody showed no specific staining. Images were taken at equivalent locations
+and exposure times using a laser scanning confocal microscope (Zeiss LSM 700, ×40
+objective). Stacks of seven to eight images (1024 × 1024 pixels) spaced by 1 μm were
+recorded at a magnification of 156 nm/pixel.</p></sec><sec id="SEC2-7" disp-level="2"><title>Functional analysis</title><sec id="SEC2-7-1" disp-level="3"><title>Muscle function</title><p>Muscle function of <italic>mdx</italic> mice was evaluated by measuring tibialis
+anterior muscle contraction <italic>in situ</italic> in response to nerve stimulation as
+previously described (<xref rid="B7" ref-type="bibr">7</xref>). Mice were anesthetized
+using pentobarbital (60 mg/kg intraperitoneally). Body temperature was maintained at
+37°C using radiant heat. The knee and foot were fixed with pins and clamps, and the
+distal tendon of the muscle was attached to the lever arm of a servo-motor system (305B;
+Dual-Mode Lever; Aurora Scientific) using a silk ligature. The sciatic nerve was crushed
+proximally and stimulated distally by a bipolar silver electrode using supramaximal 0.1
+ms–duration square-wave pulses. We measured the absolute maximal isometric tetanic force
+(<italic>P</italic><sub>0</sub>) generated during isometric contractions in response
+to electrical stimulation (frequency 75–150 Hz, stimulation train 500 ms).
+<italic>P</italic><sub>0</sub> was determined at
+<italic>L</italic><sub>0</sub> (length at which maximal tension was obtained during the
+tetanus). Absolute maximal isometric force was normalized to muscle mass as an estimate
+of specific maximal force (<italic>sP</italic><sub>0</sub>), that is, specific
+force.</p><p>Fragility was estimated from the force decline resulting from lengthening
+contraction-induced injury. The sciatic nerve was stimulated for 700 ms (150 Hz
+stimulation frequency). A maximal isometric contraction of the TA muscle was initiated
+during the first 500 ms. Then, muscle lengthening (10% <italic>L</italic><sub>0</sub>)
+at a velocity of 5.5 mm/s was imposed during the last 200 ms. All isometric contractions
+were made at an initial length, <italic>L</italic><sub>0</sub>. Nine lengthening
+contractions of the TA muscles were performed, each separated by a 60 s rest period.
+Maximal isometric force was measured 1 min after each lengthening contraction and
+expressed as a percentage of the initial maximal isometric force. As an indicator of
+active muscle stiffness, we measured the increase in force during the stretch of the
+first lengthening contraction. This force was expressed as a percentage of
+<italic>P</italic><sub>0</sub>.</p></sec><sec id="SEC2-7-2" disp-level="3"><title>Respiratory function</title><p>The respiratory function of mice was evaluated by whole-body plethysmography using an
+EMKA technologies plethysmograph, as previously described (<xref rid="B6" ref-type="bibr">6</xref>) and essentially as recommended by TREAT-NMD (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.treat-nmd.eu/downloads/file/sops/dmd/MDX/DMD_M.2.2.002.pdf" ext-link-type="uri">http://www.treat-nmd.eu/downloads/file/sops/dmd/MDX/DMD_M.2.2.002.pdf</ext-link>).</p><p>Briefly, unrestrained conscious mice were placed in calibrated animal chambers and the
+pressure difference between the reference and animal chambers was measured using a
+pressure transducer. Mice were allowed to acclimate in the chambers for 45 min at stable
+temperature and humidity. Data were then collected every 5 s using the iox2 software
+(version 2.8.0.19; EMKA technologies). Pause and penh were defined and calculated by the
+following formulas: pause = (TE – RT)/RT and penh = (PEP/PIP) × Pause, where PEP is peak
+expiratory pressure and PIP is peak inspiratory pressure. The value of each parameter
+was calculated from an average of 60 recordings of 5 s representing a total of 5 min.
+Inclusion criteria for each recording were &gt;8 respiration events by 5 s and &gt;80%
+of success rate as measured by the iox software.</p></sec><sec id="SEC2-7-3" disp-level="3"><title>Restraint-induced unconditioned fear</title><p>Mice were handled firmly but gently using the scruff method, as for standard
+examination or intraperitoneal injection in laboratory mice. The mouse was restrained by
+a trained experimenter grasping the scruff and back skin between thumb and index
+fingers, whilst securing the tail between the third and little fingers and tilting the
+animal upside-down so that the ventral part of its body faced the experimenter. After 15
+s, the mouse was released to a new cage (16 × 28 cm, with 12 cm high walls;
+illumination: ∼100 lx) and video-tracked for 5 min using the ANY-maze software
+(Stoelting, USA). All mice were tested between 10:00 am and 1:00 pm. Unconditioned fear
+responses induced by this acute stress were characterized by periods of tonic immobility
+(freezing) during the 5 min recording. Complete immobilization of the mouse, except for
+respiration, was regarded as a freezing response. This was typically quantified as
+episodes of immobility lasting at least 1s with a 90% immobility sensitivity (10% body
+motion allowed). In all experiments the percent time spent freezing was calculated for
+group comparisons. Horizontal (i.e. distance traveled) and vertical activity (number of
+ups) were also recorded. The investigator was blinded to the group allocations during
+the experiments.</p></sec><sec id="SEC2-7-4" disp-level="3"><title>Running test</title><p>Run to exhaustion tests were performed using the treadmill LE8710 (Panlab) essentially
+as recommended by TREAT-NMD (<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.treat-nmd.eu/downloads/file/sops/dmd/MDX/DMD_M.2.1.003.pdf" ext-link-type="uri">http://www.treat-nmd.eu/downloads/file/sops/dmd/MDX/DMD_M.2.1.003.pdf</ext-link>).
+Briefly, mice were placed on the belt and the test started at the lowest speed of 5 cm/s
+to allow a warm-up. Speed was then increased by 1 cm/s every 30 s until exhaustion.
+Exhaustion was defined as the moment when the mouse would not continue running on the
+treadmill for 20 s despite gentle nudges to make it do so. At the end of the running
+test exercise, the total distance run was measured for each mouse.</p></sec></sec><sec id="SEC2-8" disp-level="2"><title>Statistical analysis</title><p>Data were analyzed with the GraphPad Prism7 software (San Diego, California, USA) and
+expressed as means ± S.E.M. The ‘n’ refers to the number of mice per group.</p><p>Statistical significance was assessed by non-parametric Mann–whitney <italic>U</italic>
+tests for two-group comparisons. For more than two group comparisons, statistical
+significance was assessed by one-way ANOVA followed by Dunn's multiple comparisons tests
+or by two-way ANOVA followed by Tukey's or Sidak's multiple-comparison tests when
+appropriate.</p><p>For correlation analysis between exon-23 skipping and dystrophin restoration levels, a
+linear regression analysis was performed and statistical significance was assessed using
+the non-parametric Spearman tests.</p><p>ED50 values corresponding to the dose of ASO required to achieve 50% of exon 23 skipping
+in each tissue were determined by plotting the log dose of ASOs against skipping efficacy
+(% of exon 23 skipping). The curves obtained were fitted using a four-parameter fit with
+variable slope and constraining bottom = 0 and top = 1.</p><p>Significant levels were set at *<italic>P</italic> &lt; 0.05,
+**<italic>P</italic> &lt; 0.01, ***<italic>P</italic> &lt; 0.001,
+****<italic>P</italic> &lt; 0.0001.</p></sec></sec><sec id="SEC3" disp-level="1"><title>RESULTS</title><sec id="SEC3-1" disp-level="2"><title>Impact of palmitic acid conjugation on tcDNA-ASO potency</title><p>To evaluate the therapeutic potential of palmitic acid conjugation to tcDNA-ASO, we used
+the previously published tcDNA sequence targeting the donor splice site of the mouse DMD
+exon 23 (<xref rid="B7" ref-type="bibr">7</xref>,<xref rid="B17" ref-type="bibr">17</xref>). Palmitic acid was conjugated at the 5’end of tcDNA-ASO containing a full PO
+backbone (named palm-tcDNA-PO) or a full PS backbone (named palm-tcDNA-PS) using a
+C6-amino chain as a linker with a phosphorothioate bond (Figure <xref rid="F1" ref-type="fig">1A</xref>). We first compared the pharmacokinetic properties of these two
+palm-conjugated tcDNA-ASO to their unconjugated analogues after systemic delivery in adult
+<italic>mdx</italic> mice, which carry a nonsense mutation in exon 23 of the
+<italic>DMD</italic> gene (<xref rid="B22" ref-type="bibr">22</xref>). Following a
+single intravenous (IV) injection at 10 μmol/kg of the conjugated tcDNA (palm-tcDNA-PO,
+palm-tcDNA-PS) and unconjugated tcDNA (tcDNA-PO and tcDNA-PS), serum samples were
+collected at the indicated time points via typical sparse sampling design (Figure <xref rid="F1" ref-type="fig">1B</xref>) and ASO were quantified as previously described
+(<xref rid="B17" ref-type="bibr">17</xref>). Using a non-compartmental approach, we
+evaluated the effect of palmitic acid conjugation and PS modification to plasma and body
+exposure. PK parameters were calculated using a linear-trapezoidal rule and are summarized
+in Table <xref rid="tbl1" ref-type="table">1</xref>. Conjugation with palmitic acid
+increased the area under the plasma concentration-time curve (AUC) of tcDNA by 10-fold,
+from 276.99 h*μg/ml and 304.62 h*μg/ml for unconjugated tcDNA-PO and tcDNA-PS respectively
+to 2031.06 h*μg/ml and 3627.69 h*μg/ml for conjugated palm-tcDNA-PO and palm-tcDNA-PS
+(Figure <xref rid="F1" ref-type="fig">1B</xref>, Table <xref rid="tbl1" ref-type="table">1</xref>).</p><table-wrap id="tbl1" position="float"><?disp-level 3?><label>Table 1.</label><caption><p>Pharmacokinetics parameters calculated using a non-compartmental approach. Maximum
+concentration (Cmax), the area under the plasma concentration-time curve (AUC) and the
+clearance (CL) of each tcDNA compound is each shown.</p></caption><table frame="hsides" rules="groups"><thead><tr><th rowspan="1" colspan="1">TcDNA</th><th align="center" rowspan="1" colspan="1">Cmax (μg/ml)</th><th align="center" rowspan="1" colspan="1">AUC<sub>0–<italic>t</italic></sub> (h*μg/ml)</th><th align="center" rowspan="1" colspan="1">AUC<sub>0–∞</sub> (h*μg/ml)</th><th align="center" rowspan="1" colspan="1">CL (ml/h/kg)</th></tr></thead><tbody><tr><td rowspan="1" colspan="1">tcDNA-PO</td><td align="center" rowspan="1" colspan="1">695.12</td><td align="center" rowspan="1" colspan="1">276.48</td><td align="center" rowspan="1" colspan="1">276.99</td><td align="center" rowspan="1" colspan="1">180.51</td></tr><tr><td rowspan="1" colspan="1">tcDNA-PS</td><td align="center" rowspan="1" colspan="1">740.41</td><td align="center" rowspan="1" colspan="1">297.70</td><td align="center" rowspan="1" colspan="1">304.62</td><td align="center" rowspan="1" colspan="1">164.14</td></tr><tr><td rowspan="1" colspan="1">Palm-tcDNA-PO</td><td align="center" rowspan="1" colspan="1">908.4</td><td align="center" rowspan="1" colspan="1">2029.38</td><td align="center" rowspan="1" colspan="1">2031.06</td><td align="center" rowspan="1" colspan="1">24.62</td></tr><tr><td rowspan="1" colspan="1">Palm-tcDNA-PS</td><td align="center" rowspan="1" colspan="1">738.42</td><td align="center" rowspan="1" colspan="1">3527.72</td><td align="center" rowspan="1" colspan="1">3627.69</td><td align="center" rowspan="1" colspan="1">13.79</td></tr></tbody></table></table-wrap><p>Next we investigated the accumulation of these different tcDNA compounds in adult
+<italic>mdx</italic> mice following four intravenous injections at 10 μmol/kg as
+represented in Figure <xref rid="F1" ref-type="fig">1C</xref>. Tissue ASO concentration
+was quantified in several skeletal muscles (tibialis anterior, gastrocnemius, quadriceps,
+triceps, biceps, diaphragm), heart, spleen, liver and kidney (Figure <xref rid="F1" ref-type="fig">1C</xref>). Palmitoyl conjugation significantly improved tcDNA-ASO accumulation
+of both PO and PS compounds in skeletal muscles (6-fold on average for palm-tcDNA-PS and
+28-fold for palm-tcDNA-PO, <xref rid="sup1" ref-type="supplementary-material">Supplementary Table S1</xref>) relative to unconjugated ASO
+(<italic>P</italic>-value &lt; 0.0001). Palm-tcDNA-PS was the compound leading to the
+highest accumulation of ASO in tissues, however the contribution of the palmitoyl was even
+more remarkable for the PO compound showing a higher fold change compared to unconjugated
+tcDNA-PO which is otherwise very poorly distributed. Palm-tcDNA-PO also induce
+significantly higher levels of ASO in tissues than our previously described compound
+tcDNA-PS (<italic>P</italic>-value &lt; 0.005). Delivery to the spleen, liver and kidney
+was also improved by the addition of the palmitoyl moiety, leading to nearly similar
+amount of ASO in kidney with both conjugated ASO (Figure <xref rid="F1" ref-type="fig">1C</xref>, <xref rid="sup1" ref-type="supplementary-material">Supplementary Table
+S1</xref>).</p><p>To determine the metabolic fate of the palmitoyl conjugated-ASO in tissues, ASO and
+metabolites were also extracted and identified by Liquid-Chromatography-Mass-Spectrometry
+(LCMS) as previously described (<xref rid="B6" ref-type="bibr">6</xref>). LCMS
+quantifications revealed very similar amounts of ASO in tissues than the
+hybridization-based assay (<xref rid="sup1" ref-type="supplementary-material">Supplementary Figure S1</xref>), except in the kidney where amounts appeared lower in
+LCMS. Interestingly, no intact conjugated ASO was detected and the main metabolite
+isolated in all tissues was the C6-amino-tcDNA (PS or PO), suggesting that the palmitoyl
+moiety was cleaved from the oligonucleotide at the amide bond.</p><p>To determine whether the higher uptake observed with palmitoyl conjugates leads to
+improved potency, we next evaluated the levels of exon 23 skipping in the various tissues.
+The RT-PCR results revealed a dystrophin transcript lacking exon 23 for the unconjugated
+(tcDNA-PS) and conjugated tcDNA compounds in all investigated muscles from tcDNA treated
+mice (Figure <xref rid="F1" ref-type="fig">1D</xref>, right panel). Quantification by
+RT-qPCR confirmed the superiority of palmitoyl conjugated tcDNA-ASOs in all examined
+tissues, reaching up to 25% of exon 23 skipping in skeletal muscle after only four
+injections at 10 μmol/kg for the palm-tcDNA-PS. The addition of palmitic acid
+significantly improved the efficacy of the tcDNA-PS (5-fold on average across the
+different muscles, <xref rid="sup1" ref-type="supplementary-material">Supplementary Table
+S2</xref>) and even more of the tcDNA-PO with an average of 50-fold improvement between
+the palm-tcDNA-PO and the unconjugated tcDNA-PO (Figure <xref rid="F1" ref-type="fig">1D</xref> and <xref rid="sup1" ref-type="supplementary-material">Supplementary Table
+S2</xref>). The Palm-tcDNA-PS induced higher level of exon 23 skipping
+(<italic>P</italic>-value = 0.03) than the palm-tcDNA-PO except in diaphragm and heart
+where levels were similar for both conjugated compounds.</p><p>This improved efficacy of the conjugated tcDNA–ASOs correlated with the increase in ASO
+exposure in tissues and confirmed the potency of palmitoyl conjugation.</p></sec><sec id="SEC3-2" disp-level="2"><title>Evaluation of a 12-week treatment with palm-tcDNA at different doses</title><p>We next investigated the therapeutic potential of tcDNA conjugated to palmitic acid
+following long term treatment at different doses. Adult <italic>mdx</italic> mice were
+injected intravenously with 2, 4 or 10 μmol/kg/week of palm-tcDNA-PO or palm-tcDNA-PS for
+12 weeks (Figure <xref rid="F2" ref-type="fig">2A</xref>). Serum samples collected 1h
+after administration confirmed the longer half-life of palm-tcDNA-PS previously observed
+since we detected higher levels (approximately 2-fold) of palm-tcDNA-PS circulating than
+palm-tcDNA-PO at all tested doses (Figure <xref rid="F2" ref-type="fig">2B</xref>). The
+amount of tcDNA in the serum 1 h post-injection was proportional to the injected doses for
+both compounds, with calculated ratio very close to the expected ratio of 2, 2.5 and 5
+between the 2, 4 and 10 μmol/kg dosing regimen as shown in Figure <xref rid="F2" ref-type="fig">2B</xref>. ASO tissue concentrations were measured in the various tissues
+(tibialis anterior, gastrocnemius, quadriceps, triceps, biceps, diaphragm, heart, spleen,
+liver and kidney) 2 weeks after the end of the 12-week dosing regimen. We observed a dose
+dependant accumulation of ASOs in tissues with the highest amount observed with 10μmol/kg
+treated samples for both palm-tcDNA-PO and -PS. Significantly higher levels of ASO
+(∼4-fold) were found in tissues from mice treated with palm-tcDNA-PS than palm-tcDNA-PO at
+4 and 10 μmol/kg (<italic>P</italic>-values = 0.03 and &lt;0.0001 respectively) except in
+kidneys where the amount of the palm-tcDNA was similar between the two conjugated
+compounds. Remarkably, we were able to quantify the palm-tcDNA even at the low dose of 2
+μmol/kg, which reflects the amelioration of tissue uptake by the palmitoyl conjugation.
+When comparing the ASO concentrations found in tissues following 12 weeks of treatment
+with those measured after 4 weeks of treatment at 10 μmol/kg (<xref rid="sup1" ref-type="supplementary-material">Supplementary Figure S2A</xref>), we found
+∼2 times higher levels in palm-tcDNA-PS treated tissues. Interestingly, levels were quite
+similar (1.3 fold) in the palm-tcDNA-PO treated samples between 4 and 12 weeks of
+treatment, suggesting a higher clearance rate of this compound in tissues.</p><fig id="F2" position="float"><?disp-level 3?><label>Figure 2.</label><caption><p>Dose dependant distribution of palmitic acid conjugated tcDNA in tissues following
+12-week repeated dosing. (<bold>A</bold>) Schematic representation of the 12-week
+study protocol with different doses of palmitic acid conjugated tcDNA-ASO.
+<italic>Mdx</italic> mice were injected intravenously with 2, 4 or 10 μmol/kg/week
+of conjugated tcDNA (palm-tcDNA-PO or palm-tcDNA-PS) for 12 weeks and euthanized 2
+weeks after the last dose for tissue collection. 2, 4 or 10 μmol/kg correspond to
+approximately 10, 20 and 50 mg/kg. (<bold>B</bold>) Quantification of palm-tcDNA in
+mouse serum collected 1 h post-injection by fluorescent hybridization assay
+(<italic>n</italic> = 4 per group; data are represented as mean ± SEM and ratio
+between the different doses for each compound are shown). (<bold>C</bold>)
+Quantification of tcDNA-ASO content in various tissues 2 weeks after the end of the
+12-week dosing regimen by fluorescent hybridization assay. Results are expressed as
+mean ± SEM; <italic>n</italic> = 4 mice per group.</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" xlink:href="gkab1199fig2.jpg"><?cloudpmc-path blobs/9113/8754652/712126545e74/gkab1199fig2.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 1307?><?original-width 1673?><?scaled-height 523?><?scaled-width 669?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="gkab1199fig2.gif"><?cloudpmc-path blobs/9113/8754652/5298fbb25bf7/gkab1199fig2.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig><p>The efficacy of the 12-wk treatment with conjugated tcDNAs (palm-tcDNA-PO and
+palm-tcDNA-PS) was then evaluated by RT-qPCR for the different dosing regimen (2, 4 and 10
+μmol/kg). Both Palm-tcDNA compounds induced exon 23 skipping in skeletal muscles in a dose
+dependent manner. We detected levels from 1 to 8% for the low dose of 2 μmol/kg, from 2 to
+21% for the mid dose of 4 μmol/kg and levels from 8 to 56% for the 10 μmol/kg dose (Figure
+<xref rid="F3" ref-type="fig">3A</xref>). Calculation of the ED50 indicated a 4-fold
+difference between the two compounds in favour of the palm-tcDNA-PS across all muscles
+(Figure <xref rid="F3" ref-type="fig">3B</xref>). However, the palm-tcDNA-PS induced only
+statistically significant higher levels of exon skipping at the dose of 10μmol/kg, whereas
+levels were quite similar between the two compounds at 2 and 4 μmol/kg
+(<italic>P</italic>-values &gt; 0.99 and 0.91, respectively). When comparing skipping
+levels obtained after 4 or 12 weeks of injections (<xref rid="sup1" ref-type="supplementary-material">Supplementary Figure S2B</xref>), we found very similar ratio for
+palm-tcDNA-PO and palm-tcDNA-PS (2.4 and 2.5) suggesting that efficacy increases in the
+same way for both compounds despite the higher clearance of palm-cDNA-PO compound.</p><fig id="F3" position="float"><?disp-level 3?><label>Figure 3.</label><caption><p>Skipping efficacy and dystrophin rescue following 12-week repeated dosing of
+palm-tcDNA-ASO. (<bold>A</bold>) Quantification of exon 23 skipping levels in
+different muscle tissues 2-week after the end of the 12-week dosing regimen
+(palm-tcDNA-PO or palm-tcDNA-PS at 2, 4 or 10 μmol/kg/week) by RT-qPCR. Results are
+expressed as mean ± SEM; <italic>n</italic> = 4 mice/group. (<bold>B</bold>) ED50
+values corresponding to the dose of ASO required to achieve 50% of exon 23 skipping in
+each tissue were determined with GraphPad Prism 7 software for palm-tcDNA-PO or
+palm-tcDNA-PS. (<bold>C</bold>) Detection and quantification of dystrophin restoration
+by western blot analysis in the different muscle tissues 2 weeks after the end of the
+12-week dosing regimen (palm-tcDNA-PO or palm-tcDNA-PS at 2, 4 or 10 μmol/kg/week).
+The blot shows a representative example of dystrophin restoration in the quadriceps of
+one of the four animals per group. Results are expressed as mean ± SEM;
+<italic>n</italic> = 4 mice/group. (<bold>D</bold>) Detection of the dystrophin
+protein (green staining) by immunostaining on transverse sections of muscle tissues
+(quadriceps, diaphragm and heart) from WT and <italic>mdx</italic> mice treated with
+PBS or palm-tcDNA-PO or palm-tcDNA-PS for 12 weeks at 10 μmol/kg/week. Nuclei are
+labelled in blue (DAPI). Scale bar, 100 μm.</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" xlink:href="gkab1199fig3.jpg"><?cloudpmc-path blobs/9113/8754652/a8fc0dd874d5/gkab1199fig3.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 1967?><?original-width 1210?><?scaled-height 984?><?scaled-width 605?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="gkab1199fig3.gif"><?cloudpmc-path blobs/9113/8754652/06fc8e92557a/gkab1199fig3.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig><p>Based on biodistribution data and efficacy levels, we calculated the ratio of the exon
+skipping levels on ASO quantity per tissue in order to evaluate the therapeutic potential
+of each compound, i.e. determine which compound produces the highest levels of exon
+skipping with minimal tcDNA accumulation. The palm-tcDNA-PO consistently displays higher
+ratio than the palm-PS (mean ratio of 2.5 ± 0.3 across all muscles tissues and dosing
+regimen compared to 1.7 ± 0.2 for the palm-tcDNA-PS) (<xref rid="sup1" ref-type="supplementary-material">Supplementary Table S3</xref>).</p><p>We then quantified dystrophin restoration by western blot in the different muscle tissues
+following treatment with both palm-tcDNA (PO or PS) at 2, 4 and 10 μmol/kg for 12 weeks.
+Levels of dystrophin restoration correlated with the levels of exon skipping (Spearman
+correlation test, <italic>R</italic> = 0.89, <italic>P</italic> &lt; 0.0001) at the
+different dosing regimen. The amounts of dystrophin protein found in skeletal muscle
+tissues were significantly different between the two compounds at the 10 μmol/kg dose
+(<italic>P</italic> &lt; 0.0001), ranging from 8 to 17% with palm-tcDNA-PO and from 21%
+to 37% with palm-tcDNA-PS after the 12 weeks of treatment (Figure <xref rid="F3" ref-type="fig">3C</xref>). Levels of dystrophin protein in the heart reached 12% and 16% for
+the palm-tcDNA-PO and palm-tcDNA-PS respectively (not statistically different between the
+two compounds), demonstrating the ability of the palmitoyl-tcDNA compounds to efficiently
+restore dystrophin in the cardiac muscle. We also compared the levels of dystrophin
+expression after 4 or 12 weeks of treatment at the dose of 10 μmol/kg with both compounds
+and found a proportional ∼3-fold increase to the number of injections, confirming the
+accumulation of the protein over the period of treatment (<xref rid="sup1" ref-type="supplementary-material">Supplementary Figure S2C</xref>).
+Immunostainings were performed on quadriceps, diaphragm and heart muscle sections and
+revealed the correct expression and localization of dystrophin protein at the sarcolemma
+level of muscle fibers after the palm-tcDNA (PO and PS) treatment (Figure <xref rid="F3" ref-type="fig">3D</xref>).</p></sec><sec id="SEC3-3" disp-level="2"><title>Functional evaluation of conjugated tcDNA after 12 weeks of treatment</title><p>In order to evaluate the functionality of the restored dystrophin, functional properties
+were then investigated in palm-tcDNA treated mice at 10 μmol/kg. We first assessed the
+maximal specific force and resistance to eccentric contraction-induced skeletal muscle
+injury, which reflects on the structural integrity of the muscle fibers. <italic>Tibialis
+anterior</italic> (TA) muscles from control <italic>mdx</italic> mice showed a decrease
+of 28% in maximal specific force compared to the wild-type muscle (Figure <xref rid="F4" ref-type="fig">4A</xref>). In contrast, treatment with palm-tcDNA-PO and
+palm-tcDNA-PS inducing 10 and 30% of dystrophin expression respectively, improved the
+maximal specific force compared to control <italic>mdx</italic> mice
+(<italic>P</italic> = 0.001 and <italic>P</italic> = 0.05 for palm-tcDNA-PO and PS,
+respectively). Moreover, TA muscles from control <italic>mdx</italic> mice were unable to
+sustain tetanic tension, falling to 47% of their initial force after nine eccentric
+contractions (Figure <xref rid="F4" ref-type="fig">4A</xref>, right panel). Palm-tcDNA
+treatment improved the resistance to tetanic contractions since TA muscles treated with
+palm-tcDNA-PO and palm-tcDNA-PS maintained 58% and 71% respectively of their force
+following the eccentric contractions, which correlated with the observed levels of protein
+restoration. Respiratory function was also explored in <italic>mdx</italic> mice following
+treatment using whole-body plethysmography. We first confirmed that <italic>mdx</italic>
+control mice showed abnormalities for some respiratory parameters, such as the enhanced
+pause (Penh) and the peak expiratory flow (PEF) compared to age-matched wild-type mice
+(<xref rid="sup1" ref-type="supplementary-material">Supplementary Figure S3A</xref>).
+Both parameters appeared slightly improved after palm-tcDNA (PO and PS) treatment at 10
+μmol/kg although not statistically significantly. The functionality of the restored
+dystrophin was further explored using a treadmill test in order to evaluate the ability of
+treated <italic>mdx</italic> mice to sustain a continuous effort during a long period of
+time. We observed a drastic amelioration of the endurance capacity of the palm-tcDNA-PS
+treated mice after 6 weeks or 12 weeks of treatment (<italic>P</italic>-value = 0.0002
+and &lt; 0.0001 respectively). The treated mice even reached the wild-type mice
+performance (<xref rid="sup1" ref-type="supplementary-material">Supplementary Figure
+S3B</xref>).</p><fig id="F4" position="float"><?disp-level 3?><label>Figure 4.</label><caption><p>Functional evaluation following 12-week repeated dosing of palm-tcDNA-ASO treatment.
+(<bold>A</bold>) Maximal specific force (sP0) (left panel) and percentage of force
+drop following a series of eccentric contractions (right panel) measured on
+semi-isolated tibialis anterior (TA) muscles from <italic>mdx</italic> mice treated
+with palm-tcDNA-PO or palm-tcDNA-PS (<italic>n</italic> = 4 mice/group and 2 TA
+analysed per mouse) for 12 weeks at 10 μmol/kg/week and compared to WT and PBS control
+<italic>mdx</italic> mice (<italic>n</italic> = 8 mice/group). Results are expressed
+as mean ± SEM. **<italic>P</italic> &lt; 0.01 compared to PBS treated controls
+(Mann–Whitney <italic>U</italic> tests). (<bold>B</bold>) Detection and quantification
+of MYOM3 levels by western blot in serum of <italic>mdx</italic> mice treated with
+palm-tcDNA-PO or palm-tcDNA-PS (<italic>n</italic> = 4 mice/group) for 4 or 12 weeks
+at 10 μmol/kg/week and compared to WT and PBS control <italic>mdx</italic> mice
+(<italic>n</italic> = 8 mice/group). Results are expressed as mean ± SEM.
+*<italic>P</italic> &lt; 0.05 and **<italic>P</italic> &lt; 0.01 compared to PBS
+treated controls (Mann–Whitney <italic>U</italic> tests).</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" xlink:href="gkab1199fig4.jpg"><?cloudpmc-path blobs/9113/8754652/092712a063b1/gkab1199fig4.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 970?><?original-width 1673?><?scaled-height 388?><?scaled-width 669?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="gkab1199fig4.gif"><?cloudpmc-path blobs/9113/8754652/a8deadb5c8ab/gkab1199fig4.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig><p>It has been previously demonstrated that two fragments of the myofibrillar structural
+protein myomesin-3 (MYOM3) are abnormally present in sera of Duchenne Muscular Dystrophy
+(DMD) patients as well as animal models of DMD including the <italic>mdx</italic> mouse
+model (<xref rid="B23" ref-type="bibr">23</xref>). The levels of MYOM3 fragments in serum
+can be used to evaluate the efficacy of a treatment as it has already been considered a
+useful therapy-responsive biomarker in animal models as well as in patients. We therefore
+evaluated the level of MYOM3 in serum of palm-tcDNA-PO or -PS treated mice after 4 and 12
+weeks of treatment. Levels of MYOM3 in the serum following treatment with the
+palm-tcDNA-PO were significantly dropped by 37% and 65% (<italic>P</italic>-value = 0.002
+and 0.009) after 4 and 12 weeks of treatment (Figure <xref rid="F4" ref-type="fig">4B</xref>). MYOM3 levels were even more strongly reduced with the palm-tcDNA-PS where
+we found a total reduction (99,9%) after the 12-wk treatment
+(<italic>P</italic>-value = 0.0002) (Figure <xref rid="F4" ref-type="fig">4B</xref>).
+These results confirm the therapeutic benefit of the treatment with the palmitoyl-tcDNA
+oligonucleotide.</p></sec><sec id="SEC3-4" disp-level="2"><title>Effect of palm-tcDNA in the CNS</title><p>We previously described that tricyclo-DNA ASOs are able to cross the blood-brain barrier
+(BBB) and promote exon 23 skipping at the mRNA level after systemic delivery (<xref rid="B6" ref-type="bibr">6</xref>,<xref rid="B7" ref-type="bibr">7</xref>). We therefore
+investigated the effect of the palmitic-acid conjugation on this unique property of the
+tcDNA. Following a 12-week systemic treatment with palm-tcDNA (-PO or -PS) at 10 μmol/kg
+we quantified by RT-qPCR the levels of exon 23 skipping in cortex, cerebellum and
+hippocampus of treated <italic>mdx</italic> mice and confirmed the capacity of the
+conjugated palm-tcDNA to induce low levels of exon 23 skipping in the CNS, with no
+significant differences between the two conjugated compounds (-PO or -PS) (Figure <xref rid="F5" ref-type="fig">5A</xref>). We also observed a partially restored expression of
+the dystrophin protein with correct localization in stratum pyramidal (SP) and proximal
+stratum radiatum (SR) of CA1 hippocampus by immunostaining following the treatment with
+the conjugated tcDNA (Figure <xref rid="F5" ref-type="fig">5B</xref>).</p><fig id="F5" position="float"><?disp-level 3?><label>Figure 5.</label><caption><p>Palm-tcDNA-ASO effect on central nervous system in treated <italic>mdx</italic> mice.
+(<bold>A</bold>) Quantification of exon 23 skipping by qRT-PCR in the cortex,
+cerebellum (CBL), and hippocampus (Hippo) following intravenous injection of 10
+μmol/kg/week of palm-tcDNA-PO or palm-tcDNA-PS for 12 weeks. Results are expressed as
+mean ± SEM; <italic>n</italic> = 4 mice per group. (<bold>B</bold>) Detection of
+restored dystrophin by immunostaining in the stratum pyramidale (SP) and proximal
+stratum radiatum (SR) of the CA1 hippocampus in wild-type and <italic>mdx</italic>
+mice treated with PBS, palm-tcDNA-PO or palm-tcDNA-PS (10 μmol/kg/week). Scale bar 12
+μm. (<bold>C</bold>) Restraint-induced unconditioned fear responses expressed as a
+percentage of freezing time in wild-type and <italic>mdx</italic> mice treated with
+PBS, palm-tcDNA-PO or palm-tcDNA-PS (10 μmol/kg/week) after 4 weeks and 12 weeks of
+treatment. **<italic>P</italic> &lt; 0.01 and ****<italic>P</italic> &lt; 0.0001
+compared to <italic>mdx</italic> controls (Mann–Whitney <italic>U</italic> tests);
+Results are expressed as mean ± SEM; <italic>n</italic> = 7 per palm-tcDNA treated
+group and <italic>n</italic> = 14 for wild-type and <italic>mdx</italic> PBS control
+(mice from the wash-out groups were included in this non-invasive test).</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" xlink:href="gkab1199fig5.jpg"><?cloudpmc-path blobs/9113/8754652/587742d5317e/gkab1199fig5.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 1091?><?original-width 1513?><?scaled-height 545?><?scaled-width 756?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="gkab1199fig5.gif"><?cloudpmc-path blobs/9113/8754652/403d10c26497/gkab1199fig5.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig><p>The loss of dystrophin in the <italic>mdx</italic> mouse model of DMD has been associated
+with cognitive and emotional alterations, and an enhanced defensive behavior in response
+to a mild stress has been reported as a main phenotype (<xref rid="B24" ref-type="bibr">24</xref>,<xref rid="B25" ref-type="bibr">25</xref>). In order to evaluate the
+beneficial impact of treatment with the conjugated palm-tcDNA (-PO or -PS) on this
+emotional behavior, we measured the duration of tonic immobility (freezing) that resulted
+from a restraint-induced fear response in <italic>mdx</italic> mice at two different time
+points (after 4 and 12 weeks of treatment) (Figure <xref rid="F5" ref-type="fig">5C</xref>). The mice were observed for a period of 5 min following this acute stress and
+as expected control <italic>mdx</italic> mice spent about 70% of the time freezing, in
+contrast to only 11% for the WT mice. In line with the detected exon skipping and rescued
+dystrophin expression in the brain following treatment with both conjugated palm-tcDNAs,
+we measured a significant improvement of the <italic>mdx</italic> emotional phenotype,
+reflected by a decreased freezing time in the palm-tcDNA-PO and palm-tcDNA-PS treated mice
+during the 5 minutes testing period after only 4 weeks (<italic>P</italic>-value = 0.001
+after 4 weeks of treatment and <italic>P</italic>-value &lt; 0.0001 after 12 weeks of
+treatment) (Figure <xref rid="F5" ref-type="fig">5C</xref>).</p></sec><sec id="SEC3-5" disp-level="2"><title>Persistence of treatment effect after a 12-week recovery period</title><p>Because treatment of DMD patients involves a lifetime medication, it is important to
+evaluate periods of wash-out to avoid the potential toxicity due to ASO accumulation in
+tissues like liver, kidney and spleen, without losing the benefit of the treatment. For
+this purpose, we investigated the persistence of the 12-week treatment effects (with both
+-PO and -PS palm-tcDNA) after a recovery period of 12 weeks (named the wash-out period)
+(Figure <xref rid="F6" ref-type="fig">6A</xref>). Following the wash-out period, tcDNA
+compounds were still detected in all the investigated tissues at ∼10–12% of the originally
+detected levels, demonstrating that ∼90% of ASO have been cleared (Figure <xref rid="F6" ref-type="fig">6B</xref>). Higher levels were detected for the palm-tcDNA-PS
+compared to the palm-tcDNA-PO except in the kidney. Interestingly, when measuring the
+levels of exon 23 skipping (Figure <xref rid="F6" ref-type="fig">6C</xref>), we found on
+average 62 and 46% of the originally detected levels after palm-PO and palm-PS treatment
+respectively. We also observed the persistence of dystrophin protein across the different
+skeletal muscles with an average of ∼80% maintained dystrophin across the tissues for both
+conjugated compounds (Figure <xref rid="F6" ref-type="fig">6D</xref>). We then evaluated
+the functional parameters and found that improvements in force drop, specific force and
+freezing response were also maintained after the recovery period for both conjugated
+palm-tcDNAs (<xref rid="sup1" ref-type="supplementary-material">Supplementary Figure
+S4</xref>). The MYOM3 levels were still significantly decreased in the serum of
+<italic>mdx</italic> mice treated with palm-tcDNA-PO and palm-tcDNA-PS after 4 weeks of
+recovery period (<italic>P</italic>-value = 0.01) but only the mice treated with the
+palm-tcDNA-PS maintained this significance after the 12 weeks of wash-out (<xref rid="sup1" ref-type="supplementary-material">Supplementary Figure S4B</xref>).</p><fig id="F6" position="float"><?disp-level 3?><label>Figure 6.</label><caption><p>Palm-tcDNA-ASO efficacy is maintained after 12 weeks of wash-out period.
+(<bold>A</bold>) Schematic representation of the 12-week study protocol at 10
+μmol/kg/week of palm-tcDNA-PO or palm-tcDNA-PS followed by a 12-week wash-out period.
+(<bold>B</bold>) Quantification of tcDNA compounds in the different tissues after
+the 12-week wash-out period by fluorescent hybridization assay. Results are expressed
+as mean ± SEM; <italic>n</italic> = 5 for palm-tcDNA-PO and <italic>n</italic> = 3 for
+palm-tcDNA-PO. The percentage of remaining ASO compared to the content measured 2
+weeks after the last dose is indicated below the graphs. (<bold>C</bold>)
+Quantification of exon 23 skipping levels in different muscle tissues by taqman
+RT-qPCR after the 12-week wash-out period. Results are expressed as mean ± SEM;
+<italic>n</italic> = 3 for palm-tcDNA-PO and <italic>n</italic> = 5 for
+palm-tcDNA-PS. The percentage of remaining exon 23 skipping levels compared to the
+those measured 2 weeks after the last dose is indicated below the graphs.
+(<bold>D</bold>) Quantification of dystrophin restoration by western blot in the
+different muscle tissues after the 12-week wash-out period. Results are expressed as
+mean ± SEM; <italic>n</italic> = 3 for palm-tcDNA-PO and <italic>n</italic> = 5 for
+palm-tcDNA-PS. The percentage of remaining dystrophin expression compared to the
+levels measured 2 weeks after the last dose is indicated below the graphs.</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" xlink:href="gkab1199fig6.jpg"><?cloudpmc-path blobs/9113/8754652/918fc32005b4/gkab1199fig6.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 1503?><?original-width 1663?><?scaled-height 601?><?scaled-width 665?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="gkab1199fig6.gif"><?cloudpmc-path blobs/9113/8754652/7c14000997de/gkab1199fig6.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig></sec><sec id="SEC3-6" disp-level="2"><title>Safety profile of conjugated palm-tcDNA</title><p>Safety pharmacological evaluation is a crucial aspect in drug development that needs to
+be considered relatively early for every new molecule with therapeutic purposes. PS-ASOs
+are known to influence the coagulation cascade and the alternative pathway of the
+complement system as a protein binding related effect (<xref rid="B11" ref-type="bibr">11</xref>,<xref rid="B12" ref-type="bibr">12</xref>). We therefore evaluated <italic>in
+vitro</italic> the intrinsic (activated partial thromboplastin time or aPTT) and
+extrinsic (prothrombin time or PT) coagulation pathways in mouse plasma as well as
+complement activation in mouse and human serum samples. Appropriate plasma or serum
+samples were incubated with 2 mg/ml of each tcDNA-ASO. As expected, the results showed no
+effect of the palm-tcDNA-PO (and tcDNA-PO) on coagulation times as opposed to
+PS-containing tcDNA which significantly increase PT and aPTT (Figure <xref rid="F7" ref-type="fig">7A</xref>). Similarly, tcDNA-PO compounds had no effect on complement
+activation in mouse or human serum, whereas a significant increase in C3a split product
+was detected <italic>in vitro</italic> in human serum samples incubated with palm-tcDNA-PS
+(Figure <xref rid="F7" ref-type="fig">7B</xref>). This effect was found dose dependent as
+lower doses did not induce significant increase in C3a (<xref rid="sup1" ref-type="supplementary-material">Supplementary Figure S5A</xref>) and
+correlated with <italic>in vivo</italic> findings where no complement activation was
+measured after administration of 10 μmol/kg of either palm-tcDNA (<xref rid="sup1" ref-type="supplementary-material">Supplementary Figure S5B</xref>).</p><fig id="F7" position="float"><?disp-level 3?><label>Figure 7.</label><caption><p>
+<italic>In vitro</italic> evaluation of the palm-tcDNA-ASO on clotting times and
+complement activation. (<bold>A</bold>) To determine the effect of the different
+tcDNA-ASO on coagulation pathways, the prothrombin time (PT) (left) and the activated
+partial tromboplastin (aPTT) (right) were analysed in human plasma incubated with PBS
+(<italic>n</italic> = 12), tcDNA-PO (<italic>n</italic> = 6), tcDNA-PS
+(<italic>n</italic> = 6), palm-tcDNA-PO (<italic>n</italic> = 5) or palm-tcDNA-PS
+(<italic>n</italic> = 5). Results are expressed as mean ± SEM.
+****<italic>P</italic> &lt; 0.0001 compared to PBS (one-way ANOVA). (<bold>B</bold>)
+Mouse and human C3a anaphylotoxin were analysed by ELISA in mouse and human serum
+samples incubated with tcDNA-PO, tcDNA-PS, palm-tcDNA-PO or palm-tcDNA-PS. PBS and
+Zymosan were used as negative and positive control respectively. Results are expressed
+as mean ± SEM; <italic>n</italic> = 5 per tcDNA treated group and
+<italic>n</italic> = 12 for PBS and Zymosan controls. * <italic>P</italic> &lt; 0.05,
+** <italic>P</italic> &lt; 0.01, ***<italic>P</italic> &lt; 0.001,
+****<italic>P</italic> &lt; 0.0001 compared to PBS.</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" xlink:href="gkab1199fig7.jpg"><?cloudpmc-path blobs/9113/8754652/156e44e0b597/gkab1199fig7.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 1098?><?original-width 1371?><?scaled-height 549?><?scaled-width 685?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="gkab1199fig7.gif"><?cloudpmc-path blobs/9113/8754652/e296b485b01f/gkab1199fig7.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig><p>Additional adverse and toxic effects of antisense molecules may include liver or renal
+injury, especially in repeated-dose studies considering the amount of ASO which end up in
+liver and kidney. In this regard, we first analyzed the serum levels of various general
+biomarkers in mice following 12 weeks of treatment with 10 μmol/kg/wk of palm-tcDNA-ASOs
+either 2 weeks after the last dose or after a 12-week wash-out period. The serum creatine
+kinase (CK) level, a marker for muscle injury, was largely reduced in mice treated with
+palm-tcDNA-PS for 12 weeks and this was also observed for AST levels reflecting the
+efficacy of the treatment. Interestingly this effect was still detected after the 12-week
+wash-out period. Apart from these positive effects resulting from the improved dystrophic
+pathology of treated <italic>mdx</italic> mice, we observed no significant difference in
+serum levels of transaminases (ALT and AST), bilirubin, alkaline phosphatase (ALP),
+albumin, creatinine and urea of palm-tcDNA treated mice compared to <italic>mdx</italic>
+control mice (Figure <xref rid="F8" ref-type="fig">8A</xref>).</p><fig id="F8" position="float"><?disp-level 3?><label>Figure 8.</label><caption><p>Evaluation of palm-tcDNA-ASO safety profile. (<bold>A</bold>) Serum CK, AST, ALT,
+bilirubin, ALP, albumin, creatinine and urea levels were measured at the end of the
+12-wk treatment (12 weeks) or after a 12-week washout period (wash-out) in wild-type
+(<italic>n</italic> = 7) and <italic>mdx</italic> mice treated with PBS
+(<italic>n</italic> = 7), palm-tcDNA-PO (<italic>n</italic> = 3) or palm-tcDNA-PS
+(<italic>n</italic> = 5). Results are expressed as mean ± SEM. *
+<italic>P</italic> &lt; 0.05, ** <italic>P</italic> &lt; 0.01,
+***<italic>P</italic> &lt; 0.001, ****<italic>P</italic> &lt; 0.0001 compared to PBS
+(two-way ANOVA). § <italic>P</italic> = 0.0025 compared to PBS (Mann–Whitney
+<italic>U</italic> tests). (<bold>B</bold>) Histological presentation of wild-type
+mice and <italic>mdx</italic> mice treated with PBS, palm-tcDNA-PO or palm-tcDNA-PS at
+10 μmol/kg/wk for 12 weeks. In liver (upper panel), small foci of inflammatory cell
+infiltration (open arrowhead) were scattered in the liver parenchyma of
+<italic>mdx</italic> PBS mice compared to WT mice in which no such focus were
+observed. No additional lesions were present in <italic>mdx</italic> mice after
+palm-tcDNA-PO treatment. In palm-tcDNA-PS mice, foci of hepatocytes with
+intracytoplasmic vacuolization and fainted eosinophilic content (black arrowhead) were
+observed. Additionally, an increase in size heterogeneity of hepatocyte nuclei was
+present with notably numerous binucleated cells and meganucleation (arrow). In kidney
+(lower panel), no lesions were present in <italic>mdx</italic> mice after PBS or
+palm-tcDNA-PO treatment compared to WT mice. A slight increase of cellular density (*)
+in glomeruli was sometimes noted in mice treated with palm-tcDNA-PS.
+Hemalun-Eosin-Saffron staining. Scale bar = 50 μm. (<bold>C</bold>) Total protein and
+albumin levels in the urine of wild-type (<italic>n</italic> = 7) and
+<italic>mdx</italic> mice treated with PBS (<italic>n</italic> = 7), palm-tcDNA-PO
+(<italic>n</italic> = 3) or palm-tcDNA-PS (<italic>n</italic> = 5) at 10
+μmol/kg/week for 12 weeks. Urines were collected at the end of the 12-week treatment
+(12 weeks) or after a 12-week washout period (wash-out). Results are normalised to
+creatinine levels and expressed as mean ± SEM. * <italic>P</italic> &lt; 0.05 compared
+to PBS (two-way ANOVA). (<bold>D</bold>) Kidney injury biomarkers (KIB) were evaluated
+in urines collected from <italic>mdx</italic> mice treated with palm-tcDNA-PO
+(<italic>n</italic> = 3) or palm-tcDNA-PS (<italic>n</italic> = 5) at 10
+μmol/kg/week for 12 weeks. Urines were collected at the end of the 12-week treatment
+(12 weeks) or after a 12-week washout period (wash-out). Results are normalised to
+<italic>mdx</italic> PBS levels and expressed as mean ± SEM;
+*<italic>P</italic> &lt; 0.05 compared to PBS (Mann–Whitney <italic>U</italic>
+tests).</p></caption><alternatives><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="image" xlink:href="gkab1199fig8.jpg"><?cloudpmc-path blobs/9113/8754652/458742046bbe/gkab1199fig8.jpg?><?cloudpmc-bucket cdn?><?image-server-status LOAD_COMPLETED?><?original-height 2061?><?original-width 1513?><?scaled-height 1030?><?scaled-width 756?></graphic><graphic xmlns:xlink="http://www.w3.org/1999/xlink" content-type="thumb" xlink:href="gkab1199fig8.gif"><?cloudpmc-path blobs/9113/8754652/5bd25b350109/gkab1199fig8.gif?><?cloudpmc-bucket cdn?></graphic></alternatives></fig><p>Additionally, we explored the histopathological profile of liver and kidney in treated
+<italic>mdx</italic> mice in order to determine and evaluate the potential toxic
+response within the tissues. In the liver, most treated animals (3/4 for palm-tcDNA-PO and
+4/5 for palm-tcDNA-PS) displayed some small scattered foci of inflammatory cell
+infiltration centered around a few individual necrotic hepatocytes (Figure <xref rid="F8" ref-type="fig">8B</xref>). On the contrary, only few (2/6) control
+<italic>mdx</italic> animals displayed similar lesions that are commonly reported in
+adult rodents. Similar findings were observed after the wash-out period (<xref rid="sup1" ref-type="supplementary-material">Supplementary Figure S5C</xref>).
+Additionally, in all palm-tcDNA-PS treated animals, hepatocytic nuclei displayed an
+increased degree of pleomorphism corresponding to irregular nucleus size (anisokaryosis),
+heterogeneous aspect of chromatin and in most severe cases, atypias like binucleation,
+meganucleation or meganucleolation. This was only observed in one mouse treated with the
+palm-tcDNA-PO. The intensity of pleomorphism was scored and showed significant difference
+between the 2 treatments with a score of 2.4 ± 0.6 for palm-tcDNA-PS and 0.25 ± 0.5 for
+palm-tcDNA-PO (significant difference, Mann-Whitney, <italic>P</italic> &lt; 0.05). Of
+note, a null score was attributed to all control animals. After 12 weeks of wash-out,
+pleomorphism was only present in animals having received palm-tcDNA-PS with a score of
+1.2 ± 0.8. Also, in palm-tcDNA-PS treated animals exclusively, clusters of hepatocytes
+with macrovesicular intracytoplasmic vacuoles with an eosinophilic content were observed.
+In large clusters, individual hepatocytic necrosis was often associated with a mild
+infiltration of mixed inflammatory cells. This lesion was observed in all animals under
+palm-tcDNA-PS treatment (five out of five) and in three out of five animals after wash
+out.</p><p>In the kidney, no significant lesions were observed following 12 weeks of treatment with
+both tested compounds at 10 μmol/kg/week either 2 weeks after the last dose or after a
+12-week wash-out period.</p><p>Overall, histopathological findings revealed only limited lesions in intensity and in
+extension, appearing more pronounced with the palm-tcDNA-PS compound.</p></sec><sec id="SEC3-7" disp-level="2"><title>Evaluation of kidney toxicity</title><p>In order to study the potential renal toxicity that palm-tcDNA-ASO administration may
+induce due to their accumulation in proximal tubules, several biomarkers were examined
+including early kidney injury biomarkers (KIBs). Urines were collected from treated mice
+one week after the last dose or after a 12-week wash-out period, and levels of total
+protein and albumin were first measured and normalized with creatinine levels (Figure
+<xref rid="F8" ref-type="fig">8C</xref>). No changes in normalized total protein levels
+were found after any of the treatment. Urinary albumin levels appeared elevated after
+palm-tcDNA-PS treatment and went back to normal after the washout period. Interestingly,
+the palm-tcDNA-PO induced a slight decrease in albumin levels which were no longer
+different from WT levels. Moreover, treatment with palm-tcDNA-PO for 12 weeks did not
+affect the urinary levels of B2-microglobulin (B2M), renin, KIM-1, IP10, VEGF, cystatin C,
+EGF, neutrophil gelatinase-associated lipocalin (NGAL), clusterin and osteopontin (OPN)
+(Figure <xref rid="F8" ref-type="fig">8D</xref>). Palm-tcDNA-PS treatment on the other
+hand, induced a slight elevation of KIM-1 and renin levels (although not statistically
+significant for renin), which came back to normal levels after the 12-week
+washout-period.</p></sec></sec><sec id="SEC4" disp-level="1"><title>DISCUSSION</title><p>ASO therapeutics have gained increasing interest in the past few decades and several ASO
+drugs have reached market approval. However, the majority of systemically administered ASO
+are distributed to liver and kidney, limiting the therapeutic potential of this approach for
+neuromuscular diseases such as DM1 and DMD. Only the uncharged phosphorodiamidate morpholino
+(PMO) ASOs have so far been approved for the systemic treatment of DMD but their clinical
+benefit in DMD patients is still marginal. While PS-ASO can also reach muscle tissues, the
+doses required are generally very high and may result in toxicities associated with PS
+accumulation in liver and kidney. It is therefore therapeutically valuable to improve ASO
+activity in muscle tissues to better address clinical needs for NMDs. Many research efforts
+are currently focusing on extra hepatic tissue delivery and conjugation to fatty acid is an
+attractive way to improve delivery to muscle tissues. Previous studies have demonstrated
+efficient extrahepatic delivery of siRNAs (<xref rid="B26" ref-type="bibr">26</xref>) and
+gapmer ASOs (<xref rid="B27" ref-type="bibr">27</xref>,<xref rid="B28" ref-type="bibr">28</xref>) conjugated to fatty acid but this was never reported for splice-switching ASO
+(SSO) for which an additional barrier has to be overcome: the nuclear membrane. To be
+effective, SSOs have to be transported from the circulation to muscle cells nuclei and
+therefore pass the endothelium, the interstitial space, the plasma membrane and nuclear
+membrane. We have previously shown that tcDNA-ASO are promising ASO for NMD as they are
+capable of significantly reach muscle tissues and even cross the BBB at low levels after
+systemic delivery. We hypothesized that conjugation to palmitic acid would enhance their
+delivery to skeletal and cardiac muscles and improve their potency. We demonstrate here that
+palmitic acid improves the potency of both PO and PS-tcDNA ASO compared to their
+unconjugated counterparts. Palm-tcDNA-PS were 5-fold more potent than naked tcDNA-PS and,
+more strikingly, palm-tcDNA-PO were 50-fold more potent than tcDNA-PO. This improvement
+allows a significant reduction in the administered dose compared to our previously published
+studies where doses up to 40 μmol/kg of tcDNA-PS were injected. To further compare the
+potential of both conjugated compounds, we performed dose-response experiments in mice over
+a period of 3 months and showed that palm-tcDNA-PS induced significantly higher levels of
+exon skipping and dystrophin restoration than palm-tcDNA-PO at the dose of 10 μmol/kg.
+Interestingly at the lower dose, there were no statistical differences in potency between
+the two compounds. When calculating the ED50 for each compound, we found a 4-times lower
+ED50 for palm-tcDNA-PS than palm-tcDNA-PO. However, while the ED50 is a useful parameter to
+compare the potency of various compounds, it is mostly used in down-regulation studies to
+reflect the dose required to knock down 50% of the target mRNA. In the case of splice
+switching approaches and exon skipping in particular which aims at restoring the reading
+frame, the arbitrary 50% may not be very appropriate since much lower exon skipping levels
+may be therapeutically relevant for DMD patients. The level of dystrophin required for an
+effective clinical therapy in DMD patients is still under discussion. Several studies have
+suggested that approximately 20% of uniformly distributed dystrophin may be sufficient
+(<xref rid="B29" ref-type="bibr">29</xref>,<xref rid="B30" ref-type="bibr">30</xref>) and
+more recent work has shown that very low residual dystrophin quantity was associated with
+milder dystrophinopathy (<xref rid="B31" ref-type="bibr">31</xref>).</p><p>The range of dystrophin restoration obtained in this study was sufficient to improve
+functional outcomes in dystrophic mice and will likely be beneficial in patients. Moreover,
+despite the lower doses administered in this study (compared to our previous work (<xref rid="B6" ref-type="bibr">6</xref>,<xref rid="B7" ref-type="bibr">7</xref>)), tcDNA ASOs
+are still able to cross the BBB at low levels after conjugation to palmitic acid and
+partially restore expression of dystrophin protein in the brain, which improves emotional
+outcomes associated with the lack of brain dystrophin. Palm-tcDNA ASOs therefore represent
+particularly promising drugs for the systemic treatment of DMD, offering the possibility to
+address both the muscle pathology and the brain involvement associated with the absence of
+dystrophin in the brain.</p><p>While the palm-tcDNA-PS induces higher levels of exon skipping and dystrophin restoration
+than palm-tcDNA-PO and may appear as a more potent compound, several other considerations
+actually make the palm-tcDNA-PO a much more promising drug candidate. When calculating the
+ratio of efficacy over quantity detected in tissues, we found consistently better ratio for
+the palm-tcDNA PO suggesting better productive uptake for this compound (higher efficacy for
+less compound accumulated). This is particularly true after the washout period, where we
+found very little tcDNA-PO left in the tissues (about 10%) but still significant levels of
+exon skipping (about 63% of the levels detected before the 12wks wash-out). Considering the
+short half-life of DMD mRNA (<xref rid="B32" ref-type="bibr">32</xref>), this exon skipping
+level reflects the productive tcDNA-ASO fraction in the nucleus, which likely results from
+slow endosomal release over time. Despite showing higher accumulation in tissues, the ratio
+efficacy/quantity is lower for the palm-tcDNA-PS suggesting a lesser productive fraction for
+this compound which might be more retained in the interstitial space than its PO
+counterpart. Analysis of the metabolites performed by LCMS revealed that the palmitic acid
+conjugate was cleaved from the ASO found in tissues. Once freed from its palmitic acid
+conjugate, tcDNA-PO may be more advantageous than tcDNA-PS for cell trafficking and nuclear
+delivery.</p><p>More importantly, tcDNA-PO present a significant advantage in terms of toxicity compared to
+the tcDNA-PS. Our <italic>in vitro</italic> studies reveal that palm-tcDNA-PO has no impact
+on coagulation pathways nor complement activation in contrast with its PS counterpart. This
+was not observed <italic>in vivo</italic> because the doses administered were sufficiently
+low, but it is important to model potential toxicities that could occur in dose-ranging
+studies required for preclinical development. Moreover, considering that treatment for NMDs
+like DMD requires a lifetime medication, it is crucial to evaluate the impact of ASO
+accumulation in liver and kidney tissues to avoid potential long-term toxicities. No changes
+in hepatic or renal serum biomarkers were detected with any of the 2 compounds. However,
+some urinary biomarkers were slightly but statistically elevated after treatment with the
+palm-tcDNA-PS as opposed to palm-tcDNA-PO. Histopathological findings revealed only limited
+lesions, yet more pronounced with the palm-tcDNA-PS compound. Altogether our data suggest a
+better safety profile of the palm-tcDNA-PO than the palm-tcDNA-PS.</p><p>Moreover, interactions of PS-ASOs with proteins can influence their safety and it has been
+shown that binding of PS-ASOs to proteins can lead to nucleolar mislocalization of
+paraspeckle proteins and nucleolar stress, resulting in apoptotic cell death (<xref rid="B33" ref-type="bibr">33–35</xref>). While these subcellular aggregates may
+not all be detrimental, the use of PO-ASOs is an appealing strategy to overcome these
+PS-induced challenges.</p><p>The mechanism underlying the enhanced potency of palmitic acid conjugates is likely the
+improved binding to serum albumin as this was previously described for cEt (constrained
+ethyl) gapmers (<xref rid="B19" ref-type="bibr">19</xref>). Palm-cEt-PS gapmers were shown
+to be ∼5-fold more potent than their unconjugated PS counterparts, and this was associated
+with a 200-fold increase in affinity for albumin which is the most abundant plasma protein.
+An initial study comparing the conjugation of cEt gapmers to various lipids revealed that
+albumin affinity was correlated with the activity of fatty acid conjugates in skeletal and
+cardiac muscle and that palmitic acid showed the highest <italic>in vivo</italic> muscle
+activity (<xref rid="B28" ref-type="bibr">28</xref>).</p><p>Our findings with palm-tcDNA-PS corroborate the 5-fold improvement described in these
+studies and further demonstrate the potential of palmitic acid conjugation to PO-ASO with a
+50-fold increase in potency compared to naked tcDNA-PO. Developing an effective PO-ASO
+represents a major milestone for the systemic treatment of DMD to avoid dose limiting
+toxicities in the clinic, which have often been a limitation in previous clinical
+development (as observed with drisapersen, a 2’OMePS and suvodirsen, a stereopure 2’Modified
+PS –ASO).</p><p>In conclusion, we report the detailed characterisation of palmitic acid conjugation to both
+PO and PS-tcDNA showing a significant increase in potency, associated with functional
+benefits and a particularly encouraging safety profile for the palm-tcDNA-PO compound.
+Further research improving specific and targeted delivery to muscle cells may provide added
+effectiveness, as exemplified by the success of GalNac conjugation for hepatocytes.
+Interestingly, while GalNac conjugated ASO showed 7- to 10-fold improved potency in rodents
+(<xref rid="B36" ref-type="bibr">36</xref>), they were found to be 30-fold more potent
+than the unconjugated ASO in humans (<xref rid="B37" ref-type="bibr">37</xref>).
+Extrapolating these results would suggest promising outcomes for lipid-conjugated tcDNA-ASO
+in patients.</p></sec><sec id="sec24" disp-level="1"><title>Supplementary Material</title><supplementary-material id="sup1" position="float"><?disp-level 2?><label>gkab1199_Supplemental_File</label><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="gkab1199_supplemental_file.pdf" mimetype="application" mime-subtype="pdf"><?cloudpmc-path 9113/8754652/9e56a39929a2/gkab1199_supplemental_file.pdf?><?cloudpmc-bucket app?><?size 1035685?><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec><sec id="ACK1" sec-type="ack" disp-level="1"><title>ACKNOWLEDGEMENTS</title><p>We would like to thank the personnel of the plateforme 2CARE for taking care of the animals
+used in this work and Mégane Lemaitre from the Plateforme d'évaluation de la fonction
+musculaire chez le petit animal at Sorbonne University for muscle force assessment.</p></sec><sec id="_ci93_" xml:lang="en" sec-type="contrib-info" disp-level="1"><title>Contributor Information</title><p>Karima Relizani, 
+Université Paris-Saclay, UVSQ, Inserm, END-ICAP, 78000
+Versailles, France; 
+SQY Therapeutics, UVSQ, 78180 Montigny le
+Bretonneux, France.</p><p>Lucía Echevarría, 
+Université Paris-Saclay, UVSQ, Inserm, END-ICAP, 78000
+Versailles, France; 
+SQY Therapeutics, UVSQ, 78180 Montigny le
+Bretonneux, France.</p><p>Faouzi Zarrouki, 
+Université Paris-Saclay, UVSQ, Inserm, END-ICAP, 78000
+Versailles, France; 
+Université Paris-Saclay, CNRS, Institut des Neurosciences Paris
+Saclay, 91190, Gif-sur-Yvette, France.</p><p>Cécile Gastaldi, 
+LIA BAHN, centre scientifique de Monaco,
+98000, Monaco.</p><p>Chloe Dambrune, 
+Université Paris-Saclay, UVSQ, Inserm, END-ICAP, 78000
+Versailles, France.</p><p>Philippine Aupy, 
+Université Paris-Saclay, UVSQ, Inserm, END-ICAP, 78000
+Versailles, France.</p><p>Adrian Haeberli, 
+SYNTHENA AG, Bern, Switzerland.</p><p>Marek Komisarski, 
+SYNTHENA AG, Bern, Switzerland.</p><p>Thomas Tensorer, 
+SQY Therapeutics, UVSQ, 78180 Montigny le
+Bretonneux, France; 
+SYNTHENA AG, Bern, Switzerland.</p><p>Thibaut Larcher, 
+INRAE Oniris, UMR 703 PAnTher, Nantes,
+France.</p><p>Fedor Svinartchouk, 
+SQY Therapeutics, UVSQ, 78180 Montigny le
+Bretonneux, France.</p><p>Cyrille Vaillend, 
+Université Paris-Saclay, CNRS, Institut des Neurosciences Paris
+Saclay, 91190, Gif-sur-Yvette, France.</p><p>Luis Garcia, 
+Université Paris-Saclay, UVSQ, Inserm, END-ICAP, 78000
+Versailles, France; 
+LIA BAHN, centre scientifique de Monaco,
+98000, Monaco.</p><p>Aurélie Goyenvalle, 
+Université Paris-Saclay, UVSQ, Inserm, END-ICAP, 78000
+Versailles, France; 
+LIA BAHN, centre scientifique de Monaco,
+98000, Monaco.</p></sec><sec id="SEC5" disp-level="1"><title>SUPPLEMENTARY DATA</title><p>
+<ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkab1199#supplementary-data" ext-link-type="uri">Supplementary Data</ext-link> are available at NAR Online.</p></sec><sec id="SEC6" disp-level="1"><title>FUNDING</title><p>Agence Nationale de la Recherche (Chair of Excellence HandiMedEx) [ANR-14-CE13-0037-01 to
+C.V.]; Institut National de la santé et la recherche médicale (INSERM); Centre National de
+la Recherche Scientifique (CNRS); University Paris-Saclay, the Association Monégasque contre
+les Myopathies (AMM); Duchenne Parent project France (DPPF); Ministère de l’Enseignement
+Supérieur et de la Recherche; Paris Ile-de-France Region, the Fondation UVSQ; Fondation pour
+la Recherche Médicale (FRM) [PLP20161036676 to P.A.]. Funding for open access
+charge: INSERM.</p><p>
+<italic>Conflict of interest statement</italic>. K.R., L.E. and T.T. are employees of SQY
+Therapeutics. L.G. is co-founder of Synthena AG and SQY Therapeutics, which produce
+tricyclo-DNA oligomers. A.H., M.K. and T.T. were employees of Synthena AG.</p></sec><sec id="REF1" sec-type="ref-list" disp-level="1"><title>REFERENCES</title><sec id="REF1_sec2" disp-level="2"><ref-list><ref id="B1"><label>1.</label><mixed-citation><named-content content-type="citation-string">
+
+Overby  S.J.,
+Cerro-Herreros
+ E., Llamusi
+ B., Artero
+ R.
+ RNA-mediated therapies in myotonic dystrophy.
+Drug Discov. Today. 2018;
+23:2013–2022.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.drudis.2018.08.004"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="30086404"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Drug Discov. Today&amp;title=RNA-mediated therapies in myotonic dystrophy&amp;volume=23&amp;publication_year=2018&amp;pages=2013-2022&amp;pmid=30086404&amp;doi=10.1016/j.drudis.2018.08.004&amp;"/></mixed-citation></ref><ref id="B2"><label>2.</label><mixed-citation><named-content content-type="citation-string">
+
+Ferlini  A.,
+Goyenvalle
+ A., Muntoni
+ F.
+ RNA-targeted drugs for neuromuscular diseases.
+Science. 2021;
+371:29–31.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1126/science.aba4515"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="33384365"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Science&amp;title=RNA-targeted drugs for neuromuscular diseases&amp;volume=371&amp;publication_year=2021&amp;pages=29-31&amp;pmid=33384365&amp;doi=10.1126/science.aba4515&amp;"/></mixed-citation></ref><ref id="B3"><label>3.</label><mixed-citation><named-content content-type="citation-string">
+
+Geary  R.S.,
+Yu  R.Z.,
+Levin
+ A.A.
+ Pharmacokinetics of phosphorothioate antisense
+oligodeoxynucleotides. Curr. Opin. Investig. Drugs.
+2001;
+2:562–573.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="11566019"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Curr. Opin. Investig. Drugs&amp;title=Pharmacokinetics of phosphorothioate antisense oligodeoxynucleotides&amp;volume=2&amp;publication_year=2001&amp;pages=562-573&amp;pmid=11566019&amp;"/></mixed-citation></ref><ref id="B4"><label>4.</label><mixed-citation><named-content content-type="citation-string">
+
+Geary  R.S.,
+Norris  D.,
+Yu  R.,
+Bennett
+ C.F.
+ Pharmacokinetics, biodistribution and cell uptake of antisense
+oligonucleotides. Adv. Drug. Deliv. Rev.
+ 2015;
+87:46–51.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.addr.2015.01.008"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="25666165"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Adv. Drug. Deliv. Rev.&amp;title=Pharmacokinetics, biodistribution and cell uptake of antisense oligonucleotides&amp;volume=87&amp;publication_year=2015&amp;pages=46-51&amp;pmid=25666165&amp;doi=10.1016/j.addr.2015.01.008&amp;"/></mixed-citation></ref><ref id="B5"><label>5.</label><mixed-citation><named-content content-type="citation-string">
+
+Roberts  T.C.,
+Langer  R.,
+Wood
+ M.J.A.
+ Advances in oligonucleotide drug delivery. Nat.
+Rev. Drug Discov.  2020;
+19:673–694.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1038/s41573-020-0075-7"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC7419031"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="32782413"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Nat. Rev. Drug Discov.&amp;title=Advances in oligonucleotide drug delivery&amp;volume=19&amp;publication_year=2020&amp;pages=673-694&amp;pmid=32782413&amp;doi=10.1038/s41573-020-0075-7&amp;"/></mixed-citation></ref><ref id="B6"><label>6.</label><mixed-citation><named-content content-type="citation-string">
+
+Goyenvalle  A.,
+Griffith
+ G., Babbs
+ A.,
+El Andaloussi
+ S., Ezzat
+ K., Avril
+ A.,
+Dugovic
+ B., Chaussenot
+ R., Ferry
+ A., Voit
+ T.  et al.
+ Functional correction in mouse models of muscular dystrophy using
+exon-skipping tricyclo-DNA oligomers. Nat. Med.
+ 2015;
+21:270–275.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1038/nm.3765"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="25642938"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Nat. Med.&amp;title=Functional correction in mouse models of muscular dystrophy using exon-skipping tricyclo-DNA oligomers&amp;volume=21&amp;publication_year=2015&amp;pages=270-275&amp;pmid=25642938&amp;doi=10.1038/nm.3765&amp;"/></mixed-citation></ref><ref id="B7"><label>7.</label><mixed-citation><named-content content-type="citation-string">
+
+Relizani  K.,
+Griffith
+ G.,
+Echevarría
+ L., Zarrouki
+ F.,
+Facchinetti
+ P., Vaillend
+ C.,
+Leumann
+ C., Garcia
+ L.,
+Goyenvalle
+ A.  Efficacy
+and safety profile of tricyclo-DNA antisense oligonucleotides in Duchenne muscular
+dystrophy mouse model. Mol Ther Nucleic Acids.
+2017;
+8:144–157.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.omtn.2017.06.013"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC5498286"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="28918017"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Mol Ther Nucleic Acids&amp;title=Efficacy and safety profile of tricyclo-DNA antisense oligonucleotides in Duchenne muscular dystrophy mouse model&amp;volume=8&amp;publication_year=2017&amp;pages=144-157&amp;pmid=28918017&amp;doi=10.1016/j.omtn.2017.06.013&amp;"/></mixed-citation></ref><ref id="B8"><label>8.</label><mixed-citation><named-content content-type="citation-string">
+
+Robin  V.,
+Griffith
+ G., Carter
+ J.-P.L.,
+Leumann
+ C.J., Garcia
+ L.,
+Goyenvalle
+ A.  Efficient
+SMN rescue following subcutaneous tricyclo-DNA antisense oligonucleotide
+treatment. Mol Ther Nucleic Acids. 2017;
+7:81–89.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.omtn.2017.02.009"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC5415958"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="28624227"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Mol Ther Nucleic Acids&amp;title=Efficient SMN rescue following subcutaneous tricyclo-DNA antisense oligonucleotide treatment&amp;volume=7&amp;publication_year=2017&amp;pages=81-89&amp;pmid=28624227&amp;doi=10.1016/j.omtn.2017.02.009&amp;"/></mixed-citation></ref><ref id="B9"><label>9.</label><mixed-citation><named-content content-type="citation-string">
+
+Iannitti  T.,
+Morales-Medina
+ J.C.,
+Palmieri
+ B.
+ Phosphorothioate oligonucleotides: effectiveness and
+toxicity. Curr. Drug Targets. 2014;
+15:663–673.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.2174/1389450115666140321100304"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="24655142"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Curr. Drug Targets&amp;title=Phosphorothioate oligonucleotides: effectiveness and toxicity&amp;volume=15&amp;publication_year=2014&amp;pages=663-673&amp;pmid=24655142&amp;doi=10.2174/1389450115666140321100304&amp;"/></mixed-citation></ref><ref id="B10"><label>10.</label><mixed-citation><named-content content-type="citation-string">
+
+Senn  J.J.,
+Burel  S.,
+Henry
+ S.P.
+ Non-CpG-containing antisense 2’-methoxyethyl oligonucleotides activate a
+proinflammatory response independent of Toll-like receptor 9 or myeloid differentiation
+factor 88. J. Pharmacol. Exp. Ther.  2005;
+314:972–979.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1124/jpet.105.084004"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="15919763"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Pharmacol. Exp. Ther.&amp;title=Non-CpG-containing antisense 2’-methoxyethyl oligonucleotides activate a proinflammatory response independent of Toll-like receptor 9 or myeloid differentiation factor 88&amp;volume=314&amp;publication_year=2005&amp;pages=972-979&amp;pmid=15919763&amp;doi=10.1124/jpet.105.084004&amp;"/></mixed-citation></ref><ref id="B11"><label>11.</label><mixed-citation><named-content content-type="citation-string">
+
+Henry  S.P.,
+Beattie
+ G., Yeh
+ G.,
+Chappel
+ A., Giclas
+ P.,
+Mortari
+ A., Jagels
+ M.A.,
+Kornbrust
+ D.J., Levin
+ A.A.
+ Complement activation is responsible for acute toxicities in rhesus
+monkeys treated with a phosphorothioate oligodeoxynucleotide.
+Int. Immunopharmacol.  2002;
+2:1657–1666.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/s1567-5769(02)00142-x"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="12469940"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Int. Immunopharmacol.&amp;title=Complement activation is responsible for acute toxicities in rhesus monkeys treated with a phosphorothioate oligodeoxynucleotide&amp;volume=2&amp;publication_year=2002&amp;pages=1657-1666&amp;pmid=12469940&amp;doi=10.1016/s1567-5769(02)00142-x&amp;"/></mixed-citation></ref><ref id="B12"><label>12.</label><mixed-citation><named-content content-type="citation-string">
+
+Sheehan  J.P.,
+Phan
+ T.M.
+ Phosphorothioate oligonucleotides inhibit the intrinsic tenase complex
+by an allosteric mechanism. Biochemistry.
+2001;
+40:4980–4989.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1021/bi002396x"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="11305914"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Biochemistry&amp;title=Phosphorothioate oligonucleotides inhibit the intrinsic tenase complex by an allosteric mechanism&amp;volume=40&amp;publication_year=2001&amp;pages=4980-4989&amp;pmid=11305914&amp;doi=10.1021/bi002396x&amp;"/></mixed-citation></ref><ref id="B13"><label>13.</label><mixed-citation><named-content content-type="citation-string">
+
+Crooke  S.T.  Antisense Drug Technology: Principles, Strategies, and
+Applications. 2007; 2nd edn.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="title=Antisense Drug Technology: Principles, Strategies, and Applications&amp;publication_year=2007&amp;"/></mixed-citation></ref><ref id="B14"><label>14.</label><mixed-citation><named-content content-type="citation-string">
+
+Crooke  S.T.,
+Baker
+ B.F., Kwoh
+ T.J.,
+Cheng  W.,
+Schulz
+ D.J., Xia
+ S.,
+Salgado
+ N., Bui
+ H.-H.,
+Hart  C.E.,
+Burel  S.A.
+ et al.  Integrated safety assessment of
+2’-O-methoxyethyl chimeric antisense oligonucleotides in nonHuman primates and healthy
+human volunteers. Mol. Ther.  2016;
+24:1771–1782.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1038/mt.2016.136"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC5112040"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="27357629"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Mol. Ther.&amp;title=Integrated safety assessment of 2’-O-methoxyethyl chimeric antisense oligonucleotides in nonHuman primates and healthy human volunteers&amp;volume=24&amp;publication_year=2016&amp;pages=1771-1782&amp;pmid=27357629&amp;doi=10.1038/mt.2016.136&amp;"/></mixed-citation></ref><ref id="B15"><label>15.</label><mixed-citation><named-content content-type="citation-string">
+
+Goyenvalle  A.,
+Leumann
+ C., Garcia
+ L.
+ Therapeutic potential of tricyclo-DNA antisense
+oligonucleotides. J. Neuromuscul. Dis.
+ 2016;
+3:157–167.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.3233/JND-160146"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC5271482"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="27854216"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Neuromuscul. Dis.&amp;title=Therapeutic potential of tricyclo-DNA antisense oligonucleotides&amp;volume=3&amp;publication_year=2016&amp;pages=157-167&amp;pmid=27854216&amp;doi=10.3233/JND-160146&amp;"/></mixed-citation></ref><ref id="B16"><label>16.</label><mixed-citation><named-content content-type="citation-string">
+
+Renneberg  D.,
+Bouliong
+ E., Reber
+ U.,
+Schumperli
+ D., Leumann
+ C.J.
+ Antisense properties of tricyclo-DNA. Nucleic
+Acids Res.  2002;
+30:2751–2757.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1093/nar/gkf412"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC117067"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="12087157"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Nucleic Acids Res.&amp;title=Antisense properties of tricyclo-DNA&amp;volume=30&amp;publication_year=2002&amp;pages=2751-2757&amp;pmid=12087157&amp;doi=10.1093/nar/gkf412&amp;"/></mixed-citation></ref><ref id="B17"><label>17.</label><mixed-citation><named-content content-type="citation-string">
+
+Echevarría  L.,
+Aupy  P.,
+Relizani
+ K., Bestetti
+ T.,
+Griffith
+ G., Blandel
+ F.,
+Komisarski
+ M., Haeberli
+ A.,
+Svinartchouk
+ F., Garcia
+ L.  et al.
+ Evaluating the impact of variable phosphorothioate content in
+tricyclo-DNA antisense oligonucleotides in a Duchenne muscular dystrophy mouse
+model. Nucleic Acid Ther.  2019;
+29:148–160.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1089/nat.2018.0773"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="31009315"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Nucleic Acid Ther.&amp;title=Evaluating the impact of variable phosphorothioate content in tricyclo-DNA antisense oligonucleotides in a Duchenne muscular dystrophy mouse model&amp;volume=29&amp;publication_year=2019&amp;pages=148-160&amp;pmid=31009315&amp;doi=10.1089/nat.2018.0773&amp;"/></mixed-citation></ref><ref id="B18"><label>18.</label><mixed-citation><named-content content-type="citation-string">
+
+Gaus  H.J.,
+Gupta  R.,
+Chappell
+ A.E.,
+Østergaard
+ M.E., Swayze
+ E.E., Seth
+ P.P.
+ Characterization of the interactions of chemically-modified therapeutic
+nucleic acids with plasma proteins using a fluorescence polarization
+assay. Nucleic Acids Res.  2019;
+47:1110–1122.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1093/nar/gky1260"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC6379706"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="30566688"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Nucleic Acids Res.&amp;title=Characterization of the interactions of chemically-modified therapeutic nucleic acids with plasma proteins using a fluorescence polarization assay&amp;volume=47&amp;publication_year=2019&amp;pages=1110-1122&amp;pmid=30566688&amp;doi=10.1093/nar/gky1260&amp;"/></mixed-citation></ref><ref id="B19"><label>19.</label><mixed-citation><named-content content-type="citation-string">
+
+Chappell  A.E.,
+Gaus  H.J.,
+Berdeja
+ A., Gupta
+ R., Jo
+ M.,
+Prakash
+ T.P.,
+Oestergaard
+ M., Swayze
+ E.E., Seth
+ P.P.
+ Mechanisms of palmitic acid-conjugated antisense oligonucleotide
+distribution in mice. Nucleic Acids Res.
+ 2020;
+48:4382–4395.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1093/nar/gkaa164"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC7192618"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="32182359"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Nucleic Acids Res.&amp;title=Mechanisms of palmitic acid-conjugated antisense oligonucleotide distribution in mice&amp;volume=48&amp;publication_year=2020&amp;pages=4382-4395&amp;pmid=32182359&amp;doi=10.1093/nar/gkaa164&amp;"/></mixed-citation></ref><ref id="B20"><label>20.</label><mixed-citation><named-content content-type="citation-string">
+
+Zhang  A.,
+Uaesoontrachoon
+ K.,
+Shaughnessy
+ C., Das
+ J.R.,
+Rayavarapu
+ S., Brown
+ K.J., Ray
+ P.E.,
+Nagaraju
+ K.,
+van den Anker
+ J.N.,
+Hoffman
+ E.P.  et al.
+ The use of urinary and kidney SILAM proteomics to monitor kidney
+response to high dose morpholino oligonucleotides in the mdx mouse.
+Toxicol Rep. 2015;
+2:838–849.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.toxrep.2015.05.008"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC4512206"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="26213685"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Toxicol Rep&amp;title=The use of urinary and kidney SILAM proteomics to monitor kidney response to high dose morpholino oligonucleotides in the mdx mouse&amp;volume=2&amp;publication_year=2015&amp;pages=838-849&amp;pmid=26213685&amp;doi=10.1016/j.toxrep.2015.05.008&amp;"/></mixed-citation></ref><ref id="B21"><label>21.</label><mixed-citation><named-content content-type="citation-string">
+
+Aupy  P.,
+Echevarría
+ L., Relizani
+ K.,
+Zarrouki
+ F., Haeberli
+ A.,
+Komisarski
+ M., Tensorer
+ T.,
+Jouvion
+ G.,
+Svinartchouk
+ F., Garcia
+ L.  et al.
+ Identifying and avoiding tcDNA-ASO sequence-specific toxicity for the
+development of DMD exon 51 skipping therapy. Mol. Ther. Nucleic
+Acids. 2020;
+19:371–383.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1016/j.omtn.2019.11.020"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC7063478"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="31881528"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Mol. Ther. Nucleic Acids&amp;title=Identifying and avoiding tcDNA-ASO sequence-specific toxicity for the development of DMD exon 51 skipping therapy&amp;volume=19&amp;publication_year=2020&amp;pages=371-383&amp;pmid=31881528&amp;doi=10.1016/j.omtn.2019.11.020&amp;"/></mixed-citation></ref><ref id="B22"><label>22.</label><mixed-citation><named-content content-type="citation-string">
+
+Sicinski  P.,
+Geng  Y.,
+Ryder-Cook
+ A.S.,
+Barnard
+ E.A.,
+Darlison
+ M.G.,
+Barnard
+ P.J.  The
+molecular basis of muscular dystrophy in the mdx mouse: a point
+mutation. Science. 1989;
+244:1578–1580.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1126/science.2662404"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="2662404"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Science&amp;title=The molecular basis of muscular dystrophy in the mdx mouse: a point mutation&amp;volume=244&amp;publication_year=1989&amp;pages=1578-1580&amp;pmid=2662404&amp;doi=10.1126/science.2662404&amp;"/></mixed-citation></ref><ref id="B23"><label>23.</label><mixed-citation><named-content content-type="citation-string">
+
+Rouillon  J.,
+Poupiot
+ J., Zocevic
+ A., Amor
+ F., Leger
+ T., Garcia
+ C.,
+Camadro
+ J.M., Wong
+ B.,
+Pinilla
+ R., Cosette
+ J.  et al.
+ Serum proteomic profiling reveals fragments of MYOM3 as potential
+biomarkers for monitoring the outcome of therapeutic interventions in muscular
+dystrophies. Hum. Mol. Genet.  2015;
+24:4916–4932.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1093/hmg/ddv214"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC4527491"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="26060189"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Hum. Mol. Genet.&amp;title=Serum proteomic profiling reveals fragments of MYOM3 as potential biomarkers for monitoring the outcome of therapeutic interventions in muscular dystrophies&amp;volume=24&amp;publication_year=2015&amp;pages=4916-4932&amp;pmid=26060189&amp;doi=10.1093/hmg/ddv214&amp;"/></mixed-citation></ref><ref id="B24"><label>24.</label><mixed-citation><named-content content-type="citation-string">
+
+Sekiguchi  M.,
+Zushida
+ K., Yoshida
+ M.,
+Maekawa
+ M., Kamichi
+ S., Sahara
+ Y., Yuasa
+ S., Takeda
+ S., Wada
+ K.  A
+deficit of brain dystrophin impairs specific amygdala GABAergic transmission and
+enhances defensive behaviour in mice. Brain.
+2009;
+132:124–135.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1093/brain/awn253"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="18927146"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Brain&amp;title=A deficit of brain dystrophin impairs specific amygdala GABAergic transmission and enhances defensive behaviour in mice&amp;volume=132&amp;publication_year=2009&amp;pages=124-135&amp;pmid=18927146&amp;doi=10.1093/brain/awn253&amp;"/></mixed-citation></ref><ref id="B25"><label>25.</label><mixed-citation><named-content content-type="citation-string">
+
+Vaillend  C.,
+Chaussenot
+ R.
+ Relationships linking emotional, motor, cognitive and GABAergic
+dysfunctions in dystrophin-deficient mdx mice. Hum. Mol.
+Genet.  2017;
+26:1041–1055.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1093/hmg/ddx013"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="28087735"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Hum. Mol. Genet.&amp;title=Relationships linking emotional, motor, cognitive and GABAergic dysfunctions in dystrophin-deficient mdx mice&amp;volume=26&amp;publication_year=2017&amp;pages=1041-1055&amp;pmid=28087735&amp;doi=10.1093/hmg/ddx013&amp;"/></mixed-citation></ref><ref id="B26"><label>26.</label><mixed-citation><named-content content-type="citation-string">
+
+Biscans  A.,
+Coles  A.,
+Haraszti
+ R.,
+Echeverria
+ D., Hassler
+ M., Osborn
+ M.,
+Khvorova
+ A.  Diverse
+lipid conjugates for functional extra-hepatic siRNA delivery in vivo.
+Nucleic Acids Res.  2018;
+47:1082–1096.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1093/nar/gky1239"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC6379722"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="30544191"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Nucleic Acids Res.&amp;title=Diverse lipid conjugates for functional extra-hepatic siRNA delivery in vivo&amp;volume=47&amp;publication_year=2018&amp;pages=1082-1096&amp;pmid=30544191&amp;doi=10.1093/nar/gky1239&amp;"/></mixed-citation></ref><ref id="B27"><label>27.</label><mixed-citation><named-content content-type="citation-string">
+
+Østergaard  M.E.,
+Jackson
+ M., Low
+ A.,
+Chappell
+ A.E., Lee
+ R.G,
+Peralta
+ R.Q., Yu
+ J.,
+Kinberger
+ G.A., Dan
+ A., Carty
+ R.  et al.
+ Conjugation of hydrophobic moieties enhances potency of antisense
+oligonucleotides in the muscle of rodents and non-human primates.
+Nucleic Acids Res.  2019;
+47:6045–6058.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1093/nar/gkz360"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC6614849"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="31076766"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Nucleic Acids Res.&amp;title=Conjugation of hydrophobic moieties enhances potency of antisense oligonucleotides in the muscle of rodents and non-human primates&amp;volume=47&amp;publication_year=2019&amp;pages=6045-6058&amp;pmid=31076766&amp;doi=10.1093/nar/gkz360&amp;"/></mixed-citation></ref><ref id="B28"><label>28.</label><mixed-citation><named-content content-type="citation-string">
+
+Prakash  T.P.,
+Mullick
+ A.E., Lee
+ R.G., Yu
+ J., Yeh
+ S.T., Low
+ A.,
+Chappell
+ A.E.,
+Østergaard
+ M.E., Murray
+ S., Gaus
+ H.J.  et al.
+ Fatty acid conjugation enhances potency of antisense oligonucleotides in
+muscle. Nucleic Acids Res.  2019;
+47:6029–6044.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1093/nar/gkz354"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC6614804"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="31127296"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Nucleic Acids Res.&amp;title=Fatty acid conjugation enhances potency of antisense oligonucleotides in muscle&amp;volume=47&amp;publication_year=2019&amp;pages=6029-6044&amp;pmid=31127296&amp;doi=10.1093/nar/gkz354&amp;"/></mixed-citation></ref><ref id="B29"><label>29.</label><mixed-citation><named-content content-type="citation-string">
+
+Godfrey  C.,
+Muses  S.,
+McClorey
+ G., Wells
+ K.E.,
+Coursindel
+ T., Terry
+ R.L.,
+Betts  C.,
+Hammond
+ S., O’Donovan
+ L.,
+Hildyard
+ J.  et al.
+ How much dystrophin is enough: the physiological consequences of
+different levels of dystrophin in the mdx mouse. Hum. Mol.
+Genet.  2015;
+24:4225–4237.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1093/hmg/ddv155"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC4492390"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="25935000"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Hum. Mol. Genet.&amp;title=How much dystrophin is enough: the physiological consequences of different levels of dystrophin in the mdx mouse&amp;volume=24&amp;publication_year=2015&amp;pages=4225-4237&amp;pmid=25935000&amp;doi=10.1093/hmg/ddv155&amp;"/></mixed-citation></ref><ref id="B30"><label>30.</label><mixed-citation><named-content content-type="citation-string">
+
+Wells  D.J.  What is the level of dystrophin expression required for
+effective therapy of Duchenne muscular dystrophy. J. Muscle Res.
+Cell Motil.  2019;
+40:141–150.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1007/s10974-019-09535-9"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="31289969"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=J. Muscle Res. Cell Motil.&amp;title=What is the level of dystrophin expression required for effective therapy of Duchenne muscular dystrophy&amp;volume=40&amp;publication_year=2019&amp;pages=141-150&amp;pmid=31289969&amp;doi=10.1007/s10974-019-09535-9&amp;"/></mixed-citation></ref><ref id="B31"><label>31.</label><mixed-citation><named-content content-type="citation-string">
+
+de Feraudy  Y.,
+Ben Yaou
+ R., Wahbi
+ K.,
+Stalens
+ C., Stantzou
+ A., Laugel
+ V.,
+Desguerre
+ I.FILNEMUS Network FILNEMUS
+Network Servais
+ L., Leturcq
+ F.  et al.
+ Very low residual dystrophin quantity is associated with milder
+dystrophinopathy. Ann. Neurol.  2021;
+89:280–292.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1002/ana.25951"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC7894170"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="33159473"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Ann. Neurol.&amp;title=Very low residual dystrophin quantity is associated with milder dystrophinopathy&amp;volume=89&amp;publication_year=2021&amp;pages=280-292&amp;pmid=33159473&amp;doi=10.1002/ana.25951&amp;"/></mixed-citation></ref><ref id="B32"><label>32.</label><mixed-citation><named-content content-type="citation-string">
+
+Hildyard  J.C.W.,
+Rawson  F.,
+Wells
+ D.J., Piercy
+ R.J.
+ Multiplex in situ hybridization within a single transcript: RNAscope
+reveals dystrophin mRNA dynamics. PLoS One.
+2020; 15:e0239467.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1371/journal.pone.0239467"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC7514052"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="32970731"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=PLoS One&amp;title=Multiplex in situ hybridization within a single transcript: RNAscope reveals dystrophin mRNA dynamics&amp;volume=15&amp;publication_year=2020&amp;pages=e0239467&amp;pmid=32970731&amp;doi=10.1371/journal.pone.0239467&amp;"/></mixed-citation></ref><ref id="B33"><label>33.</label><mixed-citation><named-content content-type="citation-string">
+
+Shen  W.,
+De Hoyos
+ C.L., Migawa
+ M.T.,
+Vickers
+ T.A., Sun
+ H., Low
+ A., Bell
+ T.A.,
+Rahdar  M.,
+Mukhopadhyay
+ S., Hart
+ C.E.  et al.
+ Chemical modification of PS-ASO therapeutics reduces cellular
+protein-binding and improves the therapeutic index. Nat.
+Biotechnol.  2019;
+37:640–650.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1038/s41587-019-0106-2"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="31036929"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Nat. Biotechnol.&amp;title=Chemical modification of PS-ASO therapeutics reduces cellular protein-binding and improves the therapeutic index&amp;volume=37&amp;publication_year=2019&amp;pages=640-650&amp;pmid=31036929&amp;doi=10.1038/s41587-019-0106-2&amp;"/></mixed-citation></ref><ref id="B34"><label>34.</label><mixed-citation><named-content content-type="citation-string">
+
+Migawa  M.T.,
+Shen  W.,
+Wan  W.B.,
+Vasquez
+ G.,
+Oestergaard
+ M.E., Low
+ A.,
+De Hoyos
+ C.L., Gupta
+ R., Murray
+ S.,
+Tanowitz
+ M.  et al.
+ Site-specific replacement of phosphorothioate with alkyl phosphonate
+linkages enhances the therapeutic profile of gapmer ASOs by modulating interactions with
+cellular proteins. Nucleic Acids Res.
+ 2019;
+47:5465–5479.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1093/nar/gkz247"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC6582325"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="31034558"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Nucleic Acids Res.&amp;title=Site-specific replacement of phosphorothioate with alkyl phosphonate linkages enhances the therapeutic profile of gapmer ASOs by modulating interactions with cellular proteins&amp;volume=47&amp;publication_year=2019&amp;pages=5465-5479&amp;pmid=31034558&amp;doi=10.1093/nar/gkz247&amp;"/></mixed-citation></ref><ref id="B35"><label>35.</label><mixed-citation><named-content content-type="citation-string">
+
+Liang  X.-H.,
+De Hoyos
+ C.L., Shen
+ W., Zhang
+ L., Fazio
+ M., Crooke
+ S.T.
+ Solid-phase separation of toxic phosphorothioate antisense
+oligonucleotide-protein nucleolar aggregates is cytoprotective.
+Nucleic Acid Ther.  2021;
+31:126–144.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1089/nat.2020.0923"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="33534636"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Nucleic Acid Ther.&amp;title=Solid-phase separation of toxic phosphorothioate antisense oligonucleotide-protein nucleolar aggregates is cytoprotective&amp;volume=31&amp;publication_year=2021&amp;pages=126-144&amp;pmid=33534636&amp;doi=10.1089/nat.2020.0923&amp;"/></mixed-citation></ref><ref id="B36"><label>36.</label><mixed-citation><named-content content-type="citation-string">
+
+Prakash  T.P.,
+Graham
+ M.J., Yu
+ J., Carty
+ R., Low
+ A.,
+Chappell
+ A., Schmidt
+ K., Zhao
+ C.,
+Aghajan
+ M., Murray
+ H.F.  et al.
+ Targeted delivery of antisense oligonucleotides to hepatocytes using
+triantennary N-acetyl galactosamine improves potency 10-fold in mice.
+Nucleic Acids Res.  2014;
+42:8796–8807.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1093/nar/gku531"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC4117763"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="24992960"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Nucleic Acids Res.&amp;title=Targeted delivery of antisense oligonucleotides to hepatocytes using triantennary N-acetyl galactosamine improves potency 10-fold in mice&amp;volume=42&amp;publication_year=2014&amp;pages=8796-8807&amp;pmid=24992960&amp;doi=10.1093/nar/gku531&amp;"/></mixed-citation></ref><ref id="B37"><label>37.</label><mixed-citation><named-content content-type="citation-string">
+
+Crooke  S.T.,
+Baker
+ B.F., Xia
+ S., Yu
+ R.Z.,
+Viney
+ N.J., Wang
+ Y.,
+Tsimikas
+ S., Geary
+ R.S.
+ Integrated assessment of the clinical performance of GalNAc3-conjugated
+2’-O-methoxyethyl chimeric antisense oligonucleotides. I. Human volunteer
+experience. Nucleic Acid Ther.  2019;
+29:16–32.</named-content><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="doi" xlink:href="10.1089/nat.2018.0753"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmcid" xlink:href="PMC6386089"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="pmid" xlink:href="30570431"/><ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="google-scholar" xlink:href="journal=Nucleic Acid Ther.&amp;title=Integrated assessment of the clinical performance of GalNAc3-conjugated 2’-O-methoxyethyl chimeric antisense oligonucleotides. I. Human volunteer experience&amp;volume=29&amp;publication_year=2019&amp;pages=16-32&amp;pmid=30570431&amp;doi=10.1089/nat.2018.0753&amp;"/></mixed-citation></ref></ref-list></sec></sec><sec id="_ad93_" xml:lang="en" sec-type="associated-data" disp-level="1"><title>Associated Data</title><sec id="_adsm93_" xml:lang="en" sec-type="supplementary-materials" disp-level="2"><title>Supplementary Materials</title><supplementary-material id="db_ds_supplementary-material1_reqid_" position="float"><?disp-level 2?><label>gkab1199_Supplemental_File</label><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="gkab1199_supplemental_file.pdf" mimetype="application" mime-subtype="pdf"><?cloudpmc-path 9113/8754652/9e56a39929a2/gkab1199_supplemental_file.pdf?><?cloudpmc-bucket app?><?size 1035685?><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec></sec></body></article>
