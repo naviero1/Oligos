@@ -31,10 +31,14 @@ those six bibliography entries are not treated as references.
 
 ## Coverage
 
-Counts recomputed from [`data/oligos.csv`](kidney/data/oligos.csv) (65 rows × 17 columns) and
-[`data/measurements.csv`](kidney/data/measurements.csv) (111 rows × 23 columns). "Source PDFs
-held" counts only PDFs filed to that endpoint alone; the 4 multi-endpoint reference PDFs are
-excluded here and listed in the cross-cutting file instead.
+Counts are recomputed from **two** datasets, which are separate and are not joined.
+Kidney: [`kidney/data/oligos.csv`](kidney/data/oligos.csv) (65 × 17) and
+[`kidney/data/measurements.csv`](kidney/data/measurements.csv) (111 × 23).
+CNS: [`cns/data/`](cns/data/) (1,839 oligos × 45; 2,065 measurements × 36; plus a 32,569-row
+per-position modification table). The CNS rows below count only what is allocated to each
+endpoint, **not** the module's totals — see the note under the table. "Source PDFs held" counts
+only PDFs filed to that endpoint alone; the 4 multi-endpoint reference PDFs are excluded here
+and listed in the cross-cutting file instead.
 
 | Endpoint | Status | Oligos | Measurement rows | Source PDFs held | `source_id`s reaching `measurements.csv` |
 |---|---|---:|---:|---:|---|
@@ -44,14 +48,14 @@ excluded here and listed in the cross-cutting file instead.
 | [Thrombocytopenia](./thrombocytopenia.md) | background-only | 0 | 0 | 0 | none |
 | [Complement activation](./complement-activation.md) | background-only | 0 | 0 | 0 | none |
 | [Coagulopathy](./coagulopathy.md) | background-only | 0 | 0 | 0 | none |
-| [Chronic neurotoxicity](./chronic-neurotoxicity.md) | not-addressed | 0 | 0 | 0 | none |
-| [Hydrocephalus](./hydrocephalus.md) | not-addressed | 0 | 0 | 0 | none |
-| **Total** | — | **65** | **111** | **13** | **16** |
+| [Chronic neurotoxicity](./chronic-neurotoxicity.md) | delivered (thin) | 5 | 6 | 1 | 1 — L1 |
+| [Hydrocephalus](./hydrocephalus.md) | delivered (single row) | 1 | 1 | 0 | 1 — C1 |
+| **Total** | — | **71** | **118** | **14** | **18** |
 
 `sources/` holds 18 PDFs in total: the 13 endpoint-dedicated files counted above, 4
 cross-cutting reference files, and 1 off-topic file in `sources/_unrelated/`.
 
-Row counts for the single populated endpoint, by `source_id`: WS 36, N3 21, M1 11, N2 10,
+Row counts for the kidney endpoint, by `source_id`: WS 36, N3 21, M1 11, N2 10,
 K1 9, A4 5, REV 4, A1 3, A3 3, A8 2, A9 2, A2 1, A5 1, A6 1, A7 1, A10 1. Five of those 16
 (N2, N3, M1, K1, REV) correspond to a PDF held locally; the other 11 (WS and A1–A10) have no
 local PDF and are allocated to the endpoint by `source_id` alone. Distributions, per-source
@@ -62,13 +66,25 @@ oligo counts and the local-PDF mapping are in
 
 | Status | Meaning |
 |---|---|
-| `delivered` | Rows are extracted, curated and present in `data/`. The endpoint has a dataset. |
+| `delivered` | Rows are extracted, curated and present in a `data/` directory. The endpoint has a dataset. |
+| `delivered (thin)` | Rows exist and are curated, but too few, or from too few sources, to support a distributional claim. Used where the count would otherwise imply coverage it does not have. |
+| `delivered (single row)` | Exactly one curated row. Recorded because it displaces a prior claim of "nothing", not because it is coverage. |
 | `sources-acquired-not-extracted` | Primary PDFs are held in `sources/` and per-oligo material inside them has been identified, but no rows have been extracted into `data/`. |
 | `background-only` | No dedicated source was acquired. The endpoint appears only inside multi-endpoint reference material held for other reasons. |
 | `not-addressed` | No dedicated source, no row, no doc section, no slide, and no scope decision on record. At most an incidental passage inside a volume held for another endpoint. Listed so the allocation is exhaustive against the brief's eight-item list. |
 
-Only the kidney dossier describes a dataset. The other seven describe source inventories and
+Two datasets are described here: [kidney](./kidney/kidney-nephrotoxicity.md), and the CNS module
+at [`cns/`](cns/), indexed by [chronic neurotoxicity](./chronic-neurotoxicity.md) and
+[hydrocephalus](./hydrocephalus.md). The remaining five dossiers describe source inventories and
 extraction backlogs; they are deliberately short, and they are not peers of the kidney file.
+
+**The CNS module's totals do not belong to any endpoint on the brief's list.** It holds 2,065
+CNS measurements, of which **6 are chronic neurotoxicity and 1 is hydrocephalus**; 2,047 (99.1%)
+sit on the *acute* axis — "alterations of neuronal electrical activity" — which the brief
+deprioritises and which therefore still has no dossier here. Quoting the module's size as
+coverage of a listed endpoint would overstate it by roughly two orders of magnitude. The
+allocation is set out in
+[`chronic-neurotoxicity.md` §2](./chronic-neurotoxicity.md#2-the-allocation-problem--read-before-quoting-the-modules-size).
 
 ## What this reorganization changed
 
@@ -86,7 +102,7 @@ The dossiers are a new index layer. Nothing else moved:
 edited, and they remain the source of truth. Where a dossier and a data file disagree, the
 data file wins.
 
-Three facts about the data model that this index makes visible rather than changes:
+Three facts about **the kidney data model** that this index makes visible rather than changes. They are scoped to [`kidney/data/`](kidney/data/); the CNS module has its own schema, its own graded column and its own controlled vocabularies:
 
 - **All 111 measurement rows are kidney.** `is_kidney_specific` is `TRUE` on 111 of 111
   rows; no `FALSE` row exists. The column carries no information in the current dataset.
@@ -99,8 +115,11 @@ Three facts about the data model that this index makes visible rather than chang
   CSVs above. It is not a third dataset and is not curated independently.
 
 Because both the endpoint flag and the grade column are kidney-shaped, a seven-endpoint
-register cannot be produced by re-slicing the existing tables. That is why seven of the eight
-dossiers report zero rows rather than a subset.
+register cannot be produced by re-slicing the kidney tables. That is why five of the eight
+dossiers still report zero rows rather than a subset — and why the CNS work is a **second
+dataset alongside** the kidney one, with its own schema, its own `cns_tox_grade` column and its
+own written rubric ([`cns/docs/SCHEMA.md`](cns/docs/SCHEMA.md)), exactly as the earlier revisions
+of both CNS dossiers said it would have to be.
 
 ## Related files
 

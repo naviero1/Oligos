@@ -1,0 +1,10 @@
+local_name	sequence_5to3	length_nt	gapmer_motif	lna_positions_1based	nG	in_TableS1	tableS1_row	tableS1_set	tableS1_mouse_score_100ug	tableS1_CaO_score	tableS1_calculated_score	in_FigS2B_mRNA_panel	source_location
+H1_FS2_1	AAGaaatcatgggACT	16	3-10-3	1,2,3,14,15,16	4	NO	NOT_IN_TABLE_S1	NOT_IN_TABLE_S1	NOT_REPORTED	NOT_REPORTED	NOT_REPORTED	no	Suppl. Fig. S2A legend
+H1_FS2_2	ATGgaactattgATA	15	3-9-3	1,2,3,13,14,15	3	NO	NOT_IN_TABLE_S1	NOT_IN_TABLE_S1	NOT_REPORTED	NOT_REPORTED	NOT_REPORTED	no	Suppl. Fig. S2A legend
+H1_FS2_3	TGTagactattTGC	14	3-8-3	1,2,3,12,13,14	3	YES	1171	Training	NOT_REPORTED	30.95	59.1	yes	Suppl. Fig. S2A+B legend; Suppl. Table S1 row 1171
+H1_FS2_4	GTCtgtcttggctTTG	16	3-10-3	1,2,3,14,15,16	5	YES	1516	Training	NOT_REPORTED	0	32.32	yes	Suppl. Fig. S2A+B legend; Suppl. Table S1 row 1516
+H1_FS2_5	CACaagtccttacAAA	16	3-10-3	1,2,3,14,15,16	1	YES	542	Training	NOT_REPORTED	194.44	77.89	no	Suppl. Fig. S2A legend; Suppl. Table S1 row 542
+H1_FS2_6	AGCcctaaagtccCAG	16	3-10-3	1,2,3,14,15,16	3	YES	1247	Training	NOT_REPORTED	38.1	49.93	no	Suppl. Fig. S2A legend; Suppl. Table S1 row 1247
+H1_FS2_7	TGGttagccctaaAGT	16	3-10-3	1,2,3,14,15,16	4	YES	1366	Training	NOT_REPORTED	76.98	45.45	yes	Suppl. Fig. S2A+B legend; Suppl. Table S1 row 1366
+H1_FS2_8	TCTgtcttggctTTG	15	3-9-3	1,2,3,13,14,15	4	YES	1332	Training	NOT_REPORTED	40.58	42.45	yes	Suppl. Fig. S2A+B legend; Suppl. Table S1 row 1332
+H1_FS2_9	ATTtccaaattcaCTT	16	3-10-3	1,2,3,14,15,16	0	YES	54	Test	0.05	111.16	94.06	yes	Suppl. Fig. S2A+B legend; Suppl. Table S1 row 54 (= "Safe ASO" of Fig. 2/S1)

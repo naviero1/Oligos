@@ -1,53 +1,103 @@
 # Hydrocephalus — endpoint dossier
 
-**Status:** `not-addressed` · **Register:** [`./README.md`](./README.md) · **Cross-cutting sources:** [`./cross-cutting.md`](./cross-cutting.md)
+**Status:** `delivered (single row)` · **Register:** [`./README.md`](./README.md) · **Module:** [`./cns/`](./cns/) · **Cross-cutting sources:** [`./cross-cutting.md`](./cross-cutting.md)
 
-Hydrocephalus is the eighth and last endpoint in the Challenge brief's list of toxicities of interest (quoted verbatim in [`./README.md`](./README.md#scope-authority)). This project curated kidney toxicity only. Nothing was acquired, extracted or decided for this endpoint: zero rows, zero oligos, zero `source_id`s and no dedicated source. No oligonucleotide-specific material of any kind bears on it — of the 18 PDFs in `sources/`, the word occurs in exactly two, both reference PDFs (the brief's own endpoint list and a general-toxicology textbook), itemised below, and in no file in `data/` or `scripts/`. The other `not-addressed` endpoint differs: [`./chronic-neurotoxicity.md`](./chronic-neurotoxicity.md) has one relevant oligonucleotide passage to weigh. This file exists so that the absence is recorded rather than silent.
+Hydrocephalus is the eighth and last endpoint in the Challenge brief's list, quoted verbatim at
+[`README.md`](./README.md#scope-authority). A previous revision recorded it as `not-addressed`
+with zero artifacts of any kind. **That is superseded by exactly one row.**
 
-## Status
+One row is a small thing to revise a dossier for. It is recorded because the previous revision's
+claim was that *no oligonucleotide-specific material of any kind* bears on the endpoint, and that
+is no longer true: the CNS module at [`./cns/`](./cns/) carries a graded, sourced,
+oligonucleotide-specific hydrocephalus observation. The endpoint moves from "nothing" to "one
+regulatory datum", which is a different statement from "delivered".
 
-| | Value |
+## 1. Status
+
+| Item | Count | Basis |
+|---|---:|---|
+| Measurement rows, this endpoint | **1** | `C1-MSR-00011` in [`cns/data/measurements.csv`](./cns/data/measurements.csv) |
+| Oligos carrying them | **1** | nusinersen (`C1-OLG-0002`) |
+| `source_id`s | **1** | `C1` — FDA prescribing information via DailyMed |
+| Grade | 3 | `cns_tox_grade`; a serious neurological event named in Warnings and Precautions |
+| Dedicated source PDFs | 0 | The label is read live from DailyMed, not held as a PDF |
+| Extraction status | extracted and curated | Covered by the module's 26/26 structural checks |
+
+## 2. The row
+
+| Field | Value |
 |---|---|
-| Oligos | 0 |
-| Measurement rows | 0 |
-| Dedicated source PDFs | 0 |
-| `source_id`s | 0 |
-| Extraction status | not started; no source acquired and no candidate named anywhere in [`sources/SOURCES.md`](kidney/SOURCES.md) |
-| Graded column and rubric | none — see §"Not done, and why" |
+| Locus | `C1-MSR-00011` |
+| Oligo | nusinersen (Spinraza), 12 mg intrathecal, splice-switching 2′-MOE ASO |
+| Readout | `hydrocephalus_postmarketing` |
+| Value | `NOT_REPORTED` — **frequency not estimable** |
+| Axis | `clinical_serious_neurological` |
+| Source | SPINRAZA prescribing information, DailyMed setid `dd70cd5f-b0fc-4ba4-a5ea-89a34778bd94`, label published 2026-04-06, § 6.2 Postmarketing Experience |
+| Redistribution | public domain (US Government work) |
 
-## Sources allocated
+The value is `NOT_REPORTED` by construction, not by omission. Post-marketing reports are
+spontaneous, from a population of uncertain size, so no denominator exists and the label states
+no frequency. The module's rule is that a missing number stays missing: `readout_value` is
+`NOT_REPORTED` and `readout_is_qualitative` is `TRUE`. **No incidence has been estimated for this
+endpoint, and none can be from this source.**
 
-No PDF in `sources/` was acquired for this endpoint. A case-insensitive `hydrocephal` sweep over the full text of all 18 PDFs under `sources/` returns 7 hits in 2 files; the other 16 return zero.
+## 3. What is adjacent but is not this endpoint
 
-| File | Hits (pages) | Bearing on this endpoint | `source_id` | Rows |
-|---|---:|---|---|---:|
-| [`sources/reference/OligoTox_challenge_brief.pdf`](_shared/reference/OligoTox_challenge_brief.pdf) | 1 (1) | The word inside the page-1 endpoint list. Scope authority, not evidence. | none | 0 |
-| [`sources/reference/CasarettDoull_Toxicology_textbook.pdf`](_shared/reference/CasarettDoull_Toxicology_textbook.pdf) | 6 (5) | General toxicology, itemised below. Not oligonucleotide content. | none | 0 |
+Two nearby rows are deliberately *not* allocated here, since raised pressure and ventricular
+enlargement are related to hydrocephalus without being it:
 
-Both files are allocated to [`./cross-cutting.md`](./cross-cutting.md).
+| Locus | What it is | Why not allocated here |
+|---|---|---|
+| `C1-MSR-00002` | tofersen — papilledema and/or elevated intracranial pressure, 4 patients | Raised intracranial pressure is a sign that *may* accompany hydrocephalus; the label reports it as its own finding and does not diagnose hydrocephalus. Allocating it here would be this dossier's inference, not the source's statement. |
+| `C1-MSR-00012` | nusinersen — aseptic meningitis and arachnoiditis, post-marketing | A distinct post-marketing entry. Arachnoiditis can cause communicating hydrocephalus, but the label draws no such link. |
 
-The six textbook occurrences, by PDF page: **511** (×2) cyclophosphamide and its metabolites causing hydrocephaly in gestation-day-13 rat embryos; **517** congenital *Toxoplasma gondii* infection in infants; **768** a table row listing tellurium as a neurotoxicant causing hydrocephalus in experimental animals; **1037** tellurium compounds in rats after gestational exposure; **1098** glycol ethers among rodent structural anomalies. None of those five pages carries the word `oligonucleotide` or `antisense` (checked per page). They are small-molecule and infectious teratology, each a bare mention in a malformation list or a table cell; the volume nowhere defines the lesion. No claim in this register traces to them.
+Both sit on `clinical_*` axes and are indexed by [`chronic-neurotoxicity.md`](./chronic-neurotoxicity.md) §2.
 
-## Data
+The tominersen material queued in [`cns/sources/RESEARCH_QUEUE.md`](./cns/sources/RESEARCH_QUEUE.md)
+is the obvious place a real hydrocephalus dataset would come from — the GENERATION HD1 programme
+reported **dose-dependent ventricular volume increase**, and ventricular volume is the
+quantitative readout this endpoint lacks. None of it is extracted, and three of those sources are
+copyrighted and held out of the repository (§5).
 
-Zero rows, and no column that could hold one. A case-insensitive sweep for `hydrocephal|ventricul|cerebrospinal|intracranial|CSF|imaging|MRI|ultrasound` over all 23 columns × 111 rows of [`data/measurements.csv`](kidney/data/measurements.csv) and all 17 columns × 65 rows of [`data/oligos.csv`](kidney/data/oligos.csv) returns 0 hits in each. `tissue` is enumerated at `schema.md:49` as `kidney | proximal_tubule | glomerulus | NA` and `readout_category` at `schema.md:54` as `functional | injury_biomarker | viability | accumulation | histopathology | clinical_renal_outcome`; both vocabularies are wholly renal. Three rows are dosed into the CSF (`delivery_method = intrathecal`: `MSR011`, `MSR030`, `MSR042`) and all three record a renal readout; they are analysed in [`./chronic-neurotoxicity.md`](./chronic-neurotoxicity.md), not here — route of administration is not evidence of this endpoint.
+## 4. Data-model support
 
-## Known issues
+Unlike the kidney tables, the CNS module can hold this endpoint without new columns: `tox_axis`
+already enumerates `clinical_serious_neurological`, and `cns_tox_grade` has a clinical rubric arm
+(3 = a serious neurological event named in Warnings and Precautions). The previous revision's
+finding — that extraction "would require new columns, not just new rows" — was true of
+[`kidney/data/`](./kidney/data/), the kidney tables, and remains true of them. It does not apply to
+[`cns/data/`](./cns/data/).
 
-- **No scope decision is recorded outside this file.** `README.md`, `METHODOLOGY.md` and `sources/SOURCES.md` say nothing about this endpoint. `SOURCES.md`'s 18 sections are all organised around sources acquired or sought — by endpoint bucket (`KIDNEY-SPECIFIC` `:28`, `HEPATOTOX FALLBACK` `:83`), by location (`LOCAL SOURCE FILES` `:189`) and by fetch priority — with no section for an endpoint considered and excluded, so no exclusion is recorded there for this or any other endpoint. This dossier **recommends** recording the exclusion; the decision has not been taken or propagated.
-- **The scope authority is only partly authentic** — cite pp.1–3a only ([`cross-cutting.md`, §1.1 "Challenge brief — provenance defect (pp.3b–6)"](./cross-cutting.md#11-challenge-brief--provenance-defect-pp3b6)). This matters here because the page-1 sentence is the only evidence this dossier rests on. Every count above traces to page 1 or to the sweeps; nothing to pages 3b–6.
-- **Verification scope:** the PDF counts come from text layers only — figure content was not examined; the CSV counts are full-column sweeps of both data files.
+What the module still lacks is a **quantitative** hydrocephalus readout: there is no
+ventricular-volume, imaging or CSF-dynamics field. One row of `NOT_REPORTED` needs no such field;
+a real dataset would.
 
-## Not done, and why
+## 5. Known issues
+
+- **One row is not coverage.** A single label entry with no denominator supports no rate, no
+  comparison and no model. The status reads `delivered (single row)` for that reason.
+- **Grade 3 is assigned from the label's own seriousness, not from a measured severity.** The
+  rule is recorded in `grade_basis`; it is a regulatory classification, not a graded observation.
+- **No imaging or ventricular-volume field exists** in the module — see §4.
+- **The sources that would populate this endpoint are held out of the repository.** Two Roche
+  CHDI conference decks and an NEJM correspondence item are copyrighted and not licensed for
+  redistribution, so they are gitignored; see
+  [`cns/sources/RESEARCH_QUEUE.md`](./cns/sources/RESEARCH_QUEUE.md).
+- The scope-authority caveat applies unchanged: cite the brief's pp.1–3a only
+  ([`cross-cutting.md` §1.1](./cross-cutting.md#11-challenge-brief--provenance-defect-pp3b6)).
+
+## 6. Not done, and next step
 
 | Not done | Cause |
 |---|---|
-| No rows, oligos or `source_id` | No document in `sources/` reports a hydrocephalus outcome for any oligonucleotide. The seven occurrences of the word are six general-toxicology passages plus the brief's own list entry. |
-| No source acquired | Nothing in `sources/SOURCES.md` names a candidate — not in the kidney section (`:28`), the hepatotox section (`:83`), the fetch list (`:152`) or the source-hunting strategy (`:177`). |
-| No rubric or schema support | `nephrotox_grade`'s rubric ([`schema.md`](kidney/schema.md), "`nephrotox_grade` rubric (0–3)") is renal and not transferable, and there is no imaging, ventricular-volume or CSF field. Extraction would require new columns, not just new rows. |
+| Any second row | No other source in the module reports hydrocephalus for an oligonucleotide. |
+| A quantitative readout | Requires a ventricular-volume or imaging field, which the schema does not have. |
+| The tominersen evidence base | Retrieved but not extracted, and partly held out of the repo on redistribution grounds. |
 
-## Next step
-
-1. Record hydrocephalus as swept and out of scope for Phase 2, in `sources/SOURCES.md` or `METHODOLOGY.md`. The sweeps above are the evidence that the exclusion is informed rather than inadvertent.
-2. Keep this dossier in step with `sources/`: if a hydrocephalus source is ever acquired, the sweeps in §"Sources allocated" must be re-run, since they are the basis for the exclusion.
-3. No acquisition is proposed. Advancing this endpoint would require acquiring a primary source, adding CNS terms to the `tissue` and `readout_category` vocabularies, and writing a separate graded column with its own rubric. That is a second dataset, not an extension of this one.
+1. **Decide the tominersen sources.** They are the only realistic route to a hydrocephalus
+   dataset. That is both an extraction decision and a redistribution one.
+2. **If extracted, add a ventricular-volume field** to the CNS schema rather than forcing a
+   continuous imaging readout into `readout_value` as free text.
+3. **Do not re-run the kidney sweeps.** The previous revision's `hydrocephal` sweep over the 18
+   kidney PDFs stands and returned 7 hits in 2 files, none oligonucleotide-specific. Nothing in
+   this revision changes that; the new row came from a source outside that library.

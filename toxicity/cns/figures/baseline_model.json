@@ -1,0 +1,15 @@
+{
+  "n_rows": 181,
+  "n_rows_featok": 157,
+  "n_train": 138,
+  "n_held": 19,
+  "held_positives": 7,
+  "auc_published_linear": 0.929,
+  "acc_published_cutoff70": 0.894737,
+  "auc_measured_invitro": 0.929,
+  "auc_logistic_12feat": 0.857,
+  "acc_logistic": 0.789474,
+  "n_both": 181,
+  "auc_all_published_linear": 0.888,
+  "auc_all_measured_invitro": 0.735
+}

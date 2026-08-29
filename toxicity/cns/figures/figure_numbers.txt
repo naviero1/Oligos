@@ -1,0 +1,19 @@
+F1: study types {'clinical': 12, 'in_vitro': 1825, 'animal_invivo': 228}; axes {'clinical_serious_neurological': 3, 'clinical_neuroinflammatory': 4, 'clinical_cns_tolerability': 5, 'acute_neuronal_excitability': 1825, 'acute_behavioural': 222, 'late_onset_neurodegeneration': 6}
+F2 length_nt: n=1830 median=17 min=14 max=25
+F2 gc_content_pct: n=1830 median=41.18 min=5 max=87.5
+F2 n_G: n=1830 median=1 min=0 max=10
+F2 g_free_3prime_len: n=1825 median=6 min=0 max=20
+F2 n_lna: n=1830 median=6 min=0 max=10
+F2 gap_length_nt: n=1731 median=11 min=6 max=19
+F3 grade distribution: {'0': 56, '1': 87, '2': 40, '3': 57}, total graded 240
+F4 tertile most affected in vitro: n=60 median ANS=6.67
+F4 tertile middle: n=60 median ANS=3.25
+F4 tertile least affected in vitro: n=61 median ANS=0.83
+F4 Spearman rho(in vitro CaO, in vivo ANS) = -0.331, n = 181
+F5 median ANS by G count: G=0:0.3(n=81), G=1:3.2(n=37), G=2:7.3(n=16), G=3:7.7(n=30), G=4:15.0(n=11), G=5:20.0(n=3), G=6:20.0(n=3)
+F5 median ANS by 3' G-free bin: 0–4:12.3(n=45), 5–9:6.8(n=28), 10–14:2.5(n=21), 15–20:0.3(n=87)
+F6 replicate control TAGccctaaagtcCCA: n=14 mean=92.38 sd=15.99 CV=17.3% range 68.15-128.5
+F7 dose-response [(1.25, 2.0), (2.5, 2.5), (5.0, 8.4), (10.0, 14.2)]
+F7 Ca rescue [(0.0, 19.5), (4.0, 11.75), (8.0, 6.75), (12.0, 3.25), (16.0, 1.5), (32.0, 1.0)]
+F7 Mg rescue [(0.0, 19.5), (4.0, 9.8), (8.0, 8.5), (12.0, 8.5), (16.0, 2.75), (32.0, 4.0)]
+F8 completeness: Sequence 1830/1839, Modification positions 1830/1839, Purity/characterisation method 1825/1839, Purity value (%) 0/1839

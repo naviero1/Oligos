@@ -1,0 +1,10 @@
+notes/intake/Nephrotoxicity/*.pptx
+__pycache__/
+*.pyc
+data/staged/
+
+# Copyrighted publisher material: retrieved for research, not licensed for redistribution.
+# See sources/RESEARCH_QUEUE.md. Not used by the v1.0 pipeline.
+sources/S1_Schobel2021/
+sources/B2_Boak_McColgan_CHDI2022/
+sources/M1_McColgan2023/
