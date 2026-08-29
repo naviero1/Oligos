@@ -33,6 +33,7 @@ Usage:  python3 scripts/build_modifications.py
         MUST run after scripts/assemble.py, which is what assigns oligo_id.
 """
 import csv
+import json
 import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -106,29 +107,53 @@ def main():
                          "scripts/assemble.py first; it is what assigns the keys.")
     rows, report = [], []
 
-    for name, d in DESIGNS.items():
+    inn_path = os.path.join(DATA, "inn_sequences.json")
+    inn = json.load(open(inn_path)) if os.path.exists(inn_path) else {}
+
+    # ---- WHO INN-derived positions: base, sugar, 5-methyl AND linkage --------
+    for name, rec in inn.items():
         o = oligos.get(name)
         if not o:
-            raise SystemExit("design given for an oligo absent from oligos.csv: " + name)
-        n = d["length"]
-        if o["length_nt"] != str(n):
-            raise SystemExit("length disagreement for %s: oligos.csv=%s design=%d"
-                             % (name, o["length_nt"], n))
-        for i in range(1, n + 1):
+            report.append("%-24s parsed from INN but absent from oligos.csv; no rows"
+                          % name)
+            continue
+        # Cross-check against the independent label-motif derivation where we have one.
+        if name in DESIGNS:
+            d = DESIGNS[name]
+            n = d["length"]
+            label_map = [d["sugar"](i, n) for i in range(1, n + 1)]
+            inn_map = [p["sugar_chemistry"] for p in rec["positions"]]
+            if label_map != inn_map:
+                raise SystemExit(
+                    "%s: the sugar map derived from the label's motif statement "
+                    "disagrees with the map parsed from the WHO INN chemical name.\n"
+                    "  label: %s\n  INN  : %s" % (name, label_map, inn_map))
+            report.append("%-24s label-motif map and INN map AGREE (%d positions)"
+                          % (name, n))
+        for pos in rec["positions"]:
             rows.append(dict(
                 oligo_id=o["oligo_id"], oligo_name=name, strand="single_strand",
-                position_5to3=i, nucleobase="NOT_REPORTED",
-                sugar_chemistry=d["sugar"](i, n),
-                base_modification="NOT_REPORTED",
-                linkage_3prime=("terminal_none" if i == n else d["linkage"]),
-                basis=d["basis"], source_id=d["source_id"],
-                source_location=d["location"], notes=d["note"]))
-        report.append("%-24s %2d positions, sugar resolved, base NOT_REPORTED"
-                      % (name, n))
+                position_5to3=pos["position_5to3"], nucleobase=pos["nucleobase"],
+                sugar_chemistry=pos["sugar_chemistry"],
+                base_modification=pos["base_modification"],
+                linkage_3prime=pos["linkage_3prime"],
+                basis="position_resolved_from_WHO_INN_chemical_name",
+                source_id="WHO_INN_List_%d" % rec["inn_list"],
+                source_location=rec["source_location"],
+                notes=("Every field on this row is a deterministic parse of the INN "
+                       "entry, which spells out each residue's sugar, base, "
+                       "5-methylation and 3' linkage. The parse is validated against "
+                       "the product label's molecular formula and, where the label "
+                       "states them, its phosphorothioate and phosphodiester counts; "
+                       "scripts/parse_inn_sequences.py refuses to emit a disagreeing "
+                       "sequence.")))
+        report.append("%-24s %2d positions from WHO INN List %d — base, sugar, "
+                      "5-methyl and linkage all resolved"
+                      % (name, len(rec["positions"]), rec["inn_list"]))
 
     for name, o in oligos.items():
         seq = o["sequence_5to3_asprinted"]
-        if seq in ("NOT_REPORTED", "NOT_APPLICABLE") or name in DESIGNS:
+        if seq in ("NOT_REPORTED", "NOT_APPLICABLE") or name in inn:
             continue
         for i, base in enumerate(seq, 1):
             rows.append(dict(
@@ -142,6 +167,9 @@ def main():
         report.append("%-24s %2d positions, base resolved, chemistry NOT_REPORTED"
                       % (name, len(seq)))
 
+    for name in list(EXCLUDED):
+        if name in inn:
+            del EXCLUDED[name]
     for name, why in EXCLUDED.items():
         report.append("%-24s EXCLUDED — %s" % (name, why))
 

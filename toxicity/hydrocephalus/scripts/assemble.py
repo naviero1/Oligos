@@ -148,6 +148,23 @@ def source_meta_for(key):
             retrieved_via="ClinicalTrials.gov v2 API, /api/v2/studies/%s" % key,
             notes=("Adverse-event module gives per-arm counts with denominators, "
                    "including explicitly reported zeros."))
+    if key.startswith("WHO_INN_List_"):
+        n = key.rsplit("_", 1)[1]
+        return dict(
+            citation="WHO Drug Information, Recommended International Nonproprietary "
+                     "Names (INN) List %s" % n,
+            first_author="NOT_APPLICABLE", year="NOT_REPORTED",
+            journal="WHO Drug Information", doi="", pmid="", pmcid="", nct_id="",
+            url="https://cdn.who.int/media/docs/default-source/"
+                "international-nonproprietary-names-(inn)/rl%s.pdf" % n,
+            access="open_access", license="WHO publication; reuse terms not "
+                                          "established in this session",
+            redistribution="verify", evidence_tier="regulatory_primary",
+            retrieved_via="cdn.who.int Recommended INN list PDF, parsed by "
+                          "scripts/parse_inn_sequences.py",
+            notes="Supplies sequence and per-position chemistry by deterministic "
+                  "parse of the INN chemical name. No measurement row derives from "
+                  "this source.")
     if key.startswith("DailyMed_SPL_"):
         drug = key[len("DailyMed_SPL_"):]
         return dict(
@@ -217,7 +234,12 @@ def main():
         w.writerows(rows)
 
     # ---- sources registry ------------------------------------------------
-    keys = sorted({r["source_id"] for r in rows})
+    mod_path = os.path.join(DATA, "modifications.csv")
+    mod_keys = set()
+    if os.path.exists(mod_path):
+        with open(mod_path) as fh:
+            mod_keys = {r["source_id"] for r in csv.DictReader(fh)}
+    keys = sorted({r["source_id"] for r in rows} | mod_keys)
     src_cols = ["source_id", "source_key", "citation", "first_author", "year",
                 "journal", "doi", "pmid", "pmcid", "nct_id", "url", "access",
                 "license", "redistribution", "evidence_tier", "retrieved_via",

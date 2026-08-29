@@ -375,18 +375,49 @@ evidence that ventricular imaging was performed. The residual open question is n
 — whether every trial in this release is an "applicable clinical trial" bound by the
 rule, or posted voluntarily under the same structure.
 
-**OI-02 — PARTIALLY CLOSED; still open for every clinical compound.** Four
-compounds now carry a published sequence — the SPAK siRNA duplexes, printed in
-full in their source's Materials section, each verified by the sense/antisense
-reverse-complement check now run by the QC suite. They are research reagents.
-`sequence_5to3_asprinted` remains `NOT_REPORTED` for all 25 clinical and marketed
-compounds, which is where the Challenge's requirement actually bites. No US label prints the base sequence; both intrathecal ASO labels render
-the structure as a figure with no text layer. The WHO INN Recommended lists spell
-out every residue longhand and are this project's established route for sequence
-recovery (the sibling kidney dataset filled 9 compounds that way and validated the
-parser by reproducing two known duplexes character-for-character). That retrieval
-is not attempted here rather than approximated. Until it is done, the Challenge's
-"sequences of all oligos tested" requirement is unmet for this endpoint.
+**OI-02 — LARGELY CLOSED for the compounds that carry the signal; open for two
+classes.** Ten of 35 compounds now carry a published sequence, and 202
+per-position records give the location of every chemical modification for ten of
+them.
+
+Sequences for the marketed and clinical ASOs come from the **WHO INN Recommended
+lists**, the route the sibling kidney dataset established. An INN entry spells
+every residue out longhand — sugar, base, 5-methylation and whether the 3'
+linkage is a phosphorothioate or a plain phosphodiester — so the sequence and the
+modification map are a deterministic parse, not a transcription
+(`scripts/parse_inn_sequences.py`). No US label prints a sequence; this is the
+only route by which one enters the dataset.
+
+The parse is validated against evidence that does not come from the INN list, and
+the script exits rather than emit a disagreeing sequence:
+
+- **nusinersen** parses to 18 residues with 17 phosphorothioate linkages, against
+  a label formula of C234H323N61O128P17S17 — P17 and S17, both matching.
+- **tofersen** parses to 20 residues with **15 phosphorothioate and 4
+  phosphodiester** linkages, which is exactly what its label states in words, and
+  P19 = n−1.
+- **tofersen's sugar map from the INN parse is `MMMMMddddddddddMMMMM`**, identical
+  to the map derived independently from the label's own motif sentence. Two
+  unrelated derivations agreeing position-for-position.
+
+Still open, and deliberately so:
+
+- **Double-stranded siRNAs** (patisiran, givosiran, inclisiran, lumasiran,
+  vutrisiran, nedosiran). Their INN entries name both strands. Recovering them
+  needs a strand convention and a duplex reverse-complement check this parser has
+  not been validated for, so it **refuses** them rather than silently returning
+  one strand.
+- **Morpholinos** (eteplirsen, golodirsen, viltolarsen, casimersen), whose
+  nomenclature the parser does not implement.
+- **valeriasen**, whose sequence exists only as an image (see OI-09).
+
+**OI-09 — NEW: one sequence is locked in a figure.** valeriasen's sequence and
+per-position chemistry are published in its source's Extended Data Table 1 as a
+JPEG in which 2'-MOE positions are encoded by **bold and underline**. That
+formatting does not survive text extraction, and the sibling kidney dataset
+recorded the matching hazard in its own QC log — "judging letter case from
+rendered pixels is unreliable at x-height". It is not transcribed. Recovering it
+needs a second human reader, not a better parser.
 
 **OI-03 — PARTIALLY CLOSED.** Five rodent rows are now carried from two studies
 (`scripts/build_nonclinical.py`). Both publish their ventricular measurements

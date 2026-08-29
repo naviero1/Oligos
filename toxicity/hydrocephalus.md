@@ -18,10 +18,10 @@ The previous version of this dossier set three conditions for advancing the endp
 | Tier-A rows with a positive finding | 60 |
 | Tier-A rows that are explicit measured negatives | 328 |
 | Grade-3 (severe) rows | 22 |
-| Distinct sources | 53 |
-| Oligonucleotides with a published sequence | 4 of 35 — all research reagents; see `METHODOLOGY.md` OI-02 |
-| Per-position modification records | 122, over 6 oligonucleotides |
-| Oligonucleotides with a known length | 6 of 35 |
+| Distinct sources | 59 |
+| Oligonucleotides with a published sequence | 10 of 35, incl. nusinersen, tofersen, tominersen |
+| Per-position modification records | 202, over 10 oligonucleotides |
+| Oligonucleotides with a known length | 11 of 35 |
 | QC checks run / failed | 39 / 0 |
 
 Every figure above is computed by the dataset's QC suite into `qc/stats.json` and rendered into its `README.md`. They are **transcribed** here and will drift if the dataset changes; [`./hydrocephalus/README.md`](./hydrocephalus/README.md) is authoritative.
@@ -32,7 +32,7 @@ Every figure above is computed by the dataset's QC suite into `qc/stats.json` an
 |---|---|
 | "acquiring a primary source" | 53 sources across six modalities: ClinicalTrials.gov posted adverse-event tables, ClinicalTrials.gov pre-specified MRI outcome measures, openFDA FAERS, US DailyMed labels, EU EMA Summaries of Product Characteristics, and primary full-text literature including a disease-epidemiology cohort. Every payload is committed under `hydrocephalus/sources/raw/`, so the dataset rebuilds offline. |
 | "adding CNS terms to the `tissue` and `readout_category` vocabularies" | Deliberately **not** done. Adding CNS terms to the renal vocabularies would have modified the delivered kidney dataset. The new dataset declares its own `cns_compartment` and `readout_category` vocabularies instead, leaving the renal ones untouched. |
-| "the sequences of all oligos tested, as well as the location of all chemical modifications in each oligo" (Phase 2 brief) | Partly. [`data/modifications.csv`](./hydrocephalus/data/modifications.csv) gives the location of every modification for the two intrathecal ASOs whose labels state their motif in words, and the base at every position of the four sequenced siRNA duplexes — 122 position rows. It is **not** met for the 25 clinical and marketed compounds, whose sequences are not published in any label; that gap is OI-02. |
+| "the sequences of all oligos tested, as well as the location of all chemical modifications in each oligo" (Phase 2 brief) | Partly. [`data/modifications.csv`](./hydrocephalus/data/modifications.csv) gives the location of every modification for the two intrathecal ASOs whose labels state their motif in words, and the base at every position of the four sequenced siRNA duplexes — 122 position rows. Sequences and full per-position maps for nusinersen, tofersen, tominersen, inotersen, eplontersen and volanesorsen were recovered from the WHO INN Recommended lists by deterministic parse of the INN chemical name, validated against each label's molecular formula and, for tofersen, its stated 15-phosphorothioate/4-phosphodiester split. Still open for the double-stranded siRNAs and the morpholinos (OI-02). |
 | "the methods used to purify and characterize oligo identity" (Phase 2 brief) | Recorded as `NOT_REPORTED` throughout, from evidence: a full-text sweep of all 16 committed US labels finds no drug-substance purity, purification or identity statement in any of them. The same finding as the sibling CNS release. |
 | "writing a separate graded column with its own rubric" | `hydroceph_grade` (0–3), with a rubric written in ventricular and CSF terms at [`SCHEMA.md`](./hydrocephalus/SCHEMA.md). It is not a reuse of `nephrotox_grade` and is not transferable to it. |
 

@@ -25,11 +25,11 @@ one."* This directory is that second dataset.
 | Measurement rows | **914** |
 | Oligonucleotides described | **35** |
 | — of which carry at least one measurement | 30 |
-| Distinct sources | 53 |
+| Distinct sources | 59 |
 | Tier-A rows with a positive finding | 60 |
 | Tier-A rows that are explicit measured negatives | 328 |
 | Grade-3 (severe) rows | 22 |
-| Oligonucleotides with a published sequence | 4 |
+| Oligonucleotides with a published sequence | 10 |
 | QC checks run / failed | 39 / 0 |
 
 **Endpoint tier** — **A** = hydrocephalus (communicating, obstructive or normal-pressure), ventriculomegaly / ventricular dilatation, shunt or drain placement. **B** = raised intracranial pressure, papilloedema, aseptic or chemical meningitis, arachnoiditis, CSF leak or protein rise, post-lumbar-puncture syndrome.
@@ -134,7 +134,7 @@ one."* This directory is that second dataset.
 | `N1-SPAK` | 2 |
 | `N2-AQP4` | 3 |
 
-**Largest sources** (top 10 of 53)
+**Largest sources** (top 10 of 59)
 
 | `source_id` | Rows |
 |---|---:|
@@ -315,7 +315,8 @@ python3 scripts/extract_faers.py          # openFDA FAERS  (cached; re-runs cost
 python3 scripts/extract_labels.py         # DailyMed Structured Product Labels
 python3 scripts/build_literature.py       # curated full-text and EMA SmPC rows
 python3 scripts/build_nonclinical.py      # curated rodent rows (both effect directions)
-python3 scripts/build_oligos.py           # design predictors parsed from labels
+python3 scripts/parse_inn_sequences.py    # sequences + per-position chemistry from WHO INN lists
+python3 scripts/build_oligos.py           # design predictors from labels and INN
 python3 scripts/assemble.py               # canonical tables + provenance registry + merged view
 python3 scripts/build_modifications.py    # per-position chemistry (needs the keys assemble assigns)
 python3 qc/validate.py                    # 39 checks; writes qc/stats.json

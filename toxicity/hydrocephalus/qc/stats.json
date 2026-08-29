@@ -1,10 +1,10 @@
 {
   "n_measurements": 914,
   "n_oligos": 35,
-  "n_sources": 53,
-  "n_modification_positions": 122,
-  "n_oligos_with_position_map": 6,
-  "n_oligos_with_length": 6,
+  "n_sources": 59,
+  "n_modification_positions": 202,
+  "n_oligos_with_position_map": 10,
+  "n_oligos_with_length": 10,
   "n_oligos_with_measurements": 30,
   "by_endpoint_tier": {
     "A": 389,
@@ -76,7 +76,7 @@
     "pharmacovigilance_api": 1,
     "primary_fulltext": 3,
     "registry_results": 27,
-    "regulatory_primary": 16
+    "regulatory_primary": 22
   },
   "rows_per_source": {
     "FAERS_openFDA": 456,
@@ -131,7 +131,13 @@
     "NCT03399370": 2,
     "EMA_SmPC_Tegsedi": 1,
     "NCT00628498": 1,
-    "NCT05686551": 1
+    "NCT05686551": 1,
+    "WHO_INN_List_74": 0,
+    "WHO_INN_List_75": 0,
+    "WHO_INN_List_77": 0,
+    "WHO_INN_List_81": 0,
+    "WHO_INN_List_83": 0,
+    "WHO_INN_List_85": 0
   },
   "multi_row_event_clusters": {
     "L1-EVT-01": 5,
@@ -146,7 +152,7 @@
   "tier_A_null": 328,
   "grade3_rows": 22,
   "duplexes_checked": 4,
-  "oligos_with_sequence": 4,
+  "oligos_with_sequence": 10,
   "checks_run": 39,
   "checks_failed": 0
 }

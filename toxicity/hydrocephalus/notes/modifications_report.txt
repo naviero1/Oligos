@@ -1,9 +1,17 @@
 modifications.csv build report
 ============================================================
-122 position rows over 6 oligonucleotides
+202 position rows over 10 oligonucleotides
 
-tofersen                 20 positions, sugar resolved, base NOT_REPORTED
-nusinersen               18 positions, sugar resolved, base NOT_REPORTED
+nusinersen               label-motif map and INN map AGREE (18 positions)
+nusinersen               18 positions from WHO INN List 74 — base, sugar, 5-methyl and linkage all resolved
+inotersen                20 positions from WHO INN List 77 — base, sugar, 5-methyl and linkage all resolved
+tofersen                 label-motif map and INN map AGREE (20 positions)
+tofersen                 20 positions from WHO INN List 81 — base, sugar, 5-methyl and linkage all resolved
+tominersen               20 positions from WHO INN List 83 — base, sugar, 5-methyl and linkage all resolved
+eplontersen              20 positions from WHO INN List 85 — base, sugar, 5-methyl and linkage all resolved
+zorevunersen             parsed from INN but absent from oligos.csv; no rows
+elsunersen               parsed from INN but absent from oligos.csv; no rows
+volanesorsen             20 positions from WHO INN List 75 — base, sugar, 5-methyl and linkage all resolved
 SPAK_siRNA1              21 positions, base resolved, chemistry NOT_REPORTED
 SPAK_siRNA2              21 positions, base resolved, chemistry NOT_REPORTED
 SPAK_siRNA3              21 positions, base resolved, chemistry NOT_REPORTED

@@ -1,0 +1,1190 @@
+{
+ "nusinersen": {
+  "sequence_base": "UCACUUUCAUAAUGCUGG",
+  "length_nt": 18,
+  "n_phosphorothioate": 17,
+  "n_phosphodiester": 0,
+  "positions": [
+   {
+    "position_5to3": 1,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 2,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 3,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 4,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 5,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 6,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 7,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 8,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 9,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 10,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 11,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 12,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 13,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 14,
+    "nucleobase": "G",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 15,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 16,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 17,
+    "nucleobase": "G",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 18,
+    "nucleobase": "G",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "terminal_none"
+   }
+  ],
+  "inn_list": 74,
+  "citation": "WHO Drug Information Vol. 29, No. 3, 2015, Recommended INN List 74",
+  "source_location": "Recommended INN List 74, entry 'nusinersen', English chemical name",
+  "chemical_name": "all-P-ambo-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioadenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioadenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioadenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioadenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioguanylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioguanylyl-(3'\u21925')-2'-O-(2-methoxyethyl)guanosine"
+ },
+ "inotersen": {
+  "sequence_base": "UCUUGGTTACATGAAAUCCC",
+  "length_nt": 20,
+  "n_phosphorothioate": 19,
+  "n_phosphodiester": 0,
+  "positions": [
+   {
+    "position_5to3": 1,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 2,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 3,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 4,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 5,
+    "nucleobase": "G",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 6,
+    "nucleobase": "G",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 7,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 8,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 9,
+    "nucleobase": "A",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 10,
+    "nucleobase": "C",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 11,
+    "nucleobase": "A",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 12,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 13,
+    "nucleobase": "G",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 14,
+    "nucleobase": "A",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 15,
+    "nucleobase": "A",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 16,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 17,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 18,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 19,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 20,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "terminal_none"
+   }
+  ],
+  "inn_list": 77,
+  "citation": "WHO Drug Information, Recommended INN List 77",
+  "source_location": "Recommended INN List 77, entry 'inotersen', English chemical name",
+  "chemical_name": "all-P-ambo-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioguanylyl-(3'\u21925')-2'-deoxy-P-thioguanylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-2'-deoxy-P-thioadenylyl-(3'\u21925')-2'-deoxy-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-deoxy-P-thioadenylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-2'-deoxy-P-thioguanylyl-(3'\u21925')-2'-deoxy-P-thioadenylyl-(3'\u21925')-2'-deoxy-P-thioadenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioadenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methylcytidine"
+ },
+ "tofersen": {
+  "sequence_base": "CAGGATACATTTCTACAGCU",
+  "length_nt": 20,
+  "n_phosphorothioate": 15,
+  "n_phosphodiester": 4,
+  "positions": [
+   {
+    "position_5to3": 1,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 2,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 3,
+    "nucleobase": "G",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 4,
+    "nucleobase": "G",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 5,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 6,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 7,
+    "nucleobase": "A",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 8,
+    "nucleobase": "C",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 9,
+    "nucleobase": "A",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 10,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 11,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 12,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 13,
+    "nucleobase": "C",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 14,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 15,
+    "nucleobase": "A",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 16,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 17,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 18,
+    "nucleobase": "G",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 19,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 20,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "terminal_none"
+   }
+  ],
+  "inn_list": 81,
+  "citation": "WHO Drug Information, Recommended INN List 81",
+  "source_location": "Recommended INN List 81, entry 'tofersen', English chemical name",
+  "chemical_name": "all-P-ambo-2'-O-(2-methoxyethyl)-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)adenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioguanylyl-(3'\u21925')-2'-O-(2-methoxyethyl)guanylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioadenylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-2'-deoxy-P-thioadenylyl-(3'\u21925')-2'-deoxy-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-deoxy-P-thioadenylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-2'-deoxy-5-methyl-P-thiocytidylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-2'-deoxy-P-thioadenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methylcytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioadenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)guanylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyluridine"
+ },
+ "tominersen": {
+  "sequence_base": "CUCAGTAACATTGACACCAC",
+  "length_nt": 20,
+  "n_phosphorothioate": 13,
+  "n_phosphodiester": 6,
+  "positions": [
+   {
+    "position_5to3": 1,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 2,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 3,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 4,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 5,
+    "nucleobase": "G",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 6,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 7,
+    "nucleobase": "A",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 8,
+    "nucleobase": "A",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 9,
+    "nucleobase": "C",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 10,
+    "nucleobase": "A",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 11,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 12,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 13,
+    "nucleobase": "G",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 14,
+    "nucleobase": "A",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 15,
+    "nucleobase": "C",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 16,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 17,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 18,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 19,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 20,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "terminal_none"
+   }
+  ],
+  "inn_list": 83,
+  "citation": "WHO Drug Information, Recommended INN List 83",
+  "source_location": "Recommended INN List 83, entry 'tominersen', English chemical name",
+  "chemical_name": "all-P-ambo-2'-O-(2-methoxyethyl)-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyluridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methylcytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)adenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioguanylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-2'-deoxy-P-thioadenylyl-(3'\u21925')-2'-deoxy-P-thioadenylyl-(3'\u21925')-2'-deoxy-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-deoxy-P-thioadenylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-2'-deoxy-P-thioguanylyl-(3'\u21925')-2'-deoxy-P-thioadenylyl-(3'\u21925')-2'-deoxy-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)adenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methylcytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methylcytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioadenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methylcytidine"
+ },
+ "eplontersen": {
+  "sequence_base": "UCUUGGTTACATGAAAUCCC",
+  "length_nt": 20,
+  "n_phosphorothioate": 13,
+  "n_phosphodiester": 6,
+  "positions": [
+   {
+    "position_5to3": 1,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 2,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 3,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 4,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 5,
+    "nucleobase": "G",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 6,
+    "nucleobase": "G",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 7,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 8,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 9,
+    "nucleobase": "A",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 10,
+    "nucleobase": "C",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 11,
+    "nucleobase": "A",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 12,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 13,
+    "nucleobase": "G",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 14,
+    "nucleobase": "A",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 15,
+    "nucleobase": "A",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 16,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 17,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 18,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 19,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 20,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "terminal_none"
+   }
+  ],
+  "inn_list": 85,
+  "citation": "WHO Drug Information, Recommended INN List 85",
+  "source_location": "Recommended INN List 85, entry 'eplontersen', English chemical name",
+  "chemical_name": "all-P-ambo-5'-O-(28-[(2-acetamido-2-deoxy-\u03b2-D-galactopyranosyl)oxy]-16,16-bis{[3-({6-[(2-acetamido-2-deoxy-\u03b2-D-galactopyranosyl)oxy]hexyl}amino)-3-oxopropoxy]methyl}-1-hydroxy-1,10,14,21-tetraoxo-2,18-dioxa-9,15,22-triaza-1\u03bb5-phosphaoctacosan-1-yl)-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methylcytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyluridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyluridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)guanylyl-(3'\u21925')-2'-deoxy-P-thioguanylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-2'-deoxy-P-thioadenylyl-(3'\u21925')-2'-deoxy-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-deoxy-P-thioadenylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-2'-deoxy-P-thioguanylyl-(3'\u21925')-2'-deoxy-P-thioadenylyl-(3'\u21925')-2'-deoxy-P-thioadenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)adenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyluridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methylcytidine"
+ },
+ "zorevunersen": {
+  "sequence_base": "AGUUGGAGCAAGAUUAUC",
+  "length_nt": 18,
+  "n_phosphorothioate": 17,
+  "n_phosphodiester": 0,
+  "positions": [
+   {
+    "position_5to3": 1,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 2,
+    "nucleobase": "G",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 3,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 4,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 5,
+    "nucleobase": "G",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 6,
+    "nucleobase": "G",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 7,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 8,
+    "nucleobase": "G",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 9,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 10,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 11,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 12,
+    "nucleobase": "G",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 13,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 14,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 15,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 16,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 17,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 18,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "terminal_none"
+   }
+  ],
+  "inn_list": 87,
+  "citation": "WHO Drug Information, Recommended INN List 87",
+  "source_location": "Recommended INN List 87, entry 'zorevunersen', English chemical name",
+  "chemical_name": "all-P-ambo-2'-O-(2-methoxyethyl)-P-thioadenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioguanylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioguanylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioguanylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioadenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioguanylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioadenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioadenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioguanylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioadenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioadenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methylcytidine"
+ },
+ "elsunersen": {
+  "sequence_base": "CCACGACATATTTTTCUACA",
+  "length_nt": 20,
+  "n_phosphorothioate": 13,
+  "n_phosphodiester": 6,
+  "positions": [
+   {
+    "position_5to3": 1,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 2,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 3,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 4,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 5,
+    "nucleobase": "G",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 6,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 7,
+    "nucleobase": "C",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 8,
+    "nucleobase": "A",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 9,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 10,
+    "nucleobase": "A",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 11,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 12,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 13,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 14,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 15,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 16,
+    "nucleobase": "C",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 17,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphodiester"
+   },
+   {
+    "position_5to3": 18,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 19,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 20,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "terminal_none"
+   }
+  ],
+  "inn_list": 92,
+  "citation": "WHO Drug Information, Recommended INN List 92",
+  "source_location": "Recommended INN List 92, entry 'elsunersen', English chemical name",
+  "chemical_name": "all-P-ambo)-2'-O-(2-methoxyethyl)-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methylcytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)adenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methylcytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)guanylyl-(3'\u21925')-2'-O-(2-methoxyethyl)adenylyl-(3'\u21925')-2'-deoxy-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-deoxy-P-thioadenylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-2'-deoxy-P-thioadenylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-2'-deoxy-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyluridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioadenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)adenosine"
+ },
+ "volanesorsen": {
+  "sequence_base": "AGCUUCTTGTCCAGCUUUAU",
+  "length_nt": 20,
+  "n_phosphorothioate": 19,
+  "n_phosphodiester": 0,
+  "positions": [
+   {
+    "position_5to3": 1,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 2,
+    "nucleobase": "G",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 3,
+    "nucleobase": "C",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 4,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 5,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 6,
+    "nucleobase": "C",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 7,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 8,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 9,
+    "nucleobase": "G",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 10,
+    "nucleobase": "T",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 11,
+    "nucleobase": "C",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 12,
+    "nucleobase": "C",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 13,
+    "nucleobase": "A",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 14,
+    "nucleobase": "G",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 15,
+    "nucleobase": "C",
+    "sugar_chemistry": "DNA_2prime_deoxy",
+    "base_modification": "5-methylcytosine",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 16,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 17,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 18,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 19,
+    "nucleobase": "A",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "none",
+    "linkage_3prime": "phosphorothioate"
+   },
+   {
+    "position_5to3": 20,
+    "nucleobase": "U",
+    "sugar_chemistry": "2'-MOE",
+    "base_modification": "5-methyluracil",
+    "linkage_3prime": "terminal_none"
+   }
+  ],
+  "inn_list": 75,
+  "citation": "WHO Drug Information, Recommended INN List 75",
+  "source_location": "Recommended INN List 75, entry 'volanesorsen', English chemical name",
+  "chemical_name": "all-P-ambo-2'-O-(2-methoxyethyl)-P-thioadenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioguanylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-deoxy-5-methyl-P-thiocytidylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-2'-deoxy-P-thioguanylyl-(3'\u21925')-P-thiothymidylyl-(3'\u21925')-2'-deoxy-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-deoxy-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-deoxy-P-thioadenylyl-(3'\u21925')-2'-deoxy-P-thioguanylyl-(3'\u21925')-2'-deoxy-5-methyl-P-thiocytidylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyl-P-thiouridylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-P-thioadenylyl-(3'\u21925')-2'-O-(2-methoxyethyl)-5-methyluridine"
+ }
+}

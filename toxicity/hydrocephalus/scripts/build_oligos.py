@@ -203,6 +203,33 @@ SEQ_SOURCE = ("Nature Communications 2025, PMC12246246, Methods section 'Materia
               "the four SPAK siRNA duplexes are printed in full with sense and "
               "antisense strands.")
 
+# Sequences and per-position chemistry recovered from the WHO INN Recommended
+# lists by scripts/parse_inn_sequences.py. The INN entry spells every residue out
+# longhand, so the sequence is a deterministic parse rather than a judgement; the
+# parser refuses to emit a sequence that disagrees with the label's own molecular
+# formula or its stated phosphorothioate count.
+INN_PATH = os.path.join(ROOT, "data", "inn_sequences.json")
+INN = json.load(open(INN_PATH)) if os.path.exists(INN_PATH) else {}
+
+
+def inn_backbone(rec):
+    if rec["n_phosphodiester"] == 0:
+        return "full_PS"
+    return "mixed_PO_PS" if rec["n_phosphorothioate"] else "no_PS"
+
+
+def inn_motif(rec):
+    """Wing-gap-wing motif read off the per-position sugar map, or NOT_APPLICABLE."""
+    sugars = [p["sugar_chemistry"] for p in rec["positions"]]
+    if len(set(sugars)) == 1:
+        return "uniform %s" % sugars[0]
+    gap_start = next((i for i, s in enumerate(sugars) if s == "DNA_2prime_deoxy"), None)
+    gap_end = next((len(sugars) - i for i, s in enumerate(reversed(sugars))
+                    if s == "DNA_2prime_deoxy"), None)
+    if gap_start is None:
+        return "NOT_REPORTED"
+    return "%d-%d-%d" % (gap_start, gap_end - gap_start, len(sugars) - gap_end)
+
 # Lengths derivable from the label's own molecular formula. A linear
 # oligonucleotide of n residues with no terminal phosphate carries n-1
 # internucleoside linkages, hence n-1 phosphorus atoms. The tofersen label states
@@ -331,25 +358,38 @@ def main():
             target_gene=target, indication=indication, developer=developer,
             max_phase=phase, route_of_administration=route,
             length_nt=(parsed.get("length_nt")
+                       or (str(INN[name]["length_nt"]) if name in INN else None)
                        or (str(len(SEQUENCES[name][0])) if name in SEQUENCES else None)
                        or (str(LENGTH_FROM_FORMULA[name][0])
                            if name in LENGTH_FROM_FORMULA else "NOT_REPORTED")),
             length_nt_basis=("stated_in_label" if parsed.get("length_nt")
+                             else "counted_from_WHO_INN_chemical_name"
+                             if name in INN
                              else "counted_from_published_sequence"
                              if name in SEQUENCES
                              else LENGTH_FROM_FORMULA[name][1]
                              if name in LENGTH_FROM_FORMULA
                              else "NOT_REPORTED"),
-            sequence_5to3_asprinted=SEQUENCES.get(name, ("NOT_REPORTED",))[0],
-            sequence_base=SEQUENCES.get(name, ("NOT_REPORTED",))[0].replace("U", "T")
-            if name in SEQUENCES else "NOT_REPORTED",
-            sequence_source=(SEQ_SOURCE if name in SEQUENCES else
+            sequence_5to3_asprinted=(INN[name]["sequence_base"] if name in INN
+                                     else SEQUENCES.get(name, ("NOT_REPORTED",))[0]),
+            sequence_base=(INN[name]["sequence_base"].replace("U", "T") if name in INN
+                           else SEQUENCES[name][0].replace("U", "T")
+                           if name in SEQUENCES else "NOT_REPORTED"),
+            sequence_source=(("%s. Recovered by deterministic parse of the INN "
+                              "chemical name, which spells out every residue; the "
+                              "source prints no sequence string. Parser and its "
+                              "validation: scripts/parse_inn_sequences.py."
+                              % INN[name]["citation"]) if name in INN
+                             else SEQ_SOURCE if name in SEQUENCES else
                              "NOT_REPORTED — no US label prints the base sequence; the "
                              "structure is a figure with no text layer. See "
                              "METHODOLOGY.md open item OI-02."),
-            backbone_chemistry=parsed.get("backbone_chemistry", "NOT_REPORTED"),
+            backbone_chemistry=(inn_backbone(INN[name]) if name in INN
+                                else parsed.get("backbone_chemistry", "NOT_REPORTED")),
             sugar_modifications=parsed.get("sugar_modifications", "NOT_REPORTED"),
-            modification_pattern=parsed.get("modification_pattern", "NOT_REPORTED"),
+            modification_pattern=(inn_motif(INN[name]) if name in INN
+                                  else parsed.get("modification_pattern",
+                                                  "NOT_REPORTED")),
             gapmer_shape=("gapmer" if klass == "ASO_gapmer" else
                           "uniform" if klass == "splice_switching_ASO" else
                           "NOT_APPLICABLE"),
