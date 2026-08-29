@@ -20,6 +20,12 @@ def load(n):
 
 fails, checks = [], []
 
+def f(x):
+    try:
+        return float(x)
+    except (TypeError, ValueError):
+        return None
+
 def check(name, ok, detail=""):
     checks.append((name, ok, detail))
     if not ok:
@@ -52,7 +58,7 @@ VOCAB = {
  "readout_category": {"clotting_time", "factor_activity", "fibrinogen", "thrombin_generation",
                       "fibrinolysis_marker", "anticoagulant_activity", "bleeding_outcome",
                       "thrombotic_outcome", "platelet_coag_crosstalk", NR},
- "effect_direction": {"increase", "decrease", "no_change", NR},
+ "effect_direction": {"increase", "decrease", "no_change", NR, NA},  # NA = pre-dose baseline, not an effect
  "grade_status": {"provisional"},
  "readout_is_qualitative": {"TRUE", "FALSE"},
 }
@@ -152,9 +158,6 @@ check("no per-position chemistry without a sequence to anchor it", not mods_no_s
       f"{len(mods_no_seq)}: {mods_no_seq[:6]}")
 
 # ---- 26-28 ratio and grade agree -------------------------------------------
-def f(x):
-    try: return float(x)
-    except (TypeError, ValueError): return None
 bad = []
 for r in D:
     ratio, g = f(r["ratio_to_control"]), r["coag_tox_grade"]
@@ -185,6 +188,41 @@ check("oligos.n_measurements agrees with measurements.csv", not bad, f"{len(bad)
 cnt = Counter(r["source_id"] for r in D)
 bad = [r["source_id"] for r in S if int(r["n_measurements"]) != cnt.get(r["source_id"], 0)]
 check("sources.n_measurements agrees with measurements.csv", not bad, f"{len(bad)}: {bad[:5]}")
+
+
+# ---- 37-44 invariants added after the adversarial verification pass ----------
+missing = [(r["source_id"], r["document_file"], r["n_measurements"]) for r in S
+           if r["document_file"] not in (NR, "")
+           and not os.path.exists(os.path.join(ROOT, "sources", "documents", r["document_file"]))]
+check("every source's document_file resolves in sources/documents/", not missing,
+      f"{len(missing)} missing: {missing[:3]}")
+
+for col, allowed in (("is_baseline", {"TRUE", "FALSE"}),
+                     ("grade_caveat", {"within_reference_range_resolution", NA}),
+                     ("source_stated_grade", {"1", "2", "3", "4", "5", NA})):
+    bad = sorted({r[col] for r in D if r[col] not in allowed})
+    check(f"vocabulary: measurements.{col}", not bad, f"unexpected {bad[:5]}")
+
+bad = [r["measurement_id"] for r in D
+       if r["ratio_basis"] == "value_is_already_control_referenced" and f(r["control_value"]) is not None]
+check("no ratio ignores a matched control that is present", not bad,
+      f"{len(bad)} rows reference the untreated cell while holding a comparator: {bad[:5]}")
+
+bad = [r["measurement_id"] for r in D
+       if r["effect_direction"] == "no_change" and r["coag_tox_grade"] in {"1", "2", "3"}]
+check("a source-stated measured null is never graded as a toxicity", not bad, f"{len(bad)}: {bad[:5]}")
+
+bad = [r["measurement_id"] for r in D
+       if r["is_baseline"] == "TRUE" and (r["coag_tox_grade"] != NR or r["effect_direction"] != NA)]
+check("a pre-dose baseline carries neither a grade nor a direction", not bad, f"{len(bad)}: {bad[:5]}")
+
+bad = [r["measurement_id"] for r in D
+       if r["readout_unit"] == "%_inhibition_vs_control" and r["ratio_basis"] == "value_over_matched_control"]
+check("percent-inhibition rows are not read as percent-of-control", not bad, f"{len(bad)}: {bad[:5]}")
+
+bad = [r["measurement_id"] for r in D
+       if r["co_administered_agent"] != NA and r["notes"].strip() == ""]
+check("a combination row keeps the note that documents its partner agent", not bad, f"{len(bad)}: {bad[:5]}")
 
 # ---- report -----------------------------------------------------------------
 w = max(len(n) for n, _, _ in checks)

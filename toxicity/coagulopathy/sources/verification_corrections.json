@@ -1,0 +1,23 @@
+{
+  "_README": "Row-level corrections arising from the adversarial verification pass (see coagulopathy.md). Applied by build_dataset.py. Each entry is matched on a NATURAL key -- source_id plus readout_name plus the printed readout_value -- not on measurement_id, because measurement_ids are positional and would silently retarget if the input ever changed. A key that does not match is reported by the build and applied to nothing; corrections fail closed.",
+  "corrections": [
+    {
+      "match": {"source_id": "COG-S025", "readout_name": "antithrombin_activity", "readout_value": "12.3 (1.6)"},
+      "set": {"effect_direction": "decrease"},
+      "append_note": "VERIFICATION CORRECTION: was effect_direction=no_change. 12.3% against an 89.8% control is a decrease and does not belong to the measured-null class. The decrease is BY EXPERIMENTAL DESIGN (immunodepleted plasma at a 15% vs 100% target AT level), not a drug effect; the source's own 'no impact' conclusion is about assay performance, not about antithrombin.",
+      "finding": "COG-MSR0525, blocker, measured_null_sample"
+    },
+    {
+      "match": {"source_id": "COG-S073", "readout_name": "PT", "readout_value": "2 to 3"},
+      "set": {"value_origin": "cited_from_another_source", "species": "NOT_REPORTED"},
+      "append_note": "VERIFICATION CORRECTION: this figure is CITED BY the source, not measured in it -- the document credits it to Zavyalova et al. 2016a. species was 'rat', which the document never states and its own rat data contradict; set to NOT_REPORTED. The row also splits one sentence ('2 to 3-fold in PT and APTT tests') across a PT and an aPTT row.",
+      "finding": "COG-MSR2161, refuted/major, grade2_sample"
+    },
+    {
+      "match": {"source_id": "COG-S073", "readout_name": "aPTT", "readout_value": "2 to 3"},
+      "set": {"value_origin": "cited_from_another_source", "species": "NOT_REPORTED"},
+      "append_note": "VERIFICATION CORRECTION: see the paired PT row. Figure cited from Zavyalova et al. 2016a, not measured in this document; inferred species cleared.",
+      "finding": "COG-MSR2162, refuted/major, grade2_sample"
+    }
+  ]
+}

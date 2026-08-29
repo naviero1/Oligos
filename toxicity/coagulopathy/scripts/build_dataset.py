@@ -157,6 +157,22 @@ def split_length(cell):
     rest = raw[m.end():].strip(" .;:-")
     return m.group(1), rest
 
+_PATHLIKE = re.compile(r"(/\S+?\.(?:xml|txt|pdf|html|htm|json|csv|xlsx))")
+
+def primary_document(local_path):
+    """The FIRST file named in a local_path cell.
+
+    Extraction sometimes recorded several files in one cell -- 'PMC10445101.xml (main
+    text); supplementary ... s7_mmc1.pdf (8,463,837 bytes) and s7_mmc2.pdf'. Taking the
+    basename of the whole string silently selected the LAST one, which pointed 80 rows at a
+    supplementary PDF that was never staged and is not the document their quotes come from.
+    The primary document is the first path in the cell."""
+    m = _PATHLIKE.search(str(local_path or ""))
+    if m:
+        return os.path.basename(m.group(1))
+    base = os.path.basename(str(local_path or "")).split(" (")[0].strip()
+    return base or NR
+
 def load():
     bundles = []
     for f in sorted(glob.glob(os.path.join(EXTRACT, "*.json"))):
@@ -167,6 +183,130 @@ def load():
     if not bundles:
         sys.exit(f"no extraction records in {EXTRACT}")
     return bundles
+
+# ---------------------------------------------------------------- remediation
+# Fixes applied after row construction, each traceable to a finding of the adversarial
+# verification pass recorded in coagulopathy.md. They live in the build rather than in
+# hand-edits, so a rebuild reproduces them and the QC suite re-checks them.
+
+_REL = re.compile(r"relative\s+(aPTT|PT|TT|clotting)", re.I)
+_BASELINE = re.compile(r"^\s*day\s*[-−–]\s*\d+\s*$|^\s*(pre-?dose|pre-?treatment)\s*$"
+                       r"|^\s*baseline\s*[,(]?\s*(before|defined|pre-|safety)", re.I)
+_INHIB = re.compile(r"percent\s+inhibition|%\s*inhibition|inhibition\s+relative", re.I)
+_GRADE = re.compile(r"grade\s*([1-5])", re.I)
+_COAGENT = re.compile(r"co_administered_agent\s*=\s*([^;|\n]+)", re.I)
+
+def apply_corrections(rows, log):
+    """Row-level corrections from the adversarial verification pass.
+
+    Matched on a natural key, never on measurement_id (which is positional and would
+    silently retarget). A key matching nothing is reported, not ignored."""
+    path = os.path.join(ROOT, "sources", "verification_corrections.json")
+    if not os.path.exists(path):
+        return rows
+    with open(path) as fh:
+        spec = json.load(fh)
+    for corr in spec.get("corrections", []):
+        m = corr["match"]
+        hits = [r for r in rows if all(str(r.get(k, "")).strip() == v for k, v in m.items())]
+        if not hits:
+            print(f"  WARNING: correction matched no row: {m}  ({corr.get('finding','')})")
+            continue
+        for r in hits:
+            r.update(corr.get("set", {}))
+            if corr.get("append_note"):
+                r["notes"] = (r["notes"] + " | " if r["notes"] else "") + corr["append_note"]
+            log["V_verification_corrections_applied"] += 1
+    return rows
+
+
+def remediate(rows, log):
+    for r in rows:
+        r.setdefault("is_baseline", "FALSE")
+        r.setdefault("value_origin", "measured_in_this_document")
+        v = central(r["readout_value"])
+        c = central(r["control_value"])
+
+        # R1 -- a "relative" clotting time is a SUBTRACTED delta, not a level. Dividing it by
+        # the control gives fold-change-minus-one and understates every grade derived from it.
+        if _REL.search(r["readout_unit"]) and v is not None and c not in (None, 0):
+            r["ratio_to_control"] = "%.4g" % ((v + c) / c)
+            r["ratio_basis"] = "delta_plus_control_over_control(subtracted_relative_time)"
+            log["R1_relative_delta_ratio_corrected"] += 1
+
+        # R2 -- percent INHIBITION filed under %_of_control inverts every potency ranking:
+        # 74% inhibition is 0.26 of control, not 0.74.
+        if r["readout_unit"] == "%_of_control" and _INHIB.search(r["notes"] + r["effect_vs_control"]):
+            r["readout_unit"] = "%_inhibition_vs_control"
+            if v is not None and 0 <= v <= 100:
+                r["ratio_to_control"] = "%.4g" % ((100 - v) / 100)
+                r["ratio_basis"] = "residual_activity_from_percent_inhibition"
+            else:
+                r["ratio_to_control"], r["ratio_basis"] = NR, "percent_inhibition_outside_0_100"
+            log["R2_percent_inhibition_inverted"] += 1
+
+        # R3 -- when a matched comparator arm is printed, it is the denominator. Referencing a
+        # combination arm to the untreated cell scores the partner drug's effect as the oligo's.
+        if r["ratio_basis"] == "value_is_already_control_referenced" and v is not None and c not in (None, 0):
+            r["ratio_to_control"] = "%.4g" % (v / c)
+            r["ratio_basis"] = "value_over_matched_control(matched_comparator_arm_present)"
+            log["R3_matched_control_preferred"] += 1
+
+        # Re-grade from the corrected ratio. R1-R3 change the denominator or the quantity
+        # itself, so a grade computed before them is stale -- the QC check that re-derives
+        # every grade from ratio_to_control catches this immediately if it is skipped.
+        rr0 = central(r["ratio_to_control"])
+        if rr0 is not None:
+            g2, b2 = grade(r, rr0)
+            if g2 != r["coag_tox_grade"]:
+                log["R0_regraded_after_ratio_correction"] += 1
+            r["coag_tox_grade"], r["grade_basis"] = g2, b2
+
+        # R4 -- pre-dose draws are not effect measurements.
+        if _BASELINE.match(r["timepoint"]):
+            r["is_baseline"] = "TRUE"
+            r["effect_direction"] = NA
+            r["coag_tox_grade"] = NR
+            r["grade_basis"] = "pre_dose_baseline_is_not_an_effect_measurement"
+            log["R4_baseline_rows_ungraded"] += 1
+
+        # R5 -- a source-stated measured null outranks a ratio a hair above 1.00.
+        if r["effect_direction"] == "no_change" and r["coag_tox_grade"] in ("1", "2", "3"):
+            r["coag_tox_grade"] = "0"
+            r["grade_basis"] = "source_states_measured_no_change(overrides_control_referenced_ratio)"
+            log["R5_stated_null_regraded_to_0"] += 1
+
+        # R6 -- CTCAE grades against the UPPER LIMIT OF NORMAL; this dataset can only reference
+        # the control mean. A ratio a few percent above 1.00 is therefore not evidence of a
+        # real prolongation. The grade is kept but flagged so it can be filtered out.
+        rr = central(r["ratio_to_control"])
+        r["grade_caveat"] = NA
+        if r["coag_tox_grade"] in ("1", "2", "3") and rr is not None and 1.0 < rr <= 1.2:
+            r["grade_caveat"] = "within_reference_range_resolution"
+            log["R6_grade_caveat_flagged"] += 1
+
+        # R7 -- the source's OWN reported severity grade, kept in its own column rather than
+        # merged into the mechanical one: two different grading rules must not share a column.
+        m = _GRADE.search(r["severity_stated_by_source"])
+        r["source_stated_grade"] = m.group(1) if m else NA
+        if m:
+            log["R7_source_stated_grade_captured"] += 1
+
+        # R8 -- an absence of signal is not an adverse finding.
+        if r["unintended_toxicity"] == "TRUE" and \
+           r["grade_basis"].startswith("source_states_measured_no_change"):
+            r["unintended_toxicity"] = "FALSE"
+            log["R8_null_unflagged_as_toxicity"] += 1
+
+        # R9 -- a combination arm is not an oligonucleotide measurement. Promote the partner
+        # agent out of free text into its own column so it cannot be modelled as oligo effect.
+        m = _COAGENT.search(r["notes"])
+        agent = (m.group(1).strip() if m else "")
+        r["co_administered_agent"] = NA if (not agent or agent.lower().startswith("none")) else agent
+        if r["co_administered_agent"] != NA:
+            log["R9_co_administered_agent_promoted"] += 1
+    return rows
+
 
 def main():
     bundles = load()
@@ -185,7 +325,7 @@ def main():
                     "source_id": sid,
                     "citation": s.get("citation", NR),
                     "identifier": ident or NR,
-                    "document_file": (os.path.basename(s.get("local_path", "")).split(" (")[0].strip() or NR),
+                    "document_file": primary_document(s.get("local_path", "")),
                     "retrieval_route": s.get("retrieval_route", NR),
                     "licence": s.get("licence", NR),
                     "redistribution": s.get("redistribution", NR),
@@ -310,6 +450,11 @@ def main():
                 "notes": m.get("notes", ""),
             })
 
+    from collections import Counter as _C
+    _log = _C()
+    measurements = remediate(measurements, _log)
+    measurements = apply_corrections(measurements, _log)
+
     # ---- modifications -----------------------------------------------------
     mods, mod_orphans = [], 0
     for b in bundles:
@@ -383,6 +528,9 @@ def main():
     dist = defaultdict(int)
     for m in graded:
         dist[m["coag_tox_grade"]] += 1
+    print("\n  remediation applied (each traceable to a verification finding):")
+    for _k in sorted(_log):
+        print(f"    {_k:<44} {_log[_k]:>5} rows")
     print(f"\n  merged compounds across sources : {len(merges)}")
     print(f"  terminal caps lifted to oligo   : {lifted}")
     print(f"  orphan measurements dropped     : {orphans}")

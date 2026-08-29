@@ -8,7 +8,7 @@ endpoints it also serves. One artifact listed here belongs to no endpoint at all
 
 Endpoint dossiers: [kidney-nephrotoxicity](./kidney/kidney-nephrotoxicity.md) ·
 [hepatotoxicity](./hepatotoxicity.md) · [complement-activation](./complement-activation.md) ·
-[coagulopathy](./coagulopathy.md) · [thrombocytopenia](./thrombocytopenia.md) ·
+[coagulopathy](./coagulopathy/coagulopathy.md) · [thrombocytopenia](./thrombocytopenia.md) ·
 [immunotoxicity](./immunotoxicity.md) · [chronic-neurotoxicity](./chronic-neurotoxicity.md) ·
 [hydrocephalus](./hydrocephalus.md)
 

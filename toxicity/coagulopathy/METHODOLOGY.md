@@ -135,31 +135,37 @@ overlooked. All grades are `provisional`.
 | Readout (top) | aPTT 599 · PT 376 · fibrinogen 140 · FXI activity 108 · antithrombin activity 75 · TT 37 · ACT 25 |
 | Study type | animal in vivo 1,430 · clinical 453 · in vitro 297 · ex vivo human plasma 205 |
 | Species | human 850 · monkey 818 · mouse 569 · rat 33 · pig 21 · minipig 17 · other 11 · not applicable 69 |
-| Effect direction | increase 720 · no change 604 · decrease 556 · not reported 508 |
-| Grade | ungraded 1,446 · 1 → 462 · 0 → 382 · 2 → 72 · 3 → 26 |
-| Axis | on-target only 1,576 · unintended only 300 · both 144 · neither 368 |
+| Effect direction | increase 702 · no change 573 · decrease 544 · not reported 449 · not applicable (pre-dose baseline) 120 |
+| Grade | ungraded 1,521 · 0 → 463 · 1 → 312 · 2 → 66 · 3 → 26 (155 grades flagged `within_reference_range_resolution`) |
+| Axis | on-target only 1,576 · unintended only 289 · both 144 · neither 379 |
 
-**On negative controls.** 604 rows carry a measured null (`effect_direction = no_change`),
+**On negative controls.** 573 rows carry a measured null (`effect_direction = no_change`),
 and they are the class most at risk of meaning "nobody looked". The extraction contract
 required that a null be written only where the source reports a measured null, with
-reporting silence recorded separately in `notes`; the verification pass in
-[`coagulopathy.md`](./coagulopathy.md) tested this stratum specifically, because a prior
-review of the sibling kidney dataset found its negative class was substantially
-"nobody looked" rather than "looked and found nothing".
+reporting silence recorded separately in `notes`; the verification pass tested this
+stratum specifically, because a prior review of the sibling kidney dataset found its
+negative class was substantially "nobody looked" rather than "looked and found nothing".
+**That defect does not repeat here**: four independent reviewers tried to break the null
+class and could not — the nulls are measured nulls, and unmeasured endpoints are typed
+`NOT_REPORTED` with notes saying so explicitly.
 
 ## 10. Quality control
 
 Two committed scripts, both exiting non-zero on failure:
 
-- `validate_dataset.py` — 36 structural checks (keys, referential integrity, vocabularies,
-  grade reproducibility, sequence/modification consistency, roll-ups). All pass. Three
-  defects it caught during the build, and their fixes, are logged in `schema.md`.
+- `validate_dataset.py` — 45 structural checks (keys, referential integrity, vocabularies,
+  grade reproducibility, sequence/modification consistency, roll-ups, and nine invariants
+  added after verification). All pass. Defects caught during the build, and their fixes,
+  are logged in `schema.md`.
 - `verify_against_sources.py` — re-reads the committed documents and confirms every numeric
-  readout appears in the source its row cites. **1,862 / 1,862 located.**
+  readout appears in the source its row cites. **1,876 / 1,876 located.**
 
 Structural QC proves internal consistency; source verification proves the numbers were not
-invented. Neither proves a number was read from the *right* cell — that is the semantic
-verification pass, recorded in the dossier.
+invented. Neither proves a number was read from the *right* cell, so a third pass did that
+by hand: 174 rows re-checked by reviewers instructed to refute them (117 confirmed, 50
+corrected, 2 refuted, 5 unverifiable, no fabrication). Ten defect classes were found and
+corrected in the build; the residue is carried as open issues. Both the corrections and the
+residue are documented in [`coagulopathy.md`](./coagulopathy.md).
 
 ## 11. Limitations
 

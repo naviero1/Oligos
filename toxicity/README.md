@@ -43,13 +43,21 @@ excluded here and listed in the cross-cutting file instead.
 | [Immunotoxicity / immunostimulation](./immunotoxicity.md) | sources-acquired-not-extracted | 0 | 0 | 1 | none |
 | [Thrombocytopenia](./thrombocytopenia.md) | background-only | 0 | 0 | 0 | none |
 | [Complement activation](./complement-activation.md) | background-only | 0 | 0 | 0 | none |
-| [Coagulopathy](./coagulopathy.md) | background-only | 0 | 0 | 0 | none |
+| [Coagulopathy](./coagulopathy/coagulopathy.md) | delivered | 213 | 2,388 | 73 | 75 — `COG-S001`–`COG-S075` |
 | [Chronic neurotoxicity](./chronic-neurotoxicity.md) | not-addressed | 0 | 0 | 0 | none |
 | [Hydrocephalus](./hydrocephalus.md) | not-addressed | 0 | 0 | 0 | none |
-| **Total** | — | **65** | **111** | **13** | **16** |
+| **Total** | — | **278** | **2,499** | **86** | **91** |
 
-`sources/` holds 18 PDFs in total: the 13 endpoint-dedicated files counted above, 4
-cross-cutting reference files, and 1 off-topic file in `sources/_unrelated/`.
+Two endpoints now carry data. The kidney column counts PDFs; the coagulopathy column counts
+retrieved source **documents** (JATS XML, SPL XML and patent text as well as PDF), all held
+in [`coagulopathy/sources/documents/`](./coagulopathy/sources/documents/).
+
+The two datasets are **not** poolable. Each has its own graded column and its own written
+rubric — `nephrotox_grade` on a renal 0–3 scale, `coag_tox_grade` on CTCAE v5.0
+clotting-time cut-offs — and neither transfers to the other. They also differ in provenance
+standard: the kidney rows were curated under a network policy that blocked outbound fetch,
+so some rest on search summaries, while every coagulopathy row was extracted from a
+retrieved document held in the repository.
 
 Row counts for the single populated endpoint, by `source_id`: WS 36, N3 21, M1 11, N2 10,
 K1 9, A4 5, REV 4, A1 3, A3 3, A8 2, A9 2, A2 1, A5 1, A6 1, A7 1, A10 1. Five of those 16
@@ -67,8 +75,9 @@ oligo counts and the local-PDF mapping are in
 | `background-only` | No dedicated source was acquired. The endpoint appears only inside multi-endpoint reference material held for other reasons. |
 | `not-addressed` | No dedicated source, no row, no doc section, no slide, and no scope decision on record. At most an incidental passage inside a volume held for another endpoint. Listed so the allocation is exhaustive against the brief's eight-item list. |
 
-Only the kidney dossier describes a dataset. The other seven describe source inventories and
-extraction backlogs; they are deliberately short, and they are not peers of the kidney file.
+The kidney and coagulopathy dossiers each describe a dataset. The other six describe source
+inventories and extraction backlogs; they are deliberately short, and they are not peers of
+the two delivered files.
 
 ## What this reorganization changed
 
@@ -98,9 +107,12 @@ Three facts about the data model that this index makes visible rather than chang
   [`scripts/build_merged.py`](kidney/scripts/build_merged.py), as a denormalized join of the two
   CSVs above. It is not a third dataset and is not curated independently.
 
-Because both the endpoint flag and the grade column are kidney-shaped, a seven-endpoint
-register cannot be produced by re-slicing the existing tables. That is why seven of the eight
-dossiers report zero rows rather than a subset.
+Because both the endpoint flag and the grade column are kidney-shaped, a multi-endpoint
+register cannot be produced by re-slicing the kidney tables. That is why a second endpoint
+required its own tables, its own graded column and its own written rubric rather than a
+re-slice: see [`coagulopathy/`](./coagulopathy/README.md), whose `coag_tox_grade` is defined
+on CTCAE v5.0 clotting-time cut-offs and does not interoperate with `nephrotox_grade`.
+The six remaining dossiers report zero rows rather than a subset for the same reason.
 
 ## Related files
 

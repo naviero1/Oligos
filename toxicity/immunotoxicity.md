@@ -76,7 +76,7 @@ glomerulonephritis (as described subsequently) and vasculitis associated with so
 administration in monkeys."* MMB 2434 Ch.25 §3.1.3 (PDF pp.354–355) summarises proinflammatory
 manifestations and design rules. It is adjacent to Ch.25 §3.1.2, which [`cross-cutting.md`](./cross-cutting.md)
 section 1.4 "Methods in Molecular Biology 2434 — misfiling finding" allocates to
-[`complement-activation.md`](./complement-activation.md) and [`coagulopathy.md`](./coagulopathy.md);
+[`complement-activation.md`](./complement-activation.md) and [`coagulopathy.md`](./coagulopathy/coagulopathy.md);
 §3.1.3 is read here, not substituted for it.
 
 ## 4. Data

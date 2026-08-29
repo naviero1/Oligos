@@ -94,7 +94,11 @@ Challenge's requirement for "the location of all chemical modifications in each 
 | `effect_vs_control` | The effect size as the source expresses it. |
 | `ratio_to_control` | Control-referenced ratio, computed by the build. `NOT_REPORTED` when none is derivable. |
 | `ratio_basis` | **How** the ratio was obtained, or why it could not be: `value_over_matched_control`, `value_is_already_control_referenced`, `no_matched_control_value`, `value_is_censored`, `qualitative_row`, `no_numeric_value`. |
+| `is_baseline` | `TRUE` for a pre-dose / pre-treatment draw. Such a row is a reference point, not an effect: it carries no grade and `effect_direction = NOT_APPLICABLE`. |
+| `co_administered_agent` | The partner drug in a combination arm (warfarin, enoxaparin, apixaban, an antidote strand), or `NOT_APPLICABLE`. **A row with this set is not a measurement of the oligonucleotide alone.** |
 | `coag_tox_grade` | Ordinal `0`–`3`, or `NOT_REPORTED`. Rubric below. |
+| `grade_caveat` | `within_reference_range_resolution` where the grade rests on a ratio of 1.0–1.2× control, which cannot be distinguished from normal variation without a laboratory reference range. Filter on this before treating grade 1 as a finding. |
+| `source_stated_grade` | The severity grade **the source itself reports** (1–5), where it does. A different rule from `coag_tox_grade`; deliberately a separate column. |
 | `grade_basis` | The exact rule applied — or, for an ungraded row, why no rule applies. Never empty. |
 | `grade_status` | `provisional` on every row. No grade has had subject-matter review. |
 | `severity_stated_by_source` | Severity **in the source's own words**, verbatim. Where a source contradicts its own tables, this is where the contradiction is preserved. |
@@ -118,10 +122,24 @@ are the published ones; none was devised for this dataset.
 | **2** | > 1.5 – 2.5 × | < 0.75 – 0.5 × |
 | **3** | > 2.5 × | < 0.5 × |
 
-**A deviation, stated plainly.** CTCAE defines these ratios against the upper (or lower)
-limit of normal. This dataset applies them to a ratio against the **matched experimental
-control**, because that is what the sources publish — few report a laboratory reference
-range. The rule name recorded in every `grade_basis` is therefore
+Two guards keep the rule from manufacturing findings, both added after adversarial
+verification showed it doing exactly that:
+
+- **A source-stated measured null outranks the ratio.** Where the source reports the
+  endpoint as unchanged, the grade is 0 regardless of a ratio marginally above 1.00
+  (122 rows). Before this, rows the source called unremarkable carried grade 1, and
+  `coag_tox_grade` contradicted `effect_direction` in the same row.
+- **Grades resting on a near-unity ratio are flagged, not hidden.** 155 rows with a ratio
+  in 1.0–1.2× carry `grade_caveat = within_reference_range_resolution`.
+- **Pre-dose baselines are never graded** (120 rows): a draw taken before dosing is a
+  reference point, not an effect.
+
+**A deviation, stated plainly, and it is the rubric's main weakness.** CTCAE defines these
+ratios against the upper (or lower) limit of normal. This dataset applies them to a ratio
+against the **matched experimental control**, because that is what the sources publish —
+few report a laboratory reference range. Because the ULN sits *above* the control mean,
+this substitution biases grades upward at the low end: it is why the two guards above
+exist, and why `grade_caveat` must be respected. The rule name recorded in every `grade_basis` is therefore
 `CTCAE_v5.0_control_referenced`, so the substitution is visible on every graded row rather
 than buried in documentation. Where a source reports a measured null on a CTCAE-graded
 readout without a derivable ratio, the grade is `0` with basis
@@ -140,6 +158,21 @@ disagrees, so a hand-edited grade cannot survive a build.
 ---
 
 ## QC log
+
+**2026-08-29 — build v1.1, after adversarial verification.** 45 structural checks pass.
+174 rows were re-checked against their sources by reviewers instructed to refute them:
+117 confirmed, 50 corrected, 2 refuted, 5 unverifiable, **no fabricated value or quote**.
+Ten defect classes were found; all ten are corrected in `build_dataset.py` (functions
+`remediate()` and `primary_document()`), never by editing a CSV, and nine new QC checks now
+guard against their recurrence — including that every source's `document_file` resolves on
+disk, that a stated null is never graded as a toxicity, that a baseline carries no grade,
+and that a ratio never ignores a matched control it holds. The build prints a per-fix row
+count on every run. Full narrative in [`coagulopathy.md`](./coagulopathy.md).
+
+One correction was to the checking, not the data: the grade-reproducibility check failed
+after the first remediation pass because grades had been computed *before* the ratio fixes
+and left stale. Re-grading now follows ratio correction, and 41 rows changed grade as a
+result.
 
 **2026-08-29 — build v1.0.** 36 structural checks pass; `validate_dataset.py` exits
 non-zero on any failure. Coverage: primary keys, all three foreign keys, controlled
