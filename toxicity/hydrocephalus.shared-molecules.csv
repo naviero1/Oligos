@@ -1,0 +1,6 @@
+molecule,relation,oligo_id_here,also_under,oligo_id_there,sequence_check
+inclisiran,replicated_same_id,CNS276,chronic-neurotoxicity,CNS276,same_record
+nusinersen,replicated_same_id,CNS012,chronic-neurotoxicity,CNS012,same_record
+tofersen,replicated_same_id,CNS013,chronic-neurotoxicity,CNS013,same_record
+tominersen,replicated_same_id,CNS014,chronic-neurotoxicity,CNS014,same_record
+valeriasen,replicated_same_id,CNS286,chronic-neurotoxicity,CNS286,same_record

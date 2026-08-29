@@ -13,8 +13,8 @@ import re
 from collections import Counter, defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MEAS = os.path.join(ROOT, "data", "cns_measurements.csv")
-OUT = os.path.join(ROOT, "sources", "SOURCES-CNS.md")
+MEAS = os.path.join(ROOT, "notes", "cns", "corpus", "cns_measurements.csv")
+OUT = os.path.join(ROOT, "chronic-neurotoxicity.sources.md")
 LOCAL = os.path.join(ROOT, "sources", "cns")
 
 HEADER = """# Sources — OligoTox-CNS

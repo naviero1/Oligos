@@ -16,9 +16,9 @@ import re
 import sys
 from collections import Counter
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 MEAS = os.path.join(ROOT, "data", "measurements.csv")
-LICENCES = os.path.join(ROOT, "notes", "kidney", "source_licences.json")
+LICENCES = os.path.join(ROOT, "toxicity", "notes", "kidney", "source_licences.json")
 
 # ---------------------------------------------------------------------------
 # K1. Make every source reference RESOLVABLE.

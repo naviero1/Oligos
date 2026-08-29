@@ -120,20 +120,45 @@ dossiers report zero rows rather than a subset.
 - [`../PRESENTATION.md`](../PRESENTATION.md) — the deck, which covers the kidney endpoint
   only.
 
-† The two CNS endpoints were curated as **one corpus** and share a source library:
-`sources/cns/` holds 46 files (23 PDFs plus JATS XML, a label capture and a
-supplementary workbook), counted once against chronic neurotoxicity rather than
-split, because no clean per-endpoint split of the library exists. The 13 PDFs
-counted for kidney are unchanged.
+† The two CNS endpoints were curated as **one corpus** and share a source library
+(`toxicity/sources/cns/`, 46 files). It is counted once against chronic
+neurotoxicity rather than split, because no clean per-endpoint split of a source
+library exists — a paper can bear on both. The 13 PDFs counted for kidney are
+unchanged.
 
-‡ The oligo total is a sum across endpoints and **double-counts molecules studied
-for more than one toxicity** — 5 oligos appear in both CNS partitions, and several
-CNS compounds also appear in the kidney table. An oligo is a compound identity,
-not a toxicity observation. The measurement-row total does not double-count: no
-`measurement_id` appears twice.
+‡ **Oligo counts are not additive across toxicities; measurement counts are.** A
+measurement is an observation of one toxicity, so the rows partition. A molecule is
+a compound identity, so a drug studied for two toxicities appears in both oligo
+tables. 18 molecules are affected — 5 replicated under the same `oligo_id`, and 13
+curated independently under two toxicities and therefore carrying a *different* id
+in each (inotersen is `OLG001` here and `CNS277` there). The ledger is
+[`molecule_crosswalk.csv`](./molecule_crosswalk.csv), with a per-toxicity copy
+alongside each dataset.
+
+## How the datasets divide
+
+[`scripts/split_by_endpoint.py`](./scripts/split_by_endpoint.py) produces one
+self-contained dataset per toxicity from the curated corpora, and asserts rather
+than assumes the properties that make the split trustworthy:
+
+- the partition is **disjoint and exhaustive** — no `measurement_id` appears under
+  two toxicities, and the per-toxicity counts sum to the corpus total, or the
+  script fails;
+- every measurement's oligo is present in its own toxicity's oligo table, so each
+  dataset stands alone;
+- where one molecule appears under two toxicities and both records carry a
+  sequence, they must **agree base-for-base** — a disagreement means one of them is
+  the wrong molecule, and the script fails rather than publishing it. There are
+  currently no conflicts.
+
+Cross-cutting artifacts are **duplicated into each toxicity that uses them** rather
+than shared from a common folder, so no toxicity depends on another's files.
+
+Re-run it after any change to a corpus; `--check` verifies the split on disk is not
+stale without writing anything.
 
 The rows for endpoints other than kidney and the two CNS endpoints describe **the
 branch this register was written against**. Work exists on unmerged branches that
-this table has not been reconciled with — a thrombocytopenia dataset among them —
-so treat a `0` outside the CNS and kidney rows as "not seen from here", not as
-"does not exist".
+this table has not been reconciled with — a thrombocytopenia dataset among them — so
+treat a `0` outside the CNS and kidney rows as "not seen from here", not as "does
+not exist".

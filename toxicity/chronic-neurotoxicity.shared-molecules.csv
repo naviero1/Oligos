@@ -1,0 +1,16 @@
+molecule,relation,oligo_id_here,also_under,oligo_id_there,sequence_check
+eteplirsen,same_molecule_different_id,CNS273,kidney-nephrotoxicity,OLG016,one_side_TBD
+givosiran,same_molecule_different_id,CNS274,kidney-nephrotoxicity,OLG003,one_side_TBD
+golodirsen,same_molecule_different_id,CNS275,kidney-nephrotoxicity,OLG011,sequences_agree
+inclisiran,replicated_same_id,CNS276,hydrocephalus,CNS276,same_record
+inotersen,same_molecule_different_id,CNS277,kidney-nephrotoxicity,OLG001,sequences_agree
+lumasiran,same_molecule_different_id,CNS278,kidney-nephrotoxicity,OLG020,one_side_TBD
+mipomersen,same_molecule_different_id,CNS283,kidney-nephrotoxicity,OLG006,one_side_TBD
+nedosiran,same_molecule_different_id,CNS279,kidney-nephrotoxicity,OLG021,one_side_TBD
+nusinersen,replicated_same_id,CNS012,hydrocephalus,CNS012,same_record
+patisiran,same_molecule_different_id,CNS280,kidney-nephrotoxicity,OLG019,one_side_TBD
+tofersen,replicated_same_id,CNS013,hydrocephalus,CNS013,same_record
+tominersen,replicated_same_id,CNS014,hydrocephalus,CNS014,same_record
+valeriasen,replicated_same_id,CNS286,hydrocephalus,CNS286,same_record
+viltolarsen,same_molecule_different_id,CNS284,kidney-nephrotoxicity,OLG013,one_side_TBD
+volanesorsen,same_molecule_different_id,CNS285,kidney-nephrotoxicity,OLG005,one_side_TBD

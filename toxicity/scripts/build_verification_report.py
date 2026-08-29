@@ -17,8 +17,8 @@ from collections import Counter, defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VERIFY_DIR = os.path.join(ROOT, "notes", "cns", "verify")
-MEAS = os.path.join(ROOT, "data", "cns_measurements.csv")
-OUT = os.path.join(ROOT, "VERIFICATION-CNS.md")
+MEAS = os.path.join(ROOT, "notes", "cns", "corpus", "cns_measurements.csv")
+OUT = os.path.join(ROOT, "chronic-neurotoxicity.verification.md")
 
 INTRO = """# Verification — OligoTox-CNS
 

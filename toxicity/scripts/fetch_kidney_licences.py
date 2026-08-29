@@ -21,9 +21,9 @@ import sys
 import time
 import urllib.request
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 MEAS = os.path.join(ROOT, "data", "measurements.csv")
-OUT = os.path.join(ROOT, "notes", "kidney", "source_licences.json")
+OUT = os.path.join(ROOT, "toxicity", "notes", "kidney", "source_licences.json")
 UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
       "Chrome/124.0 Safari/537.36")
 PMC_RE = re.compile(r"(?<![A-Za-z0-9])PMC(\d{6,8})(?![A-Za-z0-9])", re.I)

@@ -18,9 +18,9 @@ import csv
 import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OLIGOS = os.path.join(ROOT, "data", "cns_oligos.csv")
-MEAS = os.path.join(ROOT, "data", "cns_measurements.csv")
-OUT = os.path.join(ROOT, "data", "oligotox_cns_merged.csv")
+OLIGOS = os.path.join(ROOT, "notes", "cns", "corpus", "cns_oligos.csv")
+MEAS = os.path.join(ROOT, "notes", "cns", "corpus", "cns_measurements.csv")
+OUT = os.path.join(ROOT, "notes", "cns", "corpus", "oligotox_cns_merged.csv")
 
 # oligo design predictors (all cns_oligos.csv columns except the key and its notes)
 OLIGO_PRED = ["oligo_name", "aliases", "oligo_class", "target_gene", "indication",

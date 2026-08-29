@@ -265,3 +265,44 @@ Not blocked for volume; blocked for release quality and for the in-vitro expansi
 Items 2, 3 and 6 are data edits needing a `build_merged.py` re-run; 4, 5, 7, 8 are documentation edits; 9 is the only extraction round. Four
 defects carry no step above and are held unassigned: §6.6 (deck provenance sentence; `verify` and `derived_features_only` unused), §6.8 (the
 albumin gloss in `README.md` § "Why this design — key domain facts" and `METHODOLOGY.md:28-34`), §6.9 (the MSR085 and MSR029 grades) and §6.11 (the ten `pct_control` units).
+
+---
+
+## Divided by toxicity, and what is duplicated
+
+This dataset is one slice of the kidney corpus, produced by
+[`scripts/split_by_endpoint.py`](./scripts/split_by_endpoint.py). Two things happen
+in that split and they are **not** the same operation:
+
+**Measurements divide.** A measurement is an observation of one toxicity, so the
+rows partition — disjoint and exhaustive. This toxicity holds **111 measurement
+rows**, and across all endpoints the per-toxicity counts sum exactly to the corpus
+total. The script fails loudly if they ever stop summing, so the partition cannot
+silently drift.
+
+**Oligonucleotides duplicate.** A molecule is a compound *identity*, not an
+observation. A drug studied for two toxicities belongs in both tables. This
+toxicity's oligo table holds **65 molecules**, of which **13 also appear
+under another toxicity** — 0 replicated under the same `oligo_id`, and 13
+curated independently elsewhere and therefore carrying a *different* id there.
+
+> **Consequence, because it is the easy mistake to make: oligo counts are not
+> additive across toxicities. Row counts are.** Summing the oligo tables
+> double-counts every molecule studied for more than one toxicity.
+
+| File | What it is |
+|---|---|
+| [`kidney-nephrotoxicity.measurements.csv`](./kidney-nephrotoxicity.measurements.csv) | this toxicity's 111 graded measurement rows |
+| [`kidney-nephrotoxicity.oligos.csv`](./kidney-nephrotoxicity.oligos.csv) | the 65 molecules those rows reference |
+| [`kidney-nephrotoxicity.shared-molecules.csv`](./kidney-nephrotoxicity.shared-molecules.csv) | the 13 molecules also present under another toxicity, with the id they carry there |
+| [`molecule_crosswalk.csv`](./molecule_crosswalk.csv) | the same ledger across every toxicity at once |
+
+The crosswalk matters most for the 13 molecules curated independently under two
+toxicities: nothing links `OLG###` to `CNS###`, so a model keyed on `oligo_id` would
+treat one compound as two. Where both records carry a sequence, the split asserts
+they agree base-for-base and **fails** if they do not — a disagreement would mean one
+of the two is the wrong molecule. Across the whole repository there are currently
+**no such conflicts**.
+
+Cross-cutting artifacts are **duplicated into each toxicity that uses them** rather
+than shared from a common folder, so every toxicity here is self-contained.

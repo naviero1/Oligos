@@ -41,8 +41,8 @@ from collections import Counter, defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXTRACT_DIR = os.path.join(ROOT, "notes", "cns", "extractions")
-OUT_OLIGOS = os.path.join(ROOT, "data", "cns_oligos.csv")
-OUT_MEAS = os.path.join(ROOT, "data", "cns_measurements.csv")
+OUT_OLIGOS = os.path.join(ROOT, "notes", "cns", "corpus", "cns_oligos.csv")
+OUT_MEAS = os.path.join(ROOT, "notes", "cns", "corpus", "cns_measurements.csv")
 
 OLIGO_COLS = ["oligo_id", "oligo_name", "aliases", "oligo_class", "target_gene",
               "indication", "developer", "max_phase", "length_nt", "backbone_chemistry",

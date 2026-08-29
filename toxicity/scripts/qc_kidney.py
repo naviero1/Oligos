@@ -28,7 +28,7 @@ import re
 import sys
 from collections import Counter
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OLIGOS = os.path.join(ROOT, "data", "oligos.csv")
 MEAS = os.path.join(ROOT, "data", "measurements.csv")
 

@@ -16,8 +16,8 @@ import sys
 from collections import Counter
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OLIGOS = os.path.join(ROOT, "data", "cns_oligos.csv")
-MEAS = os.path.join(ROOT, "data", "cns_measurements.csv")
+OLIGOS = os.path.join(ROOT, "notes", "cns", "corpus", "cns_oligos.csv")
+MEAS = os.path.join(ROOT, "notes", "cns", "corpus", "cns_measurements.csv")
 
 
 def load():
@@ -66,7 +66,7 @@ def check_docs():
     bad = []
     # README-CNS.md is the only doc that transcribes counters; METHODOLOGY-CNS.md
     # deliberately defers its distributions to this script rather than repeating them.
-    for doc in ("README-CNS.md",):
+    for doc in ("chronic-neurotoxicity.corpus-overview.md",):
         path = os.path.join(ROOT, doc)
         if not os.path.exists(path):
             continue

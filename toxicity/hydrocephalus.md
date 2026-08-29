@@ -1,6 +1,6 @@
 # Hydrocephalus — endpoint dossier
 
-**Status:** `delivered` · **Register:** [`./README.md`](./README.md) · **Corpus documentation:** [`../README-CNS.md`](../README-CNS.md)
+**Status:** `delivered` · **Register:** [`./README.md`](./README.md) · **Corpus documentation:** [`../README-CNS.md`](./hydrocephalus.corpus-overview.md)
 
 Hydrocephalus is the eighth and last endpoint in the Challenge brief's list of toxicities of interest (quoted verbatim in [`./README.md`](./README.md#scope-authority)). It is **curated and delivered**: 147 graded per-measurement rows over 13 oligonucleotides, drawn from 40 distinct source documents.
 
@@ -56,4 +56,45 @@ The original dossier swept the 18 PDFs then in `sources/` for `hydrocephal` and 
 
 ## Next step
 
-The gap analysis in [`../NEXT-STEPS-CNS.md`](../NEXT-STEPS-CNS.md) names the two things that would most strengthen this endpoint, both generation rather than curation: **ventricular volume as a routine endpoint in non-human-primate intrathecal studies** (imaging on animals already being dosed and imaged), and **a human choroid-plexus or ependymal organoid assay** dosed with clinical-stage oligonucleotides.
+The gap analysis in [`../NEXT-STEPS-CNS.md`](./hydrocephalus.next-steps.md) names the two things that would most strengthen this endpoint, both generation rather than curation: **ventricular volume as a routine endpoint in non-human-primate intrathecal studies** (imaging on animals already being dosed and imaged), and **a human choroid-plexus or ependymal organoid assay** dosed with clinical-stage oligonucleotides.
+
+---
+
+## Divided by toxicity, and what is duplicated
+
+This dataset is one slice of the CNS corpus, produced by
+[`scripts/split_by_endpoint.py`](./scripts/split_by_endpoint.py). Two things happen
+in that split and they are **not** the same operation:
+
+**Measurements divide.** A measurement is an observation of one toxicity, so the
+rows partition — disjoint and exhaustive. This toxicity holds **147 measurement
+rows**, and across all endpoints the per-toxicity counts sum exactly to the corpus
+total. The script fails loudly if they ever stop summing, so the partition cannot
+silently drift.
+
+**Oligonucleotides duplicate.** A molecule is a compound *identity*, not an
+observation. A drug studied for two toxicities belongs in both tables. This
+toxicity's oligo table holds **13 molecules**, of which **5 also appear
+under another toxicity** — 5 replicated under the same `oligo_id`, and 0
+curated independently elsewhere and therefore carrying a *different* id there.
+
+> **Consequence, because it is the easy mistake to make: oligo counts are not
+> additive across toxicities. Row counts are.** Summing the oligo tables
+> double-counts every molecule studied for more than one toxicity.
+
+| File | What it is |
+|---|---|
+| [`hydrocephalus.measurements.csv`](./hydrocephalus.measurements.csv) | this toxicity's 147 graded measurement rows |
+| [`hydrocephalus.oligos.csv`](./hydrocephalus.oligos.csv) | the 13 molecules those rows reference |
+| [`hydrocephalus.shared-molecules.csv`](./hydrocephalus.shared-molecules.csv) | the 5 molecules also present under another toxicity, with the id they carry there |
+| [`molecule_crosswalk.csv`](./molecule_crosswalk.csv) | the same ledger across every toxicity at once |
+
+The crosswalk matters most for the 0 molecules curated independently under two
+toxicities: nothing links `OLG###` to `CNS###`, so a model keyed on `oligo_id` would
+treat one compound as two. Where both records carry a sequence, the split asserts
+they agree base-for-base and **fails** if they do not — a disagreement would mean one
+of the two is the wrong molecule. Across the whole repository there are currently
+**no such conflicts**.
+
+Cross-cutting artifacts are **duplicated into each toxicity that uses them** rather
+than shared from a common folder, so every toxicity here is self-contained.
