@@ -1,0 +1,556 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article id="mus28372" xml:lang="en" article-type="research-article" dtd-version="1.4"><?da-xref-anchor-style autodetect?><processing-meta base-tagset="archiving" mathml-version="3.0" table-model="xhtml" tagset-family="jats"><restricted-by>pmc</restricted-by></processing-meta><front><journal-meta><journal-id journal-id-type="nlm-ta">Muscle Nerve</journal-id><journal-id journal-id-type="iso-abbrev">Muscle Nerve</journal-id><journal-id journal-id-type="pmc-domain-id">379</journal-id><journal-id journal-id-type="pmc-domain">blackwellopen</journal-id><journal-id journal-id-type="nlm-id">7803146</journal-id><journal-id journal-id-type="publisher-id">MUS</journal-id><journal-title-group><journal-title>Muscle &amp; Nerve</journal-title></journal-title-group><issn pub-type="ppub">0148-639X</issn><issn pub-type="epub">1097-4598</issn><?publisher_abbrev blackwell?><custom-meta-group><custom-meta><meta-name>pmc-is-collection-domain</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-collection-title</meta-name><meta-value>Wiley Open Access Collection</meta-value></custom-meta></custom-meta-group></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC12060635</article-id><article-id pub-id-type="pmcid-ver">PMC12060635.1</article-id><article-id pub-id-type="pmcaid">12060635</article-id><article-id pub-id-type="pmcaiid">12060635</article-id><article-id pub-id-type="pmid">40017137</article-id><article-id pub-id-type="doi">10.1002/mus.28372</article-id><article-id pub-id-type="publisher-id">MUS28372</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Clinical Research Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Clinical Research Article</subject></subj-group></article-categories><title-group><article-title>Serious Neurologic Adverse Events in Tofersen Clinical Trials for Amyotrophic Lateral Sclerosis</article-title></title-group><contrib-group><contrib id="mus28372-cr-0001" contrib-type="author"><name name-style="western"><surname>Lovett</surname><given-names initials="A">Alexandra</given-names></name><xref rid="mus28372-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="mus28372-cr-0002" contrib-type="author"><name name-style="western"><surname>Chary</surname><given-names initials="S">Sowmya</given-names></name><xref rid="mus28372-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="mus28372-cr-0003" contrib-type="author"><name name-style="western"><surname>Babu</surname><given-names initials="S">Suma</given-names></name><xref rid="mus28372-aff-0002" ref-type="aff">
+<sup>2</sup>
+</xref></contrib><contrib id="mus28372-cr-0004" contrib-type="author"><name name-style="western"><surname>Bruneteau</surname><given-names initials="G">Gaëlle</given-names></name><xref rid="mus28372-aff-0003" ref-type="aff">
+<sup>3</sup>
+</xref></contrib><contrib id="mus28372-cr-0005" contrib-type="author"><name name-style="western"><surname>Glass</surname><given-names initials="JD">Jonathan D.</given-names></name><xref rid="mus28372-aff-0004" ref-type="aff">
+<sup>4</sup>
+</xref></contrib><contrib id="mus28372-cr-0006" contrib-type="author"><name name-style="western"><surname>Karlsborg</surname><given-names initials="M">Merete</given-names></name><xref rid="mus28372-aff-0005" ref-type="aff">
+<sup>5</sup>
+</xref></contrib><contrib id="mus28372-cr-0007" contrib-type="author"><name name-style="western"><surname>Ladha</surname><given-names initials="S">Shafeeq</given-names></name><xref rid="mus28372-aff-0006" ref-type="aff">
+<sup>6</sup>
+</xref></contrib><contrib id="mus28372-cr-0008" contrib-type="author"><name name-style="western"><surname>Mayl</surname><given-names initials="K">Keith</given-names></name><xref rid="mus28372-aff-0007" ref-type="aff">
+<sup>7</sup>
+</xref><xref rid="mus28372-aff-0008" ref-type="aff">
+<sup>8</sup>
+</xref></contrib><contrib id="mus28372-cr-0009" contrib-type="author"><name name-style="western"><surname>McDermott</surname><given-names initials="C">Christopher</given-names></name><xref rid="mus28372-aff-0009" ref-type="aff">
+<sup>9</sup>
+</xref><xref rid="mus28372-aff-0010" ref-type="aff">
+<sup>10</sup>
+</xref><xref rid="mus28372-aff-0011" ref-type="aff">
+<sup>11</sup>
+</xref></contrib><contrib id="mus28372-cr-0010" contrib-type="author"><name name-style="western"><surname>Bucelli</surname><given-names initials="RC">Robert C.</given-names></name><xref rid="mus28372-aff-0012" ref-type="aff">
+<sup>12</sup>
+</xref></contrib><contrib id="mus28372-cr-0011" contrib-type="author"><name name-style="western"><surname>Chiò</surname><given-names initials="A">Adriano</given-names></name><xref rid="mus28372-aff-0013" ref-type="aff">
+<sup>13</sup>
+</xref><xref rid="mus28372-aff-0014" ref-type="aff">
+<sup>14</sup>
+</xref></contrib><contrib id="mus28372-cr-0012" contrib-type="author"><name name-style="western"><surname>Ferguson</surname><given-names initials="TA">Toby A.</given-names></name><xref rid="mus28372-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="mus28372-cr-0013" contrib-type="author"><name name-style="western"><surname>Cochrane</surname><given-names initials="T">Thos</given-names></name><xref rid="mus28372-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="mus28372-cr-0014" contrib-type="author"><name name-style="western"><surname>Fradette</surname><given-names initials="S">Stephanie</given-names></name><xref rid="mus28372-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="mus28372-cr-0015" contrib-type="author"><name name-style="western"><surname>Smirnakis</surname><given-names initials="K">Karen</given-names></name><xref rid="mus28372-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="mus28372-cr-0016" contrib-type="author" corresp="yes"><name name-style="western"><surname>Inra</surname><given-names initials="J">Jennifer</given-names></name><xref rid="mus28372-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref><address><email>jennifer.inra@biogen.com</email></address></contrib><contrib id="mus28372-cr-0017" contrib-type="author"><name name-style="western"><surname>Malek</surname><given-names initials="S">Sohail</given-names></name><xref rid="mus28372-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib><contrib id="mus28372-cr-0018" contrib-type="author"><name name-style="western"><surname>Fanning</surname><given-names initials="L">Laura</given-names></name><xref rid="mus28372-aff-0001" ref-type="aff">
+<sup>1</sup>
+</xref></contrib></contrib-group><aff id="mus28372-aff-0001">
+<label>
+<sup>1</sup>
+</label>
+<institution>Biogen</institution>
+<city>Cambridge</city>
+<named-content content-type="country-part">Massachusetts</named-content>
+<country country="US">USA</country>
+</aff><aff id="mus28372-aff-0002">
+<label>
+<sup>2</sup>
+</label>
+<institution>Sean M. Healey &amp; AMG Center for ALS, Massachusetts General Hospital, Harvard Medical School</institution>
+<city>Boston</city>
+<named-content content-type="country-part">Massachusetts</named-content>
+<country country="US">USA</country>
+</aff><aff id="mus28372-aff-0003">
+<label>
+<sup>3</sup>
+</label>
+<institution>Paris ALS Expert Center and Neurosciences Clinical Research Center, Paris Brain Institute, Pitié‐Salpêtrière Hospital, Assistance Publique – Hôpitaux de Paris</institution>
+<city>Paris</city>
+<country country="FR">France</country>
+</aff><aff id="mus28372-aff-0004">
+<label>
+<sup>4</sup>
+</label>
+<institution>Emory University</institution>
+<city>Atlanta</city>
+<named-content content-type="country-part">Georgia</named-content>
+<country country="US">USA</country>
+</aff><aff id="mus28372-aff-0005">
+<label>
+<sup>5</sup>
+</label>
+<institution>Bispebjerg Hospital (M.K.)</institution>
+<city>Copenhagen</city>
+<country country="DK">Denmark</country>
+</aff><aff id="mus28372-aff-0006">
+<label>
+<sup>6</sup>
+</label>
+<named-content content-type="organisation-division">Gregory W. Fulton ALS Center</named-content>
+<institution>Barrow Neurologic Institute</institution>
+<city>Phoenix</city>
+<named-content content-type="country-part">Arizona</named-content>
+<country country="US">USA</country>
+</aff><aff id="mus28372-aff-0007">
+<label>
+<sup>7</sup>
+</label>
+<named-content content-type="organisation-division">Maurice Wohl Clinical Neuroscience Institute</named-content>
+<institution>King's College London</institution>
+<city>London</city>
+<country country="GB">UK</country>
+</aff><aff id="mus28372-aff-0008">
+<label>
+<sup>8</sup>
+</label>
+<institution>King's College Hospital NHS Foundation Trust</institution>
+<city>London</city>
+<country country="GB">UK</country>
+</aff><aff id="mus28372-aff-0009">
+<label>
+<sup>9</sup>
+</label>
+<named-content content-type="organisation-division">Sheffield Institute for Translational Neuroscience</named-content>
+<institution>University of Sheffield</institution>
+<city>Sheffield</city>
+<country country="GB">UK</country>
+</aff><aff id="mus28372-aff-0010">
+<label>
+<sup>10</sup>
+</label>
+<named-content content-type="organisation-division">NIHR Sheffield Biomedical Research Centre and Clinical Research Facility</named-content>
+<institution>University of Sheffield</institution>
+<city>Sheffield</city>
+<country country="GB">UK</country>
+</aff><aff id="mus28372-aff-0011">
+<label>
+<sup>11</sup>
+</label>
+<institution>Sheffield Teaching Hospitals NHS Foundation Trust</institution>
+<city>Sheffield</city>
+<country country="GB">UK</country>
+</aff><aff id="mus28372-aff-0012">
+<label>
+<sup>12</sup>
+</label>
+<institution>Washington University School of Medicine</institution>
+<city>St. Louis</city>
+<named-content content-type="country-part">Missouri</named-content>
+<country country="US">USA</country>
+</aff><aff id="mus28372-aff-0013">
+<label>
+<sup>13</sup>
+</label>
+<named-content content-type="organisation-division">Rita Levi Montalcini Department of Neuroscience</named-content>
+<institution>University of Turin</institution>
+<city>Turin</city>
+<country country="IT">Italy</country>
+</aff><aff id="mus28372-aff-0014">
+<label>
+<sup>14</sup>
+</label>
+<institution>Azienda Ospedaliero‐Universitaria Città Della Salute e Della Scienza of Turin</institution>
+<city>Turin</city>
+<country country="IT">Italy</country>
+</aff><author-notes><corresp id="correspondenceTo">
+<label>*</label>
+<bold>Correspondence:</bold>
+<break/>
+Jennifer Inra (<email>jennifer.inra@biogen.com</email>)<break/>
+</corresp></author-notes><pub-date pub-type="epub"><day>27</day><month>2</month><year>2025</year></pub-date><pub-date pub-type="ppub"><month>6</month><year>2025</year></pub-date><volume>71</volume><issue seq="140">6</issue><issue-id pub-id-type="pmc-issue-id">488164</issue-id><issue-id pub-id-type="doi">10.1002/mus.v71.6</issue-id><fpage>1006</fpage><lpage>1015</lpage><history>
+<date date-type="rev-recd"><day>24</day><month>1</month><year>2025</year></date>
+<date date-type="received"><day>22</day><month>4</month><year>2024</year></date>
+<date date-type="accepted"><day>28</day><month>1</month><year>2025</year></date>
+</history><pub-history><event event-type="pmc-release"><date><day>08</day><month>05</month><year>2025</year></date></event><event event-type="pmc-live"><date><day>09</day><month>05</month><year>2025</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2025-05-09 10:25:14.000"><day>09</day><month>05</month><year>2025</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2025 The Author(s). <italic toggle="yes">Muscle &amp; Nerve</italic> published by Wiley Periodicals LLC.</copyright-statement><license><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbyncndlicense">https://creativecommons.org/licenses/by-nc-nd/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by-nc-nd/4.0/">http://creativecommons.org/licenses/by-nc-nd/4.0/</ext-link> License, which permits use and distribution in any medium, provided the original work is properly cited, the use is non‐commercial and no modifications or adaptations are made.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="MUS-71-1006.pdf"><?pdf-name MUS-71-1006.pdf?><?pdf-size 570542?><?pdf-md5 4f2a5f01274813b5107a444f6e5f7d36?><?pdf-image-server-status NEVER_LOAD?><?pdf-cloudpmc-urn urn:app:6a97/12060635/4f2a5f012748/MUS-71-1006.pdf?></self-uri><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:MUS-71-1006.pdf"/><abstract><title>ABSTRACT</title><sec id="mus28372-sec-0001"><title>Introduction/Aims</title><p>Tofersen is approved for the treatment of amyotrophic lateral sclerosis (ALS) due to superoxide dismutase 1 mutations (<italic toggle="yes">SOD1</italic>‐ALS). Here we report serious neurologic adverse events (AEs) that occurred in the tofersen clinical trials in people with <italic toggle="yes">SOD1</italic>‐ALS.</p></sec><sec id="mus28372-sec-0002"><title>Methods</title><p>Serious neurologic AEs of myelitis, radiculitis, aseptic meningitis, and papilledema reported in the tofersen clinical trials are described. Serious AEs were defined according to International Conference for Harmonization guidelines, and neurologic AEs in clinical trials were diagnosed by investigators based on symptoms, clinical examination findings, and diagnostic workup.</p></sec><sec id="mus28372-sec-0003"><title>Results</title><p>Ten participants (approximately 7% of tofersen 100‐mg–treated trial participants) experienced a total of 12 serious neurologic AEs—4 of myelitis, 2 of radiculitis, 2 of aseptic meningitis, and 4 of intracranial hypertension (ICH) and/or papilledema. All events but one resolved either spontaneously, with dosing interruption/modification, or with concomitant therapies. One event was ongoing but improved as of December 2022. While 3 events led to tofersen treatment discontinuation, all other participants were able to remain on treatment. No event was life‐threatening or fatal.</p></sec><sec id="mus28372-sec-0004"><title>Discussion</title><p>Some antisense oligonucleotides (ASOs) have been described as having pro‐inflammatory properties. Aseptic meningitis has been reported with nusinersen; however, myelitis, radiculitis, increased intracranial pressure, and papilledema have not been reported with ASO treatment. These neurologic AEs should be considered when assessing the overall benefit/risk of tofersen treatment for <italic toggle="yes">SOD1</italic>‐ALS. Safety data from the open‐label extension and expanded access program will continue to characterize these events and further inform the safety profile of tofersen in <italic toggle="yes">SOD1</italic>‐ALS.</p></sec></abstract><kwd-group kwd-group-type="author-generated"><kwd id="mus28372-kwd-0001">myelitis</kwd><kwd id="mus28372-kwd-0002">serious adverse events</kwd><kwd id="mus28372-kwd-0003">
+<italic toggle="yes">SOD1</italic>‐ALS</kwd><kwd id="mus28372-kwd-0004">tofersen</kwd><kwd id="mus28372-kwd-0005">VALOR</kwd></kwd-group><funding-group><award-group id="funding-0001"><funding-source><institution-wrap><institution>Biogen
+</institution><institution-id institution-id-type="doi">10.13039/100005614</institution-id></institution-wrap></funding-source></award-group></funding-group><counts><fig-count count="3"/><table-count count="1"/><page-count count="10"/><word-count count="5800"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY-NC-ND</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>June 2025</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_JATSPMC version:6.5.6 mode:remove_FC converted:08.05.2025</meta-value></custom-meta></custom-meta-group></article-meta><notes><fn-group id="mus28372-ntgp-0001"><fn fn-type="funding" id="mus28372-note-0001"><p>
+<bold>Funding:</bold> This work was supported by Biogen and authors include Biogen employees. Biogen provided funding for medical writing support in the development of this paper; Yien Liu, PhD (Excel Scientific Solutions, Fairfield, CT) provided medical writing support, and Cara Farrell (Excel Scientific Solutions, Fairfield, CT) copyedited and styled the manuscript per journal requirements.</p></fn><fn fn-type="generalState" id="mus28372-note-0002"><p>Alexandra Lovett, Toby A. Ferguson, Thos Cochrane, and Laura Fanning at the time the study was conducted.</p></fn></fn-group></notes></front><body id="mus28372-body-0001"><sec id="mus28372-sec-0005"><label>1</label><title>Introduction</title><p>Mutations in the <italic toggle="yes">superoxide dismutase 1</italic> (SOD1) gene cause amyotrophic lateral sclerosis (ALS) in approximately 2% of people living with ALS. <italic toggle="yes">SOD1</italic> mutations cause motor neuron death through toxic gain of function of the mutant SOD1 protein [<xref rid="mus28372-bib-0001" ref-type="bibr">1</xref>, <xref rid="mus28372-bib-0002" ref-type="bibr">2</xref>, <xref rid="mus28372-bib-0003" ref-type="bibr">3</xref>, <xref rid="mus28372-bib-0004" ref-type="bibr">4</xref>].</p><p>Tofersen is an intrathecally administered antisense oligonucleotide (ASO) designed to specifically mediate RNase H‐dependent <italic toggle="yes">SOD1</italic> messenger RNA degradation to reduce synthesis of SOD1 protein [<xref rid="mus28372-bib-0005" ref-type="bibr">5</xref>, <xref rid="mus28372-bib-0006" ref-type="bibr">6</xref>, <xref rid="mus28372-bib-0007" ref-type="bibr">7</xref>]. Tofersen has been evaluated in a 3‐part Phase 1/2/3 study (single ascending dose [SAD], multiple ascending dose [MAD], and Phase 3 [VALOR]) and its open‐label extension (OLE), and is being evaluated in the ongoing Phase 3 ATLAS study.</p><p>In the completed MAD, completed phase 3 VALOR, and OLE studies, 147 participants have received at least 1 dose of tofersen 100 mg for a total of 312.56 participant‐years of exposure as of July 15, 2022; most adverse events (AEs) at the 100 mg dose were of mild‐to‐moderate severity and were related to ALS disease progression, lumbar puncture (LP), or were events commonly seen in the general population [<xref rid="mus28372-bib-0008" ref-type="bibr">8</xref>, <xref rid="mus28372-bib-0009" ref-type="bibr">9</xref>]. Some participants have had serious neurologic AEs including myelitis, radiculitis, aseptic meningitis, and intracranial hypertension (ICH) and/or papilledema. We report here the serious neurologic AEs of participants in the MAD, VALOR, and OLE clinical trials, all of which occurred in participants receiving 100 mg of tofersen.</p></sec><sec sec-type="methods" id="mus28372-sec-0006"><label>2</label><title>Methods</title><p>The protocols and statistical analysis plans for these trials have been previously published [<xref rid="mus28372-bib-0008" ref-type="bibr">8</xref>, <xref rid="mus28372-bib-0009" ref-type="bibr">9</xref>]. The SAD study was a randomized (3:1), double‐blind, placebo‐controlled study of tofersen in 20 participants with ALS and assessed 10, 20, 40, and 60 mg of tofersen. The MAD study was a randomized (3:1), double‐blind, placebo‐controlled study of tofersen in 50 participants with <italic toggle="yes">SOD1</italic>‐ALS and assessed 3 biweekly loading doses followed by 2 monthly maintenance doses of 20, 40, 60, and 100 mg of tofersen [<xref rid="mus28372-bib-0008" ref-type="bibr">8</xref>]. The SAD and MAD studies evaluated the safety, tolerability, and pharmacokinetics (PK) of tofersen. VALOR was a Phase 3, randomized (2:1), multicenter, double‐blind, placebo‐controlled trial in 108 participants with <italic toggle="yes">SOD1</italic>‐ALS evaluating the efficacy, safety, tolerability, PK, and pharmacodynamics of tofersen [<xref rid="mus28372-bib-0009" ref-type="bibr">9</xref>]. VALOR participants were randomized to receive 3 loading doses administered once every 2 weeks over the first month followed by 5 monthly maintenance doses of tofersen (100 mg) or placebo for a total of 6 months [<xref rid="mus28372-bib-0009" ref-type="bibr">9</xref>]. The OLE includes eligible participants (139 enrolled) with <italic toggle="yes">SOD1</italic>‐ALS who completed the SAD, MAD, or VALOR studies. Some participants in the OLE originally received lower doses of tofersen (20, 40, or 60 mg) if transitioning from the SAD or MAD cohorts; OLE dose level was increased to 100 mg after evaluation of safety data from the MAD.</p><p>AEs experienced between the time of the first dose of study treatment and the last study visit as of a July 15, 2022, interim data cut, and serious AEs (SAEs) experienced between the signing of the informed consent form and the final study visit as of the same data cut date were reported. Additional reported follow‐up information for the events up through December 2022, where applicable, are included in the case narratives. In accordance with International Council for Harmonization E2A, an SAE was defined as any untoward medical occurrence that at any dose results in death, is life‐threatening, requires inpatient hospitalization or prolongs existing hospitalization, results in persistent or significant disability/incapacity, results in a congenital anomaly, or is a medically important event in the opinion of the Investigator [<xref rid="mus28372-bib-0010" ref-type="bibr">10</xref>]. Serious neurologic AEs included any AE of myelitis, radiculitis, aseptic meningitis, or ICH/papilledema that met serious criteria.</p><p>Serious neurologic AEs were diagnosed by investigators based on symptoms, clinical examination findings, and diagnostic workup, including magnetic resonance imaging (MRI) and cerebrospinal fluid (CSF) analysis. CSF sampling was done pre‐dosing at each dosing visit. Routine CSF laboratory studies, including CSF white blood cell count (WBC) and CSF protein, were analyzed at local laboratories where the upper limit of normal was defined by each local laboratory and ranged from 0 to 10 cells/μL for CSF WBC and 30 to 60 mg/dL for CSF protein. High CSF protein was defined as the value exceeding the upper limit of normal for the local laboratory reference ranges where the analyses were performed. The shift to high reported in the results section includes shift from normal baseline CSF protein (within the reference range) to high, low baseline CSF protein (below the lower limit of normal) to high, and unknown baseline CSF protein to high. Per protocol, events were assessed by the investigator as related to tofersen if there was a “reasonable possibility” that the event was caused by the study drug, with potential supporting factors including a temporal relationship to the study drug, biological plausibility based on the mechanism of action of tofersen, a positive rechallenge, improvement following discontinuation or reduction in the dose, or lack of an alternative explanation. SAE resolution was determined by the investigator.</p><sec id="mus28372-sec-0007"><label>2.1</label><title>Standard Protocol Approvals, Registrations, and Patient Consents</title><p>The tofersen clinical trials [<xref rid="mus28372-bib-0008" ref-type="bibr">8</xref>, <xref rid="mus28372-bib-0009" ref-type="bibr">9</xref>] were conducted in accordance with Good Clinical Practice Guidelines of the International Council for Harmonization and the ethical principles outlined in the Declaration of Helsinki. The protocols were approved by relevant ethics committees. Written informed consent was provided by the participants or their legal representatives.</p><p>Presented descriptions include information from the Biogen clinical trial database and global pharmacovigilance data. CSF values were obtained during diagnostic LPs as part of the event reported or were obtained pre‐dose during the clinical visit. CSF values listed herein were analyzed at local laboratories.</p></sec></sec><sec sec-type="results" id="mus28372-sec-0008"><label>3</label><title>Results</title><p>A total of 147 participants were exposed to at least 1 dose of tofersen 100 mg (Figure <xref rid="mus28372-fig-0001" ref-type="fig">1</xref>), 145 (98.6%) of whom reported at least 1 AE. The most commonly reported AEs were events consistent with the natural history of ALS, common conditions in the general population, or events related to the LP [<xref rid="mus28372-bib-0008" ref-type="bibr">8</xref>, <xref rid="mus28372-bib-0009" ref-type="bibr">9</xref>].</p><fig position="float" fig-type="FIGURE" id="mus28372-fig-0001" orientation="portrait"><label>FIGURE 1</label><caption><p>Clinical trial participants who received tofersen 100 mg. <italic toggle="yes">N</italic> = 147 inclusive of all participants with <italic toggle="yes">SOD1</italic>‐ALS who received at least 1 dose of tofersen 100 mg. 20 participants enrolled in the SAD, 50 participants enrolled in the MAD (including 2 participants who were previously enrolled in the SAD following washout periods of 32 and 42 weeks) [<xref rid="mus28372-bib-0008" ref-type="bibr">8</xref>], and 108 participants enrolled in VALOR (72 in the tofersen 100 mg treatment group and 36 in the placebo group) [<xref rid="mus28372-bib-0009" ref-type="bibr">9</xref>]. Of the 68 participants enrolled in the SAD and/or MAD studies, 43 participants received at least 1 dose of tofersen 100 mg in the MAD and/or OLE studies. Of the 36 participants who received placebo in the VALOR study, 32 participants subsequently enrolled in the OLE and received at least 1 dose of tofersen 100 mg. MAD, multiple ascending dose; OLE, open‐label extension; SAD, single ascending dose.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-1" orientation="portrait" xlink:href="MUS-71-1006-g001.jpg"><?image-name MUS-71-1006-g001.jpg?><?image-size 62732?><?image-md5 e8d612c06c2b73f9c5ec57606a4d7507?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 434?><?image-original-width 950?><?image-scaled-height 289?><?image-scaled-width 633?><?image-cloudpmc-urn urn:cdn:blobs/6a97/12060635/e8d612c06c2b/MUS-71-1006-g001.jpg?><?thumb-name MUS-71-1006-g001.gif?><?thumb-size 4054?><?thumb-md5 e902b9b66e598580ffa7926fe94a3c0e?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 80?><?thumb-scaled-width 175?><?thumb-cloudpmc-urn urn:cdn:blobs/6a97/12060635/e902b9b66e59/MUS-71-1006-g001.gif?></graphic></fig><p>Tofersen administration was commonly associated with pleocytosis and elevated CSF protein; of the 147 participants exposed to tofersen 100 mg, 79.6% had at least 1 CSF WBC value &gt; 10 cells/μL and 89.7% had a shift to high in CSF protein. The majority of these CSF abnormalities were not reported as AEs per the Investigator; 24.5% of participants reported an AE of MedDRA preferred term CSF protein increased, 16.3% reported an AE of CSF WBC count increased, and 8.8% reported an AE of pleocytosis. None of the reported AEs led to study drug discontinuation or withdrawal from the studies (Figures <xref rid="mus28372-fig-0002" ref-type="fig">2</xref> and <xref rid="mus28372-fig-0003" ref-type="fig">3</xref>).</p><fig position="float" fig-type="FIGURE" id="mus28372-fig-0002" orientation="portrait"><label>FIGURE 2</label><caption><p>CSF protein (A) and WBC (B) levels across the VALOR and OLE studies by visit as of July 15, 2022. Shaded boxes represent the 25th to 75th percentile, whiskers represent furthest data point. Outliers are denoted by a + or °, depending on whether the participant was in the early‐start tofersen group vs. delayed‐start tofersen group, respectively. Number of participants with data at the specified visit is indicated below each sub‐figure. Yellow dashed line indicates the end of VALOR and the start of the OLE. Delayed‐start tofersen 100‐mg participants (blue) received placebo in VALOR followed by tofersen 100 mg in the OLE; early‐start tofersen 100‐mg participants (red) received tofersen 100 mg in VALOR and the OLE. Outliers identified as data entry errors are not included in this figure. CSF, cerebrospinal fluid; DS, delayed‐start; ES, early‐start; OLE, open‐label extension; tof, tofersen; W, week; WBC, white blood cell.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-3" orientation="portrait" xlink:href="MUS-71-1006-g003.jpg"><?image-name MUS-71-1006-g003.jpg?><?image-size 138375?><?image-md5 318877532f71f389a657260fda4b062a?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1135?><?image-original-width 1064?><?image-scaled-height 756?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/6a97/12060635/318877532f71/MUS-71-1006-g003.jpg?><?thumb-name MUS-71-1006-g003.gif?><?thumb-size 4018?><?thumb-md5 69764e96303b0f7f73aff0e043ade3e7?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 107?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/6a97/12060635/69764e96303b/MUS-71-1006-g003.gif?></graphic></fig><fig position="float" fig-type="FIGURE" id="mus28372-fig-0003" orientation="portrait"><label>FIGURE 3</label><caption><p>Peak CSF protein (A) and peak CSF WBC (B) Levels for each individual participant across the VALOR and OLE studies as of July 15, 2022. The peak value for each CSF WBC and protein, whether in tube 1 or tube 2, is indicated in these plots for each individual participant. Participants 2, 7, and 8 had higher CSF WBC and/or CSF protein values at the time of the event (Table <xref rid="mus28372-tbl-0001" ref-type="table">1</xref>) than their peak values in the clinical trial database; these values were diagnostic values obtained outside of the clinical trial, and at shorter intervals than typically measured at the scheduled clinical trial visits. Data points that were identified as data entry errors were excluded, and the next highest peak value for the same participant was utilized for this plot. CSF, cerebrospinal fluid; OLE, open‐label extension; WBC, white blood cell.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="anchor" id="jats-graphic-5" orientation="portrait" xlink:href="MUS-71-1006-g002.jpg"><?image-name MUS-71-1006-g002.jpg?><?image-size 93369?><?image-md5 d78dee0982c5511af8a952433f13b836?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1137?><?image-original-width 1064?><?image-scaled-height 758?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/6a97/12060635/d78dee0982c5/MUS-71-1006-g002.jpg?><?thumb-name MUS-71-1006-g002.gif?><?thumb-size 2877?><?thumb-md5 ed90f13f4bbdd01f110a340ccab1ec28?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 107?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/6a97/12060635/ed90f13f4bbd/MUS-71-1006-g002.gif?></graphic></fig><p>Ten (6.8%) of these 147 tofersen 100‐mg–treated participants experienced serious neurologic AEs in the tofersen trials as of July 15, 2022. No similar events were experienced by participants receiving placebo. The events are described briefly in Table <xref rid="mus28372-tbl-0001" ref-type="table">1</xref>. More detailed participant descriptions can be found in the supplement (Supporting Information, including Figures e‐1, e‐2, e‐3, and e‐4). In summary:</p><table-wrap position="float" id="mus28372-tbl-0001" content-type="TABLE" orientation="portrait"><label>TABLE 1</label><caption><p>Summary of Participant Narratives.</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><col align="center" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Participant</th><th align="center" valign="bottom" rowspan="1" colspan="1">Serious neurologic adverse event</th><th align="center" valign="bottom" rowspan="1" colspan="1">Clinical features</th><th align="center" valign="bottom" rowspan="1" colspan="1">Relatedness of tofersen to event (investigator‐determined)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Number of study doses of tofersen prior to event<xref rid="mus28372-note-0005" ref-type="table-fn">
+<sup>a</sup>
+</xref>
+</th><th align="center" valign="bottom" rowspan="1" colspan="1">Baseline CSF WBC (cells/μL)<xref rid="mus28372-note-0006" ref-type="table-fn">
+<sup>b</sup>
+</xref>
+</th><th align="center" valign="bottom" rowspan="1" colspan="1">Baseline CSF protein (mg/dL)<xref rid="mus28372-note-0006" ref-type="table-fn">
+<sup>b</sup>
+</xref>
+</th><th align="center" valign="bottom" rowspan="1" colspan="1">CSF WBC during event (cells/μL)<xref rid="mus28372-note-0007" ref-type="table-fn">
+<sup>c</sup>
+</xref>
+</th><th align="center" valign="bottom" rowspan="1" colspan="1">CSF protein during event (mg/dL)<xref rid="mus28372-note-0007" ref-type="table-fn">
+<sup>c</sup>
+</xref>
+</th><th align="center" valign="bottom" rowspan="1" colspan="1">CSF opening pressure during event (cm H<sub>2</sub>O)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Action taken with tofersen</th></tr></thead><tbody valign="top"><tr><td align="left" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">Myelitis (reported as neurosarcoidosis)</td><td align="center" valign="top" rowspan="1" colspan="1">Rapidly progressive weakness; numbness; pain; loss of ambulation</td><td align="center" valign="top" rowspan="1" colspan="1">Unrelated</td><td align="center" valign="top" rowspan="1" colspan="1">5</td><td align="center" valign="top" rowspan="1" colspan="1">11</td><td align="center" valign="top" rowspan="1" colspan="1">38</td><td align="center" valign="top" rowspan="1" colspan="1">44 (77% lymphocytes; 23% monocytes) rising to 88 (after 5 days)</td><td align="center" valign="top" rowspan="1" colspan="1">93 rising to 150 (after 5 days)</td><td align="center" valign="top" rowspan="1" colspan="1">Not measured/not reported</td><td align="center" valign="top" rowspan="1" colspan="1">Continued for ~6 months then discontinuation</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">Myelitis</td><td align="center" valign="top" rowspan="1" colspan="1">Worsening bilateral leg weakness; paraplegia; hypoesthesia &lt;T10 dermatome; sphincter dysfunction</td><td align="center" valign="top" rowspan="1" colspan="1">Related</td><td align="center" valign="top" rowspan="1" colspan="1">5</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">31</td><td align="center" valign="top" rowspan="1" colspan="1">21 (90% mononuclear cells)</td><td align="center" valign="top" rowspan="1" colspan="1">79</td><td align="center" valign="top" rowspan="1" colspan="1">Not measured/not reported</td><td align="center" valign="top" rowspan="1" colspan="1">Discontinued</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">3</td><td align="center" valign="top" rowspan="1" colspan="1">Myelitis</td><td align="center" valign="top" rowspan="1" colspan="1">Asymptomatic (hospitalized for CSF pleocytosis; imaging findings suggested myelitis)</td><td align="center" valign="top" rowspan="1" colspan="1">Related</td><td align="center" valign="top" rowspan="1" colspan="1">7</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">44</td><td align="center" valign="top" rowspan="1" colspan="1">23 (rising to 94 after 2 weeks)</td><td align="center" valign="top" rowspan="1" colspan="1">58 (rising to 149 after 2 weeks)</td><td align="center" valign="top" rowspan="1" colspan="1">Not measured/not reported</td><td align="center" valign="top" rowspan="1" colspan="1">Continued</td></tr><tr><td rowspan="2" align="left" valign="top" colspan="1">4</td><td align="center" valign="top" rowspan="1" colspan="1">Bilateral papilledema/intracranial hypertension</td><td align="center" valign="top" rowspan="1" colspan="1">Headaches, blurred/deteriorating vision</td><td align="center" valign="top" rowspan="1" colspan="1">Related</td><td align="center" valign="top" rowspan="1" colspan="1">14<xref rid="mus28372-note-0008" ref-type="table-fn">
+<sup>d</sup>
+</xref>
+</td><td rowspan="2" align="center" valign="top" colspan="1">3</td><td rowspan="2" align="center" valign="top" colspan="1">21</td><td align="center" valign="top" rowspan="1" colspan="1">46</td><td align="center" valign="top" rowspan="1" colspan="1">77</td><td rowspan="2" align="center" valign="top" colspan="1">38</td><td align="center" valign="top" rowspan="1" colspan="1">Continued</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">Myelitis</td><td align="center" valign="top" rowspan="1" colspan="1">Asymptomatic</td><td align="center" valign="top" rowspan="1" colspan="1">Related</td><td align="center" valign="top" rowspan="1" colspan="1">15<xref rid="mus28372-note-0008" ref-type="table-fn">
+<sup>d</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">38</td><td align="center" valign="top" rowspan="1" colspan="1">119</td><td align="center" valign="top" rowspan="1" colspan="1">Two doses held, then resumed</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">5</td><td align="center" valign="top" rowspan="1" colspan="1">Radiculitis</td><td align="center" valign="top" rowspan="1" colspan="1">Back/thigh pain; foot numbness; loss of balance</td><td align="center" valign="top" rowspan="1" colspan="1">Related</td><td align="center" valign="top" rowspan="1" colspan="1">24<xref rid="mus28372-note-0005" ref-type="table-fn">
+<sup>a</sup>
+</xref>
+</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">70</td><td align="center" valign="top" rowspan="1" colspan="1">16</td><td align="center" valign="top" rowspan="1" colspan="1">200</td><td align="center" valign="top" rowspan="1" colspan="1">Not measured/not reported</td><td align="center" valign="top" rowspan="1" colspan="1">Continued</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">6</td><td align="center" valign="top" rowspan="1" colspan="1">Radiculitis</td><td align="center" valign="top" rowspan="1" colspan="1">Low back/leg pain; stiffness; gait changes</td><td align="center" valign="top" rowspan="1" colspan="1">Related</td><td align="center" valign="top" rowspan="1" colspan="1">1</td><td align="center" valign="top" rowspan="1" colspan="1">0</td><td align="center" valign="top" rowspan="1" colspan="1">114</td><td align="center" valign="top" rowspan="1" colspan="1">9</td><td align="center" valign="top" rowspan="1" colspan="1">131</td><td align="center" valign="top" rowspan="1" colspan="1">Not measured/not reported</td><td align="center" valign="top" rowspan="1" colspan="1">Continued</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">7</td><td align="center" valign="top" rowspan="1" colspan="1">Aseptic meningitis</td><td align="center" valign="top" rowspan="1" colspan="1">Severe headache; neck pain; stiffness; fever</td><td align="center" valign="top" rowspan="1" colspan="1">Related</td><td align="center" valign="top" rowspan="1" colspan="1">7</td><td align="center" valign="top" rowspan="1" colspan="1">0</td><td align="center" valign="top" rowspan="1" colspan="1">67.5</td><td align="center" valign="top" rowspan="1" colspan="1">144 (lymphocyte dominant)</td><td align="center" valign="top" rowspan="1" colspan="1">185</td><td align="center" valign="top" rowspan="1" colspan="1">Not measured/not reported</td><td align="center" valign="top" rowspan="1" colspan="1">Discontinued</td></tr><tr><td rowspan="2" align="left" valign="top" colspan="1">8</td><td align="center" valign="top" rowspan="1" colspan="1">Aseptic meningitis</td><td align="center" valign="top" rowspan="1" colspan="1">Headache; neck stiffness; visual disturbances; nausea; confusion</td><td align="center" valign="top" rowspan="1" colspan="1">Related</td><td align="center" valign="top" rowspan="1" colspan="1">5</td><td rowspan="2" align="center" valign="top" colspan="1">2</td><td rowspan="2" align="center" valign="top" colspan="1">32</td><td align="center" valign="top" rowspan="1" colspan="1">317</td><td align="center" valign="top" rowspan="1" colspan="1">95</td><td align="center" valign="top" rowspan="1" colspan="1">Not measured/not reported</td><td align="center" valign="top" rowspan="1" colspan="1">Continued</td></tr><tr><td align="center" valign="top" rowspan="1" colspan="1">Papilledema</td><td align="center" valign="top" rowspan="1" colspan="1">Headache; ear/scalp tingling; visual disturbances; tinnitus; “brain fog”</td><td align="center" valign="top" rowspan="1" colspan="1">Related</td><td align="center" valign="top" rowspan="1" colspan="1">7</td><td align="center" valign="top" rowspan="1" colspan="1">131 (97% lymphocytes)</td><td align="center" valign="top" rowspan="1" colspan="1">197</td><td align="center" valign="top" rowspan="1" colspan="1">18/20 (21, 2 months later)</td><td align="center" valign="top" rowspan="1" colspan="1">Two doses held, then resumed</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">9</td><td align="center" valign="top" rowspan="1" colspan="1">Intracranial hypertension/papilledema</td><td align="center" valign="top" rowspan="1" colspan="1">Headache; fever; photophobia</td><td align="center" valign="top" rowspan="1" colspan="1">Related</td><td align="center" valign="top" rowspan="1" colspan="1">18</td><td align="center" valign="top" rowspan="1" colspan="1">14</td><td align="center" valign="top" rowspan="1" colspan="1">46</td><td align="center" valign="top" rowspan="1" colspan="1">43 (100% lymphocytes)</td><td align="center" valign="top" rowspan="1" colspan="1">145</td><td align="center" valign="top" rowspan="1" colspan="1">25.5</td><td align="center" valign="top" rowspan="1" colspan="1">Two doses held after event was considered resolved, then resumed every other month (subsequent discontinuation)</td></tr><tr><td align="left" valign="top" rowspan="1" colspan="1">10</td><td align="center" valign="top" rowspan="1" colspan="1">Intracranial hypertension/papilledema</td><td align="center" valign="top" rowspan="1" colspan="1">Recurrent bitemporal/bioccipital headaches</td><td align="center" valign="top" rowspan="1" colspan="1">Related</td><td align="center" valign="top" rowspan="1" colspan="1">9</td><td align="center" valign="top" rowspan="1" colspan="1">2</td><td align="center" valign="top" rowspan="1" colspan="1">62</td><td align="center" valign="top" rowspan="1" colspan="1">23</td><td align="center" valign="top" rowspan="1" colspan="1">82</td><td align="center" valign="top" rowspan="1" colspan="1">28</td><td align="center" valign="top" rowspan="1" colspan="1">Continued</td></tr></tbody></table><table-wrap-foot id="mus28372-ntgp-0002"><fn id="mus28372-note-0003"><p>
+<italic toggle="yes">Note</italic>: Baseline CSF values are obtained from the clinical trial database; CSF values during the event are obtained from the global pharmacovigilance data.</p></fn><fn id="mus28372-note-0004"><p>Abbreviations: CSF, cerebrospinal fluid; LP, lumbar puncture; OLE, open‐label extension; SAE, serious adverse event; WBC, white blood cell.</p></fn><fn id="mus28372-note-0005"><label>
+<sup>a</sup>
+</label><p>All study doses of tofersen were 100 mg with the exception of participant 5; participant additionally received doses at 40 and 60 mg before dosing was escalated to 100 mg as outlined in the narrative. Doses of placebo are excluded from the total doses in the table.</p></fn><fn id="mus28372-note-0006"><label>
+<sup>b</sup>
+</label><p>Baseline CSF values are the pre‐tofersen baseline for the study in which the SAE occurred (VALOR or OLE) and are obtained from the clinical trial database.</p></fn><fn id="mus28372-note-0007"><label>
+<sup>c</sup>
+</label><p>CSF values during the event are obtained from the global pharmacovigilance data and were either from scheduled LPs in the clinical trial or from diagnostic LPs outside of the scheduled clinical trial LPs.</p></fn><fn id="mus28372-note-0008"><label>
+<sup>d</sup>
+</label><p>Participant 4 received 3 loading doses followed by a 3‐month dosing gap due to the COVID‐19 pandemic followed by monthly maintenance doses.</p></fn></table-wrap-foot></table-wrap><p>Four participants (2.7%) experienced SAEs of myelitis, with 3 assessed as related to tofersen by the Investigator. Prior to tofersen treatment the participants had baseline CSF WBC ranging from 1 to 11 cells/μL and baseline CSF protein ranging from 21 to 44 mg/dL. The participants then had a range of 5–15 doses of tofersen prior to the onset of myelitis, during which CSF WBC ranged from 21 to 44 cells/μL, and CSF protein from 58 to 150 mg/dL. Treatment varied among participants, and included intravenous methylprednisolone with oral steroid taper, plasma exchange, mycophenolate mofetil, and TNFα monoclonal antibody therapy. Action with tofersen varied, with participants continuing tofersen without interruption, interrupting until resolution, or discontinuation of tofersen either immediately or after a period of immunomodulatory treatment.</p><p>Two participants (1.4%) experienced SAEs of radiculitis, both related to tofersen as assessed by the Investigator. Prior to tofersen treatment, the participants had a baseline range of CSF WBC from 0 to 2 cells/μL, and a baseline CSF protein of 70 to 114 mg/dL. The participants then had a range of 1 to 24 doses of tofersen prior to the onset of radiculitis, during which the CSF WBC ranged from 9 to 16 cells/μL and the CSF protein ranged from 131 to 200 mg/dL. Treatment included supportive care with either nonsteroidal anti‐inflammatory drugs or other analgesics. Both continued tofersen without interruption.</p><p>Two participants (1.4%) experienced SAEs of aseptic meningitis, both related to tofersen as assessed by the Investigator. Prior to tofersen treatment, the participants had a baseline range of CSF WBC from 0 to 2 cells/μL, and a baseline CSF protein of 32 to 67.5 mg/dL. The participants then received a range of 5 to 7 doses of tofersen prior to the onset of aseptic meningitis, during which the CSF WBC ranged from 144 to 317 cells/μL, and CSF protein from 95 to 185 mg/dL. Treatment varied and included empiric antibiotics and anti‐viral therapy, methylprednisolone, and analgesics. Action with tofersen varied, including continuing without interruption and discontinuation.</p><p>Four participants (2.7%) experienced SAEs of papilledema and/or ICH, all related to tofersen as assessed by the Investigator. Prior to tofersen treatment, the participants had baseline CSF WBC ranging from 2 to 14 cells/μL, and CSF protein ranging from 21 to 62 mg/dL. The participants then had a range of 7 to 18 doses of tofersen prior to the onset of papilledema and/or ICH during which the CSF WBC ranged from 23 to 131 cells/μL, and the CSF protein from 77 to 197 mg/dL. Treatment varied, and included acetazolamide, methylprednisolone, and analgesics. Action with tofersen varied, and included continuing without interruption, interruption prior to resuming therapy, and discontinuation after a period of interruption.</p></sec><sec sec-type="discussion" id="mus28372-sec-0009"><label>4</label><title>Discussion</title><p>Serious neurologic AEs have been reported in tofersen clinical trials and have been published in the literature [<xref rid="mus28372-bib-0009" ref-type="bibr">9</xref>]. In this paper, additional details regarding the presentation, clinical course, and management of these 12 cases reported as of July 15, 2022, are provided to further inform healthcare providers and patients.</p><p>Four participants in tofersen clinical trials had clinical or radiographic features consistent with myelitis (participants 1–4); 2 participants (participants 3, 4) were asymptomatic and only discovered following imaging to evaluate other findings. One participant (participant 1) had preexisting systemic sarcoidosis, though it was quiescent at study enrollment apart from uveitis. Although this participant had a complex medical history and potential alternative explanation for the development of myelitis, in the context of the other cases of myelitis reported in the tofersen clinical trials, this case is included for the sake of completeness. Three of these 4 participants were tested for aquaporin‐4 antibodies, which can be observed in neuromyelitis optica spectrum disorder, and 2 were tested for anti‐myelin oligodendrocyte glycoprotein (MOG) antibodies, which can be observed in MOG‐immunoglobulin G‐associated‐associated encephalomyelitis; neither antibody was detected [<xref rid="mus28372-bib-0011" ref-type="bibr">11</xref>]. Participants 5 and 6 were reported to have radiculitis. Myelitis and radiculitis likely represent clinical manifestations of a neuroinflammatory response to tofersen.</p><p>Four participants had events featuring increased intracranial pressure (ICP) with papilledema (participants 4, 8, 9, 10), 2 of whom (participants 4, 8) had preceding features consistent with aseptic meningitis. Meningitis can lead to elevated ICP, possibly through impairment of CSF outflow and/or increased CSF viscosity [<xref rid="mus28372-bib-0012" ref-type="bibr">12</xref>]. In 1 participant (participant 4), the events of aseptic meningitis, papilledema, and myelitis occurred within a few months of each other, which prompts the question of whether increased ICP was another manifestation of a neuroinflammatory response that could unify and partially explain the diagnoses of all 10 participants described herein.</p><p>There is a possibility that tofersen is associated with increased ICP via a noninflammatory mechanism such as CSF outflow obstruction. Importantly, there was no imaging evidence of hydrocephalus in any participants, as distinguished from what has been described with other intrathecal ASOs [<xref rid="mus28372-bib-0013" ref-type="bibr">13</xref>], and the participants' headaches, visual symptoms, and papilledema all demonstrated improvement—either spontaneously, or with treatment including acetazolamide and/or steroids. Of note, 2 of the 4 events involving intracranial hypertension/papilledema were in participants with a medical history of obesity, a known risk factor for elevated ICP [<xref rid="mus28372-bib-0012" ref-type="bibr">12</xref>]. Venous sinus thrombosis was not identified in these participants.</p><p>CSF pleocytosis and elevated CSF protein were observed in all participants who experienced serious neurologic events (Table <xref rid="mus28372-tbl-0001" ref-type="table">1</xref>); however, not all participants who reported these SAEs had their peak CSF WBC/protein values at the time of their clinical event (Figures <xref rid="mus28372-fig-0002" ref-type="fig">2</xref> and <xref rid="mus28372-fig-0003" ref-type="fig">3</xref>), and similar elevations in CSF WBC and/or protein were common in tofersen‐treated participants who did not experience serious neurologic AEs. These CSF laboratory findings are therefore not predictive of the development of a neurologic SAE. Additionally, review of <italic toggle="yes">SOD1</italic> mutation variants did not demonstrate a predisposition to these serious neurologic AEs.</p><p>Intrathecal ASO therapy is a relatively novel strategy to target neurogenetic diseases. Some ASOs have been described to have pro‐inflammatory properties attributed to their phosphorothioate backbone, which can activate complement through Factor H binding [<xref rid="mus28372-bib-0014" ref-type="bibr">14</xref>, <xref rid="mus28372-bib-0015" ref-type="bibr">15</xref>], leading to increased production of complement split products Bb and C3a [<xref rid="mus28372-bib-0014" ref-type="bibr">14</xref>]. However, complement activation in response to ASOs has been best characterized in non‐human primates, which may be more susceptible than humans [<xref rid="mus28372-bib-0014" ref-type="bibr">14</xref>, <xref rid="mus28372-bib-0016" ref-type="bibr">16</xref>]. Systemically administered ASOs can accumulate in lymph nodes in animals, which may suggest their potential to induce inflammation [<xref rid="mus28372-bib-0014" ref-type="bibr">14</xref>, <xref rid="mus28372-bib-0015" ref-type="bibr">15</xref>]. ASO material can also accumulate within macrophages, and ASOs can lead to cellular activation, crosstalk between complement pathways and toll‐like receptors, and cytokine production, which can all contribute to a pro‐inflammatory response [<xref rid="mus28372-bib-0014" ref-type="bibr">14</xref>, <xref rid="mus28372-bib-0015" ref-type="bibr">15</xref>].</p><p>Published literature on the clinical safety of intrathecal ASO therapy is limited. A literature search was conducted to identify the safety profile of other intrathecal ASO treatments approved for neurologic diseases, which resulted in several papers describing the safety of nusinersen in clinical trials and in the post‐marketing setting. Events of myelitis, radiculitis, increased ICP, and papilledema do not appear to have been described with nusinersen. Aseptic meningitis has been reported with nusinersen, and is listed as an adverse reaction by the European Medicines Agency [<xref rid="mus28372-bib-0017" ref-type="bibr">17</xref>, <xref rid="mus28372-bib-0018" ref-type="bibr">18</xref>, <xref rid="mus28372-bib-0019" ref-type="bibr">19</xref>]. The mechanism of aseptic meningitis with nusinersen is unclear but may be due to a nusinersen‐mediated immunologic hypersensitivity, and/or direct irritation of the meninges by route of drug administration [<xref rid="mus28372-bib-0018" ref-type="bibr">18</xref>].</p><p>While immune dysregulation has been observed in <italic toggle="yes">SOD1</italic>‐ALS [<xref rid="mus28372-bib-0020" ref-type="bibr">20</xref>, <xref rid="mus28372-bib-0021" ref-type="bibr">21</xref>, <xref rid="mus28372-bib-0022" ref-type="bibr">22</xref>, <xref rid="mus28372-bib-0023" ref-type="bibr">23</xref>], there is very little literature suggesting a link between these neuroinflammatory events seen and the disease itself. One epidemiologic study reported that certain autoimmune diseases conferred an increased risk of ALS [<xref rid="mus28372-bib-0024" ref-type="bibr">24</xref>], and there have been 3 published case reports of co‐occurring ALS and seropositive NMO‐SD, each describing several years between the onset of the 2 disorders [<xref rid="mus28372-bib-0025" ref-type="bibr">25</xref>, <xref rid="mus28372-bib-0026" ref-type="bibr">26</xref>, <xref rid="mus28372-bib-0027" ref-type="bibr">27</xref>].</p><p>As these events were reported only in tofersen‐treated participants and not in placebo‐treated participants, they are likely caused by tofersen.</p><p>In the context of the risks of serious neurologic events of myelitis, radiculitis, aseptic meningitis, and increased ICP/papilledema, prescribers should consider the overall benefit/risk profile when considering treatment of their patients with tofersen. Tofersen has been available globally via an expanded access program (EAP) since July 2021. Safety data collected in the OLE study and EAP [<xref rid="mus28372-bib-0028" ref-type="bibr">28</xref>, <xref rid="mus28372-bib-0029" ref-type="bibr">29</xref>] will allow continued characterization of these neurologic events and further inform the safety profile of tofersen across the <italic toggle="yes">SOD1</italic>‐ALS disease spectrum.</p></sec><sec sec-type="conclusions" id="mus28372-sec-0010"><label>5</label><title>Conclusion</title><p>Some participants treated with tofersen 100 mg have reported serious neurologic events. Although some events prompted discontinuation of tofersen, most participants were able to remain on tofersen, and most events resolved spontaneously, with dosing interruption/cessation, or with management according to the general standard of care. Some participants with myelitis and radiculitis were treated with oral or intravenous corticosteroids or other immunosuppressive treatments and improved. However, there are inadequate data to determine if these interventions may help modify the course of these events. Continued collection of safety data in clinical trials and in the post‐marketing setting will inform potential treatment of tofersen‐associated myelitis and radiculitis. Future safety data will also aid in further characterizing the tofersen safety profile over time. Physicians treating people with <italic toggle="yes">SOD1</italic>‐ALS should be aware of these serious neurologic events and should weigh these risks against the benefits of tofersen treatment.</p></sec><sec id="mus28372-sec-0016"><title>Author Contributions</title><p>
+<bold>Alexandra Lovett:</bold> conceptualization, methodology, validation, formal analysis, writing – review and editing, writing – original draft, investigation. <bold>Sowmya Chary:</bold> formal analysis, writing – review and editing, writing – original draft, conceptualization, methodology, validation, investigation. <bold>Suma Babu:</bold> validation, writing – review and editing, formal analysis, investigation. <bold>Gaëlle Bruneteau:</bold> formal analysis, validation, writing – review and editing, investigation. <bold>Jonathan D. Glass:</bold> validation, formal analysis, writing – review and editing, investigation. <bold>Merete Karlsborg:</bold> formal analysis, validation, writing – review and editing, investigation. <bold>Shafeeq Ladha:</bold> formal analysis, validation, writing – review and editing, investigation. <bold>Keith Mayl:</bold> writing – review and editing, formal analysis, validation, investigation. <bold>Christopher McDermott:</bold> formal analysis, validation, writing – review and editing, investigation. <bold>Robert C. Bucelli:</bold> formal analysis, writing – review and editing, investigation. <bold>Adriano Chiò:</bold> formal analysis, writing – review and editing, investigation. <bold>Toby A. Ferguson:</bold> formal analysis, writing – review and editing, investigation, supervision. <bold>Thos Cochrane:</bold> conceptualization, methodology, formal analysis, writing – review and editing, writing – original draft, investigation. <bold>Stephanie Fradette:</bold> conceptualization, methodology, writing – review and editing, formal analysis, writing – original draft, investigation. <bold>Karen Smirnakis:</bold> formal analysis, methodology, conceptualization, writing – review and editing, supervision, investigation. <bold>Jennifer Inra:</bold> formal analysis, investigation, writing – review and editing. <bold>Sohail Malek:</bold> investigation, formal analysis, writing – review and editing. <bold>Laura Fanning:</bold> methodology, conceptualization, formal analysis, writing – review and editing, writing – original draft, investigation.</p></sec><sec id="mus28372-sec-0014"><title>Ethics Statement</title><p>We confirm that we have read the Journal's position on issues involved in ethical publication and affirm that this report is consistent with those guidelines.</p></sec><sec sec-type="COI-statement" id="mus28372-sec-0015"><title>Conflicts of Interest</title><p>Alexandra Lovett was an employee of Biogen at the time the study was conducted; Sowmya Chary is an employee of Biogen and may hold stock in the company; Suma Babu has received research funding from NIH, OrphAI Therapeutics, Biogen, Ionis, Novartis, Denali; institutional consulting fees from OrphAI therapeutics, Biogen, Uniqure and MarvelBiome; and platform trial coordination and center activities from HEALEY ALS, NIH‐NINDS. Gaëlle Bruneteau served as a site investigator for several clinical trials sponsored by Biogen; Jonathan D. Glass' institution was contracted by Biogen as a trial site and was paid for those services; received grants from MDA and NIH ALSA; and received commercial sponsorships for clinical trials from Amylyx, Biogen, Cytokinetics, and Neuralstem; Merete Karlsborg reports no disclosures relevant to the manuscript; Shafeeq Ladha serves as a consultant to, and is on the advisory board for, Biogen; and served as a site investigator for clinical trials sponsored by Biogen; Keith Mayl served as an investigator for several clinical trials sponsored by Biogen; Christopher McDermott received grants from MND Association and NIHR; and served as a consultant for Amylyx, Ferrer, Orion Pharma, and Orphazyme; Robert C. Bucelli serves as a consultant to, and is on the advisory board for, Biogen; and served as a site investigator for clinical trials sponsored by Biogen; Adriano Chiò received grants/contracts from Biogen; received consulting fees from Biogen, Cytokinetics, Denali Pharma, Lilly, and Mitsubishi Tanabe; and received payment/honoraria for Amylyx, Biogen, Cytokinetics, and DSMB for ABScience and AL‐S Pharma AG; Toby A. Ferguson was an employee of Biogen at the time the study was conducted; Thos Cochrane was an employee of Biogen at the time the study was conducted; Stephanie Fradette is an employee of Biogen and may hold stock in the company; Karen Smirnakis is an employee of Biogen and may hold stock in the company; Jennifer Inra is an employee of Biogen and may hold stock in the company; Sohail Malek is an employee of Biogen and may hold stock in the company; Laura Fanning was an employee of Biogen at the time the study was conducted.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material id="mus28372-supitem-0001" position="float" content-type="local-data" orientation="portrait"><caption><p>
+<bold>Data S1.</bold> Supporting Information.</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="MUS-71-1006-s001.docx" position="float" orientation="portrait"><?suppdata-name MUS-71-1006-s001.docx?><?suppdata-size 4861069?><?suppdata-md5 a00b36255a40f06e134e4f215b9e392d?><?suppdata-image-server-status NEVER_LOAD?><?suppdata-mime-type application?><?suppdata-mime-sub-type vnd.openxmlformats-officedocument.wordprocessingml.document?><?suppdata-cloudpmc-urn urn:app:6a97/12060635/a00b36255a40/MUS-71-1006-s001.docx?></media></supplementary-material></sec></body><back><ack id="mus28372-sec-0013"><title>Acknowledgments</title><p>The authors had full editorial control of the manuscript and provided their final approval of all content. The authors acknowledge Irene Tien, MD, Manjit McNeill, MSc, Siva Vobhilineni, Xin Jin, Hui‐Chun Hsu, Annapurna Dudala, Dipti Govindaraju, and Han Zhu for their support in review, quality check, and biostatistical figures; the clinical trial participants; and all of the staff at the clinical trial sites who were involved in their care.</p></ack><sec sec-type="data-availability" id="mus28372-sec-0012"><title>Data Availability Statement</title><p>The Biogen Clinical Trial Transparency and Data Sharing Policy is available at <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://clinicalresearch.biogen.com/" ext-link-type="uri" specific-use="software is-supplemented-by">https://clinicalresearch.biogen.com/</ext-link>. Individual participant data collected during the trial, which supports the research proposal, may be shared after anonymization and upon approval of the research proposal. Biogen commits to share patient‐level data, study‐level data, CSRs, and protocols with qualified scientific researchers who provide a methodologically sound proposal. Data requests are initially reviewed by Vivli and Biogen for completeness and other parameters (relating to scope and meeting Biogen's policies) and are then reviewed by an Independent Review Panel. Deidentified data and documents will be shared under agreements that further protect against participant reidentification. To request access to data, please visit <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://vivli.org/" ext-link-type="uri" specific-use="software is-supplemented-by">https://vivli.org/</ext-link>.</p></sec><ref-list content-type="cited-references" id="mus28372-bibl-0001"><title>References</title><ref id="mus28372-bib-0001"><label>1</label><mixed-citation publication-type="journal" id="mus28372-cit-0001">
+<string-name name-style="western">
+<given-names>R. K.</given-names>
+<surname>Bunton‐Stasyshyn</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. A.</given-names>
+<surname>Saccon</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Fratta</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>E. M.</given-names>
+<surname>Fisher</surname>
+</string-name>, “<article-title>SOD1 Function and Its Implications for Amyotrophic Lateral Sclerosis Pathology: New and Renascent Themes</article-title>,” <source>Neuroscientist</source>
+<volume>21</volume>, no. <issue>5</issue> (<year>2015</year>): <fpage>519</fpage>–<lpage>529</lpage>.<pub-id pub-id-type="pmid">25492944</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1177/1073858414561795</pub-id></mixed-citation></ref><ref id="mus28372-bib-0002"><label>2</label><mixed-citation publication-type="journal" id="mus28372-cit-0002">
+<string-name name-style="western">
+<given-names>H.</given-names>
+<surname>Ilieva</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Polymenidou</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D. W.</given-names>
+<surname>Cleveland</surname>
+</string-name>, “<article-title>Non‐Cell Autonomous Toxicity in Neurodegenerative Disorders: ALS and Beyond</article-title>,” <source>Journal of Cell Biology</source>
+<volume>187</volume>, no. <issue>6</issue> (<year>2009</year>): <fpage>761</fpage>–<lpage>772</lpage>.<pub-id pub-id-type="pmid">19951898</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.200908164</pub-id><pub-id pub-id-type="pmcid">PMC2806318</pub-id></mixed-citation></ref><ref id="mus28372-bib-0003"><label>3</label><mixed-citation publication-type="journal" id="mus28372-cit-0003">
+<string-name name-style="western">
+<given-names>R. A.</given-names>
+<surname>Saccon</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. K. A.</given-names>
+<surname>Bunton‐Stasyshyn</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E. M. C.</given-names>
+<surname>Fisher</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Fratta</surname>
+</string-name>, “<article-title>Is SOD1 Loss of Function Involved in Amyotrophic Lateral Sclerosis?</article-title>,” <source>Brain</source>
+<volume>136</volume>, no. <issue>Pt 8</issue> (<year>2013</year>): <fpage>2342</fpage>–<lpage>2358</lpage>.<pub-id pub-id-type="pmid">23687121</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/brain/awt097</pub-id><pub-id pub-id-type="pmcid">PMC3722346</pub-id></mixed-citation></ref><ref id="mus28372-bib-0004"><label>4</label><mixed-citation publication-type="journal" id="mus28372-cit-0004">
+<string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Sau</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>De Biasi</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Vitellaro‐Zuccarello</surname>
+</string-name>, et al., “<article-title>Mutation of SOD1 in ALS: A Gain of a Loss of Function</article-title>,” <source>Human Molecular Genetics</source>
+<volume>16</volume>, no. <issue>13</issue> (<year>2007</year>): <fpage>1604</fpage>–<lpage>1618</lpage>.<pub-id pub-id-type="pmid">17504823</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/hmg/ddm110</pub-id></mixed-citation></ref><ref id="mus28372-bib-0005"><label>5</label><mixed-citation publication-type="journal" id="mus28372-cit-0005">
+<string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Kurreck</surname>
+</string-name>, “<article-title>Antisense Technologies. Improvement Through Novel Chemical Modifications</article-title>,” <source>European Journal of Biochemistry</source>
+<volume>270</volume>, no. <issue>8</issue> (<year>2003</year>): <fpage>1628</fpage>–<lpage>1644</lpage>.<pub-id pub-id-type="pmid">12694176</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1046/j.1432-1033.2003.03555.x</pub-id></mixed-citation></ref><ref id="mus28372-bib-0006"><label>6</label><mixed-citation publication-type="journal" id="mus28372-cit-0006">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>McCampbell</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Cole</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. J.</given-names>
+<surname>Wegener</surname>
+</string-name>, et al., “<article-title>Antisense Oligonucleotides Extend Survival and Reverse Decrement in Muscle Response in ALS Models</article-title>,” <source>Journal of Clinical Investigation</source>
+<volume>128</volume>, no. <issue>8</issue> (<year>2018</year>): <fpage>3558</fpage>–<lpage>3567</lpage>.<pub-id pub-id-type="pmid">30010620</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1172/JCI99081</pub-id><pub-id pub-id-type="pmcid">PMC6063493</pub-id></mixed-citation></ref><ref id="mus28372-bib-0007"><label>7</label><mixed-citation publication-type="journal" id="mus28372-cit-0007">
+<string-name name-style="western">
+<given-names>R. A.</given-names>
+<surname>Smith</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T. M.</given-names>
+<surname>Miller</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Yamanaka</surname>
+</string-name>, et al., “<article-title>Antisense Oligonucleotide Therapy for Neurodegenerative Disease</article-title>,” <source>Journal of Clinical Investigation</source>
+<volume>116</volume>, no. <issue>8</issue> (<year>2006</year>): <fpage>2290</fpage>–<lpage>2296</lpage>.<pub-id pub-id-type="pmid">16878173</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1172/JCI25424</pub-id><pub-id pub-id-type="pmcid">PMC1518790</pub-id></mixed-citation></ref><ref id="mus28372-bib-0008"><label>8</label><mixed-citation publication-type="journal" id="mus28372-cit-0008">
+<string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Miller</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Cudkowicz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>P. J.</given-names>
+<surname>Shaw</surname>
+</string-name>, et al., “<article-title>Phase 1‐2 Trial of Antisense Oligonucleotide Tofersen for <italic toggle="yes">SOD1</italic> ALS</article-title>,” <source>New England Journal of Medicine</source>
+<volume>383</volume>, no. <issue>2</issue> (<year>2020</year>): <fpage>109</fpage>–<lpage>119</lpage>.<pub-id pub-id-type="pmid">32640130</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1056/NEJMoa2003715</pub-id></mixed-citation></ref><ref id="mus28372-bib-0009"><label>9</label><mixed-citation publication-type="journal" id="mus28372-cit-0009">
+<string-name name-style="western">
+<given-names>T. M.</given-names>
+<surname>Miller</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M. E.</given-names>
+<surname>Cudkowicz</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Genge</surname>
+</string-name>, et al., “<article-title>Trial of Antisense Oligonucleotide Tofersen for <italic toggle="yes">SOD1</italic> ALS</article-title>,” <source>New England Journal of Medicine</source>
+<volume>387</volume>, no. <issue>12</issue> (<year>2022</year>): <fpage>1099</fpage>–<lpage>1110</lpage>.<pub-id pub-id-type="pmid">36129998</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1056/NEJMoa2204705</pub-id></mixed-citation></ref><ref id="mus28372-bib-0010"><label>10</label><mixed-citation publication-type="miscellaneous" id="mus28372-cit-0010">
+<article-title>ICH Topic E 2 A Clinical Safety Data Management: Definitions and Standards for Expedited Reporting</article-title>.</mixed-citation></ref><ref id="mus28372-bib-0011"><label>11</label><mixed-citation publication-type="journal" id="mus28372-cit-0011">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Jarius</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Paul</surname>
+</string-name>, <string-name name-style="western">
+<given-names>O.</given-names>
+<surname>Aktas</surname>
+</string-name>, et al., “<article-title>MOG Encephalomyelitis: International Recommendations on Diagnosis and Antibody Testing</article-title>,” <source>Journal of Neuroinflammation</source>
+<volume>15</volume>, no. <issue>1</issue> (<year>2018</year>): <fpage>134</fpage>.<pub-id pub-id-type="pmid">29724224</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1186/s12974-018-1144-2</pub-id><pub-id pub-id-type="pmcid">PMC5932838</pub-id></mixed-citation></ref><ref id="mus28372-bib-0012"><label>12</label><mixed-citation publication-type="journal" id="mus28372-cit-0012">
+<string-name name-style="western">
+<given-names>J. S.</given-names>
+<surname>Xie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Donaldson</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Margolin</surname>
+</string-name>, “<article-title>Papilledema: A Review of Etiology, Pathophysiology, Diagnosis, and Management</article-title>,” <source>Survey of Ophthalmology</source>
+<volume>67</volume>, no. <issue>4</issue> (<year>2022</year>): <fpage>1135</fpage>–<lpage>1159</lpage>.<pub-id pub-id-type="pmid">34813854</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.survophthal.2021.11.007</pub-id></mixed-citation></ref><ref id="mus28372-bib-0013"><label>13</label><mixed-citation publication-type="journal" id="mus28372-cit-0013">
+<string-name name-style="western">
+<given-names>T. B.</given-names>
+<surname>Stoker</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K. E. R.</given-names>
+<surname>Andresen</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>R. A.</given-names>
+<surname>Barker</surname>
+</string-name>, “<article-title>Hydrocephalus Complicating Intrathecal Antisense Oligonucleotide Therapy for Huntington's Disease</article-title>,” <source>Movement Disorders</source>
+<volume>36</volume>, no. <issue>1</issue> (<year>2021</year>): <fpage>263</fpage>–<lpage>264</lpage>.<pub-id pub-id-type="pmid">33125799</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/mds.28359</pub-id><pub-id pub-id-type="pmcid">PMC7894279</pub-id></mixed-citation></ref><ref id="mus28372-bib-0014"><label>14</label><mixed-citation publication-type="journal" id="mus28372-cit-0014">
+<string-name name-style="western">
+<given-names>K. S.</given-names>
+<surname>Frazier</surname>
+</string-name>, “<article-title>Antisense Oligonucleotide Therapies: The Promise and the Challenges From a Toxicologic Pathologist's Perspective</article-title>,” <source>Toxicologic Pathology</source>
+<volume>43</volume>, no. <issue>1</issue> (<year>2015</year>): <fpage>78</fpage>–<lpage>89</lpage>.<pub-id pub-id-type="pmid">25385330</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1177/0192623314551840</pub-id></mixed-citation></ref><ref id="mus28372-bib-0015"><label>15</label><mixed-citation publication-type="journal" id="mus28372-cit-0015">
+<string-name name-style="western">
+<given-names>E. C.</given-names>
+<surname>Kuijper</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. J.</given-names>
+<surname>Bergsma</surname>
+</string-name>, <string-name name-style="western">
+<given-names>W. W. M. P.</given-names>
+<surname>Pijnappel</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Aartsma‐Rus</surname>
+</string-name>, “<article-title>Opportunities and Challenges for Antisense Oligonucleotide Therapies</article-title>,” <source>Journal of Inherited Metabolic Disease</source>
+<volume>44</volume>, no. <issue>1</issue> (<year>2021</year>): <fpage>72</fpage>–<lpage>87</lpage>.<pub-id pub-id-type="pmid">32391605</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/jimd.12251</pub-id><pub-id pub-id-type="pmcid">PMC7891411</pub-id></mixed-citation></ref><ref id="mus28372-bib-0016"><label>16</label><mixed-citation publication-type="journal" id="mus28372-cit-0016">
+<string-name name-style="western">
+<given-names>S. T.</given-names>
+<surname>Crooke</surname>
+</string-name>, <string-name name-style="western">
+<given-names>B. F.</given-names>
+<surname>Baker</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T. J.</given-names>
+<surname>Kwoh</surname>
+</string-name>, et al., “<article-title>Integrated Safety Assessment of 2′‐o‐Methoxyethyl Chimeric Antisense Oligonucleotides in Nonhuman Primates and Healthy Human Volunteers</article-title>,” <source>Molecular Therapy</source>
+<volume>24</volume>, no. <issue>10</issue> (<year>2016</year>): <fpage>1771</fpage>–<lpage>1782</lpage>.<pub-id pub-id-type="pmid">27357629</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/mt.2016.136</pub-id><pub-id pub-id-type="pmcid">PMC5112040</pub-id></mixed-citation></ref><ref id="mus28372-bib-0017"><label>17</label><mixed-citation publication-type="miscellaneous" id="mus28372-cit-0017">
+<collab collab-type="authors">European Medicines Agency</collab>
+, <article-title>Scientific Conclusions and Grounds for the Variation to the Terms of the Marketing Authorisation(s)</article-title>.</mixed-citation></ref><ref id="mus28372-bib-0018"><label>18</label><mixed-citation publication-type="journal" id="mus28372-cit-0018">
+<string-name name-style="western">
+<given-names>O.</given-names>
+<surname>Moshe‐Lilie</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L. P.</given-names>
+<surname>Riccelli</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C.</given-names>
+<surname>Karam</surname>
+</string-name>, “<article-title>Possible Recurrent Aseptic Meningitis Associated With Nusinersen Therapy</article-title>,” <source>Muscle &amp; Nerve</source>
+<volume>62</volume>, no. <issue>5</issue> (<year>2020</year>): <fpage>E79</fpage>–<lpage>e80</lpage>.<pub-id pub-id-type="pmid">32779205</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/mus.27042</pub-id></mixed-citation></ref><ref id="mus28372-bib-0019"><label>19</label><mixed-citation publication-type="journal" id="mus28372-cit-0019">
+<string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Yao</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>Peng</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Luo</surname>
+</string-name>, et al., “<article-title>Nusinersen Effectiveness and Safety in Pediatric Patients With 5q‐Spinal Muscular Atrophy: A Multi‐Center Disease Registry in China</article-title>,” <source>Journal of Neurology</source>
+<volume>271</volume>, no. <issue>8</issue> (<year>2024</year>): <fpage>5378</fpage>–<lpage>5391</lpage>.<pub-id pub-id-type="pmid">38954034</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s00415-024-12442-w</pub-id><pub-id pub-id-type="pmcid">PMC11319379</pub-id></mixed-citation></ref><ref id="mus28372-bib-0020"><label>20</label><mixed-citation publication-type="journal" id="mus28372-cit-0020">
+<string-name name-style="western">
+<given-names>D. R.</given-names>
+<surname>Beers</surname>
+</string-name> and <string-name name-style="western">
+<given-names>S. H.</given-names>
+<surname>Appel</surname>
+</string-name>, “<article-title>Immune Dysregulation in Amyotrophic Lateral Sclerosis: Mechanisms and Emerging Therapies</article-title>,” <source>Lancet Neurology</source>
+<volume>18</volume>, no. <issue>2</issue> (<year>2019</year>): <fpage>211</fpage>–<lpage>220</lpage>.<pub-id pub-id-type="pmid">30663610</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/S1474-4422(18)30394-6</pub-id></mixed-citation></ref><ref id="mus28372-bib-0021"><label>21</label><mixed-citation publication-type="journal" id="mus28372-cit-0021">
+<string-name name-style="western">
+<given-names>C. H.</given-names>
+<surname>Lu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Allen</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Oei</surname>
+</string-name>, et al., “<article-title>Systemic Inflammatory Response and Neuromuscular Involvement in Amyotrophic Lateral Sclerosis</article-title>,” <source>Neurology Neuroimmunology &amp; Neuroinflammation</source>
+<volume>3</volume>, no. <issue>4</issue> (<year>2016</year>): <elocation-id>e244</elocation-id>.<pub-id pub-id-type="pmid">27308305</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1212/NXI.0000000000000244</pub-id><pub-id pub-id-type="pmcid">PMC4897985</pub-id></mixed-citation></ref><ref id="mus28372-bib-0022"><label>22</label><mixed-citation publication-type="journal" id="mus28372-cit-0022">
+<string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Sta</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R. M. R.</given-names>
+<surname>Sylva‐Steenland</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Casula</surname>
+</string-name>, et al., “<article-title>Innate and Adaptive Immunity in Amyotrophic Lateral Sclerosis: Evidence of Complement Activation</article-title>,” <source>Neurobiology of Disease</source>
+<volume>42</volume>, no. <issue>3</issue> (<year>2011</year>): <fpage>211</fpage>–<lpage>220</lpage>.<pub-id pub-id-type="pmid">21220013</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.nbd.2011.01.002</pub-id></mixed-citation></ref><ref id="mus28372-bib-0023"><label>23</label><mixed-citation publication-type="journal" id="mus28372-cit-0023">
+<string-name name-style="western">
+<given-names>W.</given-names>
+<surname>Yu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>J.</given-names>
+<surname>He</surname>
+</string-name>, <string-name name-style="western">
+<given-names>X.</given-names>
+<surname>Cai</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Yu</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Z.</given-names>
+<surname>Zou</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>D.</given-names>
+<surname>Fan</surname>
+</string-name>, “<article-title>Neuroimmune Crosstalk Between the Peripheral and the Central Immune System in Amyotrophic Lateral Sclerosis</article-title>,” <source>Frontiers in Aging Neuroscience</source>
+<volume>14</volume> (<year>2022</year>): <elocation-id>890958</elocation-id>.<pub-id pub-id-type="pmid">35592701</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fnagi.2022.890958</pub-id><pub-id pub-id-type="pmcid">PMC9110796</pub-id></mixed-citation></ref><ref id="mus28372-bib-0024"><label>24</label><mixed-citation publication-type="journal" id="mus28372-cit-0024">
+<string-name name-style="western">
+<given-names>M. R.</given-names>
+<surname>Turner</surname>
+</string-name>, <string-name name-style="western">
+<given-names>R.</given-names>
+<surname>Goldacre</surname>
+</string-name>, <string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Ramagopalan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>K.</given-names>
+<surname>Talbot</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M. J.</given-names>
+<surname>Goldacre</surname>
+</string-name>, “<article-title>Autoimmune Disease Preceding Amyotrophic Lateral Sclerosis: An Epidemiologic Study</article-title>,” <source>Neurology</source>
+<volume>81</volume>, no. <issue>14</issue> (<year>2013</year>): <fpage>1222</fpage>–<lpage>1225</lpage>.<pub-id pub-id-type="pmid">23946298</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1212/WNL.0b013e3182a6cc13</pub-id><pub-id pub-id-type="pmcid">PMC3795611</pub-id></mixed-citation></ref><ref id="mus28372-bib-0025"><label>25</label><mixed-citation publication-type="journal" id="mus28372-cit-0025">
+<string-name name-style="western">
+<given-names>Y. M.</given-names>
+<surname>Falzone</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Radaelli</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Agosta</surname>
+</string-name>, et al., “<article-title>Concurrence of NMOSD and ALS in a Patient With Hexanucleotide Repeat Expansions of C9orf72</article-title>,” <source>Amyotroph Lateral Scler Frontotemporal Degener</source>
+<volume>20</volume>, no. <issue>5–6</issue> (<year>2019</year>): <fpage>449</fpage>–<lpage>452</lpage>.<pub-id pub-id-type="pmid">31007077</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/21678421.2019.1604761</pub-id></mixed-citation></ref><ref id="mus28372-bib-0026"><label>26</label><mixed-citation publication-type="journal" id="mus28372-cit-0026">
+<string-name name-style="western">
+<given-names>J. Y.</given-names>
+<surname>Kim</surname>
+</string-name>, <string-name name-style="western">
+<given-names>H. J.</given-names>
+<surname>Oh</surname>
+</string-name>, <string-name name-style="western">
+<given-names>Y.</given-names>
+<surname>Kim</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>J. M.</given-names>
+<surname>Seok</surname>
+</string-name>, “<article-title>Sporadic Amyotrophic Lateral Sclerosis With Seropositive Neuromyelitis Optica Spectrum Disorder: A Case Report</article-title>,” <source>Medicine (Baltimore)</source>
+<volume>100</volume>, no. <issue>16</issue> (<year>2021</year>): <elocation-id>e25580</elocation-id>.<pub-id pub-id-type="pmid">33879715</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/MD.0000000000025580</pub-id><pub-id pub-id-type="pmcid">PMC8078316</pub-id></mixed-citation></ref><ref id="mus28372-bib-0027"><label>27</label><mixed-citation publication-type="journal" id="mus28372-cit-0027">
+<string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Li</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>McGranahan</surname>
+</string-name>, <string-name name-style="western">
+<given-names>E.</given-names>
+<surname>Su</surname>
+</string-name>, <string-name name-style="western">
+<given-names>L.</given-names>
+<surname>Kipp</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>C. A.</given-names>
+<surname>Gold</surname>
+</string-name>, “<article-title>Coexistence of Neuromyelitis Optica and Amyotrophic Lateral Sclerosis: A Case Report</article-title>,” <source>Neurohospitalist</source>
+<volume>9</volume>, no. <issue>1</issue> (<year>2019</year>): <fpage>37</fpage>–<lpage>40</lpage>.<pub-id pub-id-type="pmid">30671163</pub-id>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1177/1941874418783914</pub-id><pub-id pub-id-type="pmcid">PMC6327238</pub-id></mixed-citation></ref><ref id="mus28372-bib-0028"><label>28</label><mixed-citation publication-type="journal" id="mus28372-cit-0028">
+<string-name name-style="western">
+<given-names>P.</given-names>
+<surname>Reilich</surname>
+</string-name>, <string-name name-style="western">
+<given-names>F.</given-names>
+<surname>Schöberl</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Hiebeler</surname>
+</string-name>, <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Tonon</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A. C.</given-names>
+<surname>Ludolph</surname>
+</string-name>, and <string-name name-style="western">
+<given-names>M.</given-names>
+<surname>Senel</surname>
+</string-name>, “<article-title>Myelitis as a Side Effect of Tofersen Therapy in SOD1‐Associated ALS</article-title>,” <source>Journal of Neurology</source>
+<volume>271</volume>, no. <issue>4</issue> (<year>2023</year>): <fpage>2114</fpage>–<lpage>2118</lpage>, <pub-id pub-id-type="doi">10.1007/s00415-023-12130-1</pub-id>.<pub-id pub-id-type="pmid">38066205</pub-id>
+<pub-id pub-id-type="pmcid">PMC10973064</pub-id></mixed-citation></ref><ref id="mus28372-bib-0029"><label>29</label><mixed-citation publication-type="miscellaneous" id="mus28372-cit-0029">
+<string-name name-style="western">
+<given-names>S.</given-names>
+<surname>Malek</surname>
+</string-name>, <string-name name-style="western">
+<given-names>A.</given-names>
+<surname>Lovett</surname>
+</string-name>, <string-name name-style="western">
+<given-names>T.</given-names>
+<surname>Cochrane</surname>
+</string-name>, et al., <article-title>“Tofersen Safety Experience From an Ongoing Global Early Access Program,”</article-title>
+<year>2023</year> Barcelona, Spain.</mixed-citation></ref></ref-list></back></article>
