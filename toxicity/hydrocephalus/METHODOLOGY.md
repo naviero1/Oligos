@@ -314,8 +314,12 @@ evidence that ventricular imaging was performed. The residual open question is n
 — whether every trial in this release is an "applicable clinical trial" bound by the
 rule, or posted voluntarily under the same structure.
 
-**OI-02 — no sequences.** `sequence_5to3_asprinted` is `NOT_REPORTED` for every
-compound. No US label prints the base sequence; both intrathecal ASO labels render
+**OI-02 — PARTIALLY CLOSED; still open for every clinical compound.** Four
+compounds now carry a published sequence — the SPAK siRNA duplexes, printed in
+full in their source's Materials section, each verified by the sense/antisense
+reverse-complement check now run by the QC suite. They are research reagents.
+`sequence_5to3_asprinted` remains `NOT_REPORTED` for all 25 clinical and marketed
+compounds, which is where the Challenge's requirement actually bites. No US label prints the base sequence; both intrathecal ASO labels render
 the structure as a figure with no text layer. The WHO INN Recommended lists spell
 out every residue longhand and are this project's established route for sequence
 recovery (the sibling kidney dataset filled 9 compounds that way and validated the
@@ -323,17 +327,26 @@ parser by reproducing two known duplexes character-for-character). That retrieva
 is not attempted here rather than approximated. Until it is done, the Challenge's
 "sequences of all oligos tested" requirement is unmet for this endpoint.
 
-**OI-03 — no nonclinical rows.** The dataset is entirely human. Animal studies
-dosing oligonucleotides by the intracerebroventricular or intrathecal route and
-reporting ventricular or CSF-dynamics outcomes were not extracted in this pass.
-These would add the dose–response and mechanism resolution the clinical record
-cannot provide.
+**OI-03 — PARTIALLY CLOSED.** Five rodent rows are now carried from two studies
+(`scripts/build_nonclinical.py`). Both publish their ventricular measurements
+graphically only, so all five are qualitative — the dose–response resolution this
+item was opened for is still missing. Systematic extraction of
+intracerebroventricular and intrathecal animal tolerability studies has not been
+attempted.
 
-**OI-04 — no protective/therapeutic rows.** Oligonucleotides developed *to treat*
-hydrocephalus (for example agents targeting choroid-plexus CSF hypersecretion)
-would populate `tox_axis = therapeutic_ventricular_effect`, which is declared in
-the schema and currently used by no row. They are the natural negative-direction
-control class.
+**OI-04 — CLOSED.** `tox_axis = therapeutic_ventricular_effect` now carries two
+rows: a SPAK-targeting siRNA that prevents ventriculomegaly in a kaolin-induced
+model. The axis exists so these rows can be excluded from compound-toxicity
+analysis in one filter; they are graded `not_graded`, because grading a prevented
+lesion on a harm scale would make a beneficial effect look like an absent one.
+
+**OI-08 — NEW: the dataset now has one designed control, and needs more.** The
+AQP4 study's scrambled non-targeting siRNA is the only compound in the release
+built to be inactive. Every other negative is a comparator arm, a reported zero
+or a silent label. A review of the sibling kidney dataset found its "negative
+controls" were negative *observations* rather than designed controls; this
+release has the same weakness, now with one exception and with the distinction
+recorded in `arm_role` and `ascertainment` rather than glossed.
 
 **OI-05 — PARTIALLY CLOSED.** EMA Summaries of Product Characteristics are now
 carried for nusinersen, tofersen and inotersen (8 rows), and they proved to be

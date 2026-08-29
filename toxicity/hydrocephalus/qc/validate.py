@@ -163,6 +163,28 @@ def main():
     check("label formula P-count agrees with stated length", not bad,
           "checked %d; mismatches %s" % (checked, bad))
 
+    # 11b duplex self-consistency for every published siRNA ----------------
+    #     The antisense (guide) strand must be the exact reverse complement of
+    #     the sense strand recorded in notes, once TT/dTdT overhangs are trimmed.
+    #     This depends on no external source being correct, so it catches a
+    #     plausible-but-wrong transcription that two agreeing documents would not.
+    comp = {"A": "U", "U": "A", "G": "C", "C": "G", "T": "A"}
+    dup_checked, dup_bad = 0, []
+    for r in o:
+        guide = r["sequence_5to3_asprinted"]
+        m2 = re.search(r"sense strand ([ACGUT]+)", r.get("notes", ""))
+        if not m2 or guide in ("NOT_REPORTED", "NOT_APPLICABLE"):
+            continue
+        sense = m2.group(1)
+        gcore = guide[:-2] if guide.endswith(("TT", "UU")) else guide
+        score = sense[:-2] if sense.endswith(("TT", "UU")) else sense
+        rc = "".join(comp.get(b, "?") for b in reversed(score))
+        dup_checked += 1
+        if rc != gcore:
+            dup_bad.append("%s: expected %s got %s" % (r["oligo_name"], rc, gcore))
+    check("siRNA duplex guide == reverse complement of sense", not dup_bad,
+          "checked %d; mismatches %s" % (dup_checked, dup_bad))
+
     # 12 background rows carry no compound ---------------------------------
     bad = [r["measurement_id"] for r in m
            if r["tox_axis"] == "disease_background_rate"
@@ -210,6 +232,7 @@ def main():
         tier_A_null=sum(1 for r in m if r["endpoint_tier"] == "A"
                         and r["ascertainment"] == "measured_null"),
         grade3_rows=sum(1 for r in m if r["hydroceph_grade"] == "3"),
+        duplexes_checked=dup_checked,
         oligos_with_sequence=sum(
             1 for r in o if r["sequence_5to3_asprinted"] not in ("NOT_REPORTED",
                                                                  "NOT_APPLICABLE")),

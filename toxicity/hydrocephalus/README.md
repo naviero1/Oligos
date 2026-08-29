@@ -22,27 +22,28 @@ one."* This directory is that second dataset.
 
 | | Count |
 |---|---:|
-| Measurement rows | **899** |
-| Oligonucleotides described | **28** |
-| — of which carry at least one measurement | 26 |
-| Distinct sources | 50 |
-| Tier-A rows with a positive finding | 53 |
-| Tier-A rows that are explicit measured negatives | 325 |
+| Measurement rows | **904** |
+| Oligonucleotides described | **34** |
+| — of which carry at least one measurement | 29 |
+| Distinct sources | 52 |
+| Tier-A rows with a positive finding | 55 |
+| Tier-A rows that are explicit measured negatives | 326 |
 | Grade-3 (severe) rows | 18 |
-| Oligonucleotides with a published sequence | 0 |
-| QC checks run / failed | 29 / 0 |
+| Oligonucleotides with a published sequence | 4 |
+| QC checks run / failed | 30 / 0 |
 
 **Endpoint tier** — **A** = hydrocephalus (communicating, obstructive or normal-pressure), ventriculomegaly / ventricular dilatation, shunt or drain placement. **B** = raised intracranial pressure, papilloedema, aseptic or chemical meningitis, arachnoiditis, CSF leak or protein rise, post-lumbar-puncture syndrome.
 
 | Tier | Rows |
 |---|---:|
-| A | 379 |
-| B | 520 |
+| A | 382 |
+| B | 522 |
 
 **Study type**
 
 | Study type | Rows |
 |---|---:|
+| animal_invivo | 5 |
 | background_epidemiology | 3 |
 | clinical_case | 5 |
 | clinical_trial | 347 |
@@ -53,8 +54,8 @@ one."* This directory is that second dataset.
 
 | Ascertainment | Rows |
 |---|---:|
-| measured_null | 693 |
-| measured_positive | 205 |
+| measured_null | 694 |
+| measured_positive | 209 |
 | not_assessed | 1 |
 
 **Attribution, as stated by the source** — what the SOURCE concluded about causation. `not_discussed` dominates because registry and pharmacovigilance records carry no causality assessment at all — that is a property of those sources, not an omission here
@@ -62,8 +63,8 @@ one."* This directory is that second dataset.
 | Attribution | Rows |
 |---|---:|
 | disease_attributed | 3 |
-| drug_attributed | 19 |
-| not_discussed | 877 |
+| drug_attributed | 23 |
+| not_discussed | 878 |
 
 **Toxicity axis** — `disease_background_rate` rows carry no compound; `delivery_procedure_complication` rows are attributable to the lumbar puncture rather than to any molecule
 
@@ -74,16 +75,17 @@ one."* This directory is that second dataset.
 | csf_pressure_disturbance | 123 |
 | delivery_procedure_complication | 198 |
 | disease_background_rate | 3 |
-| ventricular_enlargement | 376 |
+| therapeutic_ventricular_effect | 2 |
+| ventricular_enlargement | 379 |
 
 **Severity grade** — rubric in [`SCHEMA.md`](SCHEMA.md#hydroceph_grade-rubric-03); all grades are provisional
 
 | `hydroceph_grade` | Rows |
 |---|---:|
-| *(not graded)* | 24 |
-| 0 | 693 |
+| *(not graded)* | 26 |
+| 0 | 694 |
 | 1 | 100 |
-| 2 | 64 |
+| 2 | 66 |
 | 3 | 18 |
 
 **Delivery route** — systemically dosed oligonucleotides are included as a deliberate route contrast
@@ -91,8 +93,9 @@ one."* This directory is that second dataset.
 | Route | Rows |
 |---|---:|
 | NOT_APPLICABLE | 3 |
+| intracerebroventricular | 3 |
 | intrathecal_lumbar | 404 |
-| intravenous | 214 |
+| intravenous | 216 |
 | intravitreal | 24 |
 | subcutaneous | 254 |
 
@@ -101,20 +104,22 @@ one."* This directory is that second dataset.
 | Category | Rows |
 |---|---:|
 | csf_composition | 176 |
-| csf_dynamics | 63 |
+| csf_dynamics | 64 |
 | csf_pressure | 123 |
+| histopathology_choroid_ependyma | 1 |
 | hydrocephalus_event | 220 |
 | procedure_complication | 177 |
 | shunt_or_drain_intervention | 40 |
-| ventricular_morphometry | 100 |
+| ventricular_morphometry | 103 |
 
 **Redistribution rights** — tracked per row
 
 | Rights | Rows |
 |---|---:|
 | cc_by | 8 |
+| cc_by_nc | 3 |
 | public_domain | 880 |
-| summary_stat_only | 3 |
+| summary_stat_only | 5 |
 | verify | 8 |
 
 **Event clusters** — rows sharing an `event_cluster_id` describe **one** clinical episode and must not be counted as independent events.
@@ -124,8 +129,10 @@ one."* This directory is that second dataset.
 | `L1-EVT-01` | 5 |
 | `L2-BASELINE` | 3 |
 | `L3-TOFERSEN-SAE` | 3 |
+| `N1-SPAK` | 2 |
+| `N2-AQP4` | 3 |
 
-**Largest sources** (top 10 of 50)
+**Largest sources** (top 10 of 52)
 
 | `source_id` | Rows |
 |---|---:|
@@ -232,6 +239,15 @@ asserting; every one traces to a row and a locus.
   consistent with hydrocephalus". Results are not posted. That row carries no
   grade and `ascertainment = not_assessed`: it is evidence about how this endpoint
   is now ascertained, not about the endpoint.
+- **Two rodent studies put an oligonucleotide on both sides of the endpoint.** A
+  SPAK-targeting siRNA delivered in a lipid nanoparticle *prevents*
+  ventriculomegaly in a kaolin-induced model; an AQP4-targeting siRNA *aggravates*
+  it in an intraventricular-haemorrhage model, against the dataset's only
+  **designed** negative control — a scrambled non-targeting siRNA. The protective
+  rows sit on `tox_axis = therapeutic_ventricular_effect` and are ungraded, so a
+  beneficial effect can never be read as an absent one. The SPAK duplexes are also
+  the only compounds here with a published sequence, and each passes the
+  sense/antisense reverse-complement check the QC suite runs.
 - **Route contrasts.** Systemically dosed oligonucleotides are included
   deliberately so the intrathecal signal is testable rather than assumed. Their
   FAERS hydrocephalus counts are ~1 report against thousands, and the two
@@ -268,9 +284,10 @@ python3 scripts/extract_ctgov_outcomes.py # pre-specified ventricular MRI outcom
 python3 scripts/extract_faers.py          # openFDA FAERS  (cached; re-runs cost no quota)
 python3 scripts/extract_labels.py         # DailyMed Structured Product Labels
 python3 scripts/build_literature.py       # curated full-text and EMA SmPC rows
+python3 scripts/build_nonclinical.py      # curated rodent rows (both effect directions)
 python3 scripts/build_oligos.py           # design predictors parsed from labels
 python3 scripts/assemble.py               # canonical tables + provenance registry + merged view
-python3 qc/validate.py                    # 29 checks; writes qc/stats.json
+python3 qc/validate.py                    # 30 checks; writes qc/stats.json
 python3 scripts/render_docs.py            # regenerates the counts in this file
 ```
 

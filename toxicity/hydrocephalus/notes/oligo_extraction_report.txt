@@ -21,6 +21,12 @@ givosiran                  label=yes parsed=none
 lumasiran                  label=yes parsed=molecular_weight
 nedosiran                  label=yes parsed=none
 inclisiran                 label=yes parsed=molecular_weight
+SPAK_siRNA1                label=no  parsed=none
+SPAK_siRNA2                label=no  parsed=none
+SPAK_siRNA3                label=no  parsed=none
+SPAK_siRNA4                label=no  parsed=none
+AQP4_siRNA                 label=no  parsed=none
+negative_control_siRNA     label=no  parsed=none
 volanesorsen               label=no  parsed=none
 mipomersen                 label=no  parsed=none
 pegaptanib                 label=no  parsed=none

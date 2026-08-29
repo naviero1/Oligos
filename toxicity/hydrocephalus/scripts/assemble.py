@@ -51,6 +51,7 @@ COMPONENTS = [
     ("_faers_measurements.csv", "pharmacovigilance_api"),
     ("_label_measurements.csv", "regulatory_primary"),
     ("_literature_measurements.csv", "primary_fulltext"),
+    ("_nonclinical_measurements.csv", "primary_fulltext"),
 ]
 
 # Provenance registry entries. Each source_key used by any component gets one.
@@ -104,6 +105,33 @@ SOURCE_META = {
         notes=("ND licence term: only abstract-level summary statistics are carried; "
                "no underlying table is reproduced.")),
 }
+
+
+SOURCE_META.update({
+    "Choroid_plexus_siSPAK_LNP_2025_NatCommun": dict(
+        citation=("Targeting modulation of the choroid plexus blood-CSF barrier and CSF "
+                  "hypersecretion via lipid nanoparticle-mediated co-delivery of SPAK "
+                  "siRNA and resveratrol. Nat Commun. 2025;16."),
+        first_author="NOT_REPORTED", year="2025", journal="Nature Communications",
+        doi="10.1038/s41467-025-61543-1", pmid="40640139", pmcid="PMC12246246",
+        nct_id="", url="https://pmc.ncbi.nlm.nih.gov/articles/PMC12246246/",
+        access="open_access", license="CC BY-NC-ND 4.0",
+        redistribution="summary_stat_only", evidence_tier="primary_fulltext",
+        retrieved_via="Europe PMC REST fullTextXML endpoint",
+        notes=("Supplies the only published sequences in this release (four SPAK siRNA "
+               "duplexes, Methods/Materials) and the only protective-direction rows.")),
+    "AQP4_siRNA_hydrocephalus_2018_MedSciMonit": dict(
+        citation=("Aquaporin 4 Silencing Aggravates Hydrocephalus Induced by Injection "
+                  "of Autologous Blood in Rats. Med Sci Monit. 2018;24."),
+        first_author="NOT_REPORTED", year="2018", journal="Medical Science Monitor",
+        doi="10.12659/MSM.907186", pmid="29921834", pmcid="PMC6042309",
+        nct_id="", url="https://pmc.ncbi.nlm.nih.gov/articles/PMC6042309/",
+        access="open_access", license="CC BY-NC", redistribution="cc_by_nc",
+        evidence_tier="primary_fulltext",
+        retrieved_via="Europe PMC REST fullTextXML endpoint",
+        notes=("Toxic-direction nonclinical rows, and the dataset's only DESIGNED "
+               "negative control (a scrambled non-targeting siRNA).")),
+})
 
 
 def source_meta_for(key):

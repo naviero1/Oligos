@@ -1,13 +1,14 @@
 {
-  "n_measurements": 899,
-  "n_oligos": 28,
-  "n_sources": 50,
-  "n_oligos_with_measurements": 26,
+  "n_measurements": 904,
+  "n_oligos": 34,
+  "n_sources": 52,
+  "n_oligos_with_measurements": 29,
   "by_endpoint_tier": {
-    "A": 379,
-    "B": 520
+    "A": 382,
+    "B": 522
   },
   "by_study_type": {
+    "animal_invivo": 5,
     "background_epidemiology": 3,
     "clinical_case": 5,
     "clinical_trial": 347,
@@ -15,14 +16,14 @@
     "regulatory_label": 88
   },
   "by_ascertainment": {
-    "measured_null": 693,
-    "measured_positive": 205,
+    "measured_null": 694,
+    "measured_positive": 209,
     "not_assessed": 1
   },
   "by_attribution": {
     "disease_attributed": 3,
-    "drug_attributed": 19,
-    "not_discussed": 877
+    "drug_attributed": 23,
+    "not_discussed": 878
   },
   "by_tox_axis": {
     "csf_composition_disturbance": 198,
@@ -30,35 +31,39 @@
     "csf_pressure_disturbance": 123,
     "delivery_procedure_complication": 198,
     "disease_background_rate": 3,
-    "ventricular_enlargement": 376
+    "therapeutic_ventricular_effect": 2,
+    "ventricular_enlargement": 379
   },
   "by_grade": {
-    "": 24,
-    "0": 693,
+    "": 26,
+    "0": 694,
     "1": 100,
-    "2": 64,
+    "2": 66,
     "3": 18
   },
   "by_delivery_route": {
     "NOT_APPLICABLE": 3,
+    "intracerebroventricular": 3,
     "intrathecal_lumbar": 404,
-    "intravenous": 214,
+    "intravenous": 216,
     "intravitreal": 24,
     "subcutaneous": 254
   },
   "by_readout_category": {
     "csf_composition": 176,
-    "csf_dynamics": 63,
+    "csf_dynamics": 64,
     "csf_pressure": 123,
+    "histopathology_choroid_ependyma": 1,
     "hydrocephalus_event": 220,
     "procedure_complication": 177,
     "shunt_or_drain_intervention": 40,
-    "ventricular_morphometry": 100
+    "ventricular_morphometry": 103
   },
   "by_redistribution": {
     "cc_by": 8,
+    "cc_by_nc": 3,
     "public_domain": 880,
-    "summary_stat_only": 3,
+    "summary_stat_only": 5,
     "verify": 8
   },
   "by_source_tier": {
@@ -66,7 +71,7 @@
     "case_report": 1,
     "epidemiology": 1,
     "pharmacovigilance_api": 1,
-    "primary_fulltext": 1,
+    "primary_fulltext": 3,
     "registry_results": 27,
     "regulatory_primary": 16
   },
@@ -111,10 +116,12 @@
     "NCT02292537": 4,
     "NCT02386553": 4,
     "NCT03532542": 4,
+    "AQP4_siRNA_hydrocephalus_2018_MedSciMonit": 3,
     "NCT02462759": 3,
     "NCT04617847": 3,
     "Tofersen_seriousAE_2025_MuscleNerve": 3,
     "Viscidi_2021_OJRD": 3,
+    "Choroid_plexus_siSPAK_LNP_2025_NatCommun": 2,
     "EMA_SmPC_Spinraza": 2,
     "NCT02193074": 2,
     "NCT03399370": 2,
@@ -125,12 +132,15 @@
   "multi_row_event_clusters": {
     "L1-EVT-01": 5,
     "L2-BASELINE": 3,
-    "L3-TOFERSEN-SAE": 3
+    "L3-TOFERSEN-SAE": 3,
+    "N1-SPAK": 2,
+    "N2-AQP4": 3
   },
-  "tier_A_positive": 53,
-  "tier_A_null": 325,
+  "tier_A_positive": 55,
+  "tier_A_null": 326,
   "grade3_rows": 18,
-  "oligos_with_sequence": 0,
-  "checks_run": 29,
+  "duplexes_checked": 4,
+  "oligos_with_sequence": 4,
+  "checks_run": 30,
   "checks_failed": 0
 }

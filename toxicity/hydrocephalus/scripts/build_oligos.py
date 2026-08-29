@@ -118,6 +118,30 @@ OLIGOS = [
     ("inclisiran", "Leqvio;ALN-PCSsc", "siRNA", "double_stranded_siRNA", "PCSK9",
      "atherosclerotic_cardiovascular_disease", "Novartis/Alnylam", "approved",
      "subcutaneous", "LEQVIO prescribing information"),
+    # --- Nonclinical research-grade siRNAs with PUBLISHED sequences --------
+    # These are the only compounds in the release whose sequence is published.
+    # Each SPAK duplex passes the sense/antisense reverse-complement check.
+    ("SPAK_siRNA1", "siSPAK-1", "siRNA", "double_stranded_siRNA", "STK39_SPAK",
+     "hydrocephalus_research_choroid_plexus", "GenePharma (reagent)", "research_panel",
+     "intravenous", "Nat Commun 2025 PMC12246246, Methods (Materials)"),
+    ("SPAK_siRNA2", "siSPAK-2", "siRNA", "double_stranded_siRNA", "STK39_SPAK",
+     "hydrocephalus_research_choroid_plexus", "GenePharma (reagent)", "research_panel",
+     "intravenous", "Nat Commun 2025 PMC12246246, Methods (Materials)"),
+    ("SPAK_siRNA3", "siSPAK-3", "siRNA", "double_stranded_siRNA", "STK39_SPAK",
+     "hydrocephalus_research_choroid_plexus", "GenePharma (reagent)", "research_panel",
+     "intravenous", "Nat Commun 2025 PMC12246246, Methods (Materials)"),
+    ("SPAK_siRNA4", "siSPAK-4;lead agent", "siRNA", "double_stranded_siRNA",
+     "STK39_SPAK", "hydrocephalus_research_choroid_plexus", "GenePharma (reagent)",
+     "research_panel", "intravenous",
+     "Nat Commun 2025 PMC12246246, Methods (Materials)"),
+    ("AQP4_siRNA", "AQP4-specific siRNA", "siRNA", "double_stranded_siRNA", "AQP4",
+     "hydrocephalus_research_intraventricular_haemorrhage", "GenePharma (reagent)",
+     "research_panel", "intracerebroventricular",
+     "Med Sci Monit 2018 PMC6042309, Material and Methods"),
+    ("negative_control_siRNA", "scrambled non-targeting siRNA", "siRNA",
+     "double_stranded_siRNA", "none_no_transcriptome_match",
+     "designed_negative_control", "GenePharma (reagent)", "research_panel",
+     "intracerebroventricular", "Med Sci Monit 2018 PMC6042309, Material and Methods"),
     ("volanesorsen", "Waylivra;IONIS-APOCIIIRx", "ASO_gapmer", "single_stranded_ASO",
      "APOC3", "familial_chylomicronaemia_syndrome", "Ionis/Akcea", "approved_EMA",
      "subcutaneous", "WAYLIVRA EMA summary of product characteristics"),
@@ -154,6 +178,23 @@ PATTERNS = {
     "molecular_weight": re.compile(r"molecular weight is ([\d,]+\.?\d*)", re.I),
 }
 
+
+
+# Published sequences. The ONLY sequences in this release. Each is transcribed
+# from the source's Materials section, and each duplex's antisense strand is the
+# exact reverse complement of its sense strand once the TT overhangs are trimmed
+# — an internal check that does not depend on the source being correct.
+# Convention matches the sibling datasets: sequence_5to3_asprinted holds the
+# ANTISENSE (guide) strand; the sense strand is recorded in notes.
+SEQUENCES = {
+    "SPAK_siRNA1": ("UUGAUGAUAUCCAACAUGGTT", "CCAUGUUGGAUAUCAUCAATT"),
+    "SPAK_siRNA2": ("AUAGCCUCUCACCUGUUCCTT", "GGAACAGGUGAGAGGCUAUTT"),
+    "SPAK_siRNA3": ("UAUUUGUGGUAAGGCGCUGTT", "CAGCGCCUUACCACAAAUATT"),
+    "SPAK_siRNA4": ("AUCGUAUGUCAUUAAGUUCTT", "GAACUUAAUGACAUACGAUTT"),
+}
+SEQ_SOURCE = ("Nature Communications 2025, PMC12246246, Methods section 'Materials': "
+              "the four SPAK siRNA duplexes are printed in full with sense and "
+              "antisense strands.")
 
 def flat(el):
     return re.sub(r"\s+", " ", "".join(el.itertext())).strip()
@@ -235,9 +276,11 @@ def main():
             target_gene=target, indication=indication, developer=developer,
             max_phase=phase, route_of_administration=route,
             length_nt=parsed.get("length_nt", "NOT_REPORTED"),
-            sequence_5to3_asprinted="NOT_REPORTED",
-            sequence_base="NOT_REPORTED",
-            sequence_source=("NOT_REPORTED — no US label prints the base sequence; the "
+            sequence_5to3_asprinted=SEQUENCES.get(name, ("NOT_REPORTED",))[0],
+            sequence_base=SEQUENCES.get(name, ("NOT_REPORTED",))[0].replace("U", "T")
+            if name in SEQUENCES else "NOT_REPORTED",
+            sequence_source=(SEQ_SOURCE if name in SEQUENCES else
+                             "NOT_REPORTED — no US label prints the base sequence; the "
                              "structure is a figure with no text layer. See "
                              "METHODOLOGY.md open item OI-02."),
             backbone_chemistry=parsed.get("backbone_chemistry", "NOT_REPORTED"),
@@ -254,7 +297,10 @@ def main():
             identity_source=identity_source,
             source_location=source_loc,
             redistribution=("public_domain" if desc else "public_domain"),
-            notes=("Design fields filled only where the cited document states them; "
+            notes=(("Antisense (guide) strand shown; sense strand %s. Duplex passes "
+                    "the sense/antisense reverse-complement check on the 19-mer core. "
+                    % SEQUENCES[name][1]) if name in SEQUENCES else "") +
+                  ("Design fields filled only where the cited document states them; "
                    "everything else NOT_REPORTED. Retrieved %s." % TODAY),
         ))
         report.append("%-26s label=%-3s parsed=%s" % (
