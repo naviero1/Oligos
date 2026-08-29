@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "ARTHRALGIA",
+      "count": 811
+    },
+    {
+      "term": "MYALGIA",
+      "count": 599
+    },
+    {
+      "term": "INJECTION SITE PAIN",
+      "count": 555
+    },
+    {
+      "term": "LOW DENSITY LIPOPROTEIN INCREASED",
+      "count": 469
+    },
+    {
+      "term": "PAIN IN EXTREMITY",
+      "count": 455
+    },
+    {
+      "term": "FATIGUE",
+      "count": 396
+    },
+    {
+      "term": "PAIN",
+      "count": 389
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 381
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 340
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 320
+    },
+    {
+      "term": "HEADACHE",
+      "count": 282
+    },
+    {
+      "term": "RASH",
+      "count": 264
+    },
+    {
+      "term": "MUSCLE SPASMS",
+      "count": 239
+    },
+    {
+      "term": "COUGH",
+      "count": 223
+    },
+    {
+      "term": "PRODUCT STORAGE ERROR",
+      "count": 214
+    },
+    {
+      "term": "BLOOD CHOLESTEROL INCREASED",
+      "count": 208
+    },
+    {
+      "term": "DIZZINESS",
+      "count": 208
+    },
+    {
+      "term": "PRURITUS",
+      "count": 208
+    },
+    {
+      "term": "INJECTION SITE REACTION",
+      "count": 207
+    },
+    {
+      "term": "BACK PAIN",
+      "count": 201
+    },
+    {
+      "term": "NAUSEA",
+      "count": 201
+    },
+    {
+      "term": "URINARY TRACT INFECTION",
+      "count": 179
+    },
+    {
+      "term": "INJECTION SITE RASH",
+      "count": 176
+    },
+    {
+      "term": "BLOOD TRIGLYCERIDES INCREASED",
+      "count": 168
+    },
+    {
+      "term": "INJECTION SITE ERYTHEMA",
+      "count": 166
+    },
+    {
+      "term": "MALAISE",
+      "count": 153
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 146
+    },
+    {
+      "term": "CHEST PAIN",
+      "count": 141
+    },
+    {
+      "term": "NASOPHARYNGITIS",
+      "count": 136
+    },
+    {
+      "term": "HYPERSENSITIVITY",
+      "count": 133
+    },
+    {
+      "term": "BLOOD GLUCOSE INCREASED",
+      "count": 131
+    },
+    {
+      "term": "GAIT DISTURBANCE",
+      "count": 121
+    },
+    {
+      "term": "INJECTION SITE PRURITUS",
+      "count": 121
+    },
+    {
+      "term": "BRONCHITIS",
+      "count": 120
+    },
+    {
+      "term": "MYOCARDIAL INFARCTION",
+      "count": 116
+    },
+    {
+      "term": "DEATH",
+      "count": 115
+    },
+    {
+      "term": "FEELING ABNORMAL",
+      "count": 112
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 111
+    },
+    {
+      "term": "DRUG INTOLERANCE",
+      "count": 104
+    },
+    {
+      "term": "INAPPROPRIATE SCHEDULE OF PRODUCT ADMINISTRATION",
+      "count": 104
+    },
+    {
+      "term": "ILLNESS",
+      "count": 99
+    },
+    {
+      "term": "ARTHRITIS",
+      "count": 97
+    },
+    {
+      "term": "HYPERTENSION",
+      "count": 97
+    },
+    {
+      "term": "ABDOMINAL DISCOMFORT",
+      "count": 96
+    },
+    {
+      "term": "ABDOMINAL PAIN UPPER",
+      "count": 96
+    },
+    {
+      "term": "INFLUENZA LIKE ILLNESS",
+      "count": 94
+    },
+    {
+      "term": "INSOMNIA",
+      "count": 93
+    },
+    {
+      "term": "LOW DENSITY LIPOPROTEIN DECREASED",
+      "count": 93
+    },
+    {
+      "term": "PERIPHERAL SWELLING",
+      "count": 93
+    },
+    {
+      "term": "DIABETES MELLITUS",
+      "count": 92
+    },
+    {
+      "term": "MUSCULAR WEAKNESS",
+      "count": 91
+    },
+    {
+      "term": "LOWER RESPIRATORY TRACT INFECTION",
+      "count": 88
+    },
+    {
+      "term": "COVID-19",
+      "count": 86
+    },
+    {
+      "term": "ERYTHEMA",
+      "count": 86
+    },
+    {
+      "term": "GENERAL PHYSICAL HEALTH DETERIORATION",
+      "count": 85
+    },
+    {
+      "term": "THERAPY NON-RESPONDER",
+      "count": 82
+    },
+    {
+      "term": "ALOPECIA",
+      "count": 80
+    },
+    {
+      "term": "CEREBROVASCULAR ACCIDENT",
+      "count": 79
+    },
+    {
+      "term": "URTICARIA",
+      "count": 78
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 77
+    },
+    {
+      "term": "MEMORY IMPAIRMENT",
+      "count": 76
+    },
+    {
+      "term": "PYREXIA",
+      "count": 76
+    },
+    {
+      "term": "BLOOD CHOLESTEROL DECREASED",
+      "count": 75
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 75
+    },
+    {
+      "term": "VOMITING",
+      "count": 75
+    },
+    {
+      "term": "CHEST DISCOMFORT",
+      "count": 74
+    },
+    {
+      "term": "FALL",
+      "count": 74
+    },
+    {
+      "term": "HYPOAESTHESIA",
+      "count": 72
+    },
+    {
+      "term": "INJECTION SITE SWELLING",
+      "count": 71
+    },
+    {
+      "term": "MUSCULOSKELETAL STIFFNESS",
+      "count": 71
+    },
+    {
+      "term": "BLOOD PRESSURE INCREASED",
+      "count": 70
+    },
+    {
+      "term": "PRODUCT DOSE OMISSION ISSUE",
+      "count": 68
+    },
+    {
+      "term": "RHINORRHOEA",
+      "count": 65
+    },
+    {
+      "term": "CONSTIPATION",
+      "count": 62
+    },
+    {
+      "term": "ABDOMINAL PAIN",
+      "count": 61
+    },
+    {
+      "term": "BURNING SENSATION",
+      "count": 60
+    },
+    {
+      "term": "OROPHARYNGEAL PAIN",
+      "count": 59
+    },
+    {
+      "term": "BONE PAIN",
+      "count": 58
+    },
+    {
+      "term": "GLYCOSYLATED HAEMOGLOBIN INCREASED",
+      "count": 58
+    },
+    {
+      "term": "PRODUCT USE IN UNAPPROVED INDICATION",
+      "count": 57
+    },
+    {
+      "term": "WEIGHT INCREASED",
+      "count": 55
+    },
+    {
+      "term": "CONTUSION",
+      "count": 54
+    },
+    {
+      "term": "LIMB DISCOMFORT",
+      "count": 54
+    },
+    {
+      "term": "ALANINE AMINOTRANSFERASE INCREASED",
+      "count": 53
+    },
+    {
+      "term": "PARAESTHESIA",
+      "count": 53
+    },
+    {
+      "term": "ATRIAL FIBRILLATION",
+      "count": 52
+    },
+    {
+      "term": "CHILLS",
+      "count": 52
+    },
+    {
+      "term": "INJECTION SITE BRUISING",
+      "count": 52
+    },
+    {
+      "term": "INFLUENZA",
+      "count": 50
+    },
+    {
+      "term": "BLOOD CREATINE PHOSPHOKINASE INCREASED",
+      "count": 49
+    },
+    {
+      "term": "HEPATIC ENZYME INCREASED",
+      "count": 49
+    },
+    {
+      "term": "NASAL CONGESTION",
+      "count": 49
+    },
+    {
+      "term": "NEUROPATHY PERIPHERAL",
+      "count": 49
+    },
+    {
+      "term": "HIGH DENSITY LIPOPROTEIN DECREASED",
+      "count": 48
+    },
+    {
+      "term": "HYPOACUSIS",
+      "count": 47
+    },
+    {
+      "term": "NECK PAIN",
+      "count": 46
+    },
+    {
+      "term": "ANXIETY",
+      "count": 44
+    },
+    {
+      "term": "ASPARTATE AMINOTRANSFERASE INCREASED",
+      "count": 44
+    },
+    {
+      "term": "ACUTE MYOCARDIAL INFARCTION",
+      "count": 43
+    },
+    {
+      "term": "JOINT SWELLING",
+      "count": 43
+    }
+  ]
+}

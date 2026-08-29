@@ -1,0 +1,1286 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="0e3b8e29-64dd-430f-998d-5aca82258a8d"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>These highlights do not include all the information needed to use VILTEPSO<sup>®</sup> safely and effectively. See full prescribing information for VILTEPSO. <br/>
+      <br/>VILTEPSO (viltolarsen) injection, for intravenous use <br/>Initial U.S. Approval: 2020
+</title>
+   <effectiveTime value="20250716"/>
+   <setId root="1ffff9a8-6d6a-4dcb-8493-1b6cc3a5d123"/>
+   <versionNumber value="7"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="135666654" root="1.3.6.1.4.1.519.1"/>
+            <name>NS Pharma, Inc.</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="706261286" root="1.3.6.1.4.1.519.1"/>
+                        <name>Ajinomoto Co., Inc.</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C82401" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="API MANUFACTURE"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="73292-011" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="053217022" root="1.3.6.1.4.1.519.1"/>
+                        <name>AndersonBrecon Inc.</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C84732" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="LABEL"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="73292-011" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C84731" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="PACK"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="73292-011" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="713746022" root="1.3.6.1.4.1.519.1"/>
+                        <name>Fuji Yakuhin Co., Ltd.</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="MANUFACTURE"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="73292-011" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="718477255" root="1.3.6.1.4.1.519.1"/>
+                        <name>YMC Co., Ltd.</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C82401" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="API MANUFACTURE"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="73292-011" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section ID="dcl-dpl">
+               <id root="587c461f-ba50-48a8-928a-10952e2a7fb7"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL PRODUCT DATA ELEMENTS SECTION"/>
+               <effectiveTime value="20201103"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="73292-011" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Viltepso</name>
+                        <formCode code="C42945" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INJECTION, SOLUTION"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>viltolarsen</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator value="250" unit="mg"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="SXA7YP6EKX" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>viltolarsen</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="SXA7YP6EKX" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>viltolarsen</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="451W47IQ8X" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>sodium chloride</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="QTT17582CB" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>hydrochloric acid</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="55X04QC32I" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>sodium hydroxide</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="059QF0KO0R" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>water</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="1" unit="1"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43209" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="VIAL, GLASS"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1" unit="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="73292-011-01" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20200813"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV" displayName="Type 0: Not a Combination Product"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20200813"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NDA212154" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73594" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38276" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INTRAVENOUS"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="s0">
+               <id root="d663580a-2b4b-4617-80d4-9e33b569bf64"/>
+               <code code="43683-2" codeSystem="2.16.840.1.113883.6.1" displayName="RECENT MAJOR CHANGES SECTION"/>
+               <effectiveTime value="20250716"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <table width="100%">
+                           <colgroup>
+                              <col width="90.000%" align="left"/>
+                              <col width="10.000%" align="left"/>
+                           </colgroup>
+                           <tbody>
+                              <tr>
+                                 <td align="left" valign="top">Dosage and Administration (<linkHtml href="#s3">2.1</linkHtml>), Monitoring to Assess Safety</td>
+                                 <td align="right" valign="top">3/2021</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top">Warnings and Precautions (<linkHtml href="#s10">5.1</linkHtml>), Kidney Toxicity</td>
+                                 <td align="right" valign="top">3/2021</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph/>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="s1">
+               <id root="61cd59e4-837a-4c60-8871-50cd6f40b615"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>1 INDICATIONS AND USAGE
+</title>
+               <text>
+                  <paragraph>VILTEPSO is indicated for the treatment of Duchenne muscular dystrophy (DMD) in patients who have a confirmed mutation of the DMD gene that is amenable to exon 53 skipping. This indication is approved under accelerated approval based on an increase in dystrophin production in skeletal muscle observed in patients treated with VILTEPSO <content styleCode="italics">[see Clinical Studies (<linkHtml href="#s41">14</linkHtml>)].</content> Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial.
+</paragraph>
+               </text>
+               <effectiveTime value="20200812"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>VILTEPSO is an antisense oligonucleotide indicated for the treatment of Duchenne muscular dystrophy (DMD) in patients who have a confirmed mutation of the DMD gene that is amenable to exon 53 skipping. This indication is approved under accelerated approval based on an increase in dystrophin production in skeletal muscle observed in patients treated with VILTEPSO. Continued approval for this indication may be contingent upon verification and description of clinical benefit in a confirmatory trial. (<linkHtml href="#s1">1</linkHtml>)
+</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="s2">
+               <id root="af3e3dfb-df8a-446b-8734-c97d7b922889"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>2 DOSAGE AND ADMINISTRATION
+</title>
+               <effectiveTime value="20200812"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Serum cystatin C, urine dipstick, and urine protein-to-creatinine ratio should be measured before starting VILTEPSO. (<linkHtml href="#s3">2.1</linkHtml>)
+</item>
+                           <item>Recommended dosage is 80 milligrams per kilogram of body weight once weekly. (<linkHtml href="#s4">2.2</linkHtml>)
+</item>
+                           <item>Administer as an intravenous infusion over 60 minutes. (<linkHtml href="#s4">2.2</linkHtml>, <linkHtml href="#s6">2.4</linkHtml>)
+</item>
+                           <item>If the volume of VILTEPSO required is less than 100 mL, dilution in 0.9% Sodium Chloride Injection, USP, is required. (<linkHtml href="#s5">2.3</linkHtml>)
+</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="s3">
+                     <id root="409c5551-91ea-4de6-b6e8-8ee8af336cc0"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.1 Monitoring to Assess Safety
+</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="xmChange"/>Serum cystatin C, urine dipstick, and urine protein-to-creatinine ratio should be measured before starting VILTEPSO. Consider measurement of glomerular filtration rate prior to initiation of VILTEPSO. Monitoring for kidney toxicity during treatment is recommended. Obtain the urine samples prior to infusion of VILTEPSO or at least 48 hours after the most recent infusion <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s10">5.1</linkHtml>)].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20200812"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s4">
+                     <id root="6a257e0b-98c5-4ba4-aff1-4cbad6a54db0"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.2 Dosing Information
+</title>
+                     <text>
+                        <paragraph>The recommended dosage of VILTEPSO is 80 mg/kg administered once weekly as a 60-minute intravenous infusion.
+</paragraph>
+                        <paragraph>If a dose of VILTEPSO is missed, it should be administered as soon as possible after the scheduled dose time.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20200812"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s5">
+                     <id root="fa0d006f-2e74-4cff-ac3f-efd86b2b4c99"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.3 Preparation Instructions
+</title>
+                     <text>
+                        <paragraph>Parenteral drug products should be inspected visually for particulate matter and discoloration prior to administration, whenever solution and container permit. Prepare the VILTEPSO dose using aseptic technique.
+</paragraph>
+                        <list listType="ordered" styleCode="LittleAlpha">
+                           <item>Calculate the total dose of VILTEPSO to be administered based on the patient's weight and the recommended dosage of 80 mg/kg. Determine the volume of VILTEPSO needed and the correct number of vials to supply the full calculated dose.
+</item>
+                           <item>Allow vials to warm to room temperature. Mix the contents of each vial by gently inverting 2 to 3 times. Do not shake.
+</item>
+                           <item>Visually inspect each vial of VILTEPSO. VILTEPSO is a clear and colorless solution. Do not use if the solution in the vials is discolored or particulate matter is present.
+</item>
+                           <item>Withdraw the calculated volume of VILTEPSO from the appropriate number of vials.<list listType="ordered" styleCode="LittleRoman">
+                                 <item>If the volume of VILTEPSO required is less than 100 mL, dilution in 0.9% Sodium Chloride Injection, USP is required. Withdraw from the 100-mL infusion bag a volume of 0.9% Sodium Chloride Injection, USP, equivalent to the calculated volume of VILTEPSO and inject the VILTEPSO into the infusion bag, such that the total volume in the bag is 100 mL.
+</item>
+                                 <item>If the volume of VILTEPSO required is 100 mL or more, dilution is not required, and the required amount of VILTEPSO should be placed into an empty infusion bag.
+</item>
+                              </list>
+                           </item>
+                           <item>Visually inspect the infusion bag containing the solution for particulates. Gently invert the infusion bag to ensure equal distribution of product.  Do not shake.
+</item>
+                           <item>VILTEPSO contains no preservatives.  Infusion should begin as soon as possible, but no more than 5 hours after preparation of VILTEPSO, and be completed within 6 hours of preparation (allowing for 1 hour of infusion time), if diluted solution is stored at 20°C to 26°C (68°F to 79°F). If immediate use is not possible, the solution may be stored for up to 24 hours at 2°C to 8°C (36°F to 46°F). Do not freeze.
+</item>
+                           <item>VILTEPSO is supplied in single-dose vials. Discard unused VILTEPSO.
+</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20200812"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s6">
+                     <id root="b670999f-62df-441c-bf89-67b50ce81ec3"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.4 Administration Instructions
+</title>
+                     <text>
+                        <paragraph>VILTEPSO is administered via intravenous infusion using a peripheral or central venous catheter. Flush the intravenous access line with 0.9% Sodium Chloride Injection, USP, after infusion. Filtration of VILTEPSO is not required.
+</paragraph>
+                        <paragraph>Infuse VILTEPSO over 60 minutes. Do not mix other medications with VILTEPSO or infuse other medications concomitantly via the same intravenous access line. VILTEPSO should be mixed with 0.9% Sodium Chloride Injection, USP, only.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20200812"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s7">
+               <id root="5a87b2d6-061f-43a4-ab7e-6da060b05313"/>
+               <code code="43678-2" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION"/>
+               <title>3 DOSAGE FORMS AND STRENGTHS
+</title>
+               <text>
+                  <paragraph>VILTEPSO is a clear and colorless solution available as follows:
+</paragraph>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>Injection: 250 mg/5 mL (50 mg/mL) solution in a single-dose vial
+</item>
+                  </list>
+               </text>
+               <effectiveTime value="20200812"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Injection: 250 mg/5 mL (50 mg/mL) in a single-dose vial (<linkHtml href="#s7">3</linkHtml>)
+</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="s8">
+               <id root="fba8f7a5-31f6-417e-bd99-df786634f2c3"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>4 CONTRAINDICATIONS
+</title>
+               <text>
+                  <paragraph>None.
+</paragraph>
+               </text>
+               <effectiveTime value="20200812"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>None (<linkHtml href="#s8">4</linkHtml>)
+</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="s9">
+               <id root="464aba46-47eb-49dc-a380-72da9195e6e4"/>
+               <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+               <title>5 WARNINGS AND PRECAUTIONS
+</title>
+               <effectiveTime value="20201031"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Kidney Toxicity: Based on animal data, may cause kidney toxicity. Kidney function should be monitored; creatinine may not be a reliable measure of renal function in DMD patients. (<linkHtml href="#s10">5.1</linkHtml>, 13.2)
+</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="s10">
+                     <id root="9cd4b5d1-ed3c-4b10-b605-0cdf0dc65ab8"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.1 Kidney Toxicity
+</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="xmChange"/>Kidney toxicity was observed in animals who received viltolarsen <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#s19">8.4</linkHtml>)].</content> Although kidney toxicity was not observed in the clinical studies with VILTEPSO, the clinical experience with VILTEPSO is limited, and kidney toxicity, including potentially fatal glomerulonephritis, has been observed after administration of some antisense oligonucleotides. Kidney function should be monitored in patients taking VILTEPSO. Because of the effect of reduced skeletal muscle mass on creatinine measurements, serum creatinine may not be a reliable measure of kidney function in DMD patients. Serum cystatin C, urine dipstick, and urine protein-to-creatinine ratio should be measured before starting VILTEPSO. Consider also measuring glomerular filtration rate using an exogenous filtration marker before starting VILTEPSO. During treatment, monitor urine dipstick every month, and serum cystatin C and urine protein-to-creatinine ratio every three months. Only urine expected to be free of excreted VILTEPSO should be used for monitoring of urine protein. Urine obtained on the day of VILTEPSO infusion prior to the infusion, or urine obtained at least 48 hours after the most recent infusion, may be used.  Alternatively, use a laboratory test that does not use the reagent pyrogallol red, as this reagent has the potential to cross react with any VILTEPSO that is excreted in the urine and thus lead to a false positive result for urine protein.
+</paragraph>
+                        <paragraph>If a persistent increase in serum cystatin C or proteinuria is detected, refer to a pediatric nephrologist for further evaluation.   
+</paragraph>
+                     </text>
+                     <effectiveTime value="20201031"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s11">
+               <id root="9c180b2b-34e0-4b55-8cfa-22f74c169e8a"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>6 ADVERSE REACTIONS
+</title>
+               <effectiveTime value="20200812"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>The most common adverse reactions (incidence ≥15% in patients treated with VILTEPSO) were upper respiratory tract infection, injection site reaction, cough, and pyrexia. (<linkHtml href="#s12">6.1</linkHtml>)
+</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">To report SUSPECTED ADVERSE REACTIONS, contact NS Pharma at 1-866 NSPHARM (1-866-677-4276) or FDA at 1-800-FDA-1088 or </content>
+                           <content styleCode="bold italics">www.fda.gov/medwatch</content>
+                           <content styleCode="bold">.</content>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="s12">
+                     <id root="b946cf7d-6196-432d-b669-95835108e43a"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>6.1 Clinical Trials Experience
+</title>
+                     <text>
+                        <paragraph>Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.
+</paragraph>
+                        <paragraph>In clinical trials with VILTEPSO, 32 patients have been exposed to VILTEPSO once weekly, ranging between 40 mg/kg (0.5 times the recommended dosage) and 80 mg/kg (the recommended dosage), including 16 patients treated for greater than 12 months and 8 patients treated for greater than 24 months as part of an ongoing open-label extension study. All patients were male and had genetically confirmed DMD.
+</paragraph>
+                        <paragraph>Study 1 was a multicenter, 2-period, dose-finding study conducted in the United States and Canada in males 4 years to less than 10 years of age on a stable corticosteroid regimen for at least 3 months. During the initial period (first 4 weeks) of Study 1, patients were randomized (double-blind) to VILTEPSO or placebo. All patients then received 20 weeks of VILTEPSO 40 mg/kg once weekly (0.5 times the recommended dose) (N=8), or 80 mg/kg once weekly (N=8) <content styleCode="italics">[see Clinical Studies (<linkHtml href="#s41">14</linkHtml>)].</content>
+                        </paragraph>
+                        <paragraph>Study 2 was a multicenter, parallel-group, open-label, dose-finding study conducted in Japan. Eligible patients included ambulatory and non-ambulatory males 5 years to less than 18 years of age who were assigned to receive intravenous VILTEPSO 40 mg/kg once weekly (0.5 times the recommended dose) (N=8) or 80 mg/kg once weekly (N=8) for 24 weeks.
+</paragraph>
+                        <paragraph>Adverse reactions reported in ≥10% of patients treated with VILTEPSO 80 mg/kg/wk in pooled Studies 1 and 2 are displayed in <linkHtml href="#t1">Table 1</linkHtml>. The most common adverse reactions (incidence ≥15% in patients treated with VILTEPSO) were upper respiratory tract infection, injection site reaction, cough, and pyrexia. Patients in the pooled analysis were treated with VILTEPSO for 20 to 24 weeks.
+</paragraph>
+                        <table ID="t1" width="100%">
+                           <caption>Table 1: Adverse Reactions Reported in ≥10% of DMD Patients Treated with VILTEPSO 80 mg/kg Once Weekly (Pooled Studies 1 and 2)
+</caption>
+                           <col width="59.400%" align="left"/>
+                           <col width="40.600%" align="left"/>
+                           <tfoot>
+                              <tr>
+                                 <td colspan="2" align="left" valign="top">
+                                    <paragraph styleCode="footnote">*  Upper respiratory tract infection includes the following terms: upper respiratory tract infection, nasopharyngitis, and rhinorrhea.
+</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td colspan="2" align="left" valign="top">
+                                    <paragraph styleCode="footnote">** Injection site reaction includes the following terms: injection site bruising, injection site erythema, injection site reaction, and injection site swelling.
+</paragraph>
+                                 </td>
+                              </tr>
+                           </tfoot>
+                           <tbody>
+                              <tr>
+                                 <td align="left" valign="middle" styleCode="Toprule Botrule Lrule Rrule">
+                                    <content styleCode="bold">Adverse Reaction</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Toprule Botrule Rrule">
+                                    <content styleCode="bold">VILTEPSO</content>
+                                    <br/>
+                                    <content styleCode="bold">80 mg/kg Once Weekly</content>
+                                    <br/>
+                                    <content styleCode="bold">(n=16)</content>
+                                    <br/>
+                                    <content styleCode="bold">%</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Upper respiratory tract infection*
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">63
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Injection site reaction**
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">25
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Cough
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">19
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Pyrexia
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">19
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Contusion
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">13
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Arthralgia
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">13
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Diarrhea
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">13
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Vomiting
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">13
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Abdominal pain
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">13
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Ejection fraction decreased
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">13
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Urticaria
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">13
+</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                     <effectiveTime value="20200812"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s13">
+                     <id root="a3864329-1405-474d-bf43-a47fd049a4f5"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>6.2 Immunogenicity
+</title>
+                     <text>
+                        <paragraph>As with all oligonucleotides, there is potential for immunogenicity. The detection of antibody formation is highly dependent on the sensitivity and specificity of the assay. Additionally, the observed incidence of antibody positivity in an assay may be influenced by several factors, including assay methodology, sample handling, timing of sample collection, concomitant medications, and underlying disease. For these reasons, comparison of the incidence of antibodies in the studies described below with the incidence of antibodies in other studies may be misleading.
+</paragraph>
+                        <paragraph>For Study 1, samples collected from all 16 patients at Day 1 (pre-dose), Week 5, Week 13, and Week 24 were assessed for anti-viltolarsen antibodies. All samples were determined to be antibody negative.  For the same study, serum samples collected from all 16 patients at Day 1 (pre-dose), Week 13, and Week 24 were analyzed for anti-dystrophin antibodies. Anti-dystrophin antibodies were detected in 1 out of 16 patients (6.25%) at Weeks 13 and 24; however, at Weeks 37, 49, 73, and 97, no anti-dystrophin antibodies were detected in the same patient. Further, this patient achieved a change from baseline in dystrophin levels that was comparable to the mean change in his dosage group (80 mg/kg/week) and there were no adverse events reported with this antibody production. For Study 2, all samples collected from the 16 patients were determined to be both anti-viltolarsen antibody and anti-dystrophin antibody negative. Overall, there was a lack of observed immunogenicity, which indicates that viltolarsen is not highly immunogenic.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20200812"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s14">
+               <id root="61fe8302-d61a-4d1c-88ce-317d3b97c9ca"/>
+               <code code="43684-0" codeSystem="2.16.840.1.113883.6.1" displayName="USE IN SPECIFIC POPULATIONS SECTION"/>
+               <title>8 USE IN SPECIFIC POPULATIONS
+</title>
+               <effectiveTime value="20200812"/>
+               <component>
+                  <section ID="s15">
+                     <id root="41bf17c4-1a8e-4429-82b9-9ee24d0b9ca7"/>
+                     <code code="42228-7" codeSystem="2.16.840.1.113883.6.1" displayName="PREGNANCY SECTION"/>
+                     <title>8.1 Pregnancy
+</title>
+                     <effectiveTime value="20200812"/>
+                     <component>
+                        <section ID="s16">
+                           <id root="f3400550-4bc2-4402-b3ef-bfcec9dd7cc1"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Risk Summary</content>
+                              </paragraph>
+                              <paragraph>There are no human or animal data available to assess the use of VILTEPSO during pregnancy. In the U.S. general population, major birth defects occur in 2 to 4%, and miscarriage occurs in 15 to 20% of clinically recognized pregnancies.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20200812"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s17">
+                     <id root="df9aa1b0-696c-4659-a4dc-777515bc9163"/>
+                     <code code="77290-5" codeSystem="2.16.840.1.113883.6.1" displayName="LACTATION SECTION"/>
+                     <title>8.2 Lactation
+</title>
+                     <effectiveTime value="20200812"/>
+                     <component>
+                        <section ID="s18">
+                           <id root="df45d7ee-14d1-423a-a5ad-794ed3f1c5bc"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Risk Summary</content>
+                              </paragraph>
+                              <paragraph>There are no human or animal data to assess the effect of VILTEPSO on milk production, the presence of viltolarsen in milk, or the effects of VILTEPSO on the breastfed infant.
+</paragraph>
+                              <paragraph>The developmental and health benefits of breastfeeding should be considered along with the mother's clinical need for VILTEPSO and any potential adverse effects on the breastfed infant from VILTEPSO or from the underlying maternal condition.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20200812"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s19">
+                     <id root="93266db9-1d5c-4219-b9db-4b3cbad8d60d"/>
+                     <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+                     <title>8.4 Pediatric Use
+</title>
+                     <text>
+                        <paragraph>VILTEPSO is indicated for the treatment of DMD in patients who have a confirmed mutation of the DMD gene that is amenable to exon 53 skipping, including pediatric patients <content styleCode="italics">[see Clinical Studies (<linkHtml href="#s41">14</linkHtml>)].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20200812"/>
+                     <component>
+                        <section ID="s20">
+                           <id root="58bedb6b-bedb-4d8d-a1d9-59e730ce73e2"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Juvenile Animal Toxicity Data</content>
+                              </paragraph>
+                              <paragraph>Viltolarsen (0, 15, 60, 240, or 1200 mg/kg) was administered to juvenile male mice by subcutaneous injection on postnatal day (PND) 7 and by intravenous injection weekly from PND 14 to PND 70. The highest dose resulted in deaths because of renal toxicity. In surviving animals at 240 and 1200 mg/kg, there was a dose-dependent increase in the incidence and severity of renal tubular effects (including degeneration), which were not accompanied by clinical pathology correlates. Reduced body weight gain and delayed sexual maturation were observed at the highest dose tested. At the no-effect dose for renal toxicity (60 mg/kg), plasma exposures were similar to that in humans at the recommended human dose of 80 mg/kg/week.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20200812"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s21">
+                     <id root="e768b500-fc48-4ba6-962d-48c513e21664"/>
+                     <code code="34082-8" codeSystem="2.16.840.1.113883.6.1" displayName="GERIATRIC USE SECTION"/>
+                     <title>8.5 Geriatric Use
+</title>
+                     <text>
+                        <paragraph>DMD is largely a disease of children and young adults; therefore, there is no geriatric experience with VILTEPSO.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20200812"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s22">
+                     <id root="d2c930c4-12d9-4b01-b3c4-7d6386863276"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>8.6 Patients with Renal Impairment
+</title>
+                     <text>
+                        <paragraph>VILTEPSO has not been studied in patients with renal impairment. Viltolarsen is mostly excreted unchanged in the urine, and renal impairment may increase its exposure. However, because of the effect of reduced skeletal muscle mass on creatinine measurements in DMD patients, no specific dosage adjustment can be recommended for DMD patients with renal impairment based on estimated glomerular filtration rate. Patients with known renal function impairment should be closely monitored during treatment with VILTEPSO.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20200812"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s23">
+               <id root="01bf7dee-c8f8-46b3-b79e-827e37256d6e"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>11 DESCRIPTION
+</title>
+               <text>
+                  <paragraph>VILTEPSO (viltolarsen) injection is a sterile, preservative-free, aqueous solution for intravenous administration. VILTEPSO is a clear and colorless solution. VILTEPSO is supplied in single-dose vials containing 250 mg/5 mL viltolarsen (50 mg/mL) in 0.9% sodium chloride. Each milliliter of VILTEPSO contains 50 mg viltolarsen and 9 mg sodium chloride in water for injection. The final product is adjusted to a pH ranging between 7.0 and 7.5 using hydrochloric acid and/or sodium hydroxide.
+</paragraph>
+                  <paragraph>Viltolarsen is an antisense oligonucleotide of the phosphorodiamidate morpholino oligomer (PMO) subclass. PMOs are synthetic molecules in which the five-membered ribofuranosyl rings found in natural DNA and RNA are replaced by a six-membered morpholino ring. Each morpholino ring is linked through an uncharged phosphorodiamidate moiety rather than the negatively charged phosphate linkage that is present in natural DNA and RNA. Each phosphorodiamidate morpholino subunit contains one of the heterocyclic bases found in DNA (adenine, cytosine, guanine, or thymine). Viltolarsen contains 21 linked subunits. The molecular formula of viltolarsen is C<sub>244</sub>H<sub>381</sub>N<sub>113</sub>O<sub>88</sub>P<sub>20</sub> and the molecular weight is 6924.82 daltons. The structure and base sequence of viltolarsen are shown in <linkHtml href="#fig1">Figure 1</linkHtml>.
+</paragraph>
+                  <paragraph ID="fig1">
+                     <content styleCode="bold">Figure 1: Structural Formula of Viltolarsen</content>
+                  </paragraph>
+                  <renderMultiMedia ID="f01" referencedObject="mm01"/>
+               </text>
+               <effectiveTime value="20201031"/>
+               <component>
+                  <observationMedia ID="mm01">
+                     <text>Figure
+</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="vil01-0004-01.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s24">
+               <id root="1374920d-e8f7-4a18-b560-bd062d3788a3"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>12 CLINICAL PHARMACOLOGY
+</title>
+               <effectiveTime value="20200812"/>
+               <component>
+                  <section ID="s25">
+                     <id root="58beef48-3cf2-46bd-92a0-249d2555d174"/>
+                     <code code="43679-0" codeSystem="2.16.840.1.113883.6.1" displayName="MECHANISM OF ACTION SECTION"/>
+                     <title>12.1 Mechanism of Action
+</title>
+                     <text>
+                        <paragraph>VILTEPSO is designed to bind to exon 53 of dystrophin pre-mRNA resulting in exclusion of this exon during mRNA processing in patients with genetic mutations that are amenable to exon 53 skipping. Exon 53 skipping is intended to allow for production of an internally truncated dystrophin protein in patients with genetic mutations that are amenable to exon 53 skipping.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20200812"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s26">
+                     <id root="f5d13c9c-cc69-4a76-892d-94e8ba0b4017"/>
+                     <code code="43681-6" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACODYNAMICS SECTION"/>
+                     <title>12.2 Pharmacodynamics
+</title>
+                     <text>
+                        <paragraph>After treatment with VILTEPSO 80 mg/kg once weekly, all patients evaluated (N=8) were found to produce mRNA for a truncated dystrophin protein, as measured by reverse transcription polymerase chain reaction (RT-PCR), and demonstrated exon 53 skipping, as measured by DNA sequence analysis.
+</paragraph>
+                        <paragraph>In Study 1, all patients who received VILTEPSO 80 mg/kg once weekly for 20 to 24 weeks showed an increase from baseline in dystrophin protein expression, as quantified by a validated Western blot method (mean 5.3%; median 3.8%; range 0.7% to 13.9% of normal levels when normalized to myosin heavy chain; p-value 0.01). Mass spectrometry, immunofluorescence staining, and RT-PCR results were supportive of the Western blot data <content styleCode="italics">[see Clinical Studies (<linkHtml href="#s41">14</linkHtml>)].</content> Expected localization of truncated dystrophin to the sarcolemma in muscle fibers of patients treated with viltolarsen was confirmed by immunofluorescence staining.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20200812"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s27">
+                     <id root="52e9a4c1-9795-46f7-9c98-24dbb4a96b9a"/>
+                     <code code="43682-4" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACOKINETICS SECTION"/>
+                     <title>12.3 Pharmacokinetics
+</title>
+                     <text>
+                        <paragraph>The pharmacokinetics of viltolarsen was evaluated in DMD patients following administration of intravenous (IV) doses ranging from 1.25 mg/kg/week (0.016 times the recommended dosage) to 80 mg/kg/week (the recommended dosage). Viltolarsen exposure increased proportionally with dose, with minimal accumulation with once-weekly dosing. Inter-subject variability (as %CV) for C<sub>max</sub> and AUC ranged from 16% to 27% respectively.
+</paragraph>
+                        <paragraph>VILTEPSO is administered as an IV infusion over 60 minutes. Bioavailability is assumed to be 100%, and median T<sub>max</sub> was around 1 hour (end of infusion).
+</paragraph>
+                     </text>
+                     <effectiveTime value="20200812"/>
+                     <component>
+                        <section ID="s28">
+                           <id root="a0e707b1-a2ed-4e9f-9194-86ff69ecbdf9"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Distribution</content>
+                              </paragraph>
+                              <paragraph>The mean viltolarsen steady-state volume of distribution was 300 mL/kg (%CV=14 at a dose of 80 mg/kg. Viltolarsen plasma protein binding ranged from 39% to 40% and is not concentration dependent.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20200812"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s29">
+                           <id root="b596dc6a-5429-4cb9-99a9-ded50636dc6e"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Elimination</content>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20200812"/>
+                           <component>
+                              <section ID="s30">
+                                 <id root="5053116d-8095-4a33-9765-56ba4615d2e4"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Metabolism</content>
+                                    </paragraph>
+                                    <paragraph>Data from in vitro metabolism indicate that viltolarsen is metabolically stable. No metabolites were detected in plasma or urine.
+</paragraph>
+                                 </text>
+                                 <effectiveTime value="20200812"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section ID="s31">
+                                 <id root="979f94d8-c6f6-4205-8e16-78ab35bb49a9"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Excretion</content>
+                                    </paragraph>
+                                    <paragraph>VILTEPSO is excreted mainly as an unchanged drug in the urine. Viltolarsen elimination half-life was 2.5 (%CV=8) hours, and plasma clearance was 217 mL/hr/kg (%CV=22).
+</paragraph>
+                                 </text>
+                                 <effectiveTime value="20200812"/>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s32">
+                           <id root="f246aedc-f46e-42f3-9a91-9b2bf8376033"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Specific Populations</content>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20200812"/>
+                           <component>
+                              <section ID="s33">
+                                 <id root="36f774dc-12b4-4fcb-b584-213c56f1501f"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Age, Sex &amp; Race</content>
+                                    </paragraph>
+                                    <paragraph>The pharmacokinetics of viltolarsen have been evaluated only in male pediatric DMD patients.There is no experience with VILTEPSO in patients 65 years of age or older. No marked differences in any PK parameters were observed between White and Asian patients.
+</paragraph>
+                                 </text>
+                                 <effectiveTime value="20200812"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section ID="s34">
+                                 <id root="6b576bcd-e286-4591-a845-251bd955c5a4"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Patients with Renal or Hepatic Impairment</content>
+                                    </paragraph>
+                                    <paragraph>VILTEPSO has not been studied in patients with renal or hepatic impairment. Viltolarsen was found to be metabolically stable, and hepatic metabolism does not contribute to the elimination of viltolarsen. In addition, viltolarsen was mainly excreted unchanged in the urine. Viltolarsen is eliminated renally, and renal impairment is expected to result in increasing exposure of viltolarsen. However, because of the effect of reduced skeletal muscle mass on creatinine measurements in DMD patients, no specific dosage adjustment can be recommended for DMD patients with renal impairment based on  glomerular filtration rate estimated by serum creatinine <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#s22">8.6</linkHtml>)].</content>
+                                    </paragraph>
+                                 </text>
+                                 <effectiveTime value="20200812"/>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s35">
+                           <id root="7ef07966-7dec-43fe-8706-c1b2c433d473"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">In Vitro Drug Interaction Studies</content>
+                              </paragraph>
+                              <paragraph>Viltolarsen did not inhibit CYP3A4/5, CYP1A2, CYP2A6, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP2E1, UGT1A1, or UGT2B7. Viltolarsen did not induce CYP1A2, CYP2B6, or CYP3A4.
+</paragraph>
+                              <paragraph>Viltolarsen is not metabolized by CYP enzymes and is not a substrate of transporters BCRP, BSEP, MDR1, OAT1, OAT3, OCT1, OCT2, MATE1, or MATE2-K. Viltolarsen did not inhibit the transporters tested (OATP1B1, OATP1B3, OAT3, BCRP, MDR1, BSEP, OAT1, OCT1, OCT2, MATE1, and MATE2-K).
+</paragraph>
+                              <paragraph>Based on in vitro data, viltolarsen has a low potential for drug-drug interactions with major CYP enzymes and drug transporters in humans.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20200812"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s36">
+               <id root="47957887-fca2-420f-9676-dd80c42c94b9"/>
+               <code code="43680-8" codeSystem="2.16.840.1.113883.6.1" displayName="NONCLINICAL TOXICOLOGY SECTION"/>
+               <title>13 NONCLINICAL TOXICOLOGY
+</title>
+               <effectiveTime value="20200812"/>
+               <component>
+                  <section ID="s37">
+                     <id root="9c175b2a-237b-4343-809f-d5c09119b289"/>
+                     <code code="34083-6" codeSystem="2.16.840.1.113883.6.1" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title>13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+</title>
+                     <effectiveTime value="20200812"/>
+                     <component>
+                        <section ID="s38">
+                           <id root="fc68ac67-4f70-4803-a3b7-6df29fbb526d"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Carcinogenesis</content>
+                              </paragraph>
+                              <paragraph>Carcinogenicity studies of viltolarsen have not been conducted.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20200812"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s39">
+                           <id root="ca8bc69e-147f-4b71-88b4-4800781970ed"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Mutagenesis</content>
+                              </paragraph>
+                              <paragraph>Viltolarsen was negative for genotoxicity in <content styleCode="italics">in vitro</content> (bacterial reverse mutation, chromosomal aberration in Chinese hamster lung cells) and <content styleCode="italics">in vivo</content> (mouse bone marrow micronucleus) assays.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20200812"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s40">
+                           <id root="7f900c72-edd6-494e-84ae-f136e8c25209"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Impairment of Fertility</content>
+                              </paragraph>
+                              <paragraph>Intravenous administration of viltolarsen (0, 60, 240, or 1000 mg/kg) to male mice weekly prior to and during mating to untreated females did not have adverse effects on fertility. Plasma exposure (AUC) at the highest dose was approximately 18 times that in humans at the recommended human dose of 80 mg/kg/week.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20200812"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s41">
+               <id root="e6bdeef2-90b5-4de8-a546-4c6b4760f941"/>
+               <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+               <title>14 CLINICAL STUDIES
+</title>
+               <text>
+                  <paragraph>The effect of VILTEPSO on dystrophin production was evaluated in one study in DMD patients with a confirmed mutation of the DMD gene that is amenable to exon 53 skipping (Study 1; NCT02740972).
+</paragraph>
+                  <paragraph>Study 1 was a multicenter, 2-period, dose-finding study conducted in the United States and Canada.
+</paragraph>
+                  <paragraph>During the initial period (first 4 weeks) of Study 1, patients were randomized (double blind) to VILTEPSO or placebo. All patients then received 20 weeks of open-label VILTEPSO 40 mg/kg once weekly (0.5 times the recommended dosage) (N=8) or 80 mg/kg once weekly (N=8). Study 1 enrolled ambulatory male patients 4 years to less than 10 years of age (median age 7 years) on a stable corticosteroid regimen for at least 3 months.
+</paragraph>
+                  <paragraph>Efficacy was assessed based on change from baseline in dystrophin protein level (measured as % of the dystrophin level in healthy subjects, i.e., % of normal) at Week 25. Muscle biopsies (left or right biceps brachii) were collected from patients at baseline and following 24 weeks of VILTEPSO treatment, and analyzed for dystrophin protein level by Western blot normalized to myosin heavy chain (primary endpoint) and mass spectrometry (secondary endpoint).
+</paragraph>
+                  <paragraph>In patients who received VILTEPSO 80 mg/kg once weekly, mean dystrophin levels increased from 0.6% (SD 0.8) of normal at baseline to 5.9% (SD 4.5) of normal by Week 25, with a mean change in dystrophin of 5.3% (SD 4.5) of normal levels (p=0.01) as assessed by validated Western blot (normalized to myosin heavy chain); the median change from baseline was 3.8%. All patients demonstrated an increase in dystrophin levels over their baseline values. As assessed by mass spectrometry (normalized to filamin C), mean dystrophin levels increased from 0.6% (SD 0.2) of normal at baseline to 4.2% (SD 3.7) of normal by Week 25, with a mean change in dystrophin of 3.7% (SD 3.8) of normal levels  (nominal p=0.03, not adjusted for multiple comparisons); the median change from baseline was 1.9%.
+</paragraph>
+                  <paragraph>Individual patient dystrophin levels in patients evaluated in Study 1 are shown in <linkHtml href="#fig2">Figure 2</linkHtml> and <linkHtml href="#t2">Table 2</linkHtml>.
+</paragraph>
+                  <paragraph ID="fig2">
+                     <content styleCode="bold">Figure 2: Dystrophin Expression in Individual Patients (Study 1)</content>
+                     <br/>
+                     <br/>
+                  </paragraph>
+                  <paragraph styleCode="MultiMediaCaption">
+                     <content styleCode="bold">Patients Treated With VILTEPSO 80 mg/kg/week (n=8)</content>
+                  </paragraph>
+                  <renderMultiMedia ID="f02" referencedObject="mm02"/>
+                  <paragraph>Note: Solid lines represent individual patient data. Dystrophin was measured using Western blot and normalized to myosin heavy chain.
+</paragraph>
+                  <table ID="t2" width="100%">
+                     <caption>Table 2: Dystrophin Expression in Individual Patients (Study 1)
+</caption>
+                     <col width="20.625%" align="left"/>
+                     <col width="25.000%" align="left"/>
+                     <col width="29.375%" align="left"/>
+                     <col width="25.000%" align="left"/>
+                     <tfoot>
+                        <tr>
+                           <td colspan="4" align="left" valign="top">
+                              <paragraph styleCode="footnote">
+                                 <sup>a</sup> Data were normalized by myosin heavy chain
+</paragraph>
+                           </td>
+                        </tr>
+                     </tfoot>
+                     <tbody>
+                        <tr>
+                           <td rowspan="2" align="center" valign="top" styleCode="Toprule Botrule Lrule Rrule">
+                              <content styleCode="bold">Patient</content>
+                              <br/>
+                              <content styleCode="bold">Number</content>
+                           </td>
+                           <td colspan="3" align="center" valign="top" styleCode="Toprule Botrule Rrule">
+                              <content styleCode="bold">Western Blot % Normal Dystrophin</content>
+                              <content styleCode="bold">
+                                 <sup>a</sup>
+                              </content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">Baseline
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">Week 25
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">Change from Baseline
+</td>
+                        </tr>
+                        <tr>
+                           <td align="center" valign="top" styleCode="Botrule Lrule Rrule">1
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">0.46
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">1.14
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">0.69
+</td>
+                        </tr>
+                        <tr>
+                           <td align="center" valign="top" styleCode="Botrule Lrule Rrule">2
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">0.40
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">3.97
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">3.57
+</td>
+                        </tr>
+                        <tr>
+                           <td align="center" valign="top" styleCode="Botrule Lrule Rrule">3
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">0.46
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">2.97
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">2.51
+</td>
+                        </tr>
+                        <tr>
+                           <td align="center" valign="top" styleCode="Botrule Lrule Rrule">4
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">0.09
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">10.40
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">10.31
+</td>
+                        </tr>
+                        <tr>
+                           <td align="center" valign="top" styleCode="Botrule Lrule Rrule">5
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">0.51
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">14.42
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">13.91
+</td>
+                        </tr>
+                        <tr>
+                           <td align="center" valign="top" styleCode="Botrule Lrule Rrule">6
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">2.61
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">7.40
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">4.79
+</td>
+                        </tr>
+                        <tr>
+                           <td align="center" valign="top" styleCode="Botrule Lrule Rrule">7
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">0.43
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">3.06
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">2.63
+</td>
+                        </tr>
+                        <tr>
+                           <td align="center" valign="top" styleCode="Botrule Lrule Rrule">8
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">0.09
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">4.07
+</td>
+                           <td align="center" valign="top" styleCode="Botrule Rrule">3.98
+</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </text>
+               <effectiveTime value="20201031"/>
+               <component>
+                  <observationMedia ID="mm02">
+                     <text>Figure
+</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="vil01-0004-02.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s42">
+               <id root="2163daf4-9c87-498e-97d2-a9ad682e80f2"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>16 HOW SUPPLIED/STORAGE AND HANDLING
+</title>
+               <effectiveTime value="20200812"/>
+               <component>
+                  <section ID="s43">
+                     <id root="a34f4020-d7f3-4eee-82c9-dee1fd75760a"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>16.1  How Supplied
+</title>
+                     <text>
+                        <paragraph>VILTEPSO injection is supplied in single-dose vials. The solution is clear and colorless.
+</paragraph>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Single-dose vials containing 250 mg/5 mL (50 mg/mL) viltolarsen          NDC 73292-011-01
+</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20200812"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s44">
+                     <id root="b59fbbed-5c72-4321-ab69-be8d89819951"/>
+                     <code code="44425-7" codeSystem="2.16.840.1.113883.6.1" displayName="STORAGE AND HANDLING SECTION"/>
+                     <title>16.2  Storage and Handling
+</title>
+                     <text>
+                        <paragraph>Store VILTEPSO at 2°C to 8°C (36°F to 46°F). Do not freeze.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20200812"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s45">
+               <id root="b3cf6539-31c7-4cf1-b58d-15d6c0ed1000"/>
+               <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+               <title>17 Patient Counseling Information
+</title>
+               <effectiveTime value="20200812"/>
+               <component>
+                  <section ID="s46">
+                     <id root="b4111642-f5c3-4d46-bd9f-d2fe465ea000"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Kidney Toxicity</content>
+                        </paragraph>
+                        <paragraph>Inform patients nephrotoxicity has occurred with drugs similar to VILTEPSO. Advise patients of the importance of monitoring for kidney toxicity by their healthcare providers during treatment with VILTEPSO <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s10">5.1</linkHtml>)].</content>
+                        </paragraph>
+                        <paragraph>Manufactured for: <br/>NS Pharma, Inc. <br/>Paramus, NJ 07652
+</paragraph>
+                     </text>
+                     <effectiveTime value="20200812"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s47">
+               <id root="53f09803-1427-42c1-9321-9926e9496280"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>Principal Display Panel – Carton Label
+</title>
+               <text>
+                  <paragraph>NDC 73292-011-01</paragraph>
+                  <paragraph>Rx only</paragraph>
+                  <paragraph>Viltepso</paragraph>
+                  <paragraph>(viltolarsen) injection</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">250 mg/5 mL (50 mg/mL)</content>
+                  </paragraph>
+                  <paragraph>For intravenous infusion</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Must be refrigerated,<br/>store at 2°C to 8°C</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">(36°F to 46°F)</content>
+                  </paragraph>
+                  <paragraph>Do not freeze</paragraph>
+                  <paragraph>Single dose</paragraph>
+                  <paragraph>1 vial</paragraph>
+                  <renderMultiMedia referencedObject="L448c7bda-3015-477c-848a-dda0065317ad"/>
+               </text>
+               <effectiveTime value="20230116"/>
+               <component>
+                  <observationMedia ID="L448c7bda-3015-477c-848a-dda0065317ad">
+                     <text>Principal Display Panel – Carton Label</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="vil01-0004-03.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s48">
+               <id root="35155426-8260-463f-a050-bf186ce78af2"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>Principal Display Panel – Vial Label
+</title>
+               <text>
+                  <paragraph>NDC 73292-011-01</paragraph>
+                  <paragraph>Viltepso</paragraph>
+                  <paragraph>(viltolarsen) injection</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">250 mg/5 mL (50 mg/mL)</content>
+                  </paragraph>
+                  <paragraph>For intravenous infusion</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Refrigerate at 2°C to 8°C (36°F to 46°F)</content>
+                  </paragraph>
+                  <paragraph>Mfg for: NS Pharma, Inc.</paragraph>
+                  <paragraph>Rx only</paragraph>
+                  <renderMultiMedia referencedObject="Lead4d0c8-9468-4c89-9561-14036f8a2b6e"/>
+               </text>
+               <effectiveTime value="20230116"/>
+               <component>
+                  <observationMedia ID="Lead4d0c8-9468-4c89-9561-14036f8a2b6e">
+                     <text>Principal Display Panel – Vial Label</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="vil01-0004-04.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

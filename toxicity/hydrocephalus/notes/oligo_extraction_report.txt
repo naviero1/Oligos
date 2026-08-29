@@ -1,0 +1,30 @@
+oligos.csv build report, 2026-08-29
+================================================================
+nusinersen                 label=yes parsed=backbone_chemistry,formulation,molecular_formula,molecular_weight,sugar_modifications
+tofersen                   label=yes parsed=backbone_chemistry,formulation,length_nt,modification_pattern,molecular_formula,molecular_weight,sugar_modifications
+tominersen                 label=no  parsed=none
+BIIB080                    label=no  parsed=none
+BIIB105                    label=no  parsed=none
+WVE-120101                 label=no  parsed=none
+WVE-120102                 label=no  parsed=none
+WVE-003                    label=no  parsed=none
+eplontersen                label=yes parsed=molecular_formula,molecular_weight,sugar_modifications
+inotersen                  label=no  parsed=none
+eteplirsen                 label=yes parsed=backbone_chemistry,molecular_formula,molecular_weight,sugar_modifications
+golodirsen                 label=yes parsed=backbone_chemistry,molecular_formula,molecular_weight,sugar_modifications
+viltolarsen                label=yes parsed=backbone_chemistry,molecular_formula,molecular_weight,sugar_modifications
+casimersen                 label=yes parsed=backbone_chemistry,molecular_formula,molecular_weight,sugar_modifications
+casimersen_or_golodirsen   label=no  parsed=none
+patisiran                  label=yes parsed=molecular_weight
+vutrisiran                 label=yes parsed=none
+givosiran                  label=yes parsed=none
+lumasiran                  label=yes parsed=molecular_weight
+nedosiran                  label=yes parsed=none
+inclisiran                 label=yes parsed=molecular_weight
+volanesorsen               label=no  parsed=none
+mipomersen                 label=no  parsed=none
+pegaptanib                 label=no  parsed=none
+defibrotide                label=yes parsed=none
+imetelstat                 label=yes parsed=molecular_formula
+placebo_or_sham_control    (non-compound placeholder)
+NOT_APPLICABLE             (non-compound placeholder)

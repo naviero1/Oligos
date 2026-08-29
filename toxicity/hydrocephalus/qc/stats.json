@@ -1,0 +1,129 @@
+{
+  "n_measurements": 680,
+  "n_oligos": 28,
+  "n_sources": 46,
+  "n_oligos_with_measurements": 26,
+  "by_endpoint_tier": {
+    "A": 278,
+    "B": 402
+  },
+  "by_study_type": {
+    "background_epidemiology": 3,
+    "clinical_case": 5,
+    "clinical_trial": 326,
+    "pharmacovigilance": 266,
+    "regulatory_label": 80
+  },
+  "by_ascertainment": {
+    "measured_null": 520,
+    "measured_positive": 160
+  },
+  "by_attribution": {
+    "disease_attributed": 3,
+    "drug_attributed": 13,
+    "not_discussed": 664
+  },
+  "by_tox_axis": {
+    "csf_composition_disturbance": 138,
+    "csf_dynamics": 1,
+    "csf_pressure_disturbance": 84,
+    "delivery_procedure_complication": 179,
+    "disease_background_rate": 3,
+    "ventricular_enlargement": 275
+  },
+  "by_grade": {
+    "": 3,
+    "0": 520,
+    "1": 94,
+    "2": 48,
+    "3": 15
+  },
+  "by_delivery_route": {
+    "NOT_APPLICABLE": 3,
+    "intrathecal_lumbar": 356,
+    "intravenous": 144,
+    "intravitreal": 14,
+    "subcutaneous": 163
+  },
+  "by_readout_category": {
+    "csf_composition": 116,
+    "csf_dynamics": 44,
+    "csf_pressure": 84,
+    "hydrocephalus_event": 217,
+    "procedure_complication": 158,
+    "shunt_or_drain_intervention": 1,
+    "ventricular_morphometry": 60
+  },
+  "by_redistribution": {
+    "cc_by": 8,
+    "public_domain": 669,
+    "summary_stat_only": 3
+  },
+  "by_source_tier": {
+    "case_report": 1,
+    "epidemiology": 1,
+    "pharmacovigilance_api": 1,
+    "primary_fulltext": 1,
+    "registry_results": 26,
+    "regulatory_primary": 16
+  },
+  "rows_per_source": {
+    "FAERS_openFDA": 266,
+    "NCT02594124": 36,
+    "NCT02623699": 36,
+    "NCT03070119": 24,
+    "NCT03761849": 24,
+    "NCT03186989": 22,
+    "NCT03225846": 21,
+    "NCT02519036": 18,
+    "NCT05032196": 18,
+    "NCT03842969": 15,
+    "NCT04494256": 14,
+    "NCT01703988": 12,
+    "NCT03225833": 12,
+    "NCT04089566": 12,
+    "NCT04617860": 12,
+    "NCT03342053": 8,
+    "NCT01836549": 6,
+    "NCT04000594": 6,
+    "DailyMed_SPL_casimersen": 5,
+    "DailyMed_SPL_defibrotide": 5,
+    "DailyMed_SPL_eplontersen": 5,
+    "DailyMed_SPL_eteplirsen": 5,
+    "DailyMed_SPL_givosiran": 5,
+    "DailyMed_SPL_golodirsen": 5,
+    "DailyMed_SPL_imetelstat": 5,
+    "DailyMed_SPL_inclisiran": 5,
+    "DailyMed_SPL_inotersen": 5,
+    "DailyMed_SPL_lumasiran": 5,
+    "DailyMed_SPL_nedosiran": 5,
+    "DailyMed_SPL_nusinersen": 5,
+    "DailyMed_SPL_patisiran": 5,
+    "DailyMed_SPL_tofersen": 5,
+    "DailyMed_SPL_viltolarsen": 5,
+    "DailyMed_SPL_vutrisiran": 5,
+    "Stoker_2021_MovDisord": 5,
+    "NCT01839656": 4,
+    "NCT02292537": 4,
+    "NCT02386553": 4,
+    "NCT03532542": 4,
+    "NCT02462759": 3,
+    "NCT04617847": 3,
+    "Tofersen_seriousAE_2025_MuscleNerve": 3,
+    "Viscidi_2021_OJRD": 3,
+    "NCT02193074": 2,
+    "NCT03399370": 2,
+    "NCT00628498": 1
+  },
+  "multi_row_event_clusters": {
+    "L1-EVT-01": 5,
+    "L2-BASELINE": 3,
+    "L3-TOFERSEN-SAE": 3
+  },
+  "tier_A_positive": 25,
+  "tier_A_null": 253,
+  "grade3_rows": 15,
+  "oligos_with_sequence": 0,
+  "checks_run": 29,
+  "checks_failed": 0
+}

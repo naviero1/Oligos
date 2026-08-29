@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "INTRACRANIAL PRESSURE INCREASED",
+      "count": 6
+    },
+    {
+      "term": "HEADACHE",
+      "count": 4
+    },
+    {
+      "term": "INTRACRANIAL HYPOTENSION",
+      "count": 2
+    },
+    {
+      "term": "CONJUNCTIVAL HYPERAEMIA",
+      "count": 1
+    },
+    {
+      "term": "CSF PROTEIN INCREASED",
+      "count": 1
+    },
+    {
+      "term": "EATING DISORDER",
+      "count": 1
+    },
+    {
+      "term": "ENCEPHALITIS",
+      "count": 1
+    },
+    {
+      "term": "EPILEPSY",
+      "count": 1
+    },
+    {
+      "term": "HYPOAESTHESIA",
+      "count": 1
+    },
+    {
+      "term": "IDIOPATHIC INTRACRANIAL HYPERTENSION",
+      "count": 1
+    },
+    {
+      "term": "INTRACRANIAL ANEURYSM",
+      "count": 1
+    },
+    {
+      "term": "ISCHAEMIC STROKE",
+      "count": 1
+    },
+    {
+      "term": "NAUSEA",
+      "count": 1
+    },
+    {
+      "term": "PAPILLOEDEMA",
+      "count": 1
+    },
+    {
+      "term": "POST LUMBAR PUNCTURE SYNDROME",
+      "count": 1
+    },
+    {
+      "term": "POST PROCEDURAL COMPLICATION CIRCULATORY",
+      "count": 1
+    },
+    {
+      "term": "PROCEDURAL NAUSEA",
+      "count": 1
+    },
+    {
+      "term": "PROCEDURAL VOMITING",
+      "count": 1
+    },
+    {
+      "term": "PROTEIN TOTAL INCREASED",
+      "count": 1
+    },
+    {
+      "term": "RADICULAR PAIN",
+      "count": 1
+    },
+    {
+      "term": "VISUAL ACUITY REDUCED",
+      "count": 1
+    },
+    {
+      "term": "WHITE BLOOD CELL COUNT INCREASED",
+      "count": 1
+    }
+  ]
+}

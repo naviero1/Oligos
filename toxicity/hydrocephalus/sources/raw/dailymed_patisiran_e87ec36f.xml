@@ -1,0 +1,1225 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="254d330d-6f47-45c4-9774-95864ab46941"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>These highlights do not include all the information needed to use ONPATTRO<sup>®</sup> safely and effectively. See full prescribing information for ONPATTRO.<br/>
+      <br/>ONPATTRO (patisiran) lipid complex injection, for intravenous use<br/>Initial U.S. Approval: 2018</title>
+   <effectiveTime value="20250908"/>
+   <setId root="e87ec36f-b4b4-49d4-aea4-d4ffb09b0970"/>
+   <versionNumber value="11"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="115524410" root="1.3.6.1.4.1.519.1"/>
+            <name>Alnylam Pharmaceuticals, Inc.</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="080889930" root="1.3.6.1.4.1.519.1"/>
+                        <name>Alnylam Pharmaceuticals, Inc.</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="MANUFACTURE"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="71336-1000" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="023050730" root="1.3.6.1.4.1.519.1"/>
+                        <name>PCI San Diego, Inc.</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="MANUFACTURE"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="71336-1000" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section ID="DLDE">
+               <id root="a866d7bb-4329-452d-b46b-e2ff3be8c6c4"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL PRODUCT DATA ELEMENTS SECTION"/>
+               <effectiveTime value="20250908"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="71336-1000" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Onpattro</name>
+                        <formCode code="C42950" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INJECTION, LIPID COMPLEX"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>patisiran</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator value="2" unit="mg"/>
+                              <denominator value="1" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="WO0YM16LKG" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>patisiran sodium</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="50FKX8CB2Y" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>patisiran</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <quantity>
+                              <numerator value="13" unit="mg"/>
+                              <denominator value="1" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="Q0J6FQ6FKP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MC-3</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <quantity>
+                              <numerator value="1.6" unit="mg"/>
+                              <denominator value="1" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="G739VUB5KO" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>1,2-DIMYRISTOYL-SN-GLYCERO-3-CARBOXAMINOPROPYLPOLYETHYLENE GLYCOL 2000 METHYL ETHER</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <quantity>
+                              <numerator value="3.3" unit="mg"/>
+                              <denominator value="1" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="043IPI2M0K" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>1,2-Distearoyl-sn-glycero-3-phosphocholine</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <quantity>
+                              <numerator value="6.2" unit="mg"/>
+                              <denominator value="1" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="97C5T2UQ7J" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Cholesterol</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <quantity>
+                              <numerator value="2.3" unit="mg"/>
+                              <denominator value="1" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="70WT22SF4B" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Sodium phosphate, dibasic, heptahydrate</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <quantity>
+                              <numerator value="0.2" unit="mg"/>
+                              <denominator value="1" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="4J9FJ0HL51" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MONOBASIC POTASSIUM PHOSPHATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <quantity>
+                              <numerator value="8.8" unit="mg"/>
+                              <denominator value="1" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="451W47IQ8X" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Sodium Chloride</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="059QF0KO0R" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Water</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="5" unit="mL"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43215" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="VIAL, SINGLE-DOSE"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="71336-1000-1" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20180813"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NDA210922" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73594" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20180813"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="WHITE" xsi:type="CE">
+                              <originalText>white to off-white</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38276" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INTRAVENOUS"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="S1">
+               <id root="a358edc9-da42-4c20-80b1-2a1c0b22f05e"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>1 INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph>ONPATTRO is indicated for the treatment of the polyneuropathy of hereditary transthyretin-mediated amyloidosis in adults.</paragraph>
+               </text>
+               <effectiveTime value="20250908"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>ONPATTRO contains a transthyretin-directed small interfering RNA and is indicated for the treatment of the polyneuropathy of hereditary transthyretin-mediated amyloidosis in adults.</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="S2">
+               <id root="5e4d120e-e143-40f1-af4b-6d3d8930dbd3"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>2 DOSAGE AND ADMINISTRATION</title>
+               <effectiveTime value="20250908"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="disc">
+                           <item>For patients weighing less than 100 kg, the recommended dosage is 0.3 mg/kg every 3 weeks by intravenous infusion. For patients weighing 100 kg or more, the recommended dosage is 30 mg (<linkHtml href="#S2.1">2.1</linkHtml>)</item>
+                           <item>Premedicate with a corticosteroid, acetaminophen, and antihistamines (<linkHtml href="#S2.2">2.2</linkHtml>)</item>
+                           <item>Filter and dilute prior to administration (<linkHtml href="#S2.3">2.3</linkHtml>)</item>
+                           <item>Infuse over approximately 80 minutes (<linkHtml href="#S2.4">2.4</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="S2.1">
+                     <id root="300160a8-cbf4-426c-ba58-3852a6170aab"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.1  Dosing Information </title>
+                     <text>
+                        <paragraph>ONPATTRO should be administered by a healthcare professional.</paragraph>
+                        <paragraph>ONPATTRO is administered via intravenous (IV) infusion. Dosing is based on actual body weight.</paragraph>
+                        <paragraph>For patients weighing less than 100 kg, the recommended dosage is 0.3 mg/kg once every 3 weeks.</paragraph>
+                        <paragraph>For patients weighing 100 kg or more, the recommended dosage is 30 mg once every 3 weeks.</paragraph>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                     <component>
+                        <section>
+                           <id root="e73ffde8-0a76-495d-875e-5d62e20d8e06"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Missed Dose</content>
+                              </paragraph>
+                              <paragraph>If a dose is missed, administer ONPATTRO as soon as possible.</paragraph>
+                              <list listType="unordered" styleCode="disc">
+                                 <item>If ONPATTRO is administered within 3 days of the missed dose, continue dosing according to the patient's original schedule.</item>
+                                 <item>If ONPATTRO is administered more than 3 days after the missed dose, continue dosing every 3 weeks thereafter.</item>
+                              </list>
+                           </text>
+                           <effectiveTime value="20250908"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S2.2">
+                     <id root="680381a1-d020-45f0-83ce-27ea26911ef9"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.2  Required Premedication </title>
+                     <text>
+                        <paragraph>All patients should receive premedication prior to ONPATTRO administration to reduce the risk of infusion-related reactions (IRRs) <content styleCode="italics">[see <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>]</content>. Each of the following premedications should be given on the day of ONPATTRO infusion at least 60 minutes prior to the start of infusion:</paragraph>
+                        <list listType="unordered" styleCode="disc">
+                           <item>Intravenous corticosteroid (e.g., dexamethasone 10 mg, or equivalent)</item>
+                           <item>Oral acetaminophen (500 mg)</item>
+                           <item>Intravenous H1 blocker (e.g., diphenhydramine 50 mg, or equivalent)</item>
+                           <item>Intravenous H2 blocker (e.g., famotidine 20 mg, or equivalent)</item>
+                        </list>
+                        <paragraph>For premedications not available or not tolerated intravenously, equivalents may be administered orally.</paragraph>
+                        <paragraph>For patients who are tolerating their ONPATTRO infusions but experiencing adverse reactions related to the corticosteroid premedication, the corticosteroid may be reduced by 2.5 mg increments to a minimum dose of 5 mg of dexamethasone (intravenous), or equivalent.</paragraph>
+                        <paragraph>Some patients may require additional or higher doses of one or more of the premedications to reduce the risk of IRRs <content styleCode="italics">[see <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S2.3">
+                     <id root="7b37ab03-162c-4b47-bac7-c3dc7507a845"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.3  Preparation Instructions</title>
+                     <text>
+                        <paragraph>ONPATTRO must be filtered and diluted prior to intravenous infusion. The diluted solution for infusion should be prepared by a healthcare professional using aseptic technique as follows:</paragraph>
+                        <list listType="unordered" styleCode="disc">
+                           <item>Remove ONPATTRO from the refrigerator and allow to warm to room temperature. Do not shake or vortex.</item>
+                           <item>Inspect visually for particulate matter and discoloration. Do not use if discoloration or foreign particles are present. ONPATTRO is a white to off-white, opalescent, homogeneous solution. A white to off-white coating may be observed on the inner surface of the vial, typically at the liquid-headspace interface. Product quality is not impacted by presence of the white to off-white coating.</item>
+                           <item>Calculate the required dose of ONPATTRO based on the recommended weight-based dosage <content styleCode="italics">[see <linkHtml href="#S2.1">Dosage and Administration (2.1)</linkHtml>].</content>
+                           </item>
+                           <item>Withdraw the entire contents of one or more vials into a single sterile syringe.</item>
+                           <item>Filter ONPATTRO through a sterile 0.45 micron polyethersulfone (PES) syringe filter into a sterile container.</item>
+                           <item>Withdraw the required volume of filtered ONPATTRO from the sterile container using a sterile syringe. </item>
+                           <item>Dilute the required volume of filtered ONPATTRO into an infusion bag containing 0.9% Sodium Chloride Injection, USP for a total volume of 200 mL. Use infusion bags that are di(2-ethylhexyl)phthalate-free (DEHP-free).</item>
+                           <item>Gently invert the bag to mix the solution. Do not shake. Do not mix or dilute with other drugs.</item>
+                           <item>Discard any unused portion of ONPATTRO.</item>
+                           <item>ONPATTRO does not contain preservatives. The diluted solution should be administered immediately after preparation. If not used immediately, store in the infusion bag at room temperature (up to 30°C [86°F]) for up to 16 hours (including infusion time). Do not freeze.</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S2.4">
+                     <id root="88f39ed7-4cca-439a-9435-f7ab0f0435f5"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.4  Infusion Instructions </title>
+                     <text>
+                        <list listType="unordered" styleCode="disc">
+                           <item>Use a dedicated line with an infusion set containing a 1.2 micron polyethersulfone (PES) in-line infusion filter. Use infusion sets and lines that are DEHP-free.</item>
+                           <item>Infuse the diluted solution of ONPATTRO intravenously, via an ambulatory infusion pump, over approximately 80 minutes, at an initial infusion rate of approximately 1 mL/min for the first 15 minutes, then increase to approximately 3 mL/min for the remainder of the infusion. The duration of infusion may be extended in the event of an IRR <content styleCode="italics">[see <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>].</content>
+                           </item>
+                           <item>Administer only through a free-flowing venous access line. Monitor the infusion site for possible infiltration during drug administration. Suspected extravasation should be managed according to local standard practice for non-vesicants.</item>
+                           <item>Observe the patient during the infusion and, if clinically indicated, following the infusion <content styleCode="italics">[see <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>].</content>
+                           </item>
+                           <item>After completion of the infusion, flush the intravenous administration set with 0.9% Sodium Chloride Injection, USP to ensure that all ONPATTRO has been administered.</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S3">
+               <id root="9e971e30-78c5-4dc0-9d0b-eef492edd382"/>
+               <code code="43678-2" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION"/>
+               <title>3 DOSAGE FORMS AND STRENGTHS</title>
+               <text>
+                  <paragraph>Lipid Complex Injection: 10 mg/5 mL (2 mg/mL) white to off-white, opalescent, homogeneous solution in a single-dose vial.</paragraph>
+               </text>
+               <effectiveTime value="20250908"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Lipid Complex Injection: 10 mg/5 mL (2 mg/mL) in a single-dose vial</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="S4">
+               <id root="cc189ad1-8a27-44f8-8e84-3e37234e13ff"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>4 CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>None.</paragraph>
+               </text>
+               <effectiveTime value="20250908"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>None</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="S5">
+               <id root="c191e384-cbb5-4d20-928a-7f3a9abebf15"/>
+               <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+               <title>5 WARNINGS AND PRECAUTIONS</title>
+               <effectiveTime value="20250908"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="disc">
+                           <item>Infusion-related reactions: Monitor for signs and symptoms during infusion. Slow or interrupt the infusion if clinically indicated. Discontinue the infusion if a serious or life-threatening infusion-related reaction occurs (<linkHtml href="#S5.1">5.1</linkHtml>)</item>
+                           <item>Reduced serum vitamin A levels and recommended supplementation: Supplement with the recommended daily allowance of vitamin A. Refer to an ophthalmologist if ocular symptoms suggestive of vitamin A deficiency occur (<linkHtml href="#S5.2">5.2</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="S5.1">
+                     <id root="954ee178-dba5-4c16-a8c9-1746fadcd864"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.1  Infusion-Related Reactions </title>
+                     <text>
+                        <paragraph>Infusion-related reactions (IRRs) have been observed in patients treated with ONPATTRO. In clinical studies, all patients received premedication with a corticosteroid, acetaminophen, and antihistamines (H1 and H2 blockers) to reduce the risk of IRRs. In a controlled clinical study, 19% of ONPATTRO-treated patients experienced IRRs, compared to 9% of placebo-treated patients. Among ONPATTRO-treated patients who experienced an IRR, 79% experienced the first IRR within the first 2 infusions. The frequency of IRRs decreased over time. IRRs led to infusion interruption in 5% of patients. IRRs resulted in permanent discontinuation of ONPATTRO in less than 1% of patients in clinical studies. Across clinical studies, the most common symptoms (reported in greater than 2% of patients) of IRRs with ONPATTRO were flushing, back pain, nausea, abdominal pain, dyspnea, and headache <content styleCode="italics">[see <linkHtml href="#S6.1">Adverse Reactions (6.1)</linkHtml>]</content>. Severe hypotension and syncope have been reported as symptoms of IRRs in the expanded access program and postmarketing setting.</paragraph>
+                        <paragraph>Patients should receive premedications on the day of ONPATTRO infusion, at least 60 minutes prior to the start of infusion <content styleCode="italics">[see <linkHtml href="#S2.2">Dosage and Administration (2.2)</linkHtml>]</content>. Monitor patients during the infusion for signs and symptoms of IRRs. If an IRR occurs, consider slowing or interrupting the ONPATTRO infusion and instituting medical management (e.g., corticosteroids or other symptomatic treatment), as clinically indicated. If the infusion is interrupted, consider resuming at a slower infusion rate only if symptoms have resolved. In the case of a serious or life-threatening IRR, the infusion should be discontinued and not resumed.</paragraph>
+                        <paragraph>Some patients who experience IRRs may benefit from a slower infusion rate or additional or higher doses of one or more of the premedications with subsequent infusions to reduce the risk of IRRs <content styleCode="italics">[see <linkHtml href="#S2.2">Dosage and Administration (2.2)</linkHtml>]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S5.2">
+                     <id root="ef77251a-54c7-4e76-ac44-f80f857c702b"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.2  Reduced Serum Vitamin A Levels and Recommended Supplementation</title>
+                     <text>
+                        <paragraph>ONPATTRO treatment leads to a decrease in serum vitamin A levels. Supplementation at the recommended daily allowance of vitamin A is advised for patients taking ONPATTRO. Higher doses than the recommended daily allowance of vitamin A should not be given to try to achieve normal serum vitamin A levels during treatment with ONPATTRO, as serum vitamin A levels do not reflect the total vitamin A in the body.</paragraph>
+                        <paragraph>Patients should be referred to an ophthalmologist if they develop ocular symptoms suggestive of vitamin A deficiency (e.g., night blindness).</paragraph>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S6">
+               <id root="ffb29765-49bc-438b-85f2-2a6d8151c92a"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>6 ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>The following clinically significant adverse reactions are described elsewhere in the labeling:</paragraph>
+                  <list listType="unordered" styleCode="disc">
+                     <item>Infusion-Related Reactions <content styleCode="italics">[see <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>]</content>
+                     </item>
+                  </list>
+               </text>
+               <effectiveTime value="20250908"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>The most frequently reported adverse reactions (that occurred in at least 10% of ONPATTRO-treated patients and at least 3% more frequently than on placebo) were upper respiratory tract infections and infusion-related reactions (<linkHtml href="#S6.1">6.1</linkHtml>)</paragraph>
+                        <br/>
+                        <paragraph>
+                           <content styleCode="bold">To report SUSPECTED ADVERSE REACTIONS, contact Alnylam Pharmaceuticals at 1-877-256-9526 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch</content>.</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="S6.1">
+                     <id root="fb31d33a-0660-40df-b616-652205310bd1"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>6.1  Clinical Trials Experience</title>
+                     <text>
+                        <paragraph>Because clinical studies are conducted under widely varying conditions, adverse reaction rates observed in the clinical studies of ONPATTRO cannot be directly compared to rates in the clinical studies of another drug and may not reflect the rates observed in practice.</paragraph>
+                        <paragraph>A total of 224 patients with polyneuropathy caused by hereditary transthyretin-mediated amyloidosis (hATTR amyloidosis) received ONPATTRO in the placebo-controlled and open-label clinical studies, including 186 patients exposed for at least 1 year, 137 patients exposed for at least 2 years, and 52 patients exposed for at least 3 years. In the placebo-controlled study, 148 patients received ONPATTRO for up to 18 months (mean exposure 17.7 months). Baseline demographic and disease characteristics were generally similar between treatment groups. The median age of study patients was 62 years and 74% were male. Seventy-two percent of study patients were Caucasian, 23% were Asian, 2% were Black, and 2% were reported as other. At baseline, 46% of patients were in Stage 1 of the disease and 53% were in Stage 2. Forty-three percent of patients had Val30Met mutations in the transthyretin gene; the remaining patients had 38 other point mutations. Sixty-two percent of ONPATTRO-treated patients had non-Val30Met mutations, compared to 48% of the placebo-treated patients.</paragraph>
+                        <paragraph>Upper respiratory tract infections and infusion-related reactions were the most common adverse reactions. One patient (0.7%) discontinued ONPATTRO because of an infusion-related reaction.</paragraph>
+                        <paragraph>Patients were instructed to take the recommended daily allowance of vitamin A <content styleCode="italics">[see <linkHtml href="#S5.2">Warnings and Precautions (5.2)</linkHtml>]</content>. Sixty-four percent of patients treated with ONPATTRO had normal vitamin A levels at baseline, and 99% of those with a normal baseline developed low vitamin A levels. In one case, the decreased vitamin A level was reported as an adverse reaction.</paragraph>
+                        <paragraph>Table 1 lists the adverse reactions that occurred in at least 5% of patients in the ONPATTRO-treated group and that occurred at least 3% more frequently than in the placebo-treated group in the randomized controlled clinical trial.</paragraph>
+                        <table width="75%">
+                           <caption>Table 1:  Adverse Reactions from the Placebo-Controlled Trial that Occurred in at Least 5% of ONPATTRO-treated Patients and at Least 3% More Frequently than in Placebo-treated Patients</caption>
+                           <col width="50%" align="left" valign="top"/>
+                           <col width="25%" align="center" valign="top"/>
+                           <col width="25%" align="center" valign="top"/>
+                           <thead>
+                              <tr>
+                                 <th styleCode="Lrule Rrule" align="center" valign="middle">Adverse Reaction</th>
+                                 <th styleCode="Rrule">ONPATTRO<br/>N=148<br/>%</th>
+                                 <th styleCode="Rrule">Placebo<br/>N=77<br/>%</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">Upper respiratory tract infections <footnote ID="foot11">Includes nasopharyngitis, upper respiratory tract infection, respiratory tract infection, pharyngitis, rhinitis, sinusitis, viral upper respiratory tract infection, upper respiratory tract congestion.</footnote>
+                                 </td>
+                                 <td styleCode="Rrule">29</td>
+                                 <td styleCode="Rrule">21</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">Infusion-related reaction <footnote ID="foot12">Infusion-related reaction symptoms include, but are not limited to: arthralgia or pain (including back, neck, or musculoskeletal pain), flushing (including erythema of face or skin warm), nausea, abdominal pain, dyspnea or cough, chest discomfort or chest pain, headache, rash, chills, dizziness, fatigue, increased heart rate or palpitations, hypotension, hypertension, facial edema.</footnote>
+                                 </td>
+                                 <td styleCode="Rrule">19</td>
+                                 <td styleCode="Rrule">9</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">Dyspepsia</td>
+                                 <td styleCode="Rrule">8</td>
+                                 <td styleCode="Rrule">4</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">Dyspnea <footnote ID="foot13">Not part of an infusion-related reaction.</footnote>
+                                    <sup>, </sup>
+                                    <footnote ID="foot14">Includes dyspnea and exertional dyspnea.</footnote>
+                                 </td>
+                                 <td styleCode="Rrule">8</td>
+                                 <td styleCode="Rrule">0</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">Muscle spasms <footnoteRef IDREF="foot13"/>
+                                 </td>
+                                 <td styleCode="Rrule">8</td>
+                                 <td styleCode="Rrule">1</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">Arthralgia <footnoteRef IDREF="foot13"/>
+                                 </td>
+                                 <td styleCode="Rrule">7</td>
+                                 <td styleCode="Rrule">0</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">Erythema <footnoteRef IDREF="foot13"/>
+                                 </td>
+                                 <td styleCode="Rrule">7</td>
+                                 <td styleCode="Rrule">3</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">Bronchitis <footnote ID="foot15">Includes bronchitis, bronchiolitis, bronchitis viral, lower respiratory tract infection, lung infection.</footnote>
+                                 </td>
+                                 <td styleCode="Rrule">7</td>
+                                 <td styleCode="Rrule">3</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule">Vertigo</td>
+                                 <td styleCode="Rrule">5</td>
+                                 <td styleCode="Rrule">1</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>Four serious adverse reactions of atrioventricular (AV) heart block (2.7%) occurred in ONPATTRO-treated patients, including 3 cases of complete AV block. No serious adverse reactions of AV block were reported in placebo-treated patients.</paragraph>
+                        <paragraph>Ocular adverse reactions that occurred in 5% or less of ONPATTRO-treated patients in the controlled clinical trial, but in at least 2% of ONPATTRO-treated patients, and more frequently than on placebo, include dry eye (5% vs. 3%), blurred vision (3% vs. 1%), and vitreous floaters (2% vs. 1%).</paragraph>
+                        <paragraph>Extravasation was observed in less than 0.5% of infusions in clinical studies, including cases that were reported as serious. Signs and symptoms included phlebitis or thrombophlebitis, infusion or injection site swelling, dermatitis (subcutaneous inflammation), cellulitis, erythema or injection site redness, burning sensation, or injection site pain.</paragraph>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S6.2">
+                     <id root="637719a3-2212-45aa-90cc-70190e685787"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>6.2  Immunogenicity</title>
+                     <text>
+                        <paragraph>The detection of antibody formation is highly dependent on the sensitivity and specificity of the assay. In addition, the observed incidence of antibody (including neutralizing antibody) positivity in an assay may be influenced by several factors, including assay methodology, sample handling, timing of sample collection, concomitant medications, and underlying disease. For these reasons, comparison of the incidence of antibodies to ONPATTRO in the studies described below with the incidence of antibodies in other studies or to other products may be misleading.</paragraph>
+                        <paragraph>Anti-drug antibodies to ONPATTRO were evaluated by measuring antibodies specific to PEG<sub>2000</sub>-C-DMG, a lipid component exposed on the surface of ONPATTRO. In the placebo-controlled and open-label clinical studies, 7 of 194 (3.6%) patients with hATTR amyloidosis developed anti-drug antibodies during treatment with ONPATTRO. One additional patient had pre-existing anti-drug antibodies. There was no evidence of an effect of anti-drug antibodies on clinical efficacy, safety, or the pharmacokinetic or pharmacodynamic profiles of ONPATTRO. Although these data do not demonstrate an impact of anti-drug antibody development on the efficacy or safety of ONPATTRO in these patients, the available data are too limited to make definitive conclusions.</paragraph>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S6.3">
+                     <id root="b27e3203-d615-4b45-af18-1ef1b63e4554"/>
+                     <code code="90375-7" codeSystem="2.16.840.1.113883.6.1" displayName="POSTMARKETING EXPERIENCE SECTION"/>
+                     <title>6.3 Postmarketing Experience</title>
+                     <text>
+                        <paragraph>The following adverse reactions have been identified during postapproval use of ONPATTRO. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.</paragraph>
+                        <paragraph>Symptoms of infusion-related reactions have included syncope <content styleCode="italics">[see <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>]</content> and pruritus.</paragraph>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S8">
+               <id root="f01e327c-fc2d-4fc6-8a1f-efb81cc48eda"/>
+               <code code="43684-0" codeSystem="2.16.840.1.113883.6.1" displayName="USE IN SPECIFIC POPULATIONS SECTION"/>
+               <title>8 USE IN SPECIFIC POPULATIONS</title>
+               <effectiveTime value="20250908"/>
+               <component>
+                  <section ID="S8.1">
+                     <id root="2124878f-b0ef-493b-8da7-157cc3b3d5f5"/>
+                     <code code="42228-7" codeSystem="2.16.840.1.113883.6.1" displayName="PREGNANCY SECTION"/>
+                     <title>8.1 Pregnancy</title>
+                     <effectiveTime value="20250908"/>
+                     <component>
+                        <section>
+                           <id root="a83dab12-eb92-424d-b6d9-aadc052f10cc"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Pregnancy Exposure Registry</content>
+                              </paragraph>
+                              <paragraph>There is a pregnancy exposure registry that monitors pregnancy outcomes in women exposed to ONPATTRO during pregnancy. Physicians are encouraged to enroll pregnant patients, or pregnant women may register themselves in the program by calling 1-877-256-9526 or by contacting alnylampregnancyprogram@iqvia.com.</paragraph>
+                           </text>
+                           <effectiveTime value="20250908"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="745e99c6-0500-44f6-834d-e24082242065"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Risk Summary</content>
+                              </paragraph>
+                              <paragraph>There are no available data on ONPATTRO use in pregnant women to inform a drug-associated risk of adverse developmental outcomes. ONPATTRO treatment leads to a decrease in serum vitamin A levels, and vitamin A supplementation is advised for patients taking ONPATTRO. Vitamin A is essential for normal embryofetal development; however, excessive levels of vitamin A are associated with adverse developmental effects. The effects on the fetus of a reduction in maternal serum TTR caused by ONPATTRO and of vitamin A supplementation are unknown <content styleCode="italics">[see <linkHtml href="#S12.2">Clinical Pharmacology (12.2)</linkHtml>, <linkHtml href="#S5.2">Warnings and Precautions (5.2)</linkHtml>]</content>.</paragraph>
+                              <paragraph>In animal studies, intravenous administration of patisiran lipid complex (patisiran-LC) to pregnant rabbits resulted in developmental toxicity (embryofetal mortality and reduced fetal body weight) at doses that were also associated with maternal toxicity. No adverse developmental effects were observed when patisiran-LC or a rodent-specific (pharmacologically active) surrogate were administered to pregnant rats (see <content styleCode="italics">
+                                    <linkHtml href="#Data">Data</linkHtml>
+                                 </content>).</paragraph>
+                              <paragraph>In the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2 to 4% and 15 to 20%, respectively. The background risk of major birth defects and miscarriage for the indicated population is unknown.</paragraph>
+                           </text>
+                           <effectiveTime value="20250908"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="Data">
+                           <id root="0dd0895e-1c1e-4b7b-af03-b1c854e7f026"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Data</content>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20250908"/>
+                           <component>
+                              <section>
+                                 <id root="ac4fb70b-0f6e-4988-b009-736e315282fb"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Animal Data</content>
+                                    </paragraph>
+                                    <paragraph>Intravenous administration of patisiran-LC (0, 0.15, 0.50, or 1.5 mg/kg) or a rodent-specific (pharmacologically active) surrogate (1.5 mg/kg) to female rats every week for two weeks prior to mating and continuing throughout organogenesis resulted in no adverse effects on fertility or embryofetal development.</paragraph>
+                                    <paragraph>Intravenous administration of patisiran-LC (0, 0.1, 0.3, or 0.6 mg/kg) to pregnant rabbits every week during the period of organogenesis produced no adverse effects on embryofetal development. In a separate study, patisiran-LC (0, 0.3, 1, or 2 mg/kg), administered to pregnant rabbits every week during the period of organogenesis, resulted in embryofetal mortality and reduced fetal body weight at the mid and high doses, which were associated with maternal toxicity.</paragraph>
+                                    <paragraph>Intravenous administration of patisiran-LC (0, 0.15, 0.50, or 1.5 mg/kg) or a rodent-specific surrogate (1.5 mg/kg) to pregnant rats every week throughout pregnancy and lactation resulted in no adverse developmental effects on the offspring. </paragraph>
+                                 </text>
+                                 <effectiveTime value="20250908"/>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S8.2">
+                     <id root="98eba137-76da-4171-9885-31615045a412"/>
+                     <code code="77290-5" codeSystem="2.16.840.1.113883.6.1" displayName="LACTATION SECTION"/>
+                     <title>8.2 Lactation</title>
+                     <effectiveTime value="20250908"/>
+                     <component>
+                        <section>
+                           <id root="286c6ea2-e2de-4821-aa97-73b15397112c"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Risk Summary</content>
+                              </paragraph>
+                              <paragraph>There is no information regarding the presence of ONPATTRO in human milk, the effects on the breastfed infant, or the effects on milk production. The developmental and health benefits of breastfeeding should be considered along with the mother's clinical need for ONPATTRO and any potential adverse effects on the breastfed infant from ONPATTRO or from the underlying maternal condition.</paragraph>
+                              <paragraph>In lactating rats, patisiran was not detected in milk; however, the lipid components (DLin-MC3-DMA and PEG<sub>2000</sub>-C-DMG) were present in milk.</paragraph>
+                           </text>
+                           <effectiveTime value="20250908"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S8.4">
+                     <id root="227f1519-fcf7-43a6-b072-5129f02f7dbc"/>
+                     <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+                     <title>8.4 Pediatric Use</title>
+                     <text>
+                        <paragraph>Safety and effectiveness in pediatric patients have not been established. </paragraph>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S8.5">
+                     <id root="45ec4203-886a-4937-8ecd-6f9f9888e347"/>
+                     <code code="34082-8" codeSystem="2.16.840.1.113883.6.1" displayName="GERIATRIC USE SECTION"/>
+                     <title>8.5 Geriatric Use</title>
+                     <text>
+                        <paragraph>No dose adjustment is required in patients ≥65 years old <content styleCode="italics">[see <linkHtml href="#S12.3">Clinical Pharmacology (12.3)</linkHtml>]</content>. A total of 62 patients ≥65 years of age, including 9 patients ≥75 years of age, received ONPATTRO in the placebo-controlled study. No overall differences in safety or effectiveness were observed between these patients and younger patients, but greater sensitivity of some older individuals cannot be ruled out.</paragraph>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S8.6">
+                     <id root="fa6abde5-66de-4d3f-ba61-4126fc808455"/>
+                     <code code="88829-7" codeSystem="2.16.840.1.113883.6.1" displayName="HEPATIC IMPAIRMENT SUBSECTION"/>
+                     <title>8.6  Hepatic Impairment </title>
+                     <text>
+                        <paragraph>No dose adjustment is necessary in patients with mild hepatic impairment (bilirubin ≤1 × ULN and AST &gt;1 × ULN, or bilirubin &gt;1.0 to 1.5 × ULN) <content styleCode="italics">[see <linkHtml href="#S12.3">Clinical Pharmacology (12.3)</linkHtml>]</content>. ONPATTRO has not been studied in patients with moderate or severe hepatic impairment.</paragraph>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S8.7">
+                     <id root="fae22336-7d75-40e7-8e01-4264f5d16cb7"/>
+                     <code code="88828-9" codeSystem="2.16.840.1.113883.6.1" displayName="RENAL IMPAIRMENT SUBSECTION"/>
+                     <title>8.7  Renal Impairment</title>
+                     <text>
+                        <paragraph>No dose adjustment is necessary in patients with mild or moderate renal impairment (estimated glomerular filtration rate [eGFR] ≥30 to &lt;90 mL/min/1.73m<sup>2</sup>) <content styleCode="italics">[see <linkHtml href="#S12.3">Clinical Pharmacology (12.3)</linkHtml>]</content>. ONPATTRO has not been studied in patients with severe renal impairment or end-stage renal disease.</paragraph>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S11">
+               <id root="b49720d8-0be7-4a7e-9dcc-6e1270a6a6f9"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>11 DESCRIPTION</title>
+               <text>
+                  <paragraph>ONPATTRO contains patisiran, a double-stranded small interfering ribonucleic acid (siRNA), formulated as a lipid complex for delivery to hepatocytes. Patisiran specifically binds to a genetically conserved sequence in the 3' untranslated region (3'UTR) of mutant and wild-type transthyretin (TTR) messenger RNA (mRNA). </paragraph>
+                  <paragraph>The structural formula is: </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM1"/>
+                  </paragraph>
+                  <paragraph>A, adenosine; C, cytidine; G, guanosine; U, uridine; Cm, 2'-<content styleCode="italics">O-</content>methylcytidine; Um, 2'-<content styleCode="italics">O-</content>methyluridine; dT, thymidine </paragraph>
+                  <paragraph>ONPATTRO is supplied as a sterile, preservative-free, white to off-white, opalescent, homogeneous solution for intravenous infusion in a single-dose glass vial. Each 1 mL of solution contains 2 mg of patisiran (equivalent to 2.1 mg of patisiran sodium). Each 1 mL also contains 6.2 mg cholesterol USP, 13.0 mg (6Z,9Z,28Z,31Z)-heptatriaconta-6,9,28,31-tetraen-19-yl-4-(dimethylamino) butanoate (DLin-MC3-DMA), 3.3 mg 1,2-distearoyl-<content styleCode="italics">sn</content>-glycero-3-phosphocholine (DSPC), 1.6 mg α-(3'-{[1,2-di(myristyloxy)propanoxy] carbonylamino}propyl)-ω-methoxy, polyoxyethylene (PEG<sub>2000</sub>-C-DMG), 0.2 mg potassium phosphate monobasic anhydrous NF, 8.8 mg sodium chloride USP, 2.3 mg sodium phosphate dibasic heptahydrate USP, and Water for Injection USP. The pH is ~7.0.</paragraph>
+                  <paragraph>The molecular formula of patisiran sodium is C<sub>412</sub> H<sub>480</sub> N<sub>148</sub> Na<sub>40</sub> O<sub>290</sub> P<sub>40</sub> and the molecular weight is 14304 Da.</paragraph>
+               </text>
+               <effectiveTime value="20250908"/>
+               <component>
+                  <observationMedia ID="MM1">
+                     <text>Chemical Structure</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="onpattro-01.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S12">
+               <id root="5e83fd49-64ce-4431-ab36-7eff15e802eb"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>12 CLINICAL PHARMACOLOGY</title>
+               <effectiveTime value="20250908"/>
+               <component>
+                  <section ID="S12.1">
+                     <id root="c880389b-62bc-4cdd-873a-9a20c6b8f513"/>
+                     <code code="43679-0" codeSystem="2.16.840.1.113883.6.1" displayName="MECHANISM OF ACTION SECTION"/>
+                     <title>12.1  Mechanism of Action</title>
+                     <text>
+                        <paragraph>Patisiran is a double-stranded siRNA that causes degradation of mutant and wild-type TTR mRNA through RNA interference, which results in a reduction of serum TTR protein and TTR protein deposits in tissues.</paragraph>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S12.2">
+                     <id root="399f7274-80f8-4b06-a1fc-8ddec7bf2958"/>
+                     <code code="43681-6" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACODYNAMICS SECTION"/>
+                     <title>12.2 Pharmacodynamics</title>
+                     <text>
+                        <paragraph>The pharmacodynamic effects of ONPATTRO were evaluated in hATTR amyloidosis patients treated with 0.3 mg/kg ONPATTRO via intravenous infusion once every 3 weeks.</paragraph>
+                        <paragraph>Mean serum TTR was reduced by approximately 80% within 10 to 14 days after a single dose. With repeat dosing every 3 weeks, mean reductions of serum TTR after 9 and 18 months of treatment were 83% and 84%, respectively. The mean maximum reduction of serum TTR over 18 months was 88%. Similar TTR reductions were observed regardless of TTR mutation, sex, age, race, or prior liver transplantation. In a dose-ranging study, greater TTR reduction was maintained over the dosing interval with the recommended dosing regimen of 0.3 mg/kg every 3 weeks compared to 0.3 mg/kg every 4 weeks.</paragraph>
+                        <paragraph>Serum TTR is a carrier of retinol binding protein, which is involved in the transport of vitamin A in the blood. Mean reductions in serum retinol binding protein of 45% and serum vitamin A of 62% were observed over 18 months <content styleCode="italics">[see <linkHtml href="#S5.2">Warnings and Precautions (5.2)</linkHtml>]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S12.3">
+                     <id root="390faf7d-180d-4377-938b-0ae3dd84e104"/>
+                     <code code="43682-4" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACOKINETICS SECTION"/>
+                     <title>12.3 Pharmacokinetics</title>
+                     <text>
+                        <paragraph>Following a single intravenous administration, systemic exposure to patisiran increases in a linear and dose-proportional manner over the range of 0.01 to 0.5 mg/kg. Greater than 95% of patisiran in the circulation is associated with the lipid complex. At the recommended dosing regimen of 0.3 mg/kg every 3 weeks, steady state is reached by 24 weeks of treatment. The estimated mean ± SD steady state peak concentrations (C<sub>max</sub>), trough concentrations (C<sub>trough</sub>), and area under the curve (AUC<sub>τ</sub>) were 7.15 ± 2.14 µg/mL, 0.021 ± 0.044 µg/mL, and 184 ± 159 µg∙h/mL, respectively. The accumulation of AUC<sub>τ</sub> was 3.2-fold at steady state, compared to the first dose. In the placebo-controlled study, inter-patient variability in patisiran exposure did not result in differences in clinical efficacy (mNIS+7 change from baseline) or safety (adverse events, serious adverse events).</paragraph>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                     <component>
+                        <section>
+                           <id root="2e51fe91-0637-4615-8f8e-120433820692"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Distribution</content>
+                              </paragraph>
+                              <paragraph>Plasma protein binding of ONPATTRO is low, with ≤2.1% binding observed <content styleCode="italics">in vitro</content> with human serum albumin and human α1-acid glycoprotein. ONPATTRO distributes primarily to the liver. At the recommended dosing regimen of 0.3 mg/kg every 3 weeks, the mean ± SD steady state volume of distribution of patisiran (V<sub>ss</sub>) was 0.26 ± 0.20 L/kg.</paragraph>
+                           </text>
+                           <effectiveTime value="20250908"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="3a469e85-6ab1-4e68-b689-b9395c55c4fa"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Elimination</content>
+                              </paragraph>
+                              <paragraph>The terminal elimination half-life (mean ± SD) of patisiran is 3.2 ± 1.8 days. Patisiran is mainly cleared through metabolism, and the total body clearance (mean ± SD) at steady state (CL<sub>ss</sub>) is 3.0 ± 2.5 mL/h/kg. </paragraph>
+                           </text>
+                           <effectiveTime value="20250908"/>
+                           <component>
+                              <section>
+                                 <id root="e6a99677-50a5-48ac-b90c-7e85bc1edef2"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Metabolism</content>
+                                    </paragraph>
+                                    <paragraph>Patisiran is metabolized by nucleases to nucleotides of various lengths.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20250908"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="6204a094-820d-4dc5-aaf7-31236bb285e4"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Excretion</content>
+                                    </paragraph>
+                                    <paragraph>Less than 1% of the administered dose of patisiran is excreted unchanged into urine. </paragraph>
+                                 </text>
+                                 <effectiveTime value="20250908"/>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="8710edfa-e3ad-436b-9f83-fec09afc4482"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Specific Populations</content>
+                              </paragraph>
+                              <paragraph>Age, race (non-Caucasian vs. Caucasian), sex, and prior liver transplantation had no impact on the steady state pharmacokinetics of patisiran or TTR reduction. Population pharmacokinetic and pharmacodynamic analyses indicated no impact of mild or moderate renal impairment (eGFR ≥30 to &lt;90 mL/min/1.73m<sup>2</sup>) or mild hepatic impairment (bilirubin ≤1 × ULN and AST &gt;1 × ULN, or bilirubin &gt;1.0 to 1.5 × ULN) on patisiran exposure or TTR reduction. ONPATTRO has not been studied in patients with severe renal impairment, end-stage renal disease, or moderate or severe hepatic impairment.</paragraph>
+                           </text>
+                           <effectiveTime value="20250908"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="4c536024-3ee9-4a22-b9f2-2ade349e2fdb"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Drug Interaction Studies</content>
+                              </paragraph>
+                              <paragraph>No formal clinical drug interaction studies have been performed. The components of ONPATTRO are not inhibitors or inducers of cytochrome P450 enzymes or transporters at clinically relevant plasma concentrations. Patisiran is not a substrate of cytochrome P450 enzymes. In a population pharmacokinetic analysis, concomitant use of strong or moderate CYP3A inducers and inhibitors did not impact the pharmacokinetic parameters of patisiran. ONPATTRO is not expected to cause drug-drug interactions or to be affected by inhibitors or inducers of cytochrome P450 enzymes.</paragraph>
+                           </text>
+                           <effectiveTime value="20250908"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S13">
+               <id root="5bc22333-9c61-40cf-8b52-b0aed826b4cb"/>
+               <code code="43680-8" codeSystem="2.16.840.1.113883.6.1" displayName="NONCLINICAL TOXICOLOGY SECTION"/>
+               <title>13 NONCLINICAL TOXICOLOGY</title>
+               <effectiveTime value="20250908"/>
+               <component>
+                  <section ID="S13.1">
+                     <id root="81e4e7f0-87b8-406f-8f10-86f7f34a07e5"/>
+                     <code code="34083-6" codeSystem="2.16.840.1.113883.6.1" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title>13.1  Carcinogenesis, Mutagenesis, Impairment of Fertility</title>
+                     <effectiveTime value="20250908"/>
+                     <component>
+                        <section>
+                           <id root="a94dbf46-079a-4516-b09f-bf4fb52a72b6"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Carcinogenesis</content>
+                              </paragraph>
+                              <paragraph>Patisiran-LC was not carcinogenic in TgRasH2 mice when administered at intravenous (IV) doses of 0, 0.5, 2, or 6 mg/kg every two weeks for 26 weeks.</paragraph>
+                           </text>
+                           <effectiveTime value="20250908"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="63afca9b-f786-4247-b5fa-8503d5170279"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Mutagenesis</content>
+                              </paragraph>
+                              <paragraph>Patisiran-LC was negative for genotoxicity in <content styleCode="italics">in vitro</content> (bacterial mutagenicity assay, chromosomal aberration assay in human peripheral blood lymphocytes) and <content styleCode="italics">in vivo</content> (mouse bone marrow micronucleus) assays.</paragraph>
+                           </text>
+                           <effectiveTime value="20250908"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="a338341e-92a8-41b6-b9fb-14a13bb26dd0"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Impairment of Fertility</content>
+                              </paragraph>
+                              <paragraph>Intravenous (IV) administration of patisiran-LC (0, 0.03, 0.1, or 0.3 mg/kg) or a rodent-specific (pharmacologically active) surrogate (0.1 mg/kg) to male rats every two weeks prior to and throughout mating to untreated females produced no adverse effects on fertility.</paragraph>
+                              <paragraph>Intravenous administration of patisiran-LC (0, 0.15, 0.50, or 1.5 mg/kg) or a rodent-specific (pharmacologically active) surrogate (1.5 mg/kg) to female rats every week for two weeks prior to mating and continuing throughout organogenesis resulted in no adverse effects on fertility or on embryofetal development.</paragraph>
+                              <paragraph>Intravenous administration of patisiran-LC (0, 0.3, 1, or 2 mg/kg) to adult monkeys every three weeks for 39 weeks produced no adverse effects on male reproductive organs or on sperm morphology or count.</paragraph>
+                           </text>
+                           <effectiveTime value="20250908"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S14">
+               <id root="cc8be463-5c75-4341-85c9-c40349002e6e"/>
+               <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+               <title>14 CLINICAL STUDIES</title>
+               <text>
+                  <paragraph>The efficacy of ONPATTRO was demonstrated in a randomized, double-blind, placebo-controlled, multicenter clinical  trial in adult patients with polyneuropathy caused by hATTR amyloidosis (NCT 01960348). Patients were randomized in a 2:1 ratio to receive ONPATTRO 0.3 mg/kg (N=148) or placebo (N=77), respectively, via intravenous infusion once every 3 weeks for 18 months. All patients received premedication with a corticosteroid, acetaminophen, and H1 and H2 blockers. Ninety-three percent of ONPATTRO-treated patients and 62% of placebo-treated patients completed 18 months of the assigned treatment.</paragraph>
+                  <paragraph>The primary efficacy endpoint was the change from baseline to Month 18 in the modified Neuropathy Impairment Score +7 (mNIS+7). The mNIS+7 is an objective assessment of neuropathy and comprises the NIS and Modified +7 (+7) composite scores. In the version of the mNIS+7 used in the trial, the NIS objectively measures deficits in cranial nerve function, muscle strength, and reflexes, and the +7 assesses postural blood pressure, quantitative sensory testing, and peripheral nerve electrophysiology. The maximum possible score was 304 points, with higher scores representing a greater severity of disease.</paragraph>
+                  <paragraph>The clinical meaningfulness of effects on the mNIS+7 was assessed by the change from baseline to Month 18 in Norfolk Quality of Life-Diabetic Neuropathy (QoL-DN) total score. The Norfolk QoL-DN scale is a patient-reported assessment that evaluates the subjective experience of neuropathy in the following domains: physical functioning/large fiber neuropathy, activities of daily living, symptoms, small fiber neuropathy, and autonomic neuropathy. The version of the Norfolk QoL-DN that was used in the trial had a total score range from -4 to 136, with higher scores representing greater impairment.</paragraph>
+                  <paragraph>The changes from baseline to Month 18 on both the mNIS+7 and the Norfolk QoL-DN significantly favored ONPATTRO (Table 2, Figure 1 and Figure 3). The distributions of changes in mNIS+7 and Norfolk QoL-DN scores from baseline to Month 18 by percent of patients are shown in Figure 2 and Figure 4, respectively.</paragraph>
+                  <paragraph>The changes from baseline to Month 18 in modified body mass index (mBMI) and gait speed (10-meter walk test) significantly favored ONPATTRO (Table 2).</paragraph>
+                  <table width="75%">
+                     <caption>Table 2:	Clinical Efficacy Results from the Placebo-Controlled Study</caption>
+                     <col width="16%" align="left" valign="middle"/>
+                     <col width="13%" align="center" valign="middle"/>
+                     <col width="13%" align="center" valign="middle"/>
+                     <col width="13%" align="center" valign="middle"/>
+                     <col width="13%" align="center" valign="middle"/>
+                     <col width="16%" align="center" valign="middle"/>
+                     <col width="16%" align="center" valign="middle"/>
+                     <thead>
+                        <tr styleCode="Botrule">
+                           <th styleCode="Lrule Rrule" rowspan="2" align="center">Endpoint<footnote ID="foot21">All endpoints analyzed using the mixed-effect model repeated measures (MMRM) method.</footnote>
+                           </th>
+                           <th styleCode="Rrule" colspan="2">Baseline, Mean (SD)</th>
+                           <th styleCode="Rrule" colspan="2">Change from Baseline to Month 18, LS Mean (SEM)</th>
+                           <th styleCode="Rrule" rowspan="2">ONPATTRO-Placebo Treatment Difference, LS Mean (95% CI) </th>
+                           <th styleCode="Rrule" rowspan="2">
+                              <content styleCode="italics">p</content>-value</th>
+                        </tr>
+                        <tr>
+                           <th styleCode="Rrule" align="center">ONPATTRO<br/>N=148</th>
+                           <th styleCode="Rrule">Placebo<br/>N=77</th>
+                           <th styleCode="Rrule">ONPATTRO</th>
+                           <th styleCode="Rrule">Placebo</th>
+                        </tr>
+                     </thead>
+                     <tfoot>
+                        <tr>
+                           <td colspan="7" align="left">CI, confidence interval; LS, least squares; mBMI, modified body mass index; mNIS, modified Neuropathy Impairment Score; QoL-DN, Quality of Life – Diabetic Neuropathy; SD, standard deviation; SEM, standard error of the mean </td>
+                        </tr>
+                     </tfoot>
+                     <tbody>
+                        <tr styleCode="Botrule">
+                           <td align="left" colspan="6" styleCode="Lrule Rrule">
+                              <content styleCode="bold">Primary</content>
+                           </td>
+                           <td styleCode="Rrule"/>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Lrule Rrule">mNIS+7 <footnote ID="foot22">A lower value indicates less impairment/fewer symptoms.</footnote>
+                           </td>
+                           <td styleCode="Rrule">80.9 (41.5)</td>
+                           <td styleCode="Rrule">74.6 (37.0)</td>
+                           <td styleCode="Rrule">-6.0 (1.7)</td>
+                           <td styleCode="Rrule">28.0 (2.6)</td>
+                           <td styleCode="Rrule">-34.0<br/>(-39.9, -28.1)</td>
+                           <td styleCode="Rrule">
+                              <content styleCode="italics">p</content>&lt;0.001</td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td align="left" colspan="6" styleCode="Lrule Rrule">
+                              <content styleCode="bold">Secondary</content>
+                           </td>
+                           <td styleCode="Rrule"/>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Lrule Rrule">Norfolk QoL-DN <footnoteRef IDREF="foot22"/>
+                           </td>
+                           <td styleCode="Rrule">59.6 (28.2)</td>
+                           <td styleCode="Rrule">55.5 (24.3)</td>
+                           <td styleCode="Rrule">-6.7 (1.8)</td>
+                           <td styleCode="Rrule">14.4 (2.7)</td>
+                           <td styleCode="Rrule">-21.1<br/>(-27.2, -15.0)</td>
+                           <td styleCode="Rrule">
+                              <content styleCode="italics">p</content>&lt;0.001</td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Lrule Rrule">10-meter walk test (m/sec) <footnote ID="foot23">A higher number indicates less disability/less impairment.</footnote>
+                           </td>
+                           <td styleCode="Rrule">0.80 (0.40)</td>
+                           <td styleCode="Rrule">0.79 (0.32)</td>
+                           <td styleCode="Rrule">0.08 (0.02)</td>
+                           <td styleCode="Rrule">-0.24 (0.04)</td>
+                           <td styleCode="Rrule">0.31<br/>(0.23, 0.39)</td>
+                           <td styleCode="Rrule">
+                              <content styleCode="italics">p</content>&lt;0.001</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule Rrule">mBMI <footnote ID="foot24">mBMI: body mass index (BMI; kg/m<sup>2</sup>) multiplied by serum albumin (g/L); a higher number indicates better nutritional status.</footnote>
+                           </td>
+                           <td styleCode="Rrule">970 (210)</td>
+                           <td styleCode="Rrule">990 (214)</td>
+                           <td styleCode="Rrule">-3.7 (9.6)</td>
+                           <td styleCode="Rrule">-119 (14.5)</td>
+                           <td styleCode="Rrule">116<br/>(82, 149)</td>
+                           <td styleCode="Rrule">
+                              <content styleCode="italics">p</content>&lt;0.001</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>
+                     <content styleCode="bold">Figure 1:	Change from Baseline in mNIS+7</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM2"/>
+                  </paragraph>
+                  <paragraph>A decrease in mNIS+7 indicates improvement.</paragraph>
+                  <paragraph>Δ indicates between-group treatment difference, shown as the LS mean difference (95% CI) for ONPATTRO – placebo.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Figure 2:	 Histogram of mNIS+7 Change from Baseline at Month 18</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM3"/>
+                  </paragraph>
+                  <paragraph>mNIS+7 change scores are rounded to the nearest whole number; last available post-baseline scores were used.</paragraph>
+                  <paragraph>Categories are mutually exclusive; patients who died before 18 months are summarized in the "Death" category only.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Figure 3:	Change from Baseline in Norfolk QoL-DN Score</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM4"/>
+                  </paragraph>
+                  <paragraph>A decrease in Norfolk QoL-DN score indicates improvement.</paragraph>
+                  <paragraph>Δ indicates between-group treatment difference, shown as the LS mean difference (95% CI) for ONPATTRO – placebo.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Figure 4:	Histogram of Norfolk QoL-DN Change from Baseline at Month 18</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM5"/>
+                  </paragraph>
+                  <paragraph>Norfolk QoL-DN change scores are rounded to the nearest whole number; last available post-baseline scores were used.</paragraph>
+                  <paragraph>Categories are mutually exclusive; patients who died before 18 months are summarized in the "Death" category only.  </paragraph>
+                  <paragraph>Patients receiving ONPATTRO experienced similar improvements relative to placebo in mNIS+7 and Norfolk QoL-DN score across all subgroups including age, sex, race, region, NIS score, Val30Met mutation status, and disease stage.</paragraph>
+               </text>
+               <effectiveTime value="20250908"/>
+               <component>
+                  <observationMedia ID="MM2">
+                     <text>Figure 1</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="onpattro-02.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM3">
+                     <text>Figure 2</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="onpattro-03.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM4">
+                     <text>Figure 3</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="onpattro-04.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM5">
+                     <text>Figure 4</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="onpattro-05.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S16">
+               <id root="b168205f-c05d-49ca-93c7-2e484adbd8fd"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>16 HOW SUPPLIED/STORAGE AND HANDLING</title>
+               <effectiveTime value="20250908"/>
+               <component>
+                  <section ID="S16.1">
+                     <id root="eb307e8f-5e59-4385-9740-241799671790"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>16.1  How Supplied</title>
+                     <text>
+                        <paragraph>ONPATTRO is a sterile, preservative-free, white to off-white, opalescent, homogeneous solution for intravenous infusion supplied as a 10 mg/5 mL (2 mg/mL) solution in a single-dose glass vial. The vial stopper is not made with natural rubber latex. ONPATTRO is available in cartons containing one single-dose vial each.</paragraph>
+                        <paragraph>The NDC is: 71336-1000-1.</paragraph>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S16.2">
+                     <id root="788a4319-523f-47e8-8119-678b17e93f7b"/>
+                     <code code="44425-7" codeSystem="2.16.840.1.113883.6.1" displayName="STORAGE AND HANDLING SECTION"/>
+                     <title>16.2  Storage and Handling </title>
+                     <text>
+                        <paragraph>Store at 2°C to 8°C (36°F to 46°F). Do not freeze. Discard vial if it has been frozen.</paragraph>
+                        <paragraph>If refrigeration is not available, ONPATTRO can be stored at room temperature up to 25°C (up to 77°F) for up to 14 days.</paragraph>
+                        <paragraph>For storage conditions of ONPATTRO after dilution in the infusion bag, see <linkHtml href="#S2.3">Dosage and Administration (2.3)</linkHtml>.</paragraph>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S17">
+               <id root="02a4eefd-d1ba-4e6d-b426-233106cded37"/>
+               <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+               <title>17 PATIENT COUNSELING INFORMATION</title>
+               <effectiveTime value="20250908"/>
+               <component>
+                  <section>
+                     <id root="66aaadc2-186d-45b4-b06e-bd97ffdb970d"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Infusion-Related Reactions</content>
+                        </paragraph>
+                        <paragraph>Inform patients about the signs and symptoms of infusion-related reactions (e.g., flushing, dyspnea, chest pain, syncope, rash, increased heart rate, facial edema). Advise patients to contact their healthcare provider immediately if they experience signs and symptoms of infusion-related reactions <content styleCode="italics">[see <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>]</content>. </paragraph>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="5f3a4123-efe0-4337-94b2-32539270c16d"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Recommended Vitamin A Supplementation</content>
+                        </paragraph>
+                        <paragraph>Inform patients that ONPATTRO treatment leads to a decrease in vitamin A levels measured in the serum. Instruct patients to take the recommended daily allowance of vitamin A. Advise patients to contact their healthcare provider if they experience ocular symptoms suggestive of vitamin A deficiency (e.g., night blindness) and refer them to an ophthalmologist if they develop these symptoms <content styleCode="italics">[see <linkHtml href="#S5.2">Warnings and Precautions (5.2)</linkHtml>]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="677ae074-7d54-4f6c-9aad-239b207da81e"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Pregnancy</content>
+                        </paragraph>
+                        <paragraph>Instruct patients that if they are pregnant or plan to become pregnant while taking ONPATTRO they should inform their healthcare provider. Advise female patients of childbearing potential of the potential risk to the fetus. Encourage patients to enroll in the ONPATTRO pregnancy exposure registry if they become pregnant while taking ONPATTRO <content styleCode="italics">[see <linkHtml href="#S8.1">Use in Specific Populations (8.1)</linkHtml>]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20250908"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="24a6b646-4f42-4974-b725-62d0942f2f57"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>Manufactured for: Alnylam Pharmaceuticals, Inc.<br/>300 Third Street, Cambridge, MA 02142<br/>By: PCI San Diego, Inc.<br/>11040 Roselle Street, San Diego, CA 92121</paragraph>
+                  <paragraph>ONPATTRO is a registered trademark of Alnylam Pharmaceuticals, Inc.</paragraph>
+               </text>
+               <effectiveTime value="20250908"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="4f27646f-19e6-42b6-a805-5cc1def7769a"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 2 mg/mL Vial Carton</title>
+               <text>
+                  <paragraph>NDC 71336-1000-1</paragraph>
+                  <paragraph>onpattro<sub>®</sub>
+                     <br/>(patisiran)<br/> lipid complex injection</paragraph>
+                  <paragraph>10 mg/5 mL<br/>(2 mg/mL)</paragraph>
+                  <paragraph>Sterile Solution for<br/>Intravenous Infusion Only</paragraph>
+                  <paragraph>Dilute Before Use</paragraph>
+                  <paragraph>Single-Dose Vial</paragraph>
+                  <paragraph>Discard Unused Portion</paragraph>
+                  <paragraph>Rx Only</paragraph>
+                  <renderMultiMedia referencedObject="MM00"/>
+               </text>
+               <effectiveTime value="20250908"/>
+               <component>
+                  <observationMedia ID="MM00">
+                     <text>PRINCIPAL DISPLAY PANEL - 2 mg/mL Vial Carton</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="onpattro-06.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

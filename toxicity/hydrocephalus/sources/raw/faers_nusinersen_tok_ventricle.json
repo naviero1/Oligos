@@ -1,0 +1,238 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "CEREBRAL VENTRICLE DILATATION",
+      "count": 6
+    },
+    {
+      "term": "ACUTE RESPIRATORY FAILURE",
+      "count": 2
+    },
+    {
+      "term": "HYDROCEPHALUS",
+      "count": 2
+    },
+    {
+      "term": "SEPSIS",
+      "count": 2
+    },
+    {
+      "term": "ACCIDENTAL UNDERDOSE",
+      "count": 1
+    },
+    {
+      "term": "ADENOVIRUS INFECTION",
+      "count": 1
+    },
+    {
+      "term": "ANAEMIA",
+      "count": 1
+    },
+    {
+      "term": "ARACHNOID CYST",
+      "count": 1
+    },
+    {
+      "term": "BACTERAEMIA",
+      "count": 1
+    },
+    {
+      "term": "BRADYCARDIA",
+      "count": 1
+    },
+    {
+      "term": "CARDIAC ARREST",
+      "count": 1
+    },
+    {
+      "term": "CATHETER SITE THROMBOSIS",
+      "count": 1
+    },
+    {
+      "term": "CEREBRAL ATROPHY",
+      "count": 1
+    },
+    {
+      "term": "CEREBRAL VENTRICLE COLLAPSE",
+      "count": 1
+    },
+    {
+      "term": "CONJUNCTIVAL HYPERAEMIA",
+      "count": 1
+    },
+    {
+      "term": "CORNEAL ABRASION",
+      "count": 1
+    },
+    {
+      "term": "DEVICE MALFUNCTION",
+      "count": 1
+    },
+    {
+      "term": "ENDOTRACHEAL INTUBATION COMPLICATION",
+      "count": 1
+    },
+    {
+      "term": "ENTEROVIRUS INFECTION",
+      "count": 1
+    },
+    {
+      "term": "FATIGUE",
+      "count": 1
+    },
+    {
+      "term": "GASTROINTESTINAL INFECTION",
+      "count": 1
+    },
+    {
+      "term": "HYPERLACTACIDAEMIA",
+      "count": 1
+    },
+    {
+      "term": "HYPOXIC-ISCHAEMIC ENCEPHALOPATHY",
+      "count": 1
+    },
+    {
+      "term": "INAPPROPRIATE ANTIDIURETIC HORMONE SECRETION",
+      "count": 1
+    },
+    {
+      "term": "INFECTIVE THROMBOSIS",
+      "count": 1
+    },
+    {
+      "term": "IRRITABILITY",
+      "count": 1
+    },
+    {
+      "term": "JOINT DISLOCATION",
+      "count": 1
+    },
+    {
+      "term": "KYPHOSCOLIOSIS",
+      "count": 1
+    },
+    {
+      "term": "MEDICAL DEVICE SITE HAEMORRHAGE",
+      "count": 1
+    },
+    {
+      "term": "MENINGITIS PNEUMOCOCCAL",
+      "count": 1
+    },
+    {
+      "term": "METABOLIC DISORDER",
+      "count": 1
+    },
+    {
+      "term": "MYOCARDITIS SEPTIC",
+      "count": 1
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 1
+    },
+    {
+      "term": "OTITIS MEDIA ACUTE",
+      "count": 1
+    },
+    {
+      "term": "PAROXYSMAL SYMPATHETIC HYPERACTIVITY",
+      "count": 1
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 1
+    },
+    {
+      "term": "PNEUMONIA ESCHERICHIA",
+      "count": 1
+    },
+    {
+      "term": "PYREXIA",
+      "count": 1
+    },
+    {
+      "term": "RASH",
+      "count": 1
+    },
+    {
+      "term": "REFEEDING SYNDROME",
+      "count": 1
+    },
+    {
+      "term": "RESPIRATORY FAILURE",
+      "count": 1
+    },
+    {
+      "term": "RESPIRATORY SYNCYTIAL VIRUS BRONCHIOLITIS",
+      "count": 1
+    },
+    {
+      "term": "RHINOVIRUS INFECTION",
+      "count": 1
+    },
+    {
+      "term": "SCOLIOSIS",
+      "count": 1
+    },
+    {
+      "term": "SERRATIA INFECTION",
+      "count": 1
+    },
+    {
+      "term": "STATUS EPILEPTICUS",
+      "count": 1
+    },
+    {
+      "term": "STENOTROPHOMONAS INFECTION",
+      "count": 1
+    },
+    {
+      "term": "STREPTOCOCCAL BACTERAEMIA",
+      "count": 1
+    },
+    {
+      "term": "SUBDURAL HAEMORRHAGE",
+      "count": 1
+    },
+    {
+      "term": "THROMBOCYTOSIS",
+      "count": 1
+    },
+    {
+      "term": "THYROID DISORDER",
+      "count": 1
+    },
+    {
+      "term": "THYROID FUNCTION TEST ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "URINE OUTPUT DECREASED",
+      "count": 1
+    },
+    {
+      "term": "VASCULITIS",
+      "count": 1
+    },
+    {
+      "term": "VERTEBRAL ARTERY STENOSIS",
+      "count": 1
+    },
+    {
+      "term": "VOMITING",
+      "count": 1
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 1
+    }
+  ]
+}

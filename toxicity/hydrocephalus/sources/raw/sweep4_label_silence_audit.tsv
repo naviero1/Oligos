@@ -1,0 +1,24 @@
+label_file	drug_brand	any_TIER_A	TIER_A_terms_present	TIER_B_terms_present	verdict
+sweep4_spl_avacincaptadpegol_IZERVAY.xml	avacincaptadpegol_IZERVAY	NO	-	-	SILENT_on_endpoint
+sweep4_spl_casimersen_AMONDYS45.xml	casimersen_AMONDYS45	NO	-	-	SILENT_on_endpoint
+sweep4_spl_defibrotide_DEFITELIO.xml	defibrotide_DEFITELIO	NO	-	-	SILENT_on_endpoint
+sweep4_spl_donidalorsen_DAWNZERA.xml	donidalorsen_DAWNZERA	NO	-	-	SILENT_on_endpoint
+sweep4_spl_eplontersen_WAINUA.xml	eplontersen_WAINUA	NO	-	-	SILENT_on_endpoint
+sweep4_spl_eteplirsen_EXONDYS51.xml	eteplirsen_EXONDYS51	NO	-	-	SILENT_on_endpoint
+sweep4_spl_fitusiran_QFITLIA.xml	fitusiran_QFITLIA	NO	-	-	SILENT_on_endpoint
+sweep4_spl_givosiran_GIVLAARI.xml	givosiran_GIVLAARI	NO	-	-	SILENT_on_endpoint
+sweep4_spl_golodirsen_VYONDYS53.xml	golodirsen_VYONDYS53	NO	-	-	SILENT_on_endpoint
+sweep4_spl_imetelstat_RYTELO.xml	imetelstat_RYTELO	NO	-	-	SILENT_on_endpoint
+sweep4_spl_inclisiran_LEQVIO.xml	inclisiran_LEQVIO	NO	-	-	SILENT_on_endpoint
+sweep4_spl_inotersen_TEGSEDI_akcea.xml	inotersen_TEGSEDI_akcea	NO	-	CSF WBC/pleocytosis	TIER_B_ONLY
+sweep4_spl_inotersen_TEGSEDI_catalent.xml	inotersen_TEGSEDI_catalent	NO	-	-	SILENT_on_endpoint
+sweep4_spl_lumasiran_OXLUMO.xml	lumasiran_OXLUMO	NO	-	-	SILENT_on_endpoint
+sweep4_spl_mipomersen_KYNAMRO.xml	mipomersen_KYNAMRO	NO	-	-	SILENT_on_endpoint
+sweep4_spl_nedosiran_RIVFLOZA.xml	nedosiran_RIVFLOZA	NO	-	-	SILENT_on_endpoint
+sweep4_spl_nusinersen_SPINRAZA.xml	nusinersen_SPINRAZA	YES	hydrocephalus	aseptic meningitis;post-LP syndrome;arachnoiditis	TIER_A_PRESENT
+sweep4_spl_olezarsen_TRYNGOLZA.xml	olezarsen_TRYNGOLZA	NO	-	-	SILENT_on_endpoint
+sweep4_spl_patisiran_ONPATTRO.xml	patisiran_ONPATTRO	NO	-	-	SILENT_on_endpoint
+sweep4_spl_plozasiran_REDEMPLO.xml	plozasiran_REDEMPLO	NO	-	-	SILENT_on_endpoint
+sweep4_spl_tofersen_QALSODY.xml	tofersen_QALSODY	NO	-	raised ICP;papilledema;aseptic meningitis;CSF protein increased;CSF WBC/pleocytosis	TIER_B_ONLY
+sweep4_spl_viltolarsen_VILTEPSO.xml	viltolarsen_VILTEPSO	NO	-	-	SILENT_on_endpoint
+sweep4_spl_vutrisiran_AMVUTTRA.xml	vutrisiran_AMVUTTRA	NO	-	-	SILENT_on_endpoint

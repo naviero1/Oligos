@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "PRODUCT DOSE OMISSION ISSUE",
+      "count": 698
+    },
+    {
+      "term": "NO ADVERSE EVENT",
+      "count": 550
+    },
+    {
+      "term": "INTENTIONAL DOSE OMISSION",
+      "count": 279
+    },
+    {
+      "term": "POOR VENOUS ACCESS",
+      "count": 187
+    },
+    {
+      "term": "DEVICE ISSUE",
+      "count": 182
+    },
+    {
+      "term": "PYREXIA",
+      "count": 111
+    },
+    {
+      "term": "COVID-19",
+      "count": 87
+    },
+    {
+      "term": "MALAISE",
+      "count": 74
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 62
+    },
+    {
+      "term": "FALL",
+      "count": 60
+    },
+    {
+      "term": "COUGH",
+      "count": 58
+    },
+    {
+      "term": "ILLNESS",
+      "count": 55
+    },
+    {
+      "term": "INFLUENZA",
+      "count": 55
+    },
+    {
+      "term": "VOMITING",
+      "count": 42
+    },
+    {
+      "term": "PRODUCT DOSE OMISSION",
+      "count": 41
+    },
+    {
+      "term": "WEIGHT INCREASED",
+      "count": 40
+    },
+    {
+      "term": "EXPOSURE TO SARS-COV-2",
+      "count": 37
+    },
+    {
+      "term": "NASOPHARYNGITIS",
+      "count": 35
+    },
+    {
+      "term": "PRODUCT DISTRIBUTION ISSUE",
+      "count": 35
+    },
+    {
+      "term": "UNDERDOSE",
+      "count": 33
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 32
+    },
+    {
+      "term": "DEHYDRATION",
+      "count": 31
+    },
+    {
+      "term": "INCORRECT DOSE ADMINISTERED",
+      "count": 30
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 27
+    },
+    {
+      "term": "FATIGUE",
+      "count": 27
+    },
+    {
+      "term": "HEADACHE",
+      "count": 27
+    },
+    {
+      "term": "CHEST PAIN",
+      "count": 26
+    },
+    {
+      "term": "CATHETER SITE PAIN",
+      "count": 24
+    },
+    {
+      "term": "FEMUR FRACTURE",
+      "count": 24
+    },
+    {
+      "term": "THERAPY CESSATION",
+      "count": 23
+    },
+    {
+      "term": "ANXIETY",
+      "count": 22
+    },
+    {
+      "term": "FLUSHING",
+      "count": 21
+    },
+    {
+      "term": "RASH",
+      "count": 21
+    },
+    {
+      "term": "HEART RATE INCREASED",
+      "count": 20
+    },
+    {
+      "term": "NAUSEA",
+      "count": 20
+    },
+    {
+      "term": "PAIN",
+      "count": 20
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 20
+    },
+    {
+      "term": "CONSTIPATION",
+      "count": 19
+    },
+    {
+      "term": "RESPIRATORY FAILURE",
+      "count": 19
+    },
+    {
+      "term": "DEATH",
+      "count": 18
+    },
+    {
+      "term": "GASTROENTERITIS VIRAL",
+      "count": 18
+    },
+    {
+      "term": "HYPOTENSION",
+      "count": 18
+    },
+    {
+      "term": "INFUSION SITE EXTRAVASATION",
+      "count": 18
+    },
+    {
+      "term": "SEPSIS",
+      "count": 18
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 17
+    },
+    {
+      "term": "TREATMENT NONCOMPLIANCE",
+      "count": 17
+    },
+    {
+      "term": "PRODUCT TEMPERATURE EXCURSION ISSUE",
+      "count": 16
+    },
+    {
+      "term": "TACHYCARDIA",
+      "count": 16
+    },
+    {
+      "term": "ACUTE RESPIRATORY FAILURE",
+      "count": 15
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 15
+    },
+    {
+      "term": "NEPHROLITHIASIS",
+      "count": 15
+    },
+    {
+      "term": "ERYTHEMA",
+      "count": 14
+    },
+    {
+      "term": "INSURANCE ISSUE",
+      "count": 14
+    },
+    {
+      "term": "OROPHARYNGEAL PAIN",
+      "count": 14
+    },
+    {
+      "term": "ABDOMINAL PAIN",
+      "count": 13
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 13
+    },
+    {
+      "term": "DEVICE OCCLUSION",
+      "count": 13
+    },
+    {
+      "term": "ABDOMINAL DISCOMFORT",
+      "count": 12
+    },
+    {
+      "term": "ABDOMINAL PAIN UPPER",
+      "count": 12
+    },
+    {
+      "term": "CENTRAL VENOUS CATHETERISATION",
+      "count": 12
+    },
+    {
+      "term": "CHEST DISCOMFORT",
+      "count": 12
+    },
+    {
+      "term": "DRUG DOSE OMISSION",
+      "count": 12
+    },
+    {
+      "term": "INFUSION RELATED REACTION",
+      "count": 12
+    },
+    {
+      "term": "OVERDOSE",
+      "count": 12
+    },
+    {
+      "term": "SEPTIC SHOCK",
+      "count": 12
+    },
+    {
+      "term": "UPPER RESPIRATORY TRACT INFECTION",
+      "count": 12
+    },
+    {
+      "term": "BACK PAIN",
+      "count": 11
+    },
+    {
+      "term": "CARDIAC ARREST",
+      "count": 11
+    },
+    {
+      "term": "DISEASE PROGRESSION",
+      "count": 11
+    },
+    {
+      "term": "LOWER LIMB FRACTURE",
+      "count": 11
+    },
+    {
+      "term": "PROTEIN URINE PRESENT",
+      "count": 11
+    },
+    {
+      "term": "PRURITUS",
+      "count": 11
+    },
+    {
+      "term": "RHINORRHOEA",
+      "count": 11
+    },
+    {
+      "term": "SCOLIOSIS",
+      "count": 11
+    },
+    {
+      "term": "CARDIAC FAILURE",
+      "count": 10
+    },
+    {
+      "term": "CATHETER SITE SWELLING",
+      "count": 10
+    },
+    {
+      "term": "DYSPHAGIA",
+      "count": 10
+    },
+    {
+      "term": "INAPPROPRIATE SCHEDULE OF PRODUCT ADMINISTRATION",
+      "count": 10
+    },
+    {
+      "term": "INCREASED APPETITE",
+      "count": 10
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 10
+    },
+    {
+      "term": "PAIN IN EXTREMITY",
+      "count": 10
+    },
+    {
+      "term": "PERIPHERAL SWELLING",
+      "count": 10
+    },
+    {
+      "term": "PHARYNGITIS STREPTOCOCCAL",
+      "count": 10
+    },
+    {
+      "term": "PRODUCT COMMUNICATION ISSUE",
+      "count": 10
+    },
+    {
+      "term": "VIRAL INFECTION",
+      "count": 10
+    },
+    {
+      "term": "ABNORMAL BEHAVIOUR",
+      "count": 9
+    },
+    {
+      "term": "CHILLS",
+      "count": 9
+    },
+    {
+      "term": "DEVICE DISLOCATION",
+      "count": 9
+    },
+    {
+      "term": "HYPERSENSITIVITY",
+      "count": 9
+    },
+    {
+      "term": "MEDICATION ERROR",
+      "count": 9
+    },
+    {
+      "term": "PATIENT UNCOOPERATIVE",
+      "count": 9
+    },
+    {
+      "term": "PNEUMOTHORAX",
+      "count": 9
+    },
+    {
+      "term": "SEIZURE",
+      "count": 9
+    },
+    {
+      "term": "AGGRESSION",
+      "count": 8
+    },
+    {
+      "term": "CRYING",
+      "count": 8
+    },
+    {
+      "term": "CUSHINGOID",
+      "count": 8
+    },
+    {
+      "term": "DEVICE RELATED INFECTION",
+      "count": 8
+    },
+    {
+      "term": "GASTROINTESTINAL DISORDER",
+      "count": 8
+    },
+    {
+      "term": "INFLUENZA LIKE ILLNESS",
+      "count": 8
+    },
+    {
+      "term": "IRRITABILITY",
+      "count": 8
+    }
+  ]
+}

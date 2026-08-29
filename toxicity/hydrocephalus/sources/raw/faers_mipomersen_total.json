@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 260
+    }
+  },
+  "results": [
+    {
+      "safetyreportversion": "2",
+      "safetyreportid": "10004123",
+      "primarysourcecountry": "US",
+      "occurcountry": "US",
+      "transmissiondateformat": "102",
+      "transmissiondate": "20141212",
+      "reporttype": "2",
+      "serious": "1",
+      "seriousnessother": "1",
+      "receivedateformat": "102",
+      "receivedate": "20140312",
+      "receiptdateformat": "102",
+      "receiptdate": "20140515",
+      "fulfillexpeditecriteria": "1",
+      "companynumb": "US-SA-2014SA030027",
+      "duplicate": "1",
+      "reportduplicate": {
+        "duplicatesource": "AVENTIS",
+        "duplicatenumb": "US-SA-2014SA030027"
+      },
+      "primarysource": {
+        "reportercountry": "US",
+        "qualification": "3"
+      },
+      "sender": {
+        "sendertype": "2",
+        "senderorganization": "FDA-Public Use"
+      },
+      "receiver": {
+        "receivertype": "6",
+        "receiverorganization": "FDA"
+      },
+      "patient": {
+        "patientonsetage": "54",
+        "patientonsetageunit": "801",
+        "patientsex": "2",
+        "reaction": [
+          {
+            "reactionmeddraversionpt": "17.0",
+            "reactionmeddrapt": "Alanine aminotransferase increased",
+            "reactionoutcome": "2"
+          },
+          {
+            "reactionmeddraversionpt": "17.0",
+            "reactionmeddrapt": "Aspartate aminotransferase increased",
+            "reactionoutcome": "2"
+          },
+          {
+            "reactionmeddraversionpt": "17.0",
+            "reactionmeddrapt": "Fatigue",
+            "reactionoutcome": "2"
+          },
+          {
+            "reactionmeddraversionpt": "17.0",
+            "reactionmeddrapt": "Abdominal pain upper",
+            "reactionoutcome": "2"
+          },
+          {
+            "reactionmeddraversionpt": "17.0",
+            "reactionmeddrapt": "Injection site discolouration",
+            "reactionoutcome": "3"
+          },
+          {
+            "reactionmeddraversionpt": "17.0",
+            "reactionmeddrapt": "Injection site pruritus",
+            "reactionoutcome": "3"
+          },
+          {
+            "reactionmeddraversionpt": "17.0",
+            "reactionmeddrapt": "Unevaluable event",
+            "reactionoutcome": "3"
+          }
+        ],
+        "drug": [
+          {
+            "drugcharacterization": "1",
+            "medicinalproduct": "KYNAMRO",
+            "drugbatchnumb": "UNKNOWN",
+            "drugauthorizationnumb": "203568",
+            "drugstructuredosagenumb": "200",
+            "drugstructuredosageunit": "003",
+            "drugseparatedosagenumb": "1",
+            "drugintervaldosageunitnumb": "1",
+            "drugintervaldosagedefinition": "803",
+            "drugadministrationroute": "065",
+            "drugindication": "TYPE IIA HYPERLIPIDAEMIA",
+            "drugstartdateformat": "102",
+            "drugstartdate": "20131123",
+            "actiondrug": "1"
+          },
+          {
+            "drugcharacterization": "1",
+            "medicinalproduct": "KYNAMRO",
+            "drugbatchnumb": "UNKNOWN",
+            "drugauthorizationnumb": "203568",
+            "drugstructuredosagenumb": "200",
+            "drugstructuredosageunit": "003",
+            "drugseparatedosagenumb": "1",
+            "drugintervaldosageunitnumb": "2",
+            "drugintervaldosagedefinition": "803",
+            "drugadministrationroute": "058",
+            "drugindication": "TYPE IIA HYPERLIPIDAEMIA",
+            "actiondrug": "1"
+          }
+        ]
+      }
+    }
+  ]
+}

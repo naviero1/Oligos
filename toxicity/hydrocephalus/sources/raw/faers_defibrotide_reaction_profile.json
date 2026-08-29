@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "OFF LABEL USE",
+      "count": 1393
+    },
+    {
+      "term": "VENOOCCLUSIVE DISEASE",
+      "count": 637
+    },
+    {
+      "term": "VENOOCCLUSIVE LIVER DISEASE",
+      "count": 481
+    },
+    {
+      "term": "DEATH",
+      "count": 477
+    },
+    {
+      "term": "MULTIPLE ORGAN DYSFUNCTION SYNDROME",
+      "count": 414
+    },
+    {
+      "term": "INTENTIONAL PRODUCT USE ISSUE",
+      "count": 202
+    },
+    {
+      "term": "HYPOTENSION",
+      "count": 174
+    },
+    {
+      "term": "HAEMORRHAGE",
+      "count": 160
+    },
+    {
+      "term": "SEPSIS",
+      "count": 154
+    },
+    {
+      "term": "ACUTE GRAFT VERSUS HOST DISEASE",
+      "count": 150
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 150
+    },
+    {
+      "term": "RENAL FAILURE",
+      "count": 146
+    },
+    {
+      "term": "GASTROINTESTINAL HAEMORRHAGE",
+      "count": 138
+    },
+    {
+      "term": "SEPTIC SHOCK",
+      "count": 117
+    },
+    {
+      "term": "DISEASE PROGRESSION",
+      "count": 110
+    },
+    {
+      "term": "GRAFT VERSUS HOST DISEASE",
+      "count": 108
+    },
+    {
+      "term": "THROMBOCYTOPENIA",
+      "count": 102
+    },
+    {
+      "term": "CYSTITIS HAEMORRHAGIC",
+      "count": 101
+    },
+    {
+      "term": "RESPIRATORY FAILURE",
+      "count": 98
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 89
+    },
+    {
+      "term": "THROMBOTIC MICROANGIOPATHY",
+      "count": 86
+    },
+    {
+      "term": "CONDITION AGGRAVATED",
+      "count": 85
+    },
+    {
+      "term": "HAEMATURIA",
+      "count": 77
+    },
+    {
+      "term": "INFECTION",
+      "count": 77
+    },
+    {
+      "term": "FEBRILE NEUTROPENIA",
+      "count": 75
+    },
+    {
+      "term": "PRODUCT USE IN UNAPPROVED INDICATION",
+      "count": 75
+    },
+    {
+      "term": "CYTOMEGALOVIRUS INFECTION",
+      "count": 70
+    },
+    {
+      "term": "BLOOD BILIRUBIN INCREASED",
+      "count": 69
+    },
+    {
+      "term": "ACUTE RESPIRATORY DISTRESS SYNDROME",
+      "count": 68
+    },
+    {
+      "term": "PULMONARY HAEMORRHAGE",
+      "count": 68
+    },
+    {
+      "term": "ASCITES",
+      "count": 66
+    },
+    {
+      "term": "EPISTAXIS",
+      "count": 66
+    },
+    {
+      "term": "INTERSTITIAL LUNG DISEASE",
+      "count": 65
+    },
+    {
+      "term": "HEPATIC FAILURE",
+      "count": 64
+    },
+    {
+      "term": "ACUTE MYELOID LEUKAEMIA",
+      "count": 60
+    },
+    {
+      "term": "PYREXIA",
+      "count": 60
+    },
+    {
+      "term": "ACUTE KIDNEY INJURY",
+      "count": 59
+    },
+    {
+      "term": "MELAENA",
+      "count": 56
+    },
+    {
+      "term": "GRAFT VERSUS HOST DISEASE IN GASTROINTESTINAL TRACT",
+      "count": 55
+    },
+    {
+      "term": "CHRONIC GRAFT VERSUS HOST DISEASE",
+      "count": 51
+    },
+    {
+      "term": "CEREBRAL HAEMORRHAGE",
+      "count": 49
+    },
+    {
+      "term": "MUCOSAL INFLAMMATION",
+      "count": 49
+    },
+    {
+      "term": "RENAL IMPAIRMENT",
+      "count": 49
+    },
+    {
+      "term": "ADENOVIRUS INFECTION",
+      "count": 47
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 46
+    },
+    {
+      "term": "PLEURAL EFFUSION",
+      "count": 44
+    },
+    {
+      "term": "PULMONARY ALVEOLAR HAEMORRHAGE",
+      "count": 43
+    },
+    {
+      "term": "TACHYCARDIA",
+      "count": 42
+    },
+    {
+      "term": "ACUTE MYELOID LEUKAEMIA RECURRENT",
+      "count": 41
+    },
+    {
+      "term": "DRUG INEFFECTIVE FOR UNAPPROVED INDICATION",
+      "count": 40
+    },
+    {
+      "term": "GRAFT VERSUS HOST DISEASE IN SKIN",
+      "count": 40
+    },
+    {
+      "term": "ASPERGILLUS INFECTION",
+      "count": 39
+    },
+    {
+      "term": "PLATELET COUNT DECREASED",
+      "count": 38
+    },
+    {
+      "term": "ABDOMINAL PAIN",
+      "count": 36
+    },
+    {
+      "term": "BK VIRUS INFECTION",
+      "count": 35
+    },
+    {
+      "term": "VIRAL HAEMORRHAGIC CYSTITIS",
+      "count": 35
+    },
+    {
+      "term": "ALTERED STATE OF CONSCIOUSNESS",
+      "count": 34
+    },
+    {
+      "term": "RESPIRATORY DISTRESS",
+      "count": 33
+    },
+    {
+      "term": "BRONCHOPULMONARY ASPERGILLOSIS",
+      "count": 32
+    },
+    {
+      "term": "HAEMOPHAGOCYTIC LYMPHOHISTIOCYTOSIS",
+      "count": 32
+    },
+    {
+      "term": "MOUTH HAEMORRHAGE",
+      "count": 32
+    },
+    {
+      "term": "ACUTE GRAFT VERSUS HOST DISEASE IN SKIN",
+      "count": 31
+    },
+    {
+      "term": "ACUTE LYMPHOCYTIC LEUKAEMIA RECURRENT",
+      "count": 30
+    },
+    {
+      "term": "ANAEMIA",
+      "count": 30
+    },
+    {
+      "term": "CYTOMEGALOVIRUS INFECTION REACTIVATION",
+      "count": 30
+    },
+    {
+      "term": "ENCEPHALOPATHY",
+      "count": 30
+    },
+    {
+      "term": "STAPHYLOCOCCAL INFECTION",
+      "count": 30
+    },
+    {
+      "term": "ACUTE LYMPHOCYTIC LEUKAEMIA",
+      "count": 29
+    },
+    {
+      "term": "LUNG DISORDER",
+      "count": 29
+    },
+    {
+      "term": "ENTEROCOCCAL INFECTION",
+      "count": 28
+    },
+    {
+      "term": "POSTERIOR REVERSIBLE ENCEPHALOPATHY SYNDROME",
+      "count": 28
+    },
+    {
+      "term": "PERICARDIAL EFFUSION",
+      "count": 27
+    },
+    {
+      "term": "PULMONARY OEDEMA",
+      "count": 27
+    },
+    {
+      "term": "UPPER GASTROINTESTINAL HAEMORRHAGE",
+      "count": 27
+    },
+    {
+      "term": "ACUTE GRAFT VERSUS HOST DISEASE IN INTESTINE",
+      "count": 26
+    },
+    {
+      "term": "BACTERAEMIA",
+      "count": 26
+    },
+    {
+      "term": "BONE MARROW FAILURE",
+      "count": 26
+    },
+    {
+      "term": "HAEMATEMESIS",
+      "count": 26
+    },
+    {
+      "term": "HAEMATOCHEZIA",
+      "count": 26
+    },
+    {
+      "term": "HYPERTENSION",
+      "count": 26
+    },
+    {
+      "term": "INCORRECT PRODUCT ADMINISTRATION DURATION",
+      "count": 26
+    },
+    {
+      "term": "RECTAL HAEMORRHAGE",
+      "count": 26
+    },
+    {
+      "term": "DRUG RESISTANCE",
+      "count": 25
+    },
+    {
+      "term": "EMBOLISM",
+      "count": 25
+    },
+    {
+      "term": "PANCYTOPENIA",
+      "count": 25
+    },
+    {
+      "term": "VOMITING",
+      "count": 25
+    },
+    {
+      "term": "MYELODYSPLASTIC SYNDROME",
+      "count": 24
+    },
+    {
+      "term": "UNDERDOSE",
+      "count": 23
+    },
+    {
+      "term": "SHOCK HAEMORRHAGIC",
+      "count": 22
+    },
+    {
+      "term": "ANAPHYLACTIC SHOCK",
+      "count": 21
+    },
+    {
+      "term": "CARDIAC ARREST",
+      "count": 21
+    },
+    {
+      "term": "COAGULOPATHY",
+      "count": 21
+    },
+    {
+      "term": "HEPATOMEGALY",
+      "count": 21
+    },
+    {
+      "term": "HYPERGLYCAEMIA",
+      "count": 21
+    },
+    {
+      "term": "JAUNDICE",
+      "count": 21
+    },
+    {
+      "term": "PULMONARY HYPERTENSION",
+      "count": 21
+    },
+    {
+      "term": "ASPARTATE AMINOTRANSFERASE INCREASED",
+      "count": 20
+    },
+    {
+      "term": "CHOLESTASIS",
+      "count": 20
+    },
+    {
+      "term": "EPSTEIN-BARR VIRUS INFECTION",
+      "count": 20
+    },
+    {
+      "term": "GENERAL PHYSICAL HEALTH DETERIORATION",
+      "count": 20
+    }
+  ]
+}

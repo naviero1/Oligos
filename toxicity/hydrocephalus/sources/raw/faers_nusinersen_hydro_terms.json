@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "INTRACRANIAL PRESSURE INCREASED",
+      "count": 48
+    },
+    {
+      "term": "HYDROCEPHALUS",
+      "count": 22
+    },
+    {
+      "term": "MENINGITIS ASEPTIC",
+      "count": 19
+    },
+    {
+      "term": "HEADACHE",
+      "count": 9
+    },
+    {
+      "term": "PAPILLOEDEMA",
+      "count": 9
+    },
+    {
+      "term": "BACK PAIN",
+      "count": 7
+    },
+    {
+      "term": "ARACHNOIDITIS",
+      "count": 6
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 6
+    },
+    {
+      "term": "POST LUMBAR PUNCTURE SYNDROME",
+      "count": 5
+    },
+    {
+      "term": "PYREXIA",
+      "count": 4
+    },
+    {
+      "term": "RESPIRATORY FAILURE",
+      "count": 4
+    },
+    {
+      "term": "PROCEDURAL PAIN",
+      "count": 3
+    },
+    {
+      "term": "RESPIRATORY DISORDER",
+      "count": 3
+    },
+    {
+      "term": "RHINOVIRUS INFECTION",
+      "count": 3
+    },
+    {
+      "term": "VOMITING",
+      "count": 3
+    },
+    {
+      "term": "ACUTE RESPIRATORY FAILURE",
+      "count": 2
+    },
+    {
+      "term": "ANAEMIA",
+      "count": 2
+    },
+    {
+      "term": "CARDIO-RESPIRATORY ARREST",
+      "count": 2
+    },
+    {
+      "term": "CEREBRAL VENTRICLE DILATATION",
+      "count": 2
+    },
+    {
+      "term": "CSF PRESSURE INCREASED",
+      "count": 2
+    },
+    {
+      "term": "CSF PROTEIN INCREASED",
+      "count": 2
+    },
+    {
+      "term": "DEHYDRATION",
+      "count": 2
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 2
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 2
+    },
+    {
+      "term": "EAR INFECTION",
+      "count": 2
+    },
+    {
+      "term": "ENTEROVIRUS INFECTION",
+      "count": 2
+    },
+    {
+      "term": "HYPOAESTHESIA",
+      "count": 2
+    },
+    {
+      "term": "INFECTION",
+      "count": 2
+    },
+    {
+      "term": "LETHARGY",
+      "count": 2
+    },
+    {
+      "term": "LUNG DISORDER",
+      "count": 2
+    },
+    {
+      "term": "NEUROLOGICAL PROCEDURAL COMPLICATION",
+      "count": 2
+    },
+    {
+      "term": "PAIN",
+      "count": 2
+    },
+    {
+      "term": "SCOLIOSIS",
+      "count": 2
+    },
+    {
+      "term": "SPINAL MUSCULAR ATROPHY",
+      "count": 2
+    },
+    {
+      "term": "TACHYCARDIA",
+      "count": 2
+    },
+    {
+      "term": "ADENOVIRUS INFECTION",
+      "count": 1
+    },
+    {
+      "term": "ALANINE AMINOTRANSFERASE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "AMBLYOPIA",
+      "count": 1
+    },
+    {
+      "term": "ANXIETY",
+      "count": 1
+    },
+    {
+      "term": "ASPARTATE AMINOTRANSFERASE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "AUTISM SPECTRUM DISORDER",
+      "count": 1
+    },
+    {
+      "term": "BACILLUS INFECTION",
+      "count": 1
+    },
+    {
+      "term": "BACTERAEMIA",
+      "count": 1
+    },
+    {
+      "term": "BLINDNESS",
+      "count": 1
+    },
+    {
+      "term": "BLOOD DISORDER",
+      "count": 1
+    },
+    {
+      "term": "BODY TEMPERATURE DECREASED",
+      "count": 1
+    },
+    {
+      "term": "BRADYCARDIA",
+      "count": 1
+    },
+    {
+      "term": "BRAIN OEDEMA",
+      "count": 1
+    },
+    {
+      "term": "BRONCHIOLITIS",
+      "count": 1
+    },
+    {
+      "term": "CATHETER SITE THROMBOSIS",
+      "count": 1
+    },
+    {
+      "term": "CENTRAL NERVOUS SYSTEM LESION",
+      "count": 1
+    },
+    {
+      "term": "CEREBRAL HAEMORRHAGE",
+      "count": 1
+    },
+    {
+      "term": "CEREBROSPINAL FLUID CIRCULATION DISORDER",
+      "count": 1
+    },
+    {
+      "term": "CHRONIC RESPIRATORY FAILURE",
+      "count": 1
+    },
+    {
+      "term": "CONDITION AGGRAVATED",
+      "count": 1
+    },
+    {
+      "term": "CORNEAL ABRASION",
+      "count": 1
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 1
+    },
+    {
+      "term": "DEFORMITY THORAX",
+      "count": 1
+    },
+    {
+      "term": "DEVICE DISLOCATION",
+      "count": 1
+    },
+    {
+      "term": "DEVICE MALFUNCTION",
+      "count": 1
+    },
+    {
+      "term": "DEVICE RELATED INFECTION",
+      "count": 1
+    },
+    {
+      "term": "DRUG HYPERSENSITIVITY",
+      "count": 1
+    },
+    {
+      "term": "DYSPHAGIA",
+      "count": 1
+    },
+    {
+      "term": "ENCEPHALITIS",
+      "count": 1
+    },
+    {
+      "term": "ENDOTRACHEAL INTUBATION COMPLICATION",
+      "count": 1
+    },
+    {
+      "term": "EPILEPSY",
+      "count": 1
+    },
+    {
+      "term": "ESCHERICHIA INFECTION",
+      "count": 1
+    },
+    {
+      "term": "FATIGUE",
+      "count": 1
+    },
+    {
+      "term": "FEELING ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "FOOT DEFORMITY",
+      "count": 1
+    },
+    {
+      "term": "GASTROINTESTINAL INFECTION",
+      "count": 1
+    },
+    {
+      "term": "GENERALISED OEDEMA",
+      "count": 1
+    },
+    {
+      "term": "GLOMERULONEPHRITIS",
+      "count": 1
+    },
+    {
+      "term": "HAEMOGLOBIN DECREASED",
+      "count": 1
+    },
+    {
+      "term": "HEAD CIRCUMFERENCE ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "HEART RATE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "HEPATIC RUPTURE",
+      "count": 1
+    },
+    {
+      "term": "HYPERLACTACIDAEMIA",
+      "count": 1
+    },
+    {
+      "term": "HYPERTENSION",
+      "count": 1
+    },
+    {
+      "term": "HYPERTONIA",
+      "count": 1
+    },
+    {
+      "term": "HYPOALBUMINAEMIA",
+      "count": 1
+    },
+    {
+      "term": "HYPONATRAEMIA",
+      "count": 1
+    },
+    {
+      "term": "HYPOPROTEINAEMIA",
+      "count": 1
+    },
+    {
+      "term": "HYPOTENSION",
+      "count": 1
+    },
+    {
+      "term": "HYPOTHERMIA",
+      "count": 1
+    },
+    {
+      "term": "HYPOTONIA",
+      "count": 1
+    },
+    {
+      "term": "INAPPROPRIATE ANTIDIURETIC HORMONE SECRETION",
+      "count": 1
+    },
+    {
+      "term": "INFECTIVE THROMBOSIS",
+      "count": 1
+    },
+    {
+      "term": "INJECTION SITE PAIN",
+      "count": 1
+    },
+    {
+      "term": "INSOMNIA",
+      "count": 1
+    },
+    {
+      "term": "IRRITABILITY",
+      "count": 1
+    },
+    {
+      "term": "JOINT CONTRACTURE",
+      "count": 1
+    },
+    {
+      "term": "JOINT DISLOCATION",
+      "count": 1
+    },
+    {
+      "term": "KIDNEY INFECTION",
+      "count": 1
+    },
+    {
+      "term": "LOWER LIMB FRACTURE",
+      "count": 1
+    },
+    {
+      "term": "MALAISE",
+      "count": 1
+    },
+    {
+      "term": "MALNUTRITION",
+      "count": 1
+    },
+    {
+      "term": "MEDICAL DEVICE SITE HAEMORRHAGE",
+      "count": 1
+    },
+    {
+      "term": "MENINGISM",
+      "count": 1
+    },
+    {
+      "term": "MENINGITIS",
+      "count": 1
+    }
+  ]
+}

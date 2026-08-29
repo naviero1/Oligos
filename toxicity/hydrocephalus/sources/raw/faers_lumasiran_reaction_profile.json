@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "RENAL TRANSPLANT",
+      "count": 49
+    },
+    {
+      "term": "NEPHROLITHIASIS",
+      "count": 37
+    },
+    {
+      "term": "HOSPITALISATION",
+      "count": 21
+    },
+    {
+      "term": "LABORATORY TEST ABNORMAL",
+      "count": 17
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 16
+    },
+    {
+      "term": "URINE OXALATE INCREASED",
+      "count": 16
+    },
+    {
+      "term": "ACUTE KIDNEY INJURY",
+      "count": 13
+    },
+    {
+      "term": "INTENTIONAL DOSE OMISSION",
+      "count": 13
+    },
+    {
+      "term": "DEATH",
+      "count": 12
+    },
+    {
+      "term": "LIVER TRANSPLANT",
+      "count": 12
+    },
+    {
+      "term": "RENAL AND LIVER TRANSPLANT",
+      "count": 12
+    },
+    {
+      "term": "OXALOSIS",
+      "count": 11
+    },
+    {
+      "term": "PRODUCT DOSE OMISSION ISSUE",
+      "count": 11
+    },
+    {
+      "term": "DIALYSIS",
+      "count": 10
+    },
+    {
+      "term": "NEPHROCALCINOSIS",
+      "count": 10
+    },
+    {
+      "term": "HYPEROXALAEMIA",
+      "count": 9
+    },
+    {
+      "term": "END STAGE RENAL DISEASE",
+      "count": 8
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 8
+    },
+    {
+      "term": "THERAPY INTERRUPTED",
+      "count": 8
+    },
+    {
+      "term": "URINARY TRACT INFECTION",
+      "count": 8
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 7
+    },
+    {
+      "term": "FATIGUE",
+      "count": 7
+    },
+    {
+      "term": "INJECTION SITE PAIN",
+      "count": 7
+    },
+    {
+      "term": "INFECTION",
+      "count": 6
+    },
+    {
+      "term": "NEPHRECTOMY",
+      "count": 6
+    },
+    {
+      "term": "PAIN",
+      "count": 6
+    },
+    {
+      "term": "UNEVALUABLE EVENT",
+      "count": 6
+    },
+    {
+      "term": "BONE PAIN",
+      "count": 5
+    },
+    {
+      "term": "DIZZINESS",
+      "count": 5
+    },
+    {
+      "term": "GAIT DISTURBANCE",
+      "count": 5
+    },
+    {
+      "term": "HYPERVOLAEMIA",
+      "count": 5
+    },
+    {
+      "term": "INAPPROPRIATE SCHEDULE OF PRODUCT ADMINISTRATION",
+      "count": 5
+    },
+    {
+      "term": "NO ADVERSE EVENT",
+      "count": 5
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 5
+    },
+    {
+      "term": "RENAL ARTERY STENOSIS",
+      "count": 5
+    },
+    {
+      "term": "RENAL FAILURE",
+      "count": 5
+    },
+    {
+      "term": "RENAL IMPAIRMENT",
+      "count": 5
+    },
+    {
+      "term": "SEPSIS",
+      "count": 5
+    },
+    {
+      "term": "ANURIA",
+      "count": 4
+    },
+    {
+      "term": "BLOOD CREATININE INCREASED",
+      "count": 4
+    },
+    {
+      "term": "DISEASE PROGRESSION",
+      "count": 4
+    },
+    {
+      "term": "HYPERTENSION",
+      "count": 4
+    },
+    {
+      "term": "HYPOAESTHESIA",
+      "count": 4
+    },
+    {
+      "term": "ILL-DEFINED DISORDER",
+      "count": 4
+    },
+    {
+      "term": "PYREXIA",
+      "count": 4
+    },
+    {
+      "term": "RENAL ARTERY STENT PLACEMENT",
+      "count": 4
+    },
+    {
+      "term": "RENAL STONE REMOVAL",
+      "count": 4
+    },
+    {
+      "term": "SEIZURE",
+      "count": 4
+    },
+    {
+      "term": "SURGERY",
+      "count": 4
+    },
+    {
+      "term": "TRANSPLANT",
+      "count": 4
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 4
+    },
+    {
+      "term": "WEIGHT INCREASED",
+      "count": 4
+    },
+    {
+      "term": "ABDOMINAL PAIN",
+      "count": 3
+    },
+    {
+      "term": "ABDOMINAL PAIN UPPER",
+      "count": 3
+    },
+    {
+      "term": "ASPARTATE AMINOTRANSFERASE INCREASED",
+      "count": 3
+    },
+    {
+      "term": "BACK PAIN",
+      "count": 3
+    },
+    {
+      "term": "CHRONIC KIDNEY DISEASE",
+      "count": 3
+    },
+    {
+      "term": "CONSTIPATION",
+      "count": 3
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 3
+    },
+    {
+      "term": "DEHYDRATION",
+      "count": 3
+    },
+    {
+      "term": "EOSINOPHILIA",
+      "count": 3
+    },
+    {
+      "term": "GASTROENTERITIS",
+      "count": 3
+    },
+    {
+      "term": "HAEMOLYSIS",
+      "count": 3
+    },
+    {
+      "term": "HEADACHE",
+      "count": 3
+    },
+    {
+      "term": "INCORRECT DOSE ADMINISTERED",
+      "count": 3
+    },
+    {
+      "term": "INTENTIONAL PRODUCT USE ISSUE",
+      "count": 3
+    },
+    {
+      "term": "LACTIC ACIDOSIS",
+      "count": 3
+    },
+    {
+      "term": "METABOLIC ACIDOSIS",
+      "count": 3
+    },
+    {
+      "term": "NAUSEA",
+      "count": 3
+    },
+    {
+      "term": "OVERDOSE",
+      "count": 3
+    },
+    {
+      "term": "TRANSPLANT REJECTION",
+      "count": 3
+    },
+    {
+      "term": "URINE OXALATE DECREASED",
+      "count": 3
+    },
+    {
+      "term": "VOMITING",
+      "count": 3
+    },
+    {
+      "term": "ANXIETY",
+      "count": 2
+    },
+    {
+      "term": "APPENDICECTOMY",
+      "count": 2
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 2
+    },
+    {
+      "term": "BLOOD ALKALINE PHOSPHATASE INCREASED",
+      "count": 2
+    },
+    {
+      "term": "BLOOD PARATHYROID HORMONE INCREASED",
+      "count": 2
+    },
+    {
+      "term": "BLOOD PRESSURE INCREASED",
+      "count": 2
+    },
+    {
+      "term": "CELL DEATH",
+      "count": 2
+    },
+    {
+      "term": "CHEST PAIN",
+      "count": 2
+    },
+    {
+      "term": "COMPLICATIONS OF TRANSPLANTED KIDNEY",
+      "count": 2
+    },
+    {
+      "term": "CONDITION AGGRAVATED",
+      "count": 2
+    },
+    {
+      "term": "COVID-19",
+      "count": 2
+    },
+    {
+      "term": "CRYSTAL NEPHROPATHY",
+      "count": 2
+    },
+    {
+      "term": "DEVICE RELATED SEPSIS",
+      "count": 2
+    },
+    {
+      "term": "DISCOMFORT",
+      "count": 2
+    },
+    {
+      "term": "DRUG EFFECT LESS THAN EXPECTED",
+      "count": 2
+    },
+    {
+      "term": "DYSURIA",
+      "count": 2
+    },
+    {
+      "term": "ENTEROCOLITIS",
+      "count": 2
+    },
+    {
+      "term": "EOSINOPHILIC GRANULOMATOSIS WITH POLYANGIITIS",
+      "count": 2
+    },
+    {
+      "term": "EYELID PTOSIS",
+      "count": 2
+    },
+    {
+      "term": "FALL",
+      "count": 2
+    },
+    {
+      "term": "FEELING ABNORMAL",
+      "count": 2
+    },
+    {
+      "term": "FRACTURE",
+      "count": 2
+    },
+    {
+      "term": "GAMMA-GLUTAMYLTRANSFERASE INCREASED",
+      "count": 2
+    },
+    {
+      "term": "GASTROSTOMY",
+      "count": 2
+    },
+    {
+      "term": "GENERAL PHYSICAL HEALTH DETERIORATION",
+      "count": 2
+    },
+    {
+      "term": "GLOMERULAR FILTRATION RATE DECREASED",
+      "count": 2
+    },
+    {
+      "term": "GROWTH RETARDATION",
+      "count": 2
+    }
+  ]
+}

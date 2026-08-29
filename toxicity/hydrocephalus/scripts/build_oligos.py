@@ -1,0 +1,293 @@
+#!/usr/bin/env python3
+"""
+Builds data/oligos.csv — the design-predictor table.
+
+The Challenge asks for the predictor variables (sequence, chemical modifications,
+design) alongside the toxicity outcome. This script assembles them from two
+evidence classes, and fills nothing from any other route:
+
+  1. FDA prescribing information (public domain), section 11 DESCRIPTION, parsed
+     from the SPL XML committed under sources/raw/. Structured fields are filled
+     only by a high-precision pattern, and every filled value stores the sentence
+     it was matched from in `design_source_text`, so the parse is checkable.
+  2. ClinicalTrials.gov study records (public domain) for compounds with no
+     approved label, which establish identity, sponsor, indication and route but
+     not chemistry.
+
+Where neither states a value, the field is NOT_REPORTED. In particular:
+
+  * `sequence_5to3_asprinted` is NOT_REPORTED for EVERY compound here. No US
+    label prints the base sequence — both intrathecal ASO labels render the
+    structure as a figure ("The structural formula is: Figure 1"), which carries
+    no text layer. Sequences are obtainable from the WHO INN Recommended lists,
+    which is this project's established route (METHODOLOGY.md §4 path 4 of the
+    sibling kidney dataset); that retrieval is recorded as an open item rather
+    than approximated here. NO SEQUENCE IS GUESSED.
+
+Output: data/oligos.csv, notes/oligo_extraction_report.txt
+Usage:  python3 scripts/build_oligos.py
+"""
+import csv
+import glob
+import json
+import os
+import re
+import xml.etree.ElementTree as ET
+from datetime import date
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+RAW = os.path.join(ROOT, "sources", "raw")
+DATA = os.path.join(ROOT, "data")
+NOTES = os.path.join(ROOT, "notes")
+TODAY = date.today().isoformat()
+
+# --------------------------------------------------------------------------
+# Identity facts. Sourced, not recalled: `identity_source` names the document
+# each row's identity and route come from. Chemistry is NOT set here — it is
+# parsed from the label in parse_description(), or left NOT_REPORTED.
+# --------------------------------------------------------------------------
+OLIGOS = [
+    # name, aliases, class, modality, target, indication, developer, phase, route, identity_source
+    ("nusinersen", "Spinraza;ISIS 396443;BIIB058", "splice_switching_ASO",
+     "single_stranded_ASO", "SMN2", "spinal_muscular_atrophy", "Biogen/Ionis",
+     "approved", "intrathecal_lumbar", "SPINRAZA prescribing information"),
+    ("tofersen", "Qalsody;BIIB067;ISIS 666853", "ASO_gapmer", "single_stranded_ASO",
+     "SOD1", "SOD1_amyotrophic_lateral_sclerosis", "Biogen/Ionis", "approved",
+     "intrathecal_lumbar", "QALSODY prescribing information"),
+    ("tominersen", "RO7234292;RG6042;IONIS-HTTRx;ISIS 443139", "ASO_gapmer",
+     "single_stranded_ASO", "HTT", "huntingtons_disease", "Roche/Ionis",
+     "phase_3_discontinued", "intrathecal_lumbar",
+     "ClinicalTrials.gov NCT03761849, NCT03342053, NCT03842969, NCT02519036"),
+    ("BIIB080", "IONIS MAPTRx;BIIB080", "ASO_gapmer", "single_stranded_ASO", "MAPT",
+     "alzheimers_disease", "Biogen/Ionis", "phase_2", "intrathecal_lumbar",
+     "ClinicalTrials.gov NCT03186989"),
+    ("BIIB105", "BIIB105;ION541", "ASO_gapmer", "single_stranded_ASO", "ATXN2",
+     "amyotrophic_lateral_sclerosis", "Biogen/Ionis", "phase_2",
+     "intrathecal_lumbar", "ClinicalTrials.gov NCT04494256"),
+    ("WVE-120101", "WVE-120101", "ASO_gapmer", "single_stranded_ASO",
+     "HTT_SNP1_allele_selective", "huntingtons_disease", "Wave Life Sciences",
+     "phase_2_discontinued", "intrathecal_lumbar",
+     "ClinicalTrials.gov NCT03225833, NCT04617847"),
+    ("WVE-120102", "WVE-120102", "ASO_gapmer", "single_stranded_ASO",
+     "HTT_SNP2_allele_selective", "huntingtons_disease", "Wave Life Sciences",
+     "phase_2_discontinued", "intrathecal_lumbar",
+     "ClinicalTrials.gov NCT03225846, NCT04617860"),
+    ("WVE-003", "WVE-003", "ASO_gapmer", "single_stranded_ASO",
+     "HTT_SNP3_allele_selective", "huntingtons_disease", "Wave Life Sciences",
+     "phase_1_2", "intrathecal_lumbar", "ClinicalTrials.gov NCT05032196"),
+    ("eplontersen", "Wainua;ION-682884;AKCEA-TTR-LRx", "ASO_gapmer",
+     "single_stranded_ASO", "TTR", "hereditary_transthyretin_amyloidosis",
+     "Ionis/AstraZeneca", "approved", "subcutaneous",
+     "WAINUA prescribing information"),
+    ("inotersen", "Tegsedi;IONIS-TTRRx", "ASO_gapmer", "single_stranded_ASO", "TTR",
+     "hereditary_transthyretin_amyloidosis", "Ionis/Akcea", "approved",
+     "subcutaneous", "TEGSEDI prescribing information"),
+    ("eteplirsen", "Exondys 51;AVI-4658", "PMO", "single_stranded_ASO", "DMD_exon51",
+     "duchenne_muscular_dystrophy", "Sarepta", "approved", "intravenous",
+     "EXONDYS 51 prescribing information"),
+    ("golodirsen", "Vyondys 53;SRP-4053", "PMO", "single_stranded_ASO", "DMD_exon53",
+     "duchenne_muscular_dystrophy", "Sarepta", "approved", "intravenous",
+     "VYONDYS 53 prescribing information"),
+    ("viltolarsen", "Viltepso;NS-065;NCNP-01", "PMO", "single_stranded_ASO",
+     "DMD_exon53", "duchenne_muscular_dystrophy", "NS Pharma", "approved",
+     "intravenous", "VILTEPSO prescribing information"),
+    ("casimersen", "Amondys 45;SRP-4045", "PMO", "single_stranded_ASO", "DMD_exon45",
+     "duchenne_muscular_dystrophy", "Sarepta", "approved", "intravenous",
+     "AMONDYS 45 prescribing information"),
+    ("casimersen_or_golodirsen", "SRP-4045;SRP-4053", "PMO", "single_stranded_ASO",
+     "DMD_exon45_or_exon53", "duchenne_muscular_dystrophy", "Sarepta", "approved",
+     "intravenous",
+     "ClinicalTrials.gov NCT03532542 (a single extension study of both compounds; "
+     "the posted adverse-event table does not separate them)"),
+    ("patisiran", "Onpattro;ALN-TTR02", "siRNA", "double_stranded_siRNA", "TTR",
+     "hereditary_transthyretin_amyloidosis", "Alnylam", "approved", "intravenous",
+     "ONPATTRO prescribing information"),
+    ("vutrisiran", "Amvuttra;ALN-TTRSC02", "siRNA", "double_stranded_siRNA", "TTR",
+     "hereditary_transthyretin_amyloidosis", "Alnylam", "approved", "subcutaneous",
+     "AMVUTTRA prescribing information"),
+    ("givosiran", "Givlaari;ALN-AS1", "siRNA", "double_stranded_siRNA", "ALAS1",
+     "acute_hepatic_porphyria", "Alnylam", "approved", "subcutaneous",
+     "GIVLAARI prescribing information"),
+    ("lumasiran", "Oxlumo;ALN-GO1", "siRNA", "double_stranded_siRNA", "HAO1",
+     "primary_hyperoxaluria_type_1", "Alnylam", "approved", "subcutaneous",
+     "OXLUMO prescribing information"),
+    ("nedosiran", "Rivfloza;DCR-PHXC", "siRNA", "double_stranded_siRNA", "LDHA",
+     "primary_hyperoxaluria_type_1", "Novo Nordisk/Dicerna", "approved",
+     "subcutaneous", "RIVFLOZA prescribing information"),
+    ("inclisiran", "Leqvio;ALN-PCSsc", "siRNA", "double_stranded_siRNA", "PCSK9",
+     "atherosclerotic_cardiovascular_disease", "Novartis/Alnylam", "approved",
+     "subcutaneous", "LEQVIO prescribing information"),
+    ("volanesorsen", "Waylivra;IONIS-APOCIIIRx", "ASO_gapmer", "single_stranded_ASO",
+     "APOC3", "familial_chylomicronaemia_syndrome", "Ionis/Akcea", "approved_EMA",
+     "subcutaneous", "WAYLIVRA EMA summary of product characteristics"),
+    ("mipomersen", "Kynamro;ISIS 301012", "ASO_gapmer", "single_stranded_ASO", "APOB",
+     "homozygous_familial_hypercholesterolaemia", "Ionis/Genzyme", "approved",
+     "subcutaneous", "KYNAMRO prescribing information"),
+    ("pegaptanib", "Macugen;EYE001", "aptamer", "single_stranded_ASO", "VEGF165",
+     "neovascular_age_related_macular_degeneration", "Eyetech/Pfizer", "approved",
+     "intravitreal", "MACUGEN prescribing information"),
+    ("defibrotide", "Defitelio", "other", "NOT_REPORTED", "NOT_APPLICABLE",
+     "hepatic_veno_occlusive_disease", "Jazz Pharmaceuticals", "approved",
+     "intravenous", "DEFITELIO prescribing information"),
+    ("imetelstat", "Rytelo;GRN163L", "other", "NOT_REPORTED", "TERC",
+     "myelodysplastic_syndromes_and_oncology", "Geron", "approved", "intravenous",
+     "RYTELO prescribing information"),
+]
+
+# Rows that are not compounds but appear as oligo_name in measurements.
+NON_COMPOUND = [
+    ("placebo_or_sham_control",
+     "The comparator arm of a randomised trial: placebo injection or sham procedure. "
+     "Carries no oligonucleotide. Present so that comparator rows are data rather "
+     "than a footnote."),
+    ("NOT_APPLICABLE",
+     "Rows with no drug exposure at all — disease background-incidence rows "
+     "(tox_axis = disease_background_rate)."),
+]
+
+# High-precision patterns over the label's DESCRIPTION section.
+PATTERNS = {
+    "length_nt": re.compile(r"(\d+)[- ]base residue|\b(\d+)[- ]mer\b", re.I),
+    "modification_pattern": re.compile(r"(\d+-\d+-\d+)\s*(?:MOE|2['′]-MOE)?\s*gapmer", re.I),
+    "molecular_formula": re.compile(r"\bC\d+\s*H\d+\s*N\d+\s*O\d+\s*P\d+(?:\s*S\d+)?"),
+    "molecular_weight": re.compile(r"molecular weight is ([\d,]+\.?\d*)", re.I),
+}
+
+
+def flat(el):
+    return re.sub(r"\s+", " ", "".join(el.itertext())).strip()
+
+
+def sentence_around(text, match):
+    start = text.rfind(".", 0, match.start()) + 1
+    end = text.find(".", match.end())
+    return text[start:end + 1 if end > 0 else len(text)].strip()
+
+
+def description_of(generic):
+    """Return (text, setid) of the label's DESCRIPTION section, or (None, None)."""
+    files = sorted(glob.glob(os.path.join(RAW, "dailymed_%s_*.xml" % generic)))
+    if not files:
+        return None, None
+    setid = os.path.basename(files[0]).rsplit("_", 1)[1].split(".")[0]
+    root = ET.fromstring(open(files[0], "rb").read())
+    for sec in root.iter("{urn:hl7-org:v3}section"):
+        t = sec.find("{urn:hl7-org:v3}title")
+        if t is not None and "DESCRIPTION" in flat(t).upper():
+            return flat(sec), setid
+    return None, setid
+
+
+def main():
+    os.makedirs(DATA, exist_ok=True)
+    os.makedirs(NOTES, exist_ok=True)
+    rows, report = [], []
+
+    for (name, aliases, klass, modality, target, indication, developer, phase,
+         route, identity_source) in OLIGOS:
+        desc, setid = description_of(name)
+        parsed, evidence = {}, {}
+        if desc:
+            for field, pat in PATTERNS.items():
+                m = pat.search(desc)
+                if m:
+                    val = next((g for g in m.groups() if g), m.group(0)) \
+                        if m.groups() else m.group(0)
+                    parsed[field] = val.strip()
+                    evidence[field] = sentence_around(desc, m)[:320]
+            # Backbone: state it only if the label says so in words.
+            if re.search(r"mixed backbone", desc, re.I):
+                parsed["backbone_chemistry"] = "mixed_PO_PS"
+                m = re.search(r"[^.]*mixed backbone[^.]*\.", desc, re.I)
+                evidence["backbone_chemistry"] = m.group(0).strip()[:320] if m else ""
+            elif re.search(r"phosphate linkages are replaced with phosphorothioate",
+                           desc, re.I):
+                parsed["backbone_chemistry"] = "full_PS"
+                m = re.search(r"[^.]*phosphate linkages are replaced[^.]*\.", desc, re.I)
+                evidence["backbone_chemistry"] = m.group(0).strip()[:320] if m else ""
+            if re.search(r"morpholino", desc, re.I):
+                parsed["backbone_chemistry"] = "PMO_neutral"
+                m = re.search(r"[^.]*morpholino[^.]*\.", desc, re.I)
+                evidence["backbone_chemistry"] = m.group(0).strip()[:320] if m else ""
+            # Sugar chemistry
+            sugars = []
+            if re.search(r"2['′]-O-\(?2-methoxyethyl\)?|2['′]-O-2-methoxyethyl|MOE",
+                         desc, re.I):
+                sugars.append("2'-MOE")
+            if re.search(r"2[- ]deoxy|2['′]-deoxynucleoside", desc, re.I):
+                sugars.append("DNA_gap")
+            if re.search(r"morpholino", desc, re.I):
+                sugars.append("morpholino")
+            if sugars:
+                parsed["sugar_modifications"] = ";".join(sugars)
+            # Formulation, including whether divalent cations are present — a
+            # variable the CNS oligonucleotide literature treats as material.
+            fm = re.search(r"[^.]*(calcium chloride|magnesium chloride)[^.]*\.", desc, re.I)
+            if fm:
+                parsed["formulation"] = "contains divalent cations (Ca2+ and/or Mg2+)"
+                evidence["formulation"] = fm.group(0).strip()[:320]
+
+        source_loc = ("SPL section 11 DESCRIPTION, DailyMed setid %s" % setid
+                      if desc else identity_source)
+        rows.append(dict(
+            oligo_name=name, aliases=aliases, oligo_class=klass, modality=modality,
+            target_gene=target, indication=indication, developer=developer,
+            max_phase=phase, route_of_administration=route,
+            length_nt=parsed.get("length_nt", "NOT_REPORTED"),
+            sequence_5to3_asprinted="NOT_REPORTED",
+            sequence_base="NOT_REPORTED",
+            sequence_source=("NOT_REPORTED — no US label prints the base sequence; the "
+                             "structure is a figure with no text layer. See "
+                             "METHODOLOGY.md open item OI-02."),
+            backbone_chemistry=parsed.get("backbone_chemistry", "NOT_REPORTED"),
+            sugar_modifications=parsed.get("sugar_modifications", "NOT_REPORTED"),
+            modification_pattern=parsed.get("modification_pattern", "NOT_REPORTED"),
+            gapmer_shape=("gapmer" if klass == "ASO_gapmer" else
+                          "uniform" if klass == "splice_switching_ASO" else
+                          "NOT_APPLICABLE"),
+            molecular_formula=parsed.get("molecular_formula", "NOT_REPORTED"),
+            molecular_weight=parsed.get("molecular_weight", "NOT_REPORTED"),
+            conjugate="NOT_REPORTED",
+            formulation=parsed.get("formulation", "NOT_REPORTED"),
+            design_source_text=json.dumps(evidence)[:1800] if evidence else "NOT_REPORTED",
+            identity_source=identity_source,
+            source_location=source_loc,
+            redistribution=("public_domain" if desc else "public_domain"),
+            notes=("Design fields filled only where the cited document states them; "
+                   "everything else NOT_REPORTED. Retrieved %s." % TODAY),
+        ))
+        report.append("%-26s label=%-3s parsed=%s" % (
+            name, "yes" if desc else "no", ",".join(sorted(parsed)) or "none"))
+
+    for name, why in NON_COMPOUND:
+        rows.append(dict(
+            oligo_name=name, aliases="", oligo_class="NOT_APPLICABLE",
+            modality="NOT_APPLICABLE", target_gene="NOT_APPLICABLE",
+            indication="NOT_APPLICABLE", developer="NOT_APPLICABLE",
+            max_phase="NOT_APPLICABLE", route_of_administration="NOT_APPLICABLE",
+            length_nt="NOT_APPLICABLE", sequence_5to3_asprinted="NOT_APPLICABLE",
+            sequence_base="NOT_APPLICABLE", sequence_source="NOT_APPLICABLE",
+            backbone_chemistry="NOT_APPLICABLE", sugar_modifications="NOT_APPLICABLE",
+            modification_pattern="NOT_APPLICABLE", gapmer_shape="NOT_APPLICABLE",
+            molecular_formula="NOT_APPLICABLE", molecular_weight="NOT_APPLICABLE",
+            conjugate="NOT_APPLICABLE", formulation="NOT_APPLICABLE",
+            design_source_text="NOT_APPLICABLE", identity_source="NOT_APPLICABLE",
+            source_location="NOT_APPLICABLE", redistribution="NOT_APPLICABLE",
+            notes=why))
+        report.append("%-26s (non-compound placeholder)" % name)
+
+    out = os.path.join(DATA, "oligos.csv")
+    with open(out, "w", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=list(rows[0].keys()))
+        w.writeheader()
+        w.writerows(rows)
+    with open(os.path.join(NOTES, "oligo_extraction_report.txt"), "w") as fh:
+        fh.write("oligos.csv build report, %s\n" % TODAY)
+        fh.write("=" * 64 + "\n" + "\n".join(report) + "\n")
+    print("wrote %s: %d rows, %d columns" % (out, len(rows), len(rows[0])))
+    print("\n".join(report))
+
+
+if __name__ == "__main__":
+    main()

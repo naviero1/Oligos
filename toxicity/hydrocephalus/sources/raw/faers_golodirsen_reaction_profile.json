@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "PRODUCT DOSE OMISSION ISSUE",
+      "count": 132
+    },
+    {
+      "term": "NO ADVERSE EVENT",
+      "count": 73
+    },
+    {
+      "term": "POOR VENOUS ACCESS",
+      "count": 63
+    },
+    {
+      "term": "INTENTIONAL DOSE OMISSION",
+      "count": 34
+    },
+    {
+      "term": "DEVICE ISSUE",
+      "count": 30
+    },
+    {
+      "term": "COVID-19",
+      "count": 23
+    },
+    {
+      "term": "PYREXIA",
+      "count": 19
+    },
+    {
+      "term": "MALAISE",
+      "count": 18
+    },
+    {
+      "term": "VOMITING",
+      "count": 17
+    },
+    {
+      "term": "ILLNESS",
+      "count": 12
+    },
+    {
+      "term": "NAUSEA",
+      "count": 12
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 11
+    },
+    {
+      "term": "EXPOSURE TO SARS-COV-2",
+      "count": 10
+    },
+    {
+      "term": "HEADACHE",
+      "count": 10
+    },
+    {
+      "term": "DEHYDRATION",
+      "count": 9
+    },
+    {
+      "term": "INFLUENZA",
+      "count": 8
+    },
+    {
+      "term": "RASH",
+      "count": 8
+    },
+    {
+      "term": "CONSTIPATION",
+      "count": 7
+    },
+    {
+      "term": "FATIGUE",
+      "count": 7
+    },
+    {
+      "term": "WEIGHT INCREASED",
+      "count": 7
+    },
+    {
+      "term": "ABDOMINAL PAIN",
+      "count": 6
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 6
+    },
+    {
+      "term": "FALL",
+      "count": 6
+    },
+    {
+      "term": "PAIN",
+      "count": 6
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 5
+    },
+    {
+      "term": "CYSTATIN C INCREASED",
+      "count": 5
+    },
+    {
+      "term": "DISEASE PROGRESSION",
+      "count": 5
+    },
+    {
+      "term": "DIZZINESS",
+      "count": 5
+    },
+    {
+      "term": "HYPOTENSION",
+      "count": 5
+    },
+    {
+      "term": "OROPHARYNGEAL PAIN",
+      "count": 5
+    },
+    {
+      "term": "PRODUCT TEMPERATURE EXCURSION ISSUE",
+      "count": 5
+    },
+    {
+      "term": "TACHYCARDIA",
+      "count": 5
+    },
+    {
+      "term": "UNDERDOSE",
+      "count": 5
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 5
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 4
+    },
+    {
+      "term": "DEVICE OCCLUSION",
+      "count": 4
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 4
+    },
+    {
+      "term": "GAIT INABILITY",
+      "count": 4
+    },
+    {
+      "term": "GASTROINTESTINAL DISORDER",
+      "count": 4
+    },
+    {
+      "term": "GASTROSTOMY",
+      "count": 4
+    },
+    {
+      "term": "HEART RATE INCREASED",
+      "count": 4
+    },
+    {
+      "term": "INCORRECT DOSE ADMINISTERED",
+      "count": 4
+    },
+    {
+      "term": "PAIN IN EXTREMITY",
+      "count": 4
+    },
+    {
+      "term": "PHARYNGITIS STREPTOCOCCAL",
+      "count": 4
+    },
+    {
+      "term": "PRODUCT COMMUNICATION ISSUE",
+      "count": 4
+    },
+    {
+      "term": "PRODUCT DISTRIBUTION ISSUE",
+      "count": 4
+    },
+    {
+      "term": "ABDOMINAL DISCOMFORT",
+      "count": 3
+    },
+    {
+      "term": "ACUTE RESPIRATORY FAILURE",
+      "count": 3
+    },
+    {
+      "term": "ANXIETY",
+      "count": 3
+    },
+    {
+      "term": "BLOOD POTASSIUM DECREASED",
+      "count": 3
+    },
+    {
+      "term": "CATHETER SITE INFECTION",
+      "count": 3
+    },
+    {
+      "term": "CHEST DISCOMFORT",
+      "count": 3
+    },
+    {
+      "term": "COUGH",
+      "count": 3
+    },
+    {
+      "term": "FEMUR FRACTURE",
+      "count": 3
+    },
+    {
+      "term": "GASTROENTERITIS VIRAL",
+      "count": 3
+    },
+    {
+      "term": "HYPERSENSITIVITY",
+      "count": 3
+    },
+    {
+      "term": "INFLUENZA LIKE ILLNESS",
+      "count": 3
+    },
+    {
+      "term": "INFUSION SITE EXTRAVASATION",
+      "count": 3
+    },
+    {
+      "term": "INFUSION SITE PAIN",
+      "count": 3
+    },
+    {
+      "term": "OVERDOSE",
+      "count": 3
+    },
+    {
+      "term": "PNEUMONIA BACTERIAL",
+      "count": 3
+    },
+    {
+      "term": "PRODUCT DISPENSING ERROR",
+      "count": 3
+    },
+    {
+      "term": "PRURITUS",
+      "count": 3
+    },
+    {
+      "term": "SCOLIOSIS",
+      "count": 3
+    },
+    {
+      "term": "THERAPY CESSATION",
+      "count": 3
+    },
+    {
+      "term": "UPPER RESPIRATORY TRACT INFECTION",
+      "count": 3
+    },
+    {
+      "term": "URINARY TRACT INFECTION",
+      "count": 3
+    },
+    {
+      "term": "ADRENAL INSUFFICIENCY",
+      "count": 2
+    },
+    {
+      "term": "AGITATION",
+      "count": 2
+    },
+    {
+      "term": "ANAEMIA",
+      "count": 2
+    },
+    {
+      "term": "ANAPHYLACTIC REACTION",
+      "count": 2
+    },
+    {
+      "term": "ASPIRATION",
+      "count": 2
+    },
+    {
+      "term": "BLOOD POTASSIUM ABNORMAL",
+      "count": 2
+    },
+    {
+      "term": "CARDIOGENIC SHOCK",
+      "count": 2
+    },
+    {
+      "term": "CATHETER SITE DISCOLOURATION",
+      "count": 2
+    },
+    {
+      "term": "CATHETER SITE EROSION",
+      "count": 2
+    },
+    {
+      "term": "CATHETER SITE ERYTHEMA",
+      "count": 2
+    },
+    {
+      "term": "CATHETER SITE OEDEMA",
+      "count": 2
+    },
+    {
+      "term": "CATHETER SITE PAIN",
+      "count": 2
+    },
+    {
+      "term": "CENTRAL VENOUS CATHETERISATION",
+      "count": 2
+    },
+    {
+      "term": "CHEST PAIN",
+      "count": 2
+    },
+    {
+      "term": "CHOLELITHIASIS",
+      "count": 2
+    },
+    {
+      "term": "CRYING",
+      "count": 2
+    },
+    {
+      "term": "DEATH",
+      "count": 2
+    },
+    {
+      "term": "DERMATITIS",
+      "count": 2
+    },
+    {
+      "term": "DEVICE DISLOCATION",
+      "count": 2
+    },
+    {
+      "term": "DEVICE RELATED INFECTION",
+      "count": 2
+    },
+    {
+      "term": "EMOTIONAL DISORDER",
+      "count": 2
+    },
+    {
+      "term": "EPILEPSY",
+      "count": 2
+    },
+    {
+      "term": "FLATULENCE",
+      "count": 2
+    },
+    {
+      "term": "GASTROENTERITIS",
+      "count": 2
+    },
+    {
+      "term": "INAPPROPRIATE SCHEDULE OF PRODUCT ADMINISTRATION",
+      "count": 2
+    },
+    {
+      "term": "NASAL CONGESTION",
+      "count": 2
+    },
+    {
+      "term": "OEDEMA",
+      "count": 2
+    },
+    {
+      "term": "PLEURAL EFFUSION",
+      "count": 2
+    },
+    {
+      "term": "PNEUMONIA ASPIRATION",
+      "count": 2
+    },
+    {
+      "term": "PRODUCT DOSE OMISSION",
+      "count": 2
+    },
+    {
+      "term": "PRODUCT PRESCRIBING ISSUE",
+      "count": 2
+    },
+    {
+      "term": "PRODUCT STORAGE ERROR",
+      "count": 2
+    },
+    {
+      "term": "PRODUCTIVE COUGH",
+      "count": 2
+    }
+  ]
+}

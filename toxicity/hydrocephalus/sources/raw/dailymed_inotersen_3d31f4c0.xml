@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="3d31f4e1-431f-d3f2-e063-6394a90a6723"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>139-105-300 EXP</title>
+   <effectiveTime value="20250813"/>
+   <setId root="3d31f4c0-35bb-c990-e063-6394a90a749f"/>
+   <versionNumber value="1"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="172209277"/>
+            <name>Catalent Indiana, LLC</name>
+            <assignedEntity>
+               <assignedOrganization/>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="4226ec37-8948-7fb7-e063-6294a90a2d6d"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20250813"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="61434-031" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Tegsedi</name>
+                        <formCode code="C42945" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INJECTION, SOLUTION"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Inotersen</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator unit="mg" value="284"/>
+                              <denominator unit="mL" value="1.5"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="950736UC77" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>INOTERSEN SODIUM</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="0IEO0F56LV" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>INOTERSEN</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="1.5" unit="mL"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43202" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="SYRINGE"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="800" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="61434-031-03" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43184" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CASE"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20181005"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C102836" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 3: Prefilled Biologic Delivery Device/System (syringe, patch, etc.)" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <code code="C73590" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Export only"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20181005"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38299" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="SUBCUTANEOUS"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="L990c489c-10ec-46b9-9dee-22a4fa22326e">
+               <id root="3d31f97c-b385-2e2d-e063-6294a90a8199"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <text>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="img_3d320994-3656-c5f1-e063-6394a90a28c9"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20241102"/>
+               <component>
+                  <observationMedia ID="img_3d320994-3656-c5f1-e063-6394a90a28c9">
+                     <text>139-105-300 EXP</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="139-105-300 LBL EXP.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

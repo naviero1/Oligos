@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "PRODUCT DOSE OMISSION ISSUE",
+      "count": 259
+    },
+    {
+      "term": "NO ADVERSE EVENT",
+      "count": 166
+    },
+    {
+      "term": "POOR VENOUS ACCESS",
+      "count": 102
+    },
+    {
+      "term": "DEVICE ISSUE",
+      "count": 76
+    },
+    {
+      "term": "INTENTIONAL DOSE OMISSION",
+      "count": 74
+    },
+    {
+      "term": "MALAISE",
+      "count": 38
+    },
+    {
+      "term": "PYREXIA",
+      "count": 36
+    },
+    {
+      "term": "COVID-19",
+      "count": 31
+    },
+    {
+      "term": "INFLUENZA",
+      "count": 20
+    },
+    {
+      "term": "DEHYDRATION",
+      "count": 18
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 17
+    },
+    {
+      "term": "PRODUCT DISTRIBUTION ISSUE",
+      "count": 17
+    },
+    {
+      "term": "COUGH",
+      "count": 15
+    },
+    {
+      "term": "FALL",
+      "count": 15
+    },
+    {
+      "term": "ILLNESS",
+      "count": 14
+    },
+    {
+      "term": "VOMITING",
+      "count": 13
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 12
+    },
+    {
+      "term": "EXPOSURE TO SARS-COV-2",
+      "count": 12
+    },
+    {
+      "term": "NAUSEA",
+      "count": 12
+    },
+    {
+      "term": "WEIGHT INCREASED",
+      "count": 12
+    },
+    {
+      "term": "CATHETER SITE PAIN",
+      "count": 10
+    },
+    {
+      "term": "INFUSION SITE EXTRAVASATION",
+      "count": 10
+    },
+    {
+      "term": "RASH",
+      "count": 10
+    },
+    {
+      "term": "UNDERDOSE",
+      "count": 10
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 9
+    },
+    {
+      "term": "DEVICE DISLOCATION",
+      "count": 9
+    },
+    {
+      "term": "HEADACHE",
+      "count": 9
+    },
+    {
+      "term": "HEART RATE INCREASED",
+      "count": 9
+    },
+    {
+      "term": "FATIGUE",
+      "count": 8
+    },
+    {
+      "term": "LOWER LIMB FRACTURE",
+      "count": 8
+    },
+    {
+      "term": "OROPHARYNGEAL PAIN",
+      "count": 8
+    },
+    {
+      "term": "SEPSIS",
+      "count": 8
+    },
+    {
+      "term": "THERAPY CESSATION",
+      "count": 8
+    },
+    {
+      "term": "UPPER RESPIRATORY TRACT INFECTION",
+      "count": 8
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 8
+    },
+    {
+      "term": "ABDOMINAL DISCOMFORT",
+      "count": 7
+    },
+    {
+      "term": "ABDOMINAL PAIN UPPER",
+      "count": 7
+    },
+    {
+      "term": "ACUTE RESPIRATORY FAILURE",
+      "count": 7
+    },
+    {
+      "term": "PAIN",
+      "count": 7
+    },
+    {
+      "term": "ANXIETY",
+      "count": 6
+    },
+    {
+      "term": "CENTRAL VENOUS CATHETERISATION",
+      "count": 6
+    },
+    {
+      "term": "CHEST PAIN",
+      "count": 6
+    },
+    {
+      "term": "DEATH",
+      "count": 6
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 6
+    },
+    {
+      "term": "DEVICE OCCLUSION",
+      "count": 6
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 6
+    },
+    {
+      "term": "INCORRECT DOSE ADMINISTERED",
+      "count": 6
+    },
+    {
+      "term": "INFUSION RELATED REACTION",
+      "count": 6
+    },
+    {
+      "term": "NEPHROLITHIASIS",
+      "count": 6
+    },
+    {
+      "term": "VIRAL INFECTION",
+      "count": 6
+    },
+    {
+      "term": "CARDIAC FAILURE",
+      "count": 5
+    },
+    {
+      "term": "DIZZINESS",
+      "count": 5
+    },
+    {
+      "term": "INSOMNIA",
+      "count": 5
+    },
+    {
+      "term": "INSURANCE ISSUE",
+      "count": 5
+    },
+    {
+      "term": "OVERDOSE",
+      "count": 5
+    },
+    {
+      "term": "REFUSAL OF TREATMENT BY PATIENT",
+      "count": 5
+    },
+    {
+      "term": "SCOLIOSIS",
+      "count": 5
+    },
+    {
+      "term": "SWELLING FACE",
+      "count": 5
+    },
+    {
+      "term": "VEIN RUPTURE",
+      "count": 5
+    },
+    {
+      "term": "ABDOMINAL PAIN",
+      "count": 4
+    },
+    {
+      "term": "AGITATION",
+      "count": 4
+    },
+    {
+      "term": "CONTUSION",
+      "count": 4
+    },
+    {
+      "term": "EMOTIONAL DISORDER",
+      "count": 4
+    },
+    {
+      "term": "FEMUR FRACTURE",
+      "count": 4
+    },
+    {
+      "term": "GASTROENTERITIS",
+      "count": 4
+    },
+    {
+      "term": "GASTROENTERITIS VIRAL",
+      "count": 4
+    },
+    {
+      "term": "HYPOTENSION",
+      "count": 4
+    },
+    {
+      "term": "INCREASED APPETITE",
+      "count": 4
+    },
+    {
+      "term": "MYALGIA",
+      "count": 4
+    },
+    {
+      "term": "NASOPHARYNGITIS",
+      "count": 4
+    },
+    {
+      "term": "PLATELET COUNT DECREASED",
+      "count": 4
+    },
+    {
+      "term": "PROTEINURIA",
+      "count": 4
+    },
+    {
+      "term": "RHINORRHOEA",
+      "count": 4
+    },
+    {
+      "term": "SEIZURE",
+      "count": 4
+    },
+    {
+      "term": "SOMNOLENCE",
+      "count": 4
+    },
+    {
+      "term": "THROMBOCYTOPENIA",
+      "count": 4
+    },
+    {
+      "term": "ACCIDENTAL OVERDOSE",
+      "count": 3
+    },
+    {
+      "term": "ACNE",
+      "count": 3
+    },
+    {
+      "term": "AGGRESSION",
+      "count": 3
+    },
+    {
+      "term": "ATRIAL FIBRILLATION",
+      "count": 3
+    },
+    {
+      "term": "BACTERAEMIA",
+      "count": 3
+    },
+    {
+      "term": "BLOOD URINE PRESENT",
+      "count": 3
+    },
+    {
+      "term": "CATHETER SITE EXTRAVASATION",
+      "count": 3
+    },
+    {
+      "term": "CATHETER SITE SWELLING",
+      "count": 3
+    },
+    {
+      "term": "CHROMATURIA",
+      "count": 3
+    },
+    {
+      "term": "CONDITION AGGRAVATED",
+      "count": 3
+    },
+    {
+      "term": "CYSTATIN C INCREASED",
+      "count": 3
+    },
+    {
+      "term": "DECUBITUS ULCER",
+      "count": 3
+    },
+    {
+      "term": "DEPRESSION",
+      "count": 3
+    },
+    {
+      "term": "DEVICE RELATED INFECTION",
+      "count": 3
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 3
+    },
+    {
+      "term": "DYSPHAGIA",
+      "count": 3
+    },
+    {
+      "term": "FRUSTRATION TOLERANCE DECREASED",
+      "count": 3
+    },
+    {
+      "term": "GASTROOESOPHAGEAL REFLUX DISEASE",
+      "count": 3
+    },
+    {
+      "term": "GENERAL PHYSICAL HEALTH DETERIORATION",
+      "count": 3
+    },
+    {
+      "term": "INAPPROPRIATE SCHEDULE OF PRODUCT ADMINISTRATION",
+      "count": 3
+    },
+    {
+      "term": "IRRITABILITY",
+      "count": 3
+    },
+    {
+      "term": "LIP SWELLING",
+      "count": 3
+    },
+    {
+      "term": "MUSCLE SPASMS",
+      "count": 3
+    },
+    {
+      "term": "NASAL CONGESTION",
+      "count": 3
+    }
+  ]
+}

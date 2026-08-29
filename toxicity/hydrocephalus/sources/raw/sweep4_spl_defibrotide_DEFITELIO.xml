@@ -1,0 +1,1306 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="0269ad44-e351-4411-8866-d8d53e28fb74"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>These highlights do not include all the information needed to use DEFITELIO safely and effectively.  See full prescribing information for DEFITELIO.<br/>DEFITELIO (defibrotide sodium) injection, for intravenous use<br/>Initial U.S. Approval: 2016</title>
+   <effectiveTime value="20250701"/>
+   <setId root="2c3db989-d7ad-41ed-9ebf-698dcf6c24ec"/>
+   <versionNumber value="8"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="135926363" root="1.3.6.1.4.1.519.1"/>
+            <name>Jazz Pharmaceuticals, Inc.</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <id extension="135926363" root="1.3.6.1.4.1.519.1"/>
+                  <name>Jazz Pharmaceuticals, Inc.</name>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="432729114" root="1.3.6.1.4.1.519.1"/>
+                        <name>Gentium S.r.L</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C82401" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="API MANUFACTURE"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="68727-800" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C25391" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANALYSIS"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="68727-800" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="434078638" root="1.3.6.1.4.1.519.1"/>
+                        <name>Patheon Italia S.p.A.</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="MANUFACTURE"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="68727-800" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="896650210" root="1.3.6.1.4.1.519.1"/>
+                        <name>Jazz Pharmaceuticals Ireland Limited</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="MANUFACTURE"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="68727-800" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="fad79a41-bb52-465a-b37e-f1d8caf5017f"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20250701"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="68727-800" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>DEFITELIO</name>
+                        <formCode code="C42945" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INJECTION, SOLUTION"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>defibrotide sodium</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="80"/>
+                              <denominator unit="mL" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="L7CHH2B2J0" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>DEFIBROTIDE SODIUM</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="568FY5I1YI" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>DEFIBROTIDE FREE ACID</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="B22547B95K" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TRISODIUM CITRATE DIHYDRATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="059QF0KO0R" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>WATER</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="QTT17582CB" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYDROCHLORIC ACID</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="55X04QC32I" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM HYDROXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="mL" value="2.5"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="68727-800-01" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43226" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="VIAL"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20160330"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CE"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="mL" value="25"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="68727-800-02" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20160330"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CE"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NDA208114" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73594" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20160330"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38276" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INTRAVENOUS"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_0aacd1d6-cbd5-4f54-a66c-b3aee47dae95">
+               <id root="6f86c18d-616b-4c2b-b22e-548535305f8a"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34067-9" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>1 INDICATIONS AND USAGE </title>
+               <text>
+                  <paragraph>DEFITELIO is indicated for the treatment of adult and pediatric patients with hepatic veno-occlusive disease (VOD), also known as sinusoidal obstruction syndrome (SOS), with renal or pulmonary dysfunction following hematopoietic stem-cell transplantation (HSCT).</paragraph>
+               </text>
+               <effectiveTime value="20250701"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>DEFITELIO is indicated for the treatment of adult and pediatric patients with hepatic veno-occlusive disease (VOD), also known as sinusoidal obstruction syndrome (SOS), with renal or pulmonary dysfunction following hematopoietic stem-cell transplantation (HSCT). (<linkHtml href="#ID_0aacd1d6-cbd5-4f54-a66c-b3aee47dae95">1</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_54174b53-e00b-4389-b825-ea92ed1e8301">
+               <id root="830b0cf7-46ee-4e5b-b4f3-013e94eef733"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34068-7" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>2 DOSAGE AND ADMINISTRATION </title>
+               <effectiveTime value="20250701"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>Administer DEFITELIO 6.25 mg/kg every 6 hours given as a 2-hour intravenous infusion. (<linkHtml href="#ID_32c7270a-5ab8-4e68-956c-fffb79fac079">2.1</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Treat for a minimum of 21 days. If after 21 days signs and symptoms of VOD have not resolved, continue treatment until resolution. (<linkHtml href="#ID_32c7270a-5ab8-4e68-956c-fffb79fac079">2.1</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="ID_32c7270a-5ab8-4e68-956c-fffb79fac079">
+                     <id root="40368297-e17b-468f-9f41-315bd74aac77"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.1	Recommended Dosage</title>
+                     <text>
+                        <paragraph>The recommended dosage of DEFITELIO for adult and pediatric patients is 6.25 mg/kg every 6 hours given as a 2‑hour intravenous infusion. The dose should be based on patient’s baseline body weight, defined as the patient’s weight prior to the preparative regimen for HSCT.</paragraph>
+                        <paragraph>Administer DEFITELIO for a minimum of 21 days. If after 21 days signs and symptoms of hepatic VOD have not resolved, continue DEFITELIO until resolution of VOD or up to a maximum of 60 days.</paragraph>
+                     </text>
+                     <effectiveTime value="20250701"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_e4f50291-0fdd-4942-8388-0d04f5044d89">
+                     <id root="3cc09d10-0903-44dc-aa2c-e77a4c443026"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.2	Administration Instructions </title>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>DEFITELIO must be diluted prior to infusion <content styleCode="italics">[see <linkHtml href="#ID_232ca4f4-81e0-44e5-80a1-ff2690f2d794">Dosage and Administration (2.4)</linkHtml>]</content>.</item>
+                           <item>
+                              <caption>•</caption>Prior to administration of DEFITELIO, confirm that the patient is not experiencing clinically significant bleeding and is hemodynamically stable on no more than one vasopressor <content styleCode="italics">[see <linkHtml href="#ID_81b54bfd-59f7-459c-a261-09defc7cbae6">Warnings and Precautions (5.1)</linkHtml>]</content>. </item>
+                           <item>
+                              <caption>•</caption>Administer DEFITELIO by constant intravenous infusion over a 2-hour period.</item>
+                           <item>
+                              <caption>•</caption>Administer the diluted DEFITELIO solution using an infusion set equipped with a 0.2 micron in-line filter. Flush the intravenous administration line (peripheral or central) with 5% Dextrose Injection, USP or 0.9% Sodium Chloride Injection, USP immediately before and after administration.</item>
+                           <item>
+                              <caption>•</caption>Do not co‑administer DEFITELIO and other intravenous drugs concurrently within the same intravenous line.</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20250701"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_63acf3d4-c609-47e7-992c-0c8618447bcc">
+                     <id root="56c8268e-480c-4129-8204-16ccd0ada2f1"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.3	Treatment Modification</title>
+                     <text>
+                        <paragraph>Treatment modification, including temporary or permanent discontinuation of DEFITELIO, should follow the recommendations in Table 1.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 1:  Treatment Modifications for Toxicity or Invasive Procedures</content>
+                        </paragraph>
+                        <table width="100%">
+                           <col width="42%"/>
+                           <col width="58%"/>
+                           <tbody>
+                              <tr styleCode="Toprule">
+                                 <td valign="top" styleCode="Rrule Botrule Lrule Toprule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Event</content>
+                                    </paragraph>
+                                 </td>
+                                 <td valign="top" styleCode="Rrule Botrule Lrule Toprule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Recommended Action</content>
+                                    </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Hypersensitivity Reaction</content>
+                                    </paragraph>
+                                 </td>
+                                 <td valign="top" styleCode="Rrule Lrule Toprule Botrule "/>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>Severe or life-threatening (anaphylaxis)</paragraph>
+                                 </td>
+                                 <td valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <list listType="ordered">
+                                       <item>
+                                          <caption>1.</caption>Discontinue DEFITELIO permanently; do not resume treatment.</item>
+                                    </list>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Bleeding</content>
+                                    </paragraph>
+                                 </td>
+                                 <td valign="top" styleCode="Rrule Lrule Toprule Botrule "/>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>Persistent, severe or potentially life-threatening</paragraph>
+                                 </td>
+                                 <td valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <list listType="ordered">
+                                       <item>
+                                          <caption>1.</caption>Withhold DEFITELIO.</item>
+                                       <item>
+                                          <caption>2.</caption>Treat the cause of bleeding and give supportive care as clinically indicated.</item>
+                                       <item>
+                                          <caption>3.</caption>Consider resuming treatment (at the same dose and infusion volume) when bleeding has stopped and the patient is hemodynamically stable.</item>
+                                    </list>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>Recurrent significant bleeding</paragraph>
+                                 </td>
+                                 <td valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <list listType="ordered">
+                                       <item>
+                                          <caption>1.</caption>Discontinue DEFITELIO permanently; do not resume treatment.</item>
+                                    </list>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Invasive Procedures</content>
+                                    </paragraph>
+                                 </td>
+                                 <td valign="top" styleCode="Rrule Lrule Toprule Botrule "/>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td valign="top" styleCode="Rrule Botrule Lrule Toprule "/>
+                                 <td valign="top" styleCode="Rrule Botrule Lrule Toprule ">
+                                    <list listType="ordered">
+                                       <item>
+                                          <caption>1.</caption>There is no known reversal agent for the profibrinolytic effects of DEFITELIO. Discontinue DEFITELIO infusion at least 2 hours prior to an invasive procedure.</item>
+                                       <item>
+                                          <caption>2.</caption>Resume DEFITELIO treatment after the procedure as soon as any procedure-related risk of bleeding is resolved.</item>
+                                    </list>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                     <effectiveTime value="20250701"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_232ca4f4-81e0-44e5-80a1-ff2690f2d794">
+                     <id root="05a9fd6e-a527-48b3-ace6-b09d3e45026a"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.4	Preparation Instructions</title>
+                     <text>
+                        <paragraph>Dilute DEFITELIO in 5% Dextrose Injection, USP or 0.9% Sodium Chloride Injection, USP to a concentration of 4 mg/mL to 20 mg/mL. Administer the diluted solution over 2 hours.</paragraph>
+                        <paragraph>Vials contain no antimicrobial preservatives and are intended for a single-patient-use only. Partially used vials should be discarded. Use the diluted DEFITELIO solution within 4 hours if stored at room temperature or within 24 hours if stored under refrigeration. Up to four doses of DEFITELIO solution may be prepared at one time, if refrigerated.</paragraph>
+                        <paragraph>Preparation Instructions:</paragraph>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>Determine the dose (mg) and number of vials of DEFITELIO based on the individual patient’s baseline weight (weight prior to the preparative regimen for HSCT). </item>
+                           <item>
+                              <caption>•</caption>Calculate the volume of DEFITELIO needed, withdraw this amount from the vial(s) and add it to the infusion bag containing 0.9% Sodium Chloride Injection or 5% Dextrose Injection for each dose to make a final concentration of 4 mg/mL to 20 mg/mL.</item>
+                           <item>
+                              <caption>•</caption>Gently mix the solution for infusion.</item>
+                           <item>
+                              <caption>•</caption>Parenteral drug products should be inspected visually for particulate matter and discoloration prior to administration, whenever solution and container permit. Only clear solutions without visible particles should be used. Depending on the type and amount of diluent, the color of the diluted solution may vary from colorless to light yellow.</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20250701"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_50bc17a2-4e29-4d9b-9408-db5265b71964">
+               <id root="7607462a-926f-415d-8b1d-23ab6b669a30"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="43678-2" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION"/>
+               <title>3 DOSAGE FORMS AND STRENGTHS </title>
+               <text>
+                  <paragraph>Injection: 200 mg/2.5 mL (80 mg/mL) of defibrotide sodium as a clear, light yellow to brown solution in a single-patient-use glass vial.</paragraph>
+               </text>
+               <effectiveTime value="20250701"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Injection:  200 mg/2.5 mL (80 mg/mL) in a single-patient-use vial. (<linkHtml href="#ID_50bc17a2-4e29-4d9b-9408-db5265b71964">3</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_99ceb2ef-4d7a-446b-8de9-87a8ec194ec8">
+               <id root="b4233c96-6ec5-4bb0-be5a-a13fecf272e1"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34070-3" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>4 CONTRAINDICATIONS </title>
+               <text>
+                  <paragraph>The use of DEFITELIO is contraindicated in the following conditions:</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption>•</caption>Concomitant administration with systemic anticoagulant or fibrinolytic therapy <content styleCode="italics">[see <linkHtml href="#ID_81b54bfd-59f7-459c-a261-09defc7cbae6">Warnings and Precautions (5.1)</linkHtml>]</content>
+                     </item>
+                     <item>
+                        <caption>•</caption>Known hypersensitivity to DEFITELIO or to any of its excipients <content styleCode="italics">[see <linkHtml href="#ID_b5f6791e-bae5-4158-9e7e-60e40f0879d0">Warnings and Precautions (5.2)</linkHtml>]</content>
+                     </item>
+                  </list>
+               </text>
+               <effectiveTime value="20250701"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>Concomitant administration with systemic anticoagulant or fibrinolytic therapy. (<linkHtml href="#ID_99ceb2ef-4d7a-446b-8de9-87a8ec194ec8">4</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Known hypersensitivity to DEFITELIO or to any of its excipients. (<linkHtml href="#ID_99ceb2ef-4d7a-446b-8de9-87a8ec194ec8">4</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_34c36912-3176-44cc-930d-65aa7c7c6360">
+               <id root="3f52bd5e-1efd-44b6-878d-62f568fcdca1"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="43685-7" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+               <title>5 WARNINGS AND PRECAUTIONS </title>
+               <effectiveTime value="20250701"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>Hemorrhage:  Monitor patients for bleeding. Withhold or discontinue DEFITELIO if significant bleeding occurs. (<linkHtml href="#ID_63acf3d4-c609-47e7-992c-0c8618447bcc">2.3</linkHtml>, <linkHtml href="#ID_81b54bfd-59f7-459c-a261-09defc7cbae6">5.1</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Hypersensitivity Reactions:  If severe or life threatening allergic reaction occurs, discontinue DEFITELIO, treat according to standard of care, and monitor until signs and symptoms resolve. (<linkHtml href="#ID_63acf3d4-c609-47e7-992c-0c8618447bcc">2.3</linkHtml>, <linkHtml href="#ID_03f62c56-35fb-4e5b-8f93-361c3a4d081f">5.2</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="ID_81b54bfd-59f7-459c-a261-09defc7cbae6">
+                     <id root="3bd91a6e-0eff-4776-89ba-0085313cc00b"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.1 Hemorrhage </title>
+                     <text>
+                        <paragraph>DEFITELIO increased the activity of fibrinolytic enzymes <content styleCode="italics">in vitro,</content> and it may increase the risk of bleeding in patients with VOD after hematopoietic stem-cell transplantation (HSCT). Do not initiate DEFITELIO in patients with active bleeding. Monitor patients for signs of bleeding. If patients on DEFITELIO develop bleeding, discontinue DEFITELIO, treat the underlying cause, and provide supportive care until the bleeding has stopped <content styleCode="italics">[see <linkHtml href="#ID_63acf3d4-c609-47e7-992c-0c8618447bcc">Dosage and Administration (2.3)</linkHtml>]</content>.</paragraph>
+                        <paragraph>Concomitant use of DEFITELIO and a systemic anticoagulant or fibrinolytic therapy (not including use for routine maintenance or reopening of central venous lines) may increase the risk of bleeding. Discontinue anticoagulants and fibrinolytic agents prior to DEFITELIO treatment, and consider delaying the start of DEFITELIO administration until the effects of the anticoagulant have abated <content styleCode="italics">[see <linkHtml href="#ID_99ceb2ef-4d7a-446b-8de9-87a8ec194ec8">Contraindications (4)</linkHtml>]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20250701"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_03f62c56-35fb-4e5b-8f93-361c3a4d081f">
+                     <id root="dabd6682-94b6-404a-880b-30a8b1c55d90"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.2 Hypersensitivity Reactions </title>
+                     <text>
+                        <paragraph>Hypersensitivity reactions have occurred in less than 2% of patients treated with DEFITELIO. These reactions include rash, urticaria and angioedema. One case of an anaphylactic reaction was reported in a patient who had previously received DEFITELIO. Monitor patients for hypersensitivity reactions, especially if there is a history of previous exposure. If a severe hypersensitivity reaction occurs, discontinue DEFITELIO, treat according to the standard of care, and monitor until symptoms resolve <content styleCode="italics">[see <linkHtml href="#ID_63acf3d4-c609-47e7-992c-0c8618447bcc">Dosage and Administration (2.3)</linkHtml>]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20250701"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_232be8a9-8a1e-4d64-bc0f-84b712c83f59">
+               <id root="083ab376-a433-4618-b691-08fa92d7694c"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34084-4" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>6 ADVERSE REACTIONS </title>
+               <text>
+                  <paragraph>The following adverse reactions are discussed in greater detail in other sections of the labeling:</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption>•</caption>Hemorrhage <content styleCode="italics">[see <linkHtml href="#ID_81b54bfd-59f7-459c-a261-09defc7cbae6">Warnings and Precautions (5.1)</linkHtml>]</content>
+                     </item>
+                     <item>
+                        <caption>•</caption>Hypersensitivity Reactions <content styleCode="italics">[see <linkHtml href="#ID_03f62c56-35fb-4e5b-8f93-361c3a4d081f">Warnings and Precautions (5.2)</linkHtml>]</content>
+                     </item>
+                  </list>
+               </text>
+               <effectiveTime value="20250701"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>The most common adverse reactions (incidence ≥10% and independent of causality) with DEFITELIO treatment were hypotension, diarrhea, vomiting, nausea, and epistaxis. (<linkHtml href="#ID_55fd0b45-2cee-4f9e-bdb0-303ed97c5425">6.1</linkHtml>)<br/>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">To report SUSPECTED ADVERSE REACTIONS, contact Jazz Pharmaceuticals, Inc. at 1-800-520-5568 or FDA at 1-800-FDA-1088 or <linkHtml href="http://www.fda.gov/medwatch">www.fda.gov/medwatch.</linkHtml>
+                           </content>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="ID_55fd0b45-2cee-4f9e-bdb0-303ed97c5425">
+                     <id root="b8869673-d48a-49fb-91a7-64fa5e8e06f1"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>6.1 Clinical Trials Experience </title>
+                     <text>
+                        <paragraph>Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.</paragraph>
+                        <paragraph>The safety of DEFITELIO was determined in 176 adult and pediatric patients with hepatic VOD with pulmonary and/or renal dysfunction following HSCT who were treated with DEFITELIO 6.25 mg/kg every 6 hours <content styleCode="italics">[see <linkHtml href="#ID_d2902387-d344-4102-bc9c-83288948d9ac">Clinical Studies (14)</linkHtml>]</content>. Patients were excluded from these trials if at time of study entry they had significant acute bleeding, active grades B-D graft-versus-host disease, or a requirement for multiple vasopressors to provide blood pressure support. For the purposes of adverse event recording in the clinical trials, events were not required to be reported if they were related to the hepatic VOD, or if they were expected to occur after hematopoietic stem-cell transplantation (HSCT), unless they were serious or Grade 4-5.</paragraph>
+                        <paragraph>The median age of the safety population was 25 years (range: 1 month to 72 years), and 63% were ≥17 years of age. A total of 60% of patients were male, 78% were white, 89% had undergone allogeneic HSCT, and the underlying diagnosis was acute leukemia for 43%. At study entry, 13% were dialysis dependent and 18% were ventilator dependent. DEFITELIO was administered for a median of 21 days (range: 1 to 83 days).</paragraph>
+                        <paragraph>Information about adverse reactions resulting in permanent discontinuation of DEFITELIO was available for 102 patients, and 35 (34%) of these patients had an adverse reaction with permanent discontinuation. Adverse reactions leading to permanent discontinuation included pulmonary alveolar hemorrhage in 5 (5%) patients; pulmonary hemorrhage, hypotension, catheter site hemorrhage, and multi-organ failure, each in 3 (3%) patients; and cerebral hemorrhage and sepsis, each in 2 (2%) patients.</paragraph>
+                        <paragraph>Information about adverse reactions of any grade was available for all 176 patients. The most common adverse reactions (incidence ≥10% and independent of causality) were hypotension, diarrhea, vomiting, nausea, and epistaxis. The most common serious adverse reactions (incidence ≥5% and independent of causality) were hypotension (11%) and pulmonary alveolar hemorrhage (7%). Hemorrhage events of any type and any grade were reported for 104 (59%) of the patients, and the events were grade 4-5 in 35 (20%).</paragraph>
+                        <paragraph>Table 2 presents adverse reactions independent of causality ≥10% any grade or Grade 4/5 ≥2% reported in patients treated with DEFITELIO.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 2:  Adverse Reactions<sup>a</sup> ≥10% or Grade 4-5 Adverse Reactions ≥2%</content>
+                        </paragraph>
+                        <table width="100%">
+                           <col width="33%"/>
+                           <col width="33%"/>
+                           <col width="33%"/>
+                           <tbody>
+                              <tr>
+                                 <td valign="top" styleCode="Rrule Lrule Toprule "/>
+                                 <td colspan="2" align="center" valign="middle" styleCode="Rrule Botrule Lrule Toprule ">
+                                    <paragraph>
+                                       <content styleCode="bold">DEFITELIO</content>
+                                    </paragraph>
+                                    <paragraph>
+                                       <content styleCode="bold">(n=176)</content>
+                                    </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="middle" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Adverse Reaction<sup> a</sup>
+                                       </content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Any grade</content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Grade 4-5<sup>b</sup>
+                                       </content>
+                                    </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>Hypotension</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>65 (37%)</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>12 (7%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>Diarrhea</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>43 (24%)</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>0</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>Vomiting</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>31 (18%)</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>0</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>Nausea</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>28 (16%)</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>0</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>Epistaxis</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>24 (14%)</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>0</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="middle" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>Pulmonary alveolar hemorrhage</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>15 (9%)</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>12 (7%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="middle" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>Gastrointestinal hemorrhage</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>15 (9%)</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>5 (3%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="middle" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>Sepsis</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>12 (7%)</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>9 (5%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="middle" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>Graft versus host disease</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>11 (6%)</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>7 (4%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="middle" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>Lung infiltration</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>10 (6%)</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>5 (3%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="middle" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>Pneumonia</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>9 (5%)</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>5 (3%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="middle" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>Pulmonary hemorrhage</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>7 (4%)</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>4 (2%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="middle" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>Infection</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>6 (3%)</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>4 (2%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="middle" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>Hemorrhage intracranial</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>5 (3%)</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>4 (2%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="middle" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>Hyperuricemia</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>4 (2%)</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>4 (2%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="middle" styleCode="Rrule Botrule Lrule Toprule ">
+                                    <paragraph>Cerebral hemorrhage<sup>c</sup>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Botrule Lrule Toprule ">
+                                    <paragraph>3 (2%)</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Rrule Botrule Lrule Toprule ">
+                                    <paragraph>3 (2%)</paragraph>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <sup>a</sup> Excludes events considered to be due to the underlying disease: multi-organ failure, veno-occlusive disease, respiratory failure, renal failure, and hypoxia </paragraph>
+                        <paragraph>
+                           <sup>b</sup> Adverse reactions considered life-threatening or fatal</paragraph>
+                        <paragraph>
+                           <sup>c</sup> Cerebral hemorrhage has been included in the table due to clinical relevance</paragraph>
+                     </text>
+                     <effectiveTime value="20250701"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_840e1ae3-e4dc-44d0-9548-cdff12cf8b25">
+               <id root="888be04c-a0f4-4dea-ad2c-121e7e7f95ff"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34073-7" displayName="DRUG INTERACTIONS SECTION"/>
+               <title>7 DRUG INTERACTIONS </title>
+               <text>
+                  <paragraph>
+                     <content styleCode="italics">Antithrombotic Agents</content>
+                  </paragraph>
+                  <paragraph>DEFITELIO may enhance the pharmacodynamic activity of antithrombotic/fibrinolytic drugs such as heparin or alteplase. Concomitant use of DEFITELIO with antithrombotic or fibrinolytic drugs is contraindicated because of an increased risk of hemorrhage <content styleCode="italics">[see <linkHtml href="#ID_99ceb2ef-4d7a-446b-8de9-87a8ec194ec8">Contraindications (4)</linkHtml>]</content>.</paragraph>
+               </text>
+               <effectiveTime value="20250701"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>DEFITELIO may enhance the activity of antithrombotic/fibrinolytic drugs. (<linkHtml href="#ID_840e1ae3-e4dc-44d0-9548-cdff12cf8b25">7</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_98629523-7fba-4362-8858-aae9982c039d">
+               <id root="c943716b-61bb-4c0f-849a-75c9cfad169f"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="43684-0" displayName="USE IN SPECIFIC POPULATIONS SECTION"/>
+               <title>8 USE IN SPECIFIC POPULATIONS </title>
+               <effectiveTime value="20250701"/>
+               <component>
+                  <section ID="ID_0e4b49e6-b593-4162-9d1a-6f3437bd08de">
+                     <id root="252c04e7-7ebc-4db9-bc4a-497f635de964"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42228-7" displayName="PREGNANCY SECTION"/>
+                     <title>8.1 Pregnancy </title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Risk Summary</content>
+                        </paragraph>
+                        <paragraph>There are no available data on DEFITELIO use in pregnant women. When administered to pregnant rabbits during the period of organogenesis at doses that were comparable to the recommended human dose based on body surface area, defibrotide sodium decreased the number of implantations and viable fetuses. Advise pregnant women of the potential risk of miscarriage.</paragraph>
+                        <paragraph>The estimated background risk of major birth defects and miscarriage for the indicated population is unknown. In the U.S. general population, the estimated background risks of major birth defects and miscarriage in clinically recognized pregnancies are 2-4% and 15-20%, respectively.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Data</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Animal Data</content>
+                        </paragraph>
+                        <paragraph>Embryo-Fetal toxicity assessment was attempted in rats and rabbits, but was not possible because of high maternal mortality, abortion, and fetal resorption at all doses. Pregnant rats were administered defibrotide sodium from gestational day (GD) 6 to 15 at 0, 240, 1200, and 4800 mg/kg/day by continuous intravenous infusion over 24 hours or at 60, 120, and 240 mg/kg/day by 2-hour infusions 4 times per day. Pregnant rabbits were administered defibrotide sodium at 0, 30, 60, or 120 mg/kg/day from GD 6 to 18 by 2-hour infusions 4 times per day.</paragraph>
+                        <paragraph>In another study in pregnant rabbits, 3 separate subgroups of animals were treated with doses of 80 mg/kg/day defibrotide sodium administered by 2-hour infusions 4 times per day for 5 days each in a staggered manner during the organogenesis period. The dose of 80 mg/kg/day is approximately equivalent to the recommended clinical dose on a mg/m<sup>2</sup> basis. Subgroup 1 was dosed from GD 6 to 10, subgroup 2 was dosed from GD 10 to 14, and subgroup 3 was dosed from GD 14 to 18. An increased incidence of unilateral implantation was observed in defibrotide sodium-treated animals. Treatment with defibrotide sodium resulted in a decreased number of implantations and viable fetuses.</paragraph>
+                     </text>
+                     <effectiveTime value="20250701"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_9177d80b-a485-463c-b135-f49c93da5d6a">
+                     <id root="1c26847d-26e0-43d4-8446-81e3286987e9"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>8.2 Lactation </title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Risk Summary</content>
+                        </paragraph>
+                        <paragraph>There is no information regarding the presence of DEFITELIO in human milk, the effects on the breastfed infant, or the effects on milk production. Because of the potential for serious adverse reactions, including bleeding in a breastfed infant, advise patients that breastfeeding is not recommended during treatment with DEFITELIO.</paragraph>
+                     </text>
+                     <effectiveTime value="20250701"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_80fd0de3-a2a7-433b-a15e-23c0c243fb23">
+                     <id root="f8a20f89-e9b7-4c42-8e54-6b303e6a5809"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="34081-0" displayName="PEDIATRIC USE SECTION"/>
+                     <title>8.4 Pediatric Use </title>
+                     <text>
+                        <paragraph>The safety and effectiveness of DEFITELIO have been established in pediatric patients. Use of DEFITELIO is supported by evidence from an adequate and well-controlled study and a dose finding study of DEFITELIO in adult and pediatric patients with VOD with evidence of renal or pulmonary dysfunction following HSCT. The clinical trials enrolled 66 pediatric patients in the following age groups: 22 infants (1 month up to less than 2 years), 30 children (2 years up to less than 12 years), and 14 adolescents (12 years to less than 17 years). The efficacy and safety outcomes were consistent across pediatric and adult patients in the clinical trials <content styleCode="italics">[see <linkHtml href="#ID_232be8a9-8a1e-4d64-bc0f-84b712c83f59">Adverse Reactions (6)</linkHtml> and <linkHtml href="#ID_d2902387-d344-4102-bc9c-83288948d9ac">Clinical Studies (14)</linkHtml>]</content>.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Juvenile Animal Toxicity Data</content>
+                        </paragraph>
+                        <paragraph>A juvenile toxicity study in 21-day-old rats was conducted with intravenous bolus administration of defibrotide sodium at 40, 150, or 320 mg/kg/day for 4 weeks. A delayed mean age of preputial separation was observed at all doses, suggesting a delay in onset of male puberty. The dose of 40 mg/kg/day is approximately 0.4 times the clinical dose on a mg/m<sup>2</sup> basis for a child. The relevance of this finding for the onset of male puberty in humans is unknown.</paragraph>
+                     </text>
+                     <effectiveTime value="20250701"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_b461f22f-4669-4479-9921-5ecd3ee3d964">
+                     <id root="daa045ae-57c1-4375-8598-98621f093759"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="34082-8" displayName="GERIATRIC USE SECTION"/>
+                     <title>8.5 Geriatric Use </title>
+                     <text>
+                        <paragraph>Clinical studies of DEFITELIO did not include sufficient numbers of subjects aged 65 and over to determine whether they respond differently from younger subjects. Other reported clinical experience has not identified differences in responses between the elderly and younger patients.</paragraph>
+                     </text>
+                     <effectiveTime value="20250701"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_027b540c-4448-4f9a-8be3-04a4319b4ffc">
+               <id root="0ebf6cfe-1f54-47f2-9439-63f4562c3daa"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34088-5" displayName="OVERDOSAGE SECTION"/>
+               <title>10 OVERDOSAGE </title>
+               <text>
+                  <paragraph>There are no known cases of overdose with DEFITELIO. There is no known antidote for DEFITELIO, and DEFITELIO is not dialyzable. If an overdose occurs, institute general supportive measures.</paragraph>
+               </text>
+               <effectiveTime value="20250701"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_b5f6791e-bae5-4158-9e7e-60e40f0879d0">
+               <id root="310cb06a-5c11-4332-aaef-771ff0cb9c03"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34089-3" displayName="DESCRIPTION SECTION"/>
+               <title>11 DESCRIPTION </title>
+               <text>
+                  <paragraph>Defibrotide sodium is an oligonucleotide mixture with profibrinolytic properties. The chemical name of defibrotide sodium is polydeoxyribonucleotide, sodium salt. Defibrotide sodium is a polydisperse mixture of predominantly single-stranded (ss) polydeoxyribonucleotide sodium salts derived from porcine intestinal tissue having a mean weighted molecular weight of 14-19 kDa, and a potency of 27-39 and 28-38 biological units per mg as determined by two separate assays measuring the release of a product formed by contact between defibrotide sodium, plasmin and a plasmin substrate. The primary structure of defibrotide sodium is shown below.</paragraph>
+                  <renderMultiMedia referencedObject="ID_8eb51eb5-786b-4dd9-9c67-d5a2caf78746" ID="id1927913944"/>
+                  <paragraph>DEFITELIO (defibrotide sodium) injection is a clear, light yellow to brown, sterile, preservative-free solution in a single-patient-use vial for intravenous use. Each milliliter of the injection contains 80 mg of defibrotide sodium and 10 mg of Sodium Citrate, USP, in Water for Injection, USP. Hydrochloric Acid, NF, and/or Sodium Hydroxide, NF, may have been used to adjust pH to 6.8-7.8.</paragraph>
+               </text>
+               <effectiveTime value="20250701"/>
+               <component>
+                  <observationMedia ID="ID_8eb51eb5-786b-4dd9-9c67-d5a2caf78746">
+                     <text>chemical structure</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="image-02.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_a851f775-facd-4875-ab6f-d39a27892dc8">
+               <id root="1c92c516-a193-4832-97c5-208d9db2a708"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34090-1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>12 CLINICAL PHARMACOLOGY </title>
+               <effectiveTime value="20250701"/>
+               <component>
+                  <section ID="ID_55c29121-23ae-4118-96bf-b5b4d1ad92ee">
+                     <id root="be7b0b4c-26cc-4e61-9ec5-bcabc02d1d73"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="43679-0" displayName="MECHANISM OF ACTION SECTION"/>
+                     <title>12.1 Mechanism of Action </title>
+                     <text>
+                        <paragraph>The mechanism of action of defibrotide sodium has not been fully elucidated. <content styleCode="italics">In vitro</content>, defibrotide sodium enhances the enzymatic activity of plasmin to hydrolyze fibrin clots. Studies evaluating the pharmacological effects of defibrotide sodium on endothelial cells (ECs) were conducted primarily in the human microvascular endothelial cell line. <content styleCode="italics">In vitro</content>, defibrotide sodium increased tissue plasminogen activator (t-PA) and thrombomodulin expression, and decreased von Willebrand factor (vWF) and plasminogen activator inhibitor‑1 (PAI-1) expression, thereby reducing EC activation and increasing EC‑mediated fibrinolysis. Defibrotide sodium protected ECs from damage caused by chemotherapy, tumor necrosis factor-α (TNF-α), serum starvation, and perfusion.</paragraph>
+                     </text>
+                     <effectiveTime value="20250701"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_285fc372-f10a-4525-bc82-933d90a08df4">
+                     <id root="1dfc9030-e6e5-41b7-9e46-433d0106fa2c"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="43681-6" displayName="PHARMACODYNAMICS SECTION"/>
+                     <title>12.2 Pharmacodynamics </title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="italics">Cardiac Electrophysiology</content>
+                        </paragraph>
+                        <paragraph>At a dose 2.4 times the maximum recommended dose, DEFITELIO does not prolong the QTc interval to any clinically relevant extent.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">PAI-1 Inhibition</content>
+                        </paragraph>
+                        <paragraph>Plasma concentrations of PAI-1 were assessed on an exploratory basis as a potential pharmacodynamic marker for efficacy in Study 2. PAI-1 is an inhibitor of t-PA and therefore of fibrinolysis. Mean PAI-1 levels on Days 7 and 14 were lower than those at baseline in patients with complete response (CR) and in those who were alive at Day+100, but this trend did not reach statistical significance. There were no statistically significant differences in mean PAI-1 levels by treatment or outcome.</paragraph>
+                     </text>
+                     <effectiveTime value="20250701"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_15b12743-5ce1-468d-9654-ecfbca8d69ae">
+                     <id root="89039eb9-36f9-4dee-a078-b875127a03e4"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="43682-4" displayName="PHARMACOKINETICS SECTION"/>
+                     <title>12.3 Pharmacokinetics </title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="italics">Absorption</content>
+                        </paragraph>
+                        <paragraph>After intravenous administration, peak plasma concentrations of defibrotide sodium occur approximately at the end of each infusion.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Distribution</content>
+                        </paragraph>
+                        <paragraph>Defibrotide sodium is highly bound to human plasma proteins (average 93%) and has a volume of distribution of 8.1 to 9.1 L.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Elimination</content>
+                        </paragraph>
+                        <paragraph>Metabolism followed by urinary excretion is likely the main route of elimination. The estimated total clearance was 3.4 to 6.1 L/h. The elimination half-life of defibrotide sodium is less than 2 hours. Similar plasma concentration profiles were observed in VOD patients after initial and multiple-dose administration of 6.25 mg/kg every 6 hours for 5 days. Therefore, no accumulation is expected following multiple-dose administration.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Metabolism</content>
+                        </paragraph>
+                        <paragraph>Though the precise pathway of defibrotide sodium degradation in plasma <content styleCode="italics">in vivo</content> is largely unknown, it has been suggested that nucleases, nucleotidases, nucleosidases, deaminases, and phosphorylases metabolize polynucleotides progressively to oligonucleotides, nucleotides, nucleosides, and then to the free 2'-deoxyribose sugar, purine and pyrimidine bases.</paragraph>
+                        <paragraph>The biotransformation of defibrotide sodium was investigated <content styleCode="italics">in vitro</content> by incubation with human hepatocytes from donors of different ages and showed that defibrotide sodium does not undergo appreciable metabolism by human hepatocyte cells.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Excretion</content>
+                        </paragraph>
+                        <paragraph>After administration of 6.25 mg/kg to 15 mg/kg doses of DEFITELIO as 2-hour infusions, approximately 5-15% of the total dose was excreted in urine as defibrotide sodium, with the majority excreted during the first 4 hours.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Specific Populations</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Age: Pediatric Population</content>
+                        </paragraph>
+                        <paragraph>Insufficient PK data were collected in pediatric patients to draw conclusions.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Renal Impairment</content>
+                        </paragraph>
+                        <paragraph>The safety, tolerability, and pharmacokinetics of 6.25 mg/kg as 2-hour intravenous infusions of DEFITELIO were evaluated in patients with Hemodialysis-dependent End Stage Renal Disease (ESRD) during hemodialysis and on days off dialysis, and in patients with severe renal disease or ESRD not requiring dialysis. Defibrotide sodium was not removed by hemodialysis, which had no notable effect on plasma clearance of defibrotide sodium. Terminal half-lives were consistently less than 2 hours, and there was no accumulation of defibrotide sodium following repeated dosing. Defibrotide sodium exposure (AUC) in patients with severe renal impairment or ESRD was 50% to 60% higher than that observed in matched healthy subjects. Peak concentration (C<sub>max</sub>) was 35% to 37% higher following single- and multiple-dose administration of defibrotide sodium.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Drug Interactions</content>
+                        </paragraph>
+                        <paragraph>Pharmacokinetic drug-drug interactions are unlikely at therapeutic dose. Data from <content styleCode="italics">in vitro </content>studies using human biomaterial demonstrate that defibrotide sodium does not induce (CYP1A2, CYP2B6, CYP3A4, UGT1A1) or inhibit (CYP1A2, CYP2B6, CYP3A4, CYP2C8, CYP2C9, CYP2C19, CYP2D6, UGT1A1, UGT2B7) the major drug metabolizing enzymes and is not a substrate or inhibitor of the major drug uptake transporters (OAT1, OAT3, OCT1, OCT2, OATP1B1, OATP1B3) or efflux transporters (P-gp and BCRP).</paragraph>
+                        <paragraph>There is some evidence (animal studies, ex vivo human plasma, and healthy volunteers) that defibrotide sodium may enhance the pharmacodynamic activity of heparin and alteplase <content styleCode="italics">[see <linkHtml href="#ID_840e1ae3-e4dc-44d0-9548-cdff12cf8b25">Drug Interactions (7)</linkHtml>]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20250701"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_37af9368-d1a0-42df-85b0-d41723011485">
+               <id root="eb5ed2b0-74e3-4ccd-81f5-62139fa43310"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="43680-8" displayName="NONCLINICAL TOXICOLOGY SECTION"/>
+               <title>13 NONCLINICAL TOXICOLOGY </title>
+               <effectiveTime value="20250701"/>
+               <component>
+                  <section ID="ID_afd7a29b-e526-42b0-8c81-1ffbebdbd7bd">
+                     <id root="10ba06ca-0d08-4494-8281-29b24feb3443"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="34083-6" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title>13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility </title>
+                     <text>
+                        <paragraph>No carcinogenicity studies have been conducted with intravenous administration of defibrotide sodium.</paragraph>
+                        <paragraph>Defibrotide sodium was not mutagenic <content styleCode="italics">in vitro</content> in a bacterial reverse mutation assay (Ames assay). Defibrotide sodium was not clastogenic in an <content styleCode="italics">in vitro</content> chromosomal aberrations assay in Chinese hamster ovary cells or an <content styleCode="italics">in vivo</content> micronucleus assay conducted in bone marrow from rats administered defibrotide sodium by intravenous infusion.</paragraph>
+                        <paragraph>Studies of fertility were not conducted with defibrotide sodium administered by the intravenous route. In repeat dose general toxicology studies, when defibrotide sodium was administered intravenously to rats and dogs for up to 13 weeks, there were no effects on male or female reproductive organs.</paragraph>
+                     </text>
+                     <effectiveTime value="20250701"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_e0d30599-b0b8-4ad4-b51c-9731213b240a">
+                     <id root="f6bb9c8a-0e36-4981-bc6c-a3c4f4b6d3cc"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="34091-9" displayName="ANIMAL PHARMACOLOGY &amp; OR TOXICOLOGY SECTION"/>
+                     <title>13.2 Animal Toxicology and/or Pharmacology </title>
+                     <text>
+                        <paragraph>In the 13-week toxicity studies in rats and dogs, intravenous administration of defibrotide sodium transiently prolonged activated partial thromboplastin time (APTT) at 1200 and 4800 mg/kg/day administered as a continuous infusion in rats and at 300 and 1600 mg/kg/day administered in 2-hour infusions 4 times daily in dogs. Prothrombin time (PT) was also transiently increased at 4800 mg/kg/day in rats. These findings were observed at doses at least 6 times higher on a mg/m<sup>2</sup> basis than the clinical dose of 25 mg/kg/day. The effects on APTT and PT may be due to direct effects on coagulation based on the dose-dependent response observed.</paragraph>
+                     </text>
+                     <effectiveTime value="20250701"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_d2902387-d344-4102-bc9c-83288948d9ac">
+               <id root="ab698882-d976-4ae0-9f34-cadc86cdd26e"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34092-7" displayName="CLINICAL STUDIES SECTION"/>
+               <title>14 CLINICAL STUDIES </title>
+               <text>
+                  <paragraph>The efficacy of DEFITELIO was investigated in three studies: two prospective clinical trials (Study 1 and Study 2), and an expanded access study (Study 3).</paragraph>
+                  <paragraph>Study 1 enrolled 102 adult and pediatric patients in the DEFITELIO treatment group with a diagnosis of VOD according to the following criteria (bilirubin of at least 2 mg/dL and at least two of the following findings: hepatomegaly, ascites, and weight gain greater than 5% by Day+21 post-HSCT) with an associated diagnosis of multi-organ dysfunction (pulmonary, renal, or both) by Day+28 post-HSCT. DEFITELIO was administered to the treatment group at a dose of 6.25 mg/kg infused every 6 hours for a minimum of 21 days and continued until patient was discharged from the hospital. Patients enrolled in the DEFITELIO treatment group were not permitted to receive concomitant medications such as heparin, warfarin, or alteplase because of an increased risk of bleeding.</paragraph>
+                  <paragraph>Study 2 included adult and pediatric patients with a diagnosis of hepatic VOD and multi-organ dysfunction following HSCT, with 75 patients treated with DEFITELIO at a dose of 6.25 mg/kg infused every 6 hours. The planned minimum duration of treatment was 14 days. The treatment could be continued until signs of hepatic VOD resolved.</paragraph>
+                  <paragraph>Study 3 is an expanded access program for DEFITELIO for the treatment of adult and pediatric patients with hepatic VOD. The efficacy of defibrotide was evaluated in 351 patients who had received a HSCT and developed hepatic VOD with renal or pulmonary dysfunction. All patients received DEFITELIO at a dose of 6.25 mg/kg infused every 6 hours.</paragraph>
+                  <paragraph>Baseline demographic information and details for patients treated in these studies are provided below in Table 3.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Table 3:  Baseline Demographics of Patients Treated with DEFITELIO at 6.25 mg/kg Every 6 Hours</content>
+                  </paragraph>
+                  <table width="100%">
+                     <col width="36%"/>
+                     <col width="21%"/>
+                     <col width="21%"/>
+                     <col width="23%"/>
+                     <thead>
+                        <tr>
+                           <th valign="top" align="left" styleCode="Rrule Botrule Lrule Toprule ">
+                              <content styleCode="bold">Data Source</content>
+                           </th>
+                           <th valign="top" align="center" styleCode="Rrule Botrule Lrule Toprule ">
+                              <content styleCode="bold">Study 1</content>
+                           </th>
+                           <th valign="top" align="center" styleCode="Rrule Botrule Lrule Toprule ">
+                              <content styleCode="bold">Study 2</content>
+                           </th>
+                           <th valign="top" align="center" styleCode="Rrule Botrule Lrule Toprule ">
+                              <content styleCode="bold">Study 3</content>
+                           </th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>Design</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>Prospective</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>Prospective</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>Expanded Access Study</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top" styleCode="Rrule Lrule Botrule ">
+                              <paragraph>Number of patients </paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>102</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>75</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>351</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top" styleCode="Rrule Lrule Botrule ">
+                              <paragraph>Median age (years)</paragraph>
+                              <paragraph>(range)</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>21 years</paragraph>
+                              <paragraph>(&lt;1, 72)</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>32 years</paragraph>
+                              <paragraph>(&lt;1, 61)</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>15 years</paragraph>
+                              <paragraph>(&lt;1, 69)</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top" styleCode="Rrule Lrule Botrule ">
+                              <paragraph>Age, n(%)</paragraph>
+                              <paragraph>&lt; 17 years</paragraph>
+                              <paragraph>≥ 17 years</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>44 (43%)</paragraph>
+                              <paragraph>58 (57%)</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>22 (29%)</paragraph>
+                              <paragraph>53 (71%)</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>189 (54%)</paragraph>
+                              <paragraph>162 (46%)</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top" styleCode="Rrule Lrule Botrule ">
+                              <paragraph>Race, n(%)</paragraph>
+                              <paragraph>White</paragraph>
+                              <paragraph>Black/African American</paragraph>
+                              <paragraph>Asian</paragraph>
+                              <paragraph>Other</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>77 (75%)</paragraph>
+                              <paragraph>6 (6%)</paragraph>
+                              <paragraph>4 (4%)</paragraph>
+                              <paragraph>15 (15%)</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>61 (81%)</paragraph>
+                              <paragraph>6 (8%)</paragraph>
+                              <paragraph>2 (3%)</paragraph>
+                              <paragraph>6 (8%)</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>237 (68%)</paragraph>
+                              <paragraph>21 (6%)</paragraph>
+                              <paragraph>15 (4%)</paragraph>
+                              <paragraph>78 (22%)</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top" styleCode="Rrule Lrule Botrule ">
+                              <paragraph>Gender, n(%)</paragraph>
+                              <paragraph>Male</paragraph>
+                              <paragraph>Female</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>64 (63%)</paragraph>
+                              <paragraph>38 (37%) </paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>41 (55%)</paragraph>
+                              <paragraph>34 (45%)</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>184 (52%)</paragraph>
+                              <paragraph>167 (48% )</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top" styleCode="Rrule Lrule Botrule ">
+                              <paragraph>Median number of days on treatment (days)</paragraph>
+                              <paragraph>(range)</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>
+                                 <br/>21.5 days</paragraph>
+                              <paragraph>(1,58)</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>
+                                 <br/>19.5 days</paragraph>
+                              <paragraph>(3,83)</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>
+                                 <br/>21.0 days<sup>a</sup>
+                              </paragraph>
+                              <paragraph>(1,93)</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top" styleCode="Rrule Lrule Botrule ">
+                              <paragraph>Type of graft, n(%)</paragraph>
+                              <paragraph>Allograft</paragraph>
+                              <paragraph>Autograft</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>   90 (88%)</paragraph>
+                              <paragraph>       12 (12%) </paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>67 (89%)</paragraph>
+                              <paragraph>8 (11%)</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                              <paragraph>317 (90%)</paragraph>
+                              <paragraph>34 (10%)</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top" styleCode="Rrule Botrule Lrule Toprule ">
+                              <paragraph>Ventilator or Dialysis Dependent at Study Entry, n(%)</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Botrule Lrule Toprule ">
+                              <paragraph>34 (33%)</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Botrule Lrule Toprule ">
+                              <paragraph>8 (11%)</paragraph>
+                           </td>
+                           <td align="center" valign="top" styleCode="Rrule Botrule Lrule Toprule ">
+                              <paragraph>149 (42%)</paragraph>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <list listType="unordered">
+                     <item>
+                        <caption> </caption>
+                        <sup>a</sup> Duration of treatment from first dose to last dose is presented because days without treatment were not captured for the expanded access study.</item>
+                  </list>
+                  <paragraph>The efficacy of DEFITELIO was based on survival at Day + 100 after HSCT. In Study 1, the survival rate was 38% (95% CI: 29%, 48%) at 100 days after transplantation. In Study 2 the survival rate was 44% (95% CI: 33%, 55%) at 100 days after transplantation. In Study 3, the Day + 100 survival was 45% (95% CI: 40%, 51%).</paragraph>
+                  <paragraph>Based on published reports and analyses of patient level data for individuals with hepatic VOD with renal or pulmonary dysfunction who received supportive care or interventions other than DEFITELIO, the expected Day +100 survival rates are 21% to 31%.</paragraph>
+               </text>
+               <effectiveTime value="20250701"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_fadf7aa1-ada4-4d0a-975e-d80964a62513">
+               <id root="654d8554-5fef-451d-8ac9-6ad268a9b215"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34069-5" displayName="HOW SUPPLIED SECTION"/>
+               <title>16 HOW SUPPLIED/STORAGE AND HANDLING </title>
+               <text>
+                  <paragraph>DEFITELIO (defibrotide sodium) injection is supplied in a single-patient-use, clear glass vial as a clear, light yellow to brown, sterile, preservative-free solution for intravenous infusion. Each vial (NDC 68727-800-01) contains 200 mg/2.5 mL (at a concentration of 80 mg/mL) of defibrotide sodium.</paragraph>
+                  <paragraph>Each carton of DEFITELIO (defibrotide sodium) injection (NDC 68727-800-02) contains 10 vials.</paragraph>
+                  <paragraph>Store DEFITELIO (defibrotide sodium) injection at 20°C-25°C (68°F-77°F); excursions permitted between 15°C to 30°C (59°F to 86°F) (see USP controlled room temperature).</paragraph>
+               </text>
+               <effectiveTime value="20250701"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_57b9ec9d-cc35-486e-8804-054c98e3384f">
+               <id root="045966d6-94ed-4401-827a-e42b5ca221b9"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34076-0" displayName="INFORMATION FOR PATIENTS SECTION"/>
+               <title>17 PATIENT COUNSELING INFORMATION </title>
+               <text>
+                  <list listType="unordered">
+                     <item>
+                        <caption>•</caption>Hemorrhage:  Advise patients and caregivers that DEFITELIO may increase the risk of bleeding (hemorrhage). Instruct patients to immediately report any signs or symptoms suggestive of hemorrhage (unusual bleeding, easy bruising, blood in urine or stool, headache, confusion, slurred speech, or altered vision) <content styleCode="italics">[see <linkHtml href="#ID_81b54bfd-59f7-459c-a261-09defc7cbae6">Warnings and Precautions (5.1)</linkHtml>]</content>.</item>
+                     <item>
+                        <caption>•</caption>Hypersensitivity Reactions:  Ask patients if they have been treated with defibrotide sodium previously. Instruct patients on the risk of allergic reactions, including anaphylaxis. Describe the symptoms of allergic reactions, including anaphylaxis, and instruct the patient to seek medical attention immediately if they experience such symptoms <content styleCode="italics">[see <linkHtml href="#ID_03f62c56-35fb-4e5b-8f93-361c3a4d081f">Warnings and Precautions (5.2)</linkHtml>]</content>.</item>
+                  </list>
+               </text>
+               <effectiveTime value="20250701"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_1e0efa36-3f11-4584-82ef-c30a67ebc527">
+               <id root="86549bf3-090d-491f-b659-f6fa89a867c7"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="51945-4" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PACKAGE/LABEL PRINCIPAL DISPLAY PANEL </title>
+               <text>
+                  <renderMultiMedia referencedObject="B838C3D0-F1AE-4236-A575-8F9F874AA5AD" ID="id1174693225"/>
+                  <paragraph>This product's label may have been updated. For full prescribing information, please visit <linkHtml href="http://www.jazzpharmaceuticals.com">labels.fda.gov</linkHtml>.</paragraph>
+                  <paragraph>Distributed by:</paragraph>
+                  <paragraph>Jazz Pharmaceuticals, Inc.<br/>Palo Alto, CA 94306<br/>
+                  </paragraph>
+                  <paragraph>Protected by U.S. Patent Nos. 11,085,043, 11,236,328 and 11,746,348<br/>
+                  </paragraph>
+                  <paragraph>DEFITELIO<sup>®</sup> is a registered trademark of Jazz Pharmaceuticals plc or its subsidiaries.<br/>© 2025 Jazz Pharmaceuticals</paragraph>
+               </text>
+               <effectiveTime value="20250701"/>
+               <component>
+                  <observationMedia ID="B838C3D0-F1AE-4236-A575-8F9F874AA5AD">
+                     <text>carton</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="image-01-01.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>
