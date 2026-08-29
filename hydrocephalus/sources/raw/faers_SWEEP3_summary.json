@@ -1,0 +1,574 @@
+{
+ "sweep": "SWEEP3_FAERS_openFDA",
+ "api_last_updated": "2026-07-30",
+ "faers_global": {
+  "total_reports": 20692690,
+  "reports_PT_HYDROCEPHALUS": 5367,
+  "route": "https://api.fda.gov/drug/event.json?search=receivedate:[19000101 TO 20260730]&limit=1 ; and search=patient.reaction.reactionmeddrapt.exact:\"HYDROCEPHALUS\"&limit=1"
+ },
+ "drugs": {
+  "nusinersen": {
+   "total_reports": 7655,
+   "hydro_family_PTs": {
+    "HYDROCEPHALUS": 22,
+    "HYPERTENSIVE HYDROCEPHALUS": 1,
+    "CEREBRAL VENTRICLE DILATATION": 6,
+    "CEREBRAL VENTRICLE COLLAPSE": 1,
+    "CSF PRESSURE INCREASED": 23,
+    "CSF PROTEIN INCREASED": 14,
+    "CSF TEST ABNORMAL": 5,
+    "CSF RED BLOOD CELL COUNT POSITIVE": 4,
+    "CSF WHITE BLOOD CELL COUNT INCREASED": 4,
+    "CSF GLUCOSE DECREASED": 3,
+    "CSF VOLUME INCREASED": 3,
+    "CSF IMMUNOGLOBULIN INCREASED": 1,
+    "CSF LYMPHOCYTE COUNT INCREASED": 1,
+    "CSF PRESSURE DECREASED": 1,
+    "CSF TEST": 1,
+    "CSF VOLUME DECREASED": 1,
+    "CSF WHITE BLOOD CELL COUNT POSITIVE": 1,
+    "CEREBROSPINAL FLUID LEAKAGE": 76,
+    "CEREBROSPINAL FLUID RESERVOIR PLACEMENT": 6,
+    "CEREBROSPINAL FISTULA": 1,
+    "CEREBROSPINAL FLUID CIRCULATION DISORDER": 1,
+    "INTRACRANIAL PRESSURE INCREASED": 48,
+    "MENINGITIS ASEPTIC": 19,
+    "PAPILLOEDEMA": 9,
+    "ARACHNOIDITIS": 6
+   },
+   "top5_reactions": [
+    [
+     "HEADACHE",
+     539
+    ],
+    [
+     "POST LUMBAR PUNCTURE SYNDROME",
+     514
+    ],
+    [
+     "PYREXIA",
+     401
+    ],
+    [
+     "PROCEDURAL PAIN",
+     375
+    ],
+    [
+     "PNEUMONIA",
+     367
+    ]
+   ]
+  },
+  "tofersen": {
+   "total_reports": 503,
+   "hydro_family_PTs": {
+    "HYDROCEPHALUS": 1,
+    "NORMAL PRESSURE HYDROCEPHALUS": 1,
+    "CSF PROTEIN INCREASED": 23,
+    "CSF WHITE BLOOD CELL COUNT INCREASED": 8,
+    "CSF CELL COUNT INCREASED": 5,
+    "CSF RED BLOOD CELL COUNT POSITIVE": 4,
+    "CSF TEST ABNORMAL": 3,
+    "CSF CELL COUNT ABNORMAL": 2,
+    "CSF GLUCOSE ABNORMAL": 2,
+    "CSF PROTEIN ABNORMAL": 2,
+    "CSF VOLUME DECREASED": 2,
+    "CSF LYMPHOCYTE COUNT INCREASED": 1,
+    "CSF PRESSURE DECREASED": 1,
+    "CSF PRESSURE INCREASED": 1,
+    "CEREBROSPINAL FLUID LEAKAGE": 2,
+    "MENINGITIS ASEPTIC": 11,
+    "INTRACRANIAL PRESSURE INCREASED": 6,
+    "PAPILLOEDEMA": 6,
+    "ARACHNOIDITIS": 1
+   },
+   "top5_reactions": [
+    [
+     "AMYOTROPHIC LATERAL SCLEROSIS",
+     62
+    ],
+    [
+     "HEADACHE",
+     52
+    ],
+    [
+     "DEATH",
+     45
+    ],
+    [
+     "PROCEDURAL PAIN",
+     44
+    ],
+    [
+     "POST LUMBAR PUNCTURE SYNDROME",
+     35
+    ]
+   ]
+  },
+  "tominersen": {
+   "total_reports": 0,
+   "hydro_family_PTs": {},
+   "top5_reactions": []
+  },
+  "eplontersen": {
+   "total_reports": 168,
+   "hydro_family_PTs": {},
+   "top5_reactions": [
+    [
+     "DEATH",
+     15
+    ],
+    [
+     "FATIGUE",
+     13
+    ],
+    [
+     "NEUROPATHY PERIPHERAL",
+     13
+    ],
+    [
+     "NAUSEA",
+     12
+    ],
+    [
+     "PAIN",
+     9
+    ]
+   ]
+  },
+  "inotersen": {
+   "total_reports": 1763,
+   "hydro_family_PTs": {
+    "CEREBROSPINAL FLUID DRAINAGE": 1
+   },
+   "top5_reactions": [
+    [
+     "PLATELET COUNT DECREASED",
+     337
+    ],
+    [
+     "PROTEIN URINE PRESENT",
+     269
+    ],
+    [
+     "GLOMERULAR FILTRATION RATE DECREASED",
+     264
+    ],
+    [
+     "URINE PROTEIN/CREATININE RATIO INCREASED",
+     250
+    ],
+    [
+     "BLOOD CREATININE INCREASED",
+     213
+    ]
+   ]
+  },
+  "eteplirsen": {
+   "total_reports": 2415,
+   "hydro_family_PTs": {
+    "PAPILLOEDEMA": 2,
+    "INTRACRANIAL PRESSURE INCREASED": 1,
+    "MENINGITIS ASEPTIC": 1
+   },
+   "top5_reactions": [
+    [
+     "PRODUCT DOSE OMISSION ISSUE",
+     698
+    ],
+    [
+     "NO ADVERSE EVENT",
+     550
+    ],
+    [
+     "INTENTIONAL DOSE OMISSION",
+     279
+    ],
+    [
+     "POOR VENOUS ACCESS",
+     187
+    ],
+    [
+     "DEVICE ISSUE",
+     182
+    ]
+   ]
+  },
+  "golodirsen": {
+   "total_reports": 446,
+   "hydro_family_PTs": {},
+   "top5_reactions": [
+    [
+     "PRODUCT DOSE OMISSION ISSUE",
+     132
+    ],
+    [
+     "NO ADVERSE EVENT",
+     73
+    ],
+    [
+     "POOR VENOUS ACCESS",
+     63
+    ],
+    [
+     "INTENTIONAL DOSE OMISSION",
+     34
+    ],
+    [
+     "DEVICE ISSUE",
+     30
+    ]
+   ]
+  },
+  "viltolarsen": {
+   "total_reports": 165,
+   "hydro_family_PTs": {},
+   "top5_reactions": [
+    [
+     "PYREXIA",
+     20
+    ],
+    [
+     "VOMITING",
+     12
+    ],
+    [
+     "ILLNESS",
+     11
+    ],
+    [
+     "PNEUMONIA",
+     8
+    ],
+    [
+     "WEIGHT INCREASED",
+     8
+    ]
+   ]
+  },
+  "casimersen": {
+   "total_reports": 872,
+   "hydro_family_PTs": {},
+   "top5_reactions": [
+    [
+     "PRODUCT DOSE OMISSION ISSUE",
+     259
+    ],
+    [
+     "NO ADVERSE EVENT",
+     166
+    ],
+    [
+     "POOR VENOUS ACCESS",
+     102
+    ],
+    [
+     "DEVICE ISSUE",
+     76
+    ],
+    [
+     "INTENTIONAL DOSE OMISSION",
+     74
+    ]
+   ]
+  },
+  "patisiran": {
+   "total_reports": 2810,
+   "hydro_family_PTs": {
+    "HYDROCEPHALUS": 1,
+    "CSF TEST ABNORMAL": 1
+   },
+   "top5_reactions": [
+    [
+     "DEATH",
+     269
+    ],
+    [
+     "PRODUCT DOSE OMISSION ISSUE",
+     176
+    ],
+    [
+     "FATIGUE",
+     173
+    ],
+    [
+     "HOSPITALISATION",
+     132
+    ],
+    [
+     "INFUSION RELATED REACTION",
+     129
+    ]
+   ]
+  },
+  "vutrisiran": {
+   "total_reports": 2536,
+   "hydro_family_PTs": {
+    "HYDROCEPHALUS": 1,
+    "CSF RED BLOOD CELL COUNT POSITIVE": 1
+   },
+   "top5_reactions": [
+    [
+     "DEATH",
+     501
+    ],
+    [
+     "HOSPITALISATION",
+     311
+    ],
+    [
+     "INTENTIONAL DOSE OMISSION",
+     201
+    ],
+    [
+     "PRODUCT DOSE OMISSION ISSUE",
+     133
+    ],
+    [
+     "FALL",
+     115
+    ]
+   ]
+  },
+  "givosiran": {
+   "total_reports": 1462,
+   "hydro_family_PTs": {},
+   "top5_reactions": [
+    [
+     "PORPHYRIA ACUTE",
+     469
+    ],
+    [
+     "HOSPITALISATION",
+     171
+    ],
+    [
+     "PRODUCT DOSE OMISSION ISSUE",
+     108
+    ],
+    [
+     "NAUSEA",
+     105
+    ],
+    [
+     "INTENTIONAL DOSE OMISSION",
+     103
+    ]
+   ]
+  },
+  "lumasiran": {
+   "total_reports": 364,
+   "hydro_family_PTs": {
+    "INTRACRANIAL PRESSURE INCREASED": 1
+   },
+   "top5_reactions": [
+    [
+     "RENAL TRANSPLANT",
+     49
+    ],
+    [
+     "NEPHROLITHIASIS",
+     37
+    ],
+    [
+     "HOSPITALISATION",
+     21
+    ],
+    [
+     "LABORATORY TEST ABNORMAL",
+     17
+    ],
+    [
+     "DRUG INEFFECTIVE",
+     16
+    ]
+   ]
+  },
+  "nedosiran": {
+   "total_reports": 12,
+   "hydro_family_PTs": {},
+   "top5_reactions": [
+    [
+     "URINE OXALATE INCREASED",
+     3
+    ],
+    [
+     "INAPPROPRIATE SCHEDULE OF PRODUCT ADMINISTRATION",
+     2
+    ],
+    [
+     "RASH",
+     2
+    ],
+    [
+     "ABDOMINAL PAIN",
+     1
+    ],
+    [
+     "AMENORRHOEA",
+     1
+    ]
+   ]
+  },
+  "inclisiran": {
+   "total_reports": 7295,
+   "hydro_family_PTs": {
+    "CEREBRAL VENTRICLE DILATATION": 1
+   },
+   "top5_reactions": [
+    [
+     "ARTHRALGIA",
+     811
+    ],
+    [
+     "MYALGIA",
+     599
+    ],
+    [
+     "INJECTION SITE PAIN",
+     555
+    ],
+    [
+     "LOW DENSITY LIPOPROTEIN INCREASED",
+     469
+    ],
+    [
+     "PAIN IN EXTREMITY",
+     455
+    ]
+   ]
+  },
+  "volanesorsen": {
+   "total_reports": 6,
+   "hydro_family_PTs": {},
+   "top5_reactions": [
+    [
+     "INJECTION SITE PAIN",
+     2
+    ],
+    [
+     "INJECTION SITE REACTION",
+     2
+    ],
+    [
+     "RASH MACULAR",
+     2
+    ],
+    [
+     "ABDOMINAL DISCOMFORT",
+     1
+    ],
+    [
+     "ADVERSE DRUG REACTION",
+     1
+    ]
+   ]
+  },
+  "mipomersen": {
+   "total_reports": 260,
+   "hydro_family_PTs": {},
+   "top5_reactions": [
+    [
+     "INJECTION SITE PAIN",
+     77
+    ],
+    [
+     "INJECTION SITE ERYTHEMA",
+     61
+    ],
+    [
+     "HEPATIC ENZYME INCREASED",
+     57
+    ],
+    [
+     "INFLUENZA LIKE ILLNESS",
+     43
+    ],
+    [
+     "INJECTION SITE BRUISING",
+     35
+    ]
+   ]
+  },
+  "pegaptanib": {
+   "total_reports": 403,
+   "hydro_family_PTs": {},
+   "top5_reactions": [
+    [
+     "VISUAL ACUITY REDUCED",
+     51
+    ],
+    [
+     "ENDOPHTHALMITIS",
+     30
+    ],
+    [
+     "RETINAL HAEMORRHAGE",
+     29
+    ],
+    [
+     "EYE PAIN",
+     24
+    ],
+    [
+     "INTRAOCULAR PRESSURE INCREASED",
+     23
+    ]
+   ]
+  },
+  "imetelstat": {
+   "total_reports": 202,
+   "hydro_family_PTs": {},
+   "top5_reactions": [
+    [
+     "THROMBOCYTOPENIA",
+     33
+    ],
+    [
+     "PLATELET COUNT DECREASED",
+     28
+    ],
+    [
+     "NEUTROPENIA",
+     26
+    ],
+    [
+     "HAEMOGLOBIN DECREASED",
+     25
+    ],
+    [
+     "CYTOPENIA",
+     20
+    ]
+   ]
+  },
+  "defibrotide": {
+   "total_reports": 4291,
+   "hydro_family_PTs": {
+    "HYDROCEPHALUS": 2
+   },
+   "top5_reactions": [
+    [
+     "OFF LABEL USE",
+     1393
+    ],
+    [
+     "VENOOCCLUSIVE DISEASE",
+     637
+    ],
+    [
+     "VENOOCCLUSIVE LIVER DISEASE",
+     481
+    ],
+    [
+     "DEATH",
+     477
+    ],
+    [
+     "MULTIPLE ORGAN DYSFUNCTION SYNDROME",
+     414
+    ]
+   ]
+  }
+ }
+}

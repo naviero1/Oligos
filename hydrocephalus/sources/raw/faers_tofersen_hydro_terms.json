@@ -1,0 +1,238 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "MENINGITIS ASEPTIC",
+      "count": 11
+    },
+    {
+      "term": "INTRACRANIAL PRESSURE INCREASED",
+      "count": 6
+    },
+    {
+      "term": "PAPILLOEDEMA",
+      "count": 6
+    },
+    {
+      "term": "CSF PROTEIN INCREASED",
+      "count": 3
+    },
+    {
+      "term": "HEADACHE",
+      "count": 3
+    },
+    {
+      "term": "AMYOTROPHIC LATERAL SCLEROSIS",
+      "count": 2
+    },
+    {
+      "term": "CONFUSIONAL STATE",
+      "count": 2
+    },
+    {
+      "term": "CSF RED BLOOD CELL COUNT POSITIVE",
+      "count": 2
+    },
+    {
+      "term": "CSF WHITE BLOOD CELL COUNT INCREASED",
+      "count": 2
+    },
+    {
+      "term": "DYSARTHRIA",
+      "count": 2
+    },
+    {
+      "term": "ABNORMAL BEHAVIOUR",
+      "count": 1
+    },
+    {
+      "term": "ALLODYNIA",
+      "count": 1
+    },
+    {
+      "term": "APHASIA",
+      "count": 1
+    },
+    {
+      "term": "ARACHNOIDITIS",
+      "count": 1
+    },
+    {
+      "term": "ARTHROPOD BITE",
+      "count": 1
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 1
+    },
+    {
+      "term": "BRAIN INJURY",
+      "count": 1
+    },
+    {
+      "term": "CENTRAL NERVOUS SYSTEM VIRAL INFECTION",
+      "count": 1
+    },
+    {
+      "term": "CONJUNCTIVAL HYPERAEMIA",
+      "count": 1
+    },
+    {
+      "term": "CSF CELL COUNT ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "CSF GLUCOSE ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "CSF PRESSURE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "CSF PROTEIN ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 1
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 1
+    },
+    {
+      "term": "DISCOMFORT",
+      "count": 1
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 1
+    },
+    {
+      "term": "DYSPHAGIA",
+      "count": 1
+    },
+    {
+      "term": "FACIAL PARALYSIS",
+      "count": 1
+    },
+    {
+      "term": "HEAD DISCOMFORT",
+      "count": 1
+    },
+    {
+      "term": "HYDROCEPHALUS",
+      "count": 1
+    },
+    {
+      "term": "HYPOAESTHESIA",
+      "count": 1
+    },
+    {
+      "term": "LOSS OF CONSCIOUSNESS",
+      "count": 1
+    },
+    {
+      "term": "MAGNETIC RESONANCE IMAGING ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "MENINGITIS CHEMICAL",
+      "count": 1
+    },
+    {
+      "term": "METABOLIC ACIDOSIS",
+      "count": 1
+    },
+    {
+      "term": "MIGRAINE",
+      "count": 1
+    },
+    {
+      "term": "MUSCULAR WEAKNESS",
+      "count": 1
+    },
+    {
+      "term": "MYELITIS",
+      "count": 1
+    },
+    {
+      "term": "NERVE DEGENERATION",
+      "count": 1
+    },
+    {
+      "term": "PANCREATITIS ACUTE",
+      "count": 1
+    },
+    {
+      "term": "PLEOCYTOSIS",
+      "count": 1
+    },
+    {
+      "term": "PNEUMONIA ASPIRATION",
+      "count": 1
+    },
+    {
+      "term": "POST LUMBAR PUNCTURE SYNDROME",
+      "count": 1
+    },
+    {
+      "term": "POST PROCEDURAL HAEMATOMA",
+      "count": 1
+    },
+    {
+      "term": "PROCEDURAL NAUSEA",
+      "count": 1
+    },
+    {
+      "term": "PROCEDURAL VOMITING",
+      "count": 1
+    },
+    {
+      "term": "PROTEIN TOTAL INCREASED",
+      "count": 1
+    },
+    {
+      "term": "PSYCHOTIC DISORDER",
+      "count": 1
+    },
+    {
+      "term": "PULMONARY FUNCTION TEST DECREASED",
+      "count": 1
+    },
+    {
+      "term": "RADICULAR PAIN",
+      "count": 1
+    },
+    {
+      "term": "RESPIRATORY FAILURE",
+      "count": 1
+    },
+    {
+      "term": "RESPIRATORY MUSCLE WEAKNESS",
+      "count": 1
+    },
+    {
+      "term": "RETROPERITONEAL HAEMATOMA",
+      "count": 1
+    },
+    {
+      "term": "TINNITUS",
+      "count": 1
+    },
+    {
+      "term": "VISUAL ACUITY REDUCED",
+      "count": 1
+    },
+    {
+      "term": "WHITE BLOOD CELL COUNT INCREASED",
+      "count": 1
+    }
+  ]
+}

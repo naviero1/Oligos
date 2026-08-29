@@ -1,0 +1,819 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 168
+    }
+  },
+  "results": [
+    {
+      "safetyreportversion": "4",
+      "safetyreportid": "23393388",
+      "primarysourcecountry": "US",
+      "occurcountry": "US",
+      "transmissiondateformat": "102",
+      "transmissiondate": "20250717",
+      "reporttype": "2",
+      "serious": "1",
+      "seriousnessdeath": "2",
+      "seriousnesslifethreatening": "2",
+      "seriousnesshospitalization": "1",
+      "seriousnessdisabling": "2",
+      "seriousnesscongenitalanomali": "2",
+      "seriousnessother": "1",
+      "receivedateformat": "102",
+      "receivedate": "20240111",
+      "receiptdateformat": "102",
+      "receiptdate": "20250515",
+      "fulfillexpeditecriteria": "1",
+      "companynumb": "US-PFIZER INC-PV202400002839",
+      "primarysource": {
+        "reportercountry": "US",
+        "qualification": "5"
+      },
+      "sender": {
+        "sendertype": "6",
+        "senderorganization": "PFIZER"
+      },
+      "receiver": {
+        "receivertype": "6",
+        "receiverorganization": "FDA"
+      },
+      "patient": {
+        "patientonsetage": "80",
+        "patientonsetageunit": "801",
+        "patientsex": "1",
+        "reaction": [
+          {
+            "reactionmeddraversionpt": "28.0",
+            "reactionmeddrapt": "Urinary retention",
+            "reactionoutcome": "6"
+          },
+          {
+            "reactionmeddraversionpt": "28.0",
+            "reactionmeddrapt": "Fluid retention",
+            "reactionoutcome": "6"
+          },
+          {
+            "reactionmeddraversionpt": "28.0",
+            "reactionmeddrapt": "Infection",
+            "reactionoutcome": "6"
+          },
+          {
+            "reactionmeddraversionpt": "28.0",
+            "reactionmeddrapt": "Prostatic artery embolisation",
+            "reactionoutcome": "1"
+          }
+        ],
+        "drug": [
+          {
+            "drugcharacterization": "1",
+            "medicinalproduct": "VYNDAMAX",
+            "drugauthorizationnumb": "212161",
+            "drugstructuredosagenumb": "61",
+            "drugstructuredosageunit": "003",
+            "drugseparatedosagenumb": "1",
+            "drugintervaldosageunitnumb": "1",
+            "drugintervaldosagedefinition": "804",
+            "drugdosagetext": "61MG CAP, TAKE 1 CAPSULE BY MOUTH DAILY",
+            "drugdosageform": "Capsule, soft",
+            "drugadministrationroute": "048",
+            "drugindication": "Amyloidosis",
+            "drugstartdateformat": "102",
+            "drugstartdate": "20231017",
+            "actiondrug": "5",
+            "drugadditional": "3",
+            "activesubstance": {
+              "activesubstancename": "TAFAMIDIS"
+            },
+            "openfda": {
+              "application_number": [
+                "NDA212161"
+              ],
+              "brand_name": [
+                "VYNDAMAX"
+              ],
+              "generic_name": [
+                "TAFAMIDIS"
+              ],
+              "manufacturer_name": [
+                "Pfizer Laboratories Div Pfizer Inc"
+              ],
+              "product_ndc": [
+                "0069-8730",
+                "0069-1975"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "substance_name": [
+                "TAFAMIDIS"
+              ],
+              "rxcui": [
+                "2168534",
+                "2168540",
+                "2168542",
+                "2168548"
+              ],
+              "spl_id": [
+                "67f1031d-c298-4cf9-9051-bb8f99e56442"
+              ],
+              "spl_set_id": [
+                "1b4121ee-a733-4456-a917-be2603477839"
+              ],
+              "package_ndc": [
+                "0069-1975-12",
+                "0069-1975-40",
+                "0069-8730-01",
+                "0069-8730-30"
+              ],
+              "unii": [
+                "8FG9H9D31J",
+                "ZU7CF08A1A"
+              ]
+            }
+          },
+          {
+            "drugcharacterization": "2",
+            "medicinalproduct": "LASIX",
+            "drugdosageform": "Tablet",
+            "activesubstance": {
+              "activesubstancename": "FUROSEMIDE"
+            },
+            "openfda": {
+              "application_number": [
+                "NDA016273"
+              ],
+              "brand_name": [
+                "LASIX"
+              ],
+              "generic_name": [
+                "FUROSEMIDE"
+              ],
+              "manufacturer_name": [
+                "Validus Pharmaceuticals LLC"
+              ],
+              "product_ndc": [
+                "30698-060",
+                "30698-067",
+                "30698-066"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "substance_name": [
+                "FUROSEMIDE"
+              ],
+              "rxcui": [
+                "197732",
+                "200801",
+                "200809",
+                "205732",
+                "310429",
+                "313988"
+              ],
+              "spl_id": [
+                "4002943d-0b4b-4ff0-e063-6394a90ae63b"
+              ],
+              "spl_set_id": [
+                "2c9b4d8f-0770-482d-a9e6-9c616a440b1a"
+              ],
+              "package_ndc": [
+                "30698-067-01",
+                "30698-067-10",
+                "30698-060-01",
+                "30698-060-10",
+                "30698-060-50",
+                "30698-066-05",
+                "30698-066-50"
+              ],
+              "nui": [
+                "N0000175366",
+                "N0000175590"
+              ],
+              "pharm_class_pe": [
+                "Increased Diuresis at Loop of Henle [PE]"
+              ],
+              "pharm_class_epc": [
+                "Loop Diuretic [EPC]"
+              ],
+              "unii": [
+                "7LXU5N7ZO5"
+              ]
+            }
+          },
+          {
+            "drugcharacterization": "2",
+            "medicinalproduct": "LOSARTAN POTASSIUM",
+            "drugdosageform": "Tablet",
+            "activesubstance": {
+              "activesubstancename": "LOSARTAN POTASSIUM"
+            },
+            "openfda": {
+              "application_number": [
+                "ANDA217396",
+                "ANDA078243",
+                "ANDA090428",
+                "ANDA203835",
+                "ANDA090083",
+                "NDA020386",
+                "ANDA090382",
+                "ANDA203030",
+                "ANDA215959",
+                "NDA218772",
+                "ANDA090544",
+                "ANDA078232",
+                "ANDA202230",
+                "ANDA091497",
+                "ANDA201170"
+              ],
+              "brand_name": [
+                "LOSARTAN POTASSIUM",
+                "COZAAR",
+                "LOSARTAN POTASSIUM 25 MG",
+                "LOSARTAN POTASSIUM 50 MG",
+                "LOSARTAN POTASSIUM 100 MG",
+                "ARBLI",
+                "LOSARTAN POTASSIUM TABLETS, 25 MG",
+                "LOSARTAN POTASSIUM TABLETS, 50 MG",
+                "LOSARTAN POTASSIUM TABLETS, 100 MG"
+              ],
+              "generic_name": [
+                "LOSARTAN POTASSIUM",
+                "LOSARTAN"
+              ],
+              "manufacturer_name": [
+                "Novadoz Pharmaceuticals LLC",
+                "Quallent Pharmaceuticals Health LLC",
+                "Alembic Pharmaceuticals Limited",
+                "Camber Pharmaceuticals, Inc.",
+                "Zydus Lifesciences Limited",
+                "NorthStar RxLLC",
+                "Aurobindo Pharma Limited",
+                "Organon LLC",
+                "Strides Pharma Science Limited",
+                "Unichem Pharmaceuticals (USA), Inc.",
+                "Granules Pharmaceuticals Inc.",
+                "Scienture LLC",
+                "Zydus Pharmaceuticals USA Inc.",
+                "Alembic Pharmaceuticals Inc.",
+                "AiPing Pharmaceutical, Inc.",
+                "Lupin Pharmaceuticals, Inc.",
+                "XLCare Pharmaceuticals, Inc.",
+                "Macleods Pharmaceuticals Limited",
+                "Granules India Ltd",
+                "Solco Healthcare US, LLC",
+                "Jubilant Cadista Pharmaceuticals Inc."
+              ],
+              "product_ndc": [
+                "72205-141",
+                "72205-142",
+                "72205-143",
+                "82009-042",
+                "82009-043",
+                "82009-044",
+                "46708-445",
+                "46708-446",
+                "46708-447",
+                "31722-700",
+                "31722-701",
+                "31722-702",
+                "65841-729",
+                "65841-730",
+                "65841-731",
+                "72603-340",
+                "72603-341",
+                "72603-342",
+                "65862-201",
+                "65862-202",
+                "65862-203",
+                "78206-121",
+                "78206-122",
+                "78206-123",
+                "64380-933",
+                "64380-934",
+                "64380-935",
+                "29300-144",
+                "29300-145",
+                "29300-146",
+                "70010-741",
+                "70010-742",
+                "70010-743",
+                "83245-053",
+                "68382-135",
+                "68382-136",
+                "68382-137",
+                "62332-027",
+                "62332-028",
+                "62332-029",
+                "11788-100",
+                "11788-101",
+                "11788-102",
+                "68180-210",
+                "68180-211",
+                "68180-212",
+                "68180-376",
+                "68180-377",
+                "68180-378",
+                "68180-307",
+                "68180-308",
+                "68180-309",
+                "72865-141",
+                "72865-142",
+                "72865-143",
+                "33342-044",
+                "33342-045",
+                "33342-046",
+                "62207-741",
+                "62207-742",
+                "62207-743",
+                "43547-360",
+                "43547-361",
+                "43547-362",
+                "59746-333",
+                "59746-334",
+                "59746-335"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "substance_name": [
+                "LOSARTAN POTASSIUM"
+              ],
+              "rxcui": [
+                "979480",
+                "979485",
+                "979492",
+                "979482",
+                "979487",
+                "979494",
+                "2709039",
+                "2709046"
+              ],
+              "spl_id": [
+                "965852b8-5563-4f23-8cd1-a2f82cf16d3f",
+                "55d92567-c635-4877-91cb-dd142c71c4fb",
+                "cedeb352-a540-4778-84e6-304f898fe17f",
+                "40b34aeb-20b5-4200-e063-6394a90a96e9",
+                "36fa833c-716f-4b69-9326-3c54753240dc",
+                "40ccc1d7-14c6-e682-e063-6394a90a1d37",
+                "1942e030-0f36-4f65-9f60-4898439afc61",
+                "998b309b-7dde-4d62-b902-010dd83108fe",
+                "de8fc110-fa21-4904-8309-fd3c28dfff44",
+                "cedb47f7-7b7e-464f-b1ed-2a3afdb074d4",
+                "451da3de-077d-522d-e063-6394a90a3537",
+                "0d6183d3-e8e3-416e-a359-9348c61ac736",
+                "cfd7f3a9-7719-43af-b0b4-f655824cb19b",
+                "a12a7eb0-196c-4ddc-ba64-2909f65b6f19",
+                "0768a3af-f3b0-406b-bedb-c4c4bf11d1d4",
+                "38431fb6-7157-4be5-929a-0c65b7a29c55",
+                "f26f9307-2adc-692c-e053-2995a90a83a3",
+                "81824d1f-61f4-457c-8723-cd43d5429029",
+                "39e0a359-f9d7-c3fb-e063-6394a90a86a8",
+                "098aef71-90f1-40ee-b574-03dcbbad51a4",
+                "cfcfa1c5-48d3-4370-aa10-e1d054c1844f"
+              ],
+              "spl_set_id": [
+                "5edb843a-66ed-4950-9ed0-393e6a5d7c99",
+                "1a9e1ffd-edf1-4e35-a7f5-ca351c507d7f",
+                "eeb77c84-38d3-432d-914a-54b312b374bd",
+                "cafd54e8-42a8-474c-8ea8-49ec74c2b0d3",
+                "9ccd6823-e813-472c-99cd-c6ef25e74bed",
+                "394398e1-119e-4943-b414-27261f5d4842",
+                "31366b4b-dfd6-4fda-babe-2cb3d2c14a2b",
+                "9949448f-c3b9-44ee-94ed-c1aca8c90f39",
+                "a8817f22-8478-49b9-8354-ab27ca222c6b",
+                "92691768-b5e6-4527-98dc-d86c58f6f13e",
+                "ca012edc-923d-4ada-a261-db82b71b3c4f",
+                "afd2d1ba-e7af-4e4e-8b7e-a9f72612fc97",
+                "3233c707-70b6-4c29-8210-913eeb2a38ed",
+                "1dadbe02-289c-4312-9e65-40f3314dcc31",
+                "1ae817aa-5221-4387-a457-306785140741",
+                "e5886220-43b7-46e1-9034-5242ba245bd1",
+                "20421665-0401-4f6e-9e1d-232c654efb0f",
+                "85d69d02-c5ef-467e-94aa-903100218795",
+                "f9953f51-f30a-952d-e053-6394a90abf5f",
+                "fa0cf2c2-6238-4edd-94e2-b670b98a0da4",
+                "1bf520a2-a50e-a6ae-0fdf-9be4e69729c0"
+              ],
+              "package_ndc": [
+                "72205-141-90",
+                "72205-141-99",
+                "72205-142-30",
+                "72205-142-90",
+                "72205-142-99",
+                "72205-143-30",
+                "72205-143-90",
+                "72205-143-99",
+                "82009-042-10",
+                "82009-043-10",
+                "82009-044-10",
+                "46708-445-30",
+                "46708-445-90",
+                "46708-445-91",
+                "46708-445-31",
+                "46708-446-30",
+                "46708-446-90",
+                "46708-446-91",
+                "46708-446-31",
+                "46708-447-30",
+                "46708-447-90",
+                "46708-447-91",
+                "46708-447-31",
+                "31722-700-30",
+                "31722-700-60",
+                "31722-700-90",
+                "31722-700-05",
+                "31722-700-10",
+                "31722-701-30",
+                "31722-701-60",
+                "31722-701-90",
+                "31722-701-05",
+                "31722-701-10",
+                "31722-702-30",
+                "31722-702-60",
+                "31722-702-90",
+                "31722-702-05",
+                "31722-702-10",
+                "65841-729-16",
+                "65841-729-01",
+                "65841-729-10",
+                "65841-729-24",
+                "65841-729-06",
+                "65841-730-06",
+                "65841-730-16",
+                "65841-730-01",
+                "65841-730-10",
+                "65841-730-24",
+                "65841-731-06",
+                "65841-731-16",
+                "65841-731-01",
+                "65841-731-10",
+                "65841-731-30",
+                "65841-731-77",
+                "72603-340-01",
+                "72603-340-02",
+                "72603-341-01",
+                "72603-341-02",
+                "72603-342-01",
+                "72603-342-02",
+                "65862-201-30",
+                "65862-201-90",
+                "65862-201-05",
+                "65862-201-99",
+                "65862-202-30",
+                "65862-202-90",
+                "65862-202-99",
+                "65862-203-30",
+                "65862-203-90",
+                "65862-203-99",
+                "78206-121-01",
+                "78206-122-01",
+                "78206-122-02",
+                "78206-123-01",
+                "78206-123-02",
+                "64380-933-04",
+                "64380-933-05",
+                "64380-933-08",
+                "64380-934-04",
+                "64380-934-05",
+                "64380-934-08",
+                "64380-935-04",
+                "64380-935-05",
+                "64380-935-08",
+                "29300-144-13",
+                "29300-144-19",
+                "29300-144-01",
+                "29300-144-10",
+                "29300-145-13",
+                "29300-145-19",
+                "29300-145-01",
+                "29300-145-10",
+                "29300-146-13",
+                "29300-146-19",
+                "29300-146-01",
+                "29300-146-10",
+                "70010-741-03",
+                "70010-741-09",
+                "70010-741-10",
+                "70010-742-03",
+                "70010-742-09",
+                "70010-742-10",
+                "70010-743-03",
+                "70010-743-09",
+                "70010-743-10",
+                "83245-053-06",
+                "68382-135-16",
+                "68382-135-01",
+                "68382-135-10",
+                "68382-135-24",
+                "68382-135-06",
+                "68382-136-06",
+                "68382-136-16",
+                "68382-136-01",
+                "68382-136-10",
+                "68382-136-24",
+                "68382-137-06",
+                "68382-137-16",
+                "68382-137-01",
+                "68382-137-10",
+                "68382-137-30",
+                "68382-137-77",
+                "62332-027-30",
+                "62332-027-90",
+                "62332-027-91",
+                "62332-027-31",
+                "62332-028-30",
+                "62332-028-90",
+                "62332-028-91",
+                "62332-028-31",
+                "62332-029-30",
+                "62332-029-90",
+                "62332-029-91",
+                "62332-029-31",
+                "11788-100-30",
+                "11788-100-90",
+                "11788-100-10",
+                "11788-101-30",
+                "11788-101-90",
+                "11788-101-10",
+                "11788-102-30",
+                "11788-102-90",
+                "11788-102-10",
+                "68180-210-09",
+                "68180-210-03",
+                "68180-210-01",
+                "68180-210-06",
+                "68180-211-06",
+                "68180-211-09",
+                "68180-211-03",
+                "68180-211-01",
+                "68180-212-06",
+                "68180-212-03",
+                "68180-212-09",
+                "68180-212-01",
+                "68180-376-03",
+                "68180-376-06",
+                "68180-376-01",
+                "68180-376-09",
+                "68180-377-03",
+                "68180-377-01",
+                "68180-377-09",
+                "68180-377-06",
+                "68180-378-09",
+                "68180-378-03",
+                "68180-378-06",
+                "68180-378-01",
+                "68180-307-01",
+                "68180-307-02",
+                "68180-307-09",
+                "68180-307-06",
+                "68180-308-06",
+                "68180-308-09",
+                "68180-308-02",
+                "68180-308-01",
+                "68180-309-06",
+                "68180-309-09",
+                "68180-309-02",
+                "68180-309-01",
+                "72865-141-30",
+                "72865-141-90",
+                "72865-141-10",
+                "72865-142-30",
+                "72865-142-90",
+                "72865-142-10",
+                "72865-143-30",
+                "72865-143-90",
+                "72865-143-10",
+                "33342-044-10",
+                "33342-044-12",
+                "33342-044-07",
+                "33342-044-44",
+                "33342-045-10",
+                "33342-045-12",
+                "33342-045-07",
+                "33342-045-44",
+                "33342-046-10",
+                "33342-046-12",
+                "33342-046-07",
+                "33342-046-44",
+                "62207-741-54",
+                "62207-741-49",
+                "62207-742-54",
+                "62207-742-49",
+                "62207-743-54",
+                "62207-743-49",
+                "43547-360-09",
+                "43547-360-50",
+                "43547-360-11",
+                "43547-361-03",
+                "43547-361-09",
+                "43547-361-50",
+                "43547-361-11",
+                "43547-362-03",
+                "43547-362-09",
+                "43547-362-50",
+                "43547-362-11",
+                "59746-333-30",
+                "59746-333-90",
+                "59746-333-01",
+                "59746-333-10",
+                "59746-334-30",
+                "59746-334-90",
+                "59746-334-01",
+                "59746-334-10",
+                "59746-335-30",
+                "59746-335-90",
+                "59746-335-01",
+                "59746-335-10"
+              ],
+              "unii": [
+                "3ST302B24A"
+              ]
+            }
+          },
+          {
+            "drugcharacterization": "2",
+            "medicinalproduct": "PRADAXA",
+            "drugdosageform": "Capsule",
+            "activesubstance": {
+              "activesubstancename": "DABIGATRAN ETEXILATE MESYLATE"
+            },
+            "openfda": {
+              "application_number": [
+                "NDA022512",
+                "NDA214358"
+              ],
+              "brand_name": [
+                "PRADAXA"
+              ],
+              "generic_name": [
+                "DABIGATRAN ETEXILATE MESYLATE",
+                "DABIGATRAN ETEXILATE"
+              ],
+              "manufacturer_name": [
+                "Boehringer Ingelheim Pharmaceuticals Inc.",
+                "Boehringer Ingelheim Pharmaceuticals, Inc."
+              ],
+              "product_ndc": [
+                "0597-0108",
+                "0597-0355",
+                "0597-0360",
+                "0597-0425",
+                "0597-0430",
+                "0597-0435",
+                "0597-0440",
+                "0597-0445",
+                "0597-0450"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "substance_name": [
+                "DABIGATRAN ETEXILATE MESYLATE"
+              ],
+              "rxcui": [
+                "1037045",
+                "1037049",
+                "1037179",
+                "1037181",
+                "1723476",
+                "1723478",
+                "2590616",
+                "2590619",
+                "2590620",
+                "2590621",
+                "2590623",
+                "2590625",
+                "2590627",
+                "2590629",
+                "2590631",
+                "2590633",
+                "2590635",
+                "2590637"
+              ],
+              "spl_id": [
+                "ecf1aa06-c610-4fdb-a380-2e716d7e63c2",
+                "56b1a7c2-0afd-40c6-bda5-563e234a9f28"
+              ],
+              "spl_set_id": [
+                "ba74e3cd-b06f-4145-b284-5fd6b84ff3c9",
+                "9ac0a64a-8666-45f7-9d4f-40fd894f7e6d"
+              ],
+              "package_ndc": [
+                "0597-0108-54",
+                "0597-0108-60",
+                "0597-0355-09",
+                "0597-0355-56",
+                "0597-0355-53",
+                "0597-0360-55",
+                "0597-0360-42",
+                "0597-0360-82",
+                "0597-0425-78",
+                "0597-0430-18",
+                "0597-0435-96",
+                "0597-0440-53",
+                "0597-0445-87",
+                "0597-0450-16"
+              ],
+              "unii": [
+                "SC7NUW5IIT"
+              ]
+            }
+          },
+          {
+            "drugcharacterization": "2",
+            "medicinalproduct": "WAINUA",
+            "activesubstance": {
+              "activesubstancename": "EPLONTERSEN"
+            },
+            "openfda": {
+              "application_number": [
+                "NDA217388"
+              ],
+              "brand_name": [
+                "WAINUA"
+              ],
+              "generic_name": [
+                "EPLONTERSEN"
+              ],
+              "manufacturer_name": [
+                "AstraZeneca Pharmaceuticals LP"
+              ],
+              "product_ndc": [
+                "0310-9400",
+                "0310-9420"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "SUBCUTANEOUS"
+              ],
+              "substance_name": [
+                "EPLONTERSEN"
+              ],
+              "rxcui": [
+                "2671944",
+                "2671950",
+                "2741485",
+                "2741488"
+              ],
+              "spl_id": [
+                "cea076d0-c827-4c46-9b36-418bf63d5a9d"
+              ],
+              "spl_set_id": [
+                "d7dcb847-71dd-4fff-82d0-d43a465fc096"
+              ],
+              "package_ndc": [
+                "0310-9400-01",
+                "0310-9420-01"
+              ],
+              "nui": [
+                "N0000193849",
+                "N0000191626",
+                "M0025055",
+                "N0000008852",
+                "N0000009531"
+              ],
+              "pharm_class_epc": [
+                "Transthyretin-directed RNA Interaction [EPC]",
+                "Antisense Oligonucleotide [EPC]"
+              ],
+              "pharm_class_cs": [
+                "Oligonucleotides, Antisense [CS]"
+              ],
+              "pharm_class_pe": [
+                "Decreased RNA Integrity [PE]",
+                "Increased Protein Breakdown [PE]"
+              ],
+              "unii": [
+                "0GRZ0F5XJ6"
+              ]
+            }
+          }
+        ],
+        "summary": {
+          "narrativeincludeclinical": "CASE EVENT DATE: 20240501"
+        }
+      }
+    }
+  ]
+}

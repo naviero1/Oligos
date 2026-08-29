@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "DEATH",
+      "count": 1
+    },
+    {
+      "term": "FRACTURE",
+      "count": 1
+    },
+    {
+      "term": "HAEMORRHAGE INTRACRANIAL",
+      "count": 1
+    },
+    {
+      "term": "HEPATIC FIBROSIS",
+      "count": 1
+    },
+    {
+      "term": "HEPATORENAL SYNDROME",
+      "count": 1
+    },
+    {
+      "term": "INTRACRANIAL PRESSURE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "LABORATORY TEST ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "LACTIC ACIDOSIS",
+      "count": 1
+    },
+    {
+      "term": "OXALOSIS",
+      "count": 1
+    },
+    {
+      "term": "PANCREATITIS",
+      "count": 1
+    },
+    {
+      "term": "PERFORATION BILE DUCT",
+      "count": 1
+    },
+    {
+      "term": "RENAL AND LIVER TRANSPLANT",
+      "count": 1
+    }
+  ]
+}

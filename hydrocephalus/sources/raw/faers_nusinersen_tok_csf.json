@@ -1,0 +1,386 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "CSF PRESSURE INCREASED",
+      "count": 23
+    },
+    {
+      "term": "CSF PROTEIN INCREASED",
+      "count": 14
+    },
+    {
+      "term": "CSF TEST ABNORMAL",
+      "count": 5
+    },
+    {
+      "term": "CSF RED BLOOD CELL COUNT POSITIVE",
+      "count": 4
+    },
+    {
+      "term": "CSF WHITE BLOOD CELL COUNT INCREASED",
+      "count": 4
+    },
+    {
+      "term": "HEADACHE",
+      "count": 4
+    },
+    {
+      "term": "PROCEDURAL PAIN",
+      "count": 4
+    },
+    {
+      "term": "PYREXIA",
+      "count": 4
+    },
+    {
+      "term": "CSF GLUCOSE DECREASED",
+      "count": 3
+    },
+    {
+      "term": "CSF VOLUME INCREASED",
+      "count": 3
+    },
+    {
+      "term": "POST LUMBAR PUNCTURE SYNDROME",
+      "count": 3
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 2
+    },
+    {
+      "term": "BACK PAIN",
+      "count": 2
+    },
+    {
+      "term": "CEREBROSPINAL FLUID LEAKAGE",
+      "count": 2
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 2
+    },
+    {
+      "term": "IRRITABILITY",
+      "count": 2
+    },
+    {
+      "term": "MENINGITIS",
+      "count": 2
+    },
+    {
+      "term": "MIGRAINE",
+      "count": 2
+    },
+    {
+      "term": "PAIN IN EXTREMITY",
+      "count": 2
+    },
+    {
+      "term": "SECRETION DISCHARGE",
+      "count": 2
+    },
+    {
+      "term": "VOMITING",
+      "count": 2
+    },
+    {
+      "term": "XANTHOCHROMIA",
+      "count": 2
+    },
+    {
+      "term": "ANAEMIA",
+      "count": 1
+    },
+    {
+      "term": "ANEURYSM",
+      "count": 1
+    },
+    {
+      "term": "ARACHNOID CYST",
+      "count": 1
+    },
+    {
+      "term": "ARACHNOIDITIS",
+      "count": 1
+    },
+    {
+      "term": "BLOOD BRAIN BARRIER DEFECT",
+      "count": 1
+    },
+    {
+      "term": "BLOOD CREATININE DECREASED",
+      "count": 1
+    },
+    {
+      "term": "BLOOD DISORDER",
+      "count": 1
+    },
+    {
+      "term": "BLOOD POTASSIUM DECREASED",
+      "count": 1
+    },
+    {
+      "term": "BLOOD UREA DECREASED",
+      "count": 1
+    },
+    {
+      "term": "BONE MARROW OEDEMA",
+      "count": 1
+    },
+    {
+      "term": "CARDIAC ARREST",
+      "count": 1
+    },
+    {
+      "term": "CARDIOVASCULAR DISORDER",
+      "count": 1
+    },
+    {
+      "term": "CENTRAL NERVOUS SYSTEM INFECTION",
+      "count": 1
+    },
+    {
+      "term": "COMPLICATION ASSOCIATED WITH DEVICE",
+      "count": 1
+    },
+    {
+      "term": "CONDITION AGGRAVATED",
+      "count": 1
+    },
+    {
+      "term": "CSF IMMUNOGLOBULIN INCREASED",
+      "count": 1
+    },
+    {
+      "term": "CSF LYMPHOCYTE COUNT INCREASED",
+      "count": 1
+    },
+    {
+      "term": "CSF PRESSURE DECREASED",
+      "count": 1
+    },
+    {
+      "term": "CSF TEST",
+      "count": 1
+    },
+    {
+      "term": "CSF VOLUME DECREASED",
+      "count": 1
+    },
+    {
+      "term": "CSF WHITE BLOOD CELL COUNT POSITIVE",
+      "count": 1
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 1
+    },
+    {
+      "term": "DEPRESSED MOOD",
+      "count": 1
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 1
+    },
+    {
+      "term": "FATIGUE",
+      "count": 1
+    },
+    {
+      "term": "GASTROINTESTINAL DISORDER",
+      "count": 1
+    },
+    {
+      "term": "GENERAL PHYSICAL HEALTH DETERIORATION",
+      "count": 1
+    },
+    {
+      "term": "HAEMOGLOBIN DECREASED",
+      "count": 1
+    },
+    {
+      "term": "HYPOKALAEMIA",
+      "count": 1
+    },
+    {
+      "term": "HYPONATRAEMIA",
+      "count": 1
+    },
+    {
+      "term": "HYPOTONIA",
+      "count": 1
+    },
+    {
+      "term": "INJECTION SITE BRUISING",
+      "count": 1
+    },
+    {
+      "term": "INJECTION SITE HAEMORRHAGE",
+      "count": 1
+    },
+    {
+      "term": "INJECTION SITE SCAR",
+      "count": 1
+    },
+    {
+      "term": "INTRACRANIAL PRESSURE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "INTUSSUSCEPTION",
+      "count": 1
+    },
+    {
+      "term": "KIDNEY ENLARGEMENT",
+      "count": 1
+    },
+    {
+      "term": "LEUKOCYTOSIS",
+      "count": 1
+    },
+    {
+      "term": "LOSS OF THERAPEUTIC RESPONSE",
+      "count": 1
+    },
+    {
+      "term": "LUMBAR PUNCTURE",
+      "count": 1
+    },
+    {
+      "term": "LUMBAR PUNCTURE ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "MACROCEPHALY",
+      "count": 1
+    },
+    {
+      "term": "MENINGITIS ASEPTIC",
+      "count": 1
+    },
+    {
+      "term": "MENTAL IMPAIRMENT",
+      "count": 1
+    },
+    {
+      "term": "MUSCULOSKELETAL PROCEDURAL COMPLICATION",
+      "count": 1
+    },
+    {
+      "term": "MUSCULOSKELETAL STIFFNESS",
+      "count": 1
+    },
+    {
+      "term": "NUCHAL RIGIDITY",
+      "count": 1
+    },
+    {
+      "term": "PAIN",
+      "count": 1
+    },
+    {
+      "term": "PAPILLOEDEMA",
+      "count": 1
+    },
+    {
+      "term": "PARAESTHESIA",
+      "count": 1
+    },
+    {
+      "term": "PERIPHERAL COLDNESS",
+      "count": 1
+    },
+    {
+      "term": "PLEOCYTOSIS",
+      "count": 1
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 1
+    },
+    {
+      "term": "POOR VENOUS ACCESS",
+      "count": 1
+    },
+    {
+      "term": "POST PROCEDURAL COMPLICATION",
+      "count": 1
+    },
+    {
+      "term": "PROCEDURAL HAEMORRHAGE",
+      "count": 1
+    },
+    {
+      "term": "PROCEDURAL VOMITING",
+      "count": 1
+    },
+    {
+      "term": "RASH",
+      "count": 1
+    },
+    {
+      "term": "RESPIRATORY ARREST",
+      "count": 1
+    },
+    {
+      "term": "RESPIRATORY DISTRESS",
+      "count": 1
+    },
+    {
+      "term": "RESPIRATORY TRACT INFECTION",
+      "count": 1
+    },
+    {
+      "term": "SCOLIOSIS",
+      "count": 1
+    },
+    {
+      "term": "SENSITIVITY TO WEATHER CHANGE",
+      "count": 1
+    },
+    {
+      "term": "SPINAL FUSION SURGERY",
+      "count": 1
+    },
+    {
+      "term": "STRESS",
+      "count": 1
+    },
+    {
+      "term": "SUDDEN DEATH",
+      "count": 1
+    },
+    {
+      "term": "SUPERINFECTION",
+      "count": 1
+    },
+    {
+      "term": "SYNCOPE",
+      "count": 1
+    },
+    {
+      "term": "THERAPEUTIC RESPONSE SHORTENED",
+      "count": 1
+    },
+    {
+      "term": "URETERIC OBSTRUCTION",
+      "count": 1
+    },
+    {
+      "term": "URINARY RETENTION",
+      "count": 1
+    },
+    {
+      "term": "URINE OUTPUT INCREASED",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,406 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 514
+    }
+  },
+  "results": [
+    {
+      "safetyreportversion": "9",
+      "safetyreportid": "13294119",
+      "primarysourcecountry": "US",
+      "occurcountry": "US",
+      "transmissiondateformat": "102",
+      "transmissiondate": "20190204",
+      "reporttype": "1",
+      "serious": "1",
+      "seriousnesslifethreatening": "1",
+      "seriousnesshospitalization": "1",
+      "receivedateformat": "102",
+      "receivedate": "20170303",
+      "receiptdateformat": "102",
+      "receiptdate": "20181206",
+      "fulfillexpeditecriteria": "2",
+      "companynumb": "US-BIOGEN-2017BI00363723",
+      "duplicate": "1",
+      "reportduplicate": {
+        "duplicatesource": "BIOGEN",
+        "duplicatenumb": "US-BIOGEN-2017BI00363723"
+      },
+      "primarysource": {
+        "reportercountry": "US",
+        "qualification": "1"
+      },
+      "sender": {
+        "sendertype": "2",
+        "senderorganization": "FDA-Public Use"
+      },
+      "receiver": {
+        "receivertype": "6",
+        "receiverorganization": "FDA"
+      },
+      "patient": {
+        "patientonsetage": "8",
+        "patientonsetageunit": "801",
+        "patientweight": "18",
+        "patientsex": "2",
+        "reaction": [
+          {
+            "reactionmeddraversionpt": "21.1",
+            "reactionmeddrapt": "Meningitis streptococcal",
+            "reactionoutcome": "1"
+          },
+          {
+            "reactionmeddraversionpt": "21.1",
+            "reactionmeddrapt": "Pallor",
+            "reactionoutcome": "1"
+          },
+          {
+            "reactionmeddraversionpt": "21.1",
+            "reactionmeddrapt": "Post lumbar puncture syndrome",
+            "reactionoutcome": "1"
+          }
+        ],
+        "drug": [
+          {
+            "drugcharacterization": "1",
+            "medicinalproduct": "SPINRAZA",
+            "drugstructuredosagenumb": "12",
+            "drugstructuredosageunit": "003",
+            "drugdosagetext": "12MG/5ML",
+            "drugdosageform": "UNKNOWN",
+            "drugadministrationroute": "037",
+            "drugstartdateformat": "102",
+            "drugstartdate": "20170222",
+            "actiondrug": "4",
+            "drugrecurreadministration": "3",
+            "activesubstance": {
+              "activesubstancename": "NUSINERSEN"
+            },
+            "openfda": {
+              "application_number": [
+                "NDA209531"
+              ],
+              "brand_name": [
+                "SPINRAZA"
+              ],
+              "generic_name": [
+                "NUSINERSEN"
+              ],
+              "manufacturer_name": [
+                "Biogen Inc."
+              ],
+              "product_ndc": [
+                "64406-036",
+                "64406-058",
+                "64406-037"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "INTRATHECAL"
+              ],
+              "substance_name": [
+                "NUSINERSEN"
+              ],
+              "rxcui": [
+                "1863560",
+                "1863565",
+                "2739995",
+                "2739998",
+                "2740001",
+                "2740004"
+              ],
+              "spl_id": [
+                "cb572584-c0fd-42aa-b6d1-6dd8260028b5"
+              ],
+              "spl_set_id": [
+                "dd70cd5f-b0fc-4ba4-a5ea-89a34778bd94"
+              ],
+              "package_ndc": [
+                "64406-058-01",
+                "64406-036-01",
+                "64406-037-01"
+              ],
+              "nui": [
+                "N0000193222",
+                "N0000191626",
+                "M0025055",
+                "N0000009533"
+              ],
+              "pharm_class_epc": [
+                "Survival Motor Neuron-2-directed RNA Interaction [EPC]",
+                "Antisense Oligonucleotide [EPC]"
+              ],
+              "pharm_class_cs": [
+                "Oligonucleotides, Antisense [CS]"
+              ],
+              "pharm_class_pe": [
+                "Increased Protein Synthesis [PE]"
+              ],
+              "unii": [
+                "5Z9SP3X666"
+              ]
+            }
+          },
+          {
+            "drugcharacterization": "1",
+            "medicinalproduct": "SPINRAZA",
+            "drugstructuredosagenumb": "12",
+            "drugstructuredosageunit": "003",
+            "drugdosageform": "SOLUTION FOR INJECTION",
+            "drugadministrationroute": "037",
+            "drugindication": "SPINAL MUSCULAR ATROPHY",
+            "drugstartdateformat": "102",
+            "drugstartdate": "20170125",
+            "actiondrug": "4",
+            "drugrecurreadministration": "3",
+            "activesubstance": {
+              "activesubstancename": "NUSINERSEN"
+            },
+            "openfda": {
+              "application_number": [
+                "NDA209531"
+              ],
+              "brand_name": [
+                "SPINRAZA"
+              ],
+              "generic_name": [
+                "NUSINERSEN"
+              ],
+              "manufacturer_name": [
+                "Biogen Inc."
+              ],
+              "product_ndc": [
+                "64406-036",
+                "64406-058",
+                "64406-037"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "INTRATHECAL"
+              ],
+              "substance_name": [
+                "NUSINERSEN"
+              ],
+              "rxcui": [
+                "1863560",
+                "1863565",
+                "2739995",
+                "2739998",
+                "2740001",
+                "2740004"
+              ],
+              "spl_id": [
+                "cb572584-c0fd-42aa-b6d1-6dd8260028b5"
+              ],
+              "spl_set_id": [
+                "dd70cd5f-b0fc-4ba4-a5ea-89a34778bd94"
+              ],
+              "package_ndc": [
+                "64406-058-01",
+                "64406-036-01",
+                "64406-037-01"
+              ],
+              "nui": [
+                "N0000193222",
+                "N0000191626",
+                "M0025055",
+                "N0000009533"
+              ],
+              "pharm_class_epc": [
+                "Survival Motor Neuron-2-directed RNA Interaction [EPC]",
+                "Antisense Oligonucleotide [EPC]"
+              ],
+              "pharm_class_cs": [
+                "Oligonucleotides, Antisense [CS]"
+              ],
+              "pharm_class_pe": [
+                "Increased Protein Synthesis [PE]"
+              ],
+              "unii": [
+                "5Z9SP3X666"
+              ]
+            }
+          },
+          {
+            "drugcharacterization": "1",
+            "medicinalproduct": "SPINRAZA",
+            "drugstructuredosagenumb": "12",
+            "drugstructuredosageunit": "003",
+            "drugdosagetext": "12MG/5ML",
+            "drugdosageform": "UNKNOWN",
+            "drugadministrationroute": "037",
+            "drugstartdateformat": "102",
+            "drugstartdate": "20170208",
+            "actiondrug": "4",
+            "drugrecurreadministration": "3",
+            "activesubstance": {
+              "activesubstancename": "NUSINERSEN"
+            },
+            "openfda": {
+              "application_number": [
+                "NDA209531"
+              ],
+              "brand_name": [
+                "SPINRAZA"
+              ],
+              "generic_name": [
+                "NUSINERSEN"
+              ],
+              "manufacturer_name": [
+                "Biogen Inc."
+              ],
+              "product_ndc": [
+                "64406-036",
+                "64406-058",
+                "64406-037"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "INTRATHECAL"
+              ],
+              "substance_name": [
+                "NUSINERSEN"
+              ],
+              "rxcui": [
+                "1863560",
+                "1863565",
+                "2739995",
+                "2739998",
+                "2740001",
+                "2740004"
+              ],
+              "spl_id": [
+                "cb572584-c0fd-42aa-b6d1-6dd8260028b5"
+              ],
+              "spl_set_id": [
+                "dd70cd5f-b0fc-4ba4-a5ea-89a34778bd94"
+              ],
+              "package_ndc": [
+                "64406-058-01",
+                "64406-036-01",
+                "64406-037-01"
+              ],
+              "nui": [
+                "N0000193222",
+                "N0000191626",
+                "M0025055",
+                "N0000009533"
+              ],
+              "pharm_class_epc": [
+                "Survival Motor Neuron-2-directed RNA Interaction [EPC]",
+                "Antisense Oligonucleotide [EPC]"
+              ],
+              "pharm_class_cs": [
+                "Oligonucleotides, Antisense [CS]"
+              ],
+              "pharm_class_pe": [
+                "Increased Protein Synthesis [PE]"
+              ],
+              "unii": [
+                "5Z9SP3X666"
+              ]
+            }
+          },
+          {
+            "drugcharacterization": "1",
+            "medicinalproduct": "SPINRAZA",
+            "drugstructuredosagenumb": "12",
+            "drugstructuredosageunit": "003",
+            "drugdosagetext": "12MG/5ML",
+            "drugdosageform": "UNKNOWN",
+            "drugadministrationroute": "037",
+            "drugstartdateformat": "102",
+            "drugstartdate": "20170125",
+            "actiondrug": "4",
+            "drugrecurreadministration": "3",
+            "activesubstance": {
+              "activesubstancename": "NUSINERSEN"
+            },
+            "openfda": {
+              "application_number": [
+                "NDA209531"
+              ],
+              "brand_name": [
+                "SPINRAZA"
+              ],
+              "generic_name": [
+                "NUSINERSEN"
+              ],
+              "manufacturer_name": [
+                "Biogen Inc."
+              ],
+              "product_ndc": [
+                "64406-036",
+                "64406-058",
+                "64406-037"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "INTRATHECAL"
+              ],
+              "substance_name": [
+                "NUSINERSEN"
+              ],
+              "rxcui": [
+                "1863560",
+                "1863565",
+                "2739995",
+                "2739998",
+                "2740001",
+                "2740004"
+              ],
+              "spl_id": [
+                "cb572584-c0fd-42aa-b6d1-6dd8260028b5"
+              ],
+              "spl_set_id": [
+                "dd70cd5f-b0fc-4ba4-a5ea-89a34778bd94"
+              ],
+              "package_ndc": [
+                "64406-058-01",
+                "64406-036-01",
+                "64406-037-01"
+              ],
+              "nui": [
+                "N0000193222",
+                "N0000191626",
+                "M0025055",
+                "N0000009533"
+              ],
+              "pharm_class_epc": [
+                "Survival Motor Neuron-2-directed RNA Interaction [EPC]",
+                "Antisense Oligonucleotide [EPC]"
+              ],
+              "pharm_class_cs": [
+                "Oligonucleotides, Antisense [CS]"
+              ],
+              "pharm_class_pe": [
+                "Increased Protein Synthesis [PE]"
+              ],
+              "unii": [
+                "5Z9SP3X666"
+              ]
+            }
+          }
+        ],
+        "summary": {
+          "narrativeincludeclinical": "CASE EVENT DATE: 201701"
+        }
+      }
+    }
+  ]
+}

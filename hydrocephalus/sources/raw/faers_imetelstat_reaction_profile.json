@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "THROMBOCYTOPENIA",
+      "count": 33
+    },
+    {
+      "term": "PLATELET COUNT DECREASED",
+      "count": 28
+    },
+    {
+      "term": "NEUTROPENIA",
+      "count": 26
+    },
+    {
+      "term": "HAEMOGLOBIN DECREASED",
+      "count": 25
+    },
+    {
+      "term": "CYTOPENIA",
+      "count": 20
+    },
+    {
+      "term": "ANAEMIA",
+      "count": 16
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 12
+    },
+    {
+      "term": "INFECTION",
+      "count": 12
+    },
+    {
+      "term": "NAUSEA",
+      "count": 12
+    },
+    {
+      "term": "ACUTE MYELOID LEUKAEMIA",
+      "count": 11
+    },
+    {
+      "term": "HYPOKALAEMIA",
+      "count": 11
+    },
+    {
+      "term": "NEUTROPHIL COUNT DECREASED",
+      "count": 11
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 11
+    },
+    {
+      "term": "VOMITING",
+      "count": 11
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 10
+    },
+    {
+      "term": "CONSTIPATION",
+      "count": 10
+    },
+    {
+      "term": "DRUG-INDUCED LIVER INJURY",
+      "count": 10
+    },
+    {
+      "term": "ASPARTATE AMINOTRANSFERASE INCREASED",
+      "count": 9
+    },
+    {
+      "term": "BLOOD ALKALINE PHOSPHATASE INCREASED",
+      "count": 9
+    },
+    {
+      "term": "BLOOD BILIRUBIN INCREASED",
+      "count": 9
+    },
+    {
+      "term": "HYPONATRAEMIA",
+      "count": 9
+    },
+    {
+      "term": "INFUSION RELATED REACTION",
+      "count": 9
+    },
+    {
+      "term": "PAIN",
+      "count": 9
+    },
+    {
+      "term": "TACHYCARDIA",
+      "count": 9
+    },
+    {
+      "term": "WHITE BLOOD CELL COUNT DECREASED",
+      "count": 9
+    },
+    {
+      "term": "BLOOD LACTATE DEHYDROGENASE INCREASED",
+      "count": 8
+    },
+    {
+      "term": "DEATH",
+      "count": 8
+    },
+    {
+      "term": "RENAL DISORDER",
+      "count": 8
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 7
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 6
+    },
+    {
+      "term": "FALL",
+      "count": 6
+    },
+    {
+      "term": "FATIGUE",
+      "count": 6
+    },
+    {
+      "term": "PANCYTOPENIA",
+      "count": 6
+    },
+    {
+      "term": "FULL BLOOD COUNT DECREASED",
+      "count": 5
+    },
+    {
+      "term": "HAEMORRHOIDS",
+      "count": 5
+    },
+    {
+      "term": "HEADACHE",
+      "count": 5
+    },
+    {
+      "term": "INTERCEPTED PRODUCT PREPARATION ERROR",
+      "count": 5
+    },
+    {
+      "term": "BACK PAIN",
+      "count": 4
+    },
+    {
+      "term": "CARDIAC FAILURE CONGESTIVE",
+      "count": 4
+    },
+    {
+      "term": "DISEASE PROGRESSION",
+      "count": 4
+    },
+    {
+      "term": "LABELLED DRUG-DRUG INTERACTION MEDICATION ERROR",
+      "count": 4
+    },
+    {
+      "term": "RED BLOOD CELL COUNT DECREASED",
+      "count": 4
+    },
+    {
+      "term": "THERAPY NON-RESPONDER",
+      "count": 4
+    },
+    {
+      "term": "CHILLS",
+      "count": 3
+    },
+    {
+      "term": "CRANIOCEREBRAL INJURY",
+      "count": 3
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 3
+    },
+    {
+      "term": "FEELING ABNORMAL",
+      "count": 3
+    },
+    {
+      "term": "INFUSION SITE EXTRAVASATION",
+      "count": 3
+    },
+    {
+      "term": "MALAISE",
+      "count": 3
+    },
+    {
+      "term": "PRURITUS",
+      "count": 3
+    },
+    {
+      "term": "ABDOMINAL DISCOMFORT",
+      "count": 2
+    },
+    {
+      "term": "ABDOMINAL PAIN UPPER",
+      "count": 2
+    },
+    {
+      "term": "ACTINIC KERATOSIS",
+      "count": 2
+    },
+    {
+      "term": "BLOOD TEST ABNORMAL",
+      "count": 2
+    },
+    {
+      "term": "CONDITION AGGRAVATED",
+      "count": 2
+    },
+    {
+      "term": "DEEP VEIN THROMBOSIS",
+      "count": 2
+    },
+    {
+      "term": "EPISTAXIS",
+      "count": 2
+    },
+    {
+      "term": "GASTROINTESTINAL DISORDER",
+      "count": 2
+    },
+    {
+      "term": "GASTROINTESTINAL HAEMORRHAGE",
+      "count": 2
+    },
+    {
+      "term": "HAEMATOCRIT DECREASED",
+      "count": 2
+    },
+    {
+      "term": "ILL-DEFINED DISORDER",
+      "count": 2
+    },
+    {
+      "term": "LABORATORY TEST ABNORMAL",
+      "count": 2
+    },
+    {
+      "term": "MELAENA",
+      "count": 2
+    },
+    {
+      "term": "MUSCULAR WEAKNESS",
+      "count": 2
+    },
+    {
+      "term": "OCCUPATIONAL EXPOSURE TO PRODUCT",
+      "count": 2
+    },
+    {
+      "term": "PRODUCT DOSE OMISSION ISSUE",
+      "count": 2
+    },
+    {
+      "term": "SEPSIS",
+      "count": 2
+    },
+    {
+      "term": "SUBDURAL HAEMORRHAGE",
+      "count": 2
+    },
+    {
+      "term": "SYNCOPE",
+      "count": 2
+    },
+    {
+      "term": "URINARY TRACT INFECTION",
+      "count": 2
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 2
+    },
+    {
+      "term": "ABDOMINAL CAVITY DRAINAGE",
+      "count": 1
+    },
+    {
+      "term": "ABDOMINAL PAIN",
+      "count": 1
+    },
+    {
+      "term": "AGITATION",
+      "count": 1
+    },
+    {
+      "term": "ALANINE AMINOTRANSFERASE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "ALTERED STATE OF CONSCIOUSNESS",
+      "count": 1
+    },
+    {
+      "term": "ANION GAP DECREASED",
+      "count": 1
+    },
+    {
+      "term": "ANORECTAL POLYP",
+      "count": 1
+    },
+    {
+      "term": "ARTHRALGIA",
+      "count": 1
+    },
+    {
+      "term": "ATRIAL FIBRILLATION",
+      "count": 1
+    },
+    {
+      "term": "BLADDER HYPERTROPHY",
+      "count": 1
+    },
+    {
+      "term": "BLOOD ALBUMIN DECREASED",
+      "count": 1
+    },
+    {
+      "term": "BLOOD CHLORIDE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "BLOOD CREATININE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "BLOOD GLUCOSE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "BODY TEMPERATURE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "BONE MARROW DISORDER",
+      "count": 1
+    },
+    {
+      "term": "BRONCHITIS",
+      "count": 1
+    },
+    {
+      "term": "CALCINOSIS",
+      "count": 1
+    },
+    {
+      "term": "CEREBRAL HAEMORRHAGE",
+      "count": 1
+    },
+    {
+      "term": "CEREBROVASCULAR ACCIDENT",
+      "count": 1
+    },
+    {
+      "term": "CHEST PAIN",
+      "count": 1
+    },
+    {
+      "term": "COAGULATION TIME PROLONGED",
+      "count": 1
+    },
+    {
+      "term": "COLONIC ANGIOECTASIA",
+      "count": 1
+    },
+    {
+      "term": "CONFUSIONAL STATE",
+      "count": 1
+    },
+    {
+      "term": "CONTUSION",
+      "count": 1
+    },
+    {
+      "term": "COUGH",
+      "count": 1
+    },
+    {
+      "term": "COVID-19",
+      "count": 1
+    },
+    {
+      "term": "DEPRESSED MOOD",
+      "count": 1
+    },
+    {
+      "term": "DIZZINESS",
+      "count": 1
+    }
+  ]
+}

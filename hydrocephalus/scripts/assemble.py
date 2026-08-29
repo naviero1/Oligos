@@ -1,0 +1,233 @@
+#!/usr/bin/env python3
+"""
+Assembles the canonical OligoTox-Hydrocephalus tables from the four extraction
+components, assigns stable primary keys, and writes the provenance registry and
+the derived analysis-ready join.
+
+Reads   data/_ctgov_measurements.csv       (deterministic, scripts/extract_ctgov.py)
+        data/_faers_measurements.csv       (deterministic, scripts/extract_faers.py)
+        data/_label_measurements.csv       (deterministic, scripts/extract_labels.py)
+        data/_literature_measurements.csv  (curated,       scripts/build_literature.py)
+        data/oligos.csv                    (               scripts/build_oligos.py)
+
+Writes  data/measurements.csv              canonical, one row per measurement
+        data/sources.csv                   provenance registry
+        data/hydrocephalus_merged.csv      GENERATED denormalized join
+
+The merged file is derived and must never be hand-edited; regenerate it by
+re-running this script.
+
+Usage: python3 scripts/assemble.py
+"""
+import csv
+import os
+from datetime import date
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+DATA = os.path.join(ROOT, "data")
+TODAY = date.today().isoformat()
+
+MEASUREMENT_COLS = [
+    "measurement_id", "oligo_id", "oligo_name", "source_id",
+    "study_type", "species", "strain", "system_model", "is_human_system",
+    "indication_population", "arm_label", "arm_description", "arm_role",
+    "cns_compartment", "delivery_route", "dose_value", "dose_unit", "dose_regimen",
+    "exposure_duration", "timepoint",
+    "endpoint_tier", "readout_category", "readout_name", "readout_term_verbatim",
+    "readout_value", "readout_unit", "readout_is_qualitative",
+    "n_affected", "n_at_risk", "comparator_arm", "n_affected_comparator",
+    "n_at_risk_comparator", "statistic", "effect_direction", "effect_vs_control",
+    "seriousness", "assessment_type", "organ_system", "source_vocabulary",
+    "hydroceph_grade", "grade_basis", "grade_status",
+    "ascertainment", "ascertainment_basis",
+    "attribution_as_stated", "attribution_evidence", "tox_axis", "event_cluster_id",
+    "source_ref", "source_location", "redistribution", "notes",
+]
+
+COMPONENTS = [
+    ("_ctgov_measurements.csv", "registry_results"),
+    ("_faers_measurements.csv", "pharmacovigilance_api"),
+    ("_label_measurements.csv", "regulatory_primary"),
+    ("_literature_measurements.csv", "primary_fulltext"),
+]
+
+# Provenance registry entries. Each source_key used by any component gets one.
+SOURCE_META = {
+    "FAERS_openFDA": dict(
+        citation=("FDA Adverse Event Reporting System (FAERS), queried through the "
+                  "openFDA drug/event API"),
+        first_author="NOT_APPLICABLE", year="2026", journal="NOT_APPLICABLE",
+        doi="", pmid="", pmcid="", nct_id="", url="https://api.fda.gov/drug/event.json",
+        access="api", license="US Government work / public domain",
+        redistribution="public_domain", evidence_tier="pharmacovigilance_api",
+        retrieved_via="openFDA REST API, one exact query per (drug, MedDRA term) pair",
+        notes=("Spontaneous reports. Counts are reports, not patients, and carry no "
+               "exposure denominator. No disproportionality statistic is computed here.")),
+    "Stoker_2021_MovDisord": dict(
+        citation=("Stoker TB, Andresen KER, Barker RA. Hydrocephalus Complicating "
+                  "Intrathecal Antisense Oligonucleotide Therapy for Huntington's "
+                  "Disease. Mov Disord. 2021;36(1):263-264."),
+        first_author="Stoker TB", year="2021", journal="Movement Disorders",
+        doi="10.1002/mds.28359", pmid="33125799", pmcid="PMC7894279", nct_id="",
+        url="https://pmc.ncbi.nlm.nih.gov/articles/PMC7894279/",
+        access="open_access", license="CC BY 4.0", redistribution="cc_by",
+        evidence_tier="case_report",
+        retrieved_via="Europe PMC REST fullTextXML endpoint",
+        notes=("The index case for this endpoint: communicating hydrocephalus after "
+               "intrathecal tominersen, attributed by the authors to a drug-induced "
+               "sterile meningitis, resolved by ventriculoperitoneal shunting.")),
+    "Viscidi_2021_OJRD": dict(
+        citation=("Viscidi E, Wang N, Juneja M, et al. The incidence of hydrocephalus "
+                  "among patients with and without spinal muscular atrophy (SMA): "
+                  "Results from a US electronic health records study. Orphanet J Rare "
+                  "Dis. 2021;16:207."),
+        first_author="Viscidi E", year="2021", journal="Orphanet Journal of Rare Diseases",
+        doi="10.1186/s13023-021-01822-4", pmid="33962637", pmcid="PMC8105953",
+        nct_id="", url="https://pmc.ncbi.nlm.nih.gov/articles/PMC8105953/",
+        access="open_access", license="CC BY 4.0", redistribution="cc_by",
+        evidence_tier="epidemiology",
+        retrieved_via="Europe PMC REST fullTextXML endpoint",
+        notes=("THE CONFOUNDER CONTROL. Disease background rate of hydrocephalus in SMA "
+               "over a study window that ends at nusinersen approval, so it is "
+               "uncontaminated by the drug.")),
+    "Tofersen_seriousAE_2025_MuscleNerve": dict(
+        citation=("Serious Neurologic Adverse Events in Tofersen Clinical Trials for "
+                  "Amyotrophic Lateral Sclerosis. Muscle Nerve. 2025."),
+        first_author="NOT_REPORTED", year="2025", journal="Muscle & Nerve",
+        doi="10.1002/mus.28372", pmid="40017137", pmcid="PMC12060635", nct_id="",
+        url="https://pmc.ncbi.nlm.nih.gov/articles/PMC12060635/",
+        access="open_access", license="CC BY-NC-ND",
+        redistribution="summary_stat_only", evidence_tier="primary_fulltext",
+        retrieved_via="Europe PMC REST fullTextXML endpoint",
+        notes=("ND licence term: only abstract-level summary statistics are carried; "
+               "no underlying table is reproduced.")),
+}
+
+
+def source_meta_for(key):
+    if key in SOURCE_META:
+        return SOURCE_META[key]
+    if key.startswith("NCT"):
+        return dict(
+            citation="ClinicalTrials.gov study record %s, including posted results" % key,
+            first_author="NOT_APPLICABLE", year="NOT_REPORTED",
+            journal="NOT_APPLICABLE", doi="", pmid="", pmcid="", nct_id=key,
+            url="https://clinicaltrials.gov/study/%s" % key,
+            access="public_domain", license="US Government work / public domain",
+            redistribution="public_domain", evidence_tier="registry_results",
+            retrieved_via="ClinicalTrials.gov v2 API, /api/v2/studies/%s" % key,
+            notes=("Adverse-event module gives per-arm counts with denominators, "
+                   "including explicitly reported zeros."))
+    if key.startswith("DailyMed_SPL_"):
+        drug = key[len("DailyMed_SPL_"):]
+        return dict(
+            citation="FDA prescribing information for %s (Structured Product Label)" % drug,
+            first_author="NOT_APPLICABLE", year="NOT_REPORTED",
+            journal="NOT_APPLICABLE", doi="", pmid="", pmcid="", nct_id="",
+            url="https://dailymed.nlm.nih.gov/dailymed/",
+            access="public_domain", license="US Government work / public domain",
+            redistribution="public_domain", evidence_tier="regulatory_primary",
+            retrieved_via="DailyMed v2 API, spls/<setid>.xml",
+            notes="Label text quoted verbatim with its LOINC-coded section.")
+    return dict(citation=key, first_author="NOT_REPORTED", year="NOT_REPORTED",
+                journal="NOT_APPLICABLE", doi="", pmid="", pmcid="", nct_id="",
+                url="", access="NOT_REPORTED", license="NOT_REPORTED",
+                redistribution="verify", evidence_tier="NOT_REPORTED",
+                retrieved_via="NOT_REPORTED", notes="")
+
+
+def main():
+    # ---- oligo ids -------------------------------------------------------
+    oligos = list(csv.DictReader(open(os.path.join(DATA, "oligos.csv"))))
+    oligos.sort(key=lambda o: o["oligo_name"].lower())
+    for i, o in enumerate(oligos, 1):
+        o["oligo_id"] = "HYD-OLG-%04d" % i
+    by_name = {o["oligo_name"]: o["oligo_id"] for o in oligos}
+    cols = ["oligo_id"] + [c for c in oligos[0] if c != "oligo_id"]
+    with open(os.path.join(DATA, "oligos.csv"), "w", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=cols)
+        w.writeheader()
+        w.writerows(oligos)
+
+    # ---- measurements ----------------------------------------------------
+    rows, unknown = [], set()
+    for fname, _tier in COMPONENTS:
+        path = os.path.join(DATA, fname)
+        if not os.path.exists(path):
+            raise SystemExit("missing component: %s (run its build script first)" % fname)
+        for src in csv.DictReader(open(path)):
+            out = {c: src.get(c, "") for c in MEASUREMENT_COLS}
+            name = src.get("oligo_name", "")
+            if name not in by_name:
+                unknown.add(name)
+            out["oligo_name"] = name
+            out["oligo_id"] = by_name.get(name, "UNMAPPED")
+            out["source_id"] = src.get("source_key", "")
+            for col in MEASUREMENT_COLS:
+                if out[col] == "" and col not in ("hydroceph_grade", "event_cluster_id",
+                                                  "dose_value", "dose_unit",
+                                                  "dose_regimen"):
+                    out[col] = "NOT_REPORTED"
+            for col in ("dose_value", "dose_unit", "dose_regimen"):
+                if out[col] == "":
+                    out[col] = "NOT_REPORTED"
+            if out["event_cluster_id"] == "":
+                out["event_cluster_id"] = "NOT_APPLICABLE"
+            rows.append(out)
+
+    if unknown:
+        raise SystemExit("oligo_name values absent from oligos.csv: %s" % sorted(unknown))
+
+    for i, r in enumerate(rows, 1):
+        r["measurement_id"] = "HYD-MSR-%05d" % i
+
+    with open(os.path.join(DATA, "measurements.csv"), "w", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=MEASUREMENT_COLS)
+        w.writeheader()
+        w.writerows(rows)
+
+    # ---- sources registry ------------------------------------------------
+    keys = sorted({r["source_id"] for r in rows})
+    src_cols = ["source_id", "source_key", "citation", "first_author", "year",
+                "journal", "doi", "pmid", "pmcid", "nct_id", "url", "access",
+                "license", "redistribution", "evidence_tier", "retrieved_via",
+                "retrieved_date", "n_oligos", "n_measurements", "notes"]
+    src_rows = []
+    for key in keys:
+        meta = source_meta_for(key)
+        mine = [r for r in rows if r["source_id"] == key]
+        src_rows.append(dict(
+            source_id=key, source_key=key, retrieved_date=TODAY,
+            n_oligos=len({r["oligo_id"] for r in mine
+                          if r["oligo_name"] not in ("NOT_APPLICABLE",
+                                                     "placebo_or_sham_control")}),
+            n_measurements=len(mine), **meta))
+    with open(os.path.join(DATA, "sources.csv"), "w", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=src_cols)
+        w.writeheader()
+        w.writerows(src_rows)
+
+    # ---- derived merged view --------------------------------------------
+    obyid = {o["oligo_id"]: o for o in oligos}
+    ocols = [c for c in oligos[0] if c not in ("oligo_id", "oligo_name")]
+    merged_cols = MEASUREMENT_COLS + ["oligo__" + c for c in ocols]
+    with open(os.path.join(DATA, "hydrocephalus_merged.csv"), "w", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=merged_cols)
+        w.writeheader()
+        for r in rows:
+            o = obyid.get(r["oligo_id"], {})
+            m = dict(r)
+            for c in ocols:
+                m["oligo__" + c] = o.get(c, "NOT_APPLICABLE")
+            w.writerow(m)
+
+    print("data/oligos.csv        %4d rows" % len(oligos))
+    print("data/measurements.csv  %4d rows x %d cols" % (len(rows), len(MEASUREMENT_COLS)))
+    print("data/sources.csv       %4d rows" % len(src_rows))
+    print("data/hydrocephalus_merged.csv %4d rows x %d cols (GENERATED)"
+          % (len(rows), len(merged_cols)))
+
+
+if __name__ == "__main__":
+    main()

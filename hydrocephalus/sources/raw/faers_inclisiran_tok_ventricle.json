@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "ANAEMIA MACROCYTIC",
+      "count": 1
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 1
+    },
+    {
+      "term": "BRAIN OEDEMA",
+      "count": 1
+    },
+    {
+      "term": "BREATH SOUNDS ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "CARDIO-RESPIRATORY ARREST",
+      "count": 1
+    },
+    {
+      "term": "CAROTID ARTERIOSCLEROSIS",
+      "count": 1
+    },
+    {
+      "term": "CEREBRAL ARTERIOSCLEROSIS",
+      "count": 1
+    },
+    {
+      "term": "CEREBRAL HAEMORRHAGE",
+      "count": 1
+    },
+    {
+      "term": "CEREBRAL INFARCTION",
+      "count": 1
+    },
+    {
+      "term": "CEREBRAL MASS EFFECT",
+      "count": 1
+    },
+    {
+      "term": "CEREBRAL VENTRICLE DILATATION",
+      "count": 1
+    },
+    {
+      "term": "CONSTIPATION",
+      "count": 1
+    },
+    {
+      "term": "DEATH",
+      "count": 1
+    },
+    {
+      "term": "DEEP VEIN THROMBOSIS",
+      "count": 1
+    },
+    {
+      "term": "DISSEMINATED COCCIDIOIDOMYCOSIS",
+      "count": 1
+    },
+    {
+      "term": "DYSPHAGIA",
+      "count": 1
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 1
+    },
+    {
+      "term": "GAIT DISTURBANCE",
+      "count": 1
+    },
+    {
+      "term": "HYPERLIPIDAEMIA",
+      "count": 1
+    },
+    {
+      "term": "HYPERTENSION",
+      "count": 1
+    },
+    {
+      "term": "HYPONATRAEMIA",
+      "count": 1
+    },
+    {
+      "term": "MYDRIASIS",
+      "count": 1
+    },
+    {
+      "term": "PERIVENTRICULAR LEUKOMALACIA",
+      "count": 1
+    },
+    {
+      "term": "PLEURAL EFFUSION",
+      "count": 1
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 1
+    },
+    {
+      "term": "PULMONARY MASS",
+      "count": 1
+    },
+    {
+      "term": "TYPE 2 DIABETES MELLITUS",
+      "count": 1
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 1
+    }
+  ]
+}

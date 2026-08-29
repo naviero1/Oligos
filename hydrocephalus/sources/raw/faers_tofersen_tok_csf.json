@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "CSF PROTEIN INCREASED",
+      "count": 23
+    },
+    {
+      "term": "CSF WHITE BLOOD CELL COUNT INCREASED",
+      "count": 8
+    },
+    {
+      "term": "AMYOTROPHIC LATERAL SCLEROSIS",
+      "count": 6
+    },
+    {
+      "term": "CSF CELL COUNT INCREASED",
+      "count": 5
+    },
+    {
+      "term": "CSF RED BLOOD CELL COUNT POSITIVE",
+      "count": 4
+    },
+    {
+      "term": "HEADACHE",
+      "count": 4
+    },
+    {
+      "term": "MENINGITIS ASEPTIC",
+      "count": 4
+    },
+    {
+      "term": "CSF TEST ABNORMAL",
+      "count": 3
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 3
+    },
+    {
+      "term": "PROCEDURAL PAIN",
+      "count": 3
+    },
+    {
+      "term": "CHEST DISCOMFORT",
+      "count": 2
+    },
+    {
+      "term": "CSF CELL COUNT ABNORMAL",
+      "count": 2
+    },
+    {
+      "term": "CSF GLUCOSE ABNORMAL",
+      "count": 2
+    },
+    {
+      "term": "CSF PROTEIN ABNORMAL",
+      "count": 2
+    },
+    {
+      "term": "CSF VOLUME DECREASED",
+      "count": 2
+    },
+    {
+      "term": "DYSPHAGIA",
+      "count": 2
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 2
+    },
+    {
+      "term": "FALL",
+      "count": 2
+    },
+    {
+      "term": "FULL BLOOD COUNT ABNORMAL",
+      "count": 2
+    },
+    {
+      "term": "MUSCULOSKELETAL STIFFNESS",
+      "count": 2
+    },
+    {
+      "term": "MYALGIA",
+      "count": 2
+    },
+    {
+      "term": "PAPILLOEDEMA",
+      "count": 2
+    },
+    {
+      "term": "POST LUMBAR PUNCTURE SYNDROME",
+      "count": 2
+    },
+    {
+      "term": "PRODUCT DOSE OMISSION ISSUE",
+      "count": 2
+    },
+    {
+      "term": "RESPIRATORY FAILURE",
+      "count": 2
+    },
+    {
+      "term": "ALLODYNIA",
+      "count": 1
+    },
+    {
+      "term": "ANXIETY",
+      "count": 1
+    },
+    {
+      "term": "APHASIA",
+      "count": 1
+    },
+    {
+      "term": "ARTHROPOD BITE",
+      "count": 1
+    },
+    {
+      "term": "ASTHENOPIA",
+      "count": 1
+    },
+    {
+      "term": "BACK PAIN",
+      "count": 1
+    },
+    {
+      "term": "BLOOD CREATINE PHOSPHOKINASE ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "BLOOD CREATINE PHOSPHOKINASE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "BLOOD CREATININE ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "CARDIO-RESPIRATORY ARREST",
+      "count": 1
+    },
+    {
+      "term": "CENTRAL NERVOUS SYSTEM VIRAL INFECTION",
+      "count": 1
+    },
+    {
+      "term": "CHEST INJURY",
+      "count": 1
+    },
+    {
+      "term": "CHOKING",
+      "count": 1
+    },
+    {
+      "term": "CHOLESTASIS",
+      "count": 1
+    },
+    {
+      "term": "CLUMSINESS",
+      "count": 1
+    },
+    {
+      "term": "CONSTIPATION",
+      "count": 1
+    },
+    {
+      "term": "COVID-19",
+      "count": 1
+    },
+    {
+      "term": "CSF LYMPHOCYTE COUNT INCREASED",
+      "count": 1
+    },
+    {
+      "term": "CSF PRESSURE DECREASED",
+      "count": 1
+    },
+    {
+      "term": "CSF PRESSURE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "DACTYLITIS",
+      "count": 1
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 1
+    },
+    {
+      "term": "DISCOMFORT",
+      "count": 1
+    },
+    {
+      "term": "DIZZINESS",
+      "count": 1
+    },
+    {
+      "term": "DYSARTHRIA",
+      "count": 1
+    },
+    {
+      "term": "DYSPEPSIA",
+      "count": 1
+    },
+    {
+      "term": "DYSPNOEA EXERTIONAL",
+      "count": 1
+    },
+    {
+      "term": "EYE INFLAMMATION",
+      "count": 1
+    },
+    {
+      "term": "FACIAL PARALYSIS",
+      "count": 1
+    },
+    {
+      "term": "FOREIGN BODY IN THROAT",
+      "count": 1
+    },
+    {
+      "term": "GAIT DISTURBANCE",
+      "count": 1
+    },
+    {
+      "term": "GINGIVITIS",
+      "count": 1
+    },
+    {
+      "term": "HYDROCEPHALUS",
+      "count": 1
+    },
+    {
+      "term": "HYPOAESTHESIA",
+      "count": 1
+    },
+    {
+      "term": "HYPOKALAEMIA",
+      "count": 1
+    },
+    {
+      "term": "INAPPROPRIATE SCHEDULE OF PRODUCT ADMINISTRATION",
+      "count": 1
+    },
+    {
+      "term": "INCORRECT DOSE ADMINISTERED BY PRODUCT",
+      "count": 1
+    },
+    {
+      "term": "INSOMNIA",
+      "count": 1
+    },
+    {
+      "term": "INTRACRANIAL PRESSURE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "LYMPHOCYTE COUNT INCREASED",
+      "count": 1
+    },
+    {
+      "term": "MEMORY IMPAIRMENT",
+      "count": 1
+    },
+    {
+      "term": "METABOLIC ACIDOSIS",
+      "count": 1
+    },
+    {
+      "term": "MIGRAINE",
+      "count": 1
+    },
+    {
+      "term": "MOBILITY DECREASED",
+      "count": 1
+    },
+    {
+      "term": "MONONUCLEAR CELL COUNT INCREASED",
+      "count": 1
+    },
+    {
+      "term": "MONOPLEGIA",
+      "count": 1
+    },
+    {
+      "term": "MUSCLE CONTRACTIONS INVOLUNTARY",
+      "count": 1
+    },
+    {
+      "term": "MUSCULOSKELETAL DISCOMFORT",
+      "count": 1
+    },
+    {
+      "term": "MYELITIS",
+      "count": 1
+    },
+    {
+      "term": "NEUROLOGICAL PROCEDURAL COMPLICATION",
+      "count": 1
+    },
+    {
+      "term": "NEUROLOGICAL SYMPTOM",
+      "count": 1
+    },
+    {
+      "term": "OPTIC NERVE DISORDER",
+      "count": 1
+    },
+    {
+      "term": "ORTHOSTATIC HEADACHE",
+      "count": 1
+    },
+    {
+      "term": "OSTEITIS",
+      "count": 1
+    },
+    {
+      "term": "PAIN",
+      "count": 1
+    },
+    {
+      "term": "PANCREATITIS ACUTE",
+      "count": 1
+    },
+    {
+      "term": "PLEOCYTOSIS",
+      "count": 1
+    },
+    {
+      "term": "PNEUMONIA ASPIRATION",
+      "count": 1
+    },
+    {
+      "term": "POOR QUALITY SLEEP",
+      "count": 1
+    },
+    {
+      "term": "POST PROCEDURAL CONTUSION",
+      "count": 1
+    },
+    {
+      "term": "POST PROCEDURAL HAEMATOMA",
+      "count": 1
+    },
+    {
+      "term": "PROCEDURAL ANXIETY",
+      "count": 1
+    },
+    {
+      "term": "PROCEDURAL FAILURE",
+      "count": 1
+    },
+    {
+      "term": "PROTEIN TOTAL INCREASED",
+      "count": 1
+    },
+    {
+      "term": "PULMONARY EMBOLISM",
+      "count": 1
+    },
+    {
+      "term": "RADIATION INJURY",
+      "count": 1
+    },
+    {
+      "term": "RADICULAR PAIN",
+      "count": 1
+    },
+    {
+      "term": "RADICULOPATHY",
+      "count": 1
+    },
+    {
+      "term": "RED BLOOD CELL COUNT ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "RESPIRATORY DISORDER",
+      "count": 1
+    },
+    {
+      "term": "RETROPERITONEAL HAEMATOMA",
+      "count": 1
+    },
+    {
+      "term": "RHINOVIRUS INFECTION",
+      "count": 1
+    },
+    {
+      "term": "SCIATICA",
+      "count": 1
+    },
+    {
+      "term": "SECRETION DISCHARGE",
+      "count": 1
+    },
+    {
+      "term": "SKIN LESION",
+      "count": 1
+    }
+  ]
+}

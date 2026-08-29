@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "CEREBROSPINAL FLUID LEAKAGE",
+      "count": 76
+    },
+    {
+      "term": "POST LUMBAR PUNCTURE SYNDROME",
+      "count": 16
+    },
+    {
+      "term": "HEADACHE",
+      "count": 13
+    },
+    {
+      "term": "CEREBROSPINAL FLUID RESERVOIR PLACEMENT",
+      "count": 6
+    },
+    {
+      "term": "NAUSEA",
+      "count": 5
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 5
+    },
+    {
+      "term": "VOMITING",
+      "count": 5
+    },
+    {
+      "term": "BACK PAIN",
+      "count": 4
+    },
+    {
+      "term": "DEHYDRATION",
+      "count": 4
+    },
+    {
+      "term": "DIZZINESS",
+      "count": 4
+    },
+    {
+      "term": "PAIN",
+      "count": 4
+    },
+    {
+      "term": "PYREXIA",
+      "count": 4
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 3
+    },
+    {
+      "term": "MUSCULAR WEAKNESS",
+      "count": 3
+    },
+    {
+      "term": "PROCEDURAL PAIN",
+      "count": 3
+    },
+    {
+      "term": "INJECTION SITE EXTRAVASATION",
+      "count": 2
+    },
+    {
+      "term": "INJECTION SITE SWELLING",
+      "count": 2
+    },
+    {
+      "term": "INTRACRANIAL HYPOTENSION",
+      "count": 2
+    },
+    {
+      "term": "MENINGITIS",
+      "count": 2
+    },
+    {
+      "term": "MOBILITY DECREASED",
+      "count": 2
+    },
+    {
+      "term": "PAIN IN EXTREMITY",
+      "count": 2
+    },
+    {
+      "term": "POST PROCEDURAL COMPLICATION",
+      "count": 2
+    },
+    {
+      "term": "POST PROCEDURAL SWELLING",
+      "count": 2
+    },
+    {
+      "term": "PROCEDURAL COMPLICATION",
+      "count": 2
+    },
+    {
+      "term": "PROCEDURAL NAUSEA",
+      "count": 2
+    },
+    {
+      "term": "ACCIDENTAL UNDERDOSE",
+      "count": 1
+    },
+    {
+      "term": "ACUTE RESPIRATORY FAILURE",
+      "count": 1
+    },
+    {
+      "term": "ANEURYSM",
+      "count": 1
+    },
+    {
+      "term": "ANXIETY",
+      "count": 1
+    },
+    {
+      "term": "ARACHNOID CYST",
+      "count": 1
+    },
+    {
+      "term": "ARTHRALGIA",
+      "count": 1
+    },
+    {
+      "term": "ATELECTASIS",
+      "count": 1
+    },
+    {
+      "term": "BACK DISORDER",
+      "count": 1
+    },
+    {
+      "term": "BALANCE DISORDER",
+      "count": 1
+    },
+    {
+      "term": "BLOOD CREATINE PHOSPHOKINASE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "BLOOD GLUCOSE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "BLOOD POTASSIUM DECREASED",
+      "count": 1
+    },
+    {
+      "term": "BRADYKINESIA",
+      "count": 1
+    },
+    {
+      "term": "BRAIN INJURY",
+      "count": 1
+    },
+    {
+      "term": "CENTRAL NERVOUS SYSTEM INFECTION",
+      "count": 1
+    },
+    {
+      "term": "CENTRAL NERVOUS SYSTEM LESION",
+      "count": 1
+    },
+    {
+      "term": "CEREBRAL DISORDER",
+      "count": 1
+    },
+    {
+      "term": "CEREBROSPINAL FISTULA",
+      "count": 1
+    },
+    {
+      "term": "CEREBROSPINAL FLUID CIRCULATION DISORDER",
+      "count": 1
+    },
+    {
+      "term": "CHEST PAIN",
+      "count": 1
+    },
+    {
+      "term": "CONTUSION",
+      "count": 1
+    },
+    {
+      "term": "COVID-19",
+      "count": 1
+    },
+    {
+      "term": "CSF RED BLOOD CELL COUNT POSITIVE",
+      "count": 1
+    },
+    {
+      "term": "CSF VOLUME INCREASED",
+      "count": 1
+    },
+    {
+      "term": "CYST RUPTURE",
+      "count": 1
+    },
+    {
+      "term": "DEVICE ISSUE",
+      "count": 1
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 1
+    },
+    {
+      "term": "DISCOMFORT",
+      "count": 1
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 1
+    },
+    {
+      "term": "DURAL TEAR",
+      "count": 1
+    },
+    {
+      "term": "FALL",
+      "count": 1
+    },
+    {
+      "term": "FATIGUE",
+      "count": 1
+    },
+    {
+      "term": "FEEDING DISORDER",
+      "count": 1
+    },
+    {
+      "term": "FEELING ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "FLUID RETENTION",
+      "count": 1
+    },
+    {
+      "term": "GASTROINTESTINAL DISORDER",
+      "count": 1
+    },
+    {
+      "term": "HAEMORRHAGE",
+      "count": 1
+    },
+    {
+      "term": "INAPPROPRIATE SCHEDULE OF PRODUCT ADMINISTRATION",
+      "count": 1
+    },
+    {
+      "term": "INJECTION SITE HAEMORRHAGE",
+      "count": 1
+    },
+    {
+      "term": "INTUSSUSCEPTION",
+      "count": 1
+    },
+    {
+      "term": "LORDOSIS",
+      "count": 1
+    },
+    {
+      "term": "MENINGITIS BACTERIAL",
+      "count": 1
+    },
+    {
+      "term": "MENINGITIS CHEMICAL",
+      "count": 1
+    },
+    {
+      "term": "MIGRAINE",
+      "count": 1
+    },
+    {
+      "term": "MUSCULOSKELETAL PAIN",
+      "count": 1
+    },
+    {
+      "term": "MUSCULOSKELETAL STIFFNESS",
+      "count": 1
+    },
+    {
+      "term": "MYOGLOBIN BLOOD INCREASED",
+      "count": 1
+    },
+    {
+      "term": "NECK PAIN",
+      "count": 1
+    },
+    {
+      "term": "NEUROLOGICAL PROCEDURAL COMPLICATION",
+      "count": 1
+    },
+    {
+      "term": "NEUROMUSCULAR SCOLIOSIS",
+      "count": 1
+    },
+    {
+      "term": "PAPILLOEDEMA",
+      "count": 1
+    },
+    {
+      "term": "PHARYNGITIS STREPTOCOCCAL",
+      "count": 1
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 1
+    },
+    {
+      "term": "POST PROCEDURAL HAEMATOMA",
+      "count": 1
+    },
+    {
+      "term": "POST PROCEDURAL INFECTION",
+      "count": 1
+    },
+    {
+      "term": "POST PROCEDURAL INFLAMMATION",
+      "count": 1
+    },
+    {
+      "term": "PRESCRIBED OVERDOSE",
+      "count": 1
+    },
+    {
+      "term": "PROCEDURAL ANXIETY",
+      "count": 1
+    },
+    {
+      "term": "PROCEDURAL VOMITING",
+      "count": 1
+    },
+    {
+      "term": "PRODUCT DOSE OMISSION",
+      "count": 1
+    },
+    {
+      "term": "PROTEIN TOTAL INCREASED",
+      "count": 1
+    },
+    {
+      "term": "PSEUDOMENINGOCELE",
+      "count": 1
+    },
+    {
+      "term": "SCOLIOSIS",
+      "count": 1
+    },
+    {
+      "term": "SENSORY LOSS",
+      "count": 1
+    },
+    {
+      "term": "SPINAL CORD OEDEMA",
+      "count": 1
+    },
+    {
+      "term": "STAPHYLOCOCCAL INFECTION",
+      "count": 1
+    },
+    {
+      "term": "SUBDURAL HAEMATOMA",
+      "count": 1
+    },
+    {
+      "term": "SUBDURAL HAEMORRHAGE",
+      "count": 1
+    },
+    {
+      "term": "THROMBOCYTOPENIA",
+      "count": 1
+    },
+    {
+      "term": "TRAUMATIC LUMBAR PUNCTURE",
+      "count": 1
+    },
+    {
+      "term": "TREMOR",
+      "count": 1
+    },
+    {
+      "term": "UNDERDOSE",
+      "count": 1
+    },
+    {
+      "term": "URINARY RETENTION",
+      "count": 1
+    },
+    {
+      "term": "VASCULAR DEVICE INFECTION",
+      "count": 1
+    },
+    {
+      "term": "VERTIGO",
+      "count": 1
+    }
+  ]
+}

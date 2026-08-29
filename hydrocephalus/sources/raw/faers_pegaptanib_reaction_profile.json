@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "VISUAL ACUITY REDUCED",
+      "count": 51
+    },
+    {
+      "term": "ENDOPHTHALMITIS",
+      "count": 30
+    },
+    {
+      "term": "RETINAL HAEMORRHAGE",
+      "count": 29
+    },
+    {
+      "term": "EYE PAIN",
+      "count": 24
+    },
+    {
+      "term": "INTRAOCULAR PRESSURE INCREASED",
+      "count": 23
+    },
+    {
+      "term": "CEREBROVASCULAR ACCIDENT",
+      "count": 17
+    },
+    {
+      "term": "EYE HAEMORRHAGE",
+      "count": 16
+    },
+    {
+      "term": "DEATH",
+      "count": 15
+    },
+    {
+      "term": "INJECTION SITE PAIN",
+      "count": 14
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 13
+    },
+    {
+      "term": "VISION BLURRED",
+      "count": 12
+    },
+    {
+      "term": "BLINDNESS UNILATERAL",
+      "count": 11
+    },
+    {
+      "term": "CATARACT",
+      "count": 11
+    },
+    {
+      "term": "MACULAR OEDEMA",
+      "count": 11
+    },
+    {
+      "term": "NAUSEA",
+      "count": 11
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 11
+    },
+    {
+      "term": "RETINAL DETACHMENT",
+      "count": 11
+    },
+    {
+      "term": "DETACHMENT OF RETINAL PIGMENT EPITHELIUM",
+      "count": 10
+    },
+    {
+      "term": "VISUAL DISTURBANCE",
+      "count": 10
+    },
+    {
+      "term": "HYPERSENSITIVITY",
+      "count": 9
+    },
+    {
+      "term": "VITREOUS HAEMORRHAGE",
+      "count": 9
+    },
+    {
+      "term": "BLINDNESS TRANSIENT",
+      "count": 8
+    },
+    {
+      "term": "CHEST PAIN",
+      "count": 8
+    },
+    {
+      "term": "CHOROIDAL NEOVASCULARISATION",
+      "count": 8
+    },
+    {
+      "term": "EYE SWELLING",
+      "count": 8
+    },
+    {
+      "term": "HYPERTENSION",
+      "count": 8
+    },
+    {
+      "term": "MACULAR DEGENERATION",
+      "count": 8
+    },
+    {
+      "term": "VISUAL IMPAIRMENT",
+      "count": 8
+    },
+    {
+      "term": "CEREBRAL INFARCTION",
+      "count": 7
+    },
+    {
+      "term": "CONDITION AGGRAVATED",
+      "count": 7
+    },
+    {
+      "term": "DISCOMFORT",
+      "count": 7
+    },
+    {
+      "term": "MYOCARDIAL INFARCTION",
+      "count": 7
+    },
+    {
+      "term": "OCULAR HYPERAEMIA",
+      "count": 7
+    },
+    {
+      "term": "VITREOUS FLOATERS",
+      "count": 7
+    },
+    {
+      "term": "VITRITIS",
+      "count": 7
+    },
+    {
+      "term": "ATRIAL FIBRILLATION",
+      "count": 6
+    },
+    {
+      "term": "BLINDNESS",
+      "count": 6
+    },
+    {
+      "term": "BLOOD PRESSURE INCREASED",
+      "count": 6
+    },
+    {
+      "term": "DISEASE PROGRESSION",
+      "count": 6
+    },
+    {
+      "term": "DRUG HYPERSENSITIVITY",
+      "count": 6
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 6
+    },
+    {
+      "term": "EYE IRRITATION",
+      "count": 6
+    },
+    {
+      "term": "FALL",
+      "count": 6
+    },
+    {
+      "term": "MALAISE",
+      "count": 6
+    },
+    {
+      "term": "TRANSIENT ISCHAEMIC ATTACK",
+      "count": 6
+    },
+    {
+      "term": "VITREOUS DETACHMENT",
+      "count": 6
+    },
+    {
+      "term": "EYE DISORDER",
+      "count": 5
+    },
+    {
+      "term": "LACRIMATION INCREASED",
+      "count": 5
+    },
+    {
+      "term": "LOSS OF CONSCIOUSNESS",
+      "count": 5
+    },
+    {
+      "term": "OCULAR HYPERTENSION",
+      "count": 5
+    },
+    {
+      "term": "PHARMACEUTICAL PRODUCT COMPLAINT",
+      "count": 5
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 5
+    },
+    {
+      "term": "POST PROCEDURAL COMPLICATION",
+      "count": 5
+    },
+    {
+      "term": "RETINAL ARTERY OCCLUSION",
+      "count": 5
+    },
+    {
+      "term": "RETINAL DISORDER",
+      "count": 5
+    },
+    {
+      "term": "VOMITING",
+      "count": 5
+    },
+    {
+      "term": "AGE-RELATED MACULAR DEGENERATION",
+      "count": 4
+    },
+    {
+      "term": "ARTHRITIS",
+      "count": 4
+    },
+    {
+      "term": "CHOROIDAL HAEMORRHAGE",
+      "count": 4
+    },
+    {
+      "term": "CYSTOID MACULAR OEDEMA",
+      "count": 4
+    },
+    {
+      "term": "DIZZINESS",
+      "count": 4
+    },
+    {
+      "term": "DYSPHAGIA",
+      "count": 4
+    },
+    {
+      "term": "EYE PRURITUS",
+      "count": 4
+    },
+    {
+      "term": "FATIGUE",
+      "count": 4
+    },
+    {
+      "term": "HEADACHE",
+      "count": 4
+    },
+    {
+      "term": "INTERNATIONAL NORMALISED RATIO INCREASED",
+      "count": 4
+    },
+    {
+      "term": "MEDICATION ERROR",
+      "count": 4
+    },
+    {
+      "term": "PYREXIA",
+      "count": 4
+    },
+    {
+      "term": "RETINAL PIGMENT EPITHELIAL TEAR",
+      "count": 4
+    },
+    {
+      "term": "SUDDEN DEATH",
+      "count": 4
+    },
+    {
+      "term": "URINARY TRACT INFECTION",
+      "count": 4
+    },
+    {
+      "term": "URTICARIA",
+      "count": 4
+    },
+    {
+      "term": "UVEITIS",
+      "count": 4
+    },
+    {
+      "term": "VITRECTOMY",
+      "count": 4
+    },
+    {
+      "term": "ACUTE MYOCARDIAL INFARCTION",
+      "count": 3
+    },
+    {
+      "term": "ANAPHYLACTIC SHOCK",
+      "count": 3
+    },
+    {
+      "term": "ANGIONEUROTIC OEDEMA",
+      "count": 3
+    },
+    {
+      "term": "ARRHYTHMIA",
+      "count": 3
+    },
+    {
+      "term": "ASPARTATE AMINOTRANSFERASE INCREASED",
+      "count": 3
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 3
+    },
+    {
+      "term": "BLOOD GLUCOSE INCREASED",
+      "count": 3
+    },
+    {
+      "term": "BLOOD PRESSURE DECREASED",
+      "count": 3
+    },
+    {
+      "term": "BRADYCARDIA",
+      "count": 3
+    },
+    {
+      "term": "CONSTIPATION",
+      "count": 3
+    },
+    {
+      "term": "DEHYDRATION",
+      "count": 3
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 3
+    },
+    {
+      "term": "FEELING ABNORMAL",
+      "count": 3
+    },
+    {
+      "term": "FOREIGN BODY IN EYE",
+      "count": 3
+    },
+    {
+      "term": "GLAUCOMA",
+      "count": 3
+    },
+    {
+      "term": "HEAD INJURY",
+      "count": 3
+    },
+    {
+      "term": "INJECTION SITE REACTION",
+      "count": 3
+    },
+    {
+      "term": "ISCHAEMIA",
+      "count": 3
+    },
+    {
+      "term": "MYALGIA",
+      "count": 3
+    },
+    {
+      "term": "OEDEMA",
+      "count": 3
+    },
+    {
+      "term": "OPTIC ISCHAEMIC NEUROPATHY",
+      "count": 3
+    },
+    {
+      "term": "PAIN IN EXTREMITY",
+      "count": 3
+    },
+    {
+      "term": "PALPITATIONS",
+      "count": 3
+    },
+    {
+      "term": "PROCEDURAL PAIN",
+      "count": 3
+    },
+    {
+      "term": "PRURITUS",
+      "count": 3
+    },
+    {
+      "term": "RASH",
+      "count": 3
+    }
+  ]
+}

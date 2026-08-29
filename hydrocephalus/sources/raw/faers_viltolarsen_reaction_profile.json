@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "PYREXIA",
+      "count": 20
+    },
+    {
+      "term": "VOMITING",
+      "count": 12
+    },
+    {
+      "term": "ILLNESS",
+      "count": 11
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 8
+    },
+    {
+      "term": "WEIGHT INCREASED",
+      "count": 8
+    },
+    {
+      "term": "MALAISE",
+      "count": 7
+    },
+    {
+      "term": "COVID-19",
+      "count": 6
+    },
+    {
+      "term": "PRODUCT DOSE OMISSION ISSUE",
+      "count": 6
+    },
+    {
+      "term": "COUGH",
+      "count": 5
+    },
+    {
+      "term": "FALL",
+      "count": 5
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 5
+    },
+    {
+      "term": "SARS-COV-2 TEST POSITIVE",
+      "count": 5
+    },
+    {
+      "term": "ABDOMINAL DISCOMFORT",
+      "count": 4
+    },
+    {
+      "term": "CHEST PAIN",
+      "count": 4
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 4
+    },
+    {
+      "term": "INFLUENZA",
+      "count": 4
+    },
+    {
+      "term": "NAUSEA",
+      "count": 4
+    },
+    {
+      "term": "UPPER RESPIRATORY TRACT INFECTION",
+      "count": 4
+    },
+    {
+      "term": "ADVERSE EVENT",
+      "count": 3
+    },
+    {
+      "term": "ANGER",
+      "count": 3
+    },
+    {
+      "term": "ANXIETY",
+      "count": 3
+    },
+    {
+      "term": "BLOOD TRIGLYCERIDES INCREASED",
+      "count": 3
+    },
+    {
+      "term": "CATHETER SITE INFECTION",
+      "count": 3
+    },
+    {
+      "term": "DEATH",
+      "count": 3
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 3
+    },
+    {
+      "term": "FATIGUE",
+      "count": 3
+    },
+    {
+      "term": "GAIT INABILITY",
+      "count": 3
+    },
+    {
+      "term": "HEADACHE",
+      "count": 3
+    },
+    {
+      "term": "HEART RATE INCREASED",
+      "count": 3
+    },
+    {
+      "term": "INFUSION SITE SWELLING",
+      "count": 3
+    },
+    {
+      "term": "OROPHARYNGEAL PAIN",
+      "count": 3
+    },
+    {
+      "term": "PROTEINURIA",
+      "count": 3
+    },
+    {
+      "term": "VIRAL INFECTION",
+      "count": 3
+    },
+    {
+      "term": "WHEELCHAIR USER",
+      "count": 3
+    },
+    {
+      "term": "ABDOMINAL PAIN",
+      "count": 2
+    },
+    {
+      "term": "ABNORMAL BEHAVIOUR",
+      "count": 2
+    },
+    {
+      "term": "ARTHRALGIA",
+      "count": 2
+    },
+    {
+      "term": "BEHAVIOUR DISORDER",
+      "count": 2
+    },
+    {
+      "term": "CONSTIPATION",
+      "count": 2
+    },
+    {
+      "term": "CYSTATIN C INCREASED",
+      "count": 2
+    },
+    {
+      "term": "DEVICE RELATED INFECTION",
+      "count": 2
+    },
+    {
+      "term": "DISEASE PROGRESSION",
+      "count": 2
+    },
+    {
+      "term": "DUCHENNE MUSCULAR DYSTROPHY",
+      "count": 2
+    },
+    {
+      "term": "FEMUR FRACTURE",
+      "count": 2
+    },
+    {
+      "term": "GASTROENTERITIS VIRAL",
+      "count": 2
+    },
+    {
+      "term": "HAEMATOCHEZIA",
+      "count": 2
+    },
+    {
+      "term": "HYPOTENSION",
+      "count": 2
+    },
+    {
+      "term": "INFUSION SITE EXTRAVASATION",
+      "count": 2
+    },
+    {
+      "term": "INFUSION SITE PAIN",
+      "count": 2
+    },
+    {
+      "term": "IRRITABILITY",
+      "count": 2
+    },
+    {
+      "term": "LABORATORY TEST ABNORMAL",
+      "count": 2
+    },
+    {
+      "term": "LOSS OF PERSONAL INDEPENDENCE IN DAILY ACTIVITIES",
+      "count": 2
+    },
+    {
+      "term": "MOOD SWINGS",
+      "count": 2
+    },
+    {
+      "term": "MYALGIA",
+      "count": 2
+    },
+    {
+      "term": "NASOPHARYNGITIS",
+      "count": 2
+    },
+    {
+      "term": "PALLOR",
+      "count": 2
+    },
+    {
+      "term": "PLATELET COUNT DECREASED",
+      "count": 2
+    },
+    {
+      "term": "PNEUMONIA ASPIRATION",
+      "count": 2
+    },
+    {
+      "term": "THROMBOCYTOPENIA",
+      "count": 2
+    },
+    {
+      "term": "TIBIA FRACTURE",
+      "count": 2
+    },
+    {
+      "term": "URINE PROTEIN/CREATININE RATIO ABNORMAL",
+      "count": 2
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 2
+    },
+    {
+      "term": "ABDOMINAL PAIN UPPER",
+      "count": 1
+    },
+    {
+      "term": "ACNE",
+      "count": 1
+    },
+    {
+      "term": "ADMINISTRATION SITE EXTRAVASATION",
+      "count": 1
+    },
+    {
+      "term": "ADRENAL INSUFFICIENCY",
+      "count": 1
+    },
+    {
+      "term": "ADRENOCORTICAL INSUFFICIENCY ACUTE",
+      "count": 1
+    },
+    {
+      "term": "AGGRESSION",
+      "count": 1
+    },
+    {
+      "term": "ANAEMIA",
+      "count": 1
+    },
+    {
+      "term": "ANAPHYLACTIC REACTION",
+      "count": 1
+    },
+    {
+      "term": "ANTIBODY TEST ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "BLADDER DISORDER",
+      "count": 1
+    },
+    {
+      "term": "BLISTER",
+      "count": 1
+    },
+    {
+      "term": "BLOOD DISORDER",
+      "count": 1
+    },
+    {
+      "term": "BLOOD PRESSURE DIASTOLIC DECREASED",
+      "count": 1
+    },
+    {
+      "term": "BLOOD PRESSURE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "BLOOD URINE PRESENT",
+      "count": 1
+    },
+    {
+      "term": "BODY HEIGHT INCREASED",
+      "count": 1
+    },
+    {
+      "term": "BODY TEMPERATURE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "BRADYKINESIA",
+      "count": 1
+    },
+    {
+      "term": "CARDIAC FAILURE",
+      "count": 1
+    },
+    {
+      "term": "CARDIAC FUNCTION TEST ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "CATHETER PLACEMENT",
+      "count": 1
+    },
+    {
+      "term": "CATHETER SITE CELLULITIS",
+      "count": 1
+    },
+    {
+      "term": "CATHETER SITE INFLAMMATION",
+      "count": 1
+    },
+    {
+      "term": "CELLULITIS",
+      "count": 1
+    },
+    {
+      "term": "CENTRAL VENOUS CATHETERISATION",
+      "count": 1
+    },
+    {
+      "term": "CHILLS",
+      "count": 1
+    },
+    {
+      "term": "COMPLICATION ASSOCIATED WITH DEVICE",
+      "count": 1
+    },
+    {
+      "term": "COMPRESSION FRACTURE",
+      "count": 1
+    },
+    {
+      "term": "CONDITION AGGRAVATED",
+      "count": 1
+    },
+    {
+      "term": "CONGESTIVE HEPATOPATHY",
+      "count": 1
+    },
+    {
+      "term": "CONTUSION",
+      "count": 1
+    },
+    {
+      "term": "COSTOCHONDRITIS",
+      "count": 1
+    },
+    {
+      "term": "CROUP INFECTIOUS",
+      "count": 1
+    },
+    {
+      "term": "CRYING",
+      "count": 1
+    },
+    {
+      "term": "CYSTATIN C ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 1
+    },
+    {
+      "term": "DEHYDRATION",
+      "count": 1
+    },
+    {
+      "term": "DEPRESSED MOOD",
+      "count": 1
+    }
+  ]
+}

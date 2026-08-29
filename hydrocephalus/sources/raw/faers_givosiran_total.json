@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 1462
+    }
+  },
+  "results": [
+    {
+      "safetyreportversion": "1",
+      "safetyreportid": "17362783",
+      "primarysourcecountry": "US",
+      "occurcountry": "US",
+      "transmissiondateformat": "102",
+      "transmissiondate": "20200409",
+      "reporttype": "1",
+      "serious": "2",
+      "receivedateformat": "102",
+      "receivedate": "20200203",
+      "receiptdateformat": "102",
+      "receiptdate": "20200203",
+      "fulfillexpeditecriteria": "2",
+      "companynumb": "US-ALNYLAM PHARMACEUTICALS, INC.-ALN-2020-000051",
+      "duplicate": "1",
+      "reportduplicate": {
+        "duplicatesource": "ALNYLAM PHARMACEUTICALS",
+        "duplicatenumb": "US-ALNYLAM PHARMACEUTICALS, INC.-ALN-2020-000051"
+      },
+      "primarysource": {
+        "reportercountry": "US",
+        "qualification": "1"
+      },
+      "sender": {
+        "sendertype": "2",
+        "senderorganization": "FDA-Public Use"
+      },
+      "receiver": {
+        "receivertype": "6",
+        "receiverorganization": "FDA"
+      },
+      "patient": {
+        "patientonsetage": "50",
+        "patientonsetageunit": "801",
+        "patientsex": "2",
+        "reaction": [
+          {
+            "reactionmeddraversionpt": "22.1",
+            "reactionmeddrapt": "Injection site pain",
+            "reactionoutcome": "6"
+          }
+        ],
+        "drug": [
+          {
+            "drugcharacterization": "1",
+            "medicinalproduct": "GIVLAARI",
+            "drugauthorizationnumb": "212194",
+            "drugdosagetext": "UNK, MONTHLY",
+            "drugdosageform": "SOLUTION FOR INJECTION",
+            "drugadministrationroute": "058",
+            "drugindication": "PORPHYRIA ACUTE",
+            "actiondrug": "5",
+            "drugrecurreadministration": "3",
+            "drugadditional": "3",
+            "activesubstance": {
+              "activesubstancename": "GIVOSIRAN SODIUM"
+            },
+            "openfda": {
+              "application_number": [
+                "NDA212194"
+              ],
+              "brand_name": [
+                "GIVLAARI"
+              ],
+              "generic_name": [
+                "GIVOSIRAN SODIUM"
+              ],
+              "manufacturer_name": [
+                "Alnylam Pharmaceuticals, Inc."
+              ],
+              "product_ndc": [
+                "71336-1001"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "SUBCUTANEOUS"
+              ],
+              "substance_name": [
+                "GIVOSIRAN SODIUM"
+              ],
+              "rxcui": [
+                "2265716",
+                "2265721"
+              ],
+              "spl_id": [
+                "942492a0-de6e-4c31-8b9c-d259f808d821"
+              ],
+              "spl_set_id": [
+                "167e663c-11e1-497b-a3fc-951d65d58eaa"
+              ],
+              "package_ndc": [
+                "71336-1001-1"
+              ],
+              "unii": [
+                "5XE21E41RT"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

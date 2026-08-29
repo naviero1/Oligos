@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "PLATELET COUNT DECREASED",
+      "count": 337
+    },
+    {
+      "term": "PROTEIN URINE PRESENT",
+      "count": 269
+    },
+    {
+      "term": "GLOMERULAR FILTRATION RATE DECREASED",
+      "count": 264
+    },
+    {
+      "term": "URINE PROTEIN/CREATININE RATIO INCREASED",
+      "count": 250
+    },
+    {
+      "term": "BLOOD CREATININE INCREASED",
+      "count": 213
+    },
+    {
+      "term": "FATIGUE",
+      "count": 203
+    },
+    {
+      "term": "BACTERIAL TEST POSITIVE",
+      "count": 193
+    },
+    {
+      "term": "URINE ABNORMALITY",
+      "count": 186
+    },
+    {
+      "term": "NAUSEA",
+      "count": 153
+    },
+    {
+      "term": "MALAISE",
+      "count": 148
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 144
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 136
+    },
+    {
+      "term": "URINARY CASTS",
+      "count": 127
+    },
+    {
+      "term": "WHITE BLOOD CELLS URINE POSITIVE",
+      "count": 125
+    },
+    {
+      "term": "PAIN",
+      "count": 124
+    },
+    {
+      "term": "URINE LEUKOCYTE ESTERASE POSITIVE",
+      "count": 123
+    },
+    {
+      "term": "CHILLS",
+      "count": 121
+    },
+    {
+      "term": "HAEMOGLOBIN DECREASED",
+      "count": 111
+    },
+    {
+      "term": "FALL",
+      "count": 109
+    },
+    {
+      "term": "DIZZINESS",
+      "count": 106
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 102
+    },
+    {
+      "term": "VOMITING",
+      "count": 102
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 100
+    },
+    {
+      "term": "RED BLOOD CELLS URINE POSITIVE",
+      "count": 97
+    },
+    {
+      "term": "HEADACHE",
+      "count": 96
+    },
+    {
+      "term": "PERIPHERAL SWELLING",
+      "count": 94
+    },
+    {
+      "term": "PAIN IN EXTREMITY",
+      "count": 93
+    },
+    {
+      "term": "CRYSTAL URINE PRESENT",
+      "count": 91
+    },
+    {
+      "term": "URINARY SEDIMENT PRESENT",
+      "count": 89
+    },
+    {
+      "term": "URINE KETONE BODY PRESENT",
+      "count": 88
+    },
+    {
+      "term": "THROMBOCYTOPENIA",
+      "count": 87
+    },
+    {
+      "term": "URINARY OCCULT BLOOD POSITIVE",
+      "count": 87
+    },
+    {
+      "term": "URINARY TRACT INFECTION",
+      "count": 87
+    },
+    {
+      "term": "GAIT DISTURBANCE",
+      "count": 83
+    },
+    {
+      "term": "HAEMATOCRIT DECREASED",
+      "count": 82
+    },
+    {
+      "term": "HYPOTENSION",
+      "count": 82
+    },
+    {
+      "term": "INJECTION SITE PAIN",
+      "count": 82
+    },
+    {
+      "term": "PYREXIA",
+      "count": 81
+    },
+    {
+      "term": "NITRITE URINE PRESENT",
+      "count": 77
+    },
+    {
+      "term": "RED BLOOD CELL COUNT DECREASED",
+      "count": 77
+    },
+    {
+      "term": "CREATININE URINE ABNORMAL",
+      "count": 74
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 73
+    },
+    {
+      "term": "HYPOAESTHESIA",
+      "count": 68
+    },
+    {
+      "term": "WHITE BLOOD CELL COUNT DECREASED",
+      "count": 65
+    },
+    {
+      "term": "LYMPHOCYTE COUNT DECREASED",
+      "count": 63
+    },
+    {
+      "term": "OEDEMA PERIPHERAL",
+      "count": 63
+    },
+    {
+      "term": "URINE PROTEIN/CREATININE RATIO ABNORMAL",
+      "count": 63
+    },
+    {
+      "term": "RENAL IMPAIRMENT",
+      "count": 62
+    },
+    {
+      "term": "ASPARTATE AMINOTRANSFERASE INCREASED",
+      "count": 61
+    },
+    {
+      "term": "RED CELL DISTRIBUTION WIDTH INCREASED",
+      "count": 60
+    },
+    {
+      "term": "CONSTIPATION",
+      "count": 56
+    },
+    {
+      "term": "INFLUENZA LIKE ILLNESS",
+      "count": 56
+    },
+    {
+      "term": "TREMOR",
+      "count": 55
+    },
+    {
+      "term": "ABDOMINAL DISCOMFORT",
+      "count": 54
+    },
+    {
+      "term": "ARTHRALGIA",
+      "count": 54
+    },
+    {
+      "term": "COUGH",
+      "count": 54
+    },
+    {
+      "term": "GLUCOSE URINE PRESENT",
+      "count": 54
+    },
+    {
+      "term": "CARDIAC FAILURE",
+      "count": 52
+    },
+    {
+      "term": "INJECTION SITE PRURITUS",
+      "count": 52
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 52
+    },
+    {
+      "term": "INJECTION SITE ERYTHEMA",
+      "count": 51
+    },
+    {
+      "term": "MOBILITY DECREASED",
+      "count": 51
+    },
+    {
+      "term": "MUSCULAR WEAKNESS",
+      "count": 51
+    },
+    {
+      "term": "CARDIAC DISORDER",
+      "count": 50
+    },
+    {
+      "term": "DEATH",
+      "count": 50
+    },
+    {
+      "term": "DISEASE PROGRESSION",
+      "count": 50
+    },
+    {
+      "term": "SOMNOLENCE",
+      "count": 49
+    },
+    {
+      "term": "VITAMIN A DECREASED",
+      "count": 49
+    },
+    {
+      "term": "CHEST PAIN",
+      "count": 48
+    },
+    {
+      "term": "CONTUSION",
+      "count": 48
+    },
+    {
+      "term": "BACK PAIN",
+      "count": 47
+    },
+    {
+      "term": "COVID-19",
+      "count": 46
+    },
+    {
+      "term": "CREATININE URINE DECREASED",
+      "count": 46
+    },
+    {
+      "term": "FEELING ABNORMAL",
+      "count": 46
+    },
+    {
+      "term": "ABDOMINAL DISTENSION",
+      "count": 45
+    },
+    {
+      "term": "BLOOD CREATININE ABNORMAL",
+      "count": 45
+    },
+    {
+      "term": "GASTROINTESTINAL DISORDER",
+      "count": 45
+    },
+    {
+      "term": "GLOMERULONEPHRITIS",
+      "count": 45
+    },
+    {
+      "term": "URINARY CASTS PRESENT",
+      "count": 44
+    },
+    {
+      "term": "DEHYDRATION",
+      "count": 41
+    },
+    {
+      "term": "ABDOMINAL PAIN",
+      "count": 40
+    },
+    {
+      "term": "ANAEMIA",
+      "count": 40
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 40
+    },
+    {
+      "term": "BALANCE DISORDER",
+      "count": 39
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 39
+    },
+    {
+      "term": "ALANINE AMINOTRANSFERASE INCREASED",
+      "count": 38
+    },
+    {
+      "term": "FLUID RETENTION",
+      "count": 38
+    },
+    {
+      "term": "ILLNESS",
+      "count": 37
+    },
+    {
+      "term": "PLATELET COUNT INCREASED",
+      "count": 37
+    },
+    {
+      "term": "PRURITUS",
+      "count": 37
+    },
+    {
+      "term": "SWELLING",
+      "count": 37
+    },
+    {
+      "term": "ANXIETY",
+      "count": 36
+    },
+    {
+      "term": "BLOOD UREA INCREASED",
+      "count": 36
+    },
+    {
+      "term": "ADVERSE DRUG REACTION",
+      "count": 35
+    },
+    {
+      "term": "BLOOD BILIRUBIN INCREASED",
+      "count": 35
+    },
+    {
+      "term": "GENERAL PHYSICAL HEALTH DETERIORATION",
+      "count": 35
+    },
+    {
+      "term": "INSOMNIA",
+      "count": 35
+    },
+    {
+      "term": "BLOOD PRESSURE DECREASED",
+      "count": 33
+    },
+    {
+      "term": "MEAN CELL VOLUME INCREASED",
+      "count": 33
+    },
+    {
+      "term": "NEUTROPHIL COUNT DECREASED",
+      "count": 32
+    }
+  ]
+}

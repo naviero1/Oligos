@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "PORPHYRIA ACUTE",
+      "count": 469
+    },
+    {
+      "term": "HOSPITALISATION",
+      "count": 171
+    },
+    {
+      "term": "PRODUCT DOSE OMISSION ISSUE",
+      "count": 108
+    },
+    {
+      "term": "NAUSEA",
+      "count": 105
+    },
+    {
+      "term": "INTENTIONAL DOSE OMISSION",
+      "count": 103
+    },
+    {
+      "term": "THERAPY INTERRUPTED",
+      "count": 100
+    },
+    {
+      "term": "FATIGUE",
+      "count": 97
+    },
+    {
+      "term": "PAIN",
+      "count": 85
+    },
+    {
+      "term": "MALAISE",
+      "count": 68
+    },
+    {
+      "term": "ABDOMINAL PAIN",
+      "count": 66
+    },
+    {
+      "term": "VOMITING",
+      "count": 62
+    },
+    {
+      "term": "ILL-DEFINED DISORDER",
+      "count": 58
+    },
+    {
+      "term": "SEIZURE",
+      "count": 58
+    },
+    {
+      "term": "INAPPROPRIATE SCHEDULE OF PRODUCT ADMINISTRATION",
+      "count": 47
+    },
+    {
+      "term": "UNEVALUABLE EVENT",
+      "count": 46
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 45
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 45
+    },
+    {
+      "term": "BLOOD HOMOCYSTEINE INCREASED",
+      "count": 39
+    },
+    {
+      "term": "COVID-19",
+      "count": 37
+    },
+    {
+      "term": "HEADACHE",
+      "count": 37
+    },
+    {
+      "term": "ILLNESS",
+      "count": 37
+    },
+    {
+      "term": "INJECTION SITE PAIN",
+      "count": 36
+    },
+    {
+      "term": "FEELING ABNORMAL",
+      "count": 32
+    },
+    {
+      "term": "WEIGHT INCREASED",
+      "count": 32
+    },
+    {
+      "term": "DEATH",
+      "count": 30
+    },
+    {
+      "term": "STRESS",
+      "count": 30
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 29
+    },
+    {
+      "term": "CONDITION AGGRAVATED",
+      "count": 26
+    },
+    {
+      "term": "ADVERSE DRUG REACTION",
+      "count": 25
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 25
+    },
+    {
+      "term": "PAIN IN EXTREMITY",
+      "count": 24
+    },
+    {
+      "term": "ANXIETY",
+      "count": 23
+    },
+    {
+      "term": "BLOOD CREATININE INCREASED",
+      "count": 23
+    },
+    {
+      "term": "FALL",
+      "count": 23
+    },
+    {
+      "term": "LIVER FUNCTION TEST INCREASED",
+      "count": 22
+    },
+    {
+      "term": "MATERNAL EXPOSURE DURING PREGNANCY",
+      "count": 22
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 22
+    },
+    {
+      "term": "ABDOMINAL PAIN UPPER",
+      "count": 21
+    },
+    {
+      "term": "DEPRESSION",
+      "count": 21
+    },
+    {
+      "term": "RENAL IMPAIRMENT",
+      "count": 21
+    },
+    {
+      "term": "INSOMNIA",
+      "count": 19
+    },
+    {
+      "term": "BACK PAIN",
+      "count": 18
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 18
+    },
+    {
+      "term": "DIZZINESS",
+      "count": 18
+    },
+    {
+      "term": "PANCREATITIS",
+      "count": 18
+    },
+    {
+      "term": "LOSS OF CONSCIOUSNESS",
+      "count": 17
+    },
+    {
+      "term": "MEMORY IMPAIRMENT",
+      "count": 17
+    },
+    {
+      "term": "PYREXIA",
+      "count": 17
+    },
+    {
+      "term": "CONFUSIONAL STATE",
+      "count": 16
+    },
+    {
+      "term": "MUSCLE SPASMS",
+      "count": 16
+    },
+    {
+      "term": "COUGH",
+      "count": 15
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 15
+    },
+    {
+      "term": "MENTAL DISORDER",
+      "count": 15
+    },
+    {
+      "term": "HEPATIC ENZYME INCREASED",
+      "count": 14
+    },
+    {
+      "term": "HYPERHOMOCYSTEINAEMIA",
+      "count": 14
+    },
+    {
+      "term": "PORPHYRIA",
+      "count": 14
+    },
+    {
+      "term": "RENAL FAILURE",
+      "count": 14
+    },
+    {
+      "term": "SOMNOLENCE",
+      "count": 14
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 13
+    },
+    {
+      "term": "GAIT DISTURBANCE",
+      "count": 13
+    },
+    {
+      "term": "MIGRAINE",
+      "count": 13
+    },
+    {
+      "term": "ARTHRALGIA",
+      "count": 12
+    },
+    {
+      "term": "DEHYDRATION",
+      "count": 12
+    },
+    {
+      "term": "HYPERTENSION",
+      "count": 12
+    },
+    {
+      "term": "HYPOAESTHESIA",
+      "count": 12
+    },
+    {
+      "term": "INFECTION",
+      "count": 12
+    },
+    {
+      "term": "INJECTION SITE ERYTHEMA",
+      "count": 12
+    },
+    {
+      "term": "SEPSIS",
+      "count": 12
+    },
+    {
+      "term": "SURGERY",
+      "count": 12
+    },
+    {
+      "term": "ACUTE KIDNEY INJURY",
+      "count": 11
+    },
+    {
+      "term": "HALLUCINATION",
+      "count": 11
+    },
+    {
+      "term": "INFLUENZA",
+      "count": 11
+    },
+    {
+      "term": "PRURITUS",
+      "count": 11
+    },
+    {
+      "term": "BLOOD PRESSURE INCREASED",
+      "count": 10
+    },
+    {
+      "term": "BRAIN FOG",
+      "count": 10
+    },
+    {
+      "term": "NEUROPATHY PERIPHERAL",
+      "count": 10
+    },
+    {
+      "term": "PARAESTHESIA",
+      "count": 10
+    },
+    {
+      "term": "RASH",
+      "count": 10
+    },
+    {
+      "term": "THROMBOSIS",
+      "count": 10
+    },
+    {
+      "term": "TREMOR",
+      "count": 10
+    },
+    {
+      "term": "URINARY TRACT INFECTION",
+      "count": 10
+    },
+    {
+      "term": "ABDOMINAL DISTENSION",
+      "count": 9
+    },
+    {
+      "term": "ALANINE AMINOTRANSFERASE INCREASED",
+      "count": 9
+    },
+    {
+      "term": "AMNESIA",
+      "count": 9
+    },
+    {
+      "term": "BLOOD ALKALINE PHOSPHATASE INCREASED",
+      "count": 9
+    },
+    {
+      "term": "CONSTIPATION",
+      "count": 9
+    },
+    {
+      "term": "INCORRECT DOSE ADMINISTERED",
+      "count": 9
+    },
+    {
+      "term": "NASOPHARYNGITIS",
+      "count": 9
+    },
+    {
+      "term": "PERIPHERAL SWELLING",
+      "count": 9
+    },
+    {
+      "term": "ABORTION SPONTANEOUS",
+      "count": 8
+    },
+    {
+      "term": "ASPARTATE AMINOTRANSFERASE INCREASED",
+      "count": 8
+    },
+    {
+      "term": "CEREBROVASCULAR ACCIDENT",
+      "count": 8
+    },
+    {
+      "term": "GASTROINTESTINAL DISORDER",
+      "count": 8
+    },
+    {
+      "term": "HEPATIC FUNCTION ABNORMAL",
+      "count": 8
+    },
+    {
+      "term": "HYPERSOMNIA",
+      "count": 8
+    },
+    {
+      "term": "INJECTION SITE DISCOLOURATION",
+      "count": 8
+    },
+    {
+      "term": "LABORATORY TEST ABNORMAL",
+      "count": 8
+    },
+    {
+      "term": "MOBILITY DECREASED",
+      "count": 8
+    },
+    {
+      "term": "NEURALGIA",
+      "count": 8
+    },
+    {
+      "term": "NO ADVERSE EVENT",
+      "count": 8
+    }
+  ]
+}

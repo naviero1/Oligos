@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "INJECTION SITE PAIN",
+      "count": 77
+    },
+    {
+      "term": "INJECTION SITE ERYTHEMA",
+      "count": 61
+    },
+    {
+      "term": "HEPATIC ENZYME INCREASED",
+      "count": 57
+    },
+    {
+      "term": "INFLUENZA LIKE ILLNESS",
+      "count": 43
+    },
+    {
+      "term": "INJECTION SITE BRUISING",
+      "count": 35
+    },
+    {
+      "term": "NAUSEA",
+      "count": 31
+    },
+    {
+      "term": "FATIGUE",
+      "count": 30
+    },
+    {
+      "term": "DRUG DOSE OMISSION",
+      "count": 28
+    },
+    {
+      "term": "INJECTION SITE DISCOLOURATION",
+      "count": 28
+    },
+    {
+      "term": "INJECTION SITE SWELLING",
+      "count": 27
+    },
+    {
+      "term": "INJECTION SITE PRURITUS",
+      "count": 23
+    },
+    {
+      "term": "MYALGIA",
+      "count": 21
+    },
+    {
+      "term": "HEADACHE",
+      "count": 20
+    },
+    {
+      "term": "INJECTION SITE REACTION",
+      "count": 20
+    },
+    {
+      "term": "PAIN",
+      "count": 20
+    },
+    {
+      "term": "INJECTION SITE RASH",
+      "count": 19
+    },
+    {
+      "term": "PYREXIA",
+      "count": 16
+    },
+    {
+      "term": "ARTHRALGIA",
+      "count": 14
+    },
+    {
+      "term": "INJECTION SITE WARMTH",
+      "count": 14
+    },
+    {
+      "term": "MALAISE",
+      "count": 14
+    },
+    {
+      "term": "CHILLS",
+      "count": 13
+    },
+    {
+      "term": "INJECTION SITE MASS",
+      "count": 13
+    },
+    {
+      "term": "ALANINE AMINOTRANSFERASE INCREASED",
+      "count": 12
+    },
+    {
+      "term": "DIZZINESS",
+      "count": 12
+    },
+    {
+      "term": "LIVER FUNCTION TEST ABNORMAL",
+      "count": 12
+    },
+    {
+      "term": "ABDOMINAL PAIN UPPER",
+      "count": 11
+    },
+    {
+      "term": "MUSCLE SPASMS",
+      "count": 11
+    },
+    {
+      "term": "PRURITUS",
+      "count": 10
+    },
+    {
+      "term": "ASPARTATE AMINOTRANSFERASE INCREASED",
+      "count": 9
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 9
+    },
+    {
+      "term": "ABDOMINAL DISCOMFORT",
+      "count": 8
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 8
+    },
+    {
+      "term": "BACK PAIN",
+      "count": 8
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 8
+    },
+    {
+      "term": "MEDICATION ERROR",
+      "count": 8
+    },
+    {
+      "term": "PAIN IN EXTREMITY",
+      "count": 8
+    },
+    {
+      "term": "VOMITING",
+      "count": 8
+    },
+    {
+      "term": "INAPPROPRIATE SCHEDULE OF DRUG ADMINISTRATION",
+      "count": 7
+    },
+    {
+      "term": "RASH",
+      "count": 7
+    },
+    {
+      "term": "FEELING ABNORMAL",
+      "count": 6
+    },
+    {
+      "term": "INJECTION SITE DISCOMFORT",
+      "count": 6
+    },
+    {
+      "term": "LOW DENSITY LIPOPROTEIN INCREASED",
+      "count": 6
+    },
+    {
+      "term": "NASOPHARYNGITIS",
+      "count": 6
+    },
+    {
+      "term": "ABDOMINAL PAIN",
+      "count": 5
+    },
+    {
+      "term": "ADVERSE EVENT",
+      "count": 5
+    },
+    {
+      "term": "ADVERSE REACTION",
+      "count": 5
+    },
+    {
+      "term": "CHEST DISCOMFORT",
+      "count": 5
+    },
+    {
+      "term": "CHEST PAIN",
+      "count": 5
+    },
+    {
+      "term": "INJECTION SITE NODULE",
+      "count": 5
+    },
+    {
+      "term": "NASAL CONGESTION",
+      "count": 5
+    },
+    {
+      "term": "PALPITATIONS",
+      "count": 5
+    },
+    {
+      "term": "TREMOR",
+      "count": 5
+    },
+    {
+      "term": "URTICARIA",
+      "count": 5
+    },
+    {
+      "term": "ADVERSE DRUG REACTION",
+      "count": 4
+    },
+    {
+      "term": "BLOOD CHOLESTEROL INCREASED",
+      "count": 4
+    },
+    {
+      "term": "BONE PAIN",
+      "count": 4
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 4
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 4
+    },
+    {
+      "term": "HYPERHIDROSIS",
+      "count": 4
+    },
+    {
+      "term": "HYPERSENSITIVITY",
+      "count": 4
+    },
+    {
+      "term": "INFLUENZA",
+      "count": 4
+    },
+    {
+      "term": "INJECTION SITE INDURATION",
+      "count": 4
+    },
+    {
+      "term": "INJECTION SITE URTICARIA",
+      "count": 4
+    },
+    {
+      "term": "OROPHARYNGEAL PAIN",
+      "count": 4
+    },
+    {
+      "term": "PETECHIAE",
+      "count": 4
+    },
+    {
+      "term": "RASH GENERALISED",
+      "count": 4
+    },
+    {
+      "term": "THERAPY CESSATION",
+      "count": 4
+    },
+    {
+      "term": "BLOOD PRESSURE INCREASED",
+      "count": 3
+    },
+    {
+      "term": "BRONCHITIS",
+      "count": 3
+    },
+    {
+      "term": "COUGH",
+      "count": 3
+    },
+    {
+      "term": "DRY MOUTH",
+      "count": 3
+    },
+    {
+      "term": "ERYTHEMA",
+      "count": 3
+    },
+    {
+      "term": "FALL",
+      "count": 3
+    },
+    {
+      "term": "FEELING COLD",
+      "count": 3
+    },
+    {
+      "term": "HIATUS HERNIA",
+      "count": 3
+    },
+    {
+      "term": "HYPERTENSION",
+      "count": 3
+    },
+    {
+      "term": "INJECTION SITE IRRITATION",
+      "count": 3
+    },
+    {
+      "term": "LIVER DISORDER",
+      "count": 3
+    },
+    {
+      "term": "MUSCLE TIGHTNESS",
+      "count": 3
+    },
+    {
+      "term": "MUSCULAR WEAKNESS",
+      "count": 3
+    },
+    {
+      "term": "MUSCULOSKELETAL PAIN",
+      "count": 3
+    },
+    {
+      "term": "MUSCULOSKELETAL STIFFNESS",
+      "count": 3
+    },
+    {
+      "term": "MYOCARDIAL INFARCTION",
+      "count": 3
+    },
+    {
+      "term": "NEEDLE ISSUE",
+      "count": 3
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 3
+    },
+    {
+      "term": "PAIN IN JAW",
+      "count": 3
+    },
+    {
+      "term": "PRODUCT QUALITY ISSUE",
+      "count": 3
+    },
+    {
+      "term": "PRURITUS GENERALISED",
+      "count": 3
+    },
+    {
+      "term": "RASH PAPULAR",
+      "count": 3
+    },
+    {
+      "term": "RASH PRURITIC",
+      "count": 3
+    },
+    {
+      "term": "RHINORRHOEA",
+      "count": 3
+    },
+    {
+      "term": "SNEEZING",
+      "count": 3
+    },
+    {
+      "term": "URINARY TRACT INFECTION",
+      "count": 3
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 3
+    },
+    {
+      "term": "AGEUSIA",
+      "count": 2
+    },
+    {
+      "term": "ANGINA PECTORIS",
+      "count": 2
+    },
+    {
+      "term": "BLOOD GLUCOSE DECREASED",
+      "count": 2
+    },
+    {
+      "term": "BLOOD GLUCOSE INCREASED",
+      "count": 2
+    },
+    {
+      "term": "BRONCHOSPASM",
+      "count": 2
+    },
+    {
+      "term": "BURNING SENSATION",
+      "count": 2
+    }
+  ]
+}

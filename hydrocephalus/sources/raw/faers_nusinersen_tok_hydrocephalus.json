@@ -1,0 +1,398 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "HYDROCEPHALUS",
+      "count": 22
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 7
+    },
+    {
+      "term": "RESPIRATORY FAILURE",
+      "count": 4
+    },
+    {
+      "term": "PYREXIA",
+      "count": 3
+    },
+    {
+      "term": "RESPIRATORY DISORDER",
+      "count": 3
+    },
+    {
+      "term": "ACUTE RESPIRATORY FAILURE",
+      "count": 2
+    },
+    {
+      "term": "CARDIO-RESPIRATORY ARREST",
+      "count": 2
+    },
+    {
+      "term": "CEREBRAL VENTRICLE DILATATION",
+      "count": 2
+    },
+    {
+      "term": "ENTEROVIRUS INFECTION",
+      "count": 2
+    },
+    {
+      "term": "LUNG DISORDER",
+      "count": 2
+    },
+    {
+      "term": "NEUROLOGICAL PROCEDURAL COMPLICATION",
+      "count": 2
+    },
+    {
+      "term": "RHINOVIRUS INFECTION",
+      "count": 2
+    },
+    {
+      "term": "SCOLIOSIS",
+      "count": 2
+    },
+    {
+      "term": "VOMITING",
+      "count": 2
+    },
+    {
+      "term": "ADENOVIRUS INFECTION",
+      "count": 1
+    },
+    {
+      "term": "ALANINE AMINOTRANSFERASE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "ANAEMIA",
+      "count": 1
+    },
+    {
+      "term": "ASPARTATE AMINOTRANSFERASE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "AUTISM SPECTRUM DISORDER",
+      "count": 1
+    },
+    {
+      "term": "BACILLUS INFECTION",
+      "count": 1
+    },
+    {
+      "term": "BACTERAEMIA",
+      "count": 1
+    },
+    {
+      "term": "BRADYCARDIA",
+      "count": 1
+    },
+    {
+      "term": "BRONCHIOLITIS",
+      "count": 1
+    },
+    {
+      "term": "CATHETER SITE THROMBOSIS",
+      "count": 1
+    },
+    {
+      "term": "CEREBRAL HAEMORRHAGE",
+      "count": 1
+    },
+    {
+      "term": "CHRONIC RESPIRATORY FAILURE",
+      "count": 1
+    },
+    {
+      "term": "CONDITION AGGRAVATED",
+      "count": 1
+    },
+    {
+      "term": "CORNEAL ABRASION",
+      "count": 1
+    },
+    {
+      "term": "DEFORMITY THORAX",
+      "count": 1
+    },
+    {
+      "term": "DEVICE DISLOCATION",
+      "count": 1
+    },
+    {
+      "term": "DEVICE MALFUNCTION",
+      "count": 1
+    },
+    {
+      "term": "DEVICE RELATED INFECTION",
+      "count": 1
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 1
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 1
+    },
+    {
+      "term": "DYSPHAGIA",
+      "count": 1
+    },
+    {
+      "term": "ENCEPHALITIS",
+      "count": 1
+    },
+    {
+      "term": "ENDOTRACHEAL INTUBATION COMPLICATION",
+      "count": 1
+    },
+    {
+      "term": "ESCHERICHIA INFECTION",
+      "count": 1
+    },
+    {
+      "term": "FATIGUE",
+      "count": 1
+    },
+    {
+      "term": "FOOT DEFORMITY",
+      "count": 1
+    },
+    {
+      "term": "GENERALISED OEDEMA",
+      "count": 1
+    },
+    {
+      "term": "HEAD CIRCUMFERENCE ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "HEART RATE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "HEPATIC RUPTURE",
+      "count": 1
+    },
+    {
+      "term": "HYPERLACTACIDAEMIA",
+      "count": 1
+    },
+    {
+      "term": "HYPERTENSIVE HYDROCEPHALUS",
+      "count": 1
+    },
+    {
+      "term": "HYPOALBUMINAEMIA",
+      "count": 1
+    },
+    {
+      "term": "HYPONATRAEMIA",
+      "count": 1
+    },
+    {
+      "term": "HYPOPROTEINAEMIA",
+      "count": 1
+    },
+    {
+      "term": "HYPOTONIA",
+      "count": 1
+    },
+    {
+      "term": "INAPPROPRIATE ANTIDIURETIC HORMONE SECRETION",
+      "count": 1
+    },
+    {
+      "term": "INFECTIVE THROMBOSIS",
+      "count": 1
+    },
+    {
+      "term": "INTRACRANIAL PRESSURE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "IRRITABILITY",
+      "count": 1
+    },
+    {
+      "term": "JOINT CONTRACTURE",
+      "count": 1
+    },
+    {
+      "term": "JOINT DISLOCATION",
+      "count": 1
+    },
+    {
+      "term": "KIDNEY INFECTION",
+      "count": 1
+    },
+    {
+      "term": "LOWER LIMB FRACTURE",
+      "count": 1
+    },
+    {
+      "term": "MALAISE",
+      "count": 1
+    },
+    {
+      "term": "MALNUTRITION",
+      "count": 1
+    },
+    {
+      "term": "MEDICAL DEVICE SITE HAEMORRHAGE",
+      "count": 1
+    },
+    {
+      "term": "MENINGITIS PNEUMOCOCCAL",
+      "count": 1
+    },
+    {
+      "term": "METABOLIC DISORDER",
+      "count": 1
+    },
+    {
+      "term": "MYOCARDITIS SEPTIC",
+      "count": 1
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 1
+    },
+    {
+      "term": "OTITIS MEDIA ACUTE",
+      "count": 1
+    },
+    {
+      "term": "PAPILLOEDEMA",
+      "count": 1
+    },
+    {
+      "term": "PAROXYSMAL SYMPATHETIC HYPERACTIVITY",
+      "count": 1
+    },
+    {
+      "term": "PERICARDITIS",
+      "count": 1
+    },
+    {
+      "term": "PNEUMONIA ESCHERICHIA",
+      "count": 1
+    },
+    {
+      "term": "POST PROCEDURAL OEDEMA",
+      "count": 1
+    },
+    {
+      "term": "PRESCRIBED OVERDOSE",
+      "count": 1
+    },
+    {
+      "term": "PROTEIN-LOSING GASTROENTEROPATHY",
+      "count": 1
+    },
+    {
+      "term": "REFEEDING SYNDROME",
+      "count": 1
+    },
+    {
+      "term": "RESPIRATORY SYNCYTIAL VIRUS BRONCHIOLITIS",
+      "count": 1
+    },
+    {
+      "term": "ROAD TRAFFIC ACCIDENT",
+      "count": 1
+    },
+    {
+      "term": "SALIVARY HYPERSECRETION",
+      "count": 1
+    },
+    {
+      "term": "SEIZURE",
+      "count": 1
+    },
+    {
+      "term": "SEPSIS",
+      "count": 1
+    },
+    {
+      "term": "SERRATIA INFECTION",
+      "count": 1
+    },
+    {
+      "term": "SHUNT INFECTION",
+      "count": 1
+    },
+    {
+      "term": "SKIN SWELLING",
+      "count": 1
+    },
+    {
+      "term": "SPINAL MUSCULAR ATROPHY",
+      "count": 1
+    },
+    {
+      "term": "SPUTUM INCREASED",
+      "count": 1
+    },
+    {
+      "term": "STAPHYLOCOCCAL INFECTION",
+      "count": 1
+    },
+    {
+      "term": "STATUS EPILEPTICUS",
+      "count": 1
+    },
+    {
+      "term": "STENOTROPHOMONAS INFECTION",
+      "count": 1
+    },
+    {
+      "term": "STREPTOCOCCAL BACTERAEMIA",
+      "count": 1
+    },
+    {
+      "term": "TACHYCARDIA",
+      "count": 1
+    },
+    {
+      "term": "THROMBOCYTOSIS",
+      "count": 1
+    },
+    {
+      "term": "THYROID DISORDER",
+      "count": 1
+    },
+    {
+      "term": "THYROID FUNCTION TEST ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "UPPER RESPIRATORY TRACT INFECTION",
+      "count": 1
+    },
+    {
+      "term": "URINE OUTPUT DECREASED",
+      "count": 1
+    },
+    {
+      "term": "VASCULITIS",
+      "count": 1
+    },
+    {
+      "term": "VERTEBRAL ARTERY STENOSIS",
+      "count": 1
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 1
+    }
+  ]
+}

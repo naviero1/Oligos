@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "URINE OXALATE INCREASED",
+      "count": 3
+    },
+    {
+      "term": "INAPPROPRIATE SCHEDULE OF PRODUCT ADMINISTRATION",
+      "count": 2
+    },
+    {
+      "term": "RASH",
+      "count": 2
+    },
+    {
+      "term": "ABDOMINAL PAIN",
+      "count": 1
+    },
+    {
+      "term": "AMENORRHOEA",
+      "count": 1
+    },
+    {
+      "term": "BONE PAIN",
+      "count": 1
+    },
+    {
+      "term": "DEATH",
+      "count": 1
+    },
+    {
+      "term": "DEHYDRATION",
+      "count": 1
+    },
+    {
+      "term": "DIABETES MELLITUS",
+      "count": 1
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 1
+    },
+    {
+      "term": "FEBRILE INFECTION",
+      "count": 1
+    },
+    {
+      "term": "HAEMOGLOBIN INCREASED",
+      "count": 1
+    },
+    {
+      "term": "HYPEROXALAEMIA",
+      "count": 1
+    },
+    {
+      "term": "HYPEROXALURIA",
+      "count": 1
+    },
+    {
+      "term": "INFLUENZA",
+      "count": 1
+    },
+    {
+      "term": "KIDNEY TRANSPLANT REJECTION",
+      "count": 1
+    },
+    {
+      "term": "LABORATORY TEST ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "LITHIASIS",
+      "count": 1
+    },
+    {
+      "term": "LIVER TRANSPLANT",
+      "count": 1
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 1
+    },
+    {
+      "term": "OXALOSIS",
+      "count": 1
+    },
+    {
+      "term": "PULMONARY OEDEMA",
+      "count": 1
+    },
+    {
+      "term": "RENAL IMPAIRMENT",
+      "count": 1
+    },
+    {
+      "term": "RENAL TRANSPLANT",
+      "count": 1
+    },
+    {
+      "term": "VIRAL INFECTION",
+      "count": 1
+    }
+  ]
+}

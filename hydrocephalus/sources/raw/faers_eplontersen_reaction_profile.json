@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "DEATH",
+      "count": 15
+    },
+    {
+      "term": "FATIGUE",
+      "count": 13
+    },
+    {
+      "term": "NEUROPATHY PERIPHERAL",
+      "count": 13
+    },
+    {
+      "term": "NAUSEA",
+      "count": 12
+    },
+    {
+      "term": "PAIN",
+      "count": 9
+    },
+    {
+      "term": "VOMITING",
+      "count": 7
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 6
+    },
+    {
+      "term": "HYPOAESTHESIA",
+      "count": 6
+    },
+    {
+      "term": "PAIN IN EXTREMITY",
+      "count": 6
+    },
+    {
+      "term": "PARAESTHESIA",
+      "count": 6
+    },
+    {
+      "term": "PRODUCT DOSE OMISSION ISSUE",
+      "count": 6
+    },
+    {
+      "term": "VISION BLURRED",
+      "count": 6
+    },
+    {
+      "term": "CONSTIPATION",
+      "count": 5
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 5
+    },
+    {
+      "term": "PRURITUS",
+      "count": 5
+    },
+    {
+      "term": "VITAMIN A DECREASED",
+      "count": 5
+    },
+    {
+      "term": "CARDIAC DISORDER",
+      "count": 4
+    },
+    {
+      "term": "DIZZINESS",
+      "count": 4
+    },
+    {
+      "term": "MALAISE",
+      "count": 4
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 4
+    },
+    {
+      "term": "ABDOMINAL DISCOMFORT",
+      "count": 3
+    },
+    {
+      "term": "AMYLOIDOSIS",
+      "count": 3
+    },
+    {
+      "term": "ANAEMIA",
+      "count": 3
+    },
+    {
+      "term": "ARTHRALGIA",
+      "count": 3
+    },
+    {
+      "term": "ASCITES",
+      "count": 3
+    },
+    {
+      "term": "BURNING SENSATION",
+      "count": 3
+    },
+    {
+      "term": "CONFUSIONAL STATE",
+      "count": 3
+    },
+    {
+      "term": "DISEASE PROGRESSION",
+      "count": 3
+    },
+    {
+      "term": "FALL",
+      "count": 3
+    },
+    {
+      "term": "FEELING ABNORMAL",
+      "count": 3
+    },
+    {
+      "term": "GASTROOESOPHAGEAL REFLUX DISEASE",
+      "count": 3
+    },
+    {
+      "term": "HAEMATURIA",
+      "count": 3
+    },
+    {
+      "term": "MEMORY IMPAIRMENT",
+      "count": 3
+    },
+    {
+      "term": "THROMBOSIS",
+      "count": 3
+    },
+    {
+      "term": "ABDOMINAL PAIN UPPER",
+      "count": 2
+    },
+    {
+      "term": "ACQUIRED ATTR AMYLOIDOSIS",
+      "count": 2
+    },
+    {
+      "term": "APHASIA",
+      "count": 2
+    },
+    {
+      "term": "BLOOD PRESSURE DECREASED",
+      "count": 2
+    },
+    {
+      "term": "CARDIAC FAILURE",
+      "count": 2
+    },
+    {
+      "term": "DEHYDRATION",
+      "count": 2
+    },
+    {
+      "term": "DEVICE MALFUNCTION",
+      "count": 2
+    },
+    {
+      "term": "DYSURIA",
+      "count": 2
+    },
+    {
+      "term": "GASTROINTESTINAL DISORDER",
+      "count": 2
+    },
+    {
+      "term": "GENERAL PHYSICAL CONDITION ABNORMAL",
+      "count": 2
+    },
+    {
+      "term": "HEPATIC LESION",
+      "count": 2
+    },
+    {
+      "term": "HYPERSENSITIVITY",
+      "count": 2
+    },
+    {
+      "term": "ILLNESS",
+      "count": 2
+    },
+    {
+      "term": "INAPPROPRIATE SCHEDULE OF PRODUCT ADMINISTRATION",
+      "count": 2
+    },
+    {
+      "term": "INFECTION",
+      "count": 2
+    },
+    {
+      "term": "INFLUENZA",
+      "count": 2
+    },
+    {
+      "term": "INJECTION SITE HAEMORRHAGE",
+      "count": 2
+    },
+    {
+      "term": "JOINT SWELLING",
+      "count": 2
+    },
+    {
+      "term": "LIGAMENT SPRAIN",
+      "count": 2
+    },
+    {
+      "term": "LIMB DISCOMFORT",
+      "count": 2
+    },
+    {
+      "term": "MUSCLE SPASMS",
+      "count": 2
+    },
+    {
+      "term": "MUSCULAR WEAKNESS",
+      "count": 2
+    },
+    {
+      "term": "MUSCULOSKELETAL PAIN",
+      "count": 2
+    },
+    {
+      "term": "NEEDLE ISSUE",
+      "count": 2
+    },
+    {
+      "term": "NEURALGIA",
+      "count": 2
+    },
+    {
+      "term": "PERIPHERAL SWELLING",
+      "count": 2
+    },
+    {
+      "term": "PLEURAL EFFUSION",
+      "count": 2
+    },
+    {
+      "term": "PRODUCT PACKAGING QUANTITY ISSUE",
+      "count": 2
+    },
+    {
+      "term": "RASH",
+      "count": 2
+    },
+    {
+      "term": "SYNCOPE",
+      "count": 2
+    },
+    {
+      "term": "URINARY TRACT INFECTION",
+      "count": 2
+    },
+    {
+      "term": "ABDOMINAL DISTENSION",
+      "count": 1
+    },
+    {
+      "term": "ACUTE KIDNEY INJURY",
+      "count": 1
+    },
+    {
+      "term": "ADVERSE EVENT",
+      "count": 1
+    },
+    {
+      "term": "AMYLOID ARTHROPATHY",
+      "count": 1
+    },
+    {
+      "term": "ANALGESIC THERAPY",
+      "count": 1
+    },
+    {
+      "term": "ANORECTAL DISCOMFORT",
+      "count": 1
+    },
+    {
+      "term": "ARTERY DISSECTION",
+      "count": 1
+    },
+    {
+      "term": "ARTHROPATHY",
+      "count": 1
+    },
+    {
+      "term": "ASPIRATION",
+      "count": 1
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 1
+    },
+    {
+      "term": "ATRIAL FIBRILLATION",
+      "count": 1
+    },
+    {
+      "term": "BACK PAIN",
+      "count": 1
+    },
+    {
+      "term": "BALANCE DISORDER",
+      "count": 1
+    },
+    {
+      "term": "BLADDER DISORDER",
+      "count": 1
+    },
+    {
+      "term": "BLOOD ALBUMIN INCREASED",
+      "count": 1
+    },
+    {
+      "term": "BLOOD GLUCOSE INCREASED",
+      "count": 1
+    },
+    {
+      "term": "BODY MASS INDEX ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "BONE CONTUSION",
+      "count": 1
+    },
+    {
+      "term": "BRAIN NEOPLASM BENIGN",
+      "count": 1
+    },
+    {
+      "term": "BREAST CANCER FEMALE",
+      "count": 1
+    },
+    {
+      "term": "CARDIAC DISCOMFORT",
+      "count": 1
+    },
+    {
+      "term": "CELLULITIS",
+      "count": 1
+    },
+    {
+      "term": "CEREBRAL INFARCTION",
+      "count": 1
+    },
+    {
+      "term": "CHEST PAIN",
+      "count": 1
+    },
+    {
+      "term": "CHILLS",
+      "count": 1
+    },
+    {
+      "term": "COGNITIVE DISORDER",
+      "count": 1
+    },
+    {
+      "term": "CONDITION AGGRAVATED",
+      "count": 1
+    },
+    {
+      "term": "CRANIAL NERVE PARALYSIS",
+      "count": 1
+    },
+    {
+      "term": "CYST",
+      "count": 1
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 1
+    },
+    {
+      "term": "DEEP VEIN THROMBOSIS",
+      "count": 1
+    },
+    {
+      "term": "DEPRESSION",
+      "count": 1
+    },
+    {
+      "term": "DEVICE BREAKAGE",
+      "count": 1
+    },
+    {
+      "term": "DEVICE LEAKAGE",
+      "count": 1
+    },
+    {
+      "term": "DEVICE RELATED INFECTION",
+      "count": 1
+    }
+  ]
+}

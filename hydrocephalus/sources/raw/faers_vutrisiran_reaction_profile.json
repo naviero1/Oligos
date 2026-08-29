@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "DEATH",
+      "count": 501
+    },
+    {
+      "term": "HOSPITALISATION",
+      "count": 311
+    },
+    {
+      "term": "INTENTIONAL DOSE OMISSION",
+      "count": 201
+    },
+    {
+      "term": "PRODUCT DOSE OMISSION ISSUE",
+      "count": 133
+    },
+    {
+      "term": "FALL",
+      "count": 115
+    },
+    {
+      "term": "FATIGUE",
+      "count": 100
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 85
+    },
+    {
+      "term": "THERAPY INTERRUPTED",
+      "count": 85
+    },
+    {
+      "term": "CARDIAC FAILURE",
+      "count": 78
+    },
+    {
+      "term": "GAIT DISTURBANCE",
+      "count": 75
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 68
+    },
+    {
+      "term": "PAIN IN EXTREMITY",
+      "count": 68
+    },
+    {
+      "term": "ARTHRALGIA",
+      "count": 67
+    },
+    {
+      "term": "ATRIAL FIBRILLATION",
+      "count": 63
+    },
+    {
+      "term": "PAIN",
+      "count": 60
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 56
+    },
+    {
+      "term": "UNEVALUABLE EVENT",
+      "count": 54
+    },
+    {
+      "term": "DIZZINESS",
+      "count": 53
+    },
+    {
+      "term": "ILL-DEFINED DISORDER",
+      "count": 52
+    },
+    {
+      "term": "MALAISE",
+      "count": 51
+    },
+    {
+      "term": "NEUROPATHY PERIPHERAL",
+      "count": 50
+    },
+    {
+      "term": "PERIPHERAL SWELLING",
+      "count": 50
+    },
+    {
+      "term": "CEREBROVASCULAR ACCIDENT",
+      "count": 48
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 46
+    },
+    {
+      "term": "CARDIAC DISORDER",
+      "count": 42
+    },
+    {
+      "term": "CONDITION AGGRAVATED",
+      "count": 41
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 39
+    },
+    {
+      "term": "HYPOAESTHESIA",
+      "count": 39
+    },
+    {
+      "term": "URINARY TRACT INFECTION",
+      "count": 37
+    },
+    {
+      "term": "DISEASE PROGRESSION",
+      "count": 36
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 36
+    },
+    {
+      "term": "BALANCE DISORDER",
+      "count": 35
+    },
+    {
+      "term": "GENERAL PHYSICAL HEALTH DETERIORATION",
+      "count": 35
+    },
+    {
+      "term": "NAUSEA",
+      "count": 33
+    },
+    {
+      "term": "THERAPEUTIC RESPONSE SHORTENED",
+      "count": 32
+    },
+    {
+      "term": "ILLNESS",
+      "count": 31
+    },
+    {
+      "term": "BACK PAIN",
+      "count": 30
+    },
+    {
+      "term": "SURGERY",
+      "count": 30
+    },
+    {
+      "term": "MUSCULAR WEAKNESS",
+      "count": 28
+    },
+    {
+      "term": "VOMITING",
+      "count": 28
+    },
+    {
+      "term": "LOSS OF CONSCIOUSNESS",
+      "count": 27
+    },
+    {
+      "term": "MOBILITY DECREASED",
+      "count": 27
+    },
+    {
+      "term": "CARDIAC FAILURE CONGESTIVE",
+      "count": 26
+    },
+    {
+      "term": "HYPOTENSION",
+      "count": 26
+    },
+    {
+      "term": "HEART TRANSPLANT",
+      "count": 25
+    },
+    {
+      "term": "MUSCLE SPASMS",
+      "count": 25
+    },
+    {
+      "term": "PARAESTHESIA",
+      "count": 25
+    },
+    {
+      "term": "HEADACHE",
+      "count": 24
+    },
+    {
+      "term": "SYNCOPE",
+      "count": 24
+    },
+    {
+      "term": "CONSTIPATION",
+      "count": 22
+    },
+    {
+      "term": "DEHYDRATION",
+      "count": 22
+    },
+    {
+      "term": "COVID-19",
+      "count": 21
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 21
+    },
+    {
+      "term": "FLUID RETENTION",
+      "count": 21
+    },
+    {
+      "term": "OEDEMA PERIPHERAL",
+      "count": 21
+    },
+    {
+      "term": "RENAL FAILURE",
+      "count": 21
+    },
+    {
+      "term": "THERAPY CESSATION",
+      "count": 21
+    },
+    {
+      "term": "SPINAL OPERATION",
+      "count": 20
+    },
+    {
+      "term": "VISION BLURRED",
+      "count": 20
+    },
+    {
+      "term": "GASTROINTESTINAL DISORDER",
+      "count": 18
+    },
+    {
+      "term": "HIP FRACTURE",
+      "count": 18
+    },
+    {
+      "term": "SOMNOLENCE",
+      "count": 18
+    },
+    {
+      "term": "CARPAL TUNNEL SYNDROME",
+      "count": 17
+    },
+    {
+      "term": "DEMENTIA",
+      "count": 17
+    },
+    {
+      "term": "KNEE ARTHROPLASTY",
+      "count": 17
+    },
+    {
+      "term": "MYALGIA",
+      "count": 17
+    },
+    {
+      "term": "RENAL DISORDER",
+      "count": 17
+    },
+    {
+      "term": "ARRHYTHMIA",
+      "count": 16
+    },
+    {
+      "term": "BLOOD PRESSURE INCREASED",
+      "count": 16
+    },
+    {
+      "term": "CARDIAC PACEMAKER INSERTION",
+      "count": 16
+    },
+    {
+      "term": "HYPERVOLAEMIA",
+      "count": 16
+    },
+    {
+      "term": "MEMORY IMPAIRMENT",
+      "count": 16
+    },
+    {
+      "term": "PRURITUS",
+      "count": 16
+    },
+    {
+      "term": "RASH",
+      "count": 16
+    },
+    {
+      "term": "RENAL IMPAIRMENT",
+      "count": 16
+    },
+    {
+      "term": "CATARACT",
+      "count": 15
+    },
+    {
+      "term": "CHEST PAIN",
+      "count": 15
+    },
+    {
+      "term": "GAIT INABILITY",
+      "count": 15
+    },
+    {
+      "term": "GLAUCOMA",
+      "count": 15
+    },
+    {
+      "term": "LIMB DISCOMFORT",
+      "count": 15
+    },
+    {
+      "term": "VISUAL IMPAIRMENT",
+      "count": 15
+    },
+    {
+      "term": "CARDIAC ARREST",
+      "count": 14
+    },
+    {
+      "term": "INAPPROPRIATE SCHEDULE OF PRODUCT ADMINISTRATION",
+      "count": 14
+    },
+    {
+      "term": "INSOMNIA",
+      "count": 14
+    },
+    {
+      "term": "MYOCARDIAL INFARCTION",
+      "count": 14
+    },
+    {
+      "term": "NIGHT BLINDNESS",
+      "count": 14
+    },
+    {
+      "term": "ABDOMINAL DISCOMFORT",
+      "count": 13
+    },
+    {
+      "term": "COUGH",
+      "count": 13
+    },
+    {
+      "term": "FEELING ABNORMAL",
+      "count": 13
+    },
+    {
+      "term": "INFECTION",
+      "count": 13
+    },
+    {
+      "term": "INJECTION SITE PAIN",
+      "count": 13
+    },
+    {
+      "term": "PROSTATE CANCER",
+      "count": 13
+    },
+    {
+      "term": "SEPSIS",
+      "count": 13
+    },
+    {
+      "term": "VITAMIN A DECREASED",
+      "count": 13
+    },
+    {
+      "term": "ADVERSE DRUG REACTION",
+      "count": 12
+    },
+    {
+      "term": "ARTHRITIS",
+      "count": 12
+    },
+    {
+      "term": "DRUG EFFECT LESS THAN EXPECTED",
+      "count": 12
+    },
+    {
+      "term": "FEMUR FRACTURE",
+      "count": 12
+    },
+    {
+      "term": "PULMONARY OEDEMA",
+      "count": 12
+    },
+    {
+      "term": "THROMBOSIS",
+      "count": 12
+    }
+  ]
+}

@@ -1,0 +1,316 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 7655
+    }
+  },
+  "results": [
+    {
+      "safetyreportversion": "1",
+      "safetyreportid": "13059796",
+      "occurcountry": "ES",
+      "transmissiondateformat": "102",
+      "transmissiondate": "20170207",
+      "reporttype": "2",
+      "serious": "1",
+      "seriousnesshospitalization": "1",
+      "receivedateformat": "102",
+      "receivedate": "20161223",
+      "receiptdateformat": "102",
+      "receiptdate": "20161223",
+      "fulfillexpeditecriteria": "1",
+      "companynumb": "ES-ABBVIE-16P-144-1818827-00",
+      "duplicate": "1",
+      "reportduplicate": {
+        "duplicatesource": "ABBVIE",
+        "duplicatenumb": "ES-ABBVIE-16P-144-1818827-00"
+      },
+      "primarysource": {
+        "reportercountry": "ES",
+        "qualification": "5"
+      },
+      "sender": {
+        "sendertype": "2",
+        "senderorganization": "FDA-Public Use"
+      },
+      "receiver": {
+        "receivertype": "6",
+        "receiverorganization": "FDA"
+      },
+      "patient": {
+        "patientonsetage": "5",
+        "patientonsetageunit": "801",
+        "patientweight": "10.9",
+        "patientsex": "2",
+        "reaction": [
+          {
+            "reactionmeddraversionpt": "19.1",
+            "reactionmeddrapt": "Atelectasis",
+            "reactionoutcome": "6"
+          },
+          {
+            "reactionmeddraversionpt": "19.1",
+            "reactionmeddrapt": "Oxygen saturation decreased",
+            "reactionoutcome": "1"
+          },
+          {
+            "reactionmeddraversionpt": "19.1",
+            "reactionmeddrapt": "Secretion discharge",
+            "reactionoutcome": "3"
+          },
+          {
+            "reactionmeddraversionpt": "19.1",
+            "reactionmeddrapt": "Vomiting",
+            "reactionoutcome": "6"
+          },
+          {
+            "reactionmeddraversionpt": "19.1",
+            "reactionmeddrapt": "Pyrexia",
+            "reactionoutcome": "1"
+          }
+        ],
+        "drug": [
+          {
+            "drugcharacterization": "1",
+            "medicinalproduct": "SYNAGIS",
+            "drugbatchnumb": "NOT AVAILABLE,NOT AVILABLE",
+            "drugseparatedosagenumb": "1",
+            "drugintervaldosageunitnumb": "1",
+            "drugintervaldosagedefinition": "802",
+            "drugdosageform": "SOLUTION FOR INJECTION",
+            "drugadministrationroute": "030",
+            "drugindication": "ANTIVIRAL PROPHYLAXIS",
+            "drugstartdateformat": "102",
+            "drugstartdate": "20161110",
+            "drugenddateformat": "102",
+            "drugenddate": "20161110",
+            "actiondrug": "4",
+            "activesubstance": {
+              "activesubstancename": "PALIVIZUMAB"
+            },
+            "openfda": {
+              "application_number": [
+                "BLA103770"
+              ],
+              "brand_name": [
+                "SYNAGIS"
+              ],
+              "generic_name": [
+                "PALIVIZUMAB"
+              ],
+              "manufacturer_name": [
+                "Swedish Orphan Biovitrum AB (publ)"
+              ],
+              "product_ndc": [
+                "66658-230",
+                "66658-231"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "INTRAMUSCULAR"
+              ],
+              "substance_name": [
+                "PALIVIZUMAB"
+              ],
+              "rxcui": [
+                "1657341",
+                "1657343",
+                "1657361",
+                "1657362"
+              ],
+              "spl_id": [
+                "48e6af70-cd93-3f1d-e063-6394a90a8104"
+              ],
+              "spl_set_id": [
+                "3a0096c7-8139-44cd-bba4-520ab05c2cb2"
+              ],
+              "package_ndc": [
+                "66658-231-01",
+                "66658-230-01"
+              ],
+              "nui": [
+                "M0001357",
+                "N0000175615",
+                "N0000175623"
+              ],
+              "pharm_class_cs": [
+                "Antibodies, Monoclonal [CS]"
+              ],
+              "pharm_class_moa": [
+                "Fusion Protein Inhibitors [MoA]"
+              ],
+              "pharm_class_epc": [
+                "Respiratory Syncytial Virus Anti-F Protein Monoclonal Antibody [EPC]"
+              ],
+              "unii": [
+                "DQ448MW7KS"
+              ]
+            }
+          },
+          {
+            "drugcharacterization": "2",
+            "medicinalproduct": "NUSINERSEN",
+            "drugindication": "MUSCLE ATROPHY",
+            "drugstartdateformat": "602",
+            "drugstartdate": "2011",
+            "openfda": {
+              "application_number": [
+                "NDA209531"
+              ],
+              "brand_name": [
+                "SPINRAZA"
+              ],
+              "generic_name": [
+                "NUSINERSEN"
+              ],
+              "manufacturer_name": [
+                "Biogen Inc."
+              ],
+              "product_ndc": [
+                "64406-036",
+                "64406-058",
+                "64406-037"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "INTRATHECAL"
+              ],
+              "substance_name": [
+                "NUSINERSEN"
+              ],
+              "rxcui": [
+                "1863560",
+                "1863565",
+                "2739995",
+                "2739998",
+                "2740001",
+                "2740004"
+              ],
+              "spl_id": [
+                "cb572584-c0fd-42aa-b6d1-6dd8260028b5"
+              ],
+              "spl_set_id": [
+                "dd70cd5f-b0fc-4ba4-a5ea-89a34778bd94"
+              ],
+              "package_ndc": [
+                "64406-058-01",
+                "64406-036-01",
+                "64406-037-01"
+              ],
+              "nui": [
+                "N0000193222",
+                "N0000191626",
+                "M0025055",
+                "N0000009533"
+              ],
+              "pharm_class_epc": [
+                "Survival Motor Neuron-2-directed RNA Interaction [EPC]",
+                "Antisense Oligonucleotide [EPC]"
+              ],
+              "pharm_class_cs": [
+                "Oligonucleotides, Antisense [CS]"
+              ],
+              "pharm_class_pe": [
+                "Increased Protein Synthesis [PE]"
+              ],
+              "unii": [
+                "5Z9SP3X666"
+              ]
+            }
+          },
+          {
+            "drugcharacterization": "1",
+            "medicinalproduct": "SYNAGIS",
+            "drugbatchnumb": "NOT AVAILABLE,NOT AVILABLE",
+            "drugseparatedosagenumb": "1",
+            "drugintervaldosageunitnumb": "1",
+            "drugintervaldosagedefinition": "802",
+            "drugdosageform": "SOLUTION FOR INJECTION",
+            "drugadministrationroute": "030",
+            "drugstartdateformat": "102",
+            "drugstartdate": "20161201",
+            "drugenddateformat": "102",
+            "drugenddate": "20161201",
+            "actiondrug": "4",
+            "activesubstance": {
+              "activesubstancename": "PALIVIZUMAB"
+            },
+            "openfda": {
+              "application_number": [
+                "BLA103770"
+              ],
+              "brand_name": [
+                "SYNAGIS"
+              ],
+              "generic_name": [
+                "PALIVIZUMAB"
+              ],
+              "manufacturer_name": [
+                "Swedish Orphan Biovitrum AB (publ)"
+              ],
+              "product_ndc": [
+                "66658-230",
+                "66658-231"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "INTRAMUSCULAR"
+              ],
+              "substance_name": [
+                "PALIVIZUMAB"
+              ],
+              "rxcui": [
+                "1657341",
+                "1657343",
+                "1657361",
+                "1657362"
+              ],
+              "spl_id": [
+                "48e6af70-cd93-3f1d-e063-6394a90a8104"
+              ],
+              "spl_set_id": [
+                "3a0096c7-8139-44cd-bba4-520ab05c2cb2"
+              ],
+              "package_ndc": [
+                "66658-231-01",
+                "66658-230-01"
+              ],
+              "nui": [
+                "M0001357",
+                "N0000175615",
+                "N0000175623"
+              ],
+              "pharm_class_cs": [
+                "Antibodies, Monoclonal [CS]"
+              ],
+              "pharm_class_moa": [
+                "Fusion Protein Inhibitors [MoA]"
+              ],
+              "pharm_class_epc": [
+                "Respiratory Syncytial Virus Anti-F Protein Monoclonal Antibody [EPC]"
+              ],
+              "unii": [
+                "DQ448MW7KS"
+              ]
+            }
+          }
+        ],
+        "summary": {
+          "narrativeincludeclinical": "CASE EVENT DATE: 20161206"
+        }
+      }
+    }
+  ]
+}

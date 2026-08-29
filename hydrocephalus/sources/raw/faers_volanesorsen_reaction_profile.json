@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "INJECTION SITE PAIN",
+      "count": 2
+    },
+    {
+      "term": "INJECTION SITE REACTION",
+      "count": 2
+    },
+    {
+      "term": "RASH MACULAR",
+      "count": 2
+    },
+    {
+      "term": "ABDOMINAL DISCOMFORT",
+      "count": 1
+    },
+    {
+      "term": "ADVERSE DRUG REACTION",
+      "count": 1
+    },
+    {
+      "term": "ADVERSE REACTION",
+      "count": 1
+    },
+    {
+      "term": "ALCOHOL USE",
+      "count": 1
+    },
+    {
+      "term": "ARTHRALGIA",
+      "count": 1
+    },
+    {
+      "term": "CONTUSION",
+      "count": 1
+    },
+    {
+      "term": "FEELING ABNORMAL",
+      "count": 1
+    },
+    {
+      "term": "INJECTION SITE BRUISING",
+      "count": 1
+    },
+    {
+      "term": "INJECTION SITE INDURATION",
+      "count": 1
+    },
+    {
+      "term": "MALAISE",
+      "count": 1
+    },
+    {
+      "term": "POOR QUALITY SLEEP",
+      "count": 1
+    },
+    {
+      "term": "SKIN INDURATION",
+      "count": 1
+    },
+    {
+      "term": "VOMITING",
+      "count": 1
+    }
+  ]
+}

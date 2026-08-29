@@ -1,0 +1,1081 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 3
+    }
+  },
+  "results": [
+    {
+      "safetyreportversion": "3",
+      "safetyreportid": "22120933",
+      "primarysourcecountry": "IN",
+      "occurcountry": "IN",
+      "transmissiondateformat": "102",
+      "transmissiondate": "20230721",
+      "reporttype": "2",
+      "serious": "1",
+      "seriousnessdeath": "2",
+      "seriousnesslifethreatening": "2",
+      "seriousnesshospitalization": "1",
+      "seriousnessdisabling": "2",
+      "seriousnesscongenitalanomali": "2",
+      "seriousnessother": "2",
+      "receivedateformat": "102",
+      "receivedate": "20230321",
+      "receiptdateformat": "102",
+      "receiptdate": "20230605",
+      "fulfillexpeditecriteria": "1",
+      "companynumb": "IN-SAREPTA THERAPEUTICS INC.-SRP2023-003140",
+      "primarysource": {
+        "reportercountry": "IN",
+        "qualification": "1"
+      },
+      "sender": {
+        "sendertype": "2",
+        "senderorganization": "FDA-Public Use"
+      },
+      "receiver": {
+        "receivertype": "6",
+        "receiverorganization": "FDA"
+      },
+      "patient": {
+        "reaction": [
+          {
+            "reactionmeddraversionpt": "26.0",
+            "reactionmeddrapt": "Meningitis aseptic",
+            "reactionoutcome": "1"
+          }
+        ],
+        "drug": [
+          {
+            "drugcharacterization": "1",
+            "medicinalproduct": "ETEPLIRSEN",
+            "drugbatchnumb": "N195535-0035L001/N195535-0029L001",
+            "drugauthorizationnumb": "206488",
+            "drugstructuredosagenumb": "100",
+            "drugstructuredosageunit": "007",
+            "drugdosagetext": "100 MILLIGRAM/KILOGRAM, WEEKLY",
+            "drugdosageform": "Intravenous infusion",
+            "drugadministrationroute": "042",
+            "drugindication": "Duchenne muscular dystrophy",
+            "drugstartdateformat": "102",
+            "drugstartdate": "20230111",
+            "drugenddateformat": "102",
+            "drugenddate": "20230302",
+            "drugtreatmentduration": "51",
+            "drugtreatmentdurationunit": "804",
+            "drugrecurreadministration": "3",
+            "activesubstance": {
+              "activesubstancename": "ETEPLIRSEN"
+            },
+            "openfda": {
+              "application_number": [
+                "NDA206488"
+              ],
+              "brand_name": [
+                "EXONDYS 51"
+              ],
+              "generic_name": [
+                "ETEPLIRSEN"
+              ],
+              "manufacturer_name": [
+                "Sarepta Therapeutics, Inc."
+              ],
+              "product_ndc": [
+                "60923-284",
+                "60923-363"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "INTRAVENOUS"
+              ],
+              "substance_name": [
+                "ETEPLIRSEN"
+              ],
+              "rxcui": [
+                "1810573",
+                "1810578",
+                "1810581",
+                "1810582"
+              ],
+              "spl_id": [
+                "97565339-f295-43ab-98a9-bb6bdf2d049c"
+              ],
+              "spl_set_id": [
+                "33bff678-7829-479e-9110-b8e33a0bc0aa"
+              ],
+              "package_ndc": [
+                "60923-363-02",
+                "60923-284-10"
+              ],
+              "nui": [
+                "N0000191626",
+                "M0025055"
+              ],
+              "pharm_class_epc": [
+                "Antisense Oligonucleotide [EPC]"
+              ],
+              "pharm_class_cs": [
+                "Oligonucleotides, Antisense [CS]"
+              ],
+              "unii": [
+                "AIW6036FAS"
+              ]
+            }
+          },
+          {
+            "drugcharacterization": "1",
+            "medicinalproduct": "ETEPLIRSEN",
+            "drugbatchnumb": "N195535-0035L001/N195535-0029L001",
+            "drugauthorizationnumb": "206488",
+            "drugstructuredosagenumb": "100",
+            "drugstructuredosageunit": "007",
+            "drugdosagetext": "100 MILLIGRAM/KILOGRAM, WEEKLY",
+            "drugdosageform": "Intravenous infusion",
+            "drugadministrationroute": "042",
+            "drugstartdateformat": "102",
+            "drugstartdate": "20230315",
+            "drugrecurreadministration": "3",
+            "activesubstance": {
+              "activesubstancename": "ETEPLIRSEN"
+            },
+            "openfda": {
+              "application_number": [
+                "NDA206488"
+              ],
+              "brand_name": [
+                "EXONDYS 51"
+              ],
+              "generic_name": [
+                "ETEPLIRSEN"
+              ],
+              "manufacturer_name": [
+                "Sarepta Therapeutics, Inc."
+              ],
+              "product_ndc": [
+                "60923-284",
+                "60923-363"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "INTRAVENOUS"
+              ],
+              "substance_name": [
+                "ETEPLIRSEN"
+              ],
+              "rxcui": [
+                "1810573",
+                "1810578",
+                "1810581",
+                "1810582"
+              ],
+              "spl_id": [
+                "97565339-f295-43ab-98a9-bb6bdf2d049c"
+              ],
+              "spl_set_id": [
+                "33bff678-7829-479e-9110-b8e33a0bc0aa"
+              ],
+              "package_ndc": [
+                "60923-363-02",
+                "60923-284-10"
+              ],
+              "nui": [
+                "N0000191626",
+                "M0025055"
+              ],
+              "pharm_class_epc": [
+                "Antisense Oligonucleotide [EPC]"
+              ],
+              "pharm_class_cs": [
+                "Oligonucleotides, Antisense [CS]"
+              ],
+              "unii": [
+                "AIW6036FAS"
+              ]
+            }
+          },
+          {
+            "drugcharacterization": "2",
+            "medicinalproduct": "PREDNISOLONE",
+            "drugstructuredosagenumb": "0.75",
+            "drugstructuredosageunit": "007",
+            "drugseparatedosagenumb": "1",
+            "drugintervaldosageunitnumb": "1",
+            "drugintervaldosagedefinition": "804",
+            "drugdosagetext": "0.75 MILLIGRAM/KILOGRAM, QD",
+            "drugadministrationroute": "048",
+            "drugindication": "Duchenne muscular dystrophy",
+            "drugstartdateformat": "102",
+            "drugstartdate": "20220405",
+            "activesubstance": {
+              "activesubstancename": "PREDNISOLONE"
+            },
+            "openfda": {
+              "application_number": [
+                "ANDA080531",
+                "ANDA040571",
+                "ANDA215673",
+                "ANDA040323",
+                "ANDA219509",
+                "ANDA218083",
+                "ANDA040775"
+              ],
+              "brand_name": [
+                "PREDNISOLONE"
+              ],
+              "generic_name": [
+                "PREDNISOLONE",
+                "PREDNISOLONE ORAL",
+                "PREDNISOLONE ORAL SOLUTION"
+              ],
+              "manufacturer_name": [
+                "Chartwell RX, LLC",
+                "PAI Holdings, LLC dba PAI Pharma",
+                "Aurobindo Pharma Limited",
+                "Tulex Pharmaceuticals Inc",
+                "Zhejiang Xianju Pharmaceutical Co., Ltd.",
+                "Hisun Pharmaceuticals USA, Inc.",
+                "Lannett Company, Inc.",
+                "Heritage Pharma Labs Inc. d/b/a Avet Pharmaceuticals Labs Inc.",
+                "Chartwell Governmental & Specialty RX, LLC."
+              ],
+              "product_ndc": [
+                "62135-437",
+                "0121-0885",
+                "59651-491",
+                "62135-250",
+                "70404-077",
+                "60722-5011",
+                "42658-160",
+                "0527-5406",
+                "23155-927",
+                "68999-250"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "substance_name": [
+                "PREDNISOLONE"
+              ],
+              "rxcui": [
+                "198142",
+                "283077"
+              ],
+              "spl_id": [
+                "1b180b1a-f4e2-e1ee-e063-6294a90adc05",
+                "1166b85b-73c5-4a8f-bc41-f99b406d0ff5",
+                "c535b93f-b31f-411f-848c-b5e6782f321f",
+                "19febba3-956f-d1a9-e063-6394a90afda5",
+                "561d8c9c-b67f-7fb2-e063-6394a90a0316",
+                "da9dfcf4-1631-4923-9536-72c27fc0b307",
+                "9f93400d-a8c0-435a-ad65-48717cc455cf",
+                "5122ba73-5783-49f0-9b9c-a03d59d8899c",
+                "d2e4ebab-8c9d-44cb-b665-293007f7e058",
+                "43e3bba6-a836-f5e7-e063-6294a90a10e4"
+              ],
+              "spl_set_id": [
+                "2e965355-f7f2-4dd3-9c5c-1524c6f39c91",
+                "cebd7b5b-8e9f-4de9-9fcf-8ee0661fede3",
+                "070f1937-50a5-457f-bef5-4e597014e26d",
+                "aa40f582-cced-4e6e-90f0-10ab310ab2a7",
+                "757b41c4-a0fe-4a09-8816-a4cdb7558f41",
+                "52e6e21d-94b8-41a0-8d13-371c0e66bcee",
+                "16d4e064-66d3-4497-8c7d-3aa355f91e1d",
+                "86652e2d-664a-4388-a611-c2a9aa4a4bc8",
+                "b079834f-9aa3-4db9-bd53-de28e8f81c04",
+                "2dac9898-6492-4f34-ad86-83a902e0fe0b"
+              ],
+              "package_ndc": [
+                "62135-437-30",
+                "0121-0885-08",
+                "0121-0885-16",
+                "59651-491-50",
+                "59651-491-01",
+                "62135-250-37",
+                "62135-250-47",
+                "62135-250-45",
+                "62135-250-24",
+                "70404-077-14",
+                "70404-077-16",
+                "60722-5011-0",
+                "60722-5011-1",
+                "42658-160-05",
+                "0527-5406-68",
+                "0527-5406-70",
+                "23155-927-51",
+                "23155-927-52",
+                "68999-250-45",
+                "68999-250-24"
+              ],
+              "nui": [
+                "N0000175576",
+                "N0000175450"
+              ],
+              "pharm_class_epc": [
+                "Corticosteroid [EPC]"
+              ],
+              "pharm_class_moa": [
+                "Corticosteroid Hormone Receptor Agonists [MoA]"
+              ],
+              "unii": [
+                "9PHQ9Y1OLM"
+              ]
+            }
+          },
+          {
+            "drugcharacterization": "2",
+            "medicinalproduct": "PREDNISOLONE",
+            "drugstructuredosagenumb": "0.5",
+            "drugstructuredosageunit": "007",
+            "drugseparatedosagenumb": "1",
+            "drugintervaldosageunitnumb": "1",
+            "drugintervaldosagedefinition": "804",
+            "drugdosagetext": "0.5 MILLIGRAM/KILOGRAM, QD",
+            "drugadministrationroute": "048",
+            "activesubstance": {
+              "activesubstancename": "PREDNISOLONE"
+            },
+            "openfda": {
+              "application_number": [
+                "ANDA080531",
+                "ANDA040571",
+                "ANDA215673",
+                "ANDA040323",
+                "ANDA219509",
+                "ANDA218083",
+                "ANDA040775"
+              ],
+              "brand_name": [
+                "PREDNISOLONE"
+              ],
+              "generic_name": [
+                "PREDNISOLONE",
+                "PREDNISOLONE ORAL",
+                "PREDNISOLONE ORAL SOLUTION"
+              ],
+              "manufacturer_name": [
+                "Chartwell RX, LLC",
+                "PAI Holdings, LLC dba PAI Pharma",
+                "Aurobindo Pharma Limited",
+                "Tulex Pharmaceuticals Inc",
+                "Zhejiang Xianju Pharmaceutical Co., Ltd.",
+                "Hisun Pharmaceuticals USA, Inc.",
+                "Lannett Company, Inc.",
+                "Heritage Pharma Labs Inc. d/b/a Avet Pharmaceuticals Labs Inc.",
+                "Chartwell Governmental & Specialty RX, LLC."
+              ],
+              "product_ndc": [
+                "62135-437",
+                "0121-0885",
+                "59651-491",
+                "62135-250",
+                "70404-077",
+                "60722-5011",
+                "42658-160",
+                "0527-5406",
+                "23155-927",
+                "68999-250"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "substance_name": [
+                "PREDNISOLONE"
+              ],
+              "rxcui": [
+                "198142",
+                "283077"
+              ],
+              "spl_id": [
+                "1b180b1a-f4e2-e1ee-e063-6294a90adc05",
+                "1166b85b-73c5-4a8f-bc41-f99b406d0ff5",
+                "c535b93f-b31f-411f-848c-b5e6782f321f",
+                "19febba3-956f-d1a9-e063-6394a90afda5",
+                "561d8c9c-b67f-7fb2-e063-6394a90a0316",
+                "da9dfcf4-1631-4923-9536-72c27fc0b307",
+                "9f93400d-a8c0-435a-ad65-48717cc455cf",
+                "5122ba73-5783-49f0-9b9c-a03d59d8899c",
+                "d2e4ebab-8c9d-44cb-b665-293007f7e058",
+                "43e3bba6-a836-f5e7-e063-6294a90a10e4"
+              ],
+              "spl_set_id": [
+                "2e965355-f7f2-4dd3-9c5c-1524c6f39c91",
+                "cebd7b5b-8e9f-4de9-9fcf-8ee0661fede3",
+                "070f1937-50a5-457f-bef5-4e597014e26d",
+                "aa40f582-cced-4e6e-90f0-10ab310ab2a7",
+                "757b41c4-a0fe-4a09-8816-a4cdb7558f41",
+                "52e6e21d-94b8-41a0-8d13-371c0e66bcee",
+                "16d4e064-66d3-4497-8c7d-3aa355f91e1d",
+                "86652e2d-664a-4388-a611-c2a9aa4a4bc8",
+                "b079834f-9aa3-4db9-bd53-de28e8f81c04",
+                "2dac9898-6492-4f34-ad86-83a902e0fe0b"
+              ],
+              "package_ndc": [
+                "62135-437-30",
+                "0121-0885-08",
+                "0121-0885-16",
+                "59651-491-50",
+                "59651-491-01",
+                "62135-250-37",
+                "62135-250-47",
+                "62135-250-45",
+                "62135-250-24",
+                "70404-077-14",
+                "70404-077-16",
+                "60722-5011-0",
+                "60722-5011-1",
+                "42658-160-05",
+                "0527-5406-68",
+                "0527-5406-70",
+                "23155-927-51",
+                "23155-927-52",
+                "68999-250-45",
+                "68999-250-24"
+              ],
+              "nui": [
+                "N0000175576",
+                "N0000175450"
+              ],
+              "pharm_class_epc": [
+                "Corticosteroid [EPC]"
+              ],
+              "pharm_class_moa": [
+                "Corticosteroid Hormone Receptor Agonists [MoA]"
+              ],
+              "unii": [
+                "9PHQ9Y1OLM"
+              ]
+            }
+          },
+          {
+            "drugcharacterization": "2",
+            "medicinalproduct": "PREDNISOLONE",
+            "drugstructuredosagenumb": "10",
+            "drugstructuredosageunit": "003",
+            "drugseparatedosagenumb": "1",
+            "drugintervaldosageunitnumb": "1",
+            "drugintervaldosagedefinition": "804",
+            "drugcumulativedosagenumb": "2700",
+            "drugcumulativedosageunit": "003",
+            "drugdosagetext": "10 MILLIGRAM, QD",
+            "drugadministrationroute": "048",
+            "drugindication": "Duchenne muscular dystrophy",
+            "drugstartdateformat": "102",
+            "drugstartdate": "20220610",
+            "drugenddateformat": "102",
+            "drugenddate": "20230306",
+            "drugtreatmentduration": "270",
+            "drugtreatmentdurationunit": "804",
+            "activesubstance": {
+              "activesubstancename": "PREDNISOLONE"
+            },
+            "openfda": {
+              "application_number": [
+                "ANDA080531",
+                "ANDA040571",
+                "ANDA215673",
+                "ANDA040323",
+                "ANDA219509",
+                "ANDA218083",
+                "ANDA040775"
+              ],
+              "brand_name": [
+                "PREDNISOLONE"
+              ],
+              "generic_name": [
+                "PREDNISOLONE",
+                "PREDNISOLONE ORAL",
+                "PREDNISOLONE ORAL SOLUTION"
+              ],
+              "manufacturer_name": [
+                "Chartwell RX, LLC",
+                "PAI Holdings, LLC dba PAI Pharma",
+                "Aurobindo Pharma Limited",
+                "Tulex Pharmaceuticals Inc",
+                "Zhejiang Xianju Pharmaceutical Co., Ltd.",
+                "Hisun Pharmaceuticals USA, Inc.",
+                "Lannett Company, Inc.",
+                "Heritage Pharma Labs Inc. d/b/a Avet Pharmaceuticals Labs Inc.",
+                "Chartwell Governmental & Specialty RX, LLC."
+              ],
+              "product_ndc": [
+                "62135-437",
+                "0121-0885",
+                "59651-491",
+                "62135-250",
+                "70404-077",
+                "60722-5011",
+                "42658-160",
+                "0527-5406",
+                "23155-927",
+                "68999-250"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "substance_name": [
+                "PREDNISOLONE"
+              ],
+              "rxcui": [
+                "198142",
+                "283077"
+              ],
+              "spl_id": [
+                "1b180b1a-f4e2-e1ee-e063-6294a90adc05",
+                "1166b85b-73c5-4a8f-bc41-f99b406d0ff5",
+                "c535b93f-b31f-411f-848c-b5e6782f321f",
+                "19febba3-956f-d1a9-e063-6394a90afda5",
+                "561d8c9c-b67f-7fb2-e063-6394a90a0316",
+                "da9dfcf4-1631-4923-9536-72c27fc0b307",
+                "9f93400d-a8c0-435a-ad65-48717cc455cf",
+                "5122ba73-5783-49f0-9b9c-a03d59d8899c",
+                "d2e4ebab-8c9d-44cb-b665-293007f7e058",
+                "43e3bba6-a836-f5e7-e063-6294a90a10e4"
+              ],
+              "spl_set_id": [
+                "2e965355-f7f2-4dd3-9c5c-1524c6f39c91",
+                "cebd7b5b-8e9f-4de9-9fcf-8ee0661fede3",
+                "070f1937-50a5-457f-bef5-4e597014e26d",
+                "aa40f582-cced-4e6e-90f0-10ab310ab2a7",
+                "757b41c4-a0fe-4a09-8816-a4cdb7558f41",
+                "52e6e21d-94b8-41a0-8d13-371c0e66bcee",
+                "16d4e064-66d3-4497-8c7d-3aa355f91e1d",
+                "86652e2d-664a-4388-a611-c2a9aa4a4bc8",
+                "b079834f-9aa3-4db9-bd53-de28e8f81c04",
+                "2dac9898-6492-4f34-ad86-83a902e0fe0b"
+              ],
+              "package_ndc": [
+                "62135-437-30",
+                "0121-0885-08",
+                "0121-0885-16",
+                "59651-491-50",
+                "59651-491-01",
+                "62135-250-37",
+                "62135-250-47",
+                "62135-250-45",
+                "62135-250-24",
+                "70404-077-14",
+                "70404-077-16",
+                "60722-5011-0",
+                "60722-5011-1",
+                "42658-160-05",
+                "0527-5406-68",
+                "0527-5406-70",
+                "23155-927-51",
+                "23155-927-52",
+                "68999-250-45",
+                "68999-250-24"
+              ],
+              "nui": [
+                "N0000175576",
+                "N0000175450"
+              ],
+              "pharm_class_epc": [
+                "Corticosteroid [EPC]"
+              ],
+              "pharm_class_moa": [
+                "Corticosteroid Hormone Receptor Agonists [MoA]"
+              ],
+              "unii": [
+                "9PHQ9Y1OLM"
+              ]
+            }
+          },
+          {
+            "drugcharacterization": "2",
+            "medicinalproduct": "PREDNISOLONE",
+            "drugstructuredosagenumb": "5",
+            "drugstructuredosageunit": "003",
+            "drugseparatedosagenumb": "1",
+            "drugintervaldosageunitnumb": "1",
+            "drugintervaldosagedefinition": "804",
+            "drugcumulativedosagenumb": "2700",
+            "drugcumulativedosageunit": "003",
+            "drugdosagetext": "5 MILLIGRAM, QD",
+            "drugadministrationroute": "048",
+            "drugstartdateformat": "102",
+            "drugstartdate": "20230307",
+            "drugenddateformat": "102",
+            "drugenddate": "20230314",
+            "drugtreatmentduration": "8",
+            "drugtreatmentdurationunit": "804",
+            "activesubstance": {
+              "activesubstancename": "PREDNISOLONE"
+            },
+            "openfda": {
+              "application_number": [
+                "ANDA080531",
+                "ANDA040571",
+                "ANDA215673",
+                "ANDA040323",
+                "ANDA219509",
+                "ANDA218083",
+                "ANDA040775"
+              ],
+              "brand_name": [
+                "PREDNISOLONE"
+              ],
+              "generic_name": [
+                "PREDNISOLONE",
+                "PREDNISOLONE ORAL",
+                "PREDNISOLONE ORAL SOLUTION"
+              ],
+              "manufacturer_name": [
+                "Chartwell RX, LLC",
+                "PAI Holdings, LLC dba PAI Pharma",
+                "Aurobindo Pharma Limited",
+                "Tulex Pharmaceuticals Inc",
+                "Zhejiang Xianju Pharmaceutical Co., Ltd.",
+                "Hisun Pharmaceuticals USA, Inc.",
+                "Lannett Company, Inc.",
+                "Heritage Pharma Labs Inc. d/b/a Avet Pharmaceuticals Labs Inc.",
+                "Chartwell Governmental & Specialty RX, LLC."
+              ],
+              "product_ndc": [
+                "62135-437",
+                "0121-0885",
+                "59651-491",
+                "62135-250",
+                "70404-077",
+                "60722-5011",
+                "42658-160",
+                "0527-5406",
+                "23155-927",
+                "68999-250"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "substance_name": [
+                "PREDNISOLONE"
+              ],
+              "rxcui": [
+                "198142",
+                "283077"
+              ],
+              "spl_id": [
+                "1b180b1a-f4e2-e1ee-e063-6294a90adc05",
+                "1166b85b-73c5-4a8f-bc41-f99b406d0ff5",
+                "c535b93f-b31f-411f-848c-b5e6782f321f",
+                "19febba3-956f-d1a9-e063-6394a90afda5",
+                "561d8c9c-b67f-7fb2-e063-6394a90a0316",
+                "da9dfcf4-1631-4923-9536-72c27fc0b307",
+                "9f93400d-a8c0-435a-ad65-48717cc455cf",
+                "5122ba73-5783-49f0-9b9c-a03d59d8899c",
+                "d2e4ebab-8c9d-44cb-b665-293007f7e058",
+                "43e3bba6-a836-f5e7-e063-6294a90a10e4"
+              ],
+              "spl_set_id": [
+                "2e965355-f7f2-4dd3-9c5c-1524c6f39c91",
+                "cebd7b5b-8e9f-4de9-9fcf-8ee0661fede3",
+                "070f1937-50a5-457f-bef5-4e597014e26d",
+                "aa40f582-cced-4e6e-90f0-10ab310ab2a7",
+                "757b41c4-a0fe-4a09-8816-a4cdb7558f41",
+                "52e6e21d-94b8-41a0-8d13-371c0e66bcee",
+                "16d4e064-66d3-4497-8c7d-3aa355f91e1d",
+                "86652e2d-664a-4388-a611-c2a9aa4a4bc8",
+                "b079834f-9aa3-4db9-bd53-de28e8f81c04",
+                "2dac9898-6492-4f34-ad86-83a902e0fe0b"
+              ],
+              "package_ndc": [
+                "62135-437-30",
+                "0121-0885-08",
+                "0121-0885-16",
+                "59651-491-50",
+                "59651-491-01",
+                "62135-250-37",
+                "62135-250-47",
+                "62135-250-45",
+                "62135-250-24",
+                "70404-077-14",
+                "70404-077-16",
+                "60722-5011-0",
+                "60722-5011-1",
+                "42658-160-05",
+                "0527-5406-68",
+                "0527-5406-70",
+                "23155-927-51",
+                "23155-927-52",
+                "68999-250-45",
+                "68999-250-24"
+              ],
+              "nui": [
+                "N0000175576",
+                "N0000175450"
+              ],
+              "pharm_class_epc": [
+                "Corticosteroid [EPC]"
+              ],
+              "pharm_class_moa": [
+                "Corticosteroid Hormone Receptor Agonists [MoA]"
+              ],
+              "unii": [
+                "9PHQ9Y1OLM"
+              ]
+            }
+          },
+          {
+            "drugcharacterization": "2",
+            "medicinalproduct": "PREDNISOLONE",
+            "drugstructuredosagenumb": "10",
+            "drugstructuredosageunit": "003",
+            "drugseparatedosagenumb": "1",
+            "drugintervaldosageunitnumb": "1",
+            "drugintervaldosagedefinition": "804",
+            "drugcumulativedosagenumb": "2700",
+            "drugcumulativedosageunit": "003",
+            "drugdosagetext": "10 MILLIGRAM, QD",
+            "drugadministrationroute": "048",
+            "drugstartdateformat": "102",
+            "drugstartdate": "20230315",
+            "activesubstance": {
+              "activesubstancename": "PREDNISOLONE"
+            },
+            "openfda": {
+              "application_number": [
+                "ANDA080531",
+                "ANDA040571",
+                "ANDA215673",
+                "ANDA040323",
+                "ANDA219509",
+                "ANDA218083",
+                "ANDA040775"
+              ],
+              "brand_name": [
+                "PREDNISOLONE"
+              ],
+              "generic_name": [
+                "PREDNISOLONE",
+                "PREDNISOLONE ORAL",
+                "PREDNISOLONE ORAL SOLUTION"
+              ],
+              "manufacturer_name": [
+                "Chartwell RX, LLC",
+                "PAI Holdings, LLC dba PAI Pharma",
+                "Aurobindo Pharma Limited",
+                "Tulex Pharmaceuticals Inc",
+                "Zhejiang Xianju Pharmaceutical Co., Ltd.",
+                "Hisun Pharmaceuticals USA, Inc.",
+                "Lannett Company, Inc.",
+                "Heritage Pharma Labs Inc. d/b/a Avet Pharmaceuticals Labs Inc.",
+                "Chartwell Governmental & Specialty RX, LLC."
+              ],
+              "product_ndc": [
+                "62135-437",
+                "0121-0885",
+                "59651-491",
+                "62135-250",
+                "70404-077",
+                "60722-5011",
+                "42658-160",
+                "0527-5406",
+                "23155-927",
+                "68999-250"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "substance_name": [
+                "PREDNISOLONE"
+              ],
+              "rxcui": [
+                "198142",
+                "283077"
+              ],
+              "spl_id": [
+                "1b180b1a-f4e2-e1ee-e063-6294a90adc05",
+                "1166b85b-73c5-4a8f-bc41-f99b406d0ff5",
+                "c535b93f-b31f-411f-848c-b5e6782f321f",
+                "19febba3-956f-d1a9-e063-6394a90afda5",
+                "561d8c9c-b67f-7fb2-e063-6394a90a0316",
+                "da9dfcf4-1631-4923-9536-72c27fc0b307",
+                "9f93400d-a8c0-435a-ad65-48717cc455cf",
+                "5122ba73-5783-49f0-9b9c-a03d59d8899c",
+                "d2e4ebab-8c9d-44cb-b665-293007f7e058",
+                "43e3bba6-a836-f5e7-e063-6294a90a10e4"
+              ],
+              "spl_set_id": [
+                "2e965355-f7f2-4dd3-9c5c-1524c6f39c91",
+                "cebd7b5b-8e9f-4de9-9fcf-8ee0661fede3",
+                "070f1937-50a5-457f-bef5-4e597014e26d",
+                "aa40f582-cced-4e6e-90f0-10ab310ab2a7",
+                "757b41c4-a0fe-4a09-8816-a4cdb7558f41",
+                "52e6e21d-94b8-41a0-8d13-371c0e66bcee",
+                "16d4e064-66d3-4497-8c7d-3aa355f91e1d",
+                "86652e2d-664a-4388-a611-c2a9aa4a4bc8",
+                "b079834f-9aa3-4db9-bd53-de28e8f81c04",
+                "2dac9898-6492-4f34-ad86-83a902e0fe0b"
+              ],
+              "package_ndc": [
+                "62135-437-30",
+                "0121-0885-08",
+                "0121-0885-16",
+                "59651-491-50",
+                "59651-491-01",
+                "62135-250-37",
+                "62135-250-47",
+                "62135-250-45",
+                "62135-250-24",
+                "70404-077-14",
+                "70404-077-16",
+                "60722-5011-0",
+                "60722-5011-1",
+                "42658-160-05",
+                "0527-5406-68",
+                "0527-5406-70",
+                "23155-927-51",
+                "23155-927-52",
+                "68999-250-45",
+                "68999-250-24"
+              ],
+              "nui": [
+                "N0000175576",
+                "N0000175450"
+              ],
+              "pharm_class_epc": [
+                "Corticosteroid [EPC]"
+              ],
+              "pharm_class_moa": [
+                "Corticosteroid Hormone Receptor Agonists [MoA]"
+              ],
+              "unii": [
+                "9PHQ9Y1OLM"
+              ]
+            }
+          },
+          {
+            "drugcharacterization": "2",
+            "medicinalproduct": "CALCIUM",
+            "drugstructuredosagenumb": "250",
+            "drugstructuredosageunit": "003",
+            "drugseparatedosagenumb": "1",
+            "drugintervaldosageunitnumb": "1",
+            "drugintervaldosagedefinition": "804",
+            "drugdosagetext": "250 MILLIGRAM, QD",
+            "drugadministrationroute": "048",
+            "drugindication": "Supplementation therapy",
+            "drugstartdateformat": "102",
+            "drugstartdate": "20221119",
+            "activesubstance": {
+              "activesubstancename": "CALCIUM"
+            },
+            "openfda": {
+              "brand_name": [
+                "7030 CALCIUM PREMIUM",
+                "AG-X",
+                "7030 CALCIUM GOLD"
+              ],
+              "generic_name": [
+                "CALCIUM"
+              ],
+              "manufacturer_name": [
+                "Apexel Co., Ltd",
+                "APEXEL CO., LTD."
+              ],
+              "product_ndc": [
+                "55259-1112",
+                "55259-0007",
+                "55259-0001"
+              ],
+              "product_type": [
+                "HUMAN OTC DRUG"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "substance_name": [
+                "CALCIUM"
+              ],
+              "spl_id": [
+                "0fa8135f-89c9-41a2-e063-6294a90a403d",
+                "11cc283a-fe2c-f101-e063-6294a90ad2d4",
+                "11cc310a-d82e-be44-e063-6394a90a227c"
+              ],
+              "spl_set_id": [
+                "bdc7c833-daf7-48f9-e053-2995a90ad88e",
+                "bdee5e24-645b-7fa0-e053-2995a90a7d25",
+                "bdc7c088-83e3-20ce-e053-2995a90abd2f"
+              ],
+              "package_ndc": [
+                "55259-1112-1",
+                "55259-0007-1",
+                "55259-0001-1"
+              ],
+              "nui": [
+                "M0003153",
+                "N0000175901"
+              ],
+              "pharm_class_cs": [
+                "Calcium [CS]"
+              ],
+              "pharm_class_epc": [
+                "Calcium [EPC]"
+              ],
+              "unii": [
+                "SY7Q814VUP"
+              ]
+            }
+          },
+          {
+            "drugcharacterization": "2",
+            "medicinalproduct": "PANTOPRAZOLE",
+            "drugstructuredosagenumb": "20",
+            "drugstructuredosageunit": "003",
+            "drugseparatedosagenumb": "1",
+            "drugintervaldosageunitnumb": "1",
+            "drugintervaldosagedefinition": "804",
+            "drugcumulativedosagenumb": "5380",
+            "drugcumulativedosageunit": "003",
+            "drugdosagetext": "20 MILLIGRAM, QD",
+            "drugadministrationroute": "048",
+            "drugindication": "Gastritis",
+            "drugstartdateformat": "102",
+            "drugstartdate": "20220610",
+            "drugenddateformat": "102",
+            "drugenddate": "20230305",
+            "drugtreatmentduration": "269",
+            "drugtreatmentdurationunit": "804",
+            "activesubstance": {
+              "activesubstancename": "PANTOPRAZOLE"
+            },
+            "openfda": {
+              "application_number": [
+                "ANDA202882",
+                "ANDA205119",
+                "ANDA077619"
+              ],
+              "brand_name": [
+                "PANTOPRAZOLE SODIUM",
+                "PANTOPRAZOLE"
+              ],
+              "generic_name": [
+                "PANTOPRAZOLE"
+              ],
+              "manufacturer_name": [
+                "XLCare Pharmaceuticals Inc.",
+                "Quallent Pharmaceuticals Health LLC",
+                "Amneal Pharmaceuticals LLC",
+                "Camber Pharmaceuticals, Inc.",
+                "NorthStar RxLLC",
+                "Dr.Reddy's Laboratories Limited"
+              ],
+              "product_ndc": [
+                "72865-229",
+                "72865-230",
+                "82009-010",
+                "82009-011",
+                "65162-636",
+                "65162-637",
+                "31722-712",
+                "31722-713",
+                "72603-177",
+                "72603-178",
+                "55111-332",
+                "55111-333"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "substance_name": [
+                "PANTOPRAZOLE SODIUM"
+              ],
+              "rxcui": [
+                "251872",
+                "314200"
+              ],
+              "spl_id": [
+                "f26fc428-a419-1008-e053-2a95a90a83fc",
+                "48430767-cec0-15e0-e063-6394a90ac032",
+                "940df77d-5373-4196-946e-19271ac91087",
+                "48f42a12-2eac-e5dd-e063-6294a90aa92d",
+                "57338853-6995-de1e-62ca-be5505c8d656",
+                "c0575fc6-20c4-12a6-10b7-1af65cac1ee0"
+              ],
+              "spl_set_id": [
+                "17468dbf-84b6-4c53-9ad5-341350d2cfab",
+                "643eb498-d916-4fb7-9281-32895575ab36",
+                "f3ded82a-cf0d-4844-944a-75f9f9215ff0",
+                "9daa1483-5a36-44db-9e0d-904d100da262",
+                "82f0103a-2b97-d210-6d7d-c627d60ad694",
+                "564709e8-358f-c185-4ecb-b3849c3fe59c"
+              ],
+              "package_ndc": [
+                "72865-229-90",
+                "72865-230-90",
+                "72865-230-10",
+                "82009-010-90",
+                "82009-011-90",
+                "82009-011-10",
+                "65162-636-03",
+                "65162-636-09",
+                "65162-637-03",
+                "65162-637-09",
+                "65162-637-50",
+                "65162-637-11",
+                "31722-712-90",
+                "31722-712-32",
+                "31722-712-31",
+                "31722-713-90",
+                "31722-713-32",
+                "31722-713-31",
+                "31722-713-10",
+                "72603-177-01",
+                "72603-178-01",
+                "55111-332-30",
+                "55111-332-90",
+                "55111-332-01",
+                "55111-332-05",
+                "55111-332-10",
+                "55111-332-79",
+                "55111-332-81",
+                "55111-332-78",
+                "55111-333-30",
+                "55111-333-90",
+                "55111-333-01",
+                "55111-333-05",
+                "55111-333-10",
+                "55111-333-79",
+                "55111-333-81",
+                "55111-333-78"
+              ],
+              "unii": [
+                "6871619Q5X"
+              ]
+            }
+          }
+        ],
+        "summary": {
+          "narrativeincludeclinical": "CASE EVENT DATE: 20230306"
+        }
+      }
+    }
+  ]
+}
