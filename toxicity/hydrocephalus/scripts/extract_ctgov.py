@@ -400,16 +400,24 @@ def main():
                     grade_basis=("0 = no serious adverse event coded to any tier-A "
                                  "hydrocephalus term appears in this trial's posted "
                                  f"serious-adverse-event table ({n_serious_terms} terms "
-                                 "listed). SCHEMA.md rubric grade 0."),
+                                 "listed), which 42 CFR 11.48(a)(4)(ii)(A) requires to be "
+                                 "complete for serious events. SCHEMA.md rubric grade 0."),
                     grade_status="provisional",
                     ascertainment="measured_null",
                     ascertainment_basis=(
-                        f"Derived from absence: this trial posted a serious-adverse-event "
-                        f"table listing {n_serious_terms} terms and an other-event table "
-                        f"listing {n_other_terms} terms at frequencyThreshold={threshold}; "
-                        f"no tier-A hydrocephalus term is among them. This is a statement "
-                        f"about the posted document, not a claim that ventricular imaging "
-                        f"was performed. See METHODOLOGY.md OI-01."),
+                        f"Reported zero, not merely an unreported one. 42 CFR "
+                        f"11.48(a)(4)(ii)(A) requires the results submission to contain a "
+                        f"\"Table of all serious adverse events grouped by organ system, "
+                        f"with the number and frequency of each event by arm or comparison "
+                        f"group\" - with no frequency threshold. This trial posted such a "
+                        f"table, listing {n_serious_terms} terms, and no tier-A "
+                        f"hydrocephalus term is among them; therefore no SERIOUS "
+                        f"hydrocephalus event occurred in this arm. A NON-serious "
+                        f"ventricular event could still have occurred below the "
+                        f"other-events threshold of {threshold}%, which 42 CFR "
+                        f"11.48(a)(4)(ii)(B) sets at 5 percent within any arm. This is not "
+                        f"a claim that ventricular imaging was performed. Regulation text "
+                        f"committed at sources/raw/ecfr_42CFR11.48_results_reporting.xml."),
                     attribution_as_stated="not_discussed",
                     attribution_evidence=(
                         "No event; no attribution to record."),

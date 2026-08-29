@@ -61,12 +61,11 @@ Three findings bear on how the rest of this register should be read.
 - **Grades are provisional.** All graded rows ship `grade_status = provisional`; no subject-matter expert has reviewed the rubric or its application.
 - **No sequences.** The Challenge's "sequences of all oligos tested" requirement is unmet for this endpoint (`METHODOLOGY.md` OI-02). Design predictors are chemistry- and design-level only.
 - **No nonclinical and no protective rows** (OI-03, OI-04): the dataset is entirely human and entirely toxicity-direction. `tox_axis = therapeutic_ventricular_effect` is declared and used by no row.
-- **253 tier-A negatives rest on an absence argument** whose governing reporting rule was not itself verified (OI-01). This is the highest-value next step, because verifying it would strengthen the dataset's entire negative class.
+- ~~253 tier-A negatives rest on an unverified absence argument~~ — **resolved.** 42 CFR 11.48(a)(4)(ii)(A) requires a results submission to table *all* serious adverse events with no frequency threshold, so absence of a tier-A term from a posted serious-adverse-event table is a reported zero for serious events. The regulation is committed and cited per row. Two limits remain in-row: a non-serious ventricular event below the 5 percent threshold of subparagraph (B) would not appear, and none of this evidences that ventricular imaging was done.
 - **The counts in this dossier are transcribed**, not regenerated, and will drift if the dataset changes.
 - **One compound row is a composite** (OI-07): `casimersen_or_golodirsen` covers a trial whose posted table does not separate the two compounds.
 
 ## Next step
 
-1. Verify the ClinicalTrials.gov serious-adverse-event reporting rule (OI-01), which governs 253 of the dataset's rows.
-2. Recover sequences through the WHO INN Recommended lists (OI-02) — the route the sibling kidney dataset already built and validated.
-3. Extract nonclinical intracerebroventricular and intrathecal animal rows (OI-03), the only available source of dose–response for this endpoint.
+1. Recover sequences through the WHO INN Recommended lists (OI-02) — the route the sibling kidney dataset already built and validated.
+2. Extract nonclinical intracerebroventricular and intrathecal animal rows (OI-03), the only available source of dose–response for this endpoint.

@@ -185,9 +185,12 @@ Three grades of negative are distinguished, weakest last:
 1. **An explicitly reported zero in a comparator arm.** The term is listed in the
    trial's table with a count of 0 for that arm — the strongest negative in the
    dataset, because the same protocol found the event elsewhere.
-2. **A trial-level absence.** No tier-A term appears anywhere in a trial's posted
-   serious-adverse-event table. Recorded as a statement about the posted
-   document, not as a claim that imaging was performed. See **OI-01**.
+2. **A trial-level absence from a table the law requires to be complete.** No
+   tier-A term appears in a trial's posted serious-adverse-event table, which 42
+   CFR 11.48(a)(4)(ii)(A) requires to list *all* serious adverse events with no
+   frequency threshold. This is a reported zero for serious events. It is not a
+   claim that imaging was performed, and a non-serious event below the 5 percent
+   threshold of subparagraph (B) would not appear. See **OI-01**.
 3. **A silent label, or a FAERS zero.** Weakest: reflects reporting behaviour as
    much as clinical absence.
 
@@ -263,14 +266,23 @@ What it does **not** yet support, stated plainly:
 
 Numbered so they can be cited from elsewhere in the repository.
 
-**OI-01 — trial-level negatives are an absence argument.** A `measured_null` row
-derived from a term's absence from a posted serious-adverse-event table asserts
-something about the *document*, not about whether ventricular imaging was
-performed. The reporting rule that governs which serious adverse events must be
-posted was not itself retrieved and verified in this release, so the
-`ascertainment_basis` of those rows states only what was observed in the document.
-Verifying that rule would strengthen 253 tier-A negatives from "not reported" to
-"reported and zero", and is the single highest-value next step.
+**OI-01 — RESOLVED in this release.** Trial-level negatives were originally recorded
+as an absence argument about a document. The governing rule has since been retrieved
+and verified: **42 CFR 11.48(a)(4)(ii)(A)** requires a results submission to include a
+*"Table of all serious adverse events grouped by organ system, with the number and
+frequency of each event by arm or comparison group"* — with **no** frequency
+threshold, unlike subparagraph (B), which sets 5 percent within any arm for
+non-serious events. Absence of a tier-A term from a posted serious-adverse-event
+table is therefore a **reported zero for serious events**, not an unreported one, and
+that is what the 253 tier-A negative rows now assert. The regulation text is committed
+at `sources/raw/ecfr_42CFR11.48_results_reporting.xml` and cited in every affected
+row's `ascertainment_basis`.
+
+Two limits remain, and are stated in those rows rather than here: a **non-serious**
+ventricular event below the 5 percent threshold would not appear, and none of this is
+evidence that ventricular imaging was performed. The residual open question is narrow
+— whether every trial in this release is an "applicable clinical trial" bound by the
+rule, or posted voluntarily under the same structure.
 
 **OI-02 — no sequences.** `sequence_5to3_asprinted` is `NOT_REPORTED` for every
 compound. No US label prints the base sequence; both intrathecal ASO labels render
