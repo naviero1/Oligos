@@ -17,6 +17,9 @@ import datetime
 import pathlib
 import sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import endpoints
+
 import openpyxl
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
@@ -103,8 +106,8 @@ README_LINES = [
 
 
 def read(name: str) -> list[dict]:
-    with (DATA / f"{name}.csv").open() as fh:
-        return list(csv.DictReader(fh))
+    """Union of the three endpoint folders (src/endpoints.py owns the split)."""
+    return endpoints.load_all(name)
 
 
 def data_sheet(wb, name: str, columns, rows: list[dict], numeric_cols=()):

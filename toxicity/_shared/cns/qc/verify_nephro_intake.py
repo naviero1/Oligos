@@ -27,8 +27,8 @@ import csv
 import pathlib
 import sys
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent      # toxicity/cns
-DATA = ROOT.parent / "kidney" / "data"        # toxicity/kidney/data/
+ROOT = pathlib.Path(__file__).resolve().parent.parent      # toxicity/_shared/cns
+DATA = ROOT.parent.parent / "kidney" / "data"   # toxicity/kidney/data/
 
 CLAIMS = {
     "unique_oligos": 65,

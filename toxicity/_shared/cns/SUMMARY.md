@@ -14,10 +14,18 @@ Phase 2. Release **v1.0**. Licence **CC BY 4.0** (see `LICENSE.md` for the per-r
 | Oligonucleotides | **1,839** |
 | CNS toxicity measurements | **2,065** |
 | Per-position chemical-modification records | **32,569** |
-| Sources | **5** (4 contributing rows, 1 contributing instruments) |
+| Sources | **5** — 4 contributing rows, 1 contributing measurement instruments only |
 | Sequences published | 1,830 / 1,839 (99.5%) |
 | Position-resolved modification maps | 1,830 / 1,839 (99.5%) |
-| Structural QC | **26/26 checks pass** |
+| Structural QC | **30/30 checks pass** |
+
+Split across the three endpoint folders, none of which mixes toxicities:
+
+| Endpoint folder | Measurements | On the brief's list? |
+|---|---:|---|
+| `toxicity/acute-neurotoxicity/` | 2,058 | **no** — the deprioritised axis, plus general clinical CNS AEs |
+| `toxicity/chronic-neurotoxicity/` | 6 | yes |
+| `toxicity/hydrocephalus/` | 1 | yes |
 
 **Severity grades 0/1/2/3** — 56 / 87 / 40 / 57.
 **Study types** — 1,825 in vitro, 228 in vivo, 12 clinical.
@@ -86,7 +94,8 @@ features.
 
 | | |
 |---|---|
-| Dataset | `data/` — `oligos.csv`, `measurements.csv`, `modifications.csv`, `sources.csv` |
+| Dataset | one per endpoint: `toxicity/{acute,chronic}-neurotoxicity/data/` and `toxicity/hydrocephalus/data/` — each holds only its own toxicity |
+| Endpoint allocation rule | `src/endpoints.py` — enforced by four QC checks |
 | Submission PDFs | `deliverables/OligoTox-CNS_{Narrative,Methodology}.pdf` |
 | Dataset workbook | `deliverables/OligoTox-CNS_Dataset.xlsx` |
 | Schema & dictionary | `docs/SCHEMA.md`, `docs/DATA_DICTIONARY.md` |

@@ -24,6 +24,9 @@ import pathlib
 import statistics as st
 import sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import endpoints
+
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -61,8 +64,8 @@ def note(s: str) -> None:
 
 
 def load(name):
-    with (DATA / f"{name}.csv").open() as fh:
-        return list(csv.DictReader(fh))
+    """Union of the three endpoint folders (src/endpoints.py owns the split)."""
+    return endpoints.load_all(name)
 
 
 def style(ax, title=None, xlabel=None, ylabel=None):

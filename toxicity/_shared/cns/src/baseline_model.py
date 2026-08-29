@@ -26,6 +26,9 @@ import pathlib
 import statistics as st
 import sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import endpoints
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 
@@ -35,8 +38,8 @@ FEATURES = ["length_nt", "gc_content_pct", "n_A", "n_C", "n_G", "n_T",
 
 
 def load():
-    oligos = {o["oligo_id"]: o for o in csv.DictReader((DATA / "oligos.csv").open())}
-    meas = list(csv.DictReader((DATA / "measurements.csv").open()))
+    oligos = {o["oligo_id"]: o for o in endpoints.load_all("oligos")}
+    meas = endpoints.load_all("measurements")
     ans = {m["oligo_id"]: float(m["readout_value"]) for m in meas
            if m["readout_name"] == "acute_tolerability_score_ANS"}
     cao = {m["oligo_id"]: float(m["readout_value"]) for m in meas

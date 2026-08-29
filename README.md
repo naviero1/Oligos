@@ -4,15 +4,17 @@ All work is filed under [`toxicity/`](toxicity/README.md), by the toxicity endpo
 belongs to. Nothing project-specific lives at the repository root.
 
 The NIH/NCATS OligoTox Challenge names **eight toxicities of interest**. This repository holds
-curated data for **three** of them, in **two separate datasets** — kidney toxicity, and (from
-the CNS module) chronic neurotoxicity and hydrocephalus — plus a dossier for each remaining
-endpoint recording what material the repo actually has for it.
+curated data for **three** of them — kidney toxicity, chronic neurotoxicity and hydrocephalus —
+plus a dossier for each remaining endpoint recording what material the repo actually has for it.
 
-The CNS module is much larger than its endpoint contribution: 1,839 oligonucleotides and 2,065
-CNS measurements, of which **6 are chronic neurotoxicity and 1 is hydrocephalus**. The other
-99.1% sit on the acute-neurotoxicity axis the Challenge brief explicitly deprioritises. Read
-[`toxicity/chronic-neurotoxicity.md` §2](toxicity/chronic-neurotoxicity.md) before quoting the
-module's size as coverage.
+Every toxicity has its own folder and its own dossier, and holds only its own rows. The CNS
+curation produced 2,065 measurements but they are **not one toxicity**: 6 are chronic
+neurotoxicity, 1 is hydrocephalus, and the other 2,058 are acute neurotoxicity and general
+clinical CNS adverse events. Acute neurotoxicity is **not on the brief's list** — the Challenge
+explicitly deprioritises it — so it has its own folder to keep the data filed honestly, but
+nothing in it counts toward coverage. Read
+[`toxicity/acute-neurotoxicity/acute-neurotoxicity.md` §1](toxicity/acute-neurotoxicity/acute-neurotoxicity.md)
+before quoting that folder's size.
 
 ```
 toxicity/
@@ -24,11 +26,16 @@ toxicity/
     data/  sources/  scripts/  assets/
     kidney-nephrotoxicity.md    endpoint dossier
 
-  cns/                          ← populated dataset (2,065 measurements, 1,839 oligos;
-    SUMMARY.md  README.md         7 of those rows fall on a listed endpoint — see above)
-    docs/  data/  sources/  src/  qc/  figures/  deliverables/
+  chronic-neurotoxicity/        ← listed endpoint (6 measurements, 5 oligos)
+    chronic-neurotoxicity.md  data/
+  hydrocephalus/                ← listed endpoint (1 measurement, 1 oligo)
+    hydrocephalus.md  data/
+  acute-neurotoxicity/          ← NOT a listed endpoint (2,058 measurements, 1,834 oligos)
+    acute-neurotoxicity.md  data/
 
-  chronic-neurotoxicity.md  hydrocephalus.md    dossiers indexing cns/
+  _shared/cns/                  build pipeline, schema, sources and submission documents
+    src/  qc/  docs/  sources/  figures/  deliverables/   shared by the three CNS endpoints
+
   hepatotoxicity.md   thrombocytopenia.md   complement-activation.md
   coagulopathy.md     immunotoxicity.md     cross-cutting.md
                                             dossiers (documented, not populated)
@@ -42,8 +49,9 @@ or [`toxicity/kidney/README.md`](toxicity/kidney/README.md) for the dataset itse
 
 Each populated endpoint directory is self-contained — its scripts resolve paths relative to
 that directory, so `python3 toxicity/kidney/scripts/build_merged.py` regenerates the kidney
-merged view, and `python3 toxicity/cns/qc/validate_dataset.py` runs the CNS module's 26
-structural checks, both with no path configuration.
+merged view, and `python3 toxicity/_shared/cns/qc/validate_dataset.py` runs the CNS suite's 30
+structural checks — four of which verify that no endpoint's rows have been filed in another
+endpoint's folder — both with no path configuration.
 
 New work goes under the endpoint it pertains to. Material spanning endpoints goes in
 `_shared/`; `REVIEW-2026-08.md` and `cross-cutting.md` cover repo-wide concerns.

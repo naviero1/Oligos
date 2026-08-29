@@ -18,6 +18,9 @@ import statistics as st
 import subprocess
 import sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import endpoints
+
 import reportlab.rl_config
 # Byte-deterministic output. reportlab otherwise stamps each build with the current time in
 # /CreationDate and /ModDate and a random /ID, so two runs over identical data produce
@@ -150,9 +153,9 @@ def gather():
     n["checks"] = q["checks"]
     n["model"] = json.loads((FIG / "baseline_model.json").read_text())
 
-    oligos = list(csv.DictReader((DATA / "oligos.csv").open()))
-    meas = list(csv.DictReader((DATA / "measurements.csv").open()))
-    srcs = list(csv.DictReader((DATA / "sources.csv").open()))
+    oligos = endpoints.load_all("oligos")
+    meas = endpoints.load_all("measurements")
+    srcs = endpoints.load_all("sources")
     n["sources_rows"] = srcs
 
     ans = {m["oligo_id"]: float(m["readout_value"]) for m in meas

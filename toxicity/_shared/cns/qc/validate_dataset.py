@@ -18,6 +18,9 @@ import pathlib
 import re
 import sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent / "src"))
+import endpoints
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 
@@ -41,8 +44,8 @@ def check(name: str, ok: bool, detail: str = "") -> None:
 
 
 def load(name: str) -> list[dict]:
-    with (DATA / f"{name}.csv").open() as fh:
-        return list(csv.DictReader(fh))
+    """Union of the three endpoint folders. There is no combined master table by design."""
+    return endpoints.load_all(name)
 
 
 def main(as_json: bool = False) -> int:
@@ -151,6 +154,27 @@ def main(as_json: bool = False) -> int:
     check("every position-resolved oligo has a full modification table", should <= covered,
           f"{len(should - covered)} missing")
 
+    # ---- endpoint split integrity ---------------------------------------------------------
+    # These four checks are what keep each toxicity's rows in its own folder. They are the
+    # machine-checkable form of the filing rule, so a future edit that misfiles a row fails here
+    # rather than being noticed by a reader.
+    per_ep = {ep: endpoints.read(ep, "measurements") for ep in endpoints.ENDPOINTS}
+    misfiled = [(ep, r["measurement_id"], endpoints.endpoint_of(r))
+                for ep, rows in per_ep.items() for r in rows
+                if endpoints.endpoint_of(r) != ep]
+    check("every measurement sits in the folder its endpoint rule assigns", not misfiled,
+          f"{len(misfiled)} misfiled" + (f" e.g. {misfiled[0]}" if misfiled else ""))
+
+    ids = [r["measurement_id"] for rows in per_ep.values() for r in rows]
+    check("no measurement appears in two endpoint folders", len(ids) == len(set(ids)),
+          f"{len(ids) - len(set(ids))} duplicated across folders")
+
+    check("the endpoint folders account for every measurement",
+          len(ids) == len(meas), f"folders hold {len(ids)}, union holds {len(meas)}")
+
+    empty = [ep for ep, rows in per_ep.items() if not rows]
+    check("no endpoint folder is empty", not empty, f"empty: {empty}")
+
     # ---- report -------------------------------------------------------------------------
     passed = sum(1 for _, ok, _ in results if ok)
     summary = {
@@ -161,6 +185,7 @@ def main(as_json: bool = False) -> int:
         "sequences_present": sum(1 for o in oligos if o["sequence_base"] not in MISSING_TOKENS),
         "position_resolved_oligos": len(should),
         "human_system_measurements": sum(1 for m in meas if m["is_human_system"] == "TRUE"),
+        "measurements_per_endpoint": {ep: len(rows) for ep, rows in per_ep.items()},
         "grade_distribution": dict(sorted(collections.Counter(
             m["cns_tox_grade"] for m in meas if m["cns_tox_grade"] != "").items())),
         "study_type_distribution": dict(collections.Counter(m["study_type"] for m in meas)),

@@ -2,7 +2,12 @@
 """Merge every staged per-source table into the released OligoTox-CNS dataset.
 
 Reads   data/staged/*_oligos.csv, *_measurements.csv, *_modifications.csv
-Writes  data/oligos.csv, data/measurements.csv, data/modifications.csv, data/sources.csv
+Writes  one data/ per toxicity endpoint, under toxicity/<endpoint>/data/ --
+        acute-neurotoxicity, chronic-neurotoxicity and hydrocephalus.
+
+The endpoint folders are the source of truth; there is deliberately no combined master table,
+so a folder cannot drift from one. src/endpoints.py owns the allocation rule and the union
+loader that consumers use when they need the whole CNS picture.
 
 The canonical column order defined here IS the schema; docs/DATA_DICTIONARY.md is generated
 from the same definitions by src/make_docs.py, so the two can never drift apart.
@@ -18,6 +23,8 @@ from __future__ import annotations
 import csv
 import pathlib
 import sys
+
+import endpoints
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 STAGED = ROOT / "data" / "staged"
@@ -233,15 +240,21 @@ def main() -> int:
     srcs = [dict(s, n_oligos=no.get(s["source_id"], 0), n_measurements=nm.get(s["source_id"], 0))
             for s in SOURCES]
 
-    write(DATA / "oligos.csv", oligos, OLIGO_COLUMNS)
-    write(DATA / "measurements.csv", meas, MEASUREMENT_COLUMNS)
-    write(DATA / "modifications.csv", mods, MODIFICATION_COLUMNS)
+    columns = {"oligos": [c for c, _ in OLIGO_COLUMNS],
+               "measurements": [c for c, _ in MEASUREMENT_COLUMNS],
+               "modifications": [c for c, _ in MODIFICATION_COLUMNS],
+               "sources": list(srcs[0].keys())}
+    counts = endpoints.write_split(oligos, meas, mods, srcs, columns)
 
-    scols = list(srcs[0].keys())
-    with (DATA / "sources.csv").open("w", newline="") as fh:
-        w = csv.DictWriter(fh, fieldnames=scols)
-        w.writeheader(); w.writerows(srcs)
-    print(f"wrote data/sources.csv: {len(srcs)} rows x {len(scols)} cols")
+    print("per-endpoint data written to toxicity/<endpoint>/data/:")
+    for ep in endpoints.ENDPOINTS:
+        c = counts[ep]
+        listed = "listed in the brief" if endpoints.LISTED_IN_BRIEF[ep] else "NOT a listed endpoint"
+        print(f"  {ep:<24} oligos={c['oligos']:>5}  measurements={c['measurements']:>5}  "
+              f"modifications={c['modifications']:>6}  sources={c['sources']}   ({listed})")
+    total = sum(c["measurements"] for c in counts.values())
+    assert total == len(meas), f"split lost rows: {total} != {len(meas)}"
+    print(f"  {'TOTAL':<24} measurements={total} (every assembled row allocated exactly once)")
 
     print("\nper-source contribution:")
     for s in srcs:

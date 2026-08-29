@@ -41,10 +41,18 @@ Phase 2. Release **v1.0**. Licence **CC BY 4.0** (see `LICENSE.md` for the per-r
 | Oligonucleotides | **{n['n_oligos']:,}** |
 | CNS toxicity measurements | **{n['n_measurements']:,}** |
 | Per-position chemical-modification records | **{n['n_modification_rows']:,}** |
-| Sources | **{n['n_sources']}** (4 contributing rows, 1 contributing instruments) |
+| Sources | **{n['n_sources']}** — 4 contributing rows, 1 contributing measurement instruments only |
 | Sequences published | {n['sequences_present']:,} / {n['n_oligos']:,} ({pct(n['sequences_present'], n['n_oligos'])}) |
 | Position-resolved modification maps | {n['position_resolved_oligos']:,} / {n['n_oligos']:,} ({pct(n['position_resolved_oligos'], n['n_oligos'])}) |
 | Structural QC | **{n['checks_passed']}/{n['checks_total']} checks pass** |
+
+Split across the three endpoint folders, none of which mixes toxicities:
+
+| Endpoint folder | Measurements | On the brief's list? |
+|---|---:|---|
+| `toxicity/acute-neurotoxicity/` | {n['measurements_per_endpoint']['acute-neurotoxicity']:,} | **no** — the deprioritised axis, plus general clinical CNS AEs |
+| `toxicity/chronic-neurotoxicity/` | {n['measurements_per_endpoint']['chronic-neurotoxicity']} | yes |
+| `toxicity/hydrocephalus/` | {n['measurements_per_endpoint']['hydrocephalus']} | yes |
 
 **Severity grades 0/1/2/3** — {g.get('0',0)} / {g.get('1',0)} / {g.get('2',0)} / {g.get('3',0)}.
 **Study types** — {sd.get('in_vitro',0):,} in vitro, {sd.get('animal_invivo',0)} in vivo, {sd.get('clinical',0)} clinical.
@@ -113,7 +121,8 @@ features.
 
 | | |
 |---|---|
-| Dataset | `data/` — `oligos.csv`, `measurements.csv`, `modifications.csv`, `sources.csv` |
+| Dataset | one per endpoint: `toxicity/{{acute,chronic}}-neurotoxicity/data/` and `toxicity/hydrocephalus/data/` — each holds only its own toxicity |
+| Endpoint allocation rule | `src/endpoints.py` — enforced by four QC checks |
 | Submission PDFs | `deliverables/OligoTox-CNS_{{Narrative,Methodology}}.pdf` |
 | Dataset workbook | `deliverables/OligoTox-CNS_Dataset.xlsx` |
 | Schema & dictionary | `docs/SCHEMA.md`, `docs/DATA_DICTIONARY.md` |
