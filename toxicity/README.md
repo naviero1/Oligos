@@ -44,12 +44,15 @@ excluded here and listed in the cross-cutting file instead.
 | [Thrombocytopenia](./thrombocytopenia.md) | background-only | 0 | 0 | 0 | none |
 | [Complement activation](./complement-activation.md) | background-only | 0 | 0 | 0 | none |
 | [Coagulopathy](./coagulopathy.md) | background-only | 0 | 0 | 0 | none |
-| [Chronic neurotoxicity](./chronic-neurotoxicity.md) | not-addressed | 0 | 0 | 0 | none |
-| [Hydrocephalus](./hydrocephalus.md) | not-addressed | 0 | 0 | 0 | none |
-| **Total** | — | **65** | **111** | **13** | **16** |
+| [Chronic neurotoxicity](./chronic-neurotoxicity.md) | delivered | 573 | 2,393 | 23 † | 94 |
+| [Hydrocephalus](./hydrocephalus.md) | delivered | 13 | 147 | (shared †) | 44 |
+| **Total** | — | **651** ‡ | **2,651** | **36** † | **154** |
 
-`sources/` holds 18 PDFs in total: the 13 endpoint-dedicated files counted above, 4
-cross-cutting reference files, and 1 off-topic file in `sources/_unrelated/`.
+`sources/` originally held 18 PDFs: 13 endpoint-dedicated files, 4 cross-cutting
+reference files, and 1 off-topic file in `sources/_unrelated/`. The CNS pass added
+`sources/cns/`, a further 46 files (23 PDFs plus JATS XML full texts, a label
+capture and a supplementary workbook), so the library is no longer 18 files and
+any sweep quoting that number predates the CNS work.
 
 Row counts for the single populated endpoint, by `source_id`: WS 36, N3 21, M1 11, N2 10,
 K1 9, A4 5, REV 4, A1 3, A3 3, A8 2, A9 2, A2 1, A5 1, A6 1, A7 1, A10 1. Five of those 16
@@ -116,3 +119,21 @@ dossiers report zero rows rather than a subset.
 - [`../PADP.md`](../PADP.md) — Public Access & Dissemination Plan.
 - [`../PRESENTATION.md`](../PRESENTATION.md) — the deck, which covers the kidney endpoint
   only.
+
+† The two CNS endpoints were curated as **one corpus** and share a source library:
+`sources/cns/` holds 46 files (23 PDFs plus JATS XML, a label capture and a
+supplementary workbook), counted once against chronic neurotoxicity rather than
+split, because no clean per-endpoint split of the library exists. The 13 PDFs
+counted for kidney are unchanged.
+
+‡ The oligo total is a sum across endpoints and **double-counts molecules studied
+for more than one toxicity** — 5 oligos appear in both CNS partitions, and several
+CNS compounds also appear in the kidney table. An oligo is a compound identity,
+not a toxicity observation. The measurement-row total does not double-count: no
+`measurement_id` appears twice.
+
+The rows for endpoints other than kidney and the two CNS endpoints describe **the
+branch this register was written against**. Work exists on unmerged branches that
+this table has not been reconciled with — a thrombocytopenia dataset among them —
+so treat a `0` outside the CNS and kidney rows as "not seen from here", not as
+"does not exist".

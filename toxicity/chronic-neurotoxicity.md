@@ -1,60 +1,76 @@
 # Chronic neurotoxicity
 
-Chronic neurotoxicity is the seventh endpoint on the Challenge's list of toxicities of interest, quoted verbatim from the brief at [`README.md`](./README.md#scope-authority). **This project has done no work on it:** no source acquired, no rows extracted, and the endpoint is named in no file in `data/`, `sources/`, `scripts/` or the deck (a case-insensitive grep for `neurotox|neurodegener|hydrocephal|CNS toxicity` over the curated corpus returns nothing; it now appears only in `README.md`, `REVIEW-2026-08.md` and this directory, all added by this reorganization). No scope decision was recorded either — `sources/SOURCES.md` holds no section, note or exclusion statement for it. This dossier supplies the missing statement: **out of scope for Phase 2**, on the grounds in §2 and §5.
+**Status:** `delivered` · **Register:** [`./README.md`](./README.md) · **Corpus documentation:** [`../README-CNS.md`](../README-CNS.md)
+
+Chronic neurotoxicity is the seventh endpoint on the Challenge's list of toxicities of interest, quoted verbatim from the brief at [`./README.md`](./README.md#scope-authority). It is **curated and delivered**: 2,393 graded per-measurement rows over 573 oligonucleotides, drawn from 89 distinct source documents.
+
+> **This file previously said the opposite.** Until 2026-08-28 it recorded the endpoint as `not-addressed` — "no source acquired, no rows extracted" — and proposed **out of scope for Phase 2** as its deliverable. That was an accurate description of one branch (the 111-row kidney lineage) and a wrong description of the project: the CNS curation was carried out on a separate branch that the review could not see. The recommendation is withdrawn, and §4 below preserves what the original sweeps did and did not establish, since that record is still useful.
 
 ## 1. Status
 
 | Item | Count | Basis |
 |---|---:|---|
-| Oligos | 0 | No oligo row carries a neurological toxicity observation — §3 |
-| Measurement rows | 0 | All 111 rows in `data/measurements.csv` are kidney; no neurological readout exists |
-| `source_id`s | 0 | All 16 `source_id`s in use belong to [kidney](./kidney-nephrotoxicity.md) |
-| Source PDFs held | 0 | No PDF in `sources/` is a neurotoxicity source — §2 |
-| Extraction status | not started | Nothing to extract from |
+| Measurement rows | **2,393** | `challenge_priority != high_hydrocephalus` in the 2,540-row CNS corpus |
+| Oligos | **573** | distinct `oligo_id` referenced by those rows |
+| Oligos with a published sequence | **458 / 573** | rest are `TBD`; never reconstructed |
+| Distinct `source_ref` documents | **89** | canonical identifiers — DOI, PMID, PMCID, US patent, NCT, FDA/EMA document |
+| Distinct `source_id`s | **94** | |
+| Distinct target genes | **41** | |
+| Rows carrying a verifier verdict | **228** | adversarial verification, [`../VERIFICATION-CNS.md`](../VERIFICATION-CNS.md) |
+| Extraction status | complete for this pass | 12 extraction lanes, [`../notes/cns/extractions/`](../notes/cns/extractions/) |
 
-## 2. Sources allocated
+Grades — provisional on all rows, pending subject-matter review:
 
-**None.** All 18 PDFs in `sources/` were swept with the case-insensitive pattern `neurotox|neurodegener|hydrocephal|neuroinflamm|neuronal` over their full text layers. Fifteen return zero hits, including all five hepatotox sources, both Frazier reviews, and every kidney PDF except the MMB volume treated below. Three return hits; none is a source for this endpoint, and all three are already allocated in [`cross-cutting.md`](./cross-cutting.md).
+| `neurotox_grade` | 0 | 1 | 2 | 3 |
+|---|---:|---:|---:|---:|
+| Rows | 1,183 | 577 | 513 | 120 |
 
-| File | Pattern / strict `neurotox` hits | Why it is not a source here |
-|---|---|---|
-| [`CasarettDoull_Toxicology_textbook.pdf`](../sources/reference/CasarettDoull_Toxicology_textbook.pdf) (1,473 pp.) | 804 / 625 | General toxicology. Only 14 of its pages mention oligonucleotides or antisense at all, and none of those 14 also carries a `neurotox` hit. |
-| [`MethodsMolBiol2022_book_incl_renal-tox-mice_chapter.pdf`](../sources/kidney/MethodsMolBiol2022_book_incl_renal-tox-mice_chapter.pdf) (416 pp.) | 18 / **0** | All 18 hits are `neurodegener` or `neuronal`; most are the CNS as a *therapeutic target* (Batten disease, Parkinson's, neuromuscular and neurodegenerative indications). Two passages touch CNS safety — below. |
-| [`OligoTox_challenge_brief.pdf`](../sources/reference/OligoTox_challenge_brief.pdf) (6 pp.) | 4 / 2 | Scope authority naming the endpoint, not evidence about it. Both strict hits are on p.1, inside the authoritative portion (provenance caveat: [`cross-cutting.md`, §1.1 "Challenge brief — provenance defect (pp.3b–6)"](./cross-cutting.md#11-challenge-brief--provenance-defect-pp3b6)). |
+| Study type | animal in vivo | clinical | in vitro |
+|---|---:|---:|---:|
+| Rows | 1,684 | 414 | 295 |
 
-Two passages touch CNS safety; neither is oligonucleotide-specific evidence for this endpoint.
+## 2. Where the data and its documentation live
 
-**Chapter 24**, "Intrathecal Delivery of Therapeutic Oligonucleotides for Potent Modulation of Gene Expression in the Central Nervous System" (PDF pp.341–349 = book pp.345–353), is allocated to this endpoint as "delivery route; chronic neurotoxicity context" by the chapter table at [`cross-cutting.md`, §1.4 "Methods in Molecular Biology 2434 — misfiling finding"](./cross-cutting.md#14-methods-in-molecular-biology-2434--misfiling-finding). Its Notes (PDF p.348 = book p.352) state that 10 µL injections in adult mice "are well-tolerated and do not cause neuronal loss, astrogliosis, or microgliosis [9]". That is a **procedure and volume** qualification — it names no oligonucleotide, dose or duration, and concerns single injections — so it supports the delivery method, not a chronic-toxicity finding.
+The CNS curation was carried out as **one corpus of 2,540 measurements serving both CNS endpoints the brief names**, partitioned by its own `challenge_priority` column: `high_hydrocephalus` (147 rows) belongs to [`./hydrocephalus.md`](./hydrocephalus.md), everything else (2,393) here. The partition is disjoint and exhaustive.
 
-**Chapter 25**, "Preclinical Safety Assessment of Therapeutic Oligonucleotides" (Patrik Andersson, chapter head at PDF p.350), §3.2.1 (PDF p.356 = book p.361): the author states that, to the author's knowledge, there is no information on systemically administered ASOs or siRNA "showing activity in vitro or in vivo safety pharmacology studies, including activity on the hERG channel or any other ion channels important for cardiovascular or neuronal function", while noting that direct delivery into heart and CNS "is a different story and could result in functional effects". It reports an **absence of available information**, not a demonstrated negative, and carries no compound, dose, species or value. Ion-channel activity maps to the acute axis the brief deprioritizes ("alterations of neuronal electrical activity", brief p.1); the passage itself uses neither "acute" nor "chronic", so that mapping is this dossier's inference. Neither passage addresses the chronic axis, and neither does anything else the §2 and §3 sweeps reached.
-
-## 3. Data
-
-No file or column in `data/` carries a record for this endpoint. Sweeping all 23 columns × 111 measurement rows and all 17 columns × 65 oligo rows with `neuro|CNS|brain|cerebr|spinal|cognit|ventricul|hydrocephal|axon|myelin|intrathecal|neuron` returns 10 field-level matches across 7 loci. Every one is a renal row, a route string, or a drug-identity field belonging to an oligo indicated for neurological disease — listed so a later sweep does not re-open them as findings.
-
-| Loci | Field | What it is |
-|---|---|---|
-| `MSR011`, `MSR030` | `delivery_method=intrathecal` | Nusinersen (`OLG004`). Both read out `urine_protein_elevated` (58 and 69 `pct_incidence`), `tissue=kidney`, `nephrotox_grade=1`. **Renal rows; the route is intrathecal because the drug is.** |
-| `MSR042` | `delivery_method`, `notes` | Tofersen (`OLG017`). `readout_name=proteinuria`, `readout_value=none`, `nephrotox_grade=0` — the *absence* of a renal finding. Its note `neuro_AEs_predominate_ASO_class_renal_statement` mentions neurological AEs only to explain why the renal signal is not the dominant one. No neurological AE is named, counted or graded. |
-| `MSR001`, `OLG001` | `source_table`, `indication`, `design_source` | Inotersen: the NEURO-TTR trial name used as a provenance locus, and the treated disease (hATTR polyneuropathy). All 5 of its rows are `systemic_dose`. |
-| `OLG004`, `OLG017` | `indication`, `notes` | Route strings (`intrathecal_delivery`, `intrathecal`); `OLG017`'s note is a *renal* class precaution. `OLG004`'s `indication` is `spinal_muscular_atrophy` — the treated disease, not a toxicity observation. |
-
-The three oligos the sweep matched — `OLG001` inotersen, `OLG004` nusinersen, `OLG017` tofersen — carry 8 measurement rows between them, all kidney. The rule is the regex above, not a clinical judgement: the four hATTR oligos (`OLG018`, `OLG019`, `OLG022`, `OLG023`) and the five DMD oligos (`OLG008`, `OLG011`, `OLG012`, `OLG013`, `OLG016`) are also indicated for neuromuscular or amyloid disease but their `indication` strings contain no pattern term, so they fall outside this list — and no field of theirs matched the sweep either. Two of the three are intrathecally delivered; inotersen is systemic in every row. Their identity and design fields are curated, so the identity layer for them exists; no neurological observation is attached to any of them.
-
-## 4. Known issues that apply here
-
-- The eight-endpoint list existed in the repository only as a PDF; no markdown file quoted or named it, so an endpoint with zero artifacts was indistinguishable from one that was never part of the Challenge (audit finding, `major`). Quoting it at [`README.md`](./README.md#scope-authority) is the fix.
-- The same silence covers five of the other six non-kidney endpoints (audit finding, `minor`). Hepatotoxicity is the exception: `sources/SOURCES.md:83`, `:169` and `:216` carry its fallback status, and the root [`README.md` § "Record counter" (the hepatotox-fallback row)](../README.md) records the decision as "not needed".
-- The MMB 2434 volume is misfiled under `sources/kidney/` although it is a 416-page multi-chapter book — which is why the §2 sweep had to reach into a kidney-filed file. Finding and fix in [`cross-cutting.md`, §1.4 "Methods in Molecular Biology 2434 — misfiling finding"](./cross-cutting.md#14-methods-in-molecular-biology-2434--misfiling-finding).
-- Scope of verification: the sweeps above cover PDF text layers, tables and reference lists. Figure content was not searched.
-
-## 5. Not done, and next step
-
-| Not done | Cause |
+| Artifact | Path |
 |---|---|
-| No rows extracted | No source in the repository carries a per-compound neurological readout. The two passages in §2 are an injection-procedure note and a class-level statement about missing information. |
-| No source acquired | Deliberate: no candidate was ever entered on the fetch list, and the scope decision above leaves it that way for Phase 2. |
-| No grading rubric | The 0–3 rubric in [`schema.md`](../schema.md) is written entirely in renal terms and is not transferable; a second endpoint needs its own graded column and rubric ([`cross-cutting.md`, §4 "What must change if a second endpoint is populated"](./cross-cutting.md#4-what-must-change-if-a-second-endpoint-is-populated)). |
-| No chronic/acute boundary defined | The brief distinguishes chronic neurotoxicity from acute alterations of neuronal electrical activity but defines neither. Adopting the endpoint would require drawing that line here. |
+| Measurements | [`../data/cns_measurements.csv`](../data/cns_measurements.csv) (2,540 × 26, corpus) |
+| Oligos | [`../data/cns_oligos.csv`](../data/cns_oligos.csv) (592 × 17, corpus) |
+| Analysis view (generated) | [`../data/oligotox_cns_merged.csv`](../data/oligotox_cns_merged.csv) |
+| Schema, vocabularies, 0–3 rubric | [`../schema-cns.md`](../schema-cns.md) |
+| Methodology | [`../METHODOLOGY-CNS.md`](../METHODOLOGY-CNS.md) |
+| Verification record | [`../VERIFICATION-CNS.md`](../VERIFICATION-CNS.md) |
+| Source registry (generated) | [`../sources/SOURCES-CNS.md`](../sources/SOURCES-CNS.md) |
+| Gap analysis / what to generate next | [`../NEXT-STEPS-CNS.md`](../NEXT-STEPS-CNS.md) |
 
-No acquisition work is proposed; the deliverable for this endpoint is the scope statement above. If it were ever advanced, the order is: define the chronic/acute boundary, add a neurotoxicity-specific graded column with a written rubric, then acquire a primary source from outside the current library.
+The rubric concern the earlier version raised was real and is resolved: `nephrotox_grade` is renal and not transferable, so this endpoint has its **own** graded column, `neurotox_grade`, with its own written rubric in [`../schema-cns.md`](../schema-cns.md), plus CNS-specific columns (`cns_region`, `endpoint_domain`, `challenge_priority`, `reversibility`). `cns_oligos.csv` keeps the identical 17-column layout as the kidney oligo table so the two datasets union without re-mapping.
+
+## 3. The chronic/acute boundary
+
+The earlier version correctly noted that the brief distinguishes chronic neurotoxicity from acute alterations of neuronal electrical activity but defines neither, and that adopting the endpoint would require drawing that line. It is drawn in the data rather than in prose: every row declares `endpoint_domain` and `challenge_priority`, so a consumer filters rather than trusts a judgement.
+
+| `challenge_priority` | Rows (corpus) | Meaning |
+|---|---:|---|
+| `high_chronic_neurotox` | 1,047 | the named endpoint |
+| `high_hydrocephalus` | 147 | the other named endpoint, in its own dossier |
+| `medium` | 1,165 | in scope, neither named bucket |
+| `low_acute_electrophysiology` | 181 | the readout class the brief deprioritises — 7% of the corpus, filterable in one predicate |
+
+Acute rows are present deliberately: the large panels that pair **sequences** with **graded CNS outcomes** are acute, and they are the modelling payload. The 181 electrophysiology rows are present only as the matched in-vitro arm of an in-vivo panel on the same molecules.
+
+## 4. What the original sweeps established, and what they did not
+
+Preserved because the record remains useful. The original dossier swept the 18 PDFs then in `sources/` and found no per-compound neurological readout among them: two passages touched CNS safety — an injection-procedure note in *Methods in Molecular Biology* 2434 ch. 24 stating that 10 µL murine injections cause no neuronal loss, astrogliosis or microgliosis, and a ch. 25 statement that the author knew of no safety-pharmacology data on systemic ASOs — and neither is oligonucleotide-specific evidence of chronic toxicity. Both readings stand.
+
+What did not follow is the conclusion. **The corpus of sources held at the time was not the corpus of sources available**, and the sweep measured the former. The CNS pass acquired 108 documents that were not in `sources/` when the dossier was written, including FDA nonclinical review documents that had been recorded as unobtainable because `accessdata.fda.gov` returns HTTP 404 to non-browser clients — a bare 404 there was read as absence. Those reviews are among the best chronic-neurotoxicity sources in existence, because they carry per-dose, per-sex, per-timepoint lesion incidences **with recovery groups**.
+
+The methodological lesson is recorded in [`../NEXT-STEPS-CNS.md`](../NEXT-STEPS-CNS.md): an endpoint sweep bounded by the local library measures the library, not the literature, and should say which it is measuring.
+
+## 5. Known limitations
+
+- **Grades are provisional** on all 2,393 rows, pending subject-matter review.
+- **Recovery is rarely assessed.** `reversibility` is `not_assessed` on the large majority of corpus rows because most sources never looked; 398 rows carry a real recovery assessment, nearly all from regulatory nonclinical reviews.
+- **Human in vitro data is thin** — 295 in-vitro rows, and the literature is genuinely close to empty for iPSC microglia and brain organoids, which is a finding rather than an omission.
+- **Source concentration.** A few high-yield documents contribute a large share of rows, so errors there propagate; those were prioritised in verification.
+- Verification was a stratified sample, not a census: 614 verdicts, 149 refuted, 253 rows corrected.

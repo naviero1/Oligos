@@ -1,0 +1,541 @@
+{
+ "batch": "batch_reversibility",
+ "verdicts": [
+  {
+   "measurement_id": "CMS0283",
+   "verdict": "CONFIRMED",
+   "checked": "Local sources/cns/fpo/US10968453.html, Example 16 / Table 67. The table is explicitly paired: columns are \"3 hour FOB\" (1 mg, 3 mg) and \"8 week FOB\" (1 mg, 3 mg) after \"1 mg or 3 mg of a single dose\" intrathecally in Sprague-Dawley rats. ISIS 333611 reads 3.0 at 3 h / 1 mg and 0.0 at 8 weeks / 1 mg; ISIS 666870 reads 2.3 at 3 h / 1 mg and 0.0 at 8 weeks / 1 mg. Both row values are exact and the extractor's stated basis ('reversibility from the paired 8-week score in the same table') is correct: recovery was assessed at 8 weeks after a single dose and was complete.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0295",
+   "verdict": "CONFIRMED",
+   "checked": "Local sources/cns/fpo/US10968453.html, Example 16 / Table 67. The table is explicitly paired: columns are \"3 hour FOB\" (1 mg, 3 mg) and \"8 week FOB\" (1 mg, 3 mg) after \"1 mg or 3 mg of a single dose\" intrathecally in Sprague-Dawley rats. ISIS 333611 reads 3.0 at 3 h / 1 mg and 0.0 at 8 weeks / 1 mg; ISIS 666870 reads 2.3 at 3 h / 1 mg and 0.0 at 8 weeks / 1 mg. Both row values are exact and the extractor's stated basis ('reversibility from the paired 8-week score in the same table') is correct: recovery was assessed at 8 weeks after a single dose and was complete.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0372",
+   "verdict": "REFUTED",
+   "checked": "Local sources/cns/fpo/US11851654.html, Example 4 / Table 10 'Acute tolerability score'. The table is a time course, not a single point: ASO reads 7.5 +/- 0.9 at 1 hour (the row's value, exact), 5.5 +/- 0.9 at 3 hours and 0.5 +/- 2.3 at 6 hours, with PBS 0 +/- 0 throughout. The patent's own summary of that time course is: \"rise at 1 hour after the administration was observed in the ASO administration group, which was thereafter reduced gradually, however the rise remained up to 6 hours.\" Table 11 shows the side-effect event rate still 50% at 6 hours, and Table 12 shows 2/6 mice in this group died (PBS 0/4). No observation exists beyond 6 hours.",
+   "problem": "reversibility=reversible overstates the source. At the last observed timepoint the finding had not resolved - the patent says in terms that the rise \"remained up to 6 hours\", half the animals still had signs, and a third of the group died. Recovery was partially assessed and was partial. Correct value: partially_reversible. (Note the patent does distinguish: for the parallel Example 5 ASO it writes the score \"improved after 6 hours\" with a 0% event rate - so 'reversible' was available language the drafters deliberately did not use here.)",
+   "correction": {
+    "reversibility": "partially_reversible"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS0435",
+   "verdict": "CONFIRMED",
+   "checked": "Local sources/cns/fpo/US11851654.html, Example 5 / Table 16 'Number of deaths/number of doses': ASO 1/4, PBS 0/4 - the row's value is exact. Mortality is by definition an assessed, non-recovered outcome, and the deaths are recorded within one day of the ICV dose.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0512",
+   "verdict": "CONFIRMED",
+   "checked": "Local sources/cns/fpo/US9605263.html, Example 12 / Table 15. Design read verbatim: \"Wild type C57/B16 mice each received a single ICV dose of 700 ug of an antisense oligonucleotide listed in the table below... At 8 weeks post-injection, mice were evaluated according to 7 different criteria... Animals were sacrificed at 8 weeks.\" The behavioural read is therefore a single follow-up 8 weeks after one dose - i.e. long after exposure stopped - and the score is still non-zero, so recovery was looked for and had not occurred. Score in Table 15 matches the row exactly (791656=3.5, 801284=1.8, 801305=5.3, 802464=1.8, 806682=1.8). Corroboration that the assay discriminates: the paired rat table (Table 16) carries both a 3-hour and an 8-week column and several ASOs go 2.5->0.0, 1.2->0.0, 2.0->0.0, i.e. the 8-week column genuinely separates recovered from non-recovered animals.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0608",
+   "verdict": "CONFIRMED",
+   "checked": "Local sources/cns/fpo/US9605263.html, Example 12 / Table 15. Design read verbatim: \"Wild type C57/B16 mice each received a single ICV dose of 700 ug of an antisense oligonucleotide listed in the table below... At 8 weeks post-injection, mice were evaluated according to 7 different criteria... Animals were sacrificed at 8 weeks.\" The behavioural read is therefore a single follow-up 8 weeks after one dose - i.e. long after exposure stopped - and the score is still non-zero, so recovery was looked for and had not occurred. Score in Table 15 matches the row exactly (791656=3.5, 801284=1.8, 801305=5.3, 802464=1.8, 806682=1.8). Corroboration that the assay discriminates: the paired rat table (Table 16) carries both a 3-hour and an 8-week column and several ASOs go 2.5->0.0, 1.2->0.0, 2.0->0.0, i.e. the 8-week column genuinely separates recovered from non-recovered animals.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0701",
+   "verdict": "CONFIRMED",
+   "checked": "Local sources/cns/fpo/US9605263.html, Example 12 / Table 15. Design read verbatim: \"Wild type C57/B16 mice each received a single ICV dose of 700 ug of an antisense oligonucleotide listed in the table below... At 8 weeks post-injection, mice were evaluated according to 7 different criteria... Animals were sacrificed at 8 weeks.\" The behavioural read is therefore a single follow-up 8 weeks after one dose - i.e. long after exposure stopped - and the score is still non-zero, so recovery was looked for and had not occurred. Score in Table 15 matches the row exactly (791656=3.5, 801284=1.8, 801305=5.3, 802464=1.8, 806682=1.8). Corroboration that the assay discriminates: the paired rat table (Table 16) carries both a 3-hour and an 8-week column and several ASOs go 2.5->0.0, 1.2->0.0, 2.0->0.0, i.e. the 8-week column genuinely separates recovered from non-recovered animals.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0774",
+   "verdict": "CONFIRMED",
+   "checked": "Local sources/cns/fpo/US9605263.html, Example 12 / Table 15. Design read verbatim: \"Wild type C57/B16 mice each received a single ICV dose of 700 ug of an antisense oligonucleotide listed in the table below... At 8 weeks post-injection, mice were evaluated according to 7 different criteria... Animals were sacrificed at 8 weeks.\" The behavioural read is therefore a single follow-up 8 weeks after one dose - i.e. long after exposure stopped - and the score is still non-zero, so recovery was looked for and had not occurred. Score in Table 15 matches the row exactly (791656=3.5, 801284=1.8, 801305=5.3, 802464=1.8, 806682=1.8). Corroboration that the assay discriminates: the paired rat table (Table 16) carries both a 3-hour and an 8-week column and several ASOs go 2.5->0.0, 1.2->0.0, 2.0->0.0, i.e. the 8-week column genuinely separates recovered from non-recovered animals.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0890",
+   "verdict": "CONFIRMED",
+   "checked": "Local sources/cns/fpo/US9605263.html, Example 12 / Table 15. Design read verbatim: \"Wild type C57/B16 mice each received a single ICV dose of 700 ug of an antisense oligonucleotide listed in the table below... At 8 weeks post-injection, mice were evaluated according to 7 different criteria... Animals were sacrificed at 8 weeks.\" The behavioural read is therefore a single follow-up 8 weeks after one dose - i.e. long after exposure stopped - and the score is still non-zero, so recovery was looked for and had not occurred. Score in Table 15 matches the row exactly (791656=3.5, 801284=1.8, 801305=5.3, 802464=1.8, 806682=1.8). Corroboration that the assay discriminates: the paired rat table (Table 16) carries both a 3-hour and an 8-week column and several ASOs go 2.5->0.0, 1.2->0.0, 2.0->0.0, i.e. the 8-week column genuinely separates recovered from non-recovered animals.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0955",
+   "verdict": "CONFIRMED",
+   "checked": "Local sources/cns/fpo/US9605263.html, Example 13 / Table 16: \"Each rat in each group of rats was administered a single 3 mg intrathecal (IT) dose... At 3 hours and at 8 weeks following the IT dose, the movement of 7 different parts of the body was evaluated for each rat... Animals were sacrificed at 8 weeks.\" ISIS 802473 reads 2.0 at 3 hours and 2.3 at 8 weeks - the row's 2.3 is exact, and the paired timepoints are an explicit recovery assessment in which recovery did not occur (contrast 801287 2.5->0.0, 806679 1.2->0.0, 802459 2.0->0.0 in the same table).",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1131",
+   "verdict": "REFUTED",
+   "checked": "Local EMA_Qalsody_EPAR_276404_2024.pdf, Table 36 (p.135-136), read directly: Headache 33 (45.8%) tofersen 100 mg N=72 vs 16 (44.4%) placebo N=36 - the row's value and its grade-0 comparator logic are both exact. Table 36 is a TEAE incidence table by preferred term; it carries no duration, outcome or resolution column. The EPAR does report resolution narratives, but only for the individual neuroinflammatory SAEs (e.g. 'the event resolved after 11 days', 'resolved with sequelae'), never for the common-TEAE headache row.",
+   "problem": "reversibility=reversible is not at the cited locus. Also semantically empty here: the row is graded 0 as a negative anchor because the incidence is at the placebo rate, so there is no drug-attributable finding for a reversibility value to describe. Correct value: not_assessed.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1176",
+   "verdict": "REFUTED",
+   "checked": "SPINRAZA (nusinersen) US prescribing information, DailyMed setid dd70cd5f-b0fc-4ba4-a5ea-89a34778bd94, sec 6.1 Table 3 (Later-Onset SMA, Study 2). Value confirmed exactly: Back pain 25% SPINRAZA 12 mg (N=84) vs 0% sham-procedure control (N=42). The table is a bare incidence table; it reports no duration, outcome, resolution or follow-up for any listed reaction, and no adjacent label text states that back pain resolved.",
+   "problem": "reversibility=reversible is not stated anywhere at the cited locus. An adverse-reaction incidence table does not assess recovery. Correct value: not_assessed.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1191",
+   "verdict": "CONFIRMED",
+   "checked": "SPINRAZA US label sec 8.4 Juvenile Animal Toxicity Data, read on DailyMed: \"In a combined 6 and 13 week toxicity study in juvenile monkeys, intrathecal administration of nusinersen at higher doses (0, 5, 10, or 15 mg/dose) resulted in additional acute, transient effects, including limited use of limbs at the mid and high dose and uncoordinated movement at the high dose.\" The word 'transient' is in the cited locus itself, so the reversibility value does not depend on the EU SmPC cross-reference in the notes.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1323",
+   "verdict": "CONFIRMED",
+   "checked": "doi:10.3233/JND-230032, full text via PMC10357201. Recovery assessed and stated: \"This 21-year-old man suffered from headache and vomiting followed by visual disturbances after the 12th injection of nusinersen. Bilateral papilledema was recognized ophthalmologically... Symptoms resolved after 8 weeks of treatment with repeated lumbar punctures and acetazolamide.\" Presentation detail matches the row (severe bilateral papilledema with haemorrhage and secondary macular oedema; visual acuity reduced to decimal 0.3 right / 0.5 left).",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1362",
+   "verdict": "REFUTED",
+   "checked": "ClinicalTrials.gov API v2, NCT02623699, resultsSection.adverseEventsModule.otherEvents[106]: term='Headache', organSystem='Nervous system disorders', EG006 = 'Part B-MAD: Cohort 5: BIIB067 20 mg', numAffected=4 / numAtRisk=10 = 40.0% - value and arm confirmed exactly. The record's keys for this module are frequencyThreshold, timeFrame, description, eventGroups, seriousEvents, otherEvents; each event carries only counts.",
+   "problem": "reversibility=reversible cannot come from this locus. A ClinicalTrials.gov adverseEventsModule entry contains only term, organSystem, sourceVocabulary, assessmentType and per-arm numAffected/numAtRisk - there is no outcome, duration or resolution field in the schema at all. Correct value: not_assessed. (Grade-0 row: incidence at or below the concurrent intrathecal-placebo arm.)",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1384",
+   "verdict": "REFUTED",
+   "checked": "ClinicalTrials.gov API v2, NCT03070119, otherEvents[58]: term='Post lumbar puncture syndrome', organSystem='Injury, poisoning and procedural complications', EG001 = '233AS101: Part C (Prior BIIB067 100 mg)', numAffected=15 / numAtRisk=63 = 23.8% - confirmed exactly.",
+   "problem": "reversibility=reversible cannot come from this locus. A ClinicalTrials.gov adverseEventsModule entry contains only term, organSystem, sourceVocabulary, assessmentType and per-arm numAffected/numAtRisk - there is no outcome, duration or resolution field in the schema at all. Correct value: not_assessed.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1434",
+   "verdict": "REFUTED",
+   "checked": "ClinicalTrials.gov API v2, NCT03761849, otherEvents[20]: term='Headache', organSystem='Nervous system disorders', EG004 = 'Q16W NDC', numAffected=57 / numAtRisk=264 = 21.6% - confirmed exactly.",
+   "problem": "reversibility=reversible cannot come from this locus. A ClinicalTrials.gov adverseEventsModule entry contains only term, organSystem, sourceVocabulary, assessmentType and per-arm numAffected/numAtRisk - there is no outcome, duration or resolution field in the schema at all. Correct value: not_assessed. (Grade-0 row: below the concurrent intrathecal-placebo rate.)",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1471",
+   "verdict": "UNVERIFIABLE",
+   "checked": "Source is a gated Roche medical-affairs slide deck (CHDI 2023, M-XX-00013000, medically.roche.com). The deck is not retrievable: the CHDI-2023 landing page on medically.roche.com carries no tominersen/GENERATION HD1 material listing and direct material URLs return 404. Slide 21 could not be seen.",
+   "problem": "Unverifiable, and the reversibility reasoning is internally inconsistent on its face. The row is a WEEK-21, ON-TREATMENT plasma NfL point, but the notes justify 'reversible' with a week-101 OFF-TREATMENT observation ('Dosing stopped in March 2021, so week 101 is an OFF-TREATMENT timepoint at which both arms fall below placebo - direct evidence of reversibility'). A later timepoint's behaviour is not this row's evidence. Recommendation: keep only if the deck can be archived alongside the dataset AND the reversibility value is moved to the week-101 row where the observation actually sits; otherwise drop. A gated medical-affairs deck is also a weak provenance class for an open dataset.",
+   "correction": {},
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1499",
+   "verdict": "UNVERIFIABLE",
+   "checked": "Source is a gated Roche/Genentech medical-affairs slide deck (CHDI 2021, M-XX-00005115, medically.gene.com). Not retrievable; slide 32 could not be seen.",
+   "problem": "Unverifiable. Note also that the readout is an adverse-event incidence (post-lumbar puncture syndrome, 10.0%), the class of locus that never carries resolution information even when it can be read - so even if the deck were obtained, not_assessed is the likely correct value unless the slide states an outcome. Recommendation: keep only with an explicit 'unverified, gated source' caveat, or drop.",
+   "correction": {},
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1529",
+   "verdict": "CONFIRMED",
+   "checked": "doi:10.1001/jamaneurol.2025.4946 (Miller et al., final integrated VALOR + OLE analysis). Full text is paywalled; the published abstract retrieved via the Crossref API states the reversibility finding outright: \"Most adverse events were consistent with ALS progression or known procedural adverse effects. All serious neurological adverse events were reversible; few led to tofersen discontinuation.\" This row is a serious neurologic event (radiculitis) from the 'Serious neurologic events' rows, so the claim is on point.",
+   "problem": "Caveat on locus, not on the field under audit: the numeric value (1.0% at Table 3) could not be checked because the full text is paywalled - only the reversibility statement was verifiable.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1545",
+   "verdict": "REFUTED",
+   "checked": "Lovett et al., doi:10.1002/mus.28372, full text via PMC12060635. Value confirmed: \"24.5% of participants reported an AE of MedDRA preferred term CSF protein increased\" out of 147 exposed to tofersen 100 mg. The very next sentence is the only outcome statement attached to it: \"None of the reported AEs led to study drug discontinuation or withdrawal from the studies.\"",
+   "problem": "'did not lead to discontinuation' is not 'resolved'. The paper reports CSF protein trajectories by visit (Fig 2) but never states that these AEs resolved, and the paper's resolution statement ('All events but one resolved') is about the 12 SERIOUS neurologic events, not about this non-serious AE term. Correct value: not_assessed.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1554",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Lovett et al., doi:10.1002/mus.28372 via PMC12060635, Table 1 'Summary of Participant Narratives'. Participant 2 row confirmed exactly: myelitis; worsening bilateral leg weakness, paraplegia, hypoesthesia <T10, sphincter dysfunction; Related; 5 doses; baseline CSF WBC 2 and protein 31; CSF WBC during event 21 (90% mononuclear cells); protein 79; opening pressure not measured; tofersen discontinued. Recovery was assessed for the whole series: \"All events but one resolved either spontaneously, with dosing interruption/modification, or with concomitant therapies. One event was ongoing but improved as of December 2022.\"",
+   "problem": "Substantively right - recovery was assessed and 11 of 12 events resolved - but the paper does not identify WHICH event remained ongoing, and the detailed per-participant narratives are in a supplement not available in the PMC record. So 'reversible' for participant 2 specifically is an 11-in-12 inference from a class-level sentence rather than a per-row datum. Not corrected; flagged.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1563",
+   "verdict": "CONFIRMED",
+   "checked": "doi:10.1007/s00415-025-13415-3, full text via PMC12559034. Recovery assessed over a long follow-up (32 doses, most recent March 2025) and stated: \"After T21, pleocytosis initially remained stable before gradually decreasing, reaching the lowest cell count of 6 MPt/L at T30. Q-IgM also gradually decreased from 36 at T23 to 9 at T32... All symptoms gradually resolved and responded to concomitant non-steroidal anti-inflammatory treatment without relapse.\" Presentation matches the row (progressively worsening holocephalic headache from the third dose; transient fever/shivering/fatigue/radiating leg pain between T20 and T23; rising CSF pleocytosis, protein and intrathecal IgM).",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1584",
+   "verdict": "REFUTED",
+   "checked": "doi:10.1038/s41591-023-02326-3 (Mummery, MAPTRx phase 1b), full text via PMC10287562. Value confirmed: \"Adverse events (AEs) were reported in 94% of participants treated with MAPTRx and 75% of participants treated with placebo; all events were considered mild (88%) or moderate (12%) in severity by investigators (Table 2).\" The trial does have a 23-week post-treatment period, and the paper does report resolution for one specific term - \"All post-LP headaches resolved (median duration, <1 day)\" - and \"There were no deaths, dose-limiting AEs or discontinuations of dosing regimens during the trial.\"",
+   "problem": "The row is the aggregate any-adverse-event incidence (94%), and the source never states that those AEs resolved. What it states is their SEVERITY (all mild or moderate) plus resolution of one component term. Severity is not reversibility. Correct value for the aggregate row: not_assessed.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1614",
+   "verdict": "REFUTED",
+   "checked": "doi:10.1038/s41591-026-04314-9, local PMC13099374, 'Safety and adverse events', patient 1 narrative: \"Between the 4th and 5th dose (weeks 8-12), patient 1 developed dystonia, which was noticed on her exam before the 5th dose (Extended Data Fig. 6b). This was reported as a serious adverse event of uncertain correlation with the investigational therapy... She was evaluated by movement disorder, physiatry and physical therapy specialists and treated for status dystonicus with a course of clonazepam, baclofen and gabapentin, and improved.\" Everything in the row except the reversibility value matches.",
+   "problem": "The source says 'improved', not 'resolved' or 'returned to baseline'. The same paper uses the stronger wording where it applies - patient 2's status dystonicus is described as treated \"with gradual improvement to baseline\" - so the weaker wording for patient 1 is deliberate. Patient 1 subsequently developed severe communicating hydrocephalus and died under hospice care 3 months after the final dose. Correct value: partially_reversible.",
+   "correction": {
+    "reversibility": "partially_reversible"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1645",
+   "verdict": "CONFIRMED",
+   "checked": "Local PMC12744863 (doi:10.1016/j.omtn.2025.102692). Contrary to the standing lead, this study does have a post-dose follow-up window: a SINGLE i.c.v. or i.t. injection followed by serial tolerability scoring and open-field testing for 7-21 days - \"Mice injected with ASO2 and ASO3 were sacrificed 7 days postinjection; others were sacrificed 21 days postinjection\"; rats \"sacrificed 14 days postinjection\"; variant cohorts sacrificed at 10, 11, 14 or 21 days. The outcome of that window is stated explicitly: \"This toxicity appeared at least 3 days postinjection, persisted for 6 days or more, and worsened over time.\" The authors demonstrably do report resolution where it happens - \"acute toxicity from ASO2 resolved completely within 1 day\" - so non-resolution of the late-onset toxicity is an observation, not an absence of looking. Animals were killed on humane grounds when they \"reached a tolerability score >=11 and could no longer drink water independently\".",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1656",
+   "verdict": "CONFIRMED",
+   "checked": "Local PMC12744863 (doi:10.1016/j.omtn.2025.102692). Contrary to the standing lead, this study does have a post-dose follow-up window: a SINGLE i.c.v. or i.t. injection followed by serial tolerability scoring and open-field testing for 7-21 days - \"Mice injected with ASO2 and ASO3 were sacrificed 7 days postinjection; others were sacrificed 21 days postinjection\"; rats \"sacrificed 14 days postinjection\"; variant cohorts sacrificed at 10, 11, 14 or 21 days. The outcome of that window is stated explicitly: \"This toxicity appeared at least 3 days postinjection, persisted for 6 days or more, and worsened over time.\" The authors demonstrably do report resolution where it happens - \"acute toxicity from ASO2 resolved completely within 1 day\" - so non-resolution of the late-onset toxicity is an observation, not an absence of looking. Animals were killed on humane grounds when they \"reached a tolerability score >=11 and could no longer drink water independently\".",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1671",
+   "verdict": "CONFIRMED",
+   "checked": "Local PMC12744863 (doi:10.1016/j.omtn.2025.102692). Contrary to the standing lead, this study does have a post-dose follow-up window: a SINGLE i.c.v. or i.t. injection followed by serial tolerability scoring and open-field testing for 7-21 days - \"Mice injected with ASO2 and ASO3 were sacrificed 7 days postinjection; others were sacrificed 21 days postinjection\"; rats \"sacrificed 14 days postinjection\"; variant cohorts sacrificed at 10, 11, 14 or 21 days. The outcome of that window is stated explicitly: \"This toxicity appeared at least 3 days postinjection, persisted for 6 days or more, and worsened over time.\" The authors demonstrably do report resolution where it happens - \"acute toxicity from ASO2 resolved completely within 1 day\" - so non-resolution of the late-onset toxicity is an observation, not an absence of looking. Animals were killed on humane grounds when they \"reached a tolerability score >=11 and could no longer drink water independently\". For this specific row the readout (bladder volume) is a single terminal measurement at necropsy 14 days post-injection, so the reversibility value rests on the animal-level 14-day tolerability time course (Fig. 1F) rather than on serial measurement of this readout.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1681",
+   "verdict": "CONFIRMED",
+   "checked": "doi:10.1016/j.ymthe.2024.10.024 (Moazami, EvADINT), local PMC11638874. Observation window and recovery assessment are both explicit: \"EvADINT observation began at the time of anesthetic reversal with animals observed periodically over the next 24 h\"; \"we monitored mice at multiple time points over 24 h after injection.\" Non-recovery is built into the instrument - the Table 1 time bins end at \"24/no recovery\" and death scores 75. Outcome stated: \"Even severely affected mice, unless they died, recovered fully by 24 h, and showed no further adverse effects.\" This row scores 25.0/75, well below the death anchor, so the animal recovered.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1692",
+   "verdict": "REFUTED",
+   "checked": "Local PMC9221153 (doi:10.1089/nat.2021.0071) Methods: \"For 1 h following the single bolus injection of ASO, animals were observed for behavioral side effects using a modified functional observational battery, as recommended by the Oligonucleotide Safety Working Group.\" Results repeat: \"Five neurobehavioral categories were observed up to 1 h after dosing.\" The only recovery language in the paper is expressly restricted to a different, smaller cohort: \"We chose to evaluate behaviors during the 1st hour for all ASOs because observations of an initial set of 9 ASOs showed that acute behaviors manifested strongly within the 1st hour of dosing and waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing (Supplementary Fig. S2A). Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug\" - the following sentence's \"Also, for this initial set\" fixes both preceding sentences, and Suppl Fig S2A, to the 9-ASO pilot, not to the scored panel. Row value re-read from the extractor's own locus, Suppl_TableS1.xlsx column 'Acute_tolerance_score_mice' (indexing set-label + ordinal position among the 181 numerically scored rows): value matches exactly. The supplementary table has no recovery, mortality or follow-up column of any kind.",
+   "problem": "reversibility=reversible is not in the source for this animal. These mice were observed for 1 h only and were never re-examined; the 2-4 h / 24 h-7 d recovery observation belongs to the separate 9-ASO pilot cohort. The claim was imported from adjacent prose and then repeated verbatim in the notes of every row from this source ('Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A)'), which is the signature of a class-level claim applied row-by-row. Correct value: not_assessed. This is also a grade-0 row: the animal showed no signs at all, so there is nothing for a reversibility value to describe; not_assessed is the only honest value.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1701",
+   "verdict": "REFUTED",
+   "checked": "Local PMC9221153 (doi:10.1089/nat.2021.0071) Methods: \"For 1 h following the single bolus injection of ASO, animals were observed for behavioral side effects using a modified functional observational battery, as recommended by the Oligonucleotide Safety Working Group.\" Results repeat: \"Five neurobehavioral categories were observed up to 1 h after dosing.\" The only recovery language in the paper is expressly restricted to a different, smaller cohort: \"We chose to evaluate behaviors during the 1st hour for all ASOs because observations of an initial set of 9 ASOs showed that acute behaviors manifested strongly within the 1st hour of dosing and waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing (Supplementary Fig. S2A). Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug\" - the following sentence's \"Also, for this initial set\" fixes both preceding sentences, and Suppl Fig S2A, to the 9-ASO pilot, not to the scored panel. Row value re-read from the extractor's own locus, Suppl_TableS1.xlsx column 'Acute_tolerance_score_mice' (indexing set-label + ordinal position among the 181 numerically scored rows): value matches exactly. The supplementary table has no recovery, mortality or follow-up column of any kind.",
+   "problem": "reversibility=reversible is not in the source for this animal. These mice were observed for 1 h only and were never re-examined; the 2-4 h / 24 h-7 d recovery observation belongs to the separate 9-ASO pilot cohort. The claim was imported from adjacent prose and then repeated verbatim in the notes of every row from this source ('Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A)'), which is the signature of a class-level claim applied row-by-row. Correct value: not_assessed.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1710",
+   "verdict": "REFUTED",
+   "checked": "Local PMC9221153 (doi:10.1089/nat.2021.0071) Methods: \"For 1 h following the single bolus injection of ASO, animals were observed for behavioral side effects using a modified functional observational battery, as recommended by the Oligonucleotide Safety Working Group.\" Results repeat: \"Five neurobehavioral categories were observed up to 1 h after dosing.\" The only recovery language in the paper is expressly restricted to a different, smaller cohort: \"We chose to evaluate behaviors during the 1st hour for all ASOs because observations of an initial set of 9 ASOs showed that acute behaviors manifested strongly within the 1st hour of dosing and waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing (Supplementary Fig. S2A). Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug\" - the following sentence's \"Also, for this initial set\" fixes both preceding sentences, and Suppl Fig S2A, to the 9-ASO pilot, not to the scored panel. Row value re-read from the extractor's own locus, Suppl_TableS1.xlsx column 'Acute_tolerance_score_mice' (indexing set-label + ordinal position among the 181 numerically scored rows): value matches exactly. The supplementary table has no recovery, mortality or follow-up column of any kind.",
+   "problem": "reversibility=reversible is not in the source for this animal. These mice were observed for 1 h only and were never re-examined; the 2-4 h / 24 h-7 d recovery observation belongs to the separate 9-ASO pilot cohort. The claim was imported from adjacent prose and then repeated verbatim in the notes of every row from this source ('Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A)'), which is the signature of a class-level claim applied row-by-row. Correct value: not_assessed. This is also a grade-0 row: the animal showed no signs at all, so there is nothing for a reversibility value to describe; not_assessed is the only honest value.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1720",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local PMC9221153 (doi:10.1089/nat.2021.0071) Methods: \"For 1 h following the single bolus injection of ASO, animals were observed for behavioral side effects using a modified functional observational battery, as recommended by the Oligonucleotide Safety Working Group.\" Results repeat: \"Five neurobehavioral categories were observed up to 1 h after dosing.\" The only recovery language in the paper is expressly restricted to a different, smaller cohort: \"We chose to evaluate behaviors during the 1st hour for all ASOs because observations of an initial set of 9 ASOs showed that acute behaviors manifested strongly within the 1st hour of dosing and waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing (Supplementary Fig. S2A). Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug\" - the following sentence's \"Also, for this initial set\" fixes both preceding sentences, and Suppl Fig S2A, to the 9-ASO pilot, not to the scored panel. Row value re-read from the extractor's own locus, Suppl_TableS1.xlsx column 'Acute_tolerance_score_mice' (indexing set-label + ordinal position among the 181 numerically scored rows): value matches exactly. The supplementary table has no recovery, mortality or follow-up column of any kind. Score is exactly 20.0, the top of the scale, which the paper defines as \"20 (severe signs in all categories, including convulsions resulting in euthanasia)\".",
+   "problem": "irreversible survives, but on a different basis than the notes give. The notes' stated justification is the same imported 2-4 h/24 h-7 d recovery sentence used on every row from this source, which does not apply to this cohort. irreversible is nevertheless defensible here because it follows from the definition of the score actually recorded for THIS animal (a group mean of 20 requires the maximum in all five categories, an anchor the paper defines as requiring euthanasia), not from prose about other animals. Caveat: the paper reports no per-ASO mortality and the supplementary table has no death column, so euthanasia is inferred from the scale anchor. If the curator prefers a single uniform rule for this source, not_assessed is the conservative alternative for these two rows.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1729",
+   "verdict": "REFUTED",
+   "checked": "Local PMC9221153 (doi:10.1089/nat.2021.0071) Methods: \"For 1 h following the single bolus injection of ASO, animals were observed for behavioral side effects using a modified functional observational battery, as recommended by the Oligonucleotide Safety Working Group.\" Results repeat: \"Five neurobehavioral categories were observed up to 1 h after dosing.\" The only recovery language in the paper is expressly restricted to a different, smaller cohort: \"We chose to evaluate behaviors during the 1st hour for all ASOs because observations of an initial set of 9 ASOs showed that acute behaviors manifested strongly within the 1st hour of dosing and waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing (Supplementary Fig. S2A). Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug\" - the following sentence's \"Also, for this initial set\" fixes both preceding sentences, and Suppl Fig S2A, to the 9-ASO pilot, not to the scored panel. Row value re-read from the extractor's own locus, Suppl_TableS1.xlsx column 'Acute_tolerance_score_mice' (indexing set-label + ordinal position among the 181 numerically scored rows): value matches exactly. The supplementary table has no recovery, mortality or follow-up column of any kind.",
+   "problem": "reversibility=reversible is not in the source for this animal. These mice were observed for 1 h only and were never re-examined; the 2-4 h / 24 h-7 d recovery observation belongs to the separate 9-ASO pilot cohort. The claim was imported from adjacent prose and then repeated verbatim in the notes of every row from this source ('Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A)'), which is the signature of a class-level claim applied row-by-row. Correct value: not_assessed. This is also a grade-0 row: the animal showed no signs at all, so there is nothing for a reversibility value to describe; not_assessed is the only honest value.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1739",
+   "verdict": "REFUTED",
+   "checked": "Local PMC9221153 (doi:10.1089/nat.2021.0071) Methods: \"For 1 h following the single bolus injection of ASO, animals were observed for behavioral side effects using a modified functional observational battery, as recommended by the Oligonucleotide Safety Working Group.\" Results repeat: \"Five neurobehavioral categories were observed up to 1 h after dosing.\" The only recovery language in the paper is expressly restricted to a different, smaller cohort: \"We chose to evaluate behaviors during the 1st hour for all ASOs because observations of an initial set of 9 ASOs showed that acute behaviors manifested strongly within the 1st hour of dosing and waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing (Supplementary Fig. S2A). Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug\" - the following sentence's \"Also, for this initial set\" fixes both preceding sentences, and Suppl Fig S2A, to the 9-ASO pilot, not to the scored panel. Row value re-read from the extractor's own locus, Suppl_TableS1.xlsx column 'Acute_tolerance_score_mice' (indexing set-label + ordinal position among the 181 numerically scored rows): value matches exactly. The supplementary table has no recovery, mortality or follow-up column of any kind.",
+   "problem": "reversibility=reversible is not in the source for this animal. These mice were observed for 1 h only and were never re-examined; the 2-4 h / 24 h-7 d recovery observation belongs to the separate 9-ASO pilot cohort. The claim was imported from adjacent prose and then repeated verbatim in the notes of every row from this source ('Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A)'), which is the signature of a class-level claim applied row-by-row. Correct value: not_assessed. This is also a grade-0 row: the animal showed no signs at all, so there is nothing for a reversibility value to describe; not_assessed is the only honest value.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1748",
+   "verdict": "REFUTED",
+   "checked": "Local PMC9221153 (doi:10.1089/nat.2021.0071) Methods: \"For 1 h following the single bolus injection of ASO, animals were observed for behavioral side effects using a modified functional observational battery, as recommended by the Oligonucleotide Safety Working Group.\" Results repeat: \"Five neurobehavioral categories were observed up to 1 h after dosing.\" The only recovery language in the paper is expressly restricted to a different, smaller cohort: \"We chose to evaluate behaviors during the 1st hour for all ASOs because observations of an initial set of 9 ASOs showed that acute behaviors manifested strongly within the 1st hour of dosing and waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing (Supplementary Fig. S2A). Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug\" - the following sentence's \"Also, for this initial set\" fixes both preceding sentences, and Suppl Fig S2A, to the 9-ASO pilot, not to the scored panel. Row value re-read from the extractor's own locus, Suppl_TableS1.xlsx column 'Acute_tolerance_score_mice' (indexing set-label + ordinal position among the 181 numerically scored rows): value matches exactly. The supplementary table has no recovery, mortality or follow-up column of any kind.",
+   "problem": "reversibility=reversible is not in the source for this animal. These mice were observed for 1 h only and were never re-examined; the 2-4 h / 24 h-7 d recovery observation belongs to the separate 9-ASO pilot cohort. The claim was imported from adjacent prose and then repeated verbatim in the notes of every row from this source ('Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A)'), which is the signature of a class-level claim applied row-by-row. Correct value: not_assessed.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1757",
+   "verdict": "REFUTED",
+   "checked": "Local PMC9221153 (doi:10.1089/nat.2021.0071) Methods: \"For 1 h following the single bolus injection of ASO, animals were observed for behavioral side effects using a modified functional observational battery, as recommended by the Oligonucleotide Safety Working Group.\" Results repeat: \"Five neurobehavioral categories were observed up to 1 h after dosing.\" The only recovery language in the paper is expressly restricted to a different, smaller cohort: \"We chose to evaluate behaviors during the 1st hour for all ASOs because observations of an initial set of 9 ASOs showed that acute behaviors manifested strongly within the 1st hour of dosing and waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing (Supplementary Fig. S2A). Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug\" - the following sentence's \"Also, for this initial set\" fixes both preceding sentences, and Suppl Fig S2A, to the 9-ASO pilot, not to the scored panel. Row value re-read from the extractor's own locus, Suppl_TableS1.xlsx column 'Acute_tolerance_score_mice' (indexing set-label + ordinal position among the 181 numerically scored rows): value matches exactly. The supplementary table has no recovery, mortality or follow-up column of any kind.",
+   "problem": "reversibility=reversible is not in the source for this animal. These mice were observed for 1 h only and were never re-examined; the 2-4 h / 24 h-7 d recovery observation belongs to the separate 9-ASO pilot cohort. The claim was imported from adjacent prose and then repeated verbatim in the notes of every row from this source ('Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A)'), which is the signature of a class-level claim applied row-by-row. Correct value: not_assessed.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1766",
+   "verdict": "REFUTED",
+   "checked": "Local PMC9221153 (doi:10.1089/nat.2021.0071) Methods: \"For 1 h following the single bolus injection of ASO, animals were observed for behavioral side effects using a modified functional observational battery, as recommended by the Oligonucleotide Safety Working Group.\" Results repeat: \"Five neurobehavioral categories were observed up to 1 h after dosing.\" The only recovery language in the paper is expressly restricted to a different, smaller cohort: \"We chose to evaluate behaviors during the 1st hour for all ASOs because observations of an initial set of 9 ASOs showed that acute behaviors manifested strongly within the 1st hour of dosing and waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing (Supplementary Fig. S2A). Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug\" - the following sentence's \"Also, for this initial set\" fixes both preceding sentences, and Suppl Fig S2A, to the 9-ASO pilot, not to the scored panel. Row value re-read from the extractor's own locus, Suppl_TableS1.xlsx column 'Acute_tolerance_score_mice' (indexing set-label + ordinal position among the 181 numerically scored rows): value matches exactly. The supplementary table has no recovery, mortality or follow-up column of any kind.",
+   "problem": "reversibility=reversible is not in the source for this animal. These mice were observed for 1 h only and were never re-examined; the 2-4 h / 24 h-7 d recovery observation belongs to the separate 9-ASO pilot cohort. The claim was imported from adjacent prose and then repeated verbatim in the notes of every row from this source ('Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A)'), which is the signature of a class-level claim applied row-by-row. Correct value: not_assessed.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1775",
+   "verdict": "REFUTED",
+   "checked": "Local PMC9221153 (doi:10.1089/nat.2021.0071) Methods: \"For 1 h following the single bolus injection of ASO, animals were observed for behavioral side effects using a modified functional observational battery, as recommended by the Oligonucleotide Safety Working Group.\" Results repeat: \"Five neurobehavioral categories were observed up to 1 h after dosing.\" The only recovery language in the paper is expressly restricted to a different, smaller cohort: \"We chose to evaluate behaviors during the 1st hour for all ASOs because observations of an initial set of 9 ASOs showed that acute behaviors manifested strongly within the 1st hour of dosing and waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing (Supplementary Fig. S2A). Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug\" - the following sentence's \"Also, for this initial set\" fixes both preceding sentences, and Suppl Fig S2A, to the 9-ASO pilot, not to the scored panel. Row value re-read from the extractor's own locus, Suppl_TableS1.xlsx column 'Acute_tolerance_score_mice' (indexing set-label + ordinal position among the 181 numerically scored rows): value matches exactly. The supplementary table has no recovery, mortality or follow-up column of any kind.",
+   "problem": "reversibility=reversible is not in the source for this animal. These mice were observed for 1 h only and were never re-examined; the 2-4 h / 24 h-7 d recovery observation belongs to the separate 9-ASO pilot cohort. The claim was imported from adjacent prose and then repeated verbatim in the notes of every row from this source ('Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A)'), which is the signature of a class-level claim applied row-by-row. Correct value: not_assessed.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1784",
+   "verdict": "REFUTED",
+   "checked": "Local PMC9221153 (doi:10.1089/nat.2021.0071) Methods: \"For 1 h following the single bolus injection of ASO, animals were observed for behavioral side effects using a modified functional observational battery, as recommended by the Oligonucleotide Safety Working Group.\" Results repeat: \"Five neurobehavioral categories were observed up to 1 h after dosing.\" The only recovery language in the paper is expressly restricted to a different, smaller cohort: \"We chose to evaluate behaviors during the 1st hour for all ASOs because observations of an initial set of 9 ASOs showed that acute behaviors manifested strongly within the 1st hour of dosing and waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing (Supplementary Fig. S2A). Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug\" - the following sentence's \"Also, for this initial set\" fixes both preceding sentences, and Suppl Fig S2A, to the 9-ASO pilot, not to the scored panel. Row value re-read from the extractor's own locus, Suppl_TableS1.xlsx column 'Acute_tolerance_score_mice' (indexing set-label + ordinal position among the 181 numerically scored rows): value matches exactly. The supplementary table has no recovery, mortality or follow-up column of any kind.",
+   "problem": "reversibility=reversible is not in the source for this animal. These mice were observed for 1 h only and were never re-examined; the 2-4 h / 24 h-7 d recovery observation belongs to the separate 9-ASO pilot cohort. The claim was imported from adjacent prose and then repeated verbatim in the notes of every row from this source ('Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A)'), which is the signature of a class-level claim applied row-by-row. Correct value: not_assessed.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1793",
+   "verdict": "REFUTED",
+   "checked": "Local PMC9221153 (doi:10.1089/nat.2021.0071) Methods: \"For 1 h following the single bolus injection of ASO, animals were observed for behavioral side effects using a modified functional observational battery, as recommended by the Oligonucleotide Safety Working Group.\" Results repeat: \"Five neurobehavioral categories were observed up to 1 h after dosing.\" The only recovery language in the paper is expressly restricted to a different, smaller cohort: \"We chose to evaluate behaviors during the 1st hour for all ASOs because observations of an initial set of 9 ASOs showed that acute behaviors manifested strongly within the 1st hour of dosing and waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing (Supplementary Fig. S2A). Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug\" - the following sentence's \"Also, for this initial set\" fixes both preceding sentences, and Suppl Fig S2A, to the 9-ASO pilot, not to the scored panel. Row value re-read from the extractor's own locus, Suppl_TableS1.xlsx column 'Acute_tolerance_score_mice' (indexing set-label + ordinal position among the 181 numerically scored rows): value matches exactly. The supplementary table has no recovery, mortality or follow-up column of any kind.",
+   "problem": "reversibility=reversible is not in the source for this animal. These mice were observed for 1 h only and were never re-examined; the 2-4 h / 24 h-7 d recovery observation belongs to the separate 9-ASO pilot cohort. The claim was imported from adjacent prose and then repeated verbatim in the notes of every row from this source ('Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A)'), which is the signature of a class-level claim applied row-by-row. Correct value: not_assessed.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1802",
+   "verdict": "REFUTED",
+   "checked": "Local PMC9221153 (doi:10.1089/nat.2021.0071) Methods: \"For 1 h following the single bolus injection of ASO, animals were observed for behavioral side effects using a modified functional observational battery, as recommended by the Oligonucleotide Safety Working Group.\" Results repeat: \"Five neurobehavioral categories were observed up to 1 h after dosing.\" The only recovery language in the paper is expressly restricted to a different, smaller cohort: \"We chose to evaluate behaviors during the 1st hour for all ASOs because observations of an initial set of 9 ASOs showed that acute behaviors manifested strongly within the 1st hour of dosing and waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing (Supplementary Fig. S2A). Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug\" - the following sentence's \"Also, for this initial set\" fixes both preceding sentences, and Suppl Fig S2A, to the 9-ASO pilot, not to the scored panel. Row value re-read from the extractor's own locus, Suppl_TableS1.xlsx column 'Acute_tolerance_score_mice' (indexing set-label + ordinal position among the 181 numerically scored rows): value matches exactly. The supplementary table has no recovery, mortality or follow-up column of any kind.",
+   "problem": "reversibility=reversible is not in the source for this animal. These mice were observed for 1 h only and were never re-examined; the 2-4 h / 24 h-7 d recovery observation belongs to the separate 9-ASO pilot cohort. The claim was imported from adjacent prose and then repeated verbatim in the notes of every row from this source ('Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A)'), which is the signature of a class-level claim applied row-by-row. Correct value: not_assessed.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1811",
+   "verdict": "REFUTED",
+   "checked": "Local PMC9221153 (doi:10.1089/nat.2021.0071) Methods: \"For 1 h following the single bolus injection of ASO, animals were observed for behavioral side effects using a modified functional observational battery, as recommended by the Oligonucleotide Safety Working Group.\" Results repeat: \"Five neurobehavioral categories were observed up to 1 h after dosing.\" The only recovery language in the paper is expressly restricted to a different, smaller cohort: \"We chose to evaluate behaviors during the 1st hour for all ASOs because observations of an initial set of 9 ASOs showed that acute behaviors manifested strongly within the 1st hour of dosing and waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing (Supplementary Fig. S2A). Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug\" - the following sentence's \"Also, for this initial set\" fixes both preceding sentences, and Suppl Fig S2A, to the 9-ASO pilot, not to the scored panel. Row value re-read from the extractor's own locus, Suppl_TableS1.xlsx column 'Acute_tolerance_score_mice' (indexing set-label + ordinal position among the 181 numerically scored rows): value matches exactly. The supplementary table has no recovery, mortality or follow-up column of any kind.",
+   "problem": "reversibility=reversible is not in the source for this animal. These mice were observed for 1 h only and were never re-examined; the 2-4 h / 24 h-7 d recovery observation belongs to the separate 9-ASO pilot cohort. The claim was imported from adjacent prose and then repeated verbatim in the notes of every row from this source ('Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A)'), which is the signature of a class-level claim applied row-by-row. Correct value: not_assessed.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1820",
+   "verdict": "REFUTED",
+   "checked": "Local PMC9221153 (doi:10.1089/nat.2021.0071) Methods: \"For 1 h following the single bolus injection of ASO, animals were observed for behavioral side effects using a modified functional observational battery, as recommended by the Oligonucleotide Safety Working Group.\" Results repeat: \"Five neurobehavioral categories were observed up to 1 h after dosing.\" The only recovery language in the paper is expressly restricted to a different, smaller cohort: \"We chose to evaluate behaviors during the 1st hour for all ASOs because observations of an initial set of 9 ASOs showed that acute behaviors manifested strongly within the 1st hour of dosing and waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing (Supplementary Fig. S2A). Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug\" - the following sentence's \"Also, for this initial set\" fixes both preceding sentences, and Suppl Fig S2A, to the 9-ASO pilot, not to the scored panel. Row value re-read from the extractor's own locus, Suppl_TableS1.xlsx column 'Acute_tolerance_score_mice' (indexing set-label + ordinal position among the 181 numerically scored rows): value matches exactly. The supplementary table has no recovery, mortality or follow-up column of any kind.",
+   "problem": "reversibility=reversible is not in the source for this animal. These mice were observed for 1 h only and were never re-examined; the 2-4 h / 24 h-7 d recovery observation belongs to the separate 9-ASO pilot cohort. The claim was imported from adjacent prose and then repeated verbatim in the notes of every row from this source ('Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A)'), which is the signature of a class-level claim applied row-by-row. Correct value: not_assessed.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1829",
+   "verdict": "REFUTED",
+   "checked": "Local PMC9221153 (doi:10.1089/nat.2021.0071) Methods: \"For 1 h following the single bolus injection of ASO, animals were observed for behavioral side effects using a modified functional observational battery, as recommended by the Oligonucleotide Safety Working Group.\" Results repeat: \"Five neurobehavioral categories were observed up to 1 h after dosing.\" The only recovery language in the paper is expressly restricted to a different, smaller cohort: \"We chose to evaluate behaviors during the 1st hour for all ASOs because observations of an initial set of 9 ASOs showed that acute behaviors manifested strongly within the 1st hour of dosing and waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing (Supplementary Fig. S2A). Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug\" - the following sentence's \"Also, for this initial set\" fixes both preceding sentences, and Suppl Fig S2A, to the 9-ASO pilot, not to the scored panel. Row value re-read from the extractor's own locus, Suppl_TableS1.xlsx column 'Acute_tolerance_score_mice' (indexing set-label + ordinal position among the 181 numerically scored rows): value matches exactly. The supplementary table has no recovery, mortality or follow-up column of any kind.",
+   "problem": "reversibility=reversible is not in the source for this animal. These mice were observed for 1 h only and were never re-examined; the 2-4 h / 24 h-7 d recovery observation belongs to the separate 9-ASO pilot cohort. The claim was imported from adjacent prose and then repeated verbatim in the notes of every row from this source ('Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A)'), which is the signature of a class-level claim applied row-by-row. Correct value: not_assessed.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1838",
+   "verdict": "REFUTED",
+   "checked": "Local PMC9221153 (doi:10.1089/nat.2021.0071) Methods: \"For 1 h following the single bolus injection of ASO, animals were observed for behavioral side effects using a modified functional observational battery, as recommended by the Oligonucleotide Safety Working Group.\" Results repeat: \"Five neurobehavioral categories were observed up to 1 h after dosing.\" The only recovery language in the paper is expressly restricted to a different, smaller cohort: \"We chose to evaluate behaviors during the 1st hour for all ASOs because observations of an initial set of 9 ASOs showed that acute behaviors manifested strongly within the 1st hour of dosing and waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing (Supplementary Fig. S2A). Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug\" - the following sentence's \"Also, for this initial set\" fixes both preceding sentences, and Suppl Fig S2A, to the 9-ASO pilot, not to the scored panel. Row value re-read from the extractor's own locus, Suppl_TableS1.xlsx column 'Acute_tolerance_score_mice' (indexing set-label + ordinal position among the 181 numerically scored rows): value matches exactly. The supplementary table has no recovery, mortality or follow-up column of any kind.",
+   "problem": "reversibility=reversible is not in the source for this animal. These mice were observed for 1 h only and were never re-examined; the 2-4 h / 24 h-7 d recovery observation belongs to the separate 9-ASO pilot cohort. The claim was imported from adjacent prose and then repeated verbatim in the notes of every row from this source ('Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A)'), which is the signature of a class-level claim applied row-by-row. Correct value: not_assessed.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1847",
+   "verdict": "REFUTED",
+   "checked": "Local PMC9221153 (doi:10.1089/nat.2021.0071) Methods: \"For 1 h following the single bolus injection of ASO, animals were observed for behavioral side effects using a modified functional observational battery, as recommended by the Oligonucleotide Safety Working Group.\" Results repeat: \"Five neurobehavioral categories were observed up to 1 h after dosing.\" The only recovery language in the paper is expressly restricted to a different, smaller cohort: \"We chose to evaluate behaviors during the 1st hour for all ASOs because observations of an initial set of 9 ASOs showed that acute behaviors manifested strongly within the 1st hour of dosing and waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing (Supplementary Fig. S2A). Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug\" - the following sentence's \"Also, for this initial set\" fixes both preceding sentences, and Suppl Fig S2A, to the 9-ASO pilot, not to the scored panel. Row value re-read from the extractor's own locus, Suppl_TableS1.xlsx column 'Acute_tolerance_score_mice' (indexing set-label + ordinal position among the 181 numerically scored rows): value matches exactly. The supplementary table has no recovery, mortality or follow-up column of any kind.",
+   "problem": "reversibility=reversible is not in the source for this animal. These mice were observed for 1 h only and were never re-examined; the 2-4 h / 24 h-7 d recovery observation belongs to the separate 9-ASO pilot cohort. The claim was imported from adjacent prose and then repeated verbatim in the notes of every row from this source ('Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A)'), which is the signature of a class-level claim applied row-by-row. Correct value: not_assessed.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1857",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local PMC9221153 (doi:10.1089/nat.2021.0071) Methods: \"For 1 h following the single bolus injection of ASO, animals were observed for behavioral side effects using a modified functional observational battery, as recommended by the Oligonucleotide Safety Working Group.\" Results repeat: \"Five neurobehavioral categories were observed up to 1 h after dosing.\" The only recovery language in the paper is expressly restricted to a different, smaller cohort: \"We chose to evaluate behaviors during the 1st hour for all ASOs because observations of an initial set of 9 ASOs showed that acute behaviors manifested strongly within the 1st hour of dosing and waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing (Supplementary Fig. S2A). Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug\" - the following sentence's \"Also, for this initial set\" fixes both preceding sentences, and Suppl Fig S2A, to the 9-ASO pilot, not to the scored panel. Row value re-read from the extractor's own locus, Suppl_TableS1.xlsx column 'Acute_tolerance_score_mice' (indexing set-label + ordinal position among the 181 numerically scored rows): value matches exactly. The supplementary table has no recovery, mortality or follow-up column of any kind. Score is exactly 20.0, the top of the scale, which the paper defines as \"20 (severe signs in all categories, including convulsions resulting in euthanasia)\".",
+   "problem": "irreversible survives, but on a different basis than the notes give. The notes' stated justification is the same imported 2-4 h/24 h-7 d recovery sentence used on every row from this source, which does not apply to this cohort. irreversible is nevertheless defensible here because it follows from the definition of the score actually recorded for THIS animal (a group mean of 20 requires the maximum in all five categories, an anchor the paper defines as requiring euthanasia), not from prose about other animals. Caveat: the paper reports no per-ASO mortality and the supplementary table has no death column, so euthanasia is inferred from the scale anchor. If the curator prefers a single uniform rule for this source, not_assessed is the conservative alternative for these two rows.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1870",
+   "verdict": "REFUTED",
+   "checked": "Local PMC9221153 (doi:10.1089/nat.2021.0071) Methods: \"For 1 h following the single bolus injection of ASO, animals were observed for behavioral side effects using a modified functional observational battery, as recommended by the Oligonucleotide Safety Working Group.\" Results repeat: \"Five neurobehavioral categories were observed up to 1 h after dosing.\" The only recovery language in the paper is expressly restricted to a different, smaller cohort: \"We chose to evaluate behaviors during the 1st hour for all ASOs because observations of an initial set of 9 ASOs showed that acute behaviors manifested strongly within the 1st hour of dosing and waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing (Supplementary Fig. S2A). Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug\" - the following sentence's \"Also, for this initial set\" fixes both preceding sentences, and Suppl Fig S2A, to the 9-ASO pilot, not to the scored panel. Row value re-read from the extractor's own locus, Suppl_TableS1.xlsx column 'Acute_tolerance_score_mice' (indexing set-label + ordinal position among the 181 numerically scored rows): value matches exactly. The supplementary table has no recovery, mortality or follow-up column of any kind.",
+   "problem": "reversibility=reversible is not in the source for this animal. These mice were observed for 1 h only and were never re-examined; the 2-4 h / 24 h-7 d recovery observation belongs to the separate 9-ASO pilot cohort. The claim was imported from adjacent prose and then repeated verbatim in the notes of every row from this source ('Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A)'), which is the signature of a class-level claim applied row-by-row. Correct value: not_assessed.",
+   "correction": {
+    "reversibility": "not_assessed"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1879",
+   "verdict": "CONFIRMED",
+   "checked": "Local PMC12865454 (doi:10.1093/nar/gkaf1333). Scoring window: \"Animals are observed in their home cages 3 h after ASO ICV injection\" (rodent ICV) and \"Lower spinal reflexes and general motor function are assessed as a part of standard neurological examinations 2-4 h after IT administration of ASO in NHP\". Recovery WAS assessed, repeatedly and explicitly: (i) rats, full time course - \"Acute inhibition response scores were assessed at 30 min to 2 weeks after 700 ug of ASO1 delivered via IT administration in rats (Fig. 1B)... By 16-24 h and for the next 2 weeks, all animals scored a 0, confirming acute inhibition is transient with no long-term sequelae\"; (ii) the mouse ICV ASO2-8 panel these rows come from - \"Following a single 100 ug ICV injection in mice, the acute inhibition response at 3 h post-injection varied from 0 to 5, depending upon the sequence tested (Fig. 2A), and resolved by 24 h\"; (iii) abstract, across species - \"inhibition-like responses peaked ~3 h post-ASO delivery, reversed within 24 h with no sequelae\"; (iv) rat electrophysiology re-recorded at 24 h - \"All MMEP recovered by 24 h after dosing\"; (v) Discussion - \"The acute inhibition response peaks around 3 h post-administration and is typically fully reversible by 24 h post-dose, with no identifiable sequelae.\"",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1889",
+   "verdict": "CONFIRMED",
+   "checked": "Local PMC12865454 (doi:10.1093/nar/gkaf1333). Scoring window: \"Animals are observed in their home cages 3 h after ASO ICV injection\" (rodent ICV) and \"Lower spinal reflexes and general motor function are assessed as a part of standard neurological examinations 2-4 h after IT administration of ASO in NHP\". Recovery WAS assessed, repeatedly and explicitly: (i) rats, full time course - \"Acute inhibition response scores were assessed at 30 min to 2 weeks after 700 ug of ASO1 delivered via IT administration in rats (Fig. 1B)... By 16-24 h and for the next 2 weeks, all animals scored a 0, confirming acute inhibition is transient with no long-term sequelae\"; (ii) the mouse ICV ASO2-8 panel these rows come from - \"Following a single 100 ug ICV injection in mice, the acute inhibition response at 3 h post-injection varied from 0 to 5, depending upon the sequence tested (Fig. 2A), and resolved by 24 h\"; (iii) abstract, across species - \"inhibition-like responses peaked ~3 h post-ASO delivery, reversed within 24 h with no sequelae\"; (iv) rat electrophysiology re-recorded at 24 h - \"All MMEP recovered by 24 h after dosing\"; (v) Discussion - \"The acute inhibition response peaks around 3 h post-administration and is typically fully reversible by 24 h post-dose, with no identifiable sequelae.\"",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1897",
+   "verdict": "CONFIRMED",
+   "checked": "Local PMC12865454 (doi:10.1093/nar/gkaf1333). Scoring window: \"Animals are observed in their home cages 3 h after ASO ICV injection\" (rodent ICV) and \"Lower spinal reflexes and general motor function are assessed as a part of standard neurological examinations 2-4 h after IT administration of ASO in NHP\". Recovery WAS assessed, repeatedly and explicitly: (i) rats, full time course - \"Acute inhibition response scores were assessed at 30 min to 2 weeks after 700 ug of ASO1 delivered via IT administration in rats (Fig. 1B)... By 16-24 h and for the next 2 weeks, all animals scored a 0, confirming acute inhibition is transient with no long-term sequelae\"; (ii) the mouse ICV ASO2-8 panel these rows come from - \"Following a single 100 ug ICV injection in mice, the acute inhibition response at 3 h post-injection varied from 0 to 5, depending upon the sequence tested (Fig. 2A), and resolved by 24 h\"; (iii) abstract, across species - \"inhibition-like responses peaked ~3 h post-ASO delivery, reversed within 24 h with no sequelae\"; (iv) rat electrophysiology re-recorded at 24 h - \"All MMEP recovered by 24 h after dosing\"; (v) Discussion - \"The acute inhibition response peaks around 3 h post-administration and is typically fully reversible by 24 h post-dose, with no identifiable sequelae.\"",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1906",
+   "verdict": "CONFIRMED",
+   "checked": "Local PMC12865454 (doi:10.1093/nar/gkaf1333). Scoring window: \"Animals are observed in their home cages 3 h after ASO ICV injection\" (rodent ICV) and \"Lower spinal reflexes and general motor function are assessed as a part of standard neurological examinations 2-4 h after IT administration of ASO in NHP\". Recovery WAS assessed, repeatedly and explicitly: (i) rats, full time course - \"Acute inhibition response scores were assessed at 30 min to 2 weeks after 700 ug of ASO1 delivered via IT administration in rats (Fig. 1B)... By 16-24 h and for the next 2 weeks, all animals scored a 0, confirming acute inhibition is transient with no long-term sequelae\"; (ii) the mouse ICV ASO2-8 panel these rows come from - \"Following a single 100 ug ICV injection in mice, the acute inhibition response at 3 h post-injection varied from 0 to 5, depending upon the sequence tested (Fig. 2A), and resolved by 24 h\"; (iii) abstract, across species - \"inhibition-like responses peaked ~3 h post-ASO delivery, reversed within 24 h with no sequelae\"; (iv) rat electrophysiology re-recorded at 24 h - \"All MMEP recovered by 24 h after dosing\"; (v) Discussion - \"The acute inhibition response peaks around 3 h post-administration and is typically fully reversible by 24 h post-dose, with no identifiable sequelae.\"",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1914",
+   "verdict": "CONFIRMED",
+   "checked": "Local PMC12865454 (doi:10.1093/nar/gkaf1333). Scoring window: \"Animals are observed in their home cages 3 h after ASO ICV injection\" (rodent ICV) and \"Lower spinal reflexes and general motor function are assessed as a part of standard neurological examinations 2-4 h after IT administration of ASO in NHP\". Recovery WAS assessed, repeatedly and explicitly: (i) rats, full time course - \"Acute inhibition response scores were assessed at 30 min to 2 weeks after 700 ug of ASO1 delivered via IT administration in rats (Fig. 1B)... By 16-24 h and for the next 2 weeks, all animals scored a 0, confirming acute inhibition is transient with no long-term sequelae\"; (ii) the mouse ICV ASO2-8 panel these rows come from - \"Following a single 100 ug ICV injection in mice, the acute inhibition response at 3 h post-injection varied from 0 to 5, depending upon the sequence tested (Fig. 2A), and resolved by 24 h\"; (iii) abstract, across species - \"inhibition-like responses peaked ~3 h post-ASO delivery, reversed within 24 h with no sequelae\"; (iv) rat electrophysiology re-recorded at 24 h - \"All MMEP recovered by 24 h after dosing\"; (v) Discussion - \"The acute inhibition response peaks around 3 h post-administration and is typically fully reversible by 24 h post-dose, with no identifiable sequelae.\"",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1923",
+   "verdict": "CONFIRMED",
+   "checked": "Local PMC12865454 (doi:10.1093/nar/gkaf1333). Scoring window: \"Animals are observed in their home cages 3 h after ASO ICV injection\" (rodent ICV) and \"Lower spinal reflexes and general motor function are assessed as a part of standard neurological examinations 2-4 h after IT administration of ASO in NHP\". Recovery WAS assessed, repeatedly and explicitly: (i) rats, full time course - \"Acute inhibition response scores were assessed at 30 min to 2 weeks after 700 ug of ASO1 delivered via IT administration in rats (Fig. 1B)... By 16-24 h and for the next 2 weeks, all animals scored a 0, confirming acute inhibition is transient with no long-term sequelae\"; (ii) the mouse ICV ASO2-8 panel these rows come from - \"Following a single 100 ug ICV injection in mice, the acute inhibition response at 3 h post-injection varied from 0 to 5, depending upon the sequence tested (Fig. 2A), and resolved by 24 h\"; (iii) abstract, across species - \"inhibition-like responses peaked ~3 h post-ASO delivery, reversed within 24 h with no sequelae\"; (iv) rat electrophysiology re-recorded at 24 h - \"All MMEP recovered by 24 h after dosing\"; (v) Discussion - \"The acute inhibition response peaks around 3 h post-administration and is typically fully reversible by 24 h post-dose, with no identifiable sequelae.\" Caveat recorded, not a refutation: this row's group mean is at the severe end of the 0-7 scale (where 7 = death) and the paper's reversibility statement is a class-level claim hedged with \"typically\"; no per-ASO 24 h re-score is published for the 300 ug groups.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1931",
+   "verdict": "CONFIRMED",
+   "checked": "Local PMC12865454 (doi:10.1093/nar/gkaf1333). Scoring window: \"Animals are observed in their home cages 3 h after ASO ICV injection\" (rodent ICV) and \"Lower spinal reflexes and general motor function are assessed as a part of standard neurological examinations 2-4 h after IT administration of ASO in NHP\". Recovery WAS assessed, repeatedly and explicitly: (i) rats, full time course - \"Acute inhibition response scores were assessed at 30 min to 2 weeks after 700 ug of ASO1 delivered via IT administration in rats (Fig. 1B)... By 16-24 h and for the next 2 weeks, all animals scored a 0, confirming acute inhibition is transient with no long-term sequelae\"; (ii) the mouse ICV ASO2-8 panel these rows come from - \"Following a single 100 ug ICV injection in mice, the acute inhibition response at 3 h post-injection varied from 0 to 5, depending upon the sequence tested (Fig. 2A), and resolved by 24 h\"; (iii) abstract, across species - \"inhibition-like responses peaked ~3 h post-ASO delivery, reversed within 24 h with no sequelae\"; (iv) rat electrophysiology re-recorded at 24 h - \"All MMEP recovered by 24 h after dosing\"; (v) Discussion - \"The acute inhibition response peaks around 3 h post-administration and is typically fully reversible by 24 h post-dose, with no identifiable sequelae.\" Caveat recorded, not a refutation: this row's group mean is at the severe end of the 0-7 scale (where 7 = death) and the paper's reversibility statement is a class-level claim hedged with \"typically\"; no per-ASO 24 h re-score is published for the 300 ug groups.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1939",
+   "verdict": "CONFIRMED",
+   "checked": "Local PMC12865454 (doi:10.1093/nar/gkaf1333). Scoring window: \"Animals are observed in their home cages 3 h after ASO ICV injection\" (rodent ICV) and \"Lower spinal reflexes and general motor function are assessed as a part of standard neurological examinations 2-4 h after IT administration of ASO in NHP\". Recovery WAS assessed, repeatedly and explicitly: (i) rats, full time course - \"Acute inhibition response scores were assessed at 30 min to 2 weeks after 700 ug of ASO1 delivered via IT administration in rats (Fig. 1B)... By 16-24 h and for the next 2 weeks, all animals scored a 0, confirming acute inhibition is transient with no long-term sequelae\"; (ii) the mouse ICV ASO2-8 panel these rows come from - \"Following a single 100 ug ICV injection in mice, the acute inhibition response at 3 h post-injection varied from 0 to 5, depending upon the sequence tested (Fig. 2A), and resolved by 24 h\"; (iii) abstract, across species - \"inhibition-like responses peaked ~3 h post-ASO delivery, reversed within 24 h with no sequelae\"; (iv) rat electrophysiology re-recorded at 24 h - \"All MMEP recovered by 24 h after dosing\"; (v) Discussion - \"The acute inhibition response peaks around 3 h post-administration and is typically fully reversible by 24 h post-dose, with no identifiable sequelae.\" Caveat recorded, not a refutation: this row's group mean is at the severe end of the 0-7 scale (where 7 = death) and the paper's reversibility statement is a class-level claim hedged with \"typically\"; no per-ASO 24 h re-score is published for the 300 ug groups.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1949",
+   "verdict": "CONFIRMED",
+   "checked": "Local PMC12867516 (doi:10.1093/nar/gkag057). Recovery was assessed by design: \"Rats are observed for 2 h after dosing, and the maximum score observed is recorded at 15, 30, 45, 60, 90, and 120 min after dosing\" (identical wording for mice). Outcome: abstract - \"we characterize a subset of these changes peaking 15 min after ON dosing and resolving after 120 min\"; Results - \"A clear temporal relationship of various signs and behaviors followed, generally declining over time, and resolving after 120 min\"; Discussion - \"Without intervention, the symptoms typically resolve after 2 h, with no apparent sequelae.\" Animals were additionally held to 2 or 8 weeks before tissue collection.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1958",
+   "verdict": "CONFIRMED",
+   "checked": "Local PMC12867516 (doi:10.1093/nar/gkag057). Recovery was assessed by design: \"Rats are observed for 2 h after dosing, and the maximum score observed is recorded at 15, 30, 45, 60, 90, and 120 min after dosing\" (identical wording for mice). Outcome: abstract - \"we characterize a subset of these changes peaking 15 min after ON dosing and resolving after 120 min\"; Results - \"A clear temporal relationship of various signs and behaviors followed, generally declining over time, and resolving after 120 min\"; Discussion - \"Without intervention, the symptoms typically resolve after 2 h, with no apparent sequelae.\" Animals were additionally held to 2 or 8 weeks before tissue collection.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1967",
+   "verdict": "CONFIRMED",
+   "checked": "Local PMC12867516 (doi:10.1093/nar/gkag057). Recovery was assessed by design: \"Rats are observed for 2 h after dosing, and the maximum score observed is recorded at 15, 30, 45, 60, 90, and 120 min after dosing\" (identical wording for mice). Outcome: abstract - \"we characterize a subset of these changes peaking 15 min after ON dosing and resolving after 120 min\"; Results - \"A clear temporal relationship of various signs and behaviors followed, generally declining over time, and resolving after 120 min\"; Discussion - \"Without intervention, the symptoms typically resolve after 2 h, with no apparent sequelae.\" Animals were additionally held to 2 or 8 weeks before tissue collection.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  }
+ ],
+ "summary": "60 rows, 18 sources, grouped and adjudicated source-by-source: 28 CONFIRMED, 3 CONFIRMED_MINOR, 27 REFUTED, 2 UNVERIFIABLE. The standing lead is CONFIRMED and is the largest correction available. In the mouse ICV acute-tolerability panel of doi:10.1089/nat.2021.0071 (Hagedorn 2022) the animals were observed for ONE HOUR and never re-examined; the paper's only recovery language ('waned anywhere between 2 and 4 h post-dose... From 24 h and out to 7 days, we almost never observed any acute behavior reappearing') is expressly tied to 'an initial set of 9 ASOs' - the following sentence, 'Also, for this initial set, mice were injected with doses ranging from 12.5 to 200 ug', pins it. All 18 'reversible' rows from that source are REFUTED to not_assessed. The two 'irreversible' rows survive on a different footing: they score exactly 20.0, the scale anchor the paper defines as euthanasia, which is a property of the score recorded for those very animals rather than prose about other ones. The MIRROR lead is REFUTED: doi:10.1016/j.omtn.2025.102692 (Kuroda 2025) does have a post-dose window - a single injection followed by serial scoring to day 7-21 - and reports that the toxicity 'appeared at least 3 days postinjection, persisted for 6 days or more, and worsened over time', while reporting resolution elsewhere where it occurred ('acute toxicity from ASO2 resolved completely within 1 day'). Its 'irreversible' values stand. Beyond the leads, a second systematic error surfaced that the leads did not name: adverse-event INCIDENCE rows - ClinicalTrials.gov adverseEventsModule entries, FDA-label Table 3, the Qalsody EPAR Table 36, and a trial paper's aggregate 94%-any-AE figure - all carry 'reversible' although an incidence table has no outcome field whatsoever; 7 such rows are refuted to not_assessed. Two further single-row refutations: US11851654B2 Table 10, where the patent itself says the score 'remained up to 6 hours' with 50% of animals still affected and 2/6 dead (-> partially_reversible), and the KCNT1 Nat Med patient-1 dystonia, which the paper says 'improved', not resolved (-> partially_reversible).",
+ "systematic_issues": "1. IMPORTED CLASS-LEVEL RECOVERY CLAIMS - the flagged tell is real and diagnostic. Every row from doi:10.1089/nat.2021.0071 repeats the identical sentence in notes ('Reversibility: text states signs waned 2-4 h post-dose and acute behaviour almost never reappeared from 24 h to 7 d (Suppl Fig S2A)'), and that sentence describes a 9-ASO pilot cohort, not the 181 scored animals. But the tell must be applied with the source open, not mechanically: doi:10.1016/j.omtn.2025.102692, doi:10.1093/nar/gkaf1333, doi:10.1093/nar/gkag057 and doi:10.1016/j.ymthe.2024.10.024 also carry identical boilerplate in every row, and in those four the boilerplate is a faithful paraphrase of a class-level statement the source really does make about the very animals being scored. The discriminating question is not 'is the note boilerplate' but 'does the source's recovery statement cover the scored cohort'. 2. AE-INCIDENCE LOCI CANNOT SUPPORT A REVERSIBILITY VALUE. Seven rows in this sample assert 'reversible' at a locus that structurally cannot contain it: three ClinicalTrials.gov adverseEventsModule entries (the schema has term/organSystem/numAffected/numAtRisk and nothing else), FDA_NDA209531 label Table 3, EMA EPAR Table 36, doi:10.1002/mus.28372's 24.5% CSF-protein-increased AE, and doi:10.1038/s41591-023-02326-3's aggregate 94% any-AE. Where the source does carry a resolution narrative it attaches to individual SERIOUS events, never to the incidence table - and the extractor has in several cases silently promoted 'did not lead to discontinuation' or 'all events were mild or moderate' into 'reversible'. Neither is reversibility. Sweep all clinical/regulatory AE-incidence rows across the dataset for this. 3. GRADE-0 ROWS SHOULD NOT ASSERT REVERSIBILITY. Nine rows in this sample are graded 0 (no signal, or incidence at/below the concurrent control) yet claim 'reversible'. There is no finding to reverse; not_assessed is the correct filler. This is cheap to fix with a predicate. 4. WHERE THE SOURCE HEDGES, THE ROW SHOULD HEDGE. Two rows flattened 'improved' / 'remained up to 6 hours' into 'reversible' when partially_reversible exists in the vocabulary and the source's own contrastive wording elsewhere in the same document shows the hedge was deliberate. Check partially_reversible usage dataset-wide - it appears to be under-used. 5. THE PATENT LANE IS THE STRONGEST LANE HERE. US9605263B2, US10968453B2 and US11851654B2 all publish PAIRED timepoints (3 hour and 8 week FOB; 1/3/6 hour tolerability), so their reversibility values are directly falsifiable and, with one exception, correct. Nothing in this lane needs a wholesale change."
+}

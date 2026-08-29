@@ -1,0 +1,507 @@
+{
+ "batch": "batch_hydrocephalus_a",
+ "verdicts": [
+  {
+   "measurement_id": "CMS1161",
+   "verdict": "REFUTED",
+   "checked": "EMA/276404/2024 Qalsody EPAR (181pp) downloaded from ema.europa.eu and text-extracted; located sec 2.6.8.1 patient exposure (p.167), Table 37 (p.139), Table 38 (pp.140-141), sec 2.6.8.3 SAE narratives (pp.142-143), sec 2.6.9 papilloedema discussion (p.165), sec 3.5 (p.167), Table 42 effects table (p.169), sec 3.7 (p.171). The verbatim quote 'Hydrocephalus was not reported during the tofersen CDP so far...' is present and exact, and the RMP-style 'Risk of Hydrocephalus - Reported with intrathecally administered ASOs, i.e. tominersen (secondary to aseptic meningitis), nusinersen' text is present and exact. Searched the whole document for '212', '119.4', '148.4', '316'.",
+   "problem": "exposure_duration 'up to 212wk' does not appear anywhere in EMA/276404/2024. The document's only exposure figures are: Pool ABCL2 (any dose, N=166) median 131.7 weeks, minimum 4, maximum 316 weeks; Pool ABCL1 (100 mg, N=147) median total duration 148.4 weeks; and elsewhere a maximum 100 mg treatment duration of 245 weeks. '212 weeks' is not in the source. Separately, source_table is wrong on both loci: the 'not reported during the CDP' sentence sits in section 3.5 'Uncertainties and limitations about unfavourable effects' (p.167/181), not section 2.6; and the 'Risk of Hydrocephalus' entry sits in Table 42, the Effects Table (section 3.6, p.169/181), not in an RMP safety-concern table - hydrocephalus does not appear in the EPAR's RMP safety-concerns listing at all. Finally this row is a DUPLICATE of CMS1247: same document, same finding, same grade, filed under a different source_id (R3 vs CNSSRC_QALSODY_EPAR) and a different source_ref string, so the same regulatory negative is counted twice. The substantive claim (zero hydrocephalus in the tofersen CDP, grade 0) is correct and valuable.",
+   "correction": {
+    "exposure_duration": "median 148.4wk (Pool ABCL1, 100 mg); max 245wk at 100 mg",
+    "source_table": "EPAR sec 3.5 'Uncertainties and limitations about unfavourable effects' (p.167/181) and Table 42 Effects Table, uncertainties column (sec 3.6, p.169/181)"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1169",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "EMA Spinraza EPAR product information (SmPC + package leaflet, 49pp) downloaded from ema.europa.eu; read sec 4.4 'Hydrocephalus', sec 4.8 Table 3 and the statement below it, and package leaflet sec 4. Cross-checked the US SPINRAZA label on DailyMed (setid dd70cd5f-b0fc-4ba4-a5ea-89a34778bd94) sec 6.2. SmPC sec 4.4 'Hydrocephalus' paragraph and the sec 4.8 sentence below Table 3 both read verbatim; US label sec 6.2 Postmarketing Experience read (Hydrocephalus is listed there, and 'hydrocephalus' occurs nowhere else in the US label). PRAC procedure EMEA/H/C/004312/II/0004 corroborated in EMA/PRAC/395628/2018 item 5.3.21.",
+   "problem": "Substance correct: the sec 4.4 quote is exact, the sec 4.8 sentence is exact, the US label sec 6.2 listing is confirmed, and grade 3 is properly earned by the label's own 'Some patients were implanted with a ventriculo-peritoneal shunt' (hydrocephalus requiring intervention). Three non-critical defects: (a) exposure_duration 'up to 3940d (median 2388d)' is taken from SmPC sec 4.8, where it describes the 385-patient CLINICAL TRIAL population on 12 mg or lower - it is not the exposure of the post-marketing spontaneous reports this row is about, so it is attached to the wrong population; (b) reversibility='irreversible' is not stated or implied anywhere in the source; (c) this row and CMS1242 are the same SmPC statement filed twice under different source_ids (R5 vs CNSSRC_SPINRAZA_SMPC), and the two duplicates disagree with each other on reversibility (irreversible vs partially_reversible).",
+   "correction": {
+    "exposure_duration": "TBD (post-marketing spontaneous reports; no exposure window stated)",
+    "reversibility": "not_assessed"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1176",
+   "verdict": "REFUTED",
+   "checked": "EMA/PRAC/395628/2018, PRAC draft agenda for the meeting on 11-14 June 2018 (68pp), downloaded from ema.europa.eu and text-extracted. Item 5.3.21 located on p.26/68 and read in full.",
+   "problem": "The quotation is verbatim-exact: 'Nusinersen - SPINRAZA (CAP) - EMEA/H/C/004312/II/0004, Orphan / Applicant: Biogen Idec Ltd / PRAC Rapporteur: Qun-Ying Yue / Scope: Update of section 4.8 of the SmPC to include new safety information related to hydrocephalus. The package leaflet and the RMP (version 7.0) are updated accordingly.' (the agenda continues '...In addition, the MAH took the opportunity to correct some typographical errors in section 5.1 of the SmPC'). But neurotox_grade=3 is not supportable at this locus. A PRAC meeting agenda records that a labelling variation was tabled; it contains no patient, no case count, no incidence, and above all no statement that any hydrocephalus required intervention - which is what the rubric's grade 3 demands. The grade has been imported from a different document (the SmPC, already captured at CMS1169 and CMS1242). As filed this row manufactures a third grade-3 hydrocephalus record out of a committee agenda item, and with CMS1169 and CMS1242 it triple-counts one signal. Recommend dropping it as a measurement and folding the procedure reference into CMS1242's notes as provenance; if kept, it must not carry a neurotox grade.",
+   "correction": {
+    "neurotox_grade": "drop row (regulatory-procedure record, not a measurement); grade not assignable from a PRAC agenda"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1234",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "PubMed record PMID 33578442 fetched via efetch; full abstract read. Journal/volume/pages/year confirmed (Neuropediatrics 2021 Jun;52(3):219-223, doi 10.1055/s-0040-1722687). Thieme full text not accessible; row correctly declares the abstract as its locus.",
+   "problem": "The number is right: 'Signs of increased intracranial pressure in ophthalmological assessments or brain imaging were only seen in one patient' (1/34), and 'None of the patients reported symptoms indicative of increased intracranial pressure' supports the 0/34 symptomatic figure in effect_vs_control. Two non-critical problems. (a) readout_name='papilledema' asserts a finding the source does not make: the abstract deliberately groups ophthalmological AND neuroimaging signs and never says which the single patient had - the row's own notes admit this, but the machine-readable field does not, so a consumer reading only the columns learns 'nusinersen papilledema 1/34' from a source that never says papilledema. (b) grade 2 is inconsistent with the lane's own grading: CMS1235 and CMS1236 grade markedly raised opening pressures 1 precisely because nobody was symptomatic, and this patient was equally asymptomatic. Grade 1 is the more defensible reading of an isolated objective sign with no functional deficit.",
+   "correction": {
+    "readout_name": "raised_ICP_objective_sign (ophthalmological or neuroimaging; source does not specify which)",
+    "neurotox_grade": "1"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1235",
+   "verdict": "CONFIRMED",
+   "checked": "PubMed record PMID 33578442 fetched via efetch; full abstract read. Journal/volume/pages/year confirmed (Neuropediatrics 2021 Jun;52(3):219-223, doi 10.1055/s-0040-1722687). Thieme full text not accessible; row correctly declares the abstract as its locus.",
+   "problem": "None. 'In our cohort, the LOP was >20 cm H2O in 25 patients (70.5%)' is exact, and the row's flagged arithmetic discrepancy in the published abstract (25/34 = 73.5%, printed 70.5%) is real and correctly recorded-as-printed rather than silently fixed. 'in two patients, it was increased prior to treatment initiation' is exact. The authors' conclusion quoted in notes - 'Our results raise the question whether the LOP is generally increased in SMA as part of the underlying disease' - is verbatim. Grade 1 is well argued (no symptoms in any of the 34) and the absence of an untreated SMA comparator is properly flagged. Redistribution summary_stat is correct for a paywalled Thieme article, and source_table honestly declares the abstract as the locus.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1236",
+   "verdict": "CONFIRMED",
+   "checked": "PubMed record PMID 33578442 fetched via efetch; full abstract read. Journal/volume/pages/year confirmed (Neuropediatrics 2021 Jun;52(3):219-223, doi 10.1055/s-0040-1722687). Thieme full text not accessible; row correctly declares the abstract as its locus.",
+   "problem": "None. 'within this group >=28 cm H2O in 12 patients (35.3%)' is exact and internally consistent (12/34 = 35.3%). Grade 1 rather than 2 is correctly reasoned: a raised opening pressure without symptoms, papilloedema or imaging change does not meet the rubric's grade-2 definition of a clinically significant neurologic adverse event.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1237",
+   "verdict": "CONFIRMED",
+   "checked": "Biogen DHPC SPZ-GBR-0020 (31 July 2018, 3pp) retrieved from assets.publishing.service.gov.uk (the gov.uk /media/ URL now returns 410) and read in full, plus MHRA Drug Safety Update 25 Sep 2018. Confounder claim cross-checked against Orphanet J Rare Dis 2021 PMC8105953 full text and Table 2 via PMC efetch. Case 1 of the five short case descriptions read verbatim.",
+   "problem": "None on the graded fields. Source text: 'A 4-month-old female with Type I SMA who had received three doses of Spinraza presented with enlarging head size and lethargy, and was diagnosed with communicating hydrocephalus. Results from a CSF sample showed no evidence of an infection. The patient underwent placement of a VPS. The patient continues to receive Spinraza therapy.' Every element of the row matches, including exposure_duration '3 doses'. Grade 3 is properly earned: a VPS is hydrocephalus requiring intervention, stated in the source, not inferred from serious-AE coding. Two notes for the assembler: reversibility='partially_reversible' is an interpretation the DHPC does not make; and the canonical gov.uk /media/ URL for this PDF now returns HTTP 410, though the file is still live at assets.publishing.service.gov.uk - the source_ref should carry a retrievable URL or the PDF should be archived under sources/cns/.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1238",
+   "verdict": "CONFIRMED",
+   "checked": "Biogen DHPC SPZ-GBR-0020 (31 July 2018, 3pp) retrieved from assets.publishing.service.gov.uk (the gov.uk /media/ URL now returns 410) and read in full, plus MHRA Drug Safety Update 25 Sep 2018. Confounder claim cross-checked against Orphanet J Rare Dis 2021 PMC8105953 full text and Table 2 via PMC efetch. Case 2 read verbatim.",
+   "problem": "None. Source text: '6-month-old male with Type I SMA who had received four doses ... exhibited signs of increased intracranial pressure with nystagmus and tense fontanelle. Communicating hydrocephalus with markedly enlarged inner CSF spaces was shown. Spinal magnetic resonance imaging did not show evidence of space occupying lesions or bleeding. A VPS was placed. The patient continues to receive Spinraza therapy.' Exact, including '4 doses'. Grade 3 properly earned (VPS). The note's point that MRI excluded space-occupying lesion and haemorrhage is accurate and does strengthen attribution for this individual case - though it remains a single spontaneous report with no denominator.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1239",
+   "verdict": "CONFIRMED",
+   "checked": "Biogen DHPC SPZ-GBR-0020 (31 July 2018, 3pp) retrieved from assets.publishing.service.gov.uk (the gov.uk /media/ URL now returns 410) and read in full, plus MHRA Drug Safety Update 25 Sep 2018. Confounder claim cross-checked against Orphanet J Rare Dis 2021 PMC8105953 full text and Table 2 via PMC efetch. Case 3 read verbatim.",
+   "problem": "None. Source text: 'A 3-year-old male with Type I SMA had received two doses of Spinraza when brain MRI revealed communicating hydrocephalus. There was no treatment administered for the hydrocephalus, but the patient is being followed by a neurosurgery clinic. Treatment with Spinraza was discontinued.' Exact, including '2 doses'. Grade 2 rather than 3 is the correct call and is exactly the discipline the rubric requires: hydrocephalus was diagnosed but no CSF diversion was performed, so 'requiring intervention' is not met, notwithstanding that the drug was permanently stopped.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1240",
+   "verdict": "CONFIRMED",
+   "checked": "Biogen DHPC SPZ-GBR-0020 (31 July 2018, 3pp) retrieved from assets.publishing.service.gov.uk (the gov.uk /media/ URL now returns 410) and read in full, plus MHRA Drug Safety Update 25 Sep 2018. Confounder claim cross-checked against Orphanet J Rare Dis 2021 PMC8105953 full text and Table 2 via PMC efetch. Case 5 read verbatim.",
+   "problem": "None. The DHPC says only: 'An adult female patient with SMA who had received Spinraza was diagnosed with communicating hydrocephalus. The patient was reported to also have scoliosis.' The row reproduces exactly that and correctly records dose count, timing and management as not reported. Grade 2 in the absence of any reported intervention is right, and the row itself flags that the grade is weakly supported. Note for the assembler: the fifth DHPC case (a 5-month-old male, four doses, macrocephaly, external ventricular drain awaiting VPS) is not in this batch - presumably in batch_hydrocephalus_b - and is the case that carries CMS1241's EVD claim.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1241",
+   "verdict": "CONFIRMED",
+   "checked": "Biogen DHPC SPZ-GBR-0020 (31 July 2018, 3pp) retrieved from assets.publishing.service.gov.uk (the gov.uk /media/ URL now returns 410) and read in full, plus MHRA Drug Safety Update 25 Sep 2018. Confounder claim cross-checked against Orphanet J Rare Dis 2021 PMC8105953 full text and Table 2 via PMC efetch. All five DHPC case descriptions read; MHRA Drug Safety Update 25 Sep 2018 fetched and read for the exposure figures; the SMA-confounder claim checked against the primary source (Orphanet J Rare Dis 2021, PMC8105953, 'The incidence of hydrocephalus among patients with and without spinal muscular atrophy (SMA): Results from a US electronic health records study'), full text and Table 2.",
+   "problem": "None on the graded fields; this row is unusually well built. Verified: 5 cases worldwide to 6 July 2018; approximately 1,437 patients / 439 patient-years of routine-practice exposure as of 30 September 2017 (MHRA DSU); presentation after 2 to 4 loading doses. The grade-3 justification is exact - two of the five received a VPS and a third (the 5-month-old male) 'has an external ventricular drain (EVD) and is awaiting VPS'. The confounder note is also exact against PMC8105953 Table 2: 5,354 SMA cases vs 5,354 matched non-SMA controls, hydrocephalus IR 15.5 per 100,000 person-months (95% CI 11.2-20.9) vs 3.3 (95% CI 1.5-6.3), IRR 4.7 (95% CI 2.4-10.2), in the pre-nusinersen era (2007-2016). The numerator/denominator window mismatch is correctly flagged. One thing worth adding to notes: the MHRA DSU that supplies the exposure denominator itself asserts 'There is no known association between spinal muscular atrophy and communicating hydrocephalus' - the 2021 EHR study postdates and overturns that 2018 statement, and a reader should see the chronology rather than infer the DHPC endorsed the confounder.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1242",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "EMA Spinraza EPAR product information (SmPC + package leaflet, 49pp) downloaded from ema.europa.eu; read sec 4.4 'Hydrocephalus', sec 4.8 Table 3 and the statement below it, and package leaflet sec 4. Cross-checked the US SPINRAZA label on DailyMed (setid dd70cd5f-b0fc-4ba4-a5ea-89a34778bd94) sec 6.2. Read SmPC sec 4.4 'Hydrocephalus' in full, sec 4.8 Table 3 in full (every row and frequency category), the sentence printed below Table 3, and the package leaflet section 4 'Not known' list. Also confirmed the asymmetry claim by reading the whole US SPINRAZA label (hydrocephalus appears only in sec 6.2, with no section 5 warning).",
+   "problem": "The two verbatim quotes are exact and grade 3 is properly earned by the VPS sentence. One locus error: effect_vs_control states the frequency category is 'Not known (cannot be estimated from the available data)', but hydrocephalus is NOT a row of SmPC Table 3 and carries no frequency category there. Table 3's rows are Meningitis, Hypersensitivity, Headache, Aseptic meningitis, Arachnoiditis, Vomiting, Back pain, Pyrexia; hydrocephalus appears only as free text below the table. The 'Not known' categorisation is in the PACKAGE LEAFLET section 4 bullet list, a different document section. Also a duplicate of CMS1169 (see that row), and the two disagree on reversibility.",
+   "correction": {
+    "source_table": "SmPC sec 4.4 'Hydrocephalus'; SmPC sec 4.8 statement below Table 3; frequency category 'Not known' from Package Leaflet sec 4"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1243",
+   "verdict": "REFUTED",
+   "checked": "EMA/276404/2024 Qalsody EPAR (181pp) downloaded from ema.europa.eu and text-extracted; located sec 2.6.8.1 patient exposure (p.167), Table 37 (p.139), Table 38 (pp.140-141), sec 2.6.8.3 SAE narratives (pp.142-143), sec 2.6.9 papilloedema discussion (p.165), sec 3.5 (p.167), Table 42 effects table (p.169), sec 3.7 (p.171). Table 37 read directly: 'Papilloedema 7/147 (4.8) Common'; NOTE 1 confirms the composite includes PT papilloedema and PT intracranial pressure increased. The effect_vs_control quote 'All AEs and SAEs related to papilloedema/intracranial pressure increased were reported in participants who received tofersen 100 mg; no such events were reported in the placebo group' is exact (p.142). Background rates 0.9/100,000 US and 1.56/100,000 UK [Rigi 2015] confirmed exact (p.142). US label sec 5.2 'Four patients developed elevated intracranial pressure and/or papilledema' confirmed verbatim in the local DailyMed capture.",
+   "problem": "(1) exposure_duration 'median 119.4 weeks (range 4-212 weeks)' appears NOWHERE in EMA/276404/2024. The EPAR reports Pool ABCL1 median total duration of exposure = 148.4 weeks (N=147, 368.83 participant-years) and Pool ABCL2 median 131.7 weeks, range 4-316 weeks. Neither 119.4 nor 212 occurs in the document. (2) The note asserts 'the EPAR records resolution or marked regression in every described case with no event leading to permanent vision loss', but the EPAR's own papilloedema discussion (p.165) states 'One SAE of papilloedema/increased ICP resolved with sequelae of improved but ongoing symptoms, which led to permanent tofersen discontinuation' and 'One SAE was not resolved as of 28 Feb 2023' - so reversibility='reversible' is over-stated and the discontinuation claim is contradicted by the source. (3) Unflagged internal conflict in the same EPAR: p.165 gives 'an overall incidence of papilloedema of 8/147 subjects (5.4%)' against Table 37's 7/147 (4.8%), the difference being the PT 'CSF pressure increased'. The readout value 7/147 is correct at the cited Table 37 locus; the discrepancy belongs in notes.",
+   "correction": {
+    "exposure_duration": "median 148.4wk total exposure to 100 mg (Pool ABCL1)",
+    "reversibility": "partially_reversible"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1244",
+   "verdict": "REFUTED",
+   "checked": "EMA/276404/2024 Qalsody EPAR (181pp) downloaded from ema.europa.eu and text-extracted; located sec 2.6.8.1 patient exposure (p.167), Table 37 (p.139), Table 38 (pp.140-141), sec 2.6.8.3 SAE narratives (pp.142-143), sec 2.6.9 papilloedema discussion (p.165), sec 3.5 (p.167), Table 42 effects table (p.169), sec 3.7 (p.171). Table 38 row read directly: 'Intracranial pressure increased  0  0  3 (2.0)  3 (1.8)' across columns Pool RC1 (tofersen 100 mg, N=72), Pool RC2 (placebo, N=36), Pool ABCL1 (N=147), Pool ABCL2 (N=166). Checked which Table 38 cells actually carry the redaction marker 'N'.",
+   "problem": "(1) Same fabricated exposure_duration as CMS1243: 'median 119.4 weeks (range 4-212 weeks)' is not in EMA/276404/2024 (actual: Pool ABCL1 median 148.4 weeks). (2) Comparator misrepresentation: effect_vs_control reads '3/147 (2.0%) related serious AEs in pooled tofersen 100 mg (ABCL1) vs 0/36 placebo (Pool RC2)', which sets an open-label pooled numerator against a placebo denominator from the 28-week controlled period. In that controlled period the tofersen arm itself (Pool RC1, N=72) is also 0 - i.e. there were zero related serious ICP events on tofersen during the only placebo-controlled window. The row does not say this, and the juxtaposition invites a rate comparison the table does not support. (3) The row's caveat that 'several cells of Table 38 for the Study 101 Part C columns are redacted' does not apply to this preferred term: both Part C cells for 'Intracranial pressure increased' are explicit zeros, not 'N'. (4) reversibility='reversible' is contradicted - of the three ICP SAEs, one was still ongoing at the 28 Feb 2023 cut and one 'resolved after 27 days with sequelae (ongoing headache and visual disturbance)' with the participant finally withdrawing tofersen.",
+   "correction": {
+    "exposure_duration": "median 148.4wk total exposure to 100 mg (Pool ABCL1)",
+    "effect_vs_control": "3/147 (2.0%) Pool ABCL1 open-label pooled; 0/72 tofersen 100 mg (Pool RC1) and 0/36 placebo (Pool RC2) in the placebo-controlled period",
+    "reversibility": "partially_reversible"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1245",
+   "verdict": "REFUTED",
+   "checked": "EMA/276404/2024 Qalsody EPAR (181pp) downloaded from ema.europa.eu and text-extracted; located sec 2.6.8.1 patient exposure (p.167), Table 37 (p.139), Table 38 (pp.140-141), sec 2.6.8.3 SAE narratives (pp.142-143), sec 2.6.9 papilloedema discussion (p.165), sec 3.5 (p.167), Table 42 effects table (p.169), sec 3.7 (p.171). Table 38 row read directly: 'Papilloedema  0  0  1 (0.7)  1 (0.6)'. The four SAE narratives on p.143 were read in full to identify which event carries PT Papilloedema (the 7-dose case).",
+   "problem": "Same three defects as CMS1244. (1) exposure_duration 'median 119.4 weeks (range 4-212 weeks)' is not in the source (actual Pool ABCL1 median 148.4 weeks). (2) The '1/147 vs 0/36 placebo' contrast mixes an open-label pool with the controlled-period placebo arm; Pool RC1 (tofersen 100 mg, N=72) is also 0 in the controlled period. (3) reversibility='reversible': the single PT-Papilloedema SAE (7-dose case) was 'reported as resolved after 191 days' but with Neuro-ophthalmology recommending continued IV methylprednisolone around infusions and continued acetazolamide, and the participant later had a rebound-intracranial-hypertension SAE on acetazolamide withdrawal. The readout value 1/147 is correct at the cited locus.",
+   "correction": {
+    "exposure_duration": "median 148.4wk total exposure to 100 mg (Pool ABCL1)",
+    "reversibility": "partially_reversible"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1246",
+   "verdict": "CONFIRMED",
+   "checked": "EMA/276404/2024 Qalsody EPAR (181pp) downloaded from ema.europa.eu and text-extracted; located sec 2.6.8.1 patient exposure (p.167), Table 37 (p.139), Table 38 (pp.140-141), sec 2.6.8.3 SAE narratives (pp.142-143), sec 2.6.9 papilloedema discussion (p.165), sec 3.5 (p.167), Table 42 effects table (p.169), sec 3.7 (p.171). Read the first of the four SAE narratives at EPAR p.143/181 verbatim.",
+   "problem": "None. Every element is exact: opening pressure 38 cmH2O at the index LP, 'The most recent CSF opening pressure was + 25 cm H2O', bilateral papilloedema, CSF pleocytosis and elevated CSF protein, concurrent SAE of myelitis, event ongoing at the 28 Feb 2023 cut with papilloedema markedly regressed at approximately 8 months and ophthalmological examination normalised. The note's characterisation of the other three narratives is also exact: onset after approximately 18 doses, after 7 doses and after 9 doses, with qualitative 'elevated CSF opening pressure' for two and 'The LP opening pressure was not elevated' in the 7-dose papilloedema case. This is the best-sourced row in the batch.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1247",
+   "verdict": "REFUTED",
+   "checked": "EMA/276404/2024 Qalsody EPAR (181pp) downloaded from ema.europa.eu and text-extracted; located sec 2.6.8.1 patient exposure (p.167), Table 37 (p.139), Table 38 (pp.140-141), sec 2.6.8.3 SAE narratives (pp.142-143), sec 2.6.9 papilloedema discussion (p.165), sec 3.5 (p.167), Table 42 effects table (p.169), sec 3.7 (p.171). Both verbatim quotes located and checked character by character; page footers checked against the pdf page index; whole document searched for '212' and '119.4'.",
+   "problem": "(1) exposure_duration 'median 119.4 weeks (range 4-212 weeks)' is not in EMA/276404/2024 (actual: Pool ABCL1 median 148.4 weeks; Pool ABCL2 median 131.7, range 4-316). (2) The cited pages are wrong: the 'Hydrocephalus was not reported during the tofersen CDP so far' sentence is on page 167/181 (section 3.5), not p.169/181; the second quote ('hydrocephalus has been reported with nusinersen and a case of hydrocephalus secondary to a sterile meningitis induced by the intrathecally administered ASO tominersen...') is on page 171/181, not p.172/181. The 'Risk of Hydrocephalus' entry the note refers to is in Table 42, the Effects Table (p.169/181). (3) Duplicate of CMS1161. Both quotes are otherwise verbatim-exact and the substance - zero hydrocephalus events in the tofersen CDP, grade 0, with the scope caveat that no systematic ventricular imaging was done - is correct and is one of the most useful rows in the lane.",
+   "correction": {
+    "exposure_duration": "median 148.4wk total exposure to 100 mg (Pool ABCL1)",
+    "source_table": "EPAR sec 3.5 (p.167/181) and sec 3.7 discussion (p.171/181); Table 42 Effects Table (p.169/181) for the 'Risk of Hydrocephalus' uncertainty"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1248",
+   "verdict": "REFUTED",
+   "checked": "EMA/CHMP/379593/2025 Spinraza variation assessment report EMEA/H/C/004312/X/0038 (128pp) downloaded from ema.europa.eu; read the hydrocephalus passages on p.109 (sec 2.6.8) and p.113 (sec 2.6.9 + RMP). Both cited loci located and confirmed: the 9-events sentence is on p.109/128 and the fuller discussion on p.113/128. Read the surrounding paragraphs in full.",
+   "problem": "The quoted sentence is verbatim-exact at the cited locus. Two serious problems. (1) readout_name='hydrocephalus_incidence' with readout_value=9 misrepresents what was counted. The source says the 9 events pertain to the HIGH-LEVEL GROUP TERM 'Increased intracranial pressure and hydrocephalus' - a composite that folds raised-ICP preferred terms in with hydrocephalus. The document nowhere reports 9 hydrocephalus cases. A model trained on this row learns nine nusinersen hydrocephalus events that the regulator never asserted. (2) The row omits the decisive sentences from the very same passage: 'Based on the analysis of available data, a causal association between the development of hydrocephalus and exposure to nusinersen treatment could not be established. Hydrocephalus will remain an important potential risk with nusinersen in the RMP.' and, on p.109, 'Events of hydrocephalus in nusinersen-treated patients have been reported very rarely and, where reported, are considered to be manageable and nusinersen treatment has been continued in some cases.' Omitting an explicit regulatory non-causality finding while filing the row with effect_direction=increase and grade 2 is a directional misrepresentation of the source.",
+   "correction": {
+    "readout_name": "increased_intracranial_pressure_and_hydrocephalus_events (HLGT composite, not hydrocephalus alone)",
+    "notes": "must carry the EMA's own conclusion that a causal association between hydrocephalus and nusinersen exposure could not be established, and that hydrocephalus remains an important POTENTIAL (not identified) risk"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1249",
+   "verdict": "CONFIRMED",
+   "checked": "PMC10357201 full text (JATS) fetched via efetch; read Case Report, Discussion, Table 1 and figure captions; licence statement read (CC BY-NC 4.0).",
+   "problem": "None. The source states verbatim 'The ventricular width was normal without signs of hydrocephalus', in the Case Report section, with Figure 2 the corresponding MRI - exactly the cited locus. readout_value=TBD is the honest record since no quantitative ventricular measurement is reported. Grade 0 applied to the ventricular readout specifically, with the case's other two rows at grade 2, is the correct treatment of a genuine dissociation between raised ICP and ventriculomegaly. Redistribution summary_stat is correct: the article is CC BY-NC 4.0, which the brief and the dataset's own registry both decline to upgrade to cc_by.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1250",
+   "verdict": "CONFIRMED",
+   "checked": "PMC10357201 full text (JATS) fetched via efetch; read Case Report, Discussion, Table 1 and figure captions; licence statement read (CC BY-NC 4.0).",
+   "problem": "None material. Figure 1 shows 'papilledema with hemorrhage' and OCT showing 'papilledema with secondary macular edema'; Table 1 gives visual acuity 0.3/0.5 decimal at day 19 recovering to 1.0/0.9 at day 40 and sustained at day 61. Grade 2 with the explicit refusal to upgrade to 3 despite the dramatic presentation is exactly right under the rubric. One imprecision: 'recovered ... within ~2 months' - recovery to 1.0/0.9 was at day 40, i.e. about three weeks after detection and about six weeks after the injection; the abstract's '8 weeks of treatment' refers to the whole treatment course.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1251",
+   "verdict": "CONFIRMED",
+   "checked": "PMC10357201 full text (JATS) fetched via efetch; read Case Report, Discussion, Table 1 and figure captions; licence statement read (CC BY-NC 4.0). Table 1 reproduced in full and every serial value checked.",
+   "problem": "None. Every value is exact: opening pressure 47 cmH2O on day 19, serial 47 (d19) / 42 (d26) / 33 (d33) / 23 (d40); CSF removal 40/30/25/20 mL; acetazolamide escalated to 2 x 750 mg daily; normal range 10-25 cmH2O as stated in the paper's introduction; 21-year-old male with homozygous SMN1 exon 7-8 deletion and 3 SMN2 copies; 12 doses between September 2019 and October 2022 with onset the day after the 12th injection. The confounder handling is exemplary and quotes the paper correctly: 'extensive, most likely congenital, bilateral arachnoid cysts with moderate space-occupying effects', 'bilateral stenosis of the transverse sinuses', and the authors' own limited conclusion that 'the treatment potentially contributed'. The 12 mg dose is a stated derivation from the paper's 5 mL injection volume at 2.4 mg/mL rather than a read value, and the row says so.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1252",
+   "verdict": "REFUTED",
+   "checked": "PubMed record PMID 32794413 fetched via efetch; full structured abstract read (Int J Toxicol 2020 Nov/Dec;39(6):505-509). SAGE full text not accessible, as the row declares. The full structured abstract was read and all five neurological-sign categories compared against the row's notes. Confirmed that hydrocephalus, ventriculomegaly and raised intracranial pressure appear in none of the five categories.",
+   "problem": "The descriptive content is exact - 28 intrathecal ASO studies, 1,016 cynomolgus monkeys, and all five sign categories are reproduced faithfully, including the euthanasia outcomes. But readout_value='0_of_1016' with readout_unit='n_of_N' is not a value reported at the cited locus. The paper reports a taxonomy of observed clinical neurological signs; it never reports a hydrocephalus incidence, never states that ventricular size was assessed, and supplies no denominator for a hydrocephalus endpoint. Encoding an argument from silence as a measured zero with n=1,016 makes this the largest-N negative in the lane and would anchor any model's prior for intrathecal ASO hydrocephalus risk in non-human primates on a number the source does not contain. The row's own notes say precisely this, but the notes are not what a trained model reads. readout_value should be TBD with the absence recorded qualitatively, or the row should be dropped. Secondary points: this is abstract-only (SAGE full text 403, honestly declared), and oligo_id CNS283 pools an unknown number of chemically distinct ASOs across 28 studies into one identity.",
+   "correction": {
+    "readout_value": "TBD",
+    "readout_unit": "NA",
+    "effect_vs_control": "no hydrocephalus/ventriculomegaly/raised-ICP category among the five reported classes of neurological sign; ventricular size not reported as measured"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1253",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT01703988 fetched and parsed; adverse-events module read in full. frequencyThreshold=0 confirmed. Arm sizes confirmed: 3 mg n=8, 6 mg n=8, 9 mg n=9, 12 mg n=9. All 88-term AE list scanned for hydrocephalus, ventricle, ventricular, intracranial, papilloedema, macrocephaly and meningitis preferred terms.",
+   "problem": "None. The 12 mg arm has n=9 as recorded, and no hydrocephalus, ventricular, macrocephaly, papilloedema or intracranial-pressure preferred term appears at any dose; the only term matching a ventricular/CSF search string is 'Skin papilloma' in the 3 mg arm, exactly as the row states. frequencyThreshold=0 is confirmed in the record, so the row's claim that zero means zero is right. Arm dosing confirmed: Days 1, 29, 85 for 3/6/12 mg and Days 1 and 85 for the 9 mg arm, and mean treatment duration 82.9 (SD 15.4) days.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1254",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT01703988 fetched and parsed; adverse-events module read in full. frequencyThreshold=0 confirmed. Arm sizes confirmed: 3 mg n=8, 6 mg n=8, 9 mg n=9, 12 mg n=9. All 88-term AE list scanned for hydrocephalus, ventricle, ventricular, intracranial, papilloedema, macrocephaly and meningitis preferred terms.",
+   "problem": "None. The 3 mg arm has n=8 as recorded, and no hydrocephalus, ventricular, macrocephaly, papilloedema or intracranial-pressure preferred term appears at any dose; the only term matching a ventricular/CSF search string is 'Skin papilloma' in the 3 mg arm, exactly as the row states. frequencyThreshold=0 is confirmed in the record, so the row's claim that zero means zero is right. Arm dosing confirmed: Days 1, 29, 85 for 3/6/12 mg and Days 1 and 85 for the 9 mg arm, and mean treatment duration 82.9 (SD 15.4) days.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1255",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT01703988 fetched and parsed; adverse-events module read in full. frequencyThreshold=0 confirmed. Arm sizes confirmed: 3 mg n=8, 6 mg n=8, 9 mg n=9, 12 mg n=9. All 88-term AE list scanned for hydrocephalus, ventricle, ventricular, intracranial, papilloedema, macrocephaly and meningitis preferred terms.",
+   "problem": "None. The 6 mg arm has n=8 as recorded, and no hydrocephalus, ventricular, macrocephaly, papilloedema or intracranial-pressure preferred term appears at any dose; the only term matching a ventricular/CSF search string is 'Skin papilloma' in the 3 mg arm, exactly as the row states. frequencyThreshold=0 is confirmed in the record, so the row's claim that zero means zero is right. Arm dosing confirmed: Days 1, 29, 85 for 3/6/12 mg and Days 1 and 85 for the 9 mg arm, and mean treatment duration 82.9 (SD 15.4) days.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1256",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT01703988 fetched and parsed; adverse-events module read in full. frequencyThreshold=0 confirmed. Arm sizes confirmed: 3 mg n=8, 6 mg n=8, 9 mg n=9, 12 mg n=9. All 88-term AE list scanned for hydrocephalus, ventricle, ventricular, intracranial, papilloedema, macrocephaly and meningitis preferred terms.",
+   "problem": "None. The 9 mg arm has n=9 as recorded, and no hydrocephalus, ventricular, macrocephaly, papilloedema or intracranial-pressure preferred term appears at any dose; the only term matching a ventricular/CSF search string is 'Skin papilloma' in the 3 mg arm, exactly as the row states. frequencyThreshold=0 is confirmed in the record, so the row's claim that zero means zero is right. Arm dosing confirmed: Days 1, 29, 85 for 3/6/12 mg and Days 1 and 85 for the 9 mg arm, and mean treatment duration 82.9 (SD 15.4) days.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1257",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "ClinicalTrials.gov API v2 record for NCT02193074 (ENDEAR) fetched and parsed; adverse-events module read in full for both arms. Group sizes confirmed: Control n=41, Nusinersen n=80. The Control arm's flow description confirms it is 'Sham procedure administered on Study Days 1, 15, 29, 64, 183, and 302' and the intervention record describes the sham as a 'Small needle prick on the lower back at the location where the IT injection is normally made'. No hydrocephalus, ventricular, macrocephaly, papilloedema or intracranial-pressure preferred term appears in the serious or non-serious tables in either arm.",
+   "problem": "The readout (0/80 vs sham 0/41) and grade 0 are correct, and the row's scope caveat is right: serious AEs are posted in full while non-serious events use a 5% frequency threshold. One imprecision: dose_or_conc_value=12 mg is not stated at the cited locus. The ClinicalTrials.gov record gives only 'Nusinersen (2.4 mg/mL)' for this study and never names a 12 mg dose (unlike CHERISH, whose arm description does say 'Nusinersen 12 mg'). The value is correct in fact but is imported from elsewhere.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1258",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT02292537 (CHERISH) fetched and parsed; adverse-events module read in full. Group sizes confirmed: Sham Procedure n=42, Nusinersen n=84. Arm description confirms 'Nusinersen 12 mg solution via intrathecal (IT) injection on Days 1, 29, 85 and 274'. No hydrocephalus, ventricular, macrocephaly, papilloedema or intracranial-pressure preferred term in either arm's serious or non-serious tables.",
+   "problem": "None. 0/84 nusinersen vs 0/42 sham, grade 0, dose 12 mg all confirmed at the cited locus, and the frequency-threshold caveat is correctly stated.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1264",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "ClinicalTrials.gov API v2 record for NCT02519036 fetched and parsed; outcome measure 'Ventricular Volume as Assessed by Structural Magnetic Resonance Imaging (MRI)' extracted in full - unit mL, param MEAN, dispersion Standard Deviation, classes Screening / Day 113 / Day 197, with per-arm n. Posted means: Screening placebo 35.58, 10 mg 17.88, 30 mg 33.02, 60 mg 31.90, 90 mg 39.33, 120 mg 27.53; Day 113 36.11 / 18.66 / 33.56 / 32.04 / 42.24 / 30.36; Day 197 36.46 / 19.69 / 34.82 / 34.57 / 44.43 / 33.02. Denominators 12 / 3 / 6 / 6 / 9 / 10. Arm dosing confirmed as Days 1, 29, 57 and 85. The whole 88-term AE list was also scanned.",
+   "problem": "The posted value is exact: 18.66 mL at Day 113 in the 10 mg arm, screening 17.88 mL, n=3, and the placebo arm 35.58 -> 36.11 mL, n=12. But grade 0 breaks the curator's own stated grading rule for this series ('0 where the change is at or below the placebo change'): the 10 mg change is +0.78 mL against placebo's +0.53 mL, i.e. above it. In proportional terms the gap is larger still (+4.4% of a small baseline versus +1.5%). Grade 0 is still arguable on absolute grounds with n=3, but the row as filed is internally inconsistent with its siblings.",
+   "correction": {
+    "neurotox_grade": "1 (or restate the grading rule; as written the row contradicts it)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1265",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT02519036 fetched and parsed; outcome measure 'Ventricular Volume as Assessed by Structural Magnetic Resonance Imaging (MRI)' extracted in full - unit mL, param MEAN, dispersion Standard Deviation, classes Screening / Day 113 / Day 197, with per-arm n. Posted means: Screening placebo 35.58, 10 mg 17.88, 30 mg 33.02, 60 mg 31.90, 90 mg 39.33, 120 mg 27.53; Day 113 36.11 / 18.66 / 33.56 / 32.04 / 42.24 / 30.36; Day 197 36.46 / 19.69 / 34.82 / 34.57 / 44.43 / 33.02. Denominators 12 / 3 / 6 / 6 / 9 / 10. Arm dosing confirmed as Days 1, 29, 57 and 85. The whole 88-term AE list was also scanned.",
+   "problem": "None on the extracted values: 30.36 at Day 113 in the 120 mg arm against a screening mean of 27.53 mL, n=10, is exact at the cited locus, as is the concurrent placebo pair quoted in effect_vs_control. Grade 2 ('ventriculomegaly without clinical decompensation') rests entirely on a curator-computed difference of means with no posted dispersion for the change and no statistical comparison, in an arm of n=10 whose absolute ventricular volume is at or below the placebo arm's, and in a disease whose natural history enlarges ventricles. The notes disclose all of this, and the dose-monotonicity above 30 mg is real, but the grade should be read as provisional.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1266",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT02519036 fetched and parsed; outcome measure 'Ventricular Volume as Assessed by Structural Magnetic Resonance Imaging (MRI)' extracted in full - unit mL, param MEAN, dispersion Standard Deviation, classes Screening / Day 113 / Day 197, with per-arm n. Posted means: Screening placebo 35.58, 10 mg 17.88, 30 mg 33.02, 60 mg 31.90, 90 mg 39.33, 120 mg 27.53; Day 113 36.11 / 18.66 / 33.56 / 32.04 / 42.24 / 30.36; Day 197 36.46 / 19.69 / 34.82 / 34.57 / 44.43 / 33.02. Denominators 12 / 3 / 6 / 6 / 9 / 10. Arm dosing confirmed as Days 1, 29, 57 and 85. The whole 88-term AE list was also scanned.",
+   "problem": "None on the extracted values: 33.56 at Day 113 in the 30 mg arm against a screening mean of 33.02 mL, n=6, is exact at the cited locus, as is the concurrent placebo pair quoted in effect_vs_control.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1267",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT02519036 fetched and parsed; outcome measure 'Ventricular Volume as Assessed by Structural Magnetic Resonance Imaging (MRI)' extracted in full - unit mL, param MEAN, dispersion Standard Deviation, classes Screening / Day 113 / Day 197, with per-arm n. Posted means: Screening placebo 35.58, 10 mg 17.88, 30 mg 33.02, 60 mg 31.90, 90 mg 39.33, 120 mg 27.53; Day 113 36.11 / 18.66 / 33.56 / 32.04 / 42.24 / 30.36; Day 197 36.46 / 19.69 / 34.82 / 34.57 / 44.43 / 33.02. Denominators 12 / 3 / 6 / 6 / 9 / 10. Arm dosing confirmed as Days 1, 29, 57 and 85. The whole 88-term AE list was also scanned.",
+   "problem": "None on the extracted values: 32.04 at Day 113 in the 60 mg arm against a screening mean of 31.90 mL, n=6, is exact at the cited locus, as is the concurrent placebo pair quoted in effect_vs_control.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1268",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT02519036 fetched and parsed; outcome measure 'Ventricular Volume as Assessed by Structural Magnetic Resonance Imaging (MRI)' extracted in full - unit mL, param MEAN, dispersion Standard Deviation, classes Screening / Day 113 / Day 197, with per-arm n. Posted means: Screening placebo 35.58, 10 mg 17.88, 30 mg 33.02, 60 mg 31.90, 90 mg 39.33, 120 mg 27.53; Day 113 36.11 / 18.66 / 33.56 / 32.04 / 42.24 / 30.36; Day 197 36.46 / 19.69 / 34.82 / 34.57 / 44.43 / 33.02. Denominators 12 / 3 / 6 / 6 / 9 / 10. Arm dosing confirmed as Days 1, 29, 57 and 85. The whole 88-term AE list was also scanned.",
+   "problem": "None on the extracted values: 42.24 at Day 113 in the 90 mg arm against a screening mean of 39.33 mL, n=9, is exact at the cited locus, as is the concurrent placebo pair quoted in effect_vs_control. Grade 2 ('ventriculomegaly without clinical decompensation') rests entirely on a curator-computed difference of means with no posted dispersion for the change and no statistical comparison, in an arm of n=9 whose absolute ventricular volume is at or below the placebo arm's, and in a disease whose natural history enlarges ventricles. The notes disclose all of this, and the dose-monotonicity above 30 mg is real, but the grade should be read as provisional.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1269",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT02519036 fetched and parsed; outcome measure 'Ventricular Volume as Assessed by Structural Magnetic Resonance Imaging (MRI)' extracted in full - unit mL, param MEAN, dispersion Standard Deviation, classes Screening / Day 113 / Day 197, with per-arm n. Posted means: Screening placebo 35.58, 10 mg 17.88, 30 mg 33.02, 60 mg 31.90, 90 mg 39.33, 120 mg 27.53; Day 113 36.11 / 18.66 / 33.56 / 32.04 / 42.24 / 30.36; Day 197 36.46 / 19.69 / 34.82 / 34.57 / 44.43 / 33.02. Denominators 12 / 3 / 6 / 6 / 9 / 10. Arm dosing confirmed as Days 1, 29, 57 and 85. The whole 88-term AE list was also scanned.",
+   "problem": "None on the extracted values: 19.69 at Day 197 in the 10 mg arm against a screening mean of 17.88 mL, n=3, is exact at the cited locus, as is the concurrent placebo pair quoted in effect_vs_control. reversibility='irreversible' is an interpretation of a single post-treatment timepoint, not a source statement; the notes say so.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1270",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT02519036 fetched and parsed; outcome measure 'Ventricular Volume as Assessed by Structural Magnetic Resonance Imaging (MRI)' extracted in full - unit mL, param MEAN, dispersion Standard Deviation, classes Screening / Day 113 / Day 197, with per-arm n. Posted means: Screening placebo 35.58, 10 mg 17.88, 30 mg 33.02, 60 mg 31.90, 90 mg 39.33, 120 mg 27.53; Day 113 36.11 / 18.66 / 33.56 / 32.04 / 42.24 / 30.36; Day 197 36.46 / 19.69 / 34.82 / 34.57 / 44.43 / 33.02. Denominators 12 / 3 / 6 / 6 / 9 / 10. Arm dosing confirmed as Days 1, 29, 57 and 85. The whole 88-term AE list was also scanned.",
+   "problem": "None on the extracted values: 33.02 at Day 197 in the 120 mg arm against a screening mean of 27.53 mL, n=10, is exact at the cited locus, as is the concurrent placebo pair quoted in effect_vs_control. This row's additional claim is also verified: no hydrocephalus, cerebral ventricle dilatation, papilloedema or intracranial-pressure adverse-event term appears anywhere in this study's posted AE tables at any dose from 10 to 120 mg - the only term matching a ventricular search string is the cardiac PT 'Ventricular extrasystoles'. Grade 2 ('ventriculomegaly without clinical decompensation') rests entirely on a curator-computed difference of means with no posted dispersion for the change and no statistical comparison, in an arm of n=10 whose absolute ventricular volume is at or below the placebo arm's, and in a disease whose natural history enlarges ventricles. The notes disclose all of this, and the dose-monotonicity above 30 mg is real, but the grade should be read as provisional. reversibility='irreversible' is an interpretation of a single post-treatment timepoint, not a source statement; the notes say so.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1271",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT02519036 fetched and parsed; outcome measure 'Ventricular Volume as Assessed by Structural Magnetic Resonance Imaging (MRI)' extracted in full - unit mL, param MEAN, dispersion Standard Deviation, classes Screening / Day 113 / Day 197, with per-arm n. Posted means: Screening placebo 35.58, 10 mg 17.88, 30 mg 33.02, 60 mg 31.90, 90 mg 39.33, 120 mg 27.53; Day 113 36.11 / 18.66 / 33.56 / 32.04 / 42.24 / 30.36; Day 197 36.46 / 19.69 / 34.82 / 34.57 / 44.43 / 33.02. Denominators 12 / 3 / 6 / 6 / 9 / 10. Arm dosing confirmed as Days 1, 29, 57 and 85. The whole 88-term AE list was also scanned.",
+   "problem": "None on the extracted values: 34.82 at Day 197 in the 30 mg arm against a screening mean of 33.02 mL, n=6, is exact at the cited locus, as is the concurrent placebo pair quoted in effect_vs_control. reversibility='irreversible' is an interpretation of a single post-treatment timepoint, not a source statement; the notes say so.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1272",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT02519036 fetched and parsed; outcome measure 'Ventricular Volume as Assessed by Structural Magnetic Resonance Imaging (MRI)' extracted in full - unit mL, param MEAN, dispersion Standard Deviation, classes Screening / Day 113 / Day 197, with per-arm n. Posted means: Screening placebo 35.58, 10 mg 17.88, 30 mg 33.02, 60 mg 31.90, 90 mg 39.33, 120 mg 27.53; Day 113 36.11 / 18.66 / 33.56 / 32.04 / 42.24 / 30.36; Day 197 36.46 / 19.69 / 34.82 / 34.57 / 44.43 / 33.02. Denominators 12 / 3 / 6 / 6 / 9 / 10. Arm dosing confirmed as Days 1, 29, 57 and 85. The whole 88-term AE list was also scanned.",
+   "problem": "None on the extracted values: 34.57 at Day 197 in the 60 mg arm against a screening mean of 31.90 mL, n=6, is exact at the cited locus, as is the concurrent placebo pair quoted in effect_vs_control. reversibility='irreversible' is an interpretation of a single post-treatment timepoint, not a source statement; the notes say so.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1273",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT02519036 fetched and parsed; outcome measure 'Ventricular Volume as Assessed by Structural Magnetic Resonance Imaging (MRI)' extracted in full - unit mL, param MEAN, dispersion Standard Deviation, classes Screening / Day 113 / Day 197, with per-arm n. Posted means: Screening placebo 35.58, 10 mg 17.88, 30 mg 33.02, 60 mg 31.90, 90 mg 39.33, 120 mg 27.53; Day 113 36.11 / 18.66 / 33.56 / 32.04 / 42.24 / 30.36; Day 197 36.46 / 19.69 / 34.82 / 34.57 / 44.43 / 33.02. Denominators 12 / 3 / 6 / 6 / 9 / 10. Arm dosing confirmed as Days 1, 29, 57 and 85. The whole 88-term AE list was also scanned.",
+   "problem": "None on the extracted values: 44.43 at Day 197 in the 90 mg arm against a screening mean of 39.33 mL, n=9, is exact at the cited locus, as is the concurrent placebo pair quoted in effect_vs_control. Grade 2 ('ventriculomegaly without clinical decompensation') rests entirely on a curator-computed difference of means with no posted dispersion for the change and no statistical comparison, in an arm of n=9 whose absolute ventricular volume is at or below the placebo arm's, and in a disease whose natural history enlarges ventricles. The notes disclose all of this, and the dose-monotonicity above 30 mg is real, but the grade should be read as provisional. reversibility='irreversible' is an interpretation of a single post-treatment timepoint, not a source statement; the notes say so.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1274",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "ClinicalTrials.gov API v2 record for NCT02594124 (SHINE) fetched and parsed; adverse-events module read in full. frequencyThreshold=5 confirmed. All nine event groups and their sizes confirmed: CS3A 13, CS3B Previous Control 24, CS3B Previous ISIS 396443 65, Infantile 232SM202 12, Later 232SM202 8, CS12 Type 2 20, CS12 Type 3 25, CS4 Previous Control 42, CS4 Previous ISIS 396443 83. The 'Intracranial pressure increased' row appears under Other (non-serious) events with counts 0/13, 0/24, 0/65, 1/12, 1/8, 0/20, 0/25, 0/42, 0/83. No hydrocephalus preferred term appears anywhere in the record.",
+   "problem": "The count is exact: 1/12 in 'Infantile SMA Onset 232SM202', a non-serious event. Two non-critical problems. (a) Grade 2 for a NON-SERIOUS 'Intracranial pressure increased' AE is inconsistent with the same lane grading markedly raised but asymptomatic opening pressures at 1 (CMS1235, CMS1236); ICH classifies non-serious precisely as not meeting the clinical-significance bar the rubric's grade 2 asks for. (b) The effect_vs_control string lists 'the other 7 groups (13, 24, 65, 12-not-applicable, 20, 25, 42, 83)' - that is eight numbers for seven groups, and it includes 12, which is the group that HAD the event. The seven zero groups are 13, 24, 65, 20, 25, 42 and 83.",
+   "correction": {
+    "neurotox_grade": "1",
+    "effect_vs_control": "1/12 and 1/8 in the two 232SM202 roll-over groups; 0 in the other seven groups (n = 13, 24, 65, 20, 25, 42, 83)"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1275",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT02594124 (SHINE) fetched and parsed; adverse-events module read in full. frequencyThreshold=5 confirmed. All nine event groups and their sizes confirmed: CS3A 13, CS3B Previous Control 24, CS3B Previous ISIS 396443 65, Infantile 232SM202 12, Later 232SM202 8, CS12 Type 2 20, CS12 Type 3 25, CS4 Previous Control 42, CS4 Previous ISIS 396443 83. The 'Intracranial pressure increased' row appears under Other (non-serious) events with counts 0/13, 0/24, 0/65, 1/12, 1/8, 0/20, 0/25, 0/42, 0/83. No hydrocephalus preferred term appears anywhere in the record.",
+   "problem": "None on the value: 0/65 in 'Infantile SMA Onset CS3B Previous ISIS 396443' is exact, and grade 0 is right. Note that once a preferred term crosses the 5% threshold in any group ClinicalTrials.gov posts actual counts for every group, so this zero is a real zero rather than a suppressed count - the row's caveat is more conservative than it needs to be. The effect_vs_control group listing carries the same '12-not-applicable' defect described at CMS1274.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1276",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "ClinicalTrials.gov API v2 record for NCT02594124 (SHINE) fetched and parsed; adverse-events module read in full. frequencyThreshold=5 confirmed. All nine event groups and their sizes confirmed: CS3A 13, CS3B Previous Control 24, CS3B Previous ISIS 396443 65, Infantile 232SM202 12, Later 232SM202 8, CS12 Type 2 20, CS12 Type 3 25, CS4 Previous Control 42, CS4 Previous ISIS 396443 83. The 'Intracranial pressure increased' row appears under Other (non-serious) events with counts 0/13, 0/24, 0/65, 1/12, 1/8, 0/20, 0/25, 0/42, 0/83. No hydrocephalus preferred term appears anywhere in the record.",
+   "problem": "The count is exact: 1/8 in 'Later SMA Onset 232SM202', a non-serious event. Same grade-2-for-a-non-serious-AE inconsistency as CMS1274, and the same defective group listing in effect_vs_control. The row's own caution that both events fall in the two smallest groups and are consistent with chance is well made and should survive into the published notes.",
+   "correction": {
+    "neurotox_grade": "1"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1277",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT02594124 (SHINE) fetched and parsed; adverse-events module read in full. frequencyThreshold=5 confirmed. All nine event groups and their sizes confirmed: CS3A 13, CS3B Previous Control 24, CS3B Previous ISIS 396443 65, Infantile 232SM202 12, Later 232SM202 8, CS12 Type 2 20, CS12 Type 3 25, CS4 Previous Control 42, CS4 Previous ISIS 396443 83. The 'Intracranial pressure increased' row appears under Other (non-serious) events with counts 0/13, 0/24, 0/65, 1/12, 1/8, 0/20, 0/25, 0/42, 0/83. No hydrocephalus preferred term appears anywhere in the record.",
+   "problem": "None on the value: 0/83 in 'Later SMA Onset CS4 Previous ISIS 396443' is exact and grade 0 is right. Same minor group-listing defect in effect_vs_control as CMS1274.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1278",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT02623699 (VALOR / Study 233AS101) fetched and parsed; adverse-events module read in full across all 12 posted groups (Part A SAD combined placebo n=5 and cohorts 10/20/40/60 mg; Part B MAD combined placebo n=12 and cohorts 20/40/60/100 mg; Part C placebo n=36 and BIIB067 100 mg n=72). Every serious and non-serious preferred term was scanned for hydrocephalus, ventricle, ventricular, intracranial, papilloedema, macrocephaly, meningitis and myelitis.",
+   "problem": "None on the graded fields. Confirmed: no 'Papilloedema', 'Intracranial pressure increased', 'Hydrocephalus' or ventricular preferred term appears in any of the 12 posted arms, including the 100 mg Part C comparison against placebo, and 0 at every SAD and MAD dose. This is a genuinely important negative and the framing - that the tofersen ICP signal emerges only in long-term open-label extension - is supported by the paired NCT03070119 rows. One imprecision in notes: the claim that 'the only serious neurological events in Part C were myelitis 1/72 and transverse myelitis 1/72 vs 0/36 placebo' omits the serious 'Meningitis chemical' 1/72 vs 0/36, which MedDRA files under Injury, poisoning and procedural complications but which is a neurological event in substance.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1279",
+   "verdict": "REFUTED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT03070119 (Study 233AS102) fetched and parsed; adverse-events module read in full. Group sizes confirmed: Part C Prior Placebo n=32, Part C Prior BIIB067 100 mg n=63, Parts A and B All Doses n=44. Serious events: Papilloedema 1/32, 0/63, 0/44; Intracranial pressure increased 1/32, 1/63, 1/44; Meningitis aseptic 1/32, 0/63, 0/44; Myelitis 1/32, 1/63, 1/44; Neuromyelitis optica spectrum disorder 1/32, 0/63, 0/44. Other (non-serious) events: Papilloedema 2/32, 3/63, 1/44; Intracranial pressure increased 2/32, 4/63, 0/44.",
+   "problem": "Both counts are exact at the locus (serious papilloedema 0/63 and non-serious papilloedema 3/63 in the Prior BIIB067 100 mg group). The row is nevertheless wrong as filed: readout_value='0_of_63' with effect_direction='increase' and neurotox_grade=2. A zero-valued readout cannot carry direction 'increase'; the direction contradicts the value in the same row. The curator's convention (readout_value holds serious events only, non-serious relegated to effect_vs_control) produces columns that read 'papilloedema 0/63, increase, grade 2' - a model trained on the machine-readable fields learns that zero events constitute an increase and a grade-2 toxicity. Either the readout should carry the total papilloedema burden in this group (3/63, all non-serious), keeping direction increase and grade 2; or the serious-only scope should be kept with direction no_change and grade 0, and the non-serious count filed as its own row.",
+   "correction": {
+    "readout_value": "3_of_63",
+    "effect_vs_control": "3/63 papilloedema, all non-serious (0/63 serious), Part C Prior BIIB067 100 mg"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1280",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT03070119 (Study 233AS102) fetched and parsed; adverse-events module read in full. Group sizes confirmed: Part C Prior Placebo n=32, Part C Prior BIIB067 100 mg n=63, Parts A and B All Doses n=44. Serious events: Papilloedema 1/32, 0/63, 0/44; Intracranial pressure increased 1/32, 1/63, 1/44; Meningitis aseptic 1/32, 0/63, 0/44; Myelitis 1/32, 1/63, 1/44; Neuromyelitis optica spectrum disorder 1/32, 0/63, 0/44. Other (non-serious) events: Papilloedema 2/32, 3/63, 1/44; Intracranial pressure increased 2/32, 4/63, 0/44.",
+   "problem": "None. Serious papilloedema 1/32 in 'Part C (Prior Placebo)' and the additional 2/32 non-serious are both exact, as is the cross-group summary (serious 1/32, 0/63, 0/44; non-serious 2/32, 3/63, 1/44). Grade 2 is right per the rubric's explicit listing of papilledema. The note's framing of the groups as a cumulative-exposure rather than a dose comparison is correct: all groups receive 100 mg and differ only in prior randomised assignment.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1281",
+   "verdict": "REFUTED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT03070119 (Study 233AS102) fetched and parsed; adverse-events module read in full. Group sizes confirmed: Part C Prior Placebo n=32, Part C Prior BIIB067 100 mg n=63, Parts A and B All Doses n=44. Serious events: Papilloedema 1/32, 0/63, 0/44; Intracranial pressure increased 1/32, 1/63, 1/44; Meningitis aseptic 1/32, 0/63, 0/44; Myelitis 1/32, 1/63, 1/44; Neuromyelitis optica spectrum disorder 1/32, 0/63, 0/44. Other (non-serious) events: Papilloedema 2/32, 3/63, 1/44; Intracranial pressure increased 2/32, 4/63, 0/44.",
+   "problem": "Same defect as CMS1279 and the same underlying convention. Both counts are exact (serious papilloedema 0/44, non-serious 1/44 in 'Parts A and B (All Doses)'), but the row is filed with readout_value='0_of_44', effect_direction='increase' and neurotox_grade=2, so its machine-readable fields assert an increase and a grade-2 toxicity for a recorded value of zero.",
+   "correction": {
+    "readout_value": "1_of_44",
+    "effect_vs_control": "1/44 papilloedema, non-serious (0/44 serious), Parts A and B all doses"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1282",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT03070119 (Study 233AS102) fetched and parsed; adverse-events module read in full. Group sizes confirmed: Part C Prior Placebo n=32, Part C Prior BIIB067 100 mg n=63, Parts A and B All Doses n=44. Serious events: Papilloedema 1/32, 0/63, 0/44; Intracranial pressure increased 1/32, 1/63, 1/44; Meningitis aseptic 1/32, 0/63, 0/44; Myelitis 1/32, 1/63, 1/44; Neuromyelitis optica spectrum disorder 1/32, 0/63, 0/44. Other (non-serious) events: Papilloedema 2/32, 3/63, 1/44; Intracranial pressure increased 2/32, 4/63, 0/44.",
+   "problem": "None. Serious 'Intracranial pressure increased' 1/63 plus 4/63 non-serious in 'Part C (Prior BIIB067 100 mg)' are exact, and the cross-group summary (serious 1/32, 1/63, 1/44; non-serious 2/32, 4/63, 0/44) is exact. The corroborating detail in notes is also verified: 1 serious neuromyelitis optica spectrum disorder (1/32, Prior Placebo) and serious myelitis 1/32, 1/63, 1/44. Because the serious count here is non-zero, this row does not suffer the value/direction contradiction that refutes CMS1279 and CMS1281.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1283",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT03070119 (Study 233AS102) fetched and parsed; adverse-events module read in full. Group sizes confirmed: Part C Prior Placebo n=32, Part C Prior BIIB067 100 mg n=63, Parts A and B All Doses n=44. Serious events: Papilloedema 1/32, 0/63, 0/44; Intracranial pressure increased 1/32, 1/63, 1/44; Meningitis aseptic 1/32, 0/63, 0/44; Myelitis 1/32, 1/63, 1/44; Neuromyelitis optica spectrum disorder 1/32, 0/63, 0/44. Other (non-serious) events: Papilloedema 2/32, 3/63, 1/44; Intracranial pressure increased 2/32, 4/63, 0/44.",
+   "problem": "None. Serious 'Intracranial pressure increased' 1/32 plus 2/32 non-serious in 'Part C (Prior Placebo)' are exact.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1284",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT03070119 (Study 233AS102) fetched and parsed; adverse-events module read in full. Group sizes confirmed: Part C Prior Placebo n=32, Part C Prior BIIB067 100 mg n=63, Parts A and B All Doses n=44. Serious events: Papilloedema 1/32, 0/63, 0/44; Intracranial pressure increased 1/32, 1/63, 1/44; Meningitis aseptic 1/32, 0/63, 0/44; Myelitis 1/32, 1/63, 1/44; Neuromyelitis optica spectrum disorder 1/32, 0/63, 0/44. Other (non-serious) events: Papilloedema 2/32, 3/63, 1/44; Intracranial pressure increased 2/32, 4/63, 0/44.",
+   "problem": "None. Serious 'Intracranial pressure increased' 1/44 plus 0/44 non-serious in 'Parts A and B (All Doses)' are exact.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1285",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT03342053 (tominersen OLE CS2) fetched and parsed; adverse-events module and outcome measures both extracted in full. Two arms only, Monthly n=23 and Bimonthly n=23, both 120 mg (arm descriptions confirm every 28 days for 14 months, versus every 56 days for 14 months following 2 monthly loading doses). Serious events include Hydrocephalus 1/23 monthly vs 0/23 bimonthly and Meningitis chemical 1/23 vs 0/23; Other (non-serious) events include Cerebral ventricle dilatation 2/23 monthly vs 0/23 bimonthly. Outcome measures: ventricular volume BSI mean percentage change 46.09 (SD 32.14, n=20) monthly and 18.77 (SD 10.36, n=18) bimonthly; whole-brain BSI 1.63 (SD 1.41, n=13) monthly and 0.89 (SD 0.92, n=18) bimonthly. frequencyThreshold=5.",
+   "problem": "None. 'Cerebral ventricle dilatation' 0/23 in the Bimonthly arm is exact, as is the comparator (2/23 monthly). Grade 0 is right.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1286",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT03342053 (tominersen OLE CS2) fetched and parsed; adverse-events module and outcome measures both extracted in full. Two arms only, Monthly n=23 and Bimonthly n=23, both 120 mg (arm descriptions confirm every 28 days for 14 months, versus every 56 days for 14 months following 2 monthly loading doses). Serious events include Hydrocephalus 1/23 monthly vs 0/23 bimonthly and Meningitis chemical 1/23 vs 0/23; Other (non-serious) events include Cerebral ventricle dilatation 2/23 monthly vs 0/23 bimonthly. Outcome measures: ventricular volume BSI mean percentage change 46.09 (SD 32.14, n=20) monthly and 18.77 (SD 10.36, n=18) bimonthly; whole-brain BSI 1.63 (SD 1.41, n=13) monthly and 0.89 (SD 0.92, n=18) bimonthly. frequencyThreshold=5.",
+   "problem": "None. 'Cerebral ventricle dilatation' 2/23 (8.7%) in the Monthly arm is exact, listed under Other (non-serious) events, and grade 2 (ventriculomegaly without decompensation) is the right reading. The row correctly distinguishes this from the serious hydrocephalus event captured separately.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1288",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT03342053 (tominersen OLE CS2) fetched and parsed; adverse-events module and outcome measures both extracted in full. Two arms only, Monthly n=23 and Bimonthly n=23, both 120 mg (arm descriptions confirm every 28 days for 14 months, versus every 56 days for 14 months following 2 monthly loading doses). Serious events include Hydrocephalus 1/23 monthly vs 0/23 bimonthly and Meningitis chemical 1/23 vs 0/23; Other (non-serious) events include Cerebral ventricle dilatation 2/23 monthly vs 0/23 bimonthly. Outcome measures: ventricular volume BSI mean percentage change 46.09 (SD 32.14, n=20) monthly and 18.77 (SD 10.36, n=18) bimonthly; whole-brain BSI 1.63 (SD 1.41, n=13) monthly and 0.89 (SD 0.92, n=18) bimonthly. frequencyThreshold=5.",
+   "problem": "None. Serious 'Hydrocephalus' 0/23 in the Bimonthly arm is exact, against 1/23 in the Monthly arm at the identical 120 mg dose. Grade 0 is right and the row is appropriately modest about what n=23 can support.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1289",
+   "verdict": "REFUTED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT03342053 (tominersen OLE CS2) fetched and parsed; adverse-events module and outcome measures both extracted in full. Two arms only, Monthly n=23 and Bimonthly n=23, both 120 mg (arm descriptions confirm every 28 days for 14 months, versus every 56 days for 14 months following 2 monthly loading doses). Serious events include Hydrocephalus 1/23 monthly vs 0/23 bimonthly and Meningitis chemical 1/23 vs 0/23; Other (non-serious) events include Cerebral ventricle dilatation 2/23 monthly vs 0/23 bimonthly. Outcome measures: ventricular volume BSI mean percentage change 46.09 (SD 32.14, n=20) monthly and 18.77 (SD 10.36, n=18) bimonthly; whole-brain BSI 1.63 (SD 1.41, n=13) monthly and 0.89 (SD 0.92, n=18) bimonthly. frequencyThreshold=5. Also checked the citation given in notes: PubMed PMID 33125799 confirms Stoker TB, Andresen V, Barker RA, 'Hydrocephalus Complicating Intrathecal Antisense Oligonucleotide Therapy for Huntington's Disease', Mov Disord 2021 Jan;36(1):263-264, doi 10.1002/mds.28359 - a real Letter, but paywalled at Wiley with no abstract, so the ventriculo-peritoneal shunt claim could not be read.",
+   "problem": "The value is confirmed at the locus: 1/23 serious 'Hydrocephalus' in the Monthly 120 mg arm versus 0/23 bimonthly. neurotox_grade=3 is not. The cited locus establishes only that the event was coded as a SERIOUS adverse event, and serious-AE coding is not the rubric's 'hydrocephalus requiring intervention' - the ICH definition of serious is satisfied by hospitalisation alone. The intervention that grade 3 depends on comes entirely from two documents that appear in neither source_ref nor source_id: the Stoker 2021 Letter (paywalled, unread here) and an unfetched Roche/Genentech CHDI 2021 medical-affairs slide deck, which the dataset's own source registry lists separately with rights marked 'verify'. The linkage is also an inference the row states as such ('almost certainly the same patient'). As filed, the highest-consequence grade-3 hydrocephalus row for tominersen rests on provenance that its own provenance fields do not carry. Fix by co-citing doi:10.1002/mds.28359 in source_ref and reading the shunt statement out of it; otherwise grade 2.",
+   "correction": {
+    "neurotox_grade": "2 unless source_ref is amended to co-cite doi:10.1002/mds.28359 (PMID 33125799) and the ventriculo-peritoneal shunt is read from that source",
+    "source_ref": "NCT03342053 + doi:10.1002/mds.28359 (Stoker 2021) for the intervention claim"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1290",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT03342053 (tominersen OLE CS2) fetched and parsed; adverse-events module and outcome measures both extracted in full. Two arms only, Monthly n=23 and Bimonthly n=23, both 120 mg (arm descriptions confirm every 28 days for 14 months, versus every 56 days for 14 months following 2 monthly loading doses). Serious events include Hydrocephalus 1/23 monthly vs 0/23 bimonthly and Meningitis chemical 1/23 vs 0/23; Other (non-serious) events include Cerebral ventricle dilatation 2/23 monthly vs 0/23 bimonthly. Outcome measures: ventricular volume BSI mean percentage change 46.09 (SD 32.14, n=20) monthly and 18.77 (SD 10.36, n=18) bimonthly; whole-brain BSI 1.63 (SD 1.41, n=13) monthly and 0.89 (SD 0.92, n=18) bimonthly. frequencyThreshold=5.",
+   "problem": "None. 'Mean Percentage Change in Ventricular Volume Boundary Shift Integral From Baseline to 15 Months', RO7234292 Bimonthly arm: 18.77, SD 10.36, n=18 - exact, including the dispersion and denominator. The row is right that there is no placebo arm and that the only comparator is the other dosing frequency, and right to flag Huntington's natural history as the missing control.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1291",
+   "verdict": "CONFIRMED",
+   "checked": "ClinicalTrials.gov API v2 record for NCT03342053 (tominersen OLE CS2) fetched and parsed; adverse-events module and outcome measures both extracted in full. Two arms only, Monthly n=23 and Bimonthly n=23, both 120 mg (arm descriptions confirm every 28 days for 14 months, versus every 56 days for 14 months following 2 monthly loading doses). Serious events include Hydrocephalus 1/23 monthly vs 0/23 bimonthly and Meningitis chemical 1/23 vs 0/23; Other (non-serious) events include Cerebral ventricle dilatation 2/23 monthly vs 0/23 bimonthly. Outcome measures: ventricular volume BSI mean percentage change 46.09 (SD 32.14, n=20) monthly and 18.77 (SD 10.36, n=18) bimonthly; whole-brain BSI 1.63 (SD 1.41, n=13) monthly and 0.89 (SD 0.92, n=18) bimonthly. frequencyThreshold=5.",
+   "problem": "None. RO7234292 Monthly arm: 46.09, SD 32.14, n=20 - exact. The 2.5-fold separation by dosing frequency at an identical 120 mg dose is real and is the strongest quantitative ventricular signal in the batch. Grade 2 for both arms is defensible; note for the reader that the SD in the monthly arm (32.14) is of the same order as the mean, so the group estimate is heavily influenced by a minority of large changes, one of whom is the shunted case.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1292",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "ClinicalTrials.gov API v2 record for NCT03342053 (tominersen OLE CS2) fetched and parsed; adverse-events module and outcome measures both extracted in full. Two arms only, Monthly n=23 and Bimonthly n=23, both 120 mg (arm descriptions confirm every 28 days for 14 months, versus every 56 days for 14 months following 2 monthly loading doses). Serious events include Hydrocephalus 1/23 monthly vs 0/23 bimonthly and Meningitis chemical 1/23 vs 0/23; Other (non-serious) events include Cerebral ventricle dilatation 2/23 monthly vs 0/23 bimonthly. Outcome measures: ventricular volume BSI mean percentage change 46.09 (SD 32.14, n=20) monthly and 18.77 (SD 10.36, n=18) bimonthly; whole-brain BSI 1.63 (SD 1.41, n=13) monthly and 0.89 (SD 0.92, n=18) bimonthly. frequencyThreshold=5.",
+   "problem": "The values are exact: whole-brain BSI 0.89% (SD 0.92, n=18) bimonthly, and the monthly comparator 1.63% (SD 1.41, n=13), with the denominator asymmetry the notes flag (n=13 for whole brain versus n=20 for ventricle in the monthly arm) confirmed in the record. Two non-critical problems. (a) neurotox_grade=1 is assigned 'provisionally on magnitude alone' while effect_direction is TBD because the posted results do not state the BSI sign convention - a grade cannot be defended when it is not known whether the readout denotes volume loss or gain. Grade 0, or filing the row explicitly as an ungraded context row, would be honest. (b) endpoint_domain='hydrocephalus' and challenge_priority='high_hydrocephalus' on a whole-brain-volume readout inflates the count of rows attributed to the named challenge endpoint with a measurement that is not a hydrocephalus readout; its value here is as a scaling comparator for the ventricular BSI rows.",
+   "correction": {
+    "neurotox_grade": "0 (ungraded context row) until the BSI sign convention is established",
+    "endpoint_domain": "consider chronic_neurotoxicity or a context flag rather than hydrocephalus"
+   },
+   "severity": "minor"
+  }
+ ],
+ "summary": "56 rows checked against re-fetched primary sources: 8 ClinicalTrials.gov API v2 records (NCT01703988, NCT02193074, NCT02292537, NCT02519036, NCT02594124, NCT02623699, NCT03070119, NCT03342053), the Qalsody EPAR EMA/276404/2024 (181pp), the Spinraza SmPC and package leaflet, the Spinraza variation assessment report EMA/CHMP/379593/2025 (128pp), the PRAC draft agenda EMA/PRAC/395628/2018 (68pp), the Biogen DHPC SPZ-GBR-0020 and the MHRA Drug Safety Update of 25 Sep 2018, the US SPINRAZA and QALSODY labels, PubMed records for Becker 2021 / Korte 2020 / Stoker 2021, and PMC full texts for the JND 2023 case report (PMC10357201) and the Orphanet SMA hydrocephalus EHR study (PMC8105953). Verdicts: 37 CONFIRMED, 8 CONFIRMED_MINOR, 11 REFUTED, 0 UNVERIFIABLE. No row was unverifiable: every cited source was reachable, and the two abstract-only rows (Becker 2021, Korte 2020) honestly declare the abstract as their locus. The arithmetic in this batch is unusually good - every ClinicalTrials.gov count and every posted mean, SD and denominator I checked was exact, including the 10-point tominersen ventricular-volume ladder and all 14 tofersen open-label-extension counts. The failures are not arithmetic. They are (i) one fabricated exposure figure propagated across five tofersen EPAR rows, (ii) a readout_value convention that files zeros as increases, (iii) three rows that encode an absence or an administrative act as a measured value, (iv) two grade-3 calls that rest on evidence outside their own provenance fields, and (v) duplicate filing of the same regulatory statement under different source_ids.",
+ "systematic_issues": "1. FABRICATED EXPOSURE DURATION ON THE QALSODY EPAR ROWS (highest priority). Five rows - CMS1161, CMS1243, CMS1244, CMS1245, CMS1247 - carry exposure_duration 'median 119.4 weeks (range 4-212 weeks)' or 'up to 212wk' attributed to EMA/276404/2024. Neither 119.4 nor 212 occurs anywhere in that document. The EPAR's actual figures (sec 2.6.8.1, p.167/181) are: Pool ABCL1 (100 mg, N=147) median total duration of exposure 148.4 weeks over 368.83 participant-years; Pool ABCL2 (any dose, N=166) median 131.7 weeks, minimum 4, maximum 316 weeks; and a maximum 100 mg treatment duration of 245 weeks stated elsewhere. This is a single boilerplate string copied across a whole source-group, so EVERY row in the dataset citing EMA/276404/2024 must be checked - the source registry shows 24 rows under 'EMA/276404/2024' plus 5 more under the longer variant of the same source_ref, i.e. up to 29 rows, only 6 of which are in this batch. Because cumulative exposure is the explanatory variable these rows exist to support, a wrong exposure window is not cosmetic.\n\n2. ZERO-VALUED ROWS FILED WITH effect_direction='increase' AND A NON-ZERO GRADE. The NCT03070119 lane adopted a convention where readout_value carries only the SERIOUS event count and non-serious counts are relegated to effect_vs_control prose. That produces rows whose machine-readable columns say 'papilloedema 0/63, increase, grade 2' (CMS1279) and 'papilloedema 0/44, increase, grade 2' (CMS1281). Any model trained on the columns rather than the notes learns that zero events constitute an increase and a grade-2 toxicity. This convention is stated in those rows' notes, so it is deliberate and will therefore recur wherever serious and non-serious counts of the same preferred term were split - check every row whose readout_value begins '0_of_' and whose effect_direction is not 'no_change', across all ClinicalTrials.gov-sourced lanes, not just hydrocephalus. Either the readout must carry the total, or serious and non-serious must be separate rows.\n\n3. ABSENCES AND ADMINISTRATIVE ACTS ENCODED AS MEASURED VALUES. Three distinct instances here. CMS1252 records '0_of_1016' hydrocephalus in cynomolgus monkeys from Korte 2020, a survey of clinical neurological signs that never measured ventricular size and reports no hydrocephalus denominator - an argument from silence with the largest n in the lane. CMS1176 grades a PRAC meeting agenda item as neurotox_grade 3. CMS1248 records readout_value 9 under readout_name 'hydrocephalus_incidence' when the source counts 9 events of the composite high-level group term 'Increased intracranial pressure and hydrocephalus'. The common pattern is a qualitative or administrative statement being coerced into a numeric readout so the row will survive a numeric filter. Rows whose honest readout_value is TBD should keep TBD.\n\n4. GRADE 3 SOURCED FROM OUTSIDE THE ROW'S OWN PROVENANCE FIELDS. The parent brief's warning is borne out exactly once, but on the single most scrutinised tominersen row. CMS1289 grades 3 on a ClinicalTrials.gov serious-AE code for 'Hydrocephalus' 1/23; the ventriculo-peritoneal shunt that grade 3 requires comes from Stoker 2021 (Mov Disord 36(1):263-264, paywalled) and from a Roche/Genentech CHDI 2021 slide deck, neither of which is in source_ref or source_id - and the deck is registered elsewhere in this dataset with rights 'verify'. By contrast the nusinersen DHPC grade-3 rows (CMS1237, CMS1238, CMS1241) are exemplary: the intervention is stated in the cited document itself, and CMS1239 correctly withholds grade 3 from a case with no CSF diversion. The rule that separates good from bad here is simple and should be applied dataset-wide: grade 3 for hydrocephalus requires the intervention to be readable at the cited locus, not inferred from serious-AE coding or corroborated by an uncited third document.\n\n5. DUPLICATE FILING OF THE SAME REGULATORY STATEMENT UNDER DIFFERENT source_ids. CMS1161 and CMS1247 are the same sentence from the same EPAR under source_ids R3 and CNSSRC_QALSODY_EPAR. CMS1169 and CMS1242 are the same SmPC sec 4.4 hydrocephalus paragraph under R5 and CNSSRC_SPINRAZA_SMPC, and they disagree with each other on reversibility ('irreversible' versus 'partially_reversible'). CMS1176 adds a third record of the same nusinersen signal. The source registry confirms this is structural, not local: 'EMA/276404/2024' (24 rows) and 'EMA/276404/2024, Qalsody EPAR public assessment repor...' (5 rows) are listed as two separate documents, as are 'EMA_EU/1/17/1188' (3 rows) and 'EMA Spinraza EPAR product information (SmPC), EMEA/H/C/004312' (1 row). Two lanes clearly extracted the same regulatory documents independently and neither deduplicated. Because the duplicated rows are grade-3 hydrocephalus rows on the named challenge endpoint, the effect is to inflate the headline grade-3 count on precisely the endpoint that will be counted.\n\n6. COMPARATOR ARMS DESCRIBED ACROSS NON-COMPARABLE POOLS. CMS1244 and CMS1245 state '3/147 (2.0%) ... vs 0/36 placebo' and '1/147 (0.7%) ... vs 0/36 placebo' from EPAR Table 38. Table 38 also shows that in the placebo-controlled period itself the tofersen 100 mg column (Pool RC1, N=72) is 0 for both preferred terms - all the related serious events arose in the open-label pool. Pairing an open-label pooled numerator with a controlled-period placebo denominator invites a rate comparison the table does not support. Check every EPAR-sourced row that quotes a placebo comparator whether the numerator and the comparator come from the same pool.\n\n7. INCONSISTENT GRADING OF ASYMPTOMATIC OR NON-SERIOUS RAISED-ICP FINDINGS. Within this batch the same phenomenon is graded 1 in one place and 2 in another: markedly raised but asymptomatic lumbar opening pressure grades 1 (CMS1235, CMS1236), while a single NON-SERIOUS 'Intracranial pressure increased' adverse-event code grades 2 (CMS1274, CMS1276), and an asymptomatic ophthalmological-or-imaging sign grades 2 (CMS1234). The rubric's grade 2 asks for a clinically significant event; non-serious coding is definitionally the opposite. This will recur wherever a lane grades off an AE term rather than off the clinical description.\n\n8. WHAT IS WORKING, AND SHOULD BE PROTECTED. The confounder discipline the parent was worried about is largely present and accurate: the SMA-baseline-risk claim attached to all five DHPC case rows checks out exactly against PMC8105953 Table 2 (IR 15.5 vs 3.3 per 100,000 person-months, IRR 4.7, 95% CI 2.4-10.2, 5,354 matched pairs, pre-nusinersen era); the arachnoid-cyst and transverse-sinus-stenosis confounders in the JND case report are quoted correctly and the authors' own limited causal claim ('the treatment potentially contributed') is preserved; the tominersen ventricular rows all flag the absence of an untreated Huntington's comparator. The two abstract-only rows declare the abstract as their locus rather than dressing it as a table, which is exactly what the brief asks for. No row in this batch cites a press release or slide deck as its source_ref, and the source registry marks all such grey literature 'verify' rather than public_domain - with one inconsistency worth resolving: the Biogen/MHRA DHPC is classed as 'Other / grey literature' yet given public_domain rights. That is defensible for a regulator-published DHPC under the Open Government Licence, but it should be stated rather than left as an unexplained exception, and the DHPC PDF should be archived under sources/cns/ because its canonical gov.uk URL now returns HTTP 410.\n\n9. ONE UNFLAGGED WITHIN-DOCUMENT CONFLICT WORTH CARRYING. The Qalsody EPAR gives papilloedema as 7/147 (4.8%) in Table 37 but as 'an overall incidence of papilloedema of 8/147 subjects (5.4%)' in the sec 2.6.9 discussion (p.165), the difference being the preferred term 'CSF pressure increased'. CMS1243 reports the Table 37 figure correctly but does not record that the same document states a different number elsewhere. Similarly, the US QALSODY label states 'no events led to discontinuation of QALSODY' while the EPAR records one papilloedema/raised-ICP SAE that 'resolved with sequelae ... which led to permanent tofersen discontinuation'. Both conflicts are informative and should be in notes rather than silently resolved in favour of one source."
+}

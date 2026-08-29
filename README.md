@@ -149,3 +149,19 @@ policy denies the CONNECT tunnel to every host — PMC, USPTO, publishers all
 return 403; only `WebSearch` summaries are available). Primary-source files
 must therefore be **dropped into `sources/` by the user** for local extraction.
 See `sources/SOURCES.md` for the exact drop-list and harmonization plan.
+
+---
+
+## Companion dataset — OligoTox-CNS
+
+This repository now carries **two** curated datasets covering two named OligoTox
+endpoints, sharing one schema design, one provenance discipline and one licence:
+
+| Dataset | Endpoint | Oligos | Measurements | Docs |
+|---|---|---:|---:|---|
+| **OligoTox-Kidney** | kidney toxicity / nephrotoxicity | 65 | 111 | this file, `schema.md`, `METHODOLOGY.md` |
+| **OligoTox-CNS** | **chronic neurotoxicity** and **hydrocephalus** | 585 | 2,331 | `README-CNS.md`, `schema-cns.md`, `METHODOLOGY-CNS.md` |
+
+`data/cns_oligos.csv` reuses the identical 17-column oligo layout as
+`data/oligos.csv`, so the two datasets can be unioned or compared without
+re-mapping. See **`README-CNS.md`** to start.

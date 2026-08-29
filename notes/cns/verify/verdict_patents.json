@@ -1,0 +1,476 @@
+{
+ "batch": "batch_patents",
+ "verdicts": [
+  {
+   "measurement_id": "CMS0517",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 791656 row = 3.5 | 1.1* | 1.3* | 1.0* | 1.3* | SEQ 22; GFAP(cortex)=1.3 as claimed. Table 6: 791656 = CCGGCCCCTAGCGCGCGACT, 3-10-7, start 1445 stop 1464. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base. Example 12 confirms C57/B16 mice, single ICV 700 ug, n=4, 8 wk, RT-PCR normalised to Gapdh relative to PBS=1.0; asterisk = mean of 1-3 mice, correctly flagged in notes. Grade mapping (<1.5x=>0) applied correctly at 1.3.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0538",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 791660 row = 1.8 | 2.5* | 1.4* | 1.9* | 0.8*; GFAP(spinal cord)=1.9 as claimed. Table 6: 791660 = CGGCCCCTAGCGCGCGACT, 5-9-5, 1445-1463. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base. Mapping 1.5-<2.0=>1 applied correctly. Asterisk flag present and correct.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0559",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 791665 row = 3.5 | 1.9* | 1.5* | 1.9* | 0.9*; GFAP(spinal cord)=1.9 as claimed (note AIF1 spinal cord is also 1.9 - column disambiguated and the right one taken). Table 6: 791665 = CCGGCCCCTAGCGCGCGAC, 6-9-4, 1446-1464. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0579",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 801277 row = 0.0 | 2.9 | 1.4 | 2.3 | 1.5; GFAP(spinal cord)=2.3 as claimed. Table 6: 801277 = GGCCCCTAGCGCGCGACTCC, 4-10-6, 1443-1462. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base. No asterisk on this row and notes correctly omit the 1-3-mice caveat. Mapping >=2.0x=>2 applied correctly.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0600",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 801281 row = 0.0 | 3.6 | 2.2 | 2.4 | 1.6; 'Score 8 weeks after injection' = 0.0 as claimed. Table 6: 801281 = GCCCCTAGCGCGCGACTCCT, 6-10-4, 1442-1461. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base. Example 12 defines the 7-criterion FOB scored 0/1 per criterion summed 0-7, so readout_unit score_0_to_7 is right; 0.0 => grade 0.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0621",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 801286 row = 0.0 | 1.1 | 1.2 | 1.0 | 1.1; AIF1(cerebellum)=1.2 as claimed. Table 6: 801286 = CCCCTAGCGCGCGACTCC, 4-8-6, 1443-1460. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0641",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 801290 row = 3.5 | 1.2* | 1.3* | 1.0* | 1.1*; 8-week FOB = 3.5 as claimed. Table 6: 801290 = CCTAGCGCGCGACTCCTG, 6-8-4, 1441-1458. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base. Value, locus, sequence and grade 3 all correct.",
+   "problem": "reversibility='irreversible' is an inference the patent does not support: Example 12 reports only a single 8-week timepoint. The nearest comparable read (Table 7 / Example 2, same strain, dose and route but a separate cohort) gives 6.00 at 3 h vs 3.5 at 8 wk, i.e. a partly resolving deficit, not an established irreversible one.",
+   "correction": {
+    "reversibility": "partially_reversible"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0662",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 801295 row = 1.8 | 1.4* | 1.4* | 1.0* | 0.9*; AIF1(cerebellum)=1.4 as claimed. Table 6: 801295 = CGGCCCCTAGCGCGCGAC, 6-8-4, 1446-1463. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0683",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 801300 row = 3.5 | 1.2* | 1.1* | 0.9* | 1.0*; AIF1(cerebellum)=1.1 as claimed. Table 6: 801300 = CAGGCTGCGGTTGTTTCCC, 5-9-5, 1405-1423. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0703",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 801304 row = 4.8 | 14.3* | 5.4* | 2.2* | 3.5*; 8-week FOB = 4.8 as claimed. Table 6: 801304 = GGCTGCGGTTGTTTCCCTC, 6-9-4, 1403-1421. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base. Grade 3 is well supported (a 4.8/7 deficit persisting to 8 weeks, with 14.3x AIF1 in the same animals).",
+   "problem": "Same single-timepoint issue as CMS0641: reversibility='irreversible' is not stated by the patent (Table 7 gives 5.25 at 3 h vs 4.8 at 8 wk in a comparable cohort).",
+   "correction": {
+    "reversibility": "partially_reversible"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0724",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 801309 row = 7.0 | N.D. | N.D. | N.D. | N.D.; 8-week FOB = 7.0 as claimed. Table 6: 801309 = AGGCTGCGGTTGTTTCCC, 4-8-6, 1405-1422. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base. A 7/7 score means every criterion failed including 'regular breathing', and the marker columns are N.D.; grade 3 and reversibility='irreversible' are both supported (Table 7 also gives 7.00 at 3 h).",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0745",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 801314 row = 0.0 | 1.9 | 1.2 | 1.0 | 2.9; 8-week FOB = 0.0 as claimed. Table 6: 801314 = CAGGCTGCGGTTGTTTCC, 6-8-4, 1406-1423. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base. Grade 0 correct for this readout (the same animals' GFAP cortex = 2.9 is carried on its own row, CMS0928-series, not merged into this one).",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0765",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 802460 row = 5.3 | 1.1* | 1.1* | 1.0* | 1.4*; 8-week FOB = 5.3 as claimed. Table 6: 802460 = TCTGTCTTTGGAGCCCAAAT, 3-10-7, 8012-8031. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base.",
+   "problem": "reversibility='irreversible' inferred from one timepoint; Table 7 gives 6.75 at 3 h vs 5.3 at 8 wk in a comparable cohort.",
+   "correction": {
+    "reversibility": "partially_reversible"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0786",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 802465 row = 0.0 | 0.9 | 1.1 | 1.1 | 1.6; 8-week FOB = 0.0 as claimed. Table 6: 802465 = GCCTTACTCTAGGACCAAGA, 6-10-4, 7990-8009 (SEQ ID 21, shared with 802459 and 802462 which are the same sequence in different motifs - the repeated sequence across those three rows is correct, not a copy error). Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0807",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 802470 row = 1.5 | 3.2 | 3.4 | 2.6 | 3.4; AIF1(cerebellum)=3.4 as claimed (GFAP cortex is coincidentally also 3.4; the AIF1-cerebellum column is the one taken). Table 6: 802470 = CTGCGATCCCCATTCCAGTT, 7-10-3, 8186-8205. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base. Mapping >=2.0x=>2 applied correctly.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0827",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 802474 row = 1.8 | 1.3* | 1.2* | 1.0* | 1.8*; AIF1(cerebellum)=1.2 as claimed. Table 6: 802474 = TCTGTCTTTGGAGCCCAA, 4-8-6, 8014-8031. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0848",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 806673 row = 0.0 | 1.1 | 1.0 | 1.0 | 9.1; AIF1(cerebellum)=1.0 as claimed. Table 6: 806673 = GGTTAATCTTTATCAGGTCT, 3-10-7, 1370-1389. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base. Grade 0 is right for this readout; the 9.1x GFAP-cortex value from the same table row is carried separately as CMS0843 in the canonical file (grade 2), so nothing was dropped.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0869",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 806677 row = 0.0 | 0.9 | 1.0 | 0.9 | 1.5; AIF1(spinal cord)=0.9 as claimed. Table 6: 806677 = TGGTTAATCTTTATCAGGTC, 4-10-6, 1371-1390. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base. 0.9 recorded as no_change, consistent with the row set's implicit +/-0.1 band.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0889",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 806681 row = 0.0 | 1.0 | 1.0 | 0.9 | 1.4; AIF1(spinal cord)=1.0 as claimed. Table 6: 806681 = CTGGTTAATCTTTATCAGGT, 6-10-4, 1372-1391. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0910",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 806685 row = 0.0 | 1.0 | 0.9 | 0.8 | 1.5; GFAP(cortex)=1.5 as claimed. Table 6: 806685 = GTTAATCTTTATCAGGTC, 4-8-6, 1371-1388, SEQ ID 52. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base. Mapping 1.5-<2.0=>1 applied correctly.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0931",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 (Ionis, C9ORF72, granted 2017-03-28) local FPO capture sources/cns/fpo/US9605263.html. Read Example 12 prose + TABLE 15 raw HTML (cols: ISIS No | Score 8 wk | AIF1 spinal cord | AIF1 cerebellum | GFAP spinal cord | GFAP cortex | SEQ ID). Design cross-checked against TABLE 6 (Isis No / start / stop / sequence / linkage / motif / SEQ ID). 806689 row = 0.0 | 1.1 | 1.0 | 0.8 | 1.3; GFAP(spinal cord)=0.8 as claimed. Table 6: 806689 = GTTAATCTTTATCAGGTC, 6-8-4, 1371-1388, SEQ ID 52 - the same 18-mer as 806685 in a different motif, so the duplicated sequence is correct. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base. effect_direction='decrease' is right (0.8 vs PBS 1.0).",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0951",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 Example 13 prose + TABLE 16 (cols: ISIS | score 3 h | score 8 wk | AIF1 sc | AIF1 cortex | GFAP sc | GFAP cortex | SEQ ID); design from TABLE 6. 802459 row = 2.0 | 0.0 | 1.4 | 1.2 | 1.5 | 1.5 | SEQ 21; AIF1(cortex)=1.2 as claimed. Table 6: 802459 = GCCTTACTCTAGGACCAAGA, 3-10-7, 7990-8009. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base. Example 13 confirms Sprague Dawley rats, single 3 mg intrathecal dose, markers at 8 weeks; species/route/dose/duration on the row all match.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0972",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 Example 13 prose + TABLE 16 (cols: ISIS | score 3 h | score 8 wk | AIF1 sc | AIF1 cortex | GFAP sc | GFAP cortex | SEQ ID); design from TABLE 6. 806679 row = 1.2 | 0.0 | 1.4 | 1.3 | 1.3 | 1.8 | SEQ 49; GFAP(spinal cord)=1.3 as claimed (GFAP cortex is 1.8 - the correct column was taken). Table 6: 806679 = GGTTAATCTTTATCAGGTCT, 6-10-4, 1370-1389. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0993",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 Example 14 prose + TABLE 17 (rows = brain region; col groups AIF1 then GFAP for 801287/802459/806679); design from TABLE 6. Lumbar spinal cord / AIF1 / 801287 = 1.2 as claimed. Table 6: 801287 = GCCCCTAGCGCGCGACTC, 4-8-6, 1444-1461, SEQ ID 33; corroborated by the patent's 'Certain Compositions 1. ISIS 801287' paragraph, which restates the same 18-mer and 4-8-6 motif. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base. Example 14 confirms female cynomolgus monkeys 2-6 kg, 3 x 35 mg intrathecal bolus days 1/14/28, n=4, sacrifice 2 wk after last dose - exactly as recorded.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1013",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 Example 14 prose + TABLE 17 (rows = brain region; col groups AIF1 then GFAP for 801287/802459/806679); design from TABLE 6. Hippocampus / GFAP / 806679 = 1.7 as claimed. Table 6: 806679 = GGTTAATCTTTATCAGGTCT, 6-10-4. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base. Mapping 1.5-<2.0=>1 applied correctly. Species/dose/schedule match Example 14.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1034",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 Example 2 prose + TABLE 7 (Acute tolerability scores) raw HTML; design from TABLE 6. 801279 = 1.25 as claimed. Table 6: 801279 = CCCTAGCGCGCGACTCCTGA, 6-10-4, 1440-1459. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base. Example 2 confirms C57/B16 mice, single ICV 700 ug, n=4, 3 h, 7-criterion FOB summed 0-7. Mapping 1-<3=>1 applied correctly; mouse controls score 0 by construction, so 1.25 is above control.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1055",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 Example 2 prose + TABLE 7 (Acute tolerability scores) raw HTML; design from TABLE 6. 801300 = 5.00 as claimed. Table 6: 801300 = CAGGCTGCGGTTGTTTCCC, 5-9-5. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base. Mapping >=5=>3 applied correctly.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1075",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 Example 2 prose + TABLE 7 (Acute tolerability scores) raw HTML; design from TABLE 6. 802462 = 5.75 as claimed. Table 6: 802462 = GCCTTACTCTAGGACCAAGA, 4-10-6, SEQ ID 21. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1096",
+   "verdict": "CONFIRMED",
+   "checked": "US9605263 Example 2 prose + TABLE 7 (Acute tolerability scores) raw HTML; design from TABLE 6. 806677 = 1.00 as claimed. Table 6: 806677 = TGGTTAATCTTTATCAGGTC, 4-10-6. Sequence reconciled 4 ways: printed sequence length = (stop-start+1) span = motif sum = linkage-code length + 1; matches the row's sequence_5to3, length_nt and gapmer_design base-for-base. Grade 1 defensible here: for the mouse battery the patent family states saline-treated mice generally score 0, so 1.0 is above concurrent control (unlike the rat battery in US10968453 - see CMS0063).",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0001",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "US10968453 (Biogen MA, SOD-1, granted 2021-04-06) local FPO capture sources/cns/fpo/US10968453.html. Example 14 prose + TABLE 64 'FOB scores in Sprague-Dawley rats' (cols: ISIS No | target start site on SEQ ID NO: 1 | Chemistry | FOB score). 333611 | 167 | '5-10-5 MOE with phosphorothioate backbone' | 4 -> readout 4.0 confirmed. Sequence CCGTCGCCCTTCAGCACGCA confirmed from Tables 1-12 (start 167 stop 186, span 20 = motif sum 20 = sequence length 20). Example 14 confirms Sprague Dawley rats, single 3 mg intrathecal dose, 3 h, 7-region FOB summed 0-7, 'Control animals usually have a score of 0 or 1'. Mapping 3-<5=>2 applied correctly at 4.",
+   "problem": "Oligo-level only: backbone_chemistry is TBD although Table 64 states this compound is '5-10-5 MOE with phosphorothioate backbone' (i.e. full_PS). Recoverable from the cited locus, so it should not be TBD.",
+   "correction": {
+    "backbone_chemistry": "full_PS"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0021",
+   "verdict": "CONFIRMED",
+   "checked": "US10968453 (Biogen MA, SOD-1, granted 2021-04-06) local FPO capture sources/cns/fpo/US10968453.html. Example 14 prose + TABLE 64 'FOB scores in Sprague-Dawley rats' (cols: ISIS No | target start site on SEQ ID NO: 1 | Chemistry | FOB score). 654305 | 664 | '5-8-5 MOE with mixed backbone' | 2 -> readout 2.0 confirmed. Sequence confirmed from TABLE 35: 654305, start 664 stop 681, chemistry code eeeeeddddddddeeeee (5 MOE + 8 DNA + 5 MOE = 18), linkage sooosssssssssooss (17 = 18-1). NOTE the FPO table wraps the sequence cell across two <tr>s ('GATACATTTC' then 'TACAGCTA'); the row's GATACATTTCTACAGCTA is the correctly re-joined 18-mer, not the truncated 10-mer. Mapping 1-<3=>1 applied correctly.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0042",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "US10968453 (Biogen MA, SOD-1, granted 2021-04-06) local FPO capture sources/cns/fpo/US10968453.html. Example 14 prose + TABLE 64 'FOB scores in Sprague-Dawley rats' (cols: ISIS No | target start site on SEQ ID NO: 1 | Chemistry | FOB score). 666856 | 667 | '5-9-5 MOE with mixed backbone' | 3 -> readout 3.0 confirmed. sequence_5to3=TBD is correct: ISIS 666856 appears only in Tables 64 and 65 of this patent and no sequence is printed anywhere in it. Mapping 3-<5=>2 applied correctly.",
+   "problem": "Oligo-level only: length_nt and gapmer_design are TBD although Table 64 - the very locus this row cites - states '5-9-5 MOE with mixed backbone' (19-mer, PS_PO_mix). The row's own notes even quote the string, so the fields were left TBD despite the data being in hand.",
+   "correction": {
+    "length_nt": "19",
+    "gapmer_design": "5-9-5_MOE",
+    "backbone_chemistry": "PS_PO_mix"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0063",
+   "verdict": "REFUTED",
+   "checked": "US10968453 (Biogen MA, SOD-1, granted 2021-04-06) local FPO capture sources/cns/fpo/US10968453.html. Example 14 prose + TABLE 64 'FOB scores in Sprague-Dawley rats' (cols: ISIS No | target start site on SEQ ID NO: 1 | Chemistry | FOB score). 666908 | 686 | 'Deoxy, MOE, and cEt with mixed backbone' | 1 -> readout 1.0 is correct and the sequence is correct (TABLE 50: 666908, start 686 stop 702, code eeeekdddddddkeeee = 4 MOE + cEt + 7 DNA + cEt + 4 MOE = 17 nt; FPO wraps the cell as 'ACAGTGTTTAA' + 'TGTTTA', correctly re-joined to ACAGTGTTTAATGTTTA, matching gapmer_design 5-7-5_MOE_cEt and length 17).",
+   "problem": "GRADE. The row applies the mapping band '1-<3 => grade 1' at a value of exactly 1, but Example 14 of this patent states 'Control animals usually have a score of 0 or 1'. A score of 1 is inside the concurrent-control range, so under the rubric ('incidence at or below concurrent control' = grade 0) and the brief's explicit trap this must be grade 0. The row's own effect_vs_control string ('1_vs_0_or_1_PBS') shows the value equals the control ceiling. effect_direction='increase' is likewise not supportable at the control ceiling.",
+   "correction": {
+    "neurotox_grade": "0",
+    "effect_direction": "no_change"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0083",
+   "verdict": "CONFIRMED",
+   "checked": "US10968453 (Biogen MA, SOD-1, granted 2021-04-06) local FPO capture sources/cns/fpo/US10968453.html. Example 14 prose + TABLE 64 'FOB scores in Sprague-Dawley rats' (cols: ISIS No | target start site on SEQ ID NO: 1 | Chemistry | FOB score). 684063 | 676 | 'Deoxy, MOE, and cEt with mixed backbone' | 5 -> readout 5.0 confirmed. Mapping >=5=>3 applied correctly, and 5/7 at 3 h in rats whose controls score 0-1 is a defensible grade 3. sequence/length/gapmer TBD is correct - 684063 appears exactly once in the patent (Table 64) with no sequence and no numeric motif ('Deoxy, MOE, and cEt' is not a resolvable wing-gap-wing motif).",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0104",
+   "verdict": "CONFIRMED",
+   "checked": "US10968453 (Biogen MA, SOD-1, granted 2021-04-06) local FPO capture sources/cns/fpo/US10968453.html. Example 14 prose + TABLE 64 'FOB scores in Sprague-Dawley rats' (cols: ISIS No | target start site on SEQ ID NO: 1 | Chemistry | FOB score). 684084 | 170 | 'Deoxy, MOE, and cEt with mixed backbone' | 4 -> readout 4.0 confirmed. Mapping 3-<5=>2 applied correctly. TBD sequence/motif correct (compound appears only in Table 64).",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0125",
+   "verdict": "CONFIRMED",
+   "checked": "US10968453 Example 14 second half + TABLE 65 'IBA1 and GFAP mRNA levels (% control) in the lumbar regions of Sprague-Dawley rats' (3 cols: ISIS No | IBA1 | GFAP), values re-read from raw HTML to rule out a column shift. 333611 -> IBA1 341, GFAP 314; the row takes GFAP = 314 as claimed. Example 14 confirms the lumbar spinal cord region, 8 weeks after a single 3 mg intrathecal dose, expressed as % of PBS control, and states explicitly that a higher marker level means a less tolerable compound - so effect_direction='increase' is a real increase versus the patent's own control. Mapping >=2.0x=>2 applied correctly at 3.14x.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0145",
+   "verdict": "CONFIRMED",
+   "checked": "US10968453 Example 14 second half + TABLE 65 'IBA1 and GFAP mRNA levels (% control) in the lumbar regions of Sprague-Dawley rats' (3 cols: ISIS No | IBA1 | GFAP), values re-read from raw HTML to rule out a column shift. 654318 -> IBA1 93, GFAP 81; GFAP = 81 as claimed. 0.81x of PBS, correctly recorded as a decrease and graded 0. Sequence TTACAGTGTTTAATGTTT confirmed from TABLE 35 (start 687 stop 704 = 18, code eeeeeddddddddeeeee = 18); FPO wraps the cell ('TTACAGTGTT' + 'TAATGTTT') and the row has the correctly re-joined 18-mer.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0166",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "US10968453 Example 14 second half + TABLE 65 'IBA1 and GFAP mRNA levels (% control) in the lumbar regions of Sprague-Dawley rats' (3 cols: ISIS No | IBA1 | GFAP), values re-read from raw HTML to rule out a column shift. 666850 -> IBA1 246, GFAP 252; IBA1 = 246 as claimed (readout_name AIF1_mRNA for IBA1 is right - same gene - and the notes say so). Mapping >=2.0x=>2 applied correctly at 2.46x.",
+   "problem": "Oligo-level only: length_nt/gapmer_design/backbone_chemistry are TBD although Table 64 of the same patent states 666850 is '5-10-5 MOE with mixed backbone' (20-mer, PS_PO_mix). The nucleobase sequence is genuinely absent from the patent, so sequence_5to3=TBD is correct.",
+   "correction": {
+    "length_nt": "20",
+    "gapmer_design": "5-10-5_MOE",
+    "backbone_chemistry": "PS_PO_mix"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0187",
+   "verdict": "CONFIRMED",
+   "checked": "US10968453 Example 14 second half + TABLE 65 'IBA1 and GFAP mRNA levels (% control) in the lumbar regions of Sprague-Dawley rats' (3 cols: ISIS No | IBA1 | GFAP), values re-read from raw HTML to rule out a column shift. 666862 -> IBA1 254, GFAP 285; GFAP = 285 as claimed. Mapping >=2.0x=>2 correct at 2.85x. TBD design fields correct ('Deoxy, MOE, and cEt' motif, no sequence in patent).",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0207",
+   "verdict": "CONFIRMED",
+   "checked": "US10968453 Example 14 second half + TABLE 65 'IBA1 and GFAP mRNA levels (% control) in the lumbar regions of Sprague-Dawley rats' (3 cols: ISIS No | IBA1 | GFAP), values re-read from raw HTML to rule out a column shift. 666872 -> IBA1 441, GFAP 136; GFAP = 136 as claimed and grade 0 follows from the stated mapping. Attribution verified against the neighbouring rows (666871 = 192/214, 666873 = 340/277) so this is not an off-by-one read.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0228",
+   "verdict": "CONFIRMED",
+   "checked": "US10968453 Example 14 second half + TABLE 65 'IBA1 and GFAP mRNA levels (% control) in the lumbar regions of Sprague-Dawley rats' (3 cols: ISIS No | IBA1 | GFAP), values re-read from raw HTML to rule out a column shift. 684060 -> IBA1 158, GFAP 141; IBA1 = 158 as claimed. Mapping 1.5-<2.0=>1 correct at 1.58x.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0249",
+   "verdict": "CONFIRMED",
+   "checked": "US10968453 Example 14 second half + TABLE 65 'IBA1 and GFAP mRNA levels (% control) in the lumbar regions of Sprague-Dawley rats' (3 cols: ISIS No | IBA1 | GFAP), values re-read from raw HTML to rule out a column shift. 684088 -> IBA1 151, GFAP 183; GFAP = 183 as claimed. Mapping 1.5-<2.0=>1 correct at 1.83x. Sequence GTCGCCCTTCAGCACGCA confirmed from TABLE 45 (684088, start 167 stop 184 = 18, motif column '5-8-5 MOE', code eeeeeddddddddeeeee); the FPO cell wrap ('GTCGCCCTTC' + 'AGCACGCA') was re-joined correctly.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0269",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "US10968453 Example 14 second half + TABLE 65 'IBA1 and GFAP mRNA levels (% control) in the lumbar regions of Sprague-Dawley rats' (3 cols: ISIS No | IBA1 | GFAP), values re-read from raw HTML to rule out a column shift. 684098 -> IBA1 378, GFAP 438; GFAP = 438 as claimed. Mapping >=2.0x=>2 correct at 4.38x.",
+   "problem": "Oligo-level only: length_nt/gapmer_design/backbone_chemistry TBD although Table 64 states 684098 is '7-8-5 MOE with mixed backbone' (20-mer, PS_PO_mix). Sequence genuinely not in the patent, so sequence_5to3=TBD is correct.",
+   "correction": {
+    "length_nt": "20",
+    "gapmer_design": "7-8-5_MOE",
+    "backbone_chemistry": "PS_PO_mix"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0290",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "US10968453 Example 16 prose + TABLE 67 'FOB values' (cols: Isis No | 3 h FOB 1 mg | 3 h FOB 3 mg | 8 wk FOB 1 mg | 8 wk FOB 3 mg). 666853 row = 0.0 | 0.5 | 0.0 | 0.0; the '8 week FOB / 3 mg' cell is 0.0 as claimed. Example 16 confirms Sprague-Dawley rats, groups of 4-6, single 1 mg or 3 mg intrathecal dose. Tofersen identity and sequence confirmed independently: TABLE 45 gives 666853, start 665 stop 684, motif '5-10-5 MOE', chemistry eeeeeddddddddddeeeee (5+10+5=20), linkage sososssssssssssosos (19 = 20-1), sequence wrapped as 'CAGGATACAT' + 'TTCTACAGCT' = CAGGATACATTTCTACAGCT. The row's CAGGAtacatttctaCAGCT applies the schema's case convention correctly (uppercase 1-5 and 16-20 = MOE wings, lowercase 6-15 = DNA gap). redistribution=public_domain correct for a granted US patent.",
+   "problem": "The notes carry boilerplate from the 8-week mapping - 'persisting deficit so mapping skips grade 1' - which is meaningless on a 0.0 value and could mislead a reader into thinking a deficit was observed. Value, grade 0 and direction are all correct, and reversibility='reversible' is supported inside Table 67 itself (3 h = 0.5, 8 wk = 0.0 at the same 3 mg dose).",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0311",
+   "verdict": "CONFIRMED",
+   "checked": "US10968453 Example 18 prose + TABLE 70 'Inflammation markers' (cols: Isis No | IBA1 % PBS Lumbar | IBA1 % PBS Cortex | GFAP % PBS Lumbar | GFAP % PBS Cortex), raw HTML re-read: 333611 = 130.3 | 134.3 | 117.5 | 207.7. IBA1 Lumbar = 130.3 as claimed. Example attribution is right: Table 70 sits inside Example 18, which is the C57bl6 MOUSE study (stereotaxic injection into the cerebral ventricles, single 700 ug dose, markers at 8 weeks post-dose relative to PBS) - matching the row's species=mouse, ICV, 700 ug, 8wk. Mapping <1.5x=>0 correct at 1.303x. Mapping the 'Lumbar' column to cns_region=spinal_cord is stated in the notes and is right.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0331",
+   "verdict": "CONFIRMED",
+   "checked": "US11339393 (Ionis, C9ORF72, granted 2022-05-24) local FPO capture. Example 7 prose + TABLE 32 'Percentage expression of AIF-1 mRNA compared to the PBS control' (cols: Dose (ug) | Posterior brain | Spinal cord). 300 ug row = 107 | 98; 'Spinal cord' = 98 as claimed. Table 32 has no compound column, so attribution rests on the prose, which confirms it: 'Groups of 4 C57BL/6 mice each were injected with 50, 100, 300, 500 or 700 ug of ISIS 571883 ... intracerebroventricular bolus ... allowed to recover for 14 days', and 'The induction of the microglial marker AIF-1 ... is presented in Table 32'. Species, route, dose, 14d duration and grade 0 all correct. sequence_5to3=TBD is correct and honest: ISIS 571883 appears 8 times in this patent and its nucleobase sequence is never printed (only 5-10-5 MOE, 20 nt, full PS, target start 33704 on murine SEQ ID NO: 11) - the row records exactly that and no more. The patent also states the spinal cord sampled was the lumbar section.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0352",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "US11339393 Example 7 (rat sub-study) + TABLE 36 'Percentage expression of AIF-1 mRNA compared to the PBS control' (cols: Dose (ug) | Brain 1 mm section | Cortex | Spinal cord (lumbar) | Spinal cord (cervical)). 1000 ug row = 105 | 113 | 122 | 96; 'Spinal cord (cervical)' = 96 as claimed - the correct one of the two spinal-cord columns. Prose confirms 'Groups of 4 Sprague-Dawley rats each were injected with 700, 1,000 or 3,000 ug of ISIS 603538 ... intrathecal bolus'. Sequence GACCGCTTGAGTTTGCCACA independently confirmed from the Example 7 linkage recital 'Gs Ao Co Co Gs Cs Ts Ts Gs As Gs Ts Ts Ts Gs Co Co Ao Cs A' (20 nucleosides, 19 linkages, mixed s/o = PS_PO_mix, 5-10-5 MOE) - matches the row base-for-base.",
+   "problem": "exposure_duration is TBD but the patent states it at the cited locus: 'The rats were allowed to recover for 4 weeks, after which animals were euthanized'.",
+   "correction": {
+    "exposure_duration": "4wk"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0373",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "US11851654 (National University Corporation Tokyo Medical and Dental University, 'Nucleic acid with reduced toxicity', granted 2023-12-26) local FPO capture. Example 1 methods confirm the shared design: 7-week-old female ICR mice, stereotaxic injection into the left lateral ventricle, 11-item behavioural battery scored 1=abnormal/0=normal per item summed 0-11 (so readout_unit score_0_to_11 is right), side-effect event rate = % of mice abnormal on any one of the 11 items, deaths counted within one day. Dose 12 umol/mouse in Examples 1, 2 and 4; 6 umol/mouse in Example 5. TABLE 10 'Acute tolerability score' (Example 4): PBS 0+/-0 | ASO 7.5+/-0.9 (1 h), 5.5+/-0.9 (3 h), 0.5+/-2.3 (6 h). The 3 h ASO cell = 5.5 as claimed. ASO sequence confirmed from the patent's own compound table: printed as G(L)^T(L)^a^t^t^g^c^t^g^a^G(L)^G(L)^A(L) (FPO wraps it across two <tr>s) = GTattgctgaGGA, 13 nt, which matches the declared '13mer' in the compound name and the 2-8-3 LNA motif (2 LNA + 8 DNA + 3 LNA). Case was resolved from the explicit '(L)' LNA markers in the text layer, not from a render, and is applied correctly.",
+   "problem": "reversibility='reversible' is contradicted by the patent's own Table 12 for the same Example 4 ASO group: 2 of 6 dosed mice died within one day (PBS 0/4). The recovery to 0.5 at 6 h describes the survivors only. 'partially_reversible' is the most this locus supports. Related: grade 2 on this row understates the compound-level severity (the same group has a grade-3 mortality row, CMS0414), which is legitimate under per-measurement grading but means this row alone reads as a survivable effect.",
+   "correction": {
+    "reversibility": "partially_reversible"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0393",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "US11851654 (National University Corporation Tokyo Medical and Dental University, 'Nucleic acid with reduced toxicity', granted 2023-12-26) local FPO capture. Example 1 methods confirm the shared design: 7-week-old female ICR mice, stereotaxic injection into the left lateral ventricle, 11-item behavioural battery scored 1=abnormal/0=normal per item summed 0-11 (so readout_unit score_0_to_11 is right), side-effect event rate = % of mice abnormal on any one of the 11 items, deaths counted within one day. Dose 12 umol/mouse in Examples 1, 2 and 4; 6 umol/mouse in Example 5. TABLE 11 'Side-effect event rate (%)' (Example 4): PBS 0 | ASO 100 (1 h), 100 (3 h), 50 (6 h). The 1 h ASO cell = 100 as claimed, against a concurrent PBS control of 0%, so effect_direction='increase' is a real increase versus the patent's own control. ASO sequence confirmed from the patent's own compound table: printed as G(L)^T(L)^a^t^t^g^c^t^g^a^G(L)^G(L)^A(L) (FPO wraps it across two <tr>s) = GTattgctgaGGA, 13 nt, which matches the declared '13mer' in the compound name and the 2-8-3 LNA motif (2 LNA + 8 DNA + 3 LNA). Case was resolved from the explicit '(L)' LNA markers in the text layer, not from a render, and is applied correctly.",
+   "problem": "Same issue as CMS0373: reversibility='reversible' is contradicted by Table 12 (2/6 deaths in this same ASO group). The row's rationale ('carries the paired acute_neurotoxicity_score row's grade') is internally consistent - the 1 h score is 7.5, which maps to 2 under the stated bands - but neither row reflects the mortality that occurred in the same animals.",
+   "correction": {
+    "reversibility": "partially_reversible"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS0414",
+   "verdict": "CONFIRMED",
+   "checked": "US11851654 (National University Corporation Tokyo Medical and Dental University, 'Nucleic acid with reduced toxicity', granted 2023-12-26) local FPO capture. Example 1 methods confirm the shared design: 7-week-old female ICR mice, stereotaxic injection into the left lateral ventricle, 11-item behavioural battery scored 1=abnormal/0=normal per item summed 0-11 (so readout_unit score_0_to_11 is right), side-effect event rate = % of mice abnormal on any one of the 11 items, deaths counted within one day. Dose 12 umol/mouse in Examples 1, 2 and 4; 6 umol/mouse in Example 5. TABLE 12 'Number of deaths/number of doses' (Example 4): PBS 0/4 | ASO 2/6. The ASO cell = 2/6 as claimed, with the concurrent PBS control correctly recorded as 0/4 in effect_vs_control. Grade 3 is exactly right under the rubric ('moribundity/death'), and exposure_duration=24h matches 'died within one day after the administration'. ASO sequence confirmed from the patent's own compound table: printed as G(L)^T(L)^a^t^t^g^c^t^g^a^G(L)^G(L)^A(L) (FPO wraps it across two <tr>s) = GTattgctgaGGA, 13 nt, which matches the declared '13mer' in the compound name and the 2-8-3 LNA motif (2 LNA + 8 DNA + 3 LNA). Case was resolved from the explicit '(L)' LNA markers in the text layer, not from a render, and is applied correctly.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0435",
+   "verdict": "CONFIRMED",
+   "checked": "US11851654 (National University Corporation Tokyo Medical and Dental University, 'Nucleic acid with reduced toxicity', granted 2023-12-26) local FPO capture. Example 1 methods confirm the shared design: 7-week-old female ICR mice, stereotaxic injection into the left lateral ventricle, 11-item behavioural battery scored 1=abnormal/0=normal per item summed 0-11 (so readout_unit score_0_to_11 is right), side-effect event rate = % of mice abnormal on any one of the 11 items, deaths counted within one day. Dose 12 umol/mouse in Examples 1, 2 and 4; 6 umol/mouse in Example 5. TABLE 15 'Side-effect event rate (%)' (Example 5): PBS 0 | ASO 100/50/0 | HDO 0/0/0 | OH 0/0/0. The HDO 6 h cell = 0 as claimed. Grade 0 correct - at the concurrent control. Sequence confirmed from TABLE 13: ASO (Tau) 16mer printed as A(L)^T(L)^A(L)^g^t^c^a^c^t^c^t^g^g^T(L)^G(L)^A(L) (wrapped across three <tr>s) = ATAgtcactctggTGA, 16 nt, matching the declared '16mer' and the 3-10-3 LNA motif. Example 5 dose is 6 umol/mouse, matching the row.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0455",
+   "verdict": "CONFIRMED",
+   "checked": "US11851654 (National University Corporation Tokyo Medical and Dental University, 'Nucleic acid with reduced toxicity', granted 2023-12-26) local FPO capture. Example 1 methods confirm the shared design: 7-week-old female ICR mice, stereotaxic injection into the left lateral ventricle, 11-item behavioural battery scored 1=abnormal/0=normal per item summed 0-11 (so readout_unit score_0_to_11 is right), side-effect event rate = % of mice abnormal on any one of the 11 items, deaths counted within one day. Dose 12 umol/mouse in Examples 1, 2 and 4; 6 umol/mouse in Example 5. TABLE 2 'Acute tolerability score' (Example 1): PBS 0+/-0 | ASO 7.4/6.0/2.4 | HDO cRNA all PO 0 | HDO cRNA all PS 0+/-0 at 1, 3 and 6 h. The 'HDO cRNA all PS' 3 h cell = 0 as claimed, and the row above/below (all PO and cDNA all PO) are also 0, so the attribution was checked against neighbours. ASO sequence confirmed from the patent's own compound table: printed as G(L)^T(L)^a^t^t^g^c^t^g^a^G(L)^G(L)^A(L) (FPO wraps it across two <tr>s) = GTattgctgaGGA, 13 nt, which matches the declared '13mer' in the compound name and the 2-8-3 LNA motif (2 LNA + 8 DNA + 3 LNA). Case was resolved from the explicit '(L)' LNA markers in the text layer, not from a render, and is applied correctly. Dose 12 umol matches Example 1.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0476",
+   "verdict": "CONFIRMED",
+   "checked": "US11851654 (National University Corporation Tokyo Medical and Dental University, 'Nucleic acid with reduced toxicity', granted 2023-12-26) local FPO capture. Example 1 methods confirm the shared design: 7-week-old female ICR mice, stereotaxic injection into the left lateral ventricle, 11-item behavioural battery scored 1=abnormal/0=normal per item summed 0-11 (so readout_unit score_0_to_11 is right), side-effect event rate = % of mice abnormal on any one of the 11 items, deaths counted within one day. Dose 12 umol/mouse in Examples 1, 2 and 4; 6 umol/mouse in Example 5. TABLE 4 'Number of deaths/number of doses' (Example 1): PBS 0/4 | ASO 2/6 | HDO cRNA all PO 0/4 | HDO cRNA all PS 0/4. The 'HDO cRNA all PS' cell = 0/4 as claimed; grade 0 correct. ASO sequence confirmed from the patent's own compound table: printed as G(L)^T(L)^a^t^t^g^c^t^g^a^G(L)^G(L)^A(L) (FPO wraps it across two <tr>s) = GTattgctgaGGA, 13 nt, which matches the declared '13mer' in the compound name and the 2-8-3 LNA motif (2 LNA + 8 DNA + 3 LNA). Case was resolved from the explicit '(L)' LNA markers in the text layer, not from a render, and is applied correctly.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS0497",
+   "verdict": "CONFIRMED",
+   "checked": "US11851654 (National University Corporation Tokyo Medical and Dental University, 'Nucleic acid with reduced toxicity', granted 2023-12-26) local FPO capture. Example 1 methods confirm the shared design: 7-week-old female ICR mice, stereotaxic injection into the left lateral ventricle, 11-item behavioural battery scored 1=abnormal/0=normal per item summed 0-11 (so readout_unit score_0_to_11 is right), side-effect event rate = % of mice abnormal on any one of the 11 items, deaths counted within one day. Dose 12 umol/mouse in Examples 1, 2 and 4; 6 umol/mouse in Example 5. TABLE 7 'Side-effect event rate (%)' (Example 2): PBS 0 | ASO 100/100/50 | HDO 13mer 75/75/75 | HDO 12mer 25/0/0 | HDO 11mer 25/0/0 | HDO 10mer 0/0/0. The 'HDO 10mer' 6 h cell = 0 as claimed; grade 0 correct. Example 2 dose 12 umol/mouse matches. ASO sequence confirmed from the patent's own compound table: printed as G(L)^T(L)^a^t^t^g^c^t^g^a^G(L)^G(L)^A(L) (FPO wraps it across two <tr>s) = GTattgctgaGGA, 13 nt, which matches the declared '13mer' in the compound name and the 2-8-3 LNA motif (2 LNA + 8 DNA + 3 LNA). Case was resolved from the explicit '(L)' LNA markers in the text layer, not from a render, and is applied correctly.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1117",
+   "verdict": "CONFIRMED",
+   "checked": "US9683235 (Ionis, Tau, granted 2017-06-20) local FPO capture. TABLE 67 'ICV in vivo study in hTau mice and WT C57Bl6 mice' - colgroup widths confirm the header spans: Line hTau covers the '300 ug' and '200 ug' columns, WT C57Bl6 covers the second '300 ug'. 424880 row = ND | 3 | ND, so the hTau / 200 ug cell = 3 as claimed. The prose immediately preceding Table 67 confirms hTau or WT C57Bl6 mice in groups of 3 or 4, a single ICV dose of 300 or 200 ug, evaluation at 3 hours on the 7-criterion battery summed 0-7, and 'Saline treated mice generally receive a score of 0' - all as recorded, including the group size in notes. Mapping 3-<5=>2 applied correctly. The '(Example 20)' label is correct despite looking wrong: this patent numbers TWO consecutive examples 'Example 20' (the mouse ICV study containing Table 67, then the rat IT study containing Table 68); the row cites the mouse one. Sequence ATCACTGATTTTGAAGTCCC confirmed twice - Table 1 (424880, start 135853 stop 135872, span 20) and the modification table (motif 5-10-5, linkage sssssssssssssssssss = 19 all-PS) - matching length_nt 20, gapmer_design 5-10-5_MOE and backbone full_PS. redistribution=public_domain correct.",
+   "problem": "",
+   "correction": {},
+   "severity": "none"
+  }
+ ],
+ "summary": "55/55 rows fetched and checked against the five cited patents (all five held locally as full-text FreePatentsOnline captures under sources/cns/fpo/, all confirmed to be GRANTED US patents with issue dates and US coverage, so redistribution=public_domain is correct on all 55 rows). Verdicts: 43 CONFIRMED, 11 CONFIRMED_MINOR, 1 REFUTED, 0 UNVERIFIABLE. NO SEQUENCE ERRORS FOUND - this is the headline result. All 34 distinct oligos carrying a sequence were reconciled against the patents at least three independent ways (printed sequence length, target start-stop span, gapmer motif sum, chemistry-code length, and linkage-code length + 1) and every one agrees with the recorded sequence_5to3, length_nt and gapmer_design base-for-base. The documented FreePatentsOnline hazard is REAL and PRESENT in this batch - US10968453 Tables 35/45/50 wrap every long sequence cell across two <tr>s, so a careless read of ISIS 654305 would yield the 10-mer 'GATACATTTC' instead of the 18-mer GATACATTTCTACAGCTA, and the same for 654318, 666853 (tofersen), 666908 and 684088; US11851654 wraps its LNA sequences across two or three rows. In every one of these cases the extractor re-joined the cell correctly. Case-as-chemistry is also correct where it is used (tofersen CAGGAtacatttctaCAGCT is exactly 5 upper / 10 lower / 5 upper for its 5-10-5 motif; the three US11851654 LNA gapmers resolve their case from the explicit '(L)' markers). Compound-to-row attribution was checked cell-by-cell against neighbouring rows in every multi-compound table and no off-by-one was found; the several cases where different ISIS numbers carry identical sequences (802459/802462/802465, 806685/806689, 806673/806679) are genuine motif variants of one SEQ ID NO, not copy errors. Readout semantics check out: Table 15 columns (AIF1 spinal cord / AIF1 cerebellum / GFAP spinal cord / GFAP cortex) were disambiguated correctly even where two columns hold the same number (791665, 802470); the patents state explicitly that a higher IBA1/GFAP level means a less tolerable compound, so the recorded 'increase' directions are increases against the patents' own PBS = 1.0 (or % of PBS) controls; Table 65 is correctly attributed to lumbar spinal cord at 8 weeks and Table 70 correctly to Example 18's MOUSE ICV study rather than the rat study of Example 14. The asterisk convention in US9605263 Table 15 ('average of 1-3 mice') is flagged on exactly the rows that carry an asterisk and omitted from the rest. The single REFUTED row (CMS0063) is a grade-mapping error, not a value error.",
+ "systematic_issues": "1. GRADE INFLATION AT THE CONTROL CEILING IN US10968453 TABLE 64 - the one systematic error found, and it generalises. The rat FOB rows apply a fixed band '1-<3 => grade 1', but Example 14 of that patent states 'Control animals usually have a score of 0 or 1'. Every row whose FOB score is exactly 1 is therefore inside the concurrent-control range and must be grade 0 under the rubric's own 'incidence at or below concurrent control' clause. In my sample this hits CMS0063; across the full canonical file it hits 21 of the 124 Table 64 rows (value 1.0 -> grade 1), i.e. ~17% of that table, all of them false grade-1 labels at the boundary the model most needs to get right. Note this does NOT apply to the mouse batteries (US9605263 Example 2, US9683235 Example 20, US10968453 Example 18 all state saline mice score 0), so the fix is scale-specific: re-grade only US10968453 Table 64 rows with value == 1 to grade 0 (and their effect_direction to no_change). The same discipline should be applied wherever a patent declares a non-zero control range.\n\n2. RECOVERABLE DESIGN METADATA LEFT AS TBD. US10968453 Table 64 prints a Chemistry string for every compound, and for the MOE-only compounds it is a resolvable motif ('5-9-5 MOE with mixed backbone', '5-10-5 MOE with mixed backbone', '7-8-5 MOE with mixed backbone'). Rows CMS0042/CMS0166/CMS0269 quote that string verbatim in their notes yet leave length_nt, gapmer_design and backbone_chemistry as TBD; CMS0001 leaves backbone_chemistry TBD for ISIS 333611 although the same cell says 'with phosphorothioate backbone'. This is a completeness loss, not a falsehood - and importantly, sequence_5to3=TBD on those compounds is CORRECT and honest (I confirmed those ISIS numbers appear only in Tables 64/65 with no sequence anywhere in the patent; likewise ISIS 571883 in US11339393). The 'Deoxy, MOE, and cEt' compounds have no resolvable numeric motif and are rightly TBD. Sweep: any US10968453 Table 64/65 oligo whose chemistry string starts with a digit can be filled deterministically.\n\n3. CASE-AS-CHEMISTRY IS APPLIED INCONSISTENTLY ACROSS THE PATENT LANE. schema-cns.md says 'Case is significant in gapmer rows (uppercase = 2'-MOE/cEt/LNA wing, lowercase = DNA gap)', but 176 of the 463 sequenced CNS oligos are stored ALL-UPPERCASE while still carrying a numeric wing-gap-wing motif - including all 29 US9605263 compounds in my batch. Read literally under the schema's own convention, 'CCGGCCCCTAGCGCGCGACT' with gapmer_design 3-10-7_MOE asserts a 20-nt all-MOE oligo, contradicting its own motif field. Nothing is lost (the motif column recovers the gap) and the letters are all correct, but a consumer who trusts the documented convention will mis-parse these rows, and the file is internally inconsistent because tofersen and the US11851654 LNA gapmers in the SAME batch do use mixed case. Either apply the case rule mechanically from gapmer_design across the lane, or amend the schema to say case is informative only where the source printed it.\n\n4. SINGLE-TIMEPOINT 'irreversible' INFERENCES. US9605263 Example 12 reads the FOB at 8 weeks only, yet every high-scoring 8-week row is filed reversibility='irreversible' while the 0.0 rows are filed 'not_assessed' - an asymmetry driven by the value, not by evidence. Where the patent supplies a second timepoint (Table 7 at 3 h vs Table 15 at 8 wk in comparable cohorts) it usually shows partial resolution (801290 6.00->3.5; 802460 6.75->5.3; 801304 5.25->4.8), so 'partially_reversible' or 'not_assessed' is the supportable value. Affects CMS0641/CMS0703/CMS0765 here and, by construction, every US9605263 Table 15 row with a non-zero 8-week score. The mirror-image problem appears in US11851654: CMS0373/CMS0393 are filed 'reversible' although Table 12 records 2/6 deaths in that same ASO group.\n\n5. PER-MEASUREMENT GRADING SPLITS ONE COMPOUND INTO CONTRADICTORY LABELS. This is sanctioned by the schema but is worth stating because it dominates the patent lane. ISIS 806673 at one dose in one experiment yields grade 0 on AIF1-cerebellum (1.0) and grade 2 on GFAP-cortex (9.1); ISIS 666872 yields grade 0 on GFAP (136%) and grade 2 on IBA1 (441%); the US11851654 ASO yields grade 2 on tolerability score and grade 3 on mortality in the same animals. With ~1130 patent rows covering only ~250 distinct compounds, a model trained row-wise sees the same sequence labelled 0 and 2/3. The extraction is complete and correct (I verified all five Table 15 columns are captured per compound), so the fix is a documented per-oligo aggregation rule, not re-extraction.\n\n6. THE BATCH FILE'S IDs NO LONGER MATCH THE CANONICAL CSVs - a provenance hazard for anyone applying these verdicts. batch_patents.json carries oligo_id values exactly +2 relative to data/cns_oligos.csv (batch CNS041 'ISIS 333611' vs CSV CNS041 'ISIS 564127'; the compound is CNS039 in the CSV), and 34 of 55 measurement_ids resolve to a DIFFERENT measurement in data/cns_measurements.csv (batch CMS0517 == CSV CMS0510; batch CMS0414 'row ASO 2/6' vs CSV CMS0414 'row OH 26mer PS-8 0/4'). The canonical pair is internally consistent and correct - I re-joined it and the sequences land on the right compounds - so this is snapshot drift in the verification export, not corruption of the dataset. But schema-cns.md promises 'Stable ID. Never reused', and these IDs have moved; my verdicts are keyed to the BATCH ids and must be re-keyed by (source_ref, source_table, readout_name) before being applied to the CSVs. Also note two batch rows (CMS0393, CMS0414 - the US11851654 Example 4 'ASO' side-effect-rate and mortality rows) have no counterpart at all in the current cns_measurements.csv, which now holds 133 US11851654B2 rows.\n\n7. MINOR/COSMETIC. (a) effect_direction uses an undocumented +/-0.1 dead band on fold-change (1.1 = no_change, 1.2 = increase, 0.9 = no_change, 0.8 = decrease) - defensible but it should be stated, especially as none of these patent values carry any dispersion or statistics and many are means of 1-3 animals. (b) US11851654 doses are stored as value 12 / unit TBD because the patent prints 'umol/mouse' and the schema enum has no molar unit; the notes explain it, but a bare (12, TBD) sitting beside (3, mg) rows is a live mis-read risk - consider adding 'umol' or 'nmol' to the dose unit enum. (c) source_id values P1-P7 used throughout the measurements table are not defined anywhere in sources/SOURCES-CNS.md, which keys its registry by source_ref; schema-cns.md says source_id must point to an entry there."
+}

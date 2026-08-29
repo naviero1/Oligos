@@ -1,0 +1,693 @@
+{
+ "batch": "batch_grade3_journals",
+ "verdicts": [
+  {
+   "measurement_id": "CMS1168",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "EMA Qalsody SmPC section 5.3, fetched from ema.europa.eu, verbatim: 'In a repeat-dose toxicology study (9 months), intrathecal administration of tofersen to adult cynomolgus monkeys was generally well-tolerated. The exception was a female in the high dose group (35 mg; equivalent to 350 mg per IT injection in humans) that had behaviour described as muscle cramping, head/neck dorsiflexion, and opisthotonos-like-back-arching posture after IT dosing. Electroencephalogram (EEG) indicated the absence of seizure.' Local copy sources/cns/EMA_Qalsody_EPAR_276404_2024.pdf section 2.5.4.2, p.32, verbatim: 'In the 9-month study, tofersen-related and relevant neurological findings and CSF inflammation were observed in animals administered 35 mg. As a diazepam treatment was considered required for the female administered 35 mg, the neurological findings were considered adverse. ... In conclusion, the NOAEL upon repeated IT dosing over 9 months is considered 12 mg tofersen.'",
+   "problem": "Grade 3 stands, and the row's 'REVIEWER TO CONFIRM' flag can be cleared: this is the dose-limiting limb documented in the regulator's own words - the finding was classified adverse and it set the NOAEL at 12 mg, one dose level below the tested 35 mg. Both quoted sentences verify verbatim. Minor caveats to keep in notes rather than in the grade: n=1 animal, EEG excluded seizure, and the EPAR records that 'The neuronal vacuoles - macrovesicular and microvesicular - were not associated with morphological evidence of necrosis', so there is no histopathologic degeneration behind this grade. Also note this row is a regulatory EMA document, not a journal article, and does not belong in a journal batch.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1199",
+   "verdict": "CONFIRMED",
+   "checked": "TEGSEDI US prescribing information fetched from DailyMed (setid 8513207e-b55f-417b-9473-af785146a543, SPL v10). Section 5.4 verbatim: 'TEGSEDI may cause stroke and cervicocephalic arterial dissection. In clinical studies, 1 of 161 (0.6%) TEGSEDI-treated patients experienced carotid artery dissection and stroke. These events occurred within 2 days of the first TEGSEDI dose, a time when the patient also had symptoms of cytokine release ... and a high sensitivity C-reactive protein level greater than 100 mg/L.'",
+   "problem": "None. Value, denominator, locus and dose (284 mg) all verify. Stroke is cerebral infarction, i.e. neuronal loss, and the label attributes it causally to the drug in a Warnings and Precautions section, so grade 3 holds. The row's own effect_vs_control correctly records that no concurrent control rate is given. is_cns_specific=FALSE is right for a systemically dosed ASO.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1201",
+   "verdict": "CONFIRMED",
+   "checked": "TEGSEDI US prescribing information (DailyMed, same SPL), section 5.5 'Inflammatory and Immune Effects', subheading 'Neurologic Serious Adverse Reactions', verbatim: 'Two months after the first TEGSEDI dose, one patient developed a change in gait that progressed over 6 months to paraparesis, in the absence of radiologic evidence of spinal cord compression.'",
+   "problem": "None. Locus, timing ('onset 2mo after first dose, progressed over 6mo') and the readout all verify verbatim. Paraparesis with spinal cord compression radiologically excluded is the rubric's paralysis limb; grade 3 holds.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1227",
+   "verdict": "UNVERIFIABLE",
+   "checked": "The cited locus - Biogen/MHRA Direct Healthcare Professional Communication SPZ-GBR-0020 of 31 July 2018, section 'Short descriptions of five cases reported up to 6 July 2018' - is not retrievable: the letter is not published on gov.uk and the gov.uk search API returns only the covering page 'Letters and drug alerts sent to healthcare professionals in July 2018'. The co-cited MHRA Drug Safety Update of 25 September 2018 IS retrievable and corroborates the aggregate but not the per-case vignettes: 'Worldwide, 5 cases of communicating hydrocephalus have been reported up to 6 July 2018'; 'Three of the children required cerebrospinal fluid (CSF) drainage procedures' of whom '2 had ventriculoperitoneal shunts'; four of the five were children with SMA type 1 presenting after 2-4 loading doses.",
+   "problem": "The per-case narrative for a 4-month-old female with Type I SMA (3 doses) cannot be checked against any reachable document, so the individual case rows are unverifiable as written. KEEP WITH A CAVEAT rather than drop: the class fact they encode (VP shunt required) is corroborated by the MHRA update, which is already inside source_ref, so grade 3 - hydrocephalus requiring intervention - is safe. Separate and definite problem: redistribution=public_domain is an over-claim. A Biogen DHPC letter is a manufacturer document and the MHRA update is UK Crown copyright under the Open Government Licence; neither is a US patent or an FDA/EMA document, which is what the schema's public_domain means. Set redistribution=verify until the rights are settled.",
+   "correction": {
+    "redistribution": "verify"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1228",
+   "verdict": "UNVERIFIABLE",
+   "checked": "The cited locus - Biogen/MHRA Direct Healthcare Professional Communication SPZ-GBR-0020 of 31 July 2018, section 'Short descriptions of five cases reported up to 6 July 2018' - is not retrievable: the letter is not published on gov.uk and the gov.uk search API returns only the covering page 'Letters and drug alerts sent to healthcare professionals in July 2018'. The co-cited MHRA Drug Safety Update of 25 September 2018 IS retrievable and corroborates the aggregate but not the per-case vignettes: 'Worldwide, 5 cases of communicating hydrocephalus have been reported up to 6 July 2018'; 'Three of the children required cerebrospinal fluid (CSF) drainage procedures' of whom '2 had ventriculoperitoneal shunts'; four of the five were children with SMA type 1 presenting after 2-4 loading doses.",
+   "problem": "The per-case narrative for a 6-month-old male with Type I SMA (4 doses) cannot be checked against any reachable document, so the individual case rows are unverifiable as written. KEEP WITH A CAVEAT rather than drop: the class fact they encode (VP shunt required) is corroborated by the MHRA update, which is already inside source_ref, so grade 3 - hydrocephalus requiring intervention - is safe. Separate and definite problem: redistribution=public_domain is an over-claim. A Biogen DHPC letter is a manufacturer document and the MHRA update is UK Crown copyright under the Open Government Licence; neither is a US patent or an FDA/EMA document, which is what the schema's public_domain means. Set redistribution=verify until the rights are settled.",
+   "correction": {
+    "redistribution": "verify"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1231",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "MHRA Drug Safety Update, 25 September 2018, 'Nusinersen (Spinraza): reports of communicating hydrocephalus...', fetched from gov.uk. Verbatim: 'Worldwide, 5 cases of communicating hydrocephalus have been reported up to 6 July 2018'; exposure 'approximately 1,437 patients have received nusinersen in routine clinical practice (439 patient-years)' as of 30 September 2017; 'Three of the children required cerebrospinal fluid (CSF) drainage procedures', of whom '2 had ventriculoperitoneal shunts'; four cases were children with SMA type 1 presenting after 2-4 loading doses.",
+   "problem": "Value (5 cases), denominator, as-of dates, dosing window and the intervention counts all verify verbatim, and 2 shunts plus 1 drainage procedure is hydrocephalus requiring intervention in the source's own words - grade 3 holds, and the row is properly explicit that no incidence rate may be computed because the numerator and denominator windows differ. One real problem: redistribution=public_domain is an over-claim for a Biogen DHPC plus a UK Crown-copyright/OGL publication; neither is a US patent or an FDA/EMA document. Set verify.",
+   "correction": {
+    "redistribution": "verify"
+   },
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1232",
+   "verdict": "CONFIRMED",
+   "checked": "EMA Spinraza SmPC (EMEA/H/C/004312), fetched from ema.europa.eu. Section 4.4 'Hydrocephalus' verbatim: 'There have been reports of communicating hydrocephalus not related to meningitis or bleeding in patients treated with nusinersen 12 mg in the post-marketing setting. Some patients were implanted with a ventriculo-peritoneal shunt. In patients with decreased consciousness, an evaluation for hydrocephalus should be considered.' Section 4.8, below Table 3, verbatim: 'Events of communicating hydrocephalus have been observed in the post-marketing setting (see section 4.4).' The frequency category in the section 4.8 list is 'Not known'.",
+   "problem": "None. Both cited loci exist and read as recorded. This is a legitimate TBD-value grade 3: the SmPC gives no numerator but states the qualifying outcome - ventriculo-peritoneal shunt implantation - in words. redistribution=public_domain is correct here (an EMA document), in contrast to the three DHPC-sourced sibling rows.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1552",
+   "verdict": "REFUTED",
+   "checked": "Lovett et al., Muscle & Nerve, doi:10.1002/mus.28372, fetched as PMC12060635 (CC BY-NC-ND). Table 1, participant 1, verbatim row: 'Myelitis (reported as neurosarcoidosis) | Rapidly progressive weakness; numbness; pain; loss of ambulation | Unrelated | 5 [doses] | ... | Continued for ~6 months then discontinuation'. Abstract verbatim: 'All events but one resolved either spontaneously, with dosing interruption/modification, or with concomitant therapies. ... No event was life-threatening or fatal.' Discussion: participant 1 'had preexisting systemic sarcoidosis, though it was quiescent at study enrollment apart from uveitis'.",
+   "problem": "Every field verifies, but the grade does not. The rubric names myelitis EXPLICITLY as a grade-2 exemplar ('a clinically significant but manageable/resolving neurologic adverse event (aseptic meningitis, radiculitis, myelitis, papilledema)'), and readout_name here is myelitis. The source states no event was life-threatening or fatal, records this participant's clinical feature as 'loss of ambulation' rather than paralysis (participant 2, a different row, is the one the paper calls paraplegia), and the investigator assessed causality as Unrelated. Discontinuation of one participant is not 'dose-limiting or programme-halting' for the tofersen programme, which continued to approval. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1567",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Wilton-Clark & Yokota, BioDrugs 2022, doi:10.1007/s40259-022-00519-9, fetched as PMC8899000. Section 'Wave Life Sciences WVE-120101 and WVE-120102' verbatim: 'In terms of overall tolerability of WVE-120102, 83% of the 66 participants in the treatment group and 90% of the 22 patients in the placebo group reported adverse events. In the 32-mg treatment group alone, seven of the 13 patients reported a serious adverse event, such as amnesia, ataxia, delirium, disorientation, and slurred speech. These serious adverse events were transient, but they led six of the 13 patients in the 32-mg group to discontinue treatment.' The review adds 'at 32 mg the drug reached the maximum tolerated dosage' and that the trials 'were halted due to the apparent absence of a dose-dependent response, failure to consistently lower mtHTT in patient CSF, and poor tolerability at higher doses'. The recorded 6_of_13 matches verbatim.",
+   "problem": "Grade 3 stands on the dose-limiting limb, and it is documented rather than inferred: the review states in its own words that 32 mg was the maximum tolerated dose and that 46% of that cohort discontinued for neurologic serious adverse events. The row also correctly separates the programme halt (a target-engagement/futility decision) from the dose limitation, which is the trap the brief warns about. Provenance problem: the source registry's own rule is that 'Reviews were used to find primary sources and to cross-check them, not as the cited source for a value', yet source_ref here IS the review, which is in turn citing Wave press releases. source_table is honest about the section, and the row's notes document that the press releases return HTTP 403/503 - but the row should be flagged as review-sourced.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1568",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Wilton-Clark & Yokota, BioDrugs 2022, doi:10.1007/s40259-022-00519-9, fetched as PMC8899000. Section 'Wave Life Sciences WVE-120101 and WVE-120102' verbatim: 'In terms of overall tolerability of WVE-120102, 83% of the 66 participants in the treatment group and 90% of the 22 patients in the placebo group reported adverse events. In the 32-mg treatment group alone, seven of the 13 patients reported a serious adverse event, such as amnesia, ataxia, delirium, disorientation, and slurred speech. These serious adverse events were transient, but they led six of the 13 patients in the 32-mg group to discontinue treatment.' The review adds 'at 32 mg the drug reached the maximum tolerated dosage' and that the trials 'were halted due to the apparent absence of a dose-dependent response, failure to consistently lower mtHTT in patient CSF, and poor tolerability at higher doses'. The recorded 7_of_13 matches verbatim, as does the AE list (amnesia, ataxia, delirium, disorientation, slurred speech) and the absence of comparable events at doses up to 16 mg ('none of which were considered serious' at 2-16 mg).",
+   "problem": "Grade 3 stands on the dose-limiting limb for the same reason as its companion row, and the futility/tolerability separation in the notes is correct. Same provenance caveat: the value comes from a review quoting sponsor press releases, not from a primary report. Also note this row and CMS1567 describe the SAME 13 patients and must not be summed.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1612",
+   "verdict": "CONFIRMED",
+   "checked": "Nature Medicine, doi:10.1038/s41591-026-04314-9, local copy sources/cns/PMC13099374.jats.xml, section 'Safety and adverse events'. Verbatim: 'An endoscopic third ventriculostomy with choroid plexus cauterization was performed, showing a CSF opening pressure of 55 cm H2O. No improvement in hydrocephalus was seen over the following 2 days.' Dosing verified: 'She received escalating IT doses of 10 mg, 20 mg, 30 mg and 40 mg ... maintenance dosing of 40 mg every 8 weeks beginning at week 10 ... Maintenance dosing increased to 60 mg every 8 weeks at week 26' - so the 9th dose was indeed 60 mg. Patient 2's normal comparator is also verbatim: 'Lumbar puncture showed a normal opening pressure of 16 cm H2O.'",
+   "problem": "None. Value, unit, dose, dose number and the comparator all verify. Grade 3 correct: hydrocephalus requiring intervention, with a fatal outcome recorded in the same narrative.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1613",
+   "verdict": "CONFIRMED",
+   "checked": "Nature Medicine, doi:10.1038/s41591-026-04314-9, local copy sources/cns/PMC13099374.jats.xml, section 'Safety and adverse events'. Verbatim: 'Patient 1 developed vomiting and apparent discomfort ... 8 weeks after her 9th IT dose. Brain and spine imaging was obtained 2 days later and revealed severe communicating hydrocephalus with T2 white matter changes representing transependymal flow but no other parenchymal changes. ... After considering ventriculoperitoneal shunt placement ... the family withdrew from the investigational protocol in favor of palliative care. She subsequently died under hospice care, 3 months after the final ASO dose.'",
+   "problem": "None. The whole narrative recorded in notes verifies verbatim, including the negative examination findings. Grade 3 correct on two independent limbs: hydrocephalus treated by endoscopic third ventriculostomy, and death.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1619",
+   "verdict": "CONFIRMED",
+   "checked": "Nature Medicine, doi:10.1038/s41591-026-04314-9, local copy sources/cns/PMC13099374.jats.xml, section 'Safety and adverse events'. Verbatim: 'While the initial brain MRI (day 55) had been unremarkable, repeat MRIs performed on days 62 and 64 showed mild increases in ventricular size. There was no evidence of obstruction. ... an extraventricular drain was placed. Opening pressure was >20 cm H2O. There was persistent drainage through the extraventricular drain, and a ventriculoperitoneal shunt was placed on day 65. Ventricular dilatation gradually normalized on serial MR ventriculograms, and she was discharged to home in stable condition on day 87.'",
+   "problem": "None. Days 55/62/64/65, the 4-dose escalation to 40 mg and the shunt all verify verbatim. Grade 3 correct: hydrocephalus requiring intervention. reversibility=reversible is the right way to record the radiological normalisation without lowering the grade - the grade attaches to the shunt, not to the eventual outcome.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1640",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "N=1 Collaborative, Nucleic Acids Res 2025, doi:10.1093/nar/gkaf346, fetched as PMC12022754 (CC BY-NC). The valeriasen paragraph does sit inside the section 'Lessons learned from ASO toxicity studies', as source_table claims. Verbatim: 'Initially valeriasen was effective at reducing seizure activity in Valeria and a second patient whose treatment commenced after Valeria. Unexpectedly, the ASO resulted in the development of hydrocephalus in both patients. This adverse effect had not been observed in safety studies conducted in healthy rats, but was hypothesized to be specifically due to the pathological state of the human brain.'",
+   "problem": "The quotation and the 2_of_2 count verify exactly at the named locus. Two caveats that stop short of a downgrade. (1) The rubric's hydrocephalus limb is 'hydrocephalus REQUIRING INTERVENTION', and this locus does not mention the third ventriculostomy or the shunt - that qualifier lives only in the primary Nature Medicine report, which is not in this row's source_ref. Either promote doi:10.1038/s41591-026-04314-9 into source_ref so the grade-3 claim is falsifiable from the cited document, or grade this row 2. (2) The row's own notes admit it 'intentionally DUPLICATES the two primary Nature Medicine patient rows'; at grade 3 that multiplies a single two-patient event across three rows in the training grade distribution.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1644",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml (Mol Ther Nucleic Acids, doi:10.1016/j.omtn.2025.102692, CC BY). Fig. 1 legend: seven-week-old female C57BL/6 mice, n=4 per group, single ICV injection of ASO2 (19.0 nmol, 100 ug); 'Mice injected with ASO2 and ASO3 were sacrificed 7 days postinjection' - a scheduled sacrifice, not a humane endpoint. Methods define the humane endpoint separately: 'Mice were sacrificed if they scored >=11 and could not drink water independently.' No death or moribund sacrifice is reported for the Fig. 1B mouse groups. The paper's own histopathology contradicts any degeneration reading: 'Histopathological analysis of the lumbar cord, cerebellum, and hippocampus revealed no neuronal cell death or inflammation for either ASO, indicating that severe neurodegeneration or gliosis cannot explain in vivo late-onset neurological dysfunction by ASO2'; and 'Our histopathological analysis showed no neuronal cell death in CNS tissues of rats exhibiting lethal toxicity in neurobehavioral tests'.",
+   "problem": "readout_value is TBD (the row states Fig. 1B could not be resolved per-ASO from the colour key) and no qualifying outcome - death, euthanasia, unresponsiveness, paralysis or degeneration - is stated in words for this mouse group at this locus. The signs reported are hypoactivity, impaired consciousness and weight loss. A progressive but non-lethal, non-paralytic functional deficit is grade 2 under this rubric. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1645",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml (Mol Ther Nucleic Acids, doi:10.1016/j.omtn.2025.102692, CC BY). Fig. 1 legend: ASO3 15.2 nmol (100 ug) ICV, n=4 female C57BL/6 mice, sacrificed 7 days postinjection (scheduled). Results: 'maximum speed (max speed) was decreased with all four ASOs'; 'ASO2 and ASO3 caused a severe reduction in body weight'. No death, euthanasia or paralysis is reported for ASO3 in mice. The paper's own histopathology contradicts any degeneration reading: 'Histopathological analysis of the lumbar cord, cerebellum, and hippocampus revealed no neuronal cell death or inflammation for either ASO, indicating that severe neurodegeneration or gliosis cannot explain in vivo late-onset neurological dysfunction by ASO2'; and 'Our histopathological analysis showed no neuronal cell death in CNS tissues of rats exhibiting lethal toxicity in neurobehavioral tests'.",
+   "problem": "Same defect as the sibling ASO2 row: readout_value is TBD and no qualifying grade-3 outcome is stated at the cited locus. Correct grade 2. (The earlier pass downgraded the matching ASO3 open-field row on the same evidence.)",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1650",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml (Mol Ther Nucleic Acids, doi:10.1016/j.omtn.2025.102692, CC BY). Fig. 1C/1D are the open-field maximum-speed and track-plot panels; Results: 'In the open-field test, ASO1-4 showed reduced locomotor activity, consistent with the tolerability scores. Notably, maximum speed (max speed) was decreased with all four ASOs (Figure 1C).' No numeric group mean is published. The paper's own histopathology contradicts any degeneration reading: 'Histopathological analysis of the lumbar cord, cerebellum, and hippocampus revealed no neuronal cell death or inflammation for either ASO, indicating that severe neurodegeneration or gliosis cannot explain in vivo late-onset neurological dysfunction by ASO2'; and 'Our histopathological analysis showed no neuronal cell death in CNS tissues of rats exhibiting lethal toxicity in neurobehavioral tests'.",
+   "problem": "An open-field maximum-speed decrement with readout_value=TBD cannot reach grade 3: no death, paralysis, dose-limiting event or degeneration attaches to this readout, and the paper's histopathology explicitly excludes neuronal cell death as the mechanism. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1653",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml (Mol Ther Nucleic Acids, doi:10.1016/j.omtn.2025.102692, CC BY). Results verbatim at the cited locus: 'rats with spinal canal catheters were injected with 190 nmol (1.0 mg) ASO2 (Figure 1E) into the cerebrospinal fluid space around lumbar spinal cord. A tolerability scoring system modified for rats (Table S2) revealed increased scores, including severe paraplegia (Figures 1F and S6A). One of the four rats injected with ASO2 died from severe toxicity on day 14.' Discussion: 'in the i.t. injection study, rats showed notable severe paraplegia and urinary disorders'.",
+   "problem": "Grade 3 stands. This is a legitimate TBD-value grade 3: the source states the qualifying outcome - 'severe paraplegia', i.e. frank paralysis - in its own words at the cited figure, and one animal in the same group died. Minor: readout_value is TBD because Fig. 1F publishes no numeric mean, and the grade rests on the narrative rather than on the score. The paper's own histopathology contradicts any degeneration reading: 'Histopathological analysis of the lumbar cord, cerebellum, and hippocampus revealed no neuronal cell death or inflammation for either ASO, indicating that severe neurodegeneration or gliosis cannot explain in vivo late-onset neurological dysfunction by ASO2'; and 'Our histopathological analysis showed no neuronal cell death in CNS tissues of rats exhibiting lethal toxicity in neurobehavioral tests'. That does not undo the grade (paralysis and death are named limbs of grade 3 independent of histology) but it should be recorded in notes.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1654",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml (Mol Ther Nucleic Acids, doi:10.1016/j.omtn.2025.102692, CC BY). Fig. 1G and Supplementary Fig. S6B are the rat open-field maximum-speed panels; Results: 'The open-field test showed decreased max speed and abnormality in track plots (Figures 1G and S6B), along with reduced body weight over time (Figure S6C).' No numeric group mean is published. The paper's own histopathology contradicts any degeneration reading: 'Histopathological analysis of the lumbar cord, cerebellum, and hippocampus revealed no neuronal cell death or inflammation for either ASO, indicating that severe neurodegeneration or gliosis cannot explain in vivo late-onset neurological dysfunction by ASO2'; and 'Our histopathological analysis showed no neuronal cell death in CNS tissues of rats exhibiting lethal toxicity in neurobehavioral tests'.",
+   "problem": "The grade must match the readout the row is actually about. This row is a maximum-speed decrement with readout_value=TBD; the paraplegia and the single death are recorded on their own rows (the tolerability-score row and the mortality row) and must not be re-used to grade this one, or one clinical event is counted three times at grade 3. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1656",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml (Mol Ther Nucleic Acids, doi:10.1016/j.omtn.2025.102692, CC BY). The in vivo data for ASO1 with 2'-OMe at gap position 1 are Fig. 2G/2H, whose legend reads: 'Seven-week-old female ICR mice (n = 3 per group for the vehicle and n = 4 for all other groups) were injected intracerebroventricularly with 38.4 nmol of ASO1 and ASO1 modified with 2'-OMe at gap position 1 or 2. Toxicity was assessed on the indicated days, and mice were sacrificed 10 days postinjection.' No death, euthanasia or paralysis is reported for this group. The paper's own histopathology contradicts any degeneration reading: 'Histopathological analysis of the lumbar cord, cerebellum, and hippocampus revealed no neuronal cell death or inflammation for either ASO, indicating that severe neurodegeneration or gliosis cannot explain in vivo late-onset neurological dysfunction by ASO2'; and 'Our histopathological analysis showed no neuronal cell death in CNS tissues of rats exhibiting lethal toxicity in neurobehavioral tests'.",
+   "problem": "Two problems. (1) Grade 3 is unsupported: readout_value is TBD, no numeric tolerability mean is published, and effect_direction is explicitly relative to the PARENT ASO1 rather than to vehicle - a 'worse than parent' comparison cannot establish absolute severity. Correct grade 2. (2) source_table lists four unrelated figure ranges (2G/2H, 3E-3H, 4C-4J, 6C-6I) for a single measurement; the locus for this row is Fig. 2G/2H alone. exposure_duration=10d does match that experiment.",
+   "correction": {
+    "neurotox_grade": "2",
+    "source_table": "Figures 2G and 2H"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1661",
+   "verdict": "CONFIRMED",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml (Mol Ther Nucleic Acids, doi:10.1016/j.omtn.2025.102692, CC BY). Results verbatim: 'One of the four rats injected with ASO2 died from severe toxicity on day 14.' The recorded fraction 1/4 matches exactly; vehicle and parent-ASO2 groups had no deaths in the corresponding experiments.",
+   "problem": "None. Mortality/euthanasia for severe toxicity is the rubric's grade-3 limb stated in the source's own words.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1662",
+   "verdict": "CONFIRMED",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml (Mol Ther Nucleic Acids, doi:10.1016/j.omtn.2025.102692, CC BY). Results verbatim: 'two of the five mice in the PS-1(-) group ... either succumbed to severe toxicity or were euthanized between 2 and 9 days postinjection.' The recorded fraction 2/5 matches exactly; vehicle and parent-ASO2 groups had no deaths in the corresponding experiments.",
+   "problem": "None. Mortality/euthanasia for severe toxicity is the rubric's grade-3 limb stated in the source's own words.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1664",
+   "verdict": "CONFIRMED",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml (Mol Ther Nucleic Acids, doi:10.1016/j.omtn.2025.102692, CC BY). Results verbatim: 'three of the five mice in the PS-9(-) group ... either succumbed to severe toxicity or were euthanized between 2 and 9 days postinjection.' The recorded fraction 3/5 matches exactly; vehicle and parent-ASO2 groups had no deaths in the corresponding experiments.",
+   "problem": "None. Mortality/euthanasia for severe toxicity is the rubric's grade-3 limb stated in the source's own words.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1665",
+   "verdict": "CONFIRMED",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml (Mol Ther Nucleic Acids, doi:10.1016/j.omtn.2025.102692, CC BY). Results verbatim: 'Some of the mice were sacrificed due to severe toxicity or found dead before 14 days postinjection: two of the four mice in the 5'-CP at position 1 group, all four mice in the 5'-CP at position 1 with PS-1(-) group, and one of the four mice in the 5'-CP at position 9 with PS-9(-) group.' Fig. 6H-6K legend confirms n=4 per group, ICV 19.0 nmol ASO2 variants, sacrifice at 14 days.",
+   "problem": "None. 2/4 killed for severe toxicity or found dead verifies exactly and is a grade-3 outcome in the source's own words.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1666",
+   "verdict": "CONFIRMED",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml (Mol Ther Nucleic Acids, doi:10.1016/j.omtn.2025.102692, CC BY). Results verbatim: '... all four mice in the 5'-CP at position 1 with PS-1(-) group ...' were 'sacrificed due to severe toxicity or found dead before 14 days postinjection'. Fig. 6H-6K legend: n=4 per group, ICV 19.0 nmol, sacrificed 14 days postinjection.",
+   "problem": "None - the row as written is right. IMPORTANT DATA-INTEGRITY NOTE: data/cns_measurements.csv currently carries CMS1666 at neurotox_grade=2. That downgrade was written against a DIFFERENT row that held this measurement_id in the earlier batch snapshot (a 2'-OMe gap-position-2 tolerability row with readout_value=TBD). Applied to the present row - 4/4 mortality - it is wrong and must be restored to 3.",
+   "correction": {
+    "neurotox_grade": "3"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1671",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml (Mol Ther Nucleic Acids, doi:10.1016/j.omtn.2025.102692, CC BY). Supplementary Fig. S6D is the bladder-volume panel; Results: 'Additionally, increased bladder volume was observed at dissection 14 days postinjection'; Methods: 'the abdominal cavity was opened, and bladder volume was measured'. No numeric value is published. The paper's own histopathology contradicts any degeneration reading: 'Histopathological analysis of the lumbar cord, cerebellum, and hippocampus revealed no neuronal cell death or inflammation for either ASO, indicating that severe neurodegeneration or gliosis cannot explain in vivo late-onset neurological dysfunction by ASO2'; and 'Our histopathological analysis showed no neuronal cell death in CNS tissues of rats exhibiting lethal toxicity in neurobehavioral tests'.",
+   "problem": "readout_value is TBD and the readout is a urinary-retention surrogate measured post mortem, not degeneration, paralysis or death. The paraplegia and the single death in the same animals are already carried on their own rows. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1676",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC11638874_fulltext.xml (Mol Ther, doi:10.1016/j.ymthe.2024.10.024, CC BY). Table 1 EvADINT weightings verbatim: 'Seizure 0/10/15/20 [and] Death 75; Hyperactivity or other atypical motor behaviors 0/5/10/15; Maintenance of sternal posture 0/4/8/12/20; Unstimulated movement 0/3/6/9/15; Movement without ataxia 0/2/4/6/10; Normal grooming/eating/nesting 0/1/2/3/5', with the note 'If a mouse died, it was given a maximum score of 75' and Methods 'If a mouse died within the first 24 h, it was automatically assigned a maximum score of 75; otherwise, it was the sum of all other scores.' The non-death maximum summing Table 1 is therefore 85, not 75. Results verbatim: 'Even severely affected mice, unless they died, recovered fully by 24 h, and showed no further adverse effects.' Cited locus Figure 1 (Malat1 panel); group mean recorded as 57.0.",
+   "problem": "A group mean of 57 on an instrument where death alone scores 75 is a severe but explicitly NON-LETHAL outcome, and the paper states such animals 'recovered fully by 24 h' - the row's own reversibility field says reversible. No degeneration, paralysis, death or dose-limiting event is reported for this group. Correct grade 2. Secondary: readout_unit 'score_0_to_75' misdescribes the instrument (75 is the score ASSIGNED for death; the non-death maximum is 85).",
+   "correction": {
+    "neurotox_grade": "2",
+    "readout_unit": "score_weighted (death = 75; non-death maximum 85)"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1682",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC11638874_fulltext.xml (Mol Ther, doi:10.1016/j.ymthe.2024.10.024, CC BY). Table 1 EvADINT weightings verbatim: 'Seizure 0/10/15/20 [and] Death 75; Hyperactivity or other atypical motor behaviors 0/5/10/15; Maintenance of sternal posture 0/4/8/12/20; Unstimulated movement 0/3/6/9/15; Movement without ataxia 0/2/4/6/10; Normal grooming/eating/nesting 0/1/2/3/5', with the note 'If a mouse died, it was given a maximum score of 75' and Methods 'If a mouse died within the first 24 h, it was automatically assigned a maximum score of 75; otherwise, it was the sum of all other scores.' The non-death maximum summing Table 1 is therefore 85, not 75. Results verbatim: 'Even severely affected mice, unless they died, recovered fully by 24 h, and showed no further adverse effects.' Cited locus Figure 2 (PS DNA group); group mean recorded as 57.0.",
+   "problem": "A group mean of 57 on an instrument where death alone scores 75 is a severe but explicitly NON-LETHAL outcome, and the paper states such animals 'recovered fully by 24 h' - the row's own reversibility field says reversible. No degeneration, paralysis, death or dose-limiting event is reported for this group. Correct grade 2. Secondary: readout_unit 'score_0_to_75' misdescribes the instrument (75 is the score ASSIGNED for death; the non-death maximum is 85).",
+   "correction": {
+    "neurotox_grade": "2",
+    "readout_unit": "score_weighted (death = 75; non-death maximum 85)"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1683",
+   "verdict": "CONFIRMED",
+   "checked": "Local copy sources/cns/PMC11638874_fulltext.xml (Mol Ther, doi:10.1016/j.ymthe.2024.10.024, CC BY). Table 1 EvADINT weightings verbatim: 'Seizure 0/10/15/20 [and] Death 75; Hyperactivity or other atypical motor behaviors 0/5/10/15; Maintenance of sternal posture 0/4/8/12/20; Unstimulated movement 0/3/6/9/15; Movement without ataxia 0/2/4/6/10; Normal grooming/eating/nesting 0/1/2/3/5', with the note 'If a mouse died, it was given a maximum score of 75' and Methods 'If a mouse died within the first 24 h, it was automatically assigned a maximum score of 75; otherwise, it was the sum of all other scores.' The non-death maximum summing Table 1 is therefore 85, not 75. Results verbatim: 'Even severely affected mice, unless they died, recovered fully by 24 h, and showed no further adverse effects.' Results verbatim at the cited locus: 'Within minutes after anesthesia reversal, PS-DNA-treated Unc93b1-/- and C57BL/6 WT mice exhibited severe seizures and did not survive to the end of the 24-h EvADINT observation period. These mice were assigned maximum EvADINT scores of 75 (Figure 3A).'",
+   "problem": "None. The recorded value of 75 IS the death score and the source says so in words. Grade 3 correct; reversibility=irreversible correct.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1717",
+   "verdict": "CONFIRMED",
+   "checked": "Local copies sources/cns/PMC9221153_fulltext.xml (Nucleic Acid Ther, doi:10.1089/nat.2021.0071, CC BY) and sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx. Methods verbatim: 'The severity of side effects was scored using a tolerability scale divided into five neurobehavioral categories: (1) hyperactivity, (2) decreased activity and arousal, (3) motor dysfunction/ataxia, (4) abnormal posture and breathing, and (5) tremor/convulsions. Each category was scored on a scale of 0 to 4. Scores for each category were summed to a final acute tolerability score going from 0 (no side effects) to 20 (severe signs in all categories, including convulsions resulting in euthanasia).' Dose and observation window verbatim: '100 ug ASO was given in a volume of 5 uL in 0.9% saline vehicle and injected into the right (or left) lateral ventricle ... (n = 4-6 mice per treatment group)'; 'For 1 h following the single bolus injection of ASO, animals were observed'. Row matched to Supplementary Table S1 by sequence: 'ACATtcaagcctttCC' (Set=Validate, Target=STC1), Acute_tolerance_score_mice = 20 exactly. Only 18 of the 1,827 sequences in that column carry a score of 20.",
+   "problem": "None. This is one of only two scales in the batch whose top band is DEFINED by the authors as euthanasia, and the recorded value sits on it: 20 = 'severe signs in all categories, including convulsions resulting in euthanasia'. Dose (100 ug ICV), observation window (1 h) and the CC BY rights all verify.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1719",
+   "verdict": "CONFIRMED",
+   "checked": "Local copies sources/cns/PMC9221153_fulltext.xml (Nucleic Acid Ther, doi:10.1089/nat.2021.0071, CC BY) and sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx. Methods verbatim: 'The severity of side effects was scored using a tolerability scale divided into five neurobehavioral categories: (1) hyperactivity, (2) decreased activity and arousal, (3) motor dysfunction/ataxia, (4) abnormal posture and breathing, and (5) tremor/convulsions. Each category was scored on a scale of 0 to 4. Scores for each category were summed to a final acute tolerability score going from 0 (no side effects) to 20 (severe signs in all categories, including convulsions resulting in euthanasia).' Dose and observation window verbatim: '100 ug ASO was given in a volume of 5 uL in 0.9% saline vehicle and injected into the right (or left) lateral ventricle ... (n = 4-6 mice per treatment group)'; 'For 1 h following the single bolus injection of ASO, animals were observed'. Row matched to Supplementary Table S1 by sequence: 'TATtattcttctgTTTC' (Set=Validate, Target=STC1), Acute_tolerance_score_mice = 20 exactly. Only 18 of the 1,827 sequences in that column carry a score of 20.",
+   "problem": "None. This is one of only two scales in the batch whose top band is DEFINED by the authors as euthanasia, and the recorded value sits on it: 20 = 'severe signs in all categories, including convulsions resulting in euthanasia'. Dose (100 ug ICV), observation window (1 h) and the CC BY rights all verify.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1720",
+   "verdict": "CONFIRMED",
+   "checked": "Local copies sources/cns/PMC9221153_fulltext.xml (Nucleic Acid Ther, doi:10.1089/nat.2021.0071, CC BY) and sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx. Methods verbatim: 'The severity of side effects was scored using a tolerability scale divided into five neurobehavioral categories: (1) hyperactivity, (2) decreased activity and arousal, (3) motor dysfunction/ataxia, (4) abnormal posture and breathing, and (5) tremor/convulsions. Each category was scored on a scale of 0 to 4. Scores for each category were summed to a final acute tolerability score going from 0 (no side effects) to 20 (severe signs in all categories, including convulsions resulting in euthanasia).' Dose and observation window verbatim: '100 ug ASO was given in a volume of 5 uL in 0.9% saline vehicle and injected into the right (or left) lateral ventricle ... (n = 4-6 mice per treatment group)'; 'For 1 h following the single bolus injection of ASO, animals were observed'. Row matched to Supplementary Table S1 by sequence: 'CTATttatattccacAG' (Set=Validate, Target=STC1), Acute_tolerance_score_mice = 20 exactly. Only 18 of the 1,827 sequences in that column carry a score of 20.",
+   "problem": "None. This is one of only two scales in the batch whose top band is DEFINED by the authors as euthanasia, and the recorded value sits on it: 20 = 'severe signs in all categories, including convulsions resulting in euthanasia'. Dose (100 ug ICV), observation window (1 h) and the CC BY rights all verify.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1857",
+   "verdict": "CONFIRMED",
+   "checked": "Local copies sources/cns/PMC9221153_fulltext.xml (Nucleic Acid Ther, doi:10.1089/nat.2021.0071, CC BY) and sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx. Methods verbatim: 'The severity of side effects was scored using a tolerability scale divided into five neurobehavioral categories: (1) hyperactivity, (2) decreased activity and arousal, (3) motor dysfunction/ataxia, (4) abnormal posture and breathing, and (5) tremor/convulsions. Each category was scored on a scale of 0 to 4. Scores for each category were summed to a final acute tolerability score going from 0 (no side effects) to 20 (severe signs in all categories, including convulsions resulting in euthanasia).' Dose and observation window verbatim: '100 ug ASO was given in a volume of 5 uL in 0.9% saline vehicle and injected into the right (or left) lateral ventricle ... (n = 4-6 mice per treatment group)'; 'For 1 h following the single bolus injection of ASO, animals were observed'. Row matched to Supplementary Table S1 by sequence: 'ATTaaccaattaaCCG' (Set=Test, Target=Tau), Acute_tolerance_score_mice = 20 exactly. Only 18 of the 1,827 sequences in that column carry a score of 20.",
+   "problem": "None. This is one of only two scales in the batch whose top band is DEFINED by the authors as euthanasia, and the recorded value sits on it: 20 = 'severe signs in all categories, including convulsions resulting in euthanasia'. Dose (100 ug ICV), observation window (1 h) and the CC BY rights all verify.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1858",
+   "verdict": "CONFIRMED",
+   "checked": "Local copies sources/cns/PMC9221153_fulltext.xml (Nucleic Acid Ther, doi:10.1089/nat.2021.0071, CC BY) and sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx. Methods verbatim: 'The severity of side effects was scored using a tolerability scale divided into five neurobehavioral categories: (1) hyperactivity, (2) decreased activity and arousal, (3) motor dysfunction/ataxia, (4) abnormal posture and breathing, and (5) tremor/convulsions. Each category was scored on a scale of 0 to 4. Scores for each category were summed to a final acute tolerability score going from 0 (no side effects) to 20 (severe signs in all categories, including convulsions resulting in euthanasia).' Dose and observation window verbatim: '100 ug ASO was given in a volume of 5 uL in 0.9% saline vehicle and injected into the right (or left) lateral ventricle ... (n = 4-6 mice per treatment group)'; 'For 1 h following the single bolus injection of ASO, animals were observed'. Row matched to Supplementary Table S1 by sequence: 'GATacatgcgtccTTT' (Set=Test, Target=Tau), Acute_tolerance_score_mice = 20 exactly. Only 18 of the 1,827 sequences in that column carry a score of 20.",
+   "problem": "None. This is one of only two scales in the batch whose top band is DEFINED by the authors as euthanasia, and the recorded value sits on it: 20 = 'severe signs in all categories, including convulsions resulting in euthanasia'. Dose (100 ug ICV), observation window (1 h) and the CC BY rights all verify.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1861",
+   "verdict": "CONFIRMED",
+   "checked": "Local copies sources/cns/PMC9221153_fulltext.xml (Nucleic Acid Ther, doi:10.1089/nat.2021.0071, CC BY) and sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx. Methods verbatim: 'The severity of side effects was scored using a tolerability scale divided into five neurobehavioral categories: (1) hyperactivity, (2) decreased activity and arousal, (3) motor dysfunction/ataxia, (4) abnormal posture and breathing, and (5) tremor/convulsions. Each category was scored on a scale of 0 to 4. Scores for each category were summed to a final acute tolerability score going from 0 (no side effects) to 20 (severe signs in all categories, including convulsions resulting in euthanasia).' Dose and observation window verbatim: '100 ug ASO was given in a volume of 5 uL in 0.9% saline vehicle and injected into the right (or left) lateral ventricle ... (n = 4-6 mice per treatment group)'; 'For 1 h following the single bolus injection of ASO, animals were observed'. Row matched to Supplementary Table S1 by sequence: 'ATGttgcctaatgAGC' (Set=Test, Target=Tau), Acute_tolerance_score_mice = 20 exactly. Only 18 of the 1,827 sequences in that column carry a score of 20.",
+   "problem": "None. This is one of only two scales in the batch whose top band is DEFINED by the authors as euthanasia, and the recorded value sits on it: 20 = 'severe signs in all categories, including convulsions resulting in euthanasia'. Dose (100 ug ICV), observation window (1 h) and the CC BY rights all verify.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1862",
+   "verdict": "CONFIRMED",
+   "checked": "Local copies sources/cns/PMC9221153_fulltext.xml (Nucleic Acid Ther, doi:10.1089/nat.2021.0071, CC BY) and sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx. Methods verbatim: 'The severity of side effects was scored using a tolerability scale divided into five neurobehavioral categories: (1) hyperactivity, (2) decreased activity and arousal, (3) motor dysfunction/ataxia, (4) abnormal posture and breathing, and (5) tremor/convulsions. Each category was scored on a scale of 0 to 4. Scores for each category were summed to a final acute tolerability score going from 0 (no side effects) to 20 (severe signs in all categories, including convulsions resulting in euthanasia).' Dose and observation window verbatim: '100 ug ASO was given in a volume of 5 uL in 0.9% saline vehicle and injected into the right (or left) lateral ventricle ... (n = 4-6 mice per treatment group)'; 'For 1 h following the single bolus injection of ASO, animals were observed'. Row matched to Supplementary Table S1 by sequence: 'CATgattgtgggcTTA' (Set=Test, Target=Tau), Acute_tolerance_score_mice = 20 exactly. Only 18 of the 1,827 sequences in that column carry a score of 20.",
+   "problem": "None. This is one of only two scales in the batch whose top band is DEFINED by the authors as euthanasia, and the recorded value sits on it: 20 = 'severe signs in all categories, including convulsions resulting in euthanasia'. Dose (100 ug ICV), observation window (1 h) and the CC BY rights all verify.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1864",
+   "verdict": "CONFIRMED",
+   "checked": "Local copies sources/cns/PMC9221153_fulltext.xml (Nucleic Acid Ther, doi:10.1089/nat.2021.0071, CC BY) and sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx. Methods verbatim: 'The severity of side effects was scored using a tolerability scale divided into five neurobehavioral categories: (1) hyperactivity, (2) decreased activity and arousal, (3) motor dysfunction/ataxia, (4) abnormal posture and breathing, and (5) tremor/convulsions. Each category was scored on a scale of 0 to 4. Scores for each category were summed to a final acute tolerability score going from 0 (no side effects) to 20 (severe signs in all categories, including convulsions resulting in euthanasia).' Dose and observation window verbatim: '100 ug ASO was given in a volume of 5 uL in 0.9% saline vehicle and injected into the right (or left) lateral ventricle ... (n = 4-6 mice per treatment group)'; 'For 1 h following the single bolus injection of ASO, animals were observed'. Row matched to Supplementary Table S1 by sequence: 'TAGccctaaagtcccagGTC' (Set=Test, Target=Tau), Acute_tolerance_score_mice = 20 exactly. Only 18 of the 1,827 sequences in that column carry a score of 20.",
+   "problem": "None. This is one of only two scales in the batch whose top band is DEFINED by the authors as euthanasia, and the recorded value sits on it: 20 = 'severe signs in all categories, including convulsions resulting in euthanasia'. Dose (100 ug ICV), observation window (1 h) and the CC BY rights all verify.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1865",
+   "verdict": "CONFIRMED",
+   "checked": "Local copies sources/cns/PMC9221153_fulltext.xml (Nucleic Acid Ther, doi:10.1089/nat.2021.0071, CC BY) and sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx. Methods verbatim: 'The severity of side effects was scored using a tolerability scale divided into five neurobehavioral categories: (1) hyperactivity, (2) decreased activity and arousal, (3) motor dysfunction/ataxia, (4) abnormal posture and breathing, and (5) tremor/convulsions. Each category was scored on a scale of 0 to 4. Scores for each category were summed to a final acute tolerability score going from 0 (no side effects) to 20 (severe signs in all categories, including convulsions resulting in euthanasia).' Dose and observation window verbatim: '100 ug ASO was given in a volume of 5 uL in 0.9% saline vehicle and injected into the right (or left) lateral ventricle ... (n = 4-6 mice per treatment group)'; 'For 1 h following the single bolus injection of ASO, animals were observed'. Row matched to Supplementary Table S1 by sequence: 'TTAgccctaaagtcccaGGT' (Set=Test, Target=Tau), Acute_tolerance_score_mice = 20 exactly. Only 18 of the 1,827 sequences in that column carry a score of 20.",
+   "problem": "None. This is one of only two scales in the batch whose top band is DEFINED by the authors as euthanasia, and the recorded value sits on it: 20 = 'severe signs in all categories, including convulsions resulting in euthanasia'. Dose (100 ug ICV), observation window (1 h) and the CC BY rights all verify.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1866",
+   "verdict": "CONFIRMED",
+   "checked": "Local copies sources/cns/PMC9221153_fulltext.xml (Nucleic Acid Ther, doi:10.1089/nat.2021.0071, CC BY) and sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx. Methods verbatim: 'The severity of side effects was scored using a tolerability scale divided into five neurobehavioral categories: (1) hyperactivity, (2) decreased activity and arousal, (3) motor dysfunction/ataxia, (4) abnormal posture and breathing, and (5) tremor/convulsions. Each category was scored on a scale of 0 to 4. Scores for each category were summed to a final acute tolerability score going from 0 (no side effects) to 20 (severe signs in all categories, including convulsions resulting in euthanasia).' Dose and observation window verbatim: '100 ug ASO was given in a volume of 5 uL in 0.9% saline vehicle and injected into the right (or left) lateral ventricle ... (n = 4-6 mice per treatment group)'; 'For 1 h following the single bolus injection of ASO, animals were observed'. Row matched to Supplementary Table S1 by sequence: 'GGTctgagctaccAGG' (Set=Test, Target=Tau), Acute_tolerance_score_mice = 20 exactly. Only 18 of the 1,827 sequences in that column carry a score of 20.",
+   "problem": "None. This is one of only two scales in the batch whose top band is DEFINED by the authors as euthanasia, and the recorded value sits on it: 20 = 'severe signs in all categories, including convulsions resulting in euthanasia'. Dose (100 ug ICV), observation window (1 h) and the CC BY rights all verify.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1868",
+   "verdict": "CONFIRMED",
+   "checked": "Local copies sources/cns/PMC9221153_fulltext.xml (Nucleic Acid Ther, doi:10.1089/nat.2021.0071, CC BY) and sources/cns/hagedorn2022_NAT_SupplTableS1_148ASO_ICV_mouse_tolerability.xlsx. Methods verbatim: 'The severity of side effects was scored using a tolerability scale divided into five neurobehavioral categories: (1) hyperactivity, (2) decreased activity and arousal, (3) motor dysfunction/ataxia, (4) abnormal posture and breathing, and (5) tremor/convulsions. Each category was scored on a scale of 0 to 4. Scores for each category were summed to a final acute tolerability score going from 0 (no side effects) to 20 (severe signs in all categories, including convulsions resulting in euthanasia).' Dose and observation window verbatim: '100 ug ASO was given in a volume of 5 uL in 0.9% saline vehicle and injected into the right (or left) lateral ventricle ... (n = 4-6 mice per treatment group)'; 'For 1 h following the single bolus injection of ASO, animals were observed'. Row matched to Supplementary Table S1 by sequence: 'GTTagccctaaagtcccAGG' (Set=Test, Target=Tau), Acute_tolerance_score_mice = 20 exactly. Only 18 of the 1,827 sequences in that column carry a score of 20.",
+   "problem": "None. This is one of only two scales in the batch whose top band is DEFINED by the authors as euthanasia, and the recorded value sits on it: 20 = 'severe signs in all categories, including convulsions resulting in euthanasia'. Dose (100 ug ICV), observation window (1 h) and the CC BY rights all verify.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1872",
+   "verdict": "REFUTED",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent IT acute-inhibition scale, Supplementary Fig. S1A (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 No tone/movement in tail / 2 Weak posterior posture / 3 Hind limbs don't support weight, but can still move / 4 Hind paws don't move - full hindlimb paralysis / 5 Weak anterior posture / 6 Fore paws don't move, but animal is still breathing / 7 Death'. Results text at the cited locus: 'Muscle weakness/paresis was present in posterior regions at 30-300 ug doses. At higher doses of 700-1000 ug, both posterior and anterior regions were impacted.' Fig. 1A legend: 'The heatmap shows the number of rats/group that exhibited paresis/paralysis in the designated regions over time (white = 0/4; green = 4/4)'; Supplementary Table 4 gives Saline n=4, ASO1 n=4 at 300 ug IT. Results: 'By 3 h, peak scores of 4 were reached (full tail, hindlimb, and hind paw paralysis). By 16-24 h and for the next 2 weeks, all animals scored a 0, confirming acute inhibition is transient with no long-term sequelae.'",
+   "problem": "Grade 3 is not supported at 300 ug. readout_value is TBD and Fig. 1A is a presence/absence heat map, so no score exists at this locus; the source's word for the 30-300 ug band is 'paresis' confined to posterior regions, not the scale's paralysis point 4 ('Hind paws don't move - full hindlimb paralysis'). The row imports the 700 ug peak score of 4 into a 300 ug row. The response is additionally fully reversible by 16-24 h with no sequelae out to 2 weeks. Correct grade 2. (Identical to the earlier pass's downgrade of the 100 ug sibling row.)",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1873",
+   "verdict": "CONFIRMED",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent IT acute-inhibition scale, Supplementary Fig. S1A (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 No tone/movement in tail / 2 Weak posterior posture / 3 Hind limbs don't support weight, but can still move / 4 Hind paws don't move - full hindlimb paralysis / 5 Weak anterior posture / 6 Fore paws don't move, but animal is still breathing / 7 Death'. Results verbatim: 'Acute inhibition response scores were assessed at 30 min to 2 weeks after 700 ug of ASO1 delivered via IT administration in rats (Fig. 1B). At 30 min post-dose, all animals exhibited a score of 1 (tail paralysis). By 3 h, peak scores of 4 were reached (full tail, hindlimb, and hind paw paralysis).' Supplementary Table 5 confirms 700 ug IT, n=18 rats at the 3 h time point.",
+   "problem": "None. The recorded value of 4 is stated in the text, and scale point 4 is defined by the authors in words as 'full hindlimb paralysis' - frank paralysis, which the rubric names explicitly in grade 3. reversibility=reversible is also correct and does not lower the grade, because the grade attaches to the paralysis the readout denotes.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1874",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent IT acute-inhibition scale, Supplementary Fig. S1A (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 No tone/movement in tail / 2 Weak posterior posture / 3 Hind limbs don't support weight, but can still move / 4 Hind paws don't move - full hindlimb paralysis / 5 Weak anterior posture / 6 Fore paws don't move, but animal is still breathing / 7 Death'. Results verbatim: 'At higher doses of 700-1000 ug, both posterior and anterior regions were impacted.' Fig. 1A legend records 'the number of rats/group that exhibited paresis/paralysis in the designated regions'; Supplementary Table 4 gives ASO1 n=3 at 1000 ug IT. At the adjacent 700 ug dose the paper states the measured peak is 4 = 'full tail, hindlimb, and hind paw paralysis'.",
+   "problem": "Grade 3 stands: this is the TBD-value case the rule permits, because the source states the qualifying outcome (paralysis, extending to anterior regions) in words at the cited locus. Minor: readout_value is TBD off a presence/absence heat map, so the row cannot say WHICH scale point was reached; and the extractor's note that 'the 700 ug value of 4 is stated in the text' belongs to the sibling row, not this one.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1883",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent IT acute-inhibition scale, Supplementary Fig. S1A (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 No tone/movement in tail / 2 Weak posterior posture / 3 Hind limbs don't support weight, but can still move / 4 Hind paws don't move - full hindlimb paralysis / 5 Weak anterior posture / 6 Fore paws don't move, but animal is still breathing / 7 Death'. Supplementary Table 10 (supplement p.16), Fig. 3B rat panel: PBS n=4; ASO6 30/100/300 ug ns; 700 ug n=3 ns; 1000 ug n=3 P=0.0131 vs PBS (Kruskal-Wallis) - exactly as the row records.",
+   "problem": "Grade 3 stands at this dose: 4.0 on the IT scale is the authors' 'full hindlimb paralysis' point and the 1000 ug group is the only one separable from PBS. Minor problems: (a) the value is digitised from a bar chart - the paper publishes no numeric group means for Fig. 3B; (b) the grade mapping recorded in this row's notes, 's>=3 -> 3 (paresis/paralysis)', is wrong and conflates the scale's paresis point 3 ('Hind limbs don't support weight, but can still move') with the paralysis point 4. The mapping happens not to change THIS row's grade, but it is the same defect that produced the wrong grades elsewhere in this source and should be corrected wherever it appears.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1890",
+   "verdict": "REFUTED",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent ICV acute-inhibition scale, Supplementary Fig. S1B (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 Gait slightly impaired / 2 Hunched and/or impaired gait / 3 Forward movement only after lift / 4 Any movement after lift / 5 Lateral recumbency with response to tail pinch / 6 No response to tail pinch but still breathing / 7 Death'. Methods restate 4 as 'does not move forward after lifting but has an upright posture', 5 as 'lying on its side and does not move after lift but responds to tail pinch', 6 as 'does not respond to pinch but is breathing'. Supplementary Table 13 (supplement p.18) gives n=4/4 per group for every Fig. 5C/5E comparison and reports ONLY PS-vs-PO Mann-Whitney P values; no PBS group is tabulated for Fig. 5C/5E, so the row's 'vs 0 in PBS-injected controls' comparator is not published at this locus. Fig. 5C/5E panel for ASO5 at 300 ug ICV in mice, 3 h post-dose. Paper's central claim, abstract verbatim: 'inhibition-like responses peaked ~3 h post-ASO delivery, reversed within 24 h with no sequelae'.",
+   "problem": "The value verifies as recorded but the grade does not. 4.0 lands at scale point 4, 'Any movement after lift' / 'does not move forward after lifting but has an upright posture' - an animal that is conscious, breathing and responsive to a noxious stimulus. That is not neuronal degeneration, paralysis, moribundity or death, and the row itself records reversibility=reversible. On this scale the rubric's grade-3 band begins at 6 ('No response to tail pinch but still breathing') and ends at 7 (death). The extractor's own note records the mapping it used - 'Grade mapping for this 0-7 ICV scale: 0->0; 0<s<2->1; 2<=s<4->2; s>=4->3' - i.e. a fraction-of-range cutoff, not the scale's text. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1891",
+   "verdict": "REFUTED",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent ICV acute-inhibition scale, Supplementary Fig. S1B (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 Gait slightly impaired / 2 Hunched and/or impaired gait / 3 Forward movement only after lift / 4 Any movement after lift / 5 Lateral recumbency with response to tail pinch / 6 No response to tail pinch but still breathing / 7 Death'. Methods restate 4 as 'does not move forward after lifting but has an upright posture', 5 as 'lying on its side and does not move after lift but responds to tail pinch', 6 as 'does not respond to pinch but is breathing'. Supplementary Table 13 (supplement p.18) gives n=4/4 per group for every Fig. 5C/5E comparison and reports ONLY PS-vs-PO Mann-Whitney P values; no PBS group is tabulated for Fig. 5C/5E, so the row's 'vs 0 in PBS-injected controls' comparator is not published at this locus. Fig. 5C/5E panel for ASO5 at 700 ug ICV in mice, 3 h post-dose. Paper's central claim, abstract verbatim: 'inhibition-like responses peaked ~3 h post-ASO delivery, reversed within 24 h with no sequelae'.",
+   "problem": "The value verifies as recorded but the grade does not. 5.1 lands at scale point 5, 'Lateral recumbency with response to tail pinch' - an animal that is conscious, breathing and responsive to a noxious stimulus. That is not neuronal degeneration, paralysis, moribundity or death, and the row itself records reversibility=reversible. On this scale the rubric's grade-3 band begins at 6 ('No response to tail pinch but still breathing') and ends at 7 (death). The extractor's own note records the mapping it used - 'Grade mapping for this 0-7 ICV scale: 0->0; 0<s<2->1; 2<=s<4->2; s>=4->3' - i.e. a fraction-of-range cutoff, not the scale's text. Correct grade 2. The printed value is also false-precision: with n=4 on an integer scale the mean must be a multiple of 0.25, so 5.1 is not attainable and is a bar-chart reading artefact.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1907",
+   "verdict": "REFUTED",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent ICV acute-inhibition scale, Supplementary Fig. S1B (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 Gait slightly impaired / 2 Hunched and/or impaired gait / 3 Forward movement only after lift / 4 Any movement after lift / 5 Lateral recumbency with response to tail pinch / 6 No response to tail pinch but still breathing / 7 Death'. Methods restate 4 as 'does not move forward after lifting but has an upright posture', 5 as 'lying on its side and does not move after lift but responds to tail pinch', 6 as 'does not respond to pinch but is breathing'. Supplementary Table 13 (supplement p.18) gives n=4/4 per group for every Fig. 5C/5E comparison and reports ONLY PS-vs-PO Mann-Whitney P values; no PBS group is tabulated for Fig. 5C/5E, so the row's 'vs 0 in PBS-injected controls' comparator is not published at this locus. Fig. 5C/5E panel for ASO3 at 300 ug ICV in mice, 3 h post-dose. Paper's central claim, abstract verbatim: 'inhibition-like responses peaked ~3 h post-ASO delivery, reversed within 24 h with no sequelae'.",
+   "problem": "The value verifies as recorded but the grade does not. 4.0 lands at scale point 4, 'Any movement after lift' / 'does not move forward after lifting but has an upright posture' - an animal that is conscious, breathing and responsive to a noxious stimulus. That is not neuronal degeneration, paralysis, moribundity or death, and the row itself records reversibility=reversible. On this scale the rubric's grade-3 band begins at 6 ('No response to tail pinch but still breathing') and ends at 7 (death). The extractor's own note records the mapping it used - 'Grade mapping for this 0-7 ICV scale: 0->0; 0<s<2->1; 2<=s<4->2; s>=4->3' - i.e. a fraction-of-range cutoff, not the scale's text. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1908",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent ICV acute-inhibition scale, Supplementary Fig. S1B (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 Gait slightly impaired / 2 Hunched and/or impaired gait / 3 Forward movement only after lift / 4 Any movement after lift / 5 Lateral recumbency with response to tail pinch / 6 No response to tail pinch but still breathing / 7 Death'. Methods restate 4 as 'does not move forward after lifting but has an upright posture', 5 as 'lying on its side and does not move after lift but responds to tail pinch', 6 as 'does not respond to pinch but is breathing'. Supplementary Table 13 (supplement p.18) gives n=4/4 per group for every Fig. 5C/5E comparison and reports ONLY PS-vs-PO Mann-Whitney P values; no PBS group is tabulated for Fig. 5C/5E, so the row's 'vs 0 in PBS-injected controls' comparator is not published at this locus. Fig. 5E/5C panel for ASO3 at 700 ug ICV in mice, 3 h post-dose.",
+   "problem": "Grade 3 stands: a group mean of 6.0 sits at or above scale point 6, which the authors define as 'No response to tail pinch but still breathing' - unresponsiveness, the band the rubric's grade 3 reaches on this scale (7 is death). Minor problems, shared across the whole Fig. 5C/5E block: (a) the value is read off a bar chart and the paper publishes no numeric group means; (b) effect_vs_control asserts 'vs 0 in PBS-injected controls' but Supplementary Table 13 tabulates only PS-vs-PO comparisons for these panels, so the PBS comparator is not sourced at this locus; (c) the grade mapping in the notes ('s>=4 -> 3') is wrong even though this row lands above the true threshold.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1916",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent ICV acute-inhibition scale, Supplementary Fig. S1B (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 Gait slightly impaired / 2 Hunched and/or impaired gait / 3 Forward movement only after lift / 4 Any movement after lift / 5 Lateral recumbency with response to tail pinch / 6 No response to tail pinch but still breathing / 7 Death'. Methods restate 4 as 'does not move forward after lifting but has an upright posture', 5 as 'lying on its side and does not move after lift but responds to tail pinch', 6 as 'does not respond to pinch but is breathing'. Supplementary Table 13 (supplement p.18) gives n=4/4 per group for every Fig. 5C/5E comparison and reports ONLY PS-vs-PO Mann-Whitney P values; no PBS group is tabulated for Fig. 5C/5E, so the row's 'vs 0 in PBS-injected controls' comparator is not published at this locus. Fig. 5E/5C panel for ASO4 at 700 ug ICV in mice, 3 h post-dose.",
+   "problem": "Grade 3 stands: a group mean of 6.4 sits at or above scale point 6, which the authors define as 'No response to tail pinch but still breathing' - unresponsiveness, the band the rubric's grade 3 reaches on this scale (7 is death). Minor problems, shared across the whole Fig. 5C/5E block: (a) the value is read off a bar chart and the paper publishes no numeric group means; (b) effect_vs_control asserts 'vs 0 in PBS-injected controls' but Supplementary Table 13 tabulates only PS-vs-PO comparisons for these panels, so the PBS comparator is not sourced at this locus; (c) the grade mapping in the notes ('s>=4 -> 3') is wrong even though this row lands above the true threshold. Note the digitisation is imprecise: with n=4 per group on an integer 0-7 scale the group mean must be a multiple of 0.25, so 6.4 is not an attainable mean (nearest attainable are 6.25 and 6.5). The nearest attainable values are still >=6, so the grade is unaffected, but the printed value is a false-precision artefact of reading a bar chart.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1922",
+   "verdict": "REFUTED",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent ICV acute-inhibition scale, Supplementary Fig. S1B (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 Gait slightly impaired / 2 Hunched and/or impaired gait / 3 Forward movement only after lift / 4 Any movement after lift / 5 Lateral recumbency with response to tail pinch / 6 No response to tail pinch but still breathing / 7 Death'. Methods restate 4 as 'does not move forward after lifting but has an upright posture', 5 as 'lying on its side and does not move after lift but responds to tail pinch', 6 as 'does not respond to pinch but is breathing'. Supplementary Table 13 (supplement p.18) gives n=4/4 per group for every Fig. 5C/5E comparison and reports ONLY PS-vs-PO Mann-Whitney P values; no PBS group is tabulated for Fig. 5C/5E, so the row's 'vs 0 in PBS-injected controls' comparator is not published at this locus. Fig. 5C/5E panel for ASO6 at 100 ug ICV in mice, 3 h post-dose. Paper's central claim, abstract verbatim: 'inhibition-like responses peaked ~3 h post-ASO delivery, reversed within 24 h with no sequelae'.",
+   "problem": "The value verifies as recorded but the grade does not. 4.0 lands at scale point 4, 'Any movement after lift' / 'does not move forward after lifting but has an upright posture' - an animal that is conscious, breathing and responsive to a noxious stimulus. That is not neuronal degeneration, paralysis, moribundity or death, and the row itself records reversibility=reversible. On this scale the rubric's grade-3 band begins at 6 ('No response to tail pinch but still breathing') and ends at 7 (death). The extractor's own note records the mapping it used - 'Grade mapping for this 0-7 ICV scale: 0->0; 0<s<2->1; 2<=s<4->2; s>=4->3' - i.e. a fraction-of-range cutoff, not the scale's text. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1923",
+   "verdict": "REFUTED",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent ICV acute-inhibition scale, Supplementary Fig. S1B (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 Gait slightly impaired / 2 Hunched and/or impaired gait / 3 Forward movement only after lift / 4 Any movement after lift / 5 Lateral recumbency with response to tail pinch / 6 No response to tail pinch but still breathing / 7 Death'. Methods restate 4 as 'does not move forward after lifting but has an upright posture', 5 as 'lying on its side and does not move after lift but responds to tail pinch', 6 as 'does not respond to pinch but is breathing'. Supplementary Table 13 (supplement p.18) gives n=4/4 per group for every Fig. 5C/5E comparison and reports ONLY PS-vs-PO Mann-Whitney P values; no PBS group is tabulated for Fig. 5C/5E, so the row's 'vs 0 in PBS-injected controls' comparator is not published at this locus. Fig. 5C/5E panel for ASO6 at 300 ug ICV in mice, 3 h post-dose. Paper's central claim, abstract verbatim: 'inhibition-like responses peaked ~3 h post-ASO delivery, reversed within 24 h with no sequelae'.",
+   "problem": "The value verifies as recorded but the grade does not. 4.4 lands at scale point 4, 'Any movement after lift' / 'does not move forward after lifting but has an upright posture' - an animal that is conscious, breathing and responsive to a noxious stimulus. That is not neuronal degeneration, paralysis, moribundity or death, and the row itself records reversibility=reversible. On this scale the rubric's grade-3 band begins at 6 ('No response to tail pinch but still breathing') and ends at 7 (death). The extractor's own note records the mapping it used - 'Grade mapping for this 0-7 ICV scale: 0->0; 0<s<2->1; 2<=s<4->2; s>=4->3' - i.e. a fraction-of-range cutoff, not the scale's text. Correct grade 2. The printed value is also false-precision: with n=4 on an integer scale the mean must be a multiple of 0.25, so 4.4 is not attainable and is a bar-chart reading artefact.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1924",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent ICV acute-inhibition scale, Supplementary Fig. S1B (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 Gait slightly impaired / 2 Hunched and/or impaired gait / 3 Forward movement only after lift / 4 Any movement after lift / 5 Lateral recumbency with response to tail pinch / 6 No response to tail pinch but still breathing / 7 Death'. Methods restate 4 as 'does not move forward after lifting but has an upright posture', 5 as 'lying on its side and does not move after lift but responds to tail pinch', 6 as 'does not respond to pinch but is breathing'. Supplementary Table 13 (supplement p.18) gives n=4/4 per group for every Fig. 5C/5E comparison and reports ONLY PS-vs-PO Mann-Whitney P values; no PBS group is tabulated for Fig. 5C/5E, so the row's 'vs 0 in PBS-injected controls' comparator is not published at this locus. Fig. 5E/5C panel for ASO6 at 700 ug ICV in mice, 3 h post-dose.",
+   "problem": "Grade 3 stands: a group mean of 6.2 sits at or above scale point 6, which the authors define as 'No response to tail pinch but still breathing' - unresponsiveness, the band the rubric's grade 3 reaches on this scale (7 is death). Minor problems, shared across the whole Fig. 5C/5E block: (a) the value is read off a bar chart and the paper publishes no numeric group means; (b) effect_vs_control asserts 'vs 0 in PBS-injected controls' but Supplementary Table 13 tabulates only PS-vs-PO comparisons for these panels, so the PBS comparator is not sourced at this locus; (c) the grade mapping in the notes ('s>=4 -> 3') is wrong even though this row lands above the true threshold. Note the digitisation is imprecise: with n=4 per group on an integer 0-7 scale the group mean must be a multiple of 0.25, so 6.2 is not an attainable mean (nearest attainable are 6.25 and 6.5). The nearest attainable values are still >=6, so the grade is unaffected, but the printed value is a false-precision artefact of reading a bar chart.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1928",
+   "verdict": "REFUTED",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent ICV acute-inhibition scale, Supplementary Fig. S1B (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 Gait slightly impaired / 2 Hunched and/or impaired gait / 3 Forward movement only after lift / 4 Any movement after lift / 5 Lateral recumbency with response to tail pinch / 6 No response to tail pinch but still breathing / 7 Death'. Methods restate 4 as 'does not move forward after lifting but has an upright posture', 5 as 'lying on its side and does not move after lift but responds to tail pinch', 6 as 'does not respond to pinch but is breathing'. Supplementary Table 13 (supplement p.18) gives n=4/4 per group for every Fig. 5C/5E comparison and reports ONLY PS-vs-PO Mann-Whitney P values; no PBS group is tabulated for Fig. 5C/5E, so the row's 'vs 0 in PBS-injected controls' comparator is not published at this locus. Fig. 5C/5E panel for ASO6_PO (MOE) at 700 ug ICV in mice, 3 h post-dose. Paper's central claim, abstract verbatim: 'inhibition-like responses peaked ~3 h post-ASO delivery, reversed within 24 h with no sequelae'.",
+   "problem": "The value verifies as recorded but the grade does not. 4.0 lands at scale point 4, 'Any movement after lift' / 'does not move forward after lifting but has an upright posture' - an animal that is conscious, breathing and responsive to a noxious stimulus. That is not neuronal degeneration, paralysis, moribundity or death, and the row itself records reversibility=reversible. On this scale the rubric's grade-3 band begins at 6 ('No response to tail pinch but still breathing') and ends at 7 (death). The extractor's own note records the mapping it used - 'Grade mapping for this 0-7 ICV scale: 0->0; 0<s<2->1; 2<=s<4->2; s>=4->3' - i.e. a fraction-of-range cutoff, not the scale's text. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1931",
+   "verdict": "REFUTED",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent ICV acute-inhibition scale, Supplementary Fig. S1B (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 Gait slightly impaired / 2 Hunched and/or impaired gait / 3 Forward movement only after lift / 4 Any movement after lift / 5 Lateral recumbency with response to tail pinch / 6 No response to tail pinch but still breathing / 7 Death'. Methods restate 4 as 'does not move forward after lifting but has an upright posture', 5 as 'lying on its side and does not move after lift but responds to tail pinch', 6 as 'does not respond to pinch but is breathing'. Supplementary Table 13 (supplement p.18) gives n=4/4 per group for every Fig. 5C/5E comparison and reports ONLY PS-vs-PO Mann-Whitney P values; no PBS group is tabulated for Fig. 5C/5E, so the row's 'vs 0 in PBS-injected controls' comparator is not published at this locus. Fig. 5C/5E panel for ASO7 at 300 ug ICV in mice, 3 h post-dose. Paper's central claim, abstract verbatim: 'inhibition-like responses peaked ~3 h post-ASO delivery, reversed within 24 h with no sequelae'.",
+   "problem": "The value verifies as recorded but the grade does not. 4.9 lands at scale point 4, 'Any movement after lift' / 'does not move forward after lifting but has an upright posture' - an animal that is conscious, breathing and responsive to a noxious stimulus. That is not neuronal degeneration, paralysis, moribundity or death, and the row itself records reversibility=reversible. On this scale the rubric's grade-3 band begins at 6 ('No response to tail pinch but still breathing') and ends at 7 (death). The extractor's own note records the mapping it used - 'Grade mapping for this 0-7 ICV scale: 0->0; 0<s<2->1; 2<=s<4->2; s>=4->3' - i.e. a fraction-of-range cutoff, not the scale's text. Correct grade 2. The printed value is also false-precision: with n=4 on an integer scale the mean must be a multiple of 0.25, so 4.9 is not attainable and is a bar-chart reading artefact.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1932",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent ICV acute-inhibition scale, Supplementary Fig. S1B (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 Gait slightly impaired / 2 Hunched and/or impaired gait / 3 Forward movement only after lift / 4 Any movement after lift / 5 Lateral recumbency with response to tail pinch / 6 No response to tail pinch but still breathing / 7 Death'. Methods restate 4 as 'does not move forward after lifting but has an upright posture', 5 as 'lying on its side and does not move after lift but responds to tail pinch', 6 as 'does not respond to pinch but is breathing'. Supplementary Table 13 (supplement p.18) gives n=4/4 per group for every Fig. 5C/5E comparison and reports ONLY PS-vs-PO Mann-Whitney P values; no PBS group is tabulated for Fig. 5C/5E, so the row's 'vs 0 in PBS-injected controls' comparator is not published at this locus. Fig. 5E/5C panel for ASO7 at 700 ug ICV in mice, 3 h post-dose.",
+   "problem": "Grade 3 stands: a group mean of 6.0 sits at or above scale point 6, which the authors define as 'No response to tail pinch but still breathing' - unresponsiveness, the band the rubric's grade 3 reaches on this scale (7 is death). Minor problems, shared across the whole Fig. 5C/5E block: (a) the value is read off a bar chart and the paper publishes no numeric group means; (b) effect_vs_control asserts 'vs 0 in PBS-injected controls' but Supplementary Table 13 tabulates only PS-vs-PO comparisons for these panels, so the PBS comparator is not sourced at this locus; (c) the grade mapping in the notes ('s>=4 -> 3') is wrong even though this row lands above the true threshold.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1936",
+   "verdict": "REFUTED",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent ICV acute-inhibition scale, Supplementary Fig. S1B (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 Gait slightly impaired / 2 Hunched and/or impaired gait / 3 Forward movement only after lift / 4 Any movement after lift / 5 Lateral recumbency with response to tail pinch / 6 No response to tail pinch but still breathing / 7 Death'. Methods restate 4 as 'does not move forward after lifting but has an upright posture', 5 as 'lying on its side and does not move after lift but responds to tail pinch', 6 as 'does not respond to pinch but is breathing'. Supplementary Table 13 (supplement p.18) gives n=4/4 per group for every Fig. 5C/5E comparison and reports ONLY PS-vs-PO Mann-Whitney P values; no PBS group is tabulated for Fig. 5C/5E, so the row's 'vs 0 in PBS-injected controls' comparator is not published at this locus. Fig. 5C/5E panel for ASO7_PO at 700 ug ICV in mice, 3 h post-dose. Paper's central claim, abstract verbatim: 'inhibition-like responses peaked ~3 h post-ASO delivery, reversed within 24 h with no sequelae'.",
+   "problem": "The value verifies as recorded but the grade does not. 4.0 lands at scale point 4, 'Any movement after lift' / 'does not move forward after lifting but has an upright posture' - an animal that is conscious, breathing and responsive to a noxious stimulus. That is not neuronal degeneration, paralysis, moribundity or death, and the row itself records reversibility=reversible. On this scale the rubric's grade-3 band begins at 6 ('No response to tail pinch but still breathing') and ends at 7 (death). The extractor's own note records the mapping it used - 'Grade mapping for this 0-7 ICV scale: 0->0; 0<s<2->1; 2<=s<4->2; s>=4->3' - i.e. a fraction-of-range cutoff, not the scale's text. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1938",
+   "verdict": "REFUTED",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent ICV acute-inhibition scale, Supplementary Fig. S1B (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 Gait slightly impaired / 2 Hunched and/or impaired gait / 3 Forward movement only after lift / 4 Any movement after lift / 5 Lateral recumbency with response to tail pinch / 6 No response to tail pinch but still breathing / 7 Death'. Methods restate 4 as 'does not move forward after lifting but has an upright posture', 5 as 'lying on its side and does not move after lift but responds to tail pinch', 6 as 'does not respond to pinch but is breathing'. Supplementary Table 13 (supplement p.18) gives n=4/4 per group for every Fig. 5C/5E comparison and reports ONLY PS-vs-PO Mann-Whitney P values; no PBS group is tabulated for Fig. 5C/5E, so the row's 'vs 0 in PBS-injected controls' comparator is not published at this locus. Fig. 5C/5E panel for ASO8 at 100 ug ICV in mice, 3 h post-dose. Paper's central claim, abstract verbatim: 'inhibition-like responses peaked ~3 h post-ASO delivery, reversed within 24 h with no sequelae'.",
+   "problem": "The value verifies as recorded but the grade does not. 4.0 lands at scale point 4, 'Any movement after lift' / 'does not move forward after lifting but has an upright posture' - an animal that is conscious, breathing and responsive to a noxious stimulus. That is not neuronal degeneration, paralysis, moribundity or death, and the row itself records reversibility=reversible. On this scale the rubric's grade-3 band begins at 6 ('No response to tail pinch but still breathing') and ends at 7 (death). The extractor's own note records the mapping it used - 'Grade mapping for this 0-7 ICV scale: 0->0; 0<s<2->1; 2<=s<4->2; s>=4->3' - i.e. a fraction-of-range cutoff, not the scale's text. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1939",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent ICV acute-inhibition scale, Supplementary Fig. S1B (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 Gait slightly impaired / 2 Hunched and/or impaired gait / 3 Forward movement only after lift / 4 Any movement after lift / 5 Lateral recumbency with response to tail pinch / 6 No response to tail pinch but still breathing / 7 Death'. Methods restate 4 as 'does not move forward after lifting but has an upright posture', 5 as 'lying on its side and does not move after lift but responds to tail pinch', 6 as 'does not respond to pinch but is breathing'. Supplementary Table 13 (supplement p.18) gives n=4/4 per group for every Fig. 5C/5E comparison and reports ONLY PS-vs-PO Mann-Whitney P values; no PBS group is tabulated for Fig. 5C/5E, so the row's 'vs 0 in PBS-injected controls' comparator is not published at this locus. Fig. 5E/5C panel for ASO8 at 300 ug ICV in mice, 3 h post-dose.",
+   "problem": "Grade 3 stands: a group mean of 6.0 sits at or above scale point 6, which the authors define as 'No response to tail pinch but still breathing' - unresponsiveness, the band the rubric's grade 3 reaches on this scale (7 is death). Minor problems, shared across the whole Fig. 5C/5E block: (a) the value is read off a bar chart and the paper publishes no numeric group means; (b) effect_vs_control asserts 'vs 0 in PBS-injected controls' but Supplementary Table 13 tabulates only PS-vs-PO comparisons for these panels, so the PBS comparator is not sourced at this locus; (c) the grade mapping in the notes ('s>=4 -> 3') is wrong even though this row lands above the true threshold.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1942",
+   "verdict": "REFUTED",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent ICV acute-inhibition scale, Supplementary Fig. S1B (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 Gait slightly impaired / 2 Hunched and/or impaired gait / 3 Forward movement only after lift / 4 Any movement after lift / 5 Lateral recumbency with response to tail pinch / 6 No response to tail pinch but still breathing / 7 Death'. Methods restate 4 as 'does not move forward after lifting but has an upright posture', 5 as 'lying on its side and does not move after lift but responds to tail pinch', 6 as 'does not respond to pinch but is breathing'. Supplementary Table 13 (supplement p.18) gives n=4/4 per group for every Fig. 5C/5E comparison and reports ONLY PS-vs-PO Mann-Whitney P values; no PBS group is tabulated for Fig. 5C/5E, so the row's 'vs 0 in PBS-injected controls' comparator is not published at this locus. Fig. 5C/5E panel for ASO8_PO at 100 ug ICV in mice, 3 h post-dose. Paper's central claim, abstract verbatim: 'inhibition-like responses peaked ~3 h post-ASO delivery, reversed within 24 h with no sequelae'.",
+   "problem": "The value verifies as recorded but the grade does not. 4.0 lands at scale point 4, 'Any movement after lift' / 'does not move forward after lifting but has an upright posture' - an animal that is conscious, breathing and responsive to a noxious stimulus. That is not neuronal degeneration, paralysis, moribundity or death, and the row itself records reversibility=reversible. On this scale the rubric's grade-3 band begins at 6 ('No response to tail pinch but still breathing') and ends at 7 (death). The extractor's own note records the mapping it used - 'Grade mapping for this 0-7 ICV scale: 0->0; 0<s<2->1; 2<=s<4->2; s>=4->3' - i.e. a fraction-of-range cutoff, not the scale's text. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1943",
+   "verdict": "REFUTED",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent ICV acute-inhibition scale, Supplementary Fig. S1B (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 Gait slightly impaired / 2 Hunched and/or impaired gait / 3 Forward movement only after lift / 4 Any movement after lift / 5 Lateral recumbency with response to tail pinch / 6 No response to tail pinch but still breathing / 7 Death'. Methods restate 4 as 'does not move forward after lifting but has an upright posture', 5 as 'lying on its side and does not move after lift but responds to tail pinch', 6 as 'does not respond to pinch but is breathing'. Supplementary Table 13 (supplement p.18) gives n=4/4 per group for every Fig. 5C/5E comparison and reports ONLY PS-vs-PO Mann-Whitney P values; no PBS group is tabulated for Fig. 5C/5E, so the row's 'vs 0 in PBS-injected controls' comparator is not published at this locus. Fig. 5C/5E panel for ASO8_PO at 300 ug ICV in mice, 3 h post-dose. Paper's central claim, abstract verbatim: 'inhibition-like responses peaked ~3 h post-ASO delivery, reversed within 24 h with no sequelae'.",
+   "problem": "The value verifies as recorded but the grade does not. 5.0 lands at scale point 5, 'Lateral recumbency with response to tail pinch' - an animal that is conscious, breathing and responsive to a noxious stimulus. That is not neuronal degeneration, paralysis, moribundity or death, and the row itself records reversibility=reversible. On this scale the rubric's grade-3 band begins at 6 ('No response to tail pinch but still breathing') and ends at 7 (death). The extractor's own note records the mapping it used - 'Grade mapping for this 0-7 ICV scale: 0->0; 0<s<2->1; 2<=s<4->2; s>=4->3' - i.e. a fraction-of-range cutoff, not the scale's text. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1944",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Local copies sources/cns/PMC12865454_fulltext.xml (NAR, doi:10.1093/nar/gkaf1333) and sources/cns/orourke2026_NAR_acute_inhibition_supplement.pdf. O'Rourke rodent ICV acute-inhibition scale, Supplementary Fig. S1B (supplement p.3) verbatim: '0 Bright, alert, responsive / 1 Gait slightly impaired / 2 Hunched and/or impaired gait / 3 Forward movement only after lift / 4 Any movement after lift / 5 Lateral recumbency with response to tail pinch / 6 No response to tail pinch but still breathing / 7 Death'. Methods restate 4 as 'does not move forward after lifting but has an upright posture', 5 as 'lying on its side and does not move after lift but responds to tail pinch', 6 as 'does not respond to pinch but is breathing'. Supplementary Table 13 (supplement p.18) gives n=4/4 per group for every Fig. 5C/5E comparison and reports ONLY PS-vs-PO Mann-Whitney P values; no PBS group is tabulated for Fig. 5C/5E, so the row's 'vs 0 in PBS-injected controls' comparator is not published at this locus. Fig. 5E/5C panel for ASO8_PO at 700 ug ICV in mice, 3 h post-dose.",
+   "problem": "Grade 3 stands: a group mean of 6.0 sits at or above scale point 6, which the authors define as 'No response to tail pinch but still breathing' - unresponsiveness, the band the rubric's grade 3 reaches on this scale (7 is death). Minor problems, shared across the whole Fig. 5C/5E block: (a) the value is read off a bar chart and the paper publishes no numeric group means; (b) effect_vs_control asserts 'vs 0 in PBS-injected controls' but Supplementary Table 13 tabulates only PS-vs-PO comparisons for these panels, so the PBS comparator is not sourced at this locus; (c) the grade mapping in the notes ('s>=4 -> 3') is wrong even though this row lands above the true threshold.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1957",
+   "verdict": "REFUTED",
+   "checked": "Local copies sources/cns/PMC12867516_fulltext.xml (NAR, doi:10.1093/nar/gkag057, CC BY-NC) and sources/cns/bravohernandez2026_NAR_acute_activation_supplement.pdf. Table 1, rat acute neuronal activation (aA) scale, verbatim: '0 No remarkable findings / 1 Hunched in pain, shivering, spontaneous hindlimb twitches ... / 2 Hunched and standing on toes ... mild vocalizations ... / 3 Standing up in visible distress, intense hopping and mild vocalizations ... / 4 Hyperreactivity to stimulus ... defensive behavior and mild vocalizations ... / 5 Severe vocalizations (high-pitched, long, unmodulated vocal emissions) / 6 Any type of tremors or seizure / 7 Death'. Abstract verbatim: 'we characterize a subset of these changes peaking 15 min after ON dosing and resolving after 120 min'. Fig. 1B legend: 'Time-course of acute neuronal activation response (body weight = 280 +/- 7 g, n = 6) following IT administration of siRNA A at doses of 0.03, 0.1, 0.3, 1, and 3 mg'. Results: 'Notably, at higher doses, siRNA induced more severe acute neuronal activation than ASOs, including prolonged and fatal seizures.' I searched the article and the supplement for a mortality count in the siRNA A 3 mg group and there is none - Supplementary Tables 4-6 give n, body weight and P values only.",
+   "problem": "5.3 sits between the scale's 'severe vocalizations' (5) and 'tremors or seizure' (6), below death (7). The 'prolonged and fatal seizures' sentence is a generic higher-dose statement about siRNAs with no death count attached to this group or dose, so it cannot carry the grade. The response peaks at ~15 min and resolves by ~120 min. That is a clinically significant but fully resolving event = grade 2. Secondary: the row's notes mis-state the scale as '7 = requires euthanasia'; 7 is Death on the rat scale (euthanasia is point 7 of the separate NHP scale, Table 3).",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1967",
+   "verdict": "REFUTED",
+   "checked": "Local copies sources/cns/PMC12867516_fulltext.xml (NAR, doi:10.1093/nar/gkag057, CC BY-NC) and sources/cns/bravohernandez2026_NAR_acute_activation_supplement.pdf. Table 1, rat acute neuronal activation (aA) scale, verbatim: '0 No remarkable findings / 1 Hunched in pain, shivering, spontaneous hindlimb twitches ... / 2 Hunched and standing on toes ... mild vocalizations ... / 3 Standing up in visible distress, intense hopping and mild vocalizations ... / 4 Hyperreactivity to stimulus ... defensive behavior and mild vocalizations ... / 5 Severe vocalizations (high-pitched, long, unmodulated vocal emissions) / 6 Any type of tremors or seizure / 7 Death'. Abstract verbatim: 'we characterize a subset of these changes peaking 15 min after ON dosing and resolving after 120 min'. Fig. 1F legend confirms 'a single IT administration of 16 ASOs, same chemistry (5-10-5 MOE gapmer, mixed backbone [PO/PS], and different sequences) in rats with body weight 294 +/- 13 g (n = 4)'; Results give the range only: 'The acute neuronal activation response ranged from 2 to 6, with no clear sequence dependence'. No per-ASO numeric mean is published.",
+   "problem": "A score of 5.0 for ASO K is the scale's 'Severe vocalizations (high-pitched, long, unmodulated vocal emissions)' - severe pain vocalisation, not seizure (6) and not death (7) - and it resolves by ~120 min with no apparent sequelae. The extractor's mapping 's>=5 -> 3 (author-defined severe)' equates the authors' word 'severe' with the rubric's grade 3; the rubric's grade 3 names degeneration, paralysis, hydrocephalus needing intervention, death or dose-limiting toxicity, none of which this is. The value is also a bar-chart read. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1970",
+   "verdict": "REFUTED",
+   "checked": "Local copies sources/cns/PMC12867516_fulltext.xml (NAR, doi:10.1093/nar/gkag057, CC BY-NC) and sources/cns/bravohernandez2026_NAR_acute_activation_supplement.pdf. Table 1, rat acute neuronal activation (aA) scale, verbatim: '0 No remarkable findings / 1 Hunched in pain, shivering, spontaneous hindlimb twitches ... / 2 Hunched and standing on toes ... mild vocalizations ... / 3 Standing up in visible distress, intense hopping and mild vocalizations ... / 4 Hyperreactivity to stimulus ... defensive behavior and mild vocalizations ... / 5 Severe vocalizations (high-pitched, long, unmodulated vocal emissions) / 6 Any type of tremors or seizure / 7 Death'. Abstract verbatim: 'we characterize a subset of these changes peaking 15 min after ON dosing and resolving after 120 min'. Fig. 1F legend confirms 'a single IT administration of 16 ASOs, same chemistry (5-10-5 MOE gapmer, mixed backbone [PO/PS], and different sequences) in rats with body weight 294 +/- 13 g (n = 4)'; Results give the range only: 'The acute neuronal activation response ranged from 2 to 6, with no clear sequence dependence'. No per-ASO numeric mean is published.",
+   "problem": "A score of 5.0 for ASO N is the scale's 'Severe vocalizations (high-pitched, long, unmodulated vocal emissions)' - severe pain vocalisation, not seizure (6) and not death (7) - and it resolves by ~120 min with no apparent sequelae. The extractor's mapping 's>=5 -> 3 (author-defined severe)' equates the authors' word 'severe' with the rubric's grade 3; the rubric's grade 3 names degeneration, paralysis, hydrocephalus needing intervention, death or dose-limiting toxicity, none of which this is. The value is also a bar-chart read. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1972",
+   "verdict": "REFUTED",
+   "checked": "Local copies sources/cns/PMC12867516_fulltext.xml (NAR, doi:10.1093/nar/gkag057, CC BY-NC) and sources/cns/bravohernandez2026_NAR_acute_activation_supplement.pdf. Table 1, rat acute neuronal activation (aA) scale, verbatim: '0 No remarkable findings / 1 Hunched in pain, shivering, spontaneous hindlimb twitches ... / 2 Hunched and standing on toes ... mild vocalizations ... / 3 Standing up in visible distress, intense hopping and mild vocalizations ... / 4 Hyperreactivity to stimulus ... defensive behavior and mild vocalizations ... / 5 Severe vocalizations (high-pitched, long, unmodulated vocal emissions) / 6 Any type of tremors or seizure / 7 Death'. Abstract verbatim: 'we characterize a subset of these changes peaking 15 min after ON dosing and resolving after 120 min'. Fig. 1F legend confirms 'a single IT administration of 16 ASOs, same chemistry (5-10-5 MOE gapmer, mixed backbone [PO/PS], and different sequences) in rats with body weight 294 +/- 13 g (n = 4)'; Results give the range only: 'The acute neuronal activation response ranged from 2 to 6, with no clear sequence dependence'. No per-ASO numeric mean is published.",
+   "problem": "A score of 5.0 for ASO P is the scale's 'Severe vocalizations (high-pitched, long, unmodulated vocal emissions)' - severe pain vocalisation, not seizure (6) and not death (7) - and it resolves by ~120 min with no apparent sequelae. The extractor's mapping 's>=5 -> 3 (author-defined severe)' equates the authors' word 'severe' with the rubric's grade 3; the rubric's grade 3 names degeneration, paralysis, hydrocephalus needing intervention, death or dose-limiting toxicity, none of which this is. The value is also a bar-chart read. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1982",
+   "verdict": "REFUTED",
+   "checked": "Local copies sources/cns/PMC12867516_fulltext.xml (NAR, doi:10.1093/nar/gkag057, CC BY-NC) and sources/cns/bravohernandez2026_NAR_acute_activation_supplement.pdf. Table 1, rat acute neuronal activation (aA) scale, verbatim: '0 No remarkable findings / 1 Hunched in pain, shivering, spontaneous hindlimb twitches ... / 2 Hunched and standing on toes ... mild vocalizations ... / 3 Standing up in visible distress, intense hopping and mild vocalizations ... / 4 Hyperreactivity to stimulus ... defensive behavior and mild vocalizations ... / 5 Severe vocalizations (high-pitched, long, unmodulated vocal emissions) / 6 Any type of tremors or seizure / 7 Death'. Abstract verbatim: 'we characterize a subset of these changes peaking 15 min after ON dosing and resolving after 120 min'. Table 3, NHP aA scale, verbatim: '0 No remarkable findings / 1 Tremor, twitch, salivation, self biting, or urinary incontinence / 2 Combination of two signs of the score one, or nystagmus / 3 Tonic, or clonic convulsion / 4 Tonic-clonic convulsion / 5 Seizure / 6 Severe seizures / 7 Euthanasia required for human[e] reasons'. Results verbatim at the cited locus: 'the most common observation is tremors, and the incidence of convulsions is rare ... the incidence and severity of acute neuronal activation responses in NHP increases in a dose-dependent fashion, with acute neuronal activation being observed frequently at doses above 50 mg ... The onset ... is typically immediately after dosing or during recovery from anesthesia with full resolution after ~120 min with no apparent sequelae ... If severe enough, this acute neuronal activation response can be a dose-limiting finding in NHP.'",
+   "problem": "readout_value is TBD and the only grade-3 hook is the conditional, class-level sentence 'If severe enough, this ... can be a dose-limiting finding' - a hypothetical about a subset, not a finding at 50 mg. What the locus actually reports at this exposure is predominantly tremor, rare convulsions, and full resolution by ~120 min with no sequelae. This is also a class-level row with no identified oligonucleotide. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1985",
+   "verdict": "REFUTED",
+   "checked": "Local copies sources/cns/PMC12867516_fulltext.xml (NAR, doi:10.1093/nar/gkag057, CC BY-NC) and sources/cns/bravohernandez2026_NAR_acute_activation_supplement.pdf. Table 1, rat acute neuronal activation (aA) scale, verbatim: '0 No remarkable findings / 1 Hunched in pain, shivering, spontaneous hindlimb twitches ... / 2 Hunched and standing on toes ... mild vocalizations ... / 3 Standing up in visible distress, intense hopping and mild vocalizations ... / 4 Hyperreactivity to stimulus ... defensive behavior and mild vocalizations ... / 5 Severe vocalizations (high-pitched, long, unmodulated vocal emissions) / 6 Any type of tremors or seizure / 7 Death'. Abstract verbatim: 'we characterize a subset of these changes peaking 15 min after ON dosing and resolving after 120 min'. Supplementary Figure S1 legend verbatim: '(A) Time-course of the acute neuronal activation (aA) response in male rats (body weight = 286 +/- 9 g, n=4-6) after IT administration of siRNA B at doses of 0.03, 0.1, 0.3, 1 mg in 30 ul or 30 ul of artificial cerebrospinal fluid (Vehicle) ... (B) Acute neuronal activation response after 0-15 min of a single IT administration of 1.5 [mg], or 3 mg of siRNA B or PBS (Vehicle) with body weight = 384 +/- 32 g (n=4).' Results: 'The severity of the response was comparable between sequences within the same oligonucleotide class (i.e. ASO A versus ASO B; siRNA A versus siRNA B).' No death count for siRNA B is reported.",
+   "problem": "readout_value is TBD and no qualifying outcome is stated in words for siRNA B: the grade rests on the generic 'siRNAs produce more severe acute activation than ASOs, including prolonged and fatal seizures at higher doses' sentence, which names no dose, group or count. The response resolves by ~120 min. Correct grade 2. Separate DATA-INTEGRITY defect: data/cns_measurements.csv currently holds the literal string '3.75 (or keep TBD)' in this row's readout_value column - a sentence written into a numeric cell. It must be a bare value or TBD.",
+   "correction": {
+    "neurotox_grade": "2",
+    "readout_value": "TBD"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1992",
+   "verdict": "CONFIRMED_MINOR",
+   "checked": "Abstract fetched from PubMed via NCBI E-utilities (PMID 32794413, Int J Toxicol 2020;39(6):505-509, doi:10.1177/1091581820948454). The article body is paywalled and has no PMC record; only the abstract is reachable, which is what source_table honestly declares. Abstract preamble verbatim: 'we report on neurological signs that have been observed in 28 IT studies conducted in 1,016 cynomolgus monkeys. Neurological signs were classified into 5 groups'. Group 2 verbatim: '(2) Test-article-related adverse muscle tremor or muscle spasticity occurring during the injection procedure or immediately thereafter. In one-third of animals this finding responded to treatment with diazepam, in two-third it required euthanasia.'",
+   "problem": "Grade 3 stands: the source states euthanasia in its own words, which is the permitted basis for a grade 3 on a TBD-valued row. Minor problems that are provenance, not value: this is a class-level row across 28 studies and 1,016 animals with no identifiable oligonucleotide, dose, incidence or denominator; and the grade rests on an abstract, with no table or figure behind it. Recommend an explicit class-level flag so these rows can be excluded from a per-oligo training grade distribution.",
+   "correction": {},
+   "severity": "minor"
+  },
+  {
+   "measurement_id": "CMS1993",
+   "verdict": "REFUTED",
+   "checked": "Abstract fetched from PubMed via NCBI E-utilities (PMID 32794413, Int J Toxicol 2020;39(6):505-509, doi:10.1177/1091581820948454). The article body is paywalled and has no PMC record; only the abstract is reachable, which is what source_table honestly declares. Abstract preamble verbatim: 'we report on neurological signs that have been observed in 28 IT studies conducted in 1,016 cynomolgus monkeys. Neurological signs were classified into 5 groups'. Group 3 verbatim: '(3) Neurological findings occurring between 30 minutes and 4 hours after dosing were characterized by any combination of ataxia, paresis, nystagmus, urinary incontinence, or muscle tremor. Those conditions either spontaneously resolved or they slowly worsened, eventually resulting in a poor general condition.'",
+   "problem": "The row transcribes group 3 accurately but grades it 3. Group 3 names paresis, not paralysis; no death, euthanasia, unresponsiveness or degeneration is stated for this group, and one of its two stated outcomes is spontaneous resolution. Note that the abstract reserves euthanasia for groups 2 and 5 and spinal cord necrosis for group 4 - group 3 is deliberately the milder band. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "major"
+  },
+  {
+   "measurement_id": "CMS1994",
+   "verdict": "CONFIRMED",
+   "checked": "Abstract fetched from PubMed via NCBI E-utilities (PMID 32794413, Int J Toxicol 2020;39(6):505-509, doi:10.1177/1091581820948454). The article body is paywalled and has no PMC record; only the abstract is reachable, which is what source_table honestly declares. Abstract preamble verbatim: 'we report on neurological signs that have been observed in 28 IT studies conducted in 1,016 cynomolgus monkeys. Neurological signs were classified into 5 groups'. Group 4 verbatim: '(4) Neurological findings due to spinal cord injury were characterized by rapidly progressing paralysis of hind limbs. Magnetic resonance imaging revealed a focal hyperintense lesion, indicative of spinal cord necrosis.'",
+   "problem": "None. Frank hindlimb paralysis plus imaging-documented spinal cord necrosis are two independent grade-3 limbs stated in the source's own words. readout_name=spinal_cord_degeneration is a fair label for 'spinal cord necrosis'.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS1995",
+   "verdict": "CONFIRMED",
+   "checked": "Abstract fetched from PubMed via NCBI E-utilities (PMID 32794413, Int J Toxicol 2020;39(6):505-509, doi:10.1177/1091581820948454). The article body is paywalled and has no PMC record; only the abstract is reachable, which is what source_table honestly declares. Abstract preamble verbatim: 'we report on neurological signs that have been observed in 28 IT studies conducted in 1,016 cynomolgus monkeys. Neurological signs were classified into 5 groups'. Group 5 verbatim: '(5) Test-article-related adverse hind limb paresis or paralysis that occurred between 2 and 18 days after dosing. Those findings were rare and resulted in a poor general condition requiring euthanasia.'",
+   "problem": "None. Paralysis plus euthanasia, stated verbatim. Grade 3 correct.",
+   "correction": {},
+   "severity": "none"
+  },
+  {
+   "measurement_id": "CMS2052",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml. Fig. 3 legend: 'BE(2)-M17 cells were transfected with 20 nM ASO2, with or without 2'-OMe modification at gap position 2[;] Cell number (A), LDH release in medium (B) ... are shown as the mean percentage relative to vehicle (n = 4 biological replicates per group).' Fig. 5B legend: 'BE(2)-M17 cells were transfected with 20 nM ASO2 with or without replacement of PS bond ... at gap positions 1, 3, or 9 with a PO bond (PS-1(-), PS-3(-), or PS-9(-)). Cell number and LDH release 72 h post-transfection are shown as the mean percentage relative to vehicle (n = 4 biological replicates per group).' Locus, cell line, concentration (20 nM), duration (72 h) and normalisation all match for ASO2 2'-OMe gap position 2 at Fig 3A.",
+   "problem": "CRITICAL grade inflation. An in vitro viability/LDH readout in a neuroblastoma line, with readout_value=TBD, cannot reach the rubric's grade 3 (neuronal degeneration/loss, spinal-cord or DRG degeneration, paralysis, hydrocephalus requiring intervention, moribundity/death, or dose-limiting/programme-halting neurotoxicity). Worse, effect_vs_control is expressed against the PARENT ASO2 ('worsened cytotoxicity vs parent ASO2' / 'higher LDH than parent ASO2') while the figure itself normalises to VEHICLE - so the grade was set from the weaker comparator, which inverts the severity ordering relative to sibling rows from the same figures. The row's own note states the reason for the grade: 'Graded 3 because the matched in vivo arm was programme-limiting' - i.e. the severity of a different experiment has been imported into an in vitro row. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "critical"
+  },
+  {
+   "measurement_id": "CMS2057",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml. Fig. 3 legend: 'BE(2)-M17 cells were transfected with 20 nM ASO2, with or without 2'-OMe modification at gap position 2[;] Cell number (A), LDH release in medium (B) ... are shown as the mean percentage relative to vehicle (n = 4 biological replicates per group).' Fig. 5B legend: 'BE(2)-M17 cells were transfected with 20 nM ASO2 with or without replacement of PS bond ... at gap positions 1, 3, or 9 with a PO bond (PS-1(-), PS-3(-), or PS-9(-)). Cell number and LDH release 72 h post-transfection are shown as the mean percentage relative to vehicle (n = 4 biological replicates per group).' Locus, cell line, concentration (20 nM), duration (72 h) and normalisation all match for ASO2 PS-1(-) at Fig 5B.",
+   "problem": "CRITICAL grade inflation. An in vitro viability/LDH readout in a neuroblastoma line, with readout_value=TBD, cannot reach the rubric's grade 3 (neuronal degeneration/loss, spinal-cord or DRG degeneration, paralysis, hydrocephalus requiring intervention, moribundity/death, or dose-limiting/programme-halting neurotoxicity). Worse, effect_vs_control is expressed against the PARENT ASO2 ('worsened cytotoxicity vs parent ASO2' / 'higher LDH than parent ASO2') while the figure itself normalises to VEHICLE - so the grade was set from the weaker comparator, which inverts the severity ordering relative to sibling rows from the same figures. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "critical"
+  },
+  {
+   "measurement_id": "CMS2058",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml. Fig. 3 legend: 'BE(2)-M17 cells were transfected with 20 nM ASO2, with or without 2'-OMe modification at gap position 2[;] Cell number (A), LDH release in medium (B) ... are shown as the mean percentage relative to vehicle (n = 4 biological replicates per group).' Fig. 5B legend: 'BE(2)-M17 cells were transfected with 20 nM ASO2 with or without replacement of PS bond ... at gap positions 1, 3, or 9 with a PO bond (PS-1(-), PS-3(-), or PS-9(-)). Cell number and LDH release 72 h post-transfection are shown as the mean percentage relative to vehicle (n = 4 biological replicates per group).' Locus, cell line, concentration (20 nM), duration (72 h) and normalisation all match for ASO2 PS-3(-) at Fig 5B.",
+   "problem": "CRITICAL grade inflation. An in vitro viability/LDH readout in a neuroblastoma line, with readout_value=TBD, cannot reach the rubric's grade 3 (neuronal degeneration/loss, spinal-cord or DRG degeneration, paralysis, hydrocephalus requiring intervention, moribundity/death, or dose-limiting/programme-halting neurotoxicity). Worse, effect_vs_control is expressed against the PARENT ASO2 ('worsened cytotoxicity vs parent ASO2' / 'higher LDH than parent ASO2') while the figure itself normalises to VEHICLE - so the grade was set from the weaker comparator, which inverts the severity ordering relative to sibling rows from the same figures. This row is additionally inverted against the paper's own in vivo result: PS-3(-) had the LOWEST mortality of the three PO variants (1/5) and 'Surviving mice injected with ASO2 PS-3(-) exhibited reduced late-onset neurotoxicity', yet it is graded above variants that killed 2/5, 3/5 and 4/4. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "critical"
+  },
+  {
+   "measurement_id": "CMS2060",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml. Fig. 3 legend: 'BE(2)-M17 cells were transfected with 20 nM ASO2, with or without 2'-OMe modification at gap position 2[;] Cell number (A), LDH release in medium (B) ... are shown as the mean percentage relative to vehicle (n = 4 biological replicates per group).' Fig. 5B legend: 'BE(2)-M17 cells were transfected with 20 nM ASO2 with or without replacement of PS bond ... at gap positions 1, 3, or 9 with a PO bond (PS-1(-), PS-3(-), or PS-9(-)). Cell number and LDH release 72 h post-transfection are shown as the mean percentage relative to vehicle (n = 4 biological replicates per group).' Locus, cell line, concentration (20 nM), duration (72 h) and normalisation all match for ASO2 PS-1(-) at Fig 5B.",
+   "problem": "CRITICAL grade inflation. An in vitro viability/LDH readout in a neuroblastoma line, with readout_value=TBD, cannot reach the rubric's grade 3 (neuronal degeneration/loss, spinal-cord or DRG degeneration, paralysis, hydrocephalus requiring intervention, moribundity/death, or dose-limiting/programme-halting neurotoxicity). Worse, effect_vs_control is expressed against the PARENT ASO2 ('worsened cytotoxicity vs parent ASO2' / 'higher LDH than parent ASO2') while the figure itself normalises to VEHICLE - so the grade was set from the weaker comparator, which inverts the severity ordering relative to sibling rows from the same figures. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "critical"
+  },
+  {
+   "measurement_id": "CMS2061",
+   "verdict": "REFUTED",
+   "checked": "Local copy sources/cns/PMC12744863_fulltext.xml. Fig. 3 legend: 'BE(2)-M17 cells were transfected with 20 nM ASO2, with or without 2'-OMe modification at gap position 2[;] Cell number (A), LDH release in medium (B) ... are shown as the mean percentage relative to vehicle (n = 4 biological replicates per group).' Fig. 5B legend: 'BE(2)-M17 cells were transfected with 20 nM ASO2 with or without replacement of PS bond ... at gap positions 1, 3, or 9 with a PO bond (PS-1(-), PS-3(-), or PS-9(-)). Cell number and LDH release 72 h post-transfection are shown as the mean percentage relative to vehicle (n = 4 biological replicates per group).' Locus, cell line, concentration (20 nM), duration (72 h) and normalisation all match for ASO2 PS-3(-) at Fig 5B.",
+   "problem": "CRITICAL grade inflation. An in vitro viability/LDH readout in a neuroblastoma line, with readout_value=TBD, cannot reach the rubric's grade 3 (neuronal degeneration/loss, spinal-cord or DRG degeneration, paralysis, hydrocephalus requiring intervention, moribundity/death, or dose-limiting/programme-halting neurotoxicity). Worse, effect_vs_control is expressed against the PARENT ASO2 ('worsened cytotoxicity vs parent ASO2' / 'higher LDH than parent ASO2') while the figure itself normalises to VEHICLE - so the grade was set from the weaker comparator, which inverts the severity ordering relative to sibling rows from the same figures. This row is additionally inverted against the paper's own in vivo result: PS-3(-) had the LOWEST mortality of the three PO variants (1/5) and 'Surviving mice injected with ASO2 PS-3(-) exhibited reduced late-onset neurotoxicity', yet it is graded above variants that killed 2/5, 3/5 and 4/4. Correct grade 2.",
+   "correction": {
+    "neurotox_grade": "2"
+   },
+   "severity": "critical"
+  }
+ ],
+ "summary": "76 grade-3 rows re-graded against the primary sources. Everything was read from a fetched document: local PMC JATS for O'Rourke 2026 (PMC12865454), Bravo-Hernandez 2026 (PMC12867516), Kuroda 2025 (PMC12744863), Hagedorn 2022 (PMC9221153), Moazami 2024 (PMC11638874) and the KCNT1 Nature Medicine report (PMC13099374); the O'Rourke and Bravo-Hernandez supplement PDFs; the Hagedorn 148-ASO supplementary xlsx; the Korte 2020 abstract via NCBI E-utilities; the TEGSEDI SPL via DailyMed; the Qalsody and Spinraza SmPCs and the local Qalsody EPAR; the MHRA Drug Safety Update of 25 September 2018 via gov.uk; and PMC copies of Lovett 2025, the BioDrugs HD review and the N=1 Collaborative review. VERDICTS: 26 CONFIRMED, 15 CONFIRMED_MINOR, 33 REFUTED, 2 UNVERIFIABLE. SEVERITY: 25 none, 15 minor, 31 major, 5 critical. 33 rows must be downgraded from 3 to 2. Not one fabricated number was found - every value I could reach verified, including all 11 Hagedorn tolerability scores against the supplementary xlsx by sequence, all five Kuroda mortality fractions, the Moazami death score of 75, the Korte abstract's five sign-groups word for word, 1/161 for inotersen stroke, 5 cases / 1,437 patients / 439 patient-years for nusinersen hydrocephalus, and the entire KCNT1 two-patient narrative. The failures are grading failures, not extraction failures. DOWNGRADES (all to grade 2): O'Rourke ICV rows below the unresponsiveness band - CMS1890, CMS1891, CMS1907, CMS1922, CMS1923, CMS1928, CMS1931, CMS1936, CMS1938, CMS1942, CMS1943 - plus the TBD-valued 300 ug IT row CMS1872; Kuroda functional rows with no qualifying outcome - CMS1644, CMS1645, CMS1650, CMS1654, CMS1656, CMS1671; the five Kuroda in vitro rows graded against the parent compound - CMS2052, CMS2057, CMS2058, CMS2060, CMS2061 (critical); the two non-lethal Moazami EvADINT rows CMS1676 and CMS1682; all six Bravo-Hernandez rows CMS1957, CMS1967, CMS1970, CMS1972, CMS1982, CMS1985; Korte sign-group 3, CMS1993; and the tofersen myelitis row CMS1552. ONE ROW MUST BE RESTORED UPWARD: CMS1666 (Kuroda, 4/4 mice dead or killed for severe toxicity) is correct at grade 3 in the batch but currently sits at grade 2 in data/cns_measurements.csv - see systematic issue 7.",
+ "systematic_issues": "1. THE DOMINANT ERROR REPEATS, AND ITS FINGERPRINT IS AN EXPLICIT NUMERIC MAPPING IN THE NOTES. 23 of the 33 downgrades come from acute behavioural scales whose cutoff was set at a fraction of the numeric range instead of at the scale's own text. The extractor wrote the rule into the rows, which makes it greppable: 'Grade mapping for this 0-7 ICV scale: 0->0; 0<s<2->1; 2<=s<4->2; s>=4->3' (O'Rourke ICV), 's>=3->3 (paresis/paralysis)' (O'Rourke IT) and 's>=5->3 (author-defined severe)' (Bravo-Hernandez). Anchored to the published scale text the correct thresholds are: O'Rourke rodent ICV - grade 3 begins at 6, 'No response to tail pinch but still breathing' (7 = Death); 4 is 'Any movement after lift' and 5 is 'Lateral recumbency with response to tail pinch', both of which describe a conscious, pinch-responsive, fully recovering mouse. O'Rourke rodent IT - grade 3 begins at 4, which the authors define in words as 'Hind paws don't move - full hindlimb paralysis' (the paper's own text: 'By 3 h, peak scores of 4 were reached (full tail, hindlimb, and hind paw paralysis)'), NOT at 3 'Hind limbs don't support weight, but can still move'. Bravo-Hernandez rat aA - 5 is 'Severe vocalizations', 6 is 'Any type of tremors or seizure', 7 is 'Death'; the NHP scale's 7 is 'Euthanasia required', and several rows wrongly attribute that wording to the rat scale. Only two scales in this batch survive intact, and both survive because their top band is DEFINED as death or euthanasia: Hagedorn, where 20 is 'severe signs in all categories, including convulsions resulting in euthanasia' (11 rows, all confirmed), and Moazami EvADINT, where 75 is the score automatically assigned to a mouse that died. The rule to propagate to the ~145 unchecked grade-3 rows: grade 3 only where the recorded value denotes death, euthanasia, unresponsiveness/moribundity or frank paralysis in the SOURCE'S wording, and grep notes for 'Grade mapping for' to find the rest.\n\n2. REVERSIBILITY IS RECORDED AND THEN IGNORED. Every downgraded acute row already carries reversibility=reversible and quotes the paper saying so - O'Rourke: 'reversed within 24 h with no sequelae' and 'By 16-24 h and for the next 2 weeks, all animals scored a 0'; Bravo-Hernandez: 'peaking 15 min after ON dosing and resolving after 120 min' with 'no apparent sequelae'; Moazami: 'Even severely affected mice, unless they died, recovered fully by 24 h'. The rubric's grade 1 explicitly covers 'transient acute behavioural signs resolving within hours-days'. A row whose own reversibility field says reversible and whose value is below the scale's death/unresponsiveness band is a downgrade candidate on sight - no re-fetch needed to triage them.\n\n3. GRADE 3 ON readout_value = TBD. 16 rows in this batch carry TBD and a grade inferred from prose. The test that separates them is whether the SOURCE states a qualifying outcome in words AT THE CITED LOCUS. Four pass and keep grade 3: CMS1874 (O'Rourke 1000 ug IT, 'both posterior and anterior regions were impacted' with the heat map legend reading 'paresis/paralysis'), CMS1653 (Kuroda rat IT, 'revealed increased scores, including severe paraplegia'), CMS1992 (Korte group 2, 'in two-third it required euthanasia') and CMS1232 (Spinraza SmPC, 'Some patients were implanted with a ventriculo-peritoneal shunt'). The rest fail and were downgraded. Note the two failure shapes: a conditional class-level sentence ('If severe enough, this ... can be a dose-limiting finding in NHP' - CMS1982) and a generic higher-dose sentence with no group attached ('including prolonged and fatal seizures' - CMS1957, CMS1985).\n\n4. THE IN VITRO PARENT-COMPARATOR INVERSION IS STILL LIVE, AND IT IS NOW FIVE ROWS. CMS2052, CMS2057, CMS2058, CMS2060 and CMS2061 are BE(2)-M17 viability/LDH rows at 20 nM, 72 h, all with readout_value=TBD, all graded 3, and all with effect_vs_control phrased against the PARENT ASO2 - while the figures they cite normalise to vehicle ('shown as the mean percentage relative to vehicle'). Two of them are PS-3(-), the variant that in the SAME paper had the lowest in vivo mortality of the three PO variants (1/5) and 'exhibited reduced late-onset neurotoxicity'; they were graded above variants that killed 2/5, 3/5 and 4/4. CMS2052 states its reason outright - 'Graded 3 because the matched in vivo arm was programme-limiting' - importing another experiment's outcome into an in vitro row. Sweep the whole in vitro lane for effect_vs_control containing 'vs parent', 'than parent' or 'worsened ... vs': no in vitro cytotoxicity row should carry grade 3 at all under this rubric.\n\n5. HISTOPATHOLOGY THAT CONTRADICTS THE GRADE - KURODA. The paper twice states the opposite of degeneration: 'Histopathological analysis of the lumbar cord, cerebellum, and hippocampus revealed no neuronal cell death or inflammation for either ASO, indicating that severe neurodegeneration or gliosis cannot explain in vivo late-onset neurological dysfunction by ASO2', and 'Our histopathological analysis showed no neuronal cell death in CNS tissues of rats exhibiting lethal toxicity in neurobehavioral tests'. Both facts belong in the dataset. The consequence for grading is narrow but firm: the mortality rows keep grade 3 because death is death, but no Kuroda row may be graded 3 on a degeneration reading, and the functional rows (tolerability score, open-field speed, bladder volume) have no grade-3 limb left.\n\n6. ONE CLINICAL EVENT SPREAD OVER SEVERAL GRADE-3 ROWS. Kuroda's single rat IT experiment yields four rows - tolerability score, open-field speed, bladder volume and mortality - and all four were graded 3 off the same paraplegia-plus-one-death narrative; the KCNT1 hydrocephalus event appears three times (CMS1613, CMS1619 primary, plus CMS1640, a review restatement whose own notes admit it 'intentionally DUPLICATES' them); CMS1567 and CMS1568 describe the same 13 Wave patients. For a model learning what severe neurotoxicity looks like this multiplies single events. Grade each row from its OWN readout, and flag the class-level and duplicate rows (CMS1982 and the four Korte rows attach to no identifiable oligonucleotide, with dose, duration and value all TBD).\n\n7. MEASUREMENT_IDs ARE NOT STABLE ACROSS BATCH SNAPSHOTS, AND ONE EARLIER CORRECTION LANDED ON THE WRONG ROW. Eight ids appear in both batch_grade3.json and batch_grade3_journals.json with DIFFERENT content (CMS1666, CMS1866, CMS1874, CMS1907, CMS1922, CMS1931, CMS1939, CMS2061); data/cns_measurements.csv matches the newer journals snapshot. Most of the earlier verdicts still land correctly by luck, but CMS1666 does not: the earlier pass downgraded a 2'-OMe tolerability row to grade 2 under that id, and the id now holds Kuroda's 4/4 mortality row, which the CSV consequently shows at grade 2. Restore CMS1666 to 3. Two further CSV defects surfaced while cross-checking: CMS1985's readout_value is the literal string '3.75 (or keep TBD)' - a sentence written into a numeric cell - and CMS1942's readout_value was silently changed from 4.0 to 3.75 without the row's source_table note being updated. Verdicts should be applied by matching (source_ref, source_table, oligo, dose), not by id alone.\n\n8. THE BATCH IS MIS-LABELLED: 8 OF ITS 76 ROWS ARE NOT JOURNAL ARTICLES. CMS1168 (EMA Qalsody SmPC/EPAR), CMS1199 and CMS1201 (FDA TEGSEDI label), CMS1227, CMS1228, CMS1231 (Biogen DHPC + MHRA Drug Safety Update) and CMS1232 (EMA Spinraza SmPC) are regulatory or grey-literature rows, and CMS1992-CMS1995 rest on a paywalled abstract. They all verified, but a batch described as 'all from journal articles' that contains regulatory documents will send the wrong reviewer at the wrong source.\n\n9. RIGHTS: ONE OVER-CLAIM, THREE ROWS. CMS1227, CMS1228 and CMS1231 are filed public_domain on the strength of a Biogen Direct Healthcare Professional Communication plus an MHRA Drug Safety Update. A manufacturer's DHPC is not a public-domain document and MHRA output is UK Crown copyright under the Open Government Licence; the schema's public_domain means US patents and FDA/EMA documents. Set them to verify. The rest of the batch's rights check out: Kuroda, Hagedorn and Moazami are correctly cc_by, and O'Rourke and Bravo-Hernandez are CC BY-NC and correctly held at summary_stat.\n\n10. BAR-CHART DIGITISATION IS PRODUCING IMPOSSIBLE NUMBERS. Every O'Rourke Fig. 5C/5E and Fig. 3B value and every Bravo-Hernandez Fig. 1F value is read off a bar chart; the papers publish no numeric group means. With n=4 per group on an integer 0-7 scale the mean must be a multiple of 0.25, yet the batch contains 4.4, 4.9, 5.1, 5.3, 6.2 and 6.4 - none attainable. The grade conclusions are unaffected here (4.4/4.9/5.1 are below 6 either way; 6.2/6.4 round to 6.25/6.5, still above), but the false precision should be removed: either round to the attainable grid or use TBD and keep the qualitative finding, as the extractor already did for CMS1874. Related: effect_vs_control for the whole Fig. 5C/5E block asserts 'vs 0 in PBS-injected controls', but Supplementary Table 13 tabulates only PS-vs-PO comparisons for those panels - the PBS comparator is not published at that locus and should not be stated as if it were."
+}
