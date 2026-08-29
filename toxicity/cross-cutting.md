@@ -6,7 +6,7 @@ dissemination, tooling — reusable unchanged if a second endpoint were populate
 any of it under one endpoint would either duplicate it seven times or hide it from the
 endpoints it also serves. One artifact listed here belongs to no endpoint at all (§3).
 
-Endpoint dossiers: [kidney-nephrotoxicity](./kidney-nephrotoxicity.md) ·
+Endpoint dossiers: [kidney-nephrotoxicity](./kidney/kidney-nephrotoxicity.md) ·
 [hepatotoxicity](./hepatotoxicity.md) · [complement-activation](./complement-activation.md) ·
 [coagulopathy](./coagulopathy.md) · [thrombocytopenia](./thrombocytopenia.md) ·
 [immunotoxicity](./immunotoxicity.md) · [chronic-neurotoxicity](./chronic-neurotoxicity.md) ·
@@ -16,12 +16,12 @@ Endpoint dossiers: [kidney-nephrotoxicity](./kidney-nephrotoxicity.md) ·
 
 | File | Size | Endpoints served | Role |
 |---|---|---|---|
-| [`sources/reference/OligoTox_challenge_brief.pdf`](../sources/reference/OligoTox_challenge_brief.pdf) | 6 pages | all eight (scope authority) | Defines the endpoint list this register is keyed to. **Cite pp.1–3a only.** |
-| [`sources/reference/CasarettDoull_Toxicology_textbook.pdf`](../sources/reference/CasarettDoull_Toxicology_textbook.pdf) | 1,473 pages | all (background only) | General toxicology definitions. No per-oligo data. |
-| [`sources/reference/Frazier2015_ASO_therapies_review_ToxPathol.pdf`](../sources/reference/Frazier2015_ASO_therapies_review_ToxPathol.pdf) | 12 pages | kidney, hepatotox, thrombocytopenia, complement | Multi-endpoint ASO safety review; dedicated thrombocytopenia section. |
-| [`sources/kidney/MethodsMolBiol2022_book_incl_renal-tox-mice_chapter.pdf`](../sources/kidney/MethodsMolBiol2022_book_incl_renal-tox-mice_chapter.pdf) | 416 pages | kidney, complement, coagulopathy, hepatotox | Multi-chapter volume. **Misfiled under `sources/kidney/`** — see §1.4. |
+| [`sources/reference/OligoTox_challenge_brief.pdf`](_shared/reference/OligoTox_challenge_brief.pdf) | 6 pages | all eight (scope authority) | Defines the endpoint list this register is keyed to. **Cite pp.1–3a only.** |
+| [`sources/reference/CasarettDoull_Toxicology_textbook.pdf`](_shared/reference/CasarettDoull_Toxicology_textbook.pdf) | 1,473 pages | all (background only) | General toxicology definitions. No per-oligo data. |
+| [`sources/reference/Frazier2015_ASO_therapies_review_ToxPathol.pdf`](_shared/reference/Frazier2015_ASO_therapies_review_ToxPathol.pdf) | 12 pages | kidney, hepatotox, thrombocytopenia, complement | Multi-endpoint ASO safety review; dedicated thrombocytopenia section. |
+| [`sources/kidney/MethodsMolBiol2022_book_incl_renal-tox-mice_chapter.pdf`](kidney/sources/MethodsMolBiol2022_book_incl_renal-tox-mice_chapter.pdf) | 416 pages | kidney, complement, coagulopathy, hepatotox | Multi-chapter volume. **Misfiled under `sources/kidney/`** — see §1.4. |
 
-Registered in [`sources/SOURCES.md`](../sources/SOURCES.md) at lines 200 (MMB 2434), 208
+Registered in [`sources/SOURCES.md`](kidney/SOURCES.md) at lines 200 (MMB 2434), 208
 (Frazier2015), 210 (Casarett & Doull), 211 (challenge brief).
 
 ### 1.1 Challenge brief — provenance defect (pp.3b–6)
@@ -89,19 +89,19 @@ hepatotoxicity.
 
 | Artifact | What it does | Verified defect |
 |---|---|---|
-| [`schema.md`](../schema.md) | Data dictionary, controlled vocabularies, 0–3 rubric, QC log | Rubric at lines 74–77 is written in renal terms only; `is_kidney_specific` (line 61) presumes a kidney/not-kidney split |
-| [`METHODOLOGY.md`](../METHODOLOGY.md) | 13-section Phase 2 methodology deliverable | — |
-| [`PADP.md`](../PADP.md) | Public Access & Dissemination Plan; licensing, hosting, continuity | Lines 103–104 state the dataset "has **already been released** under an irrevocable CC-BY 4.0 license"; the repository contains **no LICENSE file** |
-| [`sources/SOURCES.md`](../sources/SOURCES.md) | Source registry across all buckets | Carries the un-caveated brief entry (§1.1) and the MMB misfiling (§1.4) |
-| [`scripts/fill_inn_sequences.py`](../scripts/fill_inn_sequences.py) | Parses WHO INN chemical nomenclature into sequences; documented at `METHODOLOGY.md:84` | Endpoint-neutral — would run unchanged on a hepatotox or immunotox oligo table |
-| [`scripts/paper_search.py`](../scripts/paper_search.py) | OpenAlex / Europe PMC / PMC / Crossref search and OA full-text helper | **Documented nowhere in the curated corpus** — absent from README, METHODOLOGY, schema, PADP, SOURCES and PRESENTATION |
+| [`schema.md`](kidney/schema.md) | Data dictionary, controlled vocabularies, 0–3 rubric, QC log | Rubric at lines 74–77 is written in renal terms only; `is_kidney_specific` (line 61) presumes a kidney/not-kidney split |
+| [`METHODOLOGY.md`](kidney/METHODOLOGY.md) | 13-section Phase 2 methodology deliverable | — |
+| [`PADP.md`](kidney/PADP.md) | Public Access & Dissemination Plan; licensing, hosting, continuity | Lines 103–104 state the dataset "has **already been released** under an irrevocable CC-BY 4.0 license"; the repository contains **no LICENSE file** |
+| [`sources/SOURCES.md`](kidney/SOURCES.md) | Source registry across all buckets | Carries the un-caveated brief entry (§1.1) and the MMB misfiling (§1.4) |
+| [`scripts/fill_inn_sequences.py`](kidney/scripts/fill_inn_sequences.py) | Parses WHO INN chemical nomenclature into sequences; documented at `METHODOLOGY.md:84` | Endpoint-neutral — would run unchanged on a hepatotox or immunotox oligo table |
+| [`scripts/paper_search.py`](kidney/scripts/paper_search.py) | OpenAlex / Europe PMC / PMC / Crossref search and OA full-text helper | **Documented nowhere in the curated corpus** — absent from README, METHODOLOGY, schema, PADP, SOURCES and PRESENTATION |
 
 `scripts/build_merged.py` is *not* cross-cutting: it writes
-`data/oligotox_kidney_merged.csv` and is allocated to [kidney-nephrotoxicity](./kidney-nephrotoxicity.md).
+`data/oligotox_kidney_merged.csv` and is allocated to [kidney-nephrotoxicity](./kidney/kidney-nephrotoxicity.md).
 
 ## 3. Unallocated
 
-[`sources/_unrelated/Tipthara2016_urinary_lipidomics_OFFTOPIC.pdf`](../sources/_unrelated/Tipthara2016_urinary_lipidomics_OFFTOPIC.pdf)
+[`sources/_unrelated/Tipthara2016_urinary_lipidomics_OFFTOPIC.pdf`](_shared/_unrelated/Tipthara2016_urinary_lipidomics_OFFTOPIC.pdf)
 — 901,081 bytes, urinary lipidomics, not oligonucleotide-related. It serves no endpoint
 on the Challenge list and supplies no row. `SOURCES.md:212-213` already files it under
 "off-topic upload, flagged for REMOVAL", yet it remains **tracked** (`git ls-files` lists
@@ -119,8 +119,8 @@ non-kidney row could be ingested:
 |---|---|
 | `nephrotox_grade` rubric, `schema.md:74-77` | Grades 1–3 are defined in renal terms (proteinuria, KIM-1/NGAL/clusterin, dialysis). A hepatotox or thrombocytopenia row cannot be graded against it. |
 | `is_kidney_specific` flag | TRUE for all 111 rows; zero FALSE rows exist. As a boolean it can only express kidney vs not-kidney and would need to become an endpoint key. |
-| [`assets/datamodel.svg`](../assets/datamodel.svg) | Renders the literal field name `nephrotox_grade (0–3)`; embedded at `PRESENTATION.md:318`. |
-| [`assets/extraction.svg`](../assets/extraction.svg) | Renders "111 graded rows" and the kidney-only source_ids N2, K1, M1, N3, REV, WS; embedded at `PRESENTATION.md:464`. |
+| [`assets/datamodel.svg`](kidney/assets/datamodel.svg) | Renders the literal field name `nephrotox_grade (0–3)`; embedded at `PRESENTATION.md:318`. |
+| [`assets/extraction.svg`](kidney/assets/extraction.svg) | Renders "111 graded rows" and the kidney-only source_ids N2, K1, M1, N3, REV, WS; embedded at `PRESENTATION.md:464`. |
 
 Both SVGs are allocated to the kidney dossier because they appear only in the kidney
 deck, but their subject matter — the data model and the extraction ladder — is

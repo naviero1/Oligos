@@ -10,8 +10,8 @@ acquired no source for it.** Its only material sits inside four cross-cutting fi
 
 | | Value |
 |---|---|
-| Oligos in [`data/oligos.csv`](../data/oligos.csv) | 0 |
-| Measurement rows in [`data/measurements.csv`](../data/measurements.csv) | 0 |
+| Oligos in [`data/oligos.csv`](kidney/data/oligos.csv) | 0 |
+| Measurement rows in [`data/measurements.csv`](kidney/data/measurements.csv) | 0 |
 | Local source PDFs | 0 dedicated; of the 4 cross-cutting PDFs in §3, only Frazier 2015 has a section on the endpoint |
 | `source_id`s reaching `measurements.csv` | none; none was ever assigned |
 | Mentions in the curated corpus | 0 — `grep -rniE -e thrombocytopeni -e platelet` over `data/`, `sources/*.md`, `scripts/`, `METHODOLOGY.md`, `schema.md`, `PADP.md` and `PRESENTATION.md` exits 1. The endpoint is named in `README.md` and `REVIEW-2026-08.md`, both part of the index layer this reorganization added. |
@@ -46,7 +46,7 @@ both in its reference list (PDF pp.13 and 17, the subject of §5) and neither in
 
 **Zero rows.** A case-insensitive sweep of every cell of `data/measurements.csv` (111 × 23) and `data/oligos.csv` (65 ×
 17) for `platelet|thrombocyt|h[ae]matolog|PLT|bleed|coagul` returns 0 hits, and the `readout_category` enum at
-[`schema.md`](../schema.md)`:54` has no value that could hold a haematology readout. The one link to the dataset runs
+[`schema.md`](kidney/schema.md)`:54` has no value that could hold a haematology readout. The one link to the dataset runs
 through oligo identity: MMB 2434 Ch.25 §3.1.3 (PDF p.355; running head book p.360) states "Severe TCP was observed in the
 phase 3 studies for volanesorsen and inotersen as well as for drisapersen [86, 100, 101]." All three are in the dataset:
 
@@ -73,7 +73,7 @@ reached the registry. (The "Crooke pooled 2′-MOE" at `METHODOLOGY.md:197` for 
 | Not done | Cause |
 |---|---|
 | No rows extracted | No in-repo source attaches a platelet value to a named compound. Frazier 2015 §THROMBOCYTOPENIA (PDF p.7) gives quantities — "below 40,000/mL", "more than 20 mg/kg/wk in monkeys", "3.0 mg/kg/day" — but attaches none to a compound, and the review has no numbered tables (`TABLE`/`Table` regex count over its text extract = 0); MMB Ch.25 §3.1.3 names three compounds (§4) without per-study values. |
-| No grading rubric | The 0–3 ladder in [`schema.md`](../schema.md) is written entirely in renal terms and is not transferable — see [`cross-cutting.md`](./cross-cutting.md), section 4 "What must change if a second endpoint is populated". |
+| No grading rubric | The 0–3 ladder in [`schema.md`](kidney/schema.md) is written entirely in renal terms and is not transferable — see [`cross-cutting.md`](./cross-cutting.md), section 4 "What must change if a second endpoint is populated". |
 | Scope decision not landed | The decision in §2 is not reflected outside `toxicity/`: `README.md` § "Scope (decided — not under review)" still records kidney with no exclusions, and neither `METHODOLOGY.md` §1 nor `sources/SOURCES.md` records an exclusion for this endpoint. |
 
 ## 7. Next step

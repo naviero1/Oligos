@@ -11,8 +11,8 @@ shelved as background. This file records what that PDF holds and that nothing ha
 
 | | Value |
 |---|---|
-| Oligos in [`data/oligos.csv`](../data/oligos.csv) | 0 |
-| Measurement rows in [`data/measurements.csv`](../data/measurements.csv) | 0 |
+| Oligos in [`data/oligos.csv`](kidney/data/oligos.csv) | 0 |
+| Measurement rows in [`data/measurements.csv`](kidney/data/measurements.csv) | 0 |
 | Local source PDFs | 1 dedicated, under `sources/reference/`; 2 cross-cutting PDFs carry a section |
 | `source_id`s reaching `measurements.csv` | none; no `source_id` has ever been assigned to this endpoint |
 | Extraction status | not started; no grading rubric written for this endpoint |
@@ -137,13 +137,13 @@ renal-only schema are, with the figure-bound magnitudes limiting numeric values 
    and digitisability is unassessed.
 3. Assign a `source_id`, and resolve the Elsevier redistribution class before any extraction.
 4. Before ingesting any row, add a dedicated graded column with its own rubric in
-   [`schema.md`](../schema.md). Do not reuse or rename `nephrotox_grade`.
+   [`schema.md`](kidney/schema.md). Do not reuse or rename `nephrotox_grade`.
 5. Assess whether Figure 1(a) is digitisable — the answer decides whether the yield is 32 sequences with
    two text-stated calls, or 32 with a per-siRNA call each.
-6. The `tissue = glomerulus` edit is tracked in [`kidney-nephrotoxicity.md`](./kidney-nephrotoxicity.md),
+6. The `tissue = glomerulus` edit is tracked in [`kidney-nephrotoxicity.md`](./kidney/kidney-nephrotoxicity.md),
    section 6 "Known issues" item 5 and section 8 "Next step" item 6; this dossier contributes the
    mechanistic split in §4, not the edit.
 
 ---
 
-Index: [`README.md`](./README.md) · [`kidney-nephrotoxicity.md`](./kidney-nephrotoxicity.md) · [`hepatotoxicity.md`](./hepatotoxicity.md) · [`thrombocytopenia.md`](./thrombocytopenia.md) · [`cross-cutting.md`](./cross-cutting.md) · [`../METHODOLOGY.md`](../METHODOLOGY.md) · [`../schema.md`](../schema.md) · [`../sources/SOURCES.md`](../sources/SOURCES.md)
+Index: [`README.md`](./README.md) · [`kidney-nephrotoxicity.md`](./kidney/kidney-nephrotoxicity.md) · [`hepatotoxicity.md`](./hepatotoxicity.md) · [`thrombocytopenia.md`](./thrombocytopenia.md) · [`cross-cutting.md`](./cross-cutting.md) · [`kidney/METHODOLOGY.md`](kidney/METHODOLOGY.md) · [`kidney/schema.md`](kidney/schema.md) · [`kidney/SOURCES.md`](kidney/SOURCES.md)

@@ -188,6 +188,15 @@ Automated checks run after every ingestion round:
 
 ## 11. Known limitations
 
+- **The negative class is not yet trustworthy — see [`CLINICAL_VALIDATION.md`](CLINICAL_VALIDATION.md).**
+  Provenance and outcome are near-perfectly confounded across the 39 clinical rows: of the
+  20 flagged `WS`, **zero** carry `nephrotox_grade ≥2`, against 11/19 among anchor-sourced
+  rows (one-sided Fisher **p = 4.5 × 10⁻⁵**). Direct retrieval of 7 of the 13 unverified
+  absence claims found only **one** genuine measured negative. Whether renal endpoints were
+  measured tracks the *indication*, not the drug: trials of non-renal-indication compounds
+  both omitted renal endpoints and excluded renally impaired patients. Until a
+  `renal_endpoints_measured` field separates *measured-and-normal* from *never-looked*,
+  **this dataset should not be used to train a nephrotoxicity model.**
 - **Provisional grades** pending scientific (subject-matter) review.
 - **Sequence coverage 55/65.** The 10 remaining `TBD` are, with one exception,
   structurally unfillable rather than merely unretrieved:

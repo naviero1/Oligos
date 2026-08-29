@@ -3,16 +3,21 @@
 **Network status (2026-06-26):** this session's egress policy **blocks all
 outbound web fetch** (CONNECT tunnel denied 403 for PMC, USPTO, publishers,
 even Wikipedia; only `WebSearch` summaries work). Therefore primary-source
-files must be **downloaded by the user and dropped into this `sources/`
+files must be **downloaded by the user and dropped into this dataset's `sources/`
 directory** for local extraction. Identifiers below were verified via
 `WebSearch` this session.
+
+> **Update (2026-08):** the egress restriction above no longer holds. Direct fetch of
+> PMC, EMA, DailyMed, ClinicalTrials.gov, J-STAGE and `cdn.who.int` all succeed.
+> Still blocked: `accessdata.fda.gov`, NEJM, Circulation/AHA, ScienceDirect,
+> `academic.oup.com`. Only the blocked set needs hand-delivery.
 
 ## How to hand files back for extraction
 
 Drop files here using these names (so I can locate + parse them), then tell me:
 
 ```
-sources/
+toxicity/kidney/sources/
   N1_Dieckmann2018_MTNA_PMC5725219.pdf          + supplementary tables (.xlsx/.docx)  ← 236-oligo panel
   N2_drisapersen_ciPTEC_PMC6796739.pdf          + any supplementary files
   N3_US11105794_nephrotox_assay.pdf
@@ -186,30 +191,33 @@ _Sequences for all anchor oligos are published (labels/INN/patents) but were lef
 - Patents: Google Patents → "Also Published As" + "Cited By"; Espacenet patent
   family; USPTO Patent Public Search (ppubs.uspto.gov).
 
-## LOCAL SOURCE FILES (committed to repo, organized 2026-06-26)
+## LOCAL SOURCE FILES (committed to repo, organized 2026-06-26; re-homed under `toxicity/` 2026-08)
 
-Uploaded via GitHub and sorted under `sources/`:
+The repository is now partitioned by toxicity. This file lives at
+`toxicity/kidney/SOURCES.md`, so the paths below are relative to `toxicity/kidney/`.
+Cross-toxicity material sits outside this directory:
 
 ```
-sources/
-  kidney/      — strict-kidney primary sources & reviews
+toxicity/
+  kidney/
+    sources/   — strict-kidney primary sources & reviews  (this dataset's evidence base)
     Janssen2019_drisapersen_reversible_proteinuria_ciPTEC_PMC6796739.pdf  (= N2; drisapersen patients+monkey+ciPTEC)
     Wu_Nephrotoxicity_marketed_ASO_drugs_review_PMC10174585.pdf   (= source "REV"; marketed-ASO renal review)
     Frazier2022_kidney_effects_review_ToxPathol.pdf               (DOI 10.1177/01926233221100414)
     Sandelius2020_urinary_kidney_biomarker_panel_ASO_tubular_tox_PMID33084520.pdf  (= K1; cEt ASO mouse; KIM-1/clusterin/NGAL/cystatin-C)
     MethodsMolBiol2022_book_incl_renal-tox-mice_chapter.pdf       (book; contains the renal-tox-in-mice chapter, NBK584232)
-  hepatotox/   — hepatotox fallback panels (every extracted row → is_kidney_specific=FALSE)
+  ../hepatic/sources/   — hepatotox fallback panels (never used: all 111 rows are is_kidney_specific=TRUE)
     Dieckmann2018_HDT_236-LNA-ASO_hepatotox_PMC5725219.pdf        (N1 main PDF)
     Dieckmann2018_supp_mmc1_oligo_sequences_Tm.pdf                (Table S1: GAPDH LNA-ASO sequences + Tm; NO per-oligo tox)
     Dieckmann2018_supp_mmc2_full_with_supptables.pdf              (article + supp; Myd88 set 3 toxic/3 tolerated; aggregate 236 analysis)
     Burdick2014_LNA-ASO_hepatotox_seqmotifs_NAR.pdf               (DOI 10.1093/nar/gku142)
     Hagedorn2013_hepatotox_from_sequence_NAT.pdf                  (DOI 10.1089/nat.2013.0436)
-  reference/   — background reviews / textbooks / project docs (NOT per-row data)
+  ../_shared/reference/   — cross-toxicity reviews / textbooks / project docs (NOT per-row data)
     Frazier2015_ASO_therapies_review_ToxPathol.pdf                (DOI 10.1177/0192623314551840)
     Sioud_oligo_immunostimulation_cytokines_book.pdf             (immunostimulation; off-endpoint)
     CasarettDoull_Toxicology_textbook.pdf                         (general toxicology textbook, ~22 MB)
     OligoTox_challenge_brief.pdf                                  (challenge executive summary)
-  _unrelated/  — off-topic upload, flagged for REMOVAL
+  ../_shared/_unrelated/  — off-topic upload, flagged for REMOVAL
     Tipthara2016_urinary_lipidomics_OFFTOPIC.pdf                  (urinary lipidomics — NOT oligonucleotide-related)
 ```
 
@@ -217,10 +225,10 @@ sources/
 = volume for the fallback bucket; kidney reviews (Wu, Frazier) + the MMB renal
 chapter = strict-kidney cross-reference and any extractable per-oligo findings.
 
-**STILL MISSING — highest-priority strict-kidney VOLUME (please add to `sources/kidney/`):**
+**STILL MISSING — highest-priority strict-kidney VOLUME (please add to `toxicity/kidney/sources/`):**
 - ~~**N2** drisapersen ciPTEC — PMC6796739~~ ✅ **acquired** (Janssen 2019)
 - ~~**N3** USPTO patent 11,105,794~~ ✅ **acquired + extracted** (`source_id N3`) — Table 1 → **21 compounds (MSR091–111)** with public-domain sequences, targets (PCSK9/Myd88/BCL11A/SGLT2), chemistry, and graded in-vivo nephrotoxicity. Table 2 (per-compound in-vitro EGF) not yet extracted.
-- **N4** USPTO patent 11,479,818 ✅ acquired (sources/kidney/) — companion patent (EGFR-mRNA readout); likely overlapping compound panel — mine for any *unique* compounds to add more rows/sequences.
+- **N4** USPTO patent 11,479,818 ✅ acquired (`toxicity/kidney/sources/`) — companion patent (EGFR-mRNA readout); likely overlapping compound panel — mine for any *unique* compounds to add more rows/sequences.
 - ~~**Moisan 2017** in-vitro EGF nephrotox panel~~ ✅ **acquired** (= source `M1`, PMC5363415) — extracted → MSR080–090 (human PTEC-TERT1 panel; AON-A/C/D/E + SPC5001=AON-B).
 - **N1 Dieckmann supplement** — ✅ acquired (mmc1 = Table S1 GAPDH sequences+Tm; mmc2 = article + Myd88 labeled set). BUT these PDFs only give the 6-oligo Myd88 labeled set + sequence/Tm design data; the **full 236 per-oligo tox values are NOT in them** (aggregate analyses only — raw per-oligo table is a separate Excel). Hepatotox volume from here is limited.
 - ~~**Sandelius 2020** urinary biomarker panel — PMID 33084520~~ ✅ **acquired** (K1; extracted → MSR031–039)

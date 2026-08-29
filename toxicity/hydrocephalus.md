@@ -12,7 +12,7 @@ Hydrocephalus is the eighth and last endpoint in the Challenge brief's list of t
 | Measurement rows | 0 |
 | Dedicated source PDFs | 0 |
 | `source_id`s | 0 |
-| Extraction status | not started; no source acquired and no candidate named anywhere in [`sources/SOURCES.md`](../sources/SOURCES.md) |
+| Extraction status | not started; no source acquired and no candidate named anywhere in [`sources/SOURCES.md`](kidney/SOURCES.md) |
 | Graded column and rubric | none — see §"Not done, and why" |
 
 ## Sources allocated
@@ -21,8 +21,8 @@ No PDF in `sources/` was acquired for this endpoint. A case-insensitive `hydroce
 
 | File | Hits (pages) | Bearing on this endpoint | `source_id` | Rows |
 |---|---:|---|---|---:|
-| [`sources/reference/OligoTox_challenge_brief.pdf`](../sources/reference/OligoTox_challenge_brief.pdf) | 1 (1) | The word inside the page-1 endpoint list. Scope authority, not evidence. | none | 0 |
-| [`sources/reference/CasarettDoull_Toxicology_textbook.pdf`](../sources/reference/CasarettDoull_Toxicology_textbook.pdf) | 6 (5) | General toxicology, itemised below. Not oligonucleotide content. | none | 0 |
+| [`sources/reference/OligoTox_challenge_brief.pdf`](_shared/reference/OligoTox_challenge_brief.pdf) | 1 (1) | The word inside the page-1 endpoint list. Scope authority, not evidence. | none | 0 |
+| [`sources/reference/CasarettDoull_Toxicology_textbook.pdf`](_shared/reference/CasarettDoull_Toxicology_textbook.pdf) | 6 (5) | General toxicology, itemised below. Not oligonucleotide content. | none | 0 |
 
 Both files are allocated to [`./cross-cutting.md`](./cross-cutting.md).
 
@@ -30,7 +30,7 @@ The six textbook occurrences, by PDF page: **511** (×2) cyclophosphamide and it
 
 ## Data
 
-Zero rows, and no column that could hold one. A case-insensitive sweep for `hydrocephal|ventricul|cerebrospinal|intracranial|CSF|imaging|MRI|ultrasound` over all 23 columns × 111 rows of [`data/measurements.csv`](../data/measurements.csv) and all 17 columns × 65 rows of [`data/oligos.csv`](../data/oligos.csv) returns 0 hits in each. `tissue` is enumerated at `schema.md:49` as `kidney | proximal_tubule | glomerulus | NA` and `readout_category` at `schema.md:54` as `functional | injury_biomarker | viability | accumulation | histopathology | clinical_renal_outcome`; both vocabularies are wholly renal. Three rows are dosed into the CSF (`delivery_method = intrathecal`: `MSR011`, `MSR030`, `MSR042`) and all three record a renal readout; they are analysed in [`./chronic-neurotoxicity.md`](./chronic-neurotoxicity.md), not here — route of administration is not evidence of this endpoint.
+Zero rows, and no column that could hold one. A case-insensitive sweep for `hydrocephal|ventricul|cerebrospinal|intracranial|CSF|imaging|MRI|ultrasound` over all 23 columns × 111 rows of [`data/measurements.csv`](kidney/data/measurements.csv) and all 17 columns × 65 rows of [`data/oligos.csv`](kidney/data/oligos.csv) returns 0 hits in each. `tissue` is enumerated at `schema.md:49` as `kidney | proximal_tubule | glomerulus | NA` and `readout_category` at `schema.md:54` as `functional | injury_biomarker | viability | accumulation | histopathology | clinical_renal_outcome`; both vocabularies are wholly renal. Three rows are dosed into the CSF (`delivery_method = intrathecal`: `MSR011`, `MSR030`, `MSR042`) and all three record a renal readout; they are analysed in [`./chronic-neurotoxicity.md`](./chronic-neurotoxicity.md), not here — route of administration is not evidence of this endpoint.
 
 ## Known issues
 
@@ -44,7 +44,7 @@ Zero rows, and no column that could hold one. A case-insensitive sweep for `hydr
 |---|---|
 | No rows, oligos or `source_id` | No document in `sources/` reports a hydrocephalus outcome for any oligonucleotide. The seven occurrences of the word are six general-toxicology passages plus the brief's own list entry. |
 | No source acquired | Nothing in `sources/SOURCES.md` names a candidate — not in the kidney section (`:28`), the hepatotox section (`:83`), the fetch list (`:152`) or the source-hunting strategy (`:177`). |
-| No rubric or schema support | `nephrotox_grade`'s rubric ([`schema.md`](../schema.md), "`nephrotox_grade` rubric (0–3)") is renal and not transferable, and there is no imaging, ventricular-volume or CSF field. Extraction would require new columns, not just new rows. |
+| No rubric or schema support | `nephrotox_grade`'s rubric ([`schema.md`](kidney/schema.md), "`nephrotox_grade` rubric (0–3)") is renal and not transferable, and there is no imaging, ventricular-volume or CSF field. Extraction would require new columns, not just new rows. |
 
 ## Next step
 

@@ -11,7 +11,7 @@ they contain no measurement, oligo, sequence or citation of their own.
 ## Scope authority
 
 The endpoint list is quoted verbatim from the Challenge brief
-([`sources/reference/OligoTox_challenge_brief.pdf`](../sources/reference/OligoTox_challenge_brief.pdf),
+([`sources/reference/OligoTox_challenge_brief.pdf`](_shared/reference/OligoTox_challenge_brief.pdf),
 page 1):
 
 > Toxicities of interest include:
@@ -31,14 +31,14 @@ those six bibliography entries are not treated as references.
 
 ## Coverage
 
-Counts recomputed from [`data/oligos.csv`](../data/oligos.csv) (65 rows × 17 columns) and
-[`data/measurements.csv`](../data/measurements.csv) (111 rows × 23 columns). "Source PDFs
+Counts recomputed from [`data/oligos.csv`](kidney/data/oligos.csv) (65 rows × 17 columns) and
+[`data/measurements.csv`](kidney/data/measurements.csv) (111 rows × 23 columns). "Source PDFs
 held" counts only PDFs filed to that endpoint alone; the 4 multi-endpoint reference PDFs are
 excluded here and listed in the cross-cutting file instead.
 
 | Endpoint | Status | Oligos | Measurement rows | Source PDFs held | `source_id`s reaching `measurements.csv` |
 |---|---|---:|---:|---:|---|
-| [Kidney toxicity (nephrotoxicity)](./kidney-nephrotoxicity.md) | delivered | 65 | 111 | 7 | 16 — WS, N3, M1, N2, K1, REV, A1–A10 |
+| [Kidney toxicity (nephrotoxicity)](./kidney/kidney-nephrotoxicity.md) | delivered | 65 | 111 | 7 | 16 — WS, N3, M1, N2, K1, REV, A1–A10 |
 | [Hepatotoxicity](./hepatotoxicity.md) | sources-acquired-not-extracted | 0 | 0 | 5 | none — N1 is registered in `sources/SOURCES.md` but yields 0 rows |
 | [Immunotoxicity / immunostimulation](./immunotoxicity.md) | sources-acquired-not-extracted | 0 | 0 | 1 | none |
 | [Thrombocytopenia](./thrombocytopenia.md) | background-only | 0 | 0 | 0 | none |
@@ -56,7 +56,7 @@ K1 9, A4 5, REV 4, A1 3, A3 3, A8 2, A9 2, A2 1, A5 1, A6 1, A7 1, A10 1. Five o
 (N2, N3, M1, K1, REV) correspond to a PDF held locally; the other 11 (WS and A1–A10) have no
 local PDF and are allocated to the endpoint by `source_id` alone. Distributions, per-source
 oligo counts and the local-PDF mapping are in
-[`kidney-nephrotoxicity.md`](./kidney-nephrotoxicity.md).
+[`kidney-nephrotoxicity.md`](./kidney/kidney-nephrotoxicity.md).
 
 ## How to read the status values
 
@@ -73,16 +73,16 @@ extraction backlogs; they are deliberately short, and they are not peers of the 
 ## What this reorganization changed
 
 **Terminology used throughout these dossiers.** The **curated corpus** means the dataset and its
-documentation as they stood before this reorganization: [`data/`](../data/), [`sources/`](../sources/),
-[`scripts/`](../scripts/), [`METHODOLOGY.md`](../METHODOLOGY.md), [`schema.md`](../schema.md),
-[`PADP.md`](../PADP.md) and [`PRESENTATION.md`](../PRESENTATION.md). The **index layer** means what this
-pass added: this directory, [`../REVIEW-2026-08.md`](../REVIEW-2026-08.md), and the register section
+documentation as they stood before this reorganization: [`data/`](kidney/data/), [`sources/`](kidney/sources/),
+[`scripts/`](kidney/scripts/), [`METHODOLOGY.md`](kidney/METHODOLOGY.md), [`schema.md`](kidney/schema.md),
+[`PADP.md`](kidney/PADP.md) and [`PRESENTATION.md`](kidney/PRESENTATION.md). The **index layer** means what this
+pass added: this directory, [`kidney/REVIEW-2026-08.md`](kidney/REVIEW-2026-08.md), and the register section
 added to [`../README.md`](../README.md). A statement such as "no file in the curated corpus mentions
 this endpoint" is scoped to the former, so it stays true as the index layer grows.
 
 The dossiers are a new index layer. Nothing else moved:
-[`data/`](../data/), [`schema.md`](../schema.md), [`METHODOLOGY.md`](../METHODOLOGY.md),
-[`sources/`](../sources/) and [`scripts/`](../scripts/) were not restructured, renamed or
+[`data/`](kidney/data/), [`schema.md`](kidney/schema.md), [`METHODOLOGY.md`](kidney/METHODOLOGY.md),
+[`sources/`](kidney/sources/) and [`scripts/`](kidney/scripts/) were not restructured, renamed or
 edited, and they remain the source of truth. Where a dossier and a data file disagree, the
 data file wins.
 
@@ -91,11 +91,11 @@ Three facts about the data model that this index makes visible rather than chang
 - **All 111 measurement rows are kidney.** `is_kidney_specific` is `TRUE` on 111 of 111
   rows; no `FALSE` row exists. The column carries no information in the current dataset.
 - **`nephrotox_grade` is single-endpoint by construction.** Its distribution is 0 → 27,
-  1 → 30, 2 → 39, 3 → 15, and its 0–3 rubric in [`schema.md`](../schema.md) is written
+  1 → 30, 2 → 39, 3 → 15, and its 0–3 rubric in [`schema.md`](kidney/schema.md) is written
   entirely in renal terms. It is not transferable: a second endpoint requires its own graded
   column and its own written rubric, not a reuse of this one.
 - **`data/oligotox_kidney_merged.csv` (111 × 39) is generated,** by
-  [`scripts/build_merged.py`](../scripts/build_merged.py), as a denormalized join of the two
+  [`scripts/build_merged.py`](kidney/scripts/build_merged.py), as a denormalized join of the two
   CSVs above. It is not a third dataset and is not curated independently.
 
 Because both the endpoint flag and the grade column are kidney-shaped, a seven-endpoint
@@ -108,11 +108,11 @@ dossiers report zero rows rather than a subset.
   Challenge brief, the general-toxicology and multi-endpoint reference PDFs, the source
   registry, the root documents, and the endpoint-neutral scripts.
 - [`../README.md`](../README.md) — project front door, scope and record counter.
-- [`../METHODOLOGY.md`](../METHODOLOGY.md) — the Phase 2 methodology deliverable, including
+- [`kidney/METHODOLOGY.md`](kidney/METHODOLOGY.md) — the Phase 2 methodology deliverable, including
   the no-fabrication policy these dossiers are written under.
-- [`../schema.md`](../schema.md) — data dictionary, controlled vocabularies, grading rubric.
-- [`../sources/SOURCES.md`](../sources/SOURCES.md) — the source registry and `source_id`
+- [`kidney/schema.md`](kidney/schema.md) — data dictionary, controlled vocabularies, grading rubric.
+- [`kidney/SOURCES.md`](kidney/SOURCES.md) — the source registry and `source_id`
   definitions.
-- [`../PADP.md`](../PADP.md) — Public Access & Dissemination Plan.
-- [`../PRESENTATION.md`](../PRESENTATION.md) — the deck, which covers the kidney endpoint
+- [`kidney/PADP.md`](kidney/PADP.md) — Public Access & Dissemination Plan.
+- [`kidney/PRESENTATION.md`](kidney/PRESENTATION.md) — the deck, which covers the kidney endpoint
   only.

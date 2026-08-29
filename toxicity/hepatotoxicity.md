@@ -9,8 +9,8 @@ histopathology. It is the first endpoint named in the Challenge brief's list, qu
 
 | | Value |
 |---|---|
-| Oligos in [`data/oligos.csv`](../data/oligos.csv) | 0 |
-| Measurement rows in [`data/measurements.csv`](../data/measurements.csv) | 0 |
+| Oligos in [`data/oligos.csv`](kidney/data/oligos.csv) | 0 |
+| Measurement rows in [`data/measurements.csv`](kidney/data/measurements.csv) | 0 |
 | Local source PDFs | 5, all under `sources/hepatotox/` |
 | `source_id`s reaching `measurements.csv` | none |
 | `source_id` registered but unused | `N1` (Dieckmann 2018), defined at `sources/SOURCES.md:67-79`, re-registered with its DOI at `:138-139` |
@@ -23,7 +23,7 @@ Acquisition and registration only: five PDFs acquired, filed and registered unde
 `sources/SOURCES.md:201-206`, where Burdick's DOI (`:205`) and Hagedorn's (`:206`) stand against their filenames;
 `N1` reclassified from kidney to hepatotoxicity with a stated reason (`:65-79`, "no kidney readout"); citations
 confirmed for Hagedorn, Burdick and Kasuya at `:169-175`; `is_kidney_specific = FALSE` reserved for this endpoint's
-future rows at [`schema.md`](../schema.md) line 61. No table was extracted, no `source_id` assigned to Burdick or
+future rows at [`schema.md`](kidney/schema.md) line 61. No table was extracted, no `source_id` assigned to Burdick or
 Hagedorn, and no rubric written.
 
 ## 3. Sources allocated
@@ -38,7 +38,7 @@ Paths verified by directory listing of `sources/hepatotox/`; page counts read fr
 | `Burdick2014_LNA-ASO_hepatotox_seqmotifs_NAR.pdf` | 10 | none assigned | acquired | 0 | Table 1, 11 sequenced 14-mers with ALT/AST (p.6) |
 | `Hagedorn2013_hepatotox_from_sequence_NAT.pdf` | 9 | none assigned | acquired | 0 | Main article only; carries no sequence strings at all |
 
-Two hepatocyte panels sit **inside** kidney-filed PDFs and are allocated here, not to [`kidney-nephrotoxicity.md`](./kidney-nephrotoxicity.md):
+Two hepatocyte panels sit **inside** kidney-filed PDFs and are allocated here, not to [`kidney-nephrotoxicity.md`](./kidney/kidney-nephrotoxicity.md):
 
 | Locus | Content |
 |---|---|
@@ -109,7 +109,7 @@ the register's rule at [`README.md`](./README.md) line 9, recorded here rather t
 > **Caveats travelling with this table.** The two endpoints were measured in different species on different schedules:
 > liver = mouse, 5 × 15 mg/kg i.v., ALT at 2 weeks (mmc2 p.2 legend); kidney = Wistar Han male rats, 40 mg/kg on days 1
 > and 8 intrascapular, day 15 (US11105794 p.25). The pairing is hypothesis-generating, not a comparison. These five
-> rows inherit the `N3` defects in [`kidney-nephrotoxicity.md`](./kidney-nephrotoxicity.md), section 6 "Known issues" —
+> rows inherit the `N3` defects in [`kidney-nephrotoxicity.md`](./kidney/kidney-nephrotoxicity.md), section 6 "Known issues" —
 > items 1 (species and design), 4 (the grades are a within-panel relative rank) and, for `MSR96`/`MSR97`/`MSR99`, 10 (ID padding).
 
 ## 5. Known issues
@@ -145,10 +145,10 @@ the register's rule at [`README.md`](./README.md) line 9, recorded here rather t
 
 1. Record the scope decision at `README.md` § "Record counter" (the hepatotox-fallback row) and `SOURCES.md:216-218` (out of scope for Phase 2, five PDFs held, two carrying 17 extractable per-oligo records); retract `:76-78`'s volume framing and correct `:83-91` to mark Kasuya and Creyon as never acquired.
 2. Assign `source_id`s to Burdick and Hagedorn; resolve N1's redistribution class; mark `SOURCES.md:143`'s "Assignee to confirm on the patent face" as confirmed (Hoffmann-La Roche).
-3. Before any ingestion, add a `hepatotox_grade` column with its own rubric in [`schema.md`](../schema.md). Do not reuse or rename `nephrotox_grade`.
+3. Before any ingestion, add a `hepatotox_grade` column with its own rubric in [`schema.md`](kidney/schema.md). Do not reuse or rename `nephrotox_grade`.
 4. If the scope is widened, ingest in this order: US11105794 Table 5 and Moisan Fig. 3E (already held and parsed for
    kidney; the first `is_kidney_specific = FALSE` rows), then Burdick Table 1, then Dieckmann Table 1 carrying Hagedorn's DOI. Acquire Hagedorn's Supplementary Table S1 before attempting the 236-oligo set.
 
 ---
 
-Index: [`README.md`](./README.md) · [`kidney-nephrotoxicity.md`](./kidney-nephrotoxicity.md) · [`cross-cutting.md`](./cross-cutting.md) · [`../METHODOLOGY.md`](../METHODOLOGY.md) · [`../schema.md`](../schema.md) · [`../sources/SOURCES.md`](../sources/SOURCES.md)
+Index: [`README.md`](./README.md) · [`kidney-nephrotoxicity.md`](./kidney/kidney-nephrotoxicity.md) · [`cross-cutting.md`](./cross-cutting.md) · [`kidney/METHODOLOGY.md`](kidney/METHODOLOGY.md) · [`kidney/schema.md`](kidney/schema.md) · [`kidney/SOURCES.md`](kidney/SOURCES.md)

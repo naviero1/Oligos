@@ -4,11 +4,11 @@
 
 Kidney toxicity is one of the eight endpoints named on page 1 of the Challenge brief, quoted verbatim in [the register
 index](./README.md#scope-authority). It is the only endpoint here that carries extracted data: `is_kidney_specific` is `TRUE` on 111 of 111 rows
-of [`data/measurements.csv`](../data/measurements.csv) and no `FALSE` row exists, so all 65 oligos and all 111 rows belong here and no measurement
+of [`data/measurements.csv`](data/measurements.csv) and no `FALSE` row exists, so all 65 oligos and all 111 rows belong here and no measurement
 row is shared with another endpoint. Two of the 16 `source_id` values are shared at document level rather than row level: `N3` and `M1` also carry
-liver-side readouts, cited in [`hepatotoxicity.md` §4 "Data", sub-section "Molecule-level liver/kidney pairings the repo holds and does not record"](./hepatotoxicity.md). Grading rules, extraction
+liver-side readouts, cited in [`hepatotoxicity.md` §4 "Data", sub-section "Molecule-level liver/kidney pairings the repo holds and does not record"](../hepatotoxicity.md). Grading rules, extraction
 paths and the data dictionary are not restated — see
-[`METHODOLOGY.md`](../METHODOLOGY.md) and [`schema.md`](../schema.md).
+[`METHODOLOGY.md`](METHODOLOGY.md) and [`schema.md`](schema.md).
 
 ---
 
@@ -37,17 +37,17 @@ Everything below was produced under it.
 
 | Artifact | Path | Content |
 |---|---|---|
-| Oligo table | [`data/oligos.csv`](../data/oligos.csv) | 65 × 17 — identity and design predictors |
-| Measurement table | [`data/measurements.csv`](../data/measurements.csv) | 111 × 23 — one row per oligo × model × delivery × dose × readout |
-| Merged analysis view | [`data/oligotox_kidney_merged.csv`](../data/oligotox_kidney_merged.csv) | 111 × 39; generated, not canonical (`schema.md:131-146`) |
-| Clinical-row validation | [`data/clinical_validation_2026-08.md`](../data/clinical_validation_2026-08.md) | 85 lines; August 2026 audit of the 39 `study_type=clinical` rows |
-| Merge script | [`scripts/build_merged.py`](../scripts/build_merged.py) | Hard-codes the kidney output filename (line 22) and the measurement column list (`MEAS_COLS`, lines 30-35) |
-| Slide deck | [`PRESENTATION.md`](../PRESENTATION.md), built to `OligoTox-Kidney.pptx`, `OligoTox-Kidney-editable.pptx`, `OligoTox-Kidney.pdf` | 832 lines, 29 slides (30 `^---$` lines less the 2 front-matter delimiters = 28 separators); 29 slides/pages in each binary |
+| Oligo table | [`data/oligos.csv`](data/oligos.csv) | 65 × 17 — identity and design predictors |
+| Measurement table | [`data/measurements.csv`](data/measurements.csv) | 111 × 23 — one row per oligo × model × delivery × dose × readout |
+| Merged analysis view | [`data/oligotox_kidney_merged.csv`](data/oligotox_kidney_merged.csv) | 111 × 39; generated, not canonical (`schema.md:131-146`) |
+| Clinical-row validation | [`CLINICAL_VALIDATION.md`](CLINICAL_VALIDATION.md) | 85 lines; August 2026 audit of the 39 `study_type=clinical` rows |
+| Merge script | [`scripts/build_merged.py`](scripts/build_merged.py) | Hard-codes the kidney output filename (line 22) and the measurement column list (`MEAS_COLS`, lines 30-35) |
+| Slide deck | [`PRESENTATION.md`](PRESENTATION.md), built to `OligoTox-Kidney.pptx`, `OligoTox-Kidney-editable.pptx`, `OligoTox-Kidney.pdf` | 832 lines, 29 slides (30 `^---$` lines less the 2 front-matter delimiters = 28 separators); 29 slides/pages in each binary |
 | Diagrams | `assets/` (8 SVGs) | `mechanism`, `trap`, `datamodel`, `grade-ladder`, `extraction`, `paired`, `patent`, `translation`; each embedded exactly once, at `PRESENTATION.md:202`, `:232`, `:318`, `:338`, `:464`, `:574`, `:593`, `:613` |
 
 Documentation sections wholly this endpoint's: `README.md` §§ "Scope (decided — not under review)", "Why this design — key domain facts" and "Record counter"; `METHODOLOGY.md:20-35`, `:116-123`, `:124-158`, `:189-219`;
 `schema.md:36-80`, whose 0–3 rubric at `:74-77` is written entirely in renal terms. `PRESENTATION.md` is this endpoint end to end.
-`scripts/fill_inn_sequences.py` and `scripts/paper_search.py` are endpoint-neutral and are indexed in [`cross-cutting.md` §2](./cross-cutting.md),
+`scripts/fill_inn_sequences.py` and `scripts/paper_search.py` are endpoint-neutral and are indexed in [`cross-cutting.md` §2](../cross-cutting.md),
 which also flags `assets/datamodel.svg` and `assets/extraction.svg` as kidney-shaped infrastructure.
 
 ---
@@ -65,7 +65,7 @@ which also flags `assets/datamodel.svg` and `assets/extraction.svg` as kidney-sh
 | `Wu_Nephrotoxicity_marketed_ASO_drugs_review_PMC10174585.pdf` | `REV` | 4 | MSR027–MSR030 | `summary_stat` ×4 |
 | `US11479818_in_vitro_nephrotox_assay_patent_EGFR.pdf` | `N4` | 0 | — | — |
 | `Frazier2022_kidney_effects_review_ToxPathol.pdf` | none | 0 | — | — |
-| `MethodsMolBiol2022_book_incl_renal-tox-mice_chapter.pdf` | none | 0 | — | multi-endpoint; indexed per chapter in [`cross-cutting.md` §1.4](./cross-cutting.md) |
+| `MethodsMolBiol2022_book_incl_renal-tox-mice_chapter.pdf` | none | 0 | — | multi-endpoint; indexed per chapter in [`cross-cutting.md` §1.4](../cross-cutting.md) |
 
 Five dedicated PDFs produced 55 of the 111 rows. The eighth file is the 416-page *Methods in Molecular Biology* 2434 volume, misfiled here; only
 its Ch.26 belongs to this endpoint.
@@ -154,7 +154,7 @@ not a finding here but a defect (§6.2).
 5. **Three molecule-level liver/kidney pairings exist.** In the one carrying numbers on both sides, five of the six Dieckmann 2018 tool LNA-ASOs
    are already in `data/oligos.csv` with nephrotoxicity grades, and OLG058 is liver-negative yet carries `nephrotox_grade` 3 at MSR104. Sequences,
    ALT fold-changes, PDF loci and the other two pairings are tabulated in
-   [`hepatotoxicity.md` §4 "Data", sub-section "Molecule-level liver/kidney pairings the repo holds and does not record"](./hepatotoxicity.md), not duplicated here.
+   [`hepatotoxicity.md` §4 "Data", sub-section "Molecule-level liver/kidney pairings the repo holds and does not record"](../hepatotoxicity.md), not duplicated here.
 
 ---
 
@@ -170,7 +170,7 @@ Crl:WI(Han) male rats in groups of 4 (exp. A) or 8 (exp. B), dosed at 40 mg/kg o
 rat 29 (`METHODOLOGY.md:146`).
 
 **2. The clinical-validation confound is documented nowhere outside `data/`, and its recommendation is unapplied (blocker).**
-`data/clinical_validation_2026-08.md:11-21` cross-tabulates provenance against outcome over the 39 clinical rows: 0 of 20 `WS` rows reach grade ≥
+`CLINICAL_VALIDATION.md:11-21` cross-tabulates provenance against outcome over the 39 clinical rows: 0 of 20 `WS` rows reach grade ≥
 2 against 11 of 19 anchor-sourced rows, one-sided Fisher exact p = 4.5 × 10⁻⁵; `:45` scores "1 of 7 checked absence claims survives as a measured
 negative" and `:76` concludes "**Until this field exists, the dataset should not be used to train a nephrotoxicity model.**" No file in the
 curated corpus references it: a grep for `clinical_validation` across `*.md` outside `data/`, `toxicity/` and `REVIEW-2026-08.md` returns zero hits. Meanwhile `METHODOLOGY.md:153-154` — the Phase 2
@@ -207,10 +207,10 @@ is held locally; A4 is 5 of 5, but has no local full text (§3b). Separately, `r
 incompatible ways: `METHODOLOGY.md:135` says 46, `METHODOLOGY.md:192` and `schema.md:126` say 55, and
 `PRESENTATION.md:301`, `:493`, `:505`, `:758` say 33; the data says 55. (`README.md` carried a fourth value, 44, and a
 reconstruction note asserting "**0 measurement rows**"; both were corrected in the same pass that added this dossier —
-see [`REVIEW-2026-08.md`](../REVIEW-2026-08.md), findings B2 and M1.) `PRESENTATION.md:531` lists "inclisiran, givosiran, nusinersen · safe controls", but only inclisiran is all-grade-0 — givosiran (OLG003)
+see [`REVIEW-2026-08.md`](REVIEW-2026-08.md), findings B2 and M1.) `PRESENTATION.md:531` lists "inclisiran, givosiran, nusinersen · safe controls", but only inclisiran is all-grade-0 — givosiran (OLG003)
 has MSR009 grade 1, MSR010 grade 2, MSR074 grade 1, and nusinersen (OLG004) has MSR011 and MSR030, both grade 1. `PRESENTATION.md:821` claims
 "Every number in this deck regenerates from `data/`" while no rebuild mechanism exists in the repo — established in
-[`cross-cutting.md` §4, "What must change if a second endpoint is populated"](./cross-cutting.md) and not re-derived here. The consequence for
+[`cross-cutting.md` §4, "What must change if a second endpoint is populated"](../cross-cutting.md) and not re-derived here. The consequence for
 this endpoint: `33/65` is still present in `OligoTox-Kidney.pdf` and `OligoTox-Kidney-editable.pptx` while `55/65` appears in neither.
 
 | # | Defect | Evidence |
@@ -235,7 +235,7 @@ Not blocked for volume; blocked for release quality and for the in-vitro expansi
 | Moisan 2017 Table 1 under-extracted | Verified at PDF p.4: "Table 1. Test AONs and Summary of Kidney Toxicity Assessed in 2-Week Rat Study at 40 mg/kg/week", with kidney weight, urine protein, urinary KIM-1, de/regeneration and two tubulotoxicity grades for all five AONs. The repo holds 3 qualitative rows from it (MSR081, MSR084, MSR086); every quantitative fold-change is discarded. |
 | Frazier 2022 yields 0 rows | Acquired review; no extraction attempted. |
 | Grades not signed off | All 111 rows carry `grade_provisional`; expert review has not occurred (`METHODOLOGY.md:191`). |
-| `WS` tier not verified | 36 rows rest on search summaries. Partly attempted: `data/clinical_validation_2026-08.md` checked 7 of 13 absence claims, and 6 of the 7 did not survive as measured negatives (1 CONFIRMED, 1 PARTIAL kept at 0, 3 REFUTED, 2 UNSUPPORTED). Six remain unchecked (`:72-74`). |
+| `WS` tier not verified | 36 rows rest on search summaries. Partly attempted: `CLINICAL_VALIDATION.md` checked 7 of 13 absence claims, and 6 of the 7 did not survive as measured negatives (1 CONFIRMED, 1 PARTIAL kept at 0, 3 REFUTED, 2 UNSUPPORTED). Six remain unchecked (`:72-74`). |
 | Distributions in §4b are a manual snapshot | Nothing regenerates them from `data/`, so they drift the moment a row changes (§6.7). |
 
 ---
@@ -246,10 +246,10 @@ Not blocked for volume; blocked for release quality and for the in-vitro expansi
 2. Correct the 21 `N3` rows (`species=rat`, the real 15-day two-dose design, `dose_or_conc_value=40` with `dose_or_conc_unit=mg/kg`, intrascapular
    route in `notes`), re-run `python scripts/build_merged.py`, correct `METHODOLOGY.md:146`, and log it in the `schema.md` QC log.
 3. Zero-pad MSR91–MSR99 to MSR091–MSR099. Outside `data/`, a grep for `MSR9[1-9]` over `*.md` returns this dossier,
-   [`hepatotoxicity.md` §4 "Data", sub-section "Molecule-level liver/kidney pairings the repo holds and does not record"](./hepatotoxicity.md),
-   whose pairing table names MSR96, MSR97 and MSR99, and [`REVIEW-2026-08.md`](../REVIEW-2026-08.md); all change in the same commit.
+   [`hepatotoxicity.md` §4 "Data", sub-section "Molecule-level liver/kidney pairings the repo holds and does not record"](../hepatotoxicity.md),
+   whose pairing table names MSR96, MSR97 and MSR99, and [`REVIEW-2026-08.md`](REVIEW-2026-08.md); all change in the same commit.
    `sources/SOURCES.md:222` needs a separate correction: it prints "MSR091–111", ids that have never existed.
-4. Propagate `data/clinical_validation_2026-08.md` into `METHODOLOGY.md` §11, `README.md`, `PADP.md`'s artifact table and the deck's "Honest
+4. Propagate `CLINICAL_VALIDATION.md` into `METHODOLOGY.md` §11, `README.md`, `PADP.md`'s artifact table and the deck's "Honest
    limitations" slide (`PRESENTATION.md:752`), and either add the proposed `renal_endpoints_measured` field to `schema.md` or record why it was
    declined. Until then, correct `METHODOLOGY.md:153-154` and `PRESENTATION.md:368` so the 27 grade-0 rows are not presented as designed negative
    controls.

@@ -8,7 +8,7 @@ Chronic neurotoxicity is the seventh endpoint on the Challenge's list of toxicit
 |---|---:|---|
 | Oligos | 0 | No oligo row carries a neurological toxicity observation — §3 |
 | Measurement rows | 0 | All 111 rows in `data/measurements.csv` are kidney; no neurological readout exists |
-| `source_id`s | 0 | All 16 `source_id`s in use belong to [kidney](./kidney-nephrotoxicity.md) |
+| `source_id`s | 0 | All 16 `source_id`s in use belong to [kidney](./kidney/kidney-nephrotoxicity.md) |
 | Source PDFs held | 0 | No PDF in `sources/` is a neurotoxicity source — §2 |
 | Extraction status | not started | Nothing to extract from |
 
@@ -18,9 +18,9 @@ Chronic neurotoxicity is the seventh endpoint on the Challenge's list of toxicit
 
 | File | Pattern / strict `neurotox` hits | Why it is not a source here |
 |---|---|---|
-| [`CasarettDoull_Toxicology_textbook.pdf`](../sources/reference/CasarettDoull_Toxicology_textbook.pdf) (1,473 pp.) | 804 / 625 | General toxicology. Only 14 of its pages mention oligonucleotides or antisense at all, and none of those 14 also carries a `neurotox` hit. |
-| [`MethodsMolBiol2022_book_incl_renal-tox-mice_chapter.pdf`](../sources/kidney/MethodsMolBiol2022_book_incl_renal-tox-mice_chapter.pdf) (416 pp.) | 18 / **0** | All 18 hits are `neurodegener` or `neuronal`; most are the CNS as a *therapeutic target* (Batten disease, Parkinson's, neuromuscular and neurodegenerative indications). Two passages touch CNS safety — below. |
-| [`OligoTox_challenge_brief.pdf`](../sources/reference/OligoTox_challenge_brief.pdf) (6 pp.) | 4 / 2 | Scope authority naming the endpoint, not evidence about it. Both strict hits are on p.1, inside the authoritative portion (provenance caveat: [`cross-cutting.md`, §1.1 "Challenge brief — provenance defect (pp.3b–6)"](./cross-cutting.md#11-challenge-brief--provenance-defect-pp3b6)). |
+| [`CasarettDoull_Toxicology_textbook.pdf`](_shared/reference/CasarettDoull_Toxicology_textbook.pdf) (1,473 pp.) | 804 / 625 | General toxicology. Only 14 of its pages mention oligonucleotides or antisense at all, and none of those 14 also carries a `neurotox` hit. |
+| [`MethodsMolBiol2022_book_incl_renal-tox-mice_chapter.pdf`](kidney/sources/MethodsMolBiol2022_book_incl_renal-tox-mice_chapter.pdf) (416 pp.) | 18 / **0** | All 18 hits are `neurodegener` or `neuronal`; most are the CNS as a *therapeutic target* (Batten disease, Parkinson's, neuromuscular and neurodegenerative indications). Two passages touch CNS safety — below. |
+| [`OligoTox_challenge_brief.pdf`](_shared/reference/OligoTox_challenge_brief.pdf) (6 pp.) | 4 / 2 | Scope authority naming the endpoint, not evidence about it. Both strict hits are on p.1, inside the authoritative portion (provenance caveat: [`cross-cutting.md`, §1.1 "Challenge brief — provenance defect (pp.3b–6)"](./cross-cutting.md#11-challenge-brief--provenance-defect-pp3b6)). |
 
 Two passages touch CNS safety; neither is oligonucleotide-specific evidence for this endpoint.
 
@@ -54,7 +54,7 @@ The three oligos the sweep matched — `OLG001` inotersen, `OLG004` nusinersen, 
 |---|---|
 | No rows extracted | No source in the repository carries a per-compound neurological readout. The two passages in §2 are an injection-procedure note and a class-level statement about missing information. |
 | No source acquired | Deliberate: no candidate was ever entered on the fetch list, and the scope decision above leaves it that way for Phase 2. |
-| No grading rubric | The 0–3 rubric in [`schema.md`](../schema.md) is written entirely in renal terms and is not transferable; a second endpoint needs its own graded column and rubric ([`cross-cutting.md`, §4 "What must change if a second endpoint is populated"](./cross-cutting.md#4-what-must-change-if-a-second-endpoint-is-populated)). |
+| No grading rubric | The 0–3 rubric in [`schema.md`](kidney/schema.md) is written entirely in renal terms and is not transferable; a second endpoint needs its own graded column and rubric ([`cross-cutting.md`, §4 "What must change if a second endpoint is populated"](./cross-cutting.md#4-what-must-change-if-a-second-endpoint-is-populated)). |
 | No chronic/acute boundary defined | The brief distinguishes chronic neurotoxicity from acute alterations of neuronal electrical activity but defines neither. Adopting the endpoint would require drawing that line here. |
 
 No acquisition work is proposed; the deliverable for this endpoint is the scope statement above. If it were ever advanced, the order is: define the chronic/acute boundary, add a neurotoxicity-specific graded column with a written rubric, then acquire a primary source from outside the current library.
