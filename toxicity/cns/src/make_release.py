@@ -13,6 +13,7 @@ values computed here, so the workbook recomputes its own headline numbers when o
 from __future__ import annotations
 
 import csv
+import datetime
 import pathlib
 import sys
 
@@ -137,6 +138,51 @@ def data_sheet(wb, name: str, columns, rows: list[dict], numeric_cols=()):
     return ws
 
 
+FIXED_ZIP_TIME = (2026, 8, 26, 0, 0, 0)
+
+
+def normalise_zip_timestamps(path: pathlib.Path) -> None:
+    """Rewrite an .xlsx so every archive entry carries a fixed timestamp.
+
+    An .xlsx is a ZIP, and each entry's local header records the moment it was written, so two
+    builds over identical data differ in bytes even when every cell is the same. Two things have
+    to be normalised, and pinning `wb.properties` covers neither:
+
+      1. every entry's `date_time` in the archive;
+      2. `docProps/core.xml`, whose `dcterms:modified` openpyxl rewrites to the save time on the
+         way out, overriding whatever the workbook properties said.
+
+    Entry order, contents and compression are otherwise preserved exactly.
+    """
+    import re
+    import shutil
+    import tempfile
+    import zipfile
+
+    stamp = "2026-08-26T00:00:00Z"
+    with zipfile.ZipFile(path) as src:
+        items = []
+        for i in src.infolist():
+            data = src.read(i.filename)
+            if i.filename == "docProps/core.xml":
+                text = data.decode("utf-8")
+                for field in ("created", "modified"):
+                    text = re.sub(rf"(<dcterms:{field}[^>]*>)[^<]*(</dcterms:{field}>)",
+                                  rf"\g<1>{stamp}\g<2>", text)
+                data = text.encode("utf-8")
+            items.append((i, data))
+    tmp = pathlib.Path(tempfile.mkstemp(suffix=".xlsx")[1])
+    with zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED) as dst:
+        for info, data in items:
+            new_info = zipfile.ZipInfo(info.filename, date_time=FIXED_ZIP_TIME)
+            new_info.compress_type = info.compress_type
+            new_info.external_attr = info.external_attr
+            new_info.internal_attr = info.internal_attr
+            new_info.create_system = 3
+            dst.writestr(new_info, data)
+    shutil.move(str(tmp), str(path))
+
+
 def main() -> int:
     OUT_XLSX.parent.mkdir(exist_ok=True)
     OUT_MD.parent.mkdir(exist_ok=True)
@@ -146,6 +192,12 @@ def main() -> int:
 
     wb = openpyxl.Workbook()
     wb.remove(wb.active)
+    # Byte-deterministic output: openpyxl stamps docProps/core.xml with the current time, so
+    # two builds over identical data differ. Pin the document properties to the release date so
+    # the workbook, like the PDFs, rebuilds to the same bytes.
+    wb.properties.created = wb.properties.modified = datetime.datetime(2026, 8, 26, 0, 0, 0)
+    wb.properties.creator = wb.properties.lastModifiedBy = "OligoTox-CNS build pipeline"
+    wb.properties.title = TITLE_TEXT
 
     # ---------------- README -------------------------------------------------------------
     ws = wb.create_sheet("README")
@@ -263,6 +315,7 @@ def main() -> int:
     data_sheet(wb, "sources", src_cols, srcs)
 
     wb.save(OUT_XLSX)
+    normalise_zip_timestamps(OUT_XLSX)
     print(f"wrote {OUT_XLSX.relative_to(ROOT)}  ({OUT_XLSX.stat().st_size / 1e6:.1f} MB)")
 
     # ---------------- markdown data dictionary -------------------------------------------

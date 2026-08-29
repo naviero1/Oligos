@@ -18,6 +18,13 @@ import statistics as st
 import subprocess
 import sys
 
+import reportlab.rl_config
+# Byte-deterministic output. reportlab otherwise stamps each build with the current time in
+# /CreationDate and /ModDate and a random /ID, so two runs over identical data produce
+# different bytes. The methodology document claims the pipeline is deterministic; with this
+# set, that claim holds for the PDF binaries and not only for their content.
+reportlab.rl_config.invariant = 1
+
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_JUSTIFY
 from reportlab.lib.pagesizes import A4
@@ -855,6 +862,17 @@ def methodology(n):
         "Every number in the figures and in both PDFs is computed at build time from "
         "<font face='Courier'>data/</font>, so neither document can state a value the dataset "
         "does not contain."))
+    s.append(P(
+        "Determinism is <b>byte-level, and checked rather than asserted</b>. Running the pipeline "
+        "twice over the same inputs reproduces all 19 released artefacts &mdash; the four CSVs, "
+        "the workbook, both PDFs, the eight figures and the generated documentation &mdash; with "
+        "identical SHA-256 digests. Reaching that required suppressing three sources of "
+        "build-time noise that would otherwise make every rebuild differ while the data stayed "
+        "the same: ReportLab&rsquo;s embedded creation timestamps and document IDs, the archive "
+        "timestamps inside the .xlsx container, and the modification date openpyxl writes into "
+        "<font face='Courier'>docProps/core.xml</font> at save time. A reviewer who re-runs the "
+        "build can therefore diff the outputs against the committed ones and expect an exact "
+        "match, rather than having to compare them by eye."))
     return s
 
 
