@@ -22,13 +22,13 @@ one."* This directory is that second dataset.
 
 | | Count |
 |---|---:|
-| Measurement rows | **904** |
-| Oligonucleotides described | **34** |
-| — of which carry at least one measurement | 29 |
-| Distinct sources | 52 |
-| Tier-A rows with a positive finding | 55 |
-| Tier-A rows that are explicit measured negatives | 326 |
-| Grade-3 (severe) rows | 18 |
+| Measurement rows | **914** |
+| Oligonucleotides described | **35** |
+| — of which carry at least one measurement | 30 |
+| Distinct sources | 53 |
+| Tier-A rows with a positive finding | 60 |
+| Tier-A rows that are explicit measured negatives | 328 |
+| Grade-3 (severe) rows | 22 |
 | Oligonucleotides with a published sequence | 4 |
 | QC checks run / failed | 30 / 0 |
 
@@ -36,8 +36,8 @@ one."* This directory is that second dataset.
 
 | Tier | Rows |
 |---|---:|
-| A | 382 |
-| B | 522 |
+| A | 389 |
+| B | 525 |
 
 **Study type**
 
@@ -45,7 +45,7 @@ one."* This directory is that second dataset.
 |---|---:|
 | animal_invivo | 5 |
 | background_epidemiology | 3 |
-| clinical_case | 5 |
+| clinical_case | 15 |
 | clinical_trial | 347 |
 | pharmacovigilance | 456 |
 | regulatory_label | 88 |
@@ -54,8 +54,8 @@ one."* This directory is that second dataset.
 
 | Ascertainment | Rows |
 |---|---:|
-| measured_null | 694 |
-| measured_positive | 209 |
+| measured_null | 697 |
+| measured_positive | 216 |
 | not_assessed | 1 |
 
 **Attribution, as stated by the source** — what the SOURCE concluded about causation. `not_discussed` dominates because registry and pharmacovigilance records carry no causality assessment at all — that is a property of those sources, not an omission here
@@ -63,30 +63,30 @@ one."* This directory is that second dataset.
 | Attribution | Rows |
 |---|---:|
 | disease_attributed | 3 |
-| drug_attributed | 23 |
-| not_discussed | 878 |
+| drug_attributed | 30 |
+| not_discussed | 881 |
 
 **Toxicity axis** — `disease_background_rate` rows carry no compound; `delivery_procedure_complication` rows are attributable to the lumbar puncture rather than to any molecule
 
 | Axis | Rows |
 |---|---:|
-| csf_composition_disturbance | 198 |
+| csf_composition_disturbance | 200 |
 | csf_dynamics | 1 |
-| csf_pressure_disturbance | 123 |
+| csf_pressure_disturbance | 124 |
 | delivery_procedure_complication | 198 |
 | disease_background_rate | 3 |
 | therapeutic_ventricular_effect | 2 |
-| ventricular_enlargement | 379 |
+| ventricular_enlargement | 386 |
 
 **Severity grade** — rubric in [`SCHEMA.md`](SCHEMA.md#hydroceph_grade-rubric-03); all grades are provisional
 
 | `hydroceph_grade` | Rows |
 |---|---:|
 | *(not graded)* | 26 |
-| 0 | 694 |
-| 1 | 100 |
-| 2 | 66 |
-| 3 | 18 |
+| 0 | 697 |
+| 1 | 101 |
+| 2 | 68 |
+| 3 | 22 |
 
 **Delivery route** — systemically dosed oligonucleotides are included as a deliberate route contrast
 
@@ -94,7 +94,7 @@ one."* This directory is that second dataset.
 |---|---:|
 | NOT_APPLICABLE | 3 |
 | intracerebroventricular | 3 |
-| intrathecal_lumbar | 404 |
+| intrathecal_lumbar | 414 |
 | intravenous | 216 |
 | intravitreal | 24 |
 | subcutaneous | 254 |
@@ -103,14 +103,14 @@ one."* This directory is that second dataset.
 
 | Category | Rows |
 |---|---:|
-| csf_composition | 176 |
+| csf_composition | 178 |
 | csf_dynamics | 64 |
-| csf_pressure | 123 |
+| csf_pressure | 124 |
 | histopathology_choroid_ependyma | 1 |
-| hydrocephalus_event | 220 |
+| hydrocephalus_event | 221 |
 | procedure_complication | 177 |
-| shunt_or_drain_intervention | 40 |
-| ventricular_morphometry | 103 |
+| shunt_or_drain_intervention | 43 |
+| ventricular_morphometry | 106 |
 
 **Redistribution rights** — tracked per row
 
@@ -119,7 +119,7 @@ one."* This directory is that second dataset.
 | cc_by | 8 |
 | cc_by_nc | 3 |
 | public_domain | 880 |
-| summary_stat_only | 5 |
+| summary_stat_only | 15 |
 | verify | 8 |
 
 **Event clusters** — rows sharing an `event_cluster_id` describe **one** clinical episode and must not be counted as independent events.
@@ -129,10 +129,12 @@ one."* This directory is that second dataset.
 | `L1-EVT-01` | 5 |
 | `L2-BASELINE` | 3 |
 | `L3-TOFERSEN-SAE` | 3 |
+| `L5-PT1` | 3 |
+| `L5-PT2` | 6 |
 | `N1-SPAK` | 2 |
 | `N2-AQP4` | 3 |
 
-**Largest sources** (top 10 of 52)
+**Largest sources** (top 10 of 53)
 
 | `source_id` | Rows |
 |---|---:|
@@ -201,15 +203,40 @@ asserting; every one traces to a row and a locus.
   adverse-event counts below should not be read as the whole signal. Group sizes
   are small and the dataset computes no test statistic — the values are recorded
   exactly as published.
-- **Hydrocephalus among CNS-delivered oligonucleotides is tominersen-specific in
-  the trial record.** Serious hydrocephalus or normal-pressure hydrocephalus
-  adverse events appear in three separate tominersen studies (NCT03761849,
-  NCT03342053, NCT03842969), including **2/263 against 0/264 in the concurrent
-  placebo arm** of GENERATION HD1. Cerebral ventricle dilatation appears across
-  all three tominersen dose arms of the open-label extension. No other
-  intrathecal oligonucleotide programme — nusinersen, tofersen, BIIB080, BIIB105,
-  WVE-120101, WVE-120102, WVE-003 — reports a tier-A serious event in its posted
-  results.
+- **Within the registered-trial record the signal is tominersen's alone — but the
+  endpoint is not tominersen-specific.** Serious hydrocephalus or normal-pressure
+  hydrocephalus adverse events appear in three separate tominersen studies
+  (NCT03761849, NCT03342053, NCT03842969), including **2/263 against 0/264 in the
+  concurrent placebo arm** of GENERATION HD1, and cerebral ventricle dilatation
+  appears across all three dose arms of the open-label extension. No other
+  intrathecal programme with posted results — nusinersen, tofersen, BIIB080,
+  BIIB105, WVE-120101, WVE-120102, WVE-003 — reports a tier-A serious event. That
+  is a statement about registered trials, and it would be the wrong conclusion to
+  stop there: the two strongest drug-attributed cases in this dataset come from
+  outside that record entirely (next two bullets).
+- **A second, independent oligonucleotide produced the same endpoint in both
+  patients who received it.** In an n-of-1 protocol, two infants with KCNT1
+  epileptic encephalopathy were dosed intrathecally with valeriasen — a different
+  ASO, a different target, a different indication and age group — and **both**
+  developed ventricular enlargement. Patient 1: severe communicating hydrocephalus
+  with transependymal flow eight weeks after her ninth dose, CSF opening pressure
+  55 cmH₂O at endoscopic third ventriculostomy, no improvement, care redirected to
+  palliation. Patient 2: normal ventricles on day 55, enlargement on days 62 and
+  64, external ventricular drain at opening pressure >20 cmH₂O, ventriculoperitoneal
+  shunt on day 65. The authors state the events were *"attributable to dosing of
+  the study drug"* and call this *"a potential monitorable toxicity of some
+  intrathecal antisense oligonucleotides"*.
+- **The two drug-attributed cases point to different mechanisms, so the dataset
+  keeps them apart.** The tominersen index case was attributed to a **sterile
+  meningitis** — CSF protein 2.64 g/L with lymphocytosis. The KCNT1 patients had a
+  CSF inflammatory panel that was **negative** (albumin, IgG index, oligoclonal
+  bands, neopterin), and their authors' working hypothesis is a **dose-related**
+  effect. The evidence for that hypothesis is in the dataset as its only
+  reduced-dose rechallenge row: after a two-year pause, patient 2 received two
+  intrathecal doses (10 and 15 mg) and five intracerebroventricular doses (3–9 mg)
+  under a revised protocol with periodic MRI ventriculograms, **without
+  recurrence**. Inflammatory and dose-related routes to the same endpoint should
+  not be pooled, which is what `tox_axis` and `event_cluster_id` are for.
 - **The mechanism is documented end to end in one patient.** The index case
   (Stoker 2021, CC BY) records rising CSF protein to 2.64 g/L with lymphocytosis
   to 46 cells/mm³, then ventricular dilation on serial MRI, then **increased

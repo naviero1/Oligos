@@ -1,0 +1,4 @@
+{"studies":[
+{"protocolSection":{"identificationModule":{"nctId":"NCT06872125","briefTitle":"A Double-blind Study Evaluating the Efficacy, Safety, and Tolerability of Zorevunersen in Patients With Dravet Syndrome"},"statusModule":{"overallStatus":"RECRUITING"},"conditionsModule":{"conditions":["Dravet Syndrome"]},"designModule":{"phases":["PHASE3"]},"armsInterventionsModule":{"interventions":[{"name":"zorevunersen"},{"name":"Sham Comparator"}]}},"hasResults":false},
+{"protocolSection":{"identificationModule":{"nctId":"NCT04740476","briefTitle":"An Open-Label Extension Study of STK-001 for Patients With Dravet Syndrome"},"statusModule":{"overallStatus":"ACTIVE_NOT_RECRUITING"},"conditionsModule":{"conditions":["Dravet Syndrome"]},"designModule":{"phases":["PHASE2"]},"armsInterventionsModule":{"interventions":[{"name":"zorevunersen (STK-001)"}]}},"hasResults":false}
+]}

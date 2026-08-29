@@ -1,0 +1,871 @@
+{
+ "total": 9713,
+ "socs": [
+  [
+   "Blood and lymphatic system disorders",
+   90
+  ],
+  [
+   "Cardiac disorders",
+   237
+  ],
+  [
+   "Congenital, familial and genetic disorders",
+   387
+  ],
+  [
+   "Ear and labyrinth disorders",
+   63
+  ],
+  [
+   "Endocrine disorders",
+   19
+  ],
+  [
+   "Eye disorders",
+   86
+  ],
+  [
+   "Gastrointestinal disorders",
+   928
+  ],
+  [
+   "General disorders and administration site conditions",
+   2524
+  ],
+  [
+   "Hepatobiliary disorders",
+   46
+  ],
+  [
+   "Immune system disorders",
+   67
+  ],
+  [
+   "Infections and infestations",
+   2060
+  ],
+  [
+   "Injury, poisoning and procedural complications",
+   2415
+  ],
+  [
+   "Investigations",
+   1017
+  ],
+  [
+   "Metabolism and nutrition disorders",
+   307
+  ],
+  [
+   "Musculoskeletal and connective tissue disorders",
+   1420
+  ],
+  [
+   "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+   55
+  ],
+  [
+   "Nervous system disorders",
+   1778
+  ],
+  [
+   "Pregnancy, puerperium and perinatal conditions",
+   27
+  ],
+  [
+   "Product issues",
+   39
+  ],
+  [
+   "Psychiatric disorders",
+   324
+  ],
+  [
+   "Renal and urinary disorders",
+   222
+  ],
+  [
+   "Reproductive system and breast disorders",
+   44
+  ],
+  [
+   "Respiratory, thoracic and mediastinal disorders",
+   1031
+  ],
+  [
+   "Skin and subcutaneous tissue disorders",
+   228
+  ],
+  [
+   "Social circumstances",
+   6
+  ],
+  [
+   "Surgical and medical procedures",
+   84
+  ],
+  [
+   "Vascular disorders",
+   161
+  ]
+ ],
+ "ns_pts": [
+  [
+   "Headache",
+   755
+  ],
+  [
+   "Motor dysfunction",
+   116
+  ],
+  [
+   "Dizziness",
+   96
+  ],
+  [
+   "Seizure",
+   74
+  ],
+  [
+   "Cerebrospinal fluid leakage",
+   73
+  ],
+  [
+   "Migraine",
+   64
+  ],
+  [
+   "Tremor",
+   55
+  ],
+  [
+   "Paraesthesia",
+   46
+  ],
+  [
+   "Hypoaesthesia",
+   44
+  ],
+  [
+   "Intracranial pressure increased",
+   42
+  ],
+  [
+   "Neuralgia",
+   37
+  ],
+  [
+   "Dysstasia",
+   30
+  ],
+  [
+   "Hydrocephalus",
+   29
+  ],
+  [
+   "Somnolence",
+   29
+  ],
+  [
+   "Hypotonia",
+   27
+  ],
+  [
+   "Balance disorder",
+   26
+  ],
+  [
+   "Sciatica",
+   22
+  ],
+  [
+   "Brain injury",
+   19
+  ],
+  [
+   "Hypersomnia",
+   18
+  ],
+  [
+   "Epilepsy",
+   17
+  ],
+  [
+   "Memory impairment",
+   15
+  ],
+  [
+   "Lethargy",
+   14
+  ],
+  [
+   "Syncope",
+   14
+  ],
+  [
+   "Loss of consciousness",
+   13
+  ],
+  [
+   "Sensory disturbance",
+   12
+  ],
+  [
+   "Hypokinesia",
+   11
+  ],
+  [
+   "Pleocytosis",
+   10
+  ],
+  [
+   "Head discomfort",
+   9
+  ],
+  [
+   "Unresponsive to stimuli",
+   9
+  ],
+  [
+   "Cognitive disorder",
+   8
+  ],
+  [
+   "Encephalopathy",
+   8
+  ],
+  [
+   "Nervous system disorder",
+   8
+  ],
+  [
+   "Speech disorder",
+   8
+  ],
+  [
+   "Autonomic nervous system imbalance",
+   7
+  ],
+  [
+   "Brain oedema",
+   7
+  ],
+  [
+   "Movement disorder",
+   7
+  ],
+  [
+   "Muscle contractions involuntary",
+   7
+  ],
+  [
+   "Nerve compression",
+   7
+  ],
+  [
+   "Nystagmus",
+   7
+  ],
+  [
+   "Arachnoiditis",
+   6
+  ],
+  [
+   "Brain hypoxia",
+   6
+  ],
+  [
+   "Cerebral ventricle dilatation",
+   6
+  ],
+  [
+   "Coma",
+   6
+  ],
+  [
+   "Dysarthria",
+   6
+  ],
+  [
+   "Dyskinesia",
+   6
+  ],
+  [
+   "Intracranial hypotension",
+   6
+  ],
+  [
+   "Radicular pain",
+   6
+  ],
+  [
+   "Status epilepticus",
+   6
+  ],
+  [
+   "Aphasia",
+   5
+  ],
+  [
+   "Bulbar palsy",
+   5
+  ],
+  [
+   "Burning sensation",
+   5
+  ],
+  [
+   "Cerebral haemorrhage",
+   5
+  ],
+  [
+   "Cerebrovascular accident",
+   5
+  ],
+  [
+   "Inability to crawl",
+   5
+  ],
+  [
+   "Neuropathy peripheral",
+   5
+  ],
+  [
+   "Partial seizures",
+   5
+  ],
+  [
+   "Arachnoid cyst",
+   4
+  ],
+  [
+   "Cerebral infarction",
+   4
+  ],
+  [
+   "Dysgeusia",
+   4
+  ],
+  [
+   "Electric shock sensation",
+   4
+  ],
+  [
+   "Febrile convulsion",
+   4
+  ],
+  [
+   "Generalised tonic-clonic seizure",
+   4
+  ],
+  [
+   "Hypoxic-ischaemic encephalopathy",
+   4
+  ],
+  [
+   "Meningism",
+   4
+  ],
+  [
+   "Monoparesis",
+   4
+  ],
+  [
+   "Multiple sclerosis",
+   4
+  ],
+  [
+   "Neuromyopathy",
+   4
+  ],
+  [
+   "Paresis",
+   4
+  ],
+  [
+   "Presyncope",
+   4
+  ],
+  [
+   "Psychomotor hyperactivity",
+   4
+  ],
+  [
+   "Radiculopathy",
+   4
+  ],
+  [
+   "Subarachnoid haemorrhage",
+   4
+  ],
+  [
+   "Transient ischaemic attack",
+   4
+  ],
+  [
+   "Areflexia",
+   3
+  ],
+  [
+   "Cerebral atrophy",
+   3
+  ],
+  [
+   "Cerebral disorder",
+   3
+  ],
+  [
+   "Cerebrospinal fistula",
+   3
+  ],
+  [
+   "Drooling",
+   3
+  ],
+  [
+   "Dysgraphia",
+   3
+  ],
+  [
+   "Facial paresis",
+   3
+  ],
+  [
+   "Idiopathic intracranial hypertension",
+   3
+  ],
+  [
+   "Meningeal disorder",
+   3
+  ],
+  [
+   "Muscle spasticity",
+   3
+  ],
+  [
+   "Orthostatic headache",
+   3
+  ],
+  [
+   "Peroneal nerve palsy",
+   3
+  ],
+  [
+   "Petit mal epilepsy",
+   3
+  ],
+  [
+   "Seizure like phenomena",
+   3
+  ],
+  [
+   "Spinal cord haemorrhage",
+   3
+  ],
+  [
+   "Apallic syndrome",
+   2
+  ],
+  [
+   "Bradykinesia",
+   2
+  ],
+  [
+   "Carpal tunnel syndrome",
+   2
+  ],
+  [
+   "Central nervous system lesion",
+   2
+  ],
+  [
+   "Cerebral venous thrombosis",
+   2
+  ],
+  [
+   "Disturbance in attention",
+   2
+  ],
+  [
+   "Embolic stroke",
+   2
+  ],
+  [
+   "Exertional headache",
+   2
+  ],
+  [
+   "Facial paralysis",
+   2
+  ],
+  [
+   "Fine motor skill dysfunction",
+   2
+  ],
+  [
+   "Hemianaesthesia",
+   2
+  ],
+  [
+   "Hemiparaesthesia",
+   2
+  ],
+  [
+   "Hyperaesthesia",
+   2
+  ],
+  [
+   "Hypertonia",
+   2
+  ],
+  [
+   "Idiopathic generalised epilepsy",
+   2
+  ],
+  [
+   "Intellectual disability",
+   2
+  ],
+  [
+   "Intraventricular haemorrhage",
+   2
+  ],
+  [
+   "Ischaemic stroke",
+   2
+  ],
+  [
+   "Motor developmental delay",
+   2
+  ],
+  [
+   "Myoclonic epilepsy",
+   2
+  ],
+  [
+   "Myoclonus",
+   2
+  ],
+  [
+   "Neuritis",
+   2
+  ],
+  [
+   "Neurological decompensation",
+   2
+  ],
+  [
+   "Noninfectious myelitis",
+   2
+  ],
+  [
+   "Optic neuritis",
+   2
+  ],
+  [
+   "Paralysis",
+   2
+  ],
+  [
+   "Poor sucking reflex",
+   2
+  ],
+  [
+   "Postresuscitation encephalopathy",
+   2
+  ],
+  [
+   "Quadriplegia",
+   2
+  ],
+  [
+   "Sedation",
+   2
+  ],
+  [
+   "Sensory loss",
+   2
+  ],
+  [
+   "Superior sagittal sinus thrombosis",
+   2
+  ],
+  [
+   "Akinesia",
+   1
+  ],
+  [
+   "Amnesia",
+   1
+  ],
+  [
+   "Atonic seizures",
+   1
+  ],
+  [
+   "Autonomic dysreflexia",
+   1
+  ],
+  [
+   "Autonomic neuropathy",
+   1
+  ],
+  [
+   "Band sensation",
+   1
+  ],
+  [
+   "Brachial plexopathy",
+   1
+  ],
+  [
+   "Brain compression",
+   1
+  ],
+  [
+   "Brain fog",
+   1
+  ],
+  [
+   "Central nervous system inflammation",
+   1
+  ],
+  [
+   "Cerebral cyst",
+   1
+  ],
+  [
+   "Cerebral hypoperfusion",
+   1
+  ],
+  [
+   "Cerebral thrombosis",
+   1
+  ],
+  [
+   "Cerebral vascular occlusion",
+   1
+  ],
+  [
+   "Cerebral venous sinus thrombosis",
+   1
+  ],
+  [
+   "Cerebrospinal fluid circulation disorder",
+   1
+  ],
+  [
+   "Chorea",
+   1
+  ],
+  [
+   "Clonic convulsion",
+   1
+  ],
+  [
+   "Coordination abnormal",
+   1
+  ],
+  [
+   "Dementia Alzheimer's type",
+   1
+  ],
+  [
+   "Dizziness exertional",
+   1
+  ],
+  [
+   "Dystonia",
+   1
+  ],
+  [
+   "Encephalitis autoimmune",
+   1
+  ],
+  [
+   "Focal dyscognitive seizures",
+   1
+  ],
+  [
+   "Gross motor delay",
+   1
+  ],
+  [
+   "Guillain-Barre syndrome",
+   1
+  ],
+  [
+   "Haemorrhagic stroke",
+   1
+  ],
+  [
+   "Head titubation",
+   1
+  ],
+  [
+   "Hemihypoaesthesia",
+   1
+  ],
+  [
+   "Hemiparesis",
+   1
+  ],
+  [
+   "Hypertensive hydrocephalus",
+   1
+  ],
+  [
+   "Hypoglycaemic seizure",
+   1
+  ],
+  [
+   "Intracranial aneurysm",
+   1
+  ],
+  [
+   "Language disorder",
+   1
+  ],
+  [
+   "Meningitis noninfective",
+   1
+  ],
+  [
+   "Meningorrhagia",
+   1
+  ],
+  [
+   "Mental impairment",
+   1
+  ],
+  [
+   "Metabolic encephalopathy",
+   1
+  ],
+  [
+   "Migraine with aura",
+   1
+  ],
+  [
+   "Myelopathy",
+   1
+  ],
+  [
+   "Narcolepsy",
+   1
+  ],
+  [
+   "Neonatal seizure",
+   1
+  ],
+  [
+   "Nervous system cyst",
+   1
+  ],
+  [
+   "Neuralgic amyotrophy",
+   1
+  ],
+  [
+   "Neurodevelopmental delay",
+   1
+  ],
+  [
+   "Neurological symptom",
+   1
+  ],
+  [
+   "Noninfective encephalitis",
+   1
+  ],
+  [
+   "Normal pressure hydrocephalus",
+   1
+  ],
+  [
+   "Opisthotonus",
+   1
+  ],
+  [
+   "Parosmia",
+   1
+  ],
+  [
+   "Paroxysmal sympathetic hyperactivity",
+   1
+  ],
+  [
+   "Post herpetic neuralgia",
+   1
+  ],
+  [
+   "Postictal state",
+   1
+  ],
+  [
+   "Postural tremor",
+   1
+  ],
+  [
+   "Progressive muscular atrophy",
+   1
+  ],
+  [
+   "Quadriparesis",
+   1
+  ],
+  [
+   "Reduced facial expression",
+   1
+  ],
+  [
+   "Restless legs syndrome",
+   1
+  ],
+  [
+   "Ruptured cerebral aneurysm",
+   1
+  ],
+  [
+   "Sinus headache",
+   1
+  ],
+  [
+   "Slow response to stimuli",
+   1
+  ],
+  [
+   "Slow speech",
+   1
+  ],
+  [
+   "Speech disorder developmental",
+   1
+  ],
+  [
+   "Spinal cord oedema",
+   1
+  ],
+  [
+   "Spinal subarachnoid haemorrhage",
+   1
+  ],
+  [
+   "Thoracic radiculopathy",
+   1
+  ],
+  [
+   "Vertebrobasilar artery stenosis",
+   1
+  ],
+  [
+   "VIth nerve paralysis",
+   1
+  ],
+  [
+   "Vocal cord paralysis",
+   1
+  ]
+ ]
+}

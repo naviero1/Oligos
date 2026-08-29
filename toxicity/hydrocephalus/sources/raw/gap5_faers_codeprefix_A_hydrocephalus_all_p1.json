@@ -1,0 +1,298 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "AROMASIN",
+      "count": 5
+    },
+    {
+      "term": "AFINITOR",
+      "count": 3
+    },
+    {
+      "term": "ZOMETA",
+      "count": 2
+    },
+    {
+      "term": "ACETAMINOPHEN",
+      "count": 1
+    },
+    {
+      "term": "ALEVE                              /00256202/",
+      "count": 1
+    },
+    {
+      "term": "AMOXICILLIN AND CLAVULANATE POTASSIUM",
+      "count": 1
+    },
+    {
+      "term": "ARIMIDEX",
+      "count": 1
+    },
+    {
+      "term": "ASPIRIN",
+      "count": 1
+    },
+    {
+      "term": "AVELOX",
+      "count": 1
+    },
+    {
+      "term": "CALCIUM",
+      "count": 1
+    },
+    {
+      "term": "CEFUROXIME",
+      "count": 1
+    },
+    {
+      "term": "CENTRUM",
+      "count": 1
+    },
+    {
+      "term": "CEPHALEXIN",
+      "count": 1
+    },
+    {
+      "term": "CHEMOTHERAPEUTICS NOS",
+      "count": 1
+    },
+    {
+      "term": "CHLORHEXIDINE GLUCONATE",
+      "count": 1
+    },
+    {
+      "term": "CIPRO",
+      "count": 1
+    },
+    {
+      "term": "CLINDAMYCIN",
+      "count": 1
+    },
+    {
+      "term": "CLONAZEPAM",
+      "count": 1
+    },
+    {
+      "term": "COMPAZINE",
+      "count": 1
+    },
+    {
+      "term": "COUMADIN",
+      "count": 1
+    },
+    {
+      "term": "CYCLOBENZAPRINE",
+      "count": 1
+    },
+    {
+      "term": "DEXAMETHASONE",
+      "count": 1
+    },
+    {
+      "term": "DIAZEPAM",
+      "count": 1
+    },
+    {
+      "term": "ERYTHROMYCIN",
+      "count": 1
+    },
+    {
+      "term": "ESOMEPRAZOLE",
+      "count": 1
+    },
+    {
+      "term": "ETORICOXIB",
+      "count": 1
+    },
+    {
+      "term": "FASLODEX",
+      "count": 1
+    },
+    {
+      "term": "FLEXERIL",
+      "count": 1
+    },
+    {
+      "term": "FLUCONAZOLE",
+      "count": 1
+    },
+    {
+      "term": "GABAPENTIN",
+      "count": 1
+    },
+    {
+      "term": "HYDROCHLOROTHIAZIDE",
+      "count": 1
+    },
+    {
+      "term": "HYDROXYZINE",
+      "count": 1
+    },
+    {
+      "term": "IBUPROFEN",
+      "count": 1
+    },
+    {
+      "term": "INFLUENZA VACCINE",
+      "count": 1
+    },
+    {
+      "term": "KEFLEX",
+      "count": 1
+    },
+    {
+      "term": "KETOPROFEN",
+      "count": 1
+    },
+    {
+      "term": "LEVAQUIN",
+      "count": 1
+    },
+    {
+      "term": "LIDODERM",
+      "count": 1
+    },
+    {
+      "term": "LISINOPRIL",
+      "count": 1
+    },
+    {
+      "term": "LOTRIMIN",
+      "count": 1
+    },
+    {
+      "term": "LYRICA",
+      "count": 1
+    },
+    {
+      "term": "M.V.I.",
+      "count": 1
+    },
+    {
+      "term": "MAG-OX",
+      "count": 1
+    },
+    {
+      "term": "MIRALAX",
+      "count": 1
+    },
+    {
+      "term": "MORPHINE",
+      "count": 1
+    },
+    {
+      "term": "MULTI-VITAMINS",
+      "count": 1
+    },
+    {
+      "term": "NEULASTA",
+      "count": 1
+    },
+    {
+      "term": "NITROFURANTOIN",
+      "count": 1
+    },
+    {
+      "term": "NYSTATIN",
+      "count": 1
+    },
+    {
+      "term": "OMEPRAZOLE.",
+      "count": 1
+    },
+    {
+      "term": "OXYCODONE HCL",
+      "count": 1
+    },
+    {
+      "term": "OXYCONTIN",
+      "count": 1
+    },
+    {
+      "term": "PANTOPRAZOLE",
+      "count": 1
+    },
+    {
+      "term": "PAROXETINE HCL",
+      "count": 1
+    },
+    {
+      "term": "PAXIL",
+      "count": 1
+    },
+    {
+      "term": "PENICILLIN ^GRUNENTHAL^",
+      "count": 1
+    },
+    {
+      "term": "PERIDEX",
+      "count": 1
+    },
+    {
+      "term": "PHENAZOPYRIDINE HCL TAB",
+      "count": 1
+    },
+    {
+      "term": "PROCHLORPERAZINE",
+      "count": 1
+    },
+    {
+      "term": "REMERON",
+      "count": 1
+    },
+    {
+      "term": "SENOKOT                                 /UNK/",
+      "count": 1
+    },
+    {
+      "term": "SULFAMETHOXYPYRAZINE/TRIMETHOPRIM",
+      "count": 1
+    },
+    {
+      "term": "TAMOXIFEN CITRATE",
+      "count": 1
+    },
+    {
+      "term": "TAXOTERE",
+      "count": 1
+    },
+    {
+      "term": "VALTREX",
+      "count": 1
+    },
+    {
+      "term": "VERZENIO",
+      "count": 1
+    },
+    {
+      "term": "VESICARE",
+      "count": 1
+    },
+    {
+      "term": "VFEND",
+      "count": 1
+    },
+    {
+      "term": "VIOXX",
+      "count": 1
+    },
+    {
+      "term": "VYTORIN",
+      "count": 1
+    },
+    {
+      "term": "XANAX",
+      "count": 1
+    },
+    {
+      "term": "ZYVOX",
+      "count": 1
+    }
+  ]
+}

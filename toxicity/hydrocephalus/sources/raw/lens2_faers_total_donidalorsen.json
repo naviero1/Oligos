@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 303
+    }
+  },
+  "results": [
+    {
+      "safetyreportversion": "1",
+      "safetyreportid": "26168772",
+      "primarysourcecountry": "US",
+      "transmissiondateformat": "102",
+      "transmissiondate": "20260117",
+      "reporttype": "2",
+      "receivedateformat": "102",
+      "receivedate": "20251217",
+      "receiptdateformat": "102",
+      "receiptdate": "20251217",
+      "fulfillexpeditecriteria": "2",
+      "companynumb": "US-IONIS PHARMACEUTICALS, INC.-2025IS004148",
+      "primarysource": {
+        "reportercountry": "US",
+        "qualification": "5"
+      },
+      "sender": {
+        "sendertype": "6",
+        "senderorganization": "IONIS PHARMACEUTICALS"
+      },
+      "receiver": {
+        "receivertype": "6",
+        "receiverorganization": "FDA"
+      },
+      "patient": {
+        "patientonsetage": "30",
+        "patientonsetageunit": "801",
+        "reaction": [
+          {
+            "reactionmeddraversionpt": "28.1",
+            "reactionmeddrapt": "Hereditary angioedema",
+            "reactionoutcome": "6"
+          }
+        ],
+        "drug": [
+          {
+            "drugcharacterization": "1",
+            "medicinalproduct": "DAWNZERA",
+            "drugauthorizationnumb": "219407",
+            "drugstructuredosagenumb": "80",
+            "drugstructuredosageunit": "003",
+            "drugseparatedosagenumb": "1",
+            "drugintervaldosageunitnumb": "4",
+            "drugintervaldosagedefinition": "803",
+            "drugdosagetext": "80 MILLIGRAM, Q4W",
+            "drugindication": "Hereditary angioedema",
+            "actiondrug": "5",
+            "drugrecurreadministration": "3",
+            "drugadditional": "3",
+            "activesubstance": {
+              "activesubstancename": "DONIDALORSEN"
+            },
+            "openfda": {
+              "application_number": [
+                "NDA219407"
+              ],
+              "brand_name": [
+                "DAWNZERA"
+              ],
+              "generic_name": [
+                "DONIDALORSEN"
+              ],
+              "manufacturer_name": [
+                "Ionis Pharmaceuticals Inc."
+              ],
+              "product_ndc": [
+                "71860-103"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "SUBCUTANEOUS"
+              ],
+              "substance_name": [
+                "DONIDALORSEN SODIUM"
+              ],
+              "rxcui": [
+                "2724447",
+                "2724453"
+              ],
+              "spl_id": [
+                "3f909bfc-3281-a444-e063-6294a90a221f"
+              ],
+              "spl_set_id": [
+                "3ff501e0-f75f-07da-e063-6294a90a0cb7"
+              ],
+              "package_ndc": [
+                "71860-103-01"
+              ],
+              "unii": [
+                "Y30VEG5PH1"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

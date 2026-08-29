@@ -1,0 +1,91 @@
+{
+ "nusinersen": {
+  "inn_list": "Recommended INN List 74",
+  "who_drug_information": "Vol. 29, No. 3, 2015",
+  "pdf": "rl74.pdf",
+  "pages_in_pdf": [
+   29,
+   30
+  ],
+  "printed_page_numbers": [
+   413,
+   414
+  ],
+  "url": "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl74.pdf",
+  "local": "sweep8_whoinn_RL74_nusinersen_p29-30.pdf",
+  "molecular_formula_asprinted": "C234H340N61O128P17S17"
+ },
+ "tofersen": {
+  "inn_list": "Recommended INN List 81",
+  "who_drug_information": "Vol. 33, No. 1, 2019",
+  "pdf": "rl81.pdf",
+  "pages_in_pdf": [
+   81,
+   82
+  ],
+  "url": "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl81.pdf",
+  "local": "sweep8_whoinn_RL81_tofersen_p81-82.pdf",
+  "molecular_formula_asprinted": "C230H317N72O123P19S15"
+ },
+ "tominersen": {
+  "inn_list": "Recommended INN List 83",
+  "who_drug_information": "Vol. 34, No. 1, 2020",
+  "pdf": "rl83.pdf",
+  "pages_in_pdf": [
+   106,
+   107
+  ],
+  "printed_page_numbers": [
+   106,
+   107
+  ],
+  "url": "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl83.pdf",
+  "local": "sweep8_whoinn_RL83_tominersen_p106-107.pdf",
+  "molecular_formula_asprinted": "C230H319N74O122P19S13"
+ },
+ "eplontersen": {
+  "inn_list": "Recommended INN List 85",
+  "who_drug_information": "Vol. 35, No. 1, 2021",
+  "pdf": "rl85.pdf",
+  "pages_in_pdf": [
+   49,
+   50
+  ],
+  "printed_page_numbers": [
+   141,
+   142
+  ],
+  "url": "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl85.pdf",
+  "local": "sweep8_whoinn_RL85_eplontersen_p49-50.pdf",
+  "molecular_formula_asprinted": "C296H437N77O156P20S13"
+ },
+ "zorevunersen": {
+  "inn_list": "Recommended INN List 87",
+  "who_drug_information": "Vol. 36, No. 1, 2022",
+  "pdf": "rl87.pdf",
+  "pages_in_pdf": [
+   200
+  ],
+  "printed_page_numbers": [
+   254
+  ],
+  "url": "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl87.pdf",
+  "local": "sweep8_whoinn_RL87_zorevunersen_p200.pdf",
+  "molecular_formula_asprinted": "C234H334N71O124P17S17"
+ },
+ "diranersen (BIIB080 / ISIS 814907 / MAPTRx)": {
+  "inn_list": "Recommended INN List 94",
+  "pdf": "rl94.pdf",
+  "pages_in_pdf": [
+   54,
+   55
+  ],
+  "url": "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl94.pdf",
+  "local": "sweep8_whoinn_RL94_diranersen_BIIB080_p54-55.pdf",
+  "molecular_formula_asprinted": "C210H300N53O116P17S15",
+  "inn_identified_via": "ClinicalTrials.gov API v2 intervention otherNames on NCT05399888 / NCT06454721"
+ },
+ "_note": "Lists 74-95 were all fetched and text-searched this session; the six names above are the only hits for these compounds among Recommended lists 74-95. No sequence was transcribed in this sweep.",
+ "_url_pattern": "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl<N>.pdf",
+ "_lists_scanned": "rl74 - rl95 inclusive (22 PDFs, all HTTP 200)"
+}

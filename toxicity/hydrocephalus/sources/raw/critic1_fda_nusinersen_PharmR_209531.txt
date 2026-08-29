@@ -1,0 +1,4996 @@
+ CENTER FOR DRUG EVALUATION AND 
+RESEARCH 
+
+APPLICATION NUMBER: 
+
+209531Orig1s000 
+
+PHARMACOLOGY REVIEW(S) 
+
+ 
+ 
+ 
+ 
+ 
+ 
+Tertiary Pharmacology Review
+
+Paul C. Brown, Ph.D., ODE Associate Director for Pharmacology and 
+
+By:
+Toxicology, OND IO
+NDA: 209531
+Submission date: 8/9/2016, 9/23/2016
+Drug: nusinersen
+Applicant: Biogen
+Indication: spinal muscular atrophy
+
+Reviewing Division: Division of Neurology Products
+
+Discussion:
+The pharmacology/toxicology reviewer and supervisor conducted a thorough 
+evaluation of the nonclinical information submitted in support of this NDA. They 
+have determined that the information is adequate to support approval for the 
+indication of spinal muscular atrophy.
+
+Toxicity studies of nusinersen were conducted in mice and juvenile cynomolgus 
+monkeys. Histological evidence of neurotoxicity was observed in monkeys. The 
+NOAEL for this toxicity occurred at a dose that produced exposures relevant to 
+the clinical exposure. 
+
+Developmental and reproductive toxicity studies in mice and rabbit showed no 
+fetal effects related to treatment with nusinersen. A pre-/postnatal study is 
+ongoing and the supervisor recommends that completion of this study be a post-
+marketing requirement.
+
+Carcinogenicity studies have not been conducted with nusinersen at this time. 
+The Division has recommended that a carcinogenicity study be conducted after 
+approval.
+
+Conclusions:
+I agree that the pharmacology/toxicology information is adequate to support 
+approval of this application. The post-marketing requirements of a carcinogenicity 
+study and completion of the pre-/postnatal study are reasonable.
+
+Reference ID: 4032342
+
+1
+
+ 
+ 
+---------------------------------------------------------------------------------------------------------
+This is a representation of an electronic record that was signed
+electronically and this page is the manifestation of the electronic
+signature.
+---------------------------------------------------------------------------------------------------------
+/s/
+----------------------------------------------------
+
+PAUL C BROWN
+12/22/2016
+
+Reference ID: 4032342
+
+DEPARTMENT OF HEALTH AND HUMAN SERVICES
+PUBLIC HEALTH SERVICE
+FOOD AND DRUG ADMINISTRATION
+CENTER FOR DRUG EVALUATION AND RESEARCH
+
+PHARMACOLOGY/TOXICOLOGY REVIEW AND EVALUATION
+
+NDA NUMBER(S):
+
+SERIAL NUMBER:
+
+DATE RECEIVED BY CENTER:
+
+209531
+
+000
+
+8/09/16
+
+PRODUCT:
+
+INDICATION:
+
+SPONSOR:
+
+Nusinersen (ISIS 396443)
+
+Spinal Muscular Atrophy (SMA)
+
+Biogen
+
+REVIEW DIVISION:
+
+Division of Neurology Products (DNP)
+
+PHARM/TOX REVIEWER:
+
+PHARM/TOX SUPERVISOR:
+
+DIVISION DIRECTOR:
+
+PROJECT MANAGER:
+
+Ed Fisher
+
+Lois Freed
+
+Billy Dunn
+
+Fannie Choy
+
+Reference ID: 4030770
+
+ 
+                
+TABLE OF CONTENTS
+
+I.    EXECUTIVE SUMMARY 
+      A.    Drug ....................................................................................................   
+                   B. Brief discussion of nonclinical findings ................................................   
+      C.  Recommendations ...............................................................................   
+
+II.   PHARMACOLOGY 
+
+A.    Brief summary .............................................................................. ......
+B.    Safety Pharmacology ....................................................................     
+
+III.  PHARMACOKINETICS 
+
+A.  Absorption .....................................................................................   
+B. Distribution .................................................................................... ......
+C.  Metabolism ................................................................................... ......
+D. Excretion  .......................................................................................
+
+IV.  TOXICOLOGY 
+
+A.  Acute toxicity ................................................................................. ......
+B. Subchronic toxicity .........................................................................
+C. Chronic toxicity .............................................................................. ......
+D. Genotoxicity  ................................................................................. ......
+E.  Carcinogenicity ....................................................................................
+F.  Reproductive and developmental toxicology .....................................
+G. Other studies  ..............................................................................
+
+......
+
+V.  SUMMARY AND EVALUATION .................................................................
+
+ 3
+ 3
+ 4
+
+ 5
+10
+
+11
+13
+14
+14
+
+15
+16
+30
+48
+49
+49
+62
+
+68
+
+Note: All figures and tables in this review were excerpted from the sponsor’s submission or literature.
+
+Reference ID: 4030770
+
+2
+
+I.
+
+EXECUTIVE SUMMARY
+
+A. 
+
+Drug
+
+Trade name:                   Spinraza
+
+Generic name:                Nusinersen 
+
+Code names:                  ISIS 396443
+
+Chemical name:      
+
+RNA, [2'-O-(2-methoxyethyl)](P-thio)(m5U-m5C-A-m5C-m5U-
+m5U-m5U-m5C-A-m5U-A-A-m5U-G-m5C-m5U-G-G)
+
+CAS registry number:
+
+1258984-36-9
+
+Structure:
+
+Drug class:  
+
+2´-O-(2-methoxyethyl) antisense oligonucleotide (ASO)
+
+Indication:  
+
+Spinal muscular atrophy
+
+Clinical dose:
+
+12 mg on Days 
+every 4 months 
+
+ followed by maintenance dosing 
+
+Dosage forms:
+
+Sterile solution for intrathecal (IT) injection
+
+Relevant IND:   
+
+110011
+
+B. 
+
+Background and brief discussion of nonclinical findings
+
+ISIS  396443  is  a  fully  modified  18-base  2′-MOE  (2´-O-(2-methoxyethyl))  phosphorothioate 
+oligonucleotide that was designed to be complementary to and hybridize with the pre-mRNA for 
+human SMN2 to increase exon 7 inclusion and full length SMN protein expression. This structure 
+is similar to endogenous RNA except for the substitution of a sulfur for a non-bridging oxygen at 
+each internucleotide linkage and the addition of methoxyethyl groups (i.e., 2΄-O-MOE) to the 2΄-
+position  of  each  nucleotide.  In  pharmacology  studies,  ISIS  396443  appeared  to  promote  SMN2 
+
+Reference ID: 4030770
+
+3
+
+(b) (4) 
+  
+ 
+exon  7  splicing  in  SMA  mouse  models,  showing  activity  at  tissue  concentrations  achieved 
+clinically (~2-10 µg/g tissue). 
+
+In safety pharmacology studies, there were no pulmonary or cardiovascular effects in rats using 
+continuous  intrathecal  (IT)  infusion  for  25  days,  or  effects  on  ECG  in  the  repeat-dose  IT 
+toxicology  studies  in  monkeys.  The  only  safety  pharmacology  effects  observed  were  transient 
+post-dose  effects  on  lower  spinal  reflex  observed  at  the  highest  doses  tested  in  monkeys  (≥3 
+mg).
+
+The toxicity and pharmacokinetics (PK) of ISIS 396443 were evaluated following single IT bolus 
+doses (up to 7 mg) in adult monkeys or following repeated IT bolus doses (weekly or every other 
+week) for 14 (0.3, 1, or 3 mg/dose) and 53 (0.3, 1, or 4 mg/dose) weeks in juvenile monkeys. A 
+13-week toxicity study was conducted in juvenile CD-1 mice using SC administration (1, 10, or 50 
+mg/kg weekly or biweekly) to assess systemic effects. IT bolus injection of ISIS 396443 produced 
+dose-  and  time-dependent  increases  in  exposure  in  the  spinal  cord  and  brain.  Neurotoxicity 
+(decreased lower spinal reflexes) was observed following single doses ≥ 3 mg in both adult and 
+juvenile monkeys but appeared to be reversible and did not increase in incidence or severity with 
+continued  dosing.  In  the  14-  and  53-week  juvenile  monkey  studies,  no  drug-related  mortality  or 
+effects  on  body  weight,  ECG,  CSF  chemistry/cell  counts,  clinical  pathology,  or  complement 
+activation (as measured by concentrations of Bb split product) were observed, and there was no 
+evidence  of  systemic  inflammation  or  non-CNS  histopathology.  Possible  long-term  effects  on 
+performance in a learning and memory test were observed at the HD in the 1-year study, which 
+could  be  related  to  drug-related  hippocampal  neurohistopathology.  However,  due  to  data 
+variability and small group sizes, this neurobehavioral effect did not reach statistical significance. 
+Neuronal  vacuolation  (graded  slight  to  minimal)  in  the  inferior  region  of  the  hippocampus  was 
+observed at the MD and HD in both studies. In some animals at both doses, this vacuolation was 
+associated  with  low  incidences  of  neuronal  and  glial  cell  necrosis  and  cellular  debris. 
+Hippocampal vacuolation and necrotic cells/cellular debris were still present following 12 and 24 
+weeks  of 
+for 
+neurohistopathology in monkeys (0.3 mg/dose or 39 mg/year) is similar to the proposed human 
+maintenance dose (36 mg/yr) when calculated on a yearly basis and was associated with tissue 
+levels similar to those measured in patient tissue samples at autopsy (see Tables V.1-3, pp.69-
+70).
+
+the  14-  and  53-week  studies, 
+
+respectively.  The  NOAEL 
+
+recovery 
+
+in 
+
+In  the  13-week  SC  mouse  study,  histopathologic  findings  attributed  to  the  expected  effects  of 
+local  and  systemic  accumulations  of  oligonucleotide  and/or  their  pro-inflammatory  effects  were 
+observed  in  a  variety  of  tissues  included  basophilic  granules  in  the  kidney,  Kupffer  cell 
+hypertrophy, and vacuolated macrophages at the injection sites, lymph nodes and less commonly 
+in multiple other tissues. These findings were generally not associated with evidence of necrosis, 
+degeneration,  or  inflammation.  However,  1  HD  animal  was  found  to  have  renal  tubular 
+degeneration characterized by basophilia, vacuolation, and single cell necrosis. Vacuolation and 
+degeneration  of  renal  tubular  epithelial  cells  associated  with  basophilic  granulation  have  been 
+previously reported in animal studies of other phosphorothioate oligonucleotides. 
+
+No  clear  evidence  of  reproductive  or  developmental  toxicity  was  seen  in  mouse  and  rabbit 
+studies, and ISIS 396443 was negative for genotoxicity in a standard battery of in vitro and in vivo 
+assays. Carcinogenicity studies were not conducted. The sponsor has requested a waiver based 
+on  the  infeasibility  of  conducting  lifetime  studies  in  rodents  by  the  IT  route,  but  given  the 
+significant systemic exposure documented in clinical studies, it is recommended that a parenteral 
+study in one species be conducted postmarketing.  
+
+C.          Recommendations
+
+The application is approvable from a pharmacology/toxicology standpoint. 
+
+Reference ID: 4030770
+
+4
+
+II.
+
+PHARMACOLOGY
+
+A. Brief summary
+
+In vitro studies 
+
+ISIS  396443  was  identified  in  studies  in  which  candidate  2′-MOE  antisense  oligonucleotides 
+(ASOs)  were  screened  in  in  vitro  splicing  assays,  reporter  gene  assays,  and  SMA  patient 
+fibroblasts. Two regions within exon 7 were found that promoted exon 7 inclusion in the splicing 
+studies  and SMA  patient  fibroblasts  when bound by an ASO.  Further  studies  identified  a novel 
+site  approximately  10  nucleotides  downstream  from  the  intron/exon  junction  that  promoted 
+inclusion of exon 7 in cell culture assays. This site was shown to be effective in promoting exon 7 
+inclusion on SMN2 pre-mRNA. This site on the SMN2 pre-mRNA is referred to as intron splicing 
+silencer N1 (ISS-N1). Further screening in SMA patient fibroblasts confirmed that ASOs targeting 
+the ISS-N1 site were the most efficient at promoting SMN2 exon 7 inclusion. In the absence of 
+ASO,  approximately 30% of the  SMN2 transcripts  in patient  fibroblasts  cells are full length, i.e. 
+contain exon 7. Treatment with the lead candidate increased the amount of full length transcript 
+expressed and decreased the amount of transcripts missing exon 7. The effects of ISIS 396443 
+are  sequence  specific  as  scrambling  six  nucleotides  in  the  sequence  results  in  loss  of  activity. 
+Treatment  of  patient  fibroblasts  with  ISIS  396443  increased  exon  7  inclusion  in  the  SMN2 
+transcript and also increased the amount of SMN protein produced in these cells. 
+
+Since  humans  are  the  only  species  known  to  have  the  SMN2  gene,  in  vivo  pharmacology  was 
+examined  in  mouse  models  of  SMA  in  which  the  endogenous  mouse  gene  has  been  removed 
+and  the  human  SMN2  gene  is  expressed.  Studies  were  conducted  in  a  mild  phenotype  model 
+that  expresses  4  copies  of  the  human  SMN2  gene  (SMN-/-;  SMN22TG/2TG).  ISIS  396443  was 
+either infused into the CSF over 7 days or administered as a single ICV bolus injection. Although 
+both dosing regimens resulted in dose-dependent increases of properly spliced SMN2 and loss of 
+transcripts lacking exon 7 (Figure II.1), the ICV bolus injection decreased the ED50 from 105 μg 
+to  17  μg  in  the  spinal  cord.  This  increased  potency  was  confirmed  by  quantifying  ISIS  396443 
+levels in the spinal cord and brain and comparing this to SMN2 splicing. Preliminary duration of 
+effect was examined in these studies as well. Comparable levels of splicing were observed up to 
+71 days post initiation of ICV infusion (Figure II.1 B and E). The prolonged PD effect is consistent 
+with the long half-life of the ASO.
+
+Reference ID: 4030770
+
+5
+
+Figure II.1 
+
+Administration of ISIS 396443 by ICV infusion or ICV bolus injection
+
+(A) Real-time RT-PCR analysis of SMN2 transcripts including exon 7 (FL) or excluding exon 7 (Δ7) in the lumbar spinal 
+cord,  2  days  after  administration  of  ISIS  396443  by  ICV  infusion  for  7  days  at  the  indicated  daily  doses  and  total  dose 
+administered (e.g., 3 μg/day for 7 days = 21 μg). For each dose level, n = 5. Error bars represent the S.D. The calculated 
+ED50 is shown. (B) SMN2 splicing was assessed 71 days after the end of the 30 μg/day ICV infusion in A. (C) Real-time 
+RT-PCR analysis of FL and Δ7 SMN2 transcripts in the lumbar spinal cord, 9 days after administration of ISIS 396443 by 
+a single ICV bolus injection at the indicated dose. For each dose level n = 4. Error bars represent the S.D. The calculated 
+ED50 is shown. (D-F) Same as in A-C, except that the analysis is for the brain.
+
+ISIS  396443  distributed  broadly  throughout  the  spinal  cord  and  brain,  with  accumulation  in 
+cortical, striatal, and hippocampal regions. Highest concentrations of ISIS 396443 were found in 
+neurons,  including  motor  neurons  in  the  lumbar  spinal  cord.  SMN  protein  staining  showed 
+increased expression in ASO-dosed mice relative to PBS controls.
+
+When  induction  of  allograft  inflammatory  factor-1  (Aif1),  a  marker  for  monocyte/microglia 
+activation, was measured in mice, no increase in Aif1 transcript levels was seen at ISIS 396443 
+doses of up to 700 μg (ICV infusion) or 350 μg (ICV bolus).
+
+In similar studies using a  different mouse model (C/C), in which the mouse Smn1allele (C-allele) 
+has the human genomic SMN2 sequence after exon 6 as well as the 42-kb human SMN2 locus, 
+ICV  bolus  injection  of  ISIS  396483  increased  SMN2  expression  in  a  dose-dependent  manner. 
+The ED50 and EC50 values in both the spinal cord and brain were comparable in the two models. 
+
+Reference ID: 4030770
+
+6
+
+When  SMN2  transgenic  mice  were  dosed  by  ICV  infusion  for  7  days  and  SMN2  splicing 
+monitored out to 1 year in brain and spinal cord, SMN2 exon 7 inclusion was maintained for the 
+duration  of  the  experiment  in  both  the  brain  and  spinal  cord.  Translation  of  the  mRNA  was 
+confirmed by immunohistochemistry, showing SMN positive staining in the spinal cord. ICV bolus 
+provided a similar duration, of at least 24 to 36 weeks in brain and spinal cord (Figure II.2). There 
+was no significant increase in Aif1 over the course of the study.
+
+Figure II.2 
+
+Duration of action after ICV infusion or ICV bolus injection of ISIS 396443
+
+(A) Real-time RT-PCR analysis of SMN2 FL and Δ7 transcripts in the lumbar spinal cord at the indicated time points after 
+administration of ISIS 396443 by ICV infusion at 50 μg/day for 7 days. PBS, n = 4; 1 and 3 weeks, n = 5; 12 weeks, n = 6; 
+24 weeks n = 7; 36 weeks, n = 6; 52 weeks n = 7. Error bars represent the S.D. (B) Real-time RT-PCR analysis of FL and 
+Δ7 SMN2 transcripts in the lumbar spinal cord at the indicated time points after administration of 100 μg of ISIS 396443 by 
+a  single  ICV  bolus  injection.  For  each  time  point,  n  =  5,  except  for  the  24  weeks  group,  for  which  n  =  4.  Error  bars 
+represent the S.D. (C) Same as in B, except that 25 μg of ISIS 396443 was injected. (D-F) Same as in A-C, except that 
+the analysis is for the brain.
+
+Additional evidence that the prolonged induction of SMN2 is directly caused by ISIS 396443 was 
+provided by an experiment performed with an ASO fully complementary to ISIS 396443 (α443). 
+Injection of α443 three weeks after injection of ISIS 396443 completely reversed SMN2 splicing to 
+baseline  within  two  weeks  in  both  the  brain  and  spinal  cord  of  SMN2  transgenic  mice  (mild 
+phenotype).
+
+Reference ID: 4030770
+
+7
+
+The  functional  consequences  of  increased  SMN2  were  evaluated  in  SMA  models  of  varying 
+severity. In the mild phenotype SMN2 mouse (loss of the tail and ear necrosis beginning 3 to 4 
+weeks  after  birth),  which  lacks  mouse  Smn1  but  has  four  copies  of  human  SMN2,  intrauterine 
+ICV  bolus  injection  of  ISIS  396443  on  GD15  produced  a  dose  dependent  effect  on  exon  7 
+inclusion in pups 7 days after birth, with maximal effect (92% inclusion) occurring at a dose of 20 
+μg.  At  this  dose,  ISIS  396443  significantly  delayed  the  onset  of  tail  necrosis  and  ear  necrosis 
+(which  are  the  major  symptoms  in  mouse  model  but  not  seen  in  humans)  from  3  weeks  in 
+untreated mice to 9 weeks. A dose of 10 μg had an intermediate effect on tissue necrosis. ICV 
+dosing on GD15 had no effect on SMN2 splicing in tail tissue measured on PND 14, suggesting 
+that  the  beneficial  activity  was  not  due  to  a  direct  effect  of  ISIS  396443  in  tail  tissue.  Dosing  of 
+pups  with  20  μg  on  PND1  or  2  delayed  tail  necrosis  by  approximately  2  weeks  indicating  that 
+early treatment was more effective.
+
+In a severe SMA mouse model (SMNΔ7) that better replicates some of the features of prenatal or 
+severe type I SMA, a single ICV injection of 4 μg on PND 0 resulted in a significant increase in 
+body  weight  at  PND16  compared  to  untreated  or  control  oligonucleotide  treated  animals.  Motor 
+functions, including righting reflex, grip strength, and hindlimb splay, were also improved. 
+
+A single ICV bolus injection produced a dose-dependent effect on survival of severe SMA mice. 
+Median  survival  for  untreated  mice  and  control  oligonucleotide  treated  mice  was  16  days  after 
+birth. A dose of 0.5 μg increased survival to 20 days; maximal effects on survival were achieved 
+at  the  4  μg  dose  (median  survival  26  days).  Some  animals  survived  longer  than  50  days  in 
+groups treated with 2 and 4 μg (Figure II.3). It was also reported that ISIS 396443 administration 
+preserved  the  morphology  of  neuromuscular  junctions,  compared  to  untreated  animals,  and 
+increased the size of myofibers in Δ7 mice.
+
+Figure II.3 
+
+ISIS 396443 Improves Body Weight and Motor Function in Severe SMA Mice
+
+ISIS  396443  (4  μg)  was  administered  as  a  single  ICV  bolus  in  PND0  pups  of  SMA  Δ7  mice.  Body  weight  and  various 
+motor function tests were performed 8 and 16 days after birth and show that ISIS 396443 produces a significant increase 
+in  weight,  measure  of  strength  (i.e.  grip  strength),  and  motor  function  (i.e.,  righting  reflex  and  hindlimb  splay)  that 
+approach that of wild type animals. *p<0.05; ***p<0.001
+
+Reference ID: 4030770
+
+8
+
+The duration of action of ISIS 396443 was determined following a single 4 μg ICV bolus injection 
+on  PND0  in  SMA  Δ7  mice  by  measuring  the  concentration  of  ISIS  396443  and  level  of  SMN2 
+exon 7 inclusion in the spinal cord tissue at 3, 16, and 30 days after the single injection. At three 
+days after injection, ISIS 396443 increased exon 7 inclusion in spinal cord tissue and reached a 
+maximal  effect  16  days  after  injection.  The  effect  was  lost  by  30  days  after  the  single  injection. 
+The same dose produced a median survival of 26 days, consistent with the duration of effect. A 
+single 4 μg ICV bolus injection produced spinal cord concentrations of approximately 8-10 μg/g at 
+3  days  and  2  μg/g  at  16  days  post-dosing,  when  maximal  efficacy  was  observed.  Tissue 
+concentration at 30 days post dosing was below 2 μg/g. Based upon these results, the sponsor 
+predicted  that  tissue  concentrations  between  2  and  10  μg/g  are  required  to  produce  efficacy  in 
+this  mouse  model.  The  duration  of  action  following  ICV  bolus  injection  in  mice  on  PND0  differ 
+from the results following ICV infusion in adult mice, in which the duration of action was greater 
+than  6  months,  although  the  effective  tissue  concentrations  were  similar  in  ranges.  This  was 
+thought to possibly be due to more rapid clearance of ASO from the tissue in the developing and 
+growing neonate and to a dilution effect as the tissue increases in size.
+
+ISIS 396443 was shown to be active in peripheral tissues in studies in SMN2 transgenic mice. IP 
+bolus injection every 2 days for a total of 4 doses resulted in a dose-dependent increase in SMN2 
+splicing  correction in the  liver,  with an ED50  of 31 mg/kg. The  EC50  value  obtained in the  liver 
+(135 μg/g) was higher than had been observed in the spinal cord (1.6 μg/g) and brain (5.7 μg/g). 
+In contrast to the long-duration of action observed with ISIS 396443 in the CNS, the duration of 
+action of ISIS 396443 in the liver after IP bolus injection was much shorter, with minimal SMN2 
+splicing  correction  observed  8  weeks  after  dosing.  In  agreement  with  the  shorter  duration  of 
+SMN2  splicing  correction,  the  half-life  of  ISIS  396443  in  liver  was  about  20  days.  The  longer 
+duration of effect in neurons relative to liver has been observed for other ASOs. 
+
+CSF SMN protein level was evaluated as a possible biomarker using another ASO (ISIS 449323) 
+with  the  same  sequence  as  ISIS  396443  but  with  mixed  phosphorothioate  and  phosphodiester 
+modifications  in  the  backbone.  ICV  bolus  injection  of  ISIS  449323  into  the  CSF  of  adult  mice 
+transgenic for human SMN2 resulted in almost complete SMN2 exon 7 inclusion in CNS tissues 
+and  a  3.5-fold  increase  in  the  amount  of  SMN  protein  in  CSF.  Similar  results  were  found  in  a 
+second study in which a control ASO did not increase SMN protein in the CSF while ISIS 449323 
+did.
+
+Reference ID: 4030770
+
+9
+
+B. Safety Pharmacology
+
+1. A  pulmonary  and  cardiovascular  safety  evaluation  of  ISIS  396443  administered  as  a 
+continuous intrathecal infusion in albino rats (Study #396443-AS04 (727-038), conducted by 
+
+, report dated 12/14/12, GLP)
+
+a. Methods
+
+Male  S-D  rats  (8/gr)  were  administered  ISIS  396443  (0,  0.02,  0.06,  or  0.2  mg/day;  Lot 
+#RP396443-001) by continuous intrathecal infusion (0.25ul/hour) via implanted minipumps for 28 
+days.
+
+b. Results
+
+i. Mortality, clinical signs, body weights
+
+One MD (#318) and 3 HD (#s 327, 331, and 332) animals died or were sacrificed, but these 
+deaths were attributed to surgical procedure or accident and not drug. No drug-related signs 
+or effects on body weight were observed.
+
+ii. Pulmonary monitoring (monitoring in plethysmograph chamber on Day 11, 12, or 22, for 
+
+60 seconds at 15 minute intervals for at least 4 hours) 
+
+No drug-related effects on pulmonary function were observed.
+
+iii. Cardiovascular monitoring (systolic, diastolic, MAP, and HR monitored on SD19, 22, 23, 
+
+or 25) 
+
+No significant drug-related effects on heart rate or blood pressure were observed.
+
+iv. Postmortem  evaluations  (lumbar  spinal  cord  samples  collected  after  sacrifice  following 
+
+completion of cardiovascular monitoring) 
+
+ISIS 396443 concentrations in the lumber spinal cord were 70, 170, and 389 μg/g at the end 
+of the infusion at the LD, MD, and HD, respectively.
+
+Reference ID: 4030770
+
+10
+
+(b) (4)III.
+
+PHARMACOKINETICS 
+
+PK  in  monkeys  was  evaluated  in  a  dedicated  PK  study  in  adults  (Study  396443-APK01)  and  in 
+the 3 toxicology studies: 1) single bolus IT study in adult monkeys (Study 396443-AS01), 2) a 14-
+week IT study in juvenile monkeys (Study 396443-AS03), and 3) a 53-week IT study in juvenile 
+monkeys (Study 396443-AS06). The results of the latter 2 studies are described in the Toxicology 
+section of this review.
+
+A.
+
+Absorption
+
+In the single dose adult monkey study in which animals received either the vehicle (artificial CSF) 
+or ISIS 396443 (1, 3, or 7 mg given as 3 min IT bolus injection via lumbar catheter), peak CSF 
+concentrations were observed within 15 minutes of dosing and then rapidly declined (up to 24–48 
+hours  post  injection).  Following  the  initial  rapid  distribution  phase,  ISIS  396443  elimination  from 
+the CSF was much slower with an observed elimination half-life of approximately 11 days. MRT0-
+48 hr values ranged from 4.3 to 7.7 hrs at the 3 mg dose (Table III.1). AUC values indicated that 
+the majority of CSF exposure was during the first 12 hrs. Plasma concentrations  peaked at 2-5 
+hrs and CSF-to-plasma ratios ranged from 95-524 within 2 to 48 hr (Table III.2). 
+
+Table III.1. ISIS 396443 CSF PK parameters in adult monkeys after single IT bolus dose
+
+Table III.2.  ISIS 396443 Plasma PK parameters in adult monkeys after single IT bolus dose
+
+In the dedicated PK study, male cynomolgus monkeys received either 4 IT bolus doses or 4 IV 
+bolus  doses  at  1  mg/dose  on  Days  1,  8,  15,  and  22.  After  the  IT  bolus  injection,  peak  CSF 
+concentrations  occurred  1  hour  (the  first  evaluated  time  point),  and  plasma  concentrations 
+peaked  4  hours  post  dose.  CSF  concentrations  (collected  prior  to  the  2nd  through  4th  dose) 
+
+Reference ID: 4030770
+
+11
+
+increased approximately 2.5-fold from the first to third IT dose (Table III.3).  CSF concentrations 
+declined rapidly over the first 48 to 168 hrs after the fourth IT injection, but terminal half-life was 
+estimated at 102 days. This was considered the most representative estimate of the elimination 
+half-life in CSF since sampling continued for up to a year.
+
+Table III.3 ISIS 396443 CSF concentrations after IT and IV bolus administration of 1 mg dose
+
+Plasma  AUC  values  after  IT  and  IV  administration  are  shown  in  Table  III.4.  Plasma 
+concentrations  measured  168  hours  after  1,  2,  and  3  IT  doses  accumulated  up  to  ~3-fold  with 
+multiple dosing. The calculated AUC values for the IV group were thought to be underestimated 
+due to lack of sampling prior to 1 hr on Day 22, but the higher AUC with IT administration (IT:IV 
+ratio >1.0) was thought to support a tissue distribution advantage after IT administration. 
+
+Table III.4  
+
+Plasma PK after 1 mg IT and IV bolus injections
+
+Comparison  of  adult  and  juvenile  monkey  studies  indicated  that  plasma  exposures  in  juveniles 
+were 2-4-fold higher at the same mg doses compared to adults (Table III.5), consistent with body 
+weight  differences  and  supporting  a  direct  relationship  between  plasma  clearance  and  body 
+weight, as observed previously for similar classes of ASOs.
+
+Reference ID: 4030770
+
+12
+
+Table III.5  Plasma exposures in juvenile and adult monkeys after single 1 mg or 3 mg IT dose
+
+B.
+
+Distribution
+
+Tissue distribution in adult monkeys following 3 weeks of IT or IV bolus injection of a 1 mg dose 
+(Study  396443-APK01)  is  shown  in  Tables  III.6-7.  After  IT  dosing,  the  highest  CNS  tissue 
+concentrations  were  measured  in  the  lumbar  spinal  cord  followed  by  the  thoracic  and  cervical 
+spinal cord regions and the frontal and temporal cortex brain regions. Lower concentrations were 
+observed  in  the  brain  stem,  cerebellum,  hippocampus,  and  putamen.  (The  high  cerebellum 
+concentration on Day 85 was considered anomalous.)
+
+Table III.6   CNS tissue concentrations in monkeys after multiple 1 mg IT bolus doses
+
+Table III.7   Systemic tissue concentrations in monkeys after multiple 1 mg IT or IV bolus doses
+
+CNS  tissue  concentrations  in  adult  and  juvenile  monkeys  were  generally  similar  while  liver 
+concentrations were higher in juveniles than in adults. Lumbar spinal cord concentrations 7 days 
+after  4  weekly  1  mg  doses  in  adult  monkeys  (total  dose  =  4  mg  over  3  weeks  [1.33  mg/week]) 
+
+Reference ID: 4030770
+
+13
+
+were 91.4 ± 37.9 were consistent with those measured in juveniles 7 days after last dose in the 
+14-week toxicity study (total dose = 10 x 1 mg = 10 mg [0.77 mg/week]) (78.6 ± 53.3 μg/g).
+
+In mice, monkeys, and humans, ISIS 396443 was highly bound to plasma proteins (>94% bound) 
+at clinically relevant or higher plasma concentrations (100 ng/mL and 5 μg/mL), which would tend 
+to  limit  glomerular  filtration  and  urinary  excretion.  Protein  binding  in  monkey  and  human  CSF, 
+however,  was  much  lower  (<25%)  at  5  μg/mL,  with  no  measurable  binding  observed  at  150 
+μg/mL, consistent with lower protein concentration existing in CSF (Study 396443-IS05 and Study 
+396443-IS06).
+
+Tissue distribution and placenta transfer were evaluated in a combined fertility and developmental 
+toxicity  study  in  mice  following  multiple  SC  bolus  injections  (Study  396443-AS08)  and  in  an 
+embryofetal  development  toxicity  study  in  rabbits  following  multiple  SC  bolus  injections  (Study 
+396443-AS09) as described in the toxicology section.
+
+C.
+
+Metabolism
+
+Metabolism was evaluated in selected CSF, plasma, and tissue samples from the 14-week and 
+53-week  monkey  toxicity  studies.  Following  IT  administration,  intact  ISIS  396443  was  the  only 
+oligonucleotide detected in monkey CSF extracts. In monkey plasma samples, intact ISIS 396443 
+was  the  most  abundant  oligonucleotide  detected  and  accounted  for  >95%  of  the  total 
+oligonucleotides. The only drug-related moiety detected in plasma sample extracts was a 17-mer 
+oligonucleotide (N-1 from 3’-end only; Table III.8). Intact ISIS 396443 was also the most abundant 
+oligonucleotide  detected  in  all  evaluated  monkey  tissues,  including  brain  cortex,  lumbar  spinal 
+cord, liver, and kidney, and accounted for 79% to 81% of the total oligonucleotides (Table III.9). 
+The metabolites detected in these tissues were the chain-shortened oligonucleotides N-1, N-2, N-
+3, and N-4 from 3’-end, as well as the chain shortened oligonucleotides N-1, N-2, and N-3 from 
+5’-end.  The  N-1  metabolite  from  the  3’-end  was  the  most  abundant  metabolite  in  all  evaluated 
+tissues  (up  to  20%  of  the  total  oligonucleotide  present  when  using  peak  area  to  measure 
+abundance),  while  each  individual  remaining  metabolite  accounting  for  less  than  5%.  These 
+findings  were  thought  to  be  consistent  with  a  stable  backbone  structure,  with  metabolism 
+appearing to occur mainly via slow exonuclease-mediated hydrolysis at both the 3′- and 5′-ends.
+
+Table III.8: Relative abundance (%) of ISIS 396443 and associated metabolite in monkey plasma 
+
+Table III.9    (%) ISIS 396443 and metabolites in monkey liver, brain, and lumbar spinal cord
+
+D.
+
+Excretion
+
+Urinary  excretion  was  not  evaluated.  The  chain  shortened  oligonucleotides  are  expected  to  be 
+excreted  in  urine  following  slow  metabolism  in  tissues,  which  represents  the  major  pathway  for 
+whole body clearance of ASO compounds reported in the literature.
+
+Reference ID: 4030770
+
+14
+
+remaining C, LD, and MD monkeys received additional doses once every other week on Days 43, 
+57, 71, 85, and 99. The remaining HD monkeys received additional doses once weekly on Days 
+36,  43,  50,  57,  64,  71,  78,  85,  92,  and  99.  3-4/sex/group  were  sacrificed  on  Day  106 
+(approximately 7 days following the final dose administration). 2/sex from the C and HD groups 
+were sacrificed following a 12-week recovery (Day 183). 
+
+Observations  included  body  weight  and  food  consumption;  clinical  observations;  neurological 
+(general sensory and motor functions) and physical examinations; TK in plasma, CSF, and tissue; 
+ophthalmology;  ECG;  clinical  pathology;  complement  activation;  immunohistochemistry;  gross 
+pathology; microscopic examination of a full panel of non-CNS tissues in C and HD groups (10% 
+neutral  buffered  formalin-fixed);  and  an  expanded  examination  of  brain  and  spinal  cord  from  all 
+animals.  Histopathologic  evaluations  were  completed  by  Tox  Path  Specialists.  Brain  sections 
+from all animals (8 coronal sections from the left side of the brain) were paraffin embedded and 
+serial sections were stained with H&E and examined microscopically. In addition, two sections of 
+the brains were stained with Fluoro-jade B for evaluation of neuronal degeneration. For selected 
+slides (or a single slide) from the brain of all animals, GFAP, Fluoro-jade B, and PGP 9.5 staining 
+was performed on serial sections from the tissue in the existing paraffin block to investigate the 
+cellular location (if intracellular) of the vacuoles (noted at the original microscopic evaluation) and 
+assist with characterizing other possible changes not apparent with H&E staining. In those cases 
+a single section in the area noted to be affected during the original microscopic evaluation or the 
+section closest to that area was stained from all animals.
+
+Doses  were  based  on  the  results  of  the  single  dose  study  in  adult  monkeys  and  two  pilot  PK 
+studies of a similar uniform 2′-MOE-modified oligonucleotide. The HD (3 mg/dose) was said to be 
+limited by the potential for acute and transient changes thought to be associated with the IT bolus 
+administration.  In  the  initial  pilot  study  in  which  adult  monkeys  received  escalating  lumbar  IT 
+bolus  injections  of  1,  3,  and  10  mg,  the  HD,  which  used  a  10  mg/mL  concentration,  produced 
+transient  clinical  signs,  including  hindlimb  ataxia,  hindlimb  neurological  deficits,  and  decreased 
+heart  rate,  body  temperature,  and  respiration  rate.  In  the  single  dose  adult  monkey  study  with 
+ISIS 396443 (396443-AS013 above), transient hindlimb weakness and deficits in spinal reflexes 
+were observed in a single monkey at an IT dose of 7 mg (7 mg/mL). In the second pilot study in 
+juvenile monkeys, lumbar bolus IT injections of 0.3 and 1.5 mg appeared to be well-tolerated after 
+4  weeks  of  dosing.  Based  on  these  data,  the  HD  of  3  mg  (4  mg/mL)  in  the  current  juvenile 
+monkey study was expected to be on the threshold for acute toxicity.
+
+Reference ID: 4030770
+
+17
+
+The  HD  of  3  mg  administered  weekly  throughout  the  study  was  also  intended  to  produce  high 
+spinal cord concentrations. This dose was said to be within the dose/exposure range associated 
+with  signs  of  drug-related  histologic  changes  in  the  cerebellum  with  a  related  oligonucleotide 
+(SOD-1  inhibitor  for  ALS  indication).  Due  to  the  chemical  modification  of  ISIS  396443,  which 
+included  2’-MOE  on  each  of  the  nucleotides,  the  tissue  residence  time  was  anticipated  to  be 
+longer than observed in the previous program and thus result in higher tissue concentrations at 
+comparable  doses.  Dosing  at  the  LD  and  MD  (weekly  for  first  4  weeks  followed  by  every  other 
+week) was intended to more closely reflect the anticipated clinical dosing regimen. 
+
+The LD of 0.3 mg produced spinal cord concentrations in juvenile monkeys that were similar to 
+those associated with the desired pharmacologic activity in SMN2 transgenic mice, i.e., increased 
+exon 7 inclusion and SMN protein (~2 to 8 μg/g tissue concentration).
+
+b. Results
+
+i.
+
+Mortality and Clinical Observations 
+
+There was no mortality considered drug-related.  A single HD male (024) was found dead on 
+Day 8 approx 8 hrs after the second dose, but this death was considered unrelated to drug 
+based  on  the  pathology  findings.  The  cause  of  death  was  determined  to  be  hemorrhagic 
+meningoencephalitis  (inflammation  of  the  meninges  and  brain)  and  was  thought  likely 
+secondary  to  a  bacterial  infection  resulting  from  the  placement  and/or  presence  of  the 
+catheter.
+
+No drug-related clinical signs were observed.
+
+ii.
+
+Body Weight
+
+There were no drug-related effects on BW or food consumption. 
+
+iii.
+
+Physical and Neurological Examinations
+
+No ISIS 396443-related changes in physical examination parameters (heart rate, respiration, 
+temperature,  auscultation  (respiratory  and  cardiovascular),  gait,  disposition,  abdominal 
+palpation, lymph nodes palpation, and general appearance of the eyes, ears, oral cavity, skin, 
+and nails) were observed.
+
+ISIS  396443-related  neurological  changes  (deficits  in  spinal  reflexes)  were  seen  in  HD 
+animals  ~4  hr  after  dosing  on  Days  1  and  29  (Table  IVB.1).   Deficits  remained  in  2  HD 
+females  (059  and  060),  at  the  Day  99  evaluation  (approximately  4  hours  after  dosing). 
+Neurological examinations were normal for all other animals at the Day 99 evaluation and for 
+all animals at the Day 183 (recovery) evaluation.
+
+Reference ID: 4030770
+
+18
+
+Table IVB.1
+
+Neurological examinations 
+
+Males
+
+Females
+
+iv.
+
+Clinical Pathology
+
+There  were  no  drug-related  changes  in  hematology,  serum  and  CSF  chemistry,  or 
+urinalysis parameters and no effect on CSF cell counts. 
+
+v.
+
+Ophthalmoscopy
+
+There were no drug-related effects.
+
+vi.
+
+Cardiovascular
+
+There were no clearly drug-related effects on ECG or blood pressure parameters (measured 
+prior to initiation of dosing and prior to necropsy). Several animals (2 C, 3 LD, 2 MD, and 3 
+
+Reference ID: 4030770
+
+19
+
+HD) had mild (up to ~20%) prolongation of QT and/or QTc intervals with and without changes 
+in heart rate but due to the lack of a dose-response these changes were not considered drug-
+related.
+
+vii.
+
+TK
+
+Plasma,  CSF,  and  tissue  exposure  data  are  shown  below  (Tables  IVB.2-4).  The  highest 
+concentrations  were  measured  in  the  lumbar  spinal  cord,  brain  cortex,  and  liver  (169,  166, 
+and 115 μg/g, respectively, at the HD) at the terminal necropsy on Day 106 following once-
+weekly administration. Tissue concentrations at all doses generally increased from Day 36 to 
+Day 106. Clearance was slow following the end of dosing in the HD group. The decrease in 
+concentrations  from  tissues  during  the  recovery  period  was  somewhat  slower  than  the 
+observed  clearance  from  plasma  and  CSF.  Levels  in  the  hippocampus  (measured 
+separately) were relatively high (Table IVB.5), but not higher than in the cortex. 
+
+Table IVB.2. 
+
+Plasma TK parameters after single or multiple IT bolus doses
+
+Table IV.3  CSF concentrations pre-dose, 7 days after the 5th (Day 29) and last (Day 99) IT 
+
+bolus dose, and after recovery (HD)
+
+Reference ID: 4030770
+
+20
+
+ 
+Table IV.4  Tissue  concentrations  7  days  after  the  5th  (Day  29)  and  last  (Day  99)  IT  bolus 
+
+dose, and after recovery (HD)
+
+Table IVB.5. Concentrations in hippocampus 7 days after the last (Day 99) IT bolus HD
+
+viii.
+
+Complement analysis
+
+No  drug-related  increases  in  plasma  or  CSF  complement  split  product  Bb  were  observed 
+(Figures  IV.1-2).  While  Bb  values  were  elevated  in  a  few  individual  animals,  there  were  no 
+consistent dose-related patterns that would indicate an effect on complement activation.
+
+Reference ID: 4030770
+
+21
+
+Figure IV.1: Average Bb in plasma specimens from each group at the pre, 4 hr post/dose and 
+necropsy time points. Dotted line represents top of normal range for Bb (2 SD above mean).
+
+Figure IV.2: Average Bb level in CSF at pre and necropsy time points
+
+ix.
+
+Necropsy
+
+There  were  no  gross  lesions  and  no  changes  in  organ  weights  considered  attributable  to 
+administration of ISIS 396443.
+
+Histopathology 
+
+Day 36
+The  only  findings  considered  possibly  drug-related  (relationship  to  drug  considered 
+“equivocal” in report) were “scattered, slight microglial foci and slight perivascular infiltrates” 
+in the brain and spinal cord in a single MD male which were thought by the study pathologist 
+to represent a focal reaction caused by penetration of the oligo into the brain and spinal cord 
+parenchyma. 
+
+Day 106
+Vacuolation,  considered  by  the  pathologist  to  be  neuronal  vacuolation  based  on  general 
+morphology and immunohistochemical staining (“PGP 9.5 and GFAP stains indicated that the 
+
+Reference ID: 4030770
+
+22
+
+vacuoles  were  most  likely  within  neurons”),  was  present  in  the  inferior  region  of  the 
+hippocampus in MD and HD animals (Table IVB.6; pathology summary below). 
+
+
+
+Brain,  Hippocampus,  Hippocampal  (Inferior)  Area,  Vacuolation  (slight  to  minimal 
+severity)
+o
+
+1 mg males (1/3 animals) (slight severity) and 3 mg males (3/3) and females 
+(4/4)(slight to minimal severity) (Day 106)
+3 mg males (2/2) and females (2/2) (slight to minimal severity) (Day 183)
+
+o
+
+
+
+Brain, Hippocampus, Hippocampal (Inferior) Area, Neuron, Necrosis
+
+o
+
+3 mg females (1/4) (slight severity) (Day 106) 
+
+
+
+A  single  necrotic  neuron  was  observed  in  the  neuronal  layer.  This 
+was verified with the Fluoro-Jade B stain.
+
+
+
+Brain, Hippocampus, Hippocampal (Inferior) Area, Glial Cell, Necrosis
+
+o These  cells  were  not  Fluoro-Jade  B  positive  and  were  interpreted  to  be 
+
+necrotic glial cells.
+3 mg males (1/4) (slight severity) (Day 106)
+3 mg recovery females (1/2) (slight severity) (Day 183)
+
+o
+o
+
+In  2  HD  animals  (026  male;  058  female)  there  were  “one  or  two  necrotic  cells  within  or 
+adjacent  to  the  zone  of  vacuolation.”  Based  on  Fluoro-Jade  B  staining,  these  necrotic  cells 
+were determined to be a neuron in animal 058 and glial cells in animals 026. According to the 
+pathology report, “the biologic significance of these vacuoles, and the apparently associated 
+low level of  neuronal  or glial cell necrosis,  was not  apparent.  Although  extremely  slight, the 
+loss  of  neurons,  present  only  in  the  3  mg  (high  dose)  animals,  was  considered  an  adverse 
+effect.” The report further stated that “the very specific and limited anatomic area affected by 
+this  change  was  considered  to  be  a  very  unusual  event.  What  unique  feature  of  these 
+particular  neurons  (assuming  the  vacuoles  were  within  neurons)  made  them  susceptible  to 
+the formation of these vacuoles was not apparent.” According to the report, the finding of a 
+small number of necrotic cells “indicated that “the vacuolation seldom (if ever) progressed to 
+neuronal  necrosis.  As  a  very  rare  necrotic  neuron  can  be  encountered  in  control  animals 
+(especially when brain sections are stained with Fluoro-Jade B as was performed for selected 
+brain  sections  in  this  study),  this  single  necrotic  neuron  may  have  been  unrelated  to  test 
+article administration.”
+
+A slight accumulation of macrophages near the central canal of the spinal cord was found in 
+a  single  HD  female  and  slight  increases  (compared  to  C)  of  infiltrates  in  the  meninges 
+overlying  the  brain  was  present  in  MD  and  HD  males  and  females.  The  infiltrates  were 
+graded slight to mild, and the average severity was only marginally increased compared to C. 
+
+Day 183
+Vacuolation  was  observed  with  a  similar  incidence  and  severity  in  all  (2/sex)  HD  recovery 
+animals.  This  was  thought  to  be  due  to  the  persistence  of  high  concentrations  of 
+oligonucleotide. Necrotic glial cells were also reported in one of the HD animals (060 female). 
+
+Reference ID: 4030770
+
+23
+
+c. Conclusions:
+
+IT  bolus  injections  of  ISIS  396443  (0,  0.3,  1,  or  3  mg/dose)  weekly  or  biweekly  to  juvenile 
+monkeys for 14-weeks (total doses of 3, 10, or 45 mg) produced acute neurological deficits (lower 
+spinal  reflexes)  at  the  HD  and  brain  histopathology  at  the  MD  (neuronal  vacuolation  in 
+hippocampus)  and  HD  (neuronal  vacuolation  and  rare  cell  necrosis  in  hippocampus).  The 
+neurohistopathology findings were seen at the end of dosing and recovery but not at the 1-month 
+interim sacrifice.
+
+Reference ID: 4030770
+
+25
+
+Histopathologic  findings  considered  related  to  tissue  accumulation  of  oligonucleotide  and/or 
+their  pro-inflammatory  effects  were  observed  at  the  injection  sites  at  ≥1  mg/kg/dose  and 
+systemically  at  ≥10  mg/kg/dose  (Table  IVB.7).  These  included  basophilic  granules  in  the 
+kidney,  Kupffer  cell  hypertrophy  in  liver,  and  vacuolated  macrophages  at  the  injection  sites, 
+lymph  nodes,  and  less  commonly  in  multiple  other  tissues.  Additional  drug-related  findings 
+were noted in the mandibular salivary gland in MD and HD males and sternal bone marrow in 
+HD males.
+
+The  kidney  findings  at  the  MD  and  HD  were  described  as  small  round  basophilic  granules, 
+which  were  said  to  represent  oligonucleotide  stained  with  hematoxylin,  either  within  the 
+tubular  epithelium  or  in  the  lumen  of  the  proximal  convoluted  tubules  of  the  cortex.  In  the 
+absence of morphological changes in the tubules (i.e., vacuolation) they were not considered 
+toxicologically  significant.  However,  1  HD  male  (no.  8766-05)  had  multifocal  renal  tubular 
+degeneration characterized by basophilia, vacuolation, and single cell necrosis; according to 
+the  report,  it  was  unclear  if  this  was  an  incidental  finding  or  associated  with  the  basophilic 
+granules.  Vacuolation  and  degeneration  of  renal  tubular  epithelial  cells  associated  with 
+basophilic granulation have been reported previously with oral ASO administration (e.g., with 
+ISIS 301012, another 2’-MOE ASO, in dogs; Henry et al., 2008).
+
+In  the  liver,  Kupffer  cells  hypertrophy  at  the  MD  and  HD  was  due  to  “abundant  basophilic 
+fibrinous  to  foamy  to  cytoplasm.”  This  again  was  thought  to  represent  accumulation  of 
+oligonucleotide or possibly secretory substances such as cytokines. However, the distinctive 
+basophilic  granules  seen  in  the  kidney  were  not  seen  in  the  liver  or  any  other  tissue. 
+Basophilic granules in the cytoplasm of Kupffer cells and Kupffer cell hypertrophy have been 
+reported  previously  with  other  oligonucleotides  (Henry  et  al.,  2008),  but  according  to  the 
+pathology report, these granules were not seen with ISIS 396443. No necrosis, degeneration, 
+or inflammation was associated with the enlarged Kupffer cells in this study.
+
+Vacuolated  macrophages  containing  abundant  cytoplasm  similar  to  that  seen  in  the  Kupffer 
+cells were also observed locally at injection sites and systemically in multiple tissues. These 
+macrophages were noted in greatest number and prominence in the dermis and subcutis at 
+the  injection  sites  (interscapular  and  dorsal  thoracic)  and  all  examined  lymph  nodes  (sinus 
+histiocytes  of  the  mandibular,  mesenteric,  and  inguinal  nodes).  Vacuolated  macrophages 
+were seen at injection sites at all doses and in the lymph nodes in the MD and HD groups. 
+Fewer  numbers  of  vacuolated  macrophages  were  seen  in  the  GI  tract,  male  and  female 
+reproductive tracts, joint, salivary and lacrimal glands, urinary bladder, and skin distant from 
+the injection sites (inguinal and associated with the rectum and vagina). While it was thought 
+likely that the actual number of individual affected tissues was larger than was observed and 
+reported,  the  apparent  absence  of  vacuolated  macrophages  in  muscle  (skeletal  or  cardiac), 
+bone  marrow,  pulmonary,  and  CNS  tissues  was  consistent  with  a  list  of  tissues/systems 
+previously  reported  to  be  unaffected  by  systemic  ASO  administration.  The  granular  and/or 
+microvacuolated  cytoplasm  of  macrophages  have  been  related  to  cellular  activation  and 
+cytokine  production  resulting  from  the  pro-inflammatory  properties  of  the  ASO  in  some 
+studies (Frazier, 2015); however, no necrosis, degeneration, or inflammation was associated 
+with the enlarged and vacuolated macrophages in this study.
+
+An increase in myeloid cells (myeloid predominance) relative to other cell types was seen in 
+the  sternal  bone  marrow  of  HD  males.  This  was  thought  to  possibly  represent  a  pro-
+inflammatory  effect  of  oligonucleotide  administration.  However,  since  there  were  no 
+hematological  alterations  or  similar  effects  in  femoral  bone  marrow  it  was  unclear  whether 
+this was a true drug effect. 
+
+An increased incidence of “minimal decreased secretory granules within the granular ducts” 
+was seen in the mandibular salivary glands of MD and HD males. This change was said to be 
+a  common  finding  in  anorectic  or  moribund  animals  and  was  noted  in  the  found  dead  LD 
+
+Reference ID: 4030770
+
+27
+
+female. However, there was no adverse body weight effect in treated males (BW increased). 
+Decreased androgen levels were considered another possible mechanism in the study report, 
+but  there  were  no  apparent  changes  in  the  male  reproductive  organs.  This  finding  was 
+considered  “a  nonadverse  effect  of  test  article  administration  of  uncertain  but  likely  limited 
+toxicological importance” in the MD and HD groups. 
+
+Table IVB.7
+
+Selected histopathologic findings, PND 97 scheduled necropsy
+
+vi.
+
+Toxicokinetics
+
+Dose-dependent exposure to ISIS 396443 was observed in mouse liver tissue (Table IVB.8). 
+In  addition  to  the  parent  compound,  putative  oligonucleotide  metabolites  consistent  with 
+nuclease-mediated cleavage were evident in liver samples which were collected from Group 
+
+Reference ID: 4030770
+
+28
+
+4  on  Day  97  (Table  IVB.9).  ISIS  396443  was  the  most  abundant  species  of  oligonucleotide 
+and accounted for >74% of the total present (based on % total peak area). The metabolite of 
+N-1 from the 3’-end was the most abundant metabolite in all evaluated tissues (up to ~23% of 
+the total oligonucleotide present based on % total peak area); the relative abundance of each 
+individual  remaining  metabolite  was  <1%.  These  data  were  considered  consistent  with 
+nuclease metabolism.
+
+Table IVB.8
+
+Liver exposure to ISIS 396443 on PND 97
+
+Table IVB.9
+
+Relative  abundance  (%  of  total  peak  area)  of  ISIS  396443  and  putative 
+chain-shortened metabolites in liver
+
+c. Conclusions
+
+Subcutaneous  administration  (once  weekly  PND  4  though  PND  25  and  once  every  other  week 
+thereafter  until  PND  95)  of  ISIS  396443  to  juvenile  CD-1  mice  at  doses  of  0,  1,  10,  and  50 
+mg/kg/dose resulted in basophilic granules in the kidney (MD and HD, both sexes), Kupffer cell 
+hypertrophy  (HD  males),  and  vacuolated  macrophages  at  the  injection  sites,  lymph  nodes,  and 
+multiple other tissues (both sexes at all doses). The basophilic granulation was associated with a 
+low  incidence  (single  HD  male)  of  renal  tubular  degeneration  characterized  by  vacuolation  and 
+cell necrosis. Decreased secretory granules within the granular ducts of the mandibular salivary 
+gland (MD and HD) and an increase in myeloid cells in the sternal bone marrow (HD) were also 
+observed  in  treated  males.  Increased  spleen  weights  (MD  males  and  HD  males  and  females) 
+without  microscopic  correlates  were  considered  to  represent  known  pro-inflammatory  effects  of 
+oligonucleotide administration in mice. The spectrum and severity of effects observed in juvenile 
+animals were consistent with those documented in adult animals. 
+
+Reference ID: 4030770
+
+29
+
+C.
+
+1.
+
+CHRONIC TOXICITY
+
+ISIS 396443: A one year (53 weeks) repeat dose toxicity study in juvenile cynomolgus 
+monkeys with a 26-week recovery phase (Study Number: 8264391, ISIS Study Number: 
+396443-AS06, conducted by 
+
+, report dated 3/31/15, GLP)
+
+a. Methods
+
+Young cynomolgus monkeys (5/sex/group main, 2/sex/group C and HD recovery; approximately 
+10-11  months  of  age,  1-2  kg  at  start  of  dosing)  were  administered  ISIS  396443  (Lot  No. 
+CA396443  001)  at  doses  of  0  (artificial  CSF  vehicle),  0.3,  1,  or  4  mg/dose  (0.4,  1.33,  or  5.33 
+mg/mL, 0.75 mL/dose) by IT lumbar bolus injection (slow bolus injection over 1 minute via lumbar 
+puncture  at  L3-L6  level,  anesthesia  induced  with  ketamine  and  medetomidine)  once  weekly  for 
+the first 5 doses and once every 6 weeks thereafter for a total of 53 weeks (total doses: 0, 3.9, 13, 
+or 52 mg). 
+
+For TK analysis, blood was collected from all animals pre-dose and 1, 2, 4, 8, 12, 24, 48, and 168 
+hours  postdose  on  Day  1  and  pre-dose  and  at  0.5,  1,  2,  4,  6,  8,  12,  24,  48,  and  168  hours 
+postdose on Day 365. In addition, blood samples were collected pre-dose on all dosing days and 
+during the recovery period (Days 379, 393, 407, 421, 435, 449, 479, 518, and 554). CSF for TK 
+analysis was collected pre-dose on all dosing days, 168 hours after the last dose on Day 365 and 
+during the recovery period (Days 379, 407, 449, and 554). Tissue (brain, spinal cord, liver kidney) 
+was collected for TK analysis at scheduled necropsies.
+
+Blood for anti-drug antibody analysis was collected prior to start of dosing and pre-dose on Days 
+29,  113,  197,  and  323  and  at  the  end  of  the  recovery  period.  CSF  was  collected  for  CSF 
+chemistry, total cell counts, and complement analysis pre-dosing and at the end of the dosing and 
+recovery periods. 
+
+Endpoints  consisted  of  clinical  observations  (twice  daily;  pre-dose,  4,  and  8  hrs  after  dosing  on 
+dosing  days),  body  weight  and  food  consumption,  and  physical  (abdominal  palpation,  eye,  ear 
+and  nose  examination,  body  temperature,  heart  and  lung  auscultation)  and  neurologic  (general 
+sensorimotor, cerebral and spinal reflexes) examinations (in non-sedated animals during the pre-
+dose,  dosing,  and  recovery  phases),  neurobehavioral  observations  (FOB  pre-dose,  Weeks  29 
+and 53 of dosing, and last week of recovery), learning and memory testing (conducted pre-dose, 
+during  and  at  the  end  of  the  dosing  period,  and  at  the  end  of  the  recovery  phase,  using  the 
+Wisconsin  General  Testing  Apparatus),  ophthalmic  examinations,  cardiovascular  (BP  and  ECG 
+pre-dose, Week 53, and after recovery), determination of bone mineral density and content and 
+femur length (in anesthetized animals pre-dosing, during Week 53, and at the end of recovery), 
+clinical  pathology  evaluations  including  urine  analysis,  and  T  cell-dependent  antibody  response 
+(TDAR). 
+
+Reference ID: 4030770
+
+30
+
+(b) (4)Complete  necropsies  were  performed  on  all  animals  (main  and  recovery  groups),  with 
+macroscopic  examination  of  all  animals  and  microscopic  examination  of  a  full  panel  of  tissues 
+from  C  and  HD  animals  (fixation  in  10%  neutral  buffered  formalin).  Brain  sections  (8  left 
+hemisphere  sections)  from  all  animals  were  paraffin  embedded,  H&E  stained,  and  examined 
+microscopically at Tox Path Specialists. In addition, two sections of the brain (at the level of the 
+hippocampus  and  cerebellum)  were  stained  with  Fluoro-jade  B  for  evaluation  of  neuronal 
+degeneration.
+
+Dose  Justification:  The  doses  and  dosing  regimen  for  this  chronic  study  were  based  on  the 
+results of the 14-week study in juvenile monkeys (0.3, 1, or 3 mg administered IT weekly for the 
+first 4 weeks then every other week at the LD and MD or weekly at HD during weeks 5-14; Study 
+No. 396443-AS03) in which acute neurological changes (absence of the posterior spinal reflexes 
+associated with slow-bolus [3 minutes] IT administration of the 3 mg HD) were considered dose-
+limiting.  These  changes  were  thought  to  be  related  to  a  local  effect  on  spinal  cord  function 
+specifically at the site of the dosing catheter placement at the thoraco-lumbar junction. However, 
+the sponsor also stated that because the incidence of this neurological sign was low and did not 
+progress in incidence or severity over time, the HD was considered well-tolerated. According to 
+the  sponsor,  the  somewhat  higher  HD  selected  for  the  chronic  toxicology  study  is  “intended  to 
+ensure sufficiently high tissue concentrations to identify target organ toxicities.” 
+
+The  every-other  week  or  weekly  dosing  regimen  used  in  the  14-week  study  was  intended  to 
+exaggerate  exposure  and  identify  potential  toxicities  produced  by  exposure  that  exceed  the 
+expected clinical exposure. The tissue half-life (elimination half-lives estimated to range from 150 
+to  170  days  in  monkeys)  was  thought  to  support  infrequent  dose  administration.  At  the  HD, 
+weekly administration for 14 weeks produced lumbar spinal cord and brain cortex concentrations 
+that were approximately 30-fold higher than the targeted therapeutic exposure levels in humans 
+(tissue  concentration  of  2  -  8  μg/g).  At  the  LD,  administration  every  other  week  produced 
+exposure  that  was  approximately  3-  to  5-fold  higher  than  the  targeted  therapeutic  exposure 
+levels.  The  slow  clearance  from  tissues  was  illustrated  by  concentrations  of  ASO  in  tissue  that 
+increased from 4- to 14-week time points, and concentrations after the 13-week recovery period 
+that were similar or only slightly lower than at the end of the dosing period. The chronic monkey 
+study used a modified dosing regimen, with weekly administration for the first 4 weeks, followed 
+by  once  every  6  weeks  administration  during  the  maintenance  period,  which,  according  to  the 
+sponsor,  would  “more  appropriately  reflect  the  intended  clinical  dose  regimen.”  The  dosing 
+regimen  being  used  in  patients  is  currently  no  more  than  3  doses  in  the  first  3  months  of 
+treatment,  then  every  3  to  6  months  thereafter.  Therefore,  the  sponsor  considered  total 
+administered dose to be the most useful parameter for making exposure comparisons.
+
+In  the  14-week  study,  IT  administration  of  3  mg/week  for  14  weeks  (45  mg  total  dose)  was 
+associated with hippocampal neuronal vacuolation in all examined animals at the end of dosing 
+and  recovery.  According  to  the  sponsor,  the  location  of  this  lesion  was  thought  to  reflect  the 
+distribution and cellular uptake of oligonucleotide. There were also observations of single necrotic 
+neurons in a single HD animal at the terminal necropsy, and necrotic glial cells (1 or 2 cells per 
+animal)  in  2  additional  HD  animals,  1  at  terminal  necropsy  and  1  at  recovery.  Hippocampal 
+vacuolation  without  evidence  of  necrosis  was  also  seen  in  1/7  MD  monkeys  (1  mg  every  other 
+week or 10 mg total dose). These histologic changes were not present at any dose at the 4 week 
+interim  sacrifice  and  were  not  present  in  the  LD  group  (0.3  mg  every  other  week  or  3  mg  total 
+dose)  after  14  weeks  of  dosing.  Thus,  the  finding  correlated  with  dose  and  duration  of 
+administration.  While  not  associated  with  any  apparent  long-term  neurological  changes  (only 
+general  sensory  and  motor  functions  were  evaluated  in  14-week  study),  this  effect  was 
+considered  to  reflect  the  high  tissue  concentration  of  oligonucleotide  and  was  considered  dose 
+limiting for chronic administration.
+
+The  doses  and  regimen  in  the  chronic  study  was  expected  to  maintain  tissue  concentrations 
+throughout the 1-year study duration. This regimen resulted in the administration of total doses of 
+
+Reference ID: 4030770
+
+31
+
+3.9, 13, and 52 mg over 53 weeks, which is slightly higher than the total doses delivered over 14 
+weeks in the previous study in juvenile monkey. The HD was again said to be limited by the IT 
+bolus  associated  clinical  signs.  According  to  the  sponsor,  the  dose  regimens  employed  were 
+intended 
+tissue 
+concentrations  at  the  0.3  mg  dose  to  those  associated  with  target  organ  effects  at  4  mg  and 
+exceed the exposure observed at 1 mg dose level in 14-week study. The regimen was also said 
+to  be  determined  by  tissue  PK  and  the  likely  clinical  dose  interval  of  every  3  -  6  months  in 
+patients.
+
+to  produce  exposure 
+
+therapeutically 
+
+that  range 
+
+relevant 
+
+levels 
+
+from 
+
+The sponsor gave the following justification for the starting age of the monkeys for this study: “it 
+was recommended that the animals should be as young as possible at initiation of dosing, since 
+studies in juvenile animals via the intrathecal route have been requested by regulatory authorities 
+to  support  pediatric  clinical  trials.  However,  based  on  the  published  article  by  Morford  et  al. 
+(Morford LL et al. Birth Defect Res Pt B 92:359-380, 2011), it appeared that initiation of dosing up 
+to 12 months of age should be acceptable.”
+
+b. Results
+
+i.
+
+Mortality and Clinical Observations 
+
+There  were  no  unscheduled  deaths  during  the  study.   While,  the  study  report  stated  that 
+there were no clinical observations clearly attributable to drug, the observation of limited or no 
+use of the right leg in 1 HD male (17348M) beginning 4 hours post-dose on Days 1, 8, and 
+15,  with  staggered  movements  observed  for  this  animal  on  Days  8  and  15,  which  was 
+associated with the neurological findings in this animal (see vi. below), fits the clinical picture 
+of acute neurological changes seen at the HD in the 14-week study. According to the report, 
+“the  relationship  of  this  change  to  treatment  is  unclear  because  it  was  limited  to  a  single 
+monkey and was fully reversible despite continued treatment with ISIS 396443.”
+
+ii.
+
+Body Weight
+
+Increased BW gain was seen in the MD and HD females (both SS; Table IVC.1) and BW was 
+increased (SS) in HD females beginning on Day 282 through the end of the dosing period. No 
+BW effects were seen males. 
+
+Table IVC.1.
+
+Reference ID: 4030770
+
+32
+
+iii.
+
+Ophthalmoscopy
+
+There were no drug-related effects.
+
+iv.
+
+Cardiovascular
+
+There were no clearly drug-related effects on ECG or blood pressure parameters (measured 
+24  hr  post  dose).  A  small  but  SS  increase  in  QT  interval  in  LD  females  was  considered 
+spurious due to lack of dose-response.
+
+v.
+
+Bone Parameters and Femur length
+
+There were no consistent group differences in bone area, bone mineral content (BMC), bone 
+mineral density (BMD), or femur length.  
+
+Table IVC.2
+
+vi.
+
+Physical and Neurological Examinations
+
+Drug-related  effects  on  neurological  exam  parameters  were  observed  at  the  HD  in  both 
+sexes. These consisted of reduced or absent patellar, anal, and grip reflexes, which are lower 
+spinal reflexes. The effects were most pronounced after the first dose, but were observed in 
+individual animals on single days throughout the dosing period. Following the first dose, these 
+neurological  deficits  were  observed  in  4/7  HD  females  and  1/7  HD  males  (Table  IVC.3). 
+While 4/5 affected HD animals had recovered by 48 h, the grip reflex of 1 HD male (17348M) 
+was  still  reduced  before  dosing  on  Day  8.  Decreased  reflex  responses  continued  to  be 
+observed in this animal before dosing on Days 29 and 113.
+
+Decreased or absent spinal (patellar tendon, anal, or grip) reflexes were observed at 4 to 8 hr 
+after dosing on Days 29 (17388F, 17377F), 71 (17342M), 197 (17388F), and 365 (17342M). 
+Physical examinations did not reveal any drug-related findings. 
+
+Reference ID: 4030770
+
+33
+
+Table IVC.3
+
+vii.
+
+Neurobehavioral Observations
+
+There  were  no  drug  effects  on  neurobehavioral  observations  in  a  modified  Irwin  FOB 
+conducted  prior  to  the  dosing  period,  during  Weeks  29  and  53  of  dosing,  or  during  the  last 
+week of the recovery period.
+
+viii.
+
+Learning and Memory
+
+Possible  drug-related  differences  in  performance  in  a  double  choice  object  discrimination 
+operant  learning  test  (using  the  Wisconsin  General  Testing  Apparatus)  were  observed, 
+although  the  data  were  variable  and  N’s  small.  The  initial  learning  phase  was  conducted  in 
+the pre-dosing period of the study while reversal learning and memory were tested during the 
+dosing and recovery periods. 
+
+All  (24)  males  and  18/24  females  passed  the  pre-dose  learning  test.   Females  17366F, 
+17376F, 17380F, 17382F, 17383F, and 17387F did not pass. Animals were randomized into 
+treatment groups according to the results of the pre-dose learning test to minimize bias.
+
+At  the  first  dosing  period  testing  (Weeks  25-28),  single  MD  (17349M)  and  HD  (17361M) 
+males and LD (17380F), MD (17374F), and HD (17388F) females failed to pass the learning 
+test. This was attributed to the failure of these animals to habituate to the test apparatus. For 
+those  animals  that  did  pass,  there  were  no  dose-related  or  SS  effects  on  number  of  days 
+required  to  complete  the  tests;  however,  means  for  MD  males  and  females  were  increased 
+compared  to  C  (Table  IVC.4).  There  were  no  drug-related  decreases  in  number  of  correct 
+responses observed during the memory test. 
+
+When  testing  was  conducted  during  Weeks  49-52  (Figure  IVC.1),  a  single  HD  female 
+(17388F)  failed  to  pass  the  learning  test.  There  was  an  increase  (NS)  in  number  of  days 
+required to complete the learning tests at the HD in both sexes. In males this was primarily 
+due to 1 animal 17340M that required 18 days. This result was attributed by the sponsor to 
+the animal passing the memory test with 100% accuracy, which was thought to have made it 
+more  difficult  to  learn  the  new  object  introduced  at  this  testing  period.  (5/7  HD  males 
+[17339M,  17340M,  17342M,  17355M,  and  17361M]  and  3/7  HD  females  [17367F,  17368F, 
+and 17387F] were found to have hippocampal histopathology at necropsy)
+
+Reference ID: 4030770
+
+34
+
+During  the  recovery  period,  all  (2/sex)  HD  animals  passed  the  learning  test,  including  the 
+female  (17388F)  that  failed to  pass  at  both  times  during  the  dosing phase, but  the  average 
+number  of  days  required  was  increased  in  both  sexes  compared  to  C.  (1/2  HD  females 
+[17367F] was found to have hippocampal vacuolation at the recovery sacrifice.) The HD male 
+(17340M) that took the longest to learn at the end of the dosing phase, performed similarly to 
+C (passed in 5 days), but another HD male (17361M) needed 15 days. (Both HD males were 
+found to have hippocampal vacuolation and necrotic cells at the recovery sacrifice.) 
+
+Table IVC.4
+
+Figure IVC.1
+
+Reference ID: 4030770
+
+35
+
+ix.
+
+Clinical Pathology
+
+There were no clearly drug-related changes in hematological, clinical chemistry, or urinalysis 
+parameters.  Apparent  dose-related  decreases  in  APTT  times  were  seen  in  treated  females 
+(Table IVC.5), reaching SS for APTT on day 372 and remaining decreased (NS) compared to 
+C  during  recovery.  The  change  in  APTT  is  opposite  that  reported  for  other  oligonucleotides 
+with a phosphorothioate backbone, which have been associated with anticoagulant effects. 
+
+CSF  total  protein  (CTP)  and  albumin  (CMIA)  were  dose-dependently  increased  during  the 
+treatment period in males, reaching SS for CMIA at the HD (Table IVC.6). However, apparent 
+dose-related  increases  in  these  parameters  were  seen  in  treated  females  both  during  the 
+predosing  and  dosing  periods.  No  drug-related  increases  in  complement  split  product,  Bb, 
+were observed in CSF during the study. 
+
+No  drug-related  changes  in  the  T-cell  dependent  antibody  reaction  (TDAR)  were  observed. 
+Anti-KLH IgM and IgG development to primary and secondary vaccination at the end of the 
+dosing  period  was  similar  between  C  and  HD  animals,  although  there  was  high  inter-
+individual  variability;  and  anti-TT  IgM  and  IgG  development  to  primary  and  secondary 
+vaccination at the end of the recovery period was comparable for C and HD groups. 
+
+Reference ID: 4030770
+
+36
+
+Table IVC.5
+
+Table IVC.6
+
+x.
+
+Necropsy
+
+Adrenal gland weights were increased in the MD (SS for left only relative to brain wt) and HD 
+(SS  for  left  and  total  relative  to  brain  wt)  females  (Table  IVC.7).There  were  no  other  SS 
+differences in organ weights at the end of the dosing or recovery periods.
+
+Reference ID: 4030770
+
+37
+
+Table IVC.7
+
+Macroscopic
+
+There were no gross observations considered drug-related at the main study or recovery 
+necropsies.  Bilaterally  moderate  enlarged  lumbar  lymph  nodes  were  observed  in  1  HD 
+male  (17348M),  3  LD  males  (17335M,  17338M  and  17354M),  and  1  C  male  (17341M), 
+but  this  finding  was  thought  (by  the  sponsor)  to  be  procedure-related  (intrathecal 
+puncture) and was not seen at the end of the recovery phase.
+
+Microscopic
+
+Drug-related microscopic changes in the hippocampus were observed at the terminal and 
+recovery  sacrifices  (Table  IVC.8).  At  the  terminal  sacrifice,  lesions  were  present  in  the 
+hippocampus region (close to or partially within the amygdyloid hippocampal area) of 2/5 
+MD  males  and  3/5  HD  males  and  2/5  HD  females.  The  region  affected  was  the  most 
+inferior portion of the hippocampus, at or near the amygdyloid hippocampal area. In 1 HD 
+female, a more medial/superior portion of the hippocampus was also vacuolated. One or 
+more  of  these  findings  were  still  present  (same  region  of  the  hippocampus)  in  2/2 
+recovery sacrifice males and 1/2 recovery sacrifice females. (Affected animals: MD males 
+17345M and 17358M; HD males 17339M, 17340M, 17342M, 17355M, and 17361M; HD 
+females 17367F, 17368F, and 17387F.) 
+
+The  most  pronounced  lesion  was  described  in  the  pathology  report  as  “slight  to  mild 
+vacuolation  in  the  hippocampus,  characterized  by  large  vacuoles  that  appeared  to  be 
+within  the  cell  body  (cytoplasm)  of  neurons  in  the  hippocampus,  close  to  or  within  the 
+amygdyloid/hippocampal area (the inferior hippocampal region just lateral to and slightly 
+below the optic tract) and in one high dose terminal sacrifice female in the more medial 
+
+Reference ID: 4030770
+
+38
+
+CA3  hippocampal  region...  The  vacuoles  filled  the  cytoplasm  of  individual  neurons, 
+marginalizing the nucleus.” 
+
+In several animals at both sacrifice times (terminal: 2 HD males, 1 HD female; recovery: 1 
+HD  male),  “these  large  vacuoles  were  associated  with  less  well-defined  vacuoles 
+containing a basophilic (stained blue), flocculent, unidentified material.” According to the 
+report,  the  cellular  origin  of  these  less  well-defined  vacuoles  was  not  apparent.  In 
+addition,  “very  rare  necrotic  cells  and/or  cellular  debris”  were  observed  in  the 
+hippocampus of MD (1/5) and HD (3/5) males at termination and in a (1/2) HD recovery 
+male. Necrotic cells or necrotic cellular debris were not observed in controls. Fluoro-Jade 
+B  staining  conducted  on  two  slides/four  full  coronal  (left)  sections  (two  sections  at  the 
+level of the hippocampus; up to two sections at the level of the cerebellum/brain stem) of 
+the  brain  from  each  animal  did  not  reveal  any  necrotic  neurons  in  any  of  the  study 
+animals (terminal or recovery sacrifice), indicating that the necrotic cells were “most likely 
+not neurons,” but the cell type was not determined. GFAP staining indicated no increases 
+in astrocyte reactivity in the hippocampus or adjacent brain regions, which was thought to 
+suggest that the vacuolation (presumably of neurons) “was not associated with any tissue 
+damage  sufficient  to  elicit  an  astrocyte  response.”  Similar  morphologic  changes 
+(vacuolation  and  rare  necrotic  cell  in  the  hippocampus  region)  were  noted  at  the  HD  in 
+both  terminal  sacrifice  and  recovery  animals  (recovery  not  evaluated  in  LD  and  MD 
+groups).
+
+According to the study pathologist, “the vacuolation and very rare necrotic cells noted in 
+the region of the hippocampus/amygdyloid hippocampal area, especially given there was 
+no  detectable  astrocytic  response,  were  unlikely  to  result  in  any  clinical  signs  or  any 
+alteration that would in any way interfere with the animals ability to function normally in its 
+environment.” However, given the apparent neurobehavioral (L & M) changes seen in HD 
+animals, this statement is questionable. 
+
+There were no drug-related changes in non-nervous system tissues.
+
+Table IVC.8
+
+Histopathology findings in 1-year monkey study
+
+Reference ID: 4030770
+
+39
+
+xi.
+
+Toxicokinetics
+
+TK  data  indicated  continuous  and  dose-dependent  plasma,  CSF,  and  tissue  exposure 
+(Tables  IVC.9-12;  Figure  IVC.2).  CNS  tissue  concentrations  increased  dose  dependently  in 
+CNS tissue on Day 372, with highest concentrations in the lumbar spinal cord, hippocampus, 
+brain cortex, and thoracic spinal cord. Kidney cortex and liver were the only systemic tissues 
+evaluated  in  this  study.  Kidney  concentrations  were  generally  higher  than  CNS  tissue 
+concentrations, while liver concentrations were generally lower than all other evaluated tissue 
+concentrations.
+
+Following the end of dosing on Day 365, the estimated terminal half-life value in CSF   (111 
+days)  was  comparable  to  the  CNS  tissue  half-life  values  (117  to  195  days),  suggesting  an 
+equilibrium  between  post-distribution  CSF  and  CNS  tissue  concentrations.  Kidney  and  liver 
+concentrations declined more rapidly (estimated half-life 23 to 34.5 days). Four animals were 
+found to have much higher plasma trough concentrations than the group means (95X in MD 
+animal  17345,  20-35X  in  HD  animals  17340,  17348,  and  17367)  and  were  considered 
+outliers.  However,  the  higher  plasma  trough  values  did  not  appear  to  be  associated  with 
+differences  in  CSF  concentrations  or  tissue  concentrations.  There  was  no  clear  relationship 
+between individual brain levels and neurobehavioral or neurohistopathological findings.
+
+Reference ID: 4030770
+
+40
+
+Table IVC.9  
+
+Pre-dose CSF concentrations 
+
+Reference ID: 4030770
+
+41
+
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+Table IVC.10
+
+Post-dose plasma concentrations 
+
+Reference ID: 4030770
+
+42
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Table IVC.11
+
+Plasma TK parameters 
+
+Reference ID: 4030770
+
+43
+
+Table IVC.12  Tissue concentrations 7 days after last (13th) dose and at end of recovery
+
+Table IVC.13
+
+Terminal Half-Life values in plasma, CSF, and tissues during recovery 
+
+Reference ID: 4030770
+
+44
+
+Table IVC.14 Comparison of CSF, plasma, and tissue exposure at HD
+
+Reference ID: 4030770
+
+45
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+Figure IVC.2  CSF, plasma, and tissue concentrations after end of dosing in 1-year monkey study
+
+xii.
+
+Anti-drug antibody
+
+Following 1 year of treatment, anti-ISIS 396443 antibodies were detected in 1 MD (17345 on 
+Day  197)  and  2  HD  (17348  and  17367  on  Days  113,  197  and  323)  animals.  No  anti-drug 
+antibodies were detected following the recovery period. 
+
+Table IVC.15
+
+Anti-drug antibody analysis
+
+c. Conclusions
+
+Repeated  lumbar  IT  administration  of  0,  0.3,  1,  or  4  mg  to  juvenile  (9  to  11  months  of  age) 
+cynomolgus  monkeys  for  53  weeks  (5  weekly  doses  followed  by  8  doses  administered  once 
+every 6 weeks; total doses 0, 3.9, 13, or 52 mg) resulted in deficits in lower spinal reflexes (HD), 
+neurobehavioral  (learning  and  memory)  deficits  (HD),  and  neurohistopathology  (neuronal 
+vacuolation and necrotic cells with accompanying cellular debris in the hippocampal area at MD 
+
+Reference ID: 4030770
+
+46
+
+and HD). After an extended (26-week) recovery period, neuronal vacuolation in the hippocampus 
+was found of 3/4 HD animals, with a scoring grade similar to that at the terminal necropsy. Brain 
+and  spinal  cord  tissue  concentrations  (measured  at  the  end  of  the  maintenance  dose  phase) 
+associated  with  hippocampal  microscopic 
+IVC.16.  Liver 
+concentrations are also shown for comparison. The NOAEL was 0.3 mg/dose.
+
+findings  are  shown 
+
+in  Table 
+
+Table IVC.16
+
+Reference ID: 4030770
+
+47
+
+D.
+
+GENOTOXICITY 
+
+1. Bacterial  Reverse  Mutation  Assay  (Study  No.  396443-IS02, 
+
+AD25FG.503.BTL, 
+
+conducted by 
+
+, report dated 9/9/11, GLP)
+
+ISIS  396443  (Lot  #RP396443-001,  PBS  solvent)  was  tested  in  the  Ames  assay  using  tester 
+Salmonella  strains  TA98,  TA100,  TA1535  and  TA1537,  and  E.  coli  strain  WP2  uvrA  in  the 
+presence  and  absence  of  rat  liver  S9  using  the  plate  incorporation  method.   
+In  the  initial 
+cytotoxicity-mutation  assay,  the  concentrations  tested  were  1.5,  5,  15,  50,  150,  500,  1500,  and 
+5000 μg per plate. No positive mutagenic responses were observed with any of the tester strains 
+in either the presence or absence of S9 activation. Neither precipitate nor appreciable toxicity was 
+observed.  Based  on  the  findings  of  the  initial  assay,  concentrations  of  50,  150,  500,  1500,  and 
+5000  μg  per  plate  were  tested  in  the  confirmatory  mutagenicity  assay.  No  positive  mutagenic 
+responses were observed with any of the tester strains in either the presence or absence of S9 
+activation. Neither precipitate nor appreciable cytotoxicity was observed. Under the conditions of 
+this study, ISIS 396443 was concluded to be negative in the Ames assay.
+
+2.
+
+In  Vitro  Mammalian  Chromosome  Aberration  Test  (Study  No.  396443-IS03, 
+AD25FG.331.BTL, conducted by 
+
+, report dated 9/6/11, GLP)
+
+ISIS 396443 (Lot #RP396443-001) was tested in the CHO chromosome aberration assay in the 
+absence  and  presence  of  rat  liver  S9.   In  the  preliminary  cytotoxicity  assay,  the  maximum 
+concentration  tested  was  5000  μg/mL.  CHO  cells  were  treated  for  4  and  20  hours  in  the  non-
+activated test system and for 4 hours in the S9-activated test system. All cells were harvested 20 
+hours  after  treatment  initiation.  Substantial  cytotoxicity  (i.e.,  at  least  50%  cell  growth  inhibition, 
+relative  to  the  solvent  control)  was  not  observed  at  any  concentration  in  all  three  exposure 
+groups.  Based  on  these  findings,  the  concentrations  chosen  for  the  chromosome  aberration 
+assay  ranged  from  750  to  5000  μg/mL  for  all  three  treatment  groups.  In  the  chromosome 
+aberration  assay,  the  cells  were  incubated  with  ISIS  396443  for  4  and  20  hours  in  the  non-
+activated test system and for 4 hours in the S9-activated test system. All cells were harvested 20 
+hours  after  treatment  initiation.   In  the  absence  of  precipitation  in  the  treatment  medium  and  at 
+least  50%  toxicity,  the  highest  concentration  evaluated  was  5000  μg/mL.  Two  additional  lower 
+concentrations (2000 and 3500 μg/mL) were included. The percentage of cells with structural or 
+numerical  aberrations  in  the  drug-exposed  cultures  was  not  significantly  increased  relative  to 
+solvent control at any dose.  The positive and solvent controls fulfilled the requirements for a valid 
+test.  Based  on  the  findings  of  this  study,  ISIS  396443  was  concluded  to  be  negative  for  the 
+induction of structural and numerical chromosome aberrations in CHO cells in non-activated and 
+S9-activated test systems.
+
+3.
+
+ISIS  396443:  Mammalian  Micronucleus  Assay  in  Bone  Marrow  Erythrocytes  Following 
+  G115069,  conducted  by 
+Subcutaneous  Injection  in  ICR  Mice  (Study  No.  396443-AS10, 
+
+, report dated 10/22/15, GLP)
+
+ISIS  396443  (Lot  #CA396443-004)  was  evaluated  for  its  potential  to  increase  the  incidence  of 
+micronucleated polychromatic erythrocytes (MNPCEs) in bone marrow cells of male and female 
+ICR mice. Sterile 0.9% sodium chloride vehicle was the negative control and cyclophosphamide 
+monohydrate  (CPA)  was  the  positive  control.  The  number  of  MNPCEs  was  counted  in  4000 
+PCEs  (Polychromatic  Erythrocytes  or  Immature  Erythrocytes)  per  animal.  There  was  no 
+statistically  significant  increase  in  the  frequencies  of  MNPCEs  at  any  dose  tested  compared  to 
+negative C and no significant difference in the ratio of PCEs to total erythrocytes. Concentrations 
+in liver (from the first 3/sex/time point) at approximately 24 and 48 hours post-dose ranged from 
+65 to 183 μg/g and 72 to 188 μg/g, respectively. Under the conditions of this study, ISIS 396443 
+did not induce an increased frequency of micronuclei in bone marrow cells of ICR mice.
+
+Reference ID: 4030770
+
+48
+
+(b) (4)(b) (4)(b) (4)(b) (4)(b) (4)(b) (4) 
+E.
+
+CARCINOGENICITY
+
+Not conducted.
+
+F.
+
+1.  
+
+REPRODUCTIVE AND DEVELOPMENTAL TOXICOLOGY  
+
+A Combined Fertility and Developmental Toxicity Study of ISIS 396443 Administered by 
+Subcutaneous  Injection  in  CD-1  Mice  (Report  No.  396443-AS08;  dated  4/01/15; 
+conducted by 
+
+ GLP)
+
+a.
+
+Methods
+
+Male  and  female  CD-1  mice  (25/sex/grp  +  6/sex/grp  TK)  were  administered  ISIS  396443  (lot 
+number: CA396443-001) subcutaneously (10 mL/kg) at doses of 0 (0.9% sterile saline), 3, 10, or 
+25 mg/kg every other day to deliver weekly doses of 10.5, 35, and 87.5 mg/kg/week. Males were 
+dosed for 4 weeks prior to the mating and during and after the 2-week mating period for a total of 
+10 weeks. Females were dosed for 2 weeks prior to mating, during the mating period, and until 
+GD15 (i.e., throughout organogenesis).
+
+Clinical  observations  (daily),  body  weight  and  food  consumption  (weekly),  and  estrous  cyclicity 
+were  assessed  and  animals  were  mated  (1:1)  starting  on  Day  15  (females)  or  Day  29  (males) 
+until confirmation of mating or for 14 days. Terminal necropsy for males was on Day 71 and for 
+pregnant  dams  on  GD18.  For  males,  gross  observations  were  recorded  and  selected  organs 
+were  weighed  and  tissues  collected.  For  pregnant  females,  typical  litter  parameters  were 
+assessed,  external  fetal  examinations  were  conducted,  and  half  the  fetuses  in  each  litter  were 
+assigned  to  skeletal  evaluations  (alizarin  red  staining)  and  the  other  half  to  visceral  evaluations 
+(Wilson’s  [head]  and  Staples  [bodies]  methods).  Blood  samples  for  hematology  or  serum 
+chemistry were taken from animals at necropsy, with half the animals in each group assigned for 
+each.  Liver  and  kidney  samples  were  harvested  from  adult  TK  males  and  females  and  the 
+placenta  and  fetal  kidneys  and  livers  were  harvested  from  up  to  10  fetuses  per  litter. 
+Histopathology  was  performed  on  the  kidney,  liver,  and  spleen  of  4/sex/grp.  Histopathology  of 
+additional tissues was performed only on C and HD animals. Sperm was collected from the left 
+cauda  epididymis  of  TK  males  for  total  sperm  count,  motility,  concentration,  and  morphology 
+analysis.
+
+b.
+
+Results
+
+i. Mortality and Clinical Observations 
+
+There were 3 early deaths (1 LD and 1 MD males, 1 MD female), but these were not 
+considered drug-related. There were no clinical observations.
+
+Reference ID: 4030770
+
+49
+
+(b) (4)ii. Body Weight and Clinical Pathology
+
+indices 
+
+in  RBC 
+
+Slight increases in body weight (up to 8.9% compared to C, SS) were seen in males at 
+the  MD  and  HD.  There  were  no  BW  effects  in  females.  In  males,  minimal  (but  SS) 
+(hemoglobin,  mean  corpuscular  hemoglobin,  mean 
+decreases 
+corpuscular volume, and red blood cell distribution width) were observed at the HD and 
+more  marked  increases  in  white  blood  cell,  neutrophil,  and/or  monocytes  counts  were 
+seen at the MD and HD. Albumin and total protein were dose-dependently increased (up 
+to 13% at HD), triglycerides were decreased (34% at the HD),   and ALT and AST were 
+increased  (up  to  2X  at  HD).  There  were  no  effects  on  clinical  pathology  parameters  in 
+females.
+
+iii. Necropsy
+
+Liver  and  spleen  weights  were  dose-dependently  increased  (up  to  20  and  66%  at  HD, 
+respect).  Drug-related  gross  findings  included  kidney  discoloration  seen  in  a  HD  male 
+(#66) and MD (#231) and HD (#166) females. Increased spleen size was observed in two 
+HD males (#61 and #66).  Discolorations of the kidney and increases in spleen size were 
+considered  drug-related  based  on  the  similarity  of  these  findings  to  studies  of  other 
+ASOs. 
+
+Histopathological  changes  observed  in  kidney,  liver,  spleen,  testes,  and  epididymides 
+were considered the result of oligonucleotide accumulation in these tissues (Table IVF.1). 
+Findings included minimal to mild basophilic intracytoplasmic granules in cortical tubular 
+cells  of  the  kidneys,  hypertrophied  Kupffer  cells  in  the  liver,  minimal  to  moderate 
+macrophage  infiltrates  in  the  spleen,  mild  to  moderate  vacuolation  of  Leydig  cells  in 
+testes,  and  minimal  to  mild  macrophage  infiltrates  in  the  epididymides,  prostate  glands 
+and seminal vesicles.
+
+Table IVF.1     Histopathology findings in mouse fertility and developmental toxicity study
+
+Reference ID: 4030770
+
+50
+
+Reference ID: 4030770
+
+51
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+iv.
+
+Male and female reproductive indices 
+
+Estrous  cyclicity  did  not  differ  among  groups,  but  fertility  parameters  appeared  to  be 
+dose-dependently decreased. However, fertility and fecundity were lower than expected 
+in  the  C  group,  so  differences  were  not  observed.  There  were  no  effects  on  sperm 
+parameters  that  were  considered  drug-related  by  the  sponsor.  There  was  an  apparent 
+increase (SS) in abnormal sperm in HD males (13%) compared to C (6%); however, this 
+was primarily due to a single HD animal (104) with an extremely high (99%) percentage 
+of abnormal sperm which skewed the mean for the high dose group. Additionally,  there 
+was no clear pattern supporting an increase in sperm abnormalities with increased dose. 
+Thus, this finding was considered unlikely to be related to drug.
+
+Reference ID: 4030770
+
+52
+
+Table IVF.2 Fertility parameters
+
+Table IVF.3 Sperm Morphology 
+
+1 [R - Automatic Transformation: Rank] 2 [L,a - Automatic Transformation: Log, Group Factor Test: 
+Analysis of Variance p < 0.05]
+3  [dd  -  Test:  Dunnett  2  Sided  p  <  0.01]  4  [L,aa  -  Automatic  Transformation:  Log,  Group  Factor  Test: 
+Analysis of Variance p < 0.01]
+
+v.
+
+Litter parameters 
+
+No drug effects on C-sectioning parameters or fetal exams were apparent.  
+
+Reference ID: 4030770
+
+53
+
+Table IVF.4
+
+Caesarean-Sectioning Observations 
+
+Reference ID: 4030770
+
+54
+
+  
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+    
+ 
+ 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Table IVF.5
+
+ Fetal examinations
+
+The % fetuses for the Variation or Malformation represents the group mean litter percentage.
+The % fetuses for the Total percentage of findings represents the percentage of fetuses affected of all fetuses 
+examined
+
+vi.
+
+Tissue exposure
+
+Concentrations in the maternal and paternal mouse liver increased in a dose-dependent 
+manner.  ISIS  396443  was  only  detected  in  the  pooled  placenta  tissue  from  HD  litters, 
+with  an  organ  tissue  concentration  of  ~10  ug/g,  which  was  ~2%  of  the  maternal  liver 
+concentration. 
+
+Reference ID: 4030770
+
+55
+
+Table IVF.6
+
+Parental and fetal ISIS 396443 tissue exposure 
+
+c.
+
+Conclusions
+
+Administration  of  ISIS  396443  (0,  3,  10,  or  25  mg/kg  sc)  to  CD-1  male  and  female  mice  every 
+other  day  (10.5,  35,  87.5  mg/kg/week)  prior  and  during  mating  and  pregnancy  (through 
+organogenesis)  resulted  in  histopathology  findings  in  treated  parental  animals  that  were 
+consistent  with  those  previously  observed  in  mice  treated  with  antisense  oligonucleotides  and 
+which  were  attributed  to  the  proinflammatory  effects  and  intracellular  accumulation  of  the  drug. 
+These included basophilic intracytoplasmic granules in renal cortical tubular cells, hypertrophied 
+Kupffer  cells  and  granulomas  in  the  liver,  and  infiltrates  of  tissue  macrophages  in  the  spleen, 
+epididymides, prostate glands and testes (with associated vacuolation of Leydig cells). There was 
+no  NOEL  for  histopathology.  There  was  some  suggestion  of  effects  on  sperm  morphology  and 
+fertility parameters; however, the effect on sperm was primarily driven by a single male and the 
+possible  fertility  effect  could  not  be  adequately  evaluated  because  of  an  aberrant  control 
+response.  There  were  no  clear  effects  on  embryofetal  development.  Based  on  placental  tissue 
+levels, it appeared the placental transfer was low.
+
+Reference ID: 4030770
+
+56
+
+ 
+2.
+
+Embryo-Fetal  Development  Toxicity  Study  of  ISIS  396443  Following  Subcutaneous 
+Injection  in  New  Zealand  White  Rabbits  (Report  No.  396443-AS09;  dated  1/12/15; 
+conducted by 
+
+; GLP)
+
+a.
+
+Methods
+
+Mated  female  NZW  rabbits  were  dosed  sc  (0.30  (C  &  LD)  and  0.21  (MD  &  HD)  mL/kg)  with  0 
+(0.9% Sodium Chloride Injection vehicle), 6, 12.6, or 25 mg/kg ISIS 396443 (lot CA396443-004) 
+every  other  day  from  GD  6  through  19  (GDs  6,  8,  10,  12,  14,  16  and  18;  21,  44.1,  and  87.5 
+mg/kg/wk).  Does  were  observed  for  viability,  clinical  signs,  premature  deliveries,  and  deaths. 
+Body  weights  (BW)  and  food  consumption  were  recorded  during  the  dosing  and  post-dosing 
+period. Blood samples were collected for hematology and serum chemistry prior to necropsy on 
+GD 28. Animals were sacrificed on GD 28 and C-sectioned. Liver samples were collected from 5 
+tox group does that were pregnant with at least five fetuses. Pregnancy status was assessed, the 
+gravid  uterus  was  weighed,  and  the  numbers  of  corpora  lutea,  implantations,  and  live  fetuses 
+recorded.  Live  fetuses  were  weighed,  sexed,  and  examined  for  external  abnormalities.  The 
+placental weights were also recorded. Visceral examinations were performed on fresh specimens 
+on  the  day  of  C-section.  Following  visceral  examination,  fetuses  were  fixed  in  ethyl  alcohol, 
+stained with alizarin red and examined for skeletal variations and malformations. Portions of liver, 
+kidney, and spleen for TK evaluation were collected from pregnant does with at least 5 fetuses at 
+the time of necropsy on GD20. Placentae, fetal liver, and fetal kidney samples were also collected 
+from the litters of these same does. 
+
+Dose  selection:  Doses  were  based  on  a  dose  range-finding  study  in  pregnant  NZW  rabbits  in 
+which  sc  doses  of  5,  15,  and  30  mg/kg  were  given  every  other  day  (17.5,  52.5,  and  105 
+mg/kg/week) from GD 6-18. Drug-related changes at the HD included premature deliveries (2 HD 
+does  delivered  1  and  3  dead  fetuses  on  GD27)  and  decreases  (up  to  ~80%  of  C)  in  red  cell 
+parameters  (RBCs,  hemoglobin,  and/or  hematocrit).  There  were  no  effects  on  the  gross 
+pathology  examination  of  the  does,  gravid  uterine  weights,  number  of  live  fetuses  on  GD28,  or 
+external fetal and placental evaluations. The HD was considered by the sponsor to be associated 
+with minimal to mild maternal toxicity and no effects on embryofetal development. 
+
+b.
+
+Results
+
+i.
+
+Maternal effects 
+
+There were no deaths and no drug-related clinical signs or changes in BW or BW gain. 
+Four  previously  pregnant  animals  (2C,  1  LD,  and  1  MD)  were  not  pregnant  at  the  time 
+scheduled necropsy on GD28 but these were not considered drug-related. Slight (values 
+generally within 85% of C) but SS decreases in red cell parameters (RBCs, hemoglobin, 
+
+Reference ID: 4030770
+
+57
+
+(b) (4)and hematocrit) were noted in all treated groups. Increases (SS) in platelets (up to 49% 
+compared to C), white blood cells (up to 29%), neutrophils (up to 81%), and lymphocytes 
+(up  to  26%)  were  noted  in  all  treatment  groups,  except  for  lymphocytes  at  the  HD. 
+Decreases  in  albumin  (<10%)  and  A/G  ratio  (≤21%),  and  increases  in  globulin  (<20%) 
+were  observed  in  drug-treated  groups.  The  changes  in  serum  chemistry  parameters  in 
+association  with  the  WBC  and  differential  parameters  were  thought  to  be  indicative  of 
+pro-inflammatory class effects. 
+
+Increases  (1.1-1.4-fold)  in  liver,  spleen,  and  kidney  weights  were  observed,  primarily  at 
+the  HD,  but  there  were  no  macroscopic  changes  noted.  Tissue  bioanalysis  data 
+demonstrated dose-dependent concentrations in maternal liver at both GD20 and GD28 
+(Table  IVF.7).  On  GD28  (10  days  post  last  dose),  maternal  liver  concentrations  had 
+decreased  ~40%  compared  to  the  levels  on  GD20  (2  days  post  last  dose),  consistent 
+with the long tissue half-life of this compound. Minimal exposure (≤ 9% of maternal liver 
+exposure) was observed in the placenta and no measurable exposure (<10.00 μg/g) was 
+detected in fetal liver at any dose.
+
+Table IVF.7
+
+Parental and fetal tissue exposure
+
+ii.
+
+Litter parameters and fetal evaluations 
+
+A decrease (16%) in gravid uterine weights at the HD was considered drug-related in the 
+report.  There  was  a  slight  decrease  in  fetal  weights,  but  this  was  not  dose-related.  The 
+effect on placental weight may have been due to a decrease in implants at the HD which 
+would  not  be  expected  to  be  due  to  dosing  starting  after  implantation.  There  were  no 
+other drug-related changes in litter parameters (Table IVF.8). 
+
+There  were  no  clear  effects  on  embryofetal  development  based  on  the  pattern  and 
+incidences of fetal structural abnormalities (Table IVF.9) and lack of effect on fetal BWs. 
+An external malformation (exencephaly) was seen only at the LD. Visceral malformations 
+were  seen  only  in  MD  (1  with  misshapen  kidney)  and  HD  (2  with  misshapen  kidney,  1 
+with multiple heart and great vessel malformations) fetuses. Skeletal malformations were 
+seen in C (1 with fused ribs, 1 with fused sternebrae, 1 with thoracic hemivertebra, 1 with 
+both  fused  sternebrae  and  thoracic  hemivertebra),  LD  (1  with  open  skull  [exencephalic 
+fetus], 3 with fused sternebrae), MD (1 with skull openings, 1 with fused sternebrae), and 
+HD  (2  with  fused  sternebrae)  fetuses.  Incidences  of  skeletal  variations  such  as 
+supernumerary ribs and incomplete ossification were similar across groups.
+
+Reference ID: 4030770
+
+58
+
+Table IVF.8   Caesarean-sectioning observations
+
+Table IVF.9   Fetal abnormalities in rabbit embryofetal development study
+
+Reference ID: 4030770
+
+59
+
+c.
+
+Conclusions 
+
+SC  administration  of  ISIS  396443  to  pregnant  NZW  rabbits  every  other  day  throughout 
+organogenesis  (GD6-18)  at  doses  up  to  25  mg/kg  (87.5  mg/kg/wk)  did  not  produce  any  clear 
+evidence of maternal or embryofetal toxicity.
+
+Reference ID: 4030770
+
+61
+
+G.
+
+OTHER TOXICITY STUDIES
+
+1. Evaluation  of  oligonucleotide-associated  hippocampal  vacuolation  following  intrathecal 
+lumbar  bolus  administration  using  several  tissue  fixation  methods  in  cynomolgus  monkeys 
+; 
+(Report  #:  396443-AS11;  conducted  by 
+report dated 4/14/15; Non-GLP)
+
+a. Methods
+
+Cynomolgus  monkeys  (3/sex/grp)  were  administered  weekly  IT  bolus  doses  of  5  mg/dose 
+(1.25  mL)  for  36  days  (Days  1,  8,  15,  22,  29  and  36;  total  of  6  doses).  Dosing  was  via 
+indwelling lumbar catheters lumbar space in a volume of 1.25 mL. On Day 50 (approximately 
+2  weeks  after  the  last  dose),  all  animals  were  sacrificed  and  samples  were  taken  for 
+postmortem examination. Observations included body weight and food consumption, clinical 
+signs, and neurological (spinal reflexes: knee jerk, cutaneous reflex, proprioception, sensory 
+foot, tail reflex) and physical (heart rate, respiration, temperature, gait, disposition, abdominal 
+palpation, lymph nodes, and general appearance of the eyes, ears, oral cavity, and skin and 
+nails) examinations.
+
+b. Results
+
+i. Clinical observations and body weight
+
+There were no deaths and no clinical signs or changes in body weight were reported.
+
+ii. Neurological and physical examinations
+
+No  changes  in  physical  examinations  were  noted.  Transient  decreases  in  lower  spinal 
+reflexes (negative responses to the knee jerk, cutaneous, sensory foot and tail reflexes) 
+were observed in 8/12 animals at one or more evaluations following dosing. While their 
+onset varied, decreases in lower spinal reflexes were generally observed within the first 4 
+hours of dosing and resolved within 24 to 48 hours of dosing.
+
+Reference ID: 4030770
+
+62
+
+(b) (4)   
+Table IVG.1
+
+Neurological examination summary (# positive/# per group) Groups 1 
+and 2 - 5 mg/dose
+
+iii. Neurohistopathology
+
+In  the  10%  neutral  buffered  formalin  immersion-fixed  brain,  minimal  vacuolation  in  the 
+hippocampus  was  noted  in  3/6  monkeys;  no  additional  histological  alterations  were 
+reported. Immunohistochemistry demonstrated positive staining of neuronal cytoplasm in 
+the  region  of  the  hippocampus  and  corresponded  to  the  location  of  the  vacuoles.  The 
+vacuolated cells present also stained positive for the presence of ISIS 396443. 
+
+In the brain fixed using the alternative methods (immersion fixation in Carnoy’s solution, 
+perfusion  fixation  with  modified  Karnovsky’s  solution  and  fixation  by  snap  freezing),  no 
+vacuolation  of  the  hippocampus  or  any  other  histological  alterations  were  observed. 
+Additionally, there were no histological alterations present in the spinal cord regardless of 
+the fixation method utilized. The pathology report contained only 4 photomicrographs and 
+the following descriptions:
+
+Immersion Fixation in Carney's Solution: No histological alterations were 
+present in the brain of 6/6 monkeys.
+Perfusion Fixation with Modified Karnovsky's Solution: No histological alterations 
+were present in the brain of 6/6 monkeys.
+Fixation by snap freezing: No histological alterations were present in the brain 
+of 6/6 monkeys.
+There were no histological alterations present in the spinal cord regardless of 
+the fixation method utilized.
+
+Bioanalysis indicated that the highest concentrations were observed in the lumbar spinal 
+cord  with  lower  concentrations  in  the  thoracic  and  cervical  regions  (Table  IVG.2). 
+Concentrations  were  slightly  lower  in  the  cortical  regions  of  the  brain,  with  the  lowest 
+concentration  observed  in  the  hippocampus.  Approximately  14  days  after  the  6th  dose 
+(Day  50),  the  highest  mean  CNS  tissue  concentrations  of  ISIS  396443  were  generally 
+observed  in  the  lumbar  spinal  cord  (99.95  μg/g),  consistent  with  the  IT  route  of 
+administration  and catheter placement;  with similar concentrations  in the thoracic spinal 
+cord  (84.86  μg/g),  and  somewhat  lower  concentrations  in  the  cervical  section  (44.84 
+μg/g).  In  brain  tissues,  ISIS  396443  concentrations  were  highest  in  the  occipital  (60.56 
+μg/g)  and  frontal  (58.71  μg/g)  cortex.  Lower  concentrations  were  measured  in  the 
+hippocampus (9.87 μg/g).
+
+Reference ID: 4030770
+
+63
+
+Table IVG.2
+
+c. Conclusions
+
+These  results  were  interpreted  by  the  sponsor  to  indicate  that  the  mechanism  for 
+hippocampal  vacuolation  in  monkeys  treated  with  ISIS  396443  is  the  same  as  that  for 
+vacuolation  seen  in  the  renal  proximal  tubule,  i.e.,  “oligonucleotide  taken  up  into  the 
+endosomal/lysosomal system is eluted during the fixation/processing of these tissues leaving 
+a  dilated  vacuolar  system  remnant  to  be  seen  by  light  microscopy.”  They  further  state  that 
+“the presence of vacuoles in the hippocampus following treatment with oligonucleotides does 
+not  represent  an  adverse  toxicological  finding,  but  rather  represents  an  artifact  of  tissue 
+preservation that occurs with the presence of drug.” 
+
+Reference ID: 4030770
+
+64
+
+2. A 13-week repeat dose toxicity and impurity qualification study of ISIS 396443 in CD-1 mice 
+  report  dated, 
+
+  727-083,  conducted  by 
+
+(Study  #  396443-AS13, 
+6/10/16, GLP)
+
+a. Methods
+
+CD-1  mice  (6/sex/grp,  ~8  weeks  old)  were  administered  (SC,  5  mL/kg)  saline  vehicle  or  3 
+different  formulations  of  drug/impurities  (ISIS  396443  Impurity  Mixtures  1,  2,  and  3;  TAM: 
+Test Article Mixture) at two doses (5 and 25 mg/kg/week) weekly for 13 weeks (Days 1, 7, 14, 
+21,  28,  35,  42,  49,  56,  63,  70,  77,  84,  and  91).  Observations  consisted  of  mortality,  clinical 
+observations,  body  weight,  food  consumption,  ophthalmoscopic  examinations,  clinical  and 
+anatomic pathology, and tissue TK.
+
+Doses  were  based  on  the  previous  13-week  SC  toxicology  study  (396443-AS07)  in  which 
+doses up to 50 mg/kg produced changes consistent with the uptake of drug into tissues. The 
+doses selected for the current study were said to provide exposure margins, based on body 
+surface area, of 1- and 20-fold over doses being used in clinical trials in children and <1- and 
+4-fold  in  infants.  Levels  of  impurities  exceeded  those  normally  found  in  GLP/GMP  lots  of 
+oligonucleotides to set manufacturing specifications.
+
+b. Results
+
+i.
+
+Mortality, clinical signs, body weight, ophthalmoscopic examinations
+
+No drug-related effects on survival, clinical findings, body weights, or ophthalmoscopic exams 
+were observed.
+
+ii.
+
+Clinical pathology
+
+There were no effects on hematology parameters. Mild increases in AST and ALT seen in a 
+few individual animals were thought to possibly have been related to the microscopic findings 
+in the liver (e.g. vacuolated/granular macrophages) which were considered drug-related. 
+
+Reference ID: 4030770
+
+65
+
+(b) (4)(b) (4)iii.
+
+Histopathology
+
+Dose-dependent  accumulation  of  vacuolated/granular  macrophages  was  seen  in  tissues 
+throughout  the  body  of  drug  (alone  or  with  impurities)-treated  animals.  There  was  no 
+associated cellular degeneration or necrosis. The infiltrates were most prominent in the liver 
+(Table  IVG.3),  lymph  nodes,  and  injection  sites,  and  were  often  barely  detectable  in  other 
+tissues.  Vacuolated/granular  macrophages  were  present  in  the  sinusoids  of  the  liver,  the 
+dermis  and  subcutis  of  the  injection  sites  and  skin,  the  sinuses  of  the  lymph  nodes  and 
+spleen,  and  interstitial  connective  tissue  of  the  gastrointestinal  and  urogenital  tracts, 
+glandular organs, heart, skeletal muscle, and choroid plexus of the brain.
+
+The  kidneys  of  drug  (alone  or  with  impurities)-treated  animals  had  minimal  dose-related 
+accumulation  of  basophilic  granules  within  tubular  epithelial  cells  (Table  IVG.4),  consistent 
+with oligonucleotide uptake. Incidences were similar among groups at the same dose. There 
+was no associated cellular degeneration.
+
+Minimal to mild monocyte/macrophage hyperplasia was observed in the liver, bone marrow, 
+and mandibular lymph node of 1 female (#7504) from the HD TAM2 group. According to the 
+report, this was “characterized by multifocal aggregates of macrophages with abundant pale 
+cytoplasm and indistinct cell margins. In the liver, the monocyte/macrophage hyperplasia was 
+randomly  distributed  with  occasional  small  numbers  of  admixed  leukocytes  and/or  rare 
+attendant  single  cell  necrosis  of  adjacent  hepatocytes.”  The  widespread  finding  was  not 
+observed  in  other  treated  animals  and  the  relationship  to  the  test  article  and/or  TAM  2 
+impurity  was considered unclear in the report.  However,  monocyte/macrophage  hyperplasia 
+was  also  identified  in  the  lymph  nodes  of  other  animals  treated  with  ISIS  396443  with  or 
+without  impurities  (animal  numbers  3002  (HD  ISIS  396443  M),  7003  (HD  TAM2  M),  and 
+9503(HD TAM3 F)), but in these cases was isolated to a single lymph node.
+
+Table IVG.3
+
+ISIS 396443–related microscopic observations in the liver
+
+Table IVG.4
+
+ISIS 396443–related microscopic observations in the kidney
+
+   ISIS 396443
+
+       TAM 1
+
+       TAM 2
+
+      TAM3
+
+Dose (mg/kg/week)
+Sex
+Number
+
+basophilic  granules, 
+tubular cell - minimal
+
+    5             25
+M     F      M     F M     F      M    F M     F     M     F M     F      M     F
+6      6      6      6
+6      6      6      6
+
+6      6      6      6
+
+6      6      6      6
+
+    5             25
+
+    5             25
+
+    5             25
+
+0      2      6      6 
+
+0      0      4      6
+
+0      1      4      1 
+
+0      1      6      5
+
+basophilic 
+minimal
+
+tubules – 
+
+0      1      2      0
+
+1      1       1     0
+
+0       1     1      1
+
+0      1      0      1
+
+degeneration,  tubular
+
+1      0       0     0
+
+0      0       0     0
+
+0       0     0      0  
+
+0      0      0      0
+
+Reference ID: 4030770
+
+66
+
+                             
+Dose-dependent  exposure  in  liver  was  observed  (Table  IVG.5).  Lower  concentrations  were 
+observed in liver of mice receiving the test article mixtures (TAM) containing impurities (TAM 
+1,  2,  and  3)  compared  to  the  drug  without  impurities  due  to  the  same  mg/kg  dose  of  total 
+oligonucleotide being given in all groups and the resulting reduced percentage of full-length 
+ISIS 396443 in the formulation of TAM 1, 2, and 3. 
+
+Table IVG.5
+
+ISIS 396443 liver tissue concentrations
+
+c. Conclusions
+
+Weekly  SC  administration  of  ISIS  396443  with  and  without  added  impurities  to  adult  CD-1 
+mice  for  13  weeks  resulted  in  accumulation  of  vacuolated/granular  macrophages  in  tissues 
+throughout the body and accumulation of basophilic granules within the tubular epithelium of 
+the  kidneys.  These  findings  were  consistent  with  oligonucleotide  uptake  and/or  cellular 
+activation and cytokine production due to proinflammatory effects of the oligonucleotide and 
+were not associated with cell degeneration.  Since there were no apparent differences among 
+the groups receiving drug alone or with impurities, no additional toxicity could be attributed to 
+the impurities evaluated.
+
+Reference ID: 4030770
+
+67
+
+V.
+
+SUMMARY AND EVALUATION 
+
+Pharmacology
+
+ISIS  396443  is  a  uniformly  modified  2ʹ-MOE  antisense  oligonucleotide  (ASO)  intended  to 
+modulate  alternative  splicing  of  the  SMN2  mRNA  transcript  to  include  exon  7  and  produce  full-
+length  SMN  protein  in  patients  with  spinal  muscular  atrophy.  The  SMN2  transcript  undergoes 
+alternative splicing in which exon 7 is either skipped or included. If exon 7 is skipped, a defective 
+truncated  protein  product  is  produced.  Typically,  the  majority  of  transcripts  derived  from  the 
+SMN2  gene  are  missing  exon  7.  ISIS  396443  is  designed  to  bind  to  the  pre-mRNA  on  intron  7 
+and  promote  exon  7  inclusion  resulting  in  production  of  full  length  protein.  ISIS  396443  was 
+shown  to  target  a  site  in  intron  7,  termed  ISS-N1,  that  was  previously  known  to  repress  SMN2 
+exon  7  inclusion.  By  hybridizing  to  ISS-N1  it  is  thought  that  the  ASO  promotes  the  inclusion  of 
+exon  7  by  displacing  inhibitory  heterogeneous  nuclear  ribonucleoproteins  (hnRNPs)  on  the  pre-
+mRNA allowing assembly of splicing factors on exon 7. In cell culture and animals, ISIS 396443 
+increased  SMN2  exon  7  inclusion  and  had  beneficial  effects  in  mouse  models  of  SMA.  Safety 
+pharmacology  consisted  of  a  respiratory  and  cardiovascular  safety  pharmacology  study  in  rats 
+treated by continuous intrathecal (IT) infusion. CNS safety was assessed as part of the acute and 
+subchronic  toxicity  studies  in  monkeys  using  IT  lumbar  bolus  injection,  the  intended  route  of 
+administration  in  man.  These  did  not  indicate  any  adverse  CV  or  respiratory  effects,  but  acute 
+and possibly long-term neurotoxicity was observed in monkeys (described below). 
+
+ADME
+
+PK/ADME data were collected in a dedicated study in adult monkeys and in the toxicity studies. 
+Following IT administration to monkeys, the estimated CSF terminal elimination half-life (t1/2) was 
+consistent  between  adult  and  juvenile  monkeys,  with  observed  values  of  102-111  days. 
+Concentrations in plasma peaked 2-5 hours after the IT bolus injection and then rapidly declined 
+during  the  first  24-48  hours  post-dose,  followed  by  a  slower  elimination  phase.  The  estimated 
+plasma terminal elimination half-life (35-56 days) was shorter than that in CSF (102 to 111 days) 
+but similar to that in systemic tissues (12-23 days in liver and 35 days in kidney).
+
+Concentrations in systemic tissues like liver and kidney following IT administration were similar to 
+those seen in the spinal cord indicating that a substantial proportion of the administered dose was 
+transferred from CSF to the systemic circulation. In both adult and juvenile monkeys, ISIS 396443 
+appeared to be cleared slowly from CNS and systemic tissues. The estimated median CNS tissue 
+terminal  elimination  half-life  (t1/2)  was  consistent  between  adult  and  juvenile  monkeys,  with 
+observed  values  of  116  days  (range  74-275  days)  and  174  days  (range  117-195  days), 
+respectively, which are similar to the observed terminal elimination half-life in CSF. 
+
+Comparison of plasma, kidney cortex, and liver exposure after IT and IV administration suggested 
+minimal metabolic clearance of ISIS 396443 in the CNS prior to eventual transfer to plasma. Drug 
+exposure  in  liver  and  kidney  appeared  to  be  independent  of  the  route  of  administration.  ISIS 
+396443  is  highly  bound  to  plasma  proteins  in  mice,  monkeys,  and  humans  (>94%),  which 
+reduces  glomerular  filtration  (limiting  urinary  excretion)  and  therefore  facilitates  distribution  to 
+systemic tissues. Binding to CSF proteins (monkeys and humans) was lower (<25% at 5 μg/mL 
+and none bound at 150 μg/mL), presumably due to lower CSF protein concentrations. Following 
+SC administration in mice and rabbits, a lack of measurable fetal liver exposure indicated limited 
+placental transfer.
+
+Metabolite profiling in monkeys following IT administration indicated that intact ISIS 396443 was 
+the  primary  oligonucleotide  present,  accounting  for  100%  of  the  total  oligonucleotides  in  CSF, 
+>95%  in  plasma  and  79%  to  81%  in  CNS  and  systemic  tissues.  Metabolites  observed  in  CSF 
+(none in monkey CSF), plasma (N-1 from 3’-end only) and tissues (N-1, N-2, N-3, and N-4 from 
+
+Reference ID: 4030770
+
+68
+
+Table V.2  Histopathology and tissue concentrations in 1-year IT monkey toxicity study
+
+Table V.3
+
+ISIS 396443 tissue concentrations in human tissues after treatment
+
+Reference ID: 4030770
+
+70
+
+Table V.4
+
+Pre-dose CSF concentrations (ng/mL) in subjects receiving single and multiple IT 
+administration(s) of ISIS 396443, Study ISIS 396443-CS3A
+
+Toxicology
+
+Based  on  the  intended  patient  population  (neonates  to  adolescents),  14-  and  53-week  repeat 
+dose  toxicology  studies  were  conducted  in  juvenile  cynomolgus  monkeys  using  IT  dose 
+administration.  A  13-week  study  was  also  conducted  in  juvenile  CD-1  mice  using  SC  dosing  to 
+evaluate  systemic  effects.  Reproductive  and  developmental  toxicity  studies  were  conducted  in 
+mice  (fertility  and  developmental  toxicity)  and  rabbits  (embryo-fetal  development)  using  SC 
+dosing  to  provide  maximum  systemic  exposure.  A  study  to  evaluate  pre-natal  and  post-natal 
+development  effects  is  ongoing.  Standard  in  vitro  and  in  vivo  genotoxicity  studies  were 
+conducted.  Carcinogenicity studies were not conducted and are not planned. 
+
+In a single IT dose study in adult monkeys at up to 7 mg/dose, transient effects on lower spinal 
+reflexes  were  seen  in  1  of  6  HD  animals,  but  there  was  no  mortality  and  no  effects  on  body 
+weight,  no  changes  to  ECGs,  no  effects  on  CSF  chemistry  or  clinical  pathology,  no  effects  on 
+complement  activation,  no  evidence  of  systemic  inflammation,  and  no  other  drug-related 
+microscopic changes.
+
+In the juvenile monkey studies in which IT bolus doses were administered weekly or every other 
+week  for  14  (0.3,  1,  or  3  mg/dose)  or  53  (0.3,  1,  or  4  mg/dose)  weeks,  acute  neurotoxicity 
+(decreased  lower  spinal  reflexes)  was  observed  at  the  HD,  which  appeared  to  be  reversible  in 
+most  animals  (decreased  reflex  responses  persisted  in  1  HD  male),  but  no  clearly  drug-related 
+mortality  or  effects  on  body  weight,  ECG,  CSF  chemistry/cell  counts,  clinical  pathology,  or 
+complement activation (as measured by concentrations of Bb split product) were observed, and 
+there was no evidence of systemic inflammation or non-CNS histopathology. In the 1-year study, 
+an  apparent  long-term  effect  on  performance  in  a  learning  and  memory  test  (WGTA)  was 
+observed  at  the  HD  at  the  end  of  the  dosing  period  and  after  a  22-25-week  recovery  period. 
+However, due to data variability and the small group sizes, these effects did not reach statistical 
+significance  and  were  not  recognized  as  drug-related  by  the  sponsor.  But  in  view  of  the 
+hippocampal neurohistopathology observed in these same animals, such effects would not seem 
+to be out of the realm of possibility despite the study pathologist’s opinion that the brain findings 
+“were unlikely to result in any clinical signs or any alteration that would in any way interfere with 
+the animals ability to function normally in its environment.” Neuronal vacuolation (graded slight to 
+minimal) in the inferior region of the hippocampus was observed at the MD and HD in both the 
+14- and 53- week studies, but was not seen at the 1-month interim sacrifice in the 14-week study. 
+In some animals at both doses, this vacuolation was associated with low incidences of neuronal 
+and  glial  cell  necrosis  and  cellular  debris.  Hippocampal  vacuolation  and  necrotic  cells/cellular 
+debris  were  still  present  following  12  or  24  weeks  of  recovery  in  the  14-  and  53-week  studies, 
+respectively. 
+
+Reference ID: 4030770
+
+71
+
+in 
+
+the  hippocampus 
+
+that  “the  presence  of  vacuoles 
+
+The sponsor actually dismissed these neurohistopathology findings as fixation artifacts, based on 
+an exploratory study comparing fixation methods, or considered them non-adverse, based on the 
+pathologist’s  statement  about  the  functional  consequences.  In  the  exploratory  study,  in  which 
+monkeys  (3/sex/grp)  were  administered  weekly  IT  bolus  doses  of  5  mg/dose  for  36  days  and 
+sacrificed  2  weeks  later,  neuronal  vacuolation  in  the  hippocampus  was  seen  in  formalin 
+immersion-fixed  brains  (as  used  in  the  tox  studies)  but  not  in  brains  fixed  using  the  alternative 
+methods  (immersion  fixation  in  Carnoy’s  solution,  perfusion  fixation  with  modified  Karnovsky’s 
+solution and fixation by snap freezing). The vacuolated cells present in the formalin-fixed brains 
+also  stained  positive  for  the  presence  of  ISIS  396443.  These  results  were  interpreted  by  the 
+sponsor to indicate that the mechanism for hippocampal vacuolation in monkeys treated with ISIS 
+396443 is the same as that for vacuolation seen in the renal proximal tubule, i.e., “oligonucleotide 
+taken  up  into  the  endosomal/lysosomal  system  is  eluted  during  the  fixation/processing  of  these 
+tissues leaving a dilated vacuolar system remnant to be seen by light microscopy.” They further 
+treatment  with 
+stated 
+oligonucleotides  does  not  represent  an  adverse  toxicological  finding,  but  rather  represents  an 
+artifact of tissue preservation that occurs with the presence of drug.” However, in reports of renal 
+tubular  vacuolation  associated  with  other  oligonucleotides,  in  which  cytoplasmic  vacuoles  in 
+tubular epithelial cells appeared to be related to basophilic granulation and vacuoles were found 
+to  contain  basophilic  material  (presumably  oligonucleotide),  degenerative  changes  were  also 
+seen  at  higher  tissue  oligonucleotide  concentrations.  And  in  the  study  referred  to  (Henry  et  al., 
+Toxicology  301:13-20,  2012),  renal  tubular  cell  vacuolation  in  monkeys  dosed  with  another  2′-
+MOE  modified  oligonucleotide  was  not  considered  a  fixation  artifact  per  se,  but  the  result  of 
+oligonucleotide taken up by the endosomal/lysosomal system of the epithelial cells being eluted in 
+the  fixation  process  to  leave  clear  vacuoles.  As  stated  in  the  publication,  the  “fixation  process 
+may  influence  the  appearance  of  the  oligonucleotide  within  the  phagolysosomal  compartment.” 
+The  accumulation  of  the  oligonucleotide  within  the  tubule  epithelial  cells  was  only  considered 
+non-adverse in the absence of other morphologic changes, but was clearly deleterious at doses 
+that resulted in degenerative changes. The dose- and duration-dependent vacuolation observed 
+only in a specific region of the brain in the monkey studies of ISIS 396443 was not considered an 
+artifact by the study pathologist. While the evidence of associated neuronal necrosis was minimal, 
+the difficulty of detecting neurodegeneration at a single time point in a subchronic or chronic study 
+is  well-known.  The  very  specific  location  of  the  vacuolation  could  not  be  explained  by  tissue 
+concentrations,  since  higher  concentrations  were  measured  in  other  parts  of  the  CNS.  Taken 
+together,  these  considerations  as  well  as  the  data  suggesting  a  neurobehavioral  deficit  indicate 
+that the hippocampal vacuolation observed in monkeys following IT administration of ISIS 396443 
+should be considered an adverse neurotoxic effect.
+
+following 
+
+In  the  13-week  SC  mouse  study,  histopathologic  findings  attributed  to  the  expected  effects  of 
+local  and  systemic  accumulations  of  oligonucleotide  and/or  their  pro-inflammatory  effects  were 
+observed  and  included  basophilic  granules  in  the  kidney,  liver  Kupffer  cell  hypertrophy,  and 
+vacuolated  macrophages  at  the  injection  site  and  in  the  lymph  node  and  multiple  other  tissues. 
+These  findings  were  generally  not  associated  with  evidence  of  necrosis,  degeneration,  or 
+inflammation. However, 1 HD animal was found to have renal tubular degeneration characterized 
+by basophilia, vacuolation, and single cell necrosis. Vacuolation and degeneration of renal tubular 
+epithelial  cells  associated  with  basophilic  granulation  have  been  previously  reported  in  animal 
+studies of other phosphorothioate oligonucleotides.  
+
+No clear evidence of reproductive or developmental toxicity was seen in mice and rabbit studies, 
+and  the  ASO  was  negative  for  genotoxicity  in  a  standard  battery  of  in  vitro  and  in  vivo  assays. 
+Justification  for  a  carcinogenicity  study  waiver  included  the  technical  limitations  of  conducting 
+carcinogenicity  studies  by  the  IT  route,  the  pharmacology  of  the  target  (production  of  SMN 
+protein), mechanism of action (modulated splicing of mRNA from the SMN2 gene), and a lack of 
+nonclinical  indications  of  genotoxic,  proliferative,  endocrine  disruption,  or  immunosuppressive 
+potential.  Additionally,  the  sponsor  stated  that  a  standard  rodent  carcinogenicity  study  using 
+parenteral dosing would not provide additional insights into the potential carcinogenic risk of ISIS 
+
+Reference ID: 4030770
+
+72
+
+and 
+
+about 
+
+effects 
+
+clinically 
+
+concerns 
+
+hybridization-independent 
+
+396443 since exposure to rat CNS tissues would be low. However, given the systemic exposure 
+demonstrated 
+of 
+phosphorothioate  oligonucleotides,  e.g.,  proinflammatory  or  immunostimulatory  effects,  there  is 
+still  a  case  to  be  made  for  conducting  a  standard  carcinogenicity  study  by  the  parenteral  route. 
+For  example,  the  lymphoproliferation  and  multiorgan  lymphohistiocytic  infiltrates  previously 
+reported with oligonucleotide administration to mice were noted in connection with the malignant 
+lymphoma  found  in  a  single  LD  female  in  the  13-week  SC  study.  This  finding  in  a  single  LD 
+animal was not considered drug-related. Nevertheless, the drug-related findings in both this study 
+and  the  13-week  SC  impurity  study  in  mice  were  attributed  in  part  to  cellular  activation  and 
+cytokine production due to the proinflammatory effects of the oligonucleotide. Rodents appear to 
+be particularly sensitive to this generalized immune stimulation, whereas primates are thought to 
+be less sensitive at equivalent doses. The mixed monocellular infiltrates in liver and other organs 
+that  are  characteristic  of  the  response  in  rodents  are  reportedly  absent  even  after  long-term 
+systemic  exposure  to  other  phosphorothioate  oligonucleotides  in  monkeys.  And,  no  systemic 
+effects were seen in the IT monkey studies despite higher plasma and tissue concentrations than 
+would be expected clinically (compare Table IVC.11 [p. 43] with mean human plasma Cmax and 
+AUC0-24 values of 829 ng/mL and 2181 ng.h/mL at 12 mg dose in clinical PK study ISIS 396443-
+CS3A). However, in light of the significant systemic exposures demonstrated in patients receiving 
+IT treatment and the lifespan potential of some patients, a lifetime SC carcinogenicity study in one 
+rodent species is recommended.
+
+Reference ID: 4030770
+
+73
+
+---------------------------------------------------------------------------------------------------------
+This is a representation of an electronic record that was signed
+electronically and this page is the manifestation of the electronic
+signature.
+---------------------------------------------------------------------------------------------------------
+/s/
+----------------------------------------------------
+
+J EDWARD FISHER
+12/20/2016
+
+LOIS M FREED
+12/20/2016
+
+Reference ID: 4030770
+
+MEMORANDUM 
+
+DEPARTMENT OF HEALTH & HUMAN SERVICES 
+               Public Health Service 
+    Food and Drug Administration 
+________________________________________________________________________ 
+
+Division of Neurology Products (HFD-120) 
+Center for Drug Evaluation and Research 
+
+Date:  December 20, 2016 
+
+From:  Lois M. Freed, Ph.D. 
+
+Supervisory Pharmacologist 
+
+Subject: NDA 209-531 (ISIS 396443; nusinersen; Spinraza) 
+________________________________________________________________________ 
+
+NDA 209-531 has been submitted by the sponsor (Biogen Idec) for use of ISIS 396443 
+(nusinersen) as a treatment for spinal muscular atrophy. Submission of most of Module 3, 
+Module 4, the CMC and nonclinical portions of Module 2, and part of Module 1 on 
+August 9, 2016, initiated a rolling submission. The remainder of the information 
+(completion of Modules 1, 2, and 3 and Module 5) was received on September 23, 2016, 
+and the NDA was filed (Filing Communication, October 25, 2016). Clinical development 
+was conducted under IND 110011 by ISIS Pharmaceuticals (now Ionis Pharmaceuticals).  
+
+The following nonclinical data were submitted to the NDA: 
+
+•  Pharmacology 
+•  Safety pharmacology (male Sprague-Dawley rat, cynomolgus monkey) 
+•  PK/ADME 
+•  Toxicology 
+
+o  14- (4-week interim sacrifice) and 53-week intrathecal studies in 
+
+cynomolgus monkey 
+
+o  13-week subcutaneous study in CD-1 mouse 
+o  13-week subcutaneous study of impurities in CD-1 mouse 
+
+•  Reproductive and Developmental Toxicology (subcutaneous) 
+
+o  Combined fertility and embryofetal development study in CD-1 mouse 
+o  Embryofetal development study in New Zealand White rabbit 
+
+•  Genetic Toxicology 
+o  Ames assay 
+o  In vitro chromosomal aberration assay in CHO cells 
+o  In vivo micronucleus assay (subcutaneous) in ICR mouse 
+
+Reference ID: 4031091
+
+1 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+      
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The nonclinical data have been reviewed by Dr. Fisher (Pharmacology/Toxicology 
+Review and Evaluation, NDA 205-931, December 20, 2016).  Based on his 
+comprehensive review of the data, Dr. Fisher has concluded that the nonclinical data are 
+adequate to support approval, with a post-marketing requirement for a carcinogenicity 
+study in one species. 
+
+The following is a brief discussion of the nonclinical data, with focus on the 
+neurotoxicity and the potential adverse effects on learning and memory observed in 
+monkey. Dr. Fisher’s review should be consulted for a more detailed description and 
+discussion of all the nonclinical data.  
+
+Pharmacology 
+
+ISIS 396443 is a fully modified 18-base 2’-O-(2-methoxyethyl) phosphorothioate 
+antisense oligonucleotide designed to increase the amount of full-length SMN protein by 
+promoting the inclusion of exon 7 in the SMN2 mRNA. ISIS 396443 is thought to 
+modulate exon 7 inclusion through displacement of inhibitory heterogeneous nuclear 
+ribonucleoproteins (hnRNPs) from their target site (ISS-N1) in intron 7 of the SMN2 pre-
+mRNA. 
+
+The sponsor conducted in vitro and in vivo studies to assess the pharmacological activity 
+of ISIS 396443. In vivo studies (using intracerebroventricular and intrathecal [IT] 
+administration) were conducted in transgenic mouse models of SMA because only 
+humans are known to have the SMN2 gene. Four different mouse models were used, 
+which differed in severity of disease (mild to aggressive). Based on the data from these 
+studies, the sponsor concluded that efficacy was achieved at tissue (brain and spinal cord) 
+concentrations of ~2-10 µg/g. In addition, bolus injections resulted in lower ED50 values 
+compared to infusions, supporting the use of IT bolus injections in clinical trials. 
+
+No adverse effects were observed in a 28-day pulmonary and cardiovascular safety study 
+of ISIS 396443 (0, 0.02, 0.06, and 0.2 mg/day by continuous IT infusion) in male 
+Sprague-Dawley rat (8/group). Safety pharmacology parameters were also included in the 
+IT toxicity studies in cynomolgus monkey (discussed below). 
+
+PK/ADME 
+
+The PK/ADME of ISIS 396443 was assessed in an IT study (ISIS 396443-APK01) in 
+adult cynomolgus monkey (3-4/group/time point). ISIS 396443 was administered either 
+by intravenous (IV) or IT bolus injection at a dose of 1 mg on Days 1, 8, 15, and 22. 
+Animals were sacrificed on Day 29, 85, 183, 253, or 365.  
+
+Following IT bolus administration, the t1/2 values for ISIS 396443 in CNS tissues ranged 
+from 74.4 days in lumbar spinal cord to 275 days in hippocampus. T1/2 values in plasma 
+and csf were 52.2 and 102 days, respectively. Plasma data suggested higher (~2-fold) 
+systemic exposures with IT dosing; this is likely due to initial sampling at 1 hr post dose, 
+which would be expected to result in an underestimate of exposure following IV dosing. 
+
+Reference ID: 4031091
+
+2 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The tissue data (Day 29) demonstrate substantial transfer of ISIS 396443 into the 
+systemic circulation following IT dosing, with concentrations in liver similar between 
+routes; concentrations in kidney cortex were ~2-fold higher following IV dosing. 
+
+Plasma and tissue concentration data for ISIS 396443 are summarized in the following 
+sponsor’s tables: 
+
+Metabolites were measured in the IT toxicity studies in monkey. In plasma, ISIS 396443 
+accounted for >95% of drug-related material, with one metabolite (17-mer, ISIS 52440) 
+
+Reference ID: 4031091
+
+3 
+
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+accounting for ~2-3% of drug-related material. In brain cortex and lumbar spinal cord, 
+ISIS 396443 and metabolite ISIS 52440 accounted for ~80 and 10-20% of drug-related 
+material, respectively. 
+
+Additional PK/TK data were collected in the toxicity studies (discussed below). 
+
+Toxicology 
+
+Acute toxicity was assessed only in cynomolgus monkey (3.6-4.2 years of age). Repeat-
+dose toxicity studies were conducted in CD-1 mouse (two 13-week studies) and juvenile 
+cynomolgus monkey (14-week [with 4-week interim sacrifice] and 53-week studies; 7-8 
+and 10-11 months of age, respectively).  
+
+Mouse 
+
+-192015, ISIS 396443 was administered to juvenile CD-1 mice 
+
+Two 13-week subcutaneous (SC) toxicity studies were conducted in CD-1 mouse.  
+In Study 
+(10/sex/group) at doses of 0, 1, 10, and 50 mg/kg, weekly on PNDs 4-25 and biweekly 
+thereafter through PND95. (The study was not designed to assess potential effects on 
+developmental parameters.) The primary effects were microscopic changes in liver 
+(Kupffer cell hypertrophy at MD and HD), kidney (basophilic granules in proximal 
+convoluted tubules at MD and HD), injection site (vacuolated macrophages at all doses), 
+and lymph node and other tissues (vacuolated macrophages), consistent with 
+accumulation of ISIS 396443 or pro-inflammatory effects. However, renal tubular 
+degeneration (basophilia, vacuolation, and single cell necrosis), associated with tubular 
+basophilia and basophilic granules, was detected in one HDM.  
+
+Plasma exposure data were not collected. Mean liver exposures were <10 (LLQ), 44-45, 
+and 214-220 µg/g at the LD, MD, and HD, respectively.  
+
+Study 727-083 was conducted in adult CD-1 mouse (6/sex/group) to qualify a series of 
+related impurities using three different formulations (ISIS 396443 Impurity Mixtures 1, 2, 
+and 3). ISIS 39443 mixtures were administered SC weekly at doses of 5 and 25 mg/kg. 
+-192015. Although no 
+Results were generally similar to those observed in Study 
+renal tubular degeneration was observed, the HD was lower than in the previous study 
+and fewer animals were tested; exposure to kidney was not evaluated in either study. 
+
+Plasma exposure data were not collected. Across all mixtures, mean liver exposures were 
+~29-53 and 141-269 µg/g at the LD and HD, respectively.  
+
+Monkey 
+
+In Study 396443-AS01, ISIS 396443 was administered at acute IT (lumbar) bolus doses 
+of 0, 1, 3, and 7 mg (2-3/sex/group; 5/sex for TK at 3 mg). The only findings of note 
+were clinical signs (sedation and hindlimb weakness) and neurological impairment 
+
+Reference ID: 4031091
+
+4 
+
+(b) (4)(b) (4) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(absent cutaneous and proprioceptive reflexes) in one HDM. The neurological 
+impairment persisted, in the absence of clinical signs. 
+Seven days after injection, csf levels were 0.0102 ± 0.00489, 0.0459 ± 0.0438, and 
+0.0641 ± 0.0334 µg/mL at the LD, MD, and HD, respectively. Plasma exposure and 
+tissue concentrations are summarized in the following sponsor’s tables: 
+
+The highest tissue concentrations were detected in lumbar spinal cord at the lower doses 
+and in liver at the HD.  Hippocampus was not sampled.  
+
+In the 14-week toxicity study (396443-AS03), ISIS 396443 was administered at doses of 
+0, 0.3, 1, and 3 mg by slow IT (lumbar) bolus injection weekly for 4 weeks (interim 
+sacrifice in 3/sex/group on Day 36) weeks, followed in the remaining animals by 
+biweekly dosing for an additional 5 doses (3-4/sex/group sacrificed on Day 106). Two 
+per sex for control and HD groups were sacrificed after a 12-week recovery period 
+(sacrificed on Day 183).  
+
+There were no deaths considered drug-related and no adverse effects on clinical 
+pathology parameters, gross pathology, or organ weights were observed. Transient effects 
+(decreased or absent) on lower spinal (cutaneous, sensory foot, and/or tail) reflexes were 
+observed at the HD.  
+
+At the 4-week interim sacrifice, microscopic findings in CNS tissues were detected only 
+in one MD male (as listed in the Pathology Report): 
+
+Reference ID: 4031091
+
+5 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SEX 
+
+DOSE 
+(mg) 
+
+ANIMAL # 
+
+FINDINGS 
+
+MAIN STUDY 
+inferior hippocampus/amygdyloid hippocampal area 
+     large vacuoles (neurons) 
+     necrotic cells/cellular debris 
+
+none 
+none 
+none 
+inferior hippocampus/amygdyloid hippocampal area  
+     large vacuoles (neurons) 
+inferior hippocampus/amygdyloid hippocampal area 
+     large vacuoles (neurons) 
+     vacuoles/flocculent material 
+      necrotic cells/cellular debris 
+inferior hippocampus/amygdyloid hippocampal area  
+     large vacuoles (neurons) 
+     vacuoles/flocculent material 
+     necrotic cells/cellular debris 
+
+none 
+inferior hippocampus/amygdyloid hippocampal area 
+      large vacuoles (neurons) 
+      necrotic cells/cellular debris 
+
+none 
+none 
+none 
+none 
+none 
+none 
+inferior hippocampus/amygdyloid hippocampal area 
+     large vacuoles (neurons) 
+inferior hippocampus, medial CA3 region 
+     large vacuoles (neurons)      
+
+none 
+none 
+inferior hippocampus/amygdyloid hippocampal area 
+     large vacuoles 
+     vacuoles/flocculent material 
+
+RECOVERY 
+
+none 
+
+inferior hippocampus/amygdyloid hippocampal area 
+     large vacuoles (neurons) 
+inferior hippocampus/amygdyloid hippocampal area 
+     large vacuoles (neurons) 
+     vacuoles/flocculent material 
+     necrotic cells/cellular debris 
+inferior hippocampus/amygdyloid hippocampal area 
+     large vacuoles (neurons) 
+none 
+
+17345 
+
+17346 
+17349 
+17352 
+
+17358 
+
+17339 
+
+17342 
+
+17348 
+
+17355 
+
+17356 
+17369 
+17373 
+17374 
+17381 
+17383 
+
+17368 
+
+17377 
+17382 
+
+17387 
+
+17390 
+
+17340 
+
+17361 
+
+17367 
+
+17388 
+
+1 
+
+4 
+
+1 
+
+4 
+
+M 
+
+F 
+
+M 
+
+4 
+
+F 
+
+4 
+
+Although the sponsor suggests that the large vacuoles represent artifacts, the study 
+pathologist did not include large vacuoles in the findings specifically designated in 
+individual histopathology table as “ARTIFACT.” It is presumed that the vacuoles 
+
+Reference ID: 4031091
+
+9 
+
+ 
+ 
+represent accumulation of ISIS 396443 and would not be considered adverse if not 
+accompanied by other microscopic changes, such as necrotic cells or cellular debris. 
+
+Lumbar csf levels (mean ± SD [range]; ng/mL) on Day 372, 7 days after the last 
+dose: 
+
+0.3 
+12.0±10.6 
+[4.68-41.1] 
+
+DOSES (mg) 
+1 
+23.3±16.7 
+[8.78-68.2] 
+
+4 
+51.8±37.8 
+[16.1-162] 
+
+Plasma exposures (mean ± SD) on Day 365: 
+
+DOSE 
+ (mg) 
+0.3 
+1 
+4 
+
+Cmax 
+(µg/mL) 
+0.0859±0.0514 
+0.454±0.258 
+1.52±0.535 
+
+AUC(0-24 hr) 
+(µg*hr/mL) 
+0.626±0.197 
+2.79±1.59 
+9.59±1.90 
+
+AUC(0-168 hr) 
+(µg*hr/mL) 
+0.714±0.270 
+3.94±3.98 
+11.7±2.63 
+
+Cl/F 
+(mL/hr) 
+521±158 
+417±125 
+433±87.2 
+
+Tissue concentrations (mean ± SD; µg/g) on Day 372, 7 days after the last dose: 
+
+TISSUE 
+
+spinal cord 
+     cervical 
+     thoracic 
+     lumbar 
+brain 
+     cortex 
+     cerebellum 
+     hippocampus 
+     pons      
+kidney cortex 
+liver 
+
+0.3 
+
+DOSE (mg) 
+1 
+
+4 
+
+6.68±2.78 
+14.0±9.34 
+21.4±9.28 
+
+4.23±1.89 
+4.27±1.39 
+10.1±2.81 
+4.14±3.06 
+23.7±17.6 
+0.850±0.430 
+
+15.9±5.14 
+23.0±10.6 
+53.5±33.6 
+
+16.6±5.97 
+20.8±16.0 
+28.9±10.3 
+8.84±3.97 
+42.8±19.0 
+2.79±1.64 
+
+35.1±11.0 
+59.8±11.7 
+99.0±71.5 
+
+71.3±29.3 
+39.6±19.7 
+88.9±18.0 
+34.2±15.5 
+239±176 
+21.9±9.16 
+
+Half-lives in plasma and tissues following the last dose (>Day 365): 
+
+TISSUE 
+
+plasma 
+csf 
+spinal cord 
+     cervical 
+     thoracic 
+     lumbar 
+brain 
+     cortex 
+     cerebellum 
+     hippocampus 
+     pons      
+kidney cortex 
+liver 
+
+t1/2 
+(days) 
+55.8 
+111 
+
+195 
+117 
+138 
+
+n.c. 
+n.c. 
+191 
+174 
+34.5 
+23.4 
+
+Reference ID: 4031091
+
+10 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The study pathologist considered the microscopic findings in the CNS to be drug-related 
+but concluded that they would be “…unlikely to result in any clinical signs or any 
+alteration that would in any way interfere with the animals [sic] ability to function 
+normally in its environment,” apparently based on the lack of clinical signs and the nature 
+of the findings. However, it is not uncommon that overt effects of CNS lesions cannot be 
+detected, even where there is consistent evidence of neurotoxicity (e.g., NMDA receptor 
+antagonists) that has clear regulatory impact. In addition, the results of the learning tasks 
+suggest the possibility of a behavioral correlate.  
+
+Reproductive and Developmental Toxicology 
+
+ISIS 396443 was tested in a combined fertility and embryofetal development study in 
+male and female CD-1 mice and an embryofetal development study in New Zealand 
+White rabbit.  
+
+In the mouse study (396443-AS08), ISIS 396443 was administered SC every other day at 
+doses of 0, 3, 10, and 25 mg/kg for 4 (males) or 2 (females) weeks prior to mating, 
+throughout the 2-week mating period, and continuing for a total of 10 weeks (until GD 15 
+in females). There were no clear effects of ISIS 396443 on fertility parameters, estrus 
+cyclicity, sperm parameters, or embryofetal development. The fecundity index (# 
+pregnant/# confirmed mated) was reduced in a dose-dependent manner (N%92.9, 86.2, 
+and 83.9% at LD, MD, and HD, respectively; however, as Dr. Fisher noted, the fecundity 
+index was lowest in control (70%), making it difficult to interpret the results. 
+
+In the rabbit study (396443-AS09), ISIS 396443 was administered SC every other day 
+during GDs 6 through 19 at doses of 0, 6, 12.6, and 25 mg/kg. There were no clear drug-
+related effects on developmental parameters. 
+
+A pre- and postnatal development study is ongoing; submission of the study should be a 
+post-marketing requirement. 
+
+Genetic Toxicology 
+
+ISIS 396443 was negative in an adequately conducted standard battery of in vitro (Ames 
+and chromosomal aberration in CHO) and in vivo (mouse micronucleus) assays. 
+
+Carcinogenicity 
+
+No carcinogenicity studies were conducted to support the NDA, which is consistent with 
+the Division’s decision to allow the assessment of carcinogenicity to be conducted post-
+approval. However, the sponsor has submitted a request for waiver of carcinogenicity 
+studies for reasons discussed by Dr. Fisher. I agree with Dr. Fisher’s recommendation 
+that, because of the substantial systemic exposure to ISIS 396443 in humans after IT 
+administration, the sponsor should conduct a 2-year carcinogenicity study as a post-
+marketing requirement. 
+
+Reference ID: 4031091
+
+11 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Conclusions and Recommendations 
+
+A less-than standard battery of nonclinical studies (no chronic toxicity study in rodent [to 
+assess systemic exposure], pre- and postnatal development (PPND) study in rodent, or 
+carcinogenicity studies in mouse and rat) was conducted to support approval of 
+nusinersen. Under the IND, the Division agreed that the lack of carcinogenicity studies 
+would not preclude filing or approval of the NDA. The lack of the other studies was not 
+considered a refuse-to-file issue.  
+
+The finding of greatest concern is the neurotoxicity observed in the toxicity studies in 
+monkey, which may be associated with adverse effects on learning. The no-effect dose 
+(0.3 mg) for neurotoxicity in the 53-week monkey study was associated with csf levels 
+(12 ng/mL) generally less than that in SMA patients (7-35 ng/mL); therefore, there is no 
+safety margin based on csf levels. However, considering the seriousness of the indication 
+and the apparently substantial evidence of efficacy in the clinical trials in SMA patients, 
+there is no objection to approval of the NDA from a pharmacology/toxicology standpoint. 
+Completion of the ongoing PPND study and a carcinogenicity study in one species 
+(which will provide chronic toxicity data) should be post-marketing requirements. The 
+neurotoxicity findings should be described in labeling. 
+
+Reference ID: 4031091
+
+12 
+
+ 
+ 
+ 
+ 
+ 
+---------------------------------------------------------------------------------------------------------
+This is a representation of an electronic record that was signed
+electronically and this page is the manifestation of the electronic
+signature.
+---------------------------------------------------------------------------------------------------------
+/s/
+----------------------------------------------------
+
+LOIS M FREED
+12/20/2016
+
+Reference ID: 4031091
+
+

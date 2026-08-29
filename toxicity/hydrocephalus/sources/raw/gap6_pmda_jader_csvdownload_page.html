@@ -1,0 +1,741 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-31j">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>医薬品副作用報告データセット　一括ダウンロード</title>
+
+<script language="Javascript">
+
+function dowloadStart(typeVal, indexVal)
+
+{
+
+	var datatype = document.getElementById("datatype");
+
+	datatype.value = typeVal;
+
+	var index = document.getElementById("index");
+
+	index.value = indexVal;
+
+
+
+	document.downloadFrm.submit();
+
+
+
+}
+
+</script>
+
+
+
+</head>
+
+<body>
+
+<TABLE width="99%">
+
+	<TR>
+
+		<TD align="right">
+
+			<A id=helpURL target=_top href="./Help.html">ヘルプ</A>
+
+		</TD>
+
+	</TR>
+
+</TABLE>
+
+
+
+<CENTER><H1 style="COLOR: blue; FONT-SIZE: 15pt">医薬品副作用報告データセット　一括ダウンロード</H1>
+
+<form id="downloadFrm"  name="downloadFrm" method="post" action="./CsvDownload"><input type="hidden" name="nccharset" value="71DA81C6">
+
+
+<!-- 2018/07/27  お知らせ  -->
+<!--
+<font color=red><b>
+
+平成30年7月20日（金）に公開しました7月公開分のデータセットにつきまして、7月27日（金）15：00に更新を行いました。<br>
+ご利用されていた方々にご不便ご迷惑をお掛けしましたことをお詫び申し上げます。
+
+</b>
+-->
+<!-- 2018/07/27  お知らせ  -->
+
+
+</font>
+
+<br>
+
+<br>
+
+<font color=red>以下の文字を入力してダウンロードボタンを押してください&nbsp;<input type=text name="captchaText" id="captchaText">&nbsp;(必須)</font>
+
+<br clear=all>
+
+<img id=captchaImg src="./captcha.jpg">
+
+<br clear="all" />
+
+
+
+<table border=1 cellSpacing=0 width="80%" style="margin-top:5px">
+
+
+
+	<TR>
+
+		<td>
+
+			一括ダウンロード
+
+		</td>
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="一括ダウンロード" onClick="dowloadStart('all', 0);"></input></div>
+
+			<div style="float: left; margin-top:6px">(134Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td rowspan=35>
+
+			分割ダウンロード
+
+		</td>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル1 ダウンロード"  onClick="dowloadStart('part', 0);"></input></div>
+
+			<div style="float: left; margin-top:6px">(4Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル2 ダウンロード"  onClick="dowloadStart('part', 1);"></input></div>
+
+			<div style="float: left; margin-top:6px">(4Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル3 ダウンロード"  onClick="dowloadStart('part', 2);"></input></div>
+
+			<div style="float: left; margin-top:6px">(4Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル4 ダウンロード"  onClick="dowloadStart('part', 3);"></input></div>
+
+			<div style="float: left; margin-top:6px">(4Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル5 ダウンロード"  onClick="dowloadStart('part', 4);"></input></div>
+
+			<div style="float: left; margin-top:6px">(4Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル6 ダウンロード"  onClick="dowloadStart('part', 5);"></input></div>
+
+			<div style="float: left; margin-top:6px">(4Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル7 ダウンロード"  onClick="dowloadStart('part', 6);"></input></div>
+
+			<div style="float: left; margin-top:6px">(4Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル8 ダウンロード"  onClick="dowloadStart('part', 7);"></input></div>
+
+			<div style="float: left; margin-top:6px">(4Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル9 ダウンロード"  onClick="dowloadStart('part', 8);"></input></div>
+
+			<div style="float: left; margin-top:6px">(4Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル10 ダウンロード"  onClick="dowloadStart('part', 9);"></input></div>
+
+			<div style="float: left; margin-top:6px">(4Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル11 ダウンロード"  onClick="dowloadStart('part', 10);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル12 ダウンロード"  onClick="dowloadStart('part', 11);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル13 ダウンロード"  onClick="dowloadStart('part', 12);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル14 ダウンロード"  onClick="dowloadStart('part', 13);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル15 ダウンロード"  onClick="dowloadStart('part', 14);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル16 ダウンロード"  onClick="dowloadStart('part', 15);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル17 ダウンロード"  onClick="dowloadStart('part', 16);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル18 ダウンロード"  onClick="dowloadStart('part', 17);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル19 ダウンロード"  onClick="dowloadStart('part', 18);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル20 ダウンロード"  onClick="dowloadStart('part', 19);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル21 ダウンロード"  onClick="dowloadStart('part', 20);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル22 ダウンロード"  onClick="dowloadStart('part', 21);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル23 ダウンロード"  onClick="dowloadStart('part', 22);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル24 ダウンロード"  onClick="dowloadStart('part', 23);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル25 ダウンロード"  onClick="dowloadStart('part', 24);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル26 ダウンロード"  onClick="dowloadStart('part', 25);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル27 ダウンロード"  onClick="dowloadStart('part', 26);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル28 ダウンロード"  onClick="dowloadStart('part', 27);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル29 ダウンロード"  onClick="dowloadStart('part', 28);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル30 ダウンロード"  onClick="dowloadStart('part', 29);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル31 ダウンロード"  onClick="dowloadStart('part', 30);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル32 ダウンロード"  onClick="dowloadStart('part', 31);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル33 ダウンロード"  onClick="dowloadStart('part', 32);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル34 ダウンロード"  onClick="dowloadStart('part', 33);"></input></div>
+
+			<div style="float: left; margin-top:6px">(3Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+	<TR>
+
+
+
+		<td>
+
+			<div style="float: left"><input style="margin:4px" type="button" id="hassyutu" value="分割ファイル35 ダウンロード"  onClick="dowloadStart('part', 34);"></input></div>
+
+			<div style="float: left; margin-top:6px">(4Mbyte)</div>
+
+		</td>
+
+	</TR>
+
+
+
+</table>
+
+<input type="hidden" name="datatype" id="datatype">
+
+<input type="hidden" name="index" id="index">
+
+</form>
+
+
+
+<table border=1 bordercolor="#ff0000" cellSpacing=0 width="80%" style="margin-top:5px">
+
+<tr><td align="left"><span style="line-height:20px;">
+
+医薬品副作用データベースをご利用にあたり、以下の場合に該当する場合、<br>
+
+独立行政法人医薬品医療機器総合機構（PMDA）安全性情報・企画管理部リスクコミュニケーション推進課(<a href="mailto:&#x66;&#x75;&#x6b;&#x75;&#x73;&#x61;&#x79;&#x6f;&#x75;&#x2d;&#x64;&#x61;&#x74;&#x61;&#x62;&#x61;&#x73;&#x65;&#x40;&#x70;&#x6d;&#x64;&#x61;&#x2e;&#x67;&#x6f;&#x2e;&#x6a;&#x70;">&#x66;&#x75;&#x6b;&#x75;&#x73;&#x61;&#x79;&#x6f;&#x75;&#x2d;&#x64;&#x61;&#x74;&#x61;&#x62;&#x61;&#x73;&#x65;&#x2a;&#x70;&#x6d;&#x64;&#x61;&#x2e;&#x67;&#x6f;&#x2e;&#x6a;&#x70;</a>)までご連絡ください。<br>
+（注）迷惑メール防止対策をしているため、送信の際は * を半角のアットマークに置き換えてください。<br>
+
+　・本データベースを用いて（無料の）サービスを開発した場合<br>
+
+　・本データベースの情報を用いて論文等の公表をする場合<br>
+
+　・本データベースを用いた研究の中で健康危険情報を得た場合<br>
+
+いずれの場合も、ご連絡の際に、可能な範囲で概要がわかる資料を併せてご提出ください。<br>
+<!--
+<br>
+＊平成26年1月31日：平成25年12月27日から平成26年1月13日まで掲載されていたデータのうち、医薬品情報テーブル（ファイル名が「drug」で始まるcsvファイル）のデータに一部誤りがありました。<br>
+この期間にデータをダウンロードされた方で、誤りを修正したデータが必要な方は、PMDA安全第一部リスクコミュニケーション推進課医薬品副作用データベース係(fukusayou-database@pmda.go.jp)までご連絡ください。
+<br>
+-->
+<br>本データベースの英名は、「Japanese Adverse Drug Event Report database」、略称は、「JADER」です。<br>
+
+
+
+<br>
+
+なお、詳細は、医薬品副作用データベース利用規約を確認いただき、同意の上ご利用ください。<br>
+
+</span></td></tr>
+
+</table>
+
+
+
+</CENTER>
+
+
+
+
+
+<script type="text/javascript" src="/bnith__wL-J49GOvNMVlZonSBzgiaLsI_xgLUTm5RP_r0EtPEdj5kISReAt8sd1DSAaYEe-zLpldeLcUK4="></script> <script language="JavaScript" type="text/javascript">const _0x35e8=['visitorId','18127kSXadA','356575NPKVMA','7306axxsAH','get','657833TzFjkt','717302TQdBjl','34lMHocq','x-bni-rncf=QZeuDcI7VYT_MsoSaDdVhaHowwA6vDPjNFsdQ4sHKkI=;expires=Thu, 01 Jan 2037 00:00:00 UTC;path=/;','61XMWbpU','cookie',';expires=Thu, 01 Jan 2037 00:00:00 UTC;path=/;','then','651866OSUgMa','811155xdatvf','x-bni-fpc='];function _0x258e(_0x5954fe,_0x43567d){return _0x258e=function(_0x35e81f,_0x258e26){_0x35e81f=_0x35e81f-0x179;let _0x1280dc=_0x35e8[_0x35e81f];return _0x1280dc;},_0x258e(_0x5954fe,_0x43567d);}(function(_0x5674de,_0xdcf1af){const _0x512a29=_0x258e;while(!![]){try{const _0x55f636=parseInt(_0x512a29(0x17b))+-parseInt(_0x512a29(0x179))*parseInt(_0x512a29(0x17f))+-parseInt(_0x512a29(0x183))+-parseInt(_0x512a29(0x184))+parseInt(_0x512a29(0x187))*parseInt(_0x512a29(0x17d))+parseInt(_0x512a29(0x188))+parseInt(_0x512a29(0x17c));if(_0x55f636===_0xdcf1af)break;else _0x5674de['push'](_0x5674de['shift']());}catch(_0xd3a1ce){_0x5674de['push'](_0x5674de['shift']());}}}(_0x35e8,0x6b42d));function getClientIdentity(){const _0x47e86b=_0x258e,_0x448fbc=FingerprintJS['load']();_0x448fbc[_0x47e86b(0x182)](_0x4bb924=>_0x4bb924[_0x47e86b(0x17a)]())[_0x47e86b(0x182)](_0x2f8ca1=>{const _0x44872c=_0x47e86b,_0xa48f50=_0x2f8ca1[_0x44872c(0x186)];document[_0x44872c(0x180)]=_0x44872c(0x185)+_0xa48f50+_0x44872c(0x181),document[_0x44872c(0x180)]=_0x44872c(0x17e);});}getClientIdentity();</script></body>
+
+
+</html>

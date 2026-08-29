@@ -1,0 +1,5 @@
+{"_note":"openFDA drug/event age-stratified HYDROCEPHALUS background vs all-report denominators; retrieved 2026-08-29 by critic4","strata":[
+{"age_years":"0+TO+1","hydrocephalus_reports":61,"all_reports":22795},
+{"age_years":"0+TO+2","hydrocephalus_reports":98,"all_reports":46082},
+{"age_years":"3+TO+17","hydrocephalus_reports":453,"all_reports":580482},
+{"age_years":"18+TO+120","hydrocephalus_reports":2662,"all_reports":10809220}],"whole_db_all_reports":20692689,"whole_db_hydrocephalus":5367}

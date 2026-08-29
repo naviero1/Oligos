@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/fpo_9.css" />
+<script type="text/javascript">
+var plstart = new Date();
+</script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-174791-1']);
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="title" content="FPO IP Research &amp; Communities" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="Complete Patent Searching Database and Patent Data Analytics Services." />
+<title>FPO IP Research &amp; Communities</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link rel="shortcut icon" href="/images/favicon_1.ico"/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-1586334167197709",
+        enable_page_level_ads: true
+    });
+</script></head>
+<body>
+
+<div>
+    <a name="top"></a>
+
+    <div class="container">
+        
+<div class="header">
+    <div class="row-fluid top">
+
+        <div class="pull-left figure">
+            <a href="/" onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Logo']);"></a>
+        </div>
+
+
+        <div class="pull-right" style="width: 750px;">
+                        <div class="loginForm">
+                <form class="form-inline form-mini pull-right" action="/login.html" method="post">
+                    <input type="hidden" name="src" value="header_login">
+                    <input id="UID-top" name="UID" type="text" class="input-large" placeholder="Email">
+                    <input id="PWD-top" name="PWD" type="password" class="input-small" placeholder="Password">
+                    <button type="submit" class="btn btn-mini btn-primary"
+                            onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Login']);">Login
+                    </button>
+                    <a class="btn btn-mini btn-info" href="/register.html"
+                            onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Create']);">Sign up
+                    </a>
+                </form>
+            </div>
+            
+
+            <div class="searchForm well">
+                <form id="quick_result" name="quick_result" class="form-inline" action="/result.html" method="get">
+
+                    <input type="hidden" name="sort" value="relevance">
+                    <input type="hidden" name="srch" value="top">
+
+
+                    <div class="searchBox pull-left">
+                        <input type="text" name="query_txt" placeholder="Enter your search here"
+                               class="search-query" id="topSearchBox">
+
+                        <div class="btn-group">
+                            <button name="submit" class="btn btn-primary" type="submit"
+                                    onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Search']);">Search
+                            </button>
+                            <button id="searchBox_dropdown" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/search.html"
+                                       onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'SearchExpert']);document.cookie = 'searchTab=#expert';">
+                                    Expert Search</a>
+                                </li>
+                                <li><a href="/search.html"
+                                       onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'SearchQuick']);document.cookie = 'searchTab=#quick';">
+                                    Quick Search</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sideCollections pull-right">
+                        <ul id="header_search_top" class="borderBottom ul-mini ">
+                            <li>
+                                <label class="checkbox">
+                                    <input type="checkbox" id="patents_us" name="patents_us"
+                                           value="on" checked="checked">US Patents/Apps
+                                </label>
+                            </li>
+
+                            <li>
+                                <label class="checkbox">
+                                    <input type="checkbox" id="patents_other" name="patents_other"
+                                           value="on">Other
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </form>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="row-fluid">
+        <div class="navbar navbar-inverse center" id="primaryNavBar">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    <li><a href="/"></a></li>
+                    <li><a href="/search.html">SEARCH</a></li>
+                    <li>
+                        <a href="/tools-resources.html"
+                           onclick="_gaq.push(['_trackEvent', 'Navbar', 'Click', 'Resources']);">
+                            TOOLS &amp; RESOURCES
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+<div class="clearfix"></div>        <div>
+
+            <div id="dhtmltooltip"></div>
+            
+<form id="results" name="results" method="post" class="form-horizontal" action="/result.html"><input type="hidden" name="p" id="p" value="1" /><input type="hidden" name="query_txt" id="query_txt" value="SPEC/&quot;SETBP1&quot; AND SPEC/&quot;antisense oligonucleotide&quot;" /><input type="hidden" name="stemming" id="quickstemming" value="on" /><input type="hidden" name="sort" id="quicksort" value="relevance" /><input type="hidden" name="patents" id="quickpatents" value="" /><input type="hidden" name="patents_us" id="quickpatentsus" value="" /><input type="hidden" name="patents_other" id="quickpatentsother" value="" /><input type="hidden" name="uspat" id="quickuspat" value="on" /><input type="hidden" name="usapp" id="quickusapp" value="on" /><input type="hidden" name="pct" id="quickpct" value="" /><input type="hidden" name="jp" id="quickjp" value="on" /><input type="hidden" name="eupat" id="quickeu" value="" /><input type="hidden" name="depat" id="quickde" value="on" /><input type="hidden" name="srch" id="quicksearch" value="xprtsrch" /><input type="hidden" name="date_range" id="quickdaterange" value="all" /><input type="hidden" name="hits" id="hits" value="115" /><input type="hidden" name="srch_name" id="srch_name" value="" /><input type="hidden" name="search_name" id="search_name" value="" /><input type="hidden" name="selected_doc_flag" id="selected_doc_flag" value="" /><input type="hidden" name="selected_portfolio" id="selected_portfolio" value="" /><input type="hidden" name="portfolio_name" id="portfolio_name" value="" />
+
+<div class="well well-small" style="margin-top:10px; margin-bottom: 0">
+    <table width="100%" border="0">
+        <tr>
+            <td width="36%">
+                Matches 1 - 50 out of 115            </td>
+            <td align="right" valign="middle" width="70%" colspan="3" class="paginate_spacing">
+                 <span margin-left:3px;'><b>1</b></span><a href='result.html?p=2&amp;srch=xprtsrch&amp;query_txt=SPEC%2F%22SETBP1%22+AND+SPEC%2F%22antisense+oligonucleotide%22&amp;uspat=on&amp;usapp=on&amp;jp=on&amp;depat=on&amp;date_range=all&amp;stemming=on&amp;sort=relevance'> 2 </a><a href='result.html?p=3&amp;srch=xprtsrch&amp;query_txt=SPEC%2F%22SETBP1%22+AND+SPEC%2F%22antisense+oligonucleotide%22&amp;uspat=on&amp;usapp=on&amp;jp=on&amp;depat=on&amp;date_range=all&amp;stemming=on&amp;sort=relevance'> 3 </a><a href='result.html?p=2&amp;srch=xprtsrch&amp;query_txt=SPEC%2F%22SETBP1%22+AND+SPEC%2F%22antisense+oligonucleotide%22&amp;uspat=on&amp;usapp=on&amp;jp=on&amp;depat=on&amp;date_range=all&amp;stemming=on&amp;sort=relevance'> &gt; </a>                <br clear="all"/>
+            </td>
+        </tr>
+    </table>
+</div><br clear="all"/><!-- 728x90 Responsive 1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1586334167197709"
+     data-ad-slot="2270521617"
+     data-ad-format="auto">
+</ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br clear="all"/>
+
+<div class="legacy-container" style="margin-top: 0">
+    <div class="container_white" style="padding-top:3px;  padding-bottom:10px;">
+        <div align="center">
+            <table width="100%" border="0" cellpadding="2" cellspacing="1" class="listing_table">
+                <tr>
+                                        <th style="text-align:left;" width="10%">
+                        Match
+                    </th>
+                                        <th style="text-align:left;" width="15%"> Document</th>
+                    <th style="text-align:left;">Document Title</th>
+                    <th style='text-align:left;' width='10%'>Score</div></th>                </tr>
+                <tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                1            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20230022489    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2023/0022489.html">IDENTIFYING NON-PRODUCTIVE SPLICE SITES</a>
+        &nbsp;
+                            <br/>
+                The present disclosure provides methods of identifying non-productive splice sites in target RNA transcripts and antisense oligonucleotides that increase the expression of said target RNA...    </td>
+        <td width='5%'>
+        999    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                2            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20250327077    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2025/0327077.html">ANTISENSE MODULATION OF SETBP1 EXPRESSION</a>
+        &nbsp;
+                            <br/>
+                Described herein are reagents, products, methods, and uses for modulating SETBP1 expression, and uses thereof, such as for inhibiting SETBP1 expression in a cell, and for the treatment of...    </td>
+        <td width='5%'>
+        990    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                3            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20260132472    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2026/0132472.html">A Method for Predicting Prognosis of Cancer and the Composition Thereof</a>
+        &nbsp;
+                            <br/>
+                The present disclosure relates to a method for predicting prognosis of cancer and a composition thereof. More specifically, the present disclosure relates to a composition and a method for...    </td>
+        <td width='5%'>
+        784    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                4            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20220267855    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2022/0267855.html">A Method for Predicting Prognosis of Cancer and the Composition Thereof</a>
+        &nbsp;
+                            <br/>
+                The present disclosure relates to a method for predicting prognosis of cancer and a composition thereof. More specifically, the present disclosure relates to a composition and a method for...    </td>
+        <td width='5%'>
+        784    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                5            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP7584151B2    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP7584151B2.html">Method for predicting cancer prognosis and composition thereof</a>
+        &nbsp;
+                            <br/>
+                The present disclosure relates to a method for predicting prognosis of cancer and a composition thereof. More specifically, the present disclosure relates to a composition and a method for...    </td>
+        <td width='5%'>
+        784    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                6            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2022530570A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2022530570A.html">Cancer Prognosis Prediction Method and Its Composition</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to a method for predicting the prognosis of cancer and a composition thereof. More specifically, the present invention relates to compositions and methods for...    </td>
+        <td width='5%'>
+        734    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                7            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20220152083    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2022/0152083.html">THERAPEUTIC TARGETS FOR FACIOSCAPULOHUMERAL MUSCULAR DYSTROPHY</a>
+        &nbsp;
+                            <br/>
+                The disclosure relates to methods and compositions for regulating expression of DUX4. In some aspects, methods described by the disclosure are useful for treating a disease associated with...    </td>
+        <td width='5%'>
+        732    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                8            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20220226364    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2022/0226364.html">THERAPEUTIC TARGETS FOR FACIOSCAPULOHUMERAL MUSCULAR DYSTROPHY</a>
+        &nbsp;
+                            <br/>
+                The disclosure relates to methods and compositions for regulating expression of DUX4. In some aspects, methods described by the disclosure are useful for treating a disease associated with...    </td>
+        <td width='5%'>
+        732    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                9            </label>
+        </td>
+    <td width="15%"  valign="top">
+      11160823    </td>
+    <td  width="60%" valign="top">
+        <a href="/11160823.html">Therapeutic targets for facioscapulohumeral muscular dystrophy</a>
+        &nbsp;
+                            <br/>
+                The disclosure relates to methods and compositions for regulating expression of DUX4. In some aspects, methods described by the disclosure are useful for treating a disease associated with...    </td>
+        <td width='5%'>
+        732    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                10            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20190343865    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2019/0343865.html">THERAPEUTIC TARGETS FOR FACIOSCAPULOHUMERAL MUSCULAR DYSTROPHY</a>
+        &nbsp;
+                            <br/>
+                The disclosure relates to methods and compositions for regulating expression of DUX4. In some aspects, methods described by the disclosure are useful for treating a disease associated with...    </td>
+        <td width='5%'>
+        732    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                11            </label>
+        </td>
+    <td width="15%"  valign="top">
+      11963975    </td>
+    <td  width="60%" valign="top">
+        <a href="/11963975.html">Therapeutic targets for facioscapulohumeral muscular dystrophy</a>
+        &nbsp;
+                            <br/>
+                The disclosure relates to methods and compositions for regulating expression of DUX4. In some aspects, methods described by the disclosure are useful for treating a disease associated with...    </td>
+        <td width='5%'>
+        732    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                12            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2015500010A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2015500010A.html">Methods and kits for the prognosis of colorectal cancer</a>
+        &nbsp;
+                            <br/>
+                The present invention provides personalized medicine to a cancer patient based on a method for predicting the risk of recurrence and the expression level of various genes whose expression is...    </td>
+        <td width='5%'>
+        716    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                13            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2019534298A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2019534298A.html">Therapeutic target for facial scapulohumeral muscular dystrophy</a>
+        &nbsp;
+                            <br/>
+                The present disclosure relates to methods and compositions for controlling the expression of DUX4. In some aspects, the methods described in this disclosure are useful for treating diseases...    </td>
+        <td width='5%'>
+        674    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                14            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20220119516    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2022/0119516.html">VARIANTS OF ERYTHROFERRONE AND THEIR USE</a>
+        &nbsp;
+                            <br/>
+                The invention relates to the domain of anemia, iron overload and myeloid malignancy. The inventors identify a variant transcript of ERFE specific of SF3B1MUT MDS that contributes to increased...    </td>
+        <td width='5%'>
+        661    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                15            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20090180989    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2009/0180989.html">Compositions and methods for delivering nucleotide sequences to vertebrates</a>
+        &nbsp;
+                            <br/>
+                The invention includes methods of producing viral particles which include introducing into avian cells a nucleotide sequence encoding a replication deficient retroviral vector and introducing into...    </td>
+        <td width='5%'>
+        640    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                16            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2026518827A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2026518827A.html">Compositions and methods for manipulating transcriptomes</a>
+        &nbsp;
+                            <br/>
+                Disclosed herein are CRISPR-free compositions and methods for producing chimeric RNA molecules via trans-splicing, and methods for treating and/or preventing genetic diseases or disorders using...    </td>
+        <td width='5%'>
+        630    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                17            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2022522265A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2022522265A.html">Erythroferrone mutants and their use</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to areas of anemia, iron overload, and bone marrow malignancies. We are responsible for the increased concentration of erythroferrone (ERFE) protein, which results in...    </td>
+        <td width='5%'>
+        629    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                18            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2023071691A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2023071691A.html">Therapeutic targets for facioscapulohumeral muscular dystrophy</a>
+        &nbsp;
+                            <br/>
+                A method for treating facioscapulohumeral muscular dystrophy. The method comprises administering to the subject an effective amount of an epigenetic modulator of DUX4 gene expression, wherein the...    </td>
+        <td width='5%'>
+        621    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                19            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP7231226B2    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP7231226B2.html">Therapeutic targets for facioscapulohumeral muscular dystrophy</a>
+        &nbsp;
+                            <br/>
+                The disclosure relates to methods and compositions for regulating expression of DUX4. In some aspects, methods described by the disclosure are useful for treating a disease associated with...    </td>
+        <td width='5%'>
+        621    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                20            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20110130442    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2011/0130442.html">NUCLEIC ACID CAPABLE OF CONTROLLING DEGRANULATION OF MAST CELL</a>
+        &nbsp;
+                            <br/>
+                Provided are a mast cell degranulation control agent, a diagnostic agent or therapeutic agent for a disease resulting from mast cell degranulation control, a method of controlling mast cell...    </td>
+        <td width='5%'>
+        603    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                21            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20200040100    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2020/0040100.html">MULTIMODAL CANCER THERAPY COMPRISING CHIMERIC VIRAL/NONVIRAL NANOPARTICLES AND ANTICANCER AGENTS</a>
+        &nbsp;
+                            <br/>
+                The disclosure provides for a multimodal cancer therapy comprising chimeric viral/nonviral nanoparticles and anticancer agents and uses thereof to treat a subject with cancer or suspected of...    </td>
+        <td width='5%'>
+        585    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                22            </label>
+        </td>
+    <td width="15%"  valign="top">
+      11021545    </td>
+    <td  width="60%" valign="top">
+        <a href="/11021545.html">Multimodal cancer therapy comprising chimeric viral/nonviral nanoparticles and anticancer agents</a>
+        &nbsp;
+                            <br/>
+                The disclosure provides for a multimodal cancer therapy comprising chimeric viral/nonviral nanoparticles and anticancer agents and uses thereof to treat a subject with cancer or suspected of...    </td>
+        <td width='5%'>
+        585    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                23            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20140057258    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2014/0057258.html">METHOD OF DIAGNOSING MILD OSTEOARTHRITIS</a>
+        &nbsp;
+                            <br/>
+                The invention relates to the identification and selection of novel biomarkers and the identification and selection of novel biomarker combinations which are differentially expressed in individuals...    </td>
+        <td width='5%'>
+        575    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                24            </label>
+        </td>
+    <td width="15%"  valign="top">
+      7713695    </td>
+    <td  width="60%" valign="top">
+        <a href="/7713695.html">Mild osteoarthritis biomarkers and uses thereof</a>
+        &nbsp;
+                            <br/>
+                The invention relates to the identification and selection of novel biomarkers and the identification and selection of novel biomarker combinations which are differentially expressed in individuals...    </td>
+        <td width='5%'>
+        575    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                25            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20060263797    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2006/0263797.html">Mild osteoarthritis biomarkers and uses thereof</a>
+        &nbsp;
+                            <br/>
+                The invention relates to the identification and selection of novel biomarkers and the identification and selection of novel biomarker combinations which are differentially expressed in individuals...    </td>
+        <td width='5%'>
+        575    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                26            </label>
+        </td>
+    <td width="15%"  valign="top">
+      11285176    </td>
+    <td  width="60%" valign="top">
+        <a href="/11285176.html">Immune cells defective for Suv39h1</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to an engineered immune cell defective for Suv39h1. Preferably, said engineered immune cell further comprises a genetically engineered antigen receptor that...    </td>
+        <td width='5%'>
+        574    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                27            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20200171090    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2020/0171090.html">IMMUNE CELLS DEFECTIVE FOR SUV39H1</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to an engineered immune cell defective for Suv39h1. Preferably, said engineered immune cell further comprises a genetically engineered antigen receptor that...    </td>
+        <td width='5%'>
+        574    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                28            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20230201264    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2023/0201264.html">IMMUNE CELLS DEFECTIVE FOR SUV39H1</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to an engineered immune cell defective for Suv39h1. Preferably, said engineered immune cell further comprises a genetically engineered antigen receptor that...    </td>
+        <td width='5%'>
+        574    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                29            </label>
+        </td>
+    <td width="15%"  valign="top">
+      11622978    </td>
+    <td  width="60%" valign="top">
+        <a href="/11622978.html">Immune cells defective for SUV39H1</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to an engineered immune cell defective for Suv39h1. Preferably, said engineered immune cell further comprises a genetically engineered antigen receptor that...    </td>
+        <td width='5%'>
+        574    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                30            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20220040235    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2022/0040235.html">IMMUNE CELLS DEFECTIVE FOR SUV39H1</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to an engineered immune cell defective for Suv39h1. Preferably, said engineered immune cell further comprises a genetically engineered antigen receptor that...    </td>
+        <td width='5%'>
+        574    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                31            </label>
+        </td>
+    <td width="15%"  valign="top">
+      12371471    </td>
+    <td  width="60%" valign="top">
+        <a href="/12371471.html">Immune cells defective for SUV39H1</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to an engineered immune cell defective for Suv39h1. Preferably, said engineered immune cell further comprises a genetically engineered antigen receptor that...    </td>
+        <td width='5%'>
+        574    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                32            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20250011389    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2025/0011389.html">IMMUNE CELLS DEFECTIVE FOR SUV39H1</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to an engineered immune cell defective for Suv39h1. Preferably, said engineered immune cell further comprises a genetically engineered antigen receptor that...    </td>
+        <td width='5%'>
+        574    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                33            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2024023299A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2024023299A.html">IMMUNE CELLS DEFECTIVE FOR SUV39H1</a>
+        &nbsp;
+                            <br/>
+                To provide compositions and engineered immune cells for use in adoptive cell therapy of cancer, and to provide methods of producing the immune cells.SOLUTION: Provided is a composition comprising...    </td>
+        <td width='5%'>
+        574    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                34            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP7388798B2    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP7388798B2.html">Immune cells lacking SUV39H1</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to an engineered immune cell defective for Suv39h1. Preferably, said engineered immune cell further comprises a genetically engineered antigen receptor that...    </td>
+        <td width='5%'>
+        574    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                35            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20110020809    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2011/0020809.html">MILD OSTEOARTHRITIS BIOMARKERS AND USES THEREOF</a>
+        &nbsp;
+                            <br/>
+                The invention relates to the identification and selection of novel biomarkers and the identification and selection of novel biomarker combinations which are differentially expressed in individuals...    </td>
+        <td width='5%'>
+        562    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                36            </label>
+        </td>
+    <td width="15%"  valign="top">
+      8483968    </td>
+    <td  width="60%" valign="top">
+        <a href="/8483968.html">Method of diagnosing mild osteoarthritis</a>
+        &nbsp;
+                            <br/>
+                The invention relates to the identification and selection of novel biomarkers and the identification and selection of novel biomarker combinations which are differentially expressed in individuals...    </td>
+        <td width='5%'>
+        562    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                37            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20230078425    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2023/0078425.html">COMPOSITIONS AND METHODS FOR GENERATING SYNTHETIC LETHALITY IN TUMORS</a>
+        &nbsp;
+                            <br/>
+                The present disclosure provides methods for treating cancer comprising administering one or more therapeutic agents for manipulation of a target gene (e.g., protein kinase, membrane associated...    </td>
+        <td width='5%'>
+        557    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                38            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20240398799    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2024/0398799.html">COMPOSITIONS AND METHODS FOR GENERATING SYNTHETIC LETHALITY IN TUMORS</a>
+        &nbsp;
+                            <br/>
+                The present disclosure provides methods for treating cancer comprising administering one or more therapeutic agents for manipulation of a target gene (e.g., protein kinase, membrane associated...    </td>
+        <td width='5%'>
+        557    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                39            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20160331760    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2016/0331760.html">INCREASING STORAGE OF VITAMIN A, VITAMIN D AND/OR LIPIDS</a>
+        &nbsp;
+                            <br/>
+                The present disclosure provides compositions that include a nanoparticle and a compound that reduces the biological activity of one or more bromodomain and extra-terminal family member (BET)...    </td>
+        <td width='5%'>
+        513    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                40            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20180325914    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2018/0325914.html">INCREASING STORAGE OF VITAMIN A, VITAMIN D AND/OR LIPIDS</a>
+        &nbsp;
+                            <br/>
+                The present disclosure provides compositions that include a nanoparticle and a compound that reduces the biological activity of one or more bromodomain and extra-terminal family member (BET)...    </td>
+        <td width='5%'>
+        513    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                41            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2018504896A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2018504896A.html">Peptides and nanoparticles for intracellular delivery of molecules</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to peptides and peptide-containing complexes / nanoparticles that are useful for stabilizing and delivering cargo molecules such as nucleic acids. In the present...    </td>
+        <td width='5%'>
+        508    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                42            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20100143916    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2010/0143916.html">OSTEOARTHRITIS BIOMARKERS AND USES THEREOF</a>
+        &nbsp;
+                            <br/>
+                The invention relates to the identification and selection of novel biomarkers and the identification and selection of novel biomarker combinations which are differentially expressed in...    </td>
+        <td width='5%'>
+        471    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                43            </label>
+        </td>
+    <td width="15%"  valign="top">
+      8142998    </td>
+    <td  width="60%" valign="top">
+        <a href="/8142998.html">Osteoarthritis biomarkers and uses thereof</a>
+        &nbsp;
+                            <br/>
+                The invention relates to the identification and selection of novel biomarkers and the identification and selection of novel biomarker combinations which are differentially expressed in...    </td>
+        <td width='5%'>
+        471    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                44            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20170074883    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2017/0074883.html">IDENTIFICATION OF NOVEL DIAGNOSTICS AND THERAPEUTICS BY MODULATING RHOH</a>
+        &nbsp;
+                            <br/>
+                The disclosure relates to identifying novel therapeutic targets and/or diagnostic and/or prognostic markers by correcting abnormal RhoH expression in a hematopoietic cell.    </td>
+        <td width='5%'>
+        458    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                45            </label>
+        </td>
+    <td width="15%"  valign="top">
+      10746739    </td>
+    <td  width="60%" valign="top">
+        <a href="/10746739.html">Identification of novel diagnostics and therapeutics by modulating RhoH</a>
+        &nbsp;
+                            <br/>
+                The disclosure relates to identifying novel therapeutic targets and/or diagnostic and/or prognostic markers by correcting abnormal RhoH expression in a hematopoietic cell.    </td>
+        <td width='5%'>
+        458    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                46            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20130017965    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2013/0017965.html">OSTEOARTHRITIS BIOMARKERS AND USES THEREOF</a>
+        &nbsp;
+                            <br/>
+                The invention relates to the identification and selection of novel biomarkers and the identification and selection of novel biomarker combinations which are differentially expressed in...    </td>
+        <td width='5%'>
+        454    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                47            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20050221383    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2005/0221383.html">Osteoarthritis biomarkers and uses thereof</a>
+        &nbsp;
+                            <br/>
+                The invention relates to the identification and selection of novel biomarkers and the identification and selection of novel biomarker combinations which are differentially expressed in...    </td>
+        <td width='5%'>
+        454    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                48            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20260196299    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2026/0196299.html">PROTEOMICS OF FITNESS</a>
+        &nbsp;
+                            <br/>
+                Methods, systems, and kits are provided for assessing cardiorespiratory fitness and predicting cardiometabolic risk.    </td>
+        <td width='5%'>
+        452    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                49            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20260071221    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2026/0071221.html">Fibroblast Growth Factor (FGF)21 Inhibition for Treatment of Cardiac Hypertrophy</a>
+        &nbsp;
+                            <br/>
+                A method of treating a subject with a disease where the disease is selected from the group consisting of hypertension, cardiac hypertrophy, cardiomyocyte enlargement, myocardial fibrosis, liver...    </td>
+        <td width='5%'>
+        452    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                50            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20060281091    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2006/0281091.html">Genes regulated in ovarian cancer a s prognostic and therapeutic targets</a>
+        &nbsp;
+                            <br/>
+                This invention relates to the use of genomic analysis to detect the presence of ovarian cancer in a patient from a sample of tissue or blood and to kits for carrying out this determination. In...    </td>
+        <td width='5%'>
+        452    </td>
+    </tr>            </table>
+        </div>
+    </div>
+</div>
+</form>
+<!-- 728x90 Responsive 2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1586334167197709"
+     data-ad-slot="4118051210"
+     data-ad-format="auto">
+</ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br clear="all"/><form id="botSearch" name="botSearch" method="get" class="form-inline" action="/result.html"><input type="hidden" name="srch" id="" value="xprtsrch" /><input type="hidden" name="uspat" id="" value="on" /><input type="hidden" name="usapp" id="" value="on" /><input type="hidden" name="jp" id="" value="on" /><input type="hidden" name="depat" id="" value="on" /><input type="hidden" name="date_range" id="" value="all" /><input type="hidden" name="stemming" id="" value="on" /><input type="hidden" name="sort" id="" value="relevance" /><br/>
+<div class="well well-small">
+    <table>
+        <tr>
+            <td>Search</td>
+            <td style="width: 100%;padding: 0 14px 0 5px;"><input type="text" name="query_txt" id="query_txt" value="SPEC/&quot;SETBP1&quot; AND SPEC/&quot;antisense oligonucleotide&quot;" style="width: 100%;padding: 4px 0 4px 6px" /></td>
+            <td><input type="submit" name="search" value="Search" /></td>
+        </tr>
+    </table>
+</div>
+</form>
+<div class="well well-small" style="margin-top:10px; margin-bottom: 0">
+    <table width="100%" border="0">
+        <tr>
+            <td width="36%">
+                Matches 1 - 50 out of 115            </td>
+            <td align="right" valign="middle" width="70%" colspan="3" class="paginate_spacing">
+                 <span margin-left:3px;'><b>1</b></span><a href='result.html?p=2&amp;srch=xprtsrch&amp;query_txt=SPEC%2F%22SETBP1%22+AND+SPEC%2F%22antisense+oligonucleotide%22&amp;uspat=on&amp;usapp=on&amp;jp=on&amp;depat=on&amp;date_range=all&amp;stemming=on&amp;sort=relevance'> 2 </a><a href='result.html?p=3&amp;srch=xprtsrch&amp;query_txt=SPEC%2F%22SETBP1%22+AND+SPEC%2F%22antisense+oligonucleotide%22&amp;uspat=on&amp;usapp=on&amp;jp=on&amp;depat=on&amp;date_range=all&amp;stemming=on&amp;sort=relevance'> 3 </a><a href='result.html?p=2&amp;srch=xprtsrch&amp;query_txt=SPEC%2F%22SETBP1%22+AND+SPEC%2F%22antisense+oligonucleotide%22&amp;uspat=on&amp;usapp=on&amp;jp=on&amp;depat=on&amp;date_range=all&amp;stemming=on&amp;sort=relevance'> &gt; </a>                <br clear="all"/>
+            </td>
+        </tr>
+    </table>
+</div> « <a href="/search.html">search again</a>
+        </div>
+
+        <div class="pageFooter">
+    <div class="row-fluid top">
+        <div class="figure"></div>
+        <ul>
+            <li>
+                <a href="/" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Home']);">Home</a>
+            </li>
+            <li>
+                <a href="/search.html" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Search']);">Search</a>
+            </li>
+            <li>
+                <a href="/services.html" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Services']);">Services</a>
+            </li>
+        </ul>
+        <ul class="socialIcons">
+            <li><a href="https://twitter.com/FPOCommunity" class="twitter"
+                   onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'social twitter']);"></a></li>
+            <li><a href="http://www.linkedin.com/groups/FPO-Community-4524797" class="linkedin"
+                   onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'social linkedin']);"></a></li>
+        </ul>
+    </div>
+    <div class="row-fluid bot">
+        <p>
+            &copy; 2004-2026 FreePatentsOnline.com. All rights reserved.
+            <a href="/privacy.html" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Privacy']);">Privacy Policy
+                &amp; Terms of Use.</a>
+        </p>
+    </div>
+</div>    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    _gaq.push(['_setCustomVar', 2, 'User Origin Source', 'no referer', 2]);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+<script type="text/javascript">
+    function trackPageLoad() {
+        var plend = new Date();
+        var plload = plend.getTime() - plstart.getTime();
+        var pn = document.location.pathname;
+        var lc = 'slow';
+        var la = new Array(200, 300, 400, 500, 1000, 1500, 2000, 2500, 5000);
+        for (var i = 0, len = la.length; i < len; i++) {
+            if (plload <= la[i]) {
+                lc = String(la[i]);
+                break;
+            }
+        }
+        _gaq.push(['onLoadTracker._setAccount', 'UA-174791-5']);
+        _gaq.push(['onLoadTracker._trackEvent', "LoadTime", lc, pn, plload]);
+        }
+</script>
+<script type="text/javascript">
+    try {
+        if (window.onload != null) {
+            var oldOnload = window.onload;
+            window.onload = function (e) {
+                oldOnload(e);
+                trackPageLoad();
+            };
+        }
+        else {
+            window.onload = trackPageLoad();
+        }
+    } catch (err) {
+    }
+</script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/js/fpo_3.js"></script>
+
+</body>
+</html>

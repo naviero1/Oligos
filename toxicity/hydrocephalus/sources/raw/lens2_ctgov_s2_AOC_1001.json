@@ -1,0 +1,6 @@
+{"studies":[
+{"protocolSection":{"identificationModule":{"nctId":"NCT05027269","briefTitle":"Study of AOC 1001 in Adult Myotonic Dystrophy Type 1 (DM1) Patients"},"statusModule":{"overallStatus":"COMPLETED"},"armsInterventionsModule":{"interventions":[{"name":"AOC 1001"},{"name":"Placebo"}]}},"hasResults":false},
+{"protocolSection":{"identificationModule":{"nctId":"NCT05479981","briefTitle":"Extension of AOC 1001-CS1 (MARINA) Study in Adult Myotonic Dystrophy Type 1 (DM1) Patients"},"statusModule":{"overallStatus":"COMPLETED"},"armsInterventionsModule":{"interventions":[{"name":"Placebo"},{"name":"AOC 1001"}]}},"hasResults":false},
+{"protocolSection":{"identificationModule":{"nctId":"NCT07008469","briefTitle":"Global Open-Label Extension Study of Del-desiran for the Treatment of DM1"},"statusModule":{"overallStatus":"ENROLLING_BY_INVITATION"},"armsInterventionsModule":{"interventions":[{"name":"Del-desiran (AOC 1001)"}]}},"hasResults":false},
+{"protocolSection":{"identificationModule":{"nctId":"NCT06411288","briefTitle":"Global Study of Del-desiran for the Treatment of DM1"},"statusModule":{"overallStatus":"ACTIVE_NOT_RECRUITING"},"armsInterventionsModule":{"interventions":[{"name":"AOC 1001 (del-desiran)"},{"name":"Placebo"}]}},"hasResults":false}
+]}

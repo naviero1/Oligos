@@ -1,0 +1,446 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "IMODIUM",
+      "count": 5
+    },
+    {
+      "term": "ACYCLOVIR.",
+      "count": 2
+    },
+    {
+      "term": "ALLOPURINOL",
+      "count": 2
+    },
+    {
+      "term": "ARANESP",
+      "count": 2
+    },
+    {
+      "term": "ASACOL",
+      "count": 2
+    },
+    {
+      "term": "AVODART",
+      "count": 2
+    },
+    {
+      "term": "DECADRON",
+      "count": 2
+    },
+    {
+      "term": "DILANTIN",
+      "count": 2
+    },
+    {
+      "term": "DUPHALAC",
+      "count": 2
+    },
+    {
+      "term": "ENTRESTO",
+      "count": 2
+    },
+    {
+      "term": "GLIADEL",
+      "count": 2
+    },
+    {
+      "term": "IMOVANE",
+      "count": 2
+    },
+    {
+      "term": "O6-BENZYLGUANINE (O6BG)",
+      "count": 2
+    },
+    {
+      "term": "PROTONIX",
+      "count": 2
+    },
+    {
+      "term": "RISPERDAL",
+      "count": 2
+    },
+    {
+      "term": "ABILIFY",
+      "count": 1
+    },
+    {
+      "term": "ACETAMINOPHEN.",
+      "count": 1
+    },
+    {
+      "term": "AMITRIPTYLINE",
+      "count": 1
+    },
+    {
+      "term": "ARIXTRA",
+      "count": 1
+    },
+    {
+      "term": "ASPIRIN",
+      "count": 1
+    },
+    {
+      "term": "ASPIRIN.",
+      "count": 1
+    },
+    {
+      "term": "ATORVASTATIN",
+      "count": 1
+    },
+    {
+      "term": "AUGMENTIN",
+      "count": 1
+    },
+    {
+      "term": "BENTYL",
+      "count": 1
+    },
+    {
+      "term": "BISOPROLOL FUMARATE",
+      "count": 1
+    },
+    {
+      "term": "BUDESONIDE NASAL FLUSH",
+      "count": 1
+    },
+    {
+      "term": "CALCIUM + D",
+      "count": 1
+    },
+    {
+      "term": "CALCIUM CARBONATE.",
+      "count": 1
+    },
+    {
+      "term": "CARDENSIEL",
+      "count": 1
+    },
+    {
+      "term": "CARVEDILOL",
+      "count": 1
+    },
+    {
+      "term": "CEFAZOLIN",
+      "count": 1
+    },
+    {
+      "term": "CEFTRIAXONE.",
+      "count": 1
+    },
+    {
+      "term": "CELEXA",
+      "count": 1
+    },
+    {
+      "term": "CETIRIZINE",
+      "count": 1
+    },
+    {
+      "term": "CLONAZEPAM",
+      "count": 1
+    },
+    {
+      "term": "CLONIDINE.",
+      "count": 1
+    },
+    {
+      "term": "CYTARABINE",
+      "count": 1
+    },
+    {
+      "term": "DAUNORUBICIN HCL",
+      "count": 1
+    },
+    {
+      "term": "DEXAMETHASONE.",
+      "count": 1
+    },
+    {
+      "term": "ELOTUZUMAB.",
+      "count": 1
+    },
+    {
+      "term": "EPHEDRINE.",
+      "count": 1
+    },
+    {
+      "term": "ESTROGEN",
+      "count": 1
+    },
+    {
+      "term": "FENTANYL.",
+      "count": 1
+    },
+    {
+      "term": "FLUCONAZOLE",
+      "count": 1
+    },
+    {
+      "term": "FLUOROSCEIN",
+      "count": 1
+    },
+    {
+      "term": "FUROSEMIDE",
+      "count": 1
+    },
+    {
+      "term": "GUAIFENESIN.",
+      "count": 1
+    },
+    {
+      "term": "HUMIRA",
+      "count": 1
+    },
+    {
+      "term": "IMOVANE (ZOPICLONE)",
+      "count": 1
+    },
+    {
+      "term": "KARDEGIC",
+      "count": 1
+    },
+    {
+      "term": "LASILIX",
+      "count": 1
+    },
+    {
+      "term": "LEVOFLOXACIN.",
+      "count": 1
+    },
+    {
+      "term": "LEVONOX",
+      "count": 1
+    },
+    {
+      "term": "LIDOCAINE-EPINEPHRINE",
+      "count": 1
+    },
+    {
+      "term": "LIDOCAINE.",
+      "count": 1
+    },
+    {
+      "term": "LISINOPRIL",
+      "count": 1
+    },
+    {
+      "term": "LITHOBID",
+      "count": 1
+    },
+    {
+      "term": "LODALES",
+      "count": 1
+    },
+    {
+      "term": "LOMOTIL",
+      "count": 1
+    },
+    {
+      "term": "MAGNESIUM SULFATE.",
+      "count": 1
+    },
+    {
+      "term": "MDR-INTRAVENOUS FORMULATION",
+      "count": 1
+    },
+    {
+      "term": "MEGACE",
+      "count": 1
+    },
+    {
+      "term": "METHOCARBAMOL",
+      "count": 1
+    },
+    {
+      "term": "METOPROLOL SUCCINATE.",
+      "count": 1
+    },
+    {
+      "term": "METOPROLOL.",
+      "count": 1
+    },
+    {
+      "term": "MICRO K EXTENCAPS (POTASSIUM CHLORIDE)",
+      "count": 1
+    },
+    {
+      "term": "MIDAZOLAM",
+      "count": 1
+    },
+    {
+      "term": "MORPHINE",
+      "count": 1
+    },
+    {
+      "term": "MULTIVITAMINS",
+      "count": 1
+    },
+    {
+      "term": "MYSOLINE/PRINIDONE",
+      "count": 1
+    },
+    {
+      "term": "NORVASC",
+      "count": 1
+    },
+    {
+      "term": "OMEPRAZOLE.",
+      "count": 1
+    },
+    {
+      "term": "OMIX LP 0.4 MG",
+      "count": 1
+    },
+    {
+      "term": "ONDANSETRON",
+      "count": 1
+    },
+    {
+      "term": "OXYMETAZOLINE",
+      "count": 1
+    },
+    {
+      "term": "PANTOPRAZOLE",
+      "count": 1
+    },
+    {
+      "term": "PHOSPHA 250 NEUTRAL",
+      "count": 1
+    },
+    {
+      "term": "PLAVIX",
+      "count": 1
+    },
+    {
+      "term": "PREDNISONE",
+      "count": 1
+    },
+    {
+      "term": "PREVACID",
+      "count": 1
+    },
+    {
+      "term": "PRIMIDONE.",
+      "count": 1
+    },
+    {
+      "term": "PROCHLORPERAZINE MALEATE.",
+      "count": 1
+    },
+    {
+      "term": "PROMETHAZINE",
+      "count": 1
+    },
+    {
+      "term": "PROPOFOL.",
+      "count": 1
+    },
+    {
+      "term": "REVLIMID",
+      "count": 1
+    },
+    {
+      "term": "RIVOTRIL",
+      "count": 1
+    },
+    {
+      "term": "ROCURONIUM",
+      "count": 1
+    },
+    {
+      "term": "ROSUVASTATIN",
+      "count": 1
+    },
+    {
+      "term": "SALINE",
+      "count": 1
+    },
+    {
+      "term": "SIMVASTATIN",
+      "count": 1
+    },
+    {
+      "term": "SODIUM MONOPHOSPHATE",
+      "count": 1
+    },
+    {
+      "term": "SODIUM PHOSPHATE",
+      "count": 1
+    },
+    {
+      "term": "SPIRIVA",
+      "count": 1
+    },
+    {
+      "term": "STROMECTOL",
+      "count": 1
+    },
+    {
+      "term": "SYNTHROID",
+      "count": 1
+    },
+    {
+      "term": "TAMSULOSIN HCL",
+      "count": 1
+    },
+    {
+      "term": "TEMESTA",
+      "count": 1
+    },
+    {
+      "term": "TOPIRAMATE.",
+      "count": 1
+    },
+    {
+      "term": "TRIFLUCAN 50 MG",
+      "count": 1
+    },
+    {
+      "term": "TRIMETHOPRIM/SULFAMETHOXAZOLE",
+      "count": 1
+    },
+    {
+      "term": "VICOPROFEN",
+      "count": 1
+    },
+    {
+      "term": "VILOXAZINE HCL",
+      "count": 1
+    },
+    {
+      "term": "VISTARIL",
+      "count": 1
+    },
+    {
+      "term": "VIVALAN",
+      "count": 1
+    },
+    {
+      "term": "ZOCOR",
+      "count": 1
+    },
+    {
+      "term": "ZOMETA",
+      "count": 1
+    },
+    {
+      "term": "ZYLORIC 100",
+      "count": 1
+    },
+    {
+      "term": "ZYPREXA",
+      "count": 1
+    },
+    {
+      "term": "ZYRTEC",
+      "count": 1
+    }
+  ]
+}

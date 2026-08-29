@@ -1,0 +1,334 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "SPINRAZA",
+      "count": 95
+    },
+    {
+      "term": "QALSODY",
+      "count": 22
+    },
+    {
+      "term": "RILUZOLE",
+      "count": 8
+    },
+    {
+      "term": "TOFERSEN",
+      "count": 7
+    },
+    {
+      "term": "COENZYME Q10",
+      "count": 3
+    },
+    {
+      "term": "MIDAZOLAM",
+      "count": 3
+    },
+    {
+      "term": "EDARAVONE",
+      "count": 2
+    },
+    {
+      "term": "ELIQUIS",
+      "count": 2
+    },
+    {
+      "term": "HYDROXYZINE",
+      "count": 2
+    },
+    {
+      "term": "METHYLCOBALAMIN",
+      "count": 2
+    },
+    {
+      "term": "PARACETAMOL ACCORD",
+      "count": 2
+    },
+    {
+      "term": "PREGABALIN",
+      "count": 2
+    },
+    {
+      "term": "VITAMIN B1",
+      "count": 2
+    },
+    {
+      "term": "VITAMIN D",
+      "count": 2
+    },
+    {
+      "term": "VITAMIN E",
+      "count": 2
+    },
+    {
+      "term": ".ALPHA.-TOCOPHEROL ACETATE, D-",
+      "count": 1
+    },
+    {
+      "term": "ACETAMINOPHEN",
+      "count": 1
+    },
+    {
+      "term": "ACIDOPHILUS",
+      "count": 1
+    },
+    {
+      "term": "ALBUTEROL",
+      "count": 1
+    },
+    {
+      "term": "ALBUTEROL SULFATE",
+      "count": 1
+    },
+    {
+      "term": "AMBROXOL HYDROCHLORIDE",
+      "count": 1
+    },
+    {
+      "term": "ATARAX",
+      "count": 1
+    },
+    {
+      "term": "BACLOFEN",
+      "count": 1
+    },
+    {
+      "term": "BILASTINE",
+      "count": 1
+    },
+    {
+      "term": "Bepanthen",
+      "count": 1
+    },
+    {
+      "term": "CANNABIS SATIVA FLOWERING TOP",
+      "count": 1
+    },
+    {
+      "term": "CARNITINE",
+      "count": 1
+    },
+    {
+      "term": "CHOLECALCIFEROL",
+      "count": 1
+    },
+    {
+      "term": "Circadin LP",
+      "count": 1
+    },
+    {
+      "term": "DAPAGLIFLOZIN",
+      "count": 1
+    },
+    {
+      "term": "DESLORATADINE",
+      "count": 1
+    },
+    {
+      "term": "DULOXETINE",
+      "count": 1
+    },
+    {
+      "term": "ENALAPRIL",
+      "count": 1
+    },
+    {
+      "term": "ESCITALOPRAM",
+      "count": 1
+    },
+    {
+      "term": "FLUTICASONE",
+      "count": 1
+    },
+    {
+      "term": "FLUTICASONE PROPIONATE\\SALMETEROL XINAFOATE",
+      "count": 1
+    },
+    {
+      "term": "FUROSEMIDE",
+      "count": 1
+    },
+    {
+      "term": "Ferretab (iron fumarate; folic acid)",
+      "count": 1
+    },
+    {
+      "term": "HAWTHORN LEAF WITH FLOWER\\QUININE",
+      "count": 1
+    },
+    {
+      "term": "HYPERSAL",
+      "count": 1
+    },
+    {
+      "term": "KETOTIFEN",
+      "count": 1
+    },
+    {
+      "term": "LEVALBUTEROL.",
+      "count": 1
+    },
+    {
+      "term": "LEVETIRACETAM",
+      "count": 1
+    },
+    {
+      "term": "LEVOCARNITINE.",
+      "count": 1
+    },
+    {
+      "term": "LIORESAL",
+      "count": 1
+    },
+    {
+      "term": "MAGNESIUM",
+      "count": 1
+    },
+    {
+      "term": "MELATONIN",
+      "count": 1
+    },
+    {
+      "term": "METFORMIN",
+      "count": 1
+    },
+    {
+      "term": "MIRALAX",
+      "count": 1
+    },
+    {
+      "term": "MOMETASONE FUROATE.",
+      "count": 1
+    },
+    {
+      "term": "MORPHINE",
+      "count": 1
+    },
+    {
+      "term": "MUCOMYST",
+      "count": 1
+    },
+    {
+      "term": "NIFEDIPINE",
+      "count": 1
+    },
+    {
+      "term": "OMEPRAZOLE.",
+      "count": 1
+    },
+    {
+      "term": "PANTOPRAZOLE",
+      "count": 1
+    },
+    {
+      "term": "PAROXETINE",
+      "count": 1
+    },
+    {
+      "term": "PIPERACILLIN SODIUM\\TAZOBACTAM SODIUM",
+      "count": 1
+    },
+    {
+      "term": "POLYETHYLENE GLYCOL",
+      "count": 1
+    },
+    {
+      "term": "POLYETHYLENE GLYCOLS",
+      "count": 1
+    },
+    {
+      "term": "PREDNISOLONE ACETATE",
+      "count": 1
+    },
+    {
+      "term": "PULMICORT TURBUHALER",
+      "count": 1
+    },
+    {
+      "term": "RADICAVA",
+      "count": 1
+    },
+    {
+      "term": "RILUTEK",
+      "count": 1
+    },
+    {
+      "term": "RILUZOL",
+      "count": 1
+    },
+    {
+      "term": "SACUBITRIL\\VALSARTAN",
+      "count": 1
+    },
+    {
+      "term": "SYMBICORT",
+      "count": 1
+    },
+    {
+      "term": "Sodium bicarbonate:",
+      "count": 1
+    },
+    {
+      "term": "TEGRETOL",
+      "count": 1
+    },
+    {
+      "term": "TERFENADINE",
+      "count": 1
+    },
+    {
+      "term": "THEALOZ DUO GEL",
+      "count": 1
+    },
+    {
+      "term": "THIAMYLAL SODIUM",
+      "count": 1
+    },
+    {
+      "term": "Toco500",
+      "count": 1
+    },
+    {
+      "term": "VALPROATE",
+      "count": 1
+    },
+    {
+      "term": "VALPROATE SODIUM",
+      "count": 1
+    },
+    {
+      "term": "VITAMIN C",
+      "count": 1
+    },
+    {
+      "term": "VITAMIN D3",
+      "count": 1
+    },
+    {
+      "term": "VYVANSE",
+      "count": 1
+    },
+    {
+      "term": "XOPENEX",
+      "count": 1
+    },
+    {
+      "term": "ZOFRAN",
+      "count": 1
+    },
+    {
+      "term": "aquadran",
+      "count": 1
+    },
+    {
+      "term": "systane ultra plus",
+      "count": 1
+    }
+  ]
+}

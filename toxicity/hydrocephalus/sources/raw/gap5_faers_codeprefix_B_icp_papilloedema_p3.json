@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "CALCIUM",
+      "count": 1
+    },
+    {
+      "term": "CIPROFLOXACIN 500 MG GENERIC",
+      "count": 1
+    },
+    {
+      "term": "DIGESTIVE ENZYMES",
+      "count": 1
+    },
+    {
+      "term": "GRAPE SEED EXTRACT AND/OR MANUKA HONEY",
+      "count": 1
+    },
+    {
+      "term": "GSK2118436",
+      "count": 1
+    },
+    {
+      "term": "KRILL OIL",
+      "count": 1
+    },
+    {
+      "term": "MAGNESIUM",
+      "count": 1
+    },
+    {
+      "term": "MULTI VITAMIN",
+      "count": 1
+    },
+    {
+      "term": "OLIVE LEAF EXTRACT",
+      "count": 1
+    },
+    {
+      "term": "QUERCETIN",
+      "count": 1
+    },
+    {
+      "term": "TOPRICIN",
+      "count": 1
+    },
+    {
+      "term": "TRAMETINIB",
+      "count": 1
+    },
+    {
+      "term": "TURMERIC AND/OR GINGER",
+      "count": 1
+    }
+  ]
+}

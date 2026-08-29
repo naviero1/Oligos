@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "DEATH",
+      "count": 310
+    },
+    {
+      "term": "NAUSEA",
+      "count": 153
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 137
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 100
+    },
+    {
+      "term": "DISEASE PROGRESSION",
+      "count": 93
+    },
+    {
+      "term": "FATIGUE",
+      "count": 91
+    },
+    {
+      "term": "AMYOTROPHIC LATERAL SCLEROSIS",
+      "count": 90
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 86
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 79
+    },
+    {
+      "term": "DIZZINESS",
+      "count": 78
+    },
+    {
+      "term": "ABDOMINAL DISCOMFORT",
+      "count": 68
+    },
+    {
+      "term": "MUSCULAR WEAKNESS",
+      "count": 68
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 64
+    },
+    {
+      "term": "HEADACHE",
+      "count": 56
+    },
+    {
+      "term": "FALL",
+      "count": 51
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 49
+    },
+    {
+      "term": "VOMITING",
+      "count": 48
+    },
+    {
+      "term": "ABDOMINAL PAIN UPPER",
+      "count": 47
+    },
+    {
+      "term": "CONDITION AGGRAVATED",
+      "count": 47
+    },
+    {
+      "term": "HYPOAESTHESIA ORAL",
+      "count": 43
+    },
+    {
+      "term": "RESPIRATORY FAILURE",
+      "count": 43
+    },
+    {
+      "term": "DYSPHAGIA",
+      "count": 42
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 42
+    },
+    {
+      "term": "CONSTIPATION",
+      "count": 39
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 39
+    },
+    {
+      "term": "MALAISE",
+      "count": 39
+    },
+    {
+      "term": "GAIT DISTURBANCE",
+      "count": 37
+    },
+    {
+      "term": "HEPATIC ENZYME INCREASED",
+      "count": 37
+    },
+    {
+      "term": "PANCREATITIS ACUTE",
+      "count": 37
+    },
+    {
+      "term": "INTERSTITIAL LUNG DISEASE",
+      "count": 36
+    },
+    {
+      "term": "ABDOMINAL PAIN",
+      "count": 35
+    },
+    {
+      "term": "PRODUCT USE COMPLAINT",
+      "count": 31
+    },
+    {
+      "term": "PRURITUS",
+      "count": 31
+    },
+    {
+      "term": "SOMNOLENCE",
+      "count": 31
+    },
+    {
+      "term": "COUGH",
+      "count": 30
+    },
+    {
+      "term": "DRUG INTERACTION",
+      "count": 28
+    },
+    {
+      "term": "FEELING ABNORMAL",
+      "count": 28
+    },
+    {
+      "term": "RASH",
+      "count": 28
+    },
+    {
+      "term": "MUSCLE SPASMS",
+      "count": 27
+    },
+    {
+      "term": "ADVERSE DRUG REACTION",
+      "count": 26
+    },
+    {
+      "term": "ALANINE AMINOTRANSFERASE INCREASED",
+      "count": 25
+    },
+    {
+      "term": "PARAESTHESIA ORAL",
+      "count": 25
+    },
+    {
+      "term": "ANXIETY",
+      "count": 23
+    },
+    {
+      "term": "PRODUCT DOSE OMISSION ISSUE",
+      "count": 23
+    },
+    {
+      "term": "PRODUCT USE ISSUE",
+      "count": 22
+    },
+    {
+      "term": "PYREXIA",
+      "count": 22
+    },
+    {
+      "term": "URINARY TRACT INFECTION",
+      "count": 22
+    },
+    {
+      "term": "PNEUMONIA ASPIRATION",
+      "count": 21
+    },
+    {
+      "term": "PULMONARY EMBOLISM",
+      "count": 21
+    },
+    {
+      "term": "BALANCE DISORDER",
+      "count": 19
+    },
+    {
+      "term": "INAPPROPRIATE ANTIDIURETIC HORMONE SECRETION",
+      "count": 19
+    },
+    {
+      "term": "PAIN",
+      "count": 19
+    },
+    {
+      "term": "PERIPHERAL SWELLING",
+      "count": 19
+    },
+    {
+      "term": "ALOPECIA",
+      "count": 18
+    },
+    {
+      "term": "FLATULENCE",
+      "count": 18
+    },
+    {
+      "term": "HYPONATRAEMIA",
+      "count": 18
+    },
+    {
+      "term": "MOTOR NEURONE DISEASE",
+      "count": 18
+    },
+    {
+      "term": "PANCREATITIS",
+      "count": 18
+    },
+    {
+      "term": "PORTAL VEIN THROMBOSIS",
+      "count": 18
+    },
+    {
+      "term": "DEPRESSED MOOD",
+      "count": 17
+    },
+    {
+      "term": "GASTROINTESTINAL DISORDER",
+      "count": 17
+    },
+    {
+      "term": "INSOMNIA",
+      "count": 17
+    },
+    {
+      "term": "PARAESTHESIA",
+      "count": 17
+    },
+    {
+      "term": "PAIN IN EXTREMITY",
+      "count": 16
+    },
+    {
+      "term": "SPEECH DISORDER",
+      "count": 16
+    },
+    {
+      "term": "ASPARTATE AMINOTRANSFERASE INCREASED",
+      "count": 15
+    },
+    {
+      "term": "DEPRESSION",
+      "count": 15
+    },
+    {
+      "term": "DYSARTHRIA",
+      "count": 15
+    },
+    {
+      "term": "GENERAL PHYSICAL HEALTH DETERIORATION",
+      "count": 15
+    },
+    {
+      "term": "HYPERSENSITIVITY",
+      "count": 15
+    },
+    {
+      "term": "PANCREATITIS NECROTISING",
+      "count": 15
+    },
+    {
+      "term": "SEPSIS",
+      "count": 15
+    },
+    {
+      "term": "ACUTE RESPIRATORY FAILURE",
+      "count": 14
+    },
+    {
+      "term": "ATRIAL FIBRILLATION",
+      "count": 14
+    },
+    {
+      "term": "BLOOD PRESSURE INCREASED",
+      "count": 14
+    },
+    {
+      "term": "CHOKING",
+      "count": 14
+    },
+    {
+      "term": "GASTROSTOMY",
+      "count": 14
+    },
+    {
+      "term": "SUICIDAL IDEATION",
+      "count": 14
+    },
+    {
+      "term": "TREMOR",
+      "count": 14
+    },
+    {
+      "term": "ABDOMINAL DISTENSION",
+      "count": 13
+    },
+    {
+      "term": "HOSPITALISATION",
+      "count": 13
+    },
+    {
+      "term": "TACHYCARDIA",
+      "count": 13
+    },
+    {
+      "term": "BACK PAIN",
+      "count": 12
+    },
+    {
+      "term": "DEHYDRATION",
+      "count": 12
+    },
+    {
+      "term": "DYSPEPSIA",
+      "count": 12
+    },
+    {
+      "term": "DYSPHONIA",
+      "count": 12
+    },
+    {
+      "term": "DYSPHORIA",
+      "count": 12
+    },
+    {
+      "term": "INTENTIONAL DOSE OMISSION",
+      "count": 12
+    },
+    {
+      "term": "POOR QUALITY SLEEP",
+      "count": 12
+    },
+    {
+      "term": "RESPIRATORY DISORDER",
+      "count": 12
+    },
+    {
+      "term": "AMNESIA",
+      "count": 11
+    },
+    {
+      "term": "CHOLESTASIS",
+      "count": 11
+    },
+    {
+      "term": "HEART RATE INCREASED",
+      "count": 11
+    },
+    {
+      "term": "HEPATIC CYTOLYSIS",
+      "count": 11
+    },
+    {
+      "term": "HYPERHIDROSIS",
+      "count": 11
+    },
+    {
+      "term": "HYPOAESTHESIA",
+      "count": 11
+    },
+    {
+      "term": "ILLNESS",
+      "count": 11
+    },
+    {
+      "term": "LOSS OF CONSCIOUSNESS",
+      "count": 11
+    },
+    {
+      "term": "MYALGIA",
+      "count": 11
+    },
+    {
+      "term": "RETCHING",
+      "count": 11
+    }
+  ]
+}

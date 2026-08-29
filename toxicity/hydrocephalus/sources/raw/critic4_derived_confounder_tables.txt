@@ -1,0 +1,51 @@
+critic4 derived confounder tables — all values extracted this session from files in this directory
+
+== T1. GEN-HD1 NCT03761849 Week-13 paired ventricular vs parenchymal volume (ex-vacuo discriminator)
+   locus: resultsSection.outcomeMeasuresModule, measure 'Change From Baseline in Whole and Regional Brain Volumes...', classes
+   unit: mL
+    Week 13 Analysis of Change from Baseline in: Caudate Volume (mL)
+        Placebo ODC                 0.996  (spread 0.444)
+        RO7234292 Q4W ODC           0.330  (spread 0.491)
+        RO7234292 Q8W ODC           1.124  (spread 0.467)
+    Week 13 Change from Baseline in: Ventricle Volume (mL)
+        Placebo ODC                 1.537  (spread 0.686)
+        RO7234292 Q4W ODC           3.785  (spread 0.718)
+        RO7234292 Q8W ODC           2.011  (spread 0.700)
+    Week 13 Change from Baseline in: Whole Brain Volume (mL)
+        Placebo ODC                 0.189  (spread 0.119)
+        RO7234292 Q4W ODC          -0.184  (spread 0.123)
+        RO7234292 Q8W ODC          -0.133  (spread 0.121)
+
+== T2. CHERISH NCT02292537 randomized SHAM-PROCEDURE control (procedure vs drug attribution)
+   locus: resultsSection.adverseEventsModule
+   [seriousEvents] Post lumbar puncture syndrome: Sham Procedure 0/42, Nusinersen 1/84
+   [otherEvents] Headache: Sham Procedure 3/42, Nusinersen 24/84
+
+== T3. VALOR NCT02623699 Part C intrathecal-PLACEBO-controlled (procedure-matched)
+   [seriousEvents] Meningitis chemical: Part C-Pivotal: Placebo 0/36, Part C-Pivotal: BIIB067 100 mg 1/72
+   [seriousEvents] Lumbar radiculopathy: Part C-Pivotal: Placebo 0/36, Part C-Pivotal: BIIB067 100 mg 1/72
+   [seriousEvents] Csf protein increased: Part C-Pivotal: Placebo 0/36, Part C-Pivotal: BIIB067 100 mg 0/72
+   [seriousEvents] Csf white blood cell count increased: Part C-Pivotal: Placebo 0/36, Part C-Pivotal: BIIB067 100 mg 0/72
+   [otherEvents] Post lumbar puncture syndrome: Part C-Pivotal: Placebo 11/36, Part C-Pivotal: BIIB067 100 mg 13/72
+   [otherEvents] Csf protein increased: Part C-Pivotal: Placebo 1/36, Part C-Pivotal: BIIB067 100 mg 6/72
+   [otherEvents] Csf white blood cell count increased: Part C-Pivotal: Placebo 0/36, Part C-Pivotal: BIIB067 100 mg 7/72
+   [otherEvents] Csf white blood cell count positive: Part C-Pivotal: Placebo 0/36, Part C-Pivotal: BIIB067 100 mg 0/72
+
+== T4. FAERS nusinersen Tier A case set: duplicate flags and age (ascertainment)
+   faers_nusinersen_tierA_FULL_cases.json: n=37  duplicate_flag=1: 26  age_recorded=28  median_age_yr=2.00  frac_under_2yr=0.50
+     drugrecurreadministration values present: ['3']  (3 = unknown; no positive rechallenge coded)
+   faers_nusinersen_hydrocephalus_cases.json: n=22  duplicate_flag=1: 15  age_recorded=15  median_age_yr=0.33  frac_under_2yr=0.73
+     drugrecurreadministration values present: ['3']  (3 = unknown; no positive rechallenge coded)
+
+== T5. FAERS age-stratified hydrocephalus background (see critic4_faers_AGE_STRATIFIED_*.json)
+   whole DB: 5367/20692689 = 0.0259%
+   age     0+TO+1 yr: 61/22795 = 0.268%
+   age     0+TO+2 yr: 98/46082 = 0.213%
+   age    3+TO+17 yr: 453/580482 = 0.078%
+   age  18+TO+120 yr: 2662/10809220 = 0.025%
+   nusinersen (inventory figure, N=7655 reports): 22/7655 = 0.287%
+
+== T6. FAERS notoriety window (see critic4_faers_TIME_STRATIFIED_notoriety.json)
+   20170101+TO+20180924: 5/1481 = 0.338%
+   20180925+TO+20200101: 8/1325 = 0.604%
+   20200101+TO+20260830: 9/4849 = 0.186%

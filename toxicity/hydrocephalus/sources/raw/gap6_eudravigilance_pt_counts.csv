@@ -1,0 +1,78 @@
+substance,ev_code,soc,pt,cases,csv_rows
+NUSINERSEN,12676156,Nervous system disorders,Arachnoid cyst,4,24
+NUSINERSEN,12676156,Nervous system disorders,Arachnoiditis,7,24
+NUSINERSEN,12676156,Nervous system disorders,Blood brain barrier defect,1,24
+NUSINERSEN,12676156,Nervous system disorders,Brain oedema,6,24
+NUSINERSEN,12676156,Nervous system disorders,Cerebral ventricle dilatation,4,24
+NUSINERSEN,12676156,Nervous system disorders,Cerebrospinal fistula,3,24
+NUSINERSEN,12676156,Nervous system disorders,Cerebrospinal fluid circulation disorder,1,24
+NUSINERSEN,12676156,Nervous system disorders,Cerebrospinal fluid leakage,35,24
+NUSINERSEN,12676156,Nervous system disorders,Hydrocephalus,28,24
+NUSINERSEN,12676156,Nervous system disorders,Hypertensive hydrocephalus,1,24
+NUSINERSEN,12676156,Nervous system disorders,Idiopathic intracranial hypertension,3,24
+NUSINERSEN,12676156,Nervous system disorders,Intracranial hypotension,4,24
+NUSINERSEN,12676156,Nervous system disorders,Intracranial pressure increased,24,24
+NUSINERSEN,12676156,Nervous system disorders,Intraventricular haemorrhage,2,24
+NUSINERSEN,12676156,Nervous system disorders,Meningeal disorder,2,24
+NUSINERSEN,12676156,Nervous system disorders,Meningism,8,24
+NUSINERSEN,12676156,Nervous system disorders,Normal pressure hydrocephalus,1,24
+NUSINERSEN,12676156,Nervous system disorders,Pachymeningitis,1,24
+NUSINERSEN,12676156,Nervous system disorders,Pleocytosis,9,24
+NUSINERSEN,12676156,Nervous system disorders,Spinal subarachnoid haemorrhage,1,24
+NUSINERSEN,12676156,Nervous system disorders,Subarachnoid haemorrhage,5,24
+NUSINERSEN,12676156,Eye disorders,Papilloedema,10,24
+NUSINERSEN,12676156,Eye disorders,Pseudopapilloedema,1,24
+NUSINERSEN,12676156,Infections and infestations,Meningitis,18,24
+NUSINERSEN,12676156,Infections and infestations,Meningitis aseptic,26,24
+NUSINERSEN,12676156,Infections and infestations,Meningitis bacterial,13,24
+NUSINERSEN,12676156,Infections and infestations,Meningitis enterococcal,1,24
+NUSINERSEN,12676156,Infections and infestations,Meningitis pneumococcal,1,24
+NUSINERSEN,12676156,Infections and infestations,Meningitis staphylococcal,4,24
+NUSINERSEN,12676156,Infections and infestations,Meningitis streptococcal,1,24
+NUSINERSEN,12676156,Infections and infestations,Meningitis viral,1,24
+NUSINERSEN,12676156,Infections and infestations,Post procedural meningitis,1,24
+NUSINERSEN,12676156,Infections and infestations,Shunt infection,1,24
+NUSINERSEN,12676156,Investigations,CSF glucose decreased,2,24
+NUSINERSEN,12676156,Investigations,CSF immunoglobulin increased,1,24
+NUSINERSEN,12676156,Investigations,CSF lactate increased,2,24
+NUSINERSEN,12676156,Investigations,CSF lymphocyte count increased,1,24
+NUSINERSEN,12676156,Investigations,CSF oligoclonal band present,1,24
+NUSINERSEN,12676156,Investigations,CSF pressure decreased,1,24
+NUSINERSEN,12676156,Investigations,CSF pressure increased,33,24
+NUSINERSEN,12676156,Investigations,CSF protein increased,21,24
+NUSINERSEN,12676156,Investigations,CSF red blood cell count positive,2,24
+NUSINERSEN,12676156,Investigations,CSF test,1,24
+NUSINERSEN,12676156,Investigations,CSF test abnormal,7,24
+NUSINERSEN,12676156,Investigations,CSF white blood cell count increased,4,24
+NUSINERSEN,12676156,Investigations,CSF white blood cell count positive,1,24
+NUSINERSEN,12676156,"Injury, poisoning and procedural complications",Cerebral ventricle collapse,1,24
+NUSINERSEN,12676156,"Injury, poisoning and procedural complications",Meningitis chemical,7,24
+NUSINERSEN,12676156,"Injury, poisoning and procedural complications",Post lumbar puncture syndrome,383,24
+NUSINERSEN,12676156,"Injury, poisoning and procedural complications",Traumatic lumbar puncture,13,24
+NUSINERSEN,12676156,Surgical and medical procedures,Blood brain barrier disruption therapy,1,24
+NUSINERSEN,12676156,Surgical and medical procedures,Cerebrospinal fluid reservoir placement,4,24
+NUSINERSEN,12676156,"Congenital, familial and genetic disorders",Congenital arachnoid cyst,1,24
+TOFERSEN,35379873,Nervous system disorders,Arachnoiditis,1,24
+TOFERSEN,35379873,Nervous system disorders,Cerebrospinal fluid leakage,2,24
+TOFERSEN,35379873,Nervous system disorders,Hydrocephalus,1,24
+TOFERSEN,35379873,Nervous system disorders,Intracranial hypotension,2,24
+TOFERSEN,35379873,Nervous system disorders,Intracranial pressure increased,10,24
+TOFERSEN,35379873,Nervous system disorders,Normal pressure hydrocephalus,1,24
+TOFERSEN,35379873,Nervous system disorders,Pleocytosis,17,24
+TOFERSEN,35379873,Eye disorders,Papilloedema,7,24
+TOFERSEN,35379873,Infections and infestations,Meningitis,3,24
+TOFERSEN,35379873,Infections and infestations,Meningitis aseptic,19,24
+TOFERSEN,35379873,Infections and infestations,Meningitis bacterial,1,24
+TOFERSEN,35379873,Investigations,CSF cell count increased,14,24
+TOFERSEN,35379873,Investigations,CSF immunoglobulin increased,1,24
+TOFERSEN,35379873,Investigations,CSF lymphocyte count increased,1,24
+TOFERSEN,35379873,Investigations,CSF pressure increased,1,24
+TOFERSEN,35379873,Investigations,CSF protein abnormal,5,24
+TOFERSEN,35379873,Investigations,CSF protein increased,31,24
+TOFERSEN,35379873,Investigations,CSF red blood cell count positive,1,24
+TOFERSEN,35379873,Investigations,CSF test abnormal,1,24
+TOFERSEN,35379873,Investigations,CSF white blood cell count increased,6,24
+TOFERSEN,35379873,Investigations,Lumbar puncture abnormal,1,24
+TOFERSEN,35379873,"Injury, poisoning and procedural complications",Meningitis chemical,2,24
+TOFERSEN,35379873,"Injury, poisoning and procedural complications",Post lumbar puncture syndrome,18,24
+TOFERSEN,35379873,"Injury, poisoning and procedural complications",Traumatic lumbar puncture,3,24

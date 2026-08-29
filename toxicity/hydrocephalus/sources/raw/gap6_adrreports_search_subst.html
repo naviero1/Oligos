@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>European database of suspected adverse drug reaction
+	reports - Search</title>
+<link href="../css/search-tabs.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Scripts/cookie.js"></script>
+<script type="text/javascript" src="../Scripts/purify.min.js"></script>
+<script type="text/javascript" src="../Scripts/dashboard-api.js"></script>
+<script type="text/javascript" src="../Scripts/disclaimer.js"></script>
+<script type="text/javascript">
+  enforceDisclaimer('disclaimer.html');
+</script>
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+<link href="../css/nav.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+
+
+
+sfHover = function() {
+
+	var sfEls = document.getElementById("nav").getElementsByTagName("LI");
+
+	for (var i=0; i<sfEls.length; i++) {
+
+		sfEls[i].onmouseover=function() {
+
+			this.className+=" sfhover";
+
+		}
+
+		sfEls[i].onmouseout=function() {
+
+			this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+
+		}
+
+	}
+
+}
+
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+
+
+
+</script>
+</head>
+<body>
+	<div id="container">
+		<div style="z-index: 1; position: fixed; width: 1090px;">
+			<!-- start of header -->
+			<div id="header">
+				<!-- start of top right menu -->
+				<div id="topmenu">
+					<p>
+						<a href="contacts.html">Contacts</a> | <a href="faqs.html">FAQ</a>
+						| <a href="glossary.html">Glossary</a>
+					</p>
+					<form id="languages" name="languages">
+						<select
+							onchange="window.open(this.options[this.selectedIndex].value,'_self')"
+							name="menu" size="1"
+						>
+							<option value="../bg/index.html">balgarski (bg)</option>
+							<option value="../es/index.html">espa&#241;ol (es)</option>
+							<option value="../cs/index.html">ce&#353;tina (cs)</option>
+							<option value="../da/index.html">dansk (da)</option>
+							<option value="../de/index.html">Deutsch (de)</option>
+							<option value="../et/index.html">eesti keel (et)</option>
+							<option value="../el/index.html">ellinik&#225; (el)</option>
+                                      <option value="../is/index.html">Íslenska (is)</option> 
+							<option value="../en/index.html" selected="selected">English
+								(en)</option>
+							<option value="../fr/index.html">fran&#231;ais (fr)</option>
+							<option value="../ga/index.html">Gaeilge (ga)</option>
+                                 <option value="../hr/index.html">Hrvatski (hr)</option>
+							<option value="../it/index.html">italiano (it)</option>
+							<option value="../lv/index.html">latvie&#353;u valoda
+								(lv)</option>
+							<option value="../lt/index.html">lietuviu kalba (lt)</option>
+							<option value="../hu/index.html">magyar (hu)</option>
+							<option value="../mt/index.html">Malti (mt)</option>
+							<option value="../nl/index.html">Nederlands (nl)</option>
+							<option value="../no/index.html">Norsk (no)</option>
+							<option value="../pl/index.html">polski (pl)</option>
+							<option value="../pt/index.html">portugu&#234;s (pt)</option>
+							<option value="../ro/index.html">rom&#226;na (ro)</option>
+							<option value="../sk/index.html">slovencina (sk)</option>
+							<option value="../sl/index.html">sloven&#353;cina (sl)</option>
+							<option value="../fi/index.html">suomi (fi)</option>
+							<option value="../sv/index.html">svenska (sv)</option>
+						</select>
+					</form>
+				</div>
+				<!-- end of top right menu -->
+				<a href="index.html"><img src="../img/mainlogo.gif"
+					alt="European database of suspected adverse drug reaction reports"
+					name="mainlogo" width="600" height="53" hspace="10" vspace="20"
+					border="0" id="mainlogo"
+				/></a>
+			</div>
+			<!-- end of header -->
+			<!-- start of horizontal menu -->
+			<div id="navigation">
+				<ul id="nav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#" style="cursor: default;"> About</a>
+						<ul>
+							<li><a href="background.html">> Background</a></li>
+							<li><a href="access_policy.html">> Access policy</a></li>
+							<li><a href="faqs.html">> FAQ</a></li>
+							<li><a href="glossary.html">> Glossary</a></li>
+							<li><a href="news.html">> News</a></li>
+							<li><a href="contacts.html">> Contacts</a></li>
+						</ul></li>
+					<li><a href="#" style="cursor: default;">Understanding
+							reports</a>
+						<ul>
+							<li><a href="data_source.html">> Data source</a></li>
+							<li><a href="viewing_reports.html">> Viewing a report</a></li>
+							<li><a href="understanding_reports.html">> Understanding
+									a report</a></li>
+							<li><a href="covid19_message.html">> COVID-19 important messages</a></li>
+							<li><a href="data_quality.html">> Data quality</a></li>
+							<li><a href="disclaimer.html">> Disclaimer</a></li>
+						</ul></li>
+					<li><a href="search.html">Search</a></li>
+					<li><a href="#" style="cursor: default;">Medicine safety</a>
+						<ul>
+							<li><a href="monitoring_EU.html">> Monitoring in the EU</a></li>
+							<li><a href="eudravigilance.html">> EudraVigilance</a></li>
+							<li><a href="medicines_in_EU.html">> Medicines in the EU</a></li>
+							<li><a href="patient_safety_warnings.html">> Patient
+									safety warnings</a></li>
+							<li><a href="report_side_effect.html">> How to report a
+									side-effect</a></li>
+							<li><a href="national.html">> National authorities</a></li>
+						</ul></li>
+					<li>
+						<a href="..\vet\en\index.html">Switch to Veterinary</a>
+					</li>
+				</ul>
+			</div>
+			<!-- end of horizontal menu -->
+		</div>
+		<div id="separatingdiv" style="padding-top: 100px;"></div>
+		<div id="main_content_area">
+			<div id="second_level_content">
+				<h1>Search</h1>
+				<p>For centrally authorised medicines, access to reports is
+					granted both by the name of the medicine or the name of the active
+					substance.</p>
+				<p>
+					For non-centrally authorised medicines, access is granted based on
+					the name of the active substance only. <br />
+				</p>
+				<div id="search-tabs">
+					<ul>
+						<li><a href="search.html">Suspected adverse drug reaction
+								reports</br> for Products
+						</a></li>
+						<li id="selected"><a href="search_subst.html">Suspected
+								adverse drug reaction reports</br> for Substances
+						</a></li>
+					</ul>
+				</div>
+				<div id="separatingdiv"></div>
+				<p>
+					<img src="../img/heading_AZ.jpg" alt="Browse A-Z" width="950"
+						height="36"
+					/>
+				</p>
+				<div id="alphabetnavigation">
+					<ul id="alphabetnav">
+						<li><a href="#" onclick="return showSubstanceTable('a')">A</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('b')">B</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('c')">C</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('d')">D</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('e')">E</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('f')">F</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('g')">G</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('h')">H</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('i')">I</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('j')">J</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('k')">K</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('l')">L</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('m')">M</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('n')">N</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('o')">O</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('p')">P</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('q')">Q</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('r')">R</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('s')">S</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('t')">T</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('u')">U</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('v')">V</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('w')">W</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('x')">X</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('y')">Y</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('z')">Z</a></li>
+						<li><a href="#" onclick="return showSubstanceTable('0-9')">0-9</a></li>
+					</ul>
+				</div>
+				<div id="separatingdiv"></div>
+				<div id="result_table"></div>
+				<p>&nbsp;</p>
+				<p>* Non-centrally authorised medicines</p>
+			</div>
+		</div>
+		<!-- footer -->
+		<div id="footer">
+			<a href="index.html">Home</a> | <a href="contacts.html">Contacts</a>
+			| <a href="browsers.html">Browser compatibility and Javascript</a> |
+			<a href="copyright.html">© 2012 - 2026</a>
+		</div>
+		<!-- end of footer -->
+		<!-- divs for logos after the footer -->
+		<div id="footerlogos" style="background-color: #FFFFFF;">
+			<div id="footerlogo1" style="background-color: #FFFFFF;">
+				<div align="left">
+					&nbsp;<a href="https://www.ema.europa.eu/en/homepage" target="_blank"><img
+						src="../img/logo_emea.jpg" alt="EMA" width="300" height="57"
+						border="0"
+					/></a>
+				</div>
+			</div>
+			<div id="footerlogo2" style="background-color: #FFFFFF;">
+				<div align="left">
+					<a href="https://www.ema.europa.eu/en/human-regulatory/research-development/pharmacovigilance/eudravigilance"
+						target="_blank"
+					><img src="../img/eudravigilance_white_background.jpg"
+						alt="EudraVigilance" width="150" height="56" border="0"
+					/></a>&nbsp;&nbsp;
+				</div>
+			</div>
+		</div>
+		<!-- end of logo div-->
+	</div>
+</body>
+</html>
+

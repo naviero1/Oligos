@@ -1,0 +1,5488 @@
+
+===PAGE 1===
+nature medicine
+https://doi.org/10.1038/s41591-025-03784-7
+Article
+The UBE3A-ATS antisense oligonucleotide 
+rugonersen in children with Angelman 
+syndrome: a phase 1 trial
+In the format provided by the 
+authors and unedited
+Supplementary information
+
+
+===PAGE 2===
+1 
+ 
+Table of Contents 
+ 
+1. 
+Clinical sites, principal investigators and IRB / ethic committee IDs ...................................... 2 
+2. 
+The Rugonersen study group ................................................................................................. 2 
+3. 
+Study Participants .................................................................................................................. 3 
+4. 
+Safety and Tolerability ............................................................................................................ 4 
+Adverse events of pyrexia, vomiting, seizure, and ataxia .......................................................... 4 
+Laboratory findings in cerebrospinal fluid (CSF) ........................................................................ 4 
+Vital signs and ECG ................................................................................................................... 4 
+5. 
+Pharmacokinetics ................................................................................................................... 5 
+6. 
+EEG natural history data: developmental trajectory and analytical properties ....................... 6 
+7. 
+Clinical scales NH data: dev. trajectories and analytical properties ....................................... 8 
+8. 
+Estimates of clinically important group differences ................................................................ 9 
+9. 
+Additional exploratory clinical scales .................................................................................... 10 
+Functional Mobility Scale (FMS) .............................................................................................. 10 
+Schlaffragebogen für Kinder mit Neurologischen und Anderen Komplexen Erkrankungen 
+(SNAKE) .................................................................................................................................. 11 
+Observer-Reported Communication Ability (ORCA) ................................................................ 11 
+Aberrant Behavior Checklist Second Edition – Community Version (ABC-2C) ....................... 11 
+Caregiver-reported Angelman Syndrome Scale for Impact (CASS-I) ...................................... 11 
+10. 
+Relationship between BSID and EEG 𝛿-power ............................................................... 12 
+11. 
+Accounting for the effect of maturation ............................................................................ 13 
+12. 
+EEG in MAD .................................................................................................................... 13 
+Sensitivity analyses ................................................................................................................. 14 
+Alternative EEG metrics ........................................................................................................... 15 
+13. 
+EEG in LTE ...................................................................................................................... 17 
+14. 
+Clinical scales in MAD ..................................................................................................... 19 
+Alternative models and analyses of subpopulations evaluated for MAD day 224 ................... 21 
+15. 
+Clinical scales in LTE ...................................................................................................... 23 
+Alternative models and analyses of subpopulations evaluated for LTE2 ................................ 25 
+16. 
+SAS-CGI-S in the LTE ..................................................................................................... 26 
+17. 
+Supplementary References ............................................................................................. 27 
+ 
+
+
+===PAGE 3===
+2 
+ 
+1. Clinical sites, principal investigators and IRB / ethic committee IDs 
+ 
+Site 
+PI 
+Country 
+EC / IRB 
+EC / IRB 
+Identifier 
+Ospedale Pediatrico 
+Bambino Gesu 
+Dr Pietrafusa 
+(Current) 
+Dr Vigevano (Past) 
+Rome, Italy 
+Comitato Etico dell’ IRCCS Ospedale 
+Pediatrico Bambino Gesù 
+2084 / 2020 
+Erasmus MC - Erasmus 
+Medisch Centrum 
+Dr de Wit 
+Rotterdam, 
+Netherlands 
+Central Committee on Research 
+Involving Human Subjects (CCMO) 
+NL73321.000.20 
+H. Sant Joan de Deu, 
+Barcelona 
+Dr Serrano Gimare 
+Barcelona, 
+Spain 
+CEIC Fundació Sant Joan de Dewu, 
+Servei de Recerca 
+AC-03-20 
+Parc Taulí, Sabadell 
+Dr Roche 
+Barcelona, 
+Spain 
+CEIC Fundació Sant Joan de Dewu, 
+Servei de Recerca 
+AC-03-20 
+Hospital Virgen del 
+Rocio, Sevilla 
+Dr Muñoz 
+Sevilla, Spain 
+CEIC Fundació Sant Joan de Dewu, 
+Servei de Recerca 
+AC-03-20 
+RUSH Children's 
+Hospital 
+Dr Berry-Kravis 
+Chicago, 
+United States 
+Rush University Medical Center, 
+Rush University Medical Center 
+Institutional Review Board 
+00000482 
+Texas Children's 
+Hospital 
+Dr Bacino 
+Houston, 
+United States 
+Baylor College of Medicine Office of 
+Research, Institutional Review Board 
+H-47303 
+UNC School of 
+Medicine - Carolina 
+Institute for 
+Developmental 
+Disabilities 
+Dr Shen (Current) 
+Dr Capal (Past) 
+Chapel, Hill, 
+United States 
+Advarra 
+00041741 
+UCLA 
+Dr Rajamaran 
+(Current) 
+Dr Jeste (Past) 
+Los Angeles, 
+United States 
+Advarra 
+00041741 
+Rady Children's 
+Hospital 
+Dr Bird 
+San Diego, 
+United States 
+UCSD Human Research Protections 
+Program, Altman Clinical and 
+Translational Research Institute 
+200683 
+Columbia University 
+Medical Center 
+Dr Bain 
+New York, 
+United States 
+Columbia University Medical Center, 
+CUMC IRB 
+AAAS9480 
+Mayo Clinic, Rochester 
+Dr Gavrilova 
+Rochester, 
+United States 
+Mayo Clinic Institutional Review 
+Board Rochester 
+20-007499 
+Table S1. Clinical sites, principal investigators and Institutional Review Board (IRB) / ethic 
+committee (EC) IDs. 
+2. The Rugonersen study group 
+João A. Abrantes, Chai Adams, Angelique Augustin, Edward Austin, Muhamed Barakovic, Raman Bedi, 
+Alessandro Belotti, Olga Bettoni, Charlotte Bon, Azad Bonni, Ponghatai Boonsimma, Anna Brändli-
+Baiocco, Monika Broennimann, Gary Brouwer, Ina Bruenig Traebert, Mariana Bustamante, Katalin Buzasi, 
+Stormy Chamberlain, Daniel Chan, Susanne Clinch, Siobhan Connor-Ahmad, Gianriccardo Corbo, Philipp 
+Daetwyler, Oana Danila, Cassandra Dean, Axel Ducret, Thomas Emrich, Ela Erturk, Sam Ewing, Paulo 
+Fontoura, Isabel Galnares, Hans Peter Grimm, Leo Gschwind, Alexandra Hawes, Jörg F. Hipp, Marius 
+Hoener, Sebastian Holst, Michael Honer, Gregory Hooper, Jörg Hörnschemeyer, Florian Islinger, Ravi 
+Jagasia, Ivan Jelcic, Ellen Ji, Magdalena Jodlowska, Krisztina Kajzinger, Geoff Kerchner, Gregory Klein, 
+Erich Koller, Vitaliy Kolodyazhniy, Thomas Kremer, Michelle L. Krishnan, Gigi Lee, Valentin Legras, Rea 
+Lehner, Jörg Lill, Dominick Lionetti, Florian Lipsmeier, Jon Lopez, Renee Maas, Stefano Magon, Harald 
+Mauser, Eilidh Mayer, Martin Mehlmann, Helene Meistermann, Amanda Messer, Chantal Michaud, Rema 
+Moore, Anna Morka, Lutz Müller, Lorraine Murtagh, David Nobbs, Alessandro Noci, Robyn OConnor, 
+Giuseppe Palermo, Nikhil Pandya, Christophe Pfleger, Emma Poon, Lisa Restelli, Sophie Schaller, 
+Dietmar Schwab, Shady Sedhom, Sushma Shah, Hanna E. Silber Baumann, Kamil Sklodowski, Siegfried 
+Stolz, Lisa Squassante , Julian Tillmann, Jorrit Tjeertes, Manuel Tzouros, Naina Varsani, Brenda 
+Vincenzi, Barbara Vinduska, Franziska Voellmy, David Stephen Ward, Thomas Wiese, Penelope Wilks, 
+Tom Willgoss, Jenna Willis, Saskia Zaaijer 
+
+
+===PAGE 4===
+3 
+ 
+3. Study Participants 
+ 
+A Cohorts (Age 5 – 12 years) 
+B Cohorts (Age 1 – 4 years) 
+All 
+Characteristic 
+A1 
+(n=6) 
+A2 
+(n=8) 
+A3 
+(n=7) 
+A4 
+(n=5) 
+EA1 
+(n=5) 
+B1 
+(n=6) 
+B2 
+(n=6) 
+B3 
+(n=6) 
+B4 
+(n=6) 
+EB1 
+(n=6) 
+ 
+(n=61) 
+FMS TOTAL SCORE (SD) 
+14.0 (6.7) 
+14.4 (1.8) 
+12.9 (7.2) 
+8.2 (5.6) 
+5.5 (7.8) 
+11.3 (6.2) 
+6.8 (6.4) 
+9.7 (5.2) 
+14.6 (3.0) 
+3.2 (4.8) 
+10.3 (6.3) 
+ORCA Total T-Score v2 (SD) 
+45.0 (2.1) 
+48.8 (8.6) 
+50.6 (12.0) 
+38.5 (6.9) 
+43.2 (12.4) 
+42.9 (6.9) 
+45.1 (4.3) 
+45.1 (3.9) 
+48.6 (7.5) 
+41.6 (3.7) 
+45.4 (7.8) 
+Aberrant Behavior Checklist Second Edition – Community Version (ABC-2C), Raw Scores (SD) 
+Hyperactivity /  
+Non-Compliance 
+18.7 (8.7) 
+18.1 (9.0) 
+16.4 (10.3) 
+21.0 (14.1) 
+19.8 (13.2) 
+24.0 (6.8) 
+14.2 (10.3) 
+13.5 (9.0) 
+20.4 (11.4) 
+10.0 (6.6) 
+17.5 (10.1) 
+Inappropriate Speech 
+0.8 (2.0) 
+1.4 (2.5) 
+0.7 (1.5) 
+0.0 (0.0) 
+0.0 (0.0) 
+0.8 (1.3) 
+0.3 (0.5) 
+0.0 (0.0) 
+0.2 (0.4) 
+0.0 (0.0) 
+0.5 (1.3) 
+Irritability 
+9.8 (9.2) 
+14.6 (8.8) 
+6.7 (5.0) 
+9.8 (7.3) 
+7.2 (7.5) 
+7.2 (4.6) 
+5.2 (7.4) 
+5.3 (6.3) 
+10.0 (8.5) 
+4.5 (5.0) 
+8.2 (7.3) 
+Social Withdrawal 
+5.7 (8.5) 
+7.8 (11.4) 
+3.9 (3.5) 
+6.4 (2.2) 
+6.7 (5.7) 
+7.3 (6.3) 
+3.8 (2.6) 
+2.5 (3.7) 
+4.0 (2.5) 
+3.7 (2.7) 
+5.2 (5.9) 
+Stereotypic Behavior 
+4.0 (3.0) 
+4.2 (2.8) 
+4.6 (3.5) 
+8.6 (6.1) 
+7.3 (6.7) 
+4.7 (3.4) 
+4.0 (3.2) 
+2.3 (1.4) 
+6.2 (3.5) 
+2.7 (1.9) 
+4.8 (3.9) 
+Schlaffragebogen für Kinder mit Neurologischen und Anderen Komplexen Erkrankungen (SNAKE), T-Scores (SD) 
+Disturbances going to sleep 
+50.0 (10.3) 
+50.0 (8.6) 
+50.4 (10.3) 
+49.6 (3.6) 
+51.2 (7.3) 
+55.0 (6.4) 
+51.5 (2.0) 
+50.3 (8.4) 
+52.0 (6.8) 
+48.7 (8.3) 
+50.8 (7.4) 
+Disturbances remaining asleep 
+49.2 (7.1) 
+48.6 (6.3) 
+45.7 (7.6) 
+52.6 (7.5) 
+54.5 (9.1) 
+51.7 (8.5) 
+51.2 (3.4) 
+50.8 (9.8) 
+54.4 (8.2) 
+55.8 (4.5) 
+51.2 (7.5) 
+Arousal disorders 
+43.7 (5.1) 
+43.0 (4.6) 
+45.3 (3.9) 
+43.4 (2.6) 
+44.2 (4.3) 
+46.8 (6.4) 
+44.0 (4.6) 
+43.8 (4.5) 
+45.8 (7.8) 
+42.2 (3.6) 
+44.2 (4.7) 
+Daytime sleepiness 
+46.0 (4.9) 
+44.0 (7.3) 
+40.0 (5.5) 
+49.6 (8.0) 
+51.5 (8.5) 
+45.2 (7.9) 
+51.7 (3.3) 
+50.8 (8.5) 
+42.6 (8.0) 
+56.3 (6.9) 
+47.6 (8.1) 
+Daytime behavior disorders 
+53.7 (6.8) 
+51.5 (8.1) 
+45.3 (5.5) 
+54.2 (8.2) 
+53.0 (6.0) 
+48.0 (7.0) 
+49.8 (7.7) 
+51.7 (10.0) 
+53.6 (9.6) 
+46.0 (7.3) 
+50.5 (7.7) 
+Caregiver-reported Angelman Syndrome Scale for Impact (CASS-I) (SD) 
+Impact by Seizures 
+- 
+- 
+1.2 (0.4) 
+1.2 (0.4) 
+- 
+1.3 (0.5) 
+1.3 (0.5) 
+2.2 (1.8) 
+1.6 (0.9) 
+1.7 (0.8) 
+1.5 (0.9) 
+Sleep Throughout the Night 
+- 
+- 
+2.5 (1.6) 
+2.6 (1.5) 
+- 
+2.7 (1.4) 
+2.7 (1.5) 
+2.4 (0.9) 
+3.6 (1.5) 
+4.2 (0.8) 
+2.9 (1.4) 
+Disruptive Behavior 
+- 
+- 
+2.3 (1.0) 
+2.0 (0.7) 
+- 
+2.7 (1.2) 
+2.7 (1.6) 
+2.8 (1.8) 
+3.6 (0.9) 
+1.5 (0.5) 
+2.5 (1.3) 
+Communicate with People 
+- 
+- 
+4.2 (1.2) 
+4.8 (0.4) 
+- 
+4.0 (1.3) 
+4.5 (1.2) 
+4.2 (0.8) 
+4.2 (0.8) 
+4.7 (0.5) 
+4.4 (0.9) 
+Perform Tasks using Hands 
+- 
+- 
+3.7 (1.2) 
+3.8 (1.3) 
+- 
+3.5 (1.2) 
+3.8 (0.4) 
+2.2 (1.3) 
+2.8 (1.1) 
+3.0 (1.5) 
+3.3 (1.2) 
+Walk 
+- 
+- 
+2.0 (1.5) 
+4.4 (0.9) 
+- 
+2.8 (1.5) 
+4.3 (0.8) 
+3.2 (2.0) 
+2.2 (1.1) 
+4.2 (1.6) 
+3.3 (1.6) 
+Concentrate / Follow Instructions 
+- 
+- 
+3.8 (1.0) 
+4.8 (0.4) 
+- 
+3.8 (1.3) 
+4.5 (0.8) 
+3.4 (1.5) 
+4.0 (0.7) 
+4.5 (0.8) 
+4.1 (1.0) 
+Perform Self-Care Activities 
+- 
+- 
+4.3 (0.8) 
+4.8 (0.4) 
+- 
+5.0 (0.0) 
+4.8 (0.4) 
+4.6 (0.9) 
+4.2 (1.3) 
+5.0 (0.0) 
+4.7 (0.7) 
+AS Symptoms Overall 
+- 
+- 
+3.3 (1.2) 
+4.2 (1.3) 
+- 
+3.7 (1.0) 
+4.2 (0.8) 
+4.0 (0.7) 
+4.0 (1.2) 
+4.7 (0.8) 
+4.0 (1.0) 
+Table S2. Participant baseline characteristics for additional clinical scales. Participant baseline 
+characteristics for additional clinical scales (FMS, ORCA, ABC-2C, SNAKE, CASS-I, see Supplementary 
+Material Section 9 for details) for MAD cohorts B1-B4 and A1-A4, LTE cohorts EA1 and EB1, and the 
+summary across all cohorts (see Table 1 for demographics and baseline characteristics of BSID, VABS 
+and SAS-CGI-S). For the clinical scales, numbers were in part lower than the cohort numbers (line 2) due 
+to few assessments not performed or invalid. The CASS-I was available only following the start of cohorts 
+A1, A2 and B1. SD: standard deviation. 
+ 
+ 
+
+
+===PAGE 5===
+4 
+ 
+4. Safety and Tolerability 
+Adverse events of pyrexia, vomiting, seizure, and ataxia 
+The most common AEs were pyrexia, vomiting, seizure, and ataxia occurring within 10 days of dose 
+administration (see Table 2). Table S3 provides a listing of frequency, onset and duration by dose. 
+ 
+Dose 
+(mg)+ 
+ 
+#  Parti-
+cipants* 
+# Doses  
+Pyrexia AEs 
+Vomiting AEs 
+Seizure AEs 
+Ataxia AEs 
+Doses (%) 
+Onset / 
+Duration 
+(Days) 
+Doses (%) 
+Onset / 
+Duration 
+(Days) 
+Doses (%) 
+Onset /  
+Duration 
+(Days) 
+Doses (%) 
+Onset / 
+Duration 
+(Days) 
+Cohort A 
+60  
+19 
+34 
+4 (11.76) 
+2.8 / 2.5 
+8 (23.52) 
+2.6 / 1.6 
+2 (5.88) 
+3.5 / 2.5 
+1 (2.94) 
+0.0 / 2.0 
+90 
+8 
+15 
+9 (60.00) 
+1.0 / 4.0 
+7 (46.66) 
+2.1 / 2.1 
+0 (0.00) 
+NA 
+3 (20.00) 
+0.3 / 3.0 
+120 
+27 
+120 
+46 (38.34) 
+2.5 / 3.4 
+29 (24.16) 
+2.6 / 2.2 
+5 (4.16) 
+5.4 / 3.2 
+19 (15.84) 
+0.2 / 3.7 
+180 
+20 
+55 
+34 (61.82) 
+2.2 / 4.3 
+19 (32.72) 
+2.9 / 3.3 
+2 (3.64) 
+5.0 / 2.0 
+17 (30.90) 
+0.3 / 7.9 
+Cohort B 
+60 
+24 
+38 
+6 (15.78) 
+3.8 / 2.0 
+2 (5.26) 
+1.0 / 2.5 
+3 (7.90) 
+5.3 / 3.0 
+3 (7.90) 
+0.3 / 4.3 
+90 
+13 
+13 
+6 (46.16) 
+2.3 / 3.0 
+3 (23.08) 
+2.7 / 1.7 
+0 (0.00) 
+NA 
+1 (7.70) 
+0.0 / 14.0 
+120 
+28 
+93 
+52 (55.92) 
+1.9 / 4.0 
+11 (11.82) 
+2.8 / 2.2 
+4 (4.30) 
+2.6 / 2.8 
+11 (11.82) 
+0.5 / 5.0 
+180 
+12 
+39 
+25 (64.10) 
+1.4 / 5.0 
+5 (12.82) 
+1.4 / 2.0 
+5 (12.82) 
+3.7 / 2.5 
+7 (17.94) 
+0.1 / 19.6 
+Table S3. Adverse events of pyrexia, vomiting, seizure, and ataxia occurring within 10 days of 
+dose administration with 60, 90, 120, or 180 mg of rugonersen. NA: not applicable. +at Scheduled 
+Intervals Ranging from 4 to 24 Weeks. *Participant counts per dose do not sum up to the total of 61 due to 
+multiple doses per participant. 
+ 
+Laboratory findings in cerebrospinal fluid (CSF) 
+There were 4 AEs relevant to abnormalities of CSF cells reported in 6 participants. The AEs include CSF 
+white blood cell count increased (3 participants), CSF red blood cell count positive (1 participant), CSF 
+mononuclear cell count increased (1 participant) and CSF test abnormal (verbatim macrophages in CSF; 
+1 participant). CSF white blood cell count increased in 2 participants, CSF mononuclear count increased 
+and CSF test abnormal (verbatim macrophage in CSF) were deemed related to the study drug. The other 
+AEs were deemed related to LP or other causes. All the AEs were Grade 1. No accompanying 
+neurological changes were reported with the AEs of CSF abnormalities. No treatment was required, the 
+dose was not changed in response to the event and all events resolved. There were no clinically 
+significant changes or trends identified across the cohorts. 
+ 
+Vital signs and ECG 
+Abnormalities in vital signs were reported, however, there were no clinically significant changes or trends 
+identified across cohorts. One Grade 1 AE of hypotension was reported. The event resolved within 1 day 
+and was considered related to sedation/anesthesia. 
+Abnormalities in ECG parameters were reported, however, there were no clinically significant changes or 
+trends across the cohorts. Sinus tachycardia was reported in 1 participant on 5 separate occasions 
+(Grade 1 for all episodes), assessed as related to study drug and sedation/anesthesia. All events of sinus 
+tachycardia resolved. Across all cohorts, no high values for QTc according to Fridericia’s correction 
+formula were reported, whereas 15 high values were reported according to Bazett’s correction formula, 
+with none reported as clinically significant AEs. Confounding factors included administration of 
+concomitant anesthesia. Of note, Frederica’s correction formula is recommended for pediatric ECG 
+interpretation1. 
+ 
+ 
+
+
+===PAGE 6===
+5 
+ 
+5. Pharmacokinetics 
+Results 
+Plasma concentration (see Online Methods) of rugonersen post-dose at day 1 was dose-related, while 
+concentration at later time-points provided limited information. Rugonersen plasma concentrations 
+reached median Tmax between three- and six hours post-dose (Fig. S1a). Large variability was observed 
+as indicated by geometric coefficient of variation values of up to more than 300%. Measurable plasma 
+concentrations were observed at higher dose levels (≥30 mg) in the MAD at 4 weeks post-dose. 
+Concentrations in pre-dose samples in the LTE (16 weeks or more post dose) were mostly below the level 
+of quantification (114 out of 137 samples). 
+ 
+Rugonersen concentrations in the CSF samples (see Online Methods) poorly reflected the dose levels 
+administered and were of limited value to infer concentration in the target tissue. CSF samples were taken 
+at pre-dose at the dosing events and at different timepoints. Mean CSF concentrations across dose 
+groups showed only a relatively small increase of approximately 2-to-3-fold within a dose range of 15-fold 
+from 6 to 90 mg at samples taken 28 days post dose. Only sparse data were available for 120 and 180 mg 
+as samples got lost during shipment. CSF concentration in pre-dose samples in the LTE (12 weeks or 
+more post dose) were mostly below the level of quantification (>92% samples). 
+Discussion 
+Rugonersen plasma or CSF concentrations provided limited information on individual variability of drug 
+effects. Following IT administration, rugonersen peak plasma concentrations were observed within a few 
+hours. Plasma concentration was dose-related but highly variable. The data suggest relatively fast egress 
+of drug from the CNS to plasma. Drug concentration in the CSF was hypothesized to be a better proxy of 
+concentration in the brain compared to plasma concentration. However, there was only a shallow and 
+highly variable relationship between dose and CSF concentration. The data could not be used to infer 
+brain drug concentrations. CSF samples were taken 4 weeks or later following IT administration of 
+rugonersen. CSF samples taken at an earlier point may have produced more informative results. For other 
+ASOs, informative dose-proportional CSF concentrations have been observed2,3. We speculate that 
+rugonersen is distributed to brain within a few days, and the CSF drug concentrations observed mainly 
+reflects re-distribution of drug in the CNS, representing probably only a small fraction of rugonersen in 
+brain tissue. 
+ 
+ 
+Figure S1. Pharmacokinetics in plasma and CSF. a, Pharmacokinetics in plasma. Geometric means 
+and geometric coefficients of variation are shown. At doses of 60 mg and higher 6 hours collections were 
+added. All injections at the same dose were pooled. The number of available data per time-point were 5-6, 
+8-9, 14-17,4- 6, 9-42, 1-21, 24-61, and 15-36 for 6, 15, 30, 45, 60, 90, 120 and 180 mg, respectively. Two 
+0.0
+0.1
+0.2
+0.3
+6
+15
+30
+45
+60
+90
+15
+30
+60
+90
+0.4
+*
+Dose level (mg)
+Dose level (mg)
+B Cohort
+0
+8
+16
+24
+0.1
+1
+10
+100
+1000
+Time post-dose (h)
+Rugonersen plasma
+concentration (nM)
+180 mg
+120 mg
+90 mg
+60 mg
+45 mg
+30 mg
+15 mg
+6 mg
+Rugonersen CSF
+concentration (nM)
+0.0
+0.1
+0.2
+0.3
+0.4
+A Cohort
+a
+b
+
+
+===PAGE 7===
+6 
+ 
+participants who erroneously received 19.8 mg instead of 15 mg are excluded from this analysis. Data 
+from cut-off date February 2024. b, Pharmacokinetics in CSF. Mean and standard deviation of rugonersen 
+concentration in CSF at 28 days post last rugonersen dose. Data from MAD weeks 4 and 8 (N=5-8 for A 
+Cohorts and N=6 for B Cohorts). For CSF concentrations below the limit of quantification half of the 
+detection limit was imputed (0.0245 nM). *for each indicated dose group, one value was excluded as 
+outlier (outlier definition: at least 10-fold of the mean without outlier). Data cut-off date: February 2024. 
+ 
+6. EEG natural history data: developmental trajectory and analytical 
+properties 
+ 
+  
+Figure S2. AS EEG natural history data. a, EEG montage, 10 s EEG data example and associated 
+power spectrum for a 5 year old child with Del AS. b, Developmental trajectory of EEG -power derived 
+from NH data (see Online Methods). c, Composition of EEG -power per AS NH model. “Study/Device”, 
+“Age” and “Genotype” are fixed effects of the model, respectively. “Noise” is derived from the test-retest 
+reliability estimate for EEG -power (Table S6) and “Signal” is the fraction of the EEG power presumably 
+representing relevant information on the individual. d, Estimates of test-retest reliability / stability 
+quantified as ICC for different re-test intervals (see also Table S5). Error bars depict 90% confidence 
+intervals. 
+ 
+We used linear mixed-effects models to quantify the developmental trajectory of EEG endpoints (see 
+Online Methods, Fig. S2b). See Supplementary Table 21 as a separate file containing the age to EEG -
+power relationship for Del and Mut AS. Table S4 and Fig. S2c provide an overview of the different signal 
+components comprising EEG endpoints. Age explains approximately 40% of the variance of EEG -
+10.6%
+37.2%
+41.9%
+6.3%
+4.1%
+T6
+T5
+T4
+T3
+Pz
+P4
+P3
+Fp2
+Fp1
+Fz
+F8
+F7
+F4
+F3
+Cz
+O2
+O1
+C4
+C3
+0
+1
+2
+3
+4
+5
+Time (s)
+6
+7
+8
+9
+10
+Electrode
+200 V
+1
+0
+2k
+1k
+3k
+5k
+4k
+2
+16
+Frequency (Hz)
+Power ( V2/oct)
+32
+8
+4
+EEG   -Power
+Fp1 Fp2
+F7 F3 Fz F4 F8
+T7 C3 Cz C4 T8
+P7P3Pz P4P8
+O1 O2
+1
+3
+5
+7
+9
+11
+13
+15
+1day
+n=30
+2wks
+n=10
+1-6mo
+n=15
+1y
+n=19
+2-3y
+n=9
+Age (y)
+5
+10
+15
+20
+25
+30
+35
+40
+EEG -power (10∙log10(µV²/oct))
+Del AS, n=120 (169)
+Power Spectrum
+Artifact
+rejection
+Pre-pro
+cessing
+Feature
+extraction
+10-20 EEG Montage
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+EEG -power
+0
+20
+40
+60
+80
+100
+EEG -power
+Study/Device
+Genotype
+Age
+Signal
+Noise
+EEG -power
+Re-test time
+a
+EEG of Child withAngelman syndrome
+(~5 years, deletion genotype)
+a
+c
+d
+b
+Mut AS, n=26 (31)
+TD, n=58 (70)
+90% CI
+LS mean, 90% CI
+
+
+===PAGE 8===
+7 
+ 
+power, while the fraction that presumably represents relevant information on the individual AS phenotype 
+is generally lower but of similar magnitude. 
+ 
+-power 
+Peak -power 
+IPEG -power 
+IPEG relative -power 
+Total power 
+Relative -power 
+Offset 
+4.1 
+3.6 
+3.8 
+-0.6 
+4.9 
+0.5 
+Genotype 
+6.3 
+7.1 
+7.4 
+19.8 
+5.7 
+7.3 
+Age 
+41.9 
+40.9 
+44.3 
+42.7 
+41.9 
+23.5 
+Signal 
+37.1 
+36.8 
+34.1 
+28.9 
+34.6 
+46.3 
+Noise 
+10.5 
+11.3 
+11.1 
+11.0 
+12.9 
+17.7 
+Table S4. Composition of EEG endpoints per AS NH models. “Study/Device”, “Age” and “Genotype” 
+are the co-variates of the model, respectively (see Online Methods). “Noise” is derived from the test-retest 
+reliability estimates of EEG endpoints (Table S6) and “Signal” is the fraction of the EEG power 
+presumably representing relevant information on an individual. 
+ 
+We used intra-class correlation (ICC) coefficients to quantify the test-retest reliability of EEG metrics4. The 
+available EEG natural history data has varying lags between longitudinal visits, ranging from overnight to 
+several years. To quantify test-retest reliability, retest intervals should be short. At the same time, we 
+aimed at including as much data as possible. We therefore computed the ICC for EEG -power for 
+different lags between visits (Table S5, Fig. S2d). For intervals of up to 6 months, the values were 
+between 0.68 and 0.81 with a weighted average of 0.78 (Table S6), which is considered excellent4 and 
+was used for further analyses. 
+ 
+TRT Interval 
+ICC 
+ICC 5% 
+ICC 95% 
+N 
+Overnight 
+0.79 
+0.57 
+0.92 
+23 
+2 weeks 
+0.68 
+0.23 
+0.91 
+10 
+1 to 6 months 
+0.81 
+0.60 
+0.91 
+12 
+0.5 to 1.5 years 
+0.65 
+0.25 
+0.85 
+18 
+1.5 to 3.5 years 
+0.09 
+0.00 
+0.48 
+9 
+Table S5. Test-retest (TRT) reliability of EEG -power quantified as intra-class correlation 
+coefficient (ICC) for different retest intervals. 5% and 95% represent the lower and upper end of 90% 
+confidence intervals. N is the number of data-pairs used to derive the ICC. 
+ 
+We derived ICCs also for other EEG endpoints (see Online Methods), which yield similar ICC results, but 
+were numerically smaller than EEG -power (Table S6). Overall, the test-retest reliabilities for EEG 
+endpoints in AS were good to excellent. 
+ 
+EEG endpoint 
+ICC 
+ICC 5% 
+ICC 95% 
+-power 
+0.78 
+0.51 
+0.91 
+Peak -power 
+0.76 
+0.44 
+0.93 
+IPEG -power 
+0.75 
+0.51 
+0.91 
+IPEG relative -power 
+0.72 
+0.46 
+0.86 
+Total power 
+0.73 
+0.44 
+0.89 
+Relative -power 
+0.72 
+0.41 
+0.91 
+Table S6. TRT reliability of EEG -power quantified as ICC for retest intervals between 1 day and ½ 
+year for different EEG endpoints. 5% and 95% represent the lower and upper end of 90% confidence 
+intervals. The number of data-pairs used to derive the ICCs was n=45. 
+ 
+
+
+===PAGE 9===
+8 
+ 
+7. Clinical scales NH data: dev. trajectories and analytical properties 
+ 
+Figure S3. BSID and VABS developmental trajectories derived from AS NH data. a, LS means BSID-
+III growth score values (GSVs). TD=Typically Development (median scores and quartiles from BSID-III 
+normative sample according to the manual). Bands show bootstrapped 95% confidence intervals. b, LS 
+means VABS-3 GSV. Bands show bootstrapped 95% confidence intervals.  
+nDel=249(671)
+nMut=39(89)
+nDel=249(668)
+nMut=39(89)
+1
+3
+5
+7
+9
+11
+13
+Age (y)
+15
+350
+400
+450
+500
+550
+600
+650
+1
+3
+5
+7
+9
+11
+13
+Age (y)
+15
+350
+400
+450
+500
+550
+600
+nDel=249(669)
+nMut=40(90)
+1
+3
+5
+7
+9
+11
+13
+Age (y)
+15
+350
+400
+450
+500
+550
+600
+650
+nDel=250(669)
+nMut=42(97)
+1
+3
+5
+7
+9
+11
+13
+Age (y)
+15
+400
+450
+500
+550
+600
+650
+nDel=248(670)
+nMut=39(89)
+1
+3
+5
+7
+9
+11
+13
+Age (y)
+15
+350
+400
+450
+500
+550
+600
+650
+Del-AS
+Mut-AS
+LS means
+TD median
+95% CI
+TD Quartiles
+a
+nDel=163(232)
+nMut=44(79)
+1
+3
+5
+7
+9
+11
+13
+Age (y)
+15
+20
+40
+60
+80
+100
+120
+nDel=163(232)
+nMut=44(79)
+1
+3
+5
+7
+9
+11
+13
+Age (y)
+15
+50
+100
+150
+nDel=163(231)
+nMut =44(78)
+1
+3
+5
+7
+9
+11
+13
+Age (y)
+15
+40
+60
+80
+100
+120
+140
+160
+nDel=163(231)
+nMut =44(78)
+1
+3
+5
+7
+9
+11
+13
+Age (y)
+15
+50
+100
+150
+nDel=163(232)
+nMut =44(49)
+1
+3
+5
+7
+9
+11
+13
+Age (y)
+15
+0
+50
+100
+150
+b
+Del-AS
+Mut-AS
+95% CI
+LS means
+
+
+===PAGE 10===
+9 
+ 
+ 
+We used linear mixed-effects models to quantify the developmental trajectory of clinical scores (see 
+Online Methods, Fig. S3). See Supplementary Table 22 as a separate file containing look-up tables 
+containing the age – clinical scales relationships for Del and Mut AS. For some scales (DLS personal, 
+Expressive Communication and Fine Motor scales), the cubic fit with the limited number of datapoints for 
+Mut AS led to strong transients for the youngest ages. These transients likely do not reflect the true 
+developmental trajectories, and more work is needed to understand the youngest (and older) age range in 
+AS. For this publication, where the youngest individual with Mut AS was older than 2.5 years at baseline, 
+and therefore, the models should be fit for purpose.  
+ 
+Table S7 details the components comprising clinical scores according to the models. Furthermore, we 
+quantified the test-retest reliability as ICC4. The retest intervals ranged between 1 month and 14 months 
+and were mostly around 1 year, which is too long for a proper retest interval. The values should therefore 
+be considered as lower bounds. Values ranged between 0.6 and 0.75, which is generally considered to be 
+good4.  
+ 
+Scale 
+ICC 
+5% 
+95% 
+nICC 
+PCovar (%) 
+PSignal (%) 
+PNoise (%) 
+B 
+S 
+I 
+D 
+Cognitive 
+0.75 
+0.67 
+0.81 
+153 
+59.8 
+30.2 
+10.0 
+Rec Comm 
+0.68 
+0.59 
+0.75 
+151 
+45.6 
+36.8 
+17.6 
+Expr Comm 
+0.67 
+0.54 
+0.76 
+153 
+35.5 
+42.9 
+21.5 
+Fine Motor 
+0.75 
+0.66 
+0.81 
+151 
+50.4 
+37.2 
+12.5 
+Gross Motor 
+0.80 
+0.74 
+0.85 
+151 
+57.6 
+33.8 
+8.6 
+V 
+A 
+B 
+S 
+DLS Personal 
+0.81 
+0.75 
+0.89 
+44 
+42.1 
+47.1 
+10.8 
+Rec Comm 
+0.75 
+0.61 
+0.85 
+44 
+41.7 
+43.7 
+14.6 
+Expr Comm 
+0.60 
+0.42 
+0.76 
+44 
+32.1 
+40.7 
+27.1 
+Fine Motor 
+0.72 
+0.56 
+0.83 
+43 
+55.2 
+32.4 
+12.4 
+Gross Motor 
+0.79 
+0.57 
+0.91 
+43 
+48.3 
+40.9 
+10.8 
+Table S7. Analytical properties of clinical scales derived from AS NH data. ICC: intra-class 
+correlation coefficient (retest intervals, 1-14 months, mostly around 1 year) with 5% and 95% representing 
+the lower and upper end of 90% confidence intervals and nICC the number of pairs of datapoints to derive 
+the ICCs. PCovar, PSignal and PNoise are the fraction of the variance (%) of the clinical scale data according to 
+the natural history model (see Online Methods; Covar: covariates of the model including dataset, age and 
+genotype; noise is estimated using the ICCs).  
+ 
+8. Estimates of clinically important group differences 
+ 
+In the main text we report changes in clinical scores and compare those to the NH-reference. Besides 
+problems associated with an external control arm not accounting for effects of an investigational clinical 
+trial (see Discussion), the question remains whether a change of a clinical score is clinically meaningful5,6. 
+Since there is no published information on what changes on BSID and VABS would be clinically 
+meaningful in AS, we derived distribution-based estimates from the NH data to provide context for our 
+results. Since there are insufficient data for anchor-based methods, we focused on estimates based on 
+the distribution and reliability of scores.  
+ 
+In brief, literature suggests 0.5*SD7 and the standard error of the measurement (SEM)8 are often in line 
+with individual meaningfulness thresholds, i.e. clinically meaningful absolute change at the individual level. 
+Generally, clinically important group differences, i.e. relative difference between groups that indicate a 
+clinically relevant benefit, are lower than individual meaningfulness thresholds and some authors argue 
+that lower minimal meaningful thresholds (0.2*SD)9,10 may apply. We derived estimates for all three 
+
+
+===PAGE 11===
+10 
+ 
+measures for all 10 clinical scores used in our analyses, while correcting for all covariates as described in 
+the Online Methods (Table S8). We show 0.2*SD minimal clinically important group difference estimates 
+on top of the NH reference in Figs. 3 and 4 (red dotted lines). Generally, the changes observed in the 
+MAD and LTE are of similar magnitude as the estimated minimal clinically important group difference in 
+the MAD (Fig. 3) and go beyond in the LTE (Fig. 4). 
+ 
+Our considerations regarding clinically important group difference have clear limitations. Generally, 
+anchor-based methods to derive clinically meaningful group differences are preferred over distribution-
+based estimates. Beyond the scope of this publication, clinically meaningful changes at an individual level 
+are of great importance and distinct to group-based comparisons.  
+ 
+Scale 
+SD 
+nSubj 
+nData 
+SD·0.2 
+SEM 
+SD·0.5 
+B 
+S 
+I 
+D 
+Cognitive 
+24.89 
+792 
+271 
+4.98 
+12.40 
+12.45 
+Rec Comm 
+38.56 
+792 
+272 
+7.71 
+21.92 
+19.28 
+Expr Comm 
+28.93 
+792 
+272 
+5.79 
+16.72 
+14.47 
+Fine Motor 
+31.32 
+792 
+274 
+6.26 
+15.70 
+15.66 
+Gross Motor 
+28.92 
+792 
+276 
+5.78 
+13.02 
+14.46 
+V 
+A 
+B 
+S 
+DLS Personal 
+12.72 
+311 
+207 
+2.54 
+5.49 
+6.36 
+Rec Comm 
+15.05 
+311 
+207 
+3.01 
+7.53 
+7.52 
+Expr Comm 
+19.60 
+311 
+207 
+3.92 
+12.39 
+9.80 
+Fine Motor 
+12.66 
+311 
+207 
+2.53 
+6.66 
+6.33 
+Gross Motor 
+19.65 
+311 
+207 
+3.93 
+8.98 
+9.83 
+Table S8. Distribution based estimates of clinically important group difference. SD: standard 
+deviation of the clinical scale scores (age range 1-16 years) corrected for co-variates (see Online 
+Methods). nSubj and nData are the number of participants and number of datapoints used to derive the SD. 
+SD*0.2 is the estimate of a minimal clinically important group difference. SD*0.5 is often used as an 
+individual meaningfulness threshold. SEM: Standard error or the measurement, i.e. sqrt(1-ICC)*SD. 
+ 
+9. Additional exploratory clinical scales 
+In terms of exploratory clinical scales, the focus of this publication is on BSID, VABS and SAS-
+CGI (see Introduction). The BSID and VABS are of great importance as outcome measures in 
+AS and have substantial NH data allowing to model a NH reference, while the SAS-CGI was the 
+main clinician-rated instrument in this study. In addition to the BSID, VABS and SAS-CGI, other 
+exploratory clinical scales were assessed in this study. While it is beyond the scope of this 
+publication to report on these scales in detail (none of those has sufficient NH data to derive a 
+NH reference), we report baseline values of the FMS, ORCA, ABC-2C, SNAKE and CASS-I to 
+further characterize the study population and to provide data on these scales to the community 
+(Table S2). In the following we provide a brief description of each of these scales. 
+Functional Mobility Scale (FMS) 
+The FMS11 measures the functional mobility over three distinct distances, chosen to represent 
+mobility in the home, at school and in the wider community. For each of three distances (5m, 
+50m, and 500m), a rating of 1-6 is assigned depending on the assistance required. 1 = uses 
+wheelchair, 2 = uses a walker or frame, 3 = uses crutches, 4 = uses sticks (one or two), 5 = 
+independent on level surfaces, 6 = independent on all surfaces, “C” = crawling (for mobility at 
+home), “N” = does not apply [e.g., child does not complete the distance (500m)]. Higher total 
+scores indicate better functional mobility. 
+
+
+===PAGE 12===
+11 
+ 
+Schlaffragebogen für Kinder mit Neurologischen und Anderen Komplexen 
+Erkrankungen (SNAKE) 
+The SNAKE questionnaire12 is a proxy observation instrument for children and adolescents with 
+neurological and other complex illnesses. For the SNAKE, 5 scales (SNAKE component VI) can 
+be derived that evaluate symptoms and consequences of sleep disturbances. A total score can 
+be calculated for each of the individual scales: Scale 1 (Disturbances going to sleep), scale 2 
+(Disturbances remaining asleep), scale 3 (Arousal disorders), scale 4 (Daytime sleepiness), 
+scale 5 (Daytime behavior disorders). A higher SNAKE score on a particular scale corresponds 
+to more problematic sleep or sleep-related behavior in the context of a normative German 
+sample. 
+Observer-Reported Communication Ability (ORCA) 
+The ORCA instrument13 has been specifically developed with the AS community, to measure 
+communication abilities of most relevance to patients with AS. The measure consists of 84 total 
+questions with 70 behavioral items within 22 concepts/functions (e.g., refuse object, make 
+choices) that cover expressive, receptive and pragmatic areas of communication, alongside a 
+set of 14 descriptive items that capture important information about the individual’s unique ways 
+of communicating (e.g. modalities the individual uses, their current vocabulary, and language 
+complexity). The questionnaire is designed to be completed by the primary caregiver who is 
+most familiar with the individual and the ways they communicate. 
+Aberrant Behavior Checklist Second Edition – Community Version (ABC-2C) 
+The ABC-2C is an updated, empirically-derived, validated 58-item caregiver completed rating 
+scale that measures the severity of a range of maladaptive behaviors commonly observed in 
+children, adolescents, and adults with intellectual and developmental disabilities14. The ABC-2C 
+assesses symptoms across 5 domains: irritability, social withdrawal, stereotypic behavior, 
+hyperactive/noncompliance, and inappropriate speech. Total raw score is the sum of item scores 
+within each domain. 
+Caregiver-reported Angelman Syndrome Scale for Impact (CASS-I) 
+The CASS-I15 is a nine domain, caregiver-rated measure, assessing the caregiver’s impression 
+of AS. This scale is the caregiver-rated companion instrument to the SAS-CGI-S (see Online 
+Methods). The CASS-I assesses eight domains considered relevant to AS: seizures, sleep, 
+disruptive behavior, non-verbal and verbal expressive communication, fine motor skills, gross 
+motor skills, cognition, and self-care. The ninth domain is a score for overall severity. For each 
+domain, caregivers rate the impact using a 5-point scale, ranging from “not at all difficult” (1) to 
+“very difficult” (5). 
+ 
+ 
+
+
+===PAGE 13===
+12 
+ 
+10. 
+Relationship between BSID and EEG 𝛿-power 
+ 
+To provide more context for the observed treatment-related changes in EEG 𝛿-power, we compared the 
+changes to the relationship between EEG 𝛿-power and clinical symptoms in AS NH data. Two prior 
+publications report that EEG 𝛿-power is related to symptom severity as measured by the BSID16,17. We 
+chose to re-derive the relationship here for all 5 BSID scales, since prior work was restricted to the 
+cognitive domain of the BSID and used relative 𝛿-power17 or did not report slopes16, which we need for our 
+considerations below. Furthermore, additional NH data became available since the publication of the prior 
+reports, which increases the robustness of the estimates derived. For the VABS-3 there was not sufficient 
+data aligned with EEG recordings available to perform such analyses (a prior report on the relationship 
+between the VABS16 and EEG 𝛿-power was based on VABS-II). 
+ 
+For 4 of 5 BSID scales, we found a significant negative correlation with EEG 𝛿-power, i.e. the expected 
+directionality (p<0.05; Table S9). Both EEG 𝛿-power and clinical scales were corrected for covariates 
+before correlation analysis, avoiding trivial correlations related to both measures changing with age. 
+Clinical assessments and EEG measurements were within ±7 days. For the clinical scales with a 
+significant relationship, we then derived the slope between EEG 𝛿-power and clinical scores. Furthermore, 
+we derived estimates of correlation values corrected for the test-retest reliability of EEG and BSID      
+(rSNR-correction; test-retest: Tables S5, S7)18,19. Correlation values were small to medium according to 
+Cohen’s definition20. 
+ 
+In the analysis of the MAD data, we found average changes in EEG 𝛿-power of -2.3dB below the NH 
+reference on day 100 (Fig. 2a; Tables S10, S11). Across different ages and cumulative doses, the model 
+predicted changes as high as -6dB for the older age group (5-12 years) and high cumulative doses (320 
+mg) (Fig. 2c; Table S12). Using the NH data derived slope between EEG 𝛿-power and BSID, we 
+converted EEG 𝛿-power changes observed within this study to changes in BSID scores (Table S9). The 
+magnitude of these estimates for the largest EEG 𝛿-power changes in the MAD is above what we 
+estimated to be a minimal clinically important group difference (0.2*SD; Table S8 / last column of Table 
+S9). In the LTE Q16w-120mg dose regimen, changes in EEG 𝛿-power were on average -2.3 dB (Table 
+S15). Converting these values using the NH slope reveals values smaller than the minimal clinically 
+important group difference. Of note, these values are taken at the trough level. 
+ 
+The above consideration, using the NH relationship between EEG 𝛿-power and BSID scores as a context 
+for treatment-related changes in this study, has clear limitations. First, the dynamics and magnitude of the 
+relationship may be different in a treatment context than in the natural history. Second, in the treatment 
+context we investigate changes within treated individuals, i.e. longitudinal, while the NH relationship is 
+cross-sectional. Furthermore, in the context of disease modifying treatments neuronal activity as 
+measured with the EEG may fundamentally change (e.g. an alpha-peak may emerge), which may not be 
+captured by EEG 𝛿-power in the NH of the disorder. 
+ 
+BSID Scale 
+r 
+5% 
+95% 
+p 
+rSNR-Corr 
+n 
+slope 
+-2.3dB 
+-4dB 
+-6dB 
+SD·0.2 
+Cognitive 
+-0.24 
+-0.38 
+-0.08 
+0.008 
+-0.31 
+104 
+-1.14 
+2.63 
+4.57 
+6.85 
+4.98 
+Rec Comm 
+-0.16 
+-0.31 
+0.00 
+0.050 
+-0.22 
+105 
+-1.18 
+2.72 
+4.73 
+7.10 
+7.71 
+Expr Comm 
+-0.05 
+-0.21 
+0.11 
+0.309 
+-0.07 
+106 
+- 
+- 
+- 
+- 
+- 
+Fine Motor 
+-0.20 
+-0.35 
+-0.04 
+0.021 
+-0.26 
+107 
+-1.18 
+2.72 
+4.72 
+7.09 
+6.26 
+Gross Motor 
+-0.30 
+-0.44 
+-0.15 
+0.001 
+-0.38 
+108 
+-1.68 
+3.87 
+6.73 
+10.09 
+5.78 
+Table S9. Correlation between EEG -power and BSID scores. Both, EEG -power and BSID scores, 
+are corrected for covariates (see Online Methods; Covariates: dataset, age, genotype). EEG and clinical 
+data were recorded within ±7 days of each other. r is the Pearson correlation coefficient and 5% and 95% 
+
+
+===PAGE 14===
+13 
+ 
+the upper and lower bounds of 90% confidence intervals. p is a p-value for a one-sided test for correlation 
+coefficients smaller than zero (hypothesis: negative correlation). To derive the degrees of freedom, we 
+used the number of participants (n), not the number of datapoints. rSNR-corr, are the correlation coefficients 
+corrected for the test-retest reliability of EEG and BSID (Tables S6, S8)18,19. The slope is the slope of a 
+linear model (Scale ~ 1 + EEG). -2.3dB, -4dB and -6dB show the predicted change in clinical scores for 
+EEG -power changes of -2.3, -4 and -6 dB, respectively, based on slope of the NH relationship. SD*0.2 is 
+the estimate of a minimal clinically important group difference, reproduced from Table S9. Values of slope 
+and predicted change are not derived for BSID Expressive Communication, since the relationship had a p-
+value >0.05. 
+ 
+11. 
+Accounting for the effect of maturation 
+ 
+ 
+Figure S4. Illustration of how maturation, as predicted from NH data, was accounted for in the analysis of 
+EEG endpoints and clinical scores (see Online Methods). 
+ 
+12. 
+EEG in MAD 
+ 
+Visit 
+Estimate 
+SD 
+SE 
+±90% CI 
+p-value 
+dof 
+Decr. 
+NH 
+Decr. 
+NH HD 
+Decr. 
+BL 
+nTANGELO 
+Day 28 
+-0.668 
+2.019 
+0.412 
+0.706 
+0.059 
+24.1 
+65.5% 
+ 
+69.0% 
+29 
+Day 55 
+-1.421 
+3.280 
+0.511 
+0.860 
+0.004 
+41.2 
+67.4% 
+ 
+67.4% 
+46 
+Day 70 
+-0.739 
+3.500 
+0.781 
+1.351 
+0.178 
+20.1 
+52.0% 
+65.0% 
+56.0% 
+25 
+Day 100 
+-2.311 
+2.774 
+0.429 
+0.722 
+1.64·10-6 
+41.8 
+78.3% 
+96.4% 
+82.6% 
+46 
+Day 140 
+-2.250 
+2.917 
+0.664 
+1.149 
+0.002 
+19.3 
+79.2% 
+87.5% 
+91.7% 
+24 
+Day 224 
+-1.034 
+3.031 
+0.457 
+0.768 
+0.014 
+44.0 
+58.7% 
+78.6% 
+67.4% 
+46 
+ 
+Model: 𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝐶𝑢𝑚𝐷𝑜𝑠𝑒 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛(⊥𝐶𝑢𝑚𝐷𝑜𝑠𝑒) + 𝐿𝑜𝑔𝐴𝑔𝑒(⊥𝐶𝑢𝑚𝐷𝑜𝑠𝑒) 
+Table S10. MAD EEG -power linear model results for all timepoints. Estimate: LS means for the 
+intercept. SD: standard deviation. SE: standard error of the mean. ±90% CI: ± these values around the 
+estimates provide 90% confidence intervals. P-value: p-value for one-tailed t-test for < NH reference. dof: 
+combined degrees of freedom for TANGELO data and the NH model (is dominated by the TANGELO 
+number of observations since smaller than the NH degrees of freedom). Decr. (Decrease): percentage of 
+participants where the age- and baseline corrected EEG delta-band power was below the baseline (BL) or 
+NH prediction. HD: only for participants receiving high doses (cumulative dose > 200 mg). NTANGELO: The 
+number of TANGELO EEG datapoints (matched baseline datapoints). 
+ 
+ 
+Age at
+baseline
+Age at
+time T
+Parameter of interest
+0
+AS NH developmental trajectory
+Measured
+Predicted from NH model
+yDNH
+Bln
+yBln
+yT
+yDNH
+T
+
+
+===PAGE 15===
+14 
+ 
+Covariates 
+Estimate 
+SE 
+tStat 
+p-value 
+1 (𝐼𝑛𝑡𝑒𝑟𝑐𝑒𝑝𝑡) 
+-2.311 
+0.427 
+-5.41 
+2.79·10-6 
+𝐶𝑢𝑚𝐷𝑜𝑠𝑒 
+-0.019 
+0.0041 
+-4.72 
+2.59·10-5 
+𝑦∆𝑁𝐻
+𝐵𝑙𝑛(⊥𝐶𝑢𝑚𝐷𝑜𝑠𝑒) 
+0.583 
+0.106 
+5.52 
+1.95·10-6 
+𝐿𝑜𝑔𝐴𝑔𝑒(⊥𝐶𝑢𝑚𝐷𝑜𝑠𝑒) 
+-1.484 
+0.547 
+-2.71 
+0.0096 
+Model: 𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝐶𝑢𝑚𝐷𝑜𝑠𝑒 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛(⊥𝐶𝑢𝑚𝐷𝑜𝑠𝑒) + 𝐿𝑜𝑔𝐴𝑔𝑒(⊥𝐶𝑢𝑚𝐷𝑜𝑠𝑒) 
+Number of observations: 46; Error degrees of freedom: 42; Loglikelihood: -112.11 
+Mean of log2(age): 2.41, corresponding to 5.3 years; Mean of cumulative dose: 220 mg 
+Table S11. MAD EEG -power linear model fit for day 100. Estimate: LS means estimates for all 
+covariates. SE: standard error. tStat: t-statistics. p-value: p-values for the significance of covariates in the 
+model, two-tailed t-test. 
+ 
+Cumulative Dose 
+Age (y) 
+Estimate (dB) 
+±90% CI (dB) 
+Estimate (%) 
+p-value 
+360 mg 
+3.2 
+-3.95 
+1.38 
+40.3% 
+1.53·10-6 
+5.3 
+-5.03 
+1.21 
+31.4% 
+2.27·10-12 
+8.5 
+-6.03 
+1.36 
+24.9% 
+7.24·10-14 
+240 mg 
+3.2 
+-1.61 
+0.99 
+69.0% 
+6.36·10-3 
+5.3 
+-2.70 
+0.73 
+53.7% 
+5.56·10-10 
+8.5 
+-3.69 
+0.96 
+42.8% 
+8.45·10-11 
+Table S12. MAD EEG -power linear model predictions for day 100 for different ages and 
+cumulative doses. Estimate: prediction for intercept (model see Table S11). The estimate in dB can be 
+converted to % using the relationship: dB = 10·log10(EEGD100/EEGBln). Cumulative MAD doses of 240g (2 
+x 120 mg) and 320 mg (2 x 180 mg) and for mean log age of all participants (5.3 years), A cohorts (8.5 
+years) and B cohorts (3.2 years). ±90% CI: ± these values around the estimates provide 90% confidence 
+intervals. P-value: p-value for two-tailed t-test. 
+ 
+Sensitivity analyses 
+By design 𝐶𝑢𝑚𝐷𝑜𝑠𝑒 and 𝐿𝑜𝑔𝐴𝑔𝑒 are correlated. For this reason, we orthogonalized 𝐿𝑜𝑔𝐴𝑔𝑒 with respect 
+to 𝐶𝑢𝑚𝐷𝑜𝑠𝑒 in the main analysis (Online Methods). However, it is not possible to fully disentangle those 
+two. We therefore performed additional control analyses to further evaluate the robustness of our results. 
+ 
+No orthogonalization of 𝐿𝑜𝑔𝐴𝑔𝑒 with respect to 𝐶𝑢𝑚𝐷𝑜𝑠𝑒 (Table S13). 
+ 
+Covariates 
+Estimate 
+SE 
+tStat 
+p-value 
+1 (𝐼𝑛𝑡𝑒𝑟𝑐𝑒𝑝𝑡) 
+-2.311 
+0.427 
+-5.41 
+2.79·10-5 
+𝐶𝑢𝑚𝐷𝑜𝑠𝑒 
+-0.016 
+0.0043 
+-3.83 
+4.17·10-4 
+LogAge 
+-1.038 
+0.540 
+-1.92 
+0.0612 
+𝑦∆𝑁𝐻
+𝐵𝑙𝑛(⊥𝐶𝑢𝑚𝐷𝑜𝑠𝑒, ⊥𝐿𝑜𝑔𝐴𝑔𝑒) 
+0.584 
+0.106 
+5.52 
+1.95·10-6 
+Model: 𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝐶𝑢𝑚𝐷𝑜𝑠𝑒 + 𝐿𝑜𝑔𝐴𝑔𝑒+ 𝑦∆𝑁𝐻
+𝐵𝑙𝑛(⊥𝐶𝑢𝑚𝐷𝑜𝑠𝑒, ⊥𝐿𝑜𝑔𝐴𝑔𝑒) 
+Table S13. MAD EEG -power linear model fit of for day 100 for alternative model 1. Estimate: LS 
+means for the covariates. SE: standard error. tStat: t-statistics. p-value: p-values for the significance of 
+covariates in the model, two-tailed t-test. 
+ 
+ 
+ 
+
+
+===PAGE 16===
+15 
+ 
+Swap places in terms of orthogonalization 𝐶𝑢𝑚𝐷𝑜𝑠𝑒 <-> 𝐿𝑜𝑔𝐴𝑔𝑒 (Table S14) 
+ 
+Covariates 
+Estimate 
+SE 
+tStat 
+p-value 
+1 (𝐼𝑛𝑡𝑒𝑟𝑐𝑒𝑝𝑡) 
+-2.311 
+0.427 
+-5.41 
+2.79·10-5 
+𝐿𝑜𝑔𝐴𝑔𝑒 
+-1.852 
+0.521 
+-3.03 
+0.0041 
+𝐶𝑢𝑚𝐷𝑜𝑠𝑒(⊥𝐿𝑜𝑔𝐴𝑔𝑒) 
+-0.0092 
+0.0045 
+-2.04 
+0.0477 
+𝑦∆𝑁𝐻
+𝐵𝑙𝑛(⊥𝐿𝑜𝑔𝐴𝑔𝑒) 
+0.584 
+0.106 
+5.52 
+1.95·10-6 
+Model: 𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝐶𝑢𝑚𝐷𝑜𝑠𝑒(⊥𝐶𝑢𝑚𝐷𝑜𝑠𝑒) + 𝐿𝑜𝑔𝐴𝑔𝑒+ 𝑦∆𝑁𝐻
+𝐵𝑙𝑛(⊥𝐿𝑜𝑔𝐴𝑔𝑒) 
+Table S14. MAD EEG -power linear model fit of for day 100 for alternative model 2. Estimate: LS 
+means for the covariates. SE: standard error. tStat: t-statistics. p-value: p-values for the significance of 
+covariates in the model, two-tailed t-test. 
+ 
+We found a significant effect of 𝐶𝑢𝑚𝐷𝑜𝑠𝑒 for all three variants, further supporting a relationship between 
+𝐶𝑢𝑚𝐷𝑜𝑠𝑒 and the change in EEG -power. 
+ 
+To test if the individuals with different genotypes had a different EEG response, we compared a model 
+including genotype as a factor (Del, Mut) to the main model for MAD day 100. Adding genotype as a 
+categorical factor did not improve the main model (Loglikelihood ratio: 0.836, dof = 1, p = 0.361). Of note, 
+the statistical power for the genotype comparison is small, given the low number of individuals with Mut 
+AS (n=7). Similarly, we tested for effects of sex. Adding sex as a categorical factor revealed a trend for an 
+improve over the main model with females showing a stronger EEG response (Loglikelihood ratio: 2.738, 
+dof = 1, p = 0.098, coefficient, i.e. offset for male: 1.34dB). Of note, this study did not stratify for sex (see 
+also Table 1). 
+Alternative EEG metrics 
+In the literature, different definitions of EEG -frequency range exist. We followed our prior work and used 
+2 – 4 Hz, while other authors use different definitions21. To allow for better comparison with other work, we 
+performed the MAD EEG analyses for other EEG endpoints (Fig. S5a, see Online Methods for definitions). 
+We investigated -power defined as 1.5 – 6 Hz, following the definition of the International Pharmaco-EEG 
+Society (IPEG; referred to EEG IPEG -power) and broadband EEG power (1 – 30 Hz, referred to EEG 
+total power). We also performed an analysis of EEG -peak power (spectral power at 2.8 Hz following 
+Frohlich et al. 201921; referred to as EEG -peak power). Some authors used relative EEG -power 
+instead of absolute EEG -power17,22. We therefore performed analyses of relative power for both -
+frequency range definitions. All metrics showed qualitatively similar effects, i.e. partial normalization 
+(decrease). Absolute power seemed to be more sensitive than relative power to rugonersen-related 
+changes. 
+ 
+For analysis, we used a 10/20 EEG montage with 19 electrodes and re-referenced data to average 
+reference (Online Methods). For some applications fewer electrodes may be preferred, e.g. bi-polar 
+derivatives between a limited set of electrodes to reduce complexity and burden. To provide some 
+information on other electrode configurations, we performed the main MAD EEG -power analysis for day 
+100 for all possible bi-polar derivatives of the 10/20 EEG electrodes (Fig. S5b). Effects were most 
+pronounced for fronto-central electrode combinations and least pronounced for occipito-parietal electrode 
+combinations. 
+ 
+
+
+===PAGE 17===
+16 
+ 
+ 
+Figure S5. Additional MAD EEG analyses. a, LS means changes from baseline for relative EEG -
+power (2-4 Hz), total EEG power, peak EEG -power (2.8 Hz, as in Frohlich et al., 2019), and absolute 
+and relative IPEG EEG -power (defined as 1.5 – 6 Hz). b, LS means EEG 𝛿-power changes on MAD day 
+100 for bipolar derivatives (effect size and dB change, relative to NH reference). EEG montage. 
+ 
+ 
+-3
+-2
+-1
+0
+Day 55
+(n=46)
+Bln
+Day 224
+(n=46)
+Day 100
+(n=46)
+a
+NH Reference
+MAD Dose
+90% CI
+TANGELO
+Fp1
+F7
+F3
+T7
+C3
+P7
+P3
+O1
+Fz
+Cz
+Pz
+O2
+P4
+P8
+C4
+T8
+F4
+F8
+Fp2
+Fp1
+F7
+F3
+T7
+C3
+P7
+P3
+O1
+Fz
+Cz
+Pz
+O2
+P4
+P8
+C4
+T8
+F4
+F8
+Fp2
+Fp1
+F7
+F3
+T7
+C3
+P7
+P3
+O1
+Fz
+Cz
+Pz
+O2
+P4
+P8
+C4
+T8
+F4
+F8
+Fp2
+Fp1
+F7
+F3
+T7
+C3
+P7
+P3
+O1
+Fz
+Cz
+Pz
+O2
+P4
+P8
+C4
+T8
+F4
+F8
+Fp2
+-3
+-2
+-1
+0
+EEG total power
+change from baseline (dB)
+Day 55
+(n=46)
+Bln
+Day 224
+(n=46)
+Day 100
+(n=46)
+-3
+-2
+-1
+0
+Day 55
+(n=46)
+Bln
+Day 224
+(n=46)
+Day 100
+(n=46)
+-.10
+-.02
+-.04
+-.06
+-.08
+0
+.02
+b
+Day 55
+(n=46)
+Bln
+Day 224
+(n=46)
+Day 100
+(n=46)
+-3
+-2
+-1
+0
+Day 55
+(n=46)
+Bln
+Day 224
+(n=46)
+Day 100
+(n=46)
+.01
+-.01
+-.02
+-.03
+-.04
+-.05
+-.06
+0
+Day 55
+(n=46)
+Bln
+Day 224
+(n=46)
+Day 100
+(n=46)
+Fp1 Fp2
+F7 F3 Fz F4 F8
+T7 C3 Cz C4 T8
+P7P3Pz P4P8
+O1 O2
+-1
+-0.5
+0
+0.5
+1
+Effect size (z)
+-5
+0
+5
+Day 100 (n=46)
+Day 100 (n=46)
+EEG -power
+change from baseline (dB)
+Relative EEG -power
+change from baseline (1)
+ IPEG EEG -power
+change from baseline (dB)
+EEG -peak power
+change from baseline (dB)
+IPGE Relative EEG -power
+change from baseline (1)
+EEG -power
+chng from bln (dB)
+
+
+===PAGE 18===
+17 
+ 
+13. 
+EEG in LTE 
+ 
+Model: 𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛+ 𝐿𝑜𝑔𝐴𝑔𝑒 
+ 
+Q16w-120mg 
+Visit 
+Estimate 
+SD 
+SE 
+±90% CI 
+p-value 
+dof 
+Decrease NH 
+Decrease BL 
+nTANGELO 
+LTE 1 
+-2.31 
+3.06 
+0.63 
+1.08 
+0.00064 
+23.6 
+82.6% 
+91.3% 
+23 
+LTE 2 
+-2.22 
+3.96 
+0.83 
+1.43 
+0.00711 
+22.5 
+73.9% 
+91.3% 
+23 
+LTE 3 
+-2.03 
+4.74 
+1.04 
+1.80 
+0.03280 
+20.7 
+81.8% 
+95.5% 
+22 
+LTE 4 
+-3.24 
+5.33 
+1.48 
+2.63 
+0.02421 
+13.0 
+75.0% 
+87.5% 
+16 
+LTE 5 
+-2.15 
+4.63 
+1.55 
+2.89 
+0.10210 
+8.9 
+58.3% 
+83.3% 
+12 
+LTE 6 
+-3.72 
+2.07 
+1.31 
+4.91 
+0.07268 
+2.5 
+100.0% 
+100.0% 
+6 
+LTE Avg 
+-2.31 
+3.86 
+0.77 
+1.31 
+0.00295 
+25.3 
+83.3% 
+91.7% 
+24 
+ 
+Q24w-180mg 
+Visit 
+Estimate 
+SD 
+SE 
+±90% CI 
+p-value 
+dof 
+Decrease NH 
+Decrease BL 
+ 
+LTE 1 
+0.56 
+3.65 
+0.84 
+1.46 
+0.74 
+18.9 
+50.0% 
+60.0% 
+20 
+LTE 2 
+0.01 
+2.98 
+0.71 
+1.23 
+0.50 
+17.7 
+47.4% 
+73.7% 
+19 
+LTE 3 
+0.72 
+1.83 
+0.75 
+1.53 
+0.81 
+5.9 
+33.3% 
+77.8% 
+9 
+LTE Avg 
+0.16 
+2.50 
+0.56 
+0.97 
+0.61 
+20.1 
+38.1% 
+71.4% 
+21 
+ 
+Q16w-60mg 
+Visit 
+Estimate 
+SD 
+SE 
+±90% CI 
+p-value 
+dof 
+Decrease NH 
+Decrease BL 
+ 
+LTE 1 
+-0.25 
+3.21 
+1.21 
+2.34 
+0.42 
+7.1 
+63.6% 
+72.7% 
+11 
+LTE 2 
+-1.76 
+3.95 
+1.49 
+2.88 
+0.14 
+7.1 
+72.7% 
+72.7% 
+11 
+LTE 3 
+-0.73 
+3.05 
+1.52 
+3.55 
+0.33 
+4.0 
+62.5% 
+75.0% 
+8 
+LTE Avg 
+-0.91 
+3.43 
+1.29 
+2.50 
+0.25 
+7.1 
+72.7% 
+72.7% 
+11 
+Table S15. LTE EEG -power linear model results for all timepoints. Estimate: LS means for intercept. 
+SD: standard deviation. SE: standard error. ±90% CI: ± these values around the estimates provide the 
+90% confidence intervals. P-value: p-value for one-tailed t-tests for < NH reference. dof: combined 
+degrees of freedom for TANGELO data and the NH model (is dominated by the TANGELO number of 
+observations since smaller than the NH degrees of freedom). LTE i corresponds to the EEG assessment 
+following the ith LTE dose, right before the (i+1)th dose. For the dosing regimens Q16w-120mg and Q16w-
+60mg, this corresponds to 16 weeks, for the dosing regimens Q24w-180mg, this corresponds to 24 weeks 
+after the ith injection. LTE Avg is a model where all available LTE visits >LTE1 are averaged for each 
+participant. Decrease: percentage of participants where the age- and baseline corrected EEG delta-band 
+power was below the NH prediction and below the baseline (BL). 
+ 
+Covariate 
+Estimate 
+SE 
+tStat 
+p-value 
+1 (= 𝐼𝑛𝑡𝑒𝑟𝑐𝑒𝑝𝑡) 
+-2.314 
+0.723 
+-3.20 
+0.0043 
+𝑦∆𝑁𝐻
+𝐵𝑙𝑛 
+0.320 
+0.185 
+1.74 
+0.0974 
+𝐿𝑜𝑔𝐴𝑔𝑒 
+-1.740 
+1.072 
+-1.62 
+0.1194 
+Model: 𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛+ 𝐿𝑜𝑔𝐴𝑔𝑒 
+Number of observations: 24, Error degrees of freedom: 21; Loglikelihood: -62.80 
+Mean of log2(age): 2.82, corresponding to 7.06 years 
+Table S16. LTE EEG -power linear model fit for dose regimen Q16w-120mg. Estimate: Estimates for 
+covariates. SE: standard error. tStat: t-statistics. p-value: p-values for the significance of covariates, two-
+tailed t-test. 
+ 
+To test if individuals with different genotypes had a different EEG response, we compared a model 
+including genotype as a factor (Del, Mut) with the main model for Q16w-120mg. Adding genotype as a 
+categorical factor did not improve the main model (Loglikelihood ratio: 0.022, dof = 1, p = 0.881). Similarly, 
+we tested for effects of sex. Adding sex as a categorical factor showed a tendency for an improvement 
+over the main model with females showing a stronger EEG response, in line with the MAD results, see 
+above (Loglikelihood ratio: 1.964, dof = 1, p = 0.161, coefficient, i.e. offset for male: 1.945 dB). Of note, 
+this study did not stratify for sex (see also Table 1). 
+
+
+===PAGE 19===
+18 
+ 
+ 
+Figure S6. Additional LTE EEG analyses. a, LS means power spectra for dose regimen Q16w-120mg 
+(average of available LTE timepoints for each participant before averaging across participants). LTE 
+Q16w-120mg participants at baseline (black) and day 100 (blue). Age- and genotype matched AS NH 
+predictions (red) and age-matched predictions for typically developing children (green). b, LS means 
+EEG -band power
+change from baseline (dB)
+d
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+LTE1
+4 mo
+(n=23)
+LTE2
+8 mo
+(n=23)
+LTE3
+12 mo
+(n=22)
+LTE4
+16 mo
+(n=16)
+LTE5
+20 mo
+(n=12)
+NH Reference
+TANGELO
+Q16w-120mg
+LTE-Avg
+(n=24)
+LTE6
+24 mo
+(n=6)
+-8
+-6
+-4
+-2
+0
+LTE1
+4 mo
+(n=23)
+LTE2
+8 mo
+(n=23)
+LTE3
+12 mo
+(n=22)
+LTE4
+16 mo
+(n=16)
+LTE5
+20 mo
+(n=12)
+LTE-Avg
+(n=24)
+LTE6
+24 mo
+(n=6)
+Fp1
+F7
+F3
+T7
+C3
+P7
+P3
+O1
+Fz
+Cz
+Pz
+O2
+P4
+P8
+C4
+T8
+F4
+F8
+Fp2
+Fp1
+F7
+F3
+T7
+C3
+P7
+P3
+O1
+Fz
+Cz
+Pz
+O2
+P4
+P8
+C4
+T8
+F4
+F8
+Fp2
+Fp1
+F7
+F3
+T7
+C3
+P7
+P3
+O1
+Fz
+Cz
+Pz
+O2
+P4
+P8
+C4
+T8
+F4
+F8
+Fp2
+Fp1
+F7
+F3
+T7
+C3
+P7
+P3
+O1
+Fz
+Cz
+Pz
+O2
+P4
+P8
+C4
+T8
+F4
+F8
+Fp2
+e
+Fp1 Fp2
+F7 F3 Fz F4 F8
+T7 C3 Cz C4 T8
+P7P3Pz P4P8
+O1 O2
+-1
+-0.5
+0
+0.5
+1
+Effect size (z)
+-5
+0
+5
+Q16-120mg, LTE1-5 (n=23)
+Q16-120mg, LTE1-5 (n=24)
+EEG total power
+change from baseline (dB)
+-10
+-12
+-8
+-6
+-4
+-2
+0
+LTE1
+4 mo
+(n=23)
+LTE2
+8 mo
+(n=23)
+LTE3
+12 mo
+(n=22)
+LTE4
+16 mo
+(n=16)
+LTE5
+20 mo
+(n=12)
+LTE-Avg
+(n=24)
+LTE6
+24 mo
+(n=6)
+EEG -peak power
+change from baseline (dB)
+0
+.05
+-.05
+-.1
+-.15
+-.2
+-.25
+LTE1
+4 mo
+(n=23)
+LTE2
+8 mo
+(n=23)
+LTE3
+12 mo
+(n=22)
+LTE4
+16 mo
+(n=16)
+LTE5
+20 mo
+(n=12)
+LTE-Avg
+(n=24)
+LTE6
+24 mo
+(n=6)
+-8
+-6
+-4
+-2
+0
+2
+LTE1
+4 mo
+(n=23)
+LTE2
+8 mo
+(n=23)
+LTE3
+12 mo
+(n=22)
+LTE4
+16 mo
+(n=16)
+LTE5
+20 mo
+(n=12)
+LTE-Avg
+(n=24)
+LTE6
+24 mo
+(n=6)
+LTE1
+4 mo
+(n=23)
+LTE2
+8 mo
+(n=23)
+LTE3
+12 mo
+(n=22)
+LTE4
+16 mo
+(n=16)
+LTE5
+20 mo
+(n=12)
+LTE-Avg
+(n=24)
+LTE6
+24 mo
+(n=6)
+Relative EEG -power
+change from baseline (1)
+ IPEG EEG -power
+change from baseline (dB)
+IPGE Relative EEG -power
+change from baseline (1)
+0
+.05
+-.05
+-.1
+-.15
+-.2
+-.25
+5
+10
+15
+20
+25
+30
+-1
+0
+1
+-2
+0
+2
+Effect size (z)
+Q16w-120mg, LTE1-LTE6
+(n=24)
+Q16w-120mg
+LTE1-LTE6
+(n=24)
+Q16w-120mg
+LTE1-LTE6
+(n=24)
+c
+0
+-2
+-4
+-6
+-8
+2
+1
+2
+4
+8
+16
+32
+Frequency (Hz)
+a
+EEG power
+change from baseline (dB)
+b
+NH Ref. (90% CI)
+TANGELO (90% CI)
+Baseline
+NH Ref.
+Day 100
+TDC Ref.
+1
+2
+4
+8
+16
+32
+Frequency (Hz)
+EEG power (µV²/oct)
+-band
+-band
+-band power
+chng from NH (dB)
+EEG -power
+chng from bln (dB)
+LTE Dose
+
+
+===PAGE 20===
+19 
+ 
+power spectral change from baseline for LTE Q16w-120mg participants (blue) and age-matched NH 
+predictions (red) on MAD day 100. c, Topography of LS means EEG 𝛿-power for dose regimen Q16w-
+120mg averaged across all available relative to baseline and accounting for predicted changes from NH. 
+Left: effect size, right: change in dB. d, LS means for relative EEG -power (2-4 Hz), total EEG power, 
+peak EEG -power (2.8 Hz, as defined in Frohlich et al., 2019), absolute and relative IPEG EEG -power 
+(defined as 1.5 – 6 Hz). Average change from baseline in EEG 𝛿-power for participants (blue) and age-
+matched NH predictions (red). LTEi corresponds to the assessment following the ith LTE dose, right before 
+the (i+1)th dose. LTE-Avg: average of available LTE timepoints for each participant. e, EEG 𝛿-power 
+changes on MAD day 100 for bipolar derivatives (effect size and dB change, relative to NH reference). 
+ 
+14. 
+Clinical scales in MAD 
+ 
+Model: 𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛 
+Scale 
+Visit 
+Estimate 
+SD 
+SE 
+±90% CI 
+p-value 
+dof 
+NTANGELO 
+B 
+S 
+I 
+D 
+Cognitive 
+Day 100 
+5.59 
+15.09 
+2.38 
+4.00 
+0.0119 
+40.33 
+41 
+Cognitive 
+Day 224 
+3.69 
+14.55 
+2.36 
+3.99 
+0.0636 
+37.94 
+38 
+Rec Comm 
+Day 100 
+4.19 
+20.32 
+3.20 
+5.39 
+0.0990 
+40.31 
+41 
+Rec Comm 
+Day 224 
+8.76 
+24.69 
+3.97 
+6.70 
+0.0168 
+38.64 
+39 
+Expr Comm 
+Day 100 
+5.29 
+20.23 
+3.12 
+5.25 
+0.0487 
+42.14 
+43 
+Expr Comm 
+Day 224 
+13.84 
+22.08 
+3.56 
+6.00 
+0.0002 
+38.49 
+39 
+Fine Motor 
+Day 100 
+3.57 
+21.89 
+3.37 
+5.67 
+0.1482 
+42.18 
+43 
+Fine Motor 
+Day 224 
+8.98 
+23.01 
+3.71 
+6.26 
+0.0102 
+38.50 
+39 
+Gross Motor 
+Day 100 
+-2.17 
+11.71 
+1.80 
+3.02 
+0.8832 
+42.41 
+43 
+Gross Motor 
+Day 224 
+-1.12 
+13.22 
+2.12 
+3.57 
+0.7004 
+38.96 
+39 
+V 
+A 
+B 
+S 
+DLS Personal 
+Day 100 
+1.25 
+9.19 
+1.44 
+2.43 
+0.1960 
+40.55 
+41 
+DLS Personal 
+Day 224 
+2.43 
+7.31 
+1.24 
+2.10 
+0.0291 
+34.79 
+34 
+Rec Comm 
+Day 100 
+3.04 
+8.62 
+1.36 
+2.29 
+0.0154 
+40.38 
+41 
+Rec Comm 
+Day 224 
+3.31 
+8.00 
+1.37 
+2.32 
+0.0107 
+34.09 
+34 
+Expr Comm 
+Day 100 
+2.90 
+8.79 
+1.38 
+2.32 
+0.0207 
+40.81 
+41 
+Expr Comm 
+Day 224 
+1.71 
+8.76 
+1.48 
+2.51 
+0.1294 
+34.79 
+34 
+Fine Motor 
+Day 100 
+1.11 
+7.95 
+1.25 
+2.11 
+0.1906 
+40.29 
+41 
+Fine Motor 
+Day 224 
+2.00 
+10.65 
+1.83 
+3.09 
+0.1411 
+33.96 
+34 
+Gross Motor 
+Day 100 
+2.41 
+9.49 
+1.51 
+2.54 
+0.0591 
+39.67 
+41 
+Gross Motor 
+Day 224 
+1.41 
+7.93 
+1.33 
+2.25 
+0.1482 
+35.54 
+34 
+Table S17. MAD BSID and VABS scales linear model results for days 100 and 224. Estimate: LS 
+means for intercept. Scale: The name of the clinical scale (BSID or VABS) and the name of the domain. 
+SD: standard deviation. SE: standard error. ±90% CI: ± these values around the estimates provide the 
+90% confidence intervals. P-value: p-value for one-tailed t-tests for < NH reference. dof: combined 
+degrees of freedom for TANGELO data and the NH model (is dominated by the TANGELO number of 
+observations since smaller than the NH degrees of freedom). NTANGELO: The number of datapoints 
+(matched by baseline datasets). 
+ 
+
+
+===PAGE 21===
+20 
+ 
+ 
+Figure S7. Additional analyses of clinical response in the MAD. a, BSID: LS mean changes from NH 
+for all 5 BSID scores (color-coded) and for different sub-groups. A positive change reflects improvements. 
+Error bars show 90% CIs. b, Same as (a) for VABS domains. 
+ 
+ 
+ 
+All Data
+Del
+A-Cohort
+B-Cohort
+High Dose
+Low Dose
+High PD
+Low PD
+Cognitive
+BSID-III
+Recep. Comm.
+Expr. Comm.
+Fine Motor
+Gross Motor
+90% CI
+DLS Personal
+VABS-III
+Recep. Comm.
+Expr. Comm.
+Fine Motor
+Gross Motor
+90% CI
+a
+b
+-15
+-10
+-5
+0
+5
+10
+15
+20
+25
+-15
+-10
+-5
+0
+5
+10
+15
+20
+25
+-15
+-10
+-5
+0
+5
+10
+15
+20
+25
+-15
+-10
+-5
+0
+5
+10
+15
+20
+25
+-15
+-10
+-5
+0
+5
+10
+15
+20
+25
+-15
+-10
+-5
+0
+5
+10
+15
+20
+25
+-15
+-10
+-5
+0
+5
+10
+15
+20
+25
+-15
+-10
+-5
+0
+5
+10
+15
+20
+25
+Day 100
+n=43-45
+Day 224
+n=40-41
+Day 100
+n=37-39
+Day 224
+n=33-35
+Day 100
+n=22-23
+Day 224
+n=22-23
+Day 100
+n=21-22
+Day 224
+n=18
+Day 100
+n=21-22
+Day 224
+n=18-19
+Day 100
+n=20-21
+Day 224
+n=20
+Day 100
+n=15-16
+Day 224
+n=13-14
+Day 100
+n=27-29
+Day 224
+n=27
+Change from Bln above
+Natural History prediction (GSV)
+Change from Bln above
+Natural History prediction (GSV)
+All Data
+Del
+A-Cohort
+B-Cohort
+High Dose
+Low Dose
+High PD
+Low PD
+0
+Change from Bln above
+Natural History prediction (GSV)
+Change from Bln above
+Natural History prediction (GSV)
+-7.5
+-5
+-2.5
+0
+2.5
+5
+7.5
+10
+12.5
+Day 100
+n=42-42
+Day 224
+n=36
+-7.5
+-5
+-2.5
+0
+2.5
+5
+7.5
+10
+12.5
+Day 100
+n=17
+Day 224
+n=13
+-7.5
+-5
+-2.5
+0
+2.5
+5
+7.5
+10
+12.5
+Day 100
+n=21-22
+Day 224
+n=19
+-7.5
+-5
+-2.5
+0
+2.5
+5
+7.5
+10
+12.5
+Day 100
+n=19
+Day 224
+n=15
+-7.5
+-5
+-2.5
+0
+2.5
+5
+7.5
+10
+12.5
+Day 100
+n=25-26
+Day 224
+n=23
+-7.5
+-5
+-2.5
+0
+2.5
+5
+7.5
+10
+12.5
+Day 100
+n=35-36
+Day 224
+n=30
+-7.5
+-5
+-2.5
+0
+2.5
+5
+7.5
+10
+12.5
+Day 100
+n=24
+Day 224
+n=21
+-7.5
+-5
+-2.5
+0
+2.5
+5
+7.5
+10
+12.5
+Day 100
+n=18-19
+Day 224
+n=15
+
+
+===PAGE 22===
+21 
+ 
+Alternative models and analyses of subpopulations evaluated for MAD day 224 
+For the day of maximal effect in the MAD (day 224), we tested alternative models with fixed effects for 
+age, cumulative dose, genotype, sex and EEG -power response (day 100, relative to NH reference) 
+using log-likelihood ratio tests (Table S18). 
+ 
+Model 
+Scale 
+lrStat 
+pLLR 
+Covar 
+tStat 
+pCovar 
+dof 
+Age (A-Cohort, B-Cohort) 
+𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛+ 𝐶𝑎𝑡𝐴𝑔𝑒  
+B-Cohort 1-4 years at baseline 
+A-Cohort 5-12 years at baseline 
+Covariate: B-Cohort offset 
+BSID Cognitive 
+0.398 
+0.528 
+3.003 
+0.608 
+0.547 
+37 
+BSID Rec Comm 
+0.468 
+0.494 
+-5.552 
+-0.660 
+0.513 
+38 
+BSID Expr Comm 
+0.003 
+0.956 
+-0.390 
+-0.053 
+0.958 
+38 
+BSID Fine Motor 
+0.007 
+0.935 
+-0.597 
+-0.079 
+0.937 
+38 
+BSID Gross Motor 
+0.666 
+0.414 
+3.377 
+0.789 
+0.435 
+38 
+VABS DLS Pers 
+0.053 
+0.818 
+-0.556 
+-0.221 
+0.827 
+33 
+VABS Rec Comm 
+0.018 
+0.893 
+-0.375 
+-0.129 
+0.898 
+33 
+VABS Expr Comm 
+0.975 
+0.323 
+2.958 
+0.952 
+0.348 
+33 
+VABS Fine Motor 
+0.111 
+0.739 
+-1.215 
+-0.320 
+0.751 
+33 
+VABS Gross Motor 
+0.423 
+0.515 
+-1.672 
+-0.625 
+0.537 
+33 
+Age (continuous) 
+𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛+ 𝐿𝑜𝑔𝐴𝑔𝑒  
+Covariate: Log2(Age) slope 
+BSID Cognitive 
+0.023 
+0.878 
+0.513 
+0.147 
+0.884 
+37 
+BSID Rec Comm 
+0.902 
+0.342 
+5.378 
+0.919 
+0.364 
+38 
+BSID Expr Comm 
+0.095 
+0.758 
+-1.567 
+-0.297 
+0.768 
+38 
+BSID Fine Motor 
+0.048 
+0.827 
+-1.097 
+-0.210 
+0.834 
+38 
+BSID Gross Motor 
+0.266 
+0.606 
+-1.499 
+-0.498 
+0.622 
+38 
+VABS DLS Pers 
+0.049 
+0.824 
+0.368 
+0.213 
+0.833 
+33 
+VABS Rec Comm 
+0.003 
+0.958 
+0.099 
+0.050 
+0.960 
+33 
+VABS Expr Comm 
+3.117 
+0.077 
+-3.516 
+-1.728 
+0.093 
+33 
+VABS Fine Motor 
+0.090 
+0.764 
+-0.742 
+-0.288 
+0.775 
+33 
+VABS Gross Motor 
+0.536 
+0.464 
+1.278 
+0.703 
+0.487 
+33 
+Cumulative Dose (High, Low) 
+𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛+ 𝐶𝑎𝑡𝐷𝑜𝑠𝑒  
+High: > 200 mg 
+Low: < 200 mg 
+Covariate: Low dose offset 
+BSID Cognitive 
+1.893 
+0.169 
+-7.169 
+-1.339 
+0.189 
+37 
+BSID Rec Comm 
+0.001 
+0.970 
+-0.329 
+-0.037 
+0.971 
+38 
+BSID Expr Comm 
+0.239 
+0.625 
+3.650 
+0.471 
+0.640 
+38 
+BSID Fine Motor 
+0.426 
+0.514 
+-5.146 
+-0.630 
+0.532 
+38 
+BSID Gross Motor 
+0.069 
+0.793 
+1.170 
+0.252 
+0.802 
+38 
+VABS DLS Pers 
+0.315 
+0.575 
+1.387 
+0.538 
+0.594 
+33 
+VABS Rec Comm 
+0.049 
+0.825 
+-0.646 
+-0.212 
+0.833 
+33 
+VABS Expr Comm 
+0.240 
+0.624 
+-1.456 
+-0.470 
+0.642 
+33 
+VABS Fine Motor 
+0.575 
+0.448 
+-2.974 
+-0.729 
+0.471 
+33 
+VABS Gross Motor 
+0.060 
+0.806 
+-0.657 
+-0.235 
+0.816 
+33 
+Cumulative Dose (continuos) 
+𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛+ 𝐶𝑢𝑚𝐷𝑜𝑠𝑒  
+Covariate: Cumulative dose slope 
+BSID Cognitive 
+0.770 
+0.380 
+0.021 
+0.848 
+0.402 
+37 
+BSID Rec Comm 
+0.175 
+0.676 
+-0.017 
+-0.403 
+0.689 
+38 
+BSID Expr Comm 
+0.821 
+0.365 
+-0.031 
+-0.877 
+0.386 
+38 
+BSID Fine Motor 
+1.226 
+0.268 
+0.040 
+1.074 
+0.290 
+38 
+BSID Gross Motor 
+0.002 
+0.965 
+-0.001 
+-0.042 
+0.967 
+38 
+VABS DLS Pers 
+0.236 
+0.627 
+-0.005 
+-0.466 
+0.644 
+33 
+VABS Rec Comm 
+0.108 
+0.742 
+0.005 
+0.315 
+0.755 
+33 
+VABS Expr Comm 
+0.027 
+0.868 
+0.002 
+0.159 
+0.875 
+33 
+VABS Fine Motor 
+0.817 
+0.366 
+0.016 
+0.870 
+0.390 
+33 
+VABS Gross Motor 
+0.378 
+0.539 
+0.007 
+0.590 
+0.559 
+33 
+Genotype (Del, Mut) 
+𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛+ 𝐺𝑒𝑛𝑜𝑡𝑦𝑝𝑒 
+Covariate: Mut offset 
+BSID Cognitive 
+0.542 
+0.462 
+4.440 
+-0.710 
+0.482 
+37 
+BSID Rec Comm 
+1.484 
+0.223 
+13.239 
+-1.184 
+0.244 
+38 
+BSID Expr Comm 
+0.175 
+0.675 
+-3.850 
+0.404 
+0.689 
+38 
+BSID Fine Motor 
+0.980 
+0.322 
+-10.267 
+0.959 
+0.344 
+38 
+BSID Gross Motor 
+1.577 
+0.209 
+6.888 
+-1.221 
+0.230 
+38 
+VABS DLS Pers 
+0.768 
+0.381 
+2.873 
+-0.843 
+0.405 
+33 
+VABS Rec Comm 
+0.343 
+0.558 
+2.073 
+-0.562 
+0.578 
+33 
+VABS Expr Comm 
+0.028 
+0.867 
+0.638 
+-0.160 
+0.874 
+33 
+VABS Fine Motor 
+0.115 
+0.735 
+1.605 
+-0.324 
+0.748 
+33 
+VABS Gross Motor 
+2.191 
+0.139 
+5.062 
+-1.439 
+0.160 
+33 
+EEG -power (continuous) 
+𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛+ 𝐸𝐸𝐺  
+Covariate: EEG -power slope 
+BSID Cognitive 
+2.550 
+0.110 
+-1.138 
+-1.559 
+0.128 
+35 
+BSID Rec Comm 
+0.030 
+0.863 
+0.192 
+0.166 
+0.869 
+36 
+BSID Expr Comm 
+2.011 
+0.156 
+1.491 
+1.380 
+0.176 
+36 
+BSID Fine Motor 
+0.018 
+0.893 
+-0.141 
+-0.129 
+0.898 
+36 
+BSID Gross Motor 
+0.074 
+0.785 
+-0.166 
+-0.262 
+0.795 
+36 
+VABS DLS Pers 
+1.637 
+0.201 
+-0.404 
+-1.237 
+0.225 
+31 
+VABS Rec Comm 
+0.002 
+0.963 
+0.018 
+0.045 
+0.965 
+31 
+VABS Expr Comm 
+0.025 
+0.875 
+0.061 
+0.150 
+0.882 
+31 
+VABS Fine Motor 
+3.849 
+0.050 
+-0.944 
+-1.928 
+0.063 
+31 
+VABS Gross Motor 
+0.010 
+0.920 
+-0.035 
+-0.096 
+0.924 
+31 
+EEG (Strong, Weak) 
+𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛+ 𝐶𝑎𝑡𝐸𝐸𝐺  
+Strong: Participants within the stronger half of  
+EEG -power response (i.e. more negative) 
+Strong: Participants within the weaker half of  
+EEG -power response (i.e. less negative) (see Fig. 2c) 
+Covariate: Strong EEG -power effect offset 
+BSID Cognitive 
+1.435 
+0.231 
+5.763 
+1.160 
+0.254 
+35 
+BSID Rec Comm 
+0.010 
+0.919 
+-0.768 
+-0.098 
+0.923 
+36 
+BSID Expr Comm 
+0.555 
+0.456 
+-5.639 
+-0.718 
+0.477 
+36 
+BSID Fine Motor 
+0.854 
+0.355 
+6.801 
+0.893 
+0.378 
+36 
+BSID Gross Motor 
+0.489 
+0.484 
+2.904 
+0.674 
+0.505 
+36 
+VABS DLS Pers 
+1.169 
+0.280 
+2.720 
+1.041 
+0.306 
+31 
+VABS Rec Comm 
+0.248 
+0.619 
+1.428 
+0.476 
+0.637 
+31 
+VABS Expr Comm 
+0.002 
+0.961 
+-0.146 
+-0.046 
+0.964 
+31 
+VABS Fine Motor 
+4.983 
+0.026 
+8.081 
+2.212 
+0.034 
+31 
+VABS Gross Motor 
+0.666 
+0.415 
+2.171 
+0.783 
+0.440 
+31 
+
+
+===PAGE 23===
+22 
+ 
+Sex (F, M) 
+𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛+ 𝑆𝑒𝑥  
+Covariate: Male (M) offset 
+BSID Cognitive 
+2.959 
+0.085 
+-7.768 
+-1.686 
+0.100 
+37 
+BSID Rec Comm 
+2.086 
+0.149 
+-11.090 
+-1.408 
+0.167 
+38 
+BSID Expr Comm 
+0.418 
+0.518 
+-4.529 
+-0.624 
+0.536 
+38 
+BSID Fine Motor 
+0.143 
+0.706 
+-2.730 
+-0.364 
+0.718 
+38 
+BSID Gross Motor 
+0.623 
+0.430 
+-3.313 
+-0.763 
+0.450 
+38 
+VABS DLS Pers 
+3.069 
+0.080 
+-4.154 
+-1.714 
+0.096 
+33 
+VABS Rec Comm 
+0.178 
+0.673 
+-1.149 
+-0.405 
+0.688 
+33 
+VABS Expr Comm 
+4.175 
+0.041 
+-5.745 
+-2.014 
+0.052 
+33 
+VABS Fine Motor 
+1.187 
+0.276 
+-3.867 
+-1.052 
+0.301 
+33 
+VABS Gross Motor 
+0.160 
+0.689 
+-1.035 
+-0.384 
+0.704 
+33 
+Table S18. Alternative models with additional fixed effects for clinical scales in the MAD on day 
+224. Contribution of different fixed effects (age, dose, genotype, sex, EEG effect at MAD day 100) were 
+tested using continuous and categorical covariates (for genotype and sex only categorical). lrStat: 
+loglikelihood difference (degrees of freedom (dof) = 1 for all comparisons, i.e. the tested model had one 
+more fixed effect compared to the base model). pLLR: p-value of the loglikelihood ratio test. P-values < 
+0.1 are shown in bold, p-values >0.1 and <0.2 in italic. In addition, p-values <0.2 are highlighted with gray 
+background. Covar: The covariate of interest for the comparison (see also first column for more 
+information; reference for categorical predictors is underlined). pCovar, tStat and dof provide additional 
+information to Covar.  
+ 
+ 
+
+
+===PAGE 24===
+23 
+ 
+15. 
+Clinical scales in LTE 
+ 
+Model: 𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛+ 𝐿𝑜𝑔𝐴𝑔𝑒 
+Scale 
+Visit 
+Estimate 
+SD 
+SE 
+±90% CI 
+p-value 
+dof 
+NTANGELO 
+B 
+S 
+I 
+D 
+Cognitive 
+LTE 1 
+5.56 
+24.00 
+3.42 
+5.73 
+0.0551 
+49.32 
+48 
+Cognitive 
+LTE 2 
+10.02 
+23.54 
+3.44 
+5.77 
+0.0027 
+46.86 
+44 
+Cognitive 
+LTE 3 
+15.09 
+24.24 
+3.97 
+6.71 
+0.0003 
+37.20 
+35 
+Cognitive 
+LTE Avg 
+13.87 
+22.92 
+3.25 
+5.44 
+4.33·10-5 
+49.86 
+45 
+Rec Comm 
+LTE 1 
+5.32 
+29.98 
+4.24 
+7.10 
+0.1076 
+50.05 
+48 
+Rec Comm 
+LTE 2 
+1.27 
+38.27 
+5.52 
+9.27 
+0.4099 
+48.00 
+46 
+Rec Comm 
+LTE 3 
+6.75 
+28.10 
+4.34 
+7.30 
+0.0637 
+41.95 
+37 
+Rec Comm 
+LTE Avg 
+6.28 
+28.72 
+3.88 
+6.50 
+0.0557 
+54.73 
+47 
+Expr Comm 
+LTE 1 
+9.82 
+22.44 
+3.15 
+5.28 
+0.0015 
+50.80 
+49 
+Expr Comm 
+LTE 2 
+14.03 
+22.66 
+3.16 
+5.30 
+2.44·10-5 
+51.28 
+47 
+Expr Comm 
+LTE 3 
+17.95 
+22.35 
+3.44 
+5.79 
+2.56·10-6 
+42.25 
+38 
+Expr Comm 
+LTE Avg 
+16.82 
+23.59 
+3.21 
+5.37 
+1.34·10-6 
+54.11 
+48 
+Fine Motor 
+LTE 1 
+11.19 
+27.14 
+3.83 
+6.42 
+0.0026 
+50.29 
+49 
+Fine Motor 
+LTE 2 
+11.13 
+27.97 
+3.97 
+6.65 
+0.0036 
+49.73 
+47 
+Fine Motor 
+LTE 3 
+16.72 
+27.63 
+4.39 
+7.40 
+0.0002 
+39.58 
+37 
+Fine Motor 
+LTE Avg 
+12.60 
+25.63 
+3.54 
+5.92 
+0.0004 
+52.54 
+47 
+Gross Motor 
+LTE 1 
+0.67 
+16.85 
+2.39 
+4.01 
+0.3902 
+49.64 
+48 
+Gross Motor 
+LTE 2 
+2.12 
+20.78 
+2.96 
+4.97 
+0.2387 
+49.11 
+47 
+Gross Motor 
+LTE 3 
+2.88 
+20.35 
+3.31 
+5.59 
+0.1954 
+37.76 
+36 
+Gross Motor 
+LTE Avg 
+2.29 
+19.75 
+2.77 
+4.65 
+0.2060 
+50.71 
+47 
+V 
+A 
+B 
+S 
+DLS Personal 
+LTE 1 
+3.18 
+8.15 
+1.15 
+1.93 
+0.0041 
+49.97 
+49 
+DLS Personal 
+LTE 2 
+3.54 
+8.77 
+1.27 
+2.12 
+0.0037 
+47.99 
+46 
+DLS Personal 
+LTE 3 
+4.16 
+7.73 
+1.27 
+2.15 
+0.0012 
+36.90 
+37 
+DLS Personal 
+LTE Avg 
+3.57 
+7.93 
+1.09 
+1.83 
+0.0010 
+52.83 
+50 
+Rec Comm 
+LTE 1 
+2.40 
+8.29 
+1.17 
+1.97 
+0.0231 
+49.98 
+49 
+Rec Comm 
+LTE 2 
+3.93 
+8.66 
+1.27 
+2.13 
+0.0017 
+46.52 
+45 
+Rec Comm 
+LTE 3 
+5.62 
+7.36 
+1.23 
+2.07 
+2.67·10-5 
+36.07 
+36 
+Rec Comm 
+LTE Avg 
+5.02 
+7.72 
+1.08 
+1.82 
+1.28·10-5 
+50.81 
+49 
+Expr Comm 
+LTE 1 
+1.86 
+10.15 
+1.43 
+2.40 
+0.0996 
+50.39 
+49 
+Expr Comm 
+LTE 2 
+3.89 
+12.10 
+1.76 
+2.95 
+0.0160 
+47.41 
+45 
+Expr Comm 
+LTE 3 
+5.84 
+13.14 
+2.10 
+3.54 
+0.0041 
+39.17 
+38 
+Expr Comm 
+LTE Avg 
+5.07 
+11.69 
+1.62 
+2.71 
+0.0014 
+52.14 
+50 
+Fine Motor 
+LTE 1 
+1.78 
+8.98 
+1.29 
+2.16 
+0.0862 
+48.69 
+49 
+Fine Motor 
+LTE 2 
+2.28 
+8.35 
+1.23 
+2.07 
+0.0358 
+45.80 
+44 
+Fine Motor 
+LTE 3 
+3.39 
+8.14 
+1.34 
+2.25 
+0.0077 
+37.11 
+37 
+Fine Motor 
+LTE Avg 
+1.95 
+8.56 
+1.21 
+2.02 
+0.0565 
+50.20 
+48 
+Gross Motor 
+LTE 1 
+3.53 
+10.02 
+1.42 
+2.38 
+0.0082 
+49.72 
+49 
+Gross Motor 
+LTE 2 
+5.06 
+9.66 
+1.43 
+2.41 
+0.0005 
+45.42 
+43 
+Gross Motor 
+LTE 3 
+4.56 
+10.67 
+1.79 
+3.02 
+0.0075 
+35.72 
+35 
+Gross Motor 
+LTE Avg 
+4.88 
+10.17 
+1.44 
+2.41 
+0.0007 
+49.87 
+47 
+Table S19. LTE BSID and VABS scales linear models for timepoints LTE 1-3 and the average. 
+Estimate: LS means for intercept. Scale: The name of the clinical scale (BSID or VABS) and the name of 
+the domain. SD: standard deviation. SE: standard error. ±90% CI: ± these values around the estimates 
+provide the 90% confidence intervals. P-value: p-values for one-tailed t-test for < NH reference. dof: 
+combined degrees of freedom for TANGELO data and the NH model (is dominated by the TANGELO 
+number of observations since smaller than the NH degrees of freedom). LTE i corresponds to the 
+assessment following the ith LTE dose, right before the (i+1)th dose. For the dosing regimens Q16w-120mg 
+and Q16w-60mg, this corresponds to 16 weeks, for the dosing regimens Q24w-180mg, this corresponds 
+to 24 weeks after the ith injection. LTE Avg is a model where all LTE visits >LTE1 are averaged for each 
+participant. 
+ 
+
+
+===PAGE 25===
+24 
+ 
+ 
+Figure S8. Additional analyses for clinical response in the LTE. a, BSID: LS means changes from NH 
+reference for all 5 scales (color-coded) for all dose regimens combined. b, BSID: LS means changes from 
+NH reference for all 5 domains for all dose regimens combined averaged over LTE 2 and 3 for different 
+participant subgroups (Del: Individuals with deletion genotype only, A-Coh and B-Coh, A and B cohorts). 
+c, BSID: LS means changes from NH for all LTE visits separately for each dose regimen. d-f, Same as (a-
+c) for VABS domains. Error bars show 90% CIs. Positive changes reflect improvements. 
+ 
+Q16w-120mg
+Q24w-180mg
+Q16w-60mg
+Cognitive
+BSID-III
+Recep. Comm.
+Expr. Comm.
+Fine Motor
+Gross Motor
+90% CI
+DLS Personal
+VABS-III
+Recep. Comm.
+Expr. Comm.
+Fine Motor
+Gross Motor
+90% CI
+Change from Bln above
+Natural History prediction (GSV)
+LTE1
+n=21-22
+LTE2
+n=21-22
+LTE3
+n=18-20
+LTE4
+n=14-15
+LTE5
+n=11-12
+LTE2-5
+n=21-22
+-20
+-10
+0
+10
+20
+30
+40
+50
+LTE1
+n=18
+LTE2
+n=16-18
+LTE3
+n=11-12
+LTE2-3
+n=16-18
+-20
+-10
+0
+10
+20
+30
+40
+50
+LTE1
+n=10-11
+LTE2
+n=8-9
+LTE3
+n=7-8
+LTE2-3
+n=9-10
+-20
+-10
+0
+10
+20
+30
+40
+50
+LTE1
+n=50-51
+LTE2
+n=46-49
+LTE3
+n=37-40
+LTE2-3
+n=47-50
+All Dose Regimens
+-10
+0
+10
+20
+30
+Change from Bln above
+Natural History prediction (GSV)
+a
+b
+c
+LTE2-3 (All Dose Regimens)
+Del
+n=41-44
+B-Coh
+n=26-28
+A-Coh
+n=21-22
+All
+n=47-50
+Change from Bln above
+Natural History prediction (GSV)
+-10
+0
+10
+20
+30
+Q16w-120mg
+Q24w-180mg
+Q16w-60mg
+LTE2-3 (All Dose Regimens)
+Del
+n=43-45
+B-Coh
+n=27
+A-Coh
+n=22-25
+Change from Bln above
+Natural History prediction (GSV)
+LTE1
+n=23
+LTE2
+n=20-21
+LTE3
+n=22-23
+LTE4
+n=14-15
+LTE5
+n=11-12
+LTE2-5
+n=25
+LTE1
+n=19
+LTE2
+n=16-18
+LTE3
+n=9-11
+LTE2-3
+n=16-18
+LTE1
+n=9
+LTE2
+n=8-9
+LTE3
+n=6-7
+LTE2-3
+n=8-9
+LTE1
+n=51
+LTE2
+n=45-48
+LTE3
+n=37-40
+LTE2-3
+n=49-52
+All Dose Regimens
+d
+e
+f
+All
+n=49-52
+Change from Bln above
+Natural History prediction (GSV)
+-2.5
+0
+2.5
+5
+7.5
+10
+-5
+0
+5
+10
+15
+20
+-5
+0
+5
+10
+15
+20
+-5
+0
+5
+10
+15
+20
+Change from Bln above
+Natural History prediction (GSV)
+-2.5
+0
+2.5
+5
+7.5
+10
+
+
+===PAGE 26===
+25 
+ 
+Alternative models and analyses of subpopulations evaluated for LTE2 
+For the LTE2, we tested alternative models with fixed effects for age, cumulative dose, genotype, sex and 
+EEG -power response (LTE2, relative to NH reference) using log-likelihood ratio tests (Table S20). LTE2 
+was chosen as a tradeoff between a high number of participants and late in the LTE. 
+ 
+Model 
+Scale 
+lrStat 
+pLLR 
+Covar 
+tStat 
+pCovar 
+dof 
+Age (A-Cohort, B-Cohort) 
+𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛+ 𝐶𝑎𝑡𝐴𝑔𝑒  
+B-Cohort 1-4 years at baseline 
+A-Cohort 5-12 years at baseline 
+Covariate: B-Cohort offset 
+BSID Cognitive 
+0.688 
+0.407 
+5.760 
+0.805 
+0.425 
+43 
+BSID Rec Comm 
+0.417 
+0.518 
+7.197 
+0.627 
+0.534 
+45 
+BSID Expr Comm 
+1.080 
+0.299 
+6.269 
+1.013 
+0.317 
+46 
+BSID Fine Motor 
+1.696 
+0.193 
+9.970 
+1.273 
+0.210 
+46 
+BSID Gross Motor 
+0.053 
+0.819 
+-1.319 
+-0.222 
+0.825 
+46 
+VABS DLS Pers 
+0.023 
+0.881 
+-0.374 
+-0.146 
+0.885 
+45 
+VABS Rec Comm 
+0.005 
+0.944 
+-0.180 
+-0.069 
+0.946 
+44 
+VABS Expr Comm 
+0.007 
+0.936 
+-0.278 
+-0.078 
+0.938 
+44 
+VABS Fine Motor 
+0.332 
+0.565 
+1.395 
+0.558 
+0.580 
+43 
+VABS Gross Motor 
+0.839 
+0.360 
+2.536 
+0.889 
+0.379 
+42 
+Age (continuous) 
+𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛+ 𝐿𝑜𝑔𝐴𝑔𝑒  
+Covariate: Log2(Age) slope 
+BSID Cognitive 
+0.669 
+0.413 
+-3.866 
+-0.794 
+0.432 
+43 
+BSID Rec Comm 
+0.632 
+0.427 
+-6.150 
+-0.772 
+0.444 
+45 
+BSID Expr Comm 
+0.370 
+0.543 
+-2.539 
+-0.590 
+0.558 
+46 
+BSID Fine Motor 
+1.019 
+0.313 
+-5.360 
+-0.983 
+0.331 
+46 
+BSID Gross Motor 
+0.016 
+0.899 
+0.500 
+0.123 
+0.903 
+46 
+VABS DLS Pers 
+0.176 
+0.675 
+-0.715 
+-0.406 
+0.686 
+45 
+VABS Rec Comm 
+0.041 
+0.839 
+0.365 
+0.197 
+0.845 
+44 
+VABS Expr Comm 
+0.065 
+0.799 
+0.604 
+0.246 
+0.806 
+44 
+VABS Fine Motor 
+1.881 
+0.170 
+-2.269 
+-1.340 
+0.187 
+43 
+VABS Gross Motor 
+0.842 
+0.359 
+-1.750 
+-0.891 
+0.378 
+42 
+Dose (Q16w60mg, Q16w120mg,  
+Q24w180mg) 
+𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛+ 𝐶𝑎𝑡𝐷𝑜𝑠𝑒  
+Covariate: Q16w120mg offset 
+BSID Cognitive 
+0.399 
+0.819 
+-4.674 
+-0.504 
+0.617 
+42 
+BSID Rec Comm 
+1.657 
+0.437 
+-18.640 
+-1.178 
+0.245 
+44 
+BSID Expr Comm 
+1.507 
+0.471 
+8.588 
+0.999 
+0.323 
+45 
+BSID Fine Motor 
+2.164 
+0.339 
+11.801 
+1.088 
+0.282 
+45 
+BSID Gross Motor 
+0.619 
+0.734 
+-4.073 
+-0.494 
+0.624 
+45 
+VABS DLS Pers 
+0.578 
+0.749 
+2.599 
+0.729 
+0.470 
+44 
+VABS Rec Comm 
+0.800 
+0.670 
+-1.741 
+-0.488 
+0.628 
+43 
+VABS Expr Comm 
+0.275 
+0.872 
+-0.471 
+-0.095 
+0.924 
+43 
+VABS Fine Motor 
+4.805 
+0.091 
+-2.901 
+-0.871 
+0.389 
+42 
+VABS Gross Motor 
+2.452 
+0.293 
+-2.394 
+-0.607 
+0.547 
+41 
+Dose (Q16w60mg, Q16w120mg,  
+Q24w180mg) 
+𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛+ 𝐶𝑎𝑡𝐷𝑜𝑠𝑒  
+Covariate: Q24w180mg offset 
+BSID Cognitive 
+0.399 
+0.819 
+-5.803 
+-0.584 
+0.562 
+42 
+BSID Rec Comm 
+1.657 
+0.437 
+-9.391 
+-0.573 
+0.569 
+44 
+BSID Expr Comm 
+1.507 
+0.471 
+2.009 
+0.226 
+0.822 
+45 
+BSID Fine Motor 
+2.164 
+0.339 
+16.351 
+1.417 
+0.163 
+45 
+BSID Gross Motor 
+0.619 
+0.734 
+0.649 
+0.075 
+0.941 
+45 
+VABS DLS Pers 
+0.578 
+0.749 
+1.929 
+0.533 
+0.597 
+44 
+VABS Rec Comm 
+0.800 
+0.670 
+0.644 
+0.176 
+0.861 
+43 
+VABS Expr Comm 
+0.275 
+0.872 
+-2.148 
+-0.421 
+0.676 
+43 
+VABS Fine Motor 
+4.805 
+0.091 
+2.720 
+0.789 
+0.435 
+42 
+VABS Gross Motor 
+2.452 
+0.293 
+2.320 
+0.566 
+0.575 
+41 
+Genotype (Del, Mut) 
+𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛+ 𝐺𝑒𝑛𝑜𝑡𝑦𝑝𝑒 
+Covariate: Mut offset 
+BSID Cognitive 
+0.324 
+0.569 
+-5.603 
+0.551 
+0.584 
+43 
+BSID Rec Comm 
+0.000 
+1.000 
+0.009 
+0.000 
+1.000 
+45 
+BSID Expr Comm 
+1.012 
+0.314 
+-9.208 
+0.980 
+0.332 
+46 
+BSID Fine Motor 
+0.218 
+0.640 
+-5.526 
+0.453 
+0.653 
+46 
+BSID Gross Motor 
+1.359 
+0.244 
+10.234 
+-1.137 
+0.261 
+46 
+VABS DLS Pers 
+0.433 
+0.510 
+2.421 
+-0.639 
+0.526 
+45 
+VABS Rec Comm 
+0.127 
+0.721 
+1.419 
+-0.346 
+0.731 
+44 
+VABS Expr Comm 
+0.856 
+0.355 
+5.053 
+-0.899 
+0.373 
+44 
+VABS Fine Motor 
+2.846 
+0.092 
+-5.871 
+1.657 
+0.105 
+43 
+VABS Gross Motor 
+0.144 
+0.704 
+1.675 
+-0.367 
+0.715 
+42 
+EEG -power (continuous) 
+𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛+ 𝐸𝐸𝐺  
+Covariate: EEG -power slope 
+BSID Cognitive 
+0.588 
+0.443 
+-0.739 
+-0.742 
+0.462 
+40 
+BSID Rec Comm 
+0.707 
+0.400 
+-1.209 
+-0.816 
+0.419 
+42 
+BSID Expr Comm 
+4.351 
+0.037 
+-1.770 
+-2.065 
+0.045 
+43 
+BSID Fine Motor 
+0.008 
+0.930 
+-0.104 
+-0.085 
+0.932 
+43 
+BSID Gross Motor 
+0.082 
+0.774 
+0.242 
+0.277 
+0.783 
+43 
+VABS DLS Pers 
+1.191 
+0.275 
+-0.437 
+-1.053 
+0.300 
+32 
+VABS Rec Comm 
+0.609 
+0.435 
+-0.293 
+-0.748 
+0.460 
+31 
+VABS Expr Comm 
+1.696 
+0.193 
+-0.621 
+-1.259 
+0.217 
+31 
+VABS Fine Motor 
+0.390 
+0.532 
+-0.244 
+-0.597 
+0.555 
+30 
+VABS Gross Motor 
+0.459 
+0.498 
+-0.311 
+-0.647 
+0.522 
+29 
+EEG (Strong, Weak) 
+𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛+ 𝐶𝑎𝑡𝐸𝐸𝐺  
+Strong: Participants within the stronger half of  
+EEG -power response (i.e. more negative) 
+Strong: Participants within the weaker half of  
+EEG -power response (i.e. less negative) (see Fig. 2c) 
+Covariate: Strong EEG -power effect offset 
+BSID Cognitive 
+1.768 
+0.184 
+9.229 
+1.296 
+0.202 
+40 
+BSID Rec Comm 
+3.671 
+0.055 
+20.117 
+1.889 
+0.066 
+42 
+BSID Expr Comm 
+5.471 
+0.019 
+14.769 
+2.330 
+0.025 
+43 
+BSID Fine Motor 
+0.286 
+0.593 
+4.442 
+0.518 
+0.607 
+43 
+BSID Gross Motor 
+0.002 
+0.963 
+0.286 
+0.045 
+0.964 
+43 
+VABS DLS Pers 
+0.777 
+0.378 
+2.717 
+0.848 
+0.403 
+32 
+VABS Rec Comm 
+0.161 
+0.689 
+1.126 
+0.383 
+0.704 
+31 
+VABS Expr Comm 
+2.711 
+0.100 
+5.965 
+1.604 
+0.119 
+31 
+VABS Fine Motor 
+0.735 
+0.391 
+2.563 
+0.822 
+0.418 
+30 
+VABS Gross Motor 
+1.079 
+0.299 
+3.759 
+0.997 
+0.327 
+29 
+
+
+===PAGE 27===
+26 
+ 
+Sex (F, M) 
+𝑦∆𝑁𝐻
+𝑇 ~ 1 + 𝑦∆𝑁𝐻
+𝐵𝑙𝑛+ 𝑆𝑒𝑥  
+Covariate: Male (M) offset 
+BSID Cognitive 
+0.185 
+0.667 
+-2.827 
+-0.416 
+0.679 
+43 
+BSID Rec Comm 
+3.748 
+0.053 
+-20.351 
+-1.912 
+0.062 
+45 
+BSID Expr Comm 
+1.098 
+0.295 
+-6.486 
+-1.021 
+0.313 
+46 
+BSID Fine Motor 
+0.482 
+0.488 
+-5.278 
+-0.674 
+0.504 
+46 
+BSID Gross Motor 
+0.408 
+0.523 
+-3.671 
+-0.620 
+0.538 
+46 
+VABS DLS Pers 
+0.165 
+0.684 
+-0.995 
+-0.394 
+0.695 
+45 
+VABS Rec Comm 
+0.056 
+0.812 
+-0.590 
+-0.230 
+0.819 
+44 
+VABS Expr Comm 
+0.013 
+0.910 
+-0.388 
+-0.110 
+0.913 
+44 
+VABS Fine Motor 
+0.961 
+0.327 
+-2.342 
+-0.953 
+0.346 
+43 
+VABS Gross Motor 
+0.878 
+0.349 
+-2.595 
+-0.910 
+0.368 
+42 
+Table S20. Alternative models with additional fixed effects for clinical scales at the LTE visit 2. 
+Contribution of different predictors (age, dose, genotype, sex, EEG effect at LTE visit 2) were tested using 
+continuous and categorical fixed effects (for genotype and sex only categorical). lrStat: loglikelihood 
+difference (degrees of freedom (dof) = 1 for all comparisons (i.e. the tested model had one more fixed 
+effect compared to the base model). pLLR: p-value of the loglikelihood ratio test. P-values < 0.1 are 
+shown in bold, p-values > 0.1 and < 0.2 in italic. In addition, p-values < 0.2 are highlighted with gray 
+background. Covar: The covariate of interest for the comparison (see also first column for more 
+information; reference for categorical predictors is underlined). pCovar, tStat and dof provide additional 
+information to Covar. 
+ 
+16. 
+SAS-CGI-S in the LTE 
+For the LTE we investigated the SAS-CGI-Severity (Fig. S9), since for the SAS-CGI-Change, the 
+reference / baseline time-point was up to several years and the past and therefore not deemed 
+appropriate. 
+ 
+ 
+Figure S9. SAS-CGI-Severity in LTE. a, Frequency of SAS-CGI-Severity ratings for all 9 domains and for 
+baseline visit and LTE1 to LTE 5 visits (none: 0, very mild: 1, … very severe: 5). b, Time-courses of 
+change from baseline for all domains and the average SAS-CGI-Severity scores. Lines show means and 
+90% confidence intervals. 
+ 
+Bln (n=53)
+0
+50
+100
+SAS-CGI-Severity
+change from baseline
+SAS-CGI-Severity (%)
+LTE1 (n=51)
+LTE2 (n=50)
+LTE3 (n=40)
+LTE4 (n=20)
+LTE5 (n=12)
+36%
+19%
+36%
+9%
+17%
+19%
+26%
+26%
+9%
+2%
+11%
+17%
+32%
+28%
+8%
+4%
+23%
+40%
+30%
+8%
+2%
+36%
+47%
+13%
+2%
+6%
+36%
+42%
+17%
+25%
+45%
+26%
+4%
+4%
+13%
+42%
+34%
+8%
+21%
+64%
+15%
+25%
+29%
+39%
+6%
+20%
+33%
+27%
+16%
+4%
+10%
+22%
+35%
+25%
+8%
+2%
+47%
+33%
+16%
+2%
+2%
+8%
+45%
+35%
+10%
+2%
+18%
+49%
+25%
+6%
+2%
+51%
+31%
+16%
+2%
+2%
+33%
+37%
+25%
+6%
+51%
+29%
+14%
+16%
+42%
+34%
+8%
+22%
+24%
+30%
+22%
+2%
+12%
+16%
+42%
+26%
+4%
+52%
+32%
+16%
+6%
+54%
+32%
+8%
+18%
+52%
+26%
+2%
+2%
+54%
+34%
+12%
+2%
+42%
+38%
+18%
+2%
+56%
+34%
+8%
+25%
+40%
+30%
+5%
+25%
+15%
+45%
+15%
+15%
+18%
+42%
+18%
+8%
+52%
+32%
+15%
+12%
+52%
+30%
+5%
+22%
+52%
+22%
+2%
+2%
+48%
+40%
+10%
+38%
+48%
+15%
+2%
+60%
+30%
+8%
+25%
+35%
+30%
+10%
+25%
+20%
+35%
+20%
+15%
+15%
+30%
+35%
+5%
+60%
+25%
+15%
+5%
+60%
+30%
+5%
+15%
+70%
+10%
+5%
+60%
+30%
+10%
+45%
+50%
+5%
+60%
+30%
+10%
+33%
+17%
+42%
+8%
+25%
+33%
+33%
+8%
+25%
+8%
+50%
+8%
+8%
+58%
+33%
+8%
+67%
+25%
+8%
+8%
+67%
+17%
+8%
+8%
+58%
+25%
+8%
+50%
+50%
+67%
+25%
+8%
+None
+Very Mild
+Mild
+Moderate
+Severe
+Very Severe
+LTE1
+n=51
+LTE2
+n=50
+LTE3
+n=40
+LTE4
+n=20
+LTE5
+n=12
+-2
+-1.5
+-1
+-0.5
+0
+0.5
+1
+Seizures (1)
+SAS-CGI-S Domains
+SAS-CGI-S Domains
+Sleep (2)
+Maladaptive behaviour (3)
+Expressive communication (4)
+Fine motor (5)
+Gross motor (6)
+Cognitive (7)
+Daily living skills (8)
+Overall (9)
+a
+b
+1 2 3 4 5 6 7 8 9
+1 2 3 4 5 6 7 8 9
+1 2 3 4 5 6 7 8 9
+1 2 3 4 5 6 7 8 9
+1 2 3 4 5 6 7 8 9
+1 2 3 4 5 6 7 8 9
+mean, 90% CI
+
+
+===PAGE 28===
+27 
+ 
+17. 
+Supplementary References 
+ 
+1. Kwag, K. et al. Comparison of QT Correction Methods in the Pediatric Population of a Community 
+Hospital: A Retrospective Study. CHD 19, 107–121 (2024). 
+2. Miller, T. M. et al. An antisense oligonucleotide against SOD1 delivered intrathecally for patients with 
+SOD1 familial amyotrophic lateral sclerosis: a phase 1, randomised, first-in-man study. The Lancet 
+Neurology 12, 435–442 (2013). 
+3. Yamamoto, Y. et al. Development of a population pharmacokinetic model to characterize the 
+pharmacokinetics of intrathecally administered tominersen in cerebrospinal fluid and plasma. CPT 
+Pharmacometrics Syst Pharmacol 12, 1213–1226 (2023). 
+4. Matheson, G. J. We need to talk about reliability: making better use of test-retest studies for study 
+design and interpretation. PeerJ 7, e6918 (2019). 
+5. Hays, R. D. & Woolley, J. M. The Concept of Clinically Meaningful Difference in Health-Related Quality-
+of-Life Research. Pharmacoeconomics 18, 419–423 (2000). 
+6. Revicki, D., Hays, R. D., Cella, D. & Sloan, J. Recommended methods for determining responsiveness 
+and minimally important differences for patient-reported outcomes. Journal of Clinical Epidemiology 
+61, 102–109 (2008). 
+7. Norman, G. R., Sloan, J. A. & Wyrwich, K. W. Interpretation of Changes in Health-related Quality of 
+Life: The Remarkable Universality of Half a Standard Deviation. Medical Care 41, 582 (2003). 
+8. Copay, A. G., Subach, B. R., Glassman, S. D., Polly, D. W. & Schuler, T. C. Understanding the 
+minimum clinically important difference: a review of concepts and methods. The Spine Journal 7, 
+541–546 (2007). 
+9. Farivar, S. S., Liu, H. & Hays, R. D. Half standard deviation estimate of the minimally important 
+difference in HRQOL scores? Expert Review of Pharmacoeconomics & Outcomes Research 4, 515–
+523 (2004). 
+10. Fayers, P. M. & Hays, R. D. Don’t middle your MIDs: regression to the mean shrinks estimates of 
+minimally important differences. Qual Life Res 23, 1–4 (2014). 
+11. Graham, H. K., Harvey, A., Rodda, J., Nattrass, G. R. & Pirpiris, M. The Functional Mobility Scale 
+(FMS). Journal of Pediatric Orthopaedics 24, 514 (2004). 
+12. Blankenburg, M. et al. Snake: the development and validation of a questionnaire on sleep 
+disturbances in children with severe psychomotor impairment. Sleep Medicine 14, 339–351 (2013). 
+13. Zigler, C. K. et al. Validation of the Observer-Reported Communication Ability (ORCA) Measure for 
+Individuals With Angelman Syndrome. American Journal on Intellectual and Developmental 
+Disabilities 128, 204–218 (2023). 
+14. Aman, M. & Singh, N. ABC-2 Aberrant Behavior Checklist. Community/residential manual. Second 
+ed. (2017). 
+15. Connor-Ahmad, S. et al. Developing Angelman syndrome-specific clinician-reported and caregiver-
+reported measures to support holistic, patient-centered drug development. Orphanet Journal of Rare 
+Diseases 18, 156 (2023). 
+16. Hipp, J. F., Frohlich, J., Keute, M., Tan, W.-H. & Bird, L. M. Electrophysiological Abnormalities in 
+Angelman Syndrome Correlate With Symptom Severity. Biological Psychiatry Global Open Science 
+(2021) doi:10.1016/j.bpsgos.2021.05.003. 
+17. Ostrowski, L. M. et al. Delta power robustly predicts cognitive function in Angelman syndrome. Annals 
+of Clinical and Translational Neurology 8, 1433–1445 (2021). 
+18. Bergholm, F., Adler, J. & Parmryd, I. Analysis of Bias in the Apparent Correlation Coefficient Between 
+Image Pairs Corrupted by Severe Noise. J Math Imaging Vis 37, 204–219 (2010). 
+19. Spearman, C. The Proof and Measurement of Association between Two Things. The American 
+Journal of Psychology 15, 72–101 (1904). 
+20. Cohen, J. Statistical Power Analysis for the Behavioral Sciences. (Routledge, New York, 2013). 
+doi:10.4324/9780203771587. 
+21. Frohlich, J. et al. Electrophysiological Phenotype in Angelman Syndrome Differs Between Genotypes. 
+Biological Psychiatry 85, 752–759 (2019). 
+22. Sidorov, M. S. et al. Delta rhythmicity is a reliable EEG biomarker in Angelman syndrome: a parallel 
+mouse and human analysis. Journal of Neurodevelopmental Disorders 9, 17 (2017). 
+ 

@@ -1,0 +1,4 @@
+{"_note":"openFDA nusinersen HYDROCEPHALUS reporting fraction by receivedate window, around MHRA Drug Safety Update 2018-09-25; retrieved 2026-08-29 by critic4","windows":[
+{"receivedate_window":"20170101+TO+20180924","hydrocephalus":5,"nusinersen_total":1481},
+{"receivedate_window":"20180925+TO+20200101","hydrocephalus":8,"nusinersen_total":1325},
+{"receivedate_window":"20200101+TO+20260830","hydrocephalus":9,"nusinersen_total":4849}]}

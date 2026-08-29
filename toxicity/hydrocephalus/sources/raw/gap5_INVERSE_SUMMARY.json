@@ -1,0 +1,23 @@
+{
+  "sweep": "gap5_faers_reaction_first_inverse",
+  "retrieved_utc_date": "2026-08-29",
+  "api_base": "https://api.fda.gov/drug/event.json",
+  "openfda_data_last_updated": "2026-07-30",
+  "root_cause_of_prior_failure": "count queries with limit=1000 return {'error':{'code':'API_KEY_MISSING'}} anonymously; limit<=500 succeeds. Not a spent daily quota.",
+  "wildcard_support_verified": {"patient.drug.medicinalproduct:*ersen": 715, "patient.drug.medicinalproduct:tofersen": 121, "patient.drug.medicinalproduct:nusinersen": 160, "note": "leading wildcard returns more than any single member drug, so suffix matching is real"},
+  "distinct_drug_terms_examined": 4420,
+  "oligonucleotides_found_with_hydrocephalus_family_PT": {
+    "nusinersen":  {"tierA": 27, "tierB": 146, "terms": ["SPINRAZA","NUSINERSEN"]},
+    "tofersen":    {"tierA": 2,  "tierB": 34,  "terms": ["QALSODY","TOFERSEN"]},
+    "eteplirsen":  {"tierA": 0,  "tierB": 2,   "terms": ["EXONDYS 51","Exondys"]},
+    "vutrisiran":  {"tierA": 1,  "tierB": 0,   "terms": ["AMVUTTRA"]},
+    "patisiran":   {"tierA": 1,  "tierB": 0,   "terms": ["ONPATTRO"]},
+    "inclisiran":  {"tierA": 1,  "tierB": 0,   "terms": ["LEQVIO"]},
+    "lumasiran":   {"tierA": 0,  "tierB": 1,   "terms": ["OXLUMO"]},
+    "olezarsen":   {"tierA": 1,  "tierB": 0,   "terms": ["TRYNGOLZA"]},
+    "defibrotide": {"tierA": 3,  "tierB": 0,   "terms": ["DEFITELIO","DEFIBROTIDE","DEFIBROTIDE 200 MG/ML AMPULE GENTIUM PHARM -ITALY"]}
+  },
+  "explicit_negatives_investigational": ["STK-001/zorevunersen","jacifusen/ulefnersen","rugonersen","ION582","BIIB080/diranersen","PRAX-222","avacincaptad pegol","pegaptanib","imetelstat","CpG-ODN adjuvants","fomivirsen","mipomersen","inotersen","eplontersen","volanesorsen","golodirsen","viltolarsen","casimersen","givosiran","nedosiran","fitusiran"],
+  "negative_basis": "code-prefix wildcard sweep (ION*/IONIS*/ISIS*/BIIB*/STK*/WVE*/PRAX*/ALN*/ARO*/SRP*/AOC*/SLN*/IMO*/CPG*/NTLA*/PGN*/DYNE*/QR-*/RG6*/BMN*/NS-0*/ATL*/OLI*/TAK-*/AZD*/GSK*/LY9*/DS-5*/VIR-*) plus INN-stem sweep (*rsen/*siran/*sirna/*aptad/*captad/*aptanib) across all five PT groups; every returned bucket set was under the 500 cap, i.e. complete not truncated",
+  "label_side_analogue": {"query": "https://api.fda.gov/drug/label.json?search=%22hydrocephalus%22&count=openfda.generic_name.exact&limit=200", "distinct_generic_name_buckets": 28, "only_oligonucleotide": "NUSINERSEN", "count": 1}
+}

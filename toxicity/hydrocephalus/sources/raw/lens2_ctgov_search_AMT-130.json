@@ -1,0 +1,4 @@
+{"studies":[
+{"protocolSection":{"identificationModule":{"nctId":"NCT04120493","briefTitle":"Safety and Proof-of-Concept (POC) Study With AMT-130 in Adults With Early Manifest Huntington's Disease"},"statusModule":{"overallStatus":"ACTIVE_NOT_RECRUITING"},"conditionsModule":{"conditions":["Huntington's Disease"]},"designModule":{"phases":["PHASE1","PHASE2"]},"armsInterventionsModule":{"interventions":[{"name":"intra-striatal rAAV5-miHTT"},{"name":"Imitation (sham) surgery"}]}},"hasResults":false},
+{"protocolSection":{"identificationModule":{"nctId":"NCT05243017","briefTitle":"Safety and Efficacy of AMT-130 in European Adults With Early Manifest Huntington's Disease"},"statusModule":{"overallStatus":"ACTIVE_NOT_RECRUITING"},"conditionsModule":{"conditions":["Huntington Disease"]},"designModule":{"phases":["PHASE1","PHASE2"]},"armsInterventionsModule":{"interventions":[{"name":"intra-striatal rAAV5-miHTT"}]}},"hasResults":false}
+]}

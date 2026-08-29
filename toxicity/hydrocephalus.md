@@ -2,7 +2,7 @@
 
 **Status:** `delivered` · **Dataset:** [`./hydrocephalus/`](./hydrocephalus/README.md) · **Register:** [`./README.md`](./README.md) · **Cross-cutting sources:** [`./cross-cutting.md`](./cross-cutting.md)
 
-Hydrocephalus is the eighth and last endpoint in the Challenge brief's list of toxicities of interest (quoted verbatim in [`./README.md`](./README.md#scope-authority)). Until this pass it was `not-addressed`: zero rows, zero oligos, zero `source_id`s, no dedicated source, and no scope decision on record. It now carries a dataset of its own — **904 measurement rows over 34 oligonucleotides from 52 sources** — in [`./hydrocephalus/`](./hydrocephalus/README.md).
+Hydrocephalus is the eighth and last endpoint in the Challenge brief's list of toxicities of interest (quoted verbatim in [`./README.md`](./README.md#scope-authority)). Until this pass it was `not-addressed`: zero rows, zero oligos, zero `source_id`s, no dedicated source, and no scope decision on record. It now carries a dataset of its own — **914 measurement rows over 35 oligonucleotides from 53 sources** — in [`./hydrocephalus/`](./hydrocephalus/README.md).
 
 The previous version of this dossier set three conditions for advancing the endpoint and judged that meeting them would produce "a second dataset, not an extension of this one." That judgement was correct and has been followed: the new dataset has its own graded column, its own rubric, its own vocabularies and its own tables. **Nothing in `../data/`, `../schema.md`, `../METHODOLOGY.md`, `../sources/` or `../scripts/` was changed.** The renal dataset and this one sit side by side and are joined by nothing.
 
@@ -10,15 +10,15 @@ The previous version of this dossier set three conditions for advancing the endp
 
 | | Value |
 |---|---:|
-| Oligonucleotides described | 34 |
-| — of which carry at least one measurement | 29 |
-| Measurement rows | 904 |
-| — tier A (ventricular / CSF-volume outcome) | 382 |
-| — tier B (CSF pressure, composition, flow, procedure) | 522 |
-| Tier-A rows with a positive finding | 55 |
-| Tier-A rows that are explicit measured negatives | 326 |
-| Grade-3 (severe) rows | 18 |
-| Distinct sources | 52 |
+| Oligonucleotides described | 35 |
+| — of which carry at least one measurement | 30 |
+| Measurement rows | 914 |
+| — tier A (ventricular / CSF-volume outcome) | 389 |
+| — tier B (CSF pressure, composition, flow, procedure) | 525 |
+| Tier-A rows with a positive finding | 60 |
+| Tier-A rows that are explicit measured negatives | 328 |
+| Grade-3 (severe) rows | 22 |
+| Distinct sources | 53 |
 | Oligonucleotides with a published sequence | 4 of 34 — all research reagents; see `METHODOLOGY.md` OI-02 |
 | QC checks run / failed | 30 / 0 |
 
@@ -52,7 +52,9 @@ Three findings bear on how the rest of this register should be read.
 
 **Ventricular volume was measured, and it rose with dose.** The tominersen phase 1/2a trial made ventricular volume a pre-specified structural-MRI outcome. From screening to day 197 the placebo arm moved 35.58 → 36.46 mL (+2.5%, n=12) while the two highest dose arms moved +13.0% (n=9) and +19.9% (n=10); in the open-label extension the ventricular-volume boundary shift integral rose 46.1% on monthly against 18.8% on bimonthly dosing at 15 months. These are the only rows in either dataset where the ventricles were measured rather than incidentally observed. Group sizes are small and no test statistic is computed.
 
-**Hydrocephalus is tominersen-specific in the trial record.** Serious hydrocephalus or normal-pressure hydrocephalus adverse events appear in three separate tominersen studies, including **2/263 against 0/264 in the concurrent placebo arm** of GENERATION HD1, with cerebral ventricle dilatation across all three dose arms of the open-label extension. No other intrathecal oligonucleotide programme with posted results — nusinersen, tofersen, BIIB080, BIIB105, WVE-120101, WVE-120102, WVE-003 — reports a tier-A serious event. The others show the pressure and inflammation axes without the ventricular one.
+**Within registered trials the signal is tominersen's alone — but the endpoint is not tominersen-specific.** Serious hydrocephalus or normal-pressure hydrocephalus adverse events appear in three separate tominersen studies, including **2/263 against 0/264 in the concurrent placebo arm** of GENERATION HD1. No other intrathecal programme with posted results reports a tier-A serious event. That is a statement about registered trials only: the two strongest drug-attributed cases in the dataset come from outside that record. In an n-of-1 protocol, **both** infants dosed intrathecally with valeriasen — a different ASO, target, indication and age group — developed ventricular enlargement, one requiring endoscopic third ventriculostomy at a CSF opening pressure of 55 cmH₂O and the other an external drain and then a ventriculoperitoneal shunt; the authors call it "a potential monitorable toxicity of some intrathecal antisense oligonucleotides".
+
+**The two drug-attributed cases support different mechanisms.** The tominersen index case was attributed to a sterile meningitis (CSF protein 2.64 g/L, lymphocytosis); the KCNT1 patients had a negative CSF inflammatory panel and a dose-related working hypothesis, evidenced by a reduced-dose rechallenge delivered without recurrence. The dataset keeps the two apart on `tox_axis` and `event_cluster_id` rather than pooling them into one "hydrocephalus" count.
 
 **The mechanism is documented end to end in a single patient.** Rising CSF protein (to 2.64 g/L) and lymphocytosis, then ventricular dilation on serial MRI, then increased resistance to CSF outflow measured directly by lumbar infusion study, then a ventriculoperitoneal shunt — with the authors attributing the sequence to a drug-induced sterile meningitis. This is why the dataset records CSF-composition findings alongside ventricular ones, under an explicit tier label so that the two are never pooled by accident.
 
@@ -68,6 +70,7 @@ Three findings bear on how the rest of this register should be read.
 - **Only one designed control** (OI-08): the AQP4 study's scrambled non-targeting siRNA. Every other negative in the dataset is a comparator arm, a reported zero or a silent label — the same weakness a review found in the sibling kidney dataset, now at least recorded in `arm_role` and `ascertainment` rather than glossed.
 - ~~253 tier-A negatives rest on an unverified absence argument~~ — **resolved.** 42 CFR 11.48(a)(4)(ii)(A) requires a results submission to table *all* serious adverse events with no frequency threshold, so absence of a tier-A term from a posted serious-adverse-event table is a reported zero for serious events. The regulation is committed and cited per row. Two limits remain in-row: a non-serious ventricular event below the 5 percent threshold of subparagraph (B) would not appear, and none of this evidences that ventricular imaging was done.
 - **The counts in this dossier are transcribed**, not regenerated, and will drift if the dataset changes.
+- **100 further verified sources are retrieved but not extracted**, listed in [`hydrocephalus/notes/source_backlog.md`](./hydrocephalus/notes/source_backlog.md) — EudraVigilance, WHO VigiBase, EMA CHMP assessment reports, FDA pharmacology/toxicology reviews, PMDA documents and two patent families among them. This is the release's completeness limit, stated rather than left to be discovered.
 - **EMA rows carry `redistribution = verify`.** Reuse terms for EMA product information were not established; the verbatim text is quoted as evidence, but a redistributor should resolve the licence before republishing those eight rows' values.
 - **One compound row is a composite** (OI-07): `casimersen_or_golodirsen` covers a trial whose posted table does not separate the two compounds.
 

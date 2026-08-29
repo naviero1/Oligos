@@ -1,0 +1,3561 @@
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+Supplementary Materials for 
+
+Preclinical evaluation of antisense oligonucleotide therapy in a mouse model of 
+
+HNRNPH2-related neurodevelopmental disorder 
+
+Ane Korff1, Xiaojing Yang1, Ozan Ozdemir1, Ananya Samanta1, Yong-Dong Wang1, Tushar 
+
+Patni2, Alfonso J. Lavado3, Anoop Murthy Kavirayani4, Joseph Ochaba5, Berit Powers5, C. Frank 
+
+Bennett5, Hong Joo Kim1, and J. Paul Taylor1* 
+
+1  Department of Cell and Molecular Biology, St. Jude Children's Research Hospital, Memphis, 
+
+Tennessee, USA 
+
+2  Department of Biostatistics, St. Jude Children's Research Hospital, Memphis, Tennessee, 
+
+USA 
+
+3  Center for Pediatric Neurological Disease Research, Pediatric Translational Neuroscience 
+
+Initiative, St. Jude Children's Research Hospital, Memphis, Tennessee, USA 
+
+4  Department of Pathology, St. Jude Children's Research Hospital, Memphis, Tennessee, USA 
+
+5  Ionis Pharmaceuticals, Carlsbad, California, USA. 
+
+*Corresponding author: J. Paul Taylor, 262 Danny Thomas Place, Memphis, TN, USA 38105. 
+
+Phone: 901.595.6047; Email: jpaul.taylor@stjude.org.  
+
+One Sentence Summary: ASO-mediated Hnrnph2 knockdown induces Hnrnph1 upregulation 
+
+and rescues phenotypes in a mouse model of HNRNPH2-related neurodevelopmental disorder. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+Materials and Methods 
+
+Antisense oligonucleotide design and screening. Synthesis and purification of all chemically 
+
+modified oligonucleotides was performed as previously described (1, 2). The 2′-O-
+
+methoxyethylribose (MOE) gapmer ASOs were 20 nucleotides long, with a central gap segment 
+
+comprising ten 2′-deoxynucleotides flanked on the 5′ and 3′ ends by five 2′-MOE modified 
+
+nucleotides. All internucleoside linkages were phosphorothioate linkages, except those shown 
+
+as ‘o’ in the sequences below, which are phosphodiester. Lyophilized ASOs were formulated in 
+
+PBS without Ca2+ and Mg2+ (Gibco, 14190). 
+
+As previously described (2), ASOs targeting murine Hnrnph2 or human HNRNPH2 were 
+
+designed at Ionis to the murine and human hnRNPH2 pre-mRNAs, targeting both exonic and 
+
+intronic sequences. More than 450 ASOs were designed to the murine Hnrnph2 pre-mRNA, 
+
+which were screened in primary mouse embryonic cortical cultures isolated from 16-day pups 
+
+by adding the ASOs to the culture medium (free uptake). A similar number of ASOs were 
+
+designed to the human HNRNPH2 pre-mRNA and screened by free uptake in A431 cells 
+
+(ATTC). The level of target mRNA reduction was assessed by RT-qPCR and normalized to total 
+
+RNA level (RiboGreen, Quant-iT). Approximately 40 leads from both the human and mouse 
+
+screens were evaluated in a 4 point dose-response study to confirm activity and to rank the 
+
+leads. The top 19 murine Hnrnph2 ASOs that showed the most efficient knockdown of Hnrnph2 
+
+expression compared to untreated controls were then injected intracerebroventricularly in an 8-
+
+week, 700 µg activity and tolerability study in 8–12-week-old female C57BL/6J mice. A dose of 
+
+700 µg was selected based on prior work showing that this dose generally achieves greater 
+
+than 70% inhibition for active ASOs and will identify poorly tolerated ASOs. PBS was used as 
+
+vehicle control. Mice were observed acutely for any adverse effects as previously described (3, 
+
+4) and subsequently weighed and assessed for overall health weekly for 8 weeks. At the end of 
+
+8 weeks, animals were sacrificed, tissues collected, and RNA extracted to support analysis of 
+
+ASO activity and tolerability, measuring astrocyte and microglial activation markers. Screening 
+
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+data for 3 lead murine Hnrnph2 ASOs is shown in Table S1. Similar screens were performed for 
+
+the ASOs targeting human HNRNPH2. Levels of Hnrnph1, Hnrnph2, and Aif1 were assessed by 
+
+RT-qPCR. TaqMan primer/probe sets were employed with 56-FAM_Zen_3IABkFQ probe 
+
+chemistry (Integrated DNA Technologies). Forward (F), reverse (R), and probe (P) sequences 
+
+are as follows. Murine Hnrnph1 – F: CCTTCGTGCAGTTTGCTTC, R: 
+
+GATCATAATGAGTTCTAACTTCAGCTC, P: ACCTGTGCCCTATTCTTTCCTTGTGTT; Murine 
+
+Hnrnph2 is captured in Table S4; Murine Gapdh – F: GGCAAATTCAACGGCACAGT, R: 
+
+GGGTCTCGCTCCTGGAAGAT, P: AAGGCCGAGAATGGGAAGCTTGTCATC.  
+
+The sequences of the selected ASOs are as follows: mouse non-targeted control ASO, 
+
+5′-CCTATAGGACTATCCAGGAA-3′; mouse Hnrnph2 ASO1, 5′-GCTTATACCATTTCTCTTAT-
+
+3′. Human non-targeted control ASO, 5′-AATGCTTTCATAACTTCCAC-3′; human HNRNPH2 
+
+ASO2, 5′- GTACAGCTTTTATATCTGGA-3′.   
+
+Animals. WT C57BL/6J mice were used for ASO dose response and longitudinal studies, 
+
+distribution, and tolerance studies, with a balance of males and females. For all other studies, 
+
+Hnrnph2 P209L or R206W mutant knockin mice (5) were used, and male and female cohorts 
+
+were analyzed separately. Heterozygous mutant females were bred to WT C57BL/6J males to 
+
+generate heterozygous mutant females (Hnrnph2P209L/X), hemizygous mutant males 
+
+(Hnrnph2R206W/Y, Hnrnph2P209L/Y), and their WT female (Hnrnph2X/X) and male (Hnrnph2X/Y) 
+
+littermates. All experiments were performed on generation F12 or later. Animals were group 
+
+housed under standard conditions. Experimental protocols were approved by the Institutional 
+
+Animal Care and Use Committee at St. Jude Children’s Research Hospital.  
+
+Intracerebral ventricular injection of ASOs. Litters were randomly assigned to treatment 
+
+groups. Control or Hnrnph2 ASO was diluted to the appropriate concentration in PBS with 
+
+0.0135% Fast Green to aid in verification of the injection location. For neonatal treatment, 
+
+ 
+  
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+postnatal day 2 to 4 pups were cryo-anesthetized for 5-10 minutes. The scalp was cleaned with 
+
+70% ethanol and freehand injections were performed using a custom 10 µl Hamilton syringe 
+
+with 32-gauge needle (80308, Hamilton). Using the bregma and lambda as anatomical 
+
+references, 3 µl control ASO, Hnrnph2 ASO, or vehicle was injected freehand into the left 
+
+ventricle. After injection, pups were rewarmed in a petri dish with bedding from the dam’s cage 
+
+until the entire litter was injected. When pups were warm, pink, and capable of spontaneous 
+
+movement, the litter was sprinkled in dam urine, returned to the home cage, monitored to 
+
+ensure maternal acceptance, and observed closely for 24 hours post procedure. For juvenile 
+
+treatment, postnatal day 27 to 29 weanlings were anesthetized with isoflurane by inhalation and 
+
+their hair shaved with clippers to expose the scalp. After the scalp was cleaned with 70% 
+
+ethanol, lidocaine/bupivacaine was injected subcutaneously, and a sagittal incision was made to 
+
+expose the skull. Using the bregma and lambda as anatomical references, 3 µl control ASO, 
+
+Hnrnph2 ASO, or vehicle (0.0135% Fast Green in PBS) was injected freehand into the left 
+
+ventricle using a custom 10 µl Hamilton syringe with 32 gauge needle (80308, Hamilton). After 
+
+injection, the incision was closed with tissue adhesive and mice were moved to a heating pad 
+
+where they were monitored for recovery from anesthesia and acute post-surgery complications. 
+
+Once fully awake, mice were returned to their home cage with littermates where they were 
+
+received subcutaneous meloxicam injections every 24 hours for 3 days and monitored for post-
+
+operative complications twice daily for 1 week. 
+
+Differentiation and ASO treatment of WT human iPSC-derived neurons.  Human male 
+
+BJFF.6 iPSCs were differentiated into cortical neurons with a two-step protocol (pre-
+
+differentiation and maturation) as previously described (6). When iPSCs reached 70-80% 
+
+confluence, cells were washed twice with DPBS and dissociated with Accutase (STEMCELL 
+
+Technologies) and collected cells were filtered using a cell strainer (STEMCELL Technologies). 
+
+Filtered cells were centrifuged at 200 rcf for 5 min at room temperature and pellets were 
+
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+resuspended with medium containing N2 supplement, non-essential amino acids (NEAA), 
+
+GlutaMAX Supplement and Y-27632 (STEMCELL Technologies) and 1 μg/ml doxycycline 
+
+hyclate (Sigma Aldrich). Cell counting was performed using 10 μl and a Countess cell counter 
+
+(Thermo Fisher). Cells were subplated at 2 x 106 cells/well in 6-well dishes coated with Geltrex 
+
+(Gibco) in knockout Dulbecco’s modified Eagle’s medium (KO-DMEM)/F12. The medium was 
+
+changed daily for 3 days and Y-27632 was removed from day 2. For maturation, pre-
+
+differentiated precursor cells were washed, dissociated, counted, and subplated at 25 x 104 
+
+cells/ml on dishes coated with 50 μg/ml poly-L-ornithine and 1-2 μg/cm2 laminin (Millipore 
+
+Sigma) in BrainPhys neuronal medium (STEMCELL Technologies) containing N2 (Thermo 
+
+Fisher Scientific), B-27, 20 ng/ml BDNF (PeproTech), 20 ng/ml GDNF (PeproTech), 500 μg/ml 
+
+dibutyryl cyclic-AMP (Sigma Aldrich), 200 nM L-ascorbic acid (Sigma Aldrich), 1 μg/ml natural 
+
+mouse laminin (Thermo Fisher Scientific), 1 μM AraC (Sigma Aldrich), Y-27632 (STEMCELL 
+
+Technologies) and 1 μg/ml doxycycline hyclate. Y-27632 was removed from day 2. Half-medium 
+
+was changed every other day. iPSC-derived neurons were treated with HNRNPH2 ASO or 
+
+vehicle (DPBS) from day 7 to day 21 of neuronal maturation. The ASO was initially added 
+
+directly to the media to a final concentration of 10 µM, then at each subsequent half-media 
+
+change to achieve the same final concentration. RNA isolation, protein isolation, and Western 
+
+blotting in iPSC-derived neurons were performed as described for HEK293T cells below. ddRT-
+
+PCR was performed as described for mouse tissue below. 
+
+Cell culture, transfection, Western blot, and digital droplet RT-PCR. HEK293T cells were 
+
+maintained in Dulbecco’s Modified Eagle’s Medium (DMEM) supplemented with 10% fetal 
+
+bovine serum. Cells were transfected with RNAiMAX reagent (Thermo Fisher Scientific, 
+
+13778075) according to the manufacturer’s protocol, using either ON-TARGETplus Non-
+
+targeting Pool siRNA (Dharmacon, D-001810-10-05) or ON-TARGETplus human hnRNPH2 
+
+siRNA (Dharmacon, L-013245-02-0005). For plasmid-based transfections, cells were 
+
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+transfected with HA-minigene and/or GFP-hnRNPH2 using Lipofectamine 3000 (Thermo Fisher 
+
+Scientific, L3000015) according to the manufacturer’s instructions. Twenty-four hours post-
+
+transfection, cells were lysed on ice for 30 min in lysis buffer (25 mM Tris-HCl pH 7.5, 150 mM 
+
+NaCl, 1 mM EDTA, 1% NP-40, 5% glycerol [v/v]) supplemented with 1× Complete Protease 
+
+Inhibitor Cocktail (Thermo Fisher Scientific, 1862209). An aliquot to 3% of the lysate was used 
+
+as input. Proteins were resolved by electrophoresis on NuPAGE Novex 4–12% Bis-Tris gels 
+
+(Invitrogen) and transferred to membranes. Membranes were blocked with Intercept TBS 
+
+blocking buffer (LI-COR, 927-60001) and incubated with primary antibodies followed by species-
+
+specific IRDye secondary antibodies. Imaging was performed on an Odyssey CLx system and 
+
+analyzed on Image Studio software version 5.5 (LI-COR). Details on antibodies used in western 
+
+blots are provided in Table S5. For RNA isolation, cells were washed twice with DPBS and 
+
+processed following the manufacturer’s instructions using the RNeasy Mini Kit (74106, Qiagen). 
+
+RNA was quantified using the Quant-iT RiboGreen RNA Assay Kit (R11490, Thermo Fisher 
+
+Scientific), or NanoDrop 8000 Spectrophotometer (Thermo Fisher Scientific). ddRT-PCR was 
+
+performed as described for mouse tissues below. Target and reference genes with assay details 
+
+are listed in Table S4. 
+
+RT-PCR, digital droplet RT-PCR, and Western blot in mouse tissue. Mice were 
+
+anesthetized by isoflurane inhalation and whole brains were harvested and cut in half sagitally 
+
+before being flash frozen in liquid nitrogen and stored at -80°C until use. For RNA isolation from 
+
+mouse brain, tissue was treated with RNAlater-ICE (AM7030, Thermo Fisher Scientific) to 
+
+prevent degradation, processed using the RNeasy Midi Kit with on-column DNase digestion 
+
+(75144, Qiagen), and quantified with the Quant-it RiboGreen RNA Assay Kit (R11490, Thermo 
+
+Fisher Scientific). For gene expression by RT-PCR, 400 ng of RNA from mouse brain was 
+
+converted to cDNA with the SuperScript IV First-Strand Synthesis System (18091050, Thermo 
+
+Fisher Scientific) using random hexamer primers. Two µl of cDNA was used for PCR with the 
+
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+Platinum II Hot-Start PCR Master Mix (14001012, Thermo Fisher Scientific). Products were 
+
+resolved on a 3 % agarose gel, imaged on the ChemiDoc MP system (Bio-Rad), and 
+
+densitometry per formed with ImageJ. For gene expression analysis by digital droplet PCR, 1-10 
+
+ng RNA (depending on the target transcript) was used with a one-step RT-ddPCR Advanced Kit 
+
+for Probes (1864021, Bio-Rad). Data were analyzed with the QX Manager Software Version 2.0 
+
+(Bio-Rad), copies were normalized to those of a reference gene with similar expression level, 
+
+and expression plotted as a percentage of control. Target and reference genes with assay 
+
+details are listed in Table S4. 
+
+ For western blots in mouse, brain tissue was processed for total cell RIPA-soluble 
+
+fractions as previously published (7), or for cytoplasmic and nuclear fractions with the 
+
+Subcellular Protein Fractionation Kit for Tissues (87790, Thermo Fisher Scientific) according to 
+
+the manufacturer’s protocol. Protein concentrations were determined by BCA protein assay 
+
+(A55864, Thermo Fisher Scientific), and 15 μg total cell RIPA-soluble fraction, 100 μg 
+
+cytoplasmic fraction, or 85 μg nuclear fraction was loaded onto 8% WedgeWell gels 
+
+(NW00080BOX, Thermo Fisher Scientific). Electrophoresis was performed using the Bolt Bis-
+
+Tris mini gel system (Thermo Fisher Scientific) and proteins were transferred to PVDF 
+
+membranes (IB24001, Thermo Fisher Scientific) using the iBlot 2 dry blotting system (Thermo 
+
+Fisher Scientific). Membranes were blocked with Intercept TBS blocking buffer (LI-COR, 927-
+
+60001) and incubated with primary antibodies followed by species-specific IRDye secondary 
+
+antibodies. Imaging was performed on an Odyssey CLx system and analyzed on Image Studio 
+
+software version 5.5 (LI-COR). Details on antibodies used in western blots are provided in Table 
+
+S5.  
+
+RNA-seq data analysis. Total RNA was extracted with an RNeasy Universal Midi kit (Qiagen; 
+
+75144) as described above. A sequencing library was prepared with a TruSeq Stranded Total 
+
+RNA Kit (Illumina) and sequenced with an Illumina HiSeq system with 100-bp read length. Total 
+
+  
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+stranded RNA sequencing data were processed by the internal AutoMapper pipeline. Raw 
+
+reads were first trimmed (Trim-Galore v0.60), mapped to mouse (GRCm39) genome assembly 
+
+(STAR v2.7) and then the gene level values were quantified (RSEM v1.31) based on 
+
+GENCODE annotation (vM22). We obtained the TPM (transcript per million) counts for genes 
+
+with TPM greater than one in at least one sample and the gene expression analysis was 
+
+performed with non-parametric ANOVA using Kruskal-Wallis and Dunn’s tests on log-
+
+transformed TPM counts between three replicates of each experimental group, implemented in 
+
+Partek Genomics Suite v7.0 software (Partek). The expression of a gene was considered 
+
+significantly different if the adjusted (through two-stage linear step-up procedure of Benjamini, 
+
+Krieger and Yekutieli) (8) P value < 0.05 (equivalent to FDR of 5%) and log2FC > 0.322. For 
+
+alternative splicing analysis, the aligned and sorted BAM files after STAR alignment were used 
+
+for AS analysis using rMATS (v4.0.2) (50). A3SS, A5SS, SE, RI, and MXE events were 
+
+evaluated. Significant AS events from the two-group differential alternative splicing analysis 
+
+were identified using the following criteria: average RNA-seq read count ≥10 in both sample 
+
+groups; filter out events with average PSI value <0.05 or >0.95 in both sample groups; FDR 
+
+≤0.05; |ΔPSI| ≥0.05 (9). 
+
+Immunofluorescence. Mice were anesthetized by isoflurane inhalation and whole brains 
+
+harvested, cut in half sagitally, postfixed in 10% neutral buffered formalin (NB0345, StatLab), 
+
+and embedded in paraffin. Alternatively, mice were anesthetized by isoflurane inhalation and 
+
+transcardially perfused with 4% paraformaldehyde (J19943, Thermo Fisher Scientific) before 
+
+whole brains were harvested, cut in half sagitally, cryoprotected in 30% sucrose in PBS, and 
+
+embedded in Tissue Freezing Medium (TFM-C, GeneralData). To assess the distribution and 
+
+activity of the Hnrnph2 ASO in the mouse brain, 4-µm sagittal paraffin sections were cut on a 
+
+microtome, deparaffinized and subjected to proteinase K antigen retrieval (S3020, Dako) or 
+
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+heat-induced epitope retrieval (50-187-82, Thermo Fisher Scientific) depending on the primary 
+
+antibodies used. Sections were then stained according to standard immunofluorescence 
+
+protocols. For sections stained with both the rabbit anti-ASO and rabbit anti-HNRNPH2 
+
+antibodies, the anti-HNRNPH2 antibody was labeled with CF568 using a Mix-n-Stain antibody 
+
+labeling kit (92235, Biotium). Details on antibodies used are provided in Table S7.  
+
+For ASO distribution across the mouse brain, images were acquired with a Leica SP8 
+
+confocal microscope or a Lionheart slide scanner. For ASO distribution into brain cell types, 
+
+images were acquired with a Leica Stellaris confocal microscope. For Hnrnph2 downregulation 
+
+in brain cells containing Hntnph2 ASO, images were acquired with a Leica Stellaris confocal 
+
+microscope or a Leica SP8 confocal microscope. 
+
+Histopathology. For histopathological evaluation of Hnrnph2 ASO toxicity, mice were 
+
+anesthetized by isoflurane, euthanized, perfused transcardially with 10% neutral buffered 
+
+formalin and subjected to a standard full necropsy. Tissues were dissected, fixed in 10% neutral 
+
+buffered formalin, and processed using the HistoCore PEGASUS Tissue Processor (Leica 
+
+Biosystems). Processed tissues were embedded in paraffin and sectioned at a thickness of 4 
+
+µm using a HistoCore AUTOCUT fully automated rotary microtome (Leica Biosystems). Tissue 
+
+sections were stained with hematoxylin and eosin (H&E) using the HistoCore SPECTRA ST 
+
+Stainer (Leica Biosystems). Simplex immunohistochemistry was performed on sequential brain 
+
+sections to detect CD68 (macrophages), CD163 (peripheral monocyte-derived macrophages), 
+
+IBA1/AIF1 (microglia/macrophages), and GFAP (astrocytes). Details on epitope retrieval, 
+
+primary antibodies, staining platform and detection system used are summarized in Table S6. 
+
+Sections were reviewed by a board-certified veterinary pathologist (AMK). Histopathologic 
+
+lesions and positive reactivity for each immunohistochemistry assay were semi-quantitatively 
+
+scored for severity (10). For GFAP and IBA1, positive reactivity above baseline expression in 
+
+the brain was scored. 
+
+ 
+  
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+Audiogenic seizure susceptibility. Susceptibility to audiogenic seizures was tested as 
+
+previously described (5). Briefly, mice were exposed to a 120-125 dB fire bell inside a clear 
+
+acrylic box (30 x 30 x 30 cm) for 60 seconds and the intensity of the response (seizure severity 
+
+score) was categorized as 0 for no response or slight startle, 1 for wild running, 2 for clonic 
+
+seizures, 3 for tonic seizures, and 4 for respiratory arrest (11).  
+
+Motor function tests. Mice were tested for balance and coordination, muscle strength and gait 
+
+performance as previously described (5). Rotarod analysis was performed on an accelerating 
+
+rotarod apparatus (IITC Life Science) using a 2-day protocol consisting of a training day with 
+
+rotation speed set at 4 rpm for 5 minutes, followed by a testing day with rotation speed set to 
+
+accelerate from 4 to 40 rpm at 0.1 rpm/s. On test day, latency to fall was recorded for four 
+
+separate trials per mouse, with a 15-minute rest period between each trial, and the average 
+
+latency to fall across the 4 trials was calculated. The beam walking test was performed using a 
+
+2-day, multibeam (MazeEngineers) protocol (12). Total latency to cross all 3 beams and number 
+
+of hind paw slips on the 12-mm square beam was analyzed. Grip strength was measured using 
+
+a grip strength meter (Bioseb) as grams of force for front paws in six repeated measurements. 
+
+The average grip strength across the 6 trials was calculated. For gait analysis, the front and 
+
+hind paws of each animal were dipped in water-soluble non-toxic red and blue paint, 
+
+respectively. The animal was then placed in a 70-cm long tunnel lined on the bottom with 
+
+Whatman filter paper and allowed to walk through one time. Footprints were scanned and 
+
+analyzed with Image J for stride length, fore- and hind base width, and overlap (13).  
+
+Cognitive function tests. Mice were assessed for anxiety in the elevated plus maze, anxiety 
+
+and locomotion in the open field test, and spatial learning and memory in the Morris water maze 
+
+using the ANY-maze automated activity monitoring system and software (v7.2) as previously 
+
+ 
+ 
+  
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+described (5). Briefly, in the elevated plus maze (Stoelting), mice were placed in the center 
+
+facing an open arm away from the investigator and allowed to explore the maze undisturbed for 
+
+5 minutes (14). Parameters including total distance traveled, time spent in open arms and time 
+
+spent in the maze center were recorded and analyzed. The animal’s entire area was used to 
+
+score arm entries and exits, with at least 80% of the animal needed for an arm entry to occur, 
+
+and mice were considered to be in the center zone if not in any arm. Mice that fell off the maze 
+
+were excluded from the analysis. For the open field test, mice were placed in the center of a 40 
+
+cm x 40 cm open field arena (Stoelting) facing away from the investigator and allowed to 
+
+explore undisturbed for 20 minutes (15). Parameters including total distance traveled and time 
+
+in the center zone (defined as the center 24 cm x 24 cm of the maze) were recorded and 
+
+analyzed. The animal’s center was used to score zone entries and exits. The Morris water maze 
+
+(MazeEngineers) consisted of a cued phase to test the physical ability of the mice to complete 
+
+the task, followed by a training/spatial learning phase and finally, a spatial memory test phase 
+
+(16). Parameters including mean speed, time in the thigmotaxis zone (within 10 cm of the pool 
+
+wall), latency to find the visible platform (cued trials), latency to find the hidden platform (training 
+
+trials), cumulative distance from the platform (training trials), latency to enter the platform 
+
+location (test trial), and platform location crosses (test trial) were recorded and analyzed.  
+
+ 
+ 
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+Supplementary Figures 
+
+Fig. S1. Initial characterization of mouse Hnrnph2 ASOs in adult female C57BL/6J mice. 
+
+(A) Expression levels of Hnrnph2 and Hnrnph1 in mouse cortex 8 weeks after an ICV injection 
+
+with 700 µg of the tested Hnrnph2-targeted ASOs. Each dot represents a different ASO, with the 
+
+blue dot indicating ASO1, which was used in all subsequent experiments. mRNA levels were 
+
+measured by qRT-PCR, normalized to a reference gene, and expressed as a percentage of the 
+
+vehicle (PBS) control level. There was a significant inverse relationship between Hnrnph2 and 
+
+Hnrnph1 levels (r = -.8173, P < 0.0001, with an R2 value of 0.7, n = 3-4 mice per group). (B-D) 
+
+Mouse Hnrnph2 ASO1 knocks down Hnrnph2 (B), increases Hnrnph1 (C), and does not alter 
+
+expression of microglial activation marker Aif1 (D) in cortex 8 weeks following a single 700 µg 
+
+ICV injection in adult WT mice. mRNA levels were measured by qRT-PCR, normalized to a 
+
+ 
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+reference gene, and expressed as a percentage of the vehicle (PBS) control level. ****P < 
+
+0.0001, **P < 0.01, unpaired two-tailed t-test, n = 3-4 mice per group. Data are represented as 
+
+mean ± SD. (E) Body weight was measured weekly across the study. No significant differences 
+
+were observed in the body weight as a percentage of baseline between the vehicle- and 
+
+Hnrnph2 ASO1-treated mice across the study using multiple unpaired t-tests with two-stage 
+
+step-up (8) multiple comparisons false discovery rate method.  
+
+ 
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+Fig. S2. Validation of antibody specificity and efficiency of subcellular fractionation. (A) 
+
+Phylogenetic tree of human and mouse HNRNPH1 and HNRNPH2 proteins. The table displays 
+
+the percentage identity of their amino acid sequences. (B-D) Purified recombinant mouse 
+
+HNRNPH1 and HNRNPH2 proteins were loaded onto gels in the indicated amounts. The gels 
+
+were stained with Coomassie blue (B) or blots probed with the indicated antibodies (C, D). (E) 
+
+Nuclear or cytoplasmic fractions prepared from mouse whole brains were loaded onto gels in 
+
+the indicated amounts. Blots were probed with antibodies against HNRNPH2, a nuclear protein 
+
+(HDAC2), and a cytoplasmic protein (GAPDH). Nuclear fractions showed a strong HDAC2 
+
+signal and no signal for GAPDH, supporting completeness of the fractionation. HNRNPH2 was 
+
+detected in the nuclear fraction, and the level was reduced in Hnrnph2 ASO-treated samples. 
+
+HNRNPH1 was also detected in nuclear fractions. Cytoplasmic fractions showed a strong 
+
+GAPDH signal as well as some signal for HDAC2, particularly when larger amounts of protein 
+
+were loaded. 
+
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+Fig. S3. Distribution and activity of Hnrnph2 ASO in the mouse brain. WT mice were 
+
+treated with 30 µg control or Hnrnph2 ASO in a single bolus ICV injection at PND 2-4. Brains 
+
+were harvested at PND 21, processed for immunofluorescence, and slides imaged by confocal 
+
+microscopy. (A) ASO signal was detected inside neocortical NeuN+ neurons, CA2+ 
+
+oligodendrocytes, and IBA1+ microglia, as well as hippocampal GFAP+ astrocytes in both 
+
+control ASO- and Hnrnph2 ASO-treated samples. White arrows and arrowheads indicate ASO 
+
+present in microglial cell bodies and processes, respectively. (B) HNRNPH2 signal was 
+
+detected in nuclei of NeuN+ neurons in the hippocampus of control ASO-treated brains, but not 
+
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+in Hnrnph2 ASO-treated brains. (C) HNRNPH2 signal was detected in nuclei of calbindin+ and 
+
+parvalbumin+ Purkinje cells of the cerebellum in control ASO-treated brains, but not in Hnrnph2 
+
+ASO-treated brains. Scale bars, 7 μm in (A) and (C), 20 μM in (B). 
+
+ 
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+Fig. S4. Neonatal treatment with the Hnrnph2 ASO does not influence the survival and 
+
+body weight phenotypes of mutant Hnrnph2 mice. (A-C) Kaplan-Meier survival curves up to 
+
+8 weeks of age for P209L male mice (A), R206W male mice (B), and P209L female mice (C) 
+
+treated with 30 µg control or Hnrnph2 ASO by ICV injection at PND 2-4. ****P < 0.0001, *P = 
+
+0.0183 by Mantel-Cox test. Table shows P values for pairwise survival curve comparisons after 
+
+adjustment for multiple comparisons by the Holm-Sidak method. (D-F) Effect of neonatal ASO 
+
+treatment on body weight of P209L male mice (D), R206W male mice (E), and P209L female 
+
+mice (F) at 8 weeks of age. ****P < 0.0001, 2-way ANOVA with Sidak's multiple comparison. For 
+
+(D): control ASO WT n = 22, control ASO P209L n = 16, Hnrnph2 ASO WT n = 33, Hnrnph2 
+
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+ASO P209L n = 18. For (E): control ASO WT n = 27, control ASO R206W n = 21, Hnrnph2 ASO 
+
+WT n = 23, Hnrnph2 ASO R206W n = 24. For (F): control ASO WT n = 17, control ASO 
+
+P209L n = 18, Hnrnph2 ASO WT n = 17, Hnrnph2 ASO P209L n = 20. Data are represented as 
+
+mean ± SEM. 
+
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+Fig. S5. Neonatal treatment with Hnrnph2 ASO rescues the molecular phenotype of 
+
+juvenile R206W male mice. (A) Design of studies used to generate data in (B-L). All panels 
+
+show data collected from R206W mutant mice or littermates at 3 weeks of age treated with 30 
+
+μg dose of ASO. (B) ddRT-PCR of whole brain tissues showing Hnrnph2 and Hnrnph1 mRNA 
+
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+levels. (C) Seven upregulated genes in both Hnrnph2 mutant mice and human HNRNPH2 
+
+mutant iPSC-derived neurons. (D) ddRT-PCR of whole brain tissues showing expression levels 
+
+of genes listed in (C). (E) Volcano plots showing differentially expressed genes with significantly 
+
+downregulated (blue) and upregulated (red) genes indicated. (F) Top 10 most upregulated 
+
+genes and one downregulated gene by log2R from middle plot in (E). (G) Effects of Hnrnph2 
+
+ASO on upregulated (left), downregulated (middle), and unchanged (right) genes at the 
+
+individual gene level. (H) RNA-seq-derived differential alternative splicing events grouped by 
+
+Hnrnph2 ASO treatment (left) and R206W mutation (right). SE: skipped exon. A3SS: alternative 
+
+3′ splice site. RI: retained intron. A5SS: alternative 5′ splice site. MXE: mutually exclusive exon. 
+
+Overlap between Hnrnph2 ASO-dependent and R206W mutation-dependent events is shown. 
+
+(I) Minimal overlap between R206W mutation-dependent events identified by differential gene 
+
+expression (DGE) and differential alternative splicing (DAS) analyses. (J) Left, volcano plot 
+
+showing the 459 significant skipped exon (SE) events in control ASO-treated R206W mutant 
+
+mice with significantly increased (red) and decreased (blue) events. Right, volcano plot showing 
+
+the effect of Hnrnph2 ASO treatment on R206W mutation-dependent skipped exon events. (K-
+
+L) Audiogenic seizure susceptibility scoring (K) and assessment (L) of indicated mice. For panel 
+
+B and D, 2-way ANOVA with Sidak's multiple comparison, n = 3-4 mice per treatment. For panel 
+
+L, non-parametric Scheirer–Ray–Hare test with Mood’s median test, control ASO WT males n = 
+
+11, control ASO R206W males n = 13, Hnrnph2 ASO WT males n = 14, Hnrnph2 ASO R206W 
+
+males n = 13. For all statistical analyses, ****P < 0.0001, ***P < 0.001, **P < 0.01, *P < 0.05. 
+
+Data shown as mean ± SEM.  
+
+ 
+ 
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+Fig. S6. Effect of neonatal Hnrnph2 ASO treatment on the incidence of hydrocephalus in 
+
+male and female mice. Incidence of hydrocephalus observed at dissection of male and female 
+
+P209L mice (A), and male R206W mice (B) at 3 weeks of age. P < 0.0001, P =0.01, Fisher's 
+
+exact test. For pairwise comparison, P values were adjusted for multiple comparisons by the 
+
+Holm-Sidak method. 
+
+ 
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+Fig. S7. Impact of neonatal Hnrnph2 ASO treatment on motor and cognitive functions in 
+
+adult Hnrnph2 P209L female mice. (A-D) Effect of neonatal Hnrnph2 ASO treatment on 
+
+rotarod performance (A), balance beam performance (B), grip strength (C), and stride length (D) 
+
+in female P209L mice. (E-I) Effect of neonatal ASO treatment on elevated plus maze behavior 
+
+(E), open field behavior (F), and Morris water maze performance (G-I) in female P209L mice. In 
+
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+panel E, heatmaps show the average animals’ center point for the groups for the 5-minute test. 
+
+In panel F, heatmaps show the average animals’ center point for the groups for the 20-minute 
+
+test. For panels A-G, **P < 0.01, *P < 0.05 by 2-way ANOVA with Sidak's multiple comparison. 
+
+For panel H, #P < 0.05 by linear mixed effects model with random intercept. Post-hoc 
+
+comparisons adjusted by FDR within each time point. For panels A-D, control ASO WT females 
+
+n = 19, control ASO P209L females n = 20, Hnrnph2 ASO WT females n = 17, Hnrnph2 ASO 
+
+P209L females n = 20. For panel B: control ASO WT females n = 19, control ASO P209L 
+
+females n = 20, Hnrnph2 ASO WT females n = 15-17, Hnrnph2 ASO P209L females n = 20. For 
+
+panel E: control ASO WT females n = 26, control ASO P209L females n = 26, Hnrnph2 ASO 
+
+WT females n = 20, Hnrnph2 ASO P209L females n = 19. For panel F: control ASO WT females 
+
+n = 26, control ASO P209L females n = 30, Hnrnph2 ASO WT females n = 20, Hnrnph2 ASO 
+
+P209L females n = 20. For panel G-I: control ASO WT females n = 25, control ASO P209L 
+
+females n = 30, Hnrnph2 ASO WT females n = 20, Hnrnph2 ASO P209L females n = 20. Data 
+
+are represented as mean ± SEM. 
+
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+Fig. S8. Juvenile ASO treatment is associated with post-ICV injection seizures and 
+
+Hnrnph2 ASO rescues the molecular phenotype of juvenile R206W male mice (A-B) Effect 
+
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+of juvenile ASO treatment on the incidence of post-ICV injection seizures in male (A) and female 
+
+(B) P209L mice. P values next to each graph were determined by Fisher's exact test. Table 
+
+shows P values for pairwise comparisons of contingency tables after adjustment for multiple 
+
+comparisons by the Holm-Sidak method. For (A), control ASO WT males n = 39, control ASO 
+
+P209L males n = 27, Hnrnph2 ASO WT males n = 20, Hnrnph2 ASO P209L males n = 22. For 
+
+(B), control ASO WT females n = 43, control ASO P209L females n = 46, Hnrnph2 ASO WT 
+
+females n = 41, Hnrnph2 ASO P209L females n = 37. (C) ddRT-PCR of whole brain tissues 
+
+showing Hnrnph2 and Hnrnph1 mRNA levels. (D) ddRT-PCR of whole brain tissues showing 
+
+expression levels of seven genes previously found to be upregulated in both Hnrnph2 mutant 
+
+mice and human HNRNPH2 mutant iPSC-derived neurons. (E) Volcano plots showing 
+
+differentially expressed genes with significantly downregulated (blue) and upregulated (red) 
+
+genes indicated. (F) Top 10 most upregulated and 3 downregulated genes by log2R from 
+
+middle plot in (E). (G) Effects of Hnrnph2 ASO on upregulated (left), downregulated (middle), 
+
+and unchanged (right) genes at the individual gene level. (H) RNA-seq-derived differential 
+
+alternative splicing events grouped by Hnrnph2 ASO treatment (left) and P209L mutation (right). 
+
+SE: skipped exon. A3SS: alternative 3′ splice site. RI: retained intron. A5SS: alternative 5′ splice 
+
+site. MXE: mutually exclusive exon. Overlap between Hnrnph2 ASO-dependent and P209L 
+
+mutation-dependent events is shown. (I) Minimal overlap between P209L mutation-dependent 
+
+events identified by differential gene expression (DGE) and differential alternative splicing (DAS) 
+
+analyses. (J) Left, volcano plot showing the 91 significant skipped exon (SE) events in control 
+
+ASO-treated P209L mutant mice with significantly increased (red) and decreased (blue) events. 
+
+Right, volcano plot showing the effect of Hnrnph2 ASO treatment on P209L mutation-dependent 
+
+skipped exon events. (K-L) Audiogenic seizure susceptibility in untreated (K) and ASO-treated 
+
+(L) male mice. For panels C and D, 2-way ANOVA with Sidak's multiple comparison, n = 3-4 
+
+mice per group. For panel K, non-parametric Mann-Whitney U test, WT males n = 7, P209L 
+
+males n = 8. For panel L, non-parametric Scheirer–Ray–Hare test with Mood’s median test, 
+
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+control ASO WT males n = 25, control ASO P209L males n = 15, Hnrnph2 ASO WT males n = 
+
+18, Hnrnph2 ASO P209L males n = 16. For all statistical analyses, ****P < 0.0001, ***P < 0.001, 
+
+**P < 0.01, *P < 0.05. Panels C-L show data collected from P209L mutant male mice or 
+
+littermates at 8 weeks of age treated with 200 μg dose of ASO. Data shown as mean ± SEM. 
+
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+Fig. S9. HNRNPH2 protein regulates the expression of HNRNPH1 by modulating its 
+
+splicing. (A) Significant skipping of essential exon (exon 5) of Hnrnph1 in cortex from Hnrnph2 
+
+KO mice, but not Hnrnph2 P209L and R206W mutant mice, as detected by alternative splicing 
+
+analysis of RNA-seq data (5). (B) Schematic representation of intron-exon structure of murine 
+
+Hnrnph1, including the 139-nt essential exon and flanking exons. Forward and reverse primers 
+
+were located in exon 4 and 6 (red arrows) and expected sizes of transcripts with and without the 
+
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+essential exon were 314 bp and 175 bp, respectively. (C) Alternative splicing of the essential 
+
+exon of murine Hnrnph1 was tested by RT-PCR in the absence (DMSO) or presence of 
+
+cycloheximide (CHX) in mouse primary cortical neurons. Band identity was confirmed by 
+
+sequencing. (D) Quantification of band intensity in (C) measured by densitometry. The 
+
+percentage of non-productive splicing, calculated as the level of Hnrnph1 transcripts lacking the 
+
+essential exon divided by the level of total Hnrnph1 transcripts (with and without the essential 
+
+exon) was significantly increased after cycloheximide treatment in both WT and Hnrnph2 KO 
+
+neurons. After cycloheximide treatment, there was a significant reduction in non-productive 
+
+splicing in Hnrnph2 KO neurons compared to WT. (E) Alternative splicing of the essential exon 
+
+of murine Hnrnph1 was reduced by neonatal treatment with 30 µg of Hnrnph2 ASO in whole 
+
+brains of juvenile WT and Hnrnph2 P209L mice. (F) Western blot analysis of HEK293T cells 
+
+transfected with either GFP or GFP-HNRNPH2. Cell lysates were immunoblotted with 
+
+antibodies against HNRNPH1 (top) and HNRNPH2 (bottom). Note that the HNRNPH1 antibody 
+
+also recognizes GFP-HNRNPH2, whereas HNRNPH2 antibody only detects overexpressed 
+
+GFP-HNRNPH2. Endogenous HNRNPH1 protein levels are shown in the accompanying bar 
+
+graph. (G) Schemes for human HNRNPH2 ASO treatment (10 µg) in human iPSC-derived 
+
+neurons. (H) ddRT-PCR showing levels of HNRNPH2 and HNRNPH1 mRNA levels in the three 
+
+ASO treatment schemes as shown in (G). (I) Human iPSC-derived neurons were treated with 
+
+vehicle, 10 µg of control ASO or human HNRNPH2 ASO using scheme 3 in G. ddRT-PCR 
+
+showing levels of HNRNPH2 and HNRNPH1 mRNA levels. (J) Treatment with human 10 µg 
+
+HNRNPH2 ASO in iPSC-derived neurons results in significant increase in HNRNPH1 protein 
+
+level. Actin was used as a loading control. ns: Non-specific band.  ****P < 0.0001, ***P < 0.001, 
+
+**P < 0.01, *P < 0.05 by 2-way ANOVA with Sidak's multiple comparison (D and E), student’s t-
+
+test (F and J), one-way ANOVA with Dunnett’s multiple comparison (H and I), n = 3-4 mice per 
+
+group (D and E),  n = 3 technical repeats (F, H-J). Data shown as mean ± SD. 
+
+bioRxiv preprint 
+
+doi: 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+; 
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+
+.
+
+ASO sequence 
+
+Primary screen 
+Hnrnph2 
+mRNA (% 
+control) 
+(20 µM) 
+
+4-point 
+dose-
+response 
+IC50 (µM) 
+
+Body 
+weight 8 
+weeks after 
+dosing (% 
+control) 
+
+3 h FOB 
+
+Maximum 
+FOB over 
+8 weeks 
+
+Hnrnph2 
+mRNA 
+8 weeks after 
+dosing - cortex  
+(% control) 
+
+Hnrnph2 mRNA 
+8 weeks after 
+dosing – spinal 
+cord 
+(% control) 
+
+Aif1 mRNA 
+8 weeks 
+after dosing 
+-spinal cord  
+(% control)  
+
+IBA1 IHC 8 
+weeks after 
+dosing – brain 
+(manual 
+scoring) 
+
+CD68 IHC 8 
+weeks after 
+dosing – brain 
+(manual 
+scoring) 
+
+GCTTATACCA
+TTTCTCTTAT 
+GTTGTACTTC
+CCATTTACCA 
+TTGTACTTCC
+CATTTACCAA 
+
+21.1 ± 2.0 
+
+29.9  ± 1.6 
+
+22.1  ± 4.2 
+
+<1.2 
+
+<1.2 
+
+<1.2 
+
+118 
+
+108 
+
+108 
+
+0, 0, 0 
+
+0, 0, 0 
+
+3.8 ± 0.9 
+
+9.0 ± 0.5 
+
+81.6 ± 2.9 
+
+0, 0, 0 
+
+0, 0, 0 
+
+0, 1, 0 
+
+0, 0, 0 
+
+14.0 ± 3.4 
+
+14.0 ± 0.1 
+
+68.4 ± 6.3 
+
+0, 0, 0 
+
+0, 0, 0 
+
+0, 0, 0 
+
+0, 1, 0 
+
+19.0 ± 1.5 
+
+18.0 ± 2.0 
+
+112.4 ± 
+20.5 
+
+0, 0, 0 
+
+0, 0, 0 
+
+Table S1. Screening summary of 3 lead mouse Hnrnph2 ASOs. An example of in vitro and in vivo screening data for 3 
+lead ASOs designed to target mouse Hnrnph2. The ASOs were designed as chimeric 2′-MOE/DNA oligonucleotides with 
+mixed phosphorothioate/phosphodiester linkages. The 2′-MOE nucleotides are underlined. ASOs were initially screened in 
+mouse cortical neurons at 20 µM concentration. The most active ASOs were evaluated in a 4-point dose-response curve 
+ranging in concentration from 1.2 to 32 µM. The most active ASOs were evaluated in female C57/BL6 mice (n = 3) at a 
+dose of 700 µg by ICV injection using a functional observational battery (FOB, scored on a scale of 0 to 7) as described 
+(3, 4). Phosphate-buffered saline was used as vehicle control. Eight weeks after injection, mice were sacrificed (n = 3), 
+spinal cord and cortical tissue were isolated, and RNA was extracted. The relative levels of Hnrnph2 and Aif1 mRNA were 
+analyzed using qRT-PCR. Brains were also processed for immunohistochemistry (IHC) for IAB1 and CD68 and scored 
+manually for the presence of neuroinflammation (0 = no different from control).  
+
+ 
+ 
+ 
+ 
+bioRxiv preprint 
+
+doi: 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+; 
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+
+.
+
+Tissue & microscopic feature 
+
+30 µg control ASO 
+
+30 µg Hnrnph2 ASO 
+
+Animal 1 
+
+Animal 2 
+
+Animal 3 
+
+Animal 1 
+
+Animal 2 
+
+Animal 3 
+
+Brain (H&E) Needle tract lesion, 
+cerebral cortex 
+
+Brain (H&E) Inflammation, mixed immune 
+cell, neuroparenchyma 
+
+Brain (H&E) Inflammation, mononuclear 
+immune cell (lymphocyte), neuroparenchyma 
+
+Brain (H&E) Necrosis, neuroparenchyma 
+
+Brain (H&E) Vacuolation, neuron, cortex, 
+basal nuclei, hippocampus 
+
+Brain (H&E, GFAP) Cellularity, increased, 
+astrocyte, neuroparenchyma (excluding 
+needle tracts) 
+
+Brain (H&E, CD68) Cellularity, increased, 
+macrophage, neuroparenchyma (excluding 
+needle tracts) 
+
+Brain (H&E, CD68, CD163) Cellularity, 
+increased, macrophage, choroid plexus, 
+leptomeninges, perivascular spaces 
+
+Brain (H&E, CD68, CD163) Aggregation, 
+vacuolated macrophage,choroid plexus, 
+leptomeninges, perivascular spaces 
+
+Brain (H&E, IBA1/AIF1) Cellularity, 
+increased, microglia, neuroparenchyma 
+(excluding needle tracts) 
+
+Brain (IHC CD68) [positive score, 
+neuroparenchyma (excluding needle tracts)] 
+
+Brain (IHC CD163) [positive score, choroid 
+plexus, leptomeninges, perivascular spaces] 
+
+Brain (IHC GFAP) [positive score of GFAP+ 
+cells beyond the extent that would be seen in 
+normal young uninflamed mouse brains] 
+
+Brain (IHC IBA1/AIF1) [positive score of 
+IBA1/AIF1+ cells beyond the extent that 
+
+0 
+(not present in multiple 
+sections, 3 steps/levels; 
+small focus of 
+hemosiderophages, 
+ unilateral, subcallosal, 
+parietal region) 
+
+2 
+(mild, regionally extensive, 
+unilateral,  
+cerebral cortex; additional 
+aggregates of 
+hemosiderophages, 
+leptomeninges, 
+mesencephalic tectum) 
+
+0 
+(not present in 
+multiple sections, 3 
+steps/levels) 
+
+0 
+(not present in 
+multiple sections, 3 
+steps/levels) 
+
+0 
+(not present in 
+multiple sections, 3 
+steps/levels) 
+
+0 
+(not present in 
+multiple sections, 3 
+steps/levels) 
+
+0 
+
+0 
+
+0 
+
+0 
+
+1 
+
+1 
+
+2 
+
+0 
+
+1 
+
+1 
+
+1 
+
+1 
+
+1 
+
+0 
+
+0 
+
+0 
+
+0 
+
+1 
+
+1 
+
+2 
+
+0 
+
+2 
+
+1 
+
+1 
+
+1 
+
+2 
+
+0 
+
+0 
+
+0 
+
+0 
+
+0 
+
+1 
+
+2 
+
+0 
+
+1 
+
+1 
+
+1 
+
+0 
+
+1 
+
+0 
+
+0 
+
+0 
+
+0 
+
+0 
+
+2 
+
+2 
+
+0 
+
+2 
+
+2 
+
+1 
+
+0 
+
+2 
+
+0 
+
+0 
+
+0 
+
+0 
+
+0 
+
+1 
+
+2 
+
+0 
+
+1 
+
+1 
+
+1 
+
+0 
+
+1 
+
+0 
+
+0 
+
+0 
+
+0 
+
+0 
+
+2 
+
+2 
+
+0 
+
+1 
+
+2 
+
+1 
+
+0 
+
+1 
+
+ 
+bioRxiv preprint 
+
+doi: 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+; 
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+
+.
+
+would be seen in normal young uninflamed 
+mouse brains] 
+
+Table S2. Pathology (H&E, IHC) of brain regions. C57BL/6J pups were injected via ICV with a single bolus of 30 µg 
+control ASO, Hnrnph2 ASO, or vehicle at PND 2-4. At 3 weeks of age, whole brains were harvested and evaluated by 
+histology for signs of neuroinflammation or systemic toxicity. Tissues were evaluated for severity with a scale of 0-5. A 
+score of 0 indicates a negative finding (the lesion/feature (H&E) or positive cells (IHC) are absent in the examined slide). 
+A score of 1 indicates a minimal finding (less than 10% based on a visually estimated approximation). A score of 2 
+indicates a mild finding (11 to 25% based on a visually estimated approximation). Increasing scores are 3 (moderate), 4 
+(marked), and 5 (severe) (10). There were no histopathologic (light microscopic) indicators suggestive of systemic toxicity 
+associated with the administration of 30 µg of control or Hnrnph2 ASO in any of the organs in any of the six animals. 
+There were no noteworthy neuropathologic findings in the brain, spinal cord, dorsal root ganglia, or spinal nerve roots that 
+could be considered related to the administration of 30 µg of control or Hnrnph2 ASO in any of the six animals. A mild 
+unilateral needle tract lesion was evident in the cerebral cortex in one animal that was administered 30 µg of control ASO. 
+Focal aggregates of GFAP-positive reactive astrocytes, AIF1/IBA1-positive activated microglia, and CD68-positive 
+macrophages were evident within and around this lesion. Another animal that was administered 30 µg of control ASO had 
+a small, focally extensive, unilateral aggregate of GFAP-positive reactive astrocytes, AIF1/IBA1-positive activated 
+microglia, and CD68-positive macrophages suggestive of a needle tract lesion. However, an overt needle tract lesion was 
+not evident in the brain of this animal. The minimal increase in GFAP-positive astrocytes noted in the adjacent brain 
+regions in these two animals was considered related to overt/suspected needle tract lesions. Needle tract lesions were not 
+evident in the brains of the other four animals. 
+Apart from the lesions noted above, there were no overt neuroinflammatory lesions in any of the brain sections from any 
+of the six animals. However, immunohistochemistry examination revealed minimal to mild increase in AIF1/IBA1-positive 
+activated microglia, and CD68-positive macrophages in the brain in all six animals. Similarly there was minimal to mild 
+increase in the presence of CD68-positive and CD163-positive macrophages in the leptomeninges, choroid plexus, and 
+neuroparenchymal perivascular spaces. These findings were considered related to class-specific, sequence-independent 
+accumulation of macrophages consequent to ASO administration.  
+However, related class-specific effects that are often reported in some nonclinical safety studies such as intra-lysosomal 
+accumulation of ASO cargo (often independent of sequence specificity) seen light microscopically as the accumulation of 
+
+bioRxiv preprint 
+
+doi: 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+; 
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+
+.
+
+basophilic granules in renal proximal convoluted tubules and the presence of characteristic vacuolated macrophages in 
+multiple tissues were not evident in any of the six animals. 
+
+ 
+ 
+ 
+bioRxiv preprint 
+
+doi: 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+; 
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+
+.
+
+Tissues 
+
+30 µg control ASO 
+
+30 µg Hnrnph2 ASO 
+
+Dorsal root ganglia 
+
+Spinal cord, cervical 
+
+Spinal cord, lumbar 
+
+Spinal cord, thoracic 
+
+Spinal nerve roots 
+
+Heart 
+
+Muscle, skeletal, appendicular 
+
+Trachea 
+
+Lung 
+
+Gland, thyroid 
+
+Gland, parathyroid 
+
+Esophagus 
+
+Kidney 
+
+Liver 
+
+Gall bladder 
+
+Gland, adrenal 
+
+Thymus 
+
+Spleen 
+
+Lymph nodes 
+
+Gland, mammary 
+
+Glands, salivary (parotid, mandibular) 
+
+Stomach 
+
+Pancreas 
+
+Small intestines (duodenum, jejunum, ileum) 
+
+Gut associated lymphoid tissue (GALT) 
+
+Large intestines (cecum, colon, rectum) 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NPOS/NAE 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+Reproductive tract, ovary 
+
+Reproductive tract, oviduct 
+
+Reproductive tract, uterus/cervix 
+
+Reproductive tract, vagina 
+
+NNATMF, OPAE 
+
+NNATMF, OPAE 
+
+NNATMF 
+
+NNATMF 
+
+Animal 1 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+Animal 2 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+Animal 3 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF, OPAE 
+
+NNATMF, OPAE 
+
+NNATMF, OPAE 
+
+Animal 1 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+Animal 2 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+Animal 3 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF, OPAE 
+
+NPOS/NAE 
+
+NPOS/NAE 
+
+NPOS/NAE 
+
+NPOS/NAE 
+
+NPOS/NAE 
+
+NNATMF, OPAE 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NPOS/NAE 
+
+NPOS/NAE 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+[male animal] 
+
+[male animal] 
+
+[male animal] 
+
+[male animal] 
+
+NNATMF 
+immature 
+(no spermatogenesis 
+yet) 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NPOS/NAE 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+[female animal] 
+
+[female animal] 
+
+[female animal] 
+
+Testes 
+
+Epididymis 
+
+[female animal] 
+
+[female animal] 
+
+[female animal] 
+
+[female animal] 
+
+NNATMF 
+
+[female animal] 
+
+[female animal] 
+
+[female animal] 
+
+ 
+bioRxiv preprint 
+
+doi: 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+; 
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+
+.
+
+[female animal] 
+
+[female animal] 
+
+[female animal] 
+
+[female animal] 
+
+[female animal] 
+
+[female animal] 
+
+Gland, prostate 
+
+Seminal vesicles 
+
+Urinary bladder 
+
+Skin 
+
+Eyes 
+
+Gland, Harderian 
+
+Gland, pituitary 
+
+Head, cranial nerves and ganglia 
+
+Head, ear 
+
+Head, nasal cavity 
+
+Head, oral cavity 
+
+Head, teeth 
+
+Head, tongue 
+
+Nerve, optic 
+
+Muscle, skeletal, axial 
+
+Sternum 
+
+Bone marrow (H&E) 
+
+Femur 
+
+Joint, femorotibial 
+
+[female animal] 
+
+[female animal] 
+
+[female animal] 
+
+[female animal] 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NPOS/NAE 
+
+NNATMF 
+
+NNATMF, ITAE2 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NPOS/NAE 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NPOS/NAE 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NPOS/NAE 
+
+NPOS/NAE 
+
+NPOS/NAE 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+NNATMF 
+
+Table S3. Pathology (H&E, IHC) of all organs. C57BL/6J pups were injected via ICV with a single bolus of 30 µg control 
+ASO, Hnrnph2 ASO, or vehicle at PND 2-4. At 3 weeks of age, mice were subjected to a standard full necropsy and 
+tissues evaluated by histology for signs of neuroinflammation or systemic toxicity. ASENP = All structures of the middle 
+and inner ear are not available for evaluation in every section/every animal; limited tissue available for examination; ITAE 
+= Insufficient tissue available for evaluation; ITAEC = Insufficient tissue available for evaluation in the second/contralateral 
+eye; NNATMF = No noteworthy ASO-related toxicologically relevant microscopic findings; NPOS/NAE = Not present on 
+the slide/not available for examination; OPAE = one of a pair available for evaluation. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+Table S4. Gene expression assays used for mouse brain ddRT-PCR and RT-PCR, and human 
+
+ddRT-PCR.  
+
+Gene  
+
+Target/Reference   Fluorophore  
+
+Assay ID/custom primer probe 
+squence 
+
+Hnrnph1   Target  
+
+FAM  
+
+Mm00517601_m1  
+
+Supplier  
+
+Thermo Fisher 
+Scientific  
+
+Hnrnph1 
+with 
+essential 
+exon 
+
+Hnrnph1 
+lacking 
+essential 
+exon 
+
+Target  
+
+FAM  
+
+Target  
+
+FAM  
+
+Hnrnph2   Target  
+
+Gfap  
+
+Target  
+
+Aif1  
+
+Target  
+
+Cd68  
+
+Target  
+
+Ddn  
+
+Target  
+
+Ppfia3  
+
+Target  
+
+Tnpo2  
+
+Target  
+
+Ctnna2   Target  
+
+Phactr3   Target  
+
+Shank1   Target  
+
+Sipa1l1   Target  
+
+Rpp30   Reference  
+
+Tfrc  
+
+Reference  
+
+FAM  
+
+FAM  
+
+FAM  
+
+FAM  
+
+FAM  
+
+FAM  
+
+FAM  
+
+FAM  
+
+FAM  
+
+FAM  
+
+FAM  
+
+HEX  
+
+VIC  
+
+Probe: 
+TGGCTTTGTACGGCTTAGAGGACT 
+Forward primer: 
+ATAGTCCTGACACAGCCAATG 
+Reverse primer: 
+CGATTTCCAACCCTGAGAAGA 
+Probe: 
+TGGCTTTGTACGGCTTAGAGGACT 
+Forward primer: 
+TCCTGACACAGCCAATGA 
+Reverse primer: 
+TCAATATACCTGAGAAGAACTGAAC 
+
+IDT 
+
+IDT 
+
+Mm01340844_g1  
+
+Mm01253033_m1  
+
+Mm00479862_g1  
+
+Mm03047343_m1  
+
+Mm02020418_s1  
+
+Mm01203570_g1  
+
+Mm00520397_m1  
+
+Mm00515399_m1  
+
+Mm01212666_m1  
+
+Mm01206737_m1  
+
+Mm01242798_m1  
+
+dMmuCPE5097025  
+
+Mm00441941_m1  
+
+Thermo Fisher 
+Scientific  
+Thermo Fisher 
+Scientific  
+Thermo Fisher 
+Scientific  
+Thermo Fisher 
+Scientific  
+Thermo Fisher 
+Scientific  
+Thermo Fisher 
+Scientific  
+Thermo Fisher 
+Scientific  
+Thermo Fisher 
+Scientific  
+Thermo Fisher 
+Scientific  
+Thermo Fisher 
+Scientific  
+Thermo Fisher 
+Scientific  
+Bio-Rad  
+Thermo Fisher 
+Scientific  
+Thermo Fisher 
+Scientific  
+
+Pgk1  
+
+Reference  
+
+VIC  
+
+Mm01225301_m1  
+
+Hnrnph1  Target  
+
+NA 
+
+Forward primer: 
+TGGGTGTTGAAGCATACTGG 
+Reverse primer: 
+CGTGGTGGGTCATAATGAGTT 
+
+IDT 
+
+HNRNPH1 Target  
+
+FAM 
+
+Hs01033845_g1 
+
+Thermo Fisher 
+Scientific  
+
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+HNRNPH1 
+with 
+essential 
+exon 
+
+Target  
+
+HNRNPH1 
+lacking 
+essential 
+exon 
+
+Target  
+
+HNRNPH2 Target  
+
+RPP30 
+
+Target  
+
+SDHA 
+
+Target  
+
+FAM 
+
+FAM 
+
+FAM 
+
+HEX 
+
+VIC 
+
+Probe: TTCTTCTCAGGGTTGGAAAT 
+Forward primer: 
+CGGCTTAGAGGACTTCC 
+Reverse primer: 
+CACCGGCAATGTTATCC 
+Probe: 
+CAGTTCTTCTCAGGTATATTGA 
+Forward primer: 
+CGGCTTAGAGGACTTCC 
+Reverse primer: 
+AGCTTTCGTGGTGGATC 
+
+IDT 
+
+IDT 
+
+Hs01395062_m1 
+
+qHsaCEP0052683 
+
+Hs07291714_mH 
+
+Thermo Fisher 
+Scientific  
+Bio-Rad  
+Thermo Fisher 
+Scientific  
+
+  
+ 
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+Table S5. Antibodies used in western blots 
+
+Antibody  
+
+Specificity  
+
+Anti-HNRPH2 antibody 
+[EPR12170(B)]  
+
+hnRNP H1 polyclonal 
+Antibody  
+GAPDH (D4C6R) 
+Mouse mAb  
+HDAC2 Monoclonal 
+Antibody (HDAC2-62)  
+β-Actin (13E5) Rabbit 
+mAb 
+
+Specific for HNRNPH2 (mouse 
+only, detects both human 
+HNRNPH2 and HNRNPH1) 
+Specific for HNRNPH1 (mouse 
+and human) 
+
+Catalog 
+number  
+
+Supplier  
+
+Host  
+
+Dilution 
+used  
+
+ab179439  
+
+Abcam  
+
+Rabbit   1:500  
+
+PA5-50678  
+
+Rabbit   1:1000  
+
+GAPDH (cytoplasmic protein)   #97166  
+
+HDAC2 (nuclear protein)  
+
+MA1-25451  
+
+Mouse   1:2000  
+
+Mouse   1:1000  
+
+ Total β-actin  
+
+4970 
+
+Cell Signaling 
+Technology 
+
+Rabbit  1:1000  
+
+Thermo Fisher 
+Scientific  
+Cell Signaling 
+Technology  
+Thermo Fisher 
+Scientific  
+
+HA tag antibody 
+
+HA tag 
+
+NB600-363  Novus Bio 
+
+Rabbit  1:1000  
+
+Anti-GFP 
+
+GFP tag 
+
+11814460001 
+
+Millipore 
+Sigma 
+
+Mouse  1:1000  
+
+Secondary ab’s for 
+human WBs 
+IRDye 800CW Donkey 
+anti-Rabbit IgG 
+Secondary Antibody  
+IRDye 680RD Goat 
+anti-Mouse 
+IgG Secondary 
+Antibody  
+
+Heavy & light chains of rabbit 
+IgG, and light chains common to 
+most rabbit immunoglobulins  
+Heavy & light chains of mouse 
+IgG1, IgG2a, IgG2b, and IgG3, 
+and light chains of mouse IgM 
+and IgA  
+
+926-32213  
+
+926-68070  
+
+LICOR  
+
+Donkey  1:10,000  
+
+LICOR  
+
+Goat   1:10,000  
+
+Table S6. Epitope retrieval, primary antibodies, staining platform, and detection system used in 
+histopathology. 
+
+Marker 
+
+CD68 
+
+CD163 
+
+Primary antibody, 
+dilution, and incubation time 
+
+Staining platform, antigen retrieval, 
+detection system, and chromogens 
+
+97778, Cell Signaling 
+Rabbit monoclonal antibody (E307V) 
+1:900, 15 minutes 
+
+ab182422, Abcam 
+Rabbit monoclonal antibody (EPR19518) 
+1:1200, 15 minutes 
+
+Leica Bond Rx 
+Heat induced epitope retrieval, Epitope 
+Retrieval Solution 2 (Leica, AR9640), 20 
+minutes; Bond Polymer Refine Detection Kit, 
+DAB Refine Kit, and Hematoxylin Refine Kit 
+(Leica, DS9800) 
+
+IBA1 (AIF1) 
+
+CP290A, Biocare Medical 
+Rabbit polyclonal antibody 
+1:300, 32 minutes 
+
+GFAP 
+
+Z0334, Agilent Dako 
+Rabbit polyclonal antibody 
+1:4000, 32 minutes 
+
+Ventana DISCOVERY ULTRA 
+Heat induced epitope retrieval, Cell 
+Conditioning Solution 1 (Ventana, Roche, 950-
+500), 32 minutes; OmniMap anti-Rabbit HRP 
+Kit (Ventana, Roche, 760-4311); ChromoMap 
+DAB (Ventana, Roche, 760-159); Hematoxylin 
+II (Ventana, Roche, 760-2208); Blueing 
+reagent (Ventana, Roche, 760-2037) 
+
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+Table S7. Antibodies used for mouse brain immunofluorescence  
+
+Antibody  
+
+Host  
+
+Specificity  
+
+Anti-ASO antibody   Rabbit  
+
+ASO phosphorthioate 
+backbone  
+
+Dilution 
+used  
+
+Catalog 
+number  
+
+Supplier  
+
+1:20,000  NA  
+
+Ionis  
+
+Anti-
+HNRPH2/HNRNPH2 
+antibody 
+[EPR12171]  
+
+Rabbit   Specific for HNRNPH2 
+
+1:100  
+
+ab181171  
+
+Abcam  
+
+Anti-GFAP antibody  Rabbit  GFAP (astrocyte marker)  
+
+1:1000 
+
+Z033429 
+
+Agilent 
+
+Anti-GFAP 
+monoclonal antibody 
+(2.2B10)  
+Anti-NeuN antibody  
+
+Anti-IBA1 antibody   
+
+Anti-Carbonic 
+Anhydrase II 
+antibody  
+Anti-Calbindin D-28K 
+antibody  
+Anti-Parvalbumin 
+antibody 
+Alexa Fluor 488 anti-
+rabbit antibody 
+Alexa Fluor 488 anti-
+rabbit antibody 
+Alexa Fluor 568 anti-
+guinea pig antibody 
+Alexa Fluor 568 anti-
+rat antibody 
+Alexa Fluor 594 anti-
+sheep antibody 
+Alexa Fluor 647 anti-
+chicken antibody 
+Alexa Fluor 647 anti-
+guinea pig antibody 
+Alexa Fluor 647 anti-
+rat antibody 
+Alexa Fluor 750 anti-
+guinea pig antibody  
+
+Rat  
+
+GFAP (astrocyte marker)   1:1000   13-0300  
+
+Thermo Fisher 
+Scientific  
+
+Guinea 
+pig  
+Guinea 
+pig  
+
+NeuN  
+(neuronal marker)  
+IBA1  
+(microglial marker)  
+
+Sheep  
+
+Ca2 (oligodendrocyte 
+marker)  
+
+Chicken  
+
+Guinea 
+pig   
+
+Calbindin (Purkinje cell 
+marker)  
+Parvalbumin (Purkinje cell 
+/ interneuron marker)  
+
+1:250  
+
+266004  
+
+Synaptic Systems  
+
+1:500-
+1000 
+
+234308  
+
+Synaptic Systems  
+
+1:500  
+
+AHP206  
+
+Bio-Rad  
+
+1:1000   NBP2-50028   Novus Biologicals  
+
+1:500   GP72 
+
+Swant  
+
+Donkey  IgG 
+
+1:500 
+
+711-547-003 
+
+Donkey  IgG (Fab) 
+
+1:500 
+
+711-545-152 
+
+Donkey  IgG 
+
+1:500 
+
+A11075 
+
+Jackson 
+ImmunoResearch 
+Jackson 
+ImmunoResearch 
+Thermo Fisher 
+Scientific  
+
+Donkey  IgG (Fab) 
+
+1:500 
+
+ab175708 
+
+Abcam 
+
+Donkey  IgG 
+
+Donkey  IgY 
+
+Donkey  IgG 
+
+Donkey  IgG 
+
+Goat 
+
+IgG 
+
+1:500 
+
+713-585-003 
+
+1:500 
+
+703-605-155 
+
+1:500 
+
+706-605-148 
+
+1:500 
+
+712-605-153 
+
+Jackson 
+ImmunoResearch 
+Jackson 
+ImmunoResearch 
+Jackson 
+ImmunoResearch 
+Jackson 
+ImmunoResearch 
+
+1:500 
+
+ab175745 
+
+Abcam 
+
+ 
+  
+ 
+ 
+ 
+ 
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+References 
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+7. 
+
+8. 
+
+9. 
+
+10. 
+
+11. 
+
+12. 
+
+E. E. Swayze, A. M. Siwkowski, E. V. Wancewicz, M. T. Migawa, T. K. Wyrzykiewicz, 
+G. Hung, B. P. Monia, C. F. Bennett, Antisense oligonucleotides containing locked 
+nucleic acid improve potency but cause significant hepatotoxicity in animals. Nucleic 
+Acids Res 35, 687-700 (2007). 
+T. L. Hagemann, B. Powers, C. Mazur, A. Kim, S. Wheeler, G. Hung, E. Swayze, A. 
+Messing, Antisense suppression of glial fibrillary acidic protein as a treatment for 
+Alexander disease. Ann Neurol 83, 27-39 (2018). 
+J. G. O’Rourke, G. Bachmann, C. Mazur, K. Zhou, O. Platoshyn, M. B. Hernandez, S. 
+Klein, J. Nguyen, S. Burel, C. Hoffmaster, T. Zanardi, P. Jafar-nejad, M. Marsala, S. P. 
+Henry, E. E. Swayze, B. Powers, H. B. Kordasiewicz, Reversable Acute Sedation 
+Response of Phosphorothioate Antisense Oligonucleotides Following Local Delivery to 
+the Central Nervous System. bioRxiv, 2025.2002.2013.638136 (2025). 
+M. B. Hernandez, C. Mazur, H. Chen, L. Fradkin, J. Searcy, S. Burel, M. Kelly, D. 
+Bruening, J. G. O’Rourke, Y. Cai, J. Nguyen, L. Berman-Booty, L. Cummins, H. Gaus, 
+B. Powers, H. Zhao, P. Jafar-Nejad, S. Henry, E. Swayze, H. B. Kordasiewicz, Transient 
+Acute Neuronal Activation Response Caused by High Concentrations of 
+Oligonucleotides in the Cerebral Spinal Fluid. bioRxiv, 2025.2002.2013.638138 (2025). 
+A. Korff, X. Yang, K. O'Donovan, A. Gonzalez, B. J. Teubner, H. Nakamura, J. Messing, 
+F. Yang, A. F. Carisey, Y. D. Wang, T. Patni, H. Sheppard, S. S. Zakharenko, Y. M. 
+Chook, J. P. Taylor, H. J. Kim, A murine model of hnRNPH2-related 
+neurodevelopmental disorder reveals a mechanism for genetic compensation by Hnrnph1. 
+J Clin Invest 133,  (2023). 
+C. Wang, M. E. Ward, R. Chen, K. Liu, T. E. Tracy, X. Chen, M. Xie, P. D. Sohn, C. 
+Ludwig, A. Meyer-Franke, C. M. Karch, S. Ding, L. Gan, Scalable Production of iPSC-
+Derived Human Neurons to Identify Tau-Lowering Compounds by High-Content 
+Screening. Stem Cell Reports 9, 1221-1233 (2017). 
+L. A. Becker, B. Huang, G. Bieri, R. Ma, D. A. Knowles, P. Jafar-Nejad, J. Messing, H. 
+J. Kim, A. Soriano, G. Auburger, S. M. Pulst, J. P. Taylor, F. Rigo, A. D. Gitler, 
+Therapeutic reduction of ataxin-2 extends lifespan and reduces pathology in TDP-43 
+mice. Nature 544, 367-371 (2017). 
+Y. Benjamini, A. M. Krieger, D. Yekutieli, Adaptive linear step-up procedures that 
+control the false discovery rate. Biometrika 93, 491-507 (2006). 
+Y. Wang, Z. Xie, E. Kutschera, J. I. Adams, K. E. Kadash-Edmondson, Y. Xing, rMATS-
+turbo: an efficient and flexible computational tool for alternative splicing analysis of 
+large-scale RNA-seq data. Nat Protoc 19, 1083-1104 (2024). 
+K. A. Schafer, J. Eighmy, J. D. Fikes, W. G. Halpern, R. R. Hukkanen, G. G. Long, E. K. 
+Meseck, D. J. Patrick, M. S. Thibodeau, C. E. Wood, S. Francke, Use of Severity Grades 
+to Characterize Histopathologic Changes. Toxicol Pathol 46, 256-265 (2018). 
+S. A. Musumeci, G. Calabrese, C. M. Bonaccorso, S. D'Antoni, J. R. Brouwer, C. E. 
+Bakker, M. Elia, R. Ferri, D. L. Nelson, B. A. Oostra, M. V. Catania, Audiogenic seizure 
+susceptibility is reduced in fragile X knockout mice after introduction of FMR1 
+transgenes. Exp Neurol 203, 233-240 (2007). 
+T. N. Luong, H. J. Carlisle, A. Southwell, P. H. Patterson, Assessment of motor balance 
+and coordination in mice using the balance beam. J Vis Exp,  (2011). 
+
+ 
+bioRxiv preprint 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+
+https://doi.org/10.1101/2025.11.04.686541
+
+this version posted November 5, 2025. 
+
+The copyright holder for this preprint
+
+doi: 
+
+; 
+
+available under a
+
+CC-BY-NC-ND 4.0 International license
+.
+
+13. 
+
+14. 
+
+S. P. Brooks, R. C. Trueman, S. B. Dunnett, Assessment of Motor Coordination and 
+Balance in Mice Using the Rotarod, Elevated Bridge, and Footprint Tests. Curr Protoc 
+Mouse Biol 2, 37-53 (2012). 
+A. A. Walf, C. A. Frye, The use of the elevated plus maze as an assay of anxiety-related 
+behavior in rodents. Nat Protoc 2, 322-328 (2007). 
+
+15.  M. L. Seibenhener, M. C. Wooten, Use of the Open Field Maze to measure locomotor 
+
+16. 
+
+and anxiety-like behavior in mice. J Vis Exp, e52434 (2015). 
+C. V. Vorhees, M. T. Williams, Morris water maze: procedures for assessing spatial and 
+related forms of learning and memory. Nat Protoc 1, 848-858 (2006). 
+
+ 
+

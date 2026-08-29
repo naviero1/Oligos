@@ -1,0 +1,2010 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "HYDROCEPHALUS",
+      "count": 5367
+    },
+    {
+      "term": "FOETAL EXPOSURE DURING PREGNANCY",
+      "count": 679
+    },
+    {
+      "term": "HEADACHE",
+      "count": 582
+    },
+    {
+      "term": "CONGENITAL HYDROCEPHALUS",
+      "count": 507
+    },
+    {
+      "term": "FALL",
+      "count": 403
+    },
+    {
+      "term": "NORMAL PRESSURE HYDROCEPHALUS",
+      "count": 402
+    },
+    {
+      "term": "CEREBRAL HAEMORRHAGE",
+      "count": 387
+    },
+    {
+      "term": "INTRAVENTRICULAR HAEMORRHAGE",
+      "count": 362
+    },
+    {
+      "term": "VOMITING",
+      "count": 361
+    },
+    {
+      "term": "BRAIN OEDEMA",
+      "count": 304
+    },
+    {
+      "term": "PYREXIA",
+      "count": 293
+    },
+    {
+      "term": "GAIT DISTURBANCE",
+      "count": 273
+    },
+    {
+      "term": "NAUSEA",
+      "count": 268
+    },
+    {
+      "term": "SUBARACHNOID HAEMORRHAGE",
+      "count": 259
+    },
+    {
+      "term": "SPINA BIFIDA",
+      "count": 241
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 226
+    },
+    {
+      "term": "SEIZURE",
+      "count": 222
+    },
+    {
+      "term": "FATIGUE",
+      "count": 219
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 210
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 210
+    },
+    {
+      "term": "HYPERTENSION",
+      "count": 209
+    },
+    {
+      "term": "CEREBRAL VENTRICLE DILATATION",
+      "count": 206
+    },
+    {
+      "term": "INTRACRANIAL PRESSURE INCREASED",
+      "count": 205
+    },
+    {
+      "term": "DIZZINESS",
+      "count": 202
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 197
+    },
+    {
+      "term": "CONFUSIONAL STATE",
+      "count": 195
+    },
+    {
+      "term": "SOMNOLENCE",
+      "count": 191
+    },
+    {
+      "term": "BRAIN HERNIATION",
+      "count": 188
+    },
+    {
+      "term": "DRUG EXPOSURE DURING PREGNANCY",
+      "count": 183
+    },
+    {
+      "term": "PAIN",
+      "count": 183
+    },
+    {
+      "term": "COMA",
+      "count": 179
+    },
+    {
+      "term": "PREMATURE BABY",
+      "count": 173
+    },
+    {
+      "term": "GENERAL PHYSICAL HEALTH DETERIORATION",
+      "count": 171
+    },
+    {
+      "term": "CONDITION AGGRAVATED",
+      "count": 164
+    },
+    {
+      "term": "URINARY TRACT INFECTION",
+      "count": 163
+    },
+    {
+      "term": "MENINGOMYELOCELE",
+      "count": 162
+    },
+    {
+      "term": "ARNOLD-CHIARI MALFORMATION",
+      "count": 158
+    },
+    {
+      "term": "HAEMORRHAGE INTRACRANIAL",
+      "count": 158
+    },
+    {
+      "term": "ANAEMIA",
+      "count": 156
+    },
+    {
+      "term": "CONVULSION",
+      "count": 154
+    },
+    {
+      "term": "RESPIRATORY FAILURE",
+      "count": 152
+    },
+    {
+      "term": "DEATH",
+      "count": 150
+    },
+    {
+      "term": "CEREBROVASCULAR ACCIDENT",
+      "count": 149
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 145
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 143
+    },
+    {
+      "term": "MEMORY IMPAIRMENT",
+      "count": 142
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 137
+    },
+    {
+      "term": "BALANCE DISORDER",
+      "count": 136
+    },
+    {
+      "term": "MENINGITIS",
+      "count": 134
+    },
+    {
+      "term": "COGNITIVE DISORDER",
+      "count": 133
+    },
+    {
+      "term": "MALAISE",
+      "count": 126
+    },
+    {
+      "term": "DEVELOPMENTAL DELAY",
+      "count": 124
+    },
+    {
+      "term": "HYPOTENSION",
+      "count": 124
+    },
+    {
+      "term": "LOSS OF CONSCIOUSNESS",
+      "count": 123
+    },
+    {
+      "term": "DEPRESSED LEVEL OF CONSCIOUSNESS",
+      "count": 121
+    },
+    {
+      "term": "SEPSIS",
+      "count": 117
+    },
+    {
+      "term": "CONGENITAL CENTRAL NERVOUS SYSTEM ANOMALY",
+      "count": 111
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 110
+    },
+    {
+      "term": "MENTAL STATUS CHANGES",
+      "count": 109
+    },
+    {
+      "term": "CEREBRAL INFARCTION",
+      "count": 108
+    },
+    {
+      "term": "HEMIPARESIS",
+      "count": 106
+    },
+    {
+      "term": "NERVOUS SYSTEM DISORDER",
+      "count": 106
+    },
+    {
+      "term": "CONSTIPATION",
+      "count": 105
+    },
+    {
+      "term": "MUSCULAR WEAKNESS",
+      "count": 104
+    },
+    {
+      "term": "INFECTION",
+      "count": 103
+    },
+    {
+      "term": "UNRESPONSIVE TO STIMULI",
+      "count": 103
+    },
+    {
+      "term": "MALIGNANT NEOPLASM PROGRESSION",
+      "count": 102
+    },
+    {
+      "term": "URINARY INCONTINENCE",
+      "count": 100
+    },
+    {
+      "term": "MATERNAL EXPOSURE DURING PREGNANCY",
+      "count": 99
+    },
+    {
+      "term": "AMNESIA",
+      "count": 98
+    },
+    {
+      "term": "BACK PAIN",
+      "count": 98
+    },
+    {
+      "term": "HYPONATRAEMIA",
+      "count": 97
+    },
+    {
+      "term": "THROMBOCYTOPENIA",
+      "count": 97
+    },
+    {
+      "term": "ANXIETY",
+      "count": 96
+    },
+    {
+      "term": "COUGH",
+      "count": 96
+    },
+    {
+      "term": "ENCEPHALOPATHY",
+      "count": 96
+    },
+    {
+      "term": "CEREBELLAR HAEMORRHAGE",
+      "count": 95
+    },
+    {
+      "term": "ENCEPHALITIS",
+      "count": 94
+    },
+    {
+      "term": "MATERNAL DRUGS AFFECTING FOETUS",
+      "count": 93
+    },
+    {
+      "term": "SUBDURAL HAEMATOMA",
+      "count": 93
+    },
+    {
+      "term": "ATRIAL SEPTAL DEFECT",
+      "count": 91
+    },
+    {
+      "term": "DYSPHAGIA",
+      "count": 91
+    },
+    {
+      "term": "DEPRESSION",
+      "count": 87
+    },
+    {
+      "term": "DYSARTHRIA",
+      "count": 84
+    },
+    {
+      "term": "CEREBRAL ATROPHY",
+      "count": 83
+    },
+    {
+      "term": "CONGENITAL ANOMALY",
+      "count": 82
+    },
+    {
+      "term": "NEOPLASM PROGRESSION",
+      "count": 82
+    },
+    {
+      "term": "EPILEPSY",
+      "count": 81
+    },
+    {
+      "term": "METASTASES TO CENTRAL NERVOUS SYSTEM",
+      "count": 81
+    },
+    {
+      "term": "TALIPES",
+      "count": 81
+    },
+    {
+      "term": "ALTERED STATE OF CONSCIOUSNESS",
+      "count": 79
+    },
+    {
+      "term": "DISEASE PROGRESSION",
+      "count": 79
+    },
+    {
+      "term": "PLEURAL EFFUSION",
+      "count": 79
+    },
+    {
+      "term": "ATAXIA",
+      "count": 78
+    },
+    {
+      "term": "CNS VENTRICULITIS",
+      "count": 77
+    },
+    {
+      "term": "BRAIN ABSCESS",
+      "count": 76
+    },
+    {
+      "term": "SPEECH DISORDER",
+      "count": 76
+    },
+    {
+      "term": "VISUAL IMPAIRMENT",
+      "count": 76
+    },
+    {
+      "term": "ARTHRALGIA",
+      "count": 75
+    },
+    {
+      "term": "BLOOD PRESSURE INCREASED",
+      "count": 75
+    },
+    {
+      "term": "CARDIAC ARREST",
+      "count": 74
+    },
+    {
+      "term": "CEREBRAL HAEMATOMA",
+      "count": 74
+    },
+    {
+      "term": "INFLUENZA",
+      "count": 74
+    },
+    {
+      "term": "DIPLOPIA",
+      "count": 71
+    },
+    {
+      "term": "GASTROOESOPHAGEAL REFLUX DISEASE",
+      "count": 70
+    },
+    {
+      "term": "SEPTIC SHOCK",
+      "count": 70
+    },
+    {
+      "term": "CENTRAL NERVOUS SYSTEM LESION",
+      "count": 69
+    },
+    {
+      "term": "DEHYDRATION",
+      "count": 69
+    },
+    {
+      "term": "PLATELET COUNT DECREASED",
+      "count": 69
+    },
+    {
+      "term": "PRODUCT USE IN UNAPPROVED INDICATION",
+      "count": 69
+    },
+    {
+      "term": "TOXICITY TO VARIOUS AGENTS",
+      "count": 69
+    },
+    {
+      "term": "ABDOMINAL PAIN",
+      "count": 67
+    },
+    {
+      "term": "BRADYCARDIA",
+      "count": 67
+    },
+    {
+      "term": "HYPOAESTHESIA",
+      "count": 67
+    },
+    {
+      "term": "PAIN IN EXTREMITY",
+      "count": 67
+    },
+    {
+      "term": "BRAIN INJURY",
+      "count": 66
+    },
+    {
+      "term": "DELIRIUM",
+      "count": 66
+    },
+    {
+      "term": "RESPIRATORY DISTRESS",
+      "count": 66
+    },
+    {
+      "term": "TREMOR",
+      "count": 66
+    },
+    {
+      "term": "DRUG INTERACTION",
+      "count": 64
+    },
+    {
+      "term": "RASH",
+      "count": 64
+    },
+    {
+      "term": "LETHARGY",
+      "count": 63
+    },
+    {
+      "term": "PNEUMONIA ASPIRATION",
+      "count": 63
+    },
+    {
+      "term": "DYSMORPHISM",
+      "count": 62
+    },
+    {
+      "term": "HAEMORRHAGE",
+      "count": 62
+    },
+    {
+      "term": "INCONTINENCE",
+      "count": 62
+    },
+    {
+      "term": "NECK PAIN",
+      "count": 62
+    },
+    {
+      "term": "DEMENTIA",
+      "count": 61
+    },
+    {
+      "term": "APHASIA",
+      "count": 60
+    },
+    {
+      "term": "INSOMNIA",
+      "count": 60
+    },
+    {
+      "term": "PATENT DUCTUS ARTERIOSUS",
+      "count": 60
+    },
+    {
+      "term": "SYNCOPE",
+      "count": 59
+    },
+    {
+      "term": "HYPOTONIA",
+      "count": 58
+    },
+    {
+      "term": "POSTHAEMORRHAGIC HYDROCEPHALUS",
+      "count": 58
+    },
+    {
+      "term": "NEURAL TUBE DEFECT",
+      "count": 57
+    },
+    {
+      "term": "BRAIN NEOPLASM",
+      "count": 56
+    },
+    {
+      "term": "VERTIGO",
+      "count": 56
+    },
+    {
+      "term": "HYPOXIA",
+      "count": 55
+    },
+    {
+      "term": "RENAL FAILURE",
+      "count": 55
+    },
+    {
+      "term": "WEIGHT INCREASED",
+      "count": 55
+    },
+    {
+      "term": "VISION BLURRED",
+      "count": 54
+    },
+    {
+      "term": "ABORTION INDUCED",
+      "count": 53
+    },
+    {
+      "term": "ATRIAL FIBRILLATION",
+      "count": 53
+    },
+    {
+      "term": "HAEMORRHAGIC STROKE",
+      "count": 53
+    },
+    {
+      "term": "DISORIENTATION",
+      "count": 52
+    },
+    {
+      "term": "HAEMOGLOBIN DECREASED",
+      "count": 52
+    },
+    {
+      "term": "MACROCEPHALY",
+      "count": 51
+    },
+    {
+      "term": "NEUROLOGICAL DECOMPENSATION",
+      "count": 51
+    },
+    {
+      "term": "PARAESTHESIA",
+      "count": 51
+    },
+    {
+      "term": "BLOOD GLUCOSE INCREASED",
+      "count": 50
+    },
+    {
+      "term": "NASOPHARYNGITIS",
+      "count": 50
+    },
+    {
+      "term": "VASOGENIC CEREBRAL OEDEMA",
+      "count": 50
+    },
+    {
+      "term": "ASCITES",
+      "count": 49
+    },
+    {
+      "term": "MUSCULOSKELETAL STIFFNESS",
+      "count": 49
+    },
+    {
+      "term": "NEUROPATHY PERIPHERAL",
+      "count": 49
+    },
+    {
+      "term": "TACHYCARDIA",
+      "count": 49
+    },
+    {
+      "term": "DISTURBANCE IN ATTENTION",
+      "count": 48
+    },
+    {
+      "term": "HEART RATE INCREASED",
+      "count": 48
+    },
+    {
+      "term": "HEAD INJURY",
+      "count": 47
+    },
+    {
+      "term": "MICROGNATHIA",
+      "count": 47
+    },
+    {
+      "term": "OEDEMA",
+      "count": 47
+    },
+    {
+      "term": "PULMONARY EMBOLISM",
+      "count": 47
+    },
+    {
+      "term": "VENTRICULAR SEPTAL DEFECT",
+      "count": 47
+    },
+    {
+      "term": "OXYGEN SATURATION DECREASED",
+      "count": 46
+    },
+    {
+      "term": "STAPHYLOCOCCAL INFECTION",
+      "count": 46
+    },
+    {
+      "term": "AGITATION",
+      "count": 45
+    },
+    {
+      "term": "ATELECTASIS",
+      "count": 45
+    },
+    {
+      "term": "MENINGITIS CRYPTOCOCCAL",
+      "count": 45
+    },
+    {
+      "term": "MIGRAINE",
+      "count": 45
+    },
+    {
+      "term": "PRODUCT DOSE OMISSION ISSUE",
+      "count": 45
+    },
+    {
+      "term": "SINUSITIS",
+      "count": 45
+    },
+    {
+      "term": "STRABISMUS",
+      "count": 45
+    },
+    {
+      "term": "BRAIN COMPRESSION",
+      "count": 44
+    },
+    {
+      "term": "BRAIN DEATH",
+      "count": 44
+    },
+    {
+      "term": "HYPERHIDROSIS",
+      "count": 44
+    },
+    {
+      "term": "NEUROGENIC BLADDER",
+      "count": 44
+    },
+    {
+      "term": "PAPILLOEDEMA",
+      "count": 44
+    },
+    {
+      "term": "FEELING ABNORMAL",
+      "count": 43
+    },
+    {
+      "term": "HYPOKALAEMIA",
+      "count": 43
+    },
+    {
+      "term": "MOBILITY DECREASED",
+      "count": 43
+    },
+    {
+      "term": "PRODUCT USE ISSUE",
+      "count": 43
+    },
+    {
+      "term": "TRANSIENT ISCHAEMIC ATTACK",
+      "count": 43
+    },
+    {
+      "term": "NEUTROPENIA",
+      "count": 42
+    },
+    {
+      "term": "POST PROCEDURAL COMPLICATION",
+      "count": 41
+    },
+    {
+      "term": "ACUTE KIDNEY INJURY",
+      "count": 40
+    },
+    {
+      "term": "CHEST PAIN",
+      "count": 40
+    },
+    {
+      "term": "HEMIPLEGIA",
+      "count": 40
+    },
+    {
+      "term": "INAPPROPRIATE SCHEDULE OF PRODUCT ADMINISTRATION",
+      "count": 40
+    },
+    {
+      "term": "INTRACRANIAL ANEURYSM",
+      "count": 40
+    },
+    {
+      "term": "PANCYTOPENIA",
+      "count": 40
+    },
+    {
+      "term": "CARDIAC FAILURE",
+      "count": 39
+    },
+    {
+      "term": "CEREBELLAR INFARCTION",
+      "count": 39
+    },
+    {
+      "term": "CEREBRAL DISORDER",
+      "count": 39
+    },
+    {
+      "term": "CONTUSION",
+      "count": 39
+    },
+    {
+      "term": "ENCEPHALOMALACIA",
+      "count": 39
+    },
+    {
+      "term": "FOETAL DEATH",
+      "count": 39
+    },
+    {
+      "term": "HEART DISEASE CONGENITAL",
+      "count": 39
+    },
+    {
+      "term": "HYPOTHYROIDISM",
+      "count": 39
+    },
+    {
+      "term": "INJURY",
+      "count": 39
+    },
+    {
+      "term": "CARDIAC DISORDER",
+      "count": 38
+    },
+    {
+      "term": "CARDIAC FAILURE CONGESTIVE",
+      "count": 38
+    },
+    {
+      "term": "CENTRAL NERVOUS SYSTEM INFECTION",
+      "count": 38
+    },
+    {
+      "term": "IMMUNE RECONSTITUTION INFLAMMATORY SYNDROME",
+      "count": 38
+    },
+    {
+      "term": "MICROCEPHALY",
+      "count": 38
+    },
+    {
+      "term": "OEDEMA PERIPHERAL",
+      "count": 38
+    },
+    {
+      "term": "OVERDOSE",
+      "count": 38
+    },
+    {
+      "term": "SCOLIOSIS",
+      "count": 38
+    },
+    {
+      "term": "THROMBOSIS",
+      "count": 38
+    },
+    {
+      "term": "URINARY RETENTION",
+      "count": 38
+    },
+    {
+      "term": "ABDOMINAL DISTENSION",
+      "count": 37
+    },
+    {
+      "term": "BLINDNESS",
+      "count": 37
+    },
+    {
+      "term": "COAGULOPATHY",
+      "count": 37
+    },
+    {
+      "term": "OSTEOARTHRITIS",
+      "count": 37
+    },
+    {
+      "term": "WHITE BLOOD CELL COUNT DECREASED",
+      "count": 37
+    },
+    {
+      "term": "COORDINATION ABNORMAL",
+      "count": 36
+    },
+    {
+      "term": "DEAFNESS",
+      "count": 36
+    },
+    {
+      "term": "EAR INFECTION",
+      "count": 36
+    },
+    {
+      "term": "INFUSION RELATED REACTION",
+      "count": 36
+    },
+    {
+      "term": "KLEBSIELLA INFECTION",
+      "count": 36
+    },
+    {
+      "term": "METASTASES TO MENINGES",
+      "count": 36
+    },
+    {
+      "term": "WHITE BLOOD CELL COUNT INCREASED",
+      "count": 36
+    },
+    {
+      "term": "ACUTE RESPIRATORY FAILURE",
+      "count": 35
+    },
+    {
+      "term": "CARDIO-RESPIRATORY ARREST",
+      "count": 35
+    },
+    {
+      "term": "CRANIOSYNOSTOSIS",
+      "count": 35
+    },
+    {
+      "term": "MENINGITIS BACTERIAL",
+      "count": 35
+    },
+    {
+      "term": "MENINGITIS TUBERCULOUS",
+      "count": 35
+    },
+    {
+      "term": "MULTIPLE CONGENITAL ABNORMALITIES",
+      "count": 35
+    },
+    {
+      "term": "MUSCLE SPASMS",
+      "count": 35
+    },
+    {
+      "term": "MYOCARDIAL INFARCTION",
+      "count": 35
+    },
+    {
+      "term": "POSTERIOR REVERSIBLE ENCEPHALOPATHY SYNDROME",
+      "count": 35
+    },
+    {
+      "term": "RESPIRATORY ARREST",
+      "count": 35
+    },
+    {
+      "term": "RESPIRATORY DISORDER",
+      "count": 35
+    },
+    {
+      "term": "ASTHMA",
+      "count": 34
+    },
+    {
+      "term": "BASAL GANGLIA HAEMORRHAGE",
+      "count": 34
+    },
+    {
+      "term": "CEREBROSPINAL FLUID LEAKAGE",
+      "count": 34
+    },
+    {
+      "term": "HAEMATOMA",
+      "count": 34
+    },
+    {
+      "term": "MENTAL DISORDER",
+      "count": 34
+    },
+    {
+      "term": "PERICARDIAL EFFUSION",
+      "count": 34
+    },
+    {
+      "term": "PRURITUS",
+      "count": 34
+    },
+    {
+      "term": "CARDIOMEGALY",
+      "count": 33
+    },
+    {
+      "term": "CEREBRAL ISCHAEMIA",
+      "count": 33
+    },
+    {
+      "term": "HYPOGLYCAEMIA",
+      "count": 33
+    },
+    {
+      "term": "INFLUENZA LIKE ILLNESS",
+      "count": 33
+    },
+    {
+      "term": "IRRITABILITY",
+      "count": 33
+    },
+    {
+      "term": "LEUKOCYTOSIS",
+      "count": 33
+    },
+    {
+      "term": "PARADOXICAL DRUG REACTION",
+      "count": 33
+    },
+    {
+      "term": "PNEUMOTHORAX",
+      "count": 33
+    },
+    {
+      "term": "SLEEP APNOEA SYNDROME",
+      "count": 33
+    },
+    {
+      "term": "ABASIA",
+      "count": 32
+    },
+    {
+      "term": "ABDOMINAL PAIN UPPER",
+      "count": 32
+    },
+    {
+      "term": "ACCIDENTAL OVERDOSE",
+      "count": 32
+    },
+    {
+      "term": "AGGRESSION",
+      "count": 32
+    },
+    {
+      "term": "APNOEA",
+      "count": 32
+    },
+    {
+      "term": "BLOOD CREATININE INCREASED",
+      "count": 32
+    },
+    {
+      "term": "CARDIAC MURMUR",
+      "count": 32
+    },
+    {
+      "term": "COVID-19",
+      "count": 32
+    },
+    {
+      "term": "FOETAL GROWTH RESTRICTION",
+      "count": 32
+    },
+    {
+      "term": "LUNG DISORDER",
+      "count": 32
+    },
+    {
+      "term": "PERIPHERAL SWELLING",
+      "count": 32
+    },
+    {
+      "term": "RUPTURED CEREBRAL ANEURYSM",
+      "count": 32
+    },
+    {
+      "term": "THALAMUS HAEMORRHAGE",
+      "count": 32
+    },
+    {
+      "term": "UPPER RESPIRATORY TRACT INFECTION",
+      "count": 32
+    },
+    {
+      "term": "VENTRICULO-PERITONEAL SHUNT",
+      "count": 32
+    },
+    {
+      "term": "BRONCHITIS",
+      "count": 31
+    },
+    {
+      "term": "CEREBRAL CYST",
+      "count": 31
+    },
+    {
+      "term": "DEEP VEIN THROMBOSIS",
+      "count": 31
+    },
+    {
+      "term": "DEVICE RELATED INFECTION",
+      "count": 31
+    },
+    {
+      "term": "GASTROINTESTINAL HAEMORRHAGE",
+      "count": 31
+    },
+    {
+      "term": "MITRAL VALVE INCOMPETENCE",
+      "count": 31
+    },
+    {
+      "term": "MYDRIASIS",
+      "count": 31
+    },
+    {
+      "term": "NEUROLOGICAL SYMPTOM",
+      "count": 31
+    },
+    {
+      "term": "PULMONARY OEDEMA",
+      "count": 31
+    },
+    {
+      "term": "STATUS EPILEPTICUS",
+      "count": 31
+    },
+    {
+      "term": "WOUND INFECTION",
+      "count": 31
+    },
+    {
+      "term": "ABNORMAL BEHAVIOUR",
+      "count": 30
+    },
+    {
+      "term": "ALOPECIA",
+      "count": 30
+    },
+    {
+      "term": "BLOOD CHOLESTEROL INCREASED",
+      "count": 30
+    },
+    {
+      "term": "CAESAREAN SECTION",
+      "count": 30
+    },
+    {
+      "term": "COMA SCALE ABNORMAL",
+      "count": 30
+    },
+    {
+      "term": "DILATATION VENTRICULAR",
+      "count": 30
+    },
+    {
+      "term": "EXPOSURE DURING PREGNANCY",
+      "count": 30
+    },
+    {
+      "term": "HYPOACUSIS",
+      "count": 30
+    },
+    {
+      "term": "LUNG INFILTRATION",
+      "count": 30
+    },
+    {
+      "term": "PHOTOPHOBIA",
+      "count": 30
+    },
+    {
+      "term": "CHRONIC OBSTRUCTIVE PULMONARY DISEASE",
+      "count": 29
+    },
+    {
+      "term": "CYSTITIS",
+      "count": 29
+    },
+    {
+      "term": "FEEDING DISORDER",
+      "count": 29
+    },
+    {
+      "term": "HYPERGLYCAEMIA",
+      "count": 29
+    },
+    {
+      "term": "HYPERTELORISM OF ORBIT",
+      "count": 29
+    },
+    {
+      "term": "INFLAMMATION",
+      "count": 29
+    },
+    {
+      "term": "LYMPHADENOPATHY",
+      "count": 29
+    },
+    {
+      "term": "MENTAL IMPAIRMENT",
+      "count": 29
+    },
+    {
+      "term": "METABOLIC ACIDOSIS",
+      "count": 29
+    },
+    {
+      "term": "NEONATAL RESPIRATORY DISTRESS SYNDROME",
+      "count": 29
+    },
+    {
+      "term": "OPTIC ATROPHY",
+      "count": 29
+    },
+    {
+      "term": "PUPIL FIXED",
+      "count": 29
+    },
+    {
+      "term": "ROAD TRAFFIC ACCIDENT",
+      "count": 29
+    },
+    {
+      "term": "VIRAL INFECTION",
+      "count": 29
+    },
+    {
+      "term": "ASPARTATE AMINOTRANSFERASE INCREASED",
+      "count": 28
+    },
+    {
+      "term": "BACTERIAL INFECTION",
+      "count": 28
+    },
+    {
+      "term": "BEDRIDDEN",
+      "count": 28
+    },
+    {
+      "term": "CONGENITAL HAND MALFORMATION",
+      "count": 28
+    },
+    {
+      "term": "ENCEPHALOCELE",
+      "count": 28
+    },
+    {
+      "term": "FEBRILE NEUTROPENIA",
+      "count": 28
+    },
+    {
+      "term": "HYPERSENSITIVITY",
+      "count": 28
+    },
+    {
+      "term": "ISCHAEMIC STROKE",
+      "count": 28
+    },
+    {
+      "term": "RENAL FAILURE ACUTE",
+      "count": 28
+    },
+    {
+      "term": "SPINAL OSTEOARTHRITIS",
+      "count": 28
+    },
+    {
+      "term": "VISUAL ACUITY REDUCED",
+      "count": 28
+    },
+    {
+      "term": "ALANINE AMINOTRANSFERASE INCREASED",
+      "count": 27
+    },
+    {
+      "term": "BRAIN STEM HAEMORRHAGE",
+      "count": 27
+    },
+    {
+      "term": "CATARACT",
+      "count": 27
+    },
+    {
+      "term": "CEREBRAL MASS EFFECT",
+      "count": 27
+    },
+    {
+      "term": "CEREBRAL PALSY",
+      "count": 27
+    },
+    {
+      "term": "DEVICE MALFUNCTION",
+      "count": 27
+    },
+    {
+      "term": "DRUG HYPERSENSITIVITY",
+      "count": 27
+    },
+    {
+      "term": "DYSKINESIA",
+      "count": 27
+    },
+    {
+      "term": "GAIT INABILITY",
+      "count": 27
+    },
+    {
+      "term": "MENINGIOMA",
+      "count": 27
+    },
+    {
+      "term": "NEPHROLITHIASIS",
+      "count": 27
+    },
+    {
+      "term": "TRICUSPID VALVE INCOMPETENCE",
+      "count": 27
+    },
+    {
+      "term": "AQUEDUCTAL STENOSIS",
+      "count": 26
+    },
+    {
+      "term": "ARTHRITIS",
+      "count": 26
+    },
+    {
+      "term": "BLOOD PRESSURE DECREASED",
+      "count": 26
+    },
+    {
+      "term": "CLEFT LIP AND PALATE",
+      "count": 26
+    },
+    {
+      "term": "CLEFT PALATE",
+      "count": 26
+    },
+    {
+      "term": "DIABETES MELLITUS",
+      "count": 26
+    },
+    {
+      "term": "DRUG RESISTANCE",
+      "count": 26
+    },
+    {
+      "term": "ERYTHEMA",
+      "count": 26
+    },
+    {
+      "term": "HALLUCINATION",
+      "count": 26
+    },
+    {
+      "term": "HYPERLIPIDAEMIA",
+      "count": 26
+    },
+    {
+      "term": "HYPERTONIA",
+      "count": 26
+    },
+    {
+      "term": "INTERNATIONAL NORMALISED RATIO INCREASED",
+      "count": 26
+    },
+    {
+      "term": "LIMB MALFORMATION",
+      "count": 26
+    },
+    {
+      "term": "MOTOR DYSFUNCTION",
+      "count": 26
+    },
+    {
+      "term": "NEUROTOXICITY",
+      "count": 26
+    },
+    {
+      "term": "RENAL IMPAIRMENT",
+      "count": 26
+    },
+    {
+      "term": "SHUNT MALFUNCTION",
+      "count": 26
+    },
+    {
+      "term": "STILLBIRTH",
+      "count": 26
+    },
+    {
+      "term": "TUMOUR HAEMORRHAGE",
+      "count": 26
+    },
+    {
+      "term": "ANENCEPHALY",
+      "count": 25
+    },
+    {
+      "term": "BRAIN MALFORMATION",
+      "count": 25
+    },
+    {
+      "term": "CANDIDA INFECTION",
+      "count": 25
+    },
+    {
+      "term": "CHILLS",
+      "count": 25
+    },
+    {
+      "term": "EPISTAXIS",
+      "count": 25
+    },
+    {
+      "term": "FACIAL PARALYSIS",
+      "count": 25
+    },
+    {
+      "term": "HYPERREFLEXIA",
+      "count": 25
+    },
+    {
+      "term": "HYPOPHAGIA",
+      "count": 25
+    },
+    {
+      "term": "LEUKAEMIA RECURRENT",
+      "count": 25
+    },
+    {
+      "term": "LEUKOPENIA",
+      "count": 25
+    },
+    {
+      "term": "LIVER DISORDER",
+      "count": 25
+    },
+    {
+      "term": "OBESITY",
+      "count": 25
+    },
+    {
+      "term": "SKULL MALFORMATION",
+      "count": 25
+    },
+    {
+      "term": "VASCULITIS",
+      "count": 25
+    },
+    {
+      "term": "ARTERIOVENOUS MALFORMATION",
+      "count": 24
+    },
+    {
+      "term": "CEREBRAL VENTRICULAR RUPTURE",
+      "count": 24
+    },
+    {
+      "term": "CYTOMEGALOVIRUS INFECTION",
+      "count": 24
+    },
+    {
+      "term": "DISEASE RECURRENCE",
+      "count": 24
+    },
+    {
+      "term": "FOOT DEFORMITY",
+      "count": 24
+    },
+    {
+      "term": "HAEMANGIOMA",
+      "count": 24
+    },
+    {
+      "term": "HEPATIC FUNCTION ABNORMAL",
+      "count": 24
+    },
+    {
+      "term": "INCORRECT DOSE ADMINISTERED",
+      "count": 24
+    },
+    {
+      "term": "MATERNAL EXPOSURE TIMING UNSPECIFIED",
+      "count": 24
+    },
+    {
+      "term": "MUSCULOSKELETAL PAIN",
+      "count": 24
+    },
+    {
+      "term": "OSTEOPENIA",
+      "count": 24
+    },
+    {
+      "term": "RHINORRHOEA",
+      "count": 24
+    },
+    {
+      "term": "ARRHYTHMIA",
+      "count": 23
+    },
+    {
+      "term": "BLOOD UREA INCREASED",
+      "count": 23
+    },
+    {
+      "term": "CEREBELLAR TUMOUR",
+      "count": 23
+    },
+    {
+      "term": "CEREBRAL VENOUS THROMBOSIS",
+      "count": 23
+    },
+    {
+      "term": "EYE MOVEMENT DISORDER",
+      "count": 23
+    },
+    {
+      "term": "GRAND MAL CONVULSION",
+      "count": 23
+    },
+    {
+      "term": "HYPERTENSIVE HYDROCEPHALUS",
+      "count": 23
+    },
+    {
+      "term": "ILL-DEFINED DISORDER",
+      "count": 23
+    },
+    {
+      "term": "INTRACRANIAL MASS",
+      "count": 23
+    },
+    {
+      "term": "LOW BIRTH WEIGHT BABY",
+      "count": 23
+    },
+    {
+      "term": "PUPILLARY REFLEX IMPAIRED",
+      "count": 23
+    },
+    {
+      "term": "SUBDURAL HAEMORRHAGE",
+      "count": 23
+    },
+    {
+      "term": "SURGERY",
+      "count": 23
+    },
+    {
+      "term": "TUBERCULOMA OF CENTRAL NERVOUS SYSTEM",
+      "count": 23
+    },
+    {
+      "term": "ASPIRATION",
+      "count": 22
+    },
+    {
+      "term": "BACTERAEMIA",
+      "count": 22
+    },
+    {
+      "term": "BRAIN MIDLINE SHIFT",
+      "count": 22
+    },
+    {
+      "term": "BRONCHOPULMONARY DYSPLASIA",
+      "count": 22
+    },
+    {
+      "term": "CELLULITIS",
+      "count": 22
+    },
+    {
+      "term": "CEREBELLAR HYPOPLASIA",
+      "count": 22
+    },
+    {
+      "term": "DANDY-WALKER SYNDROME",
+      "count": 22
+    },
+    {
+      "term": "EAR MALFORMATION",
+      "count": 22
+    },
+    {
+      "term": "EMOTIONAL DISTRESS",
+      "count": 22
+    },
+    {
+      "term": "GASTROSCHISIS",
+      "count": 22
+    },
+    {
+      "term": "JOINT SWELLING",
+      "count": 22
+    },
+    {
+      "term": "LEFT VENTRICULAR DYSFUNCTION",
+      "count": 22
+    },
+    {
+      "term": "LIMB REDUCTION DEFECT",
+      "count": 22
+    },
+    {
+      "term": "LISTERIOSIS",
+      "count": 22
+    },
+    {
+      "term": "MALNUTRITION",
+      "count": 22
+    },
+    {
+      "term": "NASAL CONGESTION",
+      "count": 22
+    },
+    {
+      "term": "OSTEOPOROSIS",
+      "count": 22
+    },
+    {
+      "term": "SPLENOMEGALY",
+      "count": 22
+    },
+    {
+      "term": "SWELLING",
+      "count": 22
+    },
+    {
+      "term": "TREATMENT NONCOMPLIANCE",
+      "count": 22
+    },
+    {
+      "term": "UNEVALUABLE EVENT",
+      "count": 22
+    },
+    {
+      "term": "ANEURYSM",
+      "count": 21
+    },
+    {
+      "term": "AREFLEXIA",
+      "count": 21
+    },
+    {
+      "term": "ASPERGILLUS INFECTION",
+      "count": 21
+    },
+    {
+      "term": "BONE DISORDER",
+      "count": 21
+    },
+    {
+      "term": "CSF PROTEIN INCREASED",
+      "count": 21
+    },
+    {
+      "term": "CYANOSIS",
+      "count": 21
+    },
+    {
+      "term": "DRUG WITHDRAWAL SYNDROME NEONATAL",
+      "count": 21
+    },
+    {
+      "term": "EASTERN COOPERATIVE ONCOLOGY GROUP PERFORMANCE STATUS WORSENED",
+      "count": 21
+    },
+    {
+      "term": "EATING DISORDER",
+      "count": 21
+    },
+    {
+      "term": "HERPES ZOSTER",
+      "count": 21
+    },
+    {
+      "term": "HYPOKINESIA",
+      "count": 21
+    },
+    {
+      "term": "HYPOSPADIAS",
+      "count": 21
+    },
+    {
+      "term": "LEUKOENCEPHALOPATHY",
+      "count": 21
+    },
+    {
+      "term": "LYMPHOPENIA",
+      "count": 21
+    },
+    {
+      "term": "MICROPHTHALMOS",
+      "count": 21
+    },
+    {
+      "term": "MULTIPLE ORGAN DYSFUNCTION SYNDROME",
+      "count": 21
+    },
+    {
+      "term": "MYALGIA",
+      "count": 21
+    },
+    {
+      "term": "NEONATAL DISORDER",
+      "count": 21
+    },
+    {
+      "term": "TUBERCULOSIS OF CENTRAL NERVOUS SYSTEM",
+      "count": 21
+    },
+    {
+      "term": "URTICARIA",
+      "count": 21
+    },
+    {
+      "term": "ABDOMINAL DISCOMFORT",
+      "count": 20
+    },
+    {
+      "term": "ANAL INCONTINENCE",
+      "count": 20
+    },
+    {
+      "term": "ARACHNOIDITIS",
+      "count": 20
+    },
+    {
+      "term": "ARTERIOSCLEROSIS",
+      "count": 20
+    },
+    {
+      "term": "CRYING",
+      "count": 20
+    },
+    {
+      "term": "CSF SHUNT OPERATION",
+      "count": 20
+    },
+    {
+      "term": "EYELID PTOSIS",
+      "count": 20
+    },
+    {
+      "term": "FAILURE TO THRIVE",
+      "count": 20
+    },
+    {
+      "term": "FEMUR FRACTURE",
+      "count": 20
+    },
+    {
+      "term": "HEART RATE DECREASED",
+      "count": 20
+    },
+    {
+      "term": "INTRACRANIAL HYPOTENSION",
+      "count": 20
+    },
+    {
+      "term": "LOSS OF PERSONAL INDEPENDENCE IN DAILY ACTIVITIES",
+      "count": 20
+    },
+    {
+      "term": "NECROSIS",
+      "count": 20
+    },
+    {
+      "term": "OSTEONECROSIS OF JAW",
+      "count": 20
+    },
+    {
+      "term": "PARKINSON^S DISEASE",
+      "count": 20
+    },
+    {
+      "term": "PULMONARY MASS",
+      "count": 20
+    },
+    {
+      "term": "RENAL DISORDER",
+      "count": 20
+    },
+    {
+      "term": "SHOCK",
+      "count": 20
+    },
+    {
+      "term": "SLEEP DISORDER",
+      "count": 20
+    },
+    {
+      "term": "SYNDACTYLY",
+      "count": 20
+    },
+    {
+      "term": "THALAMIC INFARCTION",
+      "count": 20
+    },
+    {
+      "term": "ACUTE MYOCARDIAL INFARCTION",
+      "count": 19
+    },
+    {
+      "term": "BLOOD PRESSURE SYSTOLIC INCREASED",
+      "count": 19
+    },
+    {
+      "term": "CLOSTRIDIUM DIFFICILE INFECTION",
+      "count": 19
+    },
+    {
+      "term": "DRUG ABUSE",
+      "count": 19
+    },
+    {
+      "term": "DYSPHONIA",
+      "count": 19
+    },
+    {
+      "term": "ELECTROENCEPHALOGRAM ABNORMAL",
+      "count": 19
+    },
+    {
+      "term": "EMOTIONAL DISORDER",
+      "count": 19
+    },
+    {
+      "term": "INJECTION SITE PAIN",
+      "count": 19
+    },
+    {
+      "term": "INTRAVENTRICULAR HAEMORRHAGE NEONATAL",
+      "count": 19
+    },
+    {
+      "term": "LOW SET EARS",
+      "count": 19
+    },
+    {
+      "term": "MICROTIA",
+      "count": 19
+    },
+    {
+      "term": "MUCOSAL INFLAMMATION",
+      "count": 19
+    },
+    {
+      "term": "MUSCLE SPASTICITY",
+      "count": 19
+    },
+    {
+      "term": "PALPITATIONS",
+      "count": 19
+    },
+    {
+      "term": "PULMONARY HYPERTENSION",
+      "count": 19
+    },
+    {
+      "term": "RADIATION NECROSIS",
+      "count": 19
+    },
+    {
+      "term": "SINUS TACHYCARDIA",
+      "count": 19
+    },
+    {
+      "term": "SKIN DISCOLOURATION",
+      "count": 19
+    },
+    {
+      "term": "TACHYPNOEA",
+      "count": 19
+    },
+    {
+      "term": "ACUTE RESPIRATORY DISTRESS SYNDROME",
+      "count": 18
+    },
+    {
+      "term": "ANORECTAL DISORDER",
+      "count": 18
+    },
+    {
+      "term": "ARACHNOID CYST",
+      "count": 18
+    },
+    {
+      "term": "ARTHROPATHY",
+      "count": 18
+    },
+    {
+      "term": "BLOOD PHOSPHORUS DECREASED",
+      "count": 18
+    },
+    {
+      "term": "BLOOD POTASSIUM DECREASED",
+      "count": 18
+    },
+    {
+      "term": "BRAIN SARCOMA",
+      "count": 18
+    },
+    {
+      "term": "BRAIN STEM SYNDROME",
+      "count": 18
+    },
+    {
+      "term": "CENTRAL NERVOUS SYSTEM NECROSIS",
+      "count": 18
+    },
+    {
+      "term": "CONGENITAL INTESTINAL MALFORMATION",
+      "count": 18
+    },
+    {
+      "term": "CONGENITAL NOSE MALFORMATION",
+      "count": 18
+    },
+    {
+      "term": "DYSSTASIA",
+      "count": 18
+    },
+    {
+      "term": "GENERALISED TONIC-CLONIC SEIZURE",
+      "count": 18
+    },
+    {
+      "term": "HAEMATURIA",
+      "count": 18
+    },
+    {
+      "term": "HYDRONEPHROSIS",
+      "count": 18
+    },
+    {
+      "term": "ILLNESS",
+      "count": 18
+    },
+    {
+      "term": "INTERVERTEBRAL DISC DEGENERATION",
+      "count": 18
+    },
+    {
+      "term": "LYMPHOCYTE COUNT DECREASED",
+      "count": 18
+    },
+    {
+      "term": "MULTIPLE SCLEROSIS",
+      "count": 18
+    },
+    {
+      "term": "MULTIPLE SCLEROSIS RELAPSE",
+      "count": 18
+    },
+    {
+      "term": "NECROTISING COLITIS",
+      "count": 18
+    },
+    {
+      "term": "NEOPLASM RECURRENCE",
+      "count": 18
+    },
+    {
+      "term": "NYSTAGMUS",
+      "count": 18
+    },
+    {
+      "term": "PARALYSIS",
+      "count": 18
+    },
+    {
+      "term": "PARTIAL SEIZURES",
+      "count": 18
+    },
+    {
+      "term": "PERFORMANCE STATUS DECREASED",
+      "count": 18
+    },
+    {
+      "term": "PRODUCT PRESCRIBING ERROR",
+      "count": 18
+    },
+    {
+      "term": "PSEUDOMONAS INFECTION",
+      "count": 18
+    },
+    {
+      "term": "PUPILS UNEQUAL",
+      "count": 18
+    },
+    {
+      "term": "RETINOPATHY OF PREMATURITY",
+      "count": 18
+    },
+    {
+      "term": "SPEECH DISORDER DEVELOPMENTAL",
+      "count": 18
+    },
+    {
+      "term": "TINNITUS",
+      "count": 18
+    },
+    {
+      "term": "VENTRICULAR HYPOKINESIA",
+      "count": 18
+    },
+    {
+      "term": "ABSCESS",
+      "count": 17
+    },
+    {
+      "term": "ADVERSE EVENT",
+      "count": 17
+    },
+    {
+      "term": "C-REACTIVE PROTEIN INCREASED",
+      "count": 17
+    },
+    {
+      "term": "CARDIOMYOPATHY",
+      "count": 17
+    },
+    {
+      "term": "CLEFT LIP",
+      "count": 17
+    },
+    {
+      "term": "CRYPTORCHISM",
+      "count": 17
+    }
+  ]
+}

@@ -1,0 +1,510 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "SPINRAZA",
+      "count": 21
+    },
+    {
+      "term": "ZOLGENSMA",
+      "count": 3
+    },
+    {
+      "term": "ALBUTEROL.",
+      "count": 2
+    },
+    {
+      "term": "CHOLECALCIFEROL",
+      "count": 2
+    },
+    {
+      "term": "FUROSEMIDE",
+      "count": 2
+    },
+    {
+      "term": "NUSINERSEN",
+      "count": 2
+    },
+    {
+      "term": "RILUZOLE",
+      "count": 2
+    },
+    {
+      "term": "VITAMIN D",
+      "count": 2
+    },
+    {
+      "term": "XOPENEX",
+      "count": 2
+    },
+    {
+      "term": "ACETAMINOPHEN",
+      "count": 1
+    },
+    {
+      "term": "ACETAMINOPHEN.",
+      "count": 1
+    },
+    {
+      "term": "ACETAZOLAMIDE.",
+      "count": 1
+    },
+    {
+      "term": "ACYCLOVIR SODIUM.",
+      "count": 1
+    },
+    {
+      "term": "ALLOPURINOL.",
+      "count": 1
+    },
+    {
+      "term": "AMITRIPTYLINE",
+      "count": 1
+    },
+    {
+      "term": "AMLODIPINE",
+      "count": 1
+    },
+    {
+      "term": "AMPHOTERICIN B.",
+      "count": 1
+    },
+    {
+      "term": "AMPICILLIN",
+      "count": 1
+    },
+    {
+      "term": "AMVUTTRA",
+      "count": 1
+    },
+    {
+      "term": "ATORVASTATIN",
+      "count": 1
+    },
+    {
+      "term": "BACITRACIN.",
+      "count": 1
+    },
+    {
+      "term": "BETAMETHASONE",
+      "count": 1
+    },
+    {
+      "term": "BISOPROLOL",
+      "count": 1
+    },
+    {
+      "term": "BUSULFAN.",
+      "count": 1
+    },
+    {
+      "term": "CANNABIS SATIVA FLOWERING TOP",
+      "count": 1
+    },
+    {
+      "term": "CARNITOR",
+      "count": 1
+    },
+    {
+      "term": "CASPOFUNGIN",
+      "count": 1
+    },
+    {
+      "term": "CEFTAZIDIME.",
+      "count": 1
+    },
+    {
+      "term": "CEFTRIAXONE SODIUM",
+      "count": 1
+    },
+    {
+      "term": "CHANTIX",
+      "count": 1
+    },
+    {
+      "term": "CHLORPHENIRAMINE MALEATE",
+      "count": 1
+    },
+    {
+      "term": "CIPROFLOXACIN.",
+      "count": 1
+    },
+    {
+      "term": "COSYNTROPIN.",
+      "count": 1
+    },
+    {
+      "term": "CYANOCOBALAMIN",
+      "count": 1
+    },
+    {
+      "term": "CYCLOPHOSPHAMIDE.",
+      "count": 1
+    },
+    {
+      "term": "CYTARABINE.",
+      "count": 1
+    },
+    {
+      "term": "Chocola a",
+      "count": 1
+    },
+    {
+      "term": "DAUNORUBICIN HYDROCHLORIDE.",
+      "count": 1
+    },
+    {
+      "term": "DEFIBROTIDE",
+      "count": 1
+    },
+    {
+      "term": "DEFITELIO",
+      "count": 1
+    },
+    {
+      "term": "DESLORATADINE",
+      "count": 1
+    },
+    {
+      "term": "DEXAMETHASONE SODIUM PHOSPHATE",
+      "count": 1
+    },
+    {
+      "term": "DEXAMETHASONE.",
+      "count": 1
+    },
+    {
+      "term": "DIMENHYDRINATE.",
+      "count": 1
+    },
+    {
+      "term": "DIPHENHYDRAMINE.",
+      "count": 1
+    },
+    {
+      "term": "DOBETIN",
+      "count": 1
+    },
+    {
+      "term": "DOCUSATE SODIUM.",
+      "count": 1
+    },
+    {
+      "term": "DULOXETINE",
+      "count": 1
+    },
+    {
+      "term": "DUPHALAC",
+      "count": 1
+    },
+    {
+      "term": "ENSURE",
+      "count": 1
+    },
+    {
+      "term": "EPHEDRINE HYDROCHLORIDE",
+      "count": 1
+    },
+    {
+      "term": "EPINEPHRINE.",
+      "count": 1
+    },
+    {
+      "term": "ETOPOSIDE.",
+      "count": 1
+    },
+    {
+      "term": "FAMOTIDINE",
+      "count": 1
+    },
+    {
+      "term": "FLUCONAZOLE.",
+      "count": 1
+    },
+    {
+      "term": "GABAPENTIN",
+      "count": 1
+    },
+    {
+      "term": "GEMFIBROZIL",
+      "count": 1
+    },
+    {
+      "term": "GLYCERIN.",
+      "count": 1
+    },
+    {
+      "term": "GLYCOPYRROLATE.",
+      "count": 1
+    },
+    {
+      "term": "HEPARIN SODIUM.",
+      "count": 1
+    },
+    {
+      "term": "HERBALS",
+      "count": 1
+    },
+    {
+      "term": "HYDRALAZINE",
+      "count": 1
+    },
+    {
+      "term": "HYDROCORTISONE.",
+      "count": 1
+    },
+    {
+      "term": "HYDROXYZINE",
+      "count": 1
+    },
+    {
+      "term": "INCREMIN",
+      "count": 1
+    },
+    {
+      "term": "KCL",
+      "count": 1
+    },
+    {
+      "term": "LANSOPRAZOLE.",
+      "count": 1
+    },
+    {
+      "term": "MAGNESIUM",
+      "count": 1
+    },
+    {
+      "term": "MELATONIN",
+      "count": 1
+    },
+    {
+      "term": "MEROPENEM.",
+      "count": 1
+    },
+    {
+      "term": "MESNA.",
+      "count": 1
+    },
+    {
+      "term": "METHOTREXATE.",
+      "count": 1
+    },
+    {
+      "term": "METOCLOPRAMIDE.",
+      "count": 1
+    },
+    {
+      "term": "METOPROLOL",
+      "count": 1
+    },
+    {
+      "term": "MICARDIS",
+      "count": 1
+    },
+    {
+      "term": "MIDAZOLAM.",
+      "count": 1
+    },
+    {
+      "term": "MIRALAX",
+      "count": 1
+    },
+    {
+      "term": "MITOXANTRONE",
+      "count": 1
+    },
+    {
+      "term": "OMEPRAZOLE.",
+      "count": 1
+    },
+    {
+      "term": "ONDANSETRON",
+      "count": 1
+    },
+    {
+      "term": "ONPATTRO",
+      "count": 1
+    },
+    {
+      "term": "PANTOPRAZOLE",
+      "count": 1
+    },
+    {
+      "term": "PERTZYE",
+      "count": 1
+    },
+    {
+      "term": "PHENYTOIN SODIUM.",
+      "count": 1
+    },
+    {
+      "term": "PIPERACILLIN/TAZOBACTAM",
+      "count": 1
+    },
+    {
+      "term": "POLYETHYLENE GLYCOL",
+      "count": 1
+    },
+    {
+      "term": "POTASSIUM CHLORIDE.",
+      "count": 1
+    },
+    {
+      "term": "PREDNISOLONE",
+      "count": 1
+    },
+    {
+      "term": "PREDNISOLONE ACETATE",
+      "count": 1
+    },
+    {
+      "term": "PREGABALIN",
+      "count": 1
+    },
+    {
+      "term": "PROTAMINE SULFATE.",
+      "count": 1
+    },
+    {
+      "term": "PROVENTIL",
+      "count": 1
+    },
+    {
+      "term": "PULMOZYME",
+      "count": 1
+    },
+    {
+      "term": "QALSODY",
+      "count": 1
+    },
+    {
+      "term": "QUETIAPINE",
+      "count": 1
+    },
+    {
+      "term": "RANITIDINE.",
+      "count": 1
+    },
+    {
+      "term": "ROSUVASTATIN",
+      "count": 1
+    },
+    {
+      "term": "ROXICODONE",
+      "count": 1
+    },
+    {
+      "term": "SCOPOLAMINE",
+      "count": 1
+    },
+    {
+      "term": "SENNOSIDES",
+      "count": 1
+    },
+    {
+      "term": "SENNOSIDES.",
+      "count": 1
+    },
+    {
+      "term": "SERTRALINE",
+      "count": 1
+    },
+    {
+      "term": "SIMETHICONE (DIMETHICONE)",
+      "count": 1
+    },
+    {
+      "term": "SODIUM CHLORIDE 3%",
+      "count": 1
+    },
+    {
+      "term": "SODIUM CHLORIDE.",
+      "count": 1
+    },
+    {
+      "term": "SPIRONOLACTONE.",
+      "count": 1
+    },
+    {
+      "term": "STERILE VANCOMYCIN HYDROCHLORIDE",
+      "count": 1
+    },
+    {
+      "term": "SYNAGIS",
+      "count": 1
+    },
+    {
+      "term": "TACROLIMUS.",
+      "count": 1
+    },
+    {
+      "term": "TELMISARTAN",
+      "count": 1
+    },
+    {
+      "term": "TERFENADINE",
+      "count": 1
+    },
+    {
+      "term": "TOBRAMYCIN.",
+      "count": 1
+    },
+    {
+      "term": "TOFERSEN",
+      "count": 1
+    },
+    {
+      "term": "TPA",
+      "count": 1
+    },
+    {
+      "term": "TRIMETHOPRIM SULFAMETHOXAZOLE",
+      "count": 1
+    },
+    {
+      "term": "TRYNGOLZA",
+      "count": 1
+    },
+    {
+      "term": "TYLENOL",
+      "count": 1
+    },
+    {
+      "term": "URSODEOXYCHOLIC ACID",
+      "count": 1
+    },
+    {
+      "term": "VASCEPA",
+      "count": 1
+    },
+    {
+      "term": "VENTOLIN",
+      "count": 1
+    },
+    {
+      "term": "VIGANTOLETTE",
+      "count": 1
+    },
+    {
+      "term": "VORICONAZOLE.",
+      "count": 1
+    },
+    {
+      "term": "ZANTAC",
+      "count": 1
+    },
+    {
+      "term": "ZINECARD [DEXRAZOXANE]",
+      "count": 1
+    },
+    {
+      "term": "magnesium aluminum monohydrate",
+      "count": 1
+    }
+  ]
+}

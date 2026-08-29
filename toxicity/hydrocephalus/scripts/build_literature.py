@@ -392,6 +392,178 @@ L4_ROWS = [
          loc="whole Annex I SmPC, full-text sweep (0 hits for all four concepts)"),
 ]
 
+
+# --------------------------------------------------------------------------
+# L5 — Nakayama et al. 2026, Nature Medicine 32:1411-1420. "Antisense
+#      oligonucleotide-mediated knockdown therapy in two infants with severe
+#      KCNT1 epileptic encephalopathy". PMID 41981306, PMC13099374.
+#      Licence: CC BY-NC-ND -> summary_stat_only.
+#
+#      THE SECOND INDEPENDENT DRUG-ATTRIBUTED SIGNAL, and the reason this
+#      dataset does not call hydrocephalus a tominersen-specific finding. Two
+#      n-of-1 patients dosed with valeriasen (KT777), a different ASO against a
+#      different target in a different indication and age group, and BOTH
+#      developed the endpoint. The authors state: "We therefore considered the
+#      serious adverse events encountered in our two patients to be attributable
+#      to dosing of the study drug", and frame it as "a potential monitorable
+#      toxicity of some intrathecal antisense oligonucleotides".
+#
+#      It also differs MECHANISTICALLY from the tominersen index case. There the
+#      authors diagnosed a sterile meningitis with CSF protein 2.64 g/L and
+#      lymphocytosis; here CSF was negative for inflammatory biomarkers and the
+#      authors' working hypothesis is a DOSE-RELATED effect. The reduced-dose
+#      rechallenge in patient 2, delivered without recurrence, is the evidence
+#      for that and is carried as its own row.
+# --------------------------------------------------------------------------
+L5 = dict(
+    source_key="Nakayama_2026_NatMed_KCNT1",
+    source_ref="PMID 41981306; PMC13099374; doi 10.1038/s41591-026-04314-9",
+    file="sources/raw/sweep1_kcnt1_aso_infants_PMC13099374.xml",
+    redistribution="summary_stat_only",
+)
+
+L5_ROWS = [
+    # ---- patient 1 ----
+    dict(pt="1", cluster="L5-PT1", tier="A", cat="hydrocephalus_event",
+         axis="ventricular_enlargement", readout="communicating_hydrocephalus_diagnosed",
+         value="severe communicating hydrocephalus with transependymal flow",
+         unit="diagnosis", qual="TRUE", n_aff=1, grade=3, asc="measured_positive",
+         dose="60 mg every 8 weeks intrathecal (escalated from 40 mg q8w at week 26)",
+         time="8 weeks after the 9th intrathecal dose",
+         basis=("3 = hydrocephalus requiring a CSF-diversion procedure; an endoscopic "
+                "third ventriculostomy with choroid plexus cauterization was performed, "
+                "it did not relieve the hydrocephalus, and goals of care were redirected "
+                "to palliative care (SCHEMA.md rubric grade 3)."),
+         ev=('"Brain and spine imaging was obtained 2 days later and revealed severe '
+             'communicating hydrocephalus with T2 white matter changes representing '
+             'transependymal flow but no other parenchymal changes." Attribution: "We '
+             'therefore considered the serious adverse events encountered in our two '
+             'patients to be attributable to dosing of the study drug."'),
+         loc="Results, 'Safety and adverse events', patient 1 paragraph"),
+    dict(pt="1", cluster="L5-PT1", tier="B", cat="csf_pressure",
+         axis="csf_pressure_disturbance", readout="CSF_opening_pressure",
+         value="55", unit="cmH2O", qual="FALSE", n_aff=1, grade=2,
+         asc="measured_positive",
+         dose="60 mg every 8 weeks intrathecal",
+         time="at endoscopic third ventriculostomy",
+         basis=("2 = measured raised intracranial pressure (SCHEMA.md rubric grade 2). "
+                "The grade-3 consequence is carried by the sibling hydrocephalus and "
+                "diversion-procedure rows in the same event cluster."),
+         ev=('"An endoscopic third ventriculostomy with choroid plexus cauterization was '
+             'performed, showing a CSF opening pressure of 55 cm H2O."'),
+         loc="Results, 'Safety and adverse events', patient 1 paragraph"),
+    dict(pt="1", cluster="L5-PT1", tier="A", cat="shunt_or_drain_intervention",
+         axis="ventricular_enlargement",
+         readout="endoscopic_third_ventriculostomy_choroid_plexus_cauterization",
+         value="endoscopic third ventriculostomy with choroid plexus cauterization",
+         unit="intervention", qual="TRUE", n_aff=1, grade=3, asc="measured_positive",
+         dose="60 mg every 8 weeks intrathecal", time="after diagnosis",
+         basis=("3 = a CSF-diversion procedure was performed (SCHEMA.md rubric "
+                "grade 3)."),
+         ev=('"No improvement in hydrocephalus was seen over the following 2 days. '
+             'After considering ventriculoperitoneal shunt placement, and mindful of the '
+             'seriousness of her disease course before experimental therapy, the family '
+             'withdrew from the investigational protocol in favor of palliative care."'),
+         loc="Results, 'Safety and adverse events', patient 1 paragraph"),
+    # ---- patient 2 ----
+    dict(pt="2", cluster="L5-PT2", tier="A", cat="ventricular_morphometry",
+         axis="ventricular_enlargement", readout="ventricular_size_MRI",
+         value="normal ventricular size", unit="qualitative_imaging", qual="TRUE",
+         n_aff=0, grade=0, asc="measured_null",
+         dose="escalating intrathecal 10, 20, 30, 40 mg", time="day 55",
+         basis=("0 = brain MRI performed and reported as unremarkable including normal "
+                "ventricular size (SCHEMA.md rubric grade 0). A WITHIN-PATIENT negative "
+                "seven days before the same patient's ventricular enlargement, which is "
+                "the strongest form of negative in this dataset."),
+         ev=('"A brain MRI was unremarkable (including normal ventricular size) '
+             '(day 55). Lumbar puncture showed a normal opening pressure of 16 cm H2O."'),
+         loc="Results, 'Safety and adverse events', patient 2 paragraph"),
+    dict(pt="2", cluster="L5-PT2", tier="B", cat="csf_composition",
+         axis="csf_composition_disturbance", readout="CSF_white_cells_and_protein",
+         value="WBC 28 cells/mm3; protein 83 mg/dL", unit="mixed", qual="FALSE",
+         n_aff=1, grade=1, asc="measured_positive",
+         dose="escalating intrathecal 10, 20, 30, 40 mg", time="day 55",
+         basis=("1 = mild CSF composition change, described by the source as slightly "
+                "elevated and normalising on follow-up, with no intervention "
+                "(SCHEMA.md rubric grade 1)."),
+         ev=('"CSF WBCs and protein were slightly elevated at 28 cells mm-3 and 83 mg '
+             'dl-1, respectively (and follow-up cell counts and protein levels were '
+             'normal)."'),
+         loc="Results, 'Safety and adverse events', patient 2 paragraph"),
+    dict(pt="2", cluster="L5-PT2", tier="A", cat="ventricular_morphometry",
+         axis="ventricular_enlargement", readout="ventricular_size_MRI",
+         value="mild increase in ventricular size, no evidence of obstruction",
+         unit="qualitative_imaging", qual="TRUE", n_aff=1, grade=2,
+         asc="measured_positive",
+         dose="escalating intrathecal 10, 20, 30, 40 mg", time="days 62 and 64",
+         basis=("2 = symptomatic ventricular enlargement leading to intensive-care "
+                "transfer and intervention (SCHEMA.md rubric grade 2); the grade-3 "
+                "consequence is carried by the drain and shunt rows in the same "
+                "event cluster."),
+         ev=('"While the initial brain MRI (day 55) had been unremarkable, repeat MRIs '
+             'performed on days 62 and 64 showed mild increases in ventricular size. '
+             'There was no evidence of obstruction."'),
+         loc="Results, 'Safety and adverse events', patient 2 paragraph"),
+    dict(pt="2", cluster="L5-PT2", tier="A", cat="shunt_or_drain_intervention",
+         axis="ventricular_enlargement", readout="external_ventricular_drain",
+         value="extraventricular drain, opening pressure >20 cmH2O",
+         unit="intervention", qual="TRUE", n_aff=1, grade=3, asc="measured_positive",
+         dose="escalating intrathecal 10, 20, 30, 40 mg", time="day 64",
+         basis="3 = an external ventricular drain was placed (SCHEMA.md rubric grade 3).",
+         ev=('"Given the hydrocephalus found in patient 1, patient 2 was transferred to '
+             'the pediatric intensive care unit for closer neurologic monitoring, where '
+             'an extraventricular drain was placed. Opening pressure was >20 cm H2O."'),
+         loc="Results, 'Safety and adverse events', patient 2 paragraph"),
+    dict(pt="2", cluster="L5-PT2", tier="A", cat="shunt_or_drain_intervention",
+         axis="ventricular_enlargement", readout="ventriculoperitoneal_shunt_inserted",
+         value="ventriculoperitoneal shunt", unit="intervention", qual="TRUE",
+         n_aff=1, grade=3, asc="measured_positive",
+         dose="escalating intrathecal 10, 20, 30, 40 mg", time="day 65",
+         basis=("3 = permanent CSF diversion performed (SCHEMA.md rubric grade 3)."),
+         ev=('"There was persistent drainage through the extraventricular drain, and a '
+             'ventriculoperitoneal shunt was placed on day 65. Ventricular dilatation '
+             'gradually normalized on serial MR ventriculograms, and she was discharged '
+             'to home in stable condition on day 87."'),
+         loc="Results, 'Safety and adverse events', patient 2 paragraph"),
+    dict(pt="2", cluster="L5-PT2", tier="B", cat="csf_composition",
+         axis="csf_composition_disturbance", readout="CSF_inflammatory_biomarkers",
+         value="negative", unit="qualitative_panel", qual="TRUE", n_aff=0, grade=0,
+         asc="measured_null",
+         dose="escalating intrathecal 10, 20, 30, 40 mg", time="after the event",
+         basis=("0 = an inflammatory CSF panel was performed and was negative "
+                "(SCHEMA.md rubric grade 0). MECHANISTICALLY LOAD-BEARING: the "
+                "tominersen index case attributed its hydrocephalus to a sterile "
+                "meningitis with CSF protein 2.64 g/L and lymphocytosis, whereas here "
+                "the same endpoint occurs with a negative inflammatory panel and a "
+                "dose-related working hypothesis. The two cases support different "
+                "mechanisms and must not be pooled as one."),
+         ev=('"CSF testing was negative for inflammatory biomarkers (albumin, IgG index, '
+             'oligoclonal bands and neoptyrin) ... A review of preclinical and clinical '
+             'findings led to our working hypothesis that hydrocephalus was a '
+             'dose-related clinical side effect."'),
+         loc="Results, 'Safety and adverse events', closing paragraph"),
+    dict(pt="2", cluster="L5-PT2-RECHALLENGE", tier="A", cat="ventricular_morphometry",
+         axis="ventricular_enlargement", readout="reduced_dose_rechallenge_no_recurrence",
+         value="no recurrence", unit="qualitative_imaging", qual="TRUE", n_aff=0,
+         grade=0, asc="measured_null",
+         dose=("reduced: 2 intrathecal doses (10 mg, 15 mg) then 5 intracerebroventricular "
+               "doses (3, 3, 6, 6, 9 mg), each 2 months apart"),
+         time="after a 2-year hiatus",
+         basis=("0 = rechallenge at reduced dose under a revised protocol with periodic "
+                "MRI ventriculograms and per-lumbar-puncture opening pressures, "
+                "delivered without recurrence of the endpoint (SCHEMA.md rubric "
+                "grade 0). This is the dataset's only DECHALLENGE/REDUCED-DOSE "
+                "RECHALLENGE row and is the direct evidence for the authors' "
+                "dose-related hypothesis."),
+         ev=('"A revised protocol was developed, using lower doses, periodic MRI '
+             'ventriculograms and opening pressure measurements with each lumbar '
+             'puncture. ASO administration for patient 2 resumed after a 2-year hiatus. '
+             'Two IT doses (10 mg and 15 mg, spaced 2 months apart) and five ICV doses '
+             '(3 mg, 3 mg, 6 mg, 6 mg, 9 mg, spaced 2 months apart) were safely '
+             'delivered."'),
+         loc="Results, 'Safety and adverse events', closing paragraph"),
+]
+
 BLANK = dict(
     strain="NOT_APPLICABLE", dose_value="NOT_REPORTED", dose_unit="NOT_APPLICABLE",
     timepoint="NOT_REPORTED", seriousness="NOT_REPORTED",
@@ -579,6 +751,49 @@ def main():
                    "quoted as evidence and a redistributor should resolve the licence "
                    "before republishing the value. Retrieved document at %s. "
                    "Retrieved %s." % (r["file"], TODAY)),
+        ))
+
+    # ---- L5: KCNT1 n-of-1 ASO, two patients ------------------------------
+    for r in L5_ROWS:
+        rows.append(row(
+            oligo_name="valeriasen", source_key=L5["source_key"],
+            study_type="clinical_case", species="human",
+            system_model=("n-of-1 investigational protocol, patient %s of 2; "
+                          "2-year-old girl with de novo KCNT1 p.Arg474His epilepsy of "
+                          "infancy with migrating focal seizures" % r["pt"]),
+            is_human_system="TRUE",
+            indication_population="KCNT1 developmental and epileptic encephalopathy",
+            arm_label="valeriasen (KT777), intrathecal",
+            arm_description=r["dose"], arm_role="exposed",
+            cns_compartment="lateral_ventricles", delivery_route="intrathecal_lumbar",
+            dose_value="NOT_REPORTED", dose_unit="NOT_APPLICABLE",
+            dose_regimen=r["dose"], exposure_duration="NOT_REPORTED",
+            timepoint=r["time"], endpoint_tier=r["tier"],
+            readout_category=r["cat"], readout_name=r["readout"],
+            readout_value=r["value"], readout_unit=r["unit"],
+            readout_is_qualitative=r["qual"], n_affected=r["n_aff"], n_at_risk=2,
+            comparator_arm="NOT_APPLICABLE",
+            effect_direction=("no_change" if r["grade"] == 0 else "increase"),
+            effect_vs_control=("both patients in this two-patient protocol developed the "
+                               "endpoint; there is no untreated comparator"),
+            hydroceph_grade=r["grade"], grade_basis=r["basis"],
+            grade_status="provisional", ascertainment=r["asc"],
+            ascertainment_basis=(
+                "Actively investigated. After the first patient's event the protocol was "
+                "revised to require periodic MRI ventriculograms and an opening-pressure "
+                "measurement at every lumbar puncture, so later rows are "
+                "protocol-specified rather than incidental."),
+            attribution_as_stated=("drug_attributed" if r["grade"] else "not_discussed"),
+            attribution_evidence=r["ev"], tox_axis=r["axis"],
+            event_cluster_id=r["cluster"], source_ref=L5["source_ref"],
+            source_location=r["loc"], redistribution=L5["redistribution"],
+            notes=("Licence CC BY-NC-ND: summary statistics and short quoted evidence "
+                   "only; no table or figure is reproduced. Sequences and per-position "
+                   "chemistry for valeriasen exist in the source's Extended Data Table 1 "
+                   "but are published as an IMAGE in which 2'-MOE positions are encoded "
+                   "by bold and underline, which does not survive text extraction; they "
+                   "are therefore NOT transcribed here (METHODOLOGY.md OI-02). Full "
+                   "text at %s. Retrieved %s." % (L5["file"], TODAY)),
         ))
 
     out = os.path.join(DATA, "_literature_measurements.csv")

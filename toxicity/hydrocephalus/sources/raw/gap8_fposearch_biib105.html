@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/fpo_9.css" />
+<script type="text/javascript">
+var plstart = new Date();
+</script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-174791-1']);
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="title" content="FPO IP Research &amp; Communities" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="Complete Patent Searching Database and Patent Data Analytics Services." />
+<title>FPO IP Research &amp; Communities</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link rel="shortcut icon" href="/images/favicon_1.ico"/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-1586334167197709",
+        enable_page_level_ads: true
+    });
+</script></head>
+<body>
+
+<div>
+    <a name="top"></a>
+
+    <div class="container">
+        
+<div class="header">
+    <div class="row-fluid top">
+
+        <div class="pull-left figure">
+            <a href="/" onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Logo']);"></a>
+        </div>
+
+
+        <div class="pull-right" style="width: 750px;">
+                        <div class="loginForm">
+                <form class="form-inline form-mini pull-right" action="/login.html" method="post">
+                    <input type="hidden" name="src" value="header_login">
+                    <input id="UID-top" name="UID" type="text" class="input-large" placeholder="Email">
+                    <input id="PWD-top" name="PWD" type="password" class="input-small" placeholder="Password">
+                    <button type="submit" class="btn btn-mini btn-primary"
+                            onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Login']);">Login
+                    </button>
+                    <a class="btn btn-mini btn-info" href="/register.html"
+                            onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Create']);">Sign up
+                    </a>
+                </form>
+            </div>
+            
+
+            <div class="searchForm well">
+                <form id="quick_result" name="quick_result" class="form-inline" action="/result.html" method="get">
+
+                    <input type="hidden" name="sort" value="relevance">
+                    <input type="hidden" name="srch" value="top">
+
+
+                    <div class="searchBox pull-left">
+                        <input type="text" name="query_txt" placeholder="Enter your search here"
+                               class="search-query" id="topSearchBox">
+
+                        <div class="btn-group">
+                            <button name="submit" class="btn btn-primary" type="submit"
+                                    onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Search']);">Search
+                            </button>
+                            <button id="searchBox_dropdown" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/search.html"
+                                       onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'SearchExpert']);document.cookie = 'searchTab=#expert';">
+                                    Expert Search</a>
+                                </li>
+                                <li><a href="/search.html"
+                                       onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'SearchQuick']);document.cookie = 'searchTab=#quick';">
+                                    Quick Search</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sideCollections pull-right">
+                        <ul id="header_search_top" class="borderBottom ul-mini ">
+                            <li>
+                                <label class="checkbox">
+                                    <input type="checkbox" id="patents_us" name="patents_us"
+                                           value="on" checked="checked">US Patents/Apps
+                                </label>
+                            </li>
+
+                            <li>
+                                <label class="checkbox">
+                                    <input type="checkbox" id="patents_other" name="patents_other"
+                                           value="on">Other
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </form>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="row-fluid">
+        <div class="navbar navbar-inverse center" id="primaryNavBar">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    <li><a href="/"></a></li>
+                    <li><a href="/search.html">SEARCH</a></li>
+                    <li>
+                        <a href="/tools-resources.html"
+                           onclick="_gaq.push(['_trackEvent', 'Navbar', 'Click', 'Resources']);">
+                            TOOLS &amp; RESOURCES
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+<div class="clearfix"></div>        <div>
+
+            <div id="dhtmltooltip"></div>
+            
+<form id="results" name="results" method="post" class="form-horizontal" action="/result.html"><input type="hidden" name="p" id="p" value="1" /><input type="hidden" name="query_txt" id="query_txt" value="SPEC/&quot;BIIB105&quot;" /><input type="hidden" name="stemming" id="quickstemming" value="on" /><input type="hidden" name="sort" id="quicksort" value="relevance" /><input type="hidden" name="patents" id="quickpatents" value="" /><input type="hidden" name="patents_us" id="quickpatentsus" value="" /><input type="hidden" name="patents_other" id="quickpatentsother" value="" /><input type="hidden" name="uspat" id="quickuspat" value="on" /><input type="hidden" name="usapp" id="quickusapp" value="on" /><input type="hidden" name="pct" id="quickpct" value="" /><input type="hidden" name="jp" id="quickjp" value="on" /><input type="hidden" name="eupat" id="quickeu" value="" /><input type="hidden" name="depat" id="quickde" value="on" /><input type="hidden" name="srch" id="quicksearch" value="xprtsrch" /><input type="hidden" name="date_range" id="quickdaterange" value="all" /><input type="hidden" name="hits" id="hits" value="23" /><input type="hidden" name="srch_name" id="srch_name" value="" /><input type="hidden" name="search_name" id="search_name" value="" /><input type="hidden" name="selected_doc_flag" id="selected_doc_flag" value="" /><input type="hidden" name="selected_portfolio" id="selected_portfolio" value="" /><input type="hidden" name="portfolio_name" id="portfolio_name" value="" />
+
+<div class="well well-small" style="margin-top:10px; margin-bottom: 0">
+    <table width="100%" border="0">
+        <tr>
+            <td width="36%">
+                Matches 1 - 23 out of 23            </td>
+            <td align="right" valign="middle" width="70%" colspan="3" class="paginate_spacing">
+                                <br clear="all"/>
+            </td>
+        </tr>
+    </table>
+</div><br clear="all"/><!-- 728x90 Responsive 1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1586334167197709"
+     data-ad-slot="2270521617"
+     data-ad-format="auto">
+</ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br clear="all"/>
+
+<div class="legacy-container" style="margin-top: 0">
+    <div class="container_white" style="padding-top:3px;  padding-bottom:10px;">
+        <div align="center">
+            <table width="100%" border="0" cellpadding="2" cellspacing="1" class="listing_table">
+                <tr>
+                                        <th style="text-align:left;" width="10%">
+                        Match
+                    </th>
+                                        <th style="text-align:left;" width="15%"> Document</th>
+                    <th style="text-align:left;">Document Title</th>
+                    <th style='text-align:left;' width='10%'>Score</div></th>                </tr>
+                <tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                1            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20250223620    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2025/0223620.html">NOVEL PROCESSES FOR THE PRODUCTION OF POLYNUCLEOTIDES INCLUDING OLIGONUCLEOTIDES</a>
+        &nbsp;
+                            <br/>
+                The invention relates to novel processes using enzymes for the production of polynucleotides or oligonucleotides, wherein said processes are suitable for use in the production of modified...    </td>
+        <td width='5%'>
+        999    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                2            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2025511938A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2025511938A.html">Novel methods for the production of polynucleotides (including oligonucleotides)</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to novel methods for the production of polynucleotides or oligonucleotides using enzymes, which are suitable for use in producing modified polynucleotides or...    </td>
+        <td width='5%'>
+        999    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                3            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20230235332    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2023/0235332.html">TREATMENT OF NEUROLOGICAL DISEASES USING MODULATORS OF GENE TRANSCRIPTS</a>
+        &nbsp;
+                            <br/>
+                Disclosed herein are STMN2 oligonucleotides with one or more spacers. In various embodiments, STMN2 oligonucleotides with spacer(s) reduce STMN2 transcripts with cryptic exon and increase full...    </td>
+        <td width='5%'>
+        769    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                4            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2023528435A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2023528435A.html">Treatment of Neurological Diseases Using Gene Transcript Modulators</a>
+        &nbsp;
+                            <br/>
+                Disclosed herein are STMN2 oligonucleotides with one or more spacers. In various embodiments, STMN2 oligonucleotides with spacer(s) reduce STMN2 transcripts with hidden exons and increase...    </td>
+        <td width='5%'>
+        769    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                5            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2024543214A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2024543214A.html">Treatment of neurological disorders using modulators of UNC13A gene transcripts</a>
+        &nbsp;
+                            <br/>
+                Disclosed herein is the UNC13A oligonucleotide with one or more spacers or without spacers.In various embodiments, the UNC13A oligonucleotide with spacer(s) reduces the mis-spliced UNC13A...    </td>
+        <td width='5%'>
+        769    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                6            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2026519598A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2026519598A.html">Modified UNC13A oligonucleotide</a>
+        &nbsp;
+                            <br/>
+                UNC13A oligonucleotides having one or more spacers or UNC13A oligonucleotides without spacers are disclosed herein. In various embodiments, UNC13A oligonucleotides having spacers reduce misspliced...    </td>
+        <td width='5%'>
+        627    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                7            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2024545052A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2024545052A.html">Splice switcher antisense oligonucleotides with modified backbone chemistry</a>
+        &nbsp;
+                            <br/>
+                Disclosed herein is the oligonucleotide with one or more spacers or without spacers.In various embodiments, the STMN2, KCNQ2, UNC13A or SMN2 oligonucleotide with spacer(s) can reduce the STMN2...    </td>
+        <td width='5%'>
+        513    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                8            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20250051766    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2025/0051766.html">TREATMENT OF NEUROLOGICAL DISEASES USING MODULATORS OF UNC13A GENE TRANSCRIPTS</a>
+        &nbsp;
+                            <br/>
+                Disclosed herein are UNC13A oligonucleotides with one or more spacers or without a spacer. In various embodiments, UNC13A oligonucleotides with spacer(s) reduce mis-spliced UNC13A transcripts and...    </td>
+        <td width='5%'>
+        455    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                9            </label>
+        </td>
+    <td width="15%"  valign="top">
+      12331082    </td>
+    <td  width="60%" valign="top">
+        <a href="/12331082.html">Capsid variants and methods of using the same</a>
+        &nbsp;
+                            <br/>
+                The disclosure is directed in part to variant capsid polypeptides that can be used to deliver payloads.    </td>
+        <td width='5%'>
+        286    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                10            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20260027238    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2026/0027238.html">CAPSID POLYPEPTIDES AND METHODS OF USE THEREOF</a>
+        &nbsp;
+                            <br/>
+                The disclosure is directed in part to dependoparvovirus capsid polypeptides that can be used to deliver payloads.    </td>
+        <td width='5%'>
+        286    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                11            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20240417430    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2024/0417430.html">CAPSID VARIANTS AND METHODS OF USING THE SAME</a>
+        &nbsp;
+                            <br/>
+                The disclosure is directed in part to variant capsid polypeptides that can be used to deliver payloads.    </td>
+        <td width='5%'>
+        286    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                12            </label>
+        </td>
+    <td width="15%"  valign="top">
+      12528841    </td>
+    <td  width="60%" valign="top">
+        <a href="/12528841.html">Capsid variants and methods of using the same</a>
+        &nbsp;
+                            <br/>
+                The disclosure is directed in part to variant capsid polypeptides that can be used to deliver payloads.    </td>
+        <td width='5%'>
+        286    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                13            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20240425552    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2024/0425552.html">CAPSID VARIANTS AND METHODS OF USING THE SAME</a>
+        &nbsp;
+                            <br/>
+                The disclosure is directed in part to variant capsid polypeptides that can be used to deliver payloads.    </td>
+        <td width='5%'>
+        286    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                14            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20240425551    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2024/0425551.html">CAPSID VARIANTS AND METHODS OF USING THE SAME</a>
+        &nbsp;
+                            <br/>
+                The disclosure is directed in part to variant capsid polypeptides that can be used to deliver payloads.    </td>
+        <td width='5%'>
+        286    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                15            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20230357326    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2023/0357326.html">CASPID VARIANTS AND METHODS OF USING THE SAME</a>
+        &nbsp;
+                            <br/>
+                The disclosure is directed in part to variant capsid polypeptides that can be used to deliver payloads.    </td>
+        <td width='5%'>
+        286    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                16            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20250388629    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2025/0388629.html">CAPSID VARIANTS AND METHODS OF USING THE SAME</a>
+        &nbsp;
+                            <br/>
+                The disclosure is directed in part to variant capsid polypeptides that can be used to deliver payloads.    </td>
+        <td width='5%'>
+        286    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                17            </label>
+        </td>
+    <td width="15%"  valign="top">
+      12116385    </td>
+    <td  width="60%" valign="top">
+        <a href="/12116385.html">Capsid variants and methods of using the same</a>
+        &nbsp;
+                            <br/>
+                The disclosure is directed in part to variant capsid polypeptides that can be used to deliver payloads.    </td>
+        <td width='5%'>
+        286    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                18            </label>
+        </td>
+    <td width="15%"  valign="top">
+      12331081    </td>
+    <td  width="60%" valign="top">
+        <a href="/12331081.html">Capsid variants and methods of using the same</a>
+        &nbsp;
+                            <br/>
+                The disclosure is directed in part to variant capsid polypeptides that can be used to deliver payloads.    </td>
+        <td width='5%'>
+        286    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                19            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20250066428    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2025/0066428.html">CAPSID VARIANTS AND METHODS OF USING THE SAME</a>
+        &nbsp;
+                            <br/>
+                The disclosure is directed in part to variant capsid polypeptides that can be used to deliver payloads.    </td>
+        <td width='5%'>
+        286    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                20            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20250320257    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2025/0320257.html">CAPSID VARIANTS AND METHODS OF USING THE SAME</a>
+        &nbsp;
+                            <br/>
+                The disclosure is directed in part to variant capsid polypeptides that can be used to deliver payloads.    </td>
+        <td width='5%'>
+        286    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                21            </label>
+        </td>
+    <td width="15%"  valign="top">
+      12655180    </td>
+    <td  width="60%" valign="top">
+        <a href="/12655180.html">Capsid variants and methods of using the same</a>
+        &nbsp;
+                            <br/>
+                The disclosure is directed in part to variant capsid polypeptides that can be used to deliver payloads.    </td>
+        <td width='5%'>
+        286    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                22            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20260158170    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2026/0158170.html">CAPSID POLYPEPTIDES AND METHODS OF USE THEREOF</a>
+        &nbsp;
+                            <br/>
+                The disclosure is directed in part to dependoparvovirus capsid polypeptides that can be used to deliver payloads.    </td>
+        <td width='5%'>
+        208    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                23            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2024537277A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2024537277A.html">Capsid variants and methods of using same</a>
+        &nbsp;
+                            <br/>
+                This disclosure is directed, in part, to variant capsid polypeptides that can be used to deliver a payload. [Selected Figure] Figure 1A    </td>
+        <td width='5%'>
+        208    </td>
+    </tr>            </table>
+        </div>
+    </div>
+</div>
+</form>
+<!-- 728x90 Responsive 2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1586334167197709"
+     data-ad-slot="4118051210"
+     data-ad-format="auto">
+</ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br clear="all"/><form id="botSearch" name="botSearch" method="get" class="form-inline" action="/result.html"><input type="hidden" name="srch" id="" value="xprtsrch" /><input type="hidden" name="uspat" id="" value="on" /><input type="hidden" name="usapp" id="" value="on" /><input type="hidden" name="jp" id="" value="on" /><input type="hidden" name="depat" id="" value="on" /><input type="hidden" name="date_range" id="" value="all" /><input type="hidden" name="stemming" id="" value="on" /><input type="hidden" name="sort" id="" value="relevance" /><br/>
+<div class="well well-small">
+    <table>
+        <tr>
+            <td>Search</td>
+            <td style="width: 100%;padding: 0 14px 0 5px;"><input type="text" name="query_txt" id="query_txt" value="SPEC/&quot;BIIB105&quot;" style="width: 100%;padding: 4px 0 4px 6px" /></td>
+            <td><input type="submit" name="search" value="Search" /></td>
+        </tr>
+    </table>
+</div>
+</form>
+<div class="well well-small" style="margin-top:10px; margin-bottom: 0">
+    <table width="100%" border="0">
+        <tr>
+            <td width="36%">
+                Matches 1 - 23 out of 23            </td>
+            <td align="right" valign="middle" width="70%" colspan="3" class="paginate_spacing">
+                                <br clear="all"/>
+            </td>
+        </tr>
+    </table>
+</div> « <a href="/search.html">search again</a>
+        </div>
+
+        <div class="pageFooter">
+    <div class="row-fluid top">
+        <div class="figure"></div>
+        <ul>
+            <li>
+                <a href="/" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Home']);">Home</a>
+            </li>
+            <li>
+                <a href="/search.html" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Search']);">Search</a>
+            </li>
+            <li>
+                <a href="/services.html" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Services']);">Services</a>
+            </li>
+        </ul>
+        <ul class="socialIcons">
+            <li><a href="https://twitter.com/FPOCommunity" class="twitter"
+                   onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'social twitter']);"></a></li>
+            <li><a href="http://www.linkedin.com/groups/FPO-Community-4524797" class="linkedin"
+                   onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'social linkedin']);"></a></li>
+        </ul>
+    </div>
+    <div class="row-fluid bot">
+        <p>
+            &copy; 2004-2026 FreePatentsOnline.com. All rights reserved.
+            <a href="/privacy.html" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Privacy']);">Privacy Policy
+                &amp; Terms of Use.</a>
+        </p>
+    </div>
+</div>    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    _gaq.push(['_setCustomVar', 2, 'User Origin Source', 'no referer', 2]);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+<script type="text/javascript">
+    function trackPageLoad() {
+        var plend = new Date();
+        var plload = plend.getTime() - plstart.getTime();
+        var pn = document.location.pathname;
+        var lc = 'slow';
+        var la = new Array(200, 300, 400, 500, 1000, 1500, 2000, 2500, 5000);
+        for (var i = 0, len = la.length; i < len; i++) {
+            if (plload <= la[i]) {
+                lc = String(la[i]);
+                break;
+            }
+        }
+        _gaq.push(['onLoadTracker._setAccount', 'UA-174791-5']);
+        _gaq.push(['onLoadTracker._trackEvent', "LoadTime", lc, pn, plload]);
+        }
+</script>
+<script type="text/javascript">
+    try {
+        if (window.onload != null) {
+            var oldOnload = window.onload;
+            window.onload = function (e) {
+                oldOnload(e);
+                trackPageLoad();
+            };
+        }
+        else {
+            window.onload = trackPageLoad();
+        }
+    } catch (err) {
+    }
+</script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/js/fpo_3.js"></script>
+
+</body>
+</html>

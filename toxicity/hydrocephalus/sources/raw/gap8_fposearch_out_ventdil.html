@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/fpo_9.css" />
+<script type="text/javascript">
+var plstart = new Date();
+</script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-174791-1']);
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="title" content="FPO IP Research &amp; Communities" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="Complete Patent Searching Database and Patent Data Analytics Services." />
+<title>FPO IP Research &amp; Communities</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link rel="shortcut icon" href="/images/favicon_1.ico"/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-1586334167197709",
+        enable_page_level_ads: true
+    });
+</script></head>
+<body>
+
+<div>
+    <a name="top"></a>
+
+    <div class="container">
+        
+<div class="header">
+    <div class="row-fluid top">
+
+        <div class="pull-left figure">
+            <a href="/" onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Logo']);"></a>
+        </div>
+
+
+        <div class="pull-right" style="width: 750px;">
+                        <div class="loginForm">
+                <form class="form-inline form-mini pull-right" action="/login.html" method="post">
+                    <input type="hidden" name="src" value="header_login">
+                    <input id="UID-top" name="UID" type="text" class="input-large" placeholder="Email">
+                    <input id="PWD-top" name="PWD" type="password" class="input-small" placeholder="Password">
+                    <button type="submit" class="btn btn-mini btn-primary"
+                            onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Login']);">Login
+                    </button>
+                    <a class="btn btn-mini btn-info" href="/register.html"
+                            onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Create']);">Sign up
+                    </a>
+                </form>
+            </div>
+            
+
+            <div class="searchForm well">
+                <form id="quick_result" name="quick_result" class="form-inline" action="/result.html" method="get">
+
+                    <input type="hidden" name="sort" value="relevance">
+                    <input type="hidden" name="srch" value="top">
+
+
+                    <div class="searchBox pull-left">
+                        <input type="text" name="query_txt" placeholder="Enter your search here"
+                               class="search-query" id="topSearchBox">
+
+                        <div class="btn-group">
+                            <button name="submit" class="btn btn-primary" type="submit"
+                                    onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Search']);">Search
+                            </button>
+                            <button id="searchBox_dropdown" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/search.html"
+                                       onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'SearchExpert']);document.cookie = 'searchTab=#expert';">
+                                    Expert Search</a>
+                                </li>
+                                <li><a href="/search.html"
+                                       onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'SearchQuick']);document.cookie = 'searchTab=#quick';">
+                                    Quick Search</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sideCollections pull-right">
+                        <ul id="header_search_top" class="borderBottom ul-mini ">
+                            <li>
+                                <label class="checkbox">
+                                    <input type="checkbox" id="patents_us" name="patents_us"
+                                           value="on" checked="checked">US Patents/Apps
+                                </label>
+                            </li>
+
+                            <li>
+                                <label class="checkbox">
+                                    <input type="checkbox" id="patents_other" name="patents_other"
+                                           value="on">Other
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </form>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="row-fluid">
+        <div class="navbar navbar-inverse center" id="primaryNavBar">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    <li><a href="/"></a></li>
+                    <li><a href="/search.html">SEARCH</a></li>
+                    <li>
+                        <a href="/tools-resources.html"
+                           onclick="_gaq.push(['_trackEvent', 'Navbar', 'Click', 'Resources']);">
+                            TOOLS &amp; RESOURCES
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+<div class="clearfix"></div>        <div>
+
+            <div id="dhtmltooltip"></div>
+            
+<form id="results" name="results" method="post" class="form-horizontal" action="/result.html"><input type="hidden" name="p" id="p" value="1" /><input type="hidden" name="query_txt" id="query_txt" value="SPEC/&quot;antisense oligonucleotide&quot; AND SPEC/&quot;ventricular dilation&quot;" /><input type="hidden" name="stemming" id="quickstemming" value="on" /><input type="hidden" name="sort" id="quicksort" value="relevance" /><input type="hidden" name="patents" id="quickpatents" value="" /><input type="hidden" name="patents_us" id="quickpatentsus" value="" /><input type="hidden" name="patents_other" id="quickpatentsother" value="" /><input type="hidden" name="uspat" id="quickuspat" value="on" /><input type="hidden" name="usapp" id="quickusapp" value="on" /><input type="hidden" name="pct" id="quickpct" value="" /><input type="hidden" name="jp" id="quickjp" value="on" /><input type="hidden" name="eupat" id="quickeu" value="" /><input type="hidden" name="depat" id="quickde" value="on" /><input type="hidden" name="srch" id="quicksearch" value="xprtsrch" /><input type="hidden" name="date_range" id="quickdaterange" value="all" /><input type="hidden" name="hits" id="hits" value="95" /><input type="hidden" name="srch_name" id="srch_name" value="" /><input type="hidden" name="search_name" id="search_name" value="" /><input type="hidden" name="selected_doc_flag" id="selected_doc_flag" value="" /><input type="hidden" name="selected_portfolio" id="selected_portfolio" value="" /><input type="hidden" name="portfolio_name" id="portfolio_name" value="" />
+
+<div class="well well-small" style="margin-top:10px; margin-bottom: 0">
+    <table width="100%" border="0">
+        <tr>
+            <td width="36%">
+                Matches 1 - 50 out of 95            </td>
+            <td align="right" valign="middle" width="70%" colspan="3" class="paginate_spacing">
+                 <span margin-left:3px;'><b>1</b></span><a href='result.html?p=2&amp;srch=xprtsrch&amp;query_txt=SPEC%2F%22antisense+oligonucleotide%22+AND+SPEC%2F%22ventricular+dilation%22&amp;uspat=on&amp;usapp=on&amp;jp=on&amp;depat=on&amp;date_range=all&amp;stemming=on&amp;sort=relevance'> 2 </a><a href='result.html?p=2&amp;srch=xprtsrch&amp;query_txt=SPEC%2F%22antisense+oligonucleotide%22+AND+SPEC%2F%22ventricular+dilation%22&amp;uspat=on&amp;usapp=on&amp;jp=on&amp;depat=on&amp;date_range=all&amp;stemming=on&amp;sort=relevance'> &gt; </a>                <br clear="all"/>
+            </td>
+        </tr>
+    </table>
+</div><div>
+    <br/>
+    <center>
+        <a onclick="_gaq.push(['_trackEvent', 'SERP', 'Click', 'AcclaimIP_FreeTrial']);" target="_blank" href="https://app.acclaimip.com/signup/acclaimip-free-trial"><img src="/images/acclaim/acclaimIP-ad.png" alt="AcclaimIP-ad" /></a>    </center>
+    <br/>
+</div>
+
+<div class="legacy-container" style="margin-top: 0">
+    <div class="container_white" style="padding-top:3px;  padding-bottom:10px;">
+        <div align="center">
+            <table width="100%" border="0" cellpadding="2" cellspacing="1" class="listing_table">
+                <tr>
+                                        <th style="text-align:left;" width="10%">
+                        Match
+                    </th>
+                                        <th style="text-align:left;" width="15%"> Document</th>
+                    <th style="text-align:left;">Document Title</th>
+                    <th style='text-align:left;' width='10%'>Score</div></th>                </tr>
+                <tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                1            </label>
+        </td>
+    <td width="15%"  valign="top">
+      9220722    </td>
+    <td  width="60%" valign="top">
+        <a href="/9220722.html">Microrna (miRNA) and downstream targets for diagnostic and therapeutic purposes</a>
+        &nbsp;
+                            <br/>
+                In some embodiments, the invention is directed to a method for diagnosing fibrosis and/or fibrosis related diseases and to a method for screening a pharmaceutically active compound for the...    </td>
+        <td width='5%'>
+        1000    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                2            </label>
+        </td>
+    <td width="15%"  valign="top">
+      8592389    </td>
+    <td  width="60%" valign="top">
+        <a href="/8592389.html">MicroRNA (miRNA) and downstream targets for diagnostic and therapeutic purposes</a>
+        &nbsp;
+                            <br/>
+                In some embodiments, the present invention concerns antisense oligonucleotides against targets of miR-21. In some embodiments, the invention is directed to a method for diagnosing fibrosis and/or...    </td>
+        <td width='5%'>
+        1000    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                3            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20210113603    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2021/0113603.html">MicroRNA (miRNA) and Downstream Targets for Diagnostic and Therapeutic Purposes</a>
+        &nbsp;
+                            <br/>
+                In some embodiments, the invention is directed to a method for diagnosing fibrosis and/or fibrosis related diseases and to a method for screening a pharmaceutically active compound for the...    </td>
+        <td width='5%'>
+        1000    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                4            </label>
+        </td>
+    <td width="15%"  valign="top">
+      8236777    </td>
+    <td  width="60%" valign="top">
+        <a href="/8236777.html">MicroRNA (miRNA) and downstream targets for diagnostic and therapeutic purposes</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to a promoter region of a microRNA, the use of a microRNA, in particular miR-21, and related elements for the diagnosis and for the manufacture of a medicament for...    </td>
+        <td width='5%'>
+        1000    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                5            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20140121264    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2014/0121264.html">MICRORNA (miRNA) AND DOWNSTREAM TARGETS FOR DIAGNOSTIC AND THERAPEUTIC PURPOSES</a>
+        &nbsp;
+                            <br/>
+                In some embodiments, the invention is directed to a method for diagnosing fibrosis and/or fibrosis related diseases and to a method for screening a pharmaceutically active compound for the...    </td>
+        <td width='5%'>
+        1000    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                6            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20230028937    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2023/0028937.html">MicroRNA (miRNA) and Downstream Targets for Diagnostic and Therapeutic Purposes</a>
+        &nbsp;
+                            <br/>
+                In some embodiments, the invention is directed to a method for diagnosing fibrosis and/or fibrosis related diseases and to a method for screening a pharmaceutically active compound for the...    </td>
+        <td width='5%'>
+        1000    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                7            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20200069720    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2020/0069720.html">MicroRNA (miRNA) and Downstream Targets for Diagnostic and Therapeutic Purposes</a>
+        &nbsp;
+                            <br/>
+                In some embodiments, the invention is directed to a method for diagnosing fibrosis and/or fibrosis related diseases and to a method for screening a pharmaceutically active compound for the...    </td>
+        <td width='5%'>
+        1000    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                8            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20240189339    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2024/0189339.html">MicroRNA (miRNA) and Downstream Targets for Diagnostic and Therapeutic Purposes</a>
+        &nbsp;
+                            <br/>
+                In some embodiments, the invention is directed to a method for diagnosing fibrosis and/or fibrosis related diseases and to a method for screening a pharmaceutically active compound for the...    </td>
+        <td width='5%'>
+        1000    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                9            </label>
+        </td>
+    <td width="15%"  valign="top">
+      9663788    </td>
+    <td  width="60%" valign="top">
+        <a href="/9663788.html">MicroRNA (miRNA) and downstream targets for diagnostic and therapeutic purposes</a>
+        &nbsp;
+                            <br/>
+                In some embodiments, the invention is directed to a method for diagnosing fibrosis and/or fibrosis related diseases and to a method for screening a pharmaceutically active compound for the...    </td>
+        <td width='5%'>
+        1000    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                10            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20180360866    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2018/0360866.html">MicroRNA (miRNA) and Downstream Targets for Diagnostic and Therapeutic Purposes</a>
+        &nbsp;
+                            <br/>
+                In some embodiments, the invention is directed to a method for diagnosing fibrosis and/or fibrosis related diseases and to a method for screening a pharmaceutically active compound for the...    </td>
+        <td width='5%'>
+        1000    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                11            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20130018084    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2013/0018084.html">MICRORNA (miRNA) AND DOWNSTREAM TARGETS FOR DIAGNOSTIC AND THERAPEUTIC PURPOSES</a>
+        &nbsp;
+                            <br/>
+                In some embodiments, the present invention concerns antisense oligonucleotides against targets of miR-21. In some embodiments, the invention is directed to a method for diagnosing fibrosis and/or...    </td>
+        <td width='5%'>
+        1000    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                12            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20110071211    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2011/0071211.html">MicroRNA (miRNA) And Downstream Targets For Diagnostic And Therapeutic Purposes</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to a promoter region of a microRNA, the use of a microRNA, in particular miR-21, and related elements for the diagnosis and for the manufacture of a medicament for...    </td>
+        <td width='5%'>
+        1000    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                13            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20160177302    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2016/0177302.html">MICRORNA (miRNA) AND DOWNSTREAM TARGETS FOR DIAGNOSTIC AND THERAPEUTIC PURPOSES</a>
+        &nbsp;
+                            <br/>
+                In some embodiments, the invention is directed to a method for diagnosing fibrosis and/or fibrosis related diseases and to a method for screening a pharmaceutically active compound for the...    </td>
+        <td width='5%'>
+        1000    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                14            </label>
+        </td>
+    <td width="15%"  valign="top">
+      10434117    </td>
+    <td  width="60%" valign="top">
+        <a href="/10434117.html">MicroRNA (miRNA) and downstream targets for diagnostic and therapeutic purposes</a>
+        &nbsp;
+                            <br/>
+                In some embodiments, the invention is directed to a method for diagnosing fibrosis and/or fibrosis related diseases and to a method for screening a pharmaceutically active compound for the...    </td>
+        <td width='5%'>
+        1000    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                15            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20170304347    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2017/0304347.html">MICRORNA (miRNA) AND DOWNSTREAM TARGETS FOR DIAGNOSTIC AND THERAPEUTIC PURPOSES</a>
+        &nbsp;
+                            <br/>
+                In some embodiments, the invention is directed to a method for diagnosing fibrosis and/or fibrosis related diseases and to a method for screening a pharmaceutically active compound for the...    </td>
+        <td width='5%'>
+        1000    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                16            </label>
+        </td>
+    <td width="15%"  valign="top">
+      10028974    </td>
+    <td  width="60%" valign="top">
+        <a href="/10028974.html">MicroRNA (miRNA) and downstream targets for diagnostic and therapeutic purposes</a>
+        &nbsp;
+                            <br/>
+                In some embodiments, the invention is directed to a method for diagnosing fibrosis and/or fibrosis related diseases and to a method for screening a pharmaceutically active compound for the...    </td>
+        <td width='5%'>
+        1000    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                17            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20260001949    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2026/0001949.html">NEUTRALIZATION OF ACYL-COA BINDING PROTEIN FOR THE TREATMENT OF CARDIAC DYSFUNCTION</a>
+        &nbsp;
+                            <br/>
+                Cardiomyopathies are heart muscle disorders which represent a heterogeneous group of diseases that often lead to progressive heart failure with significant morbidity and mortality. Here, the...    </td>
+        <td width='5%'>
+        853    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                18            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2011516410A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2011516410A.html">MicroRNAs (miRNAs) and downstream targets for diagnosis and treatment</a>
+        &nbsp;
+                            <br/>
+                The invention relates to a promoter region of a microRNA, the use of a microRNA, in particular miR-21, related elements for diagnosis and manufacture of a medicament for treatment and/or...    </td>
+        <td width='5%'>
+        795    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                19            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20250152567    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2025/0152567.html">COMPOUNDS FOR USE IN THE TREATMENT OF DYSTROPHINOPATHIES</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to a compound selected from the group consisting of Difenpiramide, Veliflapon, Amopyroquine, Cloricromen, Alpelisib, Benorilate, Xipamide, Fabomotizole and Altizide,...    </td>
+        <td width='5%'>
+        795    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                20            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20220275105    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2022/0275105.html">NEUTRALIZING GRANZYME B FOR PROVIDING CARDIOPROTECTION IN A SUBJECT WHO EXPERIENCED A MYOCARDIAL INFARCTION</a>
+        &nbsp;
+                            <br/>
+                A method for providing cardioprotection in a subject who experienced a myocardial infarction, including administering a therapeutically effective amount of a Granzyme B inhibitor. Following acute...    </td>
+        <td width='5%'>
+        795    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                21            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20110150862    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2011/0150862.html">INHIBITORS OF STIM1 FOR THE TREATMENT OF CARDIOVASCULAR DISORDERS</a>
+        &nbsp;
+                            <br/>
+                The invention relates to inhibitors of STIM1 for the treatment and/or the prevention of cardiac disorders such as atherosclerosis, post-angioplasty restenosis, pulmonary arterial hypertension,...    </td>
+        <td width='5%'>
+        795    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                22            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2025508761A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2025508761A.html">Compounds for use in the treatment of dystrophinopathy</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to a compound selected from the group consisting of difenpyramide, veriflavone, amopyrroquine, cloricromene, alpelisib, benorylate, xipamide, favomotisole and...    </td>
+        <td width='5%'>
+        795    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                23            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2015107971A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2015107971A.html">MICRORNA (miRNA) AND DOWNSTREAM TARGETS FOR DIAGNOSTIC AND THERAPEUTIC PURPOSES</a>
+        &nbsp;
+                            <br/>
+                PROBLEM TO BE SOLVED: To provide an antisense oligonucleotide against a microRNA or precursor thereof, as well as a method for treating and/or preventing fibrosis and/or fibrosis-related diseases...    </td>
+        <td width='5%'>
+        782    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                24            </label>
+        </td>
+    <td width="15%"  valign="top">
+      9132167    </td>
+    <td  width="60%" valign="top">
+        <a href="/9132167.html">Compositions and methods for treating and preventing heart tissue degeneration and uses thereof</a>
+        &nbsp;
+                            <br/>
+                The present invention provides compositions useful for cardiac therapy comprising a cyclin-associated agent. The present invention also provides kits for use in delivering a cyclin-associated...    </td>
+        <td width='5%'>
+        765    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                25            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20110002894    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2011/0002894.html">COMPOSITIONS AND METHODS FOR TREATING AND PREVENTING HEART TISSUE DEGENERATION AND USES THEREOF</a>
+        &nbsp;
+                            <br/>
+                The present invention provides compositions useful for cardiac therapy comprising a cyclin-associated agent. The present invention also provides kits for use in delivering a cyclin-associated...    </td>
+        <td width='5%'>
+        765    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                26            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20060160733    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2006/0160733.html">Compositions and methods for treating and preventing heart tissue degeneration and uses thereof</a>
+        &nbsp;
+                            <br/>
+                The present invention provides compositions useful for cardiac therapy comprising a cyclin-associated agent. The present invention also provides kits for use in delivering a cyclin-associated...    </td>
+        <td width='5%'>
+        765    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                27            </label>
+        </td>
+    <td width="15%"  valign="top">
+      7645734    </td>
+    <td  width="60%" valign="top">
+        <a href="/7645734.html">Compositions and methods for treating and preventing heart tissue degeneration and uses thereof</a>
+        &nbsp;
+                            <br/>
+                The present invention provides compositions useful for cardiac therapy comprising a cyclin-associated agent. The present invention also provides kits for use in delivering a cyclin-associated...    </td>
+        <td width='5%'>
+        765    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                28            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20140057940    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2014/0057940.html">Methods for Treating or Preventing Cardiac and Neurological Disorders Using Chemokine Receptor Antagonists</a>
+        &nbsp;
+                            <br/>
+                The invention provides methods for treating or preventing cardiac and neurological disorders using chemokine receptor antagonists.    </td>
+        <td width='5%'>
+        735    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                29            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP7823034B2    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP7823034B2.html">GDF3 as a biomarker and biotarget in postischemic cardiac remodeling</a>
+        &nbsp;
+                            <br/>
+                Markers of an intense scarring process in the early phase post-myocardial infarction (MI) are still undetermined, and the identification of patients at higher risk of developing large adverse...    </td>
+        <td width='5%'>
+        734    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                30            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2024112962A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2024112962A.html">MICRORNA TARGETING AGENT FOR TREATMENT OF HEART DISEASE</a>
+        &nbsp;
+                            <br/>
+                To provide an oligonucleic acid agent directed for use in the treatment or prevention of heart disease, such as cardiomyopathy, hypertrophic cardiomyopathy, aortic valve stenosis, hypertension and...    </td>
+        <td width='5%'>
+        716    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                31            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20110218232    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2011/0218232.html">Inhibitors of MRP4 and Agents Stimulating MRP4 Activity for the Treatment of Cardiac Disorders</a>
+        &nbsp;
+                            <br/>
+                The invention relates to inhibitors of Multi drug Resistant Protein 4 (MRP4) for the treatment and/or the prevention of cardiac disorders, such as acute or chronic heart failure and cardiogenic...    </td>
+        <td width='5%'>
+        701    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                32            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20140248284    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2014/0248284.html">METHODS FOR THE DETECTION AND THE TREATMENT OF CARDIAC REMODELING</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to methods and kits for detecting cardiac remodeling in subjects without clinical signs of heart failure. The present invention also relates to methods and...    </td>
+        <td width='5%'>
+        701    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                33            </label>
+        </td>
+    <td width="15%"  valign="top">
+      8420594    </td>
+    <td  width="60%" valign="top">
+        <a href="/8420594.html">Inhibitors of MRP4 and agents stimulating MRP4 activity for the treatment of cardiac disorders</a>
+        &nbsp;
+                            <br/>
+                The invention relates to inhibitors of Multi drug Resistant Protein 4 (MRP4) for the treatment and/or the prevention of cardiac disorders, such as acute or chronic heart failure and cardiogenic...    </td>
+        <td width='5%'>
+        701    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                34            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20200140860    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2020/0140860.html">IncRNAs GADLOR 1 AND 2 FOR USE IN TREATING AND PREVENTING CARDIAC REMODELLING</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to a compound inhibiting the expression and/or the activity of a long non-coding RNA (lncRNA) selected from GADLOR 1 and GADLOR 2 for use in treating or preventing...    </td>
+        <td width='5%'>
+        692    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                35            </label>
+        </td>
+    <td width="15%"  valign="top">
+      11208656    </td>
+    <td  width="60%" valign="top">
+        <a href="/11208656.html">IncRNAs GADLOR 1 and 2 for use in treating and preventing cardiac remodelling</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to a compound inhibiting the expression and/or the activity of a long non-coding RNA (lncRNA) selected from GADLOR 1 and GADLOR 2 for use in treating or preventing...    </td>
+        <td width='5%'>
+        692    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                36            </label>
+        </td>
+    <td width="15%"  valign="top">
+      8088951    </td>
+    <td  width="60%" valign="top">
+        <a href="/8088951.html">Epigenetic mechanisms re-establish access to long-term memory after neuronal loss</a>
+        &nbsp;
+                            <br/>
+                The invention relates to methods and products for enhancing and improving recovery of lost memories. In particular the methods are accomplished through the increase of histone acetylation.    </td>
+        <td width='5%'>
+        638    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                37            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20120039909    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2012/0039909.html">EPIGENETIC MECHANISMS RE-ESTABLISH ACCESS TO LONG-TERM MEMORY AFTER NEURONAL LOSS</a>
+        &nbsp;
+                            <br/>
+                The invention relates to methods and products for enhancing and improving recovery of lost memories. In particular the methods are accomplished through the increase of histone acetylation.    </td>
+        <td width='5%'>
+        638    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                38            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20080300205    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2008/0300205.html">Epigenetic mechanisms re-establish access to long-term memory after neuronal loss</a>
+        &nbsp;
+                            <br/>
+                The invention relates to methods and products for enhancing and improving recovery of lost memories. In particular the methods are accomplished through the increase of histone acetylation.    </td>
+        <td width='5%'>
+        638    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                39            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2009242388A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2009242388A.html">APPLICATION OF HEART-SPECIFIC KINASE FOR DIAGNOSIS AND TREATMENT OF CARDIAC INSUFFICIENCY</a>
+        &nbsp;
+                            <br/>
+                PROBLEM TO BE SOLVED: To provide a means for the diagnosis and control of cardiac insufficiency by finding a cardiac insufficiency-related gene and using the gene or a protein encoded by the...    </td>
+        <td width='5%'>
+        638    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                40            </label>
+        </td>
+    <td width="15%"  valign="top">
+      6194556    </td>
+    <td  width="60%" valign="top">
+        <a href="/6194556.html">Angiotensin converting enzyme homolog and therapeutic and diagnostic uses therfor</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to the discovery of novel genes encoding an angiotensin converting enzyme, Angiotensin Converting Enzyme-2 (ACE-2). Therapeutics, diagnostics and screening assays...    </td>
+        <td width='5%'>
+        615    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                41            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2012510512A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2012510512A.html">Inhibition of HDAC2 to promote memory</a>
+        &nbsp;
+                            <br/>
+                The invention relates to methods and products for enhancing and improving recovery of lost memories. In particular the methods are accomplished by inhibiting HDAC2 and or selectively inhibiting...    </td>
+        <td width='5%'>
+        567    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                42            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20040242461    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2004/0242461.html">Modulators of telomere stability</a>
+        &nbsp;
+                            <br/>
+                The present invention embodies methods of modulating telomere repeat-binding factor-2 (TRF2) or cell cycle checkpoint kinase 2 (Chk2) to enhance the survival of a cell. More particularly, the...    </td>
+        <td width='5%'>
+        562    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                43            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20130011373    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2013/0011373.html">SIDE POPULATION CELLS IN CARDIAC REPAIR</a>
+        &nbsp;
+                            <br/>
+                It has been discovered that side-population cells induce cardiac tissue repair of infarcted myocardium. Provided herein are methods directed to treatment of cardiac injury using side-population cells.    </td>
+        <td width='5%'>
+        548    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                44            </label>
+        </td>
+    <td width="15%"  valign="top">
+      8221740    </td>
+    <td  width="60%" valign="top">
+        <a href="/8221740.html">Side population cells in cardiac repair</a>
+        &nbsp;
+                            <br/>
+                It has been discovered that side-population cells induce cardiac tissue repair of infarcted myocardium. Provided herein are methods directed to treatment of cardiac injury using side-population cells.    </td>
+        <td width='5%'>
+        548    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                45            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20070178075    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2007/0178075.html">Side Population Cells in Cardiac Repair</a>
+        &nbsp;
+                            <br/>
+                It has been discovered that side-population cells induce cardiac tissue repair of infarcted myocardium. Provided herein are methods directed to treatment of cardiac injury using side-population cells.    </td>
+        <td width='5%'>
+        548    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                46            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20220243249    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2022/0243249.html">ANTAGONISTS OF CAMKII-DELTA 9 AND USES THEREOF</a>
+        &nbsp;
+                            <br/>
+                Provided are methods of treating or preventing Ca2+/calmodulin-dependent kinase II (CaMKII)-mediated diseases, methods of alleviating cardiac injury, methods of stimulating the activity of...    </td>
+        <td width='5%'>
+        522    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                47            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20050147600    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2005/0147600.html">Angiotensin converting enzyme homolog and uses therefor</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to the discovery of novel genes encoding an angiotensin converting enzyme, Angiotensin Converting Enzyme-2 (ACE-2). The invention provides therapeutics, prognostic...    </td>
+        <td width='5%'>
+        518    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                48            </label>
+        </td>
+    <td width="15%"  valign="top">
+      6884771    </td>
+    <td  width="60%" valign="top">
+        <a href="/6884771.html">Angiotensin converting enzyme homolog and uses therefor</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to the discovery of novel genes encoding an angiotensin converting enzyme, Angiotensin Converting Enzyme-2 (ACE-2). The invention provides therapeutics, prognostic...    </td>
+        <td width='5%'>
+        518    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                49            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20100273989    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2010/0273989.html">ANGIOTENSIN CONVERTING ENZYME HOMOLOG AND USES THEREFOR</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to the discovery of novel genes encoding an angiotensin converting enzyme, Angiotensin Converting Enzyme-2 (ACE-2). The invention provides therapeutics, prognostic...    </td>
+        <td width='5%'>
+        518    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                50            </label>
+        </td>
+    <td width="15%"  valign="top">
+      6610497    </td>
+    <td  width="60%" valign="top">
+        <a href="/6610497.html">Angiotensin converting enzyme homolog and therapeutic and diagnostic uses therefor</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to the discovery of novel genes encoding an angiotensin converting enzyme, Angiotensin Converting Enzyme-2 (ACE-2). The invention provides therapeutics, prognostic...    </td>
+        <td width='5%'>
+        518    </td>
+    </tr>            </table>
+        </div>
+    </div>
+</div>
+</form>
+<form id="botSearch" name="botSearch" method="get" class="form-inline" action="/result.html"><input type="hidden" name="srch" id="" value="xprtsrch" /><input type="hidden" name="uspat" id="" value="on" /><input type="hidden" name="usapp" id="" value="on" /><input type="hidden" name="jp" id="" value="on" /><input type="hidden" name="depat" id="" value="on" /><input type="hidden" name="date_range" id="" value="all" /><input type="hidden" name="stemming" id="" value="on" /><input type="hidden" name="sort" id="" value="relevance" /><br/>
+<div class="well well-small">
+    <table>
+        <tr>
+            <td>Search</td>
+            <td style="width: 100%;padding: 0 14px 0 5px;"><input type="text" name="query_txt" id="query_txt" value="SPEC/&quot;antisense oligonucleotide&quot; AND SPEC/&quot;ventricular dilation&quot;" style="width: 100%;padding: 4px 0 4px 6px" /></td>
+            <td><input type="submit" name="search" value="Search" /></td>
+        </tr>
+    </table>
+</div>
+</form>
+<div class="well well-small" style="margin-top:10px; margin-bottom: 0">
+    <table width="100%" border="0">
+        <tr>
+            <td width="36%">
+                Matches 1 - 50 out of 95            </td>
+            <td align="right" valign="middle" width="70%" colspan="3" class="paginate_spacing">
+                 <span margin-left:3px;'><b>1</b></span><a href='result.html?p=2&amp;srch=xprtsrch&amp;query_txt=SPEC%2F%22antisense+oligonucleotide%22+AND+SPEC%2F%22ventricular+dilation%22&amp;uspat=on&amp;usapp=on&amp;jp=on&amp;depat=on&amp;date_range=all&amp;stemming=on&amp;sort=relevance'> 2 </a><a href='result.html?p=2&amp;srch=xprtsrch&amp;query_txt=SPEC%2F%22antisense+oligonucleotide%22+AND+SPEC%2F%22ventricular+dilation%22&amp;uspat=on&amp;usapp=on&amp;jp=on&amp;depat=on&amp;date_range=all&amp;stemming=on&amp;sort=relevance'> &gt; </a>                <br clear="all"/>
+            </td>
+        </tr>
+    </table>
+</div> « <a href="/search.html">search again</a>
+        </div>
+
+        <div class="pageFooter">
+    <div class="row-fluid top">
+        <div class="figure"></div>
+        <ul>
+            <li>
+                <a href="/" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Home']);">Home</a>
+            </li>
+            <li>
+                <a href="/search.html" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Search']);">Search</a>
+            </li>
+            <li>
+                <a href="/services.html" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Services']);">Services</a>
+            </li>
+        </ul>
+        <ul class="socialIcons">
+            <li><a href="https://twitter.com/FPOCommunity" class="twitter"
+                   onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'social twitter']);"></a></li>
+            <li><a href="http://www.linkedin.com/groups/FPO-Community-4524797" class="linkedin"
+                   onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'social linkedin']);"></a></li>
+        </ul>
+    </div>
+    <div class="row-fluid bot">
+        <p>
+            &copy; 2004-2026 FreePatentsOnline.com. All rights reserved.
+            <a href="/privacy.html" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Privacy']);">Privacy Policy
+                &amp; Terms of Use.</a>
+        </p>
+    </div>
+</div>    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    _gaq.push(['_setCustomVar', 2, 'User Origin Source', 'no referer', 2]);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+<script type="text/javascript">
+    function trackPageLoad() {
+        var plend = new Date();
+        var plload = plend.getTime() - plstart.getTime();
+        var pn = document.location.pathname;
+        var lc = 'slow';
+        var la = new Array(200, 300, 400, 500, 1000, 1500, 2000, 2500, 5000);
+        for (var i = 0, len = la.length; i < len; i++) {
+            if (plload <= la[i]) {
+                lc = String(la[i]);
+                break;
+            }
+        }
+        _gaq.push(['onLoadTracker._setAccount', 'UA-174791-5']);
+        _gaq.push(['onLoadTracker._trackEvent', "LoadTime", lc, pn, plload]);
+        }
+</script>
+<script type="text/javascript">
+    try {
+        if (window.onload != null) {
+            var oldOnload = window.onload;
+            window.onload = function (e) {
+                oldOnload(e);
+                trackPageLoad();
+            };
+        }
+        else {
+            window.onload = trackPageLoad();
+        }
+    } catch (err) {
+    }
+</script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/js/fpo_3.js"></script>
+
+</body>
+</html>

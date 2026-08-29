@@ -21,6 +21,7 @@ givosiran                  label=yes parsed=none
 lumasiran                  label=yes parsed=molecular_weight
 nedosiran                  label=yes parsed=none
 inclisiran                 label=yes parsed=molecular_weight
+valeriasen                 label=no  parsed=none
 SPAK_siRNA1                label=no  parsed=none
 SPAK_siRNA2                label=no  parsed=none
 SPAK_siRNA3                label=no  parsed=none

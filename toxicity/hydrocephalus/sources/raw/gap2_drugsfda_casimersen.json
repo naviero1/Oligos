@@ -1,0 +1,206 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-08-28",
+    "results": {
+      "skip": 0,
+      "limit": 5,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "submissions": [
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "8",
+          "submission_status": "AP",
+          "submission_status_date": "20240711",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "submission_property_type": [
+            {
+              "code": "Orphan"
+            }
+          ],
+          "application_docs": [
+            {
+              "id": "79069",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2024/213026Orig1s008ltr.pdf",
+              "date": "20240715",
+              "type": "Letter"
+            },
+            {
+              "id": "79084",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2024/213026s008lbl.pdf",
+              "date": "20240715",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "16",
+          "submission_status": "AP",
+          "submission_status_date": "20260106",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "submission_property_type": [
+            {
+              "code": "Orphan"
+            }
+          ],
+          "application_docs": [
+            {
+              "id": "84718",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/213026Orig1s016ltr.pdf",
+              "date": "20260108",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "ORIG",
+          "submission_number": "1",
+          "submission_status": "AP",
+          "submission_status_date": "20210225",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "TYPE 1",
+          "submission_class_code_description": "Type 1 - New Molecular Entity",
+          "submission_property_type": [
+            {
+              "code": "Orphan"
+            }
+          ],
+          "application_docs": [
+            {
+              "id": "66411",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2021/213026lbl.pdf",
+              "date": "20210226",
+              "type": "Label"
+            },
+            {
+              "id": "66413",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2021/213026Orig1s000ltr.pdf",
+              "date": "20210301",
+              "type": "Letter"
+            },
+            {
+              "id": "66805",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2021/213026Orig1s000TOC.html",
+              "date": "20210318",
+              "type": "Review"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "5",
+          "submission_status": "AP",
+          "submission_status_date": "20230323",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "submission_property_type": [
+            {
+              "code": "Orphan"
+            }
+          ],
+          "application_docs": [
+            {
+              "id": "73857",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2023/213026Orig1s005ltr.pdf",
+              "date": "20230324",
+              "type": "Letter"
+            },
+            {
+              "id": "73860",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2023/213026s005lbl.pdf",
+              "date": "20230324",
+              "type": "Label"
+            }
+          ]
+        }
+      ],
+      "application_number": "NDA213026",
+      "sponsor_name": "SAREPTA THERAPS INC",
+      "openfda": {
+        "application_number": [
+          "NDA213026"
+        ],
+        "brand_name": [
+          "AMONDYS 45"
+        ],
+        "generic_name": [
+          "CASIMERSEN"
+        ],
+        "manufacturer_name": [
+          "Sarepta Therapeutics, Inc."
+        ],
+        "product_ndc": [
+          "60923-227"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "INTRAVENOUS"
+        ],
+        "substance_name": [
+          "CASIMERSEN"
+        ],
+        "rxcui": [
+          "2480100",
+          "2480105"
+        ],
+        "spl_id": [
+          "f388df1b-13aa-4b95-a7fa-9694dc86981c"
+        ],
+        "spl_set_id": [
+          "e9e5fd44-eeda-4580-bba1-a734828bbcc3"
+        ],
+        "package_ndc": [
+          "60923-227-02"
+        ],
+        "nui": [
+          "N0000191626",
+          "M0025055",
+          "N0000009533"
+        ],
+        "pharm_class_epc": [
+          "Antisense Oligonucleotide [EPC]"
+        ],
+        "pharm_class_cs": [
+          "Oligonucleotides, Antisense [CS]"
+        ],
+        "pharm_class_pe": [
+          "Increased Protein Synthesis [PE]"
+        ],
+        "unii": [
+          "X8UHF7SX0R"
+        ]
+      },
+      "products": [
+        {
+          "product_number": "001",
+          "reference_drug": "Yes",
+          "brand_name": "AMONDYS 45",
+          "active_ingredients": [
+            {
+              "name": "CASIMERSEN",
+              "strength": "100MG/2ML (50MG/ML)"
+            }
+          ],
+          "reference_standard": "Yes",
+          "dosage_form": "SOLUTION",
+          "route": "INTRAVENOUS",
+          "marketing_status": "Prescription"
+        }
+      ]
+    }
+  ]
+}

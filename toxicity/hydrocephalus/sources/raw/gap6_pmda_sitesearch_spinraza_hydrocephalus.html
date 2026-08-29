@@ -1,0 +1,1645 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link href="/mf2file/custom/common/css/mf_base_white.css" rel="stylesheet" type="text/css" />
+<link href="/mf2file/custom/common/css/mf_font_navy.css" rel="stylesheet" type="text/css" />
+<link href="/mf2file/custom/jp/css/mf_lang_white.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/mf2file/site/css/search.css" type="text/css" />
+<script type="text/javascript" src="/mf2file/js/css_browser_selector.js"></script>
+<script type="text/javascript" src="/mf2file/js/yui_2.6.0/yahoo/yahoo-min.js"></script>
+<script type="text/javascript" src="/mf2file/js/yui_2.6.0/dom/dom-min.g.js"></script>
+<script type="text/javascript" src="/mf2file/js/jquery-1.8.3g.min.js"></script>
+<script type="text/javascript" src="/mf2file/js/jquery.form.minG.js"></script>
+<script type="text/javascript" src="/mf2file/js/jquery.cookie.minG.js"></script>
+<script type="text/javascript" src="/mf2file/js/jquery.blockUI.minG.js"></script>
+<script type="text/javascript" src="/mf2file/site/js/ImgZoom.js"></script>
+<script type="text/javascript" src="/mf2file/js/jumptop.min.js"></script>
+<script type="text/javascript" src="/mf2file/js/jsonp.min.js"></script>
+<script type="text/javascript" src="/mf2file/js/cssUtil.min.js"></script>
+<script type="text/javascript"><!--//
+(function($){
+  $(function(){
+	$('.mf_result,.mf_result_wide,.mf_zubaken').find('.mf_pdf a').each(function(n,a){
+		$(a).attr('is_pdf', true);
+	});
+  });
+})(GALFSRAM.jQuery);
+//--></script>
+<script type="text/javascript">onerror=function(){return true};</script>
+<script type="text/javascript">var env = {"docs":[],"zdocs":[],"muv_ext":false,"link_target":"_top","link_invert":"_blank","zoomSrcPCS":"/mf2file/site/img/pcs320.gif","iconSrcPCS":"/mf2file/site/img/pcs96.gif","iconSrcPDF":"/mf2file/site/img/result96_72_pdf.gif","iconSrcXDW":"/mf2file/site/img/result96_72_xdw.gif","iconWidth":96,"snippetLenMax":258,"fileurl":"/mf2file","nullSrc":"/mf2file/img/_.gif","zoomSrcPDF":"/mf2file/site/img/result320_240_pdf.gif","zoomSrcXDW":"/mf2file/site/img/result320_240_xdw.gif","zoomWidth":320,"searchIcon":"/mf2file/img/icon_search.gif","imgsize":1,"phrase":"スピンラザ 水頭症","zoom":"1"}; GALFSRAM.jQuery(function(){
+	var zConf =  {"zubaken_zoom_pos":"cc","search_zoom_pos":"rc"};		initZoom( zConf );
+});</script>
+<script type="text/javascript" src="/mf2file/site/js/initZoom.js"></script>
+<script type="text/javascript" src="/mf2file/site/js/zoomDecoration.js"></script>
+<script type="text/javascript" src="/mf2file/site/js/zoomFocus.js"></script>
+<script type="text/javascript" src="/mf2file/site/zoom/jsm/decoration_mf2.no-logo.jsm#zoom_decoration_tmpl"></script>
+<script type="text/javascript">zoom_decoration_zuba_tmpl = zoom_decoration_tmpl;</script>
+<script type="text/javascript" language="javascript" src="/mf2file/site/js/Clicklog3.js"></script>
+<script type="text/javascript" language="javascript" src="/mf2file/site/js/initLog.js"></script>
+<script type="text/javascript"><!--//
+cl.baseurl = ".";
+cl.mode = encodeURIComponent("__ALL__");
+//--></script>
+
+<script type="text/javascript" src="/mf2file/site/suggest/jsm/view.jsm#suggest_tmpl"></script>
+
+<script type="text/javascript" src="/mf2file/site/js/initJSONPSuggest.js"></script>
+<script type="text/javascript"><!--//
+GALFSRAM.jQuery(function(){
+	var suggest_styles = [
+		 "body {border:0px; margin:0px; padding:0px; overflow:hidden; font-family:sans-serif}"
+		,"#suggest_area table {border-collapse:collapse; border:none; border-spacing:0}"
+		,"#suggest_area td    {border:1px solid #E1E0D2; cursor:pointer; font-weight:normal; line-height:1.3em; text-align:left}"
+		,".suggest_row_0 {background-color:#FFFFFF}"
+		,".suggest_row_1 {background-color:#F2F2F2}"
+		,".suggest_data_graph div {background-color:#E0FFFF; border-bottom:1px solid #6699FF;border-left:1px solid #6699FF}"
+		,".rtl {direction:rtl; font-family: Arial, Verdana, sans-serif}"
+		,".rtl #suggest_area td, .rtl#suggest_area td {text-align:right}"
+		,".rtl .suggest_data_graph div {margin-left:auto}"
+	];
+	if( window.MF_suggest_styles ){
+		suggest_styles = suggest_styles.concat (MF_suggest_styles);
+	}
+
+	var suggest_queries = [];
+
+	suggest_queries.push("mode=__ALL__");
+	suggest_queries.push("unit=pmda__ja_all");
+	suggest_queries.push("site=");
+
+	if( window.MF_suggest_queries ){
+		suggest_queries = suggest_queries.concat (MF_suggest_queries);
+	}
+
+	var suggest_opt = {
+		 interface_url: "suggest.x"
+		,input_jquery: GALFSRAM.jQuery('#MF_form_phrase')
+		,array_styles: suggest_styles
+		,array_queries: suggest_queries
+		,show_data_graph: true				,rtl: false
+	}
+	if( window.MF_suggest_opt ){
+		for( var k in MF_suggest_opt ) suggest_opt[k] = MF_suggest_opt[k];
+	}
+	initJSONPSuggest( suggest_opt, GALFSRAM.jQuery );
+});
+//--></script>
+
+<style>
+div.mf_drilldown1 {height:auto}
+.mf_resultbox div {overflow:hidden}
+.mf_result_disp_idx {
+	margin:0 4px;
+	font-size:18px;
+	display:none;
+}
+.mf_result_disp_url,
+.mf_result_disp_title  {
+	display: inline-block;
+	width: 560px;
+	padding-top: 2px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+}
+#ContentArea #MainContents p.mf_result_disp_title{
+	margin-bottom: 5px;
+	line-height: 1.6;
+}
+.mf_result_disp_url{
+	width: 530px;
+}
+
+div#mf_drop{z-index:1000}
+.mf_zubaken .img_frame{float:none}
+.ie .mf_noresult p,
+.ie .zubaken_data td{text-align:center}
+.mode_imgsize0 .zubaken_data,
+.mode_imgsize0 .zubaken_data .mf_result_disp_title {width:914px}
+.mf_result_disp_url {line-height:17px !important; white-space:nowrap}
+.ie6 input#MF_form_phrase,
+.ie7 input#MF_form_phrase,
+.ie8 input#MF_form_phrase {padding-top:4px; height:14px !important}
+.ie6 .mf_category input,
+.ie7 .mf_category input {margin-top:-4px}
+.mf_zubaken2 table th, table td {border:none !important}
+.zubaken_data.search_data {float:left}
+div.mf_setting2_L {width:515px}
+.mf_drop_lang {padding-left:40px}
+
+p#mf_menu_txt {
+	padding-right: 20px;
+}
+div.mf_setting1 {
+	overflow: hidden;
+}
+div.mf_setting2_L {
+	margin-bottom: 0;
+}
+.ie8 #mf_menubox,
+.ie9 #mf_menubox {
+	filter: alpha(opacity=85);
+	background-color: #000000;
+	zoom:1;
+}
+.ie body #mf_drilldown1_txt,
+.ie body .mf_pagetop a {
+	text-align: center;
+}
+p#mf_menu_txt {
+	margin-top: 4px;
+	line-height: 26px;
+}
+.mf_category p {
+	font-size: 13px;
+	white-space: nowrap;
+}
+.mf_pagetop a {
+	text-align: center !important;
+	padding: 3px 0 0 0;
+	line-height: 13px;
+}
+
+</style>
+<style>
+body.jp iframe#iframe_header {width:960px; height:110px}
+.ie body.jp iframe#iframe_header {width:expression(document.body.clientWidth<960 ?'960px' :document.body.clientWidth+'px')}
+body.jp iframe#iframe_footer {width:960px; height:190px}
+.ie body.jp iframe#iframe_footer {width:expression(document.body.clientWidth<960 ?'960px' :document.body.clientWidth+'px')}
+body.en iframe#iframe_header {width:960px; height:110px}
+.ie body.en iframe#iframe_header {width:expression(document.body.clientWidth<960 ?'960px' :document.body.clientWidth+'px')}
+body.en iframe#iframe_footer {width:960px; height:190px}
+.ie body.en iframe#iframe_footer {width:expression(document.body.clientWidth<960 ?'960px' :document.body.clientWidth+'px')}
+
+
+</style>
+<script src="/mf2file/custom/jp/search/files/common/js/jquery_1.7.1.min.js" charset="utf-8"></script>
+<script src="/mf2file/custom/jp/search/files/common/js/jquery_cookie.js" charset="utf-8"></script>
+<script src="/mf2file/custom/jp/search/files/common/js/main.js" charset="utf-8"></script>
+<script type="text/javascript"><!--//
+window.mf_preload = ["",
+	,"/mf2file/site/img/zoom/zbase_mf2.gif"
+	,"/mf2file/site/img/waku_round/waku_small.png"
+	,"/mf2file/site/img/waku_round/waku_small_s.png"
+];
+$(function(){
+	$("#mf_menu,#mf_menuclose,#mf_menuclose2").click(function(){
+		$("#mf_menubox").toggle('fast');
+	});
+	$("#mf_menubox .mf_stgli:not(.mf_stg_valid)").hover(
+		function(){ $(this).css({
+				color: "#000000",
+				background: "#5ba9e0"
+			});
+		},
+		function(){ $(this).css({
+				color: "#fff",
+				background: "#4a89b6"
+			});
+		}
+	);
+	$("#mf_langmenu,#mf_langclose,#mf_langclose2").click(function(){
+		$("#mf_langmenubox").toggle('fast');
+	});
+	$(".mf_langstgli:not(.mf_lang_on)").hover(
+		function(){ $(this).css({
+				color: "#000000",
+				background: "#888888"
+			});
+		},
+	function(){ $(this).css({
+				color: "#aaaaaa",
+				background: "transparent"
+			});
+		}
+	);
+	$('.mf_drilldown .mf_drillnow').each(function(){
+		var $p = $(this).parent('li').parent('ul');
+		while ( $p.length ) {
+			$p.removeClass('mf_close');
+			$p = $p.parent('li').parent('ul');
+		}
+	});
+	$('#form0').submit(function(){
+		if ( $('body').css('cursor')=="wait" ) return false;
+		$('*').css('cursor',"wait");
+	});
+	if ( window.mf_preload ){
+		for ( var i=0;i<mf_preload.length;i++ ){
+			var src = mf_preload[i];
+			if ( src ) (new Image()).src = src;
+		}
+	}
+	var textWidth = $('.mf_text_frame').eq(1).width();
+	$('.websearch_data .mf_result_disp_title')
+//		.css('width', textWidth + "px")
+		.css('display', "block");
+
+	$('.mf_category').length &&
+		$('.mf_setting2').height( $('.mf_setting2_L').height() + 20 );
+
+});
+
+	function mf_icon_onload (icon){
+		var $icon = $(icon);
+		var icon_w = $icon.width();
+		var $text = $icon.parent();	// mf_text_frame
+		var text_w = $text.width();
+		var $title = $text.find('.mf_result_disp_title');
+		$title.css('width', text_w - icon_w - 8 +"px");
+		$title.hide();
+	}
+
+//--></script>
+
+<title>独立行政法人　医薬品医療機器総合機構 サイト内検索結果 - スピンラザ 水頭症</title>
+<meta name="keywords" content="PMDA,pmda,医薬品,副作用,被害救済,薬,医療,機器,医薬">
+<meta name="description" content="独立行政法人　医薬品医療機器総合機構：医薬品副作用被害救済や稀少病認定薬の研究振興調査などの業務案内。">
+<style type="text/css">
+div.mf_dfheadder {
+  width: 960px;
+  height: 20px;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  background: #ffffff;
+  padding-top: 30px;
+}
+
+div.mf_dfheadder p {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #ffffff;
+  color: #ffffff;
+  text-align: left;
+}
+
+div.mf_dfheadder p a {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 200px;
+  height: 14px;
+  margin: 0;
+  padding: 0;
+  background: url(/mf2file/custom/common/img/white/mf_marsfinder.gif) no-repeat;
+}
+
+div.mf_dffooter {
+  width: 960px;
+  height: 20px;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 10px;
+  border: none;
+  border-top: solid 1px #aaaaaa;
+}
+
+div.mf_dffooter p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #aaaaaa;
+  font-size: 12px;
+  font-family: "ＭＳ Ｐゴシック", "MS UI Gothic", "メイリオ", "ヒラギノ角ゴ Pro W3", "myriad-pro-1", "myriad-pro-2", "Helvetica", "Arial", "sans-serif", "neo-sans-intel", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ヒラギノ角ゴ Pro" ;
+}
+
+div.mf_dffooter p a:link, div.mf_dffooter p a:visited {
+  color: #aaaaaa;
+  font-weight: normal;
+  background-color: transparent;
+  text-decoration:none;
+}
+
+div.mf_dffooter p a:hover, div.mf_dffooter p a:active {
+  color: #aaaaaa;
+  font-weight: normal;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.ie .select-clear {
+	text-align: right;
+}
+
+.ie .search-ranking__txt {
+	text-align: center;
+}
+
+#MF_form_phrase {
+	vertical-align: middle;
+}
+
+div.mf_zubaken {
+	padding-top: 0px;
+}
+.mode_imgsize1 .mf_result_disp_snippet{
+	max-height: 36px;
+}
+
+div.mf_noresult {
+	border-style: none;
+}
+
+.ie body #FooterArea03 p {
+	text-align: center;
+}
+
+div.footeraddress {
+    text-align: left;
+}
+</style>
+	<link type="text/css" rel="stylesheet" href="/mf2file/custom/jp/search/files/common/css/import.css">
+	<link type="text/css" rel="stylesheet" href="/mf2file/custom/jp/search/files/common/css/print.css">
+</head>
+<body class="mode_imgsize1" id="zoom_area" >
+<div id="ContentWrap" class="WrapFontSizeM">
+	<noscript><p id="NoScriptWarning">当ウェブサイトを快適にご覧いただくには、ブラウザのJavaScript設定を有効（オン）にしていただく必要がございます。</p></noscript>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MHGKV3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MHGKV3');</script>
+<!-- End Google Tag Manager -->
+
+<iframe id="suggest_frame" name="suggest_frame" src="javascript:false;" style="display:none"></iframe>
+
+<!--header.htmlの中身 -->
+<div id="HeaderPopArea" class="HTML5_header">
+	<div id="HeaderPopAreaInner">
+
+		<div id="LogoArea">
+			<a href="http://www.pmda.go.jp/">Pmda 独立行政法人 医薬品医療機器総合機構</a>
+		</div><!--/LogoArea-->
+		<div id="LinkArea01" class="clearfix">
+			<ul>
+				<li class="mr_00"><a href="javascript:window.close()"><img class="imglink" src="/mf2file/custom/jp/search/files/common/img/ComHeaderAreaBtnClose.png" alt="画面を閉じる" width="118" height="24"></a></li>
+			</ul>
+		</div><!--/LinkArea01-->
+		<div id="LinkArea02">
+			<a href="http://www.pmda.go.jp/sshelp.html">サイト内検索の使い方</a>
+		</div><!--/LinkArea02-->
+	</div><!--/HeaderPopAreaInner-->
+</div><!--/HeaderPopArea-->
+<!--header.htmlの中身 -->
+	<div id="ContentArea" class="HTML5_section">
+		<div id="MainContents" class="clearfix">
+<div class="mf_contents search-contents">
+	<a name="mf_top"></a>
+	<h2 class="mf_contents__title">サイト内検索</h2>
+	<div class="box-search">
+	<div class="mf_setting">
+		<div class="mf_setting2">
+			<div class="mf_setting2_L layout-columns">
+			  <div class="mf_searchbox layout-columns__item">
+				<form id="form0" method="get" action="search.x" target="_self">
+											<div class="mf_search">
+												<input id="MF_form_phrase" type="text" name="q" value="スピンラザ 水頭症" maxlength="1000" autocomplete="off" />
+												<input id="MF_form_button" type="image" src="/mf2file/custom/jp/search/files/common/img/ComHeaderAreaBtnSearch.png" alt="検索" title="検索" />
+						<input type="hidden" name="ie"       value="utf8" />
+						<input type="hidden" name="page"     value="1" />
+		<input type="hidden" name="pagemax" value="10" />
+		<input type="hidden" name="imgsize" value="1" />
+		<input type="hidden" name="pdf" value="ok" />
+		<input type="hidden" name="zoom" value="1" />
+		<input type="hidden" name="page" value="1" />
+		<input type="hidden" name="suggest" value="1" />
+		<input type="hidden" name="counsel" value="1" />
+		<input type="hidden" name="pid" value="3NQuVGeDIiIf_hA6ReuUGQ.." />
+		<input type="hidden" name="qid" value="y9kBmlWVkLwvUQrxDidhU9-B52mgXtus" />
+					</div><!--/ .mf_search -->
+
+							</form>
+			  </div><!--/ .mf_searchbox -->
+											<div class="layout-columns__item">
+						<div class="display_counts">
+							<p id="mf_stg_per">表示件数</p>
+							<ul class="mf_stg">
+<li id="mf_stg_per_10" class="mf_stgli mf_stg_valid">10件</li>
+<a href="search.x?q=%E3%82%B9%E3%83%94%E3%83%B3%E3%83%A9%E3%82%B6+%E6%B0%B4%E9%A0%AD%E7%97%87&ie=utf8&cat=0&imgsize=1&pdf=ok&zoom=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&pagemax=20&page=1"><li id="mf_stg_per_20" class="mf_stgli">20件</li></a>
+<a href="search.x?q=%E3%82%B9%E3%83%94%E3%83%B3%E3%83%A9%E3%82%B6+%E6%B0%B4%E9%A0%AD%E7%97%87&ie=utf8&cat=0&imgsize=1&pdf=ok&zoom=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&pagemax=30&page=1"><li id="mf_stg_per_30" class="mf_stgli">30件</li></a>
+
+							</ul>
+
+						</div>
+					</div>
+
+			
+								
+				
+			</div><!-- /.mf_setting2_L -->
+									<div class="mf_setting2_R">
+				<!-- Setting Menu -->
+
+				<div id="mf_dropdown">
+					<div id="mf_menu">
+						<p id="mf_menu_txt">検索結果の表示設定</p>
+   					</div>
+					<!-- Toggle Menu -->
+					<div id="mf_menubox" style="width: 300px">
+						<!-- Settings -->
+						<div id="mf_settingsbg">
+							<p id="mf_stg_size">画像イメージ</p>
+							<ul class="mf_stg">
+<a href="search.x?q=%E3%82%B9%E3%83%94%E3%83%B3%E3%83%A9%E3%82%B6+%E6%B0%B4%E9%A0%AD%E7%97%87&ie=utf8&cat=0&pagemax=10&pdf=ok&zoom=1&page=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&imgsize=0"><li id="mf_stg_size_none" class="mf_stgli">なし</li></a>
+<li id="mf_stg_size_s" class="mf_stgli mf_stg_valid">小</li>
+<a href="search.x?q=%E3%82%B9%E3%83%94%E3%83%B3%E3%83%A9%E3%82%B6+%E6%B0%B4%E9%A0%AD%E7%97%87&ie=utf8&cat=0&pagemax=10&pdf=ok&zoom=1&page=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&imgsize=2"><li id="mf_stg_size_m" class="mf_stgli">中</li></a>
+<a href="search.x?q=%E3%82%B9%E3%83%94%E3%83%B3%E3%83%A9%E3%82%B6+%E6%B0%B4%E9%A0%AD%E7%97%87&ie=utf8&cat=0&pagemax=10&pdf=ok&zoom=1&page=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&imgsize=3"><li id="mf_stg_size_l" class="mf_stgli">大</li></a>
+
+							</ul>
+							<p id="mf_stg_zoom">ポップアップイメージ</p>
+							<ul class="mf_stg">
+<li id="mf_stg_zoom_on" class="mf_stgli mf_stg_valid">ON</li>
+<a href="search.x?q=%E3%82%B9%E3%83%94%E3%83%B3%E3%83%A9%E3%82%B6+%E6%B0%B4%E9%A0%AD%E7%97%87&ie=utf8&cat=0&pagemax=10&imgsize=1&pdf=ok&page=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&zoom=0"><li id="mf_stg_zoom_off" class="mf_stgli">OFF</li></a>
+
+							</ul>
+
+
+
+							<p id="mf_stg_suggest">キーワード入力補助機能</p>
+							<ul class="mf_stg">
+<li id="mf_stg_suggest_on" class="mf_stgli mf_stg_valid">ON</li>
+<a href="search.x?q=%E3%82%B9%E3%83%94%E3%83%B3%E3%83%A9%E3%82%B6+%E6%B0%B4%E9%A0%AD%E7%97%87&ie=utf8&cat=0&pagemax=10&imgsize=1&pdf=ok&zoom=1&page=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&suggest=0"><li id="mf_stg_suggest_off" class="mf_stgli">OFF</li></a>
+
+							</ul>
+
+
+							<p id="mf_stg_counsel">もしかして？機能</p>
+							<ul class="mf_stg">
+<li id="mf_stg_counsel_on" class="mf_stgli mf_stg_valid">ON</li>
+<a href="search.x?q=%E3%82%B9%E3%83%94%E3%83%B3%E3%83%A9%E3%82%B6+%E6%B0%B4%E9%A0%AD%E7%97%87&ie=utf8&cat=0&pagemax=10&imgsize=1&pdf=ok&zoom=1&page=1&suggest=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&counsel=0"><li id="mf_stg_counsel_off" class="mf_stgli">OFF</li></a>
+
+							</ul>
+
+
+
+						</div>
+						<!-- Settings for mobile -->
+
+						<div id="mf_menuclose">
+							<p>Close</p>
+							<img src="/mf2file/custom/common/img/common/mf_closeicon.png" width="12" height="12" />
+						</div>
+
+					</div><!-- /#mf_menubox -->
+				</div>
+				<!-- Toggle Menu -->
+
+			</div><!-- /.mf_setting2_R -->
+
+			
+		</div><!-- /.mf_setting2 -->
+		<div class="mf_setting3"></div>
+	</div><!-- /.mf_setting -->
+
+<img id="zoom_focus_frame" alt="focus"	src="/mf2file/site/img/zoom/frame.gif"	style="		position:absolute;		visibility:hidden;		width:324px;		height:244px;		z-index:30;		top:-1000px;	"/>
+	<div class="mf_zubaken">
+	</div><!-- /.mf_zubaken -->
+				</div><!-- /.box-search -->
+
+	<div class="mf_drilldown">
+				<script type="text/javascript"><!--//
+(function($){
+  window.toggle_sw = function(e) {
+	var li = $(e).parent().parent().toggleClass("mf_close");
+	var closed = String(li.attr('class')).match(/mf_close/);
+	var img = $(e).children("img");
+	var src = img.attr('src');
+	if ( closed ) {
+				img.attr('src', "/mf2file/custom/common/img/common/icon_plus.png");
+		img.attr('alt', "open");
+		$(e).attr('title', "open");
+	} else {
+				img.attr('src', "/mf2file/custom/common/img/common/icon_minus.png");
+		img.attr('alt', "close");
+		$(e).attr('title', "close");
+	}
+	return false;
+  }  
+})(GALFSRAM.jQuery);
+
+$(function(){
+	$('.select-clear span').on('click', function(){
+		var parent = $(this).parent().parent();
+
+		parent.children('ul').addClass('mf_close');
+		parent.children('ul').find('img[src="/mf2file/custom/common/img/common/icon_minus.png"]').attr({
+			'src': '/mf2file/custom/common/img/common/icon_plus.png',
+			'alt': 'open'
+		}).parent('a').attr({
+			'title': 'open'
+		})
+
+
+		parent.find('.mf_border').children('.mf_naka').addClass('mf_close');
+		parent.find('.mf_border .mf_naka').find('img[src="/mf2file/custom/common/img/common/icon_minus.png"]').attr({
+			'src': '/mf2file/custom/common/img/common/icon_plus.png',
+			'alt': 'open'
+		}).parent('a').attr({
+			'title':'open'
+		});
+	});
+});
+//--></script>
+		<div class="column-title">
+			<h2>検索結果を絞り込む</h2>
+		</div>
+		<div class="mf_drilldown1">
+			<p class="mf_drilldown1_txt">製品から絞り込む<span class="mf_drilldown1_note">(PDF等のファイルは対象外です)</span></p>
+		</div>
+		<div class="mf_drilldown2">
+	<ul class="mf_close">
+	<li class="mf_border"><img src="/mf2file/custom/common/img/common/ComIcon01.png" alt="close" /><p>くすり（医薬品） (0)</p>
+	</li>
+	</ul>
+	<ul class="mf_close">
+	<li class="mf_border"><img src="/mf2file/custom/common/img/common/ComIcon01.png" alt="close" /><p>医療機器 (0)</p>
+	</li>
+	</ul>
+	<ul class="mf_close">
+	<li class="mf_border"><img src="/mf2file/custom/common/img/common/ComIcon01.png" alt="close" /><p>医薬部外品・化粧品 (0)</p>
+	</li>
+	</ul>
+	<ul class="mf_close">
+	<li class="mf_border"><img src="/mf2file/custom/common/img/common/ComIcon01.png" alt="close" /><p>再生医療等製品 (0)</p>
+	</li>
+	</ul>
+	<ul class="mf_close">
+	<li class="mf_border"><img src="/mf2file/custom/common/img/common/ComIcon01.png" alt="close" /><p>体外診断用医薬品 (0)</p>
+	</li>
+	</ul>
+	<ul class="mf_close">
+	<li class="mf_border"><img src="/mf2file/custom/common/img/common/ComIcon01.png" alt="close" /><p>その他 (0)</p>
+	</li>
+	</ul>
+		<div class="select-clear"><span>絞り込み解除</span></div>
+		</div><!-- /.mf_drilldown2 -->
+
+								<div class="mf_drilldown1">
+			<p class="mf_drilldown1_txt">業務内容から絞り込む<span class="mf_drilldown1_note">(PDF等のファイルは対象外です)</span></p>
+		</div>
+		<div class="mf_drilldown2">
+	<ul class="mf_close">
+	<li class="mf_border"><img src="/mf2file/custom/common/img/common/ComIcon01.png" alt="close" /><p>安全対策業務 (0)</p>
+	</li>
+	</ul>
+	<ul class="mf_close">
+	<li class="mf_border"><img src="/mf2file/custom/common/img/common/ComIcon01.png" alt="close" /><p>健康被害救済業務 (0)</p>
+	</li>
+	</ul>
+	<ul class="mf_close">
+	<li class="mf_border"><img src="/mf2file/custom/common/img/common/ComIcon01.png" alt="close" /><p>レギュラトリーサイエンス・基準作成業務 (0)</p>
+	</li>
+	</ul>
+	<ul class="mf_close">
+	<li class="mf_border"><img src="/mf2file/custom/common/img/common/ComIcon01.png" alt="close" /><p>国際関係業務 (0)</p>
+	</li>
+	</ul>
+	<ul class="mf_close">
+	<li class="mf_border"><img src="/mf2file/custom/common/img/common/ComIcon01.png" alt="close" /><p>その他 (0)</p>
+	</li>
+	</ul>
+		<div class="select-clear"><span>絞り込み解除</span></div>
+		</div><!-- /.mf_drilldown2 -->
+
+								<div class="mf_drilldown1">
+			<p class="mf_drilldown1_txt">更新日から絞り込む</p>
+		</div>
+		<div class="mf_drilldown2">
+	<ul class="mf_close">
+	<li class="mf_border"><img src="/mf2file/custom/common/img/common/ComIcon01.png" alt="close" /><p><a href="search.x?q=%E3%82%B9%E3%83%94%E3%83%B3%E3%83%A9%E3%82%B6+%E6%B0%B4%E9%A0%AD%E7%97%87&ie=utf8&cat=0&pagemax=10&imgsize=1&pdf=ok&zoom=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&period=1">1週間以内</a></p>
+	</li>
+	</ul>
+	<ul class="mf_close">
+	<li class="mf_border"><img src="/mf2file/custom/common/img/common/ComIcon01.png" alt="close" /><p><a href="search.x?q=%E3%82%B9%E3%83%94%E3%83%B3%E3%83%A9%E3%82%B6+%E6%B0%B4%E9%A0%AD%E7%97%87&ie=utf8&cat=0&pagemax=10&imgsize=1&pdf=ok&zoom=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&period=2">1ヶ月以内</a></p>
+	</li>
+	</ul>
+	<ul class="mf_close">
+	<li class="mf_border"><img src="/mf2file/custom/common/img/common/ComIcon01.png" alt="close" /><p><a href="search.x?q=%E3%82%B9%E3%83%94%E3%83%B3%E3%83%A9%E3%82%B6+%E6%B0%B4%E9%A0%AD%E7%97%87&ie=utf8&cat=0&pagemax=10&imgsize=1&pdf=ok&zoom=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&period=4">1年以内</a></p>
+	</li>
+	</ul>
+		<div class="select-clear"><a href="search.x?q=%E3%82%B9%E3%83%94%E3%83%B3%E3%83%A9%E3%82%B6+%E6%B0%B4%E9%A0%AD%E7%97%87&ie=utf8&cat=0&pagemax=10&imgsize=1&pdf=ok&zoom=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus"><span>絞り込み解除</span></a></div>
+		</div><!-- /.mf_drilldown2 -->
+
+		<div class="mf_drilldown1">
+			<p class="mf_drilldown1_txt">ファイル種別から絞り込む</p>
+		</div>
+		<div class="mf_drilldown2">
+	<ul class="mf_close">
+	<li class="mf_border"><img src="/mf2file/custom/common/img/common/ComIcon01.png" alt="close" /><p><a href="search.x?q=%E3%82%B9%E3%83%94%E3%83%B3%E3%83%A9%E3%82%B6+%E6%B0%B4%E9%A0%AD%E7%97%87&ie=utf8&cat=0&pagemax=10&imgsize=1&zoom=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&pdf=only">HTMLを除外する</a></p>
+	</li>
+	</ul>
+	<ul class="mf_close">
+	<li class="mf_border"><img src="/mf2file/custom/common/img/common/ComIcon01.png" alt="close" /><p><a href="search.x?q=%E3%82%B9%E3%83%94%E3%83%B3%E3%83%A9%E3%82%B6+%E6%B0%B4%E9%A0%AD%E7%97%87&ie=utf8&cat=0&pagemax=10&imgsize=1&zoom=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&pdf=no">PDFを除外する</a></p>
+	</li>
+	</ul>
+		<div class="select-clear"><span>絞り込み解除</span></div>
+		</div><!-- /.mf_drilldown2 -->
+
+
+						        <div class="search-ranking">
+                <p class="search-ranking__txt">検索キーワードランキング</p>
+                <ul class="search-ranking__list">
+                        <li>
+                            <div class="search-ranking__no">No.1.</div>
+                            <div class="search-ranking__item"><a href="search.x?cat=0&pagemax=10&imgsize=1&pdf=ok&zoom=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&ie=utf8&q=PMDA">PMDA</a></div>
+                        </li>
+                        <li>
+                            <div class="search-ranking__no">No.2.</div>
+                            <div class="search-ranking__item"><a href="search.x?cat=0&pagemax=10&imgsize=1&pdf=ok&zoom=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&ie=utf8&q=%E5%AE%89%E5%85%A8%E6%80%A7%E6%83%85%E5%A0%B1">安全性情報</a></div>
+                        </li>
+                        <li>
+                            <div class="search-ranking__no">No.3.</div>
+                            <div class="search-ranking__item"><a href="search.x?cat=0&pagemax=10&imgsize=1&pdf=ok&zoom=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&ie=utf8&q=%E3%83%A1%E3%83%87%E3%82%A3%E3%83%8A%E3%83%93">メディナビ</a></div>
+                        </li>
+                        <li>
+                            <div class="search-ranking__no">No.4.</div>
+                            <div class="search-ranking__item"><a href="search.x?cat=0&pagemax=10&imgsize=1&pdf=ok&zoom=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&ie=utf8&q=%E6%B7%BB%E4%BB%98%E6%96%87%E6%9B%B8">添付文書</a></div>
+                        </li>
+                        <li>
+                            <div class="search-ranking__no">No.5.</div>
+                            <div class="search-ranking__item"><a href="search.x?cat=0&pagemax=10&imgsize=1&pdf=ok&zoom=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&ie=utf8&q=%E6%89%BF%E8%AA%8D">承認</a></div>
+                        </li>
+                        <li>
+                            <div class="search-ranking__no">No.6.</div>
+                            <div class="search-ranking__item"><a href="search.x?cat=0&pagemax=10&imgsize=1&pdf=ok&zoom=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&ie=utf8&q=%E7%B0%A1%E6%98%93%E7%9B%B8%E8%AB%87">簡易相談</a></div>
+                        </li>
+                        <li>
+                            <div class="search-ranking__no">No.7.</div>
+                            <div class="search-ranking__item"><a href="search.x?cat=0&pagemax=10&imgsize=1&pdf=ok&zoom=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&ie=utf8&q=%E8%96%AC%E5%B1%80%E6%96%B9">薬局方</a></div>
+                        </li>
+                        <li>
+                            <div class="search-ranking__no">No.8.</div>
+                            <div class="search-ranking__item"><a href="search.x?cat=0&pagemax=10&imgsize=1&pdf=ok&zoom=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&ie=utf8&q=%E5%BE%8C%E7%99%BA%E5%8C%BB%E8%96%AC%E5%93%81">後発医薬品</a></div>
+                        </li>
+                        <li>
+                            <div class="search-ranking__no">No.9.</div>
+                            <div class="search-ranking__item"><a href="search.x?cat=0&pagemax=10&imgsize=1&pdf=ok&zoom=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&ie=utf8&q=%E9%80%9A%E7%9F%A5">通知</a></div>
+                        </li>
+                        <li>
+                            <div class="search-ranking__no">No.10.</div>
+                            <div class="search-ranking__item"><a href="search.x?cat=0&pagemax=10&imgsize=1&pdf=ok&zoom=1&suggest=1&counsel=1&pid=3NQuVGeDIiIf_hA6ReuUGQ..&qid=y9kBmlWVkLwvUQrxDidhU9-B52mgXtus&ie=utf8&q=%E6%95%91%E6%B8%88">救済</a></div>
+                        </li>
+                </ul>
+        </div>
+
+			</div><!-- /.mf_drilldown -->
+
+
+	<div class="mf_result">
+
+						<div class="column-title search-title">
+			<h2>スピンラザ 水頭症<span class="search-title__txt">の検索結果</span></h2>
+			<div class="mf_number"><p>約<span class="mf_all">9</span> 件中 <span class="mf_now">1</span> - <span class="mf_now">9</span>件を表示</p></div>
+		</div>
+
+		
+
+		<div class="websearch_data">
+						<div class="mf_resultbox websearch_data item_for_zoom view_list mf_pdf" id="result_1">
+			<div id="img_frame_1" class="img_frame">
+				<div class="result_img_waku">
+					<div id="zoom_base_1"
+						class="zoom_base result_img_area result_img_bg"
+					>
+						<img id="zoom_image_large_1"
+							src="/mf2file/site/img/result96_72_pdf.gif"
+							class="zoom_image_large result_img_normal"
+							onerror="if(this.src!='/mf2file/site/img/pcs320.gif'){this.src='/mf2file/site/img/pcs320.gif';}"
+							onload="resetTopLarge(this)"
+							style="top:-1000;"
+						>
+						<img id="zoom_image_icon_1"
+							src="/mf2file/site/img/result96_72_pdf.gif"
+							class="zoom_image_icon result_img_normal"
+							onload="resetTop(this)"
+							onerror="if(this.src!='/mf2file/site/img/pcs96.gif')this.src='/mf2file/site/img/pcs96.gif';"
+						></div>
+					<div id="result_img_top_1"
+						 class="result_img_top result_img_area"
+					><div id="zoom_event_1" class="result_img"
+						><a
+							class="viewer_link_1"
+							target="_top"
+							href="https://www.pmda.go.jp/PmdaSearch/iyakuDetail/ResultDataSetPDF/630499_1190403A1022_1_10"
+							onclick="return cl.web(this,'-gX8tma7qfsT2JF-SKXv9d5xMm147C8gB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSjCyTJJG6wjLUumKnR7ulp-rIAtAB6aEWC4-PZj-Ey9CI-Bp4Nr7072dRNuBtsC60bGsouJoztp9s8qx3wrjmhAcTzjPmYShIN6wwD3ogTtEalcg9ZTKihzKS65GvtKmm6rqH6KlsvTEZ1iLyOSrDpoq5frdqx4wv6');"
+						><img
+							class="result_img" style="z-index:-1;display:inline;"
+							src="/mf2file/img/_.gif"
+					></a></div></div>
+										<div class="result_img_area result_img_bg"
+					><img src="/mf2file/site/img/result96_72_pdf.gif"
+						class="result_img_normal"
+						style="visibility:hidden;display:inline;position:relative;"
+						onload="this.style.visibility='visible';resetTop(this)"
+						onerror="if(this.src!='/mf2file/site/img/pcs96.gif')this.src='/mf2file/site/img/pcs96.gif';"
+					></div>
+				</div>
+			</div>
+			<div class="mf_text_frame">
+<p class="mf_result_disp_title"
+				  ><span class="mf_result_disp_idx">1.</span
+					><a
+						class="viewer_link_1"
+						target="_top"
+						href="https://www.pmda.go.jp/PmdaSearch/iyakuDetail/ResultDataSetPDF/630499_1190403A1022_1_10"
+						onclick="return cl.web(this,'-gX8tma7qfsT2JF-SKXv9d5xMm147C8gB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSjCyTJJG6wjLUumKnR7ulp-rIAtAB6aEWC4-PZj-Ey9CI-Bp4Nr7072dRNuBtsC60bGsouJoztp9s8qx3wrjmhAcTzjPmYShIN6wwD3ogTtEalcg9ZTKihzKS65GvtKmm6rqH6KlsvTEZ1iLyOSrDpoq5frdqx4wv6');">
+<font class="pdf">[PDF]&nbsp;</font><font class="titb"><span class="mf_hit">スピンラザ</span>髄注12mg・28mg・50mg</font></a>
+				</p>
+				<p class="mf_result_disp_snippet">...1
+組成販
+売
+名<span class="mf_hit">スピンラザ</span>髄注12mg<span class="mf_hit">スピンラザ</span>髄注28mg<span class="mf_hit">スピンラザ</span>髄注50mg成分・分量...mgpH調整剤
+適量
+適量
+適量3.2
+製剤の性状販
+売
+名<span class="mf_hit">スピンラザ</span>髄注12mg<span class="mf_hit">スピンラザ</span>...髄注28mg<span class="mf_hit">スピンラザ</span>髄注50mg性状外
+観
+無色澄明の液
+無色澄明の液
+無色澄明の...果が認められない場合には投与を中止すること。6.用法・用量&lt;<span class="mf_hit">スピンラザ</span>髄注50mg/28mg&gt;通常...、いずれの場合も
+1
+&#x223c;
+3
+分かけて髄腔内投与すること。&lt;<span class="mf_hit">スピンラザ</span>髄注12mg&gt;&lt;乳児......-1-2.禁忌(次の患者には投与しないこと)本剤の成分に対し過敏症の既往歴のある患者3.組成・性状3.1
+組成販
+売
+名<span class="mf_hit">スピンラザ</span>髄注12mg<span class="mf_hit">スピンラザ</span>髄注28mg<span class="mf_hit">スピンラザ</span>髄注50mg成分・分量有効成分1
+バイアル5
+mL中ヌシネルセンナトリウム(ヌシネルセンとして)12.63mg(12mg)29.5mg(28mg)52.6mg(50mg)添
+加
+剤1
+バイアル5
+mL中リン酸二水素ナトリウム0.25mg
+0.23mg
+0.23mg無水リン酸一水素ナトリウム0.49mg
+0.51mg
+0.51mg塩</p>
+				<p class="mf_result_disp_url">
+					<a target="_top" class="viewer_link_1 tenten_uri"
+						href="https://www.pmda.go.jp/PmdaSearch/iyakuDetail/ResultDataSetPDF/630499_1190403A1022_1_10"
+						onclick="return cl.web(this,'-gX8tma7qfsT2JF-SKXv9d5xMm147C8gB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSjCyTJJG6wjLUumKnR7ulp-rIAtAB6aEWC4-PZj-Ey9CI-Bp4Nr7072dRNuBtsC60bGsouJoztp9s8qx3wrjmhAcTzjPmYShIN6wwD3ogTtEalcg9ZTKihzKS65GvtKmm6rqH6KlsvTEZ1iLyOSrDpoq5frdqx4wv6');"
+					>https:/<wbr/>/<wbr/>www.pmda.go.jp/<wbr/>PmdaSearch/<wbr/>iyakuDetail/<wbr/>ResultDataSetPDF/<wbr/>630499_1190403A1022_1_10&lrm;</a>				</p>
+			</div>
+</div>
+
+						<script language="javascript" type="text/javascript"><!--//
+				env.docs.push({"opts":{"isPDF":1},"title":"スピンラザ髄注12mg・28mg・50mg","count":1,"description":"","attrs":{"mf_weight_f":"20.129133","pdfinfo_Encrypted":"no","mf_solution_offset":"0.0","pdfinfo_PDF_version":"1.6","mf_url_weighting_offset":"0.0","mf_weight_image_f":"1.0","pdfinfo_Page_size":"595.22 x 842 pts (A4)","pdfinfo_Keywords":"1校","pdfinfo_Producer":"Acrobat Distiller 25.0 (Windows)","pdfinfo_ModDate":"Wed, 29 Oct 2025 04:52:52 GMT","mf_weight_ext_pdf_f":"0.0","pdfinfo_CreationDate":"Wed, 29 Oct 2025 04:52:20 GMT","pdfinfo_Optimized":"yes","pdfinfo_Creator":"PScript5.dll Version 5.2.2","mf_weight_flash_f":"1.0","startbody":"-1-2.禁忌(次の患者には投与しないこと)本剤の成分に対し過敏症の既往歴のある患者3.組成・性状3.1\n組成販\n売\n名スピンラザ髄注12mgスピンラザ髄注28mgスピンラザ髄注50mg成分・分量有効成分1\nバイアル5\nmL中ヌシネルセンナトリウム(ヌシネルセンとして)12.63mg(12mg)29.5mg(28mg)52.6mg(50mg)添\n加\n剤1\nバイアル5\nmL中リン酸二水素ナトリウム0.25mg\n0.23mg\n0.23mg無水リン酸一水素ナトリウム0.49mg\n0.51mg\n0.51mg塩化ナトリウム\n43.83mg\n41.95mg\n40.55mg塩化カリウム\n1.12mg\n1.12mg\n1.12mg塩化カルシウム水和物1.03mg\n1.03mg\n1.03mg塩化マグネシウム\n0.82mg\n0.82mg\n0.82mgpH調整剤\n適量\n適量\n適量3.2\n製剤の性状販\n売\n名スピンラザ髄注12mgスピンラザ髄注28mgスピンラザ髄注50mg性状外\n観\n無色澄明の液\n無色澄明の液\n無色澄明の液pH\n6.7∼7.7\n6.7∼8.0\n6.7∼8.0浸透圧比約\n1\n(生理食塩液に対する比)約\n1\n(生理食塩液に対する比)約\n1\n(生理食塩液に対する比)4.効能・効果脊髄性筋萎縮症5.効能・効果に関連する注意5.1\n遺伝子検査により、SMN1遺伝子の欠失又は変異を有し、SMN2遺伝子","bullet_icon":"","uri":"https://www.pmda.go.jp/PmdaSearch/iyakuDetail/ResultDataSetPDF/630499_1190403A1022_1_10","pdfinfo_Keywords_base":"1校","pdfinfo_Author":"","pdfinfo_Title":"スピンラザ髄注12mg・28mg・50mg","pdfinfo_Tagged":"no","pdfinfo_File_size":"467970 bytes","pdfinfo_Pages":"7","mf_weight_path_f":"2.0"},"seq":"-gX8tma7qfsT2JF-SKXv9d5xMm147C8gB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSjCyTJJG6wjLUumKnR7ulp-rIAtAB6aEWC4-PZj-Ey9CI-Bp4Nr7072dRNuBtsC60bGsouJoztp9s8qx3wrjmhAcTzjPmYShIN6wwD3ogTtEalcg9ZTKihzKS65GvtKmm6rqH6KlsvTEZ1iLyOSrDpoq5frdqx4wv6","imgURL":{"opts":{},"map":{"96":"/mf2file/site/img/result96_72_pdf.gif","120":"/mf2file/site/img/result120_90_pdf.gif","200":"/mf2file/site/img/result200_150_pdf.gif","320":"/mf2file/site/img/result320_240_pdf.gif"},"imgSizes":[96,120,200,320]},"snippetList":["3.1\n組成販\n売\n名スピンラザ髄注12mgスピンラザ髄注28mgスピンラザ髄注50mg成分・分量",".82mg\n0.82mgpH調整剤\n適量\n適量\n適量3.2\n製剤の性状販\n売\n名スピンラザ髄注12mgスピンラザ","髄注28mgスピンラザ髄注50mg性状外\n観\n無色澄明の液\n無色澄明の液\n無色澄明の液pH\n6.7∼7.7\n6","的に有効性を評価し投与継続の可否を判断すること。効果が認められない場合には投与を中止すること。6.用法・用量<スピンラザ髄注50mg/28mg>通常","与を行うこととし、いずれの場合も\n1\n∼\n3\n分かけて髄腔内投与すること。<スピンラザ髄注12mg><乳児"],"snippet":[{"id":0,"text":"...","type":"connector"},{"id":0,"text":"1\n組成販\n売\n名","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注12mg","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注28mg","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注50mg成分・分量","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"mgpH調整剤\n適量\n適量\n適量3.2\n製剤の性状販\n売\n名","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注12mg","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"髄注28mg","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注50mg性状外\n観\n無色澄明の液\n無色澄明の液\n無色澄明の","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"果が認められない場合には投与を中止すること。6.用法・用量<","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注50mg/28mg>通常","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"、いずれの場合も\n1\n∼\n3\n分かけて髄腔内投与すること。<","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注12mg><乳児","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"-1-2.禁忌(次の患者には投与しないこと)本剤の成分に対し過敏症の既往歴のある患者3.組成・性状3.1\n組成販\n売\n名","type":"sbdy_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注12mg","type":"sbdy_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注28mg","type":"sbdy_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注50mg成分・分量有効成分1\nバイアル5\nmL中ヌシネルセンナトリウム(ヌシネルセンとして)12.63mg(12mg)29.5mg(28mg)52.6mg(50mg)添\n加\n剤1\nバイアル5\nmL中リン酸二水素ナトリウム0.25mg\n0.23mg\n0.23mg無水リン酸一水素ナトリウム0.49mg\n0.51mg\n0.51mg塩","type":"sbdy_1"}],"highlight":{"title":[{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注12mg・28mg・50mg","type":""}],"uri":[{"id":0,"text":"https://www.pmda.go.jp/PmdaSearch/iyakuDetail/ResultDataSetPDF/630499_1190403A1022_1_10","type":""}]},"uri":"https://www.pmda.go.jp/PmdaSearch/iyakuDetail/ResultDataSetPDF/630499_1190403A1022_1_10"});
+			//--></script>
+						<div class="mf_resultbox websearch_data item_for_zoom view_list mf_pdf" id="result_2">
+			<div id="img_frame_2" class="img_frame">
+				<div class="result_img_waku">
+					<div id="zoom_base_2"
+						class="zoom_base result_img_area result_img_bg"
+					>
+						<img id="zoom_image_large_2"
+							src="/mf2file/site/img/result96_72_pdf.gif"
+							class="zoom_image_large result_img_normal"
+							onerror="if(this.src!='/mf2file/site/img/pcs320.gif'){this.src='/mf2file/site/img/pcs320.gif';}"
+							onload="resetTopLarge(this)"
+							style="top:-1000;"
+						>
+						<img id="zoom_image_icon_2"
+							src="/mf2file/site/img/result96_72_pdf.gif"
+							class="zoom_image_icon result_img_normal"
+							onload="resetTop(this)"
+							onerror="if(this.src!='/mf2file/site/img/pcs96.gif')this.src='/mf2file/site/img/pcs96.gif';"
+						></div>
+					<div id="result_img_top_2"
+						 class="result_img_top result_img_area"
+					><div id="zoom_event_2" class="result_img"
+						><a
+							class="viewer_link_2"
+							target="_top"
+							href="https://www.pmda.go.jp/files/000226889.pdf"
+							onclick="return cl.web(this,'m9IxEDIRnd3Qm3OJu3LXhCNb-wqKugPuB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSjSIZf5FhtuhmrLdKZ_lDhVbB1pn6W5owDZ1kc6CAHQ4H1r592hVLg23vvQvKIfANic2TLHMz0V7hVV06U-pN_1MSPy_3BOYty8Ab_D37KKQQ.');"
+						><img
+							class="result_img" style="z-index:-1;display:inline;"
+							src="/mf2file/img/_.gif"
+					></a></div></div>
+										<div class="result_img_area result_img_bg"
+					><img src="/mf2file/site/img/result96_72_pdf.gif"
+						class="result_img_normal"
+						style="visibility:hidden;display:inline;position:relative;"
+						onload="this.style.visibility='visible';resetTop(this)"
+						onerror="if(this.src!='/mf2file/site/img/pcs96.gif')this.src='/mf2file/site/img/pcs96.gif';"
+					></div>
+				</div>
+			</div>
+			<div class="mf_text_frame">
+<p class="mf_result_disp_title"
+				  ><span class="mf_result_disp_idx">2.</span
+					><a
+						class="viewer_link_2"
+						target="_top"
+						href="https://www.pmda.go.jp/files/000226889.pdf"
+						onclick="return cl.web(this,'m9IxEDIRnd3Qm3OJu3LXhCNb-wqKugPuB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSjSIZf5FhtuhmrLdKZ_lDhVbB1pn6W5owDZ1kc6CAHQ4H1r592hVLg23vvQvKIfANic2TLHMz0V7hVV06U-pN_1MSPy_3BOYty8Ab_D37KKQQ.');">
+<font class="pdf">[PDF]&nbsp;</font><font class="titb">000226889.pdf</font></a>
+				</p>
+				<p class="mf_result_disp_snippet">...形医薬品第3の1
+H29.7.3
+23
+<span class="mf_hit">スピンラザ</span>髄注12mg(バイオジェン・ジャ...とする新効能医薬品第3の1
+H29.9.22
+27
+<span class="mf_hit">スピンラザ</span>髄注12mg(バイオジェン・ジャ......第2
+審査等業務及び安全対策業務関係1.医薬品等承認審査業務【医薬品等承認品目数】平成
+25
+年度
+平成
+26
+年度
+平成
+27
+年度
+平成
+28
+年度
+平成
+29
+年度医療用医薬品
+4,003
+3,944
+3,664
+3,660
+3,611要指導・一般用医薬品
+916
+844
+752
+646
+537体外診断用医薬品
+166
+109
+172
+199
+187医薬部外品
+2,028
+1,779
+2,495
+1,924
+1,891化
+粧
+品
+0
+0
+0
+0
+0計
+7,113
+6,676
+7,083
+6,429
+6,226【新医薬品の承認件数】平成25年度
+平成26年度
+平成27年度
+平成28年度
+平成29年度新医薬品(件数)
+138件
+118件
+116件
+112件
+104件うち優先審査品目(件数)
+42件
+44件
+37件
+38件
+38件&lt;参
+考
+1&gt;【新医薬品の承認状況(新有効成分含有医薬品のみ)】【</p>
+				<p class="mf_result_disp_url">
+					<a target="_top" class="viewer_link_2 tenten_uri"
+						href="https://www.pmda.go.jp/files/000226889.pdf"
+						onclick="return cl.web(this,'m9IxEDIRnd3Qm3OJu3LXhCNb-wqKugPuB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSjSIZf5FhtuhmrLdKZ_lDhVbB1pn6W5owDZ1kc6CAHQ4H1r592hVLg23vvQvKIfANic2TLHMz0V7hVV06U-pN_1MSPy_3BOYty8Ab_D37KKQQ.');"
+					>https:/<wbr/>/<wbr/>www.pmda.go.jp/<wbr/>files/<wbr/>000226889.pdf&lrm;</a>				</p>
+			</div>
+</div>
+
+						<script language="javascript" type="text/javascript"><!--//
+				env.docs.push({"opts":{"isPDF":1},"title":"","count":2,"description":"","attrs":{"mf_weight_f":"160.99126","pdfinfo_Encrypted":"no","mf_solution_offset":"0.0","pdfinfo_PDF_version":"1.6","mf_url_weighting_offset":"0.0","mf_weight_image_f":"1.0","pdfinfo_Page_size":"595.32 x 841.92 pts (A4)","pdfinfo_Keywords":"","pdfinfo_Producer":"Adobe Acrobat 11.0.0","pdfinfo_ModDate":"Wed, 21 Nov 2018 08:58:58 GMT","mf_weight_ext_pdf_f":"0.0","pdfinfo_CreationDate":"Wed, 21 Nov 2018 08:55:34 GMT","pdfinfo_Optimized":"yes","pdfinfo_Creator":"Adobe Acrobat 11.0.0","mf_weight_flash_f":"1.0","startbody":"第2\n審査等業務及び安全対策業務関係1.医薬品等承認審査業務【医薬品等承認品目数】平成\n25\n年度\n平成\n26\n年度\n平成\n27\n年度\n平成\n28\n年度\n平成\n29\n年度医療用医薬品\n4,003\n3,944\n3,664\n3,660\n3,611要指導・一般用医薬品\n916\n844\n752\n646\n537体外診断用医薬品\n166\n109\n172\n199\n187医薬部外品\n2,028\n1,779\n2,495\n1,924\n1,891化\n粧\n品\n0\n0\n0\n0\n0計\n7,113\n6,676\n7,083\n6,429\n6,226【新医薬品の承認件数】平成25年度\n平成26年度\n平成27年度\n平成28年度\n平成29年度新医薬品(件数)\n138件\n118件\n116件\n112件\n104件うち優先審査品目(件数)\n42件\n44件\n37件\n38件\n38件<参\n考\n1>【新医薬品の承認状況(新有効成分含有医薬品のみ)】【新医薬品(優先品目)の総審査期間】平成25年度\n平成26年度\n平成27年度\n平成28年度\n平成29年度タイル値\n50%\n60%\n60%\n70%\n70%総審査期間\n9.1月\n9.1月\n9.5月\n9.2月\n8.9月件\n数\n15\n24\n17\n19\n13(参考)行政側期間\n3.4月\n3.8月\n3.8月\n3.8月\n4.3月申請者側期間\n5.3月\n5.4月\n6.0月\n5.6月\n5.7月注:平成16年度以","bullet_icon":"","uri":"https://www.pmda.go.jp/files/000226889.pdf","pdfinfo_Keywords_base":"","pdfinfo_Author":"","pdfinfo_Title":"","pdfinfo_Tagged":"yes","pdfinfo_File_size":"2409618 bytes","pdfinfo_Pages":"74","mf_weight_path_f":"2.0"},"seq":"m9IxEDIRnd3Qm3OJu3LXhCNb-wqKugPuB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSjSIZf5FhtuhmrLdKZ_lDhVbB1pn6W5owDZ1kc6CAHQ4H1r592hVLg23vvQvKIfANic2TLHMz0V7hVV06U-pN_1MSPy_3BOYty8Ab_D37KKQQ.","imgURL":{"opts":{},"map":{"96":"/mf2file/site/img/result96_72_pdf.gif","120":"/mf2file/site/img/result120_90_pdf.gif","200":"/mf2file/site/img/result200_150_pdf.gif","320":"/mf2file/site/img/result320_240_pdf.gif"},"imgSizes":[96,120,200,320]},"snippetList":["形医薬品第3の1\nH29.7.3\n23\nスピンラザ髄注12mg(バイオジェン・ジャ","とする新効能医薬品第3の1\nH29.9.22\n27\nスピンラザ髄注12mg(バイオジェン・ジャ"],"snippet":[{"id":0,"text":"...","type":"connector"},{"id":0,"text":"形医薬品第3の1\nH29.7.3\n23\n","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注12mg(バイオジェン・ジャ","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"とする新効能医薬品第3の1\nH29.9.22\n27\n","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注12mg(バイオジェン・ジャ","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"第2\n審査等業務及び安全対策業務関係1.医薬品等承認審査業務【医薬品等承認品目数】平成\n25\n年度\n平成\n26\n年度\n平成\n27\n年度\n平成\n28\n年度\n平成\n29\n年度医療用医薬品\n4,003\n3,944\n3,664\n3,660\n3,611要指導・一般用医薬品\n916\n844\n752\n646\n537体外診断用医薬品\n166\n109\n172\n199\n187医薬部外品\n2,028\n1,779\n2,495\n1,924\n1,891化\n粧\n品\n0\n0\n0\n0\n0計\n7,113\n6,676\n7,083\n6,429\n6,226【新医薬品の承認件数】平成25年度\n平成26年度\n平成27年度\n平成28年度\n平成29年度新医薬品(件数)\n138件\n118件\n116件\n112件\n104件うち優先審査品目(件数)\n42件\n44件\n37件\n38件\n38件<参\n考\n1>【新医薬品の承認状況(新有効成分含有医薬品のみ)】【","type":"sbdy_1"}],"highlight":{"uri":[{"id":0,"text":"https://www.pmda.go.jp/files/000226889.pdf","type":""}]},"uri":"https://www.pmda.go.jp/files/000226889.pdf"});
+			//--></script>
+						<div class="mf_resultbox websearch_data item_for_zoom view_list mf_pdf" id="result_3">
+			<div id="img_frame_3" class="img_frame">
+				<div class="result_img_waku">
+					<div id="zoom_base_3"
+						class="zoom_base result_img_area result_img_bg"
+					>
+						<img id="zoom_image_large_3"
+							src="/mf2file/site/img/result96_72_pdf.gif"
+							class="zoom_image_large result_img_normal"
+							onerror="if(this.src!='/mf2file/site/img/pcs320.gif'){this.src='/mf2file/site/img/pcs320.gif';}"
+							onload="resetTopLarge(this)"
+							style="top:-1000;"
+						>
+						<img id="zoom_image_icon_3"
+							src="/mf2file/site/img/result96_72_pdf.gif"
+							class="zoom_image_icon result_img_normal"
+							onload="resetTop(this)"
+							onerror="if(this.src!='/mf2file/site/img/pcs96.gif')this.src='/mf2file/site/img/pcs96.gif';"
+						></div>
+					<div id="result_img_top_3"
+						 class="result_img_top result_img_area"
+					><div id="zoom_event_3" class="result_img"
+						><a
+							class="viewer_link_3"
+							target="_top"
+							href="https://www.pmda.go.jp/files/000227791.pdf"
+							onclick="return cl.web(this,'KyHIA4uM8OlL5Mn4MYEmWA3L9JoUUnrbB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSjSIZf5Fhtuhlzse2f2nkCHrB1pn6W5owDZ1kc6CAHQ4H1r592hVLg23vvQvKIfANic2TLHMz0V7hVV06U-pN_1MSPy_3BOYty8Ab_D37KKQQ.');"
+						><img
+							class="result_img" style="z-index:-1;display:inline;"
+							src="/mf2file/img/_.gif"
+					></a></div></div>
+										<div class="result_img_area result_img_bg"
+					><img src="/mf2file/site/img/result96_72_pdf.gif"
+						class="result_img_normal"
+						style="visibility:hidden;display:inline;position:relative;"
+						onload="this.style.visibility='visible';resetTop(this)"
+						onerror="if(this.src!='/mf2file/site/img/pcs96.gif')this.src='/mf2file/site/img/pcs96.gif';"
+					></div>
+				</div>
+			</div>
+			<div class="mf_text_frame">
+<p class="mf_result_disp_title"
+				  ><span class="mf_result_disp_idx">3.</span
+					><a
+						class="viewer_link_3"
+						target="_top"
+						href="https://www.pmda.go.jp/files/000227791.pdf"
+						onclick="return cl.web(this,'KyHIA4uM8OlL5Mn4MYEmWA3L9JoUUnrbB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSjSIZf5Fhtuhlzse2f2nkCHrB1pn6W5owDZ1kc6CAHQ4H1r592hVLg23vvQvKIfANic2TLHMz0V7hVV06U-pN_1MSPy_3BOYty8Ab_D37KKQQ.');">
+<font class="pdf">[PDF]&nbsp;</font><font class="titb">000227791.pdf</font></a>
+				</p>
+				<p class="mf_result_disp_snippet">...リウム《使用上の注意(下線部追加改訂部分)》販売名(会社名)<span class="mf_hit">スピンラザ</span>...改訂内容,主な該当販売名等をお知らせします。<span class="mf_hit">スピンラザ</span>髄注12mg(バイオジェン・ジャ...回目)<span class="mf_hit">水頭症</span>投与14日前投与開始日投与16日後投与30日後投与32日後投与...4SD)超音波検査(頭部)にて著明な脳室拡大を認め<span class="mf_hit">水頭症</span>...。頭部MRIにて著明な脳室拡大,中脳水道は開存しており交通性<span class="mf_hit">水頭症</span>......連絡先
+100-8916
+東京都千代田区霞が関
+1
+-
+2-
+2厚生労働省医薬・生活衛生局医薬安全対策課平成31年(2019年)2月厚生労働省医薬・生活衛生局03-3595-2435(直通)03-5253-1111(内線)2755,2754,2756(Fax)03-3508-4364この医薬品・医療機器等安全性情報は,厚生労働省において収集された副作用等の情報を基に,医薬品・医療機器等のより安全な使用に役立てていただくために,医療関係者に対して情報提供されるものです。医薬品・医療機器等安全性情報は,独
+立行政
+法
+人
+医
+薬
+品
+医
+療
+機
+器
+総合機構ホームページ(http://www.pmda.go.</p>
+				<p class="mf_result_disp_url">
+					<a target="_top" class="viewer_link_3 tenten_uri"
+						href="https://www.pmda.go.jp/files/000227791.pdf"
+						onclick="return cl.web(this,'KyHIA4uM8OlL5Mn4MYEmWA3L9JoUUnrbB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSjSIZf5Fhtuhlzse2f2nkCHrB1pn6W5owDZ1kc6CAHQ4H1r592hVLg23vvQvKIfANic2TLHMz0V7hVV06U-pN_1MSPy_3BOYty8Ab_D37KKQQ.');"
+					>https:/<wbr/>/<wbr/>www.pmda.go.jp/<wbr/>files/<wbr/>000227791.pdf&lrm;</a>				</p>
+			</div>
+</div>
+
+						<script language="javascript" type="text/javascript"><!--//
+				env.docs.push({"opts":{"isPDF":1},"title":"","count":3,"description":"","attrs":{"mf_weight_f":"160.99126","pdfinfo_Encrypted":"no","mf_solution_offset":"0.0","pdfinfo_PDF_version":"1.6","mf_url_weighting_offset":"0.0","mf_weight_image_f":"1.0","pdfinfo_Page_size":"595.276 x 841.89 pts (A4)","pdfinfo_Keywords":"","pdfinfo_Producer":"Adobe PDF Library 10.0.1","pdfinfo_ModDate":"Tue, 29 Jan 2019 06:33:35 GMT","mf_weight_ext_pdf_f":"0.0","pdfinfo_CreationDate":"Tue, 29 Jan 2019 01:45:22 GMT","pdfinfo_Optimized":"yes","pdfinfo_Creator":"Adobe InDesign CS6 (Windows)","mf_weight_flash_f":"1.0","startbody":"連絡先\n100-8916\n東京都千代田区霞が関\n1\n-\n2-\n2厚生労働省医薬・生活衛生局医薬安全対策課平成31年(2019年)2月厚生労働省医薬・生活衛生局03-3595-2435(直通)03-5253-1111(内線)2755,2754,2756(Fax)03-3508-4364この医薬品・医療機器等安全性情報は,厚生労働省において収集された副作用等の情報を基に,医薬品・医療機器等のより安全な使用に役立てていただくために,医療関係者に対して情報提供されるものです。医薬品・医療機器等安全性情報は,独\n立行政\n法\n人\n医\n薬\n品\n医\n療\n機\n器\n総合機構ホームページ(http://www.pmda.go.jp/)又は厚生労働省ホームページ(http://www.mhlw.go.jp/)からも入手可能\nです。配信一覧はコチラPMDAメディナビでどこよりも早く安全性情報を入手できます。厚生労働省、PMDAからの安全性に関する必須情報をメールで配信しています。登録いただくと、本情報も発表当日に入手可能です。ラチコは録登3601.#7;改正記載要領に基づく医療用医薬品添付文書について…\n………………\n32.重要な副作用等に関する情報…………………………………………………………………………………\n61\nヌシネルセンナトリウム………………………………………………………………………………………………","bullet_icon":"","uri":"https://www.pmda.go.jp/files/000227791.pdf","pdfinfo_Keywords_base":"","pdfinfo_Author":"","pdfinfo_Title":"","pdfinfo_Tagged":"yes","pdfinfo_File_size":"851357 bytes","pdfinfo_Pages":"12","mf_weight_path_f":"2.0"},"seq":"KyHIA4uM8OlL5Mn4MYEmWA3L9JoUUnrbB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSjSIZf5Fhtuhlzse2f2nkCHrB1pn6W5owDZ1kc6CAHQ4H1r592hVLg23vvQvKIfANic2TLHMz0V7hVV06U-pN_1MSPy_3BOYty8Ab_D37KKQQ.","imgURL":{"opts":{},"map":{"96":"/mf2file/site/img/result96_72_pdf.gif","120":"/mf2file/site/img/result120_90_pdf.gif","200":"/mf2file/site/img/result200_150_pdf.gif","320":"/mf2file/site/img/result320_240_pdf.gif"},"imgSizes":[96,120,200,320]},"snippetList":["内容等とともに改訂の根拠となった症例の概要等に関する情報を紹介します。1\nヌシネルセンナトリウム《使用上の注意(下線部追加改訂部分)》販売名(会社名)スピンラザ","改訂を指導した医薬品の使用上の注意について,改訂内容,主な該当販売名等をお知らせします。スピンラザ髄注12mg(バイオジェン・ジャ","回目)水頭症投与14日前投与開始日投与16日後投与30日後投与32日後投与35日後投与42日後投与46","の投与。本剤3回目の投与。頭囲拡大を指摘される(+2.4SD)超音波検査(頭部)にて著明な脳室拡大を認め水頭症","と診断された。投与開始9週目以後の本剤の投与を中止。頭部MRIにて著明な脳室拡大,中脳水道は開存しており交通性水頭症"],"snippet":[{"id":0,"text":"...","type":"connector"},{"id":0,"text":"リウム《使用上の注意(下線部追加改訂部分)》販売名(会社名)","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"改訂内容,主な該当販売名等をお知らせします。","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注12mg(バイオジェン・ジャ","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"回目)","type":"neighber_1"},{"id":1,"text":"水頭症","type":""},{"id":0,"text":"投与14日前投与開始日投与16日後投与30日後投与32日後投与","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"4SD)超音波検査(頭部)にて著明な脳室拡大を認め","type":"neighber_1"},{"id":1,"text":"水頭症","type":""},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"。頭部MRIにて著明な脳室拡大,中脳水道は開存しており交通性","type":"neighber_1"},{"id":1,"text":"水頭症","type":""},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"連絡先\n100-8916\n東京都千代田区霞が関\n1\n-\n2-\n2厚生労働省医薬・生活衛生局医薬安全対策課平成31年(2019年)2月厚生労働省医薬・生活衛生局03-3595-2435(直通)03-5253-1111(内線)2755,2754,2756(Fax)03-3508-4364この医薬品・医療機器等安全性情報は,厚生労働省において収集された副作用等の情報を基に,医薬品・医療機器等のより安全な使用に役立てていただくために,医療関係者に対して情報提供されるものです。医薬品・医療機器等安全性情報は,独\n立行政\n法\n人\n医\n薬\n品\n医\n療\n機\n器\n総合機構ホームページ(http://www.pmda.go.","type":"sbdy_1"}],"highlight":{"uri":[{"id":0,"text":"https://www.pmda.go.jp/files/000227791.pdf","type":""}]},"uri":"https://www.pmda.go.jp/files/000227791.pdf"});
+			//--></script>
+						<div class="mf_resultbox websearch_data item_for_zoom view_list mf_pdf" id="result_4">
+			<div id="img_frame_4" class="img_frame">
+				<div class="result_img_waku">
+					<div id="zoom_base_4"
+						class="zoom_base result_img_area result_img_bg"
+					>
+						<img id="zoom_image_large_4"
+							src="/mf2file/site/img/result96_72_pdf.gif"
+							class="zoom_image_large result_img_normal"
+							onerror="if(this.src!='/mf2file/site/img/pcs320.gif'){this.src='/mf2file/site/img/pcs320.gif';}"
+							onload="resetTopLarge(this)"
+							style="top:-1000;"
+						>
+						<img id="zoom_image_icon_4"
+							src="/mf2file/site/img/result96_72_pdf.gif"
+							class="zoom_image_icon result_img_normal"
+							onload="resetTop(this)"
+							onerror="if(this.src!='/mf2file/site/img/pcs96.gif')this.src='/mf2file/site/img/pcs96.gif';"
+						></div>
+					<div id="result_img_top_4"
+						 class="result_img_top result_img_area"
+					><div id="zoom_event_4" class="result_img"
+						><a
+							class="viewer_link_4"
+							target="_top"
+							href="https://www.pmda.go.jp/files/000227443.pdf"
+							onclick="return cl.web(this,'StBmidYHdLgywJAXlv7Zb8KIkFzgZYkoB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSjSIZf5FhtuhmYG9UQTasvlrB1pn6W5owDZ1kc6CAHQ4H1r592hVLg23vvQvKIfANic2TLHMz0V7hVV06U-pN_1MSPy_3BOYty8Ab_D37KKQQ.');"
+						><img
+							class="result_img" style="z-index:-1;display:inline;"
+							src="/mf2file/img/_.gif"
+					></a></div></div>
+										<div class="result_img_area result_img_bg"
+					><img src="/mf2file/site/img/result96_72_pdf.gif"
+						class="result_img_normal"
+						style="visibility:hidden;display:inline;position:relative;"
+						onload="this.style.visibility='visible';resetTop(this)"
+						onerror="if(this.src!='/mf2file/site/img/pcs96.gif')this.src='/mf2file/site/img/pcs96.gif';"
+					></div>
+				</div>
+			</div>
+			<div class="mf_text_frame">
+<p class="mf_result_disp_title"
+				  ><span class="mf_result_disp_idx">4.</span
+					><a
+						class="viewer_link_4"
+						target="_top"
+						href="https://www.pmda.go.jp/files/000227443.pdf"
+						onclick="return cl.web(this,'StBmidYHdLgywJAXlv7Zb8KIkFzgZYkoB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSjSIZf5FhtuhmYG9UQTasvlrB1pn6W5owDZ1kc6CAHQ4H1r592hVLg23vvQvKIfANic2TLHMz0V7hVV06U-pN_1MSPy_3BOYty8Ab_D37KKQQ.');">
+<font class="pdf">[PDF]&nbsp;</font><font class="titb">000227443.pdf</font></a>
+				</p>
+				<p class="mf_result_disp_snippet">...名販売名一般名
+販売名(承認取得者)ヌシネルセンナトリウム
+<span class="mf_hit">スピンラザ</span>髄注
+12mg...効果
+脊髄性筋萎縮症改訂の概要
+「重大な副作用」を新設し、「<span class="mf_hit">水頭症</span>...。直近
+3
+年度の国内副作用症例の集積状況【転帰死亡症例】「<span class="mf_hit">水頭症</span>」1
+例......2019
+年
+1
+月
+10
+日独立行政法人
+医薬品医療機器総合機構ヌシネルセンナトリウムの「使用上の注意」の改訂について一般名販売名一般名
+販売名(承認取得者)ヌシネルセンナトリウム
+<span class="mf_hit">スピンラザ</span>髄注
+12mg(バイオジェン・ジャパン株式会社)効能・効果
+脊髄性筋萎縮症改訂の概要
+「重大な副作用」を新設し、「<span class="mf_hit">水頭症</span>」を追記する。改訂の理由及び調査の結果国内及び海外症例が集積したことから、専門委員の意見を踏まえた調査の結果、改訂することが適切と判断した。直近
+3
+年度の国内副作用症例の集積状況【転帰死亡症例】「<span class="mf_hit">水頭症</span>」1
+例(うち、因果関係が否定できない症例
+1
+例)【死亡
+0
+例】</p>
+				<p class="mf_result_disp_url">
+					<a target="_top" class="viewer_link_4 tenten_uri"
+						href="https://www.pmda.go.jp/files/000227443.pdf"
+						onclick="return cl.web(this,'StBmidYHdLgywJAXlv7Zb8KIkFzgZYkoB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSjSIZf5FhtuhmYG9UQTasvlrB1pn6W5owDZ1kc6CAHQ4H1r592hVLg23vvQvKIfANic2TLHMz0V7hVV06U-pN_1MSPy_3BOYty8Ab_D37KKQQ.');"
+					>https:/<wbr/>/<wbr/>www.pmda.go.jp/<wbr/>files/<wbr/>000227443.pdf&lrm;</a>				</p>
+			</div>
+</div>
+
+						<script language="javascript" type="text/javascript"><!--//
+				env.docs.push({"opts":{"isPDF":1},"title":"","count":4,"description":"","attrs":{"mf_weight_f":"160.99126","pdfinfo_Encrypted":"no","mf_solution_offset":"0.0","pdfinfo_PDF_version":"1.5","mf_url_weighting_offset":"0.0","mf_weight_image_f":"1.0","pdfinfo_Page_size":"595 x 842 pts (A4)","pdfinfo_Keywords":"","pdfinfo_Producer":"Acrobat Distiller 11.0 (Windows)","pdfinfo_ModDate":"Fri, 21 Dec 2018 07:27:35 GMT","mf_weight_ext_pdf_f":"0.0","pdfinfo_CreationDate":"Thu, 20 Dec 2018 05:40:57 GMT","pdfinfo_Optimized":"yes","pdfinfo_Creator":"PScript5.dll Version 5.2.2","mf_weight_flash_f":"1.0","startbody":"2019\n年\n1\n月\n10\n日独立行政法人\n医薬品医療機器総合機構ヌシネルセンナトリウムの「使用上の注意」の改訂について一般名販売名一般名\n販売名(承認取得者)ヌシネルセンナトリウム\nスピンラザ髄注\n12mg(バイオジェン・ジャパン株式会社)効能・効果\n脊髄性筋萎縮症改訂の概要\n「重大な副作用」を新設し、「水頭症」を追記する。改訂の理由及び調査の結果国内及び海外症例が集積したことから、専門委員の意見を踏まえた調査の結果、改訂することが適切と判断した。直近\n3\n年度の国内副作用症例の集積状況【転帰死亡症例】「水頭症」1\n例(うち、因果関係が否定できない症例\n1\n例)【死亡\n0\n例】","bullet_icon":"","uri":"https://www.pmda.go.jp/files/000227443.pdf","pdfinfo_Keywords_base":"","pdfinfo_Author":"","pdfinfo_Title":"","pdfinfo_Tagged":"no","pdfinfo_File_size":"78874 bytes","pdfinfo_Pages":"1","mf_weight_path_f":"2.0"},"seq":"StBmidYHdLgywJAXlv7Zb8KIkFzgZYkoB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSjSIZf5FhtuhmYG9UQTasvlrB1pn6W5owDZ1kc6CAHQ4H1r592hVLg23vvQvKIfANic2TLHMz0V7hVV06U-pN_1MSPy_3BOYty8Ab_D37KKQQ.","imgURL":{"opts":{},"map":{"96":"/mf2file/site/img/result96_72_pdf.gif","120":"/mf2file/site/img/result120_90_pdf.gif","200":"/mf2file/site/img/result200_150_pdf.gif","320":"/mf2file/site/img/result320_240_pdf.gif"},"imgSizes":[96,120,200,320]},"snippetList":["上の注意」の改訂について一般名販売名一般名\n販売名(承認取得者)ヌシネルセンナトリウム\nスピンラザ髄注\n12mg","(バイオジェン・ジャパン株式会社)効能・効果\n脊髄性筋萎縮症改訂の概要\n「重大な副作用」を新設し、「水頭症","委員の意見を踏まえた調査の結果、改訂することが適切と判断した。直近\n3\n年度の国内副作用症例の集積状況【転帰死亡症例】「水頭症」1\n例"],"snippet":[{"id":0,"text":"...","type":"connector"},{"id":0,"text":"名販売名一般名\n販売名(承認取得者)ヌシネルセンナトリウム\n","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n12mg","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"効果\n脊髄性筋萎縮症改訂の概要\n「重大な副作用」を新設し、「","type":"neighber_1"},{"id":1,"text":"水頭症","type":""},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"。直近\n3\n年度の国内副作用症例の集積状況【転帰死亡症例】「","type":"neighber_1"},{"id":1,"text":"水頭症","type":""},{"id":0,"text":"」1\n例","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"2019\n年\n1\n月\n10\n日独立行政法人\n医薬品医療機器総合機構ヌシネルセンナトリウムの「使用上の注意」の改訂について一般名販売名一般名\n販売名(承認取得者)ヌシネルセンナトリウム\n","type":"sbdy_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n12mg(バイオジェン・ジャパン株式会社)効能・効果\n脊髄性筋萎縮症改訂の概要\n「重大な副作用」を新設し、「","type":"sbdy_1"},{"id":1,"text":"水頭症","type":""},{"id":0,"text":"」を追記する。改訂の理由及び調査の結果国内及び海外症例が集積したことから、専門委員の意見を踏まえた調査の結果、改訂することが適切と判断した。直近\n3\n年度の国内副作用症例の集積状況【転帰死亡症例】「","type":"sbdy_1"},{"id":1,"text":"水頭症","type":""},{"id":0,"text":"」1\n例(うち、因果関係が否定できない症例\n1\n例)【死亡\n0\n例】","type":"sbdy_1"}],"highlight":{"uri":[{"id":0,"text":"https://www.pmda.go.jp/files/000227443.pdf","type":""}]},"uri":"https://www.pmda.go.jp/files/000227443.pdf"});
+			//--></script>
+						<div class="mf_resultbox websearch_data item_for_zoom view_list mf_pdf" id="result_5">
+			<div id="img_frame_5" class="img_frame">
+				<div class="result_img_waku">
+					<div id="zoom_base_5"
+						class="zoom_base result_img_area result_img_bg"
+					>
+						<img id="zoom_image_large_5"
+							src="/mf2file/site/img/result96_72_pdf.gif"
+							class="zoom_image_large result_img_normal"
+							onerror="if(this.src!='/mf2file/site/img/pcs320.gif'){this.src='/mf2file/site/img/pcs320.gif';}"
+							onload="resetTopLarge(this)"
+							style="top:-1000;"
+						>
+						<img id="zoom_image_icon_5"
+							src="/mf2file/site/img/result96_72_pdf.gif"
+							class="zoom_image_icon result_img_normal"
+							onload="resetTop(this)"
+							onerror="if(this.src!='/mf2file/site/img/pcs96.gif')this.src='/mf2file/site/img/pcs96.gif';"
+						></div>
+					<div id="result_img_top_5"
+						 class="result_img_top result_img_area"
+					><div id="zoom_event_5" class="result_img"
+						><a
+							class="viewer_link_5"
+							target="_top"
+							href="https://www.pmda.go.jp/drugs/2022/P20220307001/630499000_22900AMX00587_A100_1.pdf"
+							onclick="return cl.web(this,'L7bFPjIK1yLVhgoRqKEwrTqd3fG_8y7EB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSj6stvsImBDDR2ZmyDcvnFDBYrhY3c6ZZgzHkwcik8pOT8Wwnyq3Zlw-XcQbm5Dw_YuWQWiDmm77zzsJ9BaSdh1Yl6wRYLVxJq3NQuVGeDIiJ24mBsLjKJLPd5svJdaUA2DhOJYj9k4JmL9ffG2p-h6g..');"
+						><img
+							class="result_img" style="z-index:-1;display:inline;"
+							src="/mf2file/img/_.gif"
+					></a></div></div>
+										<div class="result_img_area result_img_bg"
+					><img src="/mf2file/site/img/result96_72_pdf.gif"
+						class="result_img_normal"
+						style="visibility:hidden;display:inline;position:relative;"
+						onload="this.style.visibility='visible';resetTop(this)"
+						onerror="if(this.src!='/mf2file/site/img/pcs96.gif')this.src='/mf2file/site/img/pcs96.gif';"
+					></div>
+				</div>
+			</div>
+			<div class="mf_text_frame">
+<p class="mf_result_disp_title"
+				  ><span class="mf_result_disp_idx">5.</span
+					><a
+						class="viewer_link_5"
+						target="_top"
+						href="https://www.pmda.go.jp/drugs/2022/P20220307001/630499000_22900AMX00587_A100_1.pdf"
+						onclick="return cl.web(this,'L7bFPjIK1yLVhgoRqKEwrTqd3fG_8y7EB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSj6stvsImBDDR2ZmyDcvnFDBYrhY3c6ZZgzHkwcik8pOT8Wwnyq3Zlw-XcQbm5Dw_YuWQWiDmm77zzsJ9BaSdh1Yl6wRYLVxJq3NQuVGeDIiJ24mBsLjKJLPd5svJdaUA2DhOJYj9k4JmL9ffG2p-h6g..');">
+<font class="pdf">[PDF]&nbsp;</font><font class="titb">630499000_22900AMX00587_A100_1.pdf</font></a>
+				</p>
+				<p class="mf_result_disp_snippet"><span class="mf_hit">スピンラザ</span>髄注
+12
+mg_バイオジェン・ジャパン株式会社_審査報告書審...合機構での審査結果は、以下のとおりである。記[販
+売
+名]
+<span class="mf_hit">スピンラザ</span>髄注
+12
+mg[一
+般
+名]
+ヌシ...型以外の脊髄性筋萎縮症#12;2<span class="mf_hit">スピンラザ</span>髄注
+12
+mg_バイオジェン・ジャパン株式会社_審査報告書通...の適正使用に必要な措置を講じること。#12;<span class="mf_hit">スピンラザ</span>髄注
+12
+mg_バイオジェン・ジャパン株式会社_審査報告書別...審査の概略等は、以下のとおりである。申請品目[販
+売
+名]
+<span class="mf_hit">スピンラザ</span>髄注
+12
+mg[一
+般
+名]
+ヌシ......<span class="mf_hit">スピンラザ</span>髄注
+12
+mg_バイオジェン・ジャパン株式会社_審査報告書審査報告書令和
+4
+年
+2
+月
+15
+日独立行政法人医薬品医療機器総合機構承認申請のあった下記の医薬品にかかる医薬品医療機器総合機構での審査結果は、以下のとおりである。記[販
+売
+名]
+<span class="mf_hit">スピンラザ</span>髄注
+12
+mg[一
+般
+名]
+ヌシネルセンナトリウム[申
+請
+者]
+バイオジェン・ジャパン株式会社[申請年月日]
+令和
+3
+年
+8
+月
+20
+日[剤形・含量]
+1
+バイアル(5
+mL)中にヌシ</p>
+				<p class="mf_result_disp_url">
+					<a target="_top" class="viewer_link_5 tenten_uri"
+						href="https://www.pmda.go.jp/drugs/2022/P20220307001/630499000_22900AMX00587_A100_1.pdf"
+						onclick="return cl.web(this,'L7bFPjIK1yLVhgoRqKEwrTqd3fG_8y7EB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSj6stvsImBDDR2ZmyDcvnFDBYrhY3c6ZZgzHkwcik8pOT8Wwnyq3Zlw-XcQbm5Dw_YuWQWiDmm77zzsJ9BaSdh1Yl6wRYLVxJq3NQuVGeDIiJ24mBsLjKJLPd5svJdaUA2DhOJYj9k4JmL9ffG2p-h6g..');"
+					>https:/<wbr/>/<wbr/>www.pmda.go.jp/<wbr/>drugs/<wbr/>2022/<wbr/>P20220307001/<wbr/>630499000_22900AMX00587_A100_1.pdf&lrm;</a>				</p>
+			</div>
+</div>
+
+						<script language="javascript" type="text/javascript"><!--//
+				env.docs.push({"opts":{"isPDF":1},"title":"","count":5,"description":"","attrs":{"mf_weight_f":"46.7384","pdfinfo_Encrypted":"no","mf_solution_offset":"0.0","pdfinfo_PDF_version":"1.7","mf_url_weighting_offset":"0.0","mf_weight_image_f":"1.0","pdfinfo_Page_size":"595 x 842 pts (A4)","pdfinfo_Keywords":"","pdfinfo_Producer":"","pdfinfo_ModDate":"","mf_weight_ext_pdf_f":"0.0","pdfinfo_CreationDate":"","pdfinfo_Optimized":"no","pdfinfo_Creator":"","mf_weight_flash_f":"1.0","startbody":"スピンラザ髄注\n12\nmg_バイオジェン・ジャパン株式会社_審査報告書審査報告書令和\n4\n年\n2\n月\n15\n日独立行政法人医薬品医療機器総合機構承認申請のあった下記の医薬品にかかる医薬品医療機器総合機構での審査結果は、以下のとおりである。記[販\n売\n名]\nスピンラザ髄注\n12\nmg[一\n般\n名]\nヌシネルセンナトリウム[申\n請\n者]\nバイオジェン・ジャパン株式会社[申請年月日]\n令和\n3\n年\n8\n月\n20\n日[剤形・含量]\n1\nバイアル(5\nmL)中にヌシネルセンナトリウム\n12.63\nmg(ヌシネルセンとして\n12\nmg)を含有する注射剤[申\n請\n区\n分]\n医療用医薬品(4)新効能医薬品[特\n記\n事\n項]\n希少疾病用医薬品(指定番号:(28\n薬)第\n392\n号、平成\n28\n年\n11\n月\n24\n日付け薬生薬審発\n1124\n第\n6\n号)[審査担当部]\n新薬審査第三部[審\n査\n結\n果]別紙のとおり、提出された資料から、本品目の臨床所見は発現していないが遺伝子検査により発症が予測される脊髄性筋萎縮症に対する有効性は示され、認められたベネフィットを踏まえると安全性は許容可能と判断する。以上、医薬品医療機器総合機構における審査の結果、本品目については、下記の承認条件を付した上で、以下の効能又は効果並びに用法及び用量で承認して差し支えないと判断した。[効能又は効果]\n脊髄性筋萎縮症、臨床所見は","bullet_icon":"","uri":"https://www.pmda.go.jp/drugs/2022/P20220307001/630499000_22900AMX00587_A100_1.pdf","pdfinfo_Keywords_base":"","pdfinfo_Author":"","pdfinfo_Title":"","pdfinfo_Tagged":"no","pdfinfo_File_size":"3894533 bytes","pdfinfo_Pages":"41","mf_weight_path_f":"2.0"},"seq":"L7bFPjIK1yLVhgoRqKEwrTqd3fG_8y7EB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSj6stvsImBDDR2ZmyDcvnFDBYrhY3c6ZZgzHkwcik8pOT8Wwnyq3Zlw-XcQbm5Dw_YuWQWiDmm77zzsJ9BaSdh1Yl6wRYLVxJq3NQuVGeDIiJ24mBsLjKJLPd5svJdaUA2DhOJYj9k4JmL9ffG2p-h6g..","imgURL":{"opts":{},"map":{"96":"/mf2file/site/img/result96_72_pdf.gif","120":"/mf2file/site/img/result120_90_pdf.gif","200":"/mf2file/site/img/result200_150_pdf.gif","320":"/mf2file/site/img/result320_240_pdf.gif"},"imgSizes":[96,120,200,320]},"snippetList":["スピンラザ髄注\n12\nmg_バイオジェン・ジャパン株式会社_審査報告書審査報告書令和\n4\n年\n2","機器総合機構での審査結果は、以下のとおりである。記[販\n売\n名]\nスピンラザ髄注\n12\nmg[一\n般\n名]\nヌシ","型以外の脊髄性筋萎縮症#12;2スピンラザ髄注\n12\nmg_バイオジェン・ジャパン株式会社_審査報告書通常、ヌシ","の適正使用に必要な措置を講じること。#12;スピンラザ髄注\n12\nmg_バイオジェン・ジャパン株式会社_審査報告書別\n紙審査報告(1)令和","者が提出した資料及び医薬品医療機器総合機構における審査の概略等は、以下のとおりである。申請品目[販\n売\n名]\nスピンラザ髄注\n12\nmg[一\n般\n名]\nヌシ"],"snippet":[{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n12\nmg_バイオジェン・ジャパン株式会社_審査報告書審","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"合機構での審査結果は、以下のとおりである。記[販\n売\n名]\n","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n12\nmg[一\n般\n名]\nヌシ","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"型以外の脊髄性筋萎縮症#12;2","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n12\nmg_バイオジェン・ジャパン株式会社_審査報告書通","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"の適正使用に必要な措置を講じること。#12;","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n12\nmg_バイオジェン・ジャパン株式会社_審査報告書別","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"審査の概略等は、以下のとおりである。申請品目[販\n売\n名]\n","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n12\nmg[一\n般\n名]\nヌシ","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"...","type":"connector"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n12\nmg_バイオジェン・ジャパン株式会社_審査報告書審査報告書令和\n4\n年\n2\n月\n15\n日独立行政法人医薬品医療機器総合機構承認申請のあった下記の医薬品にかかる医薬品医療機器総合機構での審査結果は、以下のとおりである。記[販\n売\n名]\n","type":"sbdy_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n12\nmg[一\n般\n名]\nヌシネルセンナトリウム[申\n請\n者]\nバイオジェン・ジャパン株式会社[申請年月日]\n令和\n3\n年\n8\n月\n20\n日[剤形・含量]\n1\nバイアル(5\nmL)中にヌシ","type":"sbdy_1"}],"highlight":{"uri":[{"id":0,"text":"https://www.pmda.go.jp/drugs/2022/P20220307001/630499000_22900AMX00587_A100_1.pdf","type":""}]},"uri":"https://www.pmda.go.jp/drugs/2022/P20220307001/630499000_22900AMX00587_A100_1.pdf"});
+			//--></script>
+						<div class="mf_resultbox websearch_data item_for_zoom view_list mf_pdf" id="result_6">
+			<div id="img_frame_6" class="img_frame">
+				<div class="result_img_waku">
+					<div id="zoom_base_6"
+						class="zoom_base result_img_area result_img_bg"
+					>
+						<img id="zoom_image_large_6"
+							src="/mf2file/site/img/result96_72_pdf.gif"
+							class="zoom_image_large result_img_normal"
+							onerror="if(this.src!='/mf2file/site/img/pcs320.gif'){this.src='/mf2file/site/img/pcs320.gif';}"
+							onload="resetTopLarge(this)"
+							style="top:-1000;"
+						>
+						<img id="zoom_image_icon_6"
+							src="/mf2file/site/img/result96_72_pdf.gif"
+							class="zoom_image_icon result_img_normal"
+							onload="resetTop(this)"
+							onerror="if(this.src!='/mf2file/site/img/pcs96.gif')this.src='/mf2file/site/img/pcs96.gif';"
+						></div>
+					<div id="result_img_top_6"
+						 class="result_img_top result_img_area"
+					><div id="zoom_event_6" class="result_img"
+						><a
+							class="viewer_link_6"
+							target="_top"
+							href="https://www.pmda.go.jp/drugs/2021/P20210621001/450045000_30300AMX00294_B100_1.pdf"
+							onclick="return cl.web(this,'5keTebwJhTRtz6aiQPQKfGOcy7id9z-LUJca3_3zQ3mVn46jaQS2SIfM22VE3oFmOZYnUOewNf-cGc0QjlxjJIbRGnDtS-zEnWJQs6ktRuuQ2xlDaEuT63FBaJlcWKNj7u_4bTiN8lHE84z5mEoSDesMA96IE7RGpXIPWUyoocykuuRr7Sppuq6h-ipbL0xGdYi8jkqw6aKuX63aseML-g..');"
+						><img
+							class="result_img" style="z-index:-1;display:inline;"
+							src="/mf2file/img/_.gif"
+					></a></div></div>
+										<div class="result_img_area result_img_bg"
+					><img src="/mf2file/site/img/result96_72_pdf.gif"
+						class="result_img_normal"
+						style="visibility:hidden;display:inline;position:relative;"
+						onload="this.style.visibility='visible';resetTop(this)"
+						onerror="if(this.src!='/mf2file/site/img/pcs96.gif')this.src='/mf2file/site/img/pcs96.gif';"
+					></div>
+				</div>
+			</div>
+			<div class="mf_text_frame">
+<p class="mf_result_disp_title"
+				  ><span class="mf_result_disp_idx">6.</span
+					><a
+						class="viewer_link_6"
+						target="_top"
+						href="https://www.pmda.go.jp/drugs/2021/P20210621001/450045000_30300AMX00294_B100_1.pdf"
+						onclick="return cl.web(this,'5keTebwJhTRtz6aiQPQKfGOcy7id9z-LUJca3_3zQ3mVn46jaQS2SIfM22VE3oFmOZYnUOewNf-cGc0QjlxjJIbRGnDtS-zEnWJQs6ktRuuQ2xlDaEuT63FBaJlcWKNj7u_4bTiN8lHE84z5mEoSDesMA96IE7RGpXIPWUyoocykuuRr7Sppuq6h-ipbL0xGdYi8jkqw6aKuX63aseML-g..');">
+<font class="pdf">[PDF]&nbsp;</font><font class="titb">450045000_30300AMX00294_B100_1.pdf</font></a>
+				</p>
+				<p class="mf_result_disp_snippet">...同種同効品一覧表販売名
+エブリスディドライシロップ60mg
+<span class="mf_hit">スピンラザ</span>... 名
+<span class="mf_hit">スピンラザ</span>髄注12mg成分・分量有
+効
+成
+分1
+バイアル
+5
+mL中ヌ...の性状販 売 名
+<span class="mf_hit">スピンラザ</span>髄注12mg性 状外
+観
+無色澄明の液pH
+6.7&#x223c;7...形態異常(<span class="mf_hit">水頭症</span>),及び構造変異が生じ,これは母体毒性を伴っていた。胚・胎児発...1.1
+<span class="mf_hit">水頭症</span>(頻度不明)11.2
+その他の副作用1
+%以上
+1
+%未満
+頻......エブリスディドライシロップ60mgに関する資料当該資料に記載された情報に係る権利及び内容についての責任は,中外製薬株式会社に帰属するものであり,当該情報を適正使用以外の営利目的に利用することはできません。中外製薬株式会社#12;リスジプラム
+1.5
+起原又は発見の経緯及び開発の経緯
+Page
+11.5
+起原又は発見の経緯及び開発の経緯リスジプラムは低分子化合物であり,survival
+of
+motor
+neuron
+2(SMN2)の
+mRNA
+前駆体(SMN2
+pre-mRNA)の完全長
+SMN2
+mRNA
+へのスプライシングを促進することで中枢神経系及び全身の機能性
+su</p>
+				<p class="mf_result_disp_url">
+					<a target="_top" class="viewer_link_6 tenten_uri"
+						href="https://www.pmda.go.jp/drugs/2021/P20210621001/450045000_30300AMX00294_B100_1.pdf"
+						onclick="return cl.web(this,'5keTebwJhTRtz6aiQPQKfGOcy7id9z-LUJca3_3zQ3mVn46jaQS2SIfM22VE3oFmOZYnUOewNf-cGc0QjlxjJIbRGnDtS-zEnWJQs6ktRuuQ2xlDaEuT63FBaJlcWKNj7u_4bTiN8lHE84z5mEoSDesMA96IE7RGpXIPWUyoocykuuRr7Sppuq6h-ipbL0xGdYi8jkqw6aKuX63aseML-g..');"
+					>https:/<wbr/>/<wbr/>www.pmda.go.jp/<wbr/>drugs/<wbr/>2021/<wbr/>P20210621001/<wbr/>450045000_30300AMX00294_B100_1.pdf&lrm;</a>				</p>
+			</div>
+</div>
+
+						<script language="javascript" type="text/javascript"><!--//
+				env.docs.push({"opts":{"isPDF":1},"title":"","count":6,"description":"","attrs":{"mf_weight_f":"46.7384","pdfinfo_Encrypted":"no","mf_solution_offset":"0.0","pdfinfo_PDF_version":"1.7","mf_url_weighting_offset":"0.0","mf_weight_image_f":"1.0","pdfinfo_Page_size":"595.22 x 842 pts (A4)","pdfinfo_Keywords":"","pdfinfo_Producer":"","pdfinfo_ModDate":"Thu, 15 Jul 2021 01:39:00 GMT","mf_weight_ext_pdf_f":"0.0","pdfinfo_CreationDate":"Mon, 12 Jul 2021 04:56:43 GMT","pdfinfo_Optimized":"yes","pdfinfo_Creator":"ToolBox 6.3.0200","mf_weight_flash_f":"1.0","startbody":"エブリスディドライシロップ60mgに関する資料当該資料に記載された情報に係る権利及び内容についての責任は,中外製薬株式会社に帰属するものであり,当該情報を適正使用以外の営利目的に利用することはできません。中外製薬株式会社#12;リスジプラム\n1.5\n起原又は発見の経緯及び開発の経緯\nPage\n11.5\n起原又は発見の経緯及び開発の経緯リスジプラムは低分子化合物であり,survival\nof\nmotor\nneuron\n2(SMN2)の\nmRNA\n前駆体(SMN2\npre-mRNA)の完全長\nSMN2\nmRNA\nへのスプライシングを促進することで中枢神経系及び全身の機能性\nsurvival\nof\nmotor\nneuron(SMN)蛋白を増加させることが期待される経口投与可能な\nSMN2スプライシング修飾薬である。本剤の有効性及び安全性は,I\n型脊髄性筋萎縮症(SMA)患者を対象とした\nBP39056試験とII\n型及び\nIII\n型の\nSMA\n患者を対象とした\nBP39055試験において確認されたことから,中外製薬株式会社は「脊髄性筋萎縮症」を効能又は効果とする製造販売承認申請を行うこととした。起原又は発見の経緯及び開発の経緯については2.5項に,また非臨床試験の概括評価については2.4項に記載した。開発の経緯図を図\n1.5-1に示す。#12;リスジプラム\n1.5\n起原又は発見の経緯及び開発の経緯\nP","bullet_icon":"","uri":"https://www.pmda.go.jp/drugs/2021/P20210621001/450045000_30300AMX00294_B100_1.pdf","pdfinfo_Keywords_base":"","pdfinfo_Author":"","pdfinfo_Title":"","pdfinfo_Tagged":"no","pdfinfo_File_size":"3382944 bytes","pdfinfo_Pages":"99","mf_weight_path_f":"2.0"},"seq":"5keTebwJhTRtz6aiQPQKfGOcy7id9z-LUJca3_3zQ3mVn46jaQS2SIfM22VE3oFmOZYnUOewNf-cGc0QjlxjJIbRGnDtS-zEnWJQs6ktRuuQ2xlDaEuT63FBaJlcWKNj7u_4bTiN8lHE84z5mEoSDesMA96IE7RGpXIPWUyoocykuuRr7Sppuq6h-ipbL0xGdYi8jkqw6aKuX63aseML-g..","imgURL":{"opts":{},"map":{"96":"/mf2file/site/img/result96_72_pdf.gif","120":"/mf2file/site/img/result120_90_pdf.gif","200":"/mf2file/site/img/result200_150_pdf.gif","320":"/mf2file/site/img/result320_240_pdf.gif"},"imgSizes":[96,120,200,320]},"snippetList":["\n同種同効品一覧表表\n1.7-1\n同種同効品一覧表販売名\nエブリスディドライシロップ60mg\nスピンラザ"," 名\nスピンラザ髄注12mg成分・分量有\n効\n成\n分1\nバイアル\n5\nmL中ヌ","の性状販 売 名\nスピンラザ髄注12mg性 状外\n観\n無色澄明の液pH\n6.7∼7.7浸\n透\n圧\n比\n約\n1","形態異常(水頭症),及び構造変異が生じ,これは母体毒性を伴っていた。胚・胎児発生への無毒性量(4\nmg/kg/日","な副作用11.1.1\n水頭症(頻度不明)11.2\nその他の副作用1\n%以上\n1\n%未満\n頻度不明感\n染\n症\nお"],"snippet":[{"id":0,"text":"...","type":"connector"},{"id":0,"text":"同種同効品一覧表販売名\nエブリスディドライシロップ60mg\n","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"...","type":"connector"},{"id":0,"text":" 名\n","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注12mg成分・分量有\n効\n成\n分1\nバイアル\n5\nmL中ヌ","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"の性状販 売 名\n","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注12mg性 状外\n観\n無色澄明の液pH\n6.7∼7","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"形態異常(","type":"neighber_1"},{"id":1,"text":"水頭症","type":""},{"id":0,"text":"),及び構造変異が生じ,これは母体毒性を伴っていた。胚・胎児発","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"1.1\n","type":"neighber_1"},{"id":1,"text":"水頭症","type":""},{"id":0,"text":"(頻度不明)11.2\nその他の副作用1\n%以上\n1\n%未満\n頻","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"エブリスディドライシロップ60mgに関する資料当該資料に記載された情報に係る権利及び内容についての責任は,中外製薬株式会社に帰属するものであり,当該情報を適正使用以外の営利目的に利用することはできません。中外製薬株式会社#12;リスジプラム\n1.5\n起原又は発見の経緯及び開発の経緯\nPage\n11.5\n起原又は発見の経緯及び開発の経緯リスジプラムは低分子化合物であり,survival\nof\nmotor\nneuron\n2(SMN2)の\nmRNA\n前駆体(SMN2\npre-mRNA)の完全長\nSMN2\nmRNA\nへのスプライシングを促進することで中枢神経系及び全身の機能性\nsu","type":"sbdy_1"}],"highlight":{"uri":[{"id":0,"text":"https://www.pmda.go.jp/drugs/2021/P20210621001/450045000_30300AMX00294_B100_1.pdf","type":""}]},"uri":"https://www.pmda.go.jp/drugs/2021/P20210621001/450045000_30300AMX00294_B100_1.pdf"});
+			//--></script>
+						<div class="mf_resultbox websearch_data item_for_zoom view_list mf_pdf" id="result_7">
+			<div id="img_frame_7" class="img_frame">
+				<div class="result_img_waku">
+					<div id="zoom_base_7"
+						class="zoom_base result_img_area result_img_bg"
+					>
+						<img id="zoom_image_large_7"
+							src="/mf2file/site/img/result96_72_pdf.gif"
+							class="zoom_image_large result_img_normal"
+							onerror="if(this.src!='/mf2file/site/img/pcs320.gif'){this.src='/mf2file/site/img/pcs320.gif';}"
+							onload="resetTopLarge(this)"
+							style="top:-1000;"
+						>
+						<img id="zoom_image_icon_7"
+							src="/mf2file/site/img/result96_72_pdf.gif"
+							class="zoom_image_icon result_img_normal"
+							onload="resetTop(this)"
+							onerror="if(this.src!='/mf2file/site/img/pcs96.gif')this.src='/mf2file/site/img/pcs96.gif';"
+						></div>
+					<div id="result_img_top_7"
+						 class="result_img_top result_img_area"
+					><div id="zoom_event_7" class="result_img"
+						><a
+							class="viewer_link_7"
+							target="_top"
+							href="https://www.pmda.go.jp/drugs/2025/P20250912005/630499000_30700AMX00217_A100_1.pdf"
+							onclick="return cl.web(this,'fJAhEfrhYF_d8btuAmq5zrJxjS3Cn8IMB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSj6stvsImBDDSmDqZaT86kxCAOcoQQNyWwzHkwcik8pOTDPS-psE0JHy6wsjMUGnjauWQWiDmm77zzsJ9BaSdh1Yl6wRYLVxJq3NQuVGeDIiJ24mBsLjKJLPd5svJdaUA2DhOJYj9k4JmL9ffG2p-h6g..');"
+						><img
+							class="result_img" style="z-index:-1;display:inline;"
+							src="/mf2file/img/_.gif"
+					></a></div></div>
+										<div class="result_img_area result_img_bg"
+					><img src="/mf2file/site/img/result96_72_pdf.gif"
+						class="result_img_normal"
+						style="visibility:hidden;display:inline;position:relative;"
+						onload="this.style.visibility='visible';resetTop(this)"
+						onerror="if(this.src!='/mf2file/site/img/pcs96.gif')this.src='/mf2file/site/img/pcs96.gif';"
+					></div>
+				</div>
+			</div>
+			<div class="mf_text_frame">
+<p class="mf_result_disp_title"
+				  ><span class="mf_result_disp_idx">7.</span
+					><a
+						class="viewer_link_7"
+						target="_top"
+						href="https://www.pmda.go.jp/drugs/2025/P20250912005/630499000_30700AMX00217_A100_1.pdf"
+						onclick="return cl.web(this,'fJAhEfrhYF_d8btuAmq5zrJxjS3Cn8IMB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSj6stvsImBDDSmDqZaT86kxCAOcoQQNyWwzHkwcik8pOTDPS-psE0JHy6wsjMUGnjauWQWiDmm77zzsJ9BaSdh1Yl6wRYLVxJq3NQuVGeDIiJ24mBsLjKJLPd5svJdaUA2DhOJYj9k4JmL9ffG2p-h6g..');">
+<font class="pdf">[PDF]&nbsp;</font><font class="titb">630499000_30700AMX00217_A100_1.pdf</font></a>
+				</p>
+				<p class="mf_result_disp_snippet">...合機構での審査結果は、以下のとおりである。記[販
+売
+名]
+<span class="mf_hit">スピンラザ</span>髄注
+28
+mg、同髄...審査の概略等は、以下のとおりである。申請品目[販
+売
+名]
+<span class="mf_hit">スピンラザ</span>髄注
+28
+mg、同髄注
+50
+mg[一
+般
+名...、正常な
+SMN
+タンパク発現を増加させる。本邦においては、<span class="mf_hit">スピンラザ</span>髄注
+12
+mg(以下、「12...おける
+SMA
+に対する有効性及び安全性が確認されたとして、<span class="mf_hit">スピンラザ</span>髄注
+28
+mg及び<span class="mf_hit">スピンラザ</span>髄注
+50...験(平成
+29
+年
+5
+月
+31
+日付け<span class="mf_hit">スピンラザ</span>髄注12
+mg
+審査報告書)6)
+生後
+7
+カ月......審査報告書令和
+7
+年
+8
+月
+7
+日独立行政法人医薬品医療機器総合機構承認申請のあった下記の医薬品にかかる医薬品医療機器総合機構での審査結果は、以下のとおりである。記[販
+売
+名]
+<span class="mf_hit">スピンラザ</span>髄注
+28
+mg、同髄注
+50
+mg[一
+般
+名]
+ヌシネルセンナトリウム[申
+請
+者]
+バイオジェン・ジャパン株式会社[申請年月日]
+令和
+7
+年
+2
+月
+28
+日[剤形・含量]
+1
+バイアル中(5
+mL)にヌシネルセンナトリウム
+29.5
+mg
+又</p>
+				<p class="mf_result_disp_url">
+					<a target="_top" class="viewer_link_7 tenten_uri"
+						href="https://www.pmda.go.jp/drugs/2025/P20250912005/630499000_30700AMX00217_A100_1.pdf"
+						onclick="return cl.web(this,'fJAhEfrhYF_d8btuAmq5zrJxjS3Cn8IMB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSj6stvsImBDDSmDqZaT86kxCAOcoQQNyWwzHkwcik8pOTDPS-psE0JHy6wsjMUGnjauWQWiDmm77zzsJ9BaSdh1Yl6wRYLVxJq3NQuVGeDIiJ24mBsLjKJLPd5svJdaUA2DhOJYj9k4JmL9ffG2p-h6g..');"
+					>https:/<wbr/>/<wbr/>www.pmda.go.jp/<wbr/>drugs/<wbr/>2025/<wbr/>P20250912005/<wbr/>630499000_30700AMX00217_A100_1.pdf&lrm;</a>				</p>
+			</div>
+</div>
+
+						<script language="javascript" type="text/javascript"><!--//
+				env.docs.push({"opts":{"isPDF":1},"title":"","count":7,"description":"","attrs":{"mf_weight_f":"46.7384","pdfinfo_Encrypted":"no","mf_solution_offset":"0.0","pdfinfo_PDF_version":"1.6","mf_url_weighting_offset":"0.0","mf_weight_image_f":"1.0","pdfinfo_Page_size":"595.32 x 841.92 pts (A4)","pdfinfo_Keywords":"","pdfinfo_Producer":"","pdfinfo_ModDate":"","mf_weight_ext_pdf_f":"0.0","pdfinfo_CreationDate":"","pdfinfo_Optimized":"yes","pdfinfo_Creator":"","mf_weight_flash_f":"1.0","startbody":"審査報告書令和\n7\n年\n8\n月\n7\n日独立行政法人医薬品医療機器総合機構承認申請のあった下記の医薬品にかかる医薬品医療機器総合機構での審査結果は、以下のとおりである。記[販\n売\n名]\nスピンラザ髄注\n28\nmg、同髄注\n50\nmg[一\n般\n名]\nヌシネルセンナトリウム[申\n請\n者]\nバイオジェン・ジャパン株式会社[申請年月日]\n令和\n7\n年\n2\n月\n28\n日[剤形・含量]\n1\nバイアル中(5\nmL)にヌシネルセンナトリウム\n29.5\nmg\n又は\n52.6\nmg(ヌシネルセンとして\n28\nmg\n又は\n50\nmg)を含有する水性注射剤[申\n請\n区\n分]\n医療用医薬品(6)新用量医薬品、(8)剤形追加に係る医薬品[特\n記\n事\n項]\n希少疾病用医薬品(指定番号:(28\n薬)第\n392\n号、平成\n28\n年\n11\n月\n24\n日付け薬生薬審発\n1124\n第\n6\n号)[審査担当部]\n新薬審査第三部[審\n査\n結\n果]別紙のとおり、提出された資料から、本品目の脊髄性筋萎縮症に対する有効性は示され、認められたベネフィットを踏まえると安全性は許容可能と判断する。以上、医薬品医療機器総合機構における審査の結果、本品目については、以下の承認条件を付した上で、以下の効能又は効果並びに用法及び用量で承認して差し支えないと判断した。[効能又は効果]脊髄性筋萎縮症[用法及び用量]通常、ヌシネルセンとして、初回及び初回","bullet_icon":"","uri":"https://www.pmda.go.jp/drugs/2025/P20250912005/630499000_30700AMX00217_A100_1.pdf","pdfinfo_Keywords_base":"","pdfinfo_Author":"","pdfinfo_Title":"","pdfinfo_Tagged":"no","pdfinfo_File_size":"838439 bytes","pdfinfo_Pages":"35","mf_weight_path_f":"2.0"},"seq":"fJAhEfrhYF_d8btuAmq5zrJxjS3Cn8IMB3OGWVJKF6MSUBPUMP1Od-2SPxc1wnSj6stvsImBDDSmDqZaT86kxCAOcoQQNyWwzHkwcik8pOTDPS-psE0JHy6wsjMUGnjauWQWiDmm77zzsJ9BaSdh1Yl6wRYLVxJq3NQuVGeDIiJ24mBsLjKJLPd5svJdaUA2DhOJYj9k4JmL9ffG2p-h6g..","imgURL":{"opts":{},"map":{"96":"/mf2file/site/img/result96_72_pdf.gif","120":"/mf2file/site/img/result120_90_pdf.gif","200":"/mf2file/site/img/result200_150_pdf.gif","320":"/mf2file/site/img/result320_240_pdf.gif"},"imgSizes":[96,120,200,320]},"snippetList":["立行政法人医薬品医療機器総合機構承認申請のあった下記の医薬品にかかる医薬品医療機器総合機構での審査結果は、以下のとおりである。記[販\n売\n名]\nスピンラザ髄注\n28\nmg、同髄","者が提出した資料及び医薬品医療機器総合機構における審査の概略等は、以下のとおりである。申請品目[販\n売\n名]\nスピンラザ髄注\n28\nmg、同髄注\n50\nmg[一\n般\n名","体に結合することでスプライシングを調節し、正常な\nSMN\nタンパク発現を増加させる。本邦においては、スピンラザ髄注\n12\nmg(以下、「12","と比較して高用量を投与したときにおける\nSMA\nに対する有効性及び安全性が確認されたとして、スピンラザ髄注\n28\nmg及びスピンラザ髄注\n50","験(平成\n29\n年\n5\n月\n31\n日付けスピンラザ髄注12\nmg\n審査報告書)6)\n生後\n7\nカ月"],"snippet":[{"id":0,"text":"...","type":"connector"},{"id":0,"text":"合機構での審査結果は、以下のとおりである。記[販\n売\n名]\n","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n28\nmg、同髄","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"審査の概略等は、以下のとおりである。申請品目[販\n売\n名]\n","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n28\nmg、同髄注\n50\nmg[一\n般\n名","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"、正常な\nSMN\nタンパク発現を増加させる。本邦においては、","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n12\nmg(以下、「12","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"おける\nSMA\nに対する有効性及び安全性が確認されたとして、","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n28\nmg及び","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n50","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"験(平成\n29\n年\n5\n月\n31\n日付け","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注12\nmg\n審査報告書)6)\n生後\n7\nカ月","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"審査報告書令和\n7\n年\n8\n月\n7\n日独立行政法人医薬品医療機器総合機構承認申請のあった下記の医薬品にかかる医薬品医療機器総合機構での審査結果は、以下のとおりである。記[販\n売\n名]\n","type":"sbdy_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n28\nmg、同髄注\n50\nmg[一\n般\n名]\nヌシネルセンナトリウム[申\n請\n者]\nバイオジェン・ジャパン株式会社[申請年月日]\n令和\n7\n年\n2\n月\n28\n日[剤形・含量]\n1\nバイアル中(5\nmL)にヌシネルセンナトリウム\n29.5\nmg\n又","type":"sbdy_1"}],"highlight":{"uri":[{"id":0,"text":"https://www.pmda.go.jp/drugs/2025/P20250912005/630499000_30700AMX00217_A100_1.pdf","type":""}]},"uri":"https://www.pmda.go.jp/drugs/2025/P20250912005/630499000_30700AMX00217_A100_1.pdf"});
+			//--></script>
+						<div class="mf_resultbox websearch_data item_for_zoom view_list mf_pdf" id="result_8">
+			<div id="img_frame_8" class="img_frame">
+				<div class="result_img_waku">
+					<div id="zoom_base_8"
+						class="zoom_base result_img_area result_img_bg"
+					>
+						<img id="zoom_image_large_8"
+							src="/mf2file/site/img/result96_72_pdf.gif"
+							class="zoom_image_large result_img_normal"
+							onerror="if(this.src!='/mf2file/site/img/pcs320.gif'){this.src='/mf2file/site/img/pcs320.gif';}"
+							onload="resetTopLarge(this)"
+							style="top:-1000;"
+						>
+						<img id="zoom_image_icon_8"
+							src="/mf2file/site/img/result96_72_pdf.gif"
+							class="zoom_image_icon result_img_normal"
+							onload="resetTop(this)"
+							onerror="if(this.src!='/mf2file/site/img/pcs96.gif')this.src='/mf2file/site/img/pcs96.gif';"
+						></div>
+					<div id="result_img_top_8"
+						 class="result_img_top result_img_area"
+					><div id="zoom_event_8" class="result_img"
+						><a
+							class="viewer_link_8"
+							target="_top"
+							href="https://www.pmda.go.jp/RMP/www/630499/5b4da8b5-006c-4e98-be9c-6d6c784634b6/630499_1190403A1022_008RMP.pdf"
+							onclick="return cl.web(this,'TxJaKATIVvVnDp8l8As6IfES-xVxyQbk9TU09lT8w5TinwsThL_aUvM5_DUkFImI0hiMNRWepnF5lpauJ7osU5jrMNO5zbHm-fjBfCQoclqbcTqA3escsCUj48ud4X-JrrJ8NKnIVvHvNl-1QNsDgvXLFZH9lq3LvHNvFPDKsgCwdaZ-luaMA2dZHOggB0OB9a-fdoVS4Nt770LyiHwDYnNkyxzM9Fe4VVdOlPqTf9TEj8v9wTmLcvAG_w9-yikE');"
+						><img
+							class="result_img" style="z-index:-1;display:inline;"
+							src="/mf2file/img/_.gif"
+					></a></div></div>
+										<div class="result_img_area result_img_bg"
+					><img src="/mf2file/site/img/result96_72_pdf.gif"
+						class="result_img_normal"
+						style="visibility:hidden;display:inline;position:relative;"
+						onload="this.style.visibility='visible';resetTop(this)"
+						onerror="if(this.src!='/mf2file/site/img/pcs96.gif')this.src='/mf2file/site/img/pcs96.gif';"
+					></div>
+				</div>
+			</div>
+			<div class="mf_text_frame">
+<p class="mf_result_disp_title"
+				  ><span class="mf_result_disp_idx">8.</span
+					><a
+						class="viewer_link_8"
+						target="_top"
+						href="https://www.pmda.go.jp/RMP/www/630499/5b4da8b5-006c-4e98-be9c-6d6c784634b6/630499_1190403A1022_008RMP.pdf"
+						onclick="return cl.web(this,'TxJaKATIVvVnDp8l8As6IfES-xVxyQbk9TU09lT8w5TinwsThL_aUvM5_DUkFImI0hiMNRWepnF5lpauJ7osU5jrMNO5zbHm-fjBfCQoclqbcTqA3escsCUj48ud4X-JrrJ8NKnIVvHvNl-1QNsDgvXLFZH9lq3LvHNvFPDKsgCwdaZ-luaMA2dZHOggB0OB9a-fdoVS4Nt770LyiHwDYnNkyxzM9Fe4VVdOlPqTf9TEj8v9wTmLcvAG_w9-yikE');">
+<font class="pdf">[PDF]&nbsp;</font><font class="titb">630499_1190403A1022_008RMP.pdf</font></a>
+				</p>
+				<p class="mf_result_disp_snippet">...の医薬品安全性監視活動として、以下を実施する(<span class="mf_hit">スピンラザ</span>髄注12mg)。1.
+使用成績調査(全例調査)【選択理由】製造販売後の<span class="mf_hit">水頭症</span>...<span class="mf_hit">スピンラザ</span>髄注
+12mg<span class="mf_hit">スピンラザ</span>髄注
+28mg<span class="mf_hit">スピンラザ</span>髄注
+50mg
+に係...医薬品リスク管理計画書バイオジェン・ジャパン株式会社#12;<span class="mf_hit">スピンラザ</span>
+12、28、50
+&#x338e;に係る医薬品リスク管理計画書(RMP)の...要販売名
+<span class="mf_hit">スピンラザ</span>髄注12、28、50mg
+有効成分
+ヌシネルセンナトリウム製造...最小化活動追加のリスク最小化活動医療従事者向け情報提供資材(<span class="mf_hit">スピンラザ</span>髄注12mg、50mg/28mg
+の適正使用のために)の作成と......<span class="mf_hit">スピンラザ</span>髄注
+12mg<span class="mf_hit">スピンラザ</span>髄注
+28mg<span class="mf_hit">スピンラザ</span>髄注
+50mg
+に係る医薬品リスク管理計画書バイオジェン・ジャパン株式会社#12;<span class="mf_hit">スピンラザ</span>
+12、28、50
+&#x338e;に係る医薬品リスク管理計画書(RMP)の概要販売名
+<span class="mf_hit">スピンラザ</span>髄注12、28、50mg
+有効成分
+ヌシネルセンナトリウム製造販売業者
+バイオジェン・ジャパン株式会社
+薬効分類
+119提出年月日
+令和7年11月13日1.1.
+安全性検討事</p>
+				<p class="mf_result_disp_url">
+					<a target="_top" class="viewer_link_8 tenten_uri"
+						href="https://www.pmda.go.jp/RMP/www/630499/5b4da8b5-006c-4e98-be9c-6d6c784634b6/630499_1190403A1022_008RMP.pdf"
+						onclick="return cl.web(this,'TxJaKATIVvVnDp8l8As6IfES-xVxyQbk9TU09lT8w5TinwsThL_aUvM5_DUkFImI0hiMNRWepnF5lpauJ7osU5jrMNO5zbHm-fjBfCQoclqbcTqA3escsCUj48ud4X-JrrJ8NKnIVvHvNl-1QNsDgvXLFZH9lq3LvHNvFPDKsgCwdaZ-luaMA2dZHOggB0OB9a-fdoVS4Nt770LyiHwDYnNkyxzM9Fe4VVdOlPqTf9TEj8v9wTmLcvAG_w9-yikE');"
+					>https:/<wbr/>/<wbr/>www.pmda.go.jp/<wbr/>RMP/<wbr/>www/<wbr/>630499/<wbr/>5b4da8b5-006c-4e98-be9c-6d6c784634b6/<wbr/>630499_1190403A1022_008RMP.pdf&lrm;</a>				</p>
+			</div>
+</div>
+
+						<script language="javascript" type="text/javascript"><!--//
+				env.docs.push({"opts":{"isPDF":1},"title":"","count":8,"description":"","attrs":{"mf_weight_f":"18.080881","pdfinfo_Encrypted":"no","mf_solution_offset":"0.0","pdfinfo_PDF_version":"1.7","mf_url_weighting_offset":"0.0","mf_weight_image_f":"1.0","pdfinfo_Page_size":"595.32 x 841.92 pts (A4)","pdfinfo_Keywords":"","pdfinfo_Producer":"Microsoft® Word for Microsoft 365","pdfinfo_ModDate":"Thu, 13 Nov 2025 05:38:46 GMT","mf_weight_ext_pdf_f":"0.0","pdfinfo_CreationDate":"Thu, 13 Nov 2025 04:14:11 GMT","pdfinfo_Optimized":"no","pdfinfo_Creator":"Microsoft® Word for Microsoft 365","mf_weight_flash_f":"1.0","startbody":"スピンラザ髄注\n12mgスピンラザ髄注\n28mgスピンラザ髄注\n50mg\nに係る医薬品リスク管理計画書バイオジェン・ジャパン株式会社#12;スピンラザ\n12、28、50\n㎎に係る医薬品リスク管理計画書(RMP)の概要販売名\nスピンラザ髄注12、28、50mg\n有効成分\nヌシネルセンナトリウム製造販売業者\nバイオジェン・ジャパン株式会社\n薬効分類\n119提出年月日\n令和7年11月13日1.1.\n安全性検討事項【重要な特定されたリスク】\n【重要な潜在的リスク】\n【重要な不足情報】水頭症\n血液凝固障害\n長期投与患者における安全性プロファイル腎機能障害\n原薬ロット間の不純物プロファイルの違いが安全性に与える影響肝機能障害\nSMN2遺伝子以外の遺伝子との相互作用に起因して生じる有害事象(早発卵巣不全、男性及び女性の不妊)中枢神経系への影響、記憶・学習への影響過敏性反応生後2ヵ月以前に治療を開始した患者への投与QT\n延長SMN2遺伝子のコピー数が4以上の患者への投与腎機能障害患者への投与誤嚥性肺炎1.2.\n有効性に関する検討事項長期投与した場合の有効性、生命予後への影響\nSMN2遺伝子のコピー数が1又は4以上の患者への投与疾患が進行した患者における有効性\n永続的換気導入を行った患者における有効性生後20ヵ月より後に発症した患者上記に基づく安全性監視のための活動\n↓上記に基づくリスク最小化のための活動","bullet_icon":"","uri":"https://www.pmda.go.jp/RMP/www/630499/5b4da8b5-006c-4e98-be9c-6d6c784634b6/630499_1190403A1022_008RMP.pdf","pdfinfo_Keywords_base":"","pdfinfo_Author":"","pdfinfo_Title":"","pdfinfo_Tagged":"yes","pdfinfo_File_size":"580645 bytes","pdfinfo_Pages":"26","mf_weight_path_f":"2.0"},"seq":"TxJaKATIVvVnDp8l8As6IfES-xVxyQbk9TU09lT8w5TinwsThL_aUvM5_DUkFImI0hiMNRWepnF5lpauJ7osU5jrMNO5zbHm-fjBfCQoclqbcTqA3escsCUj48ud4X-JrrJ8NKnIVvHvNl-1QNsDgvXLFZH9lq3LvHNvFPDKsgCwdaZ-luaMA2dZHOggB0OB9a-fdoVS4Nt770LyiHwDYnNkyxzM9Fe4VVdOlPqTf9TEj8v9wTmLcvAG_w9-yikE","imgURL":{"opts":{},"map":{"96":"/mf2file/site/img/result96_72_pdf.gif","120":"/mf2file/site/img/result120_90_pdf.gif","200":"/mf2file/site/img/result200_150_pdf.gif","320":"/mf2file/site/img/result320_240_pdf.gif"},"imgSizes":[96,120,200,320]},"snippetList":["の医薬品安全性監視活動として、以下を実施する(スピンラザ髄注12mg)。1.\n使用成績調査(全例調査)【選択理由】製造販売後の水頭症","スピンラザ髄注\n12mgスピンラザ髄注\n28mgスピンラザ髄注\n50mg\nに係","る医薬品リスク管理計画書バイオジェン・ジャパン株式会社#12;スピンラザ\n12、28、50\n㎎に係る医薬品リスク管理計画書(RMP)の概","要販売名\nスピンラザ髄注12、28、50mg\n有効成分\nヌシネルセンナトリウム製造販売業者\nバイオジェン・ジャ","ク最小化計画の概要通常のリスク最小化活動追加のリスク最小化活動医療従事者向け情報提供資材(スピンラザ髄注12mg、50mg/28mg\nの適正使用のために)の作成と配布市\n販\n直\n後\n調\n査\nに"],"snippet":[{"id":0,"text":"...","type":"connector"},{"id":0,"text":"の医薬品安全性監視活動として、以下を実施する(","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注12mg)。1.\n使用成績調査(全例調査)【選択理由】製造販売後の","type":"neighber_1"},{"id":1,"text":"水頭症","type":""},{"id":0,"text":"...","type":"connector"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n12mg","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n28mg","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n50mg\nに係","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"医薬品リスク管理計画書バイオジェン・ジャパン株式会社#12;","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"\n12、28、50\n㎎に係る医薬品リスク管理計画書(RMP)の","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"要販売名\n","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注12、28、50mg\n有効成分\nヌシネルセンナトリウム製造","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"最小化活動追加のリスク最小化活動医療従事者向け情報提供資材(","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注12mg、50mg/28mg\nの適正使用のために)の作成と","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"...","type":"connector"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n12mg","type":"sbdy_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n28mg","type":"sbdy_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注\n50mg\nに係る医薬品リスク管理計画書バイオジェン・ジャパン株式会社#12;","type":"sbdy_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"\n12、28、50\n㎎に係る医薬品リスク管理計画書(RMP)の概要販売名\n","type":"sbdy_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注12、28、50mg\n有効成分\nヌシネルセンナトリウム製造販売業者\nバイオジェン・ジャパン株式会社\n薬効分類\n119提出年月日\n令和7年11月13日1.1.\n安全性検討事","type":"sbdy_1"}],"highlight":{"uri":[{"id":0,"text":"https://www.pmda.go.jp/RMP/www/630499/5b4da8b5-006c-4e98-be9c-6d6c784634b6/630499_1190403A1022_008RMP.pdf","type":""}]},"uri":"https://www.pmda.go.jp/RMP/www/630499/5b4da8b5-006c-4e98-be9c-6d6c784634b6/630499_1190403A1022_008RMP.pdf"});
+			//--></script>
+						<div class="mf_resultbox websearch_data item_for_zoom view_list mf_pdf" id="result_9">
+			<div id="img_frame_9" class="img_frame">
+				<div class="result_img_waku">
+					<div id="zoom_base_9"
+						class="zoom_base result_img_area result_img_bg"
+					>
+						<img id="zoom_image_large_9"
+							src="/mf2file/site/img/result96_72_pdf.gif"
+							class="zoom_image_large result_img_normal"
+							onerror="if(this.src!='/mf2file/site/img/pcs320.gif'){this.src='/mf2file/site/img/pcs320.gif';}"
+							onload="resetTopLarge(this)"
+							style="top:-1000;"
+						>
+						<img id="zoom_image_icon_9"
+							src="/mf2file/site/img/result96_72_pdf.gif"
+							class="zoom_image_icon result_img_normal"
+							onload="resetTop(this)"
+							onerror="if(this.src!='/mf2file/site/img/pcs96.gif')this.src='/mf2file/site/img/pcs96.gif';"
+						></div>
+					<div id="result_img_top_9"
+						 class="result_img_top result_img_area"
+					><div id="zoom_event_9" class="result_img"
+						><a
+							class="viewer_link_9"
+							target="_top"
+							href="https://www.pmda.go.jp/RMP/www/630499/5b4da8b5-006c-4e98-be9c-6d6c784634b6/630499_1190403A1022_01_004RMPm.pdf"
+							onclick="return cl.web(this,'Ees2D6KxYLBHyngMSeOr26_H1W2Me1OP9TU09lT8w5TinwsThL_aUvM5_DUkFImI0hiMNRWepnF5lpauJ7osU5jrMNO5zbHm-fjBfCQoclqbcTqA3escsCUj48ud4X-JrrJ8NKnIVvHvNl-1QNsDgvXLFZH9lq3L5gaXtda7cwPFZnVNAo7sGRlsZLZuUnXdmTgWC-Lm2QgR14zyBq_N1RuZPRd22oaV-MopZa3eNMCrX_2rV5I9wuc7Pfgg7rjV');"
+						><img
+							class="result_img" style="z-index:-1;display:inline;"
+							src="/mf2file/img/_.gif"
+					></a></div></div>
+										<div class="result_img_area result_img_bg"
+					><img src="/mf2file/site/img/result96_72_pdf.gif"
+						class="result_img_normal"
+						style="visibility:hidden;display:inline;position:relative;"
+						onload="this.style.visibility='visible';resetTop(this)"
+						onerror="if(this.src!='/mf2file/site/img/pcs96.gif')this.src='/mf2file/site/img/pcs96.gif';"
+					></div>
+				</div>
+			</div>
+			<div class="mf_text_frame">
+<p class="mf_result_disp_title"
+				  ><span class="mf_result_disp_idx">9.</span
+					><a
+						class="viewer_link_9"
+						target="_top"
+						href="https://www.pmda.go.jp/RMP/www/630499/5b4da8b5-006c-4e98-be9c-6d6c784634b6/630499_1190403A1022_01_004RMPm.pdf"
+						onclick="return cl.web(this,'Ees2D6KxYLBHyngMSeOr26_H1W2Me1OP9TU09lT8w5TinwsThL_aUvM5_DUkFImI0hiMNRWepnF5lpauJ7osU5jrMNO5zbHm-fjBfCQoclqbcTqA3escsCUj48ud4X-JrrJ8NKnIVvHvNl-1QNsDgvXLFZH9lq3L5gaXtda7cwPFZnVNAo7sGRlsZLZuUnXdmTgWC-Lm2QgR14zyBq_N1RuZPRd22oaV-MopZa3eNMCrX_2rV5I9wuc7Pfgg7rjV');">
+<font class="pdf">[PDF]&nbsp;</font><font class="titb">630499_1190403A1022_01_004RMPm.pdf</font></a>
+				</p>
+				<p class="mf_result_disp_snippet">...号
+871192025年11月&#x223c;2026年5月市販直後調査※<span class="mf_hit">スピンラザ</span>...投与しないこと) 
+本剤の成分に対し過敏症の既往歴のある患者<span class="mf_hit">スピンラザ</span>...を使用する前に必ずお読みください製造販売元2025年9月、&lt;<span class="mf_hit">スピンラザ</span>髄注50mg/28mg&gt;を追加用法・用量追加<span class="mf_hit">スピンラザ</span>®髄注12mg・28mg...........................
+22.
+<span class="mf_hit">スピンラザ</span>の投与対象患者について
+.............................................
+63.
+<span class="mf_hit">スピンラザ</span>の投与にあたって
+RMP
+.......................日本標準商品分類番号
+871192025年11月&#x223c;2026年5月市販直後調査※<span class="mf_hit">スピンラザ</span>髄注50mg/28mgが該当2.
+禁忌(次の患者には投与しないこと) 
+本剤の成分に対し過敏症の既往歴のある患者<span class="mf_hit">スピンラザ</span>を使用する前に必ずお読みください製造販売元2025年9月、&lt;<span class="mf_hit">スピンラザ</span>髄注50mg/28mg&gt;を追加用法・用量追加<span class="mf_hit">スピンラザ</span>®髄注12mg・28mg・50mgの適正使用のために2025年11月改訂#12;目
+次</p>
+				<p class="mf_result_disp_url">
+					<a target="_top" class="viewer_link_9 tenten_uri"
+						href="https://www.pmda.go.jp/RMP/www/630499/5b4da8b5-006c-4e98-be9c-6d6c784634b6/630499_1190403A1022_01_004RMPm.pdf"
+						onclick="return cl.web(this,'Ees2D6KxYLBHyngMSeOr26_H1W2Me1OP9TU09lT8w5TinwsThL_aUvM5_DUkFImI0hiMNRWepnF5lpauJ7osU5jrMNO5zbHm-fjBfCQoclqbcTqA3escsCUj48ud4X-JrrJ8NKnIVvHvNl-1QNsDgvXLFZH9lq3L5gaXtda7cwPFZnVNAo7sGRlsZLZuUnXdmTgWC-Lm2QgR14zyBq_N1RuZPRd22oaV-MopZa3eNMCrX_2rV5I9wuc7Pfgg7rjV');"
+					>https:/<wbr/>/<wbr/>www.pmda.go.jp/<wbr/>RMP/<wbr/>www/<wbr/>630499/<wbr/>5b4da8b5-006c-4e98-be9c-6d6c784634b6/<wbr/>630499_1190403A1022_01_004RMPm.pdf&lrm;</a>				</p>
+			</div>
+</div>
+
+						<script language="javascript" type="text/javascript"><!--//
+				env.docs.push({"opts":{"isPDF":1},"title":"","count":9,"description":"","attrs":{"mf_weight_f":"18.080881","pdfinfo_Encrypted":"no","mf_solution_offset":"0.0","pdfinfo_PDF_version":"1.6","mf_url_weighting_offset":"0.0","mf_weight_image_f":"1.0","pdfinfo_Page_size":"595.276 x 841.89 pts (A4)","pdfinfo_Keywords":"","pdfinfo_Producer":"Adobe PDF Library 17.0","pdfinfo_ModDate":"Tue, 11 Nov 2025 03:02:35 GMT","mf_weight_ext_pdf_f":"0.0","pdfinfo_CreationDate":"Tue, 11 Nov 2025 02:31:51 GMT","pdfinfo_Optimized":"no","pdfinfo_Creator":"Adobe InDesign 19.3 (Macintosh)","mf_weight_flash_f":"1.0","startbody":"日本標準商品分類番号\n871192025年11月∼2026年5月市販直後調査※スピンラザ髄注50mg/28mgが該当2.\n禁忌(次の患者には投与しないこと) \n本剤の成分に対し過敏症の既往歴のある患者スピンラザを使用する前に必ずお読みください製造販売元2025年9月、<スピンラザ髄注50mg/28mg>を追加用法・用量追加スピンラザ®髄注12mg・28mg・50mgの適正使用のために2025年11月改訂#12;目\n次1.\n適正使用のためのフローチャート\n............................\n22.\nスピンラザの投与対象患者について\n........................\n3(1)禁忌(次の患者には投与しないこと)\nRMP\n.........\n3(2)効能・効果\nRMP\n..............................................\n3(3)効能・効果に関連する注意\nRMP\n........................\n3(4)特定の背景を有する患者に関する注意\nRMP\n......\n4(5)遺伝子検査の実施\n..............................................\n5(6)早期の治療開始の重要性\n..................................\n63.\nスピンラザの投与","bullet_icon":"","uri":"https://www.pmda.go.jp/RMP/www/630499/5b4da8b5-006c-4e98-be9c-6d6c784634b6/630499_1190403A1022_01_004RMPm.pdf","pdfinfo_Keywords_base":"","pdfinfo_Author":"","pdfinfo_Title":"","pdfinfo_Tagged":"no","pdfinfo_File_size":"1332424 bytes","pdfinfo_Pages":"28","mf_weight_path_f":"2.0"},"seq":"Ees2D6KxYLBHyngMSeOr26_H1W2Me1OP9TU09lT8w5TinwsThL_aUvM5_DUkFImI0hiMNRWepnF5lpauJ7osU5jrMNO5zbHm-fjBfCQoclqbcTqA3escsCUj48ud4X-JrrJ8NKnIVvHvNl-1QNsDgvXLFZH9lq3L5gaXtda7cwPFZnVNAo7sGRlsZLZuUnXdmTgWC-Lm2QgR14zyBq_N1RuZPRd22oaV-MopZa3eNMCrX_2rV5I9wuc7Pfgg7rjV","imgURL":{"opts":{},"map":{"96":"/mf2file/site/img/result96_72_pdf.gif","120":"/mf2file/site/img/result120_90_pdf.gif","200":"/mf2file/site/img/result200_150_pdf.gif","320":"/mf2file/site/img/result320_240_pdf.gif"},"imgSizes":[96,120,200,320]},"snippetList":["日本標準商品分類番号\n871192025年11月∼2026年5月市販直後調査※スピンラザ","髄注50mg/28mgが該当2.\n禁忌(次の患者には投与しないこと) \n本剤の成分に対し過敏症の既往歴のある患者スピンラザ","を使用する前に必ずお読みください製造販売元2025年9月、<スピンラザ髄注50mg/28mg>を追加用法・用量追加スピンラザ®髄注12mg・28mg","使用のためのフローチャート\n............................\n22.\nスピンラザの投与対象患者について\n........................\n3(1","の治療開始の重要性\n..................................\n63.\nスピンラザの投与にあたって\nRMP\n..........................\n7"],"snippet":[{"id":0,"text":"...","type":"connector"},{"id":0,"text":"号\n871192025年11月∼2026年5月市販直後調査※","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"投与しないこと) \n本剤の成分に対し過敏症の既往歴のある患者","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"を使用する前に必ずお読みください製造販売元2025年9月、<","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注50mg/28mg>を追加用法・用量追加","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"®髄注12mg・28mg","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"........................\n22.\n","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"の投与対象患者について\n..................","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"........................\n63.\n","type":"neighber_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"の投与にあたって\nRMP\n.................","type":"neighber_1"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"...","type":"connector"},{"id":0,"text":"日本標準商品分類番号\n871192025年11月∼2026年5月市販直後調査※","type":"sbdy_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注50mg/28mgが該当2.\n禁忌(次の患者には投与しないこと) \n本剤の成分に対し過敏症の既往歴のある患者","type":"sbdy_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"を使用する前に必ずお読みください製造販売元2025年9月、<","type":"sbdy_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"髄注50mg/28mg>を追加用法・用量追加","type":"sbdy_1"},{"id":2,"text":"スピンラザ","type":""},{"id":0,"text":"®髄注12mg・28mg・50mgの適正使用のために2025年11月改訂#12;目\n次","type":"sbdy_1"}],"highlight":{"uri":[{"id":0,"text":"https://www.pmda.go.jp/RMP/www/630499/5b4da8b5-006c-4e98-be9c-6d6c784634b6/630499_1190403A1022_01_004RMPm.pdf","type":""}]},"uri":"https://www.pmda.go.jp/RMP/www/630499/5b4da8b5-006c-4e98-be9c-6d6c784634b6/630499_1190403A1022_01_004RMPm.pdf"});
+			//--></script>
+		</div>
+
+						<div class="mf_btm">
+			<div class="mf_search-result"> 検索結果 9件/全1ページ</div>
+			<div class="mf_pagenavi">
+				<ul class="mf_pagenumber">
+					<li class="mf_prevpage">前へ</li>
+					<li class="mf_pagenow">1</li>
+					<li class="mf_nextpage">次へ</li>
+				</ul>
+			</div>
+		</div>
+
+			</div>
+</div><!-- /.mf_contents -->
+	</div>
+	<!-- footer.html -->
+	<div class="HTML5_section">
+		<div id="FooterArea01">
+			<div class="FooterAreaInner">
+			</div><!--/FooterAreaInner-->
+		</div><!--/FooterArea01-->
+
+		<div id="FooterArea02">
+			<div class="FooterAreaInner clearfix">
+				<div class="footerlogo"><img src="/mf2file/custom/jp/search/files/common/img/pmda_name_logo_yoko.png" alt="Pmda 独立行政法人 医薬品医療機器総合機構" width="350"></div>
+				<div class="footeraddress">
+					<p>法人番号　3010005007409</p>
+					<p>〒100-0013　東京都千代田区霞が関3-3-2　新霞が関ビル</p>
+				</div>
+			</div><!--/FooterAreaInner-->
+		</div><!--/FooterArea02-->
+
+		<div id="FooterArea03">
+			<p>Copyright &copy; 独立行政法人医薬品医療機器総合機構 All Rights Reserved</p>
+		</div><!--/FooterArea03-->
+	</div><!-- / .HTML5_section -->
+	<!-- footer.html -->
+</div>
+</div>
+<script type="text/javascript" src="/mf2file/site/ext/tr.js#l=ehZv5xows0nu1hcQ8eaIRaMgCVF6yMbDvjAnVmhmCeoczTGPyI5HzA..&unit=pmda__ja_all&opt=__ALL__&mode=__ALL__"></script>
+<!--
+<script src="//i.marsflag.com/mf2file/site/ext/gui/gui.js#cid=pmda" type="text/javascript" charset="UTF-8"></script>
+-->
+<script src="//c.marsflag.com/mf/gui/gui.js#cid=pmda" type="text/javascript" charset="UTF-8"></script></body>
+</html>

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/fpo_9.css" />
+<script type="text/javascript">
+var plstart = new Date();
+</script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-174791-1']);
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="title" content="FPO IP Research &amp; Communities" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="Complete Patent Searching Database and Patent Data Analytics Services." />
+<title>FPO IP Research &amp; Communities</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link rel="shortcut icon" href="/images/favicon_1.ico"/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-1586334167197709",
+        enable_page_level_ads: true
+    });
+</script></head>
+<body>
+
+<div>
+    <a name="top"></a>
+
+    <div class="container">
+        
+<div class="header">
+    <div class="row-fluid top">
+
+        <div class="pull-left figure">
+            <a href="/" onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Logo']);"></a>
+        </div>
+
+
+        <div class="pull-right" style="width: 750px;">
+                        <div class="loginForm">
+                <form class="form-inline form-mini pull-right" action="/login.html" method="post">
+                    <input type="hidden" name="src" value="header_login">
+                    <input id="UID-top" name="UID" type="text" class="input-large" placeholder="Email">
+                    <input id="PWD-top" name="PWD" type="password" class="input-small" placeholder="Password">
+                    <button type="submit" class="btn btn-mini btn-primary"
+                            onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Login']);">Login
+                    </button>
+                    <a class="btn btn-mini btn-info" href="/register.html"
+                            onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Create']);">Sign up
+                    </a>
+                </form>
+            </div>
+            
+
+            <div class="searchForm well">
+                <form id="quick_result" name="quick_result" class="form-inline" action="/result.html" method="get">
+
+                    <input type="hidden" name="sort" value="relevance">
+                    <input type="hidden" name="srch" value="top">
+
+
+                    <div class="searchBox pull-left">
+                        <input type="text" name="query_txt" placeholder="Enter your search here"
+                               class="search-query" id="topSearchBox">
+
+                        <div class="btn-group">
+                            <button name="submit" class="btn btn-primary" type="submit"
+                                    onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Search']);">Search
+                            </button>
+                            <button id="searchBox_dropdown" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/search.html"
+                                       onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'SearchExpert']);document.cookie = 'searchTab=#expert';">
+                                    Expert Search</a>
+                                </li>
+                                <li><a href="/search.html"
+                                       onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'SearchQuick']);document.cookie = 'searchTab=#quick';">
+                                    Quick Search</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sideCollections pull-right">
+                        <ul id="header_search_top" class="borderBottom ul-mini ">
+                            <li>
+                                <label class="checkbox">
+                                    <input type="checkbox" id="patents_us" name="patents_us"
+                                           value="on" checked="checked">US Patents/Apps
+                                </label>
+                            </li>
+
+                            <li>
+                                <label class="checkbox">
+                                    <input type="checkbox" id="patents_other" name="patents_other"
+                                           value="on">Other
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </form>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="row-fluid">
+        <div class="navbar navbar-inverse center" id="primaryNavBar">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    <li><a href="/"></a></li>
+                    <li><a href="/search.html">SEARCH</a></li>
+                    <li>
+                        <a href="/tools-resources.html"
+                           onclick="_gaq.push(['_trackEvent', 'Navbar', 'Click', 'Resources']);">
+                            TOOLS &amp; RESOURCES
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+<div class="clearfix"></div>        <div>
+
+            <div id="dhtmltooltip"></div>
+            
+<form id="results" name="results" method="post" class="form-horizontal" action="/result.html"><input type="hidden" name="p" id="p" value="1" /><input type="hidden" name="query_txt" id="query_txt" value="SPEC/&quot;antisense oligonucleotide&quot; AND SPEC/&quot;enlarged ventricles&quot;" /><input type="hidden" name="stemming" id="quickstemming" value="on" /><input type="hidden" name="sort" id="quicksort" value="relevance" /><input type="hidden" name="patents" id="quickpatents" value="" /><input type="hidden" name="patents_us" id="quickpatentsus" value="" /><input type="hidden" name="patents_other" id="quickpatentsother" value="" /><input type="hidden" name="uspat" id="quickuspat" value="on" /><input type="hidden" name="usapp" id="quickusapp" value="on" /><input type="hidden" name="pct" id="quickpct" value="" /><input type="hidden" name="jp" id="quickjp" value="on" /><input type="hidden" name="eupat" id="quickeu" value="" /><input type="hidden" name="depat" id="quickde" value="on" /><input type="hidden" name="srch" id="quicksearch" value="xprtsrch" /><input type="hidden" name="date_range" id="quickdaterange" value="all" /><input type="hidden" name="hits" id="hits" value="21" /><input type="hidden" name="srch_name" id="srch_name" value="" /><input type="hidden" name="search_name" id="search_name" value="" /><input type="hidden" name="selected_doc_flag" id="selected_doc_flag" value="" /><input type="hidden" name="selected_portfolio" id="selected_portfolio" value="" /><input type="hidden" name="portfolio_name" id="portfolio_name" value="" />
+
+<div class="well well-small" style="margin-top:10px; margin-bottom: 0">
+    <table width="100%" border="0">
+        <tr>
+            <td width="36%">
+                Matches 1 - 21 out of 21            </td>
+            <td align="right" valign="middle" width="70%" colspan="3" class="paginate_spacing">
+                                <br clear="all"/>
+            </td>
+        </tr>
+    </table>
+</div><br clear="all"/><!-- 728x90 Responsive 1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1586334167197709"
+     data-ad-slot="2270521617"
+     data-ad-format="auto">
+</ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br clear="all"/>
+
+<div class="legacy-container" style="margin-top: 0">
+    <div class="container_white" style="padding-top:3px;  padding-bottom:10px;">
+        <div align="center">
+            <table width="100%" border="0" cellpadding="2" cellspacing="1" class="listing_table">
+                <tr>
+                                        <th style="text-align:left;" width="10%">
+                        Match
+                    </th>
+                                        <th style="text-align:left;" width="15%"> Document</th>
+                    <th style="text-align:left;">Document Title</th>
+                    <th style='text-align:left;' width='10%'>Score</div></th>                </tr>
+                <tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                1            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20240148835    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2024/0148835.html">TREATING DISORDERS ASSOCIATED WITH DYRK1A DYSFUNCTION</a>
+        &nbsp;
+                            <br/>
+                The present invention provides methods for treating a condition or disorder that is associated with or mediated by dysregulation or dysfunction of the dual-specificity tyrosine...    </td>
+        <td width='5%'>
+        1000    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                2            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20100119480    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2010/0119480.html">Methods for treating multiple sclerosis using antisense oligonucleotides</a>
+        &nbsp;
+                            <br/>
+                A method for treating a patient suffering from multiple sclerosis, particularly a relapsing form of multiple sclerosis, comprising periodically administering a pharmaceutical composition...    </td>
+        <td width='5%'>
+        677    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                3            </label>
+        </td>
+    <td width="15%"  valign="top">
+      8415314    </td>
+    <td  width="60%" valign="top">
+        <a href="/8415314.html">Methods for treating multiple sclerosis using antisense oligonucleotides</a>
+        &nbsp;
+                            <br/>
+                A method for treating a patient suffering from multiple sclerosis, particularly a relapsing form of multiple sclerosis, comprising periodically administering a pharmaceutical composition...    </td>
+        <td width='5%'>
+        677    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                4            </label>
+        </td>
+    <td width="15%"  valign="top">
+      8759314    </td>
+    <td  width="60%" valign="top">
+        <a href="/8759314.html">Methods for treating multiple sclerosis using antisense oligonucleotides</a>
+        &nbsp;
+                            <br/>
+                A method for treating a patient suffering from multiple sclerosis, particularly a relapsing form of multiple sclerosis, comprising periodically administering a pharmaceutical composition...    </td>
+        <td width='5%'>
+        677    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                5            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20130345293    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2013/0345293.html">METHODS FOR TREATING MULTIPLE SCLEROSIS USING ANTISENSE OLIGONUCLEOTIDES</a>
+        &nbsp;
+                            <br/>
+                A method for treating a patient suffering from multiple sclerosis, particularly a relapsing form of multiple sclerosis, comprising periodically administering a pharmaceutical composition...    </td>
+        <td width='5%'>
+        677    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                6            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20220281961    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2022/0281961.html">PHARMACEUTICAL COMPOSITIONS TARGETING IMMUNE-MEDIATED PROCESSES IN NEURODEGENERATIVE DISEASE</a>
+        &nbsp;
+                            <br/>
+                The present disclosure in various aspects provides methods for making pharmaceutical compositions for treating neurodegenerative diseases (e.g., demyelinating diseases), such as but not limited to...    </td>
+        <td width='5%'>
+        598    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                7            </label>
+        </td>
+    <td width="15%"  valign="top">
+      12545722    </td>
+    <td  width="60%" valign="top">
+        <a href="/12545722.html">Pharmaceutical compositions targeting immune-mediated processes in neurodegenerative disease</a>
+        &nbsp;
+                            <br/>
+                The present disclosure in various aspects provides methods for making pharmaceutical compositions for treating neurodegenerative diseases (e.g., demyelinating diseases), such as but not limited to...    </td>
+        <td width='5%'>
+        598    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                8            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20120114642    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2012/0114642.html">TARGETING VEGF-B REGULATION OF FATTY ACID TRANSPORTERS TO MODULATE HUMAN DISEASES</a>
+        &nbsp;
+                            <br/>
+                The present invention provides materials and methods for modulating FATP expression and/or activity in vivo. The materials and methods have numerous diagnostic, prophylactic, and therapeutic...    </td>
+        <td width='5%'>
+        598    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                9            </label>
+        </td>
+    <td width="15%"  valign="top">
+      8383112    </td>
+    <td  width="60%" valign="top">
+        <a href="/8383112.html">Targeting VEGF-B regulation of fatty acid transporters to modulate human diseases</a>
+        &nbsp;
+                            <br/>
+                The present invention provides materials and methods for modulating FATP expression and/or activity in vivo. The materials and methods have numerous diagnostic, prophylactic, and therapeutic...    </td>
+        <td width='5%'>
+        598    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                10            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20240352106    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2024/0352106.html">PHARMACEUTICAL COMPOSITIONS TARGETING IMMUNE-MEDIATED PROCESSES IN NEURODEGENERATIVE DISEASE</a>
+        &nbsp;
+                            <br/>
+                The present disclosure in various aspects provides methods for making pharmaceutical compositions for treating neurodegenerative diseases (e.g., demyelinating diseases), such as but not limited to...    </td>
+        <td width='5%'>
+        598    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                11            </label>
+        </td>
+    <td width="15%"  valign="top">
+      9078877    </td>
+    <td  width="60%" valign="top">
+        <a href="/9078877.html">Targeting VEGF-B regulation of fatty acid transporters to modulate human diseases</a>
+        &nbsp;
+                            <br/>
+                The present invention provides materials and methods for modulating FATP expression and/or activity in vivo. The materials and methods have numerous diagnostic, prophylactic, and therapeutic...    </td>
+        <td width='5%'>
+        598    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                12            </label>
+        </td>
+    <td width="15%"  valign="top">
+      8114399    </td>
+    <td  width="60%" valign="top">
+        <a href="/8114399.html">Targeting VEGF-B regulation of fatty acid transporters to modulate human diseases</a>
+        &nbsp;
+                            <br/>
+                The present invention provides materials and methods for modulating FATP expression and/or activity in vivo. The materials and methods have numerous diagnostic, prophylactic, and therapeutic...    </td>
+        <td width='5%'>
+        598    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                13            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20090324611    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2009/0324611.html">Targeting VEGF-B Regulation Of Fatty Acid Transporters To Modulate Human Diseases</a>
+        &nbsp;
+                            <br/>
+                The present invention provides materials and methods for modulating FATP expression and/or activity in vivo. The materials and methods have numerous diagnostic, prophylactic, and therapeutic...    </td>
+        <td width='5%'>
+        598    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                14            </label>
+        </td>
+    <td width="15%"  valign="top">
+      11999778    </td>
+    <td  width="60%" valign="top">
+        <a href="/11999778.html">VH4 antibodies and compositions comprising the same</a>
+        &nbsp;
+                            <br/>
+                The present disclosure in various aspects provides methods for making pharmaceutical compositions for treating neurodegenerative diseases (e.g., demyelinating diseases), such as but not limited to...    </td>
+        <td width='5%'>
+        598    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                15            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20130156757    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2013/0156757.html">TARGETING VEGF-B REGULATION OF FATTY ACID TRANSPORTERS TO MODULATE HUMAN DISEASES</a>
+        &nbsp;
+                            <br/>
+                The present invention provides materials and methods for modulating FATP expression and/or activity in vivo. The materials and methods have numerous diagnostic, prophylactic, and therapeutic...    </td>
+        <td width='5%'>
+        598    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                16            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20130344004    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2013/0344004.html">MATRIX METALLOPROTEASE TARGETING NUCLEIC ACIDS</a>
+        &nbsp;
+                            <br/>
+                A reporter conjugate for non-invasive detection (e.g., imaging) of matrix metalloprotease (MMP) gene expression in vivo is disclosed. The conjugate includes a targeting nucleic acid linked to a...    </td>
+        <td width='5%'>
+        561    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                17            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20110129421    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2011/0129421.html">MATRIX METALLOPROTEASE TARGETING NUCLEIC ACIDS</a>
+        &nbsp;
+                            <br/>
+                A reporter conjugate for non-invasive detection (e.g., imaging) of matrix metalloprotease (MMP) gene expression in vivo is disclosed. The conjugate includes a targeting nucleic acid linked to a...    </td>
+        <td width='5%'>
+        561    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                18            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20080187917    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2008/0187917.html">Compositions and methods for repressing the Ink4a and Arf senescence pathways</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to methods and compositions for regulating cell growth and development. In particular, the present invention relates to methods and compositions for repressing Ink4a...    </td>
+        <td width='5%'>
+        530    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                19            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20220098615    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2022/0098615.html">DUAL FUNCTIONAL EXPRESSION VECTORS AND METHODS OF USE THEREOF</a>
+        &nbsp;
+                            <br/>
+                A dual functional expression vector is disclosed. The dual functional vector comprises a nucleic acid suitably configured for expressing at least two active agents, where a first active agent is...    </td>
+        <td width='5%'>
+        332    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                20            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20090010909    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2009/0010909.html">Novel GPCR and methods of use of the same</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to methods of identifying antagonists of GPR22, a G protein-coupled receptor (GPCR) and related compositions and methods. Antagonists of GPR22 are useful as...    </td>
+        <td width='5%'>
+        332    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                21            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2007506754A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2007506754A.html">VEGF-C or VEGF-D substances and methods for stimulating neural stem cells</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to VEGF-C or VEGF-D materials and methods for promoting growth and differentiation of neural stem cells, neuronal and neuronal precursor cells, oligodendrocytes and...    </td>
+        <td width='5%'>
+        241    </td>
+    </tr>            </table>
+        </div>
+    </div>
+</div>
+</form>
+<!-- 728x90 Responsive 2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1586334167197709"
+     data-ad-slot="4118051210"
+     data-ad-format="auto">
+</ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br clear="all"/><form id="botSearch" name="botSearch" method="get" class="form-inline" action="/result.html"><input type="hidden" name="srch" id="" value="xprtsrch" /><input type="hidden" name="uspat" id="" value="on" /><input type="hidden" name="usapp" id="" value="on" /><input type="hidden" name="jp" id="" value="on" /><input type="hidden" name="depat" id="" value="on" /><input type="hidden" name="date_range" id="" value="all" /><input type="hidden" name="stemming" id="" value="on" /><input type="hidden" name="sort" id="" value="relevance" /><br/>
+<div class="well well-small">
+    <table>
+        <tr>
+            <td>Search</td>
+            <td style="width: 100%;padding: 0 14px 0 5px;"><input type="text" name="query_txt" id="query_txt" value="SPEC/&quot;antisense oligonucleotide&quot; AND SPEC/&quot;enlarged ventricles&quot;" style="width: 100%;padding: 4px 0 4px 6px" /></td>
+            <td><input type="submit" name="search" value="Search" /></td>
+        </tr>
+    </table>
+</div>
+</form>
+<div class="well well-small" style="margin-top:10px; margin-bottom: 0">
+    <table width="100%" border="0">
+        <tr>
+            <td width="36%">
+                Matches 1 - 21 out of 21            </td>
+            <td align="right" valign="middle" width="70%" colspan="3" class="paginate_spacing">
+                                <br clear="all"/>
+            </td>
+        </tr>
+    </table>
+</div> « <a href="/search.html">search again</a>
+        </div>
+
+        <div class="pageFooter">
+    <div class="row-fluid top">
+        <div class="figure"></div>
+        <ul>
+            <li>
+                <a href="/" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Home']);">Home</a>
+            </li>
+            <li>
+                <a href="/search.html" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Search']);">Search</a>
+            </li>
+            <li>
+                <a href="/services.html" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Services']);">Services</a>
+            </li>
+        </ul>
+        <ul class="socialIcons">
+            <li><a href="https://twitter.com/FPOCommunity" class="twitter"
+                   onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'social twitter']);"></a></li>
+            <li><a href="http://www.linkedin.com/groups/FPO-Community-4524797" class="linkedin"
+                   onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'social linkedin']);"></a></li>
+        </ul>
+    </div>
+    <div class="row-fluid bot">
+        <p>
+            &copy; 2004-2026 FreePatentsOnline.com. All rights reserved.
+            <a href="/privacy.html" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Privacy']);">Privacy Policy
+                &amp; Terms of Use.</a>
+        </p>
+    </div>
+</div>    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    _gaq.push(['_setCustomVar', 2, 'User Origin Source', 'no referer', 2]);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+<script type="text/javascript">
+    function trackPageLoad() {
+        var plend = new Date();
+        var plload = plend.getTime() - plstart.getTime();
+        var pn = document.location.pathname;
+        var lc = 'slow';
+        var la = new Array(200, 300, 400, 500, 1000, 1500, 2000, 2500, 5000);
+        for (var i = 0, len = la.length; i < len; i++) {
+            if (plload <= la[i]) {
+                lc = String(la[i]);
+                break;
+            }
+        }
+        _gaq.push(['onLoadTracker._setAccount', 'UA-174791-5']);
+        _gaq.push(['onLoadTracker._trackEvent', "LoadTime", lc, pn, plload]);
+        }
+</script>
+<script type="text/javascript">
+    try {
+        if (window.onload != null) {
+            var oldOnload = window.onload;
+            window.onload = function (e) {
+                oldOnload(e);
+                trackPageLoad();
+            };
+        }
+        else {
+            window.onload = trackPageLoad();
+        }
+    } catch (err) {
+    }
+</script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/js/fpo_3.js"></script>
+
+</body>
+</html>

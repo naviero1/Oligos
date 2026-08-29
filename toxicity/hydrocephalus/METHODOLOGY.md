@@ -292,6 +292,28 @@ What it does **not** yet support, stated plainly:
 
 ---
 
+## Coverage, and what was found but not taken
+
+Source discovery ran as a structured multi-modal pass — eight blind sweeps by
+retrieval modality, four completeness critics tasked only with naming what the
+sweeps had missed, and twelve gap-fills chasing what the critics named. It
+returned 188 unique sources, of which this release carries 53.
+
+The remaining 100 verified sources are listed in
+[`notes/source_backlog.md`](notes/source_backlog.md) with their retrieval routes,
+exact loci and per-source caveats. That list is the honest statement of this
+release's completeness limit: the largest untouched bodies of evidence are
+EudraVigilance and WHO VigiBase substance-level reaction counts, the EMA CHMP
+assessment reports for tofersen and nusinersen, FDA pharmacology/toxicology
+review documents, the Japanese PMDA label and risk-management plan, and two
+patent families carrying sequences. None of it is needed for anything asserted
+here; all of it would deepen the dataset.
+
+Two corrections the critics produced are already folded into `data/`: the FAERS
+term-string defect described in §4.2, and the second drug-attributed clinical
+case (§"L5" in `scripts/build_literature.py`) that stopped this release
+describing hydrocephalus as a tominersen-specific finding.
+
 ## Open items
 
 Numbered so they can be cited from elsewhere in the repository.

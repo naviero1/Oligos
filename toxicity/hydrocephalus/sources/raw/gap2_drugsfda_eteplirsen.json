@@ -1,0 +1,355 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-08-28",
+    "results": {
+      "skip": 0,
+      "limit": 5,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "submissions": [
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "6",
+          "submission_status": "AP",
+          "submission_status_date": "20180208",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "submission_property_type": [
+            {
+              "code": "Orphan"
+            }
+          ],
+          "application_docs": [
+            {
+              "id": "52524",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2018/206488s006lbl.pdf",
+              "date": "20180209",
+              "type": "Label"
+            },
+            {
+              "id": "52544",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2018/206488Orig1s006ltr.pdf",
+              "date": "20180209",
+              "type": "Letter"
+            },
+            {
+              "id": "54298",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/review/2018/206488Orig1s006.pdf",
+              "date": "20180522",
+              "type": "Review"
+            }
+          ]
+        },
+        {
+          "submission_type": "ORIG",
+          "submission_number": "1",
+          "submission_status": "AP",
+          "submission_status_date": "20160919",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "TYPE 1",
+          "submission_class_code_description": "Type 1 - New Molecular Entity",
+          "submission_property_type": [
+            {
+              "code": "Orphan"
+            }
+          ],
+          "application_docs": [
+            {
+              "id": "45365",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2016/206488Orig1s000ltr.pdf",
+              "date": "20160919",
+              "type": "Letter"
+            },
+            {
+              "id": "45366",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2016/206488lbl.pdf",
+              "date": "20160919",
+              "type": "Label"
+            },
+            {
+              "id": "45367",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2016/206488Orig1s000TOC.html",
+              "date": "20160919",
+              "type": "Summary Review"
+            },
+            {
+              "id": "45640",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2016/206488Orig1s000TOC.html",
+              "date": "20161026",
+              "type": "Review"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "28",
+          "submission_status": "AP",
+          "submission_status_date": "20220118",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "69905",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2022/206488Orig1s027,s028,s029ltr.pdf",
+              "date": "20220119",
+              "type": "Letter"
+            },
+            {
+              "id": "69926",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2022/206488s027s028s029lbl.pdf",
+              "date": "20220119",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "9",
+          "submission_status": "AP",
+          "submission_status_date": "20181011",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "submission_property_type": [
+            {
+              "code": "Orphan"
+            }
+          ],
+          "application_docs": [
+            {
+              "id": "55898",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2018/206488s009lbl.pdf",
+              "date": "20181012",
+              "type": "Label"
+            },
+            {
+              "id": "55942",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2018/206488Orig1s009Ltr.pdf",
+              "date": "20181015",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "3",
+          "submission_status": "AP",
+          "submission_status_date": "20170222",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "submission_property_type": [
+            {
+              "code": "Orphan"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "29",
+          "submission_status": "AP",
+          "submission_status_date": "20220118",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "application_docs": [
+            {
+              "id": "69906",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2022/206488Orig1s027,s028,s029ltr.pdf",
+              "date": "20220119",
+              "type": "Letter"
+            },
+            {
+              "id": "69927",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2022/206488s027s028s029lbl.pdf",
+              "date": "20220119",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "35",
+          "submission_status": "AP",
+          "submission_status_date": "20241227",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "submission_property_type": [
+            {
+              "code": "Orphan"
+            }
+          ],
+          "application_docs": [
+            {
+              "id": "80782",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2024/206488s035lbl.pdf",
+              "date": "20241230",
+              "type": "Label"
+            },
+            {
+              "id": "80784",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2024/206488Orig1s035ltr.pdf",
+              "date": "20241230",
+              "type": "Letter"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "27",
+          "submission_status": "AP",
+          "submission_status_date": "20220118",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "submission_property_type": [
+            {
+              "code": "Orphan"
+            }
+          ],
+          "application_docs": [
+            {
+              "id": "69904",
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2022/https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2022/206334Orig1s007ltr.pdf",
+              "date": "20220119",
+              "type": "Letter"
+            },
+            {
+              "id": "69925",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2022/206488s027s028s029lbl.pdf",
+              "date": "20220119",
+              "type": "Label"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "19",
+          "submission_status": "AP",
+          "submission_status_date": "20200707",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "submission_property_type": [
+            {
+              "code": "Orphan"
+            }
+          ],
+          "application_docs": [
+            {
+              "id": "63824",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2020/206488Orig1s019ltr.pdf",
+              "date": "20200708",
+              "type": "Letter"
+            },
+            {
+              "id": "63839",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2020/206488s019lbl.pdf",
+              "date": "20200709",
+              "type": "Label"
+            }
+          ]
+        }
+      ],
+      "application_number": "NDA206488",
+      "sponsor_name": "SAREPTA THERAPS INC",
+      "openfda": {
+        "application_number": [
+          "NDA206488"
+        ],
+        "brand_name": [
+          "EXONDYS 51"
+        ],
+        "generic_name": [
+          "ETEPLIRSEN"
+        ],
+        "manufacturer_name": [
+          "Sarepta Therapeutics, Inc."
+        ],
+        "product_ndc": [
+          "60923-284",
+          "60923-363"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "INTRAVENOUS"
+        ],
+        "substance_name": [
+          "ETEPLIRSEN"
+        ],
+        "rxcui": [
+          "1810573",
+          "1810578",
+          "1810581",
+          "1810582"
+        ],
+        "spl_id": [
+          "97565339-f295-43ab-98a9-bb6bdf2d049c"
+        ],
+        "spl_set_id": [
+          "33bff678-7829-479e-9110-b8e33a0bc0aa"
+        ],
+        "package_ndc": [
+          "60923-363-02",
+          "60923-284-10"
+        ],
+        "nui": [
+          "N0000191626",
+          "M0025055"
+        ],
+        "pharm_class_epc": [
+          "Antisense Oligonucleotide [EPC]"
+        ],
+        "pharm_class_cs": [
+          "Oligonucleotides, Antisense [CS]"
+        ],
+        "unii": [
+          "AIW6036FAS"
+        ]
+      },
+      "products": [
+        {
+          "product_number": "002",
+          "reference_drug": "Yes",
+          "brand_name": "EXONDYS 51",
+          "active_ingredients": [
+            {
+              "name": "ETEPLIRSEN",
+              "strength": "500MG/10ML (50MG/ML)"
+            }
+          ],
+          "reference_standard": "Yes",
+          "dosage_form": "SOLUTION",
+          "route": "INTRAVENOUS",
+          "marketing_status": "Prescription"
+        },
+        {
+          "product_number": "001",
+          "reference_drug": "Yes",
+          "brand_name": "EXONDYS 51",
+          "active_ingredients": [
+            {
+              "name": "ETEPLIRSEN",
+              "strength": "100MG/2ML (50MG/ML)"
+            }
+          ],
+          "reference_standard": "Yes",
+          "dosage_form": "SOLUTION",
+          "route": "INTRAVENOUS",
+          "marketing_status": "Prescription"
+        }
+      ]
+    }
+  ]
+}

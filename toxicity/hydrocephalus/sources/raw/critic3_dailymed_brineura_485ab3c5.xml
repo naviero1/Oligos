@@ -1,0 +1,2189 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="1ebeb049-90ec-42ff-9361-b6fa38d79515"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>These highlights do not include all the information needed to use BRINEURA safely and effectively. See full prescribing information for BRINEURA. <br/>
+      <br/>BRINEURA (cerliponase alfa) injection, for intraventricular use <br/>Initial U.S. Approval: 2017</title>
+   <effectiveTime value="20240805"/>
+   <setId root="485ab3c5-0359-4878-872f-2fe1e7df4047"/>
+   <versionNumber value="30"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="079722386" root="1.3.6.1.4.1.519.1"/>
+            <name>BioMarin Pharmaceutical Inc.</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="985674500" root="1.3.6.1.4.1.519.1"/>
+                        <name>Almac Pharma Services (Ireland) Limited</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C84731" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="PACK"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="68135-811" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C84732" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="LABEL"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="68135-811" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section ID="DLDE">
+               <id root="75584960-7576-4121-b982-1f3ee60ca7fc"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL PRODUCT DATA ELEMENTS SECTION"/>
+               <effectiveTime value="20240731"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="68135-811" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Brineura</name>
+                        <formCode code="C47916" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="KIT"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>cerliponase alfa</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <asContent>
+                           <quantity>
+                              <numerator value="1" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="68135-811-02" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20170427"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <part>
+                           <quantity>
+                              <numerator value="10" unit="mL"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <partProduct>
+                              <code code="68135-500" codeSystem="2.16.840.1.113883.6.69"/>
+                              <name>Brineura</name>
+                              <formCode code="C42945" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INJECTION, SOLUTION"/>
+                              <asEntityWithGeneric>
+                                 <genericMedicine>
+                                    <name>cerliponase alfa</name>
+                                 </genericMedicine>
+                              </asEntityWithGeneric>
+                              <ingredient classCode="ACTIB">
+                                 <quantity>
+                                    <numerator value="150" unit="mg"/>
+                                    <denominator value="5" unit="mL"/>
+                                 </quantity>
+                                 <ingredientSubstance>
+                                    <code code="X8R2D92QP1" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>CERLIPONASE ALFA</name>
+                                    <activeMoiety>
+                                       <activeMoiety>
+                                          <code code="X8R2D92QP1" codeSystem="2.16.840.1.113883.4.9"/>
+                                          <name>CERLIPONASE ALFA</name>
+                                       </activeMoiety>
+                                    </activeMoiety>
+                                 </ingredientSubstance>
+                              </ingredient>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="5" unit="mL"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="68135-500-00" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43209" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="VIAL, GLASS"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <characteristic>
+                                       <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                       <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                                    </characteristic>
+                                 </subjectOf>
+                              </asContent>
+                           </partProduct>
+                           <subjectOf>
+                              <approval>
+                                 <id extension="BLA761052" root="2.16.840.1.113883.3.150"/>
+                                 <code code="C73585" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BLA"/>
+                                 <author>
+                                    <territorialAuthority>
+                                       <territory>
+                                          <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                       </territory>
+                                    </territorialAuthority>
+                                 </author>
+                              </approval>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20170427"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                           <consumedIn>
+                              <substanceAdministration>
+                                 <routeCode code="C38277" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INTRAVENTRICULAR"/>
+                              </substanceAdministration>
+                           </consumedIn>
+                        </part>
+                        <part>
+                           <quantity>
+                              <numerator value="5" unit="mL"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <partProduct>
+                              <code code="68135-495" codeSystem="2.16.840.1.113883.6.69"/>
+                              <name>Intraventricular Electrolytes</name>
+                              <formCode code="C42945" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INJECTION, SOLUTION"/>
+                              <asEntityWithGeneric>
+                                 <genericMedicine>
+                                    <name>Intraventricular Electrolytes</name>
+                                 </genericMedicine>
+                              </asEntityWithGeneric>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="5" unit="mL"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="68135-495-04" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43209" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="VIAL, GLASS"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <characteristic>
+                                       <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                       <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                                    </characteristic>
+                                 </subjectOf>
+                              </asContent>
+                           </partProduct>
+                           <subjectOf>
+                              <approval>
+                                 <id extension="BLA761052" root="2.16.840.1.113883.3.150"/>
+                                 <code code="C73585" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BLA"/>
+                                 <author>
+                                    <territorialAuthority>
+                                       <territory>
+                                          <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                       </territory>
+                                    </territorialAuthority>
+                                 </author>
+                              </approval>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20170427"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                           <consumedIn>
+                              <substanceAdministration>
+                                 <routeCode code="C38277" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INTRAVENTRICULAR"/>
+                              </substanceAdministration>
+                           </consumedIn>
+                        </part>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="BLA761052" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73585" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BLA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20170427"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="BOX">
+               <id root="2101a1d8-20c3-432b-8a64-fe425bd1a3ad"/>
+               <code code="34066-1" codeSystem="2.16.840.1.113883.6.1" displayName="BOXED WARNING SECTION"/>
+               <title>
+                  <content styleCode="emphasis">WARNING: HYPERSENSITIVITY REACTIONS INCLUDING ANAPHYLAXIS</content>
+               </title>
+               <text>
+                  <paragraph>
+                     <content styleCode="xmChange">
+                        <content styleCode="bold">Patients treated with enzyme replacement therapies have experienced life-threatening hypersensitivity reactions, including anaphylaxis. Anaphylaxis has occurred during the early course of enzyme replacement therapy and after extended duration of therapy.</content>
+                     </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="xmChange">
+                        <content styleCode="bold">Initiate BRINEURA in a healthcare setting with appropriate medical monitoring and support measures, including access to cardiopulmonary resuscitation equipment. If a severe hypersensitivity reaction (e.g., anaphylaxis) occurs, discontinue BRINEURA and immediately initiate appropriate medical treatment, including use of epinephrine. Inform patients of the symptoms of life-threatening hypersensitivity reactions, including anaphylaxis and to seek immediate medical care should symptoms occur <content styleCode="italics">[see <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>].</content>
+                        </content>
+                     </content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20240731"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">WARNING: HYPERSENSITIVITY REACTIONS INCLUDING ANAPHYLAXIS</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics bold">See full prescribing information for complete boxed warning</content>
+                        </paragraph>
+                        <list listType="unordered" styleCode="disc">
+                           <item>
+                              <content styleCode="bold">Anaphylaxis has occurred during the early course of enzyme replacement therapy and after extended duration of therapy. (<linkHtml href="#S5.1">5.1</linkHtml>)</content>
+                           </item>
+                           <item>
+                              <content styleCode="bold">Initiate BRINEURA in a healthcare setting with appropriate medical monitoring and support measures, including access to cardiopulmonary resuscitation equipment. (<linkHtml href="#S5.1">5.1</linkHtml>)</content>
+                           </item>
+                           <item>
+                              <content styleCode="bold">If a severe hypersensitivity reaction (e.g., anaphylaxis) occurs, discontinue BRINEURA and immediately initiate appropriate medical treatment, including use of epinephrine. (<linkHtml href="#S5.1">5.1</linkHtml>)</content>
+                           </item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="1f509ea7-ecfc-4f2b-ad9f-7f5456d43a03"/>
+               <code code="43683-2" codeSystem="2.16.840.1.113883.6.1" displayName="RECENT MAJOR CHANGES SECTION"/>
+               <effectiveTime value="20240731"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <table width="100%" styleCode="Noautorules">
+                           <col width="85%" align="left" valign="top"/>
+                           <col width="15%" align="right" valign="top"/>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <linkHtml href="#BOX">Boxed Warning</linkHtml>
+                                 </td>
+                                 <td>7/2024</td>
+                              </tr>
+                              <tr>
+                                 <td>Indication and Usage (<linkHtml href="#S1">1</linkHtml>)</td>
+                                 <td>7/2024</td>
+                              </tr>
+                              <tr>
+                                 <td>Dosage and Administration (<linkHtml href="#S2.1">2.1</linkHtml>, <linkHtml href="#S2.2">2.2</linkHtml>, <linkHtml href="#S2.3">2.3</linkHtml>, <linkHtml href="#S2.6">2.6</linkHtml>)</td>
+                                 <td>7/2024</td>
+                              </tr>
+                              <tr>
+                                 <td>Warnings and Precautions (<linkHtml href="#S5.1">5.1</linkHtml>, <linkHtml href="#S5.5">5.5</linkHtml>)</td>
+                                 <td>7/2024</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="S1">
+               <id root="a557f342-d6a1-474e-917a-48a666d954b6"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>1 INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="xmChange">BRINEURA is indicated to slow the loss of ambulation in pediatric patients with neuronal ceroid lipofuscinosis type 2 (CLN2 disease), also known as tripeptidyl peptidase 1 (TPP1) deficiency.</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20240731"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>BRINEURA is a hydrolytic lysosomal N-terminal tripeptidyl peptidase indicated to slow the loss of ambulation in pediatric patients with neuronal ceroid lipofuscinosis type 2 (CLN2 disease), also known as tripeptidyl peptidase 1 (TPP1) deficiency. (<linkHtml href="#S1">1</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="S2">
+               <id root="6a03c0eb-b963-45d6-ab32-e48479db969f"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>2 DOSAGE AND ADMINISTRATION</title>
+               <effectiveTime value="20240731"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="disc">
+                           <item>Administration of BRINEURA should be supervised by a healthcare provider knowledgeable in the management of hypersensitivity reactions including anaphylaxis. (<linkHtml href="#S2.1">2.1</linkHtml>)</item>
+                           <item>BRINEURA should be administered by or under the supervision of a physician experienced in intraventricular administration. (<linkHtml href="#S2.1">2.1</linkHtml>)</item>
+                           <item>Premedication of patients with antihistamines with or without antipyretics or corticosteroids is recommended. (<linkHtml href="#S2.1">2.1</linkHtml>)</item>
+                           <item>Prior to each infusion, inspect the scalp for signs of intraventricular access device reservoir leakage, failure, or potential infection. (<linkHtml href="#S2.1">2.1</linkHtml>)</item>
+                           <item>Recommended BRINEURA dosage is 300 mg administered once every other week as an intraventricular infusion. In patients less than 2 years of age, lower doses are recommended. (<linkHtml href="#S2.2">2.2</linkHtml>)</item>
+                           <item>Dosing is not recommended in patients less than 37 weeks post-menstrual age or those weighing less than 2.5 kg. (<linkHtml href="#S2.2">2.2</linkHtml>)</item>
+                           <item>See the full prescribing information for dosage modifications due to hypersensitivity reactions. (<linkHtml href="#S2.3">2.3</linkHtml>)</item>
+                           <item>See the full prescribing information for preparation and administration instructions. (<linkHtml href="#S2.4">2.4</linkHtml>, <linkHtml href="#S2.6">2.6</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="S2.1">
+                     <id root="e07f62ee-d7f0-459f-b187-cff6ab2c78c7"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.1	Recommendations Prior to BRINEURA Treatment</title>
+                     <text>
+                        <list listType="unordered" styleCode="disc">
+                           <item>
+                              <content styleCode="xmChange">Administration of BRINEURA should be supervised by a healthcare provider knowledgeable in the management of hypersensitivity reactions including anaphylaxis.</content>
+                           </item>
+                           <item>
+                              <content styleCode="xmChange">Initiate BRINEURA in a healthcare setting with appropriate medical monitoring and support measures, including access to cardiopulmonary resuscitation equipment <content styleCode="italics">[see <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>]</content>.</content>
+                           </item>
+                           <item>BRINEURA should be administered by or under the supervision of a physician experienced in intraventricular administration via a surgically implanted intraventricular access device system which consists of the reservoir and catheter components <content styleCode="italics">[see <linkHtml href="#S2.6">Dosage and Administration (2.6)</linkHtml>]</content>.</item>
+                           <item>Premedication of patients with antihistamines with or without antipyretics or corticosteroids is recommended 30 to 60 minutes prior to the start of infusion <content styleCode="italics">[see <linkHtml href="#S5.1">Warnings and Precautions (5.1</linkHtml>, <linkHtml href="#S5.5">5.5)</linkHtml>]</content>.</item>
+                           <item>Aseptic technique must be strictly observed during preparation and administration <content styleCode="italics">[see <linkHtml href="#S2.6">Dosage and Administration (2.6)</linkHtml>]</content>.</item>
+                           <item>Prior to each infusion of BRINEURA, inspect the scalp for signs of intraventricular access device reservoir leakage, failure or potential infection <content styleCode="italics">[see <linkHtml href="#S5.2">Warnings and Precautions (5.2</linkHtml>, <linkHtml href="#S5.3">5.3)</linkHtml>]</content>.</item>
+                           <item>Prior to each infusion of BRINEURA and when clinically indicated, obtain a sample of CSF for cell count and culture <content styleCode="italics">[see <linkHtml href="#S5.2">Warnings and Precautions (5.2)</linkHtml>]</content>.</item>
+                           <item>Replace the intraventricular access device reservoir prior to 4 years of single-puncture administrations <content styleCode="italics">[see <linkHtml href="#S5.3">Warnings and Precautions (5.3)</linkHtml>].</content>
+                           </item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S2.2">
+                     <id root="512c71a9-b6b1-41da-a1c0-a38eb50dbafa"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.2	Recommended Dosage and Administration</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="xmChange">The recommended dosage of BRINEURA in pediatric patients is provided in Table 1. The dose is administered once every other week by intraventricular infusion.</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="xmChange">BRINEURA is not recommended in patients less than 37 weeks post-menstrual age (gestational age at birth plus post-natal age) or those weighing less than 2.5 kg <content styleCode="italics">[see <linkHtml href="#S8.4">Use in Specific Populations (8.4)</linkHtml>].</content>
+                           </content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="xmChange">Administer BRINEURA first followed by infusion of the Intraventricular Electrolytes. The complete BRINEURA infusion, including the required infusion of Intraventricular Electrolytes, is approximately 2 to 4.5 hours, depending on the dose and volume administered. See <linkHtml href="#tab1">Table 1</linkHtml> for the appropriate volume and infusion rate. For volumes that are not whole numbers, <content styleCode="italics">see <linkHtml href="#S2.6">Dosage and Administration (2.6)</linkHtml>
+                              </content>.</content>
+                        </paragraph>
+                        <table width="85%" ID="tab1">
+                           <caption>Table 1: BRINEURA Dose, Volume, and Infusion Rate by Age</caption>
+                           <col width="25%" align="center" valign="top"/>
+                           <col width="25%" align="center" valign="top"/>
+                           <col width="25%" align="center" valign="top"/>
+                           <col width="25%" align="center" valign="top"/>
+                           <thead>
+                              <tr>
+                                 <th styleCode="Lrule Rrule">
+                                    <content styleCode="xmChange">Age groups</content>
+                                 </th>
+                                 <th styleCode="Rrule">BRINEURA dose administered every other week</th>
+                                 <th styleCode="Rrule">Volume of BRINEURA solution</th>
+                                 <th styleCode="Rrule">Infusion rate</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">
+                                    <content styleCode="xmChange">Birth to &lt; 6 months</content>
+                                 </td>
+                                 <td styleCode="Rrule">100 mg</td>
+                                 <td styleCode="Rrule">3.3 mL</td>
+                                 <td styleCode="Rrule">1.25 mL/hr</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">
+                                    <content styleCode="xmChange">6 months to &lt; 1 year</content>
+                                 </td>
+                                 <td styleCode="Rrule">150 mg</td>
+                                 <td styleCode="Rrule">5 mL</td>
+                                 <td styleCode="Rrule">2.5 mL/hr</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule">
+                                    <content styleCode="xmChange">1 year to &lt; 2 years</content>
+                                 </td>
+                                 <td styleCode="Rrule">200 mg (first 4 doses)</td>
+                                 <td styleCode="Rrule">6.7 mL (first 4 doses)</td>
+                                 <td styleCode="Rrule">2.5 mL/hr</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">
+                                    <content styleCode="xmChange"> </content>
+                                 </td>
+                                 <td styleCode="Rrule">300 mg (subsequent doses)</td>
+                                 <td styleCode="Rrule">10 mL (subsequent doses)</td>
+                                 <td styleCode="Rrule"/>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">
+                                    <content styleCode="xmChange">2 years and older</content>
+                                 </td>
+                                 <td styleCode="Rrule">300 mg</td>
+                                 <td styleCode="Rrule">10 mL</td>
+                                 <td styleCode="Rrule">2.5 mL/hr</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                     <component>
+                        <section>
+                           <id root="74b85c07-0f40-45b4-a6c8-14ee9f9c55d9"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline xmChange">Missed Dose</content>
+                              </paragraph>
+                              <paragraph>
+                                 <content styleCode="xmChange">If one or more doses are missed, restart BRINEURA treatment as soon as possible, maintaining the 2-week interval between infusions thereafter.</content>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20240731"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S2.3">
+                     <id root="991709fd-c942-4488-ac73-3d063496ecd1"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.3	Administration Modifications due to Hypersensitivity Reactions Including Anaphylaxis</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="xmChange">In the event of a severe hypersensitivity reaction (e.g., anaphylaxis), immediately discontinue BRINEURA administration and initiate appropriate medical treatment. If the decision is made to readminister BRINEURA after the occurrence of anaphylaxis, initiate the subsequent infusion at approximately one-half the infusion rate at which the anaphylactic reaction occurred with appropriate premedication. For additional recommendations in the event of a hypersensitivity reaction, <content styleCode="italics">see <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>
+                              </content>.</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S2.4">
+                     <id root="a1eebab3-fac2-49f1-b93b-d7402929a97a"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.4	Preparation Instructions for Intraventricular Administration of the Product</title>
+                     <text>
+                        <paragraph>BRINEURA and the Intraventricular Electrolytes must only be administered by the intraventricular route, using the provided Administration Kit for use with BRINEURA. Each vial of BRINEURA and Intraventricular Electrolytes is intended for a single dose only.</paragraph>
+                        <paragraph>BRINEURA is administered into the cerebrospinal fluid (CSF) by infusion via a surgically implanted reservoir and catheter (the "intraventricular access device system"). BRINEURA is intended to be administered via the Codman<sup>®</sup> HOLTER RICKHAM Reservoirs (Part Numbers: 82-1625, 82-1621, 82-1616) with the Codman<sup>®</sup> Ventricular Catheter (Part Number: 82-1650). The intraventricular access device reservoir and catheter must be implanted prior to the first infusion. It is recommended that the first dose be administered at least 5 to 7 days after device implantation.</paragraph>
+                        <paragraph>BRINEURA is intended to be administered with the B Braun Perfusor<sup>®</sup> Space Infusion Pump System (Product Code: 8713030U). If an alternative pump must be used, the essential performance requirements for this syringe pump used to deliver BRINEURA are as follows:</paragraph>
+                        <list listType="unordered" styleCode="circle">
+                           <item>Delivery rate of 1.25 or 2.5 mL per hr with delivery accuracy of +/- 1 mL per hr</item>
+                           <item>Compatible with 20 mL syringes provided in the Administration Kit for use with BRINEURA </item>
+                           <item>Occlusion alarm setting to ≤ 281 mm Hg</item>
+                           <item>Cleared for intraventricular route of administration</item>
+                        </list>
+                        <paragraph>Administer BRINEURA and the Intraventricular Electrolytes using the provided Administration Kit for use with BRINEURA components <content styleCode="italics">[see <linkHtml href="#S16">How Supplied/Storage and Handling (16)</linkHtml>]</content>.</paragraph>
+                        <paragraph>Each infusion consists of 3.3 to 10 mL of BRINEURA followed by 2 mL of Intraventricular Electrolytes. The complete infusion must be administered using an infusion set with a 0.2 micron inline filter. The Intraventricular Electrolytes are used to flush the infusion line, port needle, and intraventricular access device in order to fully administer BRINEURA and to maintain patency of the intraventricular access device.</paragraph>
+                        <paragraph>Supplies for Infusion Preparation</paragraph>
+                        <list listType="unordered" styleCode="disc">
+                           <item>BRINEURA and Intraventricular Electrolytes Injection vials (package 1 of 2) <content styleCode="italics">[see <linkHtml href="#S16">How Supplied/Storage and Handling (16)</linkHtml>]</content>
+                           </item>
+                           <item>Administration Kit for use with BRINEURA (package 2 of 2) <content styleCode="italics">[see <linkHtml href="#S16">How Supplied/Storage and Handling (16)</linkHtml>]</content>
+                           </item>
+                           <item>Syringe pump (not supplied)</item>
+                           <item>Empty sterile single-use luer lock syringe, no larger than 3 mL (not supplied)</item>
+                        </list>
+                        <paragraph>Inspect the Administration Kit infusion components to ensure the components are in the individual packages and have not been compromised.</paragraph>
+                        <paragraph>Thaw BRINEURA and Intraventricular Electrolytes Injection vials at room temperature 20°C to 25°C (68°F to 77°F) for approximately 60 minutes. <content styleCode="bold">Do not</content> thaw or warm vials any other way. <content styleCode="bold">Do not</content> shake vials. Condensation will occur during thawing period. <content styleCode="bold">Do not</content> re-freeze vials or freeze syringes containing BRINEURA or Intraventricular Electrolytes.</paragraph>
+                        <paragraph>Inspect fully thawed BRINEURA and Intraventricular Electrolytes Injection vials. Parenteral drug products should be inspected visually for particulate matter and discoloration prior to administration, whenever solution and container permit. BRINEURA is a clear to slightly opalescent and colorless to pale yellow solution. Intraventricular Electrolytes is a clear to colorless solution. <content styleCode="bold">Do not use</content> if the solutions are discolored or if there is other foreign particulate matter in the solutions. BRINEURA vials may occasionally contain thin translucent fibers or opaque particles. These naturally occurring particles are cerliponase alfa. These particles are removed via the 0.2 micron inline filter without having a detectable effect on the purity or strength of BRINEURA. Intraventricular Electrolytes may contain particles, which appear during the thaw period; however, these dissolve when the solution reaches room temperature.</paragraph>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S2.5">
+                     <id root="c790c4a5-6224-402e-bf0c-93b4923c366c"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.5	Storage Instructions for the Thawed Product and Product in Syringe</title>
+                     <effectiveTime value="20240731"/>
+                     <component>
+                        <section>
+                           <id root="c00eb460-a75d-49f9-821b-fce828cdf0f2"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Storage of Thawed Product</content>
+                              </paragraph>
+                              <paragraph>Use thawed BRINEURA and Intraventricular Electrolytes immediately. If thawed BRINEURA and Intraventricular Electrolytes is not used immediately, store in the refrigerator at 2°C to 8°C (36°F to 46°F) for no more than 24 hours. Discard the thawed product after 24 hours if refrigerated.</paragraph>
+                           </text>
+                           <effectiveTime value="20240731"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="dbaba65b-8db9-4137-8158-7858ed6d32db"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Storage of Product in Syringe</content>
+                              </paragraph>
+                              <paragraph>Use product held in labeled syringes immediately. If product held in labeled syringe is not used immediately, store in the refrigerator at 2°C to 8°C (36°F to 46°F) for no more than 4 hours prior to infusion. Discard the product held in labeled syringe after 4 hours if refrigerated.</paragraph>
+                           </text>
+                           <effectiveTime value="20240731"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S2.6">
+                     <id root="180a90a1-9dca-4472-a86e-7a1ffc3b7503"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.6	Administration Instructions for Intraventricular Infusion</title>
+                     <effectiveTime value="20240731"/>
+                     <component>
+                        <section>
+                           <id root="02b0173f-82f2-412d-8cfa-b8181f5f1e6a"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Intraventricular Infusion of BRINEURA</content>
+                              </paragraph>
+                              <paragraph>Figure 1 represents the intraventricular infusion system set up. Use aseptic technique during the infusion. <br/>Follow the steps below to proceed with the intraventricular infusion.</paragraph>
+                              <table width="100%" styleCode="Noautorules">
+                                 <col width="100%" align="center" valign="middle"/>
+                                 <tbody>
+                                    <tr>
+                                       <td>
+                                          <renderMultiMedia referencedObject="MM1" ID="fig1"/>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>
+                                          <content styleCode="bold">Figure 1</content>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                              <list listType="ordered" styleCode="arabic">
+                                 <item>
+                                    <caption>1.</caption>	Use aseptic technique when preparing the BRINEURA syringe for infusion. Label one sterile syringe "BRINEURA" and attach the syringe needle.</item>
+                                 <item>
+                                    <caption>2.</caption>
+                                    <content styleCode="xmChange">Confirm required dose and volume based on patient age per Table 1. Remove the green flip-off caps from one or both BRINEURA vials. Each BRINEURA vial contains 150 mg or 5 mL. Use the "BRINEURA" labeled syringe to withdraw the volume of BRINEURA solution from the vial per the required dose (see <linkHtml href="#tab1">Table 1</linkHtml>). Intermediate volumes that fall between 1 mL increments should be drawn up in the syringe to the nearest whole number, specifically 3.3 mL to 4 mL and 6.7 mL to 7 mL. <content styleCode="bold">Do not</content> dilute BRINEURA. <content styleCode="bold">Do not</content> mix BRINEURA with any other drug. <br/>Discard any unused portion left in the vial.</content>
+                                 </item>
+                                 <item>
+                                    <caption>3.</caption>	Label the infusion line "intraventricular infusion only" (see <linkHtml href="#fig1">Figure 1</linkHtml>).</item>
+                                 <item>
+                                    <caption>4.</caption>	Attach the syringe containing BRINEURA to the extension line (see <linkHtml href="#fig2">Figure 2</linkHtml>). Then connect the extension line to the infusion set with a 0.2 micron inline filter (see <linkHtml href="#fig1">Figure 1</linkHtml>).<table width="100%" styleCode="Noautorules">
+                                       <col width="100%" align="center" valign="middle"/>
+                                       <tbody>
+                                          <tr>
+                                             <td>
+                                                <renderMultiMedia referencedObject="MM2" ID="fig2"/>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>
+                                                <content styleCode="bold">Figure 2</content>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </item>
+                                 <item>
+                                    <caption>5.</caption>	Prime the infusion components with BRINEURA.</item>
+                                 <item>
+                                    <caption>6.</caption>	Inspect scalp for signs of intraventricular access device reservoir leakage or failure and for potential infections <content styleCode="italics">[see <linkHtml href="#S5.2">Warnings and Precautions (5.2</linkHtml>, <linkHtml href="#S5.3">5.3)</linkHtml>].</content>
+                                 </item>
+                                 <item>
+                                    <caption>7.</caption>	Prepare the scalp for intraventricular infusion per institution standard of care.</item>
+                                 <item>
+                                    <caption>8.</caption>	Insert port needle into intraventricular access device reservoir (see <linkHtml href="#fig3">Figure 3</linkHtml>).<table width="100%" styleCode="Noautorules">
+                                       <col width="100%" align="center" valign="middle"/>
+                                       <tbody>
+                                          <tr>
+                                             <td>
+                                                <renderMultiMedia referencedObject="MM3" ID="fig3"/>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>
+                                                <content styleCode="bold">Figure 3</content>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </item>
+                                 <item>
+                                    <caption>9.</caption>	Connect a separate empty sterile single-use luer lock syringe, no larger than 3 mL (not provided) to the port needle. Withdraw 0.5 mL to 1 mL of CSF to check patency of intraventricular access device (see <linkHtml href="#fig4">Figure 4</linkHtml>) and send specimen for culture.<list listType="unordered" styleCode="disc">
+                                       <item>
+                                          <content styleCode="bold">Do not</content> return CSF to intraventricular access device.</item>
+                                       <item>Routinely send CSF samples for infection monitoring <content styleCode="italics">[see <linkHtml href="#S5.2">Warnings and Precautions (5.2)</linkHtml>].</content>
+                                       </item>
+                                    </list>
+                                    <table width="100%" styleCode="Noautorules">
+                                       <col width="100%" align="center" valign="middle"/>
+                                       <tbody>
+                                          <tr>
+                                             <td>
+                                                <renderMultiMedia referencedObject="MM4" ID="fig4"/>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>
+                                                <content styleCode="bold">Figure 4</content>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </item>
+                                 <item>
+                                    <caption>10.</caption>	Attach the infusion set with 0.2 micron inline filter to the port needle (see <linkHtml href="#fig1">Figure 1</linkHtml>).<list listType="unordered" styleCode="disc">
+                                       <item>Secure the components per institution standard of care.</item>
+                                    </list>
+                                 </item>
+                                 <item>
+                                    <caption>11.</caption>
+                                    <content styleCode="xmChange">Place the syringe containing BRINEURA into the syringe pump and program the pump to deliver at an infusion rate of 1.25 or 2.5 mL per hour (Table 1). <content styleCode="bold">Set the pump volume limit to deliver the exact volume that corresponds to the dose of BRINEURA solution appropriate for the patient's age (Table 1).</content> Set the occlusion alarm setting to alert at pressure ≤ 281 mm Hg. See syringe pump operating manual for details. <content styleCode="bold">Do not</content> deliver as a bolus or manually.</content>
+                                 </item>
+                                 <item>
+                                    <caption>12.</caption>	Administer pre-medication 30 to 60 minutes prior to the start of infusion<content styleCode="italics">.</content>
+                                 </item>
+                                 <item>
+                                    <caption>13.</caption>	Monitor vital signs (blood pressure, heart rate) prior to the start of infusion, periodically during infusion, and post-infusion <content styleCode="italics">[see <linkHtml href="#S5.4">Warnings and Precautions (5.4)</linkHtml>].</content>
+                                 </item>
+                                 <item>
+                                    <caption>14.</caption>
+                                    <content styleCode="xmChange">Initiate infusion of BRINEURA at a rate of 1.25 or 2.5 mL per hour (Table 1).</content>
+                                 </item>
+                                 <item>
+                                    <caption>15.</caption>	Periodically inspect the infusion system during the infusion for signs of leakage or delivery failure <content styleCode="italics">[see <linkHtml href="#S5.3">Warnings and Precautions (5.3)</linkHtml>]</content>.</item>
+                                 <item>
+                                    <caption>16.</caption>	When the BRINEURA infusion is complete, detach and remove the syringe from the pump and disconnect from the tubing (see <linkHtml href="#fig5">Figure 5</linkHtml>). Discard the syringe containing any residual drug. Proceed to Step 16 for Intraventricular Electrolytes infusion.<table width="100%" styleCode="Noautorules">
+                                       <col width="100%" align="center" valign="middle"/>
+                                       <tbody>
+                                          <tr>
+                                             <td>
+                                                <renderMultiMedia referencedObject="MM5" ID="fig5"/>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>
+                                                <content styleCode="bold">Figure 5</content>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </item>
+                              </list>
+                           </text>
+                           <effectiveTime value="20240731"/>
+                           <component>
+                              <observationMedia ID="MM1">
+                                 <text>Figure 1</text>
+                                 <value xsi:type="ED" mediaType="image/jpeg">
+                                    <reference value="brineura-01.jpg"/>
+                                 </value>
+                              </observationMedia>
+                           </component>
+                           <component>
+                              <observationMedia ID="MM2">
+                                 <text>Figure 2</text>
+                                 <value xsi:type="ED" mediaType="image/jpeg">
+                                    <reference value="brineura-02.jpg"/>
+                                 </value>
+                              </observationMedia>
+                           </component>
+                           <component>
+                              <observationMedia ID="MM3">
+                                 <text>Figure 3</text>
+                                 <value xsi:type="ED" mediaType="image/jpeg">
+                                    <reference value="brineura-03.jpg"/>
+                                 </value>
+                              </observationMedia>
+                           </component>
+                           <component>
+                              <observationMedia ID="MM4">
+                                 <text>Figure 4</text>
+                                 <value xsi:type="ED" mediaType="image/jpeg">
+                                    <reference value="brineura-04.jpg"/>
+                                 </value>
+                              </observationMedia>
+                           </component>
+                           <component>
+                              <observationMedia ID="MM5">
+                                 <text>Figure 5</text>
+                                 <value xsi:type="ED" mediaType="image/jpeg">
+                                    <reference value="brineura-05.jpg"/>
+                                 </value>
+                              </observationMedia>
+                           </component>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="ec426d27-970a-4224-b465-3cf0c02011e6"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Intraventricular Infusion of Intraventricular Electrolytes</content>
+                              </paragraph>
+                              <paragraph>Administer the Intraventricular Electrolytes provided <content styleCode="bold">after</content> BRINEURA infusion is complete.</paragraph>
+                              <list listType="ordered" styleCode="arabic">
+                                 <item>
+                                    <caption>17.</caption>	Use aseptic technique when preparing the Intraventricular Electrolytes syringe for infusion. Label one sterile syringe "Intraventricular Electrolytes" and attach the syringe needle. Remove the yellow flip-off cap from the Intraventricular Electrolytes Injection vial. Withdraw 2 mL of Intraventricular Electrolytes. Discard the remaining unused portion.</item>
+                                 <item>
+                                    <caption>18.</caption>	Attach the syringe to the extension line (see <linkHtml href="#fig6">Figure 6</linkHtml>).<table width="100%" styleCode="Noautorules">
+                                       <col width="100%" align="center" valign="middle"/>
+                                       <tbody>
+                                          <tr>
+                                             <td>
+                                                <renderMultiMedia referencedObject="MM6" ID="fig6"/>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td>
+                                                <content styleCode="bold">Figure 6</content>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </item>
+                                 <item>
+                                    <caption>19.</caption>
+                                    <content styleCode="xmChange">Place the syringe containing Intraventricular Electrolytes into the syringe pump and program pump to deliver at an infusion rate of 1.25 or 2.5 mL per hour (Table 1). Set the pump volume limit to deliver 2 mL. Set the occlusion alarm setting to alert at pressure ≤ 281 mm Hg. See syringe pump operating manual for details. <content styleCode="bold">Do not</content> deliver as a bolus or manually.</content>
+                                 </item>
+                                 <item>
+                                    <caption>20.</caption>	Initiate infusion of Intraventricular Electrolytes at a rate of 2.5 mL per hour.</item>
+                                 <item>
+                                    <caption>21.</caption>	Periodically inspect the infusion system during the infusion for signs of leakage or delivery failure.</item>
+                                 <item>
+                                    <caption>22.</caption>	When the Intraventricular Electrolytes infusion is complete, detach and remove the empty syringe from the pump and disconnect from the infusion line.</item>
+                                 <item>
+                                    <caption>23.</caption>	Remove the port needle. Apply gentle pressure and bandage the infusion site per institution standard of care.</item>
+                              </list>
+                              <paragraph>Dispose of the infusion components, needles, unused solutions and other waste materials in accordance with local requirements.</paragraph>
+                           </text>
+                           <effectiveTime value="20240731"/>
+                           <component>
+                              <observationMedia ID="MM6">
+                                 <text>Figure 6</text>
+                                 <value xsi:type="ED" mediaType="image/jpeg">
+                                    <reference value="brineura-06.jpg"/>
+                                 </value>
+                              </observationMedia>
+                           </component>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S3">
+               <id root="50b63e89-f908-4bbd-b527-171c1d954e1b"/>
+               <code code="43678-2" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION"/>
+               <title>3 DOSAGE FORMS AND STRENGTHS</title>
+               <text>
+                  <paragraph>Injection: BRINEURA 150 mg/5 mL (30 mg/mL) solution, two single-dose vials per carton co-packaged with Intraventricular Electrolytes Injection 5 mL in a single-dose vial. BRINEURA is a clear to slightly opalescent and colorless to pale yellow solution. Intraventricular Electrolytes is a clear to colorless solution <content styleCode="italics">[see <linkHtml href="#S16">How Supplied/Storage and Handling (16)</linkHtml>]</content>.</paragraph>
+               </text>
+               <effectiveTime value="20240731"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Injection: BRINEURA 150 mg/5 mL (30 mg/mL) solution, two single-dose vials per carton co-packaged with Intraventricular Electrolytes Injection 5 mL in a single-dose vial. (<linkHtml href="#S3">3</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="S4">
+               <id root="5458fb0c-0f36-45ad-9ce1-81a268ec08ca"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>4 CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>BRINEURA is contraindicated in patients with:</paragraph>
+                  <list listType="unordered" styleCode="disc">
+                     <item>any sign or symptom of acute, unresolved localized infection on or around the device insertion site (e.g., cellulitis or abscess); or suspected or confirmed CNS infection (e.g., cloudy CSF or positive CSF gram stain, or meningitis) <content styleCode="italics">[see <linkHtml href="#S5.2">Warnings and Precautions (5.2)</linkHtml>]</content>. </item>
+                     <item>any acute intraventricular access device-related complication (e.g., leakage, extravasation of fluid, or device failure) <content styleCode="italics">[see <linkHtml href="#S5.3">Warnings and Precautions (5.3)</linkHtml>].</content>
+                     </item>
+                     <item>ventriculoperitoneal shunts.</item>
+                  </list>
+               </text>
+               <effectiveTime value="20240731"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="disc">
+                           <item>Any sign or symptom of acute or unresolved localized infection on or around the device insertion site (e.g. cellulitis or abscess); or suspected or confirmed CNS infection (e.g., cloudy CSF or positive CSF gram stain, or meningitis). (<linkHtml href="#S4">4</linkHtml>)</item>
+                           <item>Any acute intraventricular access device-related complication (e.g., leakage, extravasation of fluid, or device failure). (<linkHtml href="#S4">4</linkHtml>)</item>
+                           <item>Patients with ventriculoperitoneal shunts. (<linkHtml href="#S4">4</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="S5">
+               <id root="e0b044b3-7ef1-4520-9bda-ec1f8b3f5357"/>
+               <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+               <title>5 WARNINGS AND PRECAUTIONS</title>
+               <effectiveTime value="20240731"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="disc">
+                           <item>
+                              <content styleCode="underline">Meningitis and Other Intraventricular Access Device-Related Infections</content>: Monitor the device insertion site for signs of infection. (<linkHtml href="#S4">4</linkHtml>, <linkHtml href="#S5.2">5.2</linkHtml>)</item>
+                           <item>
+                              <content styleCode="underline">Intraventricular Access Device-Related Complications</content>: Consult a neurosurgeon for any complications with the implanted device. In case of device-related complication, discontinue the infusion and refer to the device labeling for further instructions. (<linkHtml href="#S4">4</linkHtml>, <linkHtml href="#S5.3">5.3</linkHtml>)</item>
+                           <item>
+                              <content styleCode="underline">Cardiovascular Adverse Reactions</content>: Monitor vital signs before, during, and post-infusion. Monitor Electrocardiogram (ECG) in patients with a history of bradycardia, conduction disorder, or with structural heart disease, during the infusion. In patients without cardiac abnormalities, perform regular 12-lead ECG evaluations every 6 months. (<linkHtml href="#S2.5">2.5</linkHtml>, <linkHtml href="#S5.4">5.4</linkHtml>)</item>
+                           <item>
+                              <content styleCode="underline">Infusion-Associated Reactions (IARs)</content>: If an IAR occurs, decreasing the infusion rate, temporarily stopping the infusion, and/or administering antihistamines and/or antipyretics may ameliorate the symptoms. (<linkHtml href="#S5.5">5.5</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="S5.1">
+                     <id root="573d5a79-410d-4110-aff6-e98400f4e8bf"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.1	Hypersensitivity Reactions Including Anaphylaxis</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="xmChange">Life-threatening hypersensitivity reactions including anaphylaxis have been reported in patients treated with enzyme replacement therapies, including BRINEURA</content>. BRINEURA-treated patients have had these reactions occur in clinical studies and postmarketing use <content styleCode="italics">[see <linkHtml href="#S6">Adverse Reactions (6)</linkHtml>]</content>. In clinical Trial 1 and Trial 2 to 96 weeks, a total of 11 of 24 (46%) patients experienced hypersensitivity reactions during the infusion or within 24 hours of completion of the infusion. Patients in clinical trials were routinely pre-medicated with antihistamines with or without antipyretics or corticosteroids, prior to infusion of BRINEURA. During postmarketing use, anaphylactic reactions occurred during or within several hours of BRINEURA infusion. Epinephrine was administered in these patients, and they received subsequent BRINEURA infusions without recurrence of anaphylaxis.</paragraph>
+                        <paragraph>
+                           <content styleCode="xmChange">In Trial 3, hypersensitivity reactions were reported in 5 of 8 (63 %) patients less than 3 years of age at baseline as compared to 0 of 6 patients ≥ 3 years of age at baseline <content styleCode="italics">[see <linkHtml href="#S6.1">Adverse Reactions (6.1)</linkHtml>]</content>. Of the reported hypersensitivity reactions, a single anaphylactic reaction occurred in a subject &lt; 3 years of age.</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="xmChange">Anaphylaxis has occurred during the early course of enzyme replacement therapy and after extended duration of therapy. Administration of BRINEURA should be supervised by a healthcare provider knowledgeable in the management of hypersensitivity reactions including anaphylaxis. Initiate BRINERUA in a healthcare setting with appropriate medical monitoring and support measures, including access to cardiopulmonary resuscitation equipment. Premedication of patients with antihistamines with or without antipyretics or corticosteroids is recommended 30 to 60 minutes prior to the start of infusion.</content> Observe patients closely during and after the infusion. If a severe hypersensitivity reaction (e.g., anaphylaxis) occurs, discontinue BRINEURA and immediately initiate appropriate medical treatment including use of epinephrine. Inform patients and caregivers of the symptoms of life-threatening hypersensitivity reactions, including anaphylaxis and to seek immediate medical care should symptoms occur.</paragraph>
+                        <paragraph>The management of hypersensitivity reactions should be based on the severity of the reaction and may include temporarily interrupting the infusion, and/or treatment with antihistamines, antipyretics, and/or corticosteroids. Consider the risks and benefits of readministration of BRINEURA following an anaphylactic reaction. If the decision is made to readminister BRINEURA after the occurrence of anaphylaxis, ensure appropriately trained personnel and equipment for emergency resuscitation (including epinephrine and other emergency medicines) are readily available during infusion. Initiate subsequent infusion at approximately one-half the initial infusion rate at which the anaphylactic reaction occurred.</paragraph>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S5.2">
+                     <id root="29bd1439-8931-4922-908c-97483fdc2b69"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.2	Meningitis and Other Intraventricular Access Device-Related Infections</title>
+                     <text>
+                        <paragraph>Bacterial meningitis requiring antibiotic treatment and removal of the device was reported during postmarketing use of BRINEURA. Additionally, in clinical trials and during postmarketing use there were reports of other device-related clinical infections which were confirmed by positive CSF cultures, treated with antibiotics and removal of the entire intraventricular access device, and in which patients resumed treatment with BRINEURA after the device was replaced <content styleCode="italics">[see <linkHtml href="#S6.1">Adverse Reactions (6.1)</linkHtml>]</content>. In all cases, antibiotics were administered, the intraventricular access devices were removed and replaced, and patients resumed treatment with BRINEURA.</paragraph>
+                        <paragraph>The signs and symptoms of infections may not be readily apparent in patients with CLN2 disease. To reduce the risk of infectious complications, BRINEURA should be administered by, or under the supervision of, a physician experienced in intraventricular administration. Prior to each infusion of BRINEURA and when clinically indicated, obtain a sample of CSF for cell count and culture. Do not administer BRINEURA if there are localized signs of infection on or around the device insertion site, such as erythema, tenderness, or discharge or suspected or confirmed CNS infection (e.g., cloudy CSF or positive CSF gram stain, or meningitis) <content styleCode="italics">[see <linkHtml href="#S4">Contraindications (4)</linkHtml>]</content>.</paragraph>
+                        <paragraph>Healthcare providers should be vigilant for the development of signs and symptoms of infection, including meningitis, during treatment with BRINEURA and monitor the device insertion site for signs of infection.</paragraph>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S5.3">
+                     <id root="4e56557a-4acc-411f-accd-f084c9a94235"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.3	Intraventricular Access Device-Related Complications</title>
+                     <text>
+                        <paragraph>During the clinical trials and in postmarketing reports, intraventricular access device-related complications were reported (e.g., device leakage, device failure extravasation of CSF fluid, or bulging of the scalp around or above the intraventricular access device) <content styleCode="italics">[see <linkHtml href="#S6.1">Adverse Reactions (6.1)</linkHtml>]</content>. For any complications with the implanted intraventricular access device, consult with a neurosurgeon to confirm the integrity or performance of the device. In case of intraventricular access device-related complications, discontinue the BRINEURA infusion and refer to the device manufacturer's labeling for further instructions <content styleCode="italics">[see <linkHtml href="#S4">Contraindications (4)</linkHtml>]</content>.</paragraph>
+                        <paragraph>Material degradation of the intraventricular access device reservoir was reported after approximately 4 years of administration, which may impact the effective and safe use of the device. During benchtop testing such material degradation was recognized after approximately 105 perforations of the intraventricular access device. The intraventricular access device should be replaced prior to 4 years of single-puncture administrations, which equates to approximately 105 administrations of BRINEURA.</paragraph>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S5.4">
+                     <id root="dbf6bcbe-c3e4-4e23-93ff-1342bc8e8dc3"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.4	Cardiovascular Adverse Reactions</title>
+                     <text>
+                        <paragraph>Monitor vital signs (blood pressure, heart rate) before infusion starts, periodically during infusion, and post-infusion in a healthcare setting <content styleCode="italics">[see <linkHtml href="#S2.6">Dosage and Administration (2.6)</linkHtml>]</content>. Upon completion of the infusion, clinically assess the patient status. Continued observation may be necessary if clinically indicated.</paragraph>
+                        <paragraph>Perform electrocardiogram (ECG) monitoring during infusion in patients with a history of bradycardia, conduction disorder, or with structural heart disease, as some patients with CLN2 disease may develop conduction disorders or heart disease. In patients without cardiac abnormalities, regular 12-lead ECG evaluations should be performed every 6 months.</paragraph>
+                        <paragraph>In clinical Trial 1 and Trial 2 to 96 weeks, hypotension was reported in 2 of 24 (8%) patients, which occurred during or up to eight hours after BRINEURA infusion. Patients did not require alteration in treatment, and reactions resolved spontaneously or after intravenous fluid administration <content styleCode="italics">[see <linkHtml href="#S6.1">Adverse Reactions (6.1)</linkHtml>]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S5.5">
+                     <id root="a55c7440-c956-4963-93ce-71857f38a7a3"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.5	Infusion-Associated Reactions</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="xmChange">Infusion-associated reactions (IARs) such as vomiting, seizure, rash, pyrexia, hypersensitivity, and anaphylactic reaction have been observed in patients treated with BRINEURA <content styleCode="italics">[see <linkHtml href="#S6.1">Adverse Reactions (6.1)</linkHtml>]</content>.</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="xmChange">Premedication of patients with antihistamines with or without antipyretics or corticosteroids is recommended 30 to 60 minutes prior to the start of infusion. If an IAR occurs, decreasing the infusion rate, temporarily stopping the infusion, and/or administering antihistamines and/or antipyretics may ameliorate the symptoms. Closely monitor patients who have experienced IARs when re-administering BRINEURA.</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="xmChange">In Trial 3, infusion-associated reactions were reported in 8 of 8 patients less than 3 years of age at baseline as compared to 4 of 6 patients ≥ 3 years of age at baseline.</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S6">
+               <id root="08bf82d4-2c25-4de0-a391-a6069927a54b"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>6 ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>The following adverse reactions are described below and elsewhere in the labeling:</paragraph>
+                  <list listType="unordered" styleCode="disc">
+                     <item>Hypersensitivity Reactions Including Anaphylaxis <content styleCode="italics">[see <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>]</content>
+                     </item>
+                     <item>Meningitis and Other Intraventricular Access Device-Related Infections <content styleCode="italics">[see <linkHtml href="#S5.2">Warnings and Precautions (5.2)</linkHtml>]</content>
+                     </item>
+                     <item>Intraventricular Access Device-Related Complications <content styleCode="italics">[see <linkHtml href="#S5.3">Warnings and Precautions (5.3)</linkHtml>]</content>
+                     </item>
+                     <item>Cardiovascular Adverse Reactions <content styleCode="italics">[see <linkHtml href="#S5.4">Warnings and Precautions (5.4)</linkHtml>]</content>
+                     </item>
+                     <item>Infusion-Associated Reactions <content styleCode="italics">[see <linkHtml href="#S5.5">Warnings and Precautions (5.5)</linkHtml>]</content>
+                     </item>
+                  </list>
+               </text>
+               <effectiveTime value="20240731"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Most common adverse reactions (≥8%) are: pyrexia, ECG abnormalities, decreased CSF protein, vomiting, seizures, device-related complications, hypersensitivity, increased CSF protein, hematoma, headache, irritability, pleocytosis, device-related infections, bradycardia, feeling jittery, and hypotension. (<linkHtml href="#S6.1">6.1</linkHtml>)</paragraph>
+                        <br/>
+                        <paragraph>
+                           <content styleCode="bold">To report SUSPECTED ADVERSE REACTIONS, contact BioMarin at 1-866-906-6100 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch.</content>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="S6.1">
+                     <id root="5d372f77-8bcb-4d99-8e8b-ee748f4d5d42"/>
+                     <code code="90374-0" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL TRIALS EXPERIENCE SECTION"/>
+                     <title>6.1	Clinical Trials Experience</title>
+                     <text>
+                        <paragraph>Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.</paragraph>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                     <component>
+                        <section>
+                           <id root="4838ed85-d69e-46ca-8676-668de1846f33"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Trial 1 and Trial 2</content>
+                              </paragraph>
+                              <paragraph>The safety of BRINEURA was evaluated in 24 patients with CLN2 disease who received at least one 300 mg dose of BRINEURA given by intraventricular infusion in a clinical trial with extension (Trials 1 and 2) of up to 161 weeks <content styleCode="italics">[see <linkHtml href="#S14">Clinical Studies (14)</linkHtml>]</content>. Table 2 summarizes the most common adverse reactions that occurred in BRINEURA-treated patients through 96 weeks.</paragraph>
+                              <table width="75%">
+                                 <caption>Table 2: Adverse Reactions Reported in ≥ 8% of Symptomatic Pediatric Patients with CLN2 Disease in BRINEURA Trial 1 and Trial 2 at Week 96</caption>
+                                 <col width="55%" align="center" valign="top"/>
+                                 <col width="45%" align="center" valign="top"/>
+                                 <thead>
+                                    <tr>
+                                       <th styleCode="Lrule Rrule">Adverse Reaction</th>
+                                       <th styleCode="Rrule">Patients Treated with BRINEURA<br/>n=24 (%)</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule">Increased body temperature<footnote>Increased body temperature includes: increased body temperature and pyrexia</footnote>
+                                       </td>
+                                       <td styleCode="Rrule">17 (71)</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule">ECG abnormalities<footnote>ECG abnormalities include: non-specific repolarization abnormality, notched QRS, ST segment elevation, biphasic T wave abnormality, supraventricular extrasystoles, bradycardia, sinus tachycardia, and intraventricular conduction delay</footnote>
+                                       </td>
+                                       <td styleCode="Rrule">17 (71)</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule">Decreased CSF protein</td>
+                                       <td styleCode="Rrule">17 (71)</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule">Vomiting</td>
+                                       <td styleCode="Rrule">15 (63)</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule">Seizures<footnote>Seizures include: atonic, generalized tonic-clonic, focal, and absence</footnote>
+                                       </td>
+                                       <td styleCode="Rrule">12 (50)</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule">Device-related complications<footnote>Device-related complications include device-related infection, delivery system-related complications (needle issues, device leakage, device malfunction, device difficult to use, medical device site irritation, device breakage, etc.) and pleocytosis.</footnote>
+                                       </td>
+                                       <td styleCode="Rrule">12 (50)</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule">Hypersensitivity<footnote>Hypersensitivity includes only hypersensitivity <content styleCode="italics">[see <linkHtml href="#S5.4">Warnings and Precautions (5.4)</linkHtml>]</content>
+                                          </footnote>
+                                       </td>
+                                       <td styleCode="Rrule">9 (38)</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule">Increased CSF protein</td>
+                                       <td styleCode="Rrule">5 (21)</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule">Hematoma</td>
+                                       <td styleCode="Rrule">5 (21)</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule">Headache</td>
+                                       <td styleCode="Rrule">4 (17)</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule">Irritability</td>
+                                       <td styleCode="Rrule">4 (17)</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule">Pleocytosis</td>
+                                       <td styleCode="Rrule">4 (17)</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule">Device-related infections<footnote>Device-related infections include: <content styleCode="italics">Propionibacterium acnes</content> and <content styleCode="italics">Staphylococcus epidermidis</content>
+                                          </footnote>
+                                       </td>
+                                       <td styleCode="Rrule">2 (8)</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule">Bradycardia</td>
+                                       <td styleCode="Rrule">2 (8)</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule">Feeling jittery</td>
+                                       <td styleCode="Rrule">2 (8)</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule">Hypotension</td>
+                                       <td styleCode="Rrule">2 (8)</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </text>
+                           <effectiveTime value="20240731"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="a9bb2ec8-ad4d-4f22-a1d5-8ea230e7016a"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Description of Selected Adverse Reactions from Trial 1 and Trial 2 at 96 weeks</content>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20240731"/>
+                           <component>
+                              <section>
+                                 <id root="1de8d7e8-61e7-48d1-872e-a9671fa10668"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Seizures</content>
+                                    </paragraph>
+                                    <paragraph>Seizures were reported in 12 of 24 (50%) patients. The seizure types reported include atonic, generalized tonic-clonic, focal, and absence. Seizures were managed with standard anti-convulsive therapies and did not result in discontinuation of BRINEURA treatment.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20240731"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="a401914a-2953-477b-9475-b43320a471c2"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Device-Related Complications</content>
+                                    </paragraph>
+                                    <paragraph>Adverse reactions related to the device were observed in 12 of 24 (50%) of patients. Device-related adverse reactions include infection, delivery system-related complications, and pleocytosis. Nine out of 24 patients (38%) experienced adverse reactions, which involved complications of the non-implanted delivery system components. Four out of 24 patients (16%) had device-related adverse reactions, which required medical intervention, including two patients (8%) with intraventricular access device-related CNS infections, and one patient (4%) each with leakage of the intraventricular access device and pleocytosis. Device-related infections were diagnosed by increased CSF pleocytosis and microbiology culture and organism identification, without accompanying signs and symptoms of meningitis. Intraventricular access devices were replaced and infections were treated with antibiotics<content styleCode="italics">.</content> Device-related complications did not result in discontinuation of BRINEURA treatment.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20240731"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="0ef5d2e9-19cc-4784-82f9-ea22c70f7b6f"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Hematoma</content>
+                                    </paragraph>
+                                    <paragraph>Hematoma adverse reactions were reported in 5 of 24 (21%) patients treated with BRINEURA and presented as hematoma, post procedural hematoma, traumatic hematoma and subdural hematoma. Hematomas did not require treatment and did not interfere with BRINEURA infusion.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20240731"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="91ab672c-577c-4a82-9c5a-928c8fbf6932"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Hypersensitivity</content>
+                                    </paragraph>
+                                    <paragraph>Hypersensitivity reactions were reported in 11 out of 24 patients (46%) treated with BRINEURA during or within 24 hours after completion of the BRINEURA infusion, despite pre-medication with antihistamines with or without antipyretics or corticosteroids. The most common manifestations observed concomitantly with hypersensitivity included pyrexia with vomiting, pleocytosis, or irritability, which are not consistent with classic immune mediated hypersensitivity. Symptoms resolved over time or with administration of antipyretics, antihistamines and/or corticosteroids and no patient discontinued treatment with BRINEURA.</paragraph>
+                                    <paragraph>One patient experienced hypoxia (decreased oxygen saturation less than 88% by pulse oximeter), 8 hours after BRINEURA infusion, followed by a low mean arterial pressure at 15 hours post infusion. Symptoms resolved after oxygen administration, airway repositioning and normal saline infusion. One patient reported decreased oxygen saturation (90% by pulse oximeter), 45 minutes after starting BRINEURA with associated low diastolic blood pressures. Hypoxia resolved after oxygen administration. No treatment was administered for the low diastolic blood pressure, which returned to normal while the patient continued to receive BRINEURA infusion without change to the infusion rate or dose.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20240731"/>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="46b4b0ae-d314-4bf7-bd0f-b8cd7c93237c"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Trial 3</content>
+                              </paragraph>
+                              <paragraph>Trial 3 enrolled 14 patients aged 1 to 6 years at baseline who received BRINEURA at the recommended dose based on the age of the patient, every other week for a median of 142 weeks. Adverse reactions that occurred in at least 5% of patients are described in Table 3.</paragraph>
+                              <paragraph>The most frequent adverse reactions reported in patients &lt; 3 years treated with BRINEURA were similar to those observed in patients ≥ 3 years of age except for hypersensitivity reactions, which were reported in 5 of 8 (63%) in patients &lt; 3 years at baseline compared with 0 of 6 in patients ≥ 3 years of age at baseline. The most common manifestations of hypersensitivity were pyrexia and vomiting and the timing and resolution were similar to Trials 1 and 2. Symptoms of severe hypersensitivity reactions (e.g., anaphylaxis) included tachycardia, bronchospasm, rash, diarrhea, hypotension, increased body temperature and vomiting.</paragraph>
+                           </text>
+                           <effectiveTime value="20240731"/>
+                           <component>
+                              <section>
+                                 <id root="b0b1fd13-e5bb-4ba0-b998-ecfc0a7de2dd"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Drug-related IARs</content>
+                                    </paragraph>
+                                    <paragraph>In Trial 3, 12 patients (86%) who received BRINEURA had 83 IARs. Of those, 8 patients were &lt; 3 years of age and 4 were ≥ 3 years of age. The symptoms occurring in more than one patient consisted of vomiting, seizure, rash, pyrexia, hypersensitivity, and abnormal electrocardiogram. Eight (57%) patients had serious IARs: pyrexia, hypersensitivity, anaphylactic reaction, seizure, and pleocytosis.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20240731"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="bb6fe92d-de09-48a1-a976-d68ee7a37eb5"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Device-related IARs</content>
+                                    </paragraph>
+                                    <paragraph>In Trial 3, 3 patients (21%) who received BRINEURA had 3 IARs related to the intraventricular device. Of those, 2 were &lt; 3 years of age and 1 was ≥ 3 years of age. The events were: device leakage, device breakage, and CSF red blood cell count positive. One (7%) patient had a serious IAR of device leakage.</paragraph>
+                                    <table width="85%">
+                                       <caption>Table 3: Adverse Reactions Reported in ≥ 5% of Pediatric Patients (1 to 6 years of age) with CLN2 Disease treated with BRINEURA in Trial 3</caption>
+                                       <col width="25%" align="center" valign="top"/>
+                                       <col width="25%" align="center" valign="top"/>
+                                       <col width="25%" align="center" valign="top"/>
+                                       <col width="25%" align="center" valign="top"/>
+                                       <thead>
+                                          <tr>
+                                             <th styleCode="Lrule Rrule">Adverse Reaction</th>
+                                             <th styleCode="Rrule">Age 1 to 3 years <br/>n=8 (%)</th>
+                                             <th styleCode="Rrule">Age 3 to 6 years<br/>n=6 (%)</th>
+                                             <th styleCode="Rrule">Total<br/>n=14 (%)</th>
+                                          </tr>
+                                       </thead>
+                                       <tfoot>
+                                          <tr>
+                                             <td align="left" colspan="4">Note: Incidence numbers are based on baseline age group</td>
+                                          </tr>
+                                       </tfoot>
+                                       <tbody>
+                                          <tr styleCode="Botrule">
+                                             <td styleCode="Lrule Rrule">ECG abnormalities<footnote>ECG abnormalities include: non-specific repolarization abnormality, supraventricular extrasystoles, possible left ventricular hypertrophy, intermittent 2<sup>nd</sup> degree AV Block (type 2 Mobitz), incomplete right bundle branch block, and prominent Q wave.</footnote>
+                                             </td>
+                                             <td styleCode="Rrule">8 (100)</td>
+                                             <td styleCode="Rrule">6 (100)</td>
+                                             <td styleCode="Rrule">14 (100)</td>
+                                          </tr>
+                                          <tr styleCode="Botrule">
+                                             <td styleCode="Lrule Rrule">Decreased CSF protein</td>
+                                             <td styleCode="Rrule">8 (100)</td>
+                                             <td styleCode="Rrule">4 (67)</td>
+                                             <td styleCode="Rrule">12 (86)</td>
+                                          </tr>
+                                          <tr styleCode="Botrule">
+                                             <td styleCode="Lrule Rrule">Increased body temperature<footnote>Increased body temperature includes: increased body temperature and pyrexia.</footnote>
+                                             </td>
+                                             <td styleCode="Rrule">6 (75)</td>
+                                             <td styleCode="Rrule">6 (100)</td>
+                                             <td styleCode="Rrule">12 (86)</td>
+                                          </tr>
+                                          <tr styleCode="Botrule">
+                                             <td styleCode="Lrule Rrule">Seizures<footnote>Seizures include: atonic, febrile convulsion, generalized tonic-clonic, partial, partial with secondary generalization, petit mal epilepsy, myoclonic and status epilepticus.</footnote>
+                                             </td>
+                                             <td styleCode="Rrule">4 (50)</td>
+                                             <td styleCode="Rrule">4 (67)</td>
+                                             <td styleCode="Rrule">8 (57)</td>
+                                          </tr>
+                                          <tr styleCode="Botrule">
+                                             <td styleCode="Lrule Rrule">Device-related complications<footnote>Device-related complications include device-related infection, delivery system-related complications (needle issues, device leakage, device malfunction, device difficult to use, medical device site irritation, device breakage, etc.)</footnote>
+                                             </td>
+                                             <td styleCode="Rrule">3 (36)</td>
+                                             <td styleCode="Rrule">2 (33)</td>
+                                             <td styleCode="Rrule">5 (36)</td>
+                                          </tr>
+                                          <tr styleCode="Botrule">
+                                             <td styleCode="Lrule Rrule">Vomiting</td>
+                                             <td styleCode="Rrule">2 (25)</td>
+                                             <td styleCode="Rrule">3 (50)</td>
+                                             <td styleCode="Rrule">5 (36)</td>
+                                          </tr>
+                                          <tr styleCode="Botrule">
+                                             <td styleCode="Lrule Rrule">Hypersensitivity<footnote>Hypersensitivity includes only the term of hypersensitivity</footnote>
+                                             </td>
+                                             <td styleCode="Rrule">4 (50)</td>
+                                             <td styleCode="Rrule">0</td>
+                                             <td styleCode="Rrule">4 (29)</td>
+                                          </tr>
+                                          <tr styleCode="Botrule">
+                                             <td styleCode="Lrule Rrule">Hematoma</td>
+                                             <td styleCode="Rrule">2 (25)</td>
+                                             <td styleCode="Rrule">0</td>
+                                             <td styleCode="Rrule">2 (14)</td>
+                                          </tr>
+                                          <tr styleCode="Botrule">
+                                             <td styleCode="Lrule Rrule">Increased CSF protein</td>
+                                             <td styleCode="Rrule">1 (13)</td>
+                                             <td styleCode="Rrule">0</td>
+                                             <td styleCode="Rrule">1 (7)</td>
+                                          </tr>
+                                          <tr styleCode="Botrule">
+                                             <td styleCode="Lrule Rrule">Pleocytosis</td>
+                                             <td styleCode="Rrule">1 (13)</td>
+                                             <td styleCode="Rrule">0</td>
+                                             <td styleCode="Rrule">1 (7)</td>
+                                          </tr>
+                                          <tr styleCode="Botrule">
+                                             <td styleCode="Lrule Rrule">Irritability</td>
+                                             <td styleCode="Rrule">0</td>
+                                             <td styleCode="Rrule">1 (17)</td>
+                                             <td styleCode="Rrule">1 (7)</td>
+                                          </tr>
+                                          <tr styleCode="Botrule">
+                                             <td styleCode="Lrule Rrule">Headache</td>
+                                             <td styleCode="Rrule">1 (13)</td>
+                                             <td styleCode="Rrule">0</td>
+                                             <td styleCode="Rrule">1 (7)</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </text>
+                                 <effectiveTime value="20240731"/>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S6.2">
+                     <id root="46101850-d25c-4006-b1b1-287852284347"/>
+                     <code code="90375-7" codeSystem="2.16.840.1.113883.6.1" displayName="POSTMARKETING EXPERIENCE SECTION"/>
+                     <title>6.2	Postmarketing Experience</title>
+                     <text>
+                        <paragraph>The following adverse reactions have been identified during post-approval use of BRINEURA. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.</paragraph>
+                        <list listType="unordered" styleCode="disc">
+                           <item>
+                              <content styleCode="italics">Immune system disorders</content>: Anaphylactic reaction characterized by acute pyrexia, respiratory distress (bronchospasm, hypoxemia, perioral cyanosis), tachycardia, hypotension, diarrhea, and rash <content styleCode="italics">[see <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>]</content>.</item>
+                           <item>
+                              <content styleCode="italics">Infections and infestations</content>: Bacterial meningitis <content styleCode="italics">[see <linkHtml href="#S5.2">Warnings and Precautions (5.2)</linkHtml>]</content>.</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S8">
+               <id root="31119b70-9e6f-47ff-9cf1-fe270051afef"/>
+               <code code="43684-0" codeSystem="2.16.840.1.113883.6.1" displayName="USE IN SPECIFIC POPULATIONS SECTION"/>
+               <title>8 USE IN SPECIFIC POPULATIONS</title>
+               <effectiveTime value="20240731"/>
+               <component>
+                  <section ID="S8.1">
+                     <id root="547dd47f-6a9d-4ae9-b7f5-eb5cb465143c"/>
+                     <code code="42228-7" codeSystem="2.16.840.1.113883.6.1" displayName="PREGNANCY SECTION"/>
+                     <title>8.1 Pregnancy</title>
+                     <effectiveTime value="20240731"/>
+                     <component>
+                        <section>
+                           <id root="26565f37-c47c-4f90-a41c-3ef3b5103863"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Risk Summary</content>
+                              </paragraph>
+                              <paragraph>There are no available data on BRINEURA use in pregnant women to inform a drug-associated risk of pregnancy-related outcomes. Animal reproduction studies have not been conducted using cerliponase alfa.</paragraph>
+                              <paragraph>The estimated background risk of major birth defects and miscarriage for the indicated population is unknown. All pregnancies have a background risk of birth defect, loss, or other adverse outcomes. In the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2 to 4% and 15 to 20%, respectively.</paragraph>
+                           </text>
+                           <effectiveTime value="20240731"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S8.2">
+                     <id root="613017d1-85e6-44a2-8347-c4894010c922"/>
+                     <code code="77290-5" codeSystem="2.16.840.1.113883.6.1" displayName="LACTATION SECTION"/>
+                     <title>8.2 Lactation</title>
+                     <effectiveTime value="20240731"/>
+                     <component>
+                        <section>
+                           <id root="904e83ea-f358-48a2-873b-291ae4320777"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Risk Summary</content>
+                              </paragraph>
+                              <paragraph>There are no data on the presence of cerliponase alfa in human milk, the effects on the breastfed child, or the effects on milk production. The lack of clinical data during lactation precludes a clear determination of the risk of BRINEURA to an infant during lactation; therefore, the development and health benefits of breastfeeding should be considered along with the mother's clinical need for BRINEURA and any potential adverse effects on the breastfed infant from BRINEURA or from the underlying maternal condition.</paragraph>
+                           </text>
+                           <effectiveTime value="20240731"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S8.4">
+                     <id root="a91b2b5c-7f2e-4d46-9b02-138349e83900"/>
+                     <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+                     <title>8.4 Pediatric Use</title>
+                     <text>
+                        <paragraph>The safety and effectiveness of BRINEURA have been established to slow the loss of ambulation in pediatric patients with CLN2 disease and the information on this use is discussed throughout the labeling.</paragraph>
+                        <paragraph>BRINEURA is not recommended for use in patients less than 37 weeks post-menstrual age (gestational age at birth plus post-natal age) or those weighing less than 2.5 kg due to physiologic immaturity which may increase risk of serious and clinically significant adverse reactions observed with BRINEURA <content styleCode="italics">[see <linkHtml href="#S5">Warnings and Precautions (5)</linkHtml>]</content>.</paragraph>
+                        <paragraph>Patients less than 3 years of age may be at increased risk for developing hypersensitivity reactions with BRINEURA use compared to patients 3 years of age and older <content styleCode="italics">[see <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml> and <linkHtml href="#S6.1">Adverse Reactions (6.1)</linkHtml>].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S11">
+               <id root="5b19a1bd-3c4f-4733-bcbf-949c37096752"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>11 DESCRIPTION</title>
+               <text>
+                  <paragraph>Cerliponase alfa is a purified human enzyme produced by recombinant DNA technology in a Chinese hamster ovary cell line. The active substance is a recombinant human tripeptidyl peptidase-1 (rhTPP1), a lysosomal exopeptidase. The primary activity of the mature enzyme is the cleavage of N-terminal tripeptides from a broad range of protein substrates.</paragraph>
+                  <paragraph>Cerliponase alfa contains 544 amino acids with an average molecular mass of 59 kDa. The mature enzyme is 368 amino acids in length. There are 5 consensus N-glycosylation sites on rhTPP1 that contain high mannose, phosphorylated high mannose and complex glycosylation structures.</paragraph>
+                  <paragraph>BRINEURA (cerliponase alfa) Injection and Intraventricular Electrolytes Injection are administered by intraventricular infusion. The solutions are sterile, nonpyrogenic, and free of foreign particulates. BRINEURA is a clear to slightly opalescent and colorless to pale yellow solution. Intraventricular Electrolytes is a clear to colorless solution.</paragraph>
+                  <paragraph>BRINEURA and Intraventricular Electrolytes Injection are packaged in 10 mL clear Type 1 single-dose glass vials <content styleCode="italics">[see <linkHtml href="#S16">How Supplied/Storage and Handling (16)</linkHtml>].</content> Each vial of BRINEURA provides 5 mL of solution containing 150 mg cerliponase alfa. Each vial of Intraventricular Electrolytes Injection provides 5 mL of solution. Both BRINEURA and Intraventricular Electrolytes Injection are formulated with the following excipients: calcium chloride dihydrate (1.05 mg); magnesium chloride hexahydrate (0.8 mg); potassium chloride (1.1 mg); sodium chloride (43.85 mg); sodium phosphate, dibasic, heptahydrate (0.55 mg); sodium phosphate, monobasic, monohydrate (0.4 mg); and Water for Injection, USP. The pH of the solution is between 6.2 to 6.8 for BRINEURA, and between 6.0 to 7.0 for Intraventricular Electrolytes Injection.</paragraph>
+                  <paragraph>Each vial contains: sodium: 0.76 mEq, and potassium: 0.015 mEq.</paragraph>
+               </text>
+               <effectiveTime value="20240731"/>
+            </section>
+         </component>
+         <component>
+            <section ID="S12">
+               <id root="792fb36d-0a86-4287-bcd2-63ee5c41c89b"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>12 CLINICAL PHARMACOLOGY</title>
+               <effectiveTime value="20240731"/>
+               <component>
+                  <section ID="S12.1">
+                     <id root="9b995710-51c0-45ca-b473-30d5c618bd36"/>
+                     <code code="43679-0" codeSystem="2.16.840.1.113883.6.1" displayName="MECHANISM OF ACTION SECTION"/>
+                     <title>12.1	Mechanism of Action</title>
+                     <text>
+                        <paragraph>CLN2 disease is a neurodegenerative disease caused by deficiency of the lysosomal enzyme tripeptidyl peptidase-1 (TPP1), which catabolizes polypeptides in the CNS. TPP1 has no known substrate specificity. Deficiency in TPP1 activity results in the accumulation of lysosomal storage materials normally metabolized by this enzyme in the central nervous system (CNS), leading to progressive decline in motor function.</paragraph>
+                        <paragraph>Cerliponase alfa (rhTTP1), a proenzyme, is taken up by target cells in the CNS and is translocated to the lysosomes through the Cation Independent Mannose-6-Phosphate Receptor (CI-MPR, also known as M6P/IGF2 receptor). Cerliponase alfa is activated in the lysosome and the activated proteolytic form of rhTPP1 cleaves tripeptides from the N-terminus of proteins.</paragraph>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S12.2">
+                     <id root="ad3a3903-a7ab-429b-9c84-24b9a2dda4ea"/>
+                     <code code="43681-6" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACODYNAMICS SECTION"/>
+                     <title>12.2 Pharmacodynamics</title>
+                     <text>
+                        <paragraph>No formal pharmacodynamic studies have been conducted with cerliponase alfa.</paragraph>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S12.3">
+                     <id root="aec9b11d-8c90-49b3-9c9d-9ccbf17bd8e1"/>
+                     <code code="43682-4" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACOKINETICS SECTION"/>
+                     <title>12.3 Pharmacokinetics</title>
+                     <effectiveTime value="20240731"/>
+                     <component>
+                        <section>
+                           <id root="9cdaece9-aefe-4cd7-8084-0a0f734298e8"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Patients 3 years of age and older</content>
+                              </paragraph>
+                              <paragraph>The pharmacokinetics of cerliponase alfa were evaluated in patients with CLN2 disease who received intraventricular infusions of 30 mg (0.1 times the maximum approved recommended dosage), 100 mg (approximately 0.3 times the maximum approved recommended dosage), and 300 mg over approximately 4.5 hours once every other week.</paragraph>
+                              <paragraph>Cerliponase alfa CSF exposure following the initial single dose administration of BRINEURA increased less than proportionally across doses of 30 mg, 100 mg, and 300 mg. There was no apparent accumulation of cerliponase alfa in CSF or plasma when BRINEURA was administered at a dose of 300 mg once every other week.</paragraph>
+                              <paragraph>Cerliponase alfa pharmacokinetics have high inter-subject and intra-subject variability. Following intraventricular infusions of 300 mg of BRINEURA at Day 1, Week 5, and Week 13, the pharmacokinetic parameters in CSF and plasma were assessed in 14 patients and are summarized in Table 4.</paragraph>
+                              <table width="85%">
+                                 <caption>Table 4: Pharmacokinetic Parameters of Cerliponase Alfa Following Intraventricular Infusion (approximately 4.5 hours in duration) of BRINEURA 300 mg Every Two Weeks in Patients ≥ 3 years</caption>
+                                 <col width="14%" align="center" valign="top"/>
+                                 <col width="20%" align="center" valign="top"/>
+                                 <col width="22%" align="center" valign="top"/>
+                                 <col width="22%" align="center" valign="top"/>
+                                 <col width="22%" align="center" valign="top"/>
+                                 <thead>
+                                    <tr>
+                                       <th styleCode="Lrule Rrule" rowspan="2"/>
+                                       <th styleCode="Rrule" rowspan="2">Parameter</th>
+                                       <th styleCode="Botrule Rrule" colspan="3">Median [Min, Max]</th>
+                                    </tr>
+                                    <tr>
+                                       <th styleCode="Lrule Rrule">Day 1</th>
+                                       <th styleCode="Rrule">Week 5</th>
+                                       <th styleCode="Rrule">Week 13</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Botrule Rrule">N</td>
+                                       <td styleCode="Botrule Rrule">13</td>
+                                       <td styleCode="Botrule Rrule">14</td>
+                                       <td styleCode="Botrule Rrule">13</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Botrule Rrule">T<sub>max</sub>
+                                          <footnote ID="T2ft1">T<sub>max</sub> expressed as time since start of ~4.5 hour infusion.</footnote>, hr</td>
+                                       <td styleCode="Botrule Rrule">4.5 [4.3, 5.8]</td>
+                                       <td styleCode="Botrule Rrule">4.3 [3.8, 4.5]</td>
+                                       <td styleCode="Botrule Rrule">4.3 [4.0, 4.5]</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Botrule Rrule">C<sub>max</sub>, mcg/mL</td>
+                                       <td styleCode="Botrule Rrule">1260 [359, 4380]</td>
+                                       <td styleCode="Botrule Rrule">1630 [376, 4670]</td>
+                                       <td styleCode="Botrule Rrule">1390 [1110, 2340]</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule">
+                                          <content styleCode="bold">CSF</content>
+                                       </td>
+                                       <td styleCode="Botrule Rrule">AUC<sub>0-t</sub>, mcg-hr/mL</td>
+                                       <td styleCode="Botrule Rrule">9290 [3660, 19000]</td>
+                                       <td styleCode="Botrule Rrule">12400 [4620, 26200]</td>
+                                       <td styleCode="Botrule Rrule">10500 [7000, 18200]</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Botrule Rrule">V<sub>ss</sub>, mL</td>
+                                       <td styleCode="Botrule Rrule">245 [78.4, 909]</td>
+                                       <td styleCode="Botrule Rrule">196 [85.4, 665]</td>
+                                       <td styleCode="Botrule Rrule">186 [131, 257]</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Botrule Rrule">CL, mL/hr</td>
+                                       <td styleCode="Botrule Rrule">32.3 [15.8, 81.9]</td>
+                                       <td styleCode="Botrule Rrule">24.2 [11.4, 64.9]</td>
+                                       <td styleCode="Botrule Rrule">28.7 [16.5, 42.9]</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Rrule">t<sub>1/2</sub>, hr</td>
+                                       <td styleCode="Rrule">6.2 [5.5, 16.3]</td>
+                                       <td styleCode="Rrule">7.4 [3.3, 9.5]</td>
+                                       <td styleCode="Rrule">7.7 [5.1, 9.4]</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Botrule Rrule">N</td>
+                                       <td styleCode="Botrule Rrule">12</td>
+                                       <td styleCode="Botrule Rrule">12</td>
+                                       <td styleCode="Botrule Rrule">9</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule">
+                                          <content styleCode="bold">Plasma</content>
+                                          <footnote>V<sub>ss</sub>, CL, and t<sub>1/2</sub> were not estimated due to insufficient plasma pharmacokinetic data</footnote>
+                                       </td>
+                                       <td styleCode="Botrule Rrule">T<sub>max</sub>
+                                          <footnoteRef IDREF="T2ft1"/>, hr</td>
+                                       <td styleCode="Botrule Rrule">12.0 [4.3, 24.5]</td>
+                                       <td styleCode="Botrule Rrule">12.0 [7.5, 24.2]</td>
+                                       <td styleCode="Botrule Rrule">12.3 [4.3, 75.9]</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Botrule Rrule">C<sub>max</sub>, mcg/mL</td>
+                                       <td styleCode="Botrule Rrule">1.3 [0.2, 3.9]</td>
+                                       <td styleCode="Botrule Rrule">1.9 [0.2, 4.3]</td>
+                                       <td styleCode="Botrule Rrule">1.0 [0.03, 2.6]</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Rrule">AUC<sub>0-t</sub>, mcg-hr/mL</td>
+                                       <td styleCode="Rrule">16.2 [1.1, 69.9]</td>
+                                       <td styleCode="Rrule">40.1 [11.1, 78.9]</td>
+                                       <td styleCode="Rrule">9.5 [0.2, 51.6]</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Botrule Rrule">N</td>
+                                       <td styleCode="Botrule Rrule">11</td>
+                                       <td styleCode="Botrule Rrule">12</td>
+                                       <td styleCode="Botrule Rrule">9</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td rowspan="2" styleCode="Lrule Rrule">
+                                          <content styleCode="bold">CSF/Plasma Ratio</content>
+                                       </td>
+                                       <td styleCode="Rrule">C<sub>max</sub>
+                                       </td>
+                                       <td styleCode="Rrule">1200 [305, 4530]</td>
+                                       <td styleCode="Rrule">809 [202, 9370]</td>
+                                       <td styleCode="Rrule">1320 [541, 51200]</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Rrule">AUC<sub>0-t</sub>
+                                       </td>
+                                       <td styleCode="Rrule">393 [115, 1910]</td>
+                                       <td styleCode="Rrule">340 [126, 1780]</td>
+                                       <td styleCode="Rrule">1330 [167, 38900]</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                              <paragraph>The estimated CSF volume of distribution of cerliponase alfa following intraventricular infusion of 300 mg of BRINEURA (median V<sub>ss</sub> = 245 mL) exceeds the typical CSF volume (100 mL).</paragraph>
+                           </text>
+                           <effectiveTime value="20240731"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="fbad6728-1dac-4576-b3c1-be3f4206cac1"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Pediatric patients less than 3 years</content>
+                              </paragraph>
+                              <paragraph>Pediatric CLN2 patients ages 1 to &lt; 2 years (n=2) and 2 to &lt; 3 years (n=6) were administered cerliponase alfa according to the recommended dosing regimen based on age for up to 144 weeks. CSF exposure with 300 mg cerliponase alfa was within the range characterized to be safe and effective in pivotal Trial 1.</paragraph>
+                              <paragraph>Plasma exposure in younger patients trended higher than the range characterized in the pivotal study. The pharmacokinetic parameters summarized by age at time of visit and dose are shown in Table 5.</paragraph>
+                              <table width="85%">
+                                 <caption>Table 5: Pharmacokinetic Parameters of Cerliponase Alfa by Age at Visit and Dose Following Intraventricular Infusion of BRINEURA Every Two Weeks in Pediatric Patients &lt; 3 years</caption>
+                                 <col width="12%" align="center" valign="top"/>
+                                 <col width="14%" align="center" valign="top"/>
+                                 <col width="14%" align="center" valign="top"/>
+                                 <col width="30%" align="center" valign="top"/>
+                                 <col width="30%" align="center" valign="top"/>
+                                 <thead>
+                                    <tr>
+                                       <th styleCode="Lrule Rrule">Age at Visit</th>
+                                       <th styleCode="Rrule">Dose<br/>(mg)</th>
+                                       <th styleCode="Rrule"/>
+                                       <th styleCode="Rrule">Parameter</th>
+                                       <th styleCode="Rrule">Median [Min, Max]</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule" rowspan="2">
+                                          <content styleCode="bold">1 to &lt; 2 years</content>
+                                       </td>
+                                       <td styleCode="Rrule">
+                                          <content styleCode="bold">200</content>
+                                       </td>
+                                       <td styleCode="Rrule">
+                                          <content styleCode="bold">CSF</content>
+                                       </td>
+                                       <td styleCode="Rrule Botrule">N</td>
+                                       <td styleCode="Rrule Botrule">3</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule Botrule">C<sub>max</sub>, mcg/mL</td>
+                                       <td styleCode="Rrule Botrule">511 [163, 987]</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule Botrule"/>
+                                       <td styleCode="Rrule Botrule">AUC<sub>0-t</sub>, mcg-hr/mL</td>
+                                       <td styleCode="Rrule Botrule">2720 [1100, 5050]</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule">
+                                          <content styleCode="bold">Plasma</content>
+                                       </td>
+                                       <td styleCode="Rrule Botrule">N</td>
+                                       <td styleCode="Rrule Botrule">2</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule Botrule">C<sub>max</sub>, mcg/mL</td>
+                                       <td styleCode="Rrule Botrule">10.4 [9.46, 11.3]</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Rrule Botrule"/>
+                                       <td styleCode="Rrule Botrule"/>
+                                       <td styleCode="Rrule Botrule">AUC<sub>0-t</sub>, mcg-hr/mL</td>
+                                       <td styleCode="Rrule Botrule">91.8 [72.7, 111]</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Rrule">
+                                          <content styleCode="bold">
+                                             <content styleCode="bold">300</content>
+                                          </content>
+                                       </td>
+                                       <td styleCode="Rrule">
+                                          <content styleCode="bold">
+                                             <content styleCode="bold">CSF</content>
+                                          </content>
+                                       </td>
+                                       <td styleCode="Rrule Botrule">N</td>
+                                       <td styleCode="Rrule Botrule">2</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule Botrule">C<sub>max</sub>, mcg/mL</td>
+                                       <td styleCode="Rrule Botrule">566 [496, 636]</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule Botrule"/>
+                                       <td styleCode="Rrule Botrule">AUC<sub>0-t</sub>, mcg-hr/mL</td>
+                                       <td styleCode="Rrule Botrule">8030 [8030, 8030]<footnote>N=1 due to less than 3 evaluable datapoints for determination of AUC<sub>0-t</sub>
+                                          </footnote>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule">
+                                          <content styleCode="bold">Plasma</content>
+                                       </td>
+                                       <td styleCode="Rrule Botrule">N</td>
+                                       <td styleCode="Rrule Botrule">2</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule Botrule">C<sub>max</sub>, mcg/mL</td>
+                                       <td styleCode="Rrule Botrule">14.1 [11.2, 17.0]</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule">AUC<sub>0-t</sub>, mcg-hr/mL</td>
+                                       <td styleCode="Rrule">145 [82.7, 206]</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule" rowspan="2">
+                                          <content styleCode="bold">2 to &lt; 3 years</content>
+                                       </td>
+                                       <td styleCode="Rrule">
+                                          <content styleCode="bold">300</content>
+                                       </td>
+                                       <td styleCode="Rrule">
+                                          <content styleCode="bold">CSF</content>
+                                       </td>
+                                       <td styleCode="Rrule Botrule">N</td>
+                                       <td styleCode="Rrule Botrule">6</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule Botrule">C<sub>max</sub>, mcg/mL</td>
+                                       <td styleCode="Rrule Botrule">896 [508, 1790]</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule Botrule"/>
+                                       <td styleCode="Rrule Botrule">AUC<sub>0-t</sub>, mcg-hr/mL</td>
+                                       <td styleCode="Rrule Botrule">4100 [2380, 6720]<footnote>N=5 due to less than 3 evaluable datapoints for determination of AUC<sub>0-t</sub>
+                                          </footnote>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule">
+                                          <content styleCode="bold">Plasma</content>
+                                       </td>
+                                       <td styleCode="Rrule Botrule">N</td>
+                                       <td styleCode="Rrule Botrule">6</td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule Botrule">C<sub>max</sub>, mcg/mL</td>
+                                       <td styleCode="Rrule Botrule">14.9 [9.08, 35.3]</td>
+                                    </tr>
+                                    <tr styleCode=" Botrule">
+                                       <td styleCode="Lrule Rrule"/>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule"/>
+                                       <td styleCode="Rrule">AUC<sub>0-t</sub>, mcg-hr/mL</td>
+                                       <td styleCode="Rrule">163 [91.5, 320]</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                              <paragraph>Cerliponase alfa is a protein and is expected to be degraded through peptide hydrolysis.</paragraph>
+                           </text>
+                           <effectiveTime value="20240731"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S12.6">
+                     <id root="4339274c-a669-4a90-bbab-e9ef753b5232"/>
+                     <code code="88830-5" codeSystem="2.16.840.1.113883.6.1" displayName="IMMUNOGENICITY"/>
+                     <title>12.6 	Immunogenicity</title>
+                     <text>
+                        <paragraph>The observed incidence of anti-drug antibodies is highly dependent on the sensitivity and specificity of the assay. Differences in assay methods preclude meaningful comparisons of the incidence of anti-drug antibodies in the studies described below with the incidence of anti-drug antibodies in other studies including cerliponase alfa.</paragraph>
+                        <paragraph>In Trials 1 and 2 <content styleCode="italics">[see <linkHtml href="#S14">Clinical Studies (14)</linkHtml>],</content> 19 of 24 (79%) and 10 of 24 (42%) patients treated with BRINEURA developed anti-drug antibodies (ADAs) in serum and CSF, respectively. Drug-specific neutralizing antibodies (NAb) capable of inhibiting receptor-mediated cellular uptake of cerliponase alfa were detected in the CSF of 3 of 24 (13%) patients at a single visit and were undetectable in all other CSF samples tested in ADA positive patients. In Trial 3 <content styleCode="italics">[see <linkHtml href="#S14">Clinical Studies (14)</linkHtml>]</content>, 14 of 14 (100%) and 3 of 14 (21%, all of the 3 patients were &lt; 3 years of age) patients treated with BRINEURA developed ADAs in serum and CSF, respectively. NAb responses were not detected in the CSF of any ADA positive patients. Overall, patients younger than 3 years of age had higher ADA titers compared to patients 3 years of age and older.</paragraph>
+                        <paragraph>In Trials 1 and 2, patients who experienced moderate to severe hypersensitivity adverse reactions were tested for drug-specific IgE and found to be negative. No association was found between serum ADA titers and incidence or severity of hypersensitivity. In Trial 3, hypersensitivity occurred in higher percentage in BRINEURA-treated patients &lt; 3 years of age at baseline (amongst these patients, one patient experienced anaphylaxis), and higher ADA titers were also observed in this age group compared to patients ≥ 3 years of age at baseline. There was no identified clinically significant effect of ADA on pharmacokinetics or efficacy of BRINEURA. There is insufficient information to characterize the effects of ADA on safety.</paragraph>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S13">
+               <id root="21c5cafd-201b-4113-a600-77dfeb685c27"/>
+               <code code="43680-8" codeSystem="2.16.840.1.113883.6.1" displayName="NONCLINICAL TOXICOLOGY SECTION"/>
+               <title>13 NONCLINICAL TOXICOLOGY</title>
+               <effectiveTime value="20240731"/>
+               <component>
+                  <section ID="S13.1">
+                     <id root="634abd51-accc-4ec5-ae17-18c4d8da547c"/>
+                     <code code="34083-6" codeSystem="2.16.840.1.113883.6.1" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title>13.1	Carcinogenesis, Mutagenesis, Impairment of Fertility</title>
+                     <text>
+                        <paragraph>Carcinogenicity, genotoxicity, and fertility studies have not been performed with cerliponase alfa. Based on the mechanism of action, cerliponase alfa is not expected to be tumorigenic.</paragraph>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S14">
+               <id root="37c6e970-f320-4cbc-b2de-c0d5e017025a"/>
+               <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+               <title>14 CLINICAL STUDIES</title>
+               <text>
+                  <paragraph>The efficacy of BRINEURA was assessed over 96 weeks in a non-randomized single-arm dose escalation clinical study with extension in symptomatic pediatric patients with late infantile neuronal ceroid lipofuscinosis type 2 (CLN2) disease, confirmed by TPP1 deficiency. BRINEURA-treated patients were compared to untreated patients from a natural history cohort. The Motor domain of a CLN2 Clinical Rating Scale was used to assess disease progression. Scores ranged from 3 (grossly normal) to 0 (profoundly impaired) with unit decrements representing milestone events in the loss of motor function (ability to walk or crawl). Due to the inability to establish comparability for the CLN2 Language domain ratings between the clinical study with extension and the natural history cohort, efficacy of BRINEURA for the Language domain cannot be established.</paragraph>
+                  <paragraph>Twenty-four patients, aged 3 to 8 years were enrolled in the BRINEURA single-arm clinical study (Trial 1, NCT01907087). Sixty-three percent of patients were female and 37% were male. Ninety-six percent of patients were White and 4% were Asian; for ethnicity, 4% identified as Hispanic/Latino, 96% as non-Hispanic/Latino. One patient withdrew after week 1 due to inability to continue with study procedures; 23 patients were treated with BRINEURA 300 mg every other week by intraventricular infusion for 48 weeks, and continued treatment during the 240-week extension period, Trial 2 (NCT02485899), for a total duration of 288 weeks, plus a 24-week safety follow-up.</paragraph>
+                  <paragraph>In the clinical study with extension, patients were assessed for decline in the Motor domain of the CLN2 Clinical Rating Scale at 48, 72 and 96 weeks. Decline was defined as having an unreversed (sustained) 2-category decline or an unreversed score of 0 in the Motor domain of the CLN2 Clinical Rating Scale. Patients' responses to BRINEURA treatment were evaluated if at screening a combined Motor plus Language CLN2 score of less than 6 was recorded. Two patients with a combined Motor plus Language CLN2 score of 6 were excluded from the analyses; they maintained that score throughout the study period. The patient who terminated early was analyzed as having a decline at the time of termination. Data used in the analyses from the natural history cohort began at 36 months of age or greater and at the first time a Motor plus Language CLN2 score less than 6 was recorded.</paragraph>
+                  <paragraph>Motor scores of the 22 BRINEURA-treated patients in the clinical study with extension were compared to scores of the independent natural history cohort that included 42 untreated patients who satisfied inclusion criteria for the clinical study. The results of logistic modeling with covariates (screening age, screening motor score, genotype: 0 key mutations (yes/no)), demonstrated the odds of BRINEURA-treated patients not having a decline by 96 weeks were 13 times the odds of natural history cohort patients not having a decline (Odds Ratio (95% CI): 13.1 (1.2, 146.9)).</paragraph>
+               </text>
+               <effectiveTime value="20240731"/>
+               <component>
+                  <section>
+                     <id root="7dbbee67-d029-4873-a208-fa16d190b3ff"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Descriptive non-randomized comparison</content>
+                        </paragraph>
+                        <paragraph>In an unadjusted non-randomized comparison, of the 22 patients treated with BRINEURA and evaluated for efficacy at week 96, 21 (95%) did not decline, and only the patient who terminated early was deemed to have a decline in the Motor domain of the CLN2 Clinical Rating Scale. Results from the natural history cohort demonstrated progressive decline in motor function; of the 42 patients in the natural history cohort, 21 (50%) experienced an unreversed (sustained) 2-category decline or unreversed score of 0 in the Motor domain of the CLN2 Clinical Rating Scale over 96 weeks.</paragraph>
+                        <paragraph>Given the non-randomized study design, a Cox Proportional Hazards Model adjusted for age, initial motor score, and genotype was used to evaluate time to unreversed 2-category decline or unreversed score of 0 in the Motor domain. This model showed a lesser decrease in motor function in the BRINEURA-treated patients when compared to the natural history cohort (see <linkHtml href="#fig7">Figure 7</linkHtml>).</paragraph>
+                        <table width="100%" styleCode="Noautorules" ID="fig7">
+                           <caption>Figure 7. Estimated Time to Unreversed (Sustained) 2-Category Decline or Unreversed Score of Zero in Motor Domain for Symptomatic Pediatric Patients in the BRINEURA Trials 1 and 2 at 96 Weeks and for Patients in a Natural History Cohort (Based on the Cox Proportional Hazards Model Adjusting for Covariates)</caption>
+                           <col width="100%" align="center" valign="top"/>
+                           <tfoot>
+                              <tr>
+                                 <td align="left">Shading represents 95% confidence intervals.<br/>Follow-up for the natural history cohort begins at 36 months of age or greater and at the first time a Motor plus Language CLN2 score less than 6 was recorded.<br/>The BRINEURA-treated population is the full population (N=24) minus two patients with baseline Motor plus Language CLN2 score = 6.<br/>Covariates: screening age, screening Motor score, genotype: 0 key mutations (yes/no). "Screening age" was defined in the natural history cohort as the age at the first time a Motor plus Language CLN2 score less than 6 was recorded, and no earlier than 36 months of age. The "screening Motor score" of the natural history cohort was defined as the Motor score at the screening age. <br/>Decline is defined as an unreversed (sustained) 2-category decline or unreversed score of 0 in the Motor domain of the CLN2 Clinical Rating Scale.</td>
+                              </tr>
+                           </tfoot>
+                           <tbody>
+                              <tr>
+                                 <td align="left">
+                                    <paragraph>
+                                       <renderMultiMedia referencedObject="MM7"/>
+                                    </paragraph>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                     <component>
+                        <observationMedia ID="MM7">
+                           <text>Figure 7</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="brineura-07.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="eecb2271-debe-48b9-ab48-dc0689589027"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Motor Domain Scores: Matched Patients Only</content>
+                        </paragraph>
+                        <paragraph>To further assess efficacy, the 22 patients from the BRINEURA clinical study with a baseline combined Motor plus Language CLN2 score less than 6 were matched to 42 patients in the natural history cohort. Patients were matched based on the following covariates: baseline age at time of screening within 3 months, genotype (0, 1, or 2 key mutations), and baseline Motor domain CLN2 score at time of screening.</paragraph>
+                        <paragraph>Using the Motor domain of the CLN2 Clinical Rating Scale, decline was defined as having an unreversed 2-category decline or an unreversed score of 0. At 96 weeks, the matched analysis based on 17 pairs demonstrated fewer declines in the Motor domain for BRINEURA-treated patients compared to untreated patients in the natural history cohort (see <linkHtml href="#tab6">Table 6</linkHtml>).</paragraph>
+                        <table ID="tab6" width="85%">
+                           <caption>Table 6: Proportion of Matched Symptomatic Pediatric Patients with CLN2 Disease without Decline<footnote>Decline is defined as an unreversed (sustained) 2-category decline or unreversed score of 0 in the Motor domain of the CLN2 Clinical Rating Scale.</footnote> in the BRINEURA Trials 1 and 2 and in the Natural History Cohort assessed at Weeks 48, 72, and 96</caption>
+                           <col width="22%" align="left" valign="top"/>
+                           <col width="22%" align="center" valign="top"/>
+                           <col width="17%" align="center" valign="top"/>
+                           <col width="17%" align="center" valign="top"/>
+                           <col width="22%" align="center" valign="top"/>
+                           <thead>
+                              <tr>
+                                 <th rowspan="2" styleCode="Lrule Rrule">Time Point/Period</th>
+                                 <th styleCode="Botrule Rrule">Natural History Cohort<br/>(N=17)</th>
+                                 <th styleCode="Botrule Rrule">BRINEURA-Treated (N=17)</th>
+                                 <th styleCode="Botrule Rrule">Difference</th>
+                                 <th styleCode="Botrule Rrule">Odds Ratio<footnote>Based on McNemar's Exact test</footnote>
+                                 </th>
+                              </tr>
+                              <tr>
+                                 <th align="center" styleCode="Rrule">n (%)</th>
+                                 <th styleCode="Rrule">n (%)</th>
+                                 <th styleCode="Rrule">% (95% CI<footnote>Exact confidence interval for risk difference (Santner and Snell)</footnote>)</th>
+                                 <th styleCode="Rrule">OR (95% CI)</th>
+                              </tr>
+                           </thead>
+                           <tfoot>
+                              <tr>
+                                 <td align="left" colspan="5" valign="top">Matched on baseline age at time of screening within 3 months, genotype (0, 1, or 2 key mutations), and baseline Motor domain CLN2 score at time of screening. <br/>The BRINEURA-treated population is based on the full population minus two patients with baseline Motor plus Language CLN2 score = 6.</td>
+                              </tr>
+                           </tfoot>
+                           <tbody>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">Follow-up through Week 48</td>
+                                 <td styleCode="Rrule">13 (76)</td>
+                                 <td styleCode="Rrule">16 (94)</td>
+                                 <td styleCode="Rrule">18% (-19, 51)</td>
+                                 <td styleCode="Rrule">4 (0.4, 200)</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule">Follow-up through Week 72</td>
+                                 <td styleCode="Rrule">11 (65)</td>
+                                 <td styleCode="Rrule">16 (94)</td>
+                                 <td styleCode="Rrule">29% (-7, 61)</td>
+                                 <td styleCode="Rrule">5.9 (0.7, 250)</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule">Follow-up through Week 96</td>
+                                 <td styleCode="Rrule">6 (35)</td>
+                                 <td styleCode="Rrule">16 (94)</td>
+                                 <td styleCode="Rrule">59% (24, 83)</td>
+                                 <td styleCode="Rrule">11 (1.6, 500)</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>Trial 3 (NCT02678689) was a Phase 2, open label clinical study designed to enroll symptomatic and presymptomatic CLN2 patients less than 18 years of age. The trial enrolled 14 patients ranging in age from 1 to 6 years at baseline, including 8 patients less than 3 years of age, the median age was 2.7 years.  Patients received BRINEURA at the recommended dose every 2 weeks by intraventricular infusion for 144 weeks (1 patient withdrew to receive treatment commercially). Fifty-seven percent of patients were female and 43% were male. All patients were White; for ethnicity, 14% identified as Hispanic/Latino, 86% as non-Hispanic/Latino. The mean baseline CLN2 Motor score was 2.3 (standard deviation (SD) 0.83) with a range from 1 to 3.</paragraph>
+                        <paragraph>Thirteen of the 14 BRINEURA treated patients were matched with up to 3 natural history comparators on the basis of age within 3 months, equal CLN2 Motor score, and genotype (0, 1, or 2 key mutations). None of the BRINEURA treated patients (N=14) had a 2-point decline or score of zero in the Motor scale by Week 169. Among the matched natural history comparators (N=31), 20 subjects (65%) had an unreversed 2-point decline or score of zero by last assessment.</paragraph>
+                        <paragraph>The median time to an unreversed 2-point decline in Motor score or score of 0 was 133 weeks among the natural history comparators and was not reached by last assessment (Week 169) in patients treated with BRINEURA.</paragraph>
+                        <paragraph>In patients below 3 years of age, none (0%) of the BRINEURA treated patients (N=8) had a 2-point decline or score of zero in the Motor score by Week 169. Among the 8 treated patients, 7 were matched to 18 untreated patients from the natural history cohort. Among the matched natural history comparators (N=18), 11 subjects (61%) had an unreversed 2-point decline or score of zero in the Motor score by last assessment. All seven of the treated patients below 3 years of age with a motor score of 3 at baseline remained at a motor score of 3 at the last measured timepoint, which represents grossly normal gait. In this population BRINEURA treated patients showed a delay in disease onset.</paragraph>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S16">
+               <id root="f3344ec4-bae0-4073-aacd-119a608bc179"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>16 HOW SUPPLIED/STORAGE AND HANDLING</title>
+               <text>
+                  <paragraph>BRINEURA is supplied as a sterile, clear to slightly opalescent and colorless to pale yellow solution for intraventricular infusion and Intraventricular Electrolytes Injection is supplied as a clear to colorless solution for intraventricular infusion; both are included in package 1 of 2. The Administration Kit for use with BRINEURA is supplied separately as package 2 of 2 <content styleCode="italics">[see <linkHtml href="#S2.4">Dosage and Administration (2.4)</linkHtml>]</content>.</paragraph>
+               </text>
+               <effectiveTime value="20240731"/>
+               <component>
+                  <section>
+                     <id root="03acfa7f-b548-4481-b863-0c278eb8df6d"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Package 1 of 2</content>
+                        </paragraph>
+                        <paragraph>Each BRINEURA (cerliponase alfa) Injection vial has a green flip-off cap (plastic) and contains 150 mg cerliponase alfa per 5 mL (30 mg/mL).</paragraph>
+                        <paragraph>Each Intraventricular Electrolytes Injection vial has a yellow flip-off cap (plastic) and contains 5 mL of solution.</paragraph>
+                        <table width="85%">
+                           <col width="80%" align="left" valign="top"/>
+                           <col width="20%" align="left" valign="top"/>
+                           <thead>
+                              <tr>
+                                 <th styleCode="Lrule Rrule">Contents of Package 1</th>
+                                 <th styleCode="Rrule">NDC Number</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td styleCode="Lrule Rrule">BRINEURA (cerliponase alfa) Injection (2 vials of 150 mg/5 mL)<br/>Intraventricular Electrolytes Injection (1 vial, 5 mL)</td>
+                                 <td styleCode="Rrule">68135-811-02</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="7f11517b-6195-410f-9812-7dfaab733260"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Package 2 of 2</content>
+                        </paragraph>
+                        <paragraph>The Administration Kit for use with BRINEURA is supplied separately and contains the following single-use, sterile infusion components:</paragraph>
+                        <list listType="unordered" styleCode="disc">
+                           <item>Two 20-mL syringes</item>
+                           <item>Two syringe needles (21 G, 25.4 mm)</item>
+                           <item>One extension line</item>
+                           <item>One infusion set with 0.2 micron inline filter</item>
+                           <item>One port needle (22 G, 16 mm)</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="2f31a447-7909-4928-bcc1-fad402055040"/>
+                     <code code="44425-7" codeSystem="2.16.840.1.113883.6.1" displayName="STORAGE AND HANDLING SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Storage</content>
+                        </paragraph>
+                        <paragraph>BRINEURA (cerliponase alfa) Injection and Intraventricular Electrolytes Injection:<br/>Store upright in a freezer (-25°C to -15°C) in original carton to protect from light.</paragraph>
+                        <paragraph>Administration Kit for use with BRINEURA:<br/>Store in original carton separately from BRINEURA. Do not freeze.</paragraph>
+                     </text>
+                     <effectiveTime value="20240731"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S17">
+               <id root="c3b7fb71-75c0-4709-afce-cbd14b42c892"/>
+               <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+               <title>17 PATIENT COUNSELING INFORMATION</title>
+               <text>
+                  <list listType="unordered" styleCode="disc">
+                     <item>Hypersensitivity Reactions Including Anaphylaxis and Infusion-Associated Reactions (IARs)<list listType="unordered" styleCode="circle">
+                           <item>Advise patients and caregivers that life-threatening hypersensitivity reactions, including anaphylaxis, and IARs may occur with BRINEURA treatment.</item>
+                           <item>Advise patients and caregivers that anaphylaxis has occurred during the early course of enzyme replacement therapy and after extended duration of therapy.</item>
+                           <item>Inform patients and caregivers of the symptoms of life-threatening hypersensitivity reactions, including anaphylaxis, and IARs and to seek immediate medical care should symptoms occur <content styleCode="italics">[see <linkHtml href="#S5.1">Warnings and Precautions (5.1</linkHtml>, <linkHtml href="#S5.5">5.5)</linkHtml>]</content>.</item>
+                        </list>
+                     </item>
+                     <item>Intraventricular Access Device-Related Infections <br/>Advise patients and caregivers of the risk of device-related infections, including meningitis. Familiarize them with the signs and symptoms of these infections and instruct them to immediately contact their healthcare provider if an infection is suspected <content styleCode="italics">[see <linkHtml href="#S5.2">Warnings and Precautions (5.2)</linkHtml>]</content>.</item>
+                     <item>Cardiovascular Adverse Reactions<br/>Advise patients and caregivers that hypotension and/or bradycardia may occur during and following the infusion of BRINEURA. Instruct patients immediately to contact their healthcare provider if these reactions occur <content styleCode="italics">[see <linkHtml href="#S5.4">Warnings and Precautions (5.4)</linkHtml>].</content>
+                     </item>
+                  </list>
+               </text>
+               <effectiveTime value="20240731"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="485ddad9-9d55-4df1-ac8b-dc320ad5c238"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>Manufactured by:<br/>BioMarin Pharmaceutical Inc.<br/>Novato, CA 94949<br/>US License Number 1649<br/>1-866-906-6100 (phone)</paragraph>
+                  <paragraph>Codman<sup>®</sup> and the B Braun Perfusor<sup>®</sup> are the registered trademarks of their respective owners and are not trademarks of BioMarin<sup>®</sup> Pharmaceutical Inc.</paragraph>
+               </text>
+               <effectiveTime value="20240731"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="4274a6d1-ed62-4796-b8bd-9e4b137260d2"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - Kit Carton - Package 1</title>
+               <text>
+                  <paragraph>NDC 68135-811-02</paragraph>
+                  <paragraph>Brineura<sup>®</sup>
+                     <br/>(cerliponase alfa)<br/>Injection</paragraph>
+                  <paragraph>150 mg/5 mL (30 mg/mL)</paragraph>
+                  <paragraph>For Intraventricular Infusion Only</paragraph>
+                  <paragraph>Each vial of Brineura<sup>®</sup> contains 150 mg cerliponase alfa<br/>in 5 mL of solution (30 mg/mL)</paragraph>
+                  <paragraph>No preservatives<br/>Single-Dose Vial. Discard unused portion.</paragraph>
+                  <paragraph>Brineura<sup>®</sup> and Intraventricular Electrolytes must be<br/>administered with the Administration Kit provided.</paragraph>
+                  <paragraph>Each carton contains:<br/>2 vials, each containing Brineura<sup>®</sup>
+                     <br/>(cerliponase alfa) Injection, 150 mg/5 mL<br/>1 vial of Intraventricular Electrolytes<br/>Injection, 5 mL</paragraph>
+                  <paragraph>Package 1 of 2</paragraph>
+                  <paragraph>Administration Kit is supplied<br/>and stored separately as<br/>package 2 of 2.</paragraph>
+                  <paragraph>Rx Only</paragraph>
+                  <paragraph>BIOMARIN<sup>®</sup>
+                  </paragraph>
+                  <renderMultiMedia referencedObject="MM8"/>
+               </text>
+               <effectiveTime value="20240731"/>
+               <component>
+                  <observationMedia ID="MM8">
+                     <text>PRINCIPAL DISPLAY PANEL - Kit Carton - Package 1</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="brineura-08.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="b040d9ea-7c28-441b-9b24-822783c4ec58"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 150 mg/5 mL Vial Label</title>
+               <text>
+                  <paragraph>Brineura<sup>®</sup>
+                     <br/>(cerliponase alfa)<br/>Injection</paragraph>
+                  <paragraph>150 mg/5 mL<br/>(30 mg/mL)</paragraph>
+                  <paragraph>For Intraventricular Infusion Only<br/>Use before Intraventricular<br/>Electrolytes</paragraph>
+                  <renderMultiMedia referencedObject="MM9"/>
+               </text>
+               <effectiveTime value="20240731"/>
+               <component>
+                  <observationMedia ID="MM9">
+                     <text>PRINCIPAL DISPLAY PANEL - 150 mg/5 mL Vial Label</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="brineura-09.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="5797f8d8-67da-4477-b36e-ea35543ea6bf"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 5 mL Vial Label</title>
+               <text>
+                  <paragraph>Intraventricular<br/>Electrolytes</paragraph>
+                  <paragraph>Injection</paragraph>
+                  <paragraph>Use after Brineura<sup>®</sup>
+                     <br/>(cerliponase alfa)</paragraph>
+                  <paragraph>5 mL</paragraph>
+                  <paragraph>For Intraventricular<br/>Infusion Only</paragraph>
+                  <renderMultiMedia referencedObject="MM10"/>
+               </text>
+               <effectiveTime value="20240731"/>
+               <component>
+                  <observationMedia ID="MM10">
+                     <text>PRINCIPAL DISPLAY PANEL - 5 mL Vial Label</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="brineura-10.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="cc4e48ea-6210-436a-8a0c-c02dce070f08"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - Kit Carton - Package 2</title>
+               <text>
+                  <paragraph>Administration Kit for use with Brineura<sup>®</sup> (cerliponase alfa)<br/>Intraventricular infusion only</paragraph>
+                  <paragraph>Recommended Dosage: See Prescribing Information</paragraph>
+                  <paragraph>Contents of Administration Kit:</paragraph>
+                  <list listType="unordered" styleCode="disc">
+                     <item>Two single-use 20-mL syringes</item>
+                     <item>Two single-use syringe needles, 21 G, 25.4 mm</item>
+                     <item>One single-use extension line</item>
+                     <item>One single-use infusion set with 0.2 micron inline filter</item>
+                     <item>One single-use port needle, 22 G, 16 mm</item>
+                  </list>
+                  <paragraph>Package 2 of 2</paragraph>
+                  <paragraph>Brineura<sup>®</sup> and Intraventricular Electrolytes Injection are separately supplied and<br/>stored frozen as package 1 of 2<br/>Not for resale<br/>Only for use with Brineura<sup>®</sup>
+                  </paragraph>
+                  <paragraph>Caution:</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption>-</caption>Do not use if the seals or package are damaged.</item>
+                     <item>
+                        <caption>-</caption>Do not resterilize.</item>
+                     <item>
+                        <caption>-</caption>Single use only. Do not reuse.</item>
+                     <item>
+                        <caption>-</caption>Do not freeze.</item>
+                     <item>
+                        <caption>-</caption>Store in original package separately from Brineura<sup>®</sup>.</item>
+                  </list>
+                  <paragraph>NOTE:</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption>-</caption>This Administration Kit has no components made of natural latex rubber.</item>
+                     <item>
+                        <caption>-</caption>Individual devices are provided in separate sterile packaging.</item>
+                     <item>
+                        <caption>-</caption>Expiration dates may vary for each device included.</item>
+                  </list>
+                  <paragraph>Manufactured for<br/>BioMarin Pharmaceutical Inc.<br/>Novato, CA 94949<br/>www.bmrn.com</paragraph>
+                  <paragraph>Rx Only</paragraph>
+                  <paragraph>BIOMARIN<sup>®</sup>
+                  </paragraph>
+                  <renderMultiMedia referencedObject="MM11"/>
+               </text>
+               <effectiveTime value="20240731"/>
+               <component>
+                  <observationMedia ID="MM11">
+                     <text>PRINCIPAL DISPLAY PANEL - Kit Carton - Package 2</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="brineura-11.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

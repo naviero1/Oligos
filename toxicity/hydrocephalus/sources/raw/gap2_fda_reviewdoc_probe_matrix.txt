@@ -1,0 +1,48 @@
+GAP-FILL 2 SWEEP: FDA Drugs@FDA review-package retrieval, run 2026-08-29.
+
+FAILURE MODE CONFIRMED (this is why earlier sweeps recorded a false "not retrievable"):
+  curl with NO User-Agent to accessdata.fda.gov returns:
+      HTTP 404, Content-Type text/html, 419-420 bytes, body = "<title>FDA Apology</title>"
+      redirecting to /apology_objects/excessive-requests-apology.html
+  This is a bot-block disguised as a 404.
+  curl WITH a browser User-Agent returns HTTP 200 + application/pdf.
+  Verified this session on https://www.accessdata.fda.gov/drugsatfda_docs/nda/2023/215887Orig1s000IntegratedR.pdf
+      no-UA  -> 404, 419 bytes, "FDA Apology"
+      UA set -> 200, 11,199,646 bytes, sha256 c4439f480e879b865438d3defe4d1fecf5a1c5a3c7d3058c35127d0f251f4cff
+  With a UA set, a GENUINE missing document returns HTTP 404 with Content-Length 17737
+  (the real Drugs@FDA "not found" page). 17737 = truly absent; 420 = bot-block. These are
+  distinguishable and must not be conflated.
+
+WORKING ROUTE
+  Step 1 (no key): https://api.fda.gov/drug/drugsfda.json?search=openfda.generic_name:%22<drug>%22&limit=5
+                   -> submissions[].application_docs[] where type=="Review" gives the TOC.html URL,
+                      which yields <APPNO> and year. TOC.html itself is a JavaScript template (useless).
+  Step 2 (UA REQUIRED): build https://www.accessdata.fda.gov/drugsatfda_docs/nda/<YEAR>/<APPNO>Orig1s000<SUFFIX>.pdf
+                   SUFFIX in {IntegratedR, MultidisciplineR, PharmR, MedR, SumR, ClinPharmR, StatR, OtherR, RiskR, ChemR, ProceduralR}
+                   curl -s -L -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36'
+
+HEAD-PROBE MATRIX (HTTP code / Content-Length; 17737 == document genuinely absent)
+APPNO  YEAR  DRUG         IntegratedR   MultidisciplineR  PharmR      MedR         SumR      ClinPharmR  StatR      OtherR     RiskR      ChemR      ProceduralR
+215887 2023  tofersen     200/11199646  404               404         404          404       404         404        200/5370497 200/2043167 200/4617206 404
+209531 2016  nusinersen   404           404               200/9414926 200/13867148 200/1179902 200/3562258 200/1478713 200/5459259 200/154609 200/3156001 404
+206488 2016  eteplirsen   404           404               200/4626532 200/30803223 200/9916855 200/7144305 200/1963550 200/7267827 200/606378 -          -
+211970 2019  golodirsen   404           404               200/7141502 200/8265410  200/1440429 200/821126  404        200/1530099 200/444135 -          -
+212154 2020  viltolarsen  404           404               200/1804563 200/13760474 200/1754984 200/3568083 404        200/1672957 200/895611 -          -
+213026 2021  casimersen   404           404               200/6352242 200/9329192  200/984452  200/854099  404        200/1592106 200/293361 -          -
+210922 2018  patisiran    404           404               404         404          404       404         404        200/2008902 200/1065382 -          -
+215515 2022  vutrisiran   404           404               200/2863219 200/1688258  200/724934  200/2005358 200/1665743 200/1744524 200/831786 -          -
+
+VERIFIED ABSENT / DEAD ENDS
+- patisiran NDA210922: NO PharmR / MedR / SumR / ClinPharmR / IntegratedR / MultidisciplineR.
+  Also probed and 404 (17737): 210922Orig1s000{MultidisciplineR,MultiDisciplineR,MultidisciplineReview,IntegratedReview}.pdf
+  Only OtherR + RiskR exist. The clinical/nonclinical primary review for patisiran is NOT public at this path.
+- inotersen: api.fda.gov/drug/drugsfda.json returns NOT_FOUND for
+  openfda.generic_name:"inotersen" AND openfda.brand_name:"TEGSEDI". No Drugs@FDA record reachable
+  via openFDA, therefore no review-package URL could be constructed. NOT retrieved.
+- nusinersen supplements SUPPL 2,3,4,5,7,8,10,11,13,14,16 (2017-2026) carry application_docs of type
+  Label and Letter ONLY - no type=="Review". So the post-marketing label changes (incl. any later
+  addition of communicating hydrocephalus) have NO public FDA review document at Drugs@FDA.
+- Intrathecal route census: api.fda.gov/drug/drugsfda.json?search=openfda.route:"INTRATHECAL"&count=openfda.generic_name.exact
+  returns only NUSINERSEN and TOFERSEN as oligonucleotides (others: methotrexate, cytarabine,
+  baclofen, morphine, polymyxin B, iohexol, iopamidol, indium In-111 pentetate, penicillin G,
+  ziconotide, an electrolyte solution). No other CNS-route oligo has a Drugs@FDA review package.

@@ -1,0 +1,10 @@
+approval_date	submission	section_changed	verbatim_6_3_text	hydrocephalus_status
+2016-12-23	ORIG-1	(no 6.3 subsection exists)		absent_section_not_present
+2017-11-21	SUPPL-2	6.3 Postmarketing Experience (Newly added subsection)	Serious infections, including meningitis, have occurred as complications of lumbar puncture in patients treated with SPINRAZA.	absent
+2018-05-14	SUPPL-4	6.3 Postmarketing Experience	Serious infections (including meningitis) and hydrocephalus have occurred in patients treated with SPINRAZA via lumbar puncture.	present_LP_attributed
+2018-10-10	SUPPL-5	8.1 Pregnancy / 8.2 Lactation (6.3 unchanged)		present_unchanged
+2019-06-17	SUPPL-7/8	6.3 Postmarketing Experience	Serious infections associated with lumbar puncture, such as meningitis, have been observed. Hydrocephalus, aseptic meningitis, and hypersensitivity reactions (e.g. angioedema, urticaria, rash) have also been reported.	present_drug_attributed_decoupled_from_LP
+2020-06-16	SUPPL-10	6.1 Clinical Trials Experience / Immunogenicity (6.3 unchanged)		present_unchanged
+2023-02-17	SUPPL-11	label version; 6.3 wording unchanged		present_unchanged
+2024-04-10	SUPPL-14	6.3 Postmarketing Experience	Serious infections associated with lumbar puncture, such as meningitis, have been reported. Hydrocephalus, aseptic meningitis, hypersensitivity reactions (e.g. angioedema, urticaria, rash), and arachnoiditis have also been reported.	present_arachnoiditis_added
+2026-03-27	SUPPL-16	5.1/5.2/6.1/8.4 (6.3 wording unchanged)		present_unchanged

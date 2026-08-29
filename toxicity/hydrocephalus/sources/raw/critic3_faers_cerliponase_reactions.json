@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "PYREXIA",
+      "count": 90
+    },
+    {
+      "term": "SEIZURE",
+      "count": 75
+    },
+    {
+      "term": "VOMITING",
+      "count": 37
+    },
+    {
+      "term": "DEVICE RELATED INFECTION",
+      "count": 30
+    },
+    {
+      "term": "DEVICE LEAKAGE",
+      "count": 28
+    },
+    {
+      "term": "CSF CULTURE POSITIVE",
+      "count": 26
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 25
+    },
+    {
+      "term": "HEADACHE",
+      "count": 22
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 19
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 17
+    },
+    {
+      "term": "DEVICE OCCLUSION",
+      "count": 16
+    },
+    {
+      "term": "GENERAL PHYSICAL HEALTH DETERIORATION",
+      "count": 16
+    },
+    {
+      "term": "NAUSEA",
+      "count": 16
+    },
+    {
+      "term": "DYSTONIA",
+      "count": 15
+    },
+    {
+      "term": "DISEASE PROGRESSION",
+      "count": 14
+    },
+    {
+      "term": "COUGH",
+      "count": 13
+    },
+    {
+      "term": "DEATH",
+      "count": 13
+    },
+    {
+      "term": "IRRITABILITY",
+      "count": 13
+    },
+    {
+      "term": "MYOCLONUS",
+      "count": 13
+    },
+    {
+      "term": "CNS VENTRICULITIS",
+      "count": 12
+    },
+    {
+      "term": "OXYGEN SATURATION DECREASED",
+      "count": 12
+    },
+    {
+      "term": "PLEOCYTOSIS",
+      "count": 12
+    },
+    {
+      "term": "DEVICE ISSUE",
+      "count": 11
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 10
+    },
+    {
+      "term": "COVID-19",
+      "count": 10
+    },
+    {
+      "term": "SOMNOLENCE",
+      "count": 10
+    },
+    {
+      "term": "BODY TEMPERATURE INCREASED",
+      "count": 9
+    },
+    {
+      "term": "DYSPHAGIA",
+      "count": 9
+    },
+    {
+      "term": "INFUSION RELATED REACTION",
+      "count": 9
+    },
+    {
+      "term": "DEVICE DISLOCATION",
+      "count": 8
+    },
+    {
+      "term": "INFLUENZA",
+      "count": 8
+    },
+    {
+      "term": "NEEDLE ISSUE",
+      "count": 8
+    },
+    {
+      "term": "CENTRAL NERVOUS SYSTEM INFECTION",
+      "count": 7
+    },
+    {
+      "term": "CYANOSIS",
+      "count": 7
+    },
+    {
+      "term": "DEHYDRATION",
+      "count": 7
+    },
+    {
+      "term": "DYSKINESIA",
+      "count": 7
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 7
+    },
+    {
+      "term": "FATIGUE",
+      "count": 7
+    },
+    {
+      "term": "GAIT INABILITY",
+      "count": 7
+    },
+    {
+      "term": "GENERALISED TONIC-CLONIC SEIZURE",
+      "count": 7
+    },
+    {
+      "term": "INFECTION",
+      "count": 7
+    },
+    {
+      "term": "MENINGITIS",
+      "count": 7
+    },
+    {
+      "term": "STATUS EPILEPTICUS",
+      "count": 7
+    },
+    {
+      "term": "CATHETER SITE SWELLING",
+      "count": 6
+    },
+    {
+      "term": "CEREBRAL ATROPHY",
+      "count": 6
+    },
+    {
+      "term": "COGNITIVE DISORDER",
+      "count": 6
+    },
+    {
+      "term": "CSF WHITE BLOOD CELL COUNT INCREASED",
+      "count": 6
+    },
+    {
+      "term": "DEVICE BREAKAGE",
+      "count": 6
+    },
+    {
+      "term": "GAIT DISTURBANCE",
+      "count": 6
+    },
+    {
+      "term": "LETHARGY",
+      "count": 6
+    },
+    {
+      "term": "NASAL CONGESTION",
+      "count": 6
+    },
+    {
+      "term": "PAIN",
+      "count": 6
+    },
+    {
+      "term": "PETIT MAL EPILEPSY",
+      "count": 6
+    },
+    {
+      "term": "TREMOR",
+      "count": 6
+    },
+    {
+      "term": "VISUAL IMPAIRMENT",
+      "count": 6
+    },
+    {
+      "term": "CHILLS",
+      "count": 5
+    },
+    {
+      "term": "DEPRESSED LEVEL OF CONSCIOUSNESS",
+      "count": 5
+    },
+    {
+      "term": "GAZE PALSY",
+      "count": 5
+    },
+    {
+      "term": "HYDROCEPHALUS",
+      "count": 5
+    },
+    {
+      "term": "HYPERSENSITIVITY",
+      "count": 5
+    },
+    {
+      "term": "NASOPHARYNGITIS",
+      "count": 5
+    },
+    {
+      "term": "RESPIRATORY DISTRESS",
+      "count": 5
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 5
+    },
+    {
+      "term": "AGGRESSION",
+      "count": 4
+    },
+    {
+      "term": "AGITATION",
+      "count": 4
+    },
+    {
+      "term": "APHASIA",
+      "count": 4
+    },
+    {
+      "term": "BLINDNESS",
+      "count": 4
+    },
+    {
+      "term": "BRADYCARDIA",
+      "count": 4
+    },
+    {
+      "term": "CATHETER SITE ERYTHEMA",
+      "count": 4
+    },
+    {
+      "term": "CEREBROSPINAL FLUID LEAKAGE",
+      "count": 4
+    },
+    {
+      "term": "COMPLICATION ASSOCIATED WITH DEVICE",
+      "count": 4
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 4
+    },
+    {
+      "term": "HALLUCINATION",
+      "count": 4
+    },
+    {
+      "term": "HYPERTENSION",
+      "count": 4
+    },
+    {
+      "term": "HYPOTONIA",
+      "count": 4
+    },
+    {
+      "term": "LOWER RESPIRATORY TRACT INFECTION",
+      "count": 4
+    },
+    {
+      "term": "MALAISE",
+      "count": 4
+    },
+    {
+      "term": "MOTOR DYSFUNCTION",
+      "count": 4
+    },
+    {
+      "term": "PALLOR",
+      "count": 4
+    },
+    {
+      "term": "PARTIAL SEIZURES",
+      "count": 4
+    },
+    {
+      "term": "RESPIRATORY FAILURE",
+      "count": 4
+    },
+    {
+      "term": "RESPIRATORY SYMPTOM",
+      "count": 4
+    },
+    {
+      "term": "SWELLING FACE",
+      "count": 4
+    },
+    {
+      "term": "URINARY TRACT INFECTION",
+      "count": 4
+    },
+    {
+      "term": "CARDIAC ARREST",
+      "count": 3
+    },
+    {
+      "term": "CEREBRAL VENTRICLE DILATATION",
+      "count": 3
+    },
+    {
+      "term": "CLONUS",
+      "count": 3
+    },
+    {
+      "term": "CONDITION AGGRAVATED",
+      "count": 3
+    },
+    {
+      "term": "CSF TEST ABNORMAL",
+      "count": 3
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 3
+    },
+    {
+      "term": "DRUG INTERACTION",
+      "count": 3
+    },
+    {
+      "term": "EATING DISORDER",
+      "count": 3
+    },
+    {
+      "term": "EYE MOVEMENT DISORDER",
+      "count": 3
+    },
+    {
+      "term": "FALL",
+      "count": 3
+    },
+    {
+      "term": "FEBRILE CONVULSION",
+      "count": 3
+    },
+    {
+      "term": "HYPOKINESIA",
+      "count": 3
+    },
+    {
+      "term": "HYPOXIA",
+      "count": 3
+    },
+    {
+      "term": "INCORRECT DOSE ADMINISTERED",
+      "count": 3
+    },
+    {
+      "term": "LANGUAGE DISORDER",
+      "count": 3
+    },
+    {
+      "term": "MEDICAL DEVICE CHANGE",
+      "count": 3
+    }
+  ]
+}

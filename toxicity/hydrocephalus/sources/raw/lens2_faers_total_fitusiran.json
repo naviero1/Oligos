@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 44
+    }
+  },
+  "results": [
+    {
+      "safetyreportversion": "1",
+      "safetyreportid": "25468572",
+      "primarysourcecountry": "US",
+      "occurcountry": "US",
+      "transmissiondateformat": "102",
+      "transmissiondate": "20250717",
+      "reporttype": "1",
+      "serious": "2",
+      "seriousnessdeath": "2",
+      "seriousnesslifethreatening": "2",
+      "seriousnesshospitalization": "2",
+      "seriousnessdisabling": "2",
+      "seriousnesscongenitalanomali": "2",
+      "seriousnessother": "2",
+      "receivedateformat": "102",
+      "receivedate": "20250623",
+      "receiptdateformat": "102",
+      "receiptdate": "20250623",
+      "fulfillexpeditecriteria": "2",
+      "companynumb": "US-SA-2025SA174959",
+      "primarysource": {
+        "reportercountry": "US",
+        "qualification": "5"
+      },
+      "sender": {
+        "sendertype": "6",
+        "senderorganization": "SANOFI AVENTIS"
+      },
+      "receiver": {
+        "receivertype": "6",
+        "receiverorganization": "FDA"
+      },
+      "patient": {
+        "patientsex": "2",
+        "reaction": [
+          {
+            "reactionmeddraversionpt": "28.0",
+            "reactionmeddrapt": "Off label use",
+            "reactionoutcome": "6"
+          }
+        ],
+        "drug": [
+          {
+            "drugcharacterization": "1",
+            "medicinalproduct": "QFITLIA",
+            "drugauthorizationnumb": "219019",
+            "drugindication": "Factor VII deficiency",
+            "actiondrug": "5",
+            "drugadditional": "3",
+            "activesubstance": {
+              "activesubstancename": "FITUSIRAN"
+            },
+            "openfda": {
+              "application_number": [
+                "NDA219019"
+              ],
+              "brand_name": [
+                "QFITLIA"
+              ],
+              "generic_name": [
+                "FITUSIRAN"
+              ],
+              "manufacturer_name": [
+                "Genzyme Corporation"
+              ],
+              "product_ndc": [
+                "58468-0347",
+                "58468-0348"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "SUBCUTANEOUS"
+              ],
+              "substance_name": [
+                "FITUSIRAN"
+              ],
+              "rxcui": [
+                "2709452",
+                "2709458",
+                "2709461",
+                "2709464"
+              ],
+              "spl_id": [
+                "1c225007-61f2-4c48-a25e-f08b8d356a59"
+              ],
+              "spl_set_id": [
+                "6dd2f8ac-6f90-4cbf-b197-97d74964135c"
+              ],
+              "package_ndc": [
+                "58468-0348-1",
+                "58468-0347-1"
+              ],
+              "nui": [
+                "N0000194148",
+                "N0000008852",
+                "N0000193848",
+                "M0406100",
+                "N0000194154"
+              ],
+              "pharm_class_epc": [
+                "Antithrombin-directed RNA Interaction [EPC]",
+                "Small Interfering RNA [EPC]"
+              ],
+              "pharm_class_pe": [
+                "Decreased RNA Integrity [PE]",
+                "Increased RNA Degradation [PE]"
+              ],
+              "pharm_class_cs": [
+                "RNA, Small Interfering [CS]"
+              ],
+              "unii": [
+                "SV9W47ZLE1"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

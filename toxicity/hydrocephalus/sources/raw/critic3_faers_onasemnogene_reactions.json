@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "PYREXIA",
+      "count": 535
+    },
+    {
+      "term": "VOMITING",
+      "count": 500
+    },
+    {
+      "term": "ASPARTATE AMINOTRANSFERASE INCREASED",
+      "count": 353
+    },
+    {
+      "term": "ALANINE AMINOTRANSFERASE INCREASED",
+      "count": 315
+    },
+    {
+      "term": "HEPATIC ENZYME INCREASED",
+      "count": 268
+    },
+    {
+      "term": "THROMBOCYTOPENIA",
+      "count": 196
+    },
+    {
+      "term": "PLATELET COUNT DECREASED",
+      "count": 168
+    },
+    {
+      "term": "LIVER FUNCTION TEST INCREASED",
+      "count": 146
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 142
+    },
+    {
+      "term": "TROPONIN I INCREASED",
+      "count": 132
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 122
+    },
+    {
+      "term": "COUGH",
+      "count": 114
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 111
+    },
+    {
+      "term": "TROPONIN INCREASED",
+      "count": 105
+    },
+    {
+      "term": "BLOOD LACTATE DEHYDROGENASE INCREASED",
+      "count": 99
+    },
+    {
+      "term": "TRANSAMINASES INCREASED",
+      "count": 99
+    },
+    {
+      "term": "NAUSEA",
+      "count": 78
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 69
+    },
+    {
+      "term": "DYSPHAGIA",
+      "count": 67
+    },
+    {
+      "term": "OXYGEN SATURATION DECREASED",
+      "count": 66
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 64
+    },
+    {
+      "term": "IRRITABILITY",
+      "count": 57
+    },
+    {
+      "term": "RHINOVIRUS INFECTION",
+      "count": 57
+    },
+    {
+      "term": "TACHYCARDIA",
+      "count": 57
+    },
+    {
+      "term": "DEATH",
+      "count": 56
+    },
+    {
+      "term": "FATIGUE",
+      "count": 56
+    },
+    {
+      "term": "BODY TEMPERATURE INCREASED",
+      "count": 51
+    },
+    {
+      "term": "COVID-19",
+      "count": 50
+    },
+    {
+      "term": "HYPERTENSION",
+      "count": 50
+    },
+    {
+      "term": "NASOPHARYNGITIS",
+      "count": 50
+    },
+    {
+      "term": "RESPIRATORY FAILURE",
+      "count": 50
+    },
+    {
+      "term": "THROMBOTIC MICROANGIOPATHY",
+      "count": 50
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 50
+    },
+    {
+      "term": "RESPIRATORY SYNCYTIAL VIRUS INFECTION",
+      "count": 49
+    },
+    {
+      "term": "CONSTIPATION",
+      "count": 48
+    },
+    {
+      "term": "RHINORRHOEA",
+      "count": 48
+    },
+    {
+      "term": "SCOLIOSIS",
+      "count": 48
+    },
+    {
+      "term": "RESPIRATORY DISORDER",
+      "count": 47
+    },
+    {
+      "term": "WHITE BLOOD CELL COUNT DECREASED",
+      "count": 44
+    },
+    {
+      "term": "HYPERTRANSAMINASAEMIA",
+      "count": 43
+    },
+    {
+      "term": "RESPIRATORY DISTRESS",
+      "count": 43
+    },
+    {
+      "term": "INFLUENZA",
+      "count": 41
+    },
+    {
+      "term": "RASH",
+      "count": 41
+    },
+    {
+      "term": "GAMMA-GLUTAMYLTRANSFERASE INCREASED",
+      "count": 39
+    },
+    {
+      "term": "MONOCYTE COUNT INCREASED",
+      "count": 39
+    },
+    {
+      "term": "TROPONIN T INCREASED",
+      "count": 39
+    },
+    {
+      "term": "WHITE BLOOD CELL COUNT INCREASED",
+      "count": 39
+    },
+    {
+      "term": "RESPIRATORY TRACT INFECTION",
+      "count": 38
+    },
+    {
+      "term": "ATELECTASIS",
+      "count": 37
+    },
+    {
+      "term": "BRADYCARDIA",
+      "count": 37
+    },
+    {
+      "term": "HEPATIC FUNCTION ABNORMAL",
+      "count": 37
+    },
+    {
+      "term": "MUSCULAR WEAKNESS",
+      "count": 37
+    },
+    {
+      "term": "DEHYDRATION",
+      "count": 36
+    },
+    {
+      "term": "LETHARGY",
+      "count": 36
+    },
+    {
+      "term": "PLATELET COUNT INCREASED",
+      "count": 36
+    },
+    {
+      "term": "ANAEMIA",
+      "count": 34
+    },
+    {
+      "term": "BLOOD CREATININE DECREASED",
+      "count": 34
+    },
+    {
+      "term": "PROTEINURIA",
+      "count": 34
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 32
+    },
+    {
+      "term": "BLOOD BILIRUBIN INCREASED",
+      "count": 32
+    },
+    {
+      "term": "ILLNESS",
+      "count": 32
+    },
+    {
+      "term": "PNEUMONIA ASPIRATION",
+      "count": 32
+    },
+    {
+      "term": "ASPIRATION",
+      "count": 31
+    },
+    {
+      "term": "BLOOD CREATINE PHOSPHOKINASE INCREASED",
+      "count": 31
+    },
+    {
+      "term": "LEUKOPENIA",
+      "count": 30
+    },
+    {
+      "term": "HEART RATE INCREASED",
+      "count": 29
+    },
+    {
+      "term": "NEUTROPENIA",
+      "count": 29
+    },
+    {
+      "term": "SOMNOLENCE",
+      "count": 29
+    },
+    {
+      "term": "UPPER RESPIRATORY TRACT INFECTION",
+      "count": 29
+    },
+    {
+      "term": "WEIGHT INCREASED",
+      "count": 29
+    },
+    {
+      "term": "BLOOD TEST ABNORMAL",
+      "count": 28
+    },
+    {
+      "term": "HAEMOGLOBIN DECREASED",
+      "count": 28
+    },
+    {
+      "term": "MALAISE",
+      "count": 28
+    },
+    {
+      "term": "C-REACTIVE PROTEIN INCREASED",
+      "count": 27
+    },
+    {
+      "term": "INCREASED BRONCHIAL SECRETION",
+      "count": 27
+    },
+    {
+      "term": "CARDIAC ARREST",
+      "count": 26
+    },
+    {
+      "term": "HAEMATURIA",
+      "count": 26
+    },
+    {
+      "term": "ABDOMINAL DISTENSION",
+      "count": 25
+    },
+    {
+      "term": "ACUTE RESPIRATORY FAILURE",
+      "count": 25
+    },
+    {
+      "term": "LOWER RESPIRATORY TRACT INFECTION",
+      "count": 25
+    },
+    {
+      "term": "TREMOR",
+      "count": 25
+    },
+    {
+      "term": "VIRAL INFECTION",
+      "count": 25
+    },
+    {
+      "term": "CRYING",
+      "count": 24
+    },
+    {
+      "term": "GENERAL PHYSICAL HEALTH DETERIORATION",
+      "count": 24
+    },
+    {
+      "term": "NEUTROPHIL COUNT DECREASED",
+      "count": 24
+    },
+    {
+      "term": "HYPOXIA",
+      "count": 23
+    },
+    {
+      "term": "PRODUCTIVE COUGH",
+      "count": 23
+    },
+    {
+      "term": "SALIVARY HYPERSECRETION",
+      "count": 23
+    },
+    {
+      "term": "TACHYPNOEA",
+      "count": 23
+    },
+    {
+      "term": "HAEMATOCHEZIA",
+      "count": 22
+    },
+    {
+      "term": "HEPATIC CYTOLYSIS",
+      "count": 22
+    },
+    {
+      "term": "SECRETION DISCHARGE",
+      "count": 22
+    },
+    {
+      "term": "ACUTE KIDNEY INJURY",
+      "count": 21
+    },
+    {
+      "term": "BLOOD ALKALINE PHOSPHATASE INCREASED",
+      "count": 21
+    },
+    {
+      "term": "HYPOTONIA",
+      "count": 21
+    },
+    {
+      "term": "LABORATORY TEST ABNORMAL",
+      "count": 21
+    },
+    {
+      "term": "RENAL IMPAIRMENT",
+      "count": 21
+    },
+    {
+      "term": "BLOOD CREATININE INCREASED",
+      "count": 20
+    },
+    {
+      "term": "FEELING ABNORMAL",
+      "count": 20
+    },
+    {
+      "term": "GASTROOESOPHAGEAL REFLUX DISEASE",
+      "count": 20
+    }
+  ]
+}

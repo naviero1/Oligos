@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "SPINRAZA",
+      "count": 55
+    },
+    {
+      "term": "QALSODY",
+      "count": 10
+    },
+    {
+      "term": "ALBUTEROL.",
+      "count": 4
+    },
+    {
+      "term": "MIRALAX",
+      "count": 4
+    },
+    {
+      "term": "RILUZOLE",
+      "count": 4
+    },
+    {
+      "term": "LISINOPRIL",
+      "count": 3
+    },
+    {
+      "term": "ALBUTEROL",
+      "count": 2
+    },
+    {
+      "term": "CHOLECALCIFEROL",
+      "count": 2
+    },
+    {
+      "term": "CLONAZEPAM",
+      "count": 2
+    },
+    {
+      "term": "EMFLAZA",
+      "count": 2
+    },
+    {
+      "term": "MELATONIN",
+      "count": 2
+    },
+    {
+      "term": "PREVACID",
+      "count": 2
+    },
+    {
+      "term": "RADICAVA ORS",
+      "count": 2
+    },
+    {
+      "term": "RELYVRIO",
+      "count": 2
+    },
+    {
+      "term": "SPIRONOLACTONE",
+      "count": 2
+    },
+    {
+      "term": "TYLENOL",
+      "count": 2
+    },
+    {
+      "term": "VITAMIN B12",
+      "count": 2
+    },
+    {
+      "term": "ZOFRAN",
+      "count": 2
+    },
+    {
+      "term": "ZOLOFT",
+      "count": 2
+    },
+    {
+      "term": "ACETAZOLAMIDE",
+      "count": 1
+    },
+    {
+      "term": "ADVAIR HFA",
+      "count": 1
+    },
+    {
+      "term": "ADVIL",
+      "count": 1
+    },
+    {
+      "term": "ATIVAN",
+      "count": 1
+    },
+    {
+      "term": "BACLOFEN",
+      "count": 1
+    },
+    {
+      "term": "BENADRYL",
+      "count": 1
+    },
+    {
+      "term": "BUPROPION",
+      "count": 1
+    },
+    {
+      "term": "CALCIUM CARBONATE",
+      "count": 1
+    },
+    {
+      "term": "CITALOPRAM HYDROBROMIDE",
+      "count": 1
+    },
+    {
+      "term": "CYANOCOBALAMIN",
+      "count": 1
+    },
+    {
+      "term": "DEPO-TESTOSTERONE",
+      "count": 1
+    },
+    {
+      "term": "DIAMOX SEQUELS",
+      "count": 1
+    },
+    {
+      "term": "DOBETIN",
+      "count": 1
+    },
+    {
+      "term": "DULCOLAX (BISACODYL)",
+      "count": 1
+    },
+    {
+      "term": "EDARAVONE",
+      "count": 1
+    },
+    {
+      "term": "EMPAGLIFLOZIN",
+      "count": 1
+    },
+    {
+      "term": "ERYTHROMYCIN",
+      "count": 1
+    },
+    {
+      "term": "EVRYSDI",
+      "count": 1
+    },
+    {
+      "term": "EXONDYS 51",
+      "count": 1
+    },
+    {
+      "term": "Exondys",
+      "count": 1
+    },
+    {
+      "term": "FAMOTIDINE",
+      "count": 1
+    },
+    {
+      "term": "FLEXERIL",
+      "count": 1
+    },
+    {
+      "term": "FLINTSTONES COMPLETE",
+      "count": 1
+    },
+    {
+      "term": "GABAPENTIN",
+      "count": 1
+    },
+    {
+      "term": "GEMFIBROZIL",
+      "count": 1
+    },
+    {
+      "term": "GLUCOPHAGE XR",
+      "count": 1
+    },
+    {
+      "term": "GUANFACINE.",
+      "count": 1
+    },
+    {
+      "term": "HYPERSAL",
+      "count": 1
+    },
+    {
+      "term": "IBUPROFEN",
+      "count": 1
+    },
+    {
+      "term": "INSULIN ASPART",
+      "count": 1
+    },
+    {
+      "term": "INSULIN GLARGINE",
+      "count": 1
+    },
+    {
+      "term": "JARDIANCE",
+      "count": 1
+    },
+    {
+      "term": "KLS AllerClear",
+      "count": 1
+    },
+    {
+      "term": "LATANOPROST",
+      "count": 1
+    },
+    {
+      "term": "LEVALBUTEROL",
+      "count": 1
+    },
+    {
+      "term": "LEXAPRO",
+      "count": 1
+    },
+    {
+      "term": "LIDOCAINE.",
+      "count": 1
+    },
+    {
+      "term": "LIPITOR",
+      "count": 1
+    },
+    {
+      "term": "LOSARTAN",
+      "count": 1
+    },
+    {
+      "term": "MAGNESIUM SULFATE.",
+      "count": 1
+    },
+    {
+      "term": "METFORMIN HYDROCHLORIDE",
+      "count": 1
+    },
+    {
+      "term": "METHOCARBAMOL",
+      "count": 1
+    },
+    {
+      "term": "METHYLCOBALAMIN",
+      "count": 1
+    },
+    {
+      "term": "NARCAN",
+      "count": 1
+    },
+    {
+      "term": "NEBIVOLOL",
+      "count": 1
+    },
+    {
+      "term": "NEXIUM",
+      "count": 1
+    },
+    {
+      "term": "NUEDEXTA",
+      "count": 1
+    },
+    {
+      "term": "NUSINERSEN",
+      "count": 1
+    },
+    {
+      "term": "OFIRMEV",
+      "count": 1
+    },
+    {
+      "term": "OMEPRAZOLE",
+      "count": 1
+    },
+    {
+      "term": "OMEPRAZOLE.",
+      "count": 1
+    },
+    {
+      "term": "OXLUMO",
+      "count": 1
+    },
+    {
+      "term": "PEPCID",
+      "count": 1
+    },
+    {
+      "term": "POTASSIUM CHLORIDE IN D5 SODIUM CHLORIDE",
+      "count": 1
+    },
+    {
+      "term": "PROVENTIL",
+      "count": 1
+    },
+    {
+      "term": "QVAR",
+      "count": 1
+    },
+    {
+      "term": "RANOLAZINE",
+      "count": 1
+    },
+    {
+      "term": "REGLAN",
+      "count": 1
+    },
+    {
+      "term": "REPATHA",
+      "count": 1
+    },
+    {
+      "term": "RISDIPLAM",
+      "count": 1
+    },
+    {
+      "term": "SERTRALINE",
+      "count": 1
+    },
+    {
+      "term": "SIMETHICONE (DIMETHICONE)",
+      "count": 1
+    },
+    {
+      "term": "SODIUM CHLORIDE 7% SOLUTION",
+      "count": 1
+    },
+    {
+      "term": "SOMATROPIN",
+      "count": 1
+    },
+    {
+      "term": "SYNTHROID",
+      "count": 1
+    },
+    {
+      "term": "TOFERSEN",
+      "count": 1
+    },
+    {
+      "term": "TOPAMAX",
+      "count": 1
+    },
+    {
+      "term": "TOUJEO MAX",
+      "count": 1
+    },
+    {
+      "term": "TRELEGY ELLIPTA",
+      "count": 1
+    },
+    {
+      "term": "TRICOR",
+      "count": 1
+    },
+    {
+      "term": "TUMS EX",
+      "count": 1
+    },
+    {
+      "term": "VALIUM",
+      "count": 1
+    },
+    {
+      "term": "VASCEPA",
+      "count": 1
+    },
+    {
+      "term": "VIBRAMYCIN",
+      "count": 1
+    },
+    {
+      "term": "VIIBRYD",
+      "count": 1
+    },
+    {
+      "term": "VITAMIN B6",
+      "count": 1
+    },
+    {
+      "term": "VITAMIN D",
+      "count": 1
+    },
+    {
+      "term": "VITAMIN D3",
+      "count": 1
+    },
+    {
+      "term": "WELLBUTRIN XL",
+      "count": 1
+    },
+    {
+      "term": "ZANAFLEX",
+      "count": 1
+    },
+    {
+      "term": "ZOLGENSMA",
+      "count": 1
+    }
+  ]
+}

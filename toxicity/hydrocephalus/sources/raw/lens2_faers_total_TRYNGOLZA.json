@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30",
+    "results": {
+      "skip": 0,
+      "limit": 1,
+      "total": 676
+    }
+  },
+  "results": [
+    {
+      "safetyreportversion": "1",
+      "safetyreportid": "24981420",
+      "primarysourcecountry": "US",
+      "occurcountry": "US",
+      "transmissiondateformat": "102",
+      "transmissiondate": "20250408",
+      "reporttype": "1",
+      "serious": "1",
+      "seriousnessdeath": "2",
+      "seriousnesslifethreatening": "2",
+      "seriousnesshospitalization": "1",
+      "seriousnessdisabling": "2",
+      "seriousnesscongenitalanomali": "2",
+      "seriousnessother": "2",
+      "receivedateformat": "102",
+      "receivedate": "20250218",
+      "receiptdateformat": "102",
+      "receiptdate": "20250218",
+      "fulfillexpeditecriteria": "1",
+      "companynumb": "US-IONIS PHARMACEUTICALS, INC.-2025IS000397",
+      "primarysource": {
+        "reportercountry": "US",
+        "qualification": "5"
+      },
+      "sender": {
+        "sendertype": "6",
+        "senderorganization": "Unknown Manufacturer"
+      },
+      "receiver": {
+        "receivertype": "6",
+        "receiverorganization": "FDA"
+      },
+      "patient": {
+        "reaction": [
+          {
+            "reactionmeddraversionpt": "27.1",
+            "reactionmeddrapt": "Pancreatitis acute",
+            "reactionoutcome": "6"
+          }
+        ],
+        "drug": [
+          {
+            "drugcharacterization": "1",
+            "medicinalproduct": "TRYNGOLZA",
+            "drugauthorizationnumb": "218614",
+            "drugdosageform": "Injection",
+            "drugadministrationroute": "065",
+            "drugindication": "Familial hypertriglyceridaemia",
+            "actiondrug": "5",
+            "drugrecurreadministration": "3",
+            "drugadditional": "3",
+            "activesubstance": {
+              "activesubstancename": "OLEZARSEN SODIUM"
+            },
+            "openfda": {
+              "application_number": [
+                "NDA218614"
+              ],
+              "brand_name": [
+                "TRYNGOLZA"
+              ],
+              "generic_name": [
+                "OLEZARSEN SODIUM"
+              ],
+              "manufacturer_name": [
+                "Ionis Pharmaceuticals, Inc."
+              ],
+              "product_ndc": [
+                "71860-101",
+                "71860-102"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ],
+              "route": [
+                "SUBCUTANEOUS"
+              ],
+              "substance_name": [
+                "OLEZARSEN SODIUM"
+              ],
+              "rxcui": [
+                "2701422",
+                "2701428",
+                "2746496",
+                "2746499"
+              ],
+              "spl_id": [
+                "55b4730e-4610-c0f2-e063-6294a90a90ae"
+              ],
+              "spl_set_id": [
+                "0f51aa8e-8475-8cf9-e063-6394a90a6848"
+              ],
+              "package_ndc": [
+                "71860-101-01",
+                "71860-102-01"
+              ],
+              "unii": [
+                "NSY2BY6PSB"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

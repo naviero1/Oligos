@@ -1,0 +1,1078 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "IMODIUM",
+      "count": 9
+    },
+    {
+      "term": "ZOFRAN",
+      "count": 8
+    },
+    {
+      "term": "ENTRESTO",
+      "count": 6
+    },
+    {
+      "term": "PEPCID",
+      "count": 6
+    },
+    {
+      "term": "DECADRON",
+      "count": 5
+    },
+    {
+      "term": "TYLENOL",
+      "count": 5
+    },
+    {
+      "term": "AREDIA",
+      "count": 4
+    },
+    {
+      "term": "ASCORBIC ACID",
+      "count": 4
+    },
+    {
+      "term": "ATIVAN",
+      "count": 4
+    },
+    {
+      "term": "CELEXA",
+      "count": 4
+    },
+    {
+      "term": "LORTAB",
+      "count": 4
+    },
+    {
+      "term": "NEURONTIN",
+      "count": 4
+    },
+    {
+      "term": "ZOMETA",
+      "count": 4
+    },
+    {
+      "term": "ALBUTEROL",
+      "count": 3
+    },
+    {
+      "term": "CALTRATE",
+      "count": 3
+    },
+    {
+      "term": "FIBER",
+      "count": 3
+    },
+    {
+      "term": "FUROSEMIDE",
+      "count": 3
+    },
+    {
+      "term": "IRON",
+      "count": 3
+    },
+    {
+      "term": "MULTI-VITAMIN",
+      "count": 3
+    },
+    {
+      "term": "NYSTATIN",
+      "count": 3
+    },
+    {
+      "term": "TEMODAR",
+      "count": 3
+    },
+    {
+      "term": "THALIDOMIDE",
+      "count": 3
+    },
+    {
+      "term": "VICODIN",
+      "count": 3
+    },
+    {
+      "term": "VITAMIN E",
+      "count": 3
+    },
+    {
+      "term": "ZOVIRAX",
+      "count": 3
+    },
+    {
+      "term": "AMLODIPINE",
+      "count": 2
+    },
+    {
+      "term": "AMOXICILLIN",
+      "count": 2
+    },
+    {
+      "term": "APRISO",
+      "count": 2
+    },
+    {
+      "term": "ARANESP",
+      "count": 2
+    },
+    {
+      "term": "ASA",
+      "count": 2
+    },
+    {
+      "term": "ASPIRIN ^BAYER^",
+      "count": 2
+    },
+    {
+      "term": "AUGMENTIN",
+      "count": 2
+    },
+    {
+      "term": "AVASTIN",
+      "count": 2
+    },
+    {
+      "term": "BACTRIM",
+      "count": 2
+    },
+    {
+      "term": "CEFEPIME",
+      "count": 2
+    },
+    {
+      "term": "CIMETIDINE",
+      "count": 2
+    },
+    {
+      "term": "COMPAZINE",
+      "count": 2
+    },
+    {
+      "term": "DEXAMETHASONE",
+      "count": 2
+    },
+    {
+      "term": "EPOGEN",
+      "count": 2
+    },
+    {
+      "term": "FLEXERIL",
+      "count": 2
+    },
+    {
+      "term": "FOLIC ACID",
+      "count": 2
+    },
+    {
+      "term": "FUROSEMIDE.",
+      "count": 2
+    },
+    {
+      "term": "HECTOROL",
+      "count": 2
+    },
+    {
+      "term": "HEMODIALYSIS",
+      "count": 2
+    },
+    {
+      "term": "HYDROCODONE",
+      "count": 2
+    },
+    {
+      "term": "IBUPROFEN",
+      "count": 2
+    },
+    {
+      "term": "IMODIUM A-D",
+      "count": 2
+    },
+    {
+      "term": "INTERFERON",
+      "count": 2
+    },
+    {
+      "term": "IRINOTECAN HCL",
+      "count": 2
+    },
+    {
+      "term": "K-DUR",
+      "count": 2
+    },
+    {
+      "term": "KEFLEX                                  /UNK/",
+      "count": 2
+    },
+    {
+      "term": "LAMICTAL",
+      "count": 2
+    },
+    {
+      "term": "LASIX",
+      "count": 2
+    },
+    {
+      "term": "LORAZEPAM",
+      "count": 2
+    },
+    {
+      "term": "MACROBID",
+      "count": 2
+    },
+    {
+      "term": "MULTIVITAMINS",
+      "count": 2
+    },
+    {
+      "term": "MVI",
+      "count": 2
+    },
+    {
+      "term": "NALTREXONE",
+      "count": 2
+    },
+    {
+      "term": "NEPHRO-VITE",
+      "count": 2
+    },
+    {
+      "term": "NEUPOGEN",
+      "count": 2
+    },
+    {
+      "term": "NEXIUM",
+      "count": 2
+    },
+    {
+      "term": "OMEPRAZOLE.",
+      "count": 2
+    },
+    {
+      "term": "OXYCONTIN",
+      "count": 2
+    },
+    {
+      "term": "PAMELOR",
+      "count": 2
+    },
+    {
+      "term": "POTASSIUM",
+      "count": 2
+    },
+    {
+      "term": "PREDNISONE",
+      "count": 2
+    },
+    {
+      "term": "PREGABALIN.",
+      "count": 2
+    },
+    {
+      "term": "PROTONIX ^PHARMACIA^",
+      "count": 2
+    },
+    {
+      "term": "PYRIDOXINE",
+      "count": 2
+    },
+    {
+      "term": "RENA-VITE",
+      "count": 2
+    },
+    {
+      "term": "RENAGEL",
+      "count": 2
+    },
+    {
+      "term": "ROWASA",
+      "count": 2
+    },
+    {
+      "term": "RYTHMOL ^KNOLL^",
+      "count": 2
+    },
+    {
+      "term": "SODIUM BICARBONATE",
+      "count": 2
+    },
+    {
+      "term": "VIOXX",
+      "count": 2
+    },
+    {
+      "term": "XANAX",
+      "count": 2
+    },
+    {
+      "term": "XELJANZ",
+      "count": 2
+    },
+    {
+      "term": "ZEMPLAR",
+      "count": 2
+    },
+    {
+      "term": "ZITHROMAX ^HEINRICH MACK^",
+      "count": 2
+    },
+    {
+      "term": "ABRAXANE",
+      "count": 1
+    },
+    {
+      "term": "ACETAMINOPHEN.",
+      "count": 1
+    },
+    {
+      "term": "ACTOPLUS",
+      "count": 1
+    },
+    {
+      "term": "ACYCLOVIR",
+      "count": 1
+    },
+    {
+      "term": "ACYCLOVIR [ACICLOVIR]",
+      "count": 1
+    },
+    {
+      "term": "ACYCLOVIR.",
+      "count": 1
+    },
+    {
+      "term": "ADRIAMYCIN",
+      "count": 1
+    },
+    {
+      "term": "ADVANCED NATALCARE",
+      "count": 1
+    },
+    {
+      "term": "AFINITOR",
+      "count": 1
+    },
+    {
+      "term": "ALESSE",
+      "count": 1
+    },
+    {
+      "term": "ALLOPURINOL",
+      "count": 1
+    },
+    {
+      "term": "AMANTADINE",
+      "count": 1
+    },
+    {
+      "term": "AMBIEN",
+      "count": 1
+    },
+    {
+      "term": "AMIODARONE",
+      "count": 1
+    },
+    {
+      "term": "AMOXICILLIN W/CLAVULANATE POTASSIUM",
+      "count": 1
+    },
+    {
+      "term": "ANASTROZOLE",
+      "count": 1
+    },
+    {
+      "term": "ANCEF",
+      "count": 1
+    },
+    {
+      "term": "ANUSOL                                  /NET/",
+      "count": 1
+    },
+    {
+      "term": "ANZEMET",
+      "count": 1
+    },
+    {
+      "term": "APIXABAN",
+      "count": 1
+    },
+    {
+      "term": "AQUAMEPHYTON",
+      "count": 1
+    },
+    {
+      "term": "ARIXTRA",
+      "count": 1
+    },
+    {
+      "term": "AROMASIN",
+      "count": 1
+    },
+    {
+      "term": "ASPIRIN CARDIO",
+      "count": 1
+    },
+    {
+      "term": "ASPIRIN.",
+      "count": 1
+    },
+    {
+      "term": "ATENOLOL",
+      "count": 1
+    },
+    {
+      "term": "ATROPINE",
+      "count": 1
+    },
+    {
+      "term": "AUGMENTIN                               /SCH/",
+      "count": 1
+    },
+    {
+      "term": "BACLOFEN",
+      "count": 1
+    },
+    {
+      "term": "BACLOFEN.",
+      "count": 1
+    },
+    {
+      "term": "BACTRIM DS",
+      "count": 1
+    },
+    {
+      "term": "BENADRYL ^ACHE^",
+      "count": 1
+    },
+    {
+      "term": "BENEFIBER",
+      "count": 1
+    },
+    {
+      "term": "BENZONATATE",
+      "count": 1
+    },
+    {
+      "term": "BEVACIZUMAB 400 MG/VIAL GENENTECH",
+      "count": 1
+    },
+    {
+      "term": "BISACODYL",
+      "count": 1
+    },
+    {
+      "term": "BISOPROLOL",
+      "count": 1
+    },
+    {
+      "term": "BRETHINE",
+      "count": 1
+    },
+    {
+      "term": "CALCIUM",
+      "count": 1
+    },
+    {
+      "term": "CALCIUM CARBONATE.",
+      "count": 1
+    },
+    {
+      "term": "CARBOPLATIN.",
+      "count": 1
+    },
+    {
+      "term": "CARVEDILOL.",
+      "count": 1
+    },
+    {
+      "term": "CATAPRES                                /UNK/",
+      "count": 1
+    },
+    {
+      "term": "CHLORHEXIDINE",
+      "count": 1
+    },
+    {
+      "term": "CHLORTHALIDONE",
+      "count": 1
+    },
+    {
+      "term": "CHOLECALCIFEROL",
+      "count": 1
+    },
+    {
+      "term": "CLARITIN",
+      "count": 1
+    },
+    {
+      "term": "CLINDAMYCIN",
+      "count": 1
+    },
+    {
+      "term": "CLOTRIM",
+      "count": 1
+    },
+    {
+      "term": "COLACE",
+      "count": 1
+    },
+    {
+      "term": "COLYTE ^REED^",
+      "count": 1
+    },
+    {
+      "term": "CONCOR",
+      "count": 1
+    },
+    {
+      "term": "COREG",
+      "count": 1
+    },
+    {
+      "term": "COUMADINE",
+      "count": 1
+    },
+    {
+      "term": "CRANBERRY",
+      "count": 1
+    },
+    {
+      "term": "CYCLOBENZAPRINE",
+      "count": 1
+    },
+    {
+      "term": "CYTOXAN",
+      "count": 1
+    },
+    {
+      "term": "DAPAGLIFLOZIN",
+      "count": 1
+    },
+    {
+      "term": "DARVOCET-N",
+      "count": 1
+    },
+    {
+      "term": "DECADRAN",
+      "count": 1
+    },
+    {
+      "term": "DECADRON                                /CAN/",
+      "count": 1
+    },
+    {
+      "term": "DEMEROL",
+      "count": 1
+    },
+    {
+      "term": "DIFLUCAN",
+      "count": 1
+    },
+    {
+      "term": "DIGITEK",
+      "count": 1
+    },
+    {
+      "term": "DIGOXIN SANDOZ",
+      "count": 1
+    },
+    {
+      "term": "DILAUDID",
+      "count": 1
+    },
+    {
+      "term": "DIPHENHYDRAMINE HCL",
+      "count": 1
+    },
+    {
+      "term": "DOCUSATE",
+      "count": 1
+    },
+    {
+      "term": "DOXAZOSIN MESYLATE",
+      "count": 1
+    },
+    {
+      "term": "DUODART",
+      "count": 1
+    },
+    {
+      "term": "EFFEXOR",
+      "count": 1
+    },
+    {
+      "term": "ELIGARD",
+      "count": 1
+    },
+    {
+      "term": "EPLERENONE",
+      "count": 1
+    },
+    {
+      "term": "ESCODARONE",
+      "count": 1
+    },
+    {
+      "term": "ETOPOSIDE.",
+      "count": 1
+    },
+    {
+      "term": "EVISTA",
+      "count": 1
+    },
+    {
+      "term": "EXCEDRIN MIGRAINE",
+      "count": 1
+    },
+    {
+      "term": "FASLODEX",
+      "count": 1
+    },
+    {
+      "term": "FEMARA",
+      "count": 1
+    },
+    {
+      "term": "FENTANYL",
+      "count": 1
+    },
+    {
+      "term": "FENTANYL.",
+      "count": 1
+    },
+    {
+      "term": "FISH OIL",
+      "count": 1
+    },
+    {
+      "term": "FLAGYL",
+      "count": 1
+    },
+    {
+      "term": "FLUCONAZOLE.",
+      "count": 1
+    },
+    {
+      "term": "FLUOROURACIL",
+      "count": 1
+    },
+    {
+      "term": "FORTAZ",
+      "count": 1
+    },
+    {
+      "term": "GABAPENTIN.",
+      "count": 1
+    },
+    {
+      "term": "GENTAK",
+      "count": 1
+    },
+    {
+      "term": "GENTAMICIN",
+      "count": 1
+    },
+    {
+      "term": "HEPATITIS B VACCINE",
+      "count": 1
+    },
+    {
+      "term": "HUMULIN",
+      "count": 1
+    },
+    {
+      "term": "IMODIUM A?D",
+      "count": 1
+    },
+    {
+      "term": "IMODIUM ^JANSSEN^",
+      "count": 1
+    },
+    {
+      "term": "IMOVANE",
+      "count": 1
+    },
+    {
+      "term": "IMURAN",
+      "count": 1
+    },
+    {
+      "term": "INFLUENZA VACCINE",
+      "count": 1
+    },
+    {
+      "term": "INTRALIPID",
+      "count": 1
+    },
+    {
+      "term": "IRINOTECAN",
+      "count": 1
+    },
+    {
+      "term": "IRINOTECAN HYDROCHLORIDE",
+      "count": 1
+    },
+    {
+      "term": "KCL RETARD ZYMA",
+      "count": 1
+    },
+    {
+      "term": "KENALOG",
+      "count": 1
+    },
+    {
+      "term": "KEPPRA",
+      "count": 1
+    },
+    {
+      "term": "KLONOPIN",
+      "count": 1
+    },
+    {
+      "term": "LACTULOSE",
+      "count": 1
+    },
+    {
+      "term": "LAPATINIB",
+      "count": 1
+    },
+    {
+      "term": "LEVOTHYROXINE",
+      "count": 1
+    },
+    {
+      "term": "LEVOTHYROXINE.",
+      "count": 1
+    },
+    {
+      "term": "LIDOCAINE",
+      "count": 1
+    },
+    {
+      "term": "LIORESAL",
+      "count": 1
+    },
+    {
+      "term": "LISINOPRIL.",
+      "count": 1
+    },
+    {
+      "term": "LITHIUM",
+      "count": 1
+    },
+    {
+      "term": "LORAZEPAM.",
+      "count": 1
+    },
+    {
+      "term": "LOVENOX",
+      "count": 1
+    },
+    {
+      "term": "MAGNESIUM DIASPORAL 300",
+      "count": 1
+    },
+    {
+      "term": "MEGACE",
+      "count": 1
+    },
+    {
+      "term": "METFORMIN",
+      "count": 1
+    },
+    {
+      "term": "METHOTREXATE",
+      "count": 1
+    },
+    {
+      "term": "METHYLPREDNISOLONE",
+      "count": 1
+    },
+    {
+      "term": "METOLAZONE.",
+      "count": 1
+    },
+    {
+      "term": "METOPROLOL SUCCINATE.",
+      "count": 1
+    },
+    {
+      "term": "MOBIC",
+      "count": 1
+    },
+    {
+      "term": "MORNIFLUMATE",
+      "count": 1
+    },
+    {
+      "term": "MORPHINE",
+      "count": 1
+    },
+    {
+      "term": "MTX [METHOTREXATE SODIUM]",
+      "count": 1
+    },
+    {
+      "term": "MYCELEX TROCHES",
+      "count": 1
+    },
+    {
+      "term": "MYLANTA                                 /USA/",
+      "count": 1
+    },
+    {
+      "term": "NARCAN",
+      "count": 1
+    },
+    {
+      "term": "NEBIVOLOL.",
+      "count": 1
+    },
+    {
+      "term": "NORCO",
+      "count": 1
+    },
+    {
+      "term": "NORVASC",
+      "count": 1
+    },
+    {
+      "term": "NYSTATIN.",
+      "count": 1
+    },
+    {
+      "term": "OLANZAPINE",
+      "count": 1
+    },
+    {
+      "term": "OSCAL",
+      "count": 1
+    },
+    {
+      "term": "OXYCODONE",
+      "count": 1
+    },
+    {
+      "term": "PAXIL",
+      "count": 1
+    },
+    {
+      "term": "PERCOCET",
+      "count": 1
+    },
+    {
+      "term": "PHENERGAN ^AVENTIS PHARMA^",
+      "count": 1
+    },
+    {
+      "term": "PILOCARPINE",
+      "count": 1
+    },
+    {
+      "term": "POTASSIUM CHLORIDE",
+      "count": 1
+    },
+    {
+      "term": "PREDNISONE.",
+      "count": 1
+    },
+    {
+      "term": "PRENATAL VITAMINS",
+      "count": 1
+    },
+    {
+      "term": "PRILOSEC",
+      "count": 1
+    },
+    {
+      "term": "PROCRIT                            /00909301/",
+      "count": 1
+    },
+    {
+      "term": "PROTONIX",
+      "count": 1
+    },
+    {
+      "term": "PROVENTIL",
+      "count": 1
+    },
+    {
+      "term": "PYRIDIUM",
+      "count": 1
+    },
+    {
+      "term": "QUININE",
+      "count": 1
+    },
+    {
+      "term": "QUININE SULFATE",
+      "count": 1
+    },
+    {
+      "term": "RAMIPRIL",
+      "count": 1
+    },
+    {
+      "term": "REMIFEMIN",
+      "count": 1
+    },
+    {
+      "term": "REVLIMID",
+      "count": 1
+    },
+    {
+      "term": "ROCEPHIN",
+      "count": 1
+    },
+    {
+      "term": "ROSUVASTATIN",
+      "count": 1
+    },
+    {
+      "term": "SALAGEN",
+      "count": 1
+    },
+    {
+      "term": "SCOPOLAMINE",
+      "count": 1
+    },
+    {
+      "term": "SENOKOT",
+      "count": 1
+    },
+    {
+      "term": "SEREVENT",
+      "count": 1
+    },
+    {
+      "term": "SERTRALINE HCL",
+      "count": 1
+    },
+    {
+      "term": "SIMVASTIN",
+      "count": 1
+    },
+    {
+      "term": "SPIRIVA",
+      "count": 1
+    },
+    {
+      "term": "SPIRONOLACTONE",
+      "count": 1
+    },
+    {
+      "term": "SYMBICORT TURBUHALER ^DRACO^",
+      "count": 1
+    },
+    {
+      "term": "TAGAMET",
+      "count": 1
+    },
+    {
+      "term": "TEGELINE",
+      "count": 1
+    },
+    {
+      "term": "TEMAZEPAM",
+      "count": 1
+    },
+    {
+      "term": "TOBRAMYCIN",
+      "count": 1
+    },
+    {
+      "term": "TORADOL",
+      "count": 1
+    },
+    {
+      "term": "TORASEMIDE",
+      "count": 1
+    },
+    {
+      "term": "TRAZODONE",
+      "count": 1
+    },
+    {
+      "term": "TRIAMCINOLONE",
+      "count": 1
+    },
+    {
+      "term": "TRIAMTERENE",
+      "count": 1
+    },
+    {
+      "term": "TRIFLUOPERAZINE HCL",
+      "count": 1
+    },
+    {
+      "term": "UNASYN",
+      "count": 1
+    },
+    {
+      "term": "UNSPECIFIED INGREDIENT",
+      "count": 1
+    },
+    {
+      "term": "VELCADE",
+      "count": 1
+    },
+    {
+      "term": "VENLAFAXINE",
+      "count": 1
+    },
+    {
+      "term": "VINCRISTINE",
+      "count": 1
+    },
+    {
+      "term": "VITAMIN B COMPLEX CAP",
+      "count": 1
+    },
+    {
+      "term": "VITAMIN B12",
+      "count": 1
+    },
+    {
+      "term": "VITAMIN D NOS",
+      "count": 1
+    },
+    {
+      "term": "VITAMIN D3",
+      "count": 1
+    },
+    {
+      "term": "WELLBUTRIN",
+      "count": 1
+    },
+    {
+      "term": "XELODA",
+      "count": 1
+    },
+    {
+      "term": "ZANTAC",
+      "count": 1
+    },
+    {
+      "term": "ZOLOFT",
+      "count": 1
+    },
+    {
+      "term": "ZOLPIDEM",
+      "count": 1
+    },
+    {
+      "term": "ZOSTER",
+      "count": 1
+    },
+    {
+      "term": "ZOSYN",
+      "count": 1
+    }
+  ]
+}

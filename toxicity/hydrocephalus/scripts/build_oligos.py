@@ -118,6 +118,13 @@ OLIGOS = [
     ("inclisiran", "Leqvio;ALN-PCSsc", "siRNA", "double_stranded_siRNA", "PCSK9",
      "atherosclerotic_cardiovascular_disease", "Novartis/Alnylam", "approved",
      "subcutaneous", "LEQVIO prescribing information"),
+    ("valeriasen", "KT777;valeriasen sodium", "ASO_gapmer", "single_stranded_ASO",
+     "KCNT1", "KCNT1_developmental_and_epileptic_encephalopathy",
+     "n-of-1 investigator-sponsored (Boston Children's Hospital / Yale)", "phase_1",
+     "intrathecal_lumbar",
+     "Nat Med 2026 PMC13099374; sequence and per-position chemistry are in Extended "
+     "Data Table 1, published as an image whose bold/underline 2'-MOE encoding does "
+     "not survive text extraction, so NOT transcribed (OI-02)"),
     # --- Nonclinical research-grade siRNAs with PUBLISHED sequences --------
     # These are the only compounds in the release whose sequence is published.
     # Each SPAK duplex passes the sense/antisense reverse-complement check.

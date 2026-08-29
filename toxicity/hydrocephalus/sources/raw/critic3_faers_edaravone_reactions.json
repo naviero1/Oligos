@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-07-30"
+  },
+  "results": [
+    {
+      "term": "DEATH",
+      "count": 196
+    },
+    {
+      "term": "CEREBRAL INFARCTION",
+      "count": 97
+    },
+    {
+      "term": "AMYOTROPHIC LATERAL SCLEROSIS",
+      "count": 78
+    },
+    {
+      "term": "DISEASE PROGRESSION",
+      "count": 72
+    },
+    {
+      "term": "DRUG INEFFECTIVE",
+      "count": 58
+    },
+    {
+      "term": "OFF LABEL USE",
+      "count": 52
+    },
+    {
+      "term": "DYSPNOEA",
+      "count": 49
+    },
+    {
+      "term": "MUSCULAR WEAKNESS",
+      "count": 45
+    },
+    {
+      "term": "DIARRHOEA",
+      "count": 43
+    },
+    {
+      "term": "FATIGUE",
+      "count": 43
+    },
+    {
+      "term": "PNEUMONIA",
+      "count": 42
+    },
+    {
+      "term": "CONDITION AGGRAVATED",
+      "count": 40
+    },
+    {
+      "term": "ASTHENIA",
+      "count": 35
+    },
+    {
+      "term": "NAUSEA",
+      "count": 31
+    },
+    {
+      "term": "GAIT DISTURBANCE",
+      "count": 30
+    },
+    {
+      "term": "PYREXIA",
+      "count": 30
+    },
+    {
+      "term": "ABDOMINAL DISCOMFORT",
+      "count": 29
+    },
+    {
+      "term": "DYSPHAGIA",
+      "count": 29
+    },
+    {
+      "term": "PNEUMONIA ASPIRATION",
+      "count": 26
+    },
+    {
+      "term": "HEADACHE",
+      "count": 25
+    },
+    {
+      "term": "HEPATIC FUNCTION ABNORMAL",
+      "count": 25
+    },
+    {
+      "term": "RESPIRATORY FAILURE",
+      "count": 25
+    },
+    {
+      "term": "SPEECH DISORDER",
+      "count": 25
+    },
+    {
+      "term": "CEREBRAL HAEMORRHAGE",
+      "count": 24
+    },
+    {
+      "term": "FALL",
+      "count": 24
+    },
+    {
+      "term": "MALAISE",
+      "count": 21
+    },
+    {
+      "term": "ADVERSE DRUG REACTION",
+      "count": 20
+    },
+    {
+      "term": "DIZZINESS",
+      "count": 20
+    },
+    {
+      "term": "DRUG INTERACTION",
+      "count": 20
+    },
+    {
+      "term": "RASH",
+      "count": 20
+    },
+    {
+      "term": "RENAL IMPAIRMENT",
+      "count": 20
+    },
+    {
+      "term": "GASTROSTOMY",
+      "count": 19
+    },
+    {
+      "term": "HAEMORRHAGIC CEREBRAL INFARCTION",
+      "count": 19
+    },
+    {
+      "term": "APHASIA",
+      "count": 18
+    },
+    {
+      "term": "SUBARACHNOID HAEMORRHAGE",
+      "count": 18
+    },
+    {
+      "term": "ACUTE KIDNEY INJURY",
+      "count": 17
+    },
+    {
+      "term": "CONSTIPATION",
+      "count": 16
+    },
+    {
+      "term": "INAPPROPRIATE SCHEDULE OF PRODUCT ADMINISTRATION",
+      "count": 15
+    },
+    {
+      "term": "LIVER DISORDER",
+      "count": 15
+    },
+    {
+      "term": "DECREASED APPETITE",
+      "count": 14
+    },
+    {
+      "term": "PRODUCT DOSE OMISSION ISSUE",
+      "count": 14
+    },
+    {
+      "term": "PRURITUS",
+      "count": 14
+    },
+    {
+      "term": "RESPIRATORY DISORDER",
+      "count": 14
+    },
+    {
+      "term": "BALANCE DISORDER",
+      "count": 13
+    },
+    {
+      "term": "BLOOD PRESSURE DECREASED",
+      "count": 13
+    },
+    {
+      "term": "DYSKINESIA",
+      "count": 13
+    },
+    {
+      "term": "HAEMORRHAGIC INFARCTION",
+      "count": 13
+    },
+    {
+      "term": "SEPSIS",
+      "count": 13
+    },
+    {
+      "term": "URINARY TRACT INFECTION",
+      "count": 13
+    },
+    {
+      "term": "GENERAL PHYSICAL HEALTH DETERIORATION",
+      "count": 12
+    },
+    {
+      "term": "SOMNOLENCE",
+      "count": 12
+    },
+    {
+      "term": "TACHYCARDIA",
+      "count": 12
+    },
+    {
+      "term": "ABDOMINAL PAIN UPPER",
+      "count": 11
+    },
+    {
+      "term": "ALTERED STATE OF CONSCIOUSNESS",
+      "count": 11
+    },
+    {
+      "term": "EMBOLIC STROKE",
+      "count": 11
+    },
+    {
+      "term": "FEELING ABNORMAL",
+      "count": 11
+    },
+    {
+      "term": "HEMIPLEGIA",
+      "count": 11
+    },
+    {
+      "term": "MECHANICAL VENTILATION",
+      "count": 11
+    },
+    {
+      "term": "MUSCLE SPASMS",
+      "count": 11
+    },
+    {
+      "term": "MUSCULOSKELETAL STIFFNESS",
+      "count": 11
+    },
+    {
+      "term": "TRACHEOSTOMY",
+      "count": 11
+    },
+    {
+      "term": "TREMOR",
+      "count": 11
+    },
+    {
+      "term": "VOMITING",
+      "count": 11
+    },
+    {
+      "term": "DEHYDRATION",
+      "count": 10
+    },
+    {
+      "term": "DEPRESSED LEVEL OF CONSCIOUSNESS",
+      "count": 10
+    },
+    {
+      "term": "FRACTURE",
+      "count": 10
+    },
+    {
+      "term": "WEIGHT DECREASED",
+      "count": 10
+    },
+    {
+      "term": "DISSEMINATED INTRAVASCULAR COAGULATION",
+      "count": 9
+    },
+    {
+      "term": "DYSARTHRIA",
+      "count": 9
+    },
+    {
+      "term": "GASTROINTESTINAL DISORDER",
+      "count": 9
+    },
+    {
+      "term": "HYPERHIDROSIS",
+      "count": 9
+    },
+    {
+      "term": "HYPERTENSION",
+      "count": 9
+    },
+    {
+      "term": "INTERSTITIAL LUNG DISEASE",
+      "count": 9
+    },
+    {
+      "term": "PAIN IN EXTREMITY",
+      "count": 9
+    },
+    {
+      "term": "SEIZURE",
+      "count": 9
+    },
+    {
+      "term": "COMA",
+      "count": 8
+    },
+    {
+      "term": "CONFUSIONAL STATE",
+      "count": 8
+    },
+    {
+      "term": "COUGH",
+      "count": 8
+    },
+    {
+      "term": "DEPRESSED MOOD",
+      "count": 8
+    },
+    {
+      "term": "PLATELET COUNT DECREASED",
+      "count": 8
+    },
+    {
+      "term": "PRODUCT STORAGE ERROR",
+      "count": 8
+    },
+    {
+      "term": "ASTHMA",
+      "count": 7
+    },
+    {
+      "term": "ATRIAL FIBRILLATION",
+      "count": 7
+    },
+    {
+      "term": "BLOOD CREATINE PHOSPHOKINASE INCREASED",
+      "count": 7
+    },
+    {
+      "term": "BRAIN OEDEMA",
+      "count": 7
+    },
+    {
+      "term": "CARDIAC ARREST",
+      "count": 7
+    },
+    {
+      "term": "COVID-19",
+      "count": 7
+    },
+    {
+      "term": "DEEP VEIN THROMBOSIS",
+      "count": 7
+    },
+    {
+      "term": "HAEMORRHAGIC TRANSFORMATION STROKE",
+      "count": 7
+    },
+    {
+      "term": "HEART RATE INCREASED",
+      "count": 7
+    },
+    {
+      "term": "HEMIPARESIS",
+      "count": 7
+    },
+    {
+      "term": "HEPATIC ENZYME INCREASED",
+      "count": 7
+    },
+    {
+      "term": "LIMB DISCOMFORT",
+      "count": 7
+    },
+    {
+      "term": "MOBILITY DECREASED",
+      "count": 7
+    },
+    {
+      "term": "MUSCLE TWITCHING",
+      "count": 7
+    },
+    {
+      "term": "MYOCLONUS",
+      "count": 7
+    },
+    {
+      "term": "NEUROLOGICAL DECOMPENSATION",
+      "count": 7
+    },
+    {
+      "term": "OVERDOSE",
+      "count": 7
+    },
+    {
+      "term": "PRODUCT USE COMPLAINT",
+      "count": 7
+    },
+    {
+      "term": "PRODUCT USE IN UNAPPROVED INDICATION",
+      "count": 7
+    }
+  ]
+}

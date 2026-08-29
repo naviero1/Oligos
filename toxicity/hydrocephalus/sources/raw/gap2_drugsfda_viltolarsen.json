@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-08-28",
+    "results": {
+      "skip": 0,
+      "limit": 5,
+      "total": 1
+    }
+  },
+  "results": [
+    {
+      "submissions": [
+        {
+          "submission_type": "ORIG",
+          "submission_number": "1",
+          "submission_status": "AP",
+          "submission_status_date": "20200812",
+          "review_priority": "PRIORITY",
+          "submission_class_code": "TYPE 1",
+          "submission_class_code_description": "Type 1 - New Molecular Entity",
+          "submission_property_type": [
+            {
+              "code": "Orphan"
+            }
+          ],
+          "application_docs": [
+            {
+              "id": "64272",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2020/212154Orig1s000lbl.pdf",
+              "date": "20200813",
+              "type": "Label"
+            },
+            {
+              "id": "64273",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2020/212154Orig1s000ltr.pdf",
+              "date": "20200813",
+              "type": "Letter"
+            },
+            {
+              "id": "64454",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2020/212154Orig1s000TOC.html",
+              "date": "20200831",
+              "type": "Review"
+            }
+          ]
+        },
+        {
+          "submission_type": "SUPPL",
+          "submission_number": "2",
+          "submission_status": "AP",
+          "submission_status_date": "20210311",
+          "review_priority": "STANDARD",
+          "submission_class_code": "LABELING",
+          "submission_class_code_description": "Labeling",
+          "submission_property_type": [
+            {
+              "code": "Orphan"
+            }
+          ],
+          "application_docs": [
+            {
+              "id": "66753",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/label/2021/212154s002lbl.pdf",
+              "date": "20210312",
+              "type": "Label"
+            },
+            {
+              "id": "66756",
+              "url": "http://www.accessdata.fda.gov/drugsatfda_docs/appletter/2021/212154Orig1s002ltr.pdf",
+              "date": "20210312",
+              "type": "Letter"
+            }
+          ]
+        }
+      ],
+      "application_number": "NDA212154",
+      "sponsor_name": "NIPPON SHINYAKU",
+      "openfda": {
+        "application_number": [
+          "NDA212154"
+        ],
+        "brand_name": [
+          "VILTEPSO"
+        ],
+        "generic_name": [
+          "VILTOLARSEN"
+        ],
+        "manufacturer_name": [
+          "NS Pharma, Inc."
+        ],
+        "product_ndc": [
+          "73292-011"
+        ],
+        "product_type": [
+          "HUMAN PRESCRIPTION DRUG"
+        ],
+        "route": [
+          "INTRAVENOUS"
+        ],
+        "substance_name": [
+          "VILTOLARSEN"
+        ],
+        "rxcui": [
+          "2389844",
+          "2389849"
+        ],
+        "spl_id": [
+          "0e3b8e29-64dd-430f-998d-5aca82258a8d"
+        ],
+        "spl_set_id": [
+          "1ffff9a8-6d6a-4dcb-8493-1b6cc3a5d123"
+        ],
+        "package_ndc": [
+          "73292-011-01"
+        ],
+        "unii": [
+          "SXA7YP6EKX"
+        ]
+      },
+      "products": [
+        {
+          "product_number": "001",
+          "reference_drug": "Yes",
+          "brand_name": "VILTEPSO",
+          "active_ingredients": [
+            {
+              "name": "VILTOLARSEN",
+              "strength": "250MG/5ML (50MG/ML)"
+            }
+          ],
+          "reference_standard": "Yes",
+          "dosage_form": "SOLUTION",
+          "route": "INTRAVENOUS",
+          "marketing_status": "Prescription"
+        }
+      ]
+    }
+  ]
+}

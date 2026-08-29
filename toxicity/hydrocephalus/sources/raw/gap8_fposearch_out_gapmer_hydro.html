@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/fpo_9.css" />
+<script type="text/javascript">
+var plstart = new Date();
+</script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-174791-1']);
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="title" content="FPO IP Research &amp; Communities" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="Complete Patent Searching Database and Patent Data Analytics Services." />
+<title>FPO IP Research &amp; Communities</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link rel="shortcut icon" href="/images/favicon_1.ico"/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-1586334167197709",
+        enable_page_level_ads: true
+    });
+</script></head>
+<body>
+
+<div>
+    <a name="top"></a>
+
+    <div class="container">
+        
+<div class="header">
+    <div class="row-fluid top">
+
+        <div class="pull-left figure">
+            <a href="/" onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Logo']);"></a>
+        </div>
+
+
+        <div class="pull-right" style="width: 750px;">
+                        <div class="loginForm">
+                <form class="form-inline form-mini pull-right" action="/login.html" method="post">
+                    <input type="hidden" name="src" value="header_login">
+                    <input id="UID-top" name="UID" type="text" class="input-large" placeholder="Email">
+                    <input id="PWD-top" name="PWD" type="password" class="input-small" placeholder="Password">
+                    <button type="submit" class="btn btn-mini btn-primary"
+                            onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Login']);">Login
+                    </button>
+                    <a class="btn btn-mini btn-info" href="/register.html"
+                            onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Create']);">Sign up
+                    </a>
+                </form>
+            </div>
+            
+
+            <div class="searchForm well">
+                <form id="quick_result" name="quick_result" class="form-inline" action="/result.html" method="get">
+
+                    <input type="hidden" name="sort" value="relevance">
+                    <input type="hidden" name="srch" value="top">
+
+
+                    <div class="searchBox pull-left">
+                        <input type="text" name="query_txt" placeholder="Enter your search here"
+                               class="search-query" id="topSearchBox">
+
+                        <div class="btn-group">
+                            <button name="submit" class="btn btn-primary" type="submit"
+                                    onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Search']);">Search
+                            </button>
+                            <button id="searchBox_dropdown" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/search.html"
+                                       onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'SearchExpert']);document.cookie = 'searchTab=#expert';">
+                                    Expert Search</a>
+                                </li>
+                                <li><a href="/search.html"
+                                       onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'SearchQuick']);document.cookie = 'searchTab=#quick';">
+                                    Quick Search</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sideCollections pull-right">
+                        <ul id="header_search_top" class="borderBottom ul-mini ">
+                            <li>
+                                <label class="checkbox">
+                                    <input type="checkbox" id="patents_us" name="patents_us"
+                                           value="on" checked="checked">US Patents/Apps
+                                </label>
+                            </li>
+
+                            <li>
+                                <label class="checkbox">
+                                    <input type="checkbox" id="patents_other" name="patents_other"
+                                           value="on">Other
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </form>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="row-fluid">
+        <div class="navbar navbar-inverse center" id="primaryNavBar">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    <li><a href="/"></a></li>
+                    <li><a href="/search.html">SEARCH</a></li>
+                    <li>
+                        <a href="/tools-resources.html"
+                           onclick="_gaq.push(['_trackEvent', 'Navbar', 'Click', 'Resources']);">
+                            TOOLS &amp; RESOURCES
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+<div class="clearfix"></div>        <div>
+
+            <div id="dhtmltooltip"></div>
+            
+<form id="results" name="results" method="post" class="form-horizontal" action="/result.html"><input type="hidden" name="p" id="p" value="1" /><input type="hidden" name="query_txt" id="query_txt" value="SPEC/&quot;gapmer&quot; AND SPEC/&quot;hydrocephalus&quot;" /><input type="hidden" name="stemming" id="quickstemming" value="on" /><input type="hidden" name="sort" id="quicksort" value="relevance" /><input type="hidden" name="patents" id="quickpatents" value="" /><input type="hidden" name="patents_us" id="quickpatentsus" value="" /><input type="hidden" name="patents_other" id="quickpatentsother" value="" /><input type="hidden" name="uspat" id="quickuspat" value="on" /><input type="hidden" name="usapp" id="quickusapp" value="on" /><input type="hidden" name="pct" id="quickpct" value="" /><input type="hidden" name="jp" id="quickjp" value="on" /><input type="hidden" name="eupat" id="quickeu" value="" /><input type="hidden" name="depat" id="quickde" value="on" /><input type="hidden" name="srch" id="quicksearch" value="xprtsrch" /><input type="hidden" name="date_range" id="quickdaterange" value="all" /><input type="hidden" name="hits" id="hits" value="125" /><input type="hidden" name="srch_name" id="srch_name" value="" /><input type="hidden" name="search_name" id="search_name" value="" /><input type="hidden" name="selected_doc_flag" id="selected_doc_flag" value="" /><input type="hidden" name="selected_portfolio" id="selected_portfolio" value="" /><input type="hidden" name="portfolio_name" id="portfolio_name" value="" />
+
+<div class="well well-small" style="margin-top:10px; margin-bottom: 0">
+    <table width="100%" border="0">
+        <tr>
+            <td width="36%">
+                Matches 1 - 50 out of 125            </td>
+            <td align="right" valign="middle" width="70%" colspan="3" class="paginate_spacing">
+                 <span margin-left:3px;'><b>1</b></span><a href='result.html?p=2&amp;srch=xprtsrch&amp;query_txt=SPEC%2F%22gapmer%22+AND+SPEC%2F%22hydrocephalus%22&amp;uspat=on&amp;usapp=on&amp;jp=on&amp;depat=on&amp;date_range=all&amp;stemming=on&amp;sort=relevance'> 2 </a><a href='result.html?p=3&amp;srch=xprtsrch&amp;query_txt=SPEC%2F%22gapmer%22+AND+SPEC%2F%22hydrocephalus%22&amp;uspat=on&amp;usapp=on&amp;jp=on&amp;depat=on&amp;date_range=all&amp;stemming=on&amp;sort=relevance'> 3 </a><a href='result.html?p=2&amp;srch=xprtsrch&amp;query_txt=SPEC%2F%22gapmer%22+AND+SPEC%2F%22hydrocephalus%22&amp;uspat=on&amp;usapp=on&amp;jp=on&amp;depat=on&amp;date_range=all&amp;stemming=on&amp;sort=relevance'> &gt; </a>                <br clear="all"/>
+            </td>
+        </tr>
+    </table>
+</div><br clear="all"/><!-- 728x90 Responsive 1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1586334167197709"
+     data-ad-slot="2270521617"
+     data-ad-format="auto">
+</ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br clear="all"/>
+
+<div class="legacy-container" style="margin-top: 0">
+    <div class="container_white" style="padding-top:3px;  padding-bottom:10px;">
+        <div align="center">
+            <table width="100%" border="0" cellpadding="2" cellspacing="1" class="listing_table">
+                <tr>
+                                        <th style="text-align:left;" width="10%">
+                        Match
+                    </th>
+                                        <th style="text-align:left;" width="15%"> Document</th>
+                    <th style="text-align:left;">Document Title</th>
+                    <th style='text-align:left;' width='10%'>Score</div></th>                </tr>
+                <tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                1            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2018501816A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2018501816A.html">Antisense-oligonucleotide as a TGF-R signaling inhibitor</a>
+        &nbsp;
+                            <br/>
+                The present invention presents antisense-oligonucleotides having a length of at least 10 nucleotides (where at least two of the nucleotides are LNAs), their use as TGF-R signaling inhibitors, said...    </td>
+        <td width='5%'>
+        999    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                2            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP6983343B2    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP6983343B2.html">Antisense-oligonucleotide as a TGF-R signaling inhibitor</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to antisense-oligonucleotides having a length of at least 10 nucleotides, wherein at least two of the nucleotides are LNAs, their use as inhibitors of TGF-R...    </td>
+        <td width='5%'>
+        989    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                3            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2021072841A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2021072841A.html">ANTISENSE-OLIGONUCLEOTIDE AS TGF-R SIGNALING INHIBITOR</a>
+        &nbsp;
+                            <br/>
+                To provide a pharmaceutically active compound capable of reducing an amount of a TGF receptor II (TGF-RII) by expression inhibition of a TGF receptor II (TGF-RII), and reducing TGF-β downstream...    </td>
+        <td width='5%'>
+        986    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                4            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP6832285B2    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP6832285B2.html">Antisense-oligonucleotide as a TGF-R signaling inhibitor</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to antisense-oligonucleotides having a length of at least 10 nucleotides, wherein at least two of the nucleotides are LNAs, their use as inhibitors of TGF-R...    </td>
+        <td width='5%'>
+        986    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                5            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2026507503A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2026507503A.html">Oligonucleotides for modulating apolipoprotein E (APOE) expression and methods of use thereof</a>
+        &nbsp;
+                            <br/>
+                The present disclosure relates to oligonucleotides, particularly antisense oligonucleotides (ASOs) and pharmaceutically acceptable salts thereof, that can hybridize to APOE pre-mRNA or mRNA and...    </td>
+        <td width='5%'>
+        920    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                6            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2013526860A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2013526860A.html">Regulation of transthyretin expression</a>
+        &nbsp;
+                            <br/>
+                Provided herein are methods, compounds, and compositions for reducing expression of transthyretin mRNA and protein in an animal. Such methods, compounds, and compositions are useful to treat,...    </td>
+        <td width='5%'>
+        893    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                7            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP5896175B2    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP5896175B2.html">Regulation of transthyretin expression</a>
+        &nbsp;
+                            <br/>
+                Provided herein are methods, compounds, and compositions for reducing expression of transthyretin mRNA and protein in an animal. Such methods, compounds, and compositions are useful to treat,...    </td>
+        <td width='5%'>
+        893    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                8            </label>
+        </td>
+    <td width="15%"  valign="top">
+      11213541    </td>
+    <td  width="60%" valign="top">
+        <a href="/11213541.html">Antisense-oligonucleotides as inhibitors of TGF-R signaling</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to antisense-oligonucleotides having a length of at least 10 nucleotides, wherein at least two of the nucleotides are LNAs, their use as inhibitors of TGF-R...    </td>
+        <td width='5%'>
+        890    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                9            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20170319614    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2017/0319614.html">ANTISENSE-OLIGONUCLEOTIDES AS INHIBITORS OF TGF-R SIGNALING</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to antisense-oligonucleotides having a length of at least 10 nucleotides, wherein at least two of the nucleotides are LNAs, their use as inhibitors of TGF-R...    </td>
+        <td width='5%'>
+        890    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                10            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20220143071    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2022/0143071.html">ANTISENSE-OLIGONUCLEOTIDES AS INHIBITORS OF TGF-R SIGNALING</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to antisense-oligonucleotides having a length of at least 10 nucleotides, wherein at least two of the nucleotides are LNAs, their use as inhibitors of TGF-R...    </td>
+        <td width='5%'>
+        890    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                11            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20190314401    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2019/0314401.html">ANTISENSE-OLIGONUCLEOTIDES AS INHIBITORS OF TGF-R SIGNALING</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to antisense-oligonucleotides having a length of at least 10 nucleotides, wherein at least two of the nucleotides are LNAs, their use as inhibitors of TGF-R...    </td>
+        <td width='5%'>
+        890    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                12            </label>
+        </td>
+    <td width="15%"  valign="top">
+      10363266    </td>
+    <td  width="60%" valign="top">
+        <a href="/10363266.html">Antisense-oligonucleotides as inhibitors of TGF-R signaling</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to antisense-oligonucleotides having a length of at least 10 nucleotides, wherein at least two of the nucleotides are LNAs, their use as inhibitors of TGF-R...    </td>
+        <td width='5%'>
+        890    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                13            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20160138029    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2016/0138029.html">ANTISENSE-OLIGONUCLEOTIDES AS INHIBITORS OF TGF-R SIGNALING</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to antisense-oligonucleotides having a length of at least 10 nucleotides, wherein at least two of the nucleotides are LNAs, their use as inhibitors of TGF-R...    </td>
+        <td width='5%'>
+        890    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                14            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20260226463    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2026/0226463.html">OLIGONUCLEOTIDES FOR MODULATING APOLIPOPROTEIN E (APOE) EXPRESSION AND METHODS OF USE THEREOF</a>
+        &nbsp;
+                            <br/>
+                The present disclosure relates to oligonucleotides, in particular antisense oligonucleotides (ASOs) and pharmaceutically acceptable salts thereof, that can hybridize and reduce the expression of...    </td>
+        <td width='5%'>
+        887    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                15            </label>
+        </td>
+    <td width="15%"  valign="top">
+      9816092    </td>
+    <td  width="60%" valign="top">
+        <a href="/9816092.html">Modulation of transthyretin expression</a>
+        &nbsp;
+                            <br/>
+                Provided herein are methods, compounds, and compositions for reducing expression of transthyretin mRNA and protein in an animal. Such methods, compounds, and compositions are useful to treat,...    </td>
+        <td width='5%'>
+        880    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                16            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20140256797    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2014/0256797.html">MODULATION OF TRANSTHYRETIN EXPRESSION</a>
+        &nbsp;
+                            <br/>
+                Provided herein are methods, compounds, and compositions for reducing expression of transthyretin mRNA and protein in an animal. Such methods, compounds, and compositions are useful to treat,...    </td>
+        <td width='5%'>
+        880    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                17            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20190169613    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2019/0169613.html">MODULATION OF TRANSTHYRETIN EXPRESSION</a>
+        &nbsp;
+                            <br/>
+                Provided herein are methods, compounds, and compositions for reducing expression of transthyretin mRNA and protein in an animal. Such methods, compounds, and compositions are useful to treat,...    </td>
+        <td width='5%'>
+        880    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                18            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20180273946    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2018/0273946.html">MODULATION OF TRANSTHYRETIN EXPRESSION</a>
+        &nbsp;
+                            <br/>
+                Provided herein are methods, compounds, and compositions for reducing expression of transthyretin mRNA and protein in an animal. Such methods, compounds, and compositions are useful to treat,...    </td>
+        <td width='5%'>
+        880    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                19            </label>
+        </td>
+    <td width="15%"  valign="top">
+      12606826    </td>
+    <td  width="60%" valign="top">
+        <a href="/12606826.html">Modulation of transthyretin expression</a>
+        &nbsp;
+                            <br/>
+                Provided herein are methods, compounds, and compositions for reducing expression of transthyretin mRNA and protein in an animal. Such methods, compounds, and compositions are useful to treat,...    </td>
+        <td width='5%'>
+        880    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                20            </label>
+        </td>
+    <td width="15%"  valign="top">
+      8697860    </td>
+    <td  width="60%" valign="top">
+        <a href="/8697860.html">Diagnosis and treatment of disease</a>
+        &nbsp;
+                            <br/>
+                Provided herein are methods, compounds, and compositions for reducing expression of transthyretin mRNA and protein in an animal. Such methods, compounds, and compositions are useful to treat,...    </td>
+        <td width='5%'>
+        880    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                21            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20160369275    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2016/0369275.html">MODULATION OF TRANSTHYRETIN EXPRESSION</a>
+        &nbsp;
+                            <br/>
+                Provided herein are methods, compounds, and compositions for reducing expression of transthyretin mRNA and protein in an animal. Such methods, compounds, and compositions are useful to treat,...    </td>
+        <td width='5%'>
+        880    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                22            </label>
+        </td>
+    <td width="15%"  valign="top">
+      9399774    </td>
+    <td  width="60%" valign="top">
+        <a href="/9399774.html">Modulation of transthyretin expression</a>
+        &nbsp;
+                            <br/>
+                Provided herein are methods, compounds, and compositions for reducing expression of transthyretin mRNA and protein in an animal. Such methods, compounds, and compositions are useful to treat,...    </td>
+        <td width='5%'>
+        880    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                23            </label>
+        </td>
+    <td width="15%"  valign="top">
+      11535849    </td>
+    <td  width="60%" valign="top">
+        <a href="/11535849.html">Modulation of transthyretin expression</a>
+        &nbsp;
+                            <br/>
+                Provided herein are methods, compounds, and compositions for reducing expression of transthyretin mRNA and protein in an animal. Such methods, compounds, and compositions are useful to treat,...    </td>
+        <td width='5%'>
+        880    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                24            </label>
+        </td>
+    <td width="15%"  valign="top">
+      9061044    </td>
+    <td  width="60%" valign="top">
+        <a href="/9061044.html">Modulation of transthyretin expression</a>
+        &nbsp;
+                            <br/>
+                Provided herein are methods, compounds, and compositions for reducing expression of transthyretin mRNA and protein in an animal. Such methods, compounds, and compositions are useful to treat,...    </td>
+        <td width='5%'>
+        880    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                25            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20150252367    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2015/0252367.html">MODULATION OF TRANSTHYRETIN EXPRESSION</a>
+        &nbsp;
+                            <br/>
+                Provided herein are methods, compounds, and compositions for reducing expression of transthyretin mRNA and protein in an animal. Such methods, compounds, and compositions are useful to treat,...    </td>
+        <td width='5%'>
+        880    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                26            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20210095281    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2021/0095281.html">MODULATION OF TRANSTHYRETIN EXPRESSION</a>
+        &nbsp;
+                            <br/>
+                Provided herein are methods, compounds, and compositions for reducing expression of transthyretin mRNA and protein in an animal. Such methods, compounds, and compositions are useful to treat,...    </td>
+        <td width='5%'>
+        880    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                27            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20110294868    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2011/0294868.html">MODULATION OF TRANSTHYRETIN EXPRESSION</a>
+        &nbsp;
+                            <br/>
+                Provided herein are methods, compounds, and compositions for reducing expression of transthyretin mRNA and protein in an animal. Such methods, compounds, and compositions are useful to treat,...    </td>
+        <td width='5%'>
+        880    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                28            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20240132885    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2024/0132885.html">MODULATION OF TRANSTHYRETIN EXPRESSION</a>
+        &nbsp;
+                            <br/>
+                Provided herein are methods, compounds, and compositions for reducing expression of transthyretin mRNA and protein in an animal. Such methods, compounds, and compositions are useful to treat,...    </td>
+        <td width='5%'>
+        880    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                29            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20110237646    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2011/0237646.html">MODULATION OF TRANSTHYRETIN EXPRESSION FOR THE TREATMENT OF CNS RELATED DISORDERS</a>
+        &nbsp;
+                            <br/>
+                Compounds, compositions and methods are provided for modulating the expression of transthyretin in the brain, specifically the choroid plexus. The compositions comprise oligonucleotides, targeted...    </td>
+        <td width='5%'>
+        835    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                30            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20240360450    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2024/0360450.html">ANTISENSE OLIGONUCLEOTIDE THERAPY FOR H3.3 K27M DIFFUSE MIDLINE GLIOMAS</a>
+        &nbsp;
+                            <br/>
+                Disclosed herein are compositions and methods for modulating, such as decreasing, the expression of a mutant histone 3.3 (H3.3) allele or a mutant H3.3 gene. In some embodiments, the compositions...    </td>
+        <td width='5%'>
+        822    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                31            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP7339294B2    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP7339294B2.html">HBVandTTRCompositions and methods for modulating expression</a>
+        &nbsp;
+                            <br/>
+                Provided herein are oligomeric compounds with conjugate groups. In certain embodiments, the oligomeric compounds are conjugated to N-Acetylgalactosamine.    </td>
+        <td width='5%'>
+        775    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                32            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP7799103B2    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP7799103B2.html">Compositions and methods for modulating HBV and TTR expression</a>
+        &nbsp;
+                            <br/>
+                Provided herein are oligomeric compounds with conjugate groups. In certain embodiments, the oligomeric compounds are conjugated to N-Acetylgalactosamine.    </td>
+        <td width='5%'>
+        749    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                33            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP7633311B2    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP7633311B2.html">Compositions and methods for modulating HBV and TTR expression</a>
+        &nbsp;
+                            <br/>
+                Provided herein are oligomeric compounds with conjugate groups. In certain embodiments, the oligomeric compounds are conjugated to N-Acetylgalactosamine.    </td>
+        <td width='5%'>
+        749    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                34            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP6866459B2    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP6866459B2.html">Compositions and Methods for Modulating HBV and TTR Expression</a>
+        &nbsp;
+                            <br/>
+                Provided herein are oligomeric compounds with conjugate groups. In certain embodiments, the oligomeric compounds are conjugated to N-Acetylgalactosamine.    </td>
+        <td width='5%'>
+        749    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                35            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2026521709A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2026521709A.html">Apolipoprotein AI nanodiscs for central nervous system delivery</a>
+        &nbsp;
+                            <br/>
+                This disclosure provides therapeutic nanodiscs comprising a lipid-binding polypeptide, a lipid bilayer, and a therapeutic agent, wherein the therapeutic agent may be used to treat, prevent, or...    </td>
+        <td width='5%'>
+        704    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                36            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20210222168    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2021/0222168.html">METHODS FOR REACTIVATING GENES ON THE INACTIVE X CHROMOSOME</a>
+        &nbsp;
+                            <br/>
+                Methods for reactivating genes on the inactive X chromosome that include administering an inhibitor of XIST RNA and an inhibitor of an Xist-interacting protein, e.g., a chromatin-modifying...    </td>
+        <td width='5%'>
+        672    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                37            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20200054746    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2020/0054746.html">METHODS FOR INCREASING NEURONAL SURVIVAL</a>
+        &nbsp;
+                            <br/>
+                Described are methods of treating a subject after acute trauma to the head, viral encephalitis, or other causes of acute neurodegeneration, and/or after acute vascular insults, including ischemic...    </td>
+        <td width='5%'>
+        670    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                38            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20160235843    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2016/0235843.html">METHODS FOR INCREASING NEURONAL SURVIVAL</a>
+        &nbsp;
+                            <br/>
+                Described are methods of treating a subject after acute trauma to the head, viral encephalitis, or other causes of acute neurodegeneration, and/or after acute vascular insults, including ischemic...    </td>
+        <td width='5%'>
+        670    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                39            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20230374505    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2023/0374505.html">Human XIST Antisense Oligonucleotides for X Reactivation Therapy</a>
+        &nbsp;
+                            <br/>
+                Antisense Oligonucleotides targeting XIST RNA, and the use thereof for reactivating genes on the inactive X chromosome.    </td>
+        <td width='5%'>
+        639    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                40            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2015511494A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2015511494A.html">Treatment of BDNF-related disorders by inhibition of natural antisense transcripts against brain-derived neurotrophic factor (BDNF)</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to antisense oligonucleotides that regulate the expression and / or function of brain-derived neurotrophic factor (BDNF), in particular by targeting the natural...    </td>
+        <td width='5%'>
+        584    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                41            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP6738841B2    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP6738841B2.html">Treatment of BDNF-related disorders by inhibition of natural antisense transcripts against brain-derived neurotrophic factor (BDNF)</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to antisense oligonucleotides that modulate the expression of and/or function of Brain derived neurotrophic factor (BDNF), in particular, by targeting natural...    </td>
+        <td width='5%'>
+        584    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                42            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2018110582A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2018110582A.html">TREATMENT OF BRAIN DERIVED NEUROTROPHIC FACTOR (BDNF) RELATED DISEASES BY INHIBITION OF NATURAL ANTISENSE TRANSCRIPT TO BDNF</a>
+        &nbsp;
+                            <br/>
+                PROBLEM TO BE SOLVED: To provide natural antisense targets, and oligonucleotides that complement the targets and modulate Brain derived neurotrophic factor (BDNF) protein expression, for potential...    </td>
+        <td width='5%'>
+        584    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                43            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20230383292    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2023/0383292.html">TARGETING XIST AND RNA METHYLATION FOR X REACTIVATION THERAPY</a>
+        &nbsp;
+                            <br/>
+                Described herein are compositions of one or more inhibitors of XIST RNA and inhibitors of RNA methylation. Also described are methods of using said compositions, or said inhibitors separately, to...    </td>
+        <td width='5%'>
+        524    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                44            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP6175236B2    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP6175236B2.html">Disposal of the FLG associated diseases by revelation and active adjustment of the Fira green (FLG)</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to antisense oligonucleotides and/or compounds that modulate the expression of and/or function of Filaggrin (FLG), in particular, by targeting natural antisense...    </td>
+        <td width='5%'>
+        522    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                45            </label>
+        </td>
+    <td width="15%"  valign="top">
+      US20240409938    </td>
+    <td  width="60%" valign="top">
+        <a href="/y2024/0409938.html">LIPOPHILIC SIRNA CONJUGATES FOR THE TREATMENT OF CENTRAL NERVOUS SYSTEM DISEASES</a>
+        &nbsp;
+                            <br/>
+                Disclosed herein are methods of treating central nervous system diseases, such as Alzheimer's disease and Huntington's disease, using lipophilic siRNA conjugates that can bind to albumin. The...    </td>
+        <td width='5%'>
+        511    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                46            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP6027893B2    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP6027893B2.html">Medical treatment of the sex hormone joint globulin (SHBG) associated diseases by prevention of the natural antisense transcript to sex hormone joint globulin (SHBG)</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to antisense oligonucleotides that modulate the expression of and/or function of Sex Hormone Binding Globulia (SHBG), in particular, by targeting natural antisense...    </td>
+        <td width='5%'>
+        511    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                47            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP2016185148A    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP2016185148A.html">TREATMENT OF ATONAL HOMOLOG 1 (ATOH1) RELATED DISEASES BY INHIBITION OF NATURAL ANTISENSE TRANSCRIPT TO ATOH1</a>
+        &nbsp;
+                            <br/>
+                PROBLEM TO BE SOLVED: To provide antisense oligonucleotide which controls the expression and/or function of atonal homologue 1 (ATOH1) nucleotide.SOLUTION: The invention relates to an antisense...    </td>
+        <td width='5%'>
+        511    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                48            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP5973996B2    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP5973996B2.html">Medical treatment of atonal homolog 1 (ATOH1) associated diseases by prevention of the natural antisense transcript to ATOH1</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to antisense oligonucleotides that modulate the expression of and/or function of Atonal homolog 1 (ATOH1), in particular, by targeting natural antisense...    </td>
+        <td width='5%'>
+        511    </td>
+    </tr><tr class=rowalt>
+        <td width="5%" valign="top" >
+            <label>
+                49            </label>
+        </td>
+    <td width="15%"  valign="top">
+      JP5993744B2    </td>
+    <td  width="60%" valign="top">
+        <a href="/JP5993744B2.html">Medical treatment of nuclear respiratory factor 1 associated diseases by prevention of the natural antisense transcript to nuclear respiratory factor 1 (NRF1)</a>
+        &nbsp;
+                            <br/>
+                The present invention relates to antisense oligonucleotides that modulate the expression of and/or function of Nuclear Respiratory Factor 1 (NRF1), in particular, by targeting natural antisense...    </td>
+        <td width='5%'>
+        511    </td>
+    </tr><tr class=>
+        <td width="5%" valign="top" >
+            <label>
+                50            </label>
+        </td>
+    <td width="15%"  valign="top">
+      12478682    </td>
+    <td  width="60%" valign="top">
+        <a href="/12478682.html">Nucleic acid conjugates and uses thereof</a>
+        &nbsp;
+                            <br/>
+                Provided herein are conjugates comprising targeting moieties such as sugars, folates and cell-penetrating peptides, which can be used for the improved delivery of agents (e.g., nucleic acids, such...    </td>
+        <td width='5%'>
+        505    </td>
+    </tr>            </table>
+        </div>
+    </div>
+</div>
+</form>
+<!-- 728x90 Responsive 2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1586334167197709"
+     data-ad-slot="4118051210"
+     data-ad-format="auto">
+</ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br clear="all"/><form id="botSearch" name="botSearch" method="get" class="form-inline" action="/result.html"><input type="hidden" name="srch" id="" value="xprtsrch" /><input type="hidden" name="uspat" id="" value="on" /><input type="hidden" name="usapp" id="" value="on" /><input type="hidden" name="jp" id="" value="on" /><input type="hidden" name="depat" id="" value="on" /><input type="hidden" name="date_range" id="" value="all" /><input type="hidden" name="stemming" id="" value="on" /><input type="hidden" name="sort" id="" value="relevance" /><br/>
+<div class="well well-small">
+    <table>
+        <tr>
+            <td>Search</td>
+            <td style="width: 100%;padding: 0 14px 0 5px;"><input type="text" name="query_txt" id="query_txt" value="SPEC/&quot;gapmer&quot; AND SPEC/&quot;hydrocephalus&quot;" style="width: 100%;padding: 4px 0 4px 6px" /></td>
+            <td><input type="submit" name="search" value="Search" /></td>
+        </tr>
+    </table>
+</div>
+</form>
+<div class="well well-small" style="margin-top:10px; margin-bottom: 0">
+    <table width="100%" border="0">
+        <tr>
+            <td width="36%">
+                Matches 1 - 50 out of 125            </td>
+            <td align="right" valign="middle" width="70%" colspan="3" class="paginate_spacing">
+                 <span margin-left:3px;'><b>1</b></span><a href='result.html?p=2&amp;srch=xprtsrch&amp;query_txt=SPEC%2F%22gapmer%22+AND+SPEC%2F%22hydrocephalus%22&amp;uspat=on&amp;usapp=on&amp;jp=on&amp;depat=on&amp;date_range=all&amp;stemming=on&amp;sort=relevance'> 2 </a><a href='result.html?p=3&amp;srch=xprtsrch&amp;query_txt=SPEC%2F%22gapmer%22+AND+SPEC%2F%22hydrocephalus%22&amp;uspat=on&amp;usapp=on&amp;jp=on&amp;depat=on&amp;date_range=all&amp;stemming=on&amp;sort=relevance'> 3 </a><a href='result.html?p=2&amp;srch=xprtsrch&amp;query_txt=SPEC%2F%22gapmer%22+AND+SPEC%2F%22hydrocephalus%22&amp;uspat=on&amp;usapp=on&amp;jp=on&amp;depat=on&amp;date_range=all&amp;stemming=on&amp;sort=relevance'> &gt; </a>                <br clear="all"/>
+            </td>
+        </tr>
+    </table>
+</div> « <a href="/search.html">search again</a>
+        </div>
+
+        <div class="pageFooter">
+    <div class="row-fluid top">
+        <div class="figure"></div>
+        <ul>
+            <li>
+                <a href="/" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Home']);">Home</a>
+            </li>
+            <li>
+                <a href="/search.html" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Search']);">Search</a>
+            </li>
+            <li>
+                <a href="/services.html" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Services']);">Services</a>
+            </li>
+        </ul>
+        <ul class="socialIcons">
+            <li><a href="https://twitter.com/FPOCommunity" class="twitter"
+                   onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'social twitter']);"></a></li>
+            <li><a href="http://www.linkedin.com/groups/FPO-Community-4524797" class="linkedin"
+                   onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'social linkedin']);"></a></li>
+        </ul>
+    </div>
+    <div class="row-fluid bot">
+        <p>
+            &copy; 2004-2026 FreePatentsOnline.com. All rights reserved.
+            <a href="/privacy.html" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Privacy']);">Privacy Policy
+                &amp; Terms of Use.</a>
+        </p>
+    </div>
+</div>    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    _gaq.push(['_setCustomVar', 2, 'User Origin Source', 'no referer', 2]);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+<script type="text/javascript">
+    function trackPageLoad() {
+        var plend = new Date();
+        var plload = plend.getTime() - plstart.getTime();
+        var pn = document.location.pathname;
+        var lc = 'slow';
+        var la = new Array(200, 300, 400, 500, 1000, 1500, 2000, 2500, 5000);
+        for (var i = 0, len = la.length; i < len; i++) {
+            if (plload <= la[i]) {
+                lc = String(la[i]);
+                break;
+            }
+        }
+        _gaq.push(['onLoadTracker._setAccount', 'UA-174791-5']);
+        _gaq.push(['onLoadTracker._trackEvent', "LoadTime", lc, pn, plload]);
+        }
+</script>
+<script type="text/javascript">
+    try {
+        if (window.onload != null) {
+            var oldOnload = window.onload;
+            window.onload = function (e) {
+                oldOnload(e);
+                trackPageLoad();
+            };
+        }
+        else {
+            window.onload = trackPageLoad();
+        }
+    } catch (err) {
+    }
+</script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/js/fpo_3.js"></script>
+
+</body>
+</html>

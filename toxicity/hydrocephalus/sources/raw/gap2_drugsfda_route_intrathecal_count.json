@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+    "terms": "https://open.fda.gov/terms/",
+    "license": "https://open.fda.gov/license/",
+    "last_updated": "2026-08-28"
+  },
+  "results": [
+    {
+      "term": "METHOTREXATE",
+      "count": 10
+    },
+    {
+      "term": "CYTARABINE",
+      "count": 7
+    },
+    {
+      "term": "BACLOFEN",
+      "count": 5
+    },
+    {
+      "term": "MORPHINE SULFATE",
+      "count": 4
+    },
+    {
+      "term": "POLYMYXIN B SULFATE",
+      "count": 4
+    },
+    {
+      "term": "IOHEXOL",
+      "count": 2
+    },
+    {
+      "term": "IOPAMIDOL",
+      "count": 2
+    },
+    {
+      "term": "BACLOFEN INJECTION",
+      "count": 1
+    },
+    {
+      "term": "INDIUM IN-111 PENTETATE DISODIUM",
+      "count": 1
+    },
+    {
+      "term": "METHOTREXATE SODIUM",
+      "count": 1
+    },
+    {
+      "term": "NUSINERSEN",
+      "count": 1
+    },
+    {
+      "term": "PENICILLIN G POTASSIUM",
+      "count": 1
+    },
+    {
+      "term": "POLYMYXIN B",
+      "count": 1
+    },
+    {
+      "term": "SODIUM CATION, SODIUM BICARBONATE, ANHYDROUS DEXTROSE, MAGNESIUM SULFATE, POTASSIUM CHLORIDE, CALCIUM CHLORIDE, SODIUM PHOSPHATE",
+      "count": 1
+    },
+    {
+      "term": "TOFERSEN",
+      "count": 1
+    },
+    {
+      "term": "ZICONOTIDE ACETATE",
+      "count": 1
+    }
+  ]
+}
