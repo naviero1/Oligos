@@ -31,10 +31,14 @@ Usage:
 """
 import csv, json, os, re, sys
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-KIDNEY = os.path.join(ROOT, "data", "oligos.csv")
-THROMBO_MEAS = os.path.join(ROOT, "thrombocytopenia", "data", "measurements.csv")
-THROMBO_OLIGOS = os.path.join(ROOT, "thrombocytopenia", "data", "oligos.csv")
+# Paths are anchored to the ENDPOINT folder that owns this script, so all
+# thrombocytopenia artefacts stay inside thrombocytopenia/ and nothing is
+# written outside it.
+ENDPOINT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REPO = os.path.dirname(ENDPOINT)   # repository root — READ-ONLY from here
+KIDNEY = os.path.join(REPO, "data", "oligos.csv")
+THROMBO_MEAS = os.path.join(ENDPOINT, "data", "measurements.csv")
+THROMBO_OLIGOS = os.path.join(ENDPOINT, "data", "oligos.csv")
 
 
 def norm(n):

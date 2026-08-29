@@ -130,7 +130,7 @@ were therefore retrieved directly:
 | USPTO `downloadPdf` endpoint + Google Patents | patent full text, worked examples, sequence listings |
 
 PDFs were parsed locally with **PyMuPDF**; label XML was parsed directly.
-`scripts/paper_search.py` (shared with the kidney dataset) wraps the scholarly
+`../scripts/paper_search.py` (shared with the kidney dataset) wraps the scholarly
 APIs.
 
 > **No-fabrication policy (strict).** `sequence_5to3` and any toxicity

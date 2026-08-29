@@ -51,7 +51,7 @@ activators via **glycoprotein VI**; neutral-backbone chemistries and
 receptor-targeted conjugates should be largely silent.
 
 A systematic sweep of every approved oligonucleotide's FDA label
-(`../scripts/scan_labels_platelet.py`) supports this cleanly: **every PMO**
+(`scripts/scan_labels_platelet.py`) supports this cleanly: **every PMO**
 (neutral morpholino backbone) and **every siRNA / GalNAc-siRNA** returns *zero*
 platelet mentions, while inotersen (70 mentions), imetelstat (30), nusinersen
 (11) and olezarsen (6) do not.
@@ -199,6 +199,28 @@ Likewise, volanesorsen's **anti-drug** antibodies carried no altered safety
 profile, and must not be conflated with inotersen's **anti-platelet** IgG, which
 tracked with severe events.
 
+## Everything for this endpoint lives in this folder
+
+This directory is **self-contained**. Data, schema, methodology, source registry,
+dissemination plan, the full pipeline, and the curation record all sit under
+`thrombocytopenia/`, and nothing belonging to this endpoint is written anywhere
+else in the repository.
+
+```
+thrombocytopenia/
+  data/         canonical CSVs + the generated analysis view
+  scripts/      the whole pipeline (assembly, verdicts, QC, reporting)
+  curation/     raw extractions, verification verdicts, source sweep
+  schema.md  METHODOLOGY.md  SOURCES.md  PADP.md  README.md
+```
+
+Two references point **outward, read-only, and never write**: the sister kidney
+dataset's `../data/oligos.csv`, which `scripts/enrich_from_kidney.py` reads to
+reuse design records already validated against WHO INN nomenclature and patent
+sequence listings; and the shared `../sources/reference/` challenge brief.
+`scripts/ingest_thrombo.sh` anchors every path it writes to this folder, so it
+can be invoked from anywhere without leaking output.
+
 ## Data model
 
 Two normalized tables joined on `oligo_id` (full dictionary in **`schema.md`**):
@@ -304,6 +326,6 @@ python3 scripts/refresh_docs.py                             # regenerate the tab
 - **Sequences are never guessed.** `sequence_5to3` is `TBD` unless taken from a
   source that was actually retrieved.
 
-See **`../PADP.md`** for the Public Access & Dissemination Plan (CC-BY 4.0,
-archival DOI deposit, and the required U.S. Government continuity provisions),
-which covers both endpoints in this repository.
+See **`PADP.md`** for this endpoint's Public Access & Dissemination Plan
+(CC-BY 4.0, archival DOI deposit, and the required U.S. Government continuity
+provisions). The sister nephrotoxicity dataset has its own plan at `../PADP.md`.

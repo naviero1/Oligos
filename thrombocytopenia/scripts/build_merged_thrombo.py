@@ -17,8 +17,11 @@ Usage:  python3 scripts/build_merged_thrombo.py
 """
 import csv, os
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE = os.path.join(ROOT, "thrombocytopenia", "data")
+# Paths are anchored to the ENDPOINT folder that owns this script, so all
+# thrombocytopenia artefacts stay inside thrombocytopenia/ and nothing is
+# written outside it.
+ENDPOINT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE = os.path.join(ENDPOINT, "data")
 OLIGOS = os.path.join(BASE, "oligos.csv")
 MEAS = os.path.join(BASE, "measurements.csv")
 OUT = os.path.join(BASE, "oligotox_thrombo_merged.csv")

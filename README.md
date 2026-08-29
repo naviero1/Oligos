@@ -10,30 +10,6 @@ well-documented, and reproducible — which is what NCATS scores.
 
 ---
 
-> ## Datasets in this repository
->
-> This repository holds **two curated endpoint datasets** for the NIH/NCATS
-> OligoTox Open Data Challenge, Phase 2. They share a two-table design,
-> controlled vocabularies, provenance discipline and no-fabrication policy, and
-> join on oligo identity.
->
-> | Endpoint | Location | Oligos | Measurements | Sources | Verified |
-> |---|---|---:|---:|---:|---:|
-> | **Kidney toxicity** (this file) | `data/`, `schema.md`, `METHODOLOGY.md` | 65 | 111 | 53 | — |
-> | **Thrombocytopenia** | **[`thrombocytopenia/`](thrombocytopenia/README.md)** | 251 | 1786 | 47 | 628 rows |
->
-> Shared across both: `scripts/` (assembly, QC, reporting), `sources/` (source
-> registry and retrieved primary sources), `PADP.md` (the Public Access &
-> Dissemination Plan, which covers both endpoints).
->
-> The thrombocytopenia dataset additionally commits its full **curation record**
-> — raw agent extractions, verification verdicts, and the source sweep — under
-> [`thrombocytopenia/curation/`](thrombocytopenia/curation/README.md), so the
-> published CSVs are reproducible from their inputs rather than only re-checkable
-> against their citations.
-
----
-
 ## ⚠️ Reconstruction note (2026-06-26)
 
 The original repository contents from the prior working session

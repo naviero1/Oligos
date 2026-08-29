@@ -70,15 +70,16 @@ no grade-0 row was ever created from it — see `../METHODOLOGY.md`.
 ## Re-running from this record
 
 ```
-scripts/merge_lane_files.py  out.json  thrombocytopenia/curation/lanes/*.json
-scripts/assemble_thrombo.py  out.json          # verdicts, dedupe, stable keys
-scripts/apply_verdicts.py    thrombocytopenia/curation/verdicts/*.json
-scripts/qc_thrombo.py                          # gates the round
-scripts/build_merged_thrombo.py                # derived analysis view
-scripts/refresh_docs.py                        # regenerate the generated docs
+# run from the thrombocytopenia/ endpoint folder
+scripts/merge_lane_files.py   out.json  curation/lanes/*.json
+scripts/assemble_thrombo.py   out.json            # verdicts, dedupe, stable keys
+scripts/apply_verdicts.py     curation/verdicts/*.json
+scripts/qc_thrombo.py                             # gates the round
+scripts/build_merged_thrombo.py                   # derived analysis view
+scripts/refresh_docs.py                           # regenerate the generated docs
 ```
 
-`scripts/ingest_thrombo.sh` runs the whole sequence.
+`scripts/ingest_thrombo.sh` runs the whole sequence, and can be invoked from anywhere — it anchors every path to this endpoint folder.
 
 ## What is *not* here
 

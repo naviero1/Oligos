@@ -21,8 +21,11 @@ Usage:  python3 scripts/freeze_verdicts.py verdicts1.json [verdicts2.json ...]
 """
 import csv, json, os, re, sys
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE = os.path.join(ROOT, "thrombocytopenia", "data")
+# Paths are anchored to the ENDPOINT folder that owns this script, so all
+# thrombocytopenia artefacts stay inside thrombocytopenia/ and nothing is
+# written outside it.
+ENDPOINT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE = os.path.join(ENDPOINT, "data")
 
 
 def norm(s):

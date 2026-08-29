@@ -20,8 +20,11 @@ Usage:
 """
 import csv, json, os, re, sys, collections
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MEAS = os.path.join(ROOT, "thrombocytopenia", "data", "measurements.csv")
+# Paths are anchored to the ENDPOINT folder that owns this script, so all
+# thrombocytopenia artefacts stay inside thrombocytopenia/ and nothing is
+# written outside it.
+ENDPOINT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MEAS = os.path.join(ENDPOINT, "data", "measurements.csv")
 
 
 def norm(s):

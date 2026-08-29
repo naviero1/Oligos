@@ -20,8 +20,12 @@ Usage:  python3 scripts/curate_labels_lane.py > labels_lane.json
 """
 import csv, json, os, sys
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-KIDNEY_OLIGOS = os.path.join(ROOT, "data", "oligos.csv")
+# Paths are anchored to the ENDPOINT folder that owns this script, so all
+# thrombocytopenia artefacts stay inside thrombocytopenia/ and nothing is
+# written outside it.
+ENDPOINT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REPO = os.path.dirname(ENDPOINT)   # repository root — READ-ONLY from here
+KIDNEY_OLIGOS = os.path.join(REPO, "data", "oligos.csv")
 
 # ---------------------------------------------------------------------------
 # Label identifiers verified this session (DailyMed SPL setid + version)
