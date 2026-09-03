@@ -30,7 +30,7 @@ one."* This directory is that second dataset.
 | Tier-A rows that are explicit measured negatives | 328 |
 | Grade-3 (severe) rows | 22 |
 | Oligonucleotides with a published sequence | 10 |
-| QC checks run / failed | 39 / 0 |
+| QC checks run / failed | 44 / 0 |
 
 **Endpoint tier** — **A** = hydrocephalus (communicating, obstructive or normal-pressure), ventriculomegaly / ventricular dilatation, shunt or drain placement. **B** = raised intracranial pressure, papilloedema, aseptic or chemical meningitis, arachnoiditis, CSF leak or protein rise, post-lumbar-puncture syndrome.
 

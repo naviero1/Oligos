@@ -99,6 +99,8 @@ def main():
         ("data_dictionary    every column in every table, with its definition", None),
         ("oligos             one row per oligonucleotide — the predictor variables", None),
         ("measurements       one row per measured outcome — the response variables", None),
+        ("measurements_human   GENERATED view: the human evidence only", None),
+        ("measurements_animal  GENERATED view: the animal evidence only", None),
         ("modifications      one row per NUCLEOTIDE POSITION — the per-position "
          "chemistry", None),
         ("sources            the provenance registry", None),
@@ -122,6 +124,22 @@ def main():
          "in any of them. That is a property of the published record, not an omission "
          "in the curation; the sibling OligoTox-CNS release reports the same for all "
          "1,839 of its compounds.", None),
+        ("", None),
+        ("Human and animal evidence are separated, in one column", "head"),
+        ("subject_class divides every row into human_in_vivo, human_in_vitro, "
+         "human_population, animal_in_vivo, animal_in_vitro or not_applicable. It is "
+         "derived from (species, study_type) and re-derived by the QC suite, which "
+         "fails on any disagreement, so the division cannot drift. The "
+         "measurements_human and measurements_animal sheets are filters on it. "
+         "human_population marks a population incidence rate: human subjects, but no "
+         "individual dosed and no per-subject observation, so it is not a trial and "
+         "must not be pooled with one.", None),
+        ("", None),
+        ("This release is 909 human rows against 5 animal rows, and NO in vitro rows "
+         "at all. The Challenge brief singles out in vitro human systems, and "
+         "extrapolation between in vitro human systems and animal data, as of "
+         "particular interest — so that imbalance is the clearest limitation of this "
+         "release and is stated here rather than left to be discovered.", None),
         ("", None),
         ("Two tiers, never silently pooled", "head"),
         ("endpoint_tier A is the core endpoint: hydrocephalus, ventriculomegaly, "
@@ -202,7 +220,9 @@ def main():
                        ("Tier-A rows that are explicit measured negatives", "tier_A_null"),
                        ("Grade-3 (severe) rows", "grade3_rows")]:
         ws.append([label, st.get(key)])
-    for title, key in [("Rows by endpoint tier", "by_endpoint_tier"),
+    for title, key in [("Rows by subject class (human / animal division)", "by_subject_class"),
+                       ("Rows by subject class and endpoint tier", "by_subject_class_and_tier"),
+                       ("Rows by endpoint tier", "by_endpoint_tier"),
                        ("Rows by study type", "by_study_type"),
                        ("Rows by ascertainment", "by_ascertainment"),
                        ("Rows by attribution, as stated by the source", "by_attribution"),
@@ -231,6 +251,13 @@ def main():
     # ---- data sheets -----------------------------------------------------
     for name in ("oligos", "measurements", "modifications", "sources"):
         write_table(wb.create_sheet(name), load(name + ".csv"))
+
+    # Human and animal evidence as separate sheets. These are GENERATED filters
+    # on measurements.subject_class, not independent tables; the canonical
+    # measurements sheet above contains every row exactly once.
+    for sheet, fname in (("measurements_human", "measurements_human.csv"),
+                         ("measurements_animal", "measurements_animal.csv")):
+        write_table(wb.create_sheet(sheet), load(fname))
 
     wb.save(OUT)
     size = os.path.getsize(OUT)

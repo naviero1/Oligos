@@ -20,6 +20,7 @@ import sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(
     os.path.abspath(__file__))), "scripts"))
 from data_dictionary import DICTIONARY
+from assemble import subject_class_for, SUBJECT_CLASSES
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -190,6 +191,31 @@ def main():
     check("siRNA duplex guide == reverse complement of sense", not dup_bad,
           "checked %d; mismatches %s" % (dup_checked, dup_bad))
 
+    # 11b-2 human / animal division ----------------------------------------
+    bad = sorted({r["subject_class"] for r in m if r["subject_class"] not in SUBJECT_CLASSES})
+    check("vocabulary: subject_class", not bad, "unexpected: %s" % bad)
+
+    mismatched = [r["measurement_id"] for r in m
+                  if r["subject_class"] != subject_class_for(r["species"], r["study_type"])]
+    check("subject_class re-derives from (species, study_type)", not mismatched,
+          "%d rows disagree e.g. %s" % (len(mismatched), mismatched[:5]))
+
+    bad = [r["measurement_id"] for r in m
+           if (r["subject_class"].startswith("human")) != (r["is_human_system"] == "TRUE")
+           and r["subject_class"] != "human_population"]
+    check("subject_class agrees with is_human_system", not bad,
+          "offending: %s" % bad[:5])
+
+    for fname, pred in (("measurements_human.csv",
+                         lambda r: r["subject_class"].startswith("human")),
+                        ("measurements_animal.csv",
+                         lambda r: r["subject_class"].startswith("animal"))):
+        view = load(fname)
+        expect = [r["measurement_id"] for r in m if pred(r)]
+        got = [r["measurement_id"] for r in view]
+        check("split view %s matches the canonical table" % fname, expect == got,
+              "%d expected vs %d present" % (len(expect), len(got)))
+
     # 11c per-position modifications table ---------------------------------
     oid = {r["oligo_id"] for r in o}
     bad = sorted({r["oligo_id"] for r in mods if r["oligo_id"] not in oid})
@@ -282,6 +308,12 @@ def main():
         n_oligos_with_measurements=len({r["oligo_id"] for r in m
                                         if r["oligo_name"] not in
                                         ("NOT_APPLICABLE", "placebo_or_sham_control")}),
+        by_subject_class=dist("subject_class"),
+        by_subject_class_and_tier=dict(sorted(collections.Counter(
+            "%s / tier %s" % (r["subject_class"], r["endpoint_tier"]) for r in m).items())),
+        n_human_rows=sum(1 for r in m if r["subject_class"].startswith("human")),
+        n_animal_rows=sum(1 for r in m if r["subject_class"].startswith("animal")),
+        n_in_vitro_rows=sum(1 for r in m if r["subject_class"].endswith("in_vitro")),
         by_endpoint_tier=dist("endpoint_tier"),
         by_study_type=dist("study_type"),
         by_ascertainment=dist("ascertainment"),

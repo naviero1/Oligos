@@ -28,9 +28,36 @@ ROOT = os.path.dirname(HERE)
 DATA = os.path.join(ROOT, "data")
 TODAY = date.today().isoformat()
 
+# Human and animal evidence must be separable in ONE operation, not by knowing
+# which study_type values happen to imply a human subject. subject_class is
+# derived deterministically from (species, study_type) by subject_class_for()
+# below, and qc/validate.py re-derives it and fails if any stored value differs.
+#
+# The Challenge brief singles out "datasets based on in vitro human systems or
+# able to extrapolate data between in vitro human systems and animal data" as of
+# particular interest, so the vocabulary keeps the in vivo / in vitro axis
+# separate from the human / animal axis rather than collapsing them.
+SUBJECT_CLASSES = {"human_in_vivo", "human_in_vitro", "human_population",
+                   "animal_in_vivo", "animal_in_vitro", "not_applicable"}
+
+
+def subject_class_for(species, study_type):
+    if study_type == "background_epidemiology":
+        # A population incidence rate. Human subjects, but no individual dosed
+        # and no per-subject observation: it is not a trial and must not be
+        # pooled with one.
+        return "human_population"
+    if species == "human":
+        return "human_in_vitro" if study_type == "in_vitro" else "human_in_vivo"
+    if species in ("mouse", "rat", "monkey", "pig"):
+        return "animal_in_vitro" if study_type == "in_vitro" else "animal_in_vivo"
+    return "not_applicable"
+
+
 MEASUREMENT_COLS = [
     "measurement_id", "oligo_id", "oligo_name", "source_id",
-    "study_type", "species", "strain", "system_model", "is_human_system",
+    "study_type", "species", "subject_class", "strain", "system_model",
+    "is_human_system",
     "indication_population", "arm_label", "arm_description", "arm_role",
     "cns_compartment", "delivery_route", "dose_value", "dose_unit", "dose_regimen",
     "exposure_duration", "timepoint",
@@ -225,6 +252,12 @@ def main():
     if unknown:
         raise SystemExit("oligo_name values absent from oligos.csv: %s" % sorted(unknown))
 
+    for r in rows:
+        r["subject_class"] = subject_class_for(r["species"], r["study_type"])
+        if r["subject_class"] not in SUBJECT_CLASSES:
+            raise SystemExit("unmapped subject_class for species=%r study_type=%r"
+                             % (r["species"], r["study_type"]))
+
     for i, r in enumerate(rows, 1):
         r["measurement_id"] = "HYD-MSR-%05d" % i
 
@@ -272,6 +305,22 @@ def main():
             for c in ocols:
                 m["oligo__" + c] = o.get(c, "NOT_APPLICABLE")
             w.writerow(m)
+
+    # ---- split views: human evidence and animal evidence ------------------
+    # Generated, never hand-edited. They are filters over measurements.csv, kept
+    # as files because "divide the human trials from the animal trials" should be
+    # one command for a downstream user, not a lookup in the schema.
+    splits = {
+        "measurements_human.csv": lambda r: r["subject_class"].startswith("human"),
+        "measurements_animal.csv": lambda r: r["subject_class"].startswith("animal"),
+    }
+    for fname, keep in splits.items():
+        subset = [r for r in rows if keep(r)]
+        with open(os.path.join(DATA, fname), "w", newline="") as fh:
+            w = csv.DictWriter(fh, fieldnames=MEASUREMENT_COLS)
+            w.writeheader()
+            w.writerows(subset)
+        print("%-30s %4d rows (GENERATED view)" % ("data/" + fname, len(subset)))
 
     print("data/oligos.csv        %4d rows" % len(oligos))
     print("data/measurements.csv  %4d rows x %d cols" % (len(rows), len(MEASUREMENT_COLS)))

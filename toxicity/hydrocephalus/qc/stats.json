@@ -6,6 +6,21 @@
   "n_oligos_with_position_map": 10,
   "n_oligos_with_length": 10,
   "n_oligos_with_measurements": 30,
+  "by_subject_class": {
+    "animal_in_vivo": 5,
+    "human_in_vivo": 906,
+    "human_population": 3
+  },
+  "by_subject_class_and_tier": {
+    "animal_in_vivo / tier A": 3,
+    "animal_in_vivo / tier B": 2,
+    "human_in_vivo / tier A": 383,
+    "human_in_vivo / tier B": 523,
+    "human_population / tier A": 3
+  },
+  "n_human_rows": 909,
+  "n_animal_rows": 5,
+  "n_in_vitro_rows": 0,
   "by_endpoint_tier": {
     "A": 389,
     "B": 525
@@ -153,6 +168,6 @@
   "grade3_rows": 22,
   "duplexes_checked": 4,
   "oligos_with_sequence": 10,
-  "checks_run": 39,
+  "checks_run": 44,
   "checks_failed": 0
 }

@@ -80,6 +80,17 @@ DICTIONARY = {
                       "animal_invivo | in_vitro | background_epidemiology | "
                       "regulatory_label",
         "species": "human | mouse | rat | monkey | pig | multi_species",
+        "subject_class": "The human/animal and in vivo/in vitro division, in one "
+                         "column: human_in_vivo | human_in_vitro | human_population "
+                         "| animal_in_vivo | animal_in_vitro | not_applicable. "
+                         "Derived deterministically from (species, study_type) and "
+                         "re-derived by the QC suite, which fails on any "
+                         "disagreement. human_population marks a population "
+                         "incidence rate — human subjects, but no individual dosed "
+                         "and no per-subject observation, so it must not be pooled "
+                         "with trial rows. Generated views data/measurements_human.csv "
+                         "and data/measurements_animal.csv are filters on this "
+                         "column.",
         "strain": "Strain, sex and age where stated.",
         "system_model": "Trial design, cohort, animal model or culture system.",
         "is_human_system": "TRUE if measured in a human or human-derived system.",
