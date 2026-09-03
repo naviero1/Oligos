@@ -45,6 +45,7 @@ single oligo at a single concentration measured with KIM-1 *and* viability =
 | `oligo_id` | string FK | → `oligos.oligo_id`. |
 | `study_type` | enum | `in_vitro` \| `animal_invivo` \| `clinical`. |
 | `species` | enum | `human` \| `monkey` \| `rat` \| `mouse` \| `multi_species` (finding pooled across species) \| `NA`. |
+| `subject_class` | enum | **The human/animal divider.** `human_clinical` (human trial) \| `human_invitro` (human cell system) \| `animal_invivo` (any non-human species). **Derived** from `study_type` + `species` by `scripts/split_human_animal.py`, never hand-entered, so it cannot drift from the columns it summarises. Materialised because the Phase 2 brief makes this division a scoring criterion — datasets "based on in vitro human systems or able to extrapolate data between in vitro human systems and animal data" are of particular interest. |
 | `system_model` | string | Cell line / model / subject, e.g. `ciPTEC`, `HK-2`, `RPTEC_TERT1`, `primary_human_PTEC`, `proximal_tubule_on_chip`, `kidney_invivo`, `patient`. |
 | `tissue` | string | `kidney` \| `proximal_tubule` \| `glomerulus` \| `NA`. |
 | `delivery_method` | enum | `gymnotic_free_uptake` \| `transfection` \| `conjugate_mediated` \| `systemic_dose` \| `intrathecal` \| `intravitreal` \| `oral` \| `TBD`. |
@@ -128,14 +129,30 @@ oligo may differ by model/dose. Record the rationale in `notes` when non-obvious
 
 ---
 
+- **2026-09-03** — Added `subject_class`, the explicit human/animal divider, derived
+  from `study_type` + `species` by `scripts/split_human_animal.py` (39 human_clinical /
+  19 human_invitro / 53 animal_invivo; 0 disagreements with its source columns). Added
+  the derived `data/human_animal_bridge.csv` view (9 oligos with paired human+animal
+  evidence). **Corrected the 21 US 11,105,794 Table 1 rows (`MSR91`–`MSR111`, 19% of the
+  dataset): species `mouse`→`rat`, `exposure_duration` `7_days`→`15_days`, and
+  `dose_or_conc_value` `TBD`→`40` mg/kg** — verified against the patent's own method
+  section (p.25), which binds itself to Table 1 ("groups of 4 (table 1, exp. A) or 8
+  (table 1, exp. B)"), names "Wistar Han Crl : WI (Han) male rats", a "Multiplex MAP
+  **Rat** Kidney Toxicity Magnetic Bead Panel 2", dosing "at 40 mg / kg on days 1 and 8",
+  and sacrifice "on day 15". Species distribution moves from mouse 30 / rat 8 to
+  **rat 29 / mouse 9**; rows lacking a dose fall from 54 to 33. Merged view grows to 40
+  columns. After this round: all enum/FK/range checks pass, 0 orphans, 0 broken
+  documentation links.
+
 ## Derived table — `data/oligotox_kidney_merged.csv` (generated, not canonical)
 
 An analysis-ready **denormalized join** of the two canonical tables on `oligo_id`,
 produced by `scripts/build_merged.py`.
 
-- **Grain / size:** one row per measurement — **111 rows × 39 columns**.
+- **Grain / size:** one row per measurement — **111 rows × 40 columns**.
 - **Columns:** `measurement_id`, `oligo_id`, then all 15 oligo **design predictors**
-  + `notes_oligo`, then all 20 measurement **outcome/context** fields + `notes_measurement`.
+  + `notes_oligo`, then all 21 measurement **outcome/context** fields + `notes_measurement`
+  (including `subject_class`, so the human/animal split is filterable in the flat view).
   (The two source `notes` columns are disambiguated to `notes_oligo` /
   `notes_measurement`; `oligo_id` appears once.)
 - **Purpose:** each row carries the **predictors and the graded outcome together**,
@@ -145,3 +162,24 @@ produced by `scripts/build_merged.py`.
   and `data/measurements.csv` remain canonical; regenerate this file with
   `python scripts/build_merged.py` after any change, and never hand-edit it
   (denormalization repeats each oligo's design across its measurement rows).
+
+## Derived table — `data/human_animal_bridge.csv` (generated, not canonical)
+
+One row per oligo carrying evidence on **both** sides of the human/animal divide,
+produced by `scripts/split_human_animal.py`. This is the dataset's direct answer to
+the Phase 2 "extrapolate between in vitro human systems and animal data" criterion,
+so it is materialised rather than left for each consumer to recompute.
+
+- **Grain / size:** one row per bridging oligo — currently **9 oligos**.
+- **Columns:** `oligo_id`, `oligo_name`, `oligo_class`, `sequence_known`,
+  `n_human_clinical`, `n_human_invitro`, `n_animal_invivo`, `human_max_grade`,
+  `animal_max_grade`, `concordance`, `human_species_models`, `animal_species`.
+- **`concordance`:** `concordant` \| `animal_over_predicts` \| `animal_under_predicts`,
+  comparing the maximum human grade against the maximum animal grade for that oligo.
+- **Read with care.** Concordance inherits the reliability of both grades. Where the
+  human grade is an unvalidated 0 (see `CLINICAL_VALIDATION.md`), an
+  `animal_over_predicts` verdict may be an artefact of *nobody having measured the
+  human endpoint* rather than a true species difference. Two of the three current
+  `animal_over_predicts` rows (lumasiran `OLG020`, vutrisiran `OLG022`) rest on
+  exactly such grades and must not be cited as species-difference evidence until
+  their human endpoints are sourced.

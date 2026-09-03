@@ -70,7 +70,7 @@ Graded label: **`nephrotox_grade` 0–3** (rubric in `schema.md`). Inotersen
 
 **Derived analysis-ready view.** For convenience, a denormalized join of the two
 tables on `oligo_id` is generated at `data/oligotox_kidney_merged.csv`
-(**111 rows × 39 columns** — one row per measurement enriched with its oligo's
+(**111 rows × 40 columns** — one row per measurement enriched with its oligo's
 design predictors, so each row carries both predictors *and* graded outcome).
 It is produced by `scripts/build_merged.py` and is intended for direct
 EDA/predictive modeling. The two normalized tables above remain the **source of

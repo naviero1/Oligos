@@ -27,7 +27,8 @@ OLIGO_PRED = ["oligo_name", "aliases", "oligo_class", "target_gene", "indication
               "sugar_modifications", "gapmer_design", "conjugate", "ps_count",
               "sequence_5to3", "design_source"]
 # measurement outcome/context columns (all measurements.csv columns except the keys and its notes)
-MEAS_COLS = ["study_type", "species", "system_model", "tissue", "delivery_method",
+MEAS_COLS = ["study_type", "species", "subject_class", "system_model", "tissue",
+             "delivery_method",
              "dose_or_conc_value", "dose_or_conc_unit", "exposure_duration",
              "readout_category", "readout_name", "readout_value", "readout_unit",
              "effect_direction", "effect_vs_control", "nephrotox_grade",

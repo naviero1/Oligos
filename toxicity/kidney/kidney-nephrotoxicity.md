@@ -39,7 +39,7 @@ Everything below was produced under it.
 |---|---|---|
 | Oligo table | [`data/oligos.csv`](data/oligos.csv) | 65 × 17 — identity and design predictors |
 | Measurement table | [`data/measurements.csv`](data/measurements.csv) | 111 × 23 — one row per oligo × model × delivery × dose × readout |
-| Merged analysis view | [`data/oligotox_kidney_merged.csv`](data/oligotox_kidney_merged.csv) | 111 × 39; generated, not canonical (`schema.md:131-146`) |
+| Merged analysis view | [`data/oligotox_kidney_merged.csv`](data/oligotox_kidney_merged.csv) | 111 × 40; generated, not canonical (`schema.md:131-146`) |
 | Clinical-row validation | [`CLINICAL_VALIDATION.md`](CLINICAL_VALIDATION.md) | 85 lines; August 2026 audit of the 39 `study_type=clinical` rows |
 | Merge script | [`scripts/build_merged.py`](scripts/build_merged.py) | Hard-codes the kidney output filename (line 22) and the measurement column list (`MEAS_COLS`, lines 30-35) |
 | Slide deck | [`PRESENTATION.md`](PRESENTATION.md), built to `OligoTox-Kidney.pptx`, `OligoTox-Kidney-editable.pptx`, `OligoTox-Kidney.pdf` | 832 lines, 29 slides (30 `^---$` lines less the 2 front-matter delimiters = 28 separators); 29 slides/pages in each binary |
