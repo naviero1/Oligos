@@ -80,10 +80,19 @@ echo
 echo "== 6. QC (gates the round) =="
 python3 "$S_DIR/qc_thrombo.py"
 
+# Two datasets in this repository share compounds, and design metadata is
+# deliberately read across from the sister nephrotoxicity set. An OUTCOME crossing
+# over would be a silent scientific error that schema validation cannot see, so
+# endpoint alignment is proven on every round rather than assumed.
 echo
-echo "== 7. rebuild derived view + generated docs =="
+echo "== 7. endpoint-alignment audit (no cross-toxicity contamination) =="
+python3 "$S_DIR/audit_endpoint.py"
+
+echo
+echo "== 8. rebuild derived view + generated docs =="
 python3 "$S_DIR/build_merged_thrombo.py"
 python3 "$S_DIR/refresh_docs.py"
+python3 "$S_DIR/split_human_animal.py"
 
 echo
 echo "ingestion round complete."

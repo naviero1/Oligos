@@ -1,6 +1,6 @@
 # Status — OligoTox-Thrombocytopenia
 
-Assessment against the **Phase 2 announcement** (`Phase 2 description.docx`) and the
+**All four submission parts are complete.** Assessment against the **Phase 2 announcement** (`Phase 2 description.docx`) and the
 team **Phase 2 Work-Plan**. Dated 2026-09-03.
 
 Scope: **thrombocytopenia only**. Nothing here speaks for the other endpoints.
@@ -67,65 +67,63 @@ characterised on both sides does. **21 compounds** qualify — including inoters
 each with a published sequence. That set is what a cross-species model could
 actually be trained and validated on.
 
-## 3. The four required submission parts
+## 3. The four required submission parts — COMPLETE
 
-| Part | Limit | Status |
-|---|---|---|
-| **Narrative document** | ≤ 12 pp PDF | **Not started.** Much of the content exists in `README.md` (executive summary, controls, findings, predictor distributions, gap analysis, predictive-model discussion) but it is not assembled or paginated. |
-| **Methodology document** | ≤ 5 pp PDF | **Content exists, over length.** `METHODOLOGY.md` is ~30 KB — far beyond 5 pages — and **omits the explicitly required "methods used to purify and characterize oligo identity"** (see §4). |
-| **PADP** | ≤ 5 pp | **Drafted** — `PADP.md`, endpoint-specific, with licensing, archival DOI and the three required U.S. Government continuity scenarios. |
-| **Dataset** | no limit | **Substantially complete**, with the three gaps in §4. |
+All four are built, page-limit-compliant, and rebuildable with
+`scripts/build_submission.sh` (headless Chromium, no proprietary toolchain).
 
-## 4. Dataset-requirement gaps — ranked by risk
+| Part | File | Pages | Limit |
+|---|---|---:|---:|
+| 1. Narrative | `submission/narrative.pdf` | **9** | 12 |
+| 2. Methodology | `submission/methodology.pdf` | **4** | 5 |
+| 3. PADP | `submission/padp.pdf` | **3** | 5 |
+| 4. Dataset | `data/` + `schema.md` + `curation/` | — | none |
 
-The announcement is specific about what the dataset file must contain. Measured
-against that text:
+The narrative covers all six required elements: executive summary with
+positive/negative controls, main findings, how the data were produced,
+indicator/predictor measurement and distributions, the gap addressed, and the
+predictive-model discussion. The methodology covers materials, extraction,
+harmonisation, grading, QC and — explicitly — oligo identity characterisation and
+the purity limitation. The PADP covers licensing, hosting, dissemination, FAIR
+alignment and the three required U.S. Government continuity scenarios.
+
+**"Finish ML" is done.** `scripts/model_demo.py` is a worked feasibility
+demonstration, not a performance claim: grouped-by-compound cross-validation gives
+**ROC-AUC 0.616 from design features alone** against a 0.500 balanced-accuracy
+baseline, with `ps_count` the top feature. It also quantifies what would have been
+overstated — study context adds +0.065 (the confound, not biology) and a row-level
+split would have added a further +0.081 of pure leakage.
+
+## 4. Dataset-requirement status
 
 | Requirement | Status |
 |---|---|
-| data dictionary and schema documenting all metadata | ✅ `schema.md` |
-| access to the raw data | ✅ CSV + the full curation record |
-| open/CC licence terms defined | ✅ CC-BY 4.0 in `PADP.md` |
-| **sequences of all oligos tested** | ⚠️ **191 / 251 (76 %)** |
-| **location of all chemical modifications in each oligo** | ⚠️ **partial** |
-| **data on the purity and characterization of each** | ❌ **absent** |
+| data dictionary and schema | ✅ `schema.md` |
+| access to raw data | ✅ CSVs + full curation record |
+| open/CC licence defined | ✅ CC-BY 4.0, tracked per row |
+| human/animal separation | ✅ derived `subject_class`, QC-validated, + three split exports |
+| **sequences of all oligos tested** | ⚠️ **193 / 254 (76 %)** — remainder proprietary or unpublished; never guessed |
+| **location of all chemical modifications** | ⚠️ **layered**: per-residue `modification_map` where printed; `gapmer_design` (170) for wing/gap boundaries; `sugar_modifications` (232) and `ps_count` (197) |
+| **purity and characterization of each** | ❌ **structurally unavailable** — see below |
 
-### 4a. Purity and characterization — the biggest gap
+### The purity limitation — unchanged, and a team decision
 
-There is **no purity or characterization data in the dataset, and no column for
-it.** This requirement is written for teams *generating* oligos in a lab, who
-would hold HPLC/MS purity for every compound they synthesised. We are curating
-**published** data, and the source literature almost never reports purity for the
-compounds it tests.
+This requirement is written for submitters who **synthesise** their compounds and
+hold HPLC/MS records. This dataset curates **published** results for third-party
+compounds, and the source literature does not report purity for the material it
+tested. The columns exist and are populated wherever a source states purity; QC
+reports coverage every run; and the methodology declares the limitation rather
+than papering over it.
 
-This is a **structural mismatch, not an oversight**, and it should be surfaced
-deliberately rather than left for a reviewer to notice. Three things can be done,
-and none of them is "generate the numbers":
+What we *can* evidence is **identity** characterisation, which §2.1 of the
+methodology documents: patent sequence listings validated against declared
+lengths, deterministic parse of regulatory chemical names with orthogonal
+molecular-formula confirmation, WHO INN nomenclature, and zero-conflict
+cross-dataset agreement.
 
-1. **Add the columns** (`purity_pct`, `purity_method`, `characterization_method`)
-   and populate them wherever a source *does* state purity — patents sometimes
-   specify it, and some Ionis papers state ">90 % by HPLC" or similar.
-2. **State the limitation explicitly** in the methodology document, framed as what
-   it is: an in-silico curation cannot supply wet-lab characterization for
-   third-party compounds.
-3. **Decide, as a team, whether this endpoint needs any wet-lab component** to
-   satisfy the requirement, or whether the curation framing is accepted with the
-   limitation documented. *This is a judgement call for the team, not one I should
-   make.*
-
-### 4b. Chemical modification locations — partial
-
-`gapmer_design` (170/251) encodes wing/gap boundaries, `sugar_modifications`
-(232/251) names the chemistries, and `ps_count` (197/251) gives the backbone load.
-What is **not** systematically present is a **per-residue** modification map. Only
-2 oligos retain the as-printed per-residue string. Where a source prints residue-level
-notation, it should be preserved in a dedicated column rather than normalised away.
-
-### 4c. Sequences — 60 missing
-
-76 % coverage. The remainder are proprietary, class-level aggregates, or
-development-code compounds without a published sequence. Patent sequence listings
-are the main actionable route for closing part of the gap.
+**Closing the purity gap properly needs either wet-lab characterisation or
+sponsors' certificates of analysis. Neither is achievable by curation. Whether to
+pursue either is a team call, not mine.**
 
 ## 5. Source coverage against the team reading list
 
@@ -146,29 +144,32 @@ resolving each filename's PMID:
   **These were not used**, and their filename PMIDs must not be cited. Worth the
   team re-checking that folder.
 
-## 6. Other outstanding items
+## 6. Remaining outstanding items
 
-- **ML step not started.** The work plan puts *Finish ML* in every endpoint's
-  cycle. The challenge deliverable is a dataset, not a model, but the narrative
-  must discuss "how the data could be used to develop a predictive model", and a
-  worked demonstration would evidence that far better than an assertion.
-  `scripts/analyze_thrombo.py` already shows the structure–activity relationship
-  reproduces from curation alone, which is the natural starting point.
-- **Verification at 35 %.** Two blocks (659 rows) have been through adversarial
-  verification with zero rejections. The patent-derived and regulatory-review
-  blocks are still unverified, and the dataset must not be described as fully
-  verified until they are.
-- **`METHODOLOGY.md` must be cut to 5 pages** for submission; the long version is
-  worth keeping in-repo as the working record.
+- **Verification at 33 %** is the largest genuine gap. Two blocks (659 rows) are
+  adversarially verified with zero rejections; the patent-derived and
+  regulatory-review blocks are not. The documents say so plainly and the dataset
+  is described as *partially* verified.
+- **Team reading list**: ~17 on-topic papers extracted this round; ~21 filenames
+  carry PMIDs resolving to unrelated articles and were not used — worth the team
+  re-checking that folder.
+- `METHODOLOGY.md` remains the long working record; the 5-page submission version
+  is `submission/methodology.pdf`.
 
 ## 7. Honest summary
+
+**Everything due is built and reviewable.** The four submission parts are
+complete and within their page limits, the ML step is done, human and animal
+evidence are separated with a 22-compound cross-species bridge, and an
+endpoint-alignment audit runs every build proving no other toxicity's data has
+leaked in.
 
 The **dataset is in good shape and ahead of requirement on volume** — 1,786
 measurements against a field where comparable public resources do not exist, with
 per-row provenance, a reproducible pipeline, a committed curation record, and a
 human/animal division that directly serves a stated scoring priority.
 
-The **risk is not volume, it is the three dataset-content requirements** in §4 —
-above all purity/characterization, which no amount of further curation will
-supply and which needs a team decision. The submission documents are not late,
-but what they can truthfully claim is already constrained by those gaps.
+The **residual risk is not volume and not the documents — it is two dataset-content
+requirements**: purity/characterization, which no amount of further curation will
+supply and which needs a team decision, and verification coverage at 33 %. Both are
+stated plainly in the submitted documents rather than left for a reviewer to find.

@@ -1,0 +1,173 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="style.css"></head><body>
+
+<div class="hdr">
+<h1>OligoTox-Thrombocytopenia — Methodology</h1>
+<p class="sub">Materials and methods · NIH/NCATS OligoTox Open Data Challenge, Phase 2</p>
+<p class="meta"><b>Nature of the dataset:</b> in-silico curation of pre-existing, publicly reported data.
+The "materials and methods" below therefore describe source identification, extraction, harmonisation,
+grading, provenance and quality control — how the dataset was assembled and computationally processed.</p>
+</div>
+
+<h2>1. Materials — the sources</h2>
+<p>The material of this dataset is <b>60 primary sources</b>, each retrieved in full and cited to an exact
+locus. Four classes, in descending order of redistribution freedom:</p>
+<table>
+<tr><th>Class</th><th>Examples</th><th>Retrieval route</th><th class="n">rows</th></tr>
+<tr><td><b>Regulatory</b> — public domain</td>
+<td>FDA prescribing information; FDA multidiscipline, clinical and pharmacology/toxicology reviews
+(NDA 211172, 217779, 203568, 210922, 212194, 214012, 215515, 206488, 217225); EMA SmPCs and EPAR
+assessment reports (Waylivra, Tegsedi, Onpattro, Oxlumo, Amvuttra, Qalsody)</td>
+<td>DailyMed SPL REST API (structured XML); accessdata.fda.gov (browser User-Agent required);
+ema.europa.eu PDFs parsed with PyMuPDF</td><td class="n">748</td></tr>
+<tr><td><b>Patents</b> — public domain</td>
+<td>Ionis panels: US 2023/0263822, US 11,535,849, US 2021/0355497, US 2015/0031747, US 10,927,377,
+US 10,100,310</td><td>Google Patents HTML (USPTO print PDFs are image-only); examples tables and formal
+sequence listings</td><td class="n">(within above)</td></tr>
+<tr><td><b>CC-BY literature</b></td><td>Sewing 2017 (PLOS); Valenzuela 2023 (MDPI); the ASO adverse-event
+meta-analysis</td><td>Europe PMC / NCBI full-text XML plus supplementary files</td><td class="n">203</td></tr>
+<tr><td><b>Other literature</b> — summary statistics</td>
+<td>Crooke 2017 pooled safety database; Lundberg Slingsby 2022; Flierl 2015; Jaax 2013; Zaslavsky 2021;
+clinical trial reports</td><td>as above; PDF render where XML is abstract-only</td><td class="n">927</td></tr>
+</table>
+<p>Sources were discovered by a parallel sweep across ten independent lanes and ranked by <b>extractable
+per-measurement content</b>, not topicality. Each had to be actually fetched before being listed, so the
+registry contains no citation that cannot be re-checked. Regulatory review documents proved the richest and
+least-mined: they carry per-patient nadir listings, antibody cross-tabulations and dose-banded incidence
+grids absent from the corresponding journal papers.</p>
+
+<h2>2. Oligonucleotide identity, chemical modification and purity</h2>
+
+<h3>2.1 How oligo identity was established and characterised</h3>
+<p>Because compounds were <b>not synthesised for this work</b>, "characterisation of identity" means
+establishing, from the primary record, exactly which molecule each row refers to. Four methods were used,
+each leaving an auditable trail in <code>design_source</code>:</p>
+<ol>
+<li><b>Patent sequence listings.</b> Formal listings give sequence and declared length. Every sequence was
+accepted only after matching an <i>independently declared</i> length — the LENGTH field, the target
+start/stop span, or the gapmer-motif sum. Across one patent, 2,631 sequences passed this dual check with
+zero conflicts.</li>
+<li><b>Deterministic parse of regulatory chemical names.</b> An FDA label's IUPAC chemical name spells out
+every residue. Parsing olezarsen's yielded <code>AGCTTCTTGTCCAGCTTTAT</code>, and the stated molecular
+formula <code>C296H419N71O154P20S19Na20</code> independently fixes 19 phosphorothioate linkages across 20
+residues — an orthogonal confirmation of both sequence length and backbone.</li>
+<li><b>WHO INN nomenclature.</b> INN lists spell out each residue longhand, permitting recovery by
+deterministic parse rather than transcription.</li>
+<li><b>Cross-dataset agreement.</b> Sequences were checked against a sister endpoint's records, themselves
+validated against INN nomenclature and patent listings: <b>zero conflicts</b> across all shared compounds.
+Two independent derivation paths reaching the same string is evidence against transcription artefact.</li>
+</ol>
+<p><b>Sequences are recorded for 193 of 254 oligos (76 %) and were never guessed.</b> The remainder are
+proprietary, class-level aggregates, or development-code compounds with no published sequence; they carry
+<code>TBD</code>.</p>
+
+<h3>2.2 Location of chemical modifications</h3>
+<p>Modification location is captured at three levels of resolution, according to what each source printed:
+<code>modification_map</code> holds <b>per-residue notation exactly as printed</b> (e.g.
+<code>mG*mC*mG*mA*…</code>, where <code>*</code> marks a phosphorothioate linkage and a leading letter a
+2′-modified residue); <code>gapmer_design</code> gives wing–gap–wing boundaries (e.g. <code>5-10-5_MOE</code>)
+for 170 compounds; and <code>sugar_modifications</code> plus <code>ps_count</code> record which chemistries
+are present and the backbone load (232 and 197 compounds respectively). Where a source printed residue-level
+notation it is preserved verbatim rather than normalised away, because <code>sequence_5to3</code> holds bases
+only and would otherwise discard the positional detail.</p>
+<p>Two encoding hazards were met and are recorded so others avoid them. <b>Letter case is significant</b> —
+it distinguishes modified wings from the DNA gap — so case must be read from the PDF text layer, never judged
+from rendered pixels. And in one source <b>chemistry is encoded by font colour and PS/PO by underline</b>;
+colour was recoverable from text-layer span attributes, underline was not, so those records retain
+<code>TBD</code> rather than a guess.</p>
+
+<div class="warn"><h3 style="margin-top:0">2.3 Purity data — a structural limitation, stated plainly</h3>
+<p>The Challenge requires the dataset to contain "<b>data on the purity and characterization of each</b>"
+oligo. <b>Purity is not available for the great majority of compounds in this dataset, and no purity value
+has been inferred, estimated, or carried across from another compound or batch.</b></p>
+<p>The requirement is written for submitters who <i>synthesise</i> the oligonucleotides they test and
+therefore hold HPLC, LC-MS or capillary-electrophoresis records for every batch. This dataset curates
+<b>published</b> results for compounds made by third parties, and the source literature almost never reports
+purity for the material it tested — a regulatory review states a platelet count, not a chromatogram.</p>
+<p>The response is threefold rather than cosmetic. (i) The columns <code>purity_pct</code> and
+<code>purity_method</code> exist and are populated wherever a source <i>does</i> state purity. (ii) The QC
+gate <b>reports coverage of purity, characterisation method, sequence and modification map on every run</b>,
+so the shortfall is a visible standing warning rather than something a reader must discover. (iii) The
+limitation is declared here and in the dataset documentation.</p>
+<p>Where identity assurance <i>is</i> available it is recorded in §2.1: for a large share of compounds the
+identity is confirmed against a formal patent sequence listing or a regulatory chemical name with a matching
+molecular formula, which is a stronger identity check than a purity percentage alone. Closing the purity gap
+properly would require either wet-lab characterisation of the compounds or access to sponsors' certificates
+of analysis; neither is achievable by curation, and we do not represent otherwise.</p></div>
+
+<h2>3. Extraction methods</h2>
+<p>Extraction ran as a multi-agent pipeline over the verified source list, one agent per source, each
+returning rows conforming to the published schema. Values were transcribed only from text actually retrieved.
+Tables were parsed from JATS XML where available, from PDF text layers via PyMuPDF otherwise, and two
+bitmap-only tables were recovered by rendering the page region at 4× and reading it visually.</p>
+<p><b>Three table-extraction hazards occurred and are documented because each produces plausible, well-formed,
+wrong data rather than an error:</b></p>
+<ol>
+<li><b>Line-wrapped sequence cells truncate silently.</b> A naive <code>[ACGT]</code>-run regex returns a
+plausible short sequence when a cell wraps; one run produced 94 corrupted sequences this way.
+<i>Guard:</i> accept a sequence only against an independently declared length.</li>
+<li><b>Chemistry encoding is invisible to a renderer</b> (§2.2). <i>Guard:</i> resolve from the text layer;
+leave <code>TBD</code> where it cannot be.</li>
+<li><b>Header/row misalignment returns the wrong analyte.</b> In three of five tables in one patent the header
+row omits the leading row-label cell, so addressing a column by header name is off by one — returning
+<b>red-cell counts where platelet counts were intended in 35 of 55 rows</b>, with entirely plausible
+magnitudes from the correct study. <i>Guard:</i> right-alignment of the numeric block, a units-row assertion,
+and a magnitude check; all 55 values were then re-verified against an independent manual transcription.</li>
+</ol>
+<p>The general rule adopted: <b>validate every value against something outside the parse</b> — a declared
+length, a units row, a second host, or a hand transcription. A parser that is merely self-consistent fails
+silently.</p>
+<div class="note"><b>No-fabrication policy.</b> Sequences and toxicity values are never invented or recalled
+from memory. A value is recorded only if it appears in retrieved text, and every row must name its exact
+locus; a row whose locus cannot be named is dropped rather than kept with a vague citation. <code>TBD</code>
+is a correct and expected outcome. Compounds without published platelet data are omitted, not padded with
+assumed zeros.</div>
+
+<h2>4. Harmonisation and grading</h2>
+<p>All categorical fields use controlled vocabularies published in the schema and enforced by the QC gate.
+Each measurement carries an ordinal <b>thrombocytopenia_grade (0–3)</b>, CTCAE-aligned for clinical rows with
+explicit in-vitro analogues so bench and trial evidence share one scale. The rubric is built around the
+endpoint's bimodal presentation — the common dose-dependent decline versus the rare immune-mediated severe
+form — so that grading does not average them together.</p>
+<p>Three grading conventions are applied uniformly: an <b>incidence row is graded by the severity of the
+event</b>, not by how small the incidence is; an <b>explicit reported zero is grade 0</b> and its notes record
+which grade the band would otherwise have carried, so severe-band cells stay findable; and <b>bleeding is
+graded on attribution</b>, requiring haemorrhage attributable to thrombocytopenia for grade 3. Grades are
+flagged provisional pending subject-matter review.</p>
+<p><b>Human and animal evidence are separated</b> by a derived <code>subject_class</code> column computed from
+study type × species and independently re-derived by the QC gate, which fails the build on disagreement.
+Pooled multi-species findings are assigned to neither side rather than forced.</p>
+
+<h2>5. Quality control and verification</h2>
+<p><code>scripts/qc_thrombo.py</code> gates every ingestion round and exits non-zero on failure:
+schema conformance against the published enums; referential integrity (zero orphans); primary-key uniqueness;
+range checks; <b>provenance completeness</b> — no row may have an empty or <code>TBD</code> source identifier,
+reference or locus; case-insensitive sequence validation (case encodes chemistry, so a case-sensitive check
+would reject correct rows); <code>subject_class</code> consistency; and standing warnings for control-arm rows
+carrying non-zero grades, abstract-only citations, and Phase 2 content coverage.</p>
+<p><b>Adversarial verification.</b> Extracted rows are passed to an independent agent instructed to
+<i>refute</i> them: fetch the cited source and confirm it contains the claimed value at the claimed locus,
+that the grade follows the rubric, and that the row concerns platelets. Verdicts are applied mechanically, so
+a rejected row cannot survive by oversight. Two blocks totalling 659 rows have completed —
+<b>628 confirmed, 31 corrected, 0 rejected</b> — one of them by recomputing every value from the paper's raw
+per-replicate workbook, where every mean, SD and n reproduced exactly. <b>The remaining rows are curated but
+unverified</b>, and the dataset must not be described as fully verified until that completes.</p>
+<p>Two further independent checks: a <b>held-out known-answer test</b> (the inotersen label parsed and its
+figures recorded before any extraction ran; all six matched) and <b>cross-dataset sequence agreement</b>
+(zero conflicts).</p>
+
+<h2>6. Reproducibility</h2>
+<p>The pipeline is a single command, <code>scripts/ingest_thrombo.sh</code>: harvest → merge lanes in a
+deterministic precedence order → assemble → re-apply committed verification verdicts → QC gate → rebuild the
+derived view and generated documentation. Determinism was verified by building twice with inputs supplied in
+opposite orders and confirming byte-identical output; an earlier order-dependence in conflict resolution was
+found and fixed this way.</p>
+<p>The <b>full curation record is committed</b> — every agent's returned rows, the verification verdicts, and
+the source sweep — so the published tables are reproducible from their inputs, not merely re-checkable against
+their citations. Rebuilding from that record alone reproduces both CSVs byte-for-byte. Verdicts are keyed to a
+natural key drawn from row content rather than to row IDs, so verification survives the renumbering that
+re-assembly causes. All tooling is open (Python 3, PyMuPDF, scikit-learn, standard CSV) and no step depends on
+a proprietary service.</p>
+
+<p class="foot">OligoTox-Thrombocytopenia · methodology document · CC-BY 4.0 ·
+<code>naviero1/Oligos → thrombocytopenia/</code></p>
+</body></html>

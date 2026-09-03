@@ -1,0 +1,76 @@
+{
+ "n_rows": 1655,
+ "n_compounds": 223,
+ "features": [
+  "ps_count",
+  "length_nt",
+  "bb_full_PS",
+  "bb_PMO_neutral",
+  "bb_full_PO",
+  "bb_PS_PO_mix",
+  "cls_gapmer",
+  "cls_siRNA",
+  "cls_PMO",
+  "cls_aptamer",
+  "conj_none",
+  "conj_GalNAc",
+  "sug_MOE",
+  "sug_LNA",
+  "sug_cEt",
+  "sug_DNAgap",
+  "is_human",
+  "is_invitro"
+ ],
+ "grouped_auc": {
+  "design:LogisticRegression": 0.6024,
+  "design:RandomForest": 0.6164,
+  "LogisticRegression": 0.6249,
+  "RandomForest": 0.6812
+ },
+ "top_features": [
+  {
+   "feature": "ps_count",
+   "importance": 0.1891
+  },
+  {
+   "feature": "is_human",
+   "importance": 0.1819
+  },
+  {
+   "feature": "length_nt",
+   "importance": 0.1435
+  },
+  {
+   "feature": "is_invitro",
+   "importance": 0.1003
+  },
+  {
+   "feature": "conj_GalNAc",
+   "importance": 0.0591
+  },
+  {
+   "feature": "sug_MOE",
+   "importance": 0.0548
+  },
+  {
+   "feature": "sug_DNAgap",
+   "importance": 0.0454
+  },
+  {
+   "feature": "bb_full_PS",
+   "importance": 0.0436
+  },
+  {
+   "feature": "conj_none",
+   "importance": 0.0396
+  },
+  {
+   "feature": "bb_full_PO",
+   "importance": 0.0348
+  }
+ ],
+ "excluded": {
+  "control_arm": 130,
+  "mechanism_confounded": 93
+ }
+}
