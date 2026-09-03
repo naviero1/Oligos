@@ -83,3 +83,25 @@ tool call was rejected by a harness-level permission fault (`updatedInput` strip
 required parameters; only parameterless tools such as `ListAgents` succeeded). ~2.4M tokens
 produced zero retrievals across the two runs. All findings above were obtained by direct
 inline retrieval instead, which worked without incident.
+
+## 5. Update — 3 September 2026
+
+Three approved DMD PMOs (golodirsen, casimersen, viltolarsen) were added from their
+DailyMed labels, each contributing a human grade-0 row of the **measured** kind: the
+labels prescribe the analytes (serum cystatin C, urine dipstick, UPCR — monthly and
+quarterly) and then state affirmatively that "kidney toxicity was not observed in the
+clinical studies". Endpoints prescribed, result negative — the distinction §2 found
+missing from the WS rows.
+
+Effect on the confound: anchor-sourced grade-0 clinical rows **1 → 4**, and the
+association weakens from one-sided Fisher **p = 4.5 × 10⁻⁵ to p = 1.65 × 10⁻⁴**. That is
+a 3.7× weakening achieved the right way — by adding well-sourced negatives, not by
+removing positives. It is **not a resolution**: p = 1.65 × 10⁻⁴ still evidences strong
+confounding, the 20 WS rows are unchanged, and the `renal_endpoints_measured` field
+recommended in §3 remains unimplemented.
+
+These three also strengthen the extrapolation evidence in the right direction. All three
+are now bridge compounds with animal grade 2 against human grade 0, and unlike lumasiran
+and vutrisiran their human negatives are supported — so of the 6 current
+`animal_over_predicts` verdicts, 3 now rest on measured human negatives rather than
+unexamined ones.

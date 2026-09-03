@@ -12,7 +12,7 @@ curated, openly-releasable, per-measurement dataset of oligonucleotide
 > dataset was *assembled and computationally processed*, in the spirit of the
 > Phase 2 methodology requirement.
 
-Snapshot at this revision: **65 oligonucleotides · 159 measurements · 35 target
+Snapshot at this revision: **65 oligonucleotides · 165 measurements · 35 target
 genes · all strict-kidney** (`is_kidney_specific = TRUE`).
 
 ---
@@ -144,7 +144,7 @@ Toxicity indicators per `measurements.csv` (n = 111):
 | **`nephrotox_grade`** | 0: 27 · 1: 30 · 2: 39 · 3: 15 |
 | **Study type** | clinical 39 · animal 53 · in-vitro 19 |
 | **Species** | human 58 · rat 29 · mouse 9 · multi-species 8 · monkey 7 |
-| **Subject class** (`subject_class`) | human_invitro 67 · animal_invivo 53 · human_clinical 39 |
+| **Subject class** (`subject_class`) | human_invitro 67 · animal_invivo 56 · human_clinical 42 |
 | **Delivery route** | systemic 87 · gymnotic/free-uptake 19 · intrathecal 3 · intravitreal 1 · oral 1 |
 | **Readout category** | functional 35 · clinical renal outcome 27 · histopathology 24 · injury-biomarker 16 · viability 7 · accumulation 2 |
 | **Kidney-specific** | TRUE 111 / 111 |
@@ -237,7 +237,7 @@ Automated checks run after every ingestion round:
   unmeasured human endpoint rather than a species difference. Model the direction as
   an open question, not a known constant.
 - **In-vitro human-system rows were under-represented** (19/111); the US 11,105,794
-  Table 2 extraction (2026-09-03) raised this to **67/159 = 42.1%**, now the largest
+  Table 2 extraction (2026-09-03) raised this to **67/165 = 40.6%**, now the largest
   class. Further expansion
   these (e.g. the pending in-vitro nephrotoxicity-assay patents and ciPTEC/
   RPTEC-TERT1 panels) is the priority for the next ingestion round.

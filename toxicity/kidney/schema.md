@@ -163,12 +163,36 @@ oligo may differ by model/dose. Record the rationale in `notes` when non-obvious
   same-compound/same-lab human-in-vitro-vs-rat-in-vivo pairs with no cross-study
   confounding.
 
+- **2026-09-03 (c)** — Added the three approved DMD PMOs that carried **no rows at all**:
+  golodirsen (`OLG011`), casimersen (`OLG012`), viltolarsen (`OLG013`). Labels read
+  directly on DailyMed (`accessdata.fda.gov` is unreachable here); all three carry a
+  Warnings-and-Precautions "Kidney Toxicity" subsection with the same structure — kidney
+  toxicity seen in **animals**, **not** seen in the human studies, and renal monitoring
+  nonetheless mandated. 6 rows (`MSR160`–`MSR165`, source_id `A11`–`A13`): one human
+  clinical and one animal per drug. New `source_id` values `A11`/`A12`/`A13`;
+  `system_model` gains `DMD_patients` and `nonclinical_label_summary`.
+  These human grade-0 rows are **measured negatives, not absence of reporting** — the
+  labels prescribe the analytes ("serum cystatin C, urine dipstick, and urine
+  protein-to-creatinine ratio ... monitor urine dipstick every month, and serum cystatin C
+  and UPCR every three months") and then state the result was negative. That is the
+  distinction `CLINICAL_VALIDATION.md` found missing from the WS grade-0 rows, and adding
+  them **weakened the provenance/outcome confound 3.7×** (one-sided Fisher
+  p = 4.5 × 10⁻⁵ → **1.65 × 10⁻⁴**; anchor-sourced grade-0 clinical rows 1 → 4). The
+  confound is reduced, not resolved.
+  All three labels also warn that "creatinine may not be a reliable measure of kidney
+  function in DMD patients" because of reduced skeletal muscle mass — recorded in `notes`,
+  and relevant to every DMD row in the dataset (drisapersen, eteplirsen, golodirsen,
+  casimersen, viltolarsen). Serum-creatinine-based renal readouts in DMD populations
+  should be read with that caveat.
+  Effect: measurements 159 → **165**; human_clinical 39 → **42**; animal_invivo 53 → **56**;
+  bridge set 12 → **15 oligos**.
+
 ## Derived table — `data/oligotox_kidney_merged.csv` (generated, not canonical)
 
 An analysis-ready **denormalized join** of the two canonical tables on `oligo_id`,
 produced by `scripts/build_merged.py`.
 
-- **Grain / size:** one row per measurement — **159 rows × 40 columns**.
+- **Grain / size:** one row per measurement — **165 rows × 40 columns**.
 - **Columns:** `measurement_id`, `oligo_id`, then all 15 oligo **design predictors**
   + `notes_oligo`, then all 21 measurement **outcome/context** fields + `notes_measurement`
   (including `subject_class`, so the human/animal split is filterable in the flat view).

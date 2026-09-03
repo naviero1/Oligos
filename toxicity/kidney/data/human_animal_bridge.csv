@@ -2,6 +2,9 @@ oligo_id,oligo_name,oligo_class,sequence_known,n_human_clinical,n_human_invitro,
 OLG001,inotersen,ASO_gapmer,TRUE,4,0,1,3,1,animal_under_predicts,case_report;patient_cohort,multi_species
 OLG003,givosiran,GalNAc_siRNA,TRUE,2,0,1,2,1,animal_under_predicts,patient_cohort,rat
 OLG008,drisapersen,splice_switching_ASO,TRUE,3,3,2,1,1,concordant,DMD_patients_n12;ciPTEC,monkey
+OLG011,golodirsen,PMO,TRUE,1,0,3,0,3,animal_over_predicts,DMD_patients,multi_species;rat
+OLG012,casimersen,PMO,TRUE,1,0,4,0,2,animal_over_predicts,DMD_patients,monkey;multi_species;rat
+OLG013,viltolarsen,PMO,TRUE,1,0,4,0,2,animal_over_predicts,DMD_patients,monkey;multi_species
 OLG016,eteplirsen,PMO,TRUE,1,0,1,1,1,concordant,DMD_patients,rat
 OLG020,lumasiran,GalNAc_siRNA,TRUE,1,0,1,0,1,animal_over_predicts,PH1_patients,rat
 OLG022,vutrisiran,GalNAc_siRNA,TRUE,1,0,1,0,1,animal_over_predicts,ATTR_patients,multi_species
