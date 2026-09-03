@@ -8,7 +8,13 @@ endpoint. Nothing here covers another endpoint.
 | 1. Narrative document | [`narrative.pdf`](narrative.pdf) | 9 | 12 |
 | 2. Methodology document | [`methodology.pdf`](methodology.pdf) | 4 | 5 |
 | 3. Public Access & Dissemination Plan | [`padp.pdf`](padp.pdf) | 3 | 5 |
-| 4. Dataset | [`../data/`](../data/) + [`../schema.md`](../schema.md) | — | none |
+| 4. Dataset | [`OligoTox-Thrombocytopenia_dataset.xlsx`](OligoTox-Thrombocytopenia_dataset.xlsx) — single workbook — plus [`../data/`](../data/) CSVs and [`../schema.md`](../schema.md) | — | none |
+
+The announcement allows the dataset "either by including a data file in Excel (or
+similar format) or a document with instructions … on how to access and download
+the raw data". Both are provided: a **single workbook** with every table on its
+own sheet for reviewer convenience, and the canonical CSVs in the repository,
+which remain the source of truth.
 
 ## Rebuilding the PDFs
 
