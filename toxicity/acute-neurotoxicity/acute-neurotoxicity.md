@@ -2,7 +2,7 @@
 
 **Status:** `delivered` · **Not on the Challenge's endpoint list** · **Register:** [`../README.md`](../README.md) · **Data:** [`./data/`](./data/) · **Shared CNS pipeline:** [`../_shared/cns/`](../_shared/cns/)
 
-This folder holds the bulk of the CNS curation: **2,058 of the 2,065 measurements**. It exists
+This folder holds the acute axis of the CNS curation: **2,047 measurements**. It exists
 because the data exists and has to be filed somewhere honest — **not** because the Challenge asks
 for it.
 
@@ -14,7 +14,7 @@ activity"*, are **lower priority** than the eight listed toxicities. A previous 
 register drew the consequence explicitly: *"Acute neurotoxicity therefore has no dossier here."*
 
 **This folder reverses that**, and the reversal is a filing decision, not a scope claim. The
-curation produced 2,058 rows on this axis; leaving them undossiered would have meant either
+curation produced 2,047 rows on this axis; leaving them undossiered would have meant either
 discarding them or hiding them inside another endpoint's folder. Both are worse than filing them
 under their own name with the caveat attached.
 
@@ -24,50 +24,36 @@ Nothing here counts toward the brief's endpoint coverage. The two listed CNS end
 
 ## 2. Status
 
-| Item | Count | Basis |
-|---|---:|---|
-| Measurement rows | **2,058** | [`./data/measurements.csv`](./data/measurements.csv) |
-| Oligos | **1,834** | [`./data/oligos.csv`](./data/oligos.csv) |
-| Per-position modification records | **32,478** | [`./data/modifications.csv`](./data/modifications.csv) |
-| `source_id`s | 3 | `H1`, `K1`, `C1` |
-| Sequences published | 1,825 / 1,834 | 99.5%, all position-resolved |
-| Graded rows | 233 | 0 → 55, 1 → 87, 2 → 38, 3 → 53 |
-| Ungraded rows | 1,825 | the in vitro readout — continuous, and the source defines no severity bands |
-| Human rows | 11 | all clinical; the in vitro arm is **rat** |
+| Item | Count |
+|---|---:|
+| Measurement rows | **2,047** |
+| Oligonucleotides | **1,832** |
+| Per-position modification records | **32,478** |
+| `source_id`s | 2 — H1, K1 |
+| Sequences published | 1,825 / 1,832 (99.6%), all position-resolved |
+| Graded rows | 222 — 0/1/2/3 = 55 / 81 / 35 / 51 |
+| Ungraded rows | 1,825 — the in vitro readout is continuous and the source defines no severity bands |
+| Human rows | **0** — this endpoint is entirely animal |
 
-### What is actually in here
+### What is in here
 
 | `tox_axis` | Rows | What it is |
 |---|---:|---|
 | `acute_neuronal_excitability` | 1,825 | spontaneous calcium oscillations, rat cortical neurons — *literally* the phrase the brief deprioritises |
 | `acute_behavioural` | 222 | 0–20 tolerability score, ≤1 h after ICV dosing |
-| `clinical_cns_tolerability` | 5 | headache, back pain, pain, fatigue, myalgia |
-| `clinical_neuroinflammatory` | 4 | CSF white-cell and protein elevation, meningitis |
-| `clinical_serious_neurological` | 2 | myelitis/radiculitis; papilledema and raised intracranial pressure |
 
-**A caveat on the last 11 rows.** They are general clinical CNS adverse events, not acute
-neurotoxicity. They sit here because they map to no endpoint on the brief's list and the
-alternative was a fourth folder for a category the brief does not name. If a finer split is
-wanted they separate cleanly — they are exactly the `clinical_*` axes from source `C1`, minus the
-one hydrocephalus row already filed separately.
+**This folder is now purely acute.** An earlier revision also held the general clinical CNS adverse
+events, because they mapped to no listed endpoint. They have since moved to
+[`../chronic-neurotoxicity/`](../chronic-neurotoxicity/): trial adverse events are collected across
+chronic exposure, which makes them the human arm of a **listed** endpoint rather than a residual
+here. Nothing in this folder is human.
 
 ## Human versus animal
 
-The Challenge brief prioritises datasets *"based on in vitro human systems or able to extrapolate
-data between in vitro human systems and animal data"*, so this folder splits its measurements on
-that axis. Both files are written even when one is empty, so an absence is a file you can open
-rather than something you have to notice.
-
-| file | rows | subject classes present |
-|---|---:|---|
-| [`data/measurements_human.csv`](./data/measurements_human.csv) | 11 | human_clinical |
-| [`data/measurements_animal.csv`](./data/measurements_animal.csv) | 2047 | animal_invitro, animal_invivo |
-
-Every row also carries `subject_class` (`human_clinical`, `human_invitro`, `animal_invivo`,
-`animal_invitro`) and `subject_group`, both derived by
-[`../_shared/cns/src/endpoints.py`](../_shared/cns/src/endpoints.py) and checked by four QC rules.
-**`human_invitro` is zero across the whole CNS module** — that class is named precisely so its
-emptiness is visible in the data rather than only in a caveat.
+| file | rows |
+|---|---:|
+| [`data/measurements_human.csv`](./data/measurements_human.csv) | 0 — empty by construction |
+| [`data/measurements_animal.csv`](./data/measurements_animal.csv) | 2,047 |
 
 ## 3. Sources allocated
 

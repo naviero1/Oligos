@@ -17,9 +17,11 @@ The rule, in priority order
 1. `hydrocephalus`            -- the readout names hydrocephalus. A listed endpoint.
 2. `chronic-neurotoxicity`    -- `tox_axis = late_onset_neurodegeneration`, i.e. onset >= 3 days.
                                  A listed endpoint.
-3. `acute-neurotoxicity`      -- everything else: the acute axes (onset minutes to ~1 h, plus the
-                                 in vitro neuronal-excitability readout) and the general clinical
-                                 CNS adverse events. NOT a listed endpoint -- the Challenge brief
+2b. `chronic-neurotoxicity`   -- also every human clinical row: trial adverse events are
+                                 collected across chronic exposure (months of repeat dosing), so
+                                 they are the human arm of this listed endpoint.
+3. `acute-neurotoxicity`      -- everything else: the acute axes only (onset minutes to ~1 h, plus
+                                 the in vitro neuronal-excitability readout). NOT a listed endpoint -- the Challenge brief
                                  deprioritises acute neurotoxicity, "specifically alterations of
                                  neuronal electrical activity". It gets a folder because the data
                                  exists and must be filed somewhere honest, not because the brief
@@ -38,6 +40,7 @@ from __future__ import annotations
 
 import csv
 import pathlib
+import re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent      # _shared/cns
 TOXICITY = ROOT.parent.parent                              # toxicity/
@@ -86,10 +89,29 @@ def subject_group_of(measurement: dict) -> str:
     return SUBJECT_GROUP[subject_class_of(measurement)]
 
 
+HYDROCEPHALUS_RE = re.compile(r"hydroceph", re.I)
+
+
 def endpoint_of(measurement: dict) -> str:
-    """The one endpoint a measurement row belongs to. See the module docstring for the rule."""
-    if measurement["readout_name"].startswith("hydrocephalus"):
+    """The one endpoint a measurement row belongs to. See the module docstring for the rule.
+
+    The hydrocephalus test is a case-insensitive substring, not a prefix: clinical-registry terms
+    arrive as MedDRA strings such as "Hydrocephalus" and "Normal pressure hydrocephalus", and a
+    prefix match on lower case would have silently filed both under acute neurotoxicity.
+    """
+    if HYDROCEPHALUS_RE.search(measurement["readout_name"]):
         return "hydrocephalus"
+    if measurement["study_type"] == "clinical":
+        # Human clinical rows are adverse events collected across the whole trial exposure --
+        # months to years of repeat intrathecal dosing -- so they are the human evidence for
+        # CHRONIC neurotoxicity, which is on the brief's endpoint list.
+        #
+        # Caveat, recorded rather than glossed: it is the EXPOSURE that is chronic, not
+        # necessarily each event. A single "headache" term may describe an acute reaction to one
+        # dose. The registry does not publish time-to-onset per event, so a finer split would be
+        # our inference rather than the source's statement. Filter on source_id CT1/C1 or on
+        # study_type to isolate these rows.
+        return "chronic-neurotoxicity"
     if measurement["tox_axis"] == "late_onset_neurodegeneration":
         return "chronic-neurotoxicity"
     return "acute-neurotoxicity"

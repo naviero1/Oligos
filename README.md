@@ -26,11 +26,11 @@ toxicity/
     data/  sources/  scripts/  assets/
     kidney-nephrotoxicity.md    endpoint dossier
 
-  chronic-neurotoxicity/        ← listed endpoint (6 measurements, 5 oligos)
+  chronic-neurotoxicity/        ← listed endpoint (2,335 measurements, 13 oligos)
     chronic-neurotoxicity.md  data/
-  hydrocephalus/                ← listed endpoint (1 measurement, 1 oligo)
+  hydrocephalus/                ← listed endpoint (12 measurements, 2 oligos)
     hydrocephalus.md  data/
-  acute-neurotoxicity/          ← NOT a listed endpoint (2,058 measurements, 1,834 oligos)
+  acute-neurotoxicity/          ← NOT a listed endpoint (2,047 measurements, 1,832 oligos)
     acute-neurotoxicity.md  data/
 
   _shared/cns/                  build pipeline, schema, sources and submission documents

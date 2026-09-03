@@ -619,13 +619,22 @@ def narrative(n):
           f"of the published record rather than of the curation.", "small")], WARNBG,
         colors.HexColor("#ec835a")))
     s.append(Spacer(1, 5))
-    s.append(B(f"<b>The in vitro arm is rat, not human.</b> Only "
-               f"{n['human_system_measurements']} of {n['n_measurements']:,} measurements are "
-               f"human-derived, and all of them are clinical. We searched specifically for "
-               f"human iPSC-derived neuron or organoid data on oligonucleotide CNS toxicity and "
-               f"found reviews describing it as promising but no published, sequence-resolved "
-               f"source. The field's standard predictive screen is a rodent primary-neuron "
-               f"assay. This is the most important scientific gap the dataset reveals."))
+    sc = n["subject_class_distribution"]
+    s.append(B(f"<b>Human data is clinical only; the human <i>in vitro</i> arm is still empty.</b> "
+               f"{sc['human_clinical']:,} of {n['n_measurements']:,} measurements "
+               f"({100 * sc['human_clinical'] / n['n_measurements']:.0f}%) are human, all of them "
+               f"adverse-event counts from clinical trials. <b>{sc['human_invitro']} are human "
+               f"<i>in vitro</i></b>, and that is the class the Challenge brief prioritises: its "
+               f"two qualifying phrases are &ldquo;based on in vitro human systems&rdquo; and "
+               f"&ldquo;able to extrapolate data between in vitro human systems and animal "
+               f"data&rdquo;. Both require human cells, so on a strict reading this release "
+               f"satisfies neither &mdash; its {n['model']['n_both']}-compound in-vitro-to-in-vivo "
+               f"bridge is rat to mouse. A targeted sweep has since identified candidate human "
+               f"<i>in vitro</i> sources (SH-SY5Y, iPSC-derived neurons, cortical and spinal-cord "
+               f"organoids) carrying per-compound data; they are registered in the research queue "
+               f"and not yet extracted, so <b>the gap is now a known backlog rather than an "
+               f"absence of evidence</b>. Closing it is the single highest-value addition "
+               f"available to this module."))
     s.append(B(f"<b>Chemistry is narrow.</b> {n['position_resolved_oligos'] - 5:,} of "
                f"{n['n_oligos']:,} compounds are LNA/DNA full-phosphorothioate oligonucleotides "
                f"from a single study &mdash; {n['n_gapmer'] - 6:,} conventional gapmers and "
@@ -784,6 +793,12 @@ def methodology(n):
          "ICV injection of 15.2&ndash;39.9 nmol, or intrathecal injection via spinal canal "
          "catheter of 190 nmol. Five-category 0&ndash;4 tolerability scale (separate rat variant), "
          "open-field locomotion and body weight, assessed to day 21. n = 4 per group."],
+        ["CT1", "human patients, 22 randomised trials",
+         "Adverse-event tables as posted to ClinicalTrials.gov by the sponsors, covering trials of "
+         "nusinersen, tofersen, tominersen, BIIB080/MAPTRx, BIIB105, WVE-120101, WVE-120102 and "
+         "WVE-003 delivered intrathecally or intracerebroventricularly. Each event is reported per "
+         "arm with a numerator (patients affected) and a denominator (patients at risk), including "
+         "comparator arms. Exposure spans months to years of repeat dosing."],
         ["C1", "human patients",
          "Randomised placebo- or sham-controlled trials. Tofersen 100 mg intrathecally (n = 72 "
          "versus 36 placebo); nusinersen 12 mg intrathecally (n = 84 versus 42 control in the "
@@ -809,6 +824,20 @@ def methodology(n):
                "selecting by dose and cation alone merges control groups from unrelated panels."))
     s.append(B("<b>Regulatory source (C1).</b> Warnings, incidences and denominators read "
                "directly from the label text."))
+    s.append(B("<b>Trial registry source (CT1).</b> Retrieved through the ClinicalTrials.gov "
+               "API v2 (<font face='Courier'>resultsSection.adverseEventsModule</font>), not the "
+               "results web page &mdash; that page is a client-side application whose HTML "
+               "contains none of the adverse-event text, so scraping it returns nothing while "
+               "appearing to succeed. Ingestion is restricted to CNS-relevant events: the whole "
+               "MedDRA <i>Nervous system disorders</i> class, plus a curated set of terms filed "
+               "under other classes that are nonetheless CNS events (post-lumbar-puncture "
+               "syndrome, CSF findings, meningitis, myelitis, papilloedema, hydrocephalus). "
+               "Cardiac &ldquo;ventricular&rdquo; terms are excluded &mdash; those are heart "
+               "ventricles. Each trial's investigational oligonucleotide is assigned from an "
+               "explicit per-trial table rather than parsed from free text, after parsing "
+               "produced junk identifiers that would have split one molecule across several "
+               "rows. The retrieved JSON is committed, so the build does not depend on the "
+               "service remaining available."))
 
     s.append(P("6&nbsp;&nbsp;Harmonisation and grading", "h1"))
     s.append(P(

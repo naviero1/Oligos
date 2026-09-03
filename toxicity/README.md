@@ -52,10 +52,10 @@ and listed in the cross-cutting file instead.
 | [Thrombocytopenia](./thrombocytopenia.md) | background-only | 0 | 0 | 0 | none |
 | [Complement activation](./complement-activation.md) | background-only | 0 | 0 | 0 | none |
 | [Coagulopathy](./coagulopathy.md) | background-only | 0 | 0 | 0 | none |
-| [Chronic neurotoxicity](./chronic-neurotoxicity/chronic-neurotoxicity.md) | delivered (thin) | 5 | 6 | 1 | 1 — L1 |
-| [Hydrocephalus](./hydrocephalus/hydrocephalus.md) | delivered (single row) | 1 | 1 | 0 | 1 — C1 |
-| **Total (listed endpoints)** | — | **71** | **118** | **14** | **18** |
-| [Acute neurotoxicity](./acute-neurotoxicity/acute-neurotoxicity.md) — *not on the brief's list* | delivered | 1,834 | 2,058 | 3 | 3 — H1, K1, C1 |
+| [Chronic neurotoxicity](./chronic-neurotoxicity/chronic-neurotoxicity.md) | delivered | 13 | 2,335 | 1 | 3 — C1, CT1, L1 |
+| [Hydrocephalus](./hydrocephalus/hydrocephalus.md) | delivered | 2 | 12 | 0 | 2 — C1, CT1 |
+| **Total (listed endpoints)** | — | **80** | **2,458** | **14** | **21** |
+| [Acute neurotoxicity](./acute-neurotoxicity/acute-neurotoxicity.md) — *not on the brief's list* | delivered | 1,832 | 2,047 | 3 | 2 — H1, K1 |
 
 `sources/` holds 18 PDFs in total: the 13 endpoint-dedicated files counted above, 4
 cross-cutting reference files, and 1 off-topic file in `sources/_unrelated/`.
@@ -85,12 +85,18 @@ Four endpoints are populated: [kidney](./kidney/kidney-nephrotoxicity.md),
 on the brief's list**. The remaining four dossiers describe source inventories and extraction
 backlogs; they are deliberately short, and they are not peers of the kidney file.
 
-**The CNS curation is 99.7% acute.** It produced 2,065 measurements: **6 chronic neurotoxicity,
-1 hydrocephalus, and 2,058 acute plus general clinical CNS adverse events.** The acute axis —
-"alterations of neuronal electrical activity" — is the one the brief deprioritises. It has a
-folder so the data is filed under its own name rather than discarded or hidden inside a listed
-endpoint's folder, but **nothing in it counts toward the brief's coverage**. Quoting "2,065 CNS
-measurements" as coverage of a listed endpoint would overstate it by ~300×.
+**The CNS curation now covers the listed endpoints substantively.** It holds
+4,394 measurements: **2,335 chronic neurotoxicity**
+(of which 2,329 are human clinical),
+**12 hydrocephalus**, and 2,047 acute. That is a change of scale from an
+earlier revision, where the two listed endpoints held 7 rows between them, and it came from
+ingesting the ClinicalTrials.gov posted adverse-event tables — human data with denominators and
+comparator arms.
+
+Acute neurotoxicity — "alterations of neuronal electrical activity" — remains the axis the brief
+**deprioritises**. It keeps a folder so the data is filed under its own name rather than discarded
+or hidden inside a listed endpoint's folder, but **nothing in it counts toward the brief's
+coverage**.
 
 ## What this reorganization changed
 

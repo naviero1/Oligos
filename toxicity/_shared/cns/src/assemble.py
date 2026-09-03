@@ -181,6 +181,23 @@ SOURCES = [
          redistribution="public_domain", evidence_tier="regulatory_primary",
          retrieved_via="DailyMed, read directly",
          notes="Human clinical CNS adverse-event anchors for the two approved intrathecal ASOs."),
+    dict(source_id="CT1", source_key="ClinicalTrials_gov",
+         citation="ClinicalTrials.gov posted results, adverse-event tables for 22 trials of "
+                  "oligonucleotides delivered into the central nervous system (nusinersen, "
+                  "tofersen, tominersen, BIIB080/MAPTRx, BIIB105, WVE-120101, WVE-120102, "
+                  "WVE-003). U.S. National Library of Medicine.",
+         first_author="U.S. National Library of Medicine", year="2026",
+         journal="ClinicalTrials.gov results database",
+         doi="", pmid="", pmcid="",
+         url="https://clinicaltrials.gov/api/v2/studies/NCT03761849",
+         access="public_domain", license="US Government work / public domain",
+         redistribution="public_domain", evidence_tier="registry_primary",
+         retrieved_via="ClinicalTrials.gov API v2, resultsSection.adverseEventsModule; the web "
+                       "results page is a client-side application whose HTML contains none of "
+                       "the adverse-event text",
+         notes="Full MedDRA adverse-event tables with per-arm numerators AND denominators, "
+               "including comparator arms. The module's principal source of human data and its "
+               "only source of quantitative hydrocephalus rows."),
     dict(source_id="O1", source_key="ORourke_2026",
          citation="O'Rourke JJ, Bravo-Hernandez M, et al. Acute neuronal inhibition response "
                   "caused by phosphorothioate antisense oligonucleotides following local delivery "
