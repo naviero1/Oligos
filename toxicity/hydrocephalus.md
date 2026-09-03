@@ -2,7 +2,7 @@
 
 **Status:** `delivered` · **Dataset:** [`./hydrocephalus/`](./hydrocephalus/README.md) · **Register:** [`./README.md`](./README.md) · **Cross-cutting sources:** [`./cross-cutting.md`](./cross-cutting.md)
 
-Hydrocephalus is the eighth and last endpoint in the Challenge brief's list of toxicities of interest (quoted verbatim in [`./README.md`](./README.md#scope-authority)). Until this pass it was `not-addressed`: zero rows, zero oligos, zero `source_id`s, no dedicated source, and no scope decision on record. It now carries a dataset of its own — **914 measurement rows over 35 oligonucleotides from 53 sources** — in [`./hydrocephalus/`](./hydrocephalus/README.md).
+Hydrocephalus is the eighth and last endpoint in the Challenge brief's list of toxicities of interest (quoted verbatim in [`./README.md`](./README.md#scope-authority)). Until this pass it was `not-addressed`: zero rows, zero oligos, zero `source_id`s, no dedicated source, and no scope decision on record. It now carries a dataset of its own — **1,324 measurement rows over 50 oligonucleotides from 189 sources** — in [`./hydrocephalus/`](./hydrocephalus/README.md).
 
 The previous version of this dossier set three conditions for advancing the endpoint and judged that meeting them would produce "a second dataset, not an extension of this one." That judgement was correct and has been followed: the new dataset has its own graded column, its own rubric, its own vocabularies and its own tables. **Nothing in `../data/`, `../schema.md`, `../METHODOLOGY.md`, `../sources/` or `../scripts/` was changed.** The renal dataset and this one sit side by side and are joined by nothing.
 
@@ -10,19 +10,19 @@ The previous version of this dossier set three conditions for advancing the endp
 
 | | Value |
 |---|---:|
-| Oligonucleotides described | 35 |
-| — of which carry at least one measurement | 30 |
-| Measurement rows | 914 |
-| — tier A (ventricular / CSF-volume outcome) | 389 |
-| — tier B (CSF pressure, composition, flow, procedure) | 525 |
-| Tier-A rows with a positive finding | 60 |
-| Tier-A rows that are explicit measured negatives | 328 |
+| Oligonucleotides described | 50 |
+| — of which carry at least one measurement | 44 |
+| Measurement rows | 1,324 |
+| — tier A (ventricular / CSF-volume outcome) | 797 |
+| — tier B (CSF pressure, composition, flow, procedure) | 527 |
+| Tier-A rows with a positive finding | 61 |
+| Tier-A rows that are explicit measured negatives | 735 |
 | Grade-3 (severe) rows | 22 |
-| Distinct sources | 59 |
-| Oligonucleotides with a published sequence | 10 of 35, incl. nusinersen, tofersen, tominersen |
+| Distinct sources | 189 |
+| Oligonucleotides with a published sequence | 10 of 50 |
 | Per-position modification records | 202, over 10 oligonucleotides |
-| Oligonucleotides with a known length | 11 of 35 |
-| QC checks run / failed | 39 / 0 |
+| Oligonucleotides with a known length | 10 of 50 |
+| QC checks run / failed | 44 / 0 |
 
 Every figure above is computed by the dataset's QC suite into `qc/stats.json` and rendered into its `README.md`. They are **transcribed** here and will drift if the dataset changes; [`./hydrocephalus/README.md`](./hydrocephalus/README.md) is authoritative.
 
@@ -74,7 +74,8 @@ Three findings bear on how the rest of this register should be read.
 - **Only one designed control** (OI-08): the AQP4 study's scrambled non-targeting siRNA. Every other negative in the dataset is a comparator arm, a reported zero or a silent label — the same weakness a review found in the sibling kidney dataset, now at least recorded in `arm_role` and `ascertainment` rather than glossed.
 - ~~253 tier-A negatives rest on an unverified absence argument~~ — **resolved.** 42 CFR 11.48(a)(4)(ii)(A) requires a results submission to table *all* serious adverse events with no frequency threshold, so absence of a tier-A term from a posted serious-adverse-event table is a reported zero for serious events. The regulation is committed and cited per row. Two limits remain in-row: a non-serious ventricular event below the 5 percent threshold of subparagraph (B) would not appear, and none of this evidences that ventricular imaging was done.
 - **The counts in this dossier are transcribed**, not regenerated, and will drift if the dataset changes.
-- **The Phase 2 submission is not complete for this endpoint.** The dataset and its documentation exist; the ML analysis, the narrative PDF, the methodology PDF and the PADP do not. See the shared work plan.
+- **The Phase 2 submission is not complete for this endpoint.** Every requirement is mapped to its status and owner in [`hydrocephalus/PHASE2_COMPLIANCE.md`](./hydrocephalus/PHASE2_COMPLIANCE.md). The dataset part is substantially met; the ML analysis, the narrative PDF, the methodology PDF and the PADP are not started, and the repository still has no LICENSE file.
+- **Human and animal evidence are split** by `subject_class`, with generated views. The release is 1,319 human rows against 5 animal and **zero in vitro** — against a Phase 2 brief that calls in vitro human systems a particular interest.
 - **100 further verified sources are retrieved but not extracted**, listed in [`hydrocephalus/notes/source_backlog.md`](./hydrocephalus/notes/source_backlog.md) — EudraVigilance, WHO VigiBase, EMA CHMP assessment reports, FDA pharmacology/toxicology reviews, PMDA documents and two patent families among them. This is the release's completeness limit, stated rather than left to be discovered.
 - **EMA rows carry `redistribution = verify`.** Reuse terms for EMA product information were not established; the verbatim text is quoted as evidence, but a redistributor should resolve the licence before republishing those eight rows' values.
 - **One compound row is a composite** (OI-07): `casimersen_or_golodirsen` covers a trial whose posted table does not separate the two compounds.

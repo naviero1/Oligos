@@ -295,6 +295,9 @@ asserting; every one traces to a row and a locus.
 |---|---|
 | [`SCHEMA.md`](SCHEMA.md) | Data dictionary, controlled vocabularies, tier definitions, `hydroceph_grade` rubric |
 | [`METHODOLOGY.md`](METHODOLOGY.md) | How the dataset was assembled; source-study methods kept separate from curation methods; open items |
+| [`PHASE2_COMPLIANCE.md`](PHASE2_COMPLIANCE.md) | Every Phase 2 requirement mapped to what exists, what is missing and who owns it |
+| `data/trial_registry.csv` | Every oligonucleotide trial with posted results — trial selection as a query, not a judgement |
+| `data/measurements_human.csv` / `_animal.csv` | **Generated** views splitting the evidence by `subject_class` |
 | `data/oligos.csv` | One row per oligonucleotide — identity and design predictors |
 | `data/measurements.csv` | One row per oligo × population/model × route × readout × arm |
 | `data/modifications.csv` | **One row per nucleotide position** — the location of each chemical modification |
@@ -312,6 +315,7 @@ asserting; every one traces to a row and a locus.
 From a clean checkout, in order:
 
 ```bash
+python3 scripts/discover_ctgov_trials.py  # enumerate EVERY oligo trial with posted results
 python3 scripts/extract_ctgov.py          # ClinicalTrials.gov posted adverse-event tables
 python3 scripts/extract_ctgov_outcomes.py # pre-specified ventricular MRI outcome measures
 python3 scripts/extract_faers.py          # openFDA FAERS  (cached; re-runs cost no quota)
@@ -322,7 +326,7 @@ python3 scripts/parse_inn_sequences.py    # sequences + per-position chemistry f
 python3 scripts/build_oligos.py           # design predictors from labels and INN
 python3 scripts/assemble.py               # canonical tables + provenance registry + merged view
 python3 scripts/build_modifications.py    # per-position chemistry (needs the keys assemble assigns)
-python3 qc/validate.py                    # 39 checks; writes qc/stats.json
+python3 qc/validate.py                    # 44 checks; writes qc/stats.json
 python3 scripts/render_docs.py            # regenerates the counts in this file
 python3 scripts/export_xlsx.py            # the .xlsx workbook (needs openpyxl)
 ```
