@@ -8,9 +8,16 @@ brief makes that division a scoring criterion ("datasets based on in vitro human
 systems, or able to extrapolate data between in vitro human systems and animal
 data, are of particular interest"). So it is materialised as one field:
 
-    human_clinical  -- study_type=clinical, species=human   (human trials)
-    human_invitro   -- study_type=in_vitro, species=human   (human cell systems)
-    animal_invivo   -- species != human                     (animal studies)
+    human_clinical  -- study_type=clinical,     species=human    (human trials)
+    human_invitro   -- study_type=in_vitro,     species=human    (human cell systems)
+    animal_invitro  -- study_type=in_vitro,     species!=human   (animal cell systems)
+    animal_invivo   -- study_type=animal_invivo, species!=human  (animal studies)
+
+Note that animal IN VITRO is a distinct class from animal in vivo, and collapsing
+the two would be wrong: rat primary PTEC data (US 11,479,818 Table 5) is a cell
+system, not a live study, and it pairs with the human cell systems rather than with
+the in-vivo work. An earlier version of this script mapped every non-human row to
+animal_invivo, which would have silently mislabelled those rows.
 
 The value is DERIVED, never hand-entered, so it cannot drift from the two columns
 it summarises; this script is re-runnable and asserts the mapping is total.
@@ -32,15 +39,20 @@ BRIDGE = os.path.join(ROOT, "data", "human_animal_bridge.csv")
 
 
 def classify(row):
-    if row["species"] != "human":
+    human = row["species"] == "human"
+    st = row["study_type"]
+    if st == "in_vitro":
+        return "human_invitro" if human else "animal_invitro"
+    if st == "animal_invivo":
+        if human:
+            raise ValueError(f"{row['measurement_id']}: species=human with study_type=animal_invivo")
         return "animal_invivo"
-    if row["study_type"] == "clinical":
+    if st == "clinical":
+        if not human:
+            raise ValueError(f"{row['measurement_id']}: non-human species with study_type=clinical")
         return "human_clinical"
-    if row["study_type"] == "in_vitro":
-        return "human_invitro"
     raise ValueError(
-        f"{row['measurement_id']}: human subject with unexpected "
-        f"study_type={row['study_type']!r} - classify explicitly before proceeding"
+        f"{row['measurement_id']}: unexpected study_type={st!r} - classify explicitly before proceeding"
     )
 
 
@@ -64,7 +76,7 @@ def main():
     for r in rows:
         counts[r["subject_class"]] = counts.get(r["subject_class"], 0) + 1
     print("subject_class assigned:")
-    for k in ("human_clinical", "human_invitro", "animal_invivo"):
+    for k in ("human_clinical", "human_invitro", "animal_invitro", "animal_invivo"):
         print(f"  {k:<16}{counts.get(k, 0):>4}")
     assert sum(counts.values()) == len(rows), "unclassified rows remain"
 
@@ -77,7 +89,7 @@ def main():
     out = []
     for oid, groups in sorted(per.items()):
         human = [x for k in ("human_clinical", "human_invitro") for x in groups.get(k, [])]
-        animal = groups.get("animal_invivo", [])
+        animal = [x for k in ("animal_invivo", "animal_invitro") for x in groups.get(k, [])]
         if not (human and animal):
             continue
         hmax = max(int(x["nephrotox_grade"]) for x in human)
@@ -90,7 +102,8 @@ def main():
             "sequence_known": "TRUE" if ol["sequence_5to3"].strip() not in ("TBD", "", "NA") else "FALSE",
             "n_human_clinical": len(groups.get("human_clinical", [])),
             "n_human_invitro": len(groups.get("human_invitro", [])),
-            "n_animal_invivo": len(animal),
+            "n_animal_invitro": len(groups.get("animal_invitro", [])),
+            "n_animal_invivo": len(groups.get("animal_invivo", [])),
             "human_max_grade": hmax,
             "animal_max_grade": amax,
             "concordance": ("concordant" if hmax == amax

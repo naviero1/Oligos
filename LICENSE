@@ -1,0 +1,39 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 The OligoTox-Kidney dataset authors
+
+This work — the curated data files, schema, and documentation in this repository —
+is licensed under the Creative Commons Attribution 4.0 International License.
+
+You are free to:
+  Share  — copy and redistribute the material in any medium or format
+  Adapt  — remix, transform, and build upon the material for any purpose,
+           including commercially
+
+Under the following terms:
+  Attribution — You must give appropriate credit, provide a link to the license,
+  and indicate if changes were made. You may do so in any reasonable manner, but
+  not in any way that suggests the licensor endorses you or your use.
+
+No additional restrictions — You may not apply legal terms or technological
+measures that legally restrict others from doing anything the license permits.
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+Human-readable summary: https://creativecommons.org/licenses/by/4.0/
+
+--------------------------------------------------------------------------------
+SCOPE AND THIRD-PARTY MATERIAL
+
+This licence covers the curated dataset and documentation authored by this
+project. It does NOT re-license the underlying sources, which retain their own
+terms. Redistribution status is tracked PER ROW in the `redistribution` column of
+data/measurements.csv:
+
+  public_domain          US patent material; values may be reproduced freely.
+  summary_stat           Derived summary statistics from copyrighted publications.
+  derived_features_only  Only derived features may be redistributed, not raw values.
+  verify                 Licence not yet confirmed; resolve before release.
+
+Source PDFs under toxicity/*/sources/ and toxicity/_shared/reference/ are
+third-party works included for verification only and are NOT covered by this
+licence. They retain their publishers' terms.

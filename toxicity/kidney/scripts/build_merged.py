@@ -25,13 +25,15 @@ OUT    = os.path.join(ROOT, "data", "oligotox_kidney_merged.csv")
 OLIGO_PRED = ["oligo_name", "aliases", "oligo_class", "target_gene", "indication",
               "developer", "max_phase", "length_nt", "backbone_chemistry",
               "sugar_modifications", "gapmer_design", "conjugate", "ps_count",
-              "sequence_5to3", "design_source"]
+              "sequence_5to3", "purity_pct", "purity_method",
+              "identity_confirmation", "design_source"]
 # measurement outcome/context columns (all measurements.csv columns except the keys and its notes)
 MEAS_COLS = ["study_type", "species", "subject_class", "system_model", "tissue",
              "delivery_method",
              "dose_or_conc_value", "dose_or_conc_unit", "exposure_duration",
              "readout_category", "readout_name", "readout_value", "readout_unit",
-             "effect_direction", "effect_vs_control", "nephrotox_grade",
+             "effect_direction", "effect_vs_control", "renal_endpoints_measured",
+             "nephrotox_grade",
              "is_kidney_specific", "source_id", "source_ref", "source_table",
              "redistribution"]
 

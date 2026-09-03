@@ -28,6 +28,9 @@ are the chemistry/sequence/design features hypothesized to drive nephrotoxicity.
 | `conjugate` | enum | `none` \| `GalNAc` \| `lipid` \| `peptide` \| `PEG` (e.g. `PEG_5prime`) \| `other`. (Affects renal exposure.) |
 | `ps_count` | int | Number of phosphorothioate linkages, or `TBD`. |
 | `sequence_5to3` | string | 5′→3′ sequence. **`TBD` unless from a redistribution-permitted source. Never guessed.** |
+| `purity_pct` | float | Reported purity of the tested oligo, %. **`TBD` for all 65** — verified unavailable, not merely unrecorded: both in-repo patents were searched for purity/HPLC/UPLC/LC-MS/mass-spec language and neither reports any, and labels and trial papers do not publish per-batch purity. No wet lab was run, so this cannot be closed by further curation. |
+| `purity_method` | string | Analytical method behind `purity_pct` (e.g. `HPLC`, `LC-MS`). `TBD` for all 65, same reason. |
+| `identity_confirmation` | enum | **How each oligo's identity was established** — the half of the Phase 2 "purify and characterize oligo identity" requirement a curated dataset can answer. `who_inn_chemical_nomenclature` (residue-by-residue INN parse, reverse-complement and molecular-formula checked) \| `patent_sequence_listing` \| `regulatory_label` \| `peer_reviewed_publication` \| `not_established` (sequence still `TBD`). Derived by `scripts/add_identity_characterization.py`. |
 | `design_source` | string | Source for the design metadata (DOI / patent / label). |
 | `notes` | string | Free text. |
 
@@ -43,9 +46,9 @@ single oligo at a single concentration measured with KIM-1 *and* viability =
 |--------|------|-------------------------------------|
 | `measurement_id` | string PK | Stable ID, e.g. `MSR001`. |
 | `oligo_id` | string FK | → `oligos.oligo_id`. |
-| `study_type` | enum | `in_vitro` \| `animal_invivo` \| `clinical`. |
+| `study_type` | enum | `in_vitro` \| `animal_invivo` \| `clinical`. Note `in_vitro` spans both species — use `subject_class` to separate human from animal cell systems. |
 | `species` | enum | `human` \| `monkey` \| `rat` \| `mouse` \| `multi_species` (finding pooled across species) \| `NA`. |
-| `subject_class` | enum | **The human/animal divider.** `human_clinical` (human trial) \| `human_invitro` (human cell system) \| `animal_invivo` (any non-human species). **Derived** from `study_type` + `species` by `scripts/split_human_animal.py`, never hand-entered, so it cannot drift from the columns it summarises. Materialised because the Phase 2 brief makes this division a scoring criterion — datasets "based on in vitro human systems or able to extrapolate data between in vitro human systems and animal data" are of particular interest. |
+| `subject_class` | enum | **The human/animal divider.** `human_clinical` (human trial) \| `human_invitro` (human cell system) \| `animal_invitro` (non-human cell system, e.g. rat primary PTEC) \| `animal_invivo` (non-human live study). **Derived** from `study_type` + `species` by `scripts/split_human_animal.py`, never hand-entered, so it cannot drift from the columns it summarises. Materialised because the Phase 2 brief makes this division a scoring criterion — datasets "based on in vitro human systems or able to extrapolate data between in vitro human systems and animal data" are of particular interest. |
 | `system_model` | string | Cell line / model / subject, e.g. `ciPTEC`, `HK-2`, `RPTEC_TERT1`, `primary_human_PTEC`, `proximal_tubule_on_chip`, `kidney_invivo`, `patient`. |
 | `tissue` | string | `kidney` \| `proximal_tubule` \| `glomerulus` \| `NA`. |
 | `delivery_method` | enum | `gymnotic_free_uptake` \| `transfection` \| `conjugate_mediated` \| `systemic_dose` \| `intrathecal` \| `intravitreal` \| `oral` \| `TBD`. |
@@ -58,7 +61,8 @@ single oligo at a single concentration measured with KIM-1 *and* viability =
 | `readout_unit` | string | e.g. `% of control`, `fold_change`, `ng/mL`, `mg/mmol_creatinine`, `IC50_uM`; or `NA`. |
 | `effect_direction` | enum | `increase` \| `decrease` \| `no_change` \| `TBD`. |
 | `effect_vs_control` | string | Quantified effect vs control if available (e.g. `3.2x`, `-45%`), else `TBD`. |
-| `nephrotox_grade` | int 0–3 | Graded label (rubric below). |
+| `renal_endpoints_measured` | enum | **Stops grade 0 meaning two different things.** `measured_and_reported` (endpoint assayed, result reported — a real negative) \| `not_measured` (study never assessed renal endpoints) \| `not_reported_in_source` (cited source does not report them) \| `cannot_determine` (not yet verified against the primary source). Only `measured_and_reported` supports a grade of 0 as evidence of safety. Assigned deterministically by `scripts/add_endpoint_provenance.py`; see `CLINICAL_VALIDATION.md`. |
+| `nephrotox_grade` | int 0–3 | Graded label (rubric below). **Read together with `renal_endpoints_measured`** — a grade of 0 on a row that is not `measured_and_reported` means "not established", not "safe". |
 | `is_kidney_specific` | bool | `TRUE` = strict-kidney row; `FALSE` = hepatotox/other fallback row (flagged). |
 | `source_id` | string | → entry in `sources/SOURCES.md` (e.g. `N2`). |
 | `source_ref` | string | DOI or patent number. |
@@ -186,6 +190,29 @@ oligo may differ by model/dose. Record the rationale in `notes` when non-obvious
   should be read with that caveat.
   Effect: measurements 159 → **165**; human_clinical 39 → **42**; animal_invivo 53 → **56**;
   bridge set 12 → **15 oligos**.
+
+- **2026-09-03 (d)** — Final pre-submission round. Extracted **US 11,479,818 Table 5**
+  (`N4`, previously unmined): 81 rows, 9 panel compounds × 3 concentrations × 3 biomarkers
+  (`EGFR_mRNA`, `KIM-1_mRNA`, `KIM-1_protein`) on **rat primary PTEC**. Values are
+  normalised to compound 1-1, **not** saline (`readout_unit = pct_compound_1-1_reference`)
+  and must not be pooled with the N3 Table 2 %-saline values. 4 anchors checked against
+  the printed table; compound 1-1 grades 0 on all 9 of its cells by construction.
+  These are animal *cell* data, which exposed a real defect: `subject_class` previously
+  mapped every non-human row to `animal_invivo`. Added **`animal_invitro`**, so the four
+  classes are now human_clinical 42 / human_invitro 67 / animal_invitro 81 / animal_invivo 56.
+  Added **`renal_endpoints_measured`** to `measurements.csv`, implementing the
+  `CLINICAL_VALIDATION.md` recommendation: `measured_and_reported` 233 / `cannot_determine` 8
+  / `not_measured` 3 / `not_reported_in_source` 2. **13 grade-0 clinical rows are now
+  explicitly flagged as not supported as measured negatives.**
+  Added **`purity_pct`**, **`purity_method`** (TBD for all 65 — verified unavailable: both
+  patents searched for purity/HPLC/UPLC/LC-MS/mass-spec language, none present) and
+  **`identity_confirmation`** (who_inn_chemical_nomenclature 20 / patent_sequence_listing 25
+  / regulatory_label 7 / peer_reviewed_publication 3 / not_established 10), answering the
+  identity half of the Phase 2 characterization requirement.
+  Added a repository-root **`LICENSE`** (CC BY 4.0) with third-party source material
+  explicitly excluded and per-row `redistribution` retained.
+  Totals: **65 oligos (20 cols) · 246 measurements (25 cols) · 246 merged (44 cols)**,
+  0 orphans, all enum/range checks pass.
 
 ## Derived table — `data/oligotox_kidney_merged.csv` (generated, not canonical)
 
