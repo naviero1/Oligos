@@ -220,6 +220,91 @@ def apply_corrections(rows, log):
     return rows
 
 
+# ---------------------------------------------------------------- human / animal split
+# The Challenge states that datasets "based on in vitro human systems or able to extrapolate
+# data between in vitro human systems and animal data are of particular interest", so which
+# rows are human has to be answerable from the table itself. `species` alone cannot answer
+# it: a purified-protein assay carries species = NOT_APPLICABLE while being, in several
+# sources here, a purified HUMAN protein system.
+
+ANIMAL_SPECIES = {"monkey", "mouse", "rat", "pig", "minipig", "dog", "rabbit",
+                  "sheep", "cow", "guinea_pig", "cynomolgus"}
+_HUMAN_TXT = re.compile(r"\bhuman\b|recombinant human|healthy (adult )?volunteer|\bpatient\b|donor plasma", re.I)
+_ANIMAL_TXT = re.compile(r"\b(mouse|murine|mice|rat|rabbit|monkey|cynomolgus|macaque|porcine|pig|canine|dog|bovine|guinea)\b", re.I)
+
+def classify_species(r, resolved):
+    """(species_class, basis). Never guesses: an unresolved system is not_determined."""
+    sp = r.get("species", "")
+    if sp == "human":
+        return "human", "species_field"
+    if sp in ANIMAL_SPECIES:
+        return "animal", "species_field"
+    ov = resolved.get(("row", r.get("source_id", ""), str(r.get("system_model", "")).strip()))
+    if ov:
+        return ov["species_class"], "source_verified_row:" + ov.get("locus", "")[:56]
+    hit = resolved.get(("src", r.get("source_id", "")))
+    if hit and hit.get("species_class") in ("human", "animal"):
+        return hit["species_class"], "source_verified:" + hit.get("locus", "")[:60]
+    txt = " ".join(str(r.get(k, "")) for k in ("system_model", "matrix", "notes", "verbatim_quote"))
+    h, a = bool(_HUMAN_TXT.search(txt)), bool(_ANIMAL_TXT.search(txt))
+    if h and not a:
+        return "human", "system_model_names_human_material"
+    if a and not h:
+        return "animal", "system_model_names_animal_material"
+    return "not_determined", "system_origin_not_stated_by_source"
+
+def apply_species_split(rows, log):
+    path = os.path.join(ROOT, "sources", "species_resolutions.json")
+    resolved = {}
+    if os.path.exists(path):
+        with open(path) as fh:
+            spec = json.load(fh)
+            for e in spec.get("resolutions", []):
+                resolved[("src", e["source_id"])] = e
+            for e in spec.get("row_overrides", []):
+                resolved[("row", e["source_id"], e["system_model"].strip())] = e
+    for r in rows:
+        cls, basis = classify_species(r, resolved)
+        r["species_class"] = cls
+        r["species_class_basis"] = basis
+        # human_system: measured in human subjects, human tissue/plasma/cells, or purified
+        # human proteins. This is the Challenge's "in vitro human system" criterion.
+        r["human_system"] = "TRUE" if cls == "human" else "FALSE"
+        log["S_species_" + cls] += 1
+    return rows
+
+# ---------------------------------------------------------------- endpoint scope
+# This folder holds ONE endpoint. A handful of rows were extracted as context and are not
+# themselves coagulation measurements -- a complement marker, a transcript level, blanket
+# adverse-event statements. They are kept (each is honest context its extractor flagged in
+# notes) but marked, so a coagulation-row count is never inflated by them and a neighbouring
+# endpoint's readout is never silently counted here.
+SCOPE_ADJACENT_READOUTS = {
+    "complement_alternative_pathway_Bb":       "complement activation is a separate Challenge endpoint",
+    "F8_gene_expression_lung":                 "transcript level, not a clotting-factor activity",
+    "adverse_events_any":                      "blanket adverse-event statement, not a coagulation readout",
+    "serious_or_severe_adverse_event":         "blanket adverse-event statement, not a coagulation readout",
+    "fatal_treatment_emergent_adverse_event":  "blanket adverse-event statement, not a coagulation readout",
+    "infusion_related_reaction_or_toxicity":   "infusion reaction / LNP complement axis, not a coagulation readout",
+}
+
+COAG_LEXICON = re.compile(
+    r"aptt|ptt|prothrombin|\bpt\b|pt_ratio|\btt\b|inr|thrombin|thrombus|clot|coagul|fibrin|d[_ -]?dimer|antithrombin|anti[_-]?xa|anti[_-]?iia|bleed|blood_loss|blood_flow|blood_transfusion|h(?:ae|e|a)?morrhag|h(?:ae|e|a)?mostas|h(?:ae|e|a)?mostatic|thromb|kallikrein|tenase|xase|\bact\b|tfpi|vwf|von[_ ]willebrand|platelet|heparin|protamine|bivalirudin|argatroban|hirudin|\btat\b|epistaxis|h(?:ae|e|a)?matoma|h(?:ae|e|a)?maturia|contusion|transfusion|\bF(?:I|II|V|VII|VIII|IX|X|XI|XII)a?(?:se)?[_ ]|fxa|fixa|fviia|fxia|fxiia|fviii|factor|serpin|plasmin|PAI[_ ]?1|tPA|PF4|ecarin|russell|reptilase|TEG|ROTEM|bradykinin|P[_ ]selectin|occlusion|patency|perfusion|neurologic_deficit|mortality|Evans_blue|oxygenator|cerebrovascular|saphenous|carotid|jugular", re.I)
+
+def apply_endpoint_scope(rows, log):
+    for r in rows:
+        nm = r.get("readout_name", "")
+        why = SCOPE_ADJACENT_READOUTS.get(nm)
+        if why:
+            r["endpoint_scope"] = "scope_adjacent"
+            r["endpoint_scope_note"] = why
+            log["E_scope_adjacent"] += 1
+        else:
+            r["endpoint_scope"] = "coagulation"
+            r["endpoint_scope_note"] = NA
+            log["E_scope_coagulation"] += 1
+    return rows
+
 def remediate(rows, log):
     for r in rows:
         r.setdefault("is_baseline", "FALSE")
@@ -377,6 +462,9 @@ def main():
                     "synthesis_platform": o.get("synthesis_platform", NR),
                     "source_ids": src_map.get((b["_bundle"], o.get("source_key")), NR),
                     "n_measurements": 0,
+                    "n_human_measurements": 0,
+                    "n_animal_measurements": 0,
+                    "has_human_and_animal_data": "FALSE",
                     "notes": o.get("notes", ""),
                 }
                 oligos.append(rec)
@@ -417,7 +505,8 @@ def main():
                 "measurement_id": "COG-MSR%04d" % (len(measurements) + 1),
                 "oligo_id": oid,
                 "source_id": sid,
-                "study_type": m.get("study_type", NR),
+                "study_type": ("ex_vivo_plasma" if m.get("study_type") == "ex_vivo_human_plasma"
+                               else m.get("study_type", NR)),
                 "species": m.get("species", NR),
                 "system_model": m.get("system_model", NR),
                 "matrix": m.get("matrix", NR),
@@ -454,6 +543,8 @@ def main():
     _log = _C()
     measurements = remediate(measurements, _log)
     measurements = apply_corrections(measurements, _log)
+    measurements = apply_species_split(measurements, _log)
+    measurements = apply_endpoint_scope(measurements, _log)
 
     # ---- modifications -----------------------------------------------------
     mods, mod_orphans = [], 0
@@ -497,12 +588,22 @@ def main():
 
     # ---- roll-ups ----------------------------------------------------------
     per_o, per_s = defaultdict(int), defaultdict(int)
+    hum_o, ani_o = defaultdict(int), defaultdict(int)
     for m in measurements:
         per_o[m["oligo_id"]] += 1
         per_s[m["source_id"]] += 1
+        if m["species_class"] == "human":
+            hum_o[m["oligo_id"]] += 1
+        elif m["species_class"] == "animal":
+            ani_o[m["oligo_id"]] += 1
     o_per_s = defaultdict(set)
     for o in oligos:
         o["n_measurements"] = per_o.get(o["oligo_id"], 0)
+        o["n_human_measurements"] = hum_o.get(o["oligo_id"], 0)
+        o["n_animal_measurements"] = ani_o.get(o["oligo_id"], 0)
+        # A compound measured in BOTH is a human/animal translation pair -- the shape the
+        # Challenge calls "of particular interest".
+        o["has_human_and_animal_data"] = "TRUE" if (hum_o.get(o["oligo_id"], 0) and ani_o.get(o["oligo_id"], 0)) else "FALSE"
         for sid in str(o["source_ids"]).split(";"):
             o_per_s[sid].add(o["oligo_id"])
     for s in sources:

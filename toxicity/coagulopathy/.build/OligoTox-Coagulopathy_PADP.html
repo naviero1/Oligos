@@ -1,0 +1,173 @@
+<!doctype html><html><head><meta charset="utf-8"><title>OligoTox-Coagulopathy — Public Access & Dissemination Plan</title>
+<style>
+@page { size: A4; margin: 17mm 16mm 15mm 16mm; }
+@page { @bottom-center { content: counter(page); } }
+* { box-sizing: border-box; }
+body { font: 9.6pt/1.45 "Georgia","DejaVu Serif",serif; color:#111; margin:0; }
+h1 { font-size: 17pt; line-height:1.15; margin:0 0 2pt; letter-spacing:-.2pt; }
+h2 { font-size: 11pt; margin: 13pt 0 4pt; color:#1F3864; border-bottom:.6pt solid #cfd6e4; padding-bottom:2pt; }
+h3 { font-size: 9.8pt; margin: 9pt 0 3pt; color:#1F3864; }
+p { margin: 0 0 6pt; text-align: justify; hyphens:auto; }
+.sub { color:#52514e; font-size:9pt; margin:0 0 10pt; }
+.rule { height:2.2pt; background:#1F3864; margin:6pt 0 9pt; }
+table { border-collapse: collapse; width:100%; font-size:8.4pt; margin:4pt 0 8pt; }
+th { background:#1F3864; color:#fff; text-align:left; padding:3pt 5pt; font-weight:600; }
+td { border-bottom:.5pt solid #dedcd5; padding:2.6pt 5pt; vertical-align:top; }
+td.n, th.n { text-align:right; }
+figure { margin:6pt 0 9pt; page-break-inside:avoid; }
+figure img { width:100%; }
+figcaption { font-size:8.1pt; color:#52514e; margin-top:3pt; }
+.kpis { display:flex; gap:6pt; margin:8pt 0 10pt; }
+.kpi { flex:1; border:.6pt solid #cfd6e4; border-top:2.2pt solid #1F3864; padding:5pt 6pt; }
+.kpi b { display:block; font-size:14pt; line-height:1.1; color:#1F3864; }
+.kpi span { font-size:7.6pt; color:#52514e; }
+.callout { border-left:2.4pt solid #eb6834; background:#fdf6f2; padding:6pt 8pt; margin:7pt 0; }
+.callout p:last-child { margin-bottom:0; }
+ul { margin:0 0 6pt; padding-left:14pt; } li { margin-bottom:2.5pt; }
+code { font-family:"DejaVu Sans Mono",monospace; font-size:8.2pt; background:#f2f1ec; padding:0 2px; }
+.small { font-size:8.4pt; color:#52514e; }
+.pb { page-break-before: always; }
+h2, h3 { page-break-after: avoid; } table, figure { page-break-inside: avoid; }
+</style></head><body>
+<h1>OligoTox-Coagulopathy — Public Access & Dissemination Plan</h1><p class="sub">NIH/NCATS Oligonucleotide Toxicity Open Data Challenge, Phase 2</p><div class="rule"></div>
+<p>**OligoTox-Coagulopathy dataset — NIH/NCATS Oligonucleotide Toxicity (OligoTox) Open Data</p>
+<p>Challenge, Phase 2 (Data Generation).**</p>
+<div class="callout"><p><b>Draft for team review.</b> Per [<code>Phase Roles Assignment Plan</code>], the PADP is Gustavo's</p></div>
+<div class="callout"><p>deliverable. This is a drafted, endpoint-scoped version prepared alongside the</p></div>
+<div class="callout"><p>coagulopathy dataset so the data-side facts in it (licence mix, per-row redistribution</p></div>
+<div class="callout"><p>terms, hosting shape) are accurate and do not have to be reconstructed later. It needs</p></div>
+<div class="callout"><p>the team's sign-off before submission, and at submission time it will most likely be</p></div>
+<div class="callout"><p><b>consolidated with the other endpoints into a single PADP</b> covering the whole release —</p></div>
+<div class="callout"><p>the Challenge asks for one plan per submission, not one per endpoint.</p></div>
+<p>This plan describes how the OligoTox-Coagulopathy dataset is licensed, made publicly</p>
+<p>accessible and disseminated, and — as the Challenge requires — how others and ultimately</p>
+<p>the U.S. Government can allow interested parties to use it if the submitting team does not.</p>
+<p>---</p>
+<h2>1. Scope — the "solution" covered by this plan</h2>
+<p>The solution is the <b>curated dataset and its documentation</b>, specifically:</p>
+<table>
+<tr><th>Component</th><th>Path</th></tr>
+<tr><td>Four normalised data tables</td><td><code>data/{sources,oligos,measurements,modifications}.csv</code></td></tr>
+<tr><td>Single-file release workbook</td><td><code>OligoTox-Coagulopathy_Dataset.xlsx</code></td></tr>
+<tr><td>Data dictionary, controlled vocabularies, grading rubric</td><td><code>schema.md</code> (and the workbook's <code>data_dictionary</code> sheet)</td></tr>
+<tr><td>Methodology</td><td><code>METHODOLOGY.md</code></td></tr>
+<tr><td>Provenance registry</td><td><code>SOURCES.md</code>, <code>data/sources.csv</code></td></tr>
+<tr><td>Build, QC and verification code</td><td><code>scripts/</code></td></tr>
+<tr><td>Raw extraction records</td><td><code>sources/extraction/</code></td></tr>
+</table>
+<p><b>Not part of the solution:</b> the third-party source documents in <code>sources/documents/</code>.</p>
+<p>They are retrieved copies of other people's copyrighted works, held so that every row's</p>
+<p>evidence is auditable. They are <b>referenced, not relicensed</b>, and §2.3 governs them.</p>
+<h2>2. Licensing scheme</h2>
+<h3>2.1 The curated tables and documentation</h3>
+<p>Released under <b>Creative Commons Attribution 4.0 International (CC BY 4.0)</b>. Anyone may</p>
+<p>use, adapt and redistribute them, including commercially, with attribution. This is a</p>
+<p><b>non-exclusive</b> licence granted to the world; the team retains no power to withdraw it</p>
+<p>from anyone who has already received the data.</p>
+<h3>2.2 The code</h3>
+<p>Released under the <b>MIT licence</b>. The build, QC and verification scripts are what make</p>
+<p>the dataset reproducible and checkable, so they are licensed at least as permissively as</p>
+<p>the data.</p>
+<h3>2.3 Underlying sources — per-row terms, tracked</h3>
+<p>The dataset is a curation of published data, so redistribution rights vary by source and</p>
+<p>are recorded <b>per row</b> in the <code>redistribution</code> column rather than asserted globally:</p>
+<table>
+<tr><th>Term</th><th>Rows</th><th>What a user may do</th></tr>
+<tr><td><code>public_domain</code></td><td>1,382</td><td>US patents and FDA labels. Values may be reproduced freely.</td></tr>
+<tr><td><code>CC_BY_NC_ND</code></td><td>426</td><td>Cited; values recorded as data. Redistribute the source text only under its own terms.</td></tr>
+<tr><td><code>CC_BY</code></td><td>307</td><td>Fully redistributable with attribution.</td></tr>
+<tr><td><code>publisher_restricted</code></td><td>192</td><td>Cited; the extracted value is a fact, the source text is not redistributed.</td></tr>
+<tr><td><code>CC_BY_NC</code></td><td>76</td><td>Non-commercial reuse of the source text; the extracted values are cited facts.</td></tr>
+<tr><td><code>unresolved</code></td><td>5</td><td>Flagged for resolution before final release.</td></tr>
+</table>
+<p>The team's position, stated plainly: **individual measured values are facts and are not</p>
+<p>themselves copyrightable**; what is licensed under CC BY 4.0 is the curated compilation,</p>
+<p>its structure, its documentation and its code. Where a source's licence restricts</p>
+<p>redistribution of the *document*, that document is cited, and the release does not</p>
+<p>distribute it onward outside the audit copy. Users who wish to redistribute a source</p>
+<p>document itself must obtain it from its publisher under its own terms.</p>
+<h3>2.4 Attribution</h3>
+<p>Users must cite <b>both</b> this dataset and the underlying primary sources for the rows they</p>
+<p>use. <code>data/sources.csv</code> supplies the citation and identifier for every row, so the</p>
+<p>requirement is mechanically satisfiable.</p>
+<h2>3. Public access — hosting and persistence</h2>
+<p>1. <b>Primary:</b> a public GitHub repository, which is where the dataset is developed and</p>
+<p>   where its full revision history, including every correction, is visible.</p>
+<p>2. <b>Archival:</b> deposit of each tagged release in a <b>Zenodo</b> record, which mints a DOI,</p>
+<p>   is independent of the team's accounts, and persists if the repository is removed. The</p>
+<p>   DOI is the citable identifier.</p>
+<p>3. <b>Format:</b> UTF-8 CSV plus a single XLSX workbook. No proprietary format, no database</p>
+<p>   server, no API key. The CSVs are canonical; the workbook is generated from them.</p>
+<p>4. <b>No registration, no request process, no embargo.</b> Access is anonymous download.</p>
+<p>Persistence is not contingent on the team: the Zenodo record and the CC BY licence together</p>
+<p>mean the data survives the team's dissolution, loss of funding or loss of interest.</p>
+<h2>4. Dissemination</h2>
+<ul>
+<li><b>Announcement</b> to the oligonucleotide safety community — the Oligonucleotide Safety</li>
+</ul>
+<p>  Working Group, the TIDES/TIDE meetings and the DIA oligonucleotide conference are where</p>
+<p>  this audience is.</p>
+<ul>
+<li><b>A methods paper</b> describing the curation and the dataset, submitted to an open-access</li>
+</ul>
+<p>  venue, with the DOI as the persistent pointer.</p>
+<ul>
+<li><b>Registration in data indices</b> so the dataset is discoverable by search rather than only</li>
+</ul>
+<p>  by referral: re3data / FAIRsharing and Google Dataset Search via schema.org metadata.</p>
+<ul>
+<li><b>A worked example</b>, as an executable notebook, showing how to load the tables, apply the</li>
+</ul>
+<p>  two axis flags, filter on <code>grade_caveat</code>, and train a baseline model — because the single</p>
+<p>  most likely misuse of this dataset is to train across the on-target rows without the</p>
+<p>  flags, and documentation alone has not proved sufficient to prevent that.</p>
+<h2>5. Continuity and U.S. Government use contingency *(required)*</h2>
+<p>The Challenge requires a plan for the case where the winner does not maximise public access</p>
+<p>and does not permit others to do so on reasonable terms. **This dataset is structurally</p>
+<p>immune to that failure**, and the mechanism matters more than the promise:</p>
+<p>1. <b>The licence is irrevocable.</b> CC BY 4.0 cannot be withdrawn from anyone who has</p>
+<p>   received the work. If the team stops maintaining the dataset, every copy already</p>
+<p>   distributed remains fully usable, adaptable and redistributable.</p>
+<p>2. <b>The archival copy is outside the team's control.</b> A Zenodo deposit cannot be deleted</p>
+<p>   by the depositor at will; its DOI continues to resolve.</p>
+<p>3. <b>Reproducibility does not depend on the team.</b> The build, QC and verification scripts</p>
+<p>   are MIT-licensed and run from a clean checkout with no network access, so any third</p>
+<p>   party can rebuild the dataset from the committed extraction records and verify it</p>
+<p>   against the committed sources. Nothing about the pipeline requires a person.</p>
+<p>4. <b>Explicit grant to the U.S. Government.</b> The team grants the U.S. Government a</p>
+<p>   non-exclusive, irrevocable, royalty-free, worldwide right to use, reproduce, distribute</p>
+<p>   and prepare derivative works of the solution, and **to authorise others to do so on its</p>
+<p>   behalf**, for any purpose. This grant is not contingent on the team's continued</p>
+<p>   participation, and applies immediately, not only on the team's failure.</p>
+<p><b>Scenarios.</b></p>
+<table>
+<tr><th>Scenario</th><th>What happens</th></tr>
+<tr><td>Team continues normally</td><td>Team maintains the repository and issues versioned releases; DOI per release.</td></tr>
+<tr><td>Team stops maintaining</td><td>Zenodo record and CC BY licence keep the data available and reusable indefinitely. Any third party may fork and continue under §2.</td></tr>
+<tr><td>Team refuses a reasonable request</td><td>The requester does not need permission: CC BY 4.0 already grants it. There is no gate to refuse at.</td></tr>
+<tr><td>Team dissolves or is unreachable</td><td>§5.4 lets the U.S. Government authorise others directly; §5.3 means they can rebuild and verify without the team.</td></tr>
+</table>
+<h2>6. Maintenance and versioning</h2>
+<p>Semantic versioning on releases. Every release states its counts and its QC result. A</p>
+<p>correction is a new version, never a silent edit — the row-level corrections applied so far</p>
+<p>are committed as <code>sources/verification_corrections.json</code> and applied by the build, so the</p>
+<p>change is legible in the history rather than buried in a CSV diff.</p>
+<p><b>Known state at this version, disclosed rather than smoothed over:</b> all grades are</p>
+<p><code>provisional</code> and have had no subject-matter review; the open defects are enumerated in</p>
+<p><code>coagulopathy.md</code> §7. A user is entitled to know what is unfinished</p>
+<p>before they build on it.</p>
+<h2>7. Stewardship</h2>
+<p>Contact and issue tracking through the public repository, so requests and defects are</p>
+<p>visible to everyone rather than resolved privately. Defect reports against specific rows</p>
+<p>are welcome and are the reason <code>verbatim_quote</code> and <code>source_locus</code> exist on all 2,388 rows:</p>
+<p>any user can check any row against its source without asking the team for anything.</p>
+<h2>8. Compliance summary</h2>
+<table>
+<tr><th>Challenge requirement</th><th>Where met</th></tr>
+<tr><td>Dissemination of the solution and the knowledge to use it</td><td>§3, §4</td></tr>
+<tr><td>Non-exclusive licences for research purposes</td><td>§2.1, §2.2</td></tr>
+<tr><td>Provision for others to use it if the winner cannot</td><td>§5.1–§5.3, with scenarios</td></tr>
+<tr><td>Specific licensing schemes and scenarios</td><td>§2, §5 table</td></tr>
+<tr><td>U.S. Government authorisation of third parties</td><td>§5.4</td></tr>
+<tr><td>Public posting of this PADP</td><td>Agreed; this document is written for publication.</td></tr>
+</table></body></html>

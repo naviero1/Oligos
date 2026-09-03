@@ -16,9 +16,26 @@ what the repository held before this dataset existed, and what changed — is
 | Sources | **75** |
 | Oligos with a published sequence | 97 / 213 |
 | Graded rows (0/1/2/3) | 867 — 463 / 312 / 66 / 26 |
-| Structural QC | 45 / 45 checks pass |
+| Structural QC | 55 / 55 checks pass |
 | Numeric values located in their cited source | 1,876 / 1,876 |
 | Rows adversarially re-checked against sources | 174 — 0 fabrications found |
+| Human-system measurements | 886 (433 of them human in-vitro / ex-vivo) |
+| Animal-system measurements | 1,476 |
+| Compounds with both human and animal data | 30 of 213 |
+
+**Phase 2 submission package** — all four required parts, built by one command:
+
+| Deliverable | Limit | File |
+|---|---|---|
+| Narrative document | ≤12 pp | `OligoTox-Coagulopathy_Narrative.pdf` (5 pp) |
+| Methodology document | ≤5 pp | `OligoTox-Coagulopathy_Methodology.pdf` (5 pp) |
+| Public Access & Dissemination Plan | ≤5 pp | `OligoTox-Coagulopathy_PADP.pdf` (4 pp) |
+| Dataset + data dictionary | — | `OligoTox-Coagulopathy_Dataset.xlsx`, `data/*.csv`, `schema.md` |
+
+`python3 scripts/make_release.py` rebuilds all of it from the committed extraction records
+and fails rather than shipping: 55 structural checks, every numeric value re-checked against
+its source document, and the page limits enforced on the PDFs. Status assessment against the
+Phase 2 instructions and the work-plan: [`STATUS.md`](./STATUS.md).
 
 ```
 data/          oligos · measurements · modifications · sources  (the dataset)
@@ -41,6 +58,26 @@ python3 toxicity/coagulopathy/scripts/verify_against_sources.py  # values vs sou
 ```
 
 ---
+
+## Human versus animal
+
+`species_class` (`human` / `animal` / `not_determined`) and `human_system` carry this
+distinction — **not** `study_type`, which encodes the study design only. A purified-protein
+assay counts as a human system when the proteins are human, which is how 433 human in-vitro
+and ex-vivo rows become visible as human at all; `species_class_basis` records how each row
+was decided, and 26 rows whose source never states the origin stay `not_determined` rather
+than being quietly assigned.
+
+Only **30 of 213 compounds carry both human and animal data**. That is the ceiling on any
+translation claim built from this release.
+
+## One endpoint per folder
+
+Everything here is coagulopathy. 6 rows are marked `endpoint_scope = scope_adjacent` —
+a complement marker, a transcript level, blanket adverse-event statements — kept as context
+their extractor flagged, but never counted as coagulation measurements. A QC check fails the
+build if a readout is neither recognisably coagulation nor marked, and no source document in
+this folder is shared with another endpoint's.
 
 ## Read this before using the data: the dataset has two axes, not one
 

@@ -1,0 +1,206 @@
+<!doctype html><html><head><meta charset="utf-8"><title>OligoTox-Coagulopathy — Methodology</title>
+<style>
+@page { size: A4; margin: 17mm 16mm 15mm 16mm; }
+@page { @bottom-center { content: counter(page); } }
+* { box-sizing: border-box; }
+body { font: 9.6pt/1.45 "Georgia","DejaVu Serif",serif; color:#111; margin:0; }
+h1 { font-size: 17pt; line-height:1.15; margin:0 0 2pt; letter-spacing:-.2pt; }
+h2 { font-size: 11pt; margin: 13pt 0 4pt; color:#1F3864; border-bottom:.6pt solid #cfd6e4; padding-bottom:2pt; }
+h3 { font-size: 9.8pt; margin: 9pt 0 3pt; color:#1F3864; }
+p { margin: 0 0 6pt; text-align: justify; hyphens:auto; }
+.sub { color:#52514e; font-size:9pt; margin:0 0 10pt; }
+.rule { height:2.2pt; background:#1F3864; margin:6pt 0 9pt; }
+table { border-collapse: collapse; width:100%; font-size:8.4pt; margin:4pt 0 8pt; }
+th { background:#1F3864; color:#fff; text-align:left; padding:3pt 5pt; font-weight:600; }
+td { border-bottom:.5pt solid #dedcd5; padding:2.6pt 5pt; vertical-align:top; }
+td.n, th.n { text-align:right; }
+figure { margin:6pt 0 9pt; page-break-inside:avoid; }
+figure img { width:100%; }
+figcaption { font-size:8.1pt; color:#52514e; margin-top:3pt; }
+.kpis { display:flex; gap:6pt; margin:8pt 0 10pt; }
+.kpi { flex:1; border:.6pt solid #cfd6e4; border-top:2.2pt solid #1F3864; padding:5pt 6pt; }
+.kpi b { display:block; font-size:14pt; line-height:1.1; color:#1F3864; }
+.kpi span { font-size:7.6pt; color:#52514e; }
+.callout { border-left:2.4pt solid #eb6834; background:#fdf6f2; padding:6pt 8pt; margin:7pt 0; }
+.callout p:last-child { margin-bottom:0; }
+ul { margin:0 0 6pt; padding-left:14pt; } li { margin-bottom:2.5pt; }
+code { font-family:"DejaVu Sans Mono",monospace; font-size:8.2pt; background:#f2f1ec; padding:0 2px; }
+.small { font-size:8.4pt; color:#52514e; }
+.pb { page-break-before: always; }
+h2, h3 { page-break-after: avoid; } table, figure { page-break-inside: avoid; }
+</style></head><body>
+<h1>OligoTox-Coagulopathy — Methodology</h1><p class="sub">Materials and methods · NIH/NCATS Oligonucleotide Toxicity Open Data Challenge, Phase 2</p><div class="rule"></div>
+<p>Materials and methods for the coagulation-toxicity dataset, NIH/NCATS Oligonucleotide</p>
+<p>Toxicity Open Data Challenge, Phase 2.</p>
+<h2>1. Design</h2>
+<p>This is a <b>curated dataset</b>. No wet-lab experiment was performed. The methods below are</p>
+<p>therefore of two kinds, kept strictly apart: <b>(a)</b> the experimental methods of the source</p>
+<p>studies, recorded as each source states them, and <b>(b)</b> the curation methods used to</p>
+<p>find, extract, verify and harmonise them. Conflating the two would let curation choices</p>
+<p>masquerade as experimental fact.</p>
+<p>Snapshot: **213 oligonucleotides · 2,388 measurements · 941 per-position modification</p>
+<p>records · 75 sources.**</p>
+<h2>2. Scope — what counts as this endpoint</h2>
+<p>Included: clotting times (aPTT, PT/INR, TT, ACT), fibrinogen, D-dimer, thrombin generation,</p>
+<p>coagulation-factor and antithrombin activity, anti-Xa/anti-IIa activity, and bleeding or</p>
+<p>thrombotic outcomes a source attributes to a coagulation defect.</p>
+<p>Excluded, deliberately: <b>platelet count alone</b>. Thrombocytopenia is a separate Challenge</p>
+<p>endpoint with its own dossier at <code>../thrombocytopenia.md</code>. A</p>
+<p>platelet-related row appears here only where the source ties it to a cascade readout, and</p>
+<p>says so in <code>notes</code>. This boundary was set before extraction, after finding that the</p>
+<p>repository's largest existing store of "coagulation-adjacent" text — 16 hits on one page of</p>
+<p>a review already held — is entirely thrombocytopenia and belongs to that endpoint.</p>
+<p>Both <b>unintended coagulopathy</b> and <b>on-target anticoagulant/procoagulant pharmacology</b></p>
+<p>are in scope, on separate flags, because the second is where nearly all published</p>
+<p>per-compound clotting numbers live and because bleeding risk from an on-target</p>
+<p>anticoagulant is a genuine safety signal. They are never pooled: see README.</p>
+<h2>3. Source identification</h2>
+<p>Eight independent search axes were run in parallel — mechanism/in-vitro assays; clinical</p>
+<p>trials; nonclinical toxicology; siRNA and LNP; aptamers; regulatory labels; patents;</p>
+<p>reviews used as a citation map. Each axis was required to <b>retrieve and open</b> a candidate</p>
+<p>and quote the coagulation passage before reporting it; nothing entered the work-list on the</p>
+<p>strength of a title or a search summary. 96 raw candidates were merged to 73 distinct</p>
+<p>sources, then triaged into an extraction work-list ranked by whether the source gives</p>
+<p>per-compound numbers, per-compound qualitative statements, or class-level prose only.</p>
+<p>Two results of that pass are worth recording because they are negative:</p>
+<ul>
+<li><b>The project's only previously recorded lead was closed.</b> <code>coagulopathy.md</code> named</li>
+</ul>
+<p>  Crooke et al. (2016), *Mol Ther* 24(10):1771–1782, as the single lead for this endpoint,</p>
+<p>  on the strength of its title. It was retrieved and read: it does not report the</p>
+<p>  per-compound coagulation values the title implies. It is recorded as context, not as a</p>
+<p>  source of rows.</p>
+<ul>
+<li>Three sources whose granularity two axes disagreed about were resolved <b>downward</b>, to</li>
+</ul>
+<p>  qualitative, because their values live only in figure panels.</p>
+<h2>4. Retrieval</h2>
+<p>All documents were retrieved directly; no value in this dataset comes from a search-engine</p>
+<p>summary. This is a deliberate break from the sibling kidney dataset, which was built under</p>
+<p>a network policy that blocked outbound fetch and whose own validation file concluded that</p>
+<p>its search-derived clinical rows had produced a provenance/outcome confound. Routes used:</p>
+<table>
+<tr><th>Route</th><th>Sources</th></tr>
+<tr><td>PMC / Europe PMC open-access JATS full text</td><td>27</td></tr>
+<tr><td>NLM DailyMed SPL XML (US prescribing information)</td><td>8</td></tr>
+<tr><td>NCBI eutils PubMed abstract (where no open full text exists)</td><td>8</td></tr>
+<tr><td>USPTO grant text</td><td>7</td></tr>
+<tr><td>Other staged full text and supplementary files</td><td>25</td></tr>
+</table>
+<p>Every retrieved document is committed to <code>sources/documents/</code>, so</p>
+<p>each row's evidence can be re-read from the repository without network access. One</p>
+<p>supplementary PDF could not be retrieved; the 14 rows citing it are flagged and excluded</p>
+<p>from source verification rather than quietly passed.</p>
+<h2>5. Extraction</h2>
+<p>Sources were divided into 14 bundles by compound family and document type, and read</p>
+<p>individually. Extraction rules, enforced by the output contract:</p>
+<ul>
+<li>Every measurement carries a <b>verbatim quote</b> and an <b>exact locus</b> (table number,</li>
+</ul>
+<p>  figure panel, section heading, label section, page). A row that could not be quoted was</p>
+<p>  not written.</p>
+<ul>
+<li><b>No value was read off a figure.</b> Where a number exists only in a plotted panel, the</li>
+</ul>
+<p>  row carries <code>NOT_REPORTED</code> with <code>readout_is_qualitative = TRUE</code>. This cost real yield —</p>
+<p>  one source's entire PT/aPTT time course is a figure — and the loss is recorded rather</p>
+<p>  than recovered by pixel-reading.</p>
+<ul>
+<li><b>Per-position chemistry is transcribed, never modelled.</b> A <code>modifications</code> row exists</li>
+</ul>
+<p>  only where the source publishes position-resolved chemistry, and each row records in</p>
+<p>  <code>basis</code> how the position was determined, normally the source's own case legend quoted</p>
+<p>  verbatim.</p>
+<ul>
+<li>Severity is recorded <b>in the source's own words</b>; no grade was assigned during</li>
+</ul>
+<p>  extraction.</p>
+<h2>6. Oligonucleotide identity, purity and characterisation</h2>
+<p>The Challenge requires the methods used to purify and characterise oligo identity. The</p>
+<p>compounds were synthesised by the source laboratories, so what can be reported is what each</p>
+<p>source states, and <code>purity_pct</code> is <b><code>NOT_REPORTED</code> for all 213 compounds</b>. No purity</p>
+<p>value was estimated, inferred from a synthesis platform, or carried across from another</p>
+<p>compound. Where a source states a synthesis platform, purification method or identity</p>
+<p>confirmation, it populates <code>synthesis_platform</code>, <code>purity_method</code> and</p>
+<p><code>identity_confirmation</code>. This absence is a property of the published literature, not of the</p>
+<p>curation: per-compound purity is almost never published alongside toxicity results.</p>
+<p>Identity here means the printed sequence together with its per-position chemistry.</p>
+<p>97 of 213 compounds have a published sequence; 47 have position-resolved chemistry. QC</p>
+<p>checks that every declared length equals the actual string (plus any documented terminal</p>
+<p>residue) and that every modification row's nucleobase matches the sequence at that</p>
+<p>position.</p>
+<h2>7. Harmonisation and grading</h2>
+<p>Categorical fields use the controlled vocabularies in <code>schema.md</code>. Grading</p>
+<p>is mechanical, from the control-referenced ratio, by <b>CTCAE v5.0</b> cut-offs — a published</p>
+<p>standard, not thresholds invented here — and only for the readouts CTCAE defines. 942 of</p>
+<p>2,388 rows are graded; the remaining 1,446 each state in <code>grade_basis</code> why no published</p>
+<p>rule applies. The one deviation, applying CTCAE's limit-of-normal ratios to a</p>
+<p>matched-control ratio, is named in every graded row's <code>grade_basis</code> so it cannot be</p>
+<p>overlooked. All grades are <code>provisional</code>.</p>
+<h2>8. Predictor variables and their distribution</h2>
+<table>
+<tr><th>Variable</th><th>Distribution (n = 213 compounds)</th></tr>
+<tr><td>Class</td><td>aptamer 59 · ASO gapmer 58 · other 36 · GalNAc-siRNA 28 · siRNA 13 · tcDNA-ASO 7 · PMO 4 · polydisperse ssDNA 3 · ASO mixmer 2 · CpG ODN 2 · SSO 1</td></tr>
+<tr><td>Backbone</td><td>not reported 98 · full-PS 57 · mixed PO/PS 34 · full-PO 14 · PMO-neutral 4 · other/NA 4</td></tr>
+<tr><td>Sequence published</td><td>97 / 213</td></tr>
+<tr><td>Position-resolved chemistry</td><td>47 / 213 (941 position records)</td></tr>
+</table>
+<h2>9. Indicator variables and their distribution</h2>
+<table>
+<tr><th>Variable</th><th>Distribution (n = 2,388 measurements)</th></tr>
+<tr><td>Readout category</td><td>clotting time 1,160 · factor activity 387 · bleeding outcome 240 · thrombotic outcome 220 · fibrinogen 144 · platelet–coagulation crosstalk 83 · anticoagulant activity 76 · thrombin generation 47 · fibrinolysis marker 31</td></tr>
+<tr><td>Readout (top)</td><td>aPTT 599 · PT 376 · fibrinogen 140 · FXI activity 108 · antithrombin activity 75 · TT 37 · ACT 25</td></tr>
+<tr><td>Study type</td><td>animal in vivo 1,430 · clinical 453 · in vitro 297 · ex vivo human plasma 205</td></tr>
+<tr><td>Species</td><td>human 850 · monkey 818 · mouse 569 · rat 33 · pig 21 · minipig 17 · other 11 · not applicable 69</td></tr>
+<tr><td>Effect direction</td><td>increase 702 · no change 573 · decrease 544 · not reported 449 · not applicable (pre-dose baseline) 120</td></tr>
+<tr><td>Grade</td><td>ungraded 1,521 · 0 → 463 · 1 → 312 · 2 → 66 · 3 → 26 (155 grades flagged <code>within_reference_range_resolution</code>)</td></tr>
+<tr><td>Axis</td><td>on-target only 1,576 · unintended only 289 · both 144 · neither 379</td></tr>
+</table>
+<p><b>On negative controls.</b> 573 rows carry a measured null (<code>effect_direction = no_change</code>),</p>
+<p>and they are the class most at risk of meaning "nobody looked". The extraction contract</p>
+<p>required that a null be written only where the source reports a measured null, with</p>
+<p>reporting silence recorded separately in <code>notes</code>; the verification pass tested this</p>
+<p>stratum specifically, because a prior review of the sibling kidney dataset found its</p>
+<p>negative class was substantially "nobody looked" rather than "looked and found nothing".</p>
+<p><b>That defect does not repeat here</b>: four independent reviewers tried to break the null</p>
+<p>class and could not — the nulls are measured nulls, and unmeasured endpoints are typed</p>
+<p><code>NOT_REPORTED</code> with notes saying so explicitly.</p>
+<h2>10. Quality control</h2>
+<p>Two committed scripts, both exiting non-zero on failure:</p>
+<ul>
+<li><code>validate_dataset.py</code> — 45 structural checks (keys, referential integrity, vocabularies,</li>
+</ul>
+<p>  grade reproducibility, sequence/modification consistency, roll-ups, and nine invariants</p>
+<p>  added after verification). All pass. Defects caught during the build, and their fixes,</p>
+<p>  are logged in <code>schema.md</code>.</p>
+<ul>
+<li><code>verify_against_sources.py</code> — re-reads the committed documents and confirms every numeric</li>
+</ul>
+<p>  readout appears in the source its row cites. <b>1,876 / 1,876 located.</b></p>
+<p>Structural QC proves internal consistency; source verification proves the numbers were not</p>
+<p>invented. Neither proves a number was read from the *right* cell, so a third pass did that</p>
+<p>by hand: 174 rows re-checked by reviewers instructed to refute them (117 confirmed, 50</p>
+<p>corrected, 2 refuted, 5 unverifiable, no fabrication). Ten defect classes were found and</p>
+<p>corrected in the build; the residue is carried as open issues. Both the corrections and the</p>
+<p>residue are documented in <code>coagulopathy.md</code>.</p>
+<h2>11. Limitations</h2>
+<p>Stated in full in <code>README.md</code>. In brief: grades are</p>
+<p>provisional and mechanical; no clinical compound has a published sequence; PMO chemistry</p>
+<p>rests on regulatory silence rather than a measured null; prothrombotic rows come</p>
+<p>overwhelmingly from one compound family; the quantified PS class effect rests</p>
+<p>overwhelmingly on one study; figure-only values were not digitised.</p>
+<h2>12. Reproducibility</h2>
+<p>Deterministic and fully committed. From a clean checkout, with no network access:</p>
+<p><code>build_dataset.py</code> → <code>validate_dataset.py</code> → <code>verify_against_sources.py</code>. The build reads</p>
+<p>the committed extraction records in <code>sources/extraction/</code> and writes <code>data/</code>; it uses only</p>
+<p>the Python standard library. Every number in this document and in <code>README.md</code> is</p>
+<p>recomputable from <code>data/</code>.</p>
+<h2>13. Intended use for predictive modelling</h2>
+<p>The four-table design exposes sequence, per-position chemistry and design predictors</p>
+<p>against graded, per-condition coagulation outcomes. The two axis flags are not optional</p>
+<p>metadata: any model trained across <code>on_target_effect = TRUE</code> rows without them will learn</p>
+<p>that anticoagulant drugs prolong clotting times, which is true, circular and useless for</p>
+<p>safety prediction. The intended target is the <b>unintended</b> class — the</p>
+<p>hybridization-independent, Cmax-driven prolongation associated with phosphorothioate</p>
+<p>content — with the on-target rows serving as a mechanistically-explained positive class and</p>
+<p>the 604 measured nulls as negatives.</p></body></html>

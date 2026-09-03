@@ -1,0 +1,66 @@
+{
+  "_README": "Human-versus-animal resolution for rows whose species field is NOT_APPLICABLE (purified-protein or unspecified assay systems). Produced by reading each source's Materials and Methods and quoting the sentence that names the species of origin. Applied by build_dataset.py. Source-level entries apply to every unresolved row of that source; row_overrides are matched on (source_id, system_model) for sources whose assays differ. A source that never states the origin is recorded as not_stated and its rows stay species_class = not_determined -- the field-customary inference (a commercial purified protein is 'probably human') is deliberately NOT made.",
+  "resolutions": [
+    {
+      "source_id": "COG-S004",
+      "species_class": "human",
+      "locus": "PMC3508133 Methods > Materials",
+      "basis_quote": "Human coagulation factors II, VII, IX and X were isolated from fresh frozen plasma using the methods of Bajaj et al. and Jenny et al.",
+      "confidence": "high",
+      "note": "All assays in this source, including the synthetic coagulation proteome, are built from human factors."
+    },
+    {
+      "source_id": "COG-S010",
+      "species_class": "human",
+      "locus": "PMC11087511 Methods > Materials",
+      "basis_quote": "Human alpha thrombin, human factor Xa, and human fibrinogen were purchased from Haematologic Technologies Inc.",
+      "confidence": "high"
+    },
+    {
+      "source_id": "COG-S037",
+      "species_class": "animal",
+      "locus": "US 9,150,864 Example 3",
+      "basis_quote": "BALB/c mice were injected with 5 mg/kg, 10 mg/kg, 25 mg/kg, or 50 mg/kg of ISIS 410944, ISIS 410973, ISIS 410974, or ISIS 410975, administered subcutaneously twice a week for 3 weeks.",
+      "confidence": "high",
+      "note": "Every worked example in the patent is rodent; no human system appears anywhere in it."
+    },
+    {
+      "source_id": "COG-S036",
+      "species_class": "animal",
+      "locus": "US 10,858,658 Examples 12-15",
+      "basis_quote": "On day 1, two cynomolgus macaque (Macaca fascicularis) primates (both male, 5.0 kg and 8.15 kg, respectively) were co-injected with 2 mg/kg RNAi trigger (AD01001) and 2 mg/kg MLP delivery polymer.",
+      "confidence": "high"
+    }
+  ],
+  "row_overrides": [
+    {
+      "source_id": "COG-S009",
+      "system_model": "fluorogenic peptidyl substrate cleavage by clot-bound versus free thrombin",
+      "species_class": "human",
+      "locus": "PMC12822440, 'Inhibition of Clot-Bound Thrombin'",
+      "basis_quote": "Plasma clots were prepared in a 96-well plate by adding 20 uL of citrated pooled human plasma (George King Bio-Medical) to 20 uL of 25 mm CaCl2 solution.",
+      "confidence": "high",
+      "note": "The thrombin measured is endogenous thrombin trapped in a clot formed from human plasma, the clot having been washed to remove free thrombin. The comparator arm uses a purified thrombin whose species the paper never states."
+    },
+    {
+      "source_id": "COG-S062",
+      "system_model": "mechanism comparison against heparin",
+      "species_class": "animal",
+      "locus": "PMID 9361909 abstract",
+      "basis_quote": "Prolongation of APTT was also achieved by addition of ISIS 2302 to citrated blood from untreated monkeys, allowing the investigation of the mechanism of inhibition in vitro.",
+      "confidence": "medium",
+      "note": "The species attaches through the text's own chain (monkey blood -> 'allowing the investigation of the mechanism' -> 'Additional in vitro studies'), but the mechanism sentence does not itself repeat the species; hence medium."
+    }
+  ],
+  "not_stated": [
+    {"source_id": "COG-S057", "note": "'human' modifies 'plasma' in the one candidate sentence, not the purified thrombin-time components."},
+    {"source_id": "COG-S058", "note": "The only species-bearing sentence attaches to the aPTT-in-plasma framing statement, not to the 8 purified/reconstituted assays."},
+    {"source_id": "COG-S035", "note": "Rows are reporting-silence records drawn from prophetic boilerplate; no assay, no species."},
+    {"source_id": "COG-S034", "note": "Row is anchored to a definitions-section list of candidate assessment variables; names no system."},
+    {"source_id": "COG-S015", "note": "US 7,538,211 Example 6B names no species, subject, route or group size."},
+    {"source_id": "COG-S073", "note": "Ki values are a Discussion recollection of work done elsewhere; this paper ran no purified-thrombin experiment."},
+    {"source_id": "COG-S074", "note": "The pegaptanib aPTT claim is cited from elsewhere; no pegaptanib experiment exists in this paper."},
+    {"source_id": "COG-S009", "note": "Five purified-protein rows: 'Thrombin, fibrinogen, and the thrombin fluorogenic substrate were obtained from Prolytix' -- no species, no catalogue numbers. Not upgraded to human on the strength of a supplier's catalogue being predominantly human."},
+    {"source_id": "COG-S062", "note": "Two purified-enzyme rows: neither the enzymes nor the substrates are given a species anywhere in the document."}
+  ]
+}

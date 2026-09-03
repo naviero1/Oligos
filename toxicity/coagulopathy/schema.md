@@ -56,7 +56,10 @@ One row per source document. 75 rows.
 | `sugar_modifications`, `gapmer_design`, `conjugate`, `ps_count` | Design predictors. |
 | `purity_pct`, `purity_method`, `identity_confirmation`, `synthesis_platform` | The Challenge's oligo-characterisation requirement, recorded as each source states it. `purity_pct` is `NOT_REPORTED` for every compound — see METHODOLOGY §3. |
 | `source_ids` | `;`-separated sources that describe this compound. |
-| `n_measurements`, `notes` | Roll-up and free text. |
+| `n_measurements` | Measurement rows for this compound. |
+| `n_human_measurements`, `n_animal_measurements` | Rows in a human and in an animal system. |
+| `has_human_and_animal_data` | `TRUE` where the compound carries **both** — a human/animal translation pair, the shape the Challenge calls "of particular interest". Derived, never asserted; QC re-derives it. |
+| `notes` | Free text. |
 
 ## `data/modifications.csv` — per-position chemistry
 
@@ -81,8 +84,11 @@ Challenge's requirement for "the location of all chemical modifications in each 
 |---|---|
 | `measurement_id` | Primary key, `COG-MSRnnnn`. |
 | `oligo_id`, `source_id` | Foreign keys. |
-| `study_type` | `in_vitro` \| `ex_vivo_human_plasma` \| `animal_invivo` \| `clinical`. |
-| `species` | `human` \| `monkey` \| `minipig` \| `pig` \| `rat` \| `mouse` \| `dog` \| `rabbit` \| `sheep` \| `cow` \| `guinea_pig` \| `NOT_APPLICABLE` (purified system). |
+| `study_type` | `in_vitro` \| `ex_vivo_plasma` \| `animal_invivo` \| `clinical`. Carries the **design only**. It deliberately encodes no species: an earlier value `ex_vivo_human_plasma` did, and 8 rows of pig plasma, baboon and cynomolgus blood were filed under it. A QC check now fails the build if any `study_type` value names a species. |
+| `species` | `human` \| `monkey` \| `minipig` \| `pig` \| `rat` \| `mouse` \| `dog` \| `rabbit` \| `sheep` \| `cow` \| `guinea_pig` \| `NOT_APPLICABLE` (purified system). As the source states it. |
+| `species_class` | **`human` \| `animal` \| `not_determined`** — the human-versus-animal axis, and the column to filter on. `species` alone cannot answer this: a purified-protein assay carries `species = NOT_APPLICABLE` while being, in several sources here, a purified **human** protein system. |
+| `species_class_basis` | How `species_class` was decided: `species_field`, `system_model_names_human_material`, `source_verified:<locus>`, or `system_origin_not_stated_by_source`. |
+| `human_system` | `TRUE` where the measurement is made in a human subject, human tissue, plasma or cells, or purified/recombinant human proteins. This is the Challenge's "in vitro human system" criterion made queryable. |
 | `system_model`, `matrix` | Model/subject, and `plasma` \| `whole_blood` \| `serum` \| `in_vivo` \| `purified_system`. |
 | `delivery_method`, `dose_value`, `dose_unit`, `timepoint`, `exposure_duration`, `n_subjects` | Exposure. `n_subjects` matters: several clinical rows are badly underpowered and that must be visible. |
 | `readout_category` | `clotting_time` \| `factor_activity` \| `fibrinogen` \| `thrombin_generation` \| `fibrinolysis_marker` \| `anticoagulant_activity` \| `bleeding_outcome` \| `thrombotic_outcome` \| `platelet_coag_crosstalk`. |
@@ -109,6 +115,22 @@ Challenge's requirement for "the location of all chemical modifications in each 
 | `notes` | Free text, including method limitations and reporting-silence flags. |
 
 ---
+
+## Human versus animal
+
+The Challenge states that datasets "based on in vitro human systems or able to extrapolate
+data between in vitro human systems and animal data are of particular interest", so the
+release has to be able to answer *which rows are human* from the table itself.
+
+Three columns do that: `species_class` (the axis), `species_class_basis` (how each row was
+decided) and `human_system` (the boolean form of the criterion). **`study_type` is not part
+of the answer** — it now carries the study design only.
+
+A purified or recombinant protein assay counts as a **human** system when the proteins are
+human. "Purified human α-thrombin", "recombinant human factor VIII" and the Butenas/Mann
+synthetic coagulation proteome are human in-vitro systems; bovine thrombin or murine plasma
+are not. Rows whose source never states the origin are `not_determined` — not quietly
+assigned to either class.
 
 ## `coag_tox_grade` rubric (0–3)
 

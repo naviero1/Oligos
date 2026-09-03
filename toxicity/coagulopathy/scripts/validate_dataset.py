@@ -54,7 +54,7 @@ check("FK: modifications.oligo_id -> oligos", not bad, f"{len(bad)} orphans: {ba
 
 # ---- 8-12 controlled vocabularies ------------------------------------------
 VOCAB = {
- "study_type": {"in_vitro", "ex_vivo_human_plasma", "animal_invivo", "clinical", NR},
+ "study_type": {"in_vitro", "ex_vivo_plasma", "animal_invivo", "clinical", NR},
  "readout_category": {"clotting_time", "factor_activity", "fibrinogen", "thrombin_generation",
                       "fibrinolysis_marker", "anticoagulant_activity", "bleeding_outcome",
                       "thrombotic_outcome", "platelet_coag_crosstalk", NR},
@@ -223,6 +223,51 @@ check("percent-inhibition rows are not read as percent-of-control", not bad, f"{
 bad = [r["measurement_id"] for r in D
        if r["co_administered_agent"] != NA and r["notes"].strip() == ""]
 check("a combination row keeps the note that documents its partner agent", not bad, f"{len(bad)}: {bad[:5]}")
+
+
+bad = sorted({r["study_type"] for r in D if re.search(r"human|mouse|rat|monkey|pig|dog", r["study_type"], re.I)})
+check("no study_type value encodes a species (species_class carries that)", not bad, f"{bad}")
+
+for col, allowed in (("species_class", {"human", "animal", "not_determined"}),
+                     ("human_system", {"TRUE", "FALSE"})):
+    bad = sorted({r[col] for r in D if r[col] not in allowed})
+    check(f"vocabulary: measurements.{col}", not bad, f"unexpected {bad[:5]}")
+
+bad = [r["measurement_id"] for r in D
+       if (r["species_class"] == "human") != (r["human_system"] == "TRUE")]
+check("human_system agrees with species_class", not bad, f"{len(bad)}: {bad[:5]}")
+
+bad = [r["measurement_id"] for r in D if not str(r["species_class_basis"]).strip()]
+check("every species_class states how it was determined", not bad, f"{len(bad)}: {bad[:5]}")
+
+cntH = Counter(r["oligo_id"] for r in D if r["species_class"] == "human")
+cntA = Counter(r["oligo_id"] for r in D if r["species_class"] == "animal")
+bad = [r["oligo_id"] for r in O
+       if int(r["n_human_measurements"]) != cntH.get(r["oligo_id"], 0)
+       or int(r["n_animal_measurements"]) != cntA.get(r["oligo_id"], 0)]
+check("oligos human/animal roll-ups agree with measurements.csv", not bad, f"{len(bad)}: {bad[:5]}")
+
+bad = [r["oligo_id"] for r in O
+       if (r["has_human_and_animal_data"] == "TRUE") !=
+          bool(cntH.get(r["oligo_id"], 0) and cntA.get(r["oligo_id"], 0))]
+check("has_human_and_animal_data is derived, not asserted", not bad, f"{len(bad)}: {bad[:5]}")
+
+
+bad = sorted({r["endpoint_scope"] for r in D if r["endpoint_scope"] not in {"coagulation", "scope_adjacent"}})
+check("vocabulary: measurements.endpoint_scope", not bad, f"unexpected {bad[:5]}")
+
+# The coagulation lexicon is imported from the build so the two cannot drift apart.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from build_dataset import COAG_LEXICON as LEX
+
+bad = sorted({r["readout_name"] for r in D
+              if r["endpoint_scope"] == "coagulation" and not LEX.search(r["readout_name"])})
+check("every in-scope readout is a coagulation readout (else mark it scope_adjacent)", not bad,
+      f"{len(bad)} unrecognised: {bad[:6]}")
+
+bad = [r["measurement_id"] for r in D
+       if r["endpoint_scope"] == "scope_adjacent" and r["endpoint_scope_note"] in ("", NA)]
+check("every scope_adjacent row says why it is out of scope", not bad, f"{len(bad)}: {bad[:5]}")
 
 # ---- report -----------------------------------------------------------------
 w = max(len(n) for n, _, _ in checks)
