@@ -1,34 +1,208 @@
 ClinicalTrials.gov extraction audit trail
 ============================================================
-payloads scanned: 29
-rows emitted: 323
+payloads scanned: 203
+rows emitted: 733
 
+NCT00094835 (imetelstat) — 39 serious terms, 191 other terms, threshold=5, tierA_serious=no
+NCT00101907 (imetelstat) — 42 serious terms, 246 other terms, threshold=5, tierA_serious=no
+NCT00138658 (custirsen) — 40 serious terms, 85 other terms, threshold=5, tierA_serious=no
+NCT00159250 (eteplirsen) — 0 serious terms, 5 other terms, threshold=0, tierA_serious=no
+NCT00239928 (pegaptanib) — 20 serious terms, 11 other terms, threshold=5, tierA_serious=no
+NCT00242580 (pegaptanib) — 36 serious terms, 58 other terms, threshold=5, tierA_serious=no
+NCT00324116 (pegaptanib) — 9 serious terms, 5 other terms, threshold=5, tierA_serious=no
+NCT00327340 (custirsen) — 23 serious terms, 67 other terms, threshold=5, tierA_serious=no
+NCT00327470 (pegaptanib) — 59 serious terms, 266 other terms, threshold=0, tierA_serious=no
+NCT00358501 (defibrotide) — 83 serious terms, 23 other terms, threshold=5, tierA_serious=no
+NCT00362180 (mipomersen) — 1 serious terms, 115 other terms, threshold=0, tierA_serious=no
+NCT00406107 (pegaptanib) — 0 serious terms, 1 other terms, threshold=5, tierA_serious=no
+NCT00427349 (imetelstat) — 33 serious terms, 37 other terms, threshold=5, tierA_serious=no
+NCT00460408 (pegaptanib) — 26 serious terms, 56 other terms, threshold=0, tierA_serious=no
+NCT00477594 (mipomersen) — 6 serious terms, 121 other terms, threshold=0, tierA_serious=no
+NCT00549055 (pegaptanib) — 0 serious terms, 1 other terms, threshold=5, tierA_serious=no
+NCT00574951 (imetelstat) — 10 serious terms, 61 other terms, threshold=0, tierA_serious=no
+NCT00605280 (pegaptanib) — 97 serious terms, 33 other terms, threshold=5, tierA_serious=no
+NCT00607373 (mipomersen) — 3 serious terms, 93 other terms, threshold=0, tierA_serious=no
 NCT00628498 (defibrotide) — 278 serious terms, 3 other terms, threshold=5, tierA_serious=YES
+NCT00694109 (mipomersen) — 45 serious terms, 508 other terms, threshold=0, tierA_serious=no
+NCT00706849 (mipomersen) — 8 serious terms, 274 other terms, threshold=0, tierA_serious=no
+NCT00707746 (mipomersen) — 1 serious terms, 149 other terms, threshold=0, tierA_serious=no
+NCT00735943 (pegaptanib) — 0 serious terms, 3 other terms, threshold=0, tierA_serious=no
+NCT00761280 (trabedersen) — 12 serious terms, 100 other terms, threshold=5, tierA_serious=no
+NCT00770146 (mipomersen) — 12 serious terms, 273 other terms, threshold=0, tierA_serious=no
+NCT00787319 (pegaptanib) — 2 serious terms, 17 other terms, threshold=0, tierA_serious=no
+NCT00790803 (pegaptanib) — 0 serious terms, 0 other terms, threshold=0, tierA_serious=no
+NCT00794664 (mipomersen) — 9 serious terms, 132 other terms, threshold=0, tierA_serious=no
+NCT00844597 (eteplirsen) — 2 serious terms, 63 other terms, threshold=5, tierA_serious=no
+NCT00858208 (pegaptanib) — 1 serious terms, 6 other terms, threshold=0, tierA_serious=no
+NCT01100307 (pegaptanib) — 30 serious terms, 9 other terms, threshold=5, tierA_serious=no
+NCT01189461 (pegaptanib) — 3 serious terms, 31 other terms, threshold=0, tierA_serious=no
+NCT01245387 (pegaptanib) — 14 serious terms, 13 other terms, threshold=0, tierA_serious=no
+NCT01396239 (eteplirsen) — 0 serious terms, 45 other terms, threshold=5, tierA_serious=no
+NCT01475825 (mipomersen) — 75 serious terms, 29 other terms, threshold=5, tierA_serious=no
+NCT01486238 (pegaptanib) — 15 serious terms, 0 other terms, threshold=0, tierA_serious=no
+NCT01540409 (eteplirsen) — 4 serious terms, 200 other terms, threshold=5, tierA_serious=no
+NCT01573572 (pegaptanib) — 18 serious terms, 2 other terms, threshold=5, tierA_serious=no
+NCT01617967 (patisiran) — 5 serious terms, 44 other terms, threshold=5, tierA_serious=no
+NCT01681433 (apatorsen) — 24 serious terms, 176 other terms, threshold=0, tierA_serious=no
 NCT01703988 (nusinersen) — 3 serious terms, 89 other terms, threshold=0, tierA_serious=no
+NCT01731951 (imetelstat) — 10 serious terms, 75 other terms, threshold=5, tierA_serious=no
+NCT01737398 (inotersen) — 60 serious terms, 70 other terms, threshold=5, tierA_serious=no
+NCT01780545 (apatorsen) — 79 serious terms, 252 other terms, threshold=0, tierA_serious=no
+NCT01829113 (apatorsen) — 59 serious terms, 95 other terms, threshold=5, tierA_serious=no
 NCT01836549 (imetelstat) — 24 serious terms, 80 other terms, threshold=0, tierA_serious=YES
+NCT01839604 (danvatirsen) — 11 serious terms, 43 other terms, threshold=5, tierA_serious=no
 NCT01839656 (nusinersen) — 43 serious terms, 237 other terms, threshold=0, tierA_serious=no
+NCT01844817 (apatorsen) — 66 serious terms, 64 other terms, threshold=5, tierA_serious=no
+NCT01960348 (patisiran) — 128 serious terms, 58 other terms, threshold=5, tierA_serious=no
+NCT01961921 (patisiran) — 17 serious terms, 50 other terms, threshold=5, tierA_serious=no
+NCT02175004 (inotersen) — 111 serious terms, 61 other terms, threshold=5, tierA_serious=no
 NCT02193074 (nusinersen) — 92 serious terms, 51 other terms, threshold=5, tierA_serious=no
+NCT02211209 (volanesorsen) — 10 serious terms, 65 other terms, threshold=5, tierA_serious=no
+NCT02255552 (eteplirsen) — 18 serious terms, 61 other terms, threshold=5, tierA_serious=no
+NCT02286947 (eteplirsen) — 4 serious terms, 47 other terms, threshold=5, tierA_serious=no
 NCT02292537 (nusinersen) — 21 serious terms, 25 other terms, threshold=5, tierA_serious=no
+NCT02300233 (volanesorsen) — 15 serious terms, 60 other terms, threshold=5, tierA_serious=no
+NCT02310906 (golodirsen) — 9 serious terms, 105 other terms, threshold=5, tierA_serious=no
 NCT02386553 (nusinersen) — 39 serious terms, 355 other terms, threshold=5, tierA_serious=no
+NCT02417753 (danvatirsen) — 10 serious terms, 24 other terms, threshold=0, tierA_serious=no
+NCT02420379 (eteplirsen) — 5 serious terms, 59 other terms, threshold=5, tierA_serious=no
+NCT02426086 (imetelstat) — 60 serious terms, 97 other terms, threshold=5, tierA_serious=no
 NCT02462759 (nusinersen) — 38 serious terms, 187 other terms, threshold=5, tierA_serious=no
-NCT02519036 (tominersen) — 1 serious terms, 87 other terms, threshold=5, tierA_serious=no
+NCT02499328 (danvatirsen) — 150 serious terms, 676 other terms, threshold=0, tierA_serious=no
+NCT02510261 (patisiran) — 220 serious terms, 111 other terms, threshold=5, tierA_serious=no
+NCT02519036 SKIPPED — no oligonucleotide mapping recorded
+NCT02525523 (alicaforsen) — 6 serious terms, 5 other terms, threshold=5, tierA_serious=no
+NCT02527343 (volanesorsen) — 21 serious terms, 207 other terms, threshold=5, tierA_serious=no
+NCT02530905 (casimersen) — 5 serious terms, 89 other terms, threshold=5, tierA_serious=no
+NCT02554773 (fitusiran) — 22 serious terms, 181 other terms, threshold=0, tierA_serious=no
 NCT02594124 (nusinersen) — 221 serious terms, 353 other terms, threshold=5, tierA_serious=no
+NCT02597127 (inclisiran) — 88 serious terms, 25 other terms, threshold=5, tierA_serious=no
+NCT02598661 (imetelstat) — 110 serious terms, 129 other terms, threshold=5, tierA_serious=no
 NCT02623699 (tofersen) — 22 serious terms, 149 other terms, threshold=5, tierA_serious=no
+NCT02639286 (volanesorsen) — 1 serious terms, 11 other terms, threshold=5, tierA_serious=no
+NCT02658175 (volanesorsen) — 17 serious terms, 126 other terms, threshold=5, tierA_serious=no
+NCT02706886 (lumasiran) — 6 serious terms, 78 other terms, threshold=0, tierA_serious=no
+NCT02851407 (defibrotide) — 151 serious terms, 82 other terms, threshold=5, tierA_serious=no
+NCT02876601 (defibrotide) — 0 serious terms, 11 other terms, threshold=1, tierA_serious=no
+NCT02949830 (givosiran) — 13 serious terms, 147 other terms, threshold=5, tierA_serious=no
+NCT02963311 (inclisiran) — 1 serious terms, 14 other terms, threshold=0, tierA_serious=no
+NCT03060577 (inclisiran) — 149 serious terms, 793 other terms, threshold=0, tierA_serious=no
 NCT03070119 (tofersen) — 86 serious terms, 132 other terms, threshold=5, tierA_serious=no
+NCT03140969 (sepofarsen) — 1 serious terms, 24 other terms, threshold=5, tierA_serious=no
 NCT03186989 (BIIB080) — 8 serious terms, 141 other terms, threshold=5, tierA_serious=no
+NCT03218995 (eteplirsen) — 1 serious terms, 107 other terms, threshold=0, tierA_serious=no
 NCT03225833 (WVE-120101) — 12 serious terms, 109 other terms, threshold=5, tierA_serious=no
 NCT03225846 (WVE-120102) — 18 serious terms, 114 other terms, threshold=5, tierA_serious=no
+NCT03334617 (danvatirsen) — 132 serious terms, 207 other terms, threshold=5, tierA_serious=no
+NCT03338816 (givosiran) — 81 serious terms, 91 other terms, threshold=5, tierA_serious=no
+NCT03339297 (defibrotide) — 82 serious terms, 122 other terms, threshold=5, tierA_serious=no
 NCT03342053 (tominersen) — 19 serious terms, 51 other terms, threshold=5, tierA_serious=YES
+NCT03350451 (lumasiran) — 10 serious terms, 98 other terms, threshold=5, tierA_serious=no
+NCT03384693 (defibrotide) — 1 serious terms, 0 other terms, threshold=5, tierA_serious=no
+NCT03397121 (inclisiran) — 51 serious terms, 5 other terms, threshold=5, tierA_serious=no
 NCT03399370 (inclisiran) — 234 serious terms, 4 other terms, threshold=5, tierA_serious=YES
-NCT03532542 (casimersen_or_golodirsen) — 44 serious terms, 43 other terms, threshold=5, tierA_serious=no
+NCT03400800 (inclisiran) — 266 serious terms, 5 other terms, threshold=5, tierA_serious=no
+NCT03417102 (fitusiran) — 17 serious terms, 23 other terms, threshold=5, tierA_serious=no
+NCT03417245 (fitusiran) — 13 serious terms, 13 other terms, threshold=5, tierA_serious=no
+NCT03532542 (casimersen; golodirsen) — 44 serious terms, 43 other terms, threshold=5, tierA_serious=no
+NCT03549871 (fitusiran) — 16 serious terms, 37 other terms, threshold=5, tierA_serious=no
+NCT03681184 (lumasiran) — 8 serious terms, 155 other terms, threshold=0, tierA_serious=no
+NCT03728634 (eplontersen) — 0 serious terms, 20 other terms, threshold=0, tierA_serious=no
+NCT03759379 (patisiran; vutrisiran) — 50 serious terms, 22 other terms, threshold=5, tierA_serious=no
 NCT03761849 (tominersen) — 116 serious terms, 28 other terms, threshold=5, tierA_serious=YES
+NCT03794544 (danvatirsen) — 13 serious terms, 113 other terms, threshold=0, tierA_serious=no
+NCT03814187 (inclisiran) — 559 serious terms, 1410 other terms, threshold=0, tierA_serious=no
 NCT03842969 (tominersen) — 33 serious terms, 68 other terms, threshold=5, tierA_serious=YES
+NCT03847909 (nedosiran) — 4 serious terms, 42 other terms, threshold=5, tierA_serious=no
+NCT03851705 (inclisiran) — 25 serious terms, 74 other terms, threshold=0, tierA_serious=no
+NCT03862807 (patisiran) — 11 serious terms, 19 other terms, threshold=5, tierA_serious=no
+NCT03905694 (lumasiran) — 2 serious terms, 98 other terms, threshold=5, tierA_serious=no
+NCT03913130 (sepofarsen) — 1 serious terms, 33 other terms, threshold=0, tierA_serious=no
+NCT03954106 (defibrotide) — 17 serious terms, 107 other terms, threshold=5, tierA_serious=no
+NCT03985878 (eteplirsen) — 1 serious terms, 101 other terms, threshold=0, tierA_serious=no
+NCT03997383 (patisiran) — 109 serious terms, 21 other terms, threshold=5, tierA_serious=no
 NCT04000594 (tominersen) — 2 serious terms, 39 other terms, threshold=5, tierA_serious=no
+NCT04030598 (donidalorsen) — 0 serious terms, 6 other terms, threshold=5, tierA_serious=no
+NCT04060199 (viltolarsen) — 6 serious terms, 54 other terms, threshold=5, tierA_serious=no
 NCT04089566 (nusinersen) — 69 serious terms, 222 other terms, threshold=0, tierA_serious=no
+NCT04136184 (eplontersen; inotersen) — 54 serious terms, 54 other terms, threshold=5, tierA_serious=no
+NCT04152200 (lumasiran) — 20 serious terms, 55 other terms, threshold=5, tierA_serious=no
+NCT04153149 (vutrisiran) — 380 serious terms, 43 other terms, threshold=5, tierA_serious=no
+NCT04179409 (casimersen; eteplirsen; golodirsen) — 0 serious terms, 18 other terms, threshold=0, tierA_serious=no
+NCT04306510 (inotersen) — 0 serious terms, 11 other terms, threshold=0, tierA_serious=no
+NCT04307381 (donidalorsen) — 1 serious terms, 119 other terms, threshold=5, tierA_serious=no
 NCT04494256 (BIIB105) — 33 serious terms, 154 other terms, threshold=5, tierA_serious=no
+NCT04530604 (defibrotide) — 10 serious terms, 13 other terms, threshold=0, tierA_serious=no
+NCT04568434 (olezarsen) — 17 serious terms, 30 other terms, threshold=5, tierA_serious=no
 NCT04617847 (WVE-120101) — 6 serious terms, 12 other terms, threshold=5, tierA_serious=no
 NCT04617860 (WVE-120102) — 8 serious terms, 70 other terms, threshold=5, tierA_serious=no
-NCT04856982 (tofersen) — no posted results; contributes no row (recorded in SOURCES.md as results-not-posted)
+NCT04652726 (inclisiran) — 9 serious terms, 18 other terms, threshold=3, tierA_serious=no
+NCT04659863 (inclisiran) — 0 serious terms, 28 other terms, threshold=0, tierA_serious=no
+NCT04666298 (inclisiran) — 24 serious terms, 18 other terms, threshold=5, tierA_serious=no
+NCT04807400 (inclisiran) — 106 serious terms, 6 other terms, threshold=0, tierA_serious=no
+NCT04856982 SKIPPED — no oligonucleotide mapping recorded
+NCT04873934 (inclisiran) — 80 serious terms, 8 other terms, threshold=3, tierA_serious=no
+NCT04929249 (inclisiran) — 89 serious terms, 7 other terms, threshold=3, tierA_serious=no
+NCT04956289 (viltolarsen) — 0 serious terms, 35 other terms, threshold=5, tierA_serious=no
+NCT05001269 (nedosiran) — 5 serious terms, 61 other terms, threshold=5, tierA_serious=no
 NCT05032196 (WVE-003) — 2 serious terms, 86 other terms, threshold=5, tierA_serious=no
+NCT05085964 (ultevursen) — 0 serious terms, 5 other terms, threshold=5, tierA_serious=no
+NCT05139810 (donidalorsen) — 1 serious terms, 20 other terms, threshold=5, tierA_serious=no
+NCT05158296 (ultevursen) — 0 serious terms, 14 other terms, threshold=0, tierA_serious=no
+NCT05161936 (lumasiran) — 0 serious terms, 2 other terms, threshold=0, tierA_serious=no
+NCT05176717 (ultevursen) — 0 serious terms, 10 other terms, threshold=0, tierA_serious=no
+NCT05192941 (inclisiran) — 229 serious terms, 23 other terms, threshold=1.999, tierA_serious=no
+NCT05330455 (bepirovirsen) — 0 serious terms, 61 other terms, threshold=0, tierA_serious=no
+NCT05355402 (olezarsen) — 23 serious terms, 25 other terms, threshold=5, tierA_serious=no
 NCT05386680 EXCLUDED — OAV101 (onasemnogene abeparvovec) is an AAV9 gene therapy, not an oligonucleotide. Out of the Challenge's scope. Retained in sources/raw/ as an available same-route, same-disease non-oligonucleotide comparator; contributes no row.
-NCT05686551 (tominersen) — no posted results; contributes no row (recorded in SOURCES.md as results-not-posted)
+NCT05583552 (imetelstat) — 32 serious terms, 164 other terms, threshold=0, tierA_serious=no
+NCT05635045 (patisiran; vutrisiran) — 0 serious terms, 1 other terms, threshold=0, tierA_serious=no
+NCT05686551 SKIPPED — no oligonucleotide mapping recorded
+NCT05763875 (inclisiran) — 1 serious terms, 12 other terms, threshold=2, tierA_serious=no
+NCT05814666 (danvatirsen) — 51 serious terms, 52 other terms, threshold=5, tierA_serious=no
+NCT05888103 (inclisiran) — 13 serious terms, 4 other terms, threshold=5, tierA_serious=no
+NCT06058390 (bepirovirsen) — 0 serious terms, 92 other terms, threshold=0, tierA_serious=no
+NCT06422767 (bepirovirsen) — 0 serious terms, 31 other terms, threshold=0, tierA_serious=no
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded

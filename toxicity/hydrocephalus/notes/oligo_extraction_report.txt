@@ -1,4 +1,4 @@
-oligos.csv build report, 2026-08-29
+oligos.csv build report, 2026-09-03
 ================================================================
 nusinersen                 label=yes parsed=backbone_chemistry,formulation,molecular_formula,molecular_weight,sugar_modifications
 tofersen                   label=yes parsed=backbone_chemistry,formulation,length_nt,modification_pattern,molecular_formula,molecular_weight,sugar_modifications
@@ -33,5 +33,20 @@ mipomersen                 label=no  parsed=none
 pegaptanib                 label=no  parsed=none
 defibrotide                label=yes parsed=none
 imetelstat                 label=yes parsed=molecular_formula
+alicaforsen                        auto-added from trial registry (1 trials, route topical_enema)
+apatorsen                          auto-added from trial registry (4 trials, route intravenous)
+bepirovirsen                       auto-added from trial registry (3 trials, route subcutaneous)
+casimersen; eteplirsen; golodirsen auto-added from trial registry (1 trials, route NOT_REPORTED)
+casimersen; golodirsen             auto-added from trial registry (1 trials, route intravenous)
+custirsen                          auto-added from trial registry (2 trials, route intravenous)
+danvatirsen                        auto-added from trial registry (6 trials, route intravenous)
+donidalorsen                       auto-added from trial registry (3 trials, route subcutaneous)
+eplontersen; inotersen             auto-added from trial registry (1 trials, route subcutaneous)
+fitusiran                          auto-added from trial registry (4 trials, route subcutaneous)
+olezarsen                          auto-added from trial registry (2 trials, route subcutaneous)
+patisiran; vutrisiran              auto-added from trial registry (2 trials, route subcutaneous)
+sepofarsen                         auto-added from trial registry (2 trials, route intravitreal)
+trabedersen                        auto-added from trial registry (1 trials, route subcutaneous)
+ultevursen                         auto-added from trial registry (3 trials, route intravitreal)
 placebo_or_sham_control    (non-compound placeholder)
 NOT_APPLICABLE             (non-compound placeholder)

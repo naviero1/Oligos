@@ -22,12 +22,12 @@ one."* This directory is that second dataset.
 
 | | Count |
 |---|---:|
-| Measurement rows | **914** |
-| Oligonucleotides described | **35** |
-| — of which carry at least one measurement | 30 |
-| Distinct sources | 59 |
-| Tier-A rows with a positive finding | 60 |
-| Tier-A rows that are explicit measured negatives | 328 |
+| Measurement rows | **1324** |
+| Oligonucleotides described | **50** |
+| — of which carry at least one measurement | 44 |
+| Distinct sources | 189 |
+| Tier-A rows with a positive finding | 61 |
+| Tier-A rows that are explicit measured negatives | 735 |
 | Grade-3 (severe) rows | 22 |
 | Oligonucleotides with a published sequence | 10 |
 | QC checks run / failed | 44 / 0 |
@@ -36,8 +36,8 @@ one."* This directory is that second dataset.
 
 | Tier | Rows |
 |---|---:|
-| A | 389 |
-| B | 525 |
+| A | 797 |
+| B | 527 |
 
 **Study type**
 
@@ -46,7 +46,7 @@ one."* This directory is that second dataset.
 | animal_invivo | 5 |
 | background_epidemiology | 3 |
 | clinical_case | 15 |
-| clinical_trial | 347 |
+| clinical_trial | 757 |
 | pharmacovigilance | 456 |
 | regulatory_label | 88 |
 
@@ -54,8 +54,8 @@ one."* This directory is that second dataset.
 
 | Ascertainment | Rows |
 |---|---:|
-| measured_null | 697 |
-| measured_positive | 216 |
+| measured_null | 1106 |
+| measured_positive | 217 |
 | not_assessed | 1 |
 
 **Attribution, as stated by the source** — what the SOURCE concluded about causation. `not_discussed` dominates because registry and pharmacovigilance records carry no causality assessment at all — that is a property of those sources, not an omission here
@@ -64,28 +64,28 @@ one."* This directory is that second dataset.
 |---|---:|
 | disease_attributed | 3 |
 | drug_attributed | 30 |
-| not_discussed | 881 |
+| not_discussed | 1291 |
 
 **Toxicity axis** — `disease_background_rate` rows carry no compound; `delivery_procedure_complication` rows are attributable to the lumbar puncture rather than to any molecule
 
 | Axis | Rows |
 |---|---:|
-| csf_composition_disturbance | 200 |
+| csf_composition_disturbance | 210 |
 | csf_dynamics | 1 |
-| csf_pressure_disturbance | 124 |
-| delivery_procedure_complication | 198 |
+| csf_pressure_disturbance | 126 |
+| delivery_procedure_complication | 188 |
 | disease_background_rate | 3 |
 | therapeutic_ventricular_effect | 2 |
-| ventricular_enlargement | 386 |
+| ventricular_enlargement | 794 |
 
 **Severity grade** — rubric in [`SCHEMA.md`](SCHEMA.md#hydroceph_grade-rubric-03); all grades are provisional
 
 | `hydroceph_grade` | Rows |
 |---|---:|
 | *(not graded)* | 26 |
-| 0 | 697 |
-| 1 | 101 |
-| 2 | 68 |
+| 0 | 1106 |
+| 1 | 94 |
+| 2 | 76 |
 | 3 | 22 |
 
 **Delivery route** — systemically dosed oligonucleotides are included as a deliberate route contrast
@@ -93,22 +93,25 @@ one."* This directory is that second dataset.
 | Route | Rows |
 |---|---:|
 | NOT_APPLICABLE | 3 |
+| NOT_REPORTED | 124 |
 | intracerebroventricular | 3 |
-| intrathecal_lumbar | 414 |
-| intravenous | 216 |
-| intravitreal | 24 |
-| subcutaneous | 254 |
+| intrathecal_lumbar | 321 |
+| intravenous | 359 |
+| intravitreal | 59 |
+| oral | 1 |
+| subcutaneous | 452 |
+| topical_enema | 2 |
 
 **Readout category**
 
 | Category | Rows |
 |---|---:|
-| csf_composition | 178 |
-| csf_dynamics | 64 |
-| csf_pressure | 124 |
+| csf_composition | 188 |
+| csf_dynamics | 66 |
+| csf_pressure | 126 |
 | histopathology_choroid_ependyma | 1 |
-| hydrocephalus_event | 221 |
-| procedure_complication | 177 |
+| hydrocephalus_event | 629 |
+| procedure_complication | 165 |
 | shunt_or_drain_intervention | 43 |
 | ventricular_morphometry | 106 |
 
@@ -118,7 +121,7 @@ one."* This directory is that second dataset.
 |---|---:|
 | cc_by | 8 |
 | cc_by_nc | 3 |
-| public_domain | 880 |
+| public_domain | 1290 |
 | summary_stat_only | 15 |
 | verify | 8 |
 
@@ -134,20 +137,20 @@ one."* This directory is that second dataset.
 | `N1-SPAK` | 2 |
 | `N2-AQP4` | 3 |
 
-**Largest sources** (top 10 of 59)
+**Largest sources** (top 10 of 189)
 
 | `source_id` | Rows |
 |---|---:|
 | `FAERS_openFDA` | 456 |
-| `NCT02519036` | 36 |
 | `NCT02594124` | 36 |
 | `NCT02623699` | 36 |
 | `NCT03070119` | 24 |
 | `NCT03761849` | 24 |
 | `NCT03186989` | 22 |
+| `NCT03334617` | 22 |
 | `NCT03225846` | 21 |
-| `NCT05032196` | 18 |
-| `NCT03842969` | 15 |
+| `NCT02499328` | 19 |
+| `NCT02519036` | 18 |
 
 <!-- END GENERATED -->
 

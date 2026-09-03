@@ -414,6 +414,57 @@ def main():
         report.append("%-26s label=%-3s parsed=%s" % (
             name, "yes" if desc else "no", ",".join(sorted(parsed)) or "none"))
 
+    # ---- compounds present in the trial registry but not curated above -----
+    # Identity comes from ClinicalTrials.gov: the compound name, the route the
+    # trials' own text states, and the conditions they enrol. Everything else is
+    # NOT_REPORTED. These are route-contrast and negative-evidence compounds; the
+    # alternative to carrying them thinly is dropping their trials, which would
+    # reintroduce exactly the selection bias the registry was built to remove.
+    reg_path = os.path.join(ROOT, "data", "trial_registry.csv")
+    if os.path.exists(reg_path):
+        seen = {r["oligo_name"] for r in rows}
+        by_drug = {}
+        with open(reg_path) as fh:
+            for r in csv.DictReader(fh):
+                if r["excluded_reason"]:
+                    continue
+                by_drug.setdefault(r["drug"], []).append(r)
+        for drug, trials in sorted(by_drug.items()):
+            if drug in seen:
+                continue
+            routes = [t["route"] for t in trials if t["route"] != "NOT_REPORTED"]
+            route = max(set(routes), key=routes.count) if routes else "NOT_REPORTED"
+            conds = sorted({c.strip() for t in trials
+                            for c in t["conditions"].split(";") if c.strip()})
+            composite = "; " in drug
+            rows.append(dict(
+                oligo_name=drug, aliases="", oligo_class="NOT_REPORTED",
+                modality="NOT_REPORTED", target_gene="NOT_REPORTED",
+                indication="; ".join(conds)[:160] or "NOT_REPORTED",
+                developer="NOT_REPORTED", max_phase="NOT_REPORTED",
+                route_of_administration=route, length_nt="NOT_REPORTED",
+                length_nt_basis="NOT_REPORTED",
+                sequence_5to3_asprinted="NOT_REPORTED", sequence_base="NOT_REPORTED",
+                sequence_source="NOT_REPORTED", backbone_chemistry="NOT_REPORTED",
+                sugar_modifications="NOT_REPORTED", modification_pattern="NOT_REPORTED",
+                gapmer_shape="NOT_APPLICABLE", molecular_formula="NOT_REPORTED",
+                molecular_weight="NOT_REPORTED", conjugate="NOT_REPORTED",
+                formulation="NOT_REPORTED", purity_pct="NOT_REPORTED",
+                purity_method="NOT_REPORTED", identity_confirmation="NOT_REPORTED",
+                synthesis_platform="NOT_REPORTED", design_source_text="NOT_REPORTED",
+                identity_source="ClinicalTrials.gov trial registry (%d trials)"
+                                % len(trials),
+                source_location="; ".join(t["nct_id"] for t in trials[:8]),
+                redistribution="public_domain",
+                notes=(("COMPOSITE: the trials matched by this label do not separate "
+                        "the named compounds, so rows carrying it must not be "
+                        "attributed to any one of them. " if composite else "") +
+                       "Identity and route from ClinicalTrials.gov only; chemistry "
+                       "and sequence NOT_REPORTED. Carried so its trials' negative "
+                       "evidence is not lost. Retrieved %s." % TODAY)))
+            report.append("%-34s auto-added from trial registry (%d trials, route %s)"
+                          % (drug, len(trials), route))
+
     for name, why in NON_COMPOUND:
         rows.append(dict(
             oligo_name=name, aliases="", oligo_class="NOT_APPLICABLE",

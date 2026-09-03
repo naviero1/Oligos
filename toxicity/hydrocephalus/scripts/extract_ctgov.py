@@ -137,49 +137,37 @@ def grade_for(term_key, serious, n_affected):
 # 3. Oligonucleotide identity per trial. Written out explicitly rather than
 #    parsed from free-text intervention names.
 # --------------------------------------------------------------------------
-TRIAL_OLIGO = {
-    # --- CNS-delivered (intrathecal) oligonucleotides: the exposed class -----
-    "NCT01703988": "nusinersen", "NCT01839656": "nusinersen",
-    "NCT02193074": "nusinersen", "NCT02292537": "nusinersen",
-    "NCT02386553": "nusinersen", "NCT02462759": "nusinersen",
-    "NCT02594124": "nusinersen", "NCT04089566": "nusinersen",
-    "NCT02623699": "tofersen", "NCT03070119": "tofersen", "NCT04856982": "tofersen",
-    "NCT02519036": "tominersen", "NCT03342053": "tominersen",
-    "NCT03761849": "tominersen", "NCT03842969": "tominersen",
-    "NCT04000594": "tominersen", "NCT05686551": "tominersen",
-    "NCT03186989": "BIIB080", "NCT04494256": "BIIB105",
-    "NCT03225833": "WVE-120101", "NCT04617847": "WVE-120101",
-    "NCT03225846": "WVE-120102", "NCT04617860": "WVE-120102",
-    "NCT05032196": "WVE-003",
-    # --- Systemically delivered oligonucleotides: the ROUTE-CONTRAST control -
-    # These reach the CSF only across an intact blood-brain barrier. If the
-    # hydrocephalus signal is a property of intrathecal delivery rather than of
-    # oligonucleotide chemistry, these arms must be null. They are included so
-    # that prediction is testable, not assumed.
-    "NCT00628498": "defibrotide", "NCT01836549": "imetelstat",
-    "NCT03399370": "inclisiran", "NCT03532542": "casimersen_or_golodirsen",
-}
-
-# Route per trial. Never inferred from the compound alone — the same molecule
-# can be dosed by more than one route.
-TRIAL_ROUTE = {
-    "intrathecal_lumbar": {
-        "NCT01703988", "NCT01839656", "NCT02193074", "NCT02292537", "NCT02386553",
-        "NCT02462759", "NCT02594124", "NCT04089566", "NCT02623699", "NCT03070119",
-        "NCT04856982", "NCT02519036", "NCT03342053", "NCT03761849", "NCT03842969",
-        "NCT04000594", "NCT05686551", "NCT03186989", "NCT04494256", "NCT03225833",
-        "NCT03225846", "NCT04617847", "NCT04617860", "NCT05032196",
-    },
-    "intravenous": {"NCT00628498", "NCT01836549", "NCT03532542"},
-    "subcutaneous": {"NCT03399370"},
-}
+# Trial -> compound and route come from data/trial_registry.csv, built by
+# scripts/discover_ctgov_trials.py, which asks ClinicalTrials.gov for EVERY
+# oligonucleotide trial with posted results rather than relying on a hand-picked
+# list. Route is taken from each trial's own intervention and arm descriptions,
+# with the matched sentence kept in the registry as `route_evidence`.
+#
+# The earlier hand-written map of 23 trials biased the dataset toward compounds
+# already suspected of causing this endpoint and omitted the negative evidence
+# that makes the positives interpretable.
+REGISTRY = {}
+_reg_path = os.path.join(ROOT, "data", "trial_registry.csv")
+if os.path.exists(_reg_path):
+    with open(_reg_path) as _fh:
+        for _r in csv.DictReader(_fh):
+            if _r["excluded_reason"]:
+                continue
+            REGISTRY[_r["nct_id"]] = _r
 
 
 def route_for(nct):
-    for route, ncts in TRIAL_ROUTE.items():
-        if nct in ncts:
-            return route
-    return "NOT_REPORTED"
+    r = REGISTRY.get(nct)
+    return r["route"] if r else "NOT_REPORTED"
+
+
+def drug_for(nct):
+    r = REGISTRY.get(nct)
+    if not r:
+        return None
+    # A trial matched by two compound queries (e.g. a head-to-head) keeps both
+    # names joined, so the row is never silently attributed to one of them.
+    return r["drug"]
 
 
 # Excluded, with the reason recorded rather than silently dropped:
@@ -190,12 +178,13 @@ EXCLUDED_TRIALS = {
                    "non-oligonucleotide comparator; contributes no row.",
 }
 
-# --------------------------------------------------------------------------
-# 4. Comparator arms. Explicit per trial, because several trials carry more
-#    than one placebo group and an automatic rule would mis-pair them.
-#    Value: {treated_event_group_id: comparator_event_group_id}
-#    A trial absent from this map has no concurrent control arm.
-# --------------------------------------------------------------------------
+
+# Comparator arms, explicit per trial where a trial carries MORE THAN ONE control
+# group and an automatic rule would mis-pair them. A trial absent from this map
+# falls back to: if it has exactly one control group, that is the comparator for
+# every treated arm; if it has none or several, comparator is NOT_APPLICABLE
+# rather than a guess. With 157 trials this fallback governs most of them, and a
+# missing comparator is recorded as missing rather than invented.
 COMPARATOR = {
     # GENERATION HD1: two cohorts, each with its own placebo group.
     "NCT03761849": {"EG001": "EG000", "EG002": "EG000",      # ODC cohort -> PLB ODC
@@ -241,7 +230,7 @@ def main():
         if nct in EXCLUDED_TRIALS:
             report.append(f"{nct} EXCLUDED — {EXCLUDED_TRIALS[nct]}")
             continue
-        oligo = TRIAL_OLIGO.get(nct)
+        oligo = drug_for(nct)
         if oligo is None:
             report.append(f"{nct} SKIPPED — no oligonucleotide mapping recorded")
             continue
