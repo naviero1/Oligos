@@ -277,6 +277,38 @@ def main():
     check("data dictionary documents no column that does not exist", not phantom,
           "phantom: %s" % phantom[:8])
 
+    # 11e endpoint isolation — no other toxicity's material may leak in ----
+    #     Requested explicitly: the endpoints are separate deliverables and their
+    #     files must not mix. This makes that a check rather than a convention.
+    # Word-boundary anchored. An earlier version used bare substrings and matched
+    # "de-LIVER-y_procedure_complication" and "de-LIVER-y_route" — the check was
+    # wrong, not the data.
+    FOREIGN = re.compile(r"nephrotox|\bkidney\b|\brenal\b|proximal_tubule|"
+                         r"glomerul|hepatotox|\bliver\b|\bALT\b|\bAST\b|"
+                         r"thrombocytopen|\bplatelet\b|complement_activation|"
+                         r"coagulopath|cns_tox_grade|nephrotox_grade|immunotox|"
+                         r"cytokine_release", re.I)
+    # Columns that legitimately mention other organs as CONTEXT (a compound's
+    # indication, a source's title, free-text notes) are exempt; the graded and
+    # categorical columns are not.
+    GRADED_COLS = ["readout_category", "readout_name", "tox_axis", "endpoint_tier",
+                   "cns_compartment", "hydroceph_grade", "grade_status",
+                   "ascertainment", "subject_class"]
+    bad = []
+    for r in m:
+        for c in GRADED_COLS:
+            if FOREIGN.search(r.get(c, "")):
+                bad.append("%s.%s=%s" % (r["measurement_id"], c, r[c]))
+    check("no other endpoint's vocabulary in the graded columns", not bad,
+          "%d hits e.g. %s" % (len(bad), bad[:4]))
+
+    foreign_cols = [c for c in m[0] if FOREIGN.search(c)]
+    check("no other endpoint's column in measurements", not foreign_cols,
+          "columns: %s" % foreign_cols)
+    foreign_cols = [c for c in o[0] if FOREIGN.search(c)]
+    check("no other endpoint's column in oligos", not foreign_cols,
+          "columns: %s" % foreign_cols)
+
     # 12 background rows carry no compound ---------------------------------
     bad = [r["measurement_id"] for r in m
            if r["tox_axis"] == "disease_background_rate"

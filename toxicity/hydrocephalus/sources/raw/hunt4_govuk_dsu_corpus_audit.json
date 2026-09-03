@@ -1,0 +1,330 @@
+{
+ "antisense oligonucleotide": {
+  "results": [
+   {
+    "title": "Nusinersen (Spinraza\u25bc): reports of communicating hydrocephalus; discuss symptoms with patients and carers and investigate urgently ",
+    "link": "/drug-safety-update/nusinersen-spinraza-reports-of-communicating-hydrocephalus-discuss-symptoms-with-patients-and-carers-and-investigate-urgently",
+    "public_timestamp": "2018-09-25T13:02:19Z",
+    "index": "govuk",
+    "es_score": 0.04936593,
+    "_id": "/drug-safety-update/nusinersen-spinraza-reports-of-communicating-hydrocephalus-discuss-symptoms-with-patients-and-carers-and-investigate-urgently",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   }
+  ],
+  "total": 1,
+  "start": 0,
+  "aggregates": {},
+  "suggested_queries": [],
+  "suggested_autocomplete": [],
+  "es_cluster": "A"
+ },
+ "hydrocephalus": {
+  "results": [
+   {
+    "title": "Nusinersen (Spinraza\u25bc): reports of communicating hydrocephalus; discuss symptoms with patients and carers and investigate urgently ",
+    "link": "/drug-safety-update/nusinersen-spinraza-reports-of-communicating-hydrocephalus-discuss-symptoms-with-patients-and-carers-and-investigate-urgently",
+    "public_timestamp": "2018-09-25T13:02:19Z",
+    "index": "govuk",
+    "es_score": 0.20144768,
+    "_id": "/drug-safety-update/nusinersen-spinraza-reports-of-communicating-hydrocephalus-discuss-symptoms-with-patients-and-carers-and-investigate-urgently",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "Letters and drug alerts sent to healthcare professionals in July 2018",
+    "link": "/drug-safety-update/letters-and-drug-alerts-sent-to-healthcare-professionals-in-july-2018",
+    "public_timestamp": "2018-08-24T13:56:18Z",
+    "index": "govuk",
+    "es_score": 0.026930911,
+    "_id": "/drug-safety-update/letters-and-drug-alerts-sent-to-healthcare-professionals-in-july-2018",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   }
+  ],
+  "total": 2,
+  "start": 0,
+  "aggregates": {},
+  "suggested_queries": [],
+  "suggested_autocomplete": [],
+  "es_cluster": "A"
+ },
+ "nusinersen": {
+  "results": [
+   {
+    "title": "Nusinersen (Spinraza\u25bc): reports of communicating hydrocephalus; discuss symptoms with patients and carers and investigate urgently ",
+    "link": "/drug-safety-update/nusinersen-spinraza-reports-of-communicating-hydrocephalus-discuss-symptoms-with-patients-and-carers-and-investigate-urgently",
+    "public_timestamp": "2018-09-25T13:02:19Z",
+    "index": "govuk",
+    "es_score": 0.19392163,
+    "_id": "/drug-safety-update/nusinersen-spinraza-reports-of-communicating-hydrocephalus-discuss-symptoms-with-patients-and-carers-and-investigate-urgently",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "Letters and drug alerts sent to healthcare professionals in July 2018",
+    "link": "/drug-safety-update/letters-and-drug-alerts-sent-to-healthcare-professionals-in-july-2018",
+    "public_timestamp": "2018-08-24T13:56:18Z",
+    "index": "govuk",
+    "es_score": 0.06645899,
+    "_id": "/drug-safety-update/letters-and-drug-alerts-sent-to-healthcare-professionals-in-july-2018",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   }
+  ],
+  "total": 2,
+  "start": 0,
+  "aggregates": {},
+  "suggested_queries": [],
+  "suggested_autocomplete": [],
+  "es_cluster": "A"
+ },
+ "tofersen": {
+  "results": [],
+  "total": 0,
+  "start": 0,
+  "aggregates": {},
+  "suggested_queries": [],
+  "suggested_autocomplete": [],
+  "es_cluster": "A"
+ },
+ "ventriculomegaly": {
+  "results": [],
+  "total": 0,
+  "start": 0,
+  "aggregates": {},
+  "suggested_queries": [],
+  "suggested_autocomplete": [],
+  "es_cluster": "A"
+ },
+ "intracranial pressure": {
+  "results": [
+   {
+    "title": "Mesalazine and idiopathic intracranial hypertension",
+    "link": "/drug-safety-update/mesalazine-and-idiopathic-intracranial-hypertension",
+    "public_timestamp": "2025-12-04T14:00:32Z",
+    "index": "govuk",
+    "es_score": 0.05057995,
+    "_id": "/drug-safety-update/mesalazine-and-idiopathic-intracranial-hypertension",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "Cyproterone acetate: new advice to minimise risk of meningioma",
+    "link": "/drug-safety-update/cyproterone-acetate-new-advice-to-minimise-risk-of-meningioma",
+    "public_timestamp": "2020-06-29T14:20:15Z",
+    "index": "govuk",
+    "es_score": 0.02642819,
+    "_id": "/drug-safety-update/cyproterone-acetate-new-advice-to-minimise-risk-of-meningioma",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "Tredaptive (combined niacin-laropiprant): no longer for prescribing ",
+    "link": "/drug-safety-update/tredaptive-combined-niacin-laropiprant-no-longer-for-prescribing",
+    "public_timestamp": "2014-12-11T14:34:10Z",
+    "index": "govuk",
+    "es_score": 0.0009243052,
+    "_id": "/drug-safety-update/tredaptive-combined-niacin-laropiprant-no-longer-for-prescribing",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "New oral anticoagulants apixaban (Eliquis\u25bc), dabigatran (Pradaxa) and rivaroxaban (Xarelto\u25bc)",
+    "link": "/drug-safety-update/new-oral-anticoagulants-apixaban-eliquis-dabigatran-pradaxa-and-rivaroxaban-xarelto",
+    "public_timestamp": "2014-12-11T14:35:50Z",
+    "index": "govuk",
+    "es_score": 0.0008500841,
+    "_id": "/drug-safety-update/new-oral-anticoagulants-apixaban-eliquis-dabigatran-pradaxa-and-rivaroxaban-xarelto",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "Hydroxyethyl starch intravenous infusions ",
+    "link": "/drug-safety-update/hydroxyethyl-starch-intravenous-infusions",
+    "public_timestamp": "2014-12-19T09:57:33Z",
+    "index": "govuk",
+    "es_score": 0.00084612943,
+    "_id": "/drug-safety-update/hydroxyethyl-starch-intravenous-infusions",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "High-dose cyproterone acetate: potential risk of (multiple) meningiomas",
+    "link": "/drug-safety-update/high-dose-cyproterone-acetate-potential-risk-of-multiple-meningiomas",
+    "public_timestamp": "2014-12-11T14:27:24Z",
+    "index": "govuk",
+    "es_score": 0.00084612943,
+    "_id": "/drug-safety-update/high-dose-cyproterone-acetate-potential-risk-of-multiple-meningiomas",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "Nusinersen (Spinraza\u25bc): reports of communicating hydrocephalus; discuss symptoms with patients and carers and investigate urgently ",
+    "link": "/drug-safety-update/nusinersen-spinraza-reports-of-communicating-hydrocephalus-discuss-symptoms-with-patients-and-carers-and-investigate-urgently",
+    "public_timestamp": "2018-09-25T13:02:19Z",
+    "index": "govuk",
+    "es_score": 0.0007960881,
+    "_id": "/drug-safety-update/nusinersen-spinraza-reports-of-communicating-hydrocephalus-discuss-symptoms-with-patients-and-carers-and-investigate-urgently",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "Dabigatran (Pradaxa\u25bc): risk of serious haemorrhage",
+    "link": "/drug-safety-update/dabigatran-pradaxa-risk-of-serious-haemorrhage",
+    "public_timestamp": "2014-12-11T14:33:19Z",
+    "index": "govuk",
+    "es_score": 0.0007950818,
+    "_id": "/drug-safety-update/dabigatran-pradaxa-risk-of-serious-haemorrhage",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "Systemically administered VEGF pathway inhibitors: risk of aneurysm and artery dissection ",
+    "link": "/drug-safety-update/systemically-administered-vegf-pathway-inhibitors-risk-of-aneurysm-and-artery-dissection",
+    "public_timestamp": "2020-07-31T10:40:50Z",
+    "index": "govuk",
+    "es_score": 0.0006868231,
+    "_id": "/drug-safety-update/systemically-administered-vegf-pathway-inhibitors-risk-of-aneurysm-and-artery-dissection",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "Etoricoxib: prescribing to patients with high blood pressure",
+    "link": "/drug-safety-update/etoricoxib-prescribing-to-patients-with-high-blood-pressure",
+    "public_timestamp": "2014-12-11T14:25:25Z",
+    "index": "govuk",
+    "es_score": 0.0006644213,
+    "_id": "/drug-safety-update/etoricoxib-prescribing-to-patients-with-high-blood-pressure",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "Atomoxetine (Strattera\u25bc): increases in blood pressure and heart rate",
+    "link": "/drug-safety-update/atomoxetine-strattera-increases-in-blood-pressure-and-heart-rate",
+    "public_timestamp": "2014-12-11T14:32:30Z",
+    "index": "govuk",
+    "es_score": 0.00063436734,
+    "_id": "/drug-safety-update/atomoxetine-strattera-increases-in-blood-pressure-and-heart-rate",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "Ecoflac infusion solutions: risk of air embolism",
+    "link": "/drug-safety-update/ecoflac-infusion-solutions-risk-of-air-embolism",
+    "public_timestamp": "2014-12-11T14:24:01Z",
+    "index": "govuk",
+    "es_score": 0.00058064493,
+    "_id": "/drug-safety-update/ecoflac-infusion-solutions-risk-of-air-embolism",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "Mirabegron (Betmiga\u25bc): risk of severe hypertension and associated cerebrovascular and cardiac events",
+    "link": "/drug-safety-update/mirabegron-betmiga-risk-of-severe-hypertension-and-associated-cerebrovascular-and-cardiac-events",
+    "public_timestamp": "2015-10-14T11:55:40Z",
+    "index": "govuk",
+    "es_score": 0.00050580833,
+    "_id": "/drug-safety-update/mirabegron-betmiga-risk-of-severe-hypertension-and-associated-cerebrovascular-and-cardiac-events",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "Bromocriptine: monitor blood pressure when prescribing bromocriptine for prevention or inhibition of post-partum physiological lactation ",
+    "link": "/drug-safety-update/bromocriptine-monitor-blood-pressure-when-prescribing-bromocriptine-for-prevention-or-inhibition-of-post-partum-physiological-lactation",
+    "public_timestamp": "2024-10-24T10:00:18Z",
+    "index": "govuk",
+    "es_score": 0.0005003187,
+    "_id": "/drug-safety-update/bromocriptine-monitor-blood-pressure-when-prescribing-bromocriptine-for-prevention-or-inhibition-of-post-partum-physiological-lactation",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "INOmax (nitric oxide) cylinders: valve defect might stop gas delivery early in some cylinders ",
+    "link": "/drug-safety-update/inomax-nitric-oxide-cylinders-valve-defect-might-stop-gas-delivery-early-in-some-cylinders",
+    "public_timestamp": "2015-02-16T15:33:48Z",
+    "index": "govuk",
+    "es_score": 0.00048032435,
+    "_id": "/drug-safety-update/inomax-nitric-oxide-cylinders-valve-defect-might-stop-gas-delivery-early-in-some-cylinders",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "Niraparib (Zejula\u25bc): reports of severe hypertension and posterior reversible encephalopathy syndrome (PRES), particularly in early treatment ",
+    "link": "/drug-safety-update/niraparib-zejula-reports-of-severe-hypertension-and-posterior-reversible-encephalopathy-syndrome-pres-particularly-in-early-treatment",
+    "public_timestamp": "2020-10-22T13:15:44Z",
+    "index": "govuk",
+    "es_score": 0.00047892376,
+    "_id": "/drug-safety-update/niraparib-zejula-reports-of-severe-hypertension-and-posterior-reversible-encephalopathy-syndrome-pres-particularly-in-early-treatment",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "Sprayable fibrin sealants (Evicel, Tisseel and Artiss): updated guidance ",
+    "link": "/drug-safety-update/sprayable-fibrin-sealants-evicel-tisseel-and-artiss-updated-guidance",
+    "public_timestamp": "2014-12-11T14:34:20Z",
+    "index": "govuk",
+    "es_score": 0.0004711572,
+    "_id": "/drug-safety-update/sprayable-fibrin-sealants-evicel-tisseel-and-artiss-updated-guidance",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "Aliskiren (Rasilez\u25bc): risk of angioedema and renal dysfunction",
+    "link": "/drug-safety-update/aliskiren-rasilez-risk-of-angioedema-and-renal-dysfunction",
+    "public_timestamp": "2014-12-11T14:26:34Z",
+    "index": "govuk",
+    "es_score": 0.0004438157,
+    "_id": "/drug-safety-update/aliskiren-rasilez-risk-of-angioedema-and-renal-dysfunction",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "Glucose solutions: recommendations to minimise the risks associated with the accidental use of glucose solutions instead of saline solutions in arterial lines ",
+    "link": "/drug-safety-update/glucose-solutions-recommendations-to-minimise-the-risks-associated-with-the-accidental-use-of-glucose-solutions-instead-of-saline-solutions-in-arterial-lines",
+    "public_timestamp": "2023-05-25T09:53:28Z",
+    "index": "govuk",
+    "es_score": 0.00044171503,
+    "_id": "/drug-safety-update/glucose-solutions-recommendations-to-minimise-the-risks-associated-with-the-accidental-use-of-glucose-solutions-instead-of-saline-solutions-in-arterial-lines",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   },
+   {
+    "title": "Letters and medicine recalls sent to healthcare professionals in January 2023 ",
+    "link": "/drug-safety-update/letters-and-medicine-recalls-sent-to-healthcare-professionals-in-january-2023",
+    "public_timestamp": "2023-02-27T15:01:51Z",
+    "index": "govuk",
+    "es_score": 0.00042801688,
+    "_id": "/drug-safety-update/letters-and-medicine-recalls-sent-to-healthcare-professionals-in-january-2023",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   }
+  ],
+  "total": 62,
+  "start": 0,
+  "aggregates": {},
+  "suggested_queries": [],
+  "suggested_autocomplete": [],
+  "es_cluster": "A"
+ },
+ "oligonucleotide": {
+  "results": [
+   {
+    "title": "Nusinersen (Spinraza\u25bc): reports of communicating hydrocephalus; discuss symptoms with patients and carers and investigate urgently ",
+    "link": "/drug-safety-update/nusinersen-spinraza-reports-of-communicating-hydrocephalus-discuss-symptoms-with-patients-and-carers-and-investigate-urgently",
+    "public_timestamp": "2018-09-25T13:02:19Z",
+    "index": "govuk",
+    "es_score": 0.023295067,
+    "_id": "/drug-safety-update/nusinersen-spinraza-reports-of-communicating-hydrocephalus-discuss-symptoms-with-patients-and-carers-and-investigate-urgently",
+    "elasticsearch_type": "drug_safety_update",
+    "document_type": "drug_safety_update"
+   }
+  ],
+  "total": 1,
+  "start": 0,
+  "aggregates": {},
+  "suggested_queries": [],
+  "suggested_autocomplete": [],
+  "es_cluster": "A"
+ }
+}

@@ -1,0 +1,45 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 OligoTox-Hydrocephalus contributors
+
+WHAT THIS COVERS
+The curated data tables, the schema and data dictionary, the documentation and
+the build/QC code in this directory (toxicity/hydrocephalus/) are released under
+the Creative Commons Attribution 4.0 International License. You are free to
+share and adapt this material for any purpose, including commercially, provided
+you give appropriate credit.
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+WHAT THIS DOES NOT COVER
+This grant applies to the curation — the tables, the structure, the
+documentation and the code. It does NOT relicense the underlying third-party
+sources, which are never redistributed here in full. Each measurement row
+records its own rights status in the `redistribution` column:
+
+  public_domain        US Government works (ClinicalTrials.gov, FAERS, DailyMed
+                       prescribing information, eCFR). Values may be reproduced.
+  cc_by                Open-access articles under CC BY. Values may be
+                       reproduced with attribution to the original article.
+  cc_by_nc             Open-access articles under a non-commercial licence.
+  summary_stat_only    Sources whose licence carries a no-derivatives term; only
+                       abstract-level summary statistics are carried, and no
+                       underlying table or figure is reproduced.
+  verify               Rights of reuse were NOT established for this source in
+                       the curation session. The verbatim text is quoted as
+                       evidence; a redistributor should resolve the licence
+                       before republishing those values.
+
+Anyone redistributing derived values should check that column, not this file.
+
+CITATION
+Cite this dataset AND the underlying primary sources listed in
+data/sources.csv. Every row carries source_id, source_ref and an exact
+source_location so any value can be traced and attributed.
+
+NO WARRANTY
+This dataset is a curation of published data, provided as-is and without
+warranty of any kind. All severity grades ship as `grade_status = provisional`
+and have not been reviewed by a subject-matter expert. It is a research
+resource. It is not medical advice, and it must not be used to make decisions
+about the care of any patient.

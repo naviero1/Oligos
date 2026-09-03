@@ -1,0 +1,527 @@
+nct_id,arm_label,oligo_name,arm_role,is_comparator,n_at_risk,tierA_affected,tierB_affected,tierA_event,tierB_event,tierA_terms,max_grade,delivery_route,route_is_cns,indication,oligo_class,backbone_chemistry,modification_pattern,has_sequence,trial_status,n_measurement_rows
+NCT00094835,Paclitaxel/Carboplatin + Motesanib 125 mg QD,imetelstat,exposed,0,11,0,0,0,0,none,0,intravenous,0,Lung Cancer; Non-Small Cell Lung Cancer,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00094835,Paclitaxel/Carboplatin + Motesanib 50 mg QD,imetelstat,exposed,0,6,0,0,0,0,none,0,intravenous,0,Lung Cancer; Non-Small Cell Lung Cancer,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00094835,Paclitaxel/Carboplatin + Motesanib 75 mg BID,imetelstat,exposed,0,6,0,0,0,0,none,0,intravenous,0,Lung Cancer; Non-Small Cell Lung Cancer,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00094835,Panitumumab + Motesanib 125 mg QD,imetelstat,exposed,0,7,0,0,0,0,none,0,intravenous,0,Lung Cancer; Non-Small Cell Lung Cancer,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00094835,Panitumumab + Motesanib 50 mg QD,imetelstat,exposed,0,4,0,0,0,0,none,0,intravenous,0,Lung Cancer; Non-Small Cell Lung Cancer,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00094835,Panitumumab + Motesanib 75 mg BID,imetelstat,exposed,0,5,0,0,0,0,none,0,intravenous,0,Lung Cancer; Non-Small Cell Lung Cancer,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00094835,Panitumumab + Paclitaxel/Carboplatin + Motesanib 125 mg QD,imetelstat,exposed,0,6,0,0,0,0,none,0,intravenous,0,Lung Cancer; Non-Small Cell Lung Cancer,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00101907,100 mg QD AMG 706 + Panitumumab + Gem/Cis,imetelstat,exposed,0,6,0,0,0,0,none,0,intravenous,0,Lung Cancer; Pancreatic Cancer; Esophageal Cancer,other,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT00101907,125 mg QD AMG 706 + Panitumumab + Gem/CisEdit,imetelstat,exposed,0,11,0,0,0,0,none,0,intravenous,0,Lung Cancer; Pancreatic Cancer; Esophageal Cancer,other,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT00101907,50 mg QD AMG 706 + Panitumumab + Gem/Cis,imetelstat,exposed,0,8,0,0,0,0,none,0,intravenous,0,Lung Cancer; Pancreatic Cancer; Esophageal Cancer,other,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT00101907,75 mg BID AMG 706 + Panitumumab + Gem/CisEdit,imetelstat,exposed,0,2,0,0,0,0,none,0,intravenous,0,Lung Cancer; Pancreatic Cancer; Esophageal Cancer,other,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT00101907,75 mg QD AMG 706 + Panitumumab + Gem/Cis,imetelstat,exposed,0,6,0,0,0,0,none,0,intravenous,0,Lung Cancer; Pancreatic Cancer; Esophageal Cancer,other,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT00101907,Panitumumab + Gem/Cis,imetelstat,exposed,0,8,0,0,0,0,none,0,intravenous,0,Lung Cancer; Pancreatic Cancer; Esophageal Cancer,other,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT00138658,OGX-011 - Intent to Treat Analysis Set,custirsen,exposed,0,81,0,0,0,0,none,0,intravenous,0,Non-small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00159250,High Dose AVI-4658,eteplirsen,exposed,0,5,0,0,0,0,none,0,NOT_REPORTED,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT00159250,Low Dose AVI-4658,eteplirsen,exposed,0,2,0,0,0,0,none,0,NOT_REPORTED,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT00239928,EYE001,pegaptanib,exposed,0,61,0,0,0,0,none,0,NOT_REPORTED,0,Macular Degeneration,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00242580,Verteporfin + 1 mg Triamcinolone,pegaptanib,exposed,0,32,0,0,0,0,none,0,intravitreal,0,Macular Degeneration; Choroidal Neovascularization,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00242580,Verteporfin + 4 mg Triamcinolone,pegaptanib,exposed,0,41,0,0,0,0,none,0,intravitreal,0,Macular Degeneration; Choroidal Neovascularization,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00242580,Verteporfin + Pegaptanib,pegaptanib,exposed,0,38,0,0,0,0,none,0,intravitreal,0,Macular Degeneration; Choroidal Neovascularization,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00327340,OGX-011 / Docetaxel/Prednisone,custirsen,exposed,0,46,0,0,0,0,none,0,intravenous,0,Prostate Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00327340,OGX-011 / Mitoxantrone/Prednisone,custirsen,exposed,0,23,0,0,0,0,none,0,intravenous,0,Prostate Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00327470,Early AMD,pegaptanib,exposed,0,107,0,0,0,0,none,0,NOT_REPORTED,0,Age Related Macular Degeneration (AMD); Macular Degeneration; Choroidal Neovascu,aptamer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT00327470,Established AMD,pegaptanib,exposed,0,179,0,0,0,0,none,0,NOT_REPORTED,0,Age Related Macular Degeneration (AMD); Macular Degeneration; Choroidal Neovascu,aptamer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT00358501,Defibrotide,defibrotide,exposed,0,102,0,0,0,0,none,0,intravenous,0,Severe Hepatic Veno-Occlusive Disease,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00362180,Mipomersen,mipomersen,exposed,0,19,0,0,0,0,none,0,subcutaneous,0,"Lipid Metabolism, Inborn Errors; Hyperlipidemias; Metabolic Diseases; Hypolipopr",ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00362180,Not Treated,mipomersen,exposed,0,6,0,0,0,0,none,0,subcutaneous,0,"Lipid Metabolism, Inborn Errors; Hyperlipidemias; Metabolic Diseases; Hypolipopr",ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00362180,Placebo,placebo_or_sham_control,comparator,1,14,0,0,0,0,none,0,subcutaneous,0,"Lipid Metabolism, Inborn Errors; Hyperlipidemias; Metabolic Diseases; Hypolipopr",NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT00406107,Pegaptanib Sodium 0.3mg (Macugen),pegaptanib,exposed,0,15,0,0,0,0,none,0,intravitreal,0,Branch Retinal Vein Occlusion,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00406107,Pegaptanib Sodium 1 mg (Macugen),pegaptanib,exposed,0,5,0,0,0,0,none,0,intravitreal,0,Branch Retinal Vein Occlusion,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00427349,MG 706+Octreotide,imetelstat,exposed,0,45,0,0,0,0,none,0,oral,0,Gastrointestinal Carcinoid Tumor; Islet Cell Tumor; Neoplastic Syndrome,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00460408,Macugen,pegaptanib,exposed,0,403,0,0,0,0,none,0,intravitreal,0,Macular Degeneration,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00460408,Macugen and Avastin,pegaptanib,exposed,0,16,0,0,0,0,none,0,intravitreal,0,Macular Degeneration,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00460408,Macugen and Lucentis,pegaptanib,exposed,0,75,0,0,0,0,none,0,intravitreal,0,Macular Degeneration,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00460408,Macugen and Other AMD Drugs,pegaptanib,exposed,0,7,0,0,0,0,none,0,intravitreal,0,Macular Degeneration,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00477594,Mipomersen 200 mg Every Other Week,mipomersen,exposed,0,5,0,0,0,0,none,0,subcutaneous,0,"Lipid Metabolism, Inborn Errors; Hypercholesterolemia, Autosomal Dominant; Hyper",ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00477594,Mipomersen 200 mg Per Week,mipomersen,exposed,0,16,0,0,0,0,none,0,subcutaneous,0,"Lipid Metabolism, Inborn Errors; Hypercholesterolemia, Autosomal Dominant; Hyper",ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00549055,Macugen,pegaptanib,exposed,0,38,0,0,0,0,none,0,intravitreal,0,Neovascular Age-related Macular Degeneration,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00574951,AMG 706,imetelstat,exposed,0,22,0,0,0,0,none,0,NOT_REPORTED,0,Fallopian Tube Cancer; Ovarian Cancer; Primary Peritoneal Cavity Cancer,other,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT00605280,0.003 mg Pegaptanib Sodium,pegaptanib,exposed,0,7,0,0,0,0,none,0,intravitreal,0,Macular Edema Associated With Diabetes Mellitus,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00605280,0.03 mg Pegaptanib Sodium,pegaptanib,exposed,0,22,0,0,0,0,none,0,intravitreal,0,Macular Edema Associated With Diabetes Mellitus,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00605280,0.3 mg Pegaptanib Sodium,pegaptanib,exposed,0,174,0,0,0,0,none,0,intravitreal,0,Macular Edema Associated With Diabetes Mellitus,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00605280,0.3 mg Pegaptanib Sodium (Year 3),pegaptanib,exposed,0,46,0,0,0,0,none,0,intravitreal,0,Macular Edema Associated With Diabetes Mellitus,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00605280,Sham,placebo_or_sham_control,comparator,1,143,0,0,0,0,none,0,intravitreal,0,Macular Edema Associated With Diabetes Mellitus,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT00605280,Sham Conversion (Year 3),placebo_or_sham_control,comparator,1,54,0,0,0,0,none,0,intravitreal,0,Macular Edema Associated With Diabetes Mellitus,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT00607373,Mipomersen,mipomersen,exposed,0,34,0,0,0,0,none,0,subcutaneous,0,"Lipid Metabolism, Inborn Errors; Hypercholesterolemia, Autosomal Dominant; Hyper",ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00607373,Placebo,placebo_or_sham_control,comparator,1,17,0,0,0,0,none,0,subcutaneous,0,"Lipid Metabolism, Inborn Errors; Hypercholesterolemia, Autosomal Dominant; Hyper",NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT00628498,Defibrotide,defibrotide,exposed,0,1154,3,0,1,0,hydrocephalus_AE,3,intravenous,0,Hepatic Veno-Occlusive Disease,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00694109,Mipomersen,mipomersen,exposed,0,141,0,0,0,0,none,0,subcutaneous,0,"Lipid Metabolism, Inborn Errors; Hypercholesterolemia, Autosomal Dominant; Hyper",ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00706849,Mipomersen,mipomersen,exposed,0,83,0,0,0,0,none,0,subcutaneous,0,Heterozygous Familial Hypercholesterolemia; Coronary Artery Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00706849,Placebo,placebo_or_sham_control,comparator,1,41,0,0,0,0,none,0,subcutaneous,0,Heterozygous Familial Hypercholesterolemia; Coronary Artery Disease,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT00707746,Mipomersen,mipomersen,exposed,0,21,0,0,0,0,none,0,subcutaneous,0,Metabolic Diseases; Hyperlipidemias; Metabolic Disorder; Hypercholesterolemia; D,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00707746,Placebo,placebo_or_sham_control,comparator,1,12,0,0,0,0,none,0,subcutaneous,0,Metabolic Diseases; Hyperlipidemias; Metabolic Disorder; Hypercholesterolemia; D,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT00735943,Pegaptanib,pegaptanib,exposed,0,22,0,0,0,0,none,0,NOT_REPORTED,0,Vascular Endothelial Growth Factor; Macular Degeneration,aptamer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT00761280,Chemotherapy,trabedersen,exposed,0,11,1,0,1,0,hydrocephalus_AE,2,subcutaneous,0,Anaplastic Astrocytoma; Glioblastoma,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,5
+NCT00761280,Trabedersen 10 µM,trabedersen,exposed,0,13,0,2,0,1,none,2,subcutaneous,0,Anaplastic Astrocytoma; Glioblastoma,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,5
+NCT00770146,Mipomersen,mipomersen,exposed,0,105,0,0,0,0,none,0,subcutaneous,0,Hypercholesterolemia; Coronary Heart Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00770146,Placebo,placebo_or_sham_control,comparator,1,52,0,0,0,0,none,0,subcutaneous,0,Hypercholesterolemia; Coronary Heart Disease,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT00787319,Pegaptanib,pegaptanib,exposed,0,108,0,0,0,0,none,0,NOT_REPORTED,0,Age-related Macular Degeneration,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00790803,Macugen,pegaptanib,exposed,0,5,0,0,0,0,none,0,intravitreal,0,Uveitis; Cystoid Macular Edema,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00794664,Mipomersen,mipomersen,exposed,0,39,0,0,0,0,none,0,subcutaneous,0,Hypercholesterolemia; Coronary Heart Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT00794664,Placebo,placebo_or_sham_control,comparator,1,19,0,0,0,0,none,0,subcutaneous,0,Hypercholesterolemia; Coronary Heart Disease,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT00844597,Cohort 1 - 0.5 mg/kg/wk,eteplirsen,exposed,0,4,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT00844597,Cohort 2 - 1.0 mg/kg/wk,eteplirsen,exposed,0,2,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT00844597,Cohort 3 - 2.0 mg/kg/wk,eteplirsen,exposed,0,2,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT00844597,Cohort 4 - 4.0 mg/kg/wk,eteplirsen,exposed,0,3,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT00844597,Cohort 5 - 10.0 mg/kg/wk,eteplirsen,exposed,0,4,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT00844597,Cohort 6 - 20.0 mg/kg/wk,eteplirsen,exposed,0,4,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT00858208,Pegaptanib,pegaptanib,exposed,0,85,0,0,0,0,none,0,intravitreal,0,Neovascular Age-related Macular Degeneration,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01100307,Pegaptanib Sodium (Baseline to Week 24),pegaptanib,exposed,0,123,0,0,0,0,none,0,intravitreal,0,Macular Edema; Diabetic Mellitus; Retinal Disease,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01100307,Pegaptanib Sodium (Baseline to Week 54),pegaptanib,exposed,0,123,0,0,0,0,none,0,intravitreal,0,Macular Edema; Diabetic Mellitus; Retinal Disease,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01100307,Sham (Baseline to Week 24),placebo_or_sham_control,comparator,1,120,0,0,0,0,none,0,intravitreal,0,Macular Edema; Diabetic Mellitus; Retinal Disease,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT01100307,Sham Conversion (Week 24 to Week 54),placebo_or_sham_control,comparator,1,112,0,0,0,0,none,0,intravitreal,0,Macular Edema; Diabetic Mellitus; Retinal Disease,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT01189461,Macugen,pegaptanib,exposed,0,46,0,0,0,0,none,0,NOT_REPORTED,0,Anti- VGF Inhibitor; Diabetic Macular Edema; Diabetic Retinopathy,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01245387,Macugen,pegaptanib,exposed,0,816,0,0,0,0,none,0,intravitreal,0,Macular Degeneration; Age-related Macular Degeneration; Neovascular Macular Dege,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01396239,AVI-4658 (Eteplirsen) - 30mg/kg,eteplirsen,exposed,0,4,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT01396239,AVI-4658 (Eteplirsen) - 50mg/kg,eteplirsen,exposed,0,4,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT01396239,Placebo,placebo_or_sham_control,comparator,1,4,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT01475825,"Regimen A: Mipomersen, 200 mg, Once Weekly",mipomersen,exposed,0,104,0,0,0,0,none,0,subcutaneous,0,Hypercholesterolemia; Heterozygous Familial,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01475825,"Regimen A: Placebo, Once Weekly",placebo_or_sham_control,comparator,1,51,0,0,0,0,none,0,subcutaneous,0,Hypercholesterolemia; Heterozygous Familial,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT01475825,"Regimen B: Mipomersen, 70 mg, Thrice Weekly",mipomersen,exposed,0,102,0,0,0,0,none,0,subcutaneous,0,Hypercholesterolemia; Heterozygous Familial,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01475825,"Regimen B: Placebo, Thrice Weekly",placebo_or_sham_control,comparator,1,52,0,0,0,0,none,0,subcutaneous,0,Hypercholesterolemia; Heterozygous Familial,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT01486238,IVMac q4 Arm,pegaptanib,exposed,0,49,0,0,0,0,none,0,intravitreal,0,Diabetic Macular Edema,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01486238,IVMac q6 Arm,pegaptanib,exposed,0,23,0,0,0,0,none,0,intravitreal,0,Diabetic Macular Edema,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01540409,Eteplirsen 30 mg/kg,placebo_or_sham_control,comparator,1,6,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy (DMD),NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT01540409,Eteplirsen 50 mg/kg,placebo_or_sham_control,comparator,1,6,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy (DMD),NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT01573572,Intravitreal Injections of Macugen,pegaptanib,exposed,0,131,0,0,0,0,none,0,NOT_REPORTED,0,Age-Related Macular Degeneration; Retinal Vein Occlusion; Diabetic Macular Edema,aptamer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01617967,Patisiran 0.010 mg/kg Q4W,patisiran,exposed,0,4,0,0,0,0,none,0,intravenous,0,TTR-mediated Amyloidosis,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01617967,Patisiran 0.050 mg/kg Q4W,patisiran,exposed,0,3,0,0,0,0,none,0,intravenous,0,TTR-mediated Amyloidosis,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01617967,Patisiran 0.150 mg/kg Q4W,patisiran,exposed,0,3,0,0,0,0,none,0,intravenous,0,TTR-mediated Amyloidosis,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01617967,Patisiran 0.300 mg/kg Q3W,patisiran,exposed,0,3,0,0,0,0,none,0,intravenous,0,TTR-mediated Amyloidosis,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01617967,Patisiran 0.300 mg/kg Q3W Alternative,patisiran,exposed,0,9,0,0,0,0,none,0,intravenous,0,TTR-mediated Amyloidosis,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01617967,Patisiran 0.300 mg/kg Q4W,patisiran,exposed,0,7,0,0,0,0,none,0,intravenous,0,TTR-mediated Amyloidosis,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01681433,Control Arm: Arm B,apatorsen,exposed,0,36,0,0,0,0,none,0,intravenous,0,Prostate Cancer; Metastatic Castrate-Resistant Prostate Cancer; PSA,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT01681433,Experimental: Arm A,apatorsen,exposed,0,56,0,0,0,0,none,0,intravenous,0,Prostate Cancer; Metastatic Castrate-Resistant Prostate Cancer; PSA,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT01703988,Nusinersen 12 mg,nusinersen,exposed,0,9,0,5,0,1,none,1,intrathecal_lumbar,1,Spinal Muscular Atrophy,splice_switching_ASO,full_PS,uniform 2'-MOE,1,COMPLETED,3
+NCT01703988,Nusinersen 3 mg,nusinersen,exposed,0,8,0,3,0,1,none,1,intrathecal_lumbar,1,Spinal Muscular Atrophy,splice_switching_ASO,full_PS,uniform 2'-MOE,1,COMPLETED,3
+NCT01703988,Nusinersen 6 mg,nusinersen,exposed,0,8,0,1,0,1,none,1,intrathecal_lumbar,1,Spinal Muscular Atrophy,splice_switching_ASO,full_PS,uniform 2'-MOE,1,COMPLETED,3
+NCT01703988,Nusinersen 9 mg,nusinersen,exposed,0,9,0,3,0,1,none,1,intrathecal_lumbar,1,Spinal Muscular Atrophy,splice_switching_ASO,full_PS,uniform 2'-MOE,1,COMPLETED,3
+NCT01731951,Arm A: Imetelstat 9.4 mg/kg (MF),imetelstat,exposed,0,19,0,0,0,0,none,0,intravenous,0,Primary Myelofibrosis; Secondary Myelofibrosis; Myeloid Malignancies,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01731951,Arm B: Imetelstat 9.4 mg/kg as Induction + Maintenance (MF),imetelstat,exposed,0,16,0,0,0,0,none,0,intravenous,0,Primary Myelofibrosis; Secondary Myelofibrosis; Myeloid Malignancies,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01731951,Arm D: Imetelstat 9.4 mg/kg (Blast-phase MF/Acute Myeloid Leukemia,imetelstat,exposed,0,9,0,0,0,0,none,0,intravenous,0,Primary Myelofibrosis; Secondary Myelofibrosis; Myeloid Malignancies,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01731951,Arm E: Imetelstat 7.5 - 9.4 mg/kg (MF [With Spliceosome Mutation or Ring Sideroblasts]),imetelstat,exposed,0,9,0,0,0,0,none,0,intravenous,0,Primary Myelofibrosis; Secondary Myelofibrosis; Myeloid Malignancies,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01731951,Arm F: Imetelstat 7.5 - 9.4 mg/kg (MF [Without Spliceosome Mutation and Ring Sideroblasts]),imetelstat,exposed,0,18,0,0,0,0,none,0,intravenous,0,Primary Myelofibrosis; Secondary Myelofibrosis; Myeloid Malignancies,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01731951,Arm G: Imetelstat 7.5 - 9.4 mg/kg (MDS/MPN or MDS With Spliceosome Mutations or Ring Sideroblasts),imetelstat,exposed,0,9,0,0,0,0,none,0,intravenous,0,Primary Myelofibrosis; Secondary Myelofibrosis; Myeloid Malignancies,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01737398,Inotersen,inotersen,exposed,0,112,0,0,0,0,none,0,subcutaneous,0,FAP; Familial Amyloid Polyneuropathy; TTR; Transthyretin; Amyloidosis,ASO_gapmer,full_PS,5-10-5,1,COMPLETED,1
+NCT01737398,Placebo,placebo_or_sham_control,comparator,1,60,0,0,0,0,none,0,subcutaneous,0,FAP; Familial Amyloid Polyneuropathy; TTR; Transthyretin; Amyloidosis,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT01780545,Control Arm: Arm B,apatorsen,exposed,0,101,0,1,0,1,none,2,intravenous,0,Bladder Cancer; Urothelial Carcinoma,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,2
+NCT01780545,Experimental Arm: Arm A,apatorsen,exposed,0,99,0,0,0,0,none,0,intravenous,0,Bladder Cancer; Urothelial Carcinoma,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,2
+NCT01829113,OGX-427,apatorsen,exposed,0,74,0,0,0,0,none,0,intravenous,0,Non Squamous Non Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01829113,Placebo,apatorsen,exposed,0,76,0,0,0,0,none,0,intravenous,0,Non Squamous Non Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01836549,Molecular Study-A,imetelstat,exposed,0,1,0,0,0,0,none,0,intravenous,0,"Anaplastic Astrocytoma; Anaplastic Ependymoma; Astrocytoma, Grade II; Ependymoma",other,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT01836549,Molecular Study-B,imetelstat,exposed,0,1,0,0,0,0,none,0,intravenous,0,"Anaplastic Astrocytoma; Anaplastic Ependymoma; Astrocytoma, Grade II; Ependymoma",other,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT01836549,Stratum-A,imetelstat,exposed,0,8,0,0,0,0,none,0,intravenous,0,"Anaplastic Astrocytoma; Anaplastic Ependymoma; Astrocytoma, Grade II; Ependymoma",other,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT01836549,Stratum-B,imetelstat,exposed,0,18,1,0,1,0,hydrocephalus_AE,3,intravenous,0,"Anaplastic Astrocytoma; Anaplastic Ependymoma; Astrocytoma, Grade II; Ependymoma",other,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT01836549,Stratum-C,imetelstat,exposed,0,4,0,0,0,0,none,0,intravenous,0,"Anaplastic Astrocytoma; Anaplastic Ependymoma; Astrocytoma, Grade II; Ependymoma",other,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT01836549,Stratum-D,imetelstat,exposed,0,8,0,0,0,0,none,0,intravenous,0,"Anaplastic Astrocytoma; Anaplastic Ependymoma; Astrocytoma, Grade II; Ependymoma",other,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT01839604,1.5 mg/kg,danvatirsen,exposed,0,6,0,0,0,0,none,0,intravenous,0,Advanced Adult Hepatocellular Carcinoma; Hepatocellular Carcinoma Metastatic,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01839604,2 mg/kg,danvatirsen,exposed,0,7,0,0,0,0,none,0,intravenous,0,Advanced Adult Hepatocellular Carcinoma; Hepatocellular Carcinoma Metastatic,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01839604,2.5 mg/kg,danvatirsen,exposed,0,5,0,0,0,0,none,0,intravenous,0,Advanced Adult Hepatocellular Carcinoma; Hepatocellular Carcinoma Metastatic,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01839604,3 mg/kg,danvatirsen,exposed,0,15,0,0,0,0,none,0,intravenous,0,Advanced Adult Hepatocellular Carcinoma; Hepatocellular Carcinoma Metastatic,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01839604,AZD9150 1mg/kg,danvatirsen,exposed,0,6,0,0,0,0,none,0,intravenous,0,Advanced Adult Hepatocellular Carcinoma; Hepatocellular Carcinoma Metastatic,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01839656,Nusinersen 12 mg,nusinersen,exposed,0,16,0,1,0,1,none,2,intrathecal_lumbar,1,Spinal Muscular Atrophy,splice_switching_ASO,full_PS,uniform 2'-MOE,1,COMPLETED,2
+NCT01839656,Nusinersen 6 mg,nusinersen,exposed,0,4,0,0,0,0,none,0,intrathecal_lumbar,1,Spinal Muscular Atrophy,splice_switching_ASO,full_PS,uniform 2'-MOE,1,COMPLETED,2
+NCT01844817,OGX-427,apatorsen,exposed,0,64,0,0,0,0,none,0,intravenous,0,Pancreatic Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01844817,Placebo,apatorsen,exposed,0,63,0,0,0,0,none,0,intravenous,0,Pancreatic Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01960348,Patisiran (ALN-TTR02),patisiran,exposed,0,148,0,0,0,0,none,0,intravenous,0,"TTR-mediated Amyloidosis; Amyloidosis, Hereditary; Amyloid Neuropathies, Familia",siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT01960348,Placebo,placebo_or_sham_control,comparator,1,77,0,0,0,0,none,0,intravenous,0,"TTR-mediated Amyloidosis; Amyloidosis, Hereditary; Amyloid Neuropathies, Familia",NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT01961921,Safety Population,patisiran,exposed,0,27,0,0,0,0,none,0,intravenous,0,TTR-mediated Amyloidosis,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02175004,Previous Inotersen-Inotersen 300 mg,inotersen,exposed,0,85,0,0,0,0,none,0,subcutaneous,0,FAP; Familial Amyloid Polyneuropathy; TTR; Transthyretin; Amyloidosis,ASO_gapmer,full_PS,5-10-5,1,COMPLETED,1
+NCT02175004,Previous Placebo-Inotersen 300 mg,inotersen,exposed,0,50,0,0,0,0,none,0,subcutaneous,0,FAP; Familial Amyloid Polyneuropathy; TTR; Transthyretin; Amyloidosis,ASO_gapmer,full_PS,5-10-5,1,COMPLETED,1
+NCT02193074,Control,placebo_or_sham_control,comparator,1,41,0,0,0,0,none,0,intrathecal_lumbar,1,Spinal Muscular Atrophy,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,TERMINATED,1
+NCT02193074,Nusinersen,nusinersen,exposed,0,80,0,0,0,0,none,0,intrathecal_lumbar,1,Spinal Muscular Atrophy,splice_switching_ASO,full_PS,uniform 2'-MOE,1,TERMINATED,1
+NCT02211209,Placebo,placebo_or_sham_control,comparator,1,33,0,0,0,0,none,0,subcutaneous,0,Familial Chylomicronemia Syndrome,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT02211209,Volanesorsen,volanesorsen,exposed,0,33,0,0,0,0,none,0,subcutaneous,0,Familial Chylomicronemia Syndrome,ASO_gapmer,full_PS,5-10-5,1,COMPLETED,1
+NCT02255552,Eteplirsen 30 mg/kg,eteplirsen,exposed,0,79,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy (DMD),PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT02255552,Untreated Control Group (Non-exon 51 Amenable Participants),eteplirsen,exposed,0,30,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy (DMD),PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT02286947,Eteplirsen 30 mg/kg,eteplirsen,exposed,0,24,0,0,0,0,none,0,intravenous,0,"Muscular Dystrophy, Duchenne",PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT02292537,Nusinersen,nusinersen,exposed,0,84,0,1,0,1,none,1,intrathecal_lumbar,1,Spinal Muscular Atrophy,splice_switching_ASO,full_PS,uniform 2'-MOE,1,COMPLETED,2
+NCT02292537,Sham Procedure,placebo_or_sham_control,comparator,1,42,0,0,0,0,none,0,intrathecal_lumbar,1,Spinal Muscular Atrophy,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,2
+NCT02300233,Placebo,placebo_or_sham_control,comparator,1,38,0,0,0,0,none,0,subcutaneous,0,Hypertriglyceridemia,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT02300233,"Volanesorsen 300 mg Biweekly, Post Week 13",volanesorsen,exposed,0,50,0,0,0,0,none,0,subcutaneous,0,Hypertriglyceridemia,ASO_gapmer,full_PS,5-10-5,1,COMPLETED,1
+NCT02300233,Volanesorsen 300 mg Weekly,volanesorsen,exposed,0,25,0,0,0,0,none,0,subcutaneous,0,Hypertriglyceridemia,ASO_gapmer,full_PS,5-10-5,1,COMPLETED,1
+NCT02310906,Part 1: Golodirsen (10 mg/kg),golodirsen,exposed,0,8,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT02310906,Part 1: Golodirsen (20 mg/kg),golodirsen,exposed,0,8,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT02310906,Part 1: Golodirsen (30 mg/kg),golodirsen,exposed,0,8,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT02310906,Part 1: Golodirsen (4 mg/kg),golodirsen,exposed,0,8,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT02310906,Part 1: Placebo,placebo_or_sham_control,comparator,1,4,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT02310906,Part 2a: Total Golodirsen Group,golodirsen,exposed,0,25,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT02310906,Part 2b: Untreated Group (Natural History of Non-exon 53),golodirsen,exposed,0,14,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT02386553,ISIS 396443 2 SMN2 Copies,nusinersen,exposed,0,15,0,2,0,1,none,1,intrathecal_lumbar,1,Spinal Muscular Atrophy,splice_switching_ASO,full_PS,uniform 2'-MOE,1,COMPLETED,2
+NCT02386553,ISIS 396443 3 SMN2 Copies,nusinersen,exposed,0,10,0,4,0,1,none,1,intrathecal_lumbar,1,Spinal Muscular Atrophy,splice_switching_ASO,full_PS,uniform 2'-MOE,1,COMPLETED,2
+NCT02417753,AZD9150 in People With Malignant Ascites,danvatirsen,exposed,0,1,0,0,0,0,none,0,intravenous,0,Ovarian Cancer; Ovarian Neoplasms; Ascites; Gastrointestinal Cancer; Gastrointes,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT02420379,Control Group (Untreated) (Non-exon 51 Amenable Participants),eteplirsen,exposed,0,7,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy (DMD),PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT02420379,Eteplirsen 30 mg/kg,eteplirsen,exposed,0,26,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy (DMD),PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT02426086,Imetelstat 4.7 mg/kg,imetelstat,exposed,0,48,0,0,0,0,none,0,intravenous,0,Myelofibrosis,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02426086,Imetelstat 9.4 mg/kg,imetelstat,exposed,0,59,0,0,0,0,none,0,intravenous,0,Myelofibrosis,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02426086,Imetelstat Dose Escalated From 4.7 mg/kg to 9.4 mg/kg,imetelstat,exposed,0,12,0,0,0,0,none,0,intravenous,0,Myelofibrosis,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02462759,ISIS 396443 Part 1 & 2,nusinersen,exposed,0,14,0,0,0,0,none,0,intrathecal_lumbar,1,Spinal Muscular Atrophy,splice_switching_ASO,full_PS,uniform 2'-MOE,1,TERMINATED,1
+NCT02462759,ISIS 396443 Part 2(Participants on Sham in Part 1),placebo_or_sham_control,comparator,1,6,0,0,0,0,none,0,intrathecal_lumbar,1,Spinal Muscular Atrophy,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,TERMINATED,1
+NCT02462759,Sham Procedure in Part 1,placebo_or_sham_control,comparator,1,7,0,0,0,0,none,0,intrathecal_lumbar,1,Spinal Muscular Atrophy,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,TERMINATED,1
+NCT02499328,A1C1: AZD9150 2mg/kg + MEDI4736 20mg/kg,danvatirsen,exposed,0,4,0,0,0,0,none,0,NOT_REPORTED,0,Advanced Solid Tumors & Metastatic Squamous Cell Carcinoma of the Head and Neck,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02499328,A1C2: AZD9150 3mg/kg + MEDI4736 20mg/kg,danvatirsen,exposed,0,7,0,0,0,0,none,0,NOT_REPORTED,0,Advanced Solid Tumors & Metastatic Squamous Cell Carcinoma of the Head and Neck,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02499328,A2C1: AZD5069 40mg BID + MEDI4736 20mg/kg,danvatirsen,exposed,0,9,0,0,0,0,none,0,NOT_REPORTED,0,Advanced Solid Tumors & Metastatic Squamous Cell Carcinoma of the Head and Neck,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02499328,A2C2: AZD5069 80mg BID + MEDI4736 20mg/kg,danvatirsen,exposed,0,11,0,0,0,0,none,0,NOT_REPORTED,0,Advanced Solid Tumors & Metastatic Squamous Cell Carcinoma of the Head and Neck,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02499328,A3C1: AZD5069 80mg BID + MEDI4736 20mg/kg,danvatirsen,exposed,0,15,0,0,0,0,none,0,NOT_REPORTED,0,Advanced Solid Tumors & Metastatic Squamous Cell Carcinoma of the Head and Neck,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02499328,A4C1: AZD9150 3mg/kg q1w + MEDI4736 20mg/kg + Treme,danvatirsen,exposed,0,9,0,0,0,0,none,0,NOT_REPORTED,0,Advanced Solid Tumors & Metastatic Squamous Cell Carcinoma of the Head and Neck,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02499328,A4C2: AZD9150 2mg/kg q1w + MEDI4736 20mg/kg + Treme,danvatirsen,exposed,0,7,0,0,0,0,none,0,NOT_REPORTED,0,Advanced Solid Tumors & Metastatic Squamous Cell Carcinoma of the Head and Neck,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02499328,A4C3: AZD9150 3mg/kg q2w + MEDI4736 20mg/kg + Treme,danvatirsen,exposed,0,6,0,0,0,0,none,0,NOT_REPORTED,0,Advanced Solid Tumors & Metastatic Squamous Cell Carcinoma of the Head and Neck,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02499328,A6C1: AZD9150 3mg/kg q1w + MEDI4736 20mg/kg,danvatirsen,exposed,0,14,0,0,0,0,none,0,NOT_REPORTED,0,Advanced Solid Tumors & Metastatic Squamous Cell Carcinoma of the Head and Neck,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02499328,B1: AZD9150 3mg/kg + MEDI4736 20mg/kg Exp,danvatirsen,exposed,0,24,0,0,0,0,none,0,NOT_REPORTED,0,Advanced Solid Tumors & Metastatic Squamous Cell Carcinoma of the Head and Neck,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02499328,B2: AZD5069 40mg BID + MEDI4736 20mg/kg Exp,danvatirsen,exposed,0,20,0,0,0,0,none,0,NOT_REPORTED,0,Advanced Solid Tumors & Metastatic Squamous Cell Carcinoma of the Head and Neck,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02499328,B3: AZD9150 3mg/kg + MEDI4736 20mg/kg Naive,danvatirsen,exposed,0,53,0,0,0,0,none,0,NOT_REPORTED,0,Advanced Solid Tumors & Metastatic Squamous Cell Carcinoma of the Head and Neck,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02499328,B4: AZD5069 40mg BID + MEDI4736 20mg/kg Naive,danvatirsen,exposed,0,22,0,0,0,0,none,0,NOT_REPORTED,0,Advanced Solid Tumors & Metastatic Squamous Cell Carcinoma of the Head and Neck,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02499328,B5: AZD9150 3mg/kg,danvatirsen,exposed,0,14,0,0,0,0,none,0,NOT_REPORTED,0,Advanced Solid Tumors & Metastatic Squamous Cell Carcinoma of the Head and Neck,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02499328,B6: AZD5069 40mg BID,danvatirsen,exposed,0,10,0,0,0,0,none,0,NOT_REPORTED,0,Advanced Solid Tumors & Metastatic Squamous Cell Carcinoma of the Head and Neck,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02499328,B6a: AZD5069 40mg BID Fed/Fasted,danvatirsen,exposed,0,1,0,0,0,0,none,0,NOT_REPORTED,0,Advanced Solid Tumors & Metastatic Squamous Cell Carcinoma of the Head and Neck,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02499328,B6b: AZD5069 40mg BID Fasted/Fed,danvatirsen,exposed,0,1,0,0,0,0,none,0,NOT_REPORTED,0,Advanced Solid Tumors & Metastatic Squamous Cell Carcinoma of the Head and Neck,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02499328,B7: AZD9150 3mg/kg q1w + MEDI4736 20mg/kg,danvatirsen,exposed,0,55,0,0,0,0,none,0,NOT_REPORTED,0,Advanced Solid Tumors & Metastatic Squamous Cell Carcinoma of the Head and Neck,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02499328,B8: AZD9150 400mg q2w + MEDI4736 1.5g Q4W,danvatirsen,exposed,0,50,0,0,0,0,none,0,NOT_REPORTED,0,Advanced Solid Tumors & Metastatic Squamous Cell Carcinoma of the Head and Neck,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02510261,Prior Patisiran Group of Study 003,patisiran,exposed,0,25,0,0,0,0,none,0,intravenous,0,Amyloidosis,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02510261,Prior Patisiran Group of Study 004,patisiran,exposed,0,137,0,0,0,0,none,0,intravenous,0,Amyloidosis,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02510261,Prior Placebo Group of Study 004,patisiran,exposed,0,49,0,0,0,0,none,0,intravenous,0,Amyloidosis,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02525523,Alicaforsen,alicaforsen,exposed,0,69,0,0,0,0,none,0,topical_enema,0,Pouchitis,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02525523,Placebo,placebo_or_sham_control,comparator,1,69,0,0,0,0,none,0,topical_enema,0,Pouchitis,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT02527343,Open-Label Extension Period (OLE and OLE Post-Treatment Follow-up): Placebo/Volanesorsen,placebo_or_sham_control,comparator,1,12,0,0,0,0,none,0,subcutaneous,0,Familial Partial Lipodystrophy,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,TERMINATED,1
+NCT02527343,Open-Label Extension Period (OLE and OLE Post-Treatment Follow-up): Volanesorsen/Volanesorsen,volanesorsen,exposed,0,12,0,0,0,0,none,0,subcutaneous,0,Familial Partial Lipodystrophy,ASO_gapmer,full_PS,5-10-5,1,TERMINATED,1
+NCT02527343,Randomized Post-Treatment Follow-up: Placebo,placebo_or_sham_control,comparator,1,7,0,0,0,0,none,0,subcutaneous,0,Familial Partial Lipodystrophy,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,TERMINATED,1
+NCT02527343,Randomized Post-Treatment Follow-up: Volanesorsen,volanesorsen,exposed,0,9,0,0,0,0,none,0,subcutaneous,0,Familial Partial Lipodystrophy,ASO_gapmer,full_PS,5-10-5,1,TERMINATED,1
+NCT02527343,Randomized Treatment Period: Placebo,placebo_or_sham_control,comparator,1,19,0,0,0,0,none,0,subcutaneous,0,Familial Partial Lipodystrophy,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,TERMINATED,1
+NCT02527343,Randomized Treatment Period: Volanesorsen,volanesorsen,exposed,0,21,0,0,0,0,none,0,subcutaneous,0,Familial Partial Lipodystrophy,ASO_gapmer,full_PS,5-10-5,1,TERMINATED,1
+NCT02530905,Double-Blind Period: Casimersen 10 mg/kg,casimersen,exposed,0,8,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT02530905,Double-Blind Period: Casimersen 20 mg/kg,casimersen,exposed,0,8,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT02530905,Double-Blind Period: Casimersen 30 mg/kg,casimersen,exposed,0,8,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT02530905,Double-Blind Period: Casimersen 4 mg/kg,casimersen,exposed,0,8,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT02530905,Double-Blind Period: Placebo,placebo_or_sham_control,comparator,1,4,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT02530905,Open Label Extension Period: Casimersen 30 mg/kg,casimersen,exposed,0,12,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT02554773,AT-Based Dose Regimen (SAS 2),fitusiran,exposed,0,18,0,0,0,0,none,0,subcutaneous,0,Hemophilia A; Hemophilia B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02554773,Original Dose Regimen (SAS 1),fitusiran,exposed,0,34,0,0,0,0,none,0,subcutaneous,0,Hemophilia A; Hemophilia B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02594124,Infantile SMA Onset 232SM202,nusinersen,exposed,0,12,0,1,0,1,none,2,intrathecal_lumbar,1,Spinal Muscular Atrophy,splice_switching_ASO,full_PS,uniform 2'-MOE,1,COMPLETED,4
+NCT02594124,Infantile SMA Onset CS3A,nusinersen,exposed,0,13,0,2,0,1,none,1,intrathecal_lumbar,1,Spinal Muscular Atrophy,splice_switching_ASO,full_PS,uniform 2'-MOE,1,COMPLETED,4
+NCT02594124,Infantile SMA Onset CS3B Previous Control,nusinersen,exposed,0,24,0,4,0,1,none,1,intrathecal_lumbar,1,Spinal Muscular Atrophy,splice_switching_ASO,full_PS,uniform 2'-MOE,1,COMPLETED,4
+NCT02594124,Infantile SMA Onset CS3B Previous ISIS 396443,nusinersen,exposed,0,65,0,4,0,1,none,1,intrathecal_lumbar,1,Spinal Muscular Atrophy,splice_switching_ASO,full_PS,uniform 2'-MOE,1,COMPLETED,4
+NCT02594124,Later SMA Onset 232SM202,nusinersen,exposed,0,8,0,2,0,1,none,2,intrathecal_lumbar,1,Spinal Muscular Atrophy,splice_switching_ASO,full_PS,uniform 2'-MOE,1,COMPLETED,4
+NCT02594124,Later SMA Onset CS12 Type 2,nusinersen,exposed,0,20,0,13,0,1,none,1,intrathecal_lumbar,1,Spinal Muscular Atrophy,splice_switching_ASO,full_PS,uniform 2'-MOE,1,COMPLETED,4
+NCT02594124,Later SMA Onset CS12 Type 3,nusinersen,exposed,0,25,0,15,0,1,none,1,intrathecal_lumbar,1,Spinal Muscular Atrophy,splice_switching_ASO,full_PS,uniform 2'-MOE,1,COMPLETED,4
+NCT02594124,Later SMA Onset CS4 Previous Control,nusinersen,exposed,0,42,0,7,0,1,none,1,intrathecal_lumbar,1,Spinal Muscular Atrophy,splice_switching_ASO,full_PS,uniform 2'-MOE,1,COMPLETED,4
+NCT02594124,Later SMA Onset CS4 Previous ISIS 396443,nusinersen,exposed,0,83,0,21,0,1,none,1,intrathecal_lumbar,1,Spinal Muscular Atrophy,splice_switching_ASO,full_PS,uniform 2'-MOE,1,COMPLETED,4
+NCT02597127,Inclisiran 100 mg (Double Dose),inclisiran,exposed,0,61,0,0,0,0,none,0,subcutaneous,0,Atherosclerotic Cardiovascular Disease; Familial Hypercholesterolemia; Diabetes,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02597127,Inclisiran 200 mg (Double Dose),inclisiran,exposed,0,62,0,0,0,0,none,0,subcutaneous,0,Atherosclerotic Cardiovascular Disease; Familial Hypercholesterolemia; Diabetes,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02597127,Inclisiran 200 mg (Single Dose),inclisiran,exposed,0,60,0,0,0,0,none,0,subcutaneous,0,Atherosclerotic Cardiovascular Disease; Familial Hypercholesterolemia; Diabetes,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02597127,Inclisiran 300 mg (Double Dose),inclisiran,exposed,0,61,0,0,0,0,none,0,subcutaneous,0,Atherosclerotic Cardiovascular Disease; Familial Hypercholesterolemia; Diabetes,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02597127,Inclisiran 300 mg (Single Dose),inclisiran,exposed,0,61,0,0,0,0,none,0,subcutaneous,0,Atherosclerotic Cardiovascular Disease; Familial Hypercholesterolemia; Diabetes,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02597127,Inclisiran 500 mg (Single Dose),inclisiran,exposed,0,65,0,0,0,0,none,0,subcutaneous,0,Atherosclerotic Cardiovascular Disease; Familial Hypercholesterolemia; Diabetes,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02597127,Placebo (Double Dose),placebo_or_sham_control,comparator,1,62,0,0,0,0,none,0,subcutaneous,0,Atherosclerotic Cardiovascular Disease; Familial Hypercholesterolemia; Diabetes,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT02597127,Placebo (Single Dose),placebo_or_sham_control,comparator,1,65,0,0,0,0,none,0,subcutaneous,0,Atherosclerotic Cardiovascular Disease; Familial Hypercholesterolemia; Diabetes,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT02598661,Phase 2: Imetelstat Sodium (Escalated to 9.4 mg/kg),imetelstat,exposed,0,7,0,0,0,0,none,0,intravenous,0,Myelodysplastic Syndromes,other,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT02598661,Phase 2: Imetelstat Sodium (No Dose Escalation),imetelstat,exposed,0,50,0,0,0,0,none,0,intravenous,0,Myelodysplastic Syndromes,other,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT02598661,Phase 3: Imetelstat Sodium,imetelstat,exposed,0,118,0,0,0,0,none,0,intravenous,0,Myelodysplastic Syndromes,other,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT02598661,Phase 3: Placebo,placebo_or_sham_control,comparator,1,59,0,0,0,0,none,0,intravenous,0,Myelodysplastic Syndromes,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,ACTIVE_NOT_RECRUITING,1
+NCT02598661,QTc Substudy: Crossover Imetelstat Sodium,placebo_or_sham_control,comparator,1,14,0,0,0,0,none,0,intravenous,0,Myelodysplastic Syndromes,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,ACTIVE_NOT_RECRUITING,1
+NCT02598661,QTc Substudy: Imetelstat Sodium,imetelstat,exposed,0,35,0,0,0,0,none,0,intravenous,0,Myelodysplastic Syndromes,other,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT02598661,QTc Substudy: Placebo,placebo_or_sham_control,comparator,1,18,0,0,0,0,none,0,intravenous,0,Myelodysplastic Syndromes,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,ACTIVE_NOT_RECRUITING,1
+NCT02623699,Part A-SAD: Cohort 1: BIIB067 10 mg,tofersen,exposed,0,3,0,0,0,0,none,0,intrathecal_lumbar,1,Amyotrophic Lateral Sclerosis,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,3
+NCT02623699,Part A-SAD: Cohort 2: BIIB067 20 mg,tofersen,exposed,0,3,0,0,0,0,none,0,intrathecal_lumbar,1,Amyotrophic Lateral Sclerosis,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,3
+NCT02623699,Part A-SAD: Cohort 3: BIIB067 40 mg,tofersen,exposed,0,3,0,0,0,0,none,0,intrathecal_lumbar,1,Amyotrophic Lateral Sclerosis,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,3
+NCT02623699,Part A-SAD: Cohort 4: BIIB067 60 mg,tofersen,exposed,0,6,0,0,0,0,none,0,intrathecal_lumbar,1,Amyotrophic Lateral Sclerosis,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,3
+NCT02623699,Part A-SAD: Combined Placebo,placebo_or_sham_control,comparator,1,5,0,1,0,1,none,1,intrathecal_lumbar,1,Amyotrophic Lateral Sclerosis,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,3
+NCT02623699,Part B-MAD: Cohort 5: BIIB067 20 mg,tofersen,exposed,0,10,0,4,0,1,none,1,intrathecal_lumbar,1,Amyotrophic Lateral Sclerosis,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,3
+NCT02623699,Part B-MAD: Cohort 6: BIIB067 40 mg,tofersen,exposed,0,9,0,3,0,1,none,1,intrathecal_lumbar,1,Amyotrophic Lateral Sclerosis,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,3
+NCT02623699,Part B-MAD: Cohort 7: BIIB067 60 mg,tofersen,exposed,0,9,0,3,0,1,none,1,intrathecal_lumbar,1,Amyotrophic Lateral Sclerosis,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,3
+NCT02623699,Part B-MAD: Cohort 8: BIIB067 100 mg,tofersen,exposed,0,10,0,3,0,1,none,1,intrathecal_lumbar,1,Amyotrophic Lateral Sclerosis,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,3
+NCT02623699,Part B-MAD: Combined Placebo,placebo_or_sham_control,comparator,1,12,0,3,0,1,none,1,intrathecal_lumbar,1,Amyotrophic Lateral Sclerosis,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,3
+NCT02623699,Part C-Pivotal: BIIB067 100 mg,tofersen,exposed,0,72,0,13,0,1,none,2,intrathecal_lumbar,1,Amyotrophic Lateral Sclerosis,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,3
+NCT02623699,Part C-Pivotal: Placebo,placebo_or_sham_control,comparator,1,36,0,11,0,1,none,1,intrathecal_lumbar,1,Amyotrophic Lateral Sclerosis,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,3
+NCT02639286,ISIS 304801,volanesorsen,exposed,0,2,0,0,0,0,none,0,subcutaneous,0,Lipodystrophy,ASO_gapmer,full_PS,5-10-5,1,COMPLETED,1
+NCT02639286,Placebo,placebo_or_sham_control,comparator,1,3,0,0,0,0,none,0,subcutaneous,0,Lipodystrophy,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT02658175,CS16-Volanesorsen,volanesorsen,exposed,0,3,0,0,0,0,none,0,subcutaneous,0,Familial Chylomicronemia Syndrome; Lipoprotein Lipase Deficiency; Hyperlipoprote,ASO_gapmer,full_PS,5-10-5,1,COMPLETED,1
+NCT02658175,CS6-Volanesorsen,volanesorsen,exposed,0,14,0,0,0,0,none,0,subcutaneous,0,Familial Chylomicronemia Syndrome; Lipoprotein Lipase Deficiency; Hyperlipoprote,ASO_gapmer,full_PS,5-10-5,1,COMPLETED,1
+NCT02658175,Treatment-naïve Group,placebo_or_sham_control,comparator,1,51,0,0,0,0,none,0,subcutaneous,0,Familial Chylomicronemia Syndrome; Lipoprotein Lipase Deficiency; Hyperlipoprote,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT02706886,Part A: SAD: Lumasiran 0.3 mg/kg,lumasiran,exposed,0,6,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria Type 1 (PH1),siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02706886,Part A: SAD: Lumasiran 1.0 mg/kg,lumasiran,exposed,0,6,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria Type 1 (PH1),siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02706886,Part A: SAD: Lumasiran 3.0 mg/kg,lumasiran,exposed,0,6,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria Type 1 (PH1),siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02706886,Part A: SAD: Lumasiran 6.0 mg/kg,lumasiran,exposed,0,6,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria Type 1 (PH1),siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02706886,Part A: SAD: Placebo,placebo_or_sham_control,comparator,1,8,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria Type 1 (PH1),NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT02706886,Part B: MAD: Lumasiran 1.0 mg/kg qM,lumasiran,exposed,0,8,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria Type 1 (PH1),siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02706886,Part B: MAD: Lumasiran 3.0 mg/kg q3M,lumasiran,exposed,0,4,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria Type 1 (PH1),siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02706886,Part B: MAD: Lumasiran 3.0 mg/kg qM,lumasiran,exposed,0,8,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria Type 1 (PH1),siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02706886,Part B: MAD: Placebo,placebo_or_sham_control,comparator,1,3,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria Type 1 (PH1),NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT02851407,Best Supportive Care,defibrotide,exposed,0,174,0,1,0,1,none,2,intravenous,0,Veno-occlusive Disease,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,2
+NCT02851407,Defibrotide Prophylaxis,defibrotide,exposed,0,181,0,0,0,0,none,0,intravenous,0,Veno-occlusive Disease,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,2
+NCT02876601,Defibrotide Plus LPS,defibrotide,exposed,0,16,0,0,0,0,none,0,intravenous,0,Healthy Volunteers; Endotoxemia,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02876601,Defibrotide Plus Placebo,placebo_or_sham_control,comparator,1,3,0,0,0,0,none,0,intravenous,0,Healthy Volunteers; Endotoxemia,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT02876601,Placebo Plus LPS,placebo_or_sham_control,comparator,1,16,0,0,0,0,none,0,intravenous,0,Healthy Volunteers; Endotoxemia,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT02876601,Placebo/Placebo,placebo_or_sham_control,comparator,1,4,0,0,0,0,none,0,intravenous,0,Healthy Volunteers; Endotoxemia,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT02949830,Givosiran,givosiran,exposed,0,16,0,0,0,0,none,0,subcutaneous,0,Acute Intermittent Porphyria,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02963311,Inclisiran,inclisiran,exposed,0,4,0,0,0,0,none,0,subcutaneous,0,Homozygous Familial Hypercholesterolemia,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03060577,Inclisiran Only Arm,inclisiran,exposed,0,284,0,0,0,0,none,0,subcutaneous,0,Atherosclerotic Cardiovascular Disease; Symptomatic Atherosclerosis; Type2 Diabe,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03060577,Switching Arm After Day 360 Visit,inclisiran,exposed,0,87,0,0,0,0,none,0,subcutaneous,0,Atherosclerotic Cardiovascular Disease; Symptomatic Atherosclerosis; Type2 Diabe,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03060577,Switching Arm up to Day 360 Visit,inclisiran,exposed,0,90,0,0,0,0,none,0,subcutaneous,0,Atherosclerotic Cardiovascular Disease; Symptomatic Atherosclerosis; Type2 Diabe,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03070119,233AS101: Part C (Prior BIIB067 100 mg),tofersen,exposed,0,63,0,15,0,1,none,2,NOT_REPORTED,0,ALS Caused by Superoxide Dismutase 1 (SOD1) Mutation,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,8
+NCT03070119,233AS101: Part C (Prior Placebo),tofersen,exposed,0,32,0,6,0,1,none,2,NOT_REPORTED,0,ALS Caused by Superoxide Dismutase 1 (SOD1) Mutation,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,8
+NCT03070119,233AS101: Parts A and B (All Doses),tofersen,exposed,0,44,0,13,0,1,none,2,NOT_REPORTED,0,ALS Caused by Superoxide Dismutase 1 (SOD1) Mutation,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,8
+NCT03140969,QR-110 Low Dose,sepofarsen,exposed,0,6,0,0,0,0,none,0,intravitreal,0,Leber's Congenital Amaurosis,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03140969,QR-110 Mid Dose,sepofarsen,exposed,0,5,0,0,0,0,none,0,intravitreal,0,Leber's Congenital Amaurosis,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03186989,Part 1: Cohort A: ISIS 814907 10 mg,BIIB080,exposed,0,6,0,3,0,1,none,1,intrathecal_lumbar,1,Mild Alzheimer's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,2
+NCT03186989,Part 1: Cohort B: ISIS 814907 30 mg,BIIB080,exposed,0,6,0,1,0,1,none,1,intrathecal_lumbar,1,Mild Alzheimer's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,2
+NCT03186989,Part 1: Cohort C: ISIS 814907 60 mg,BIIB080,exposed,0,9,0,2,0,1,none,1,intrathecal_lumbar,1,Mild Alzheimer's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,2
+NCT03186989,Part 1: Cohort D: ISIS 814907 115 mg,BIIB080,exposed,0,13,0,3,0,1,none,1,intrathecal_lumbar,1,Mild Alzheimer's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,2
+NCT03186989,Part 1: Pooled Placebo,placebo_or_sham_control,comparator,1,12,0,3,0,1,none,1,intrathecal_lumbar,1,Mild Alzheimer's Disease,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,2
+NCT03186989,Part 2: Early Start Cohort A + ISIS 814907 60 mg,BIIB080,exposed,0,3,0,0,0,0,none,0,intrathecal_lumbar,1,Mild Alzheimer's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,2
+NCT03186989,Part 2: Early Start Cohort B + ISIS 814907 60 mg,BIIB080,exposed,0,5,0,0,0,0,none,0,intrathecal_lumbar,1,Mild Alzheimer's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,2
+NCT03186989,Part 2: Early Start Cohort C + ISIS 814907 60 mg,BIIB080,exposed,0,7,0,1,0,1,none,1,intrathecal_lumbar,1,Mild Alzheimer's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,2
+NCT03186989,Part 2: Early Start Cohort D + ISIS 814907 115 mg,BIIB080,exposed,0,10,0,2,0,1,none,1,intrathecal_lumbar,1,Mild Alzheimer's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,2
+NCT03186989,Part 2: Late Start Cohort A + Cohort B + Cohort C + ISIS 814907 60 mg,placebo_or_sham_control,comparator,1,4,0,0,0,0,none,0,intrathecal_lumbar,1,Mild Alzheimer's Disease,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,2
+NCT03186989,Part 2: Late Start Cohort D + ISIS 814907 115 mg,placebo_or_sham_control,comparator,1,4,0,1,0,1,none,1,intrathecal_lumbar,1,Mild Alzheimer's Disease,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,2
+NCT03218995,Cohort 1: Age 24 to 48 Months,eteplirsen,exposed,0,9,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT03218995,Cohort 2: Age 6 to <24 Months,eteplirsen,exposed,0,6,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT03225833,Pooled Placebo,placebo_or_sham_control,comparator,1,16,0,2,0,1,none,1,NOT_REPORTED,0,Huntington's Disease,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,TERMINATED,2
+NCT03225833,WVE-120101 (16 mg),WVE-120101,exposed,0,8,0,1,0,1,none,1,NOT_REPORTED,0,Huntington's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,2
+NCT03225833,WVE-120101 (2 mg),WVE-120101,exposed,0,9,0,1,0,1,none,1,NOT_REPORTED,0,Huntington's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,2
+NCT03225833,WVE-120101 (32 mg),WVE-120101,exposed,0,10,0,0,0,0,none,0,NOT_REPORTED,0,Huntington's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,2
+NCT03225833,WVE-120101 (4 mg),WVE-120101,exposed,0,9,0,2,0,1,none,1,NOT_REPORTED,0,Huntington's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,2
+NCT03225833,WVE-120101 (8 mg),WVE-120101,exposed,0,9,0,0,0,0,none,0,NOT_REPORTED,0,Huntington's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,2
+NCT03225846,Pooled Placebo,placebo_or_sham_control,comparator,1,22,0,2,0,1,none,1,NOT_REPORTED,0,Huntington's Disease,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,TERMINATED,3
+NCT03225846,WVE-120102 (12 mg),WVE-120102,exposed,0,8,0,1,0,1,none,1,NOT_REPORTED,0,Huntington's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,3
+NCT03225846,WVE-120102 (16 mg),WVE-120102,exposed,0,9,0,0,0,0,none,0,NOT_REPORTED,0,Huntington's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,3
+NCT03225846,WVE-120102 (2 mg),WVE-120102,exposed,0,9,0,0,0,0,none,0,NOT_REPORTED,0,Huntington's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,3
+NCT03225846,WVE-120102 (32 mg ),WVE-120102,exposed,0,13,0,1,0,1,none,2,NOT_REPORTED,0,Huntington's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,3
+NCT03225846,WVE-120102 (4 mg),WVE-120102,exposed,0,12,0,3,0,1,none,1,NOT_REPORTED,0,Huntington's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,3
+NCT03225846,WVE-120102 (8 mg),WVE-120102,exposed,0,15,0,2,0,1,none,1,NOT_REPORTED,0,Huntington's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,3
+NCT03334617,Module 1 Cohort A.1.HRR: Durvalumab 1500 mg + Olaparib 300 mg,danvatirsen,exposed,0,21,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 1 Cohort A.1.LKB: Durvalumab 1500 mg + Olaparib 300 mg,danvatirsen,exposed,0,21,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 1 Cohort B.1.ACQ: Durvalumab 1500 mg + Olaparib 300 mg,danvatirsen,exposed,0,23,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 1 Cohort B.1.PRI: Durvalumab 1500 mg + Olaparib 300 mg,danvatirsen,exposed,0,22,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 10 Cohort C.10.160: Durvalumab 1500 mg + Ceralasertib 160 mg,danvatirsen,exposed,0,34,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 10 Cohort C.10.240: Durvalumab 1500 mg + Ceralasertib 240 mg,danvatirsen,exposed,0,17,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 11 Cohort C.11.240: AZD6738 240 mg,danvatirsen,exposed,0,38,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 2 Cohort B.2.ACQ: Durvalumab 1500 mg + Danvatirsen 200 mg,danvatirsen,exposed,0,22,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 2 Cohort B.2.PRI: Durvalumab 1500 mg + Danvatirsen 200 mg,danvatirsen,exposed,0,23,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 3 Cohort A.3.ATM: Durvalumab 1500 mg + AZD6738 240 mg,danvatirsen,exposed,0,31,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 3 Cohort B.3.ACQ: Durvalumab 1500 mg + AZD6738 240 mg,danvatirsen,exposed,0,58,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 3 Cohort B.3.PRI: Durvalumab 1500 mg + AZD6738 240 mg,danvatirsen,exposed,0,38,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 4 Cohort A.4.RIC: Durvalumab 1500 mg + Vistusertib 125 mg,danvatirsen,exposed,0,1,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 5 Cohort A.5.73H: Durvalumab 1500 mg + Oleclumab 3000 mg,danvatirsen,exposed,0,23,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 5 Cohort B.5.ACQ: Durvalumab 1500 mg + Oleclumab 3000 mg,danvatirsen,exposed,0,25,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 5 Cohort B.5.PRI: Durvalumab 1500 mg + Oleclumab 3000 mg,danvatirsen,exposed,0,9,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 6 Cohort A.6.HER2e: Durvalumab 1120 mg + Trastuzumab Deruxtecan 5.4mg/kg,danvatirsen,exposed,0,23,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 6 Cohort A.6.HER2m: Durvalumab 1120 mg + Trastuzumab Deruxtecan 5.4mg/kg,danvatirsen,exposed,0,20,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 7 Cohort B.7.ACQ: Durvalumab 1500 mg + Cediranib 20 mg,danvatirsen,exposed,0,22,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 8 Cohort A.8.ATM: Ceralasertib 240 mg,danvatirsen,exposed,0,15,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 9 Cohort B.9.ACQ: Durvalumab 1500 mg + Ceralasertib 240 mg,danvatirsen,exposed,0,24,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03334617,Module 9 Cohort B.9.PRI: Durvalumab 1500 mg + Ceralasertib 240 mg,danvatirsen,exposed,0,19,0,0,0,0,none,0,intravenous,0,Non-Small Cell Lung Cancer,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT03338816,All Givosiran,givosiran,exposed,0,94,0,0,0,0,none,0,subcutaneous,0,"Acute Hepatic Porphyria; Acute Intermittent Porphyria; Porphyria, Acute Intermit",siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03338816,Givosiran 2.5 mg/kg 6-Month DB,givosiran,exposed,0,48,0,0,0,0,none,0,subcutaneous,0,"Acute Hepatic Porphyria; Acute Intermittent Porphyria; Porphyria, Acute Intermit",siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03338816,Givosiran/Givosiran,givosiran,exposed,0,48,0,0,0,0,none,0,subcutaneous,0,"Acute Hepatic Porphyria; Acute Intermittent Porphyria; Porphyria, Acute Intermit",siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03338816,Placebo 6-Month DB,placebo_or_sham_control,comparator,1,46,0,0,0,0,none,0,subcutaneous,0,"Acute Hepatic Porphyria; Acute Intermittent Porphyria; Porphyria, Acute Intermit",NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT03338816,Placebo/Givosiran,placebo_or_sham_control,comparator,1,46,0,0,0,0,none,0,subcutaneous,0,"Acute Hepatic Porphyria; Acute Intermittent Porphyria; Porphyria, Acute Intermit",NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT03339297,Defibrotide Prophylaxis,defibrotide,exposed,0,74,0,0,0,0,none,0,intravenous,0,Graft-versus-host Disease; Acute-graft-versus-host Disease,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03339297,Standard of Care Immunoprophylaxis,defibrotide,exposed,0,70,0,0,0,0,none,0,intravenous,0,Graft-versus-host Disease; Acute-graft-versus-host Disease,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03342053,RO7234292 Bimonthly,tominersen,exposed,0,23,0,5,0,1,none,1,intrathecal_lumbar,1,Huntington's Disease,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,4
+NCT03342053,RO7234292 Monthly,tominersen,exposed,0,23,2,4,1,1,cerebral_ventricle_dilatation_AE;hydrocephalus_AE,3,intrathecal_lumbar,1,Huntington's Disease,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,4
+NCT03350451,Lumasiran (ALN-GO1): 1.0 mg/kg QM or 3.0 mg/kg Q3M,lumasiran,exposed,0,13,0,0,0,0,none,0,subcutaneous,0,PH1; Primary Hyperoxaluria; RNAi Therapeutic; siRNA; AGT,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03350451,Lumasiran (ALN-GO1): 3.0 mg/kg QM,lumasiran,exposed,0,7,0,0,0,0,none,0,subcutaneous,0,PH1; Primary Hyperoxaluria; RNAi Therapeutic; siRNA; AGT,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03384693,Prophylactic Defibrotide,defibrotide,exposed,0,25,0,0,0,0,none,0,intravenous,0,Thrombotic Microangiopathies,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03397121,Inclisiran,inclisiran,exposed,0,241,0,0,0,0,none,0,subcutaneous,0,Heterozygous Familial Hypercholesterolemia; Elevated Cholesterol,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03397121,Placebo,placebo_or_sham_control,comparator,1,240,0,0,0,0,none,0,subcutaneous,0,Heterozygous Familial Hypercholesterolemia; Elevated Cholesterol,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT03399370,Inclisiran,inclisiran,exposed,0,781,0,0,0,0,none,0,subcutaneous,0,ASCVD; Elevated Cholesterol,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03399370,Saline Solution,placebo_or_sham_control,comparator,1,778,2,0,1,0,normal_pressure_hydrocephalus_AE,3,subcutaneous,0,ASCVD; Elevated Cholesterol,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT03400800,Inclisiran,inclisiran,exposed,0,811,0,0,0,0,none,0,subcutaneous,0,"ASCVD; Risk Factor, Cardiovascular; Elevated Cholesterol",siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03400800,Placebo,placebo_or_sham_control,comparator,1,804,0,0,0,0,none,0,subcutaneous,0,"ASCVD; Risk Factor, Cardiovascular; Elevated Cholesterol",NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT03417102,Bypassing Agents (BPA) On-demand,fitusiran,exposed,0,19,0,0,0,0,none,0,subcutaneous,0,Hemophilia A; Hemophilia B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03417102,Fitusiran 80 mg Prophylaxis,fitusiran,exposed,0,41,0,0,0,0,none,0,subcutaneous,0,Hemophilia A; Hemophilia B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03417245,Factor On-demand,fitusiran,exposed,0,40,0,0,0,0,none,0,subcutaneous,0,Hemophilia A; Hemophilia B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03417245,Fitusiran 80 mg Prophylaxis,fitusiran,exposed,0,79,0,0,0,0,none,0,subcutaneous,0,Hemophilia A; Hemophilia B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03532542,Casimersen,casimersen; golodirsen,exposed,0,97,0,1,0,1,none,2,intravenous,0,Duchenne Muscular Dystrophy,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,2
+NCT03532542,Golodirsen,casimersen; golodirsen,exposed,0,74,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,2
+NCT03549871,Cohort A: SAS 1 - BPA Prophylaxis,fitusiran,exposed,0,19,0,0,0,0,none,0,subcutaneous,0,Hemophilia,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03549871,Cohort A: SAS 1 - Fitusiran 80 mg QM,fitusiran,exposed,0,21,0,0,0,0,none,0,subcutaneous,0,Hemophilia,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03549871,Cohort A: SAS 2 - BPA Prophylaxis,fitusiran,exposed,0,2,0,0,0,0,none,0,subcutaneous,0,Hemophilia,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03549871,Cohort A: SAS 2 - Fitusiran 50 mg Q2M,fitusiran,exposed,0,2,0,0,0,0,none,0,subcutaneous,0,Hemophilia,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03549871,Cohort B: SAS 1 - Factor Prophylaxis,fitusiran,exposed,0,46,0,0,0,0,none,0,subcutaneous,0,Hemophilia,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03549871,Cohort B: SAS 1 - Fitusiran 80 mg QM,fitusiran,exposed,0,46,0,0,0,0,none,0,subcutaneous,0,Hemophilia,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03549871,Overall: SAS 1 - Factor/BPA Prophylaxis,fitusiran,exposed,0,65,0,0,0,0,none,0,subcutaneous,0,Hemophilia,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03549871,Overall: SAS 1 - Fitusiran 80 mg QM,fitusiran,exposed,0,67,0,0,0,0,none,0,subcutaneous,0,Hemophilia,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03681184,Lumasiran/Lumasiran,placebo_or_sham_control,comparator,1,26,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria Type 1 (PH1),NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT03681184,Placebo,placebo_or_sham_control,comparator,1,13,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria Type 1 (PH1),NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT03681184,Placebo/Lumasiran,placebo_or_sham_control,comparator,1,13,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria Type 1 (PH1),NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT03728634,Multiple Dose Cohort A: ION-682884 45 mg,eplontersen,exposed,0,10,0,0,0,0,none,0,subcutaneous,0,Healthy Volunteers; hATTR Amyloidosis,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,1
+NCT03728634,Multiple Dose Cohort B: ION-682884 90 mg,eplontersen,exposed,0,10,0,0,0,0,none,0,subcutaneous,0,Healthy Volunteers; hATTR Amyloidosis,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,1
+NCT03728634,Multiple Dose Cohort E: ION-682884 60 mg,eplontersen,exposed,0,10,0,0,0,0,none,0,subcutaneous,0,Healthy Volunteers; hATTR Amyloidosis,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,1
+NCT03728634,Multiple Dose Cohort: Placebo,placebo_or_sham_control,comparator,1,6,0,0,0,0,none,0,subcutaneous,0,Healthy Volunteers; hATTR Amyloidosis,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT03728634,Single Dose Cohort C: ION-682884 120 mg,eplontersen,exposed,0,9,0,0,0,0,none,0,subcutaneous,0,Healthy Volunteers; hATTR Amyloidosis,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,1
+NCT03728634,Single Dose Cohort: Placebo,placebo_or_sham_control,comparator,1,2,0,0,0,0,none,0,subcutaneous,0,Healthy Volunteers; hATTR Amyloidosis,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT03759379,Patisiran + Vutrisiran (HELIOS-A),patisiran; vutrisiran,exposed,0,42,0,0,0,0,none,0,subcutaneous,0,"Amyloidosis, Hereditary; Transthyretin Amyloidosis",NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03759379,Vutrisiran + Vutrisiran (HELIOS-A),patisiran; vutrisiran,exposed,0,122,0,0,0,0,none,0,subcutaneous,0,"Amyloidosis, Hereditary; Transthyretin Amyloidosis",NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03761849,PLB NDC,placebo_or_sham_control,comparator,1,264,0,21,0,1,none,1,intrathecal_lumbar,1,Huntingtons Disease,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,4
+NCT03761849,PLB ODC,placebo_or_sham_control,comparator,1,36,0,4,0,1,none,1,intrathecal_lumbar,1,Huntingtons Disease,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,4
+NCT03761849,Q16W NDC,tominersen,exposed,0,264,0,18,0,1,none,1,intrathecal_lumbar,1,Huntingtons Disease,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,4
+NCT03761849,Q4W ODC,tominersen,exposed,0,36,0,3,0,1,none,1,intrathecal_lumbar,1,Huntingtons Disease,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,4
+NCT03761849,Q8W NDC,tominersen,exposed,0,263,2,24,1,1,hydrocephalus_AE,3,intrathecal_lumbar,1,Huntingtons Disease,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,4
+NCT03761849,Q8W ODC,tominersen,exposed,0,36,0,7,0,1,none,1,intrathecal_lumbar,1,Huntingtons Disease,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,4
+NCT03794544,Durvalumab 1500 mg,danvatirsen,exposed,0,26,0,0,0,0,none,0,intravenous,0,Resectable; Early-stage; NSCLC,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03794544,Durvalumab 1500 mg + Danvatirsen 200 mg,danvatirsen,exposed,0,16,0,0,0,0,none,0,intravenous,0,Resectable; Early-stage; NSCLC,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03794544,Durvalumab 1500 mg + Monalizumab 750 mg,danvatirsen,exposed,0,20,0,0,0,0,none,0,intravenous,0,Resectable; Early-stage; NSCLC,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03794544,Durvalumab 1500 mg + Oleclumab 3000 mg,danvatirsen,exposed,0,21,0,0,0,0,none,0,intravenous,0,Resectable; Early-stage; NSCLC,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03814187,ORION-3 Rollover,inclisiran,exposed,0,284,0,0,0,0,none,0,subcutaneous,0,ASCVD; Elevated Cholesterol; Heterozygous Familial Hypercholesterolemia; Homozyg,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03814187,Phase III Inclisiran-Inclisiran,inclisiran,exposed,0,1512,0,0,0,0,none,0,subcutaneous,0,ASCVD; Elevated Cholesterol; Heterozygous Familial Hypercholesterolemia; Homozyg,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03814187,Phase III Placebo-Inclisiran,placebo_or_sham_control,comparator,1,1478,0,0,0,0,none,0,subcutaneous,0,ASCVD; Elevated Cholesterol; Heterozygous Familial Hypercholesterolemia; Homozyg,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT03814187,Total,inclisiran,exposed,0,3274,0,0,0,0,none,0,subcutaneous,0,ASCVD; Elevated Cholesterol; Heterozygous Familial Hypercholesterolemia; Homozyg,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03842969,Tominersen 120 mg Q16W,tominersen,exposed,0,88,1,2,1,1,cerebral_ventricle_dilatation_AE,1,intrathecal_lumbar,1,Huntington Disease,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,5
+NCT03842969,Tominersen 120 mg Q8W,tominersen,exposed,0,143,4,11,1,1,cerebral_ventricle_dilatation_AE;normal_pressure_hydrocephalus_AE,3,intrathecal_lumbar,1,Huntington Disease,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,5
+NCT03842969,Tominersen 120mg Q4W,tominersen,exposed,0,14,1,0,1,0,cerebral_ventricle_dilatation_AE,1,intrathecal_lumbar,1,Huntington Disease,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,5
+NCT03847909,DCR-PHXC,nedosiran,exposed,0,23,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria Type 1 (PH1); Primary Hyperoxaluria Type 2 (PH2); Kidney D,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03847909,Placebo,placebo_or_sham_control,comparator,1,12,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria Type 1 (PH1); Primary Hyperoxaluria Type 2 (PH2); Kidney D,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT03851705,Part 1: Inclisiran,inclisiran,exposed,0,37,0,0,0,0,none,0,subcutaneous,0,Homozygous Familial Hypercholesterolemia,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03851705,Part 1: Placebo,placebo_or_sham_control,comparator,1,19,0,0,0,0,none,0,subcutaneous,0,Homozygous Familial Hypercholesterolemia,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT03851705,Part 1:All Patients,inclisiran,exposed,0,56,0,0,0,0,none,0,subcutaneous,0,Homozygous Familial Hypercholesterolemia,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03851705,Part 2: Inclisiran,inclisiran,exposed,0,53,0,0,0,0,none,0,subcutaneous,0,Homozygous Familial Hypercholesterolemia,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03862807,Patisiran,patisiran,exposed,0,23,0,0,0,0,none,0,intravenous,0,"Amyloidosis, Familial; Transthyretin Amyloidosis",siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03905694,Lumasiran,lumasiran,exposed,0,18,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria; Primary Hyperoxaluria Type 1 (PH1),siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03913130,Drug QR-110,sepofarsen,exposed,0,9,0,0,0,0,none,0,intravitreal,0,Leber Congenital Amaurosis 10; Blindness; Leber Congenital Amaurosis; Vision Dis,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT03954106,"Part 1: Safety Lead-In, Defibrotide 2.5 mg/kg/Dose",defibrotide,exposed,0,4,0,0,0,0,none,0,NOT_REPORTED,0,DLBCL; Neurotoxicity Syndromes,other,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT03954106,"Phase 2: RP2D, 6.25 mg/kg/Dose",defibrotide,exposed,0,21,0,0,0,0,none,0,NOT_REPORTED,0,DLBCL; Neurotoxicity Syndromes,other,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT03985878,Eteplirsen,eteplirsen,exposed,0,15,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,TERMINATED,1
+NCT03997383,Double-blind Period: Patisiran,patisiran,exposed,0,181,0,0,0,0,none,0,intravenous,0,Transthyretin Amyloidosis (ATTR) With Cardiomyopathy,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03997383,Double-blind Period: Placebo,placebo_or_sham_control,comparator,1,178,0,0,0,0,none,0,intravenous,0,Transthyretin Amyloidosis (ATTR) With Cardiomyopathy,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT03997383,Open Label Extension Period: Patisiran (in DB Period) to Patisiran,patisiran,exposed,0,168,0,0,0,0,none,0,intravenous,0,Transthyretin Amyloidosis (ATTR) With Cardiomyopathy,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03997383,Open Label Extension Period: Placebo (in DB Period) to Patisiran,placebo_or_sham_control,comparator,1,166,0,0,0,0,none,0,intravenous,0,Transthyretin Amyloidosis (ATTR) With Cardiomyopathy,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT04000594,120 MG RG6042,tominersen,exposed,0,4,0,2,0,1,none,1,intrathecal_lumbar,1,Huntingtons Disease,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,2
+NCT04000594,30 MG RG6042,tominersen,exposed,0,4,0,3,0,1,none,1,intrathecal_lumbar,1,Huntingtons Disease,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,2
+NCT04000594,60 MG RG6042,tominersen,exposed,0,4,0,2,0,1,none,1,intrathecal_lumbar,1,Huntingtons Disease,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,2
+NCT04030598,Part A: Donidalorsen 80 mg,donidalorsen,exposed,0,14,0,0,0,0,none,0,subcutaneous,0,Hereditary Angioedema,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04030598,Part A: Placebo,placebo_or_sham_control,comparator,1,6,0,0,0,0,none,0,subcutaneous,0,Hereditary Angioedema,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT04030598,Part B: Donidalorsen 80 mg,donidalorsen,exposed,0,3,0,0,0,0,none,0,subcutaneous,0,Hereditary Angioedema,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04060199,Placebo,placebo_or_sham_control,comparator,1,39,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT04060199,Viltolarsen,viltolarsen,exposed,0,38,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT04089566,Part A: 28/28 mg Nusinersen,nusinersen,exposed,0,6,0,0,0,0,none,0,intrathecal_lumbar,1,"Muscular Atrophy, Spinal",splice_switching_ASO,full_PS,uniform 2'-MOE,1,COMPLETED,2
+NCT04089566,Part B: Infantile-Onset SMA: 12/12 mg Nusinersen,placebo_or_sham_control,comparator,1,25,0,0,0,0,none,0,intrathecal_lumbar,1,"Muscular Atrophy, Spinal",NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,2
+NCT04089566,Part B: Infantile-Onset SMA: 50/28 mg Nusinersen,placebo_or_sham_control,comparator,1,50,0,0,0,0,none,0,intrathecal_lumbar,1,"Muscular Atrophy, Spinal",NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,2
+NCT04089566,Part B: Later-Onset SMA: 12/12 mg Nusinersen,placebo_or_sham_control,comparator,1,8,0,0,0,0,none,0,intrathecal_lumbar,1,"Muscular Atrophy, Spinal",NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,2
+NCT04089566,Part B: Later-Onset SMA: 50/28 mg Nusinersen,placebo_or_sham_control,comparator,1,16,0,1,0,1,none,2,intrathecal_lumbar,1,"Muscular Atrophy, Spinal",NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,2
+NCT04089566,Part C: 50/28 mg Nusinersen,nusinersen,exposed,0,40,0,0,0,0,none,0,intrathecal_lumbar,1,"Muscular Atrophy, Spinal",splice_switching_ASO,full_PS,uniform 2'-MOE,1,COMPLETED,2
+NCT04136184,Eplontersen,eplontersen; inotersen,exposed,0,144,0,0,0,0,none,0,subcutaneous,0,Hereditary Transthyretin-Mediated Amyloid Polyneuropathy,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04136184,Inotersen (Prior to Switch),eplontersen; inotersen,exposed,0,24,0,0,0,0,none,0,subcutaneous,0,Hereditary Transthyretin-Mediated Amyloid Polyneuropathy,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04136184,Inotersen to ION-682884 (After Switch),eplontersen; inotersen,exposed,0,20,0,0,0,0,none,0,subcutaneous,0,Hereditary Transthyretin-Mediated Amyloid Polyneuropathy,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04152200,Cohort A: Lumasiran,lumasiran,exposed,0,6,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria Type 1; Primary Hyperoxaluria,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04152200,Cohort B: Lumasiran,lumasiran,exposed,0,15,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria Type 1; Primary Hyperoxaluria,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04153149,DB Period: Placebo,placebo_or_sham_control,comparator,1,328,0,0,0,0,none,0,subcutaneous,0,Transthyretin Amyloidosis (ATTR) With Cardiomyopathy,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,ACTIVE_NOT_RECRUITING,3
+NCT04153149,DB Period: Vutrisiran,vutrisiran,exposed,0,326,0,1,0,1,none,2,subcutaneous,0,Transthyretin Amyloidosis (ATTR) With Cardiomyopathy,siRNA,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,3
+NCT04179409,AMONDYS 45,casimersen; eteplirsen; golodirsen,exposed,0,2,0,0,0,0,none,0,NOT_REPORTED,0,Duchenne Muscular Dystrophy,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04179409,VYONDYS 53,casimersen; eteplirsen; golodirsen,exposed,0,1,0,0,0,0,none,0,NOT_REPORTED,0,Duchenne Muscular Dystrophy,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04306510,TEGSEDI,inotersen,exposed,0,7,0,0,0,0,none,0,subcutaneous,0,Hereditary Transthyretin Amyloidosis With Polyneuropthy,ASO_gapmer,full_PS,5-10-5,1,TERMINATED,1
+NCT04307381,Fixed-dose Period: HAE-1/HAE-2,donidalorsen,exposed,0,17,0,0,0,0,none,0,subcutaneous,0,Hereditary Angioedema,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04307381,Fixed-dose Period: HAE-nC1-INH,donidalorsen,exposed,0,3,0,0,0,0,none,0,subcutaneous,0,Hereditary Angioedema,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04307381,Flexible-dose Period: HAE-1/HAE-2 (Donidalorsen 100 mg Every 4 Weeks),donidalorsen,exposed,0,1,0,0,0,0,none,0,subcutaneous,0,Hereditary Angioedema,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04307381,Flexible-dose Period: HAE-1/HAE-2 (Donidalorsen 80 mg Every 4 Weeks),donidalorsen,exposed,0,13,0,0,0,0,none,0,subcutaneous,0,Hereditary Angioedema,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04307381,Flexible-dose Period: HAE-1/HAE-2 (Donidalorsen 80 mg Every 8 Weeks),donidalorsen,exposed,0,8,0,0,0,0,none,0,subcutaneous,0,Hereditary Angioedema,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04307381,Flexible-dose Period: HAE-nC1-INH (Donidalorsen 100 mg Every 4 Weeks),donidalorsen,exposed,0,2,0,0,0,0,none,0,subcutaneous,0,Hereditary Angioedema,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04307381,Flexible-dose Period: HAE-nC1-INH (Donidalorsen 80 mg Every 4 Weeks),donidalorsen,exposed,0,1,0,0,0,0,none,0,subcutaneous,0,Hereditary Angioedema,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04494256,Part 1: Cohort A: BIIB105 5 mg,BIIB105,exposed,0,6,0,3,0,1,none,1,intrathecal_lumbar,1,Amyotrophic Lateral Sclerosis,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,2
+NCT04494256,Part 1: Cohort B: BIIB105 20 mg,BIIB105,exposed,0,6,0,1,0,1,none,1,intrathecal_lumbar,1,Amyotrophic Lateral Sclerosis,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,2
+NCT04494256,Part 1: Cohorts C1+C2: BIIB105 60 mg,BIIB105,exposed,0,11,0,6,0,1,none,1,intrathecal_lumbar,1,Amyotrophic Lateral Sclerosis,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,2
+NCT04494256,Part 1: Cohorts D1 + D2: BIIB105 120 mg,BIIB105,exposed,0,48,0,15,0,1,none,1,intrathecal_lumbar,1,Amyotrophic Lateral Sclerosis,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,2
+NCT04494256,Part 1: Pooled Placebo 1+2,placebo_or_sham_control,comparator,1,28,0,7,0,1,none,1,intrathecal_lumbar,1,Amyotrophic Lateral Sclerosis,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,TERMINATED,2
+NCT04494256,Part 2: BIIB105 120 mg,placebo_or_sham_control,comparator,1,51,0,7,0,1,none,1,intrathecal_lumbar,1,Amyotrophic Lateral Sclerosis,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,TERMINATED,2
+NCT04494256,Part 2: BIIB105 60 mg,placebo_or_sham_control,comparator,1,19,0,7,0,1,none,1,intrathecal_lumbar,1,Amyotrophic Lateral Sclerosis,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,TERMINATED,2
+NCT04530604,Defibrotide,defibrotide,exposed,0,12,0,0,0,0,none,0,intravenous,0,COVID; Sars-CoV2; COVID-19; Acute Respiratory Distress Syndrome,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04568434,Olezarsen 50 mg,olezarsen,exposed,0,21,0,0,0,0,none,0,subcutaneous,0,Familial Chylomicronemia Syndrome,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04568434,Olezarsen 80 mg,olezarsen,exposed,0,22,0,0,0,0,none,0,subcutaneous,0,Familial Chylomicronemia Syndrome,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04568434,Placebo,placebo_or_sham_control,comparator,1,23,0,0,0,0,none,0,subcutaneous,0,Familial Chylomicronemia Syndrome,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT04617847,16 mg WVE-120101,WVE-120101,exposed,0,27,0,0,0,0,none,0,intrathecal_lumbar,1,Huntington Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT04617847,32 mg WVE-120101,WVE-120101,exposed,0,5,0,0,0,0,none,0,intrathecal_lumbar,1,Huntington Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT04617847,4 mg WVE-120101,WVE-120101,exposed,0,3,0,0,0,0,none,0,intrathecal_lumbar,1,Huntington Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT04617860,16 mg WVE-120102,WVE-120102,exposed,0,35,0,2,0,1,none,2,intrathecal_lumbar,1,Huntington Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,3
+NCT04617860,32 mg WVE-120102,WVE-120102,exposed,0,17,0,0,0,0,none,0,intrathecal_lumbar,1,Huntington Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,3
+NCT04617860,4 mg WVE-120102,WVE-120102,exposed,0,8,0,0,0,0,none,0,intrathecal_lumbar,1,Huntington Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,3
+NCT04617860,8 mg WVE-120102,WVE-120102,exposed,0,18,0,1,0,1,none,2,intrathecal_lumbar,1,Huntington Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,3
+NCT04652726,Part 1 - Inclisiran,inclisiran,exposed,0,93,0,0,0,0,none,0,subcutaneous,0,Familial Hypercholesterolemia - Heterozygous,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04652726,Part 1 - Placebo,placebo_or_sham_control,comparator,1,48,0,0,0,0,none,0,subcutaneous,0,Familial Hypercholesterolemia - Heterozygous,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT04652726,Part 2 - Inclisiran (Total),placebo_or_sham_control,comparator,1,139,0,0,0,0,none,0,subcutaneous,0,Familial Hypercholesterolemia - Heterozygous,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT04659863,Part 1 - Inclisiran,inclisiran,exposed,0,9,0,0,0,0,none,0,subcutaneous,0,Familial Hypercholesterolemia - Homozygous,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04659863,Part 1 - Placebo,placebo_or_sham_control,comparator,1,4,0,0,0,0,none,0,subcutaneous,0,Familial Hypercholesterolemia - Homozygous,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT04659863,Part 2 - Inclisiran (Total),placebo_or_sham_control,comparator,1,13,0,0,0,0,none,0,subcutaneous,0,Familial Hypercholesterolemia - Homozygous,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT04666298,Inclisiran 100 mg,inclisiran,exposed,0,55,0,0,0,0,none,0,subcutaneous,0,Hypercholesterolemia; Heterozygous Familial Hypercholesterolemia,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04666298,Inclisiran 200 mg,inclisiran,exposed,0,101,0,0,0,0,none,0,subcutaneous,0,Hypercholesterolemia; Heterozygous Familial Hypercholesterolemia,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04666298,Inclisiran 300 mg,inclisiran,exposed,0,99,0,0,0,0,none,0,subcutaneous,0,Hypercholesterolemia; Heterozygous Familial Hypercholesterolemia,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04666298,Placebo,placebo_or_sham_control,comparator,1,57,0,0,0,0,none,0,subcutaneous,0,Hypercholesterolemia; Heterozygous Familial Hypercholesterolemia,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT04807400,Control + BS,inclisiran,exposed,0,290,0,0,0,0,none,0,subcutaneous,0,Atherosclerotic Cardiovascular Disease; Atherosclerotic Cardiovascular Disease R,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04807400,Inclisiran,inclisiran,exposed,0,273,0,0,0,0,none,0,subcutaneous,0,Atherosclerotic Cardiovascular Disease; Atherosclerotic Cardiovascular Disease R,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04807400,Inclisiran + BS,inclisiran,exposed,0,281,0,0,0,0,none,0,subcutaneous,0,Atherosclerotic Cardiovascular Disease; Atherosclerotic Cardiovascular Disease R,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04807400,Total,inclisiran,exposed,0,844,0,0,0,0,none,0,subcutaneous,0,Atherosclerotic Cardiovascular Disease; Atherosclerotic Cardiovascular Disease R,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04873934,Inclisiran + Usual Care,inclisiran,exposed,0,203,0,0,0,0,none,0,NOT_REPORTED,0,Acute Coronary Syndrome,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04873934,Usual Care,inclisiran,exposed,0,197,0,0,0,0,none,0,NOT_REPORTED,0,Acute Coronary Syndrome,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04929249,Inclisiran First,inclisiran,exposed,0,234,0,0,0,0,none,0,NOT_REPORTED,0,Atherosclerotic Cardiovascular Disease,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04929249,Usual Care,inclisiran,exposed,0,216,0,0,0,0,none,0,NOT_REPORTED,0,Atherosclerotic Cardiovascular Disease,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT04956289,Viltolarsen 80mg/kg,viltolarsen,exposed,0,20,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT05001269,Children 0 to <2 Years,nedosiran,exposed,0,5,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria; Primary Hyperoxaluria Type 1; Primary Hyperoxaluria Type ,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT05001269,Children 2 to <6 Years,nedosiran,exposed,0,13,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria; Primary Hyperoxaluria Type 1; Primary Hyperoxaluria Type ,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT05001269,Children 6 to 11 Years,nedosiran,exposed,0,9,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria; Primary Hyperoxaluria Type 1; Primary Hyperoxaluria Type ,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT05001269,Overall,nedosiran,exposed,0,27,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria; Primary Hyperoxaluria Type 1; Primary Hyperoxaluria Type ,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT05032196,MD: 30mg WVE-003,WVE-003,exposed,0,16,0,0,0,0,none,0,NOT_REPORTED,0,Huntington Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,3
+NCT05032196,MD: Placebo,placebo_or_sham_control,comparator,1,7,0,1,0,1,none,1,NOT_REPORTED,0,Huntington Disease,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,3
+NCT05032196,SAD: 30mg WVE-003,WVE-003,exposed,0,13,0,1,0,1,none,1,NOT_REPORTED,0,Huntington Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,3
+NCT05032196,SAD: 60mg WVE-003,WVE-003,exposed,0,10,0,1,0,1,none,1,NOT_REPORTED,0,Huntington Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,3
+NCT05032196,SAD: 90mg WVE-003,WVE-003,exposed,0,8,0,2,0,1,none,1,NOT_REPORTED,0,Huntington Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,3
+NCT05032196,SAD: Pooled Placebo,placebo_or_sham_control,comparator,1,16,0,2,0,1,none,1,NOT_REPORTED,0,Huntington Disease,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,3
+NCT05085964,Ultevursen 180ug/60ug,ultevursen,exposed,0,21,0,0,0,0,none,0,intravitreal,0,Retinitis Pigmentosa; Usher Syndrome Type 2,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05139810,Cohort A: Donidalorsen 80 mg,donidalorsen,exposed,0,45,0,0,0,0,none,0,subcutaneous,0,Hereditary Angioedema,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT05139810,Cohort B: Donidalorsen 80 mg,donidalorsen,exposed,0,23,0,0,0,0,none,0,subcutaneous,0,Hereditary Angioedema,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT05139810,Pooled Placebo,placebo_or_sham_control,comparator,1,22,0,0,0,0,none,0,subcutaneous,0,Hereditary Angioedema,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT05158296,Sham-procedure,placebo_or_sham_control,comparator,1,2,0,0,0,0,none,0,intravitreal,0,Retinitis Pigmentosa; Usher Syndrome Type 2; Deaf Blind; Retinal Disease; Eye Di,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,TERMINATED,1
+NCT05158296,Ultevursen 180/60 µg,ultevursen,exposed,0,3,0,0,0,0,none,0,intravitreal,0,Retinitis Pigmentosa; Usher Syndrome Type 2; Deaf Blind; Retinal Disease; Eye Di,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05158296,Ultevursen 60/60 µg,ultevursen,exposed,0,2,0,0,0,0,none,0,intravitreal,0,Retinitis Pigmentosa; Usher Syndrome Type 2; Deaf Blind; Retinal Disease; Eye Di,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05161936,Lumasiran Dose 1,lumasiran,exposed,0,1,0,0,0,0,none,0,subcutaneous,0,Recurrent Calcium Oxalate Kidney Stone Disease; Elevated Urinary Oxalate Levels,siRNA,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05161936,Placebo,placebo_or_sham_control,comparator,1,1,0,0,0,0,none,0,subcutaneous,0,Recurrent Calcium Oxalate Kidney Stone Disease; Elevated Urinary Oxalate Levels,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,TERMINATED,1
+NCT05176717,QR-421a 180/60 µg,ultevursen,exposed,0,1,0,0,0,0,none,0,intravitreal,0,Retinitis Pigmentosa; Usher Syndrome Type 2; Deaf Blind; Retinal Disease; Eye Di,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05176717,QR-421a 60/60 µg,ultevursen,exposed,0,2,0,0,0,0,none,0,intravitreal,0,Retinitis Pigmentosa; Usher Syndrome Type 2; Deaf Blind; Retinal Disease; Eye Di,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05176717,Sham-procedure,placebo_or_sham_control,comparator,1,2,0,0,0,0,none,0,intravitreal,0,Retinitis Pigmentosa; Usher Syndrome Type 2; Deaf Blind; Retinal Disease; Eye Di,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,TERMINATED,1
+NCT05192941,Inclisiran,inclisiran,exposed,0,900,0,0,0,0,none,0,subcutaneous,0,Hypercholesterolemia,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT05192941,Placebo,placebo_or_sham_control,comparator,1,870,0,0,0,0,none,0,subcutaneous,0,Hypercholesterolemia,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT05192941,Total,inclisiran,exposed,0,1770,0,0,0,0,none,0,subcutaneous,0,Hypercholesterolemia,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT05330455,Part 1: Cohort 1 - GSK3965193 Dose 1,bepirovirsen,exposed,0,6,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05330455,Part 1: Cohort 1 - GSK3965193 Dose 2,bepirovirsen,exposed,0,6,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05330455,Part 1: Cohort 1 - GSK3965193 Dose 3,bepirovirsen,exposed,0,6,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05330455,Part 1: Cohort 1 - GSK3965193 Dose 4,bepirovirsen,exposed,0,6,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05330455,Part 1: Cohort 2 - GSK3965193 Dose 5,bepirovirsen,exposed,0,6,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05330455,Part 1: Cohort 2 - GSK3965193 Dose 6,bepirovirsen,exposed,0,6,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05330455,Part 1: Cohort 2 - GSK3965193 Dose 7,bepirovirsen,exposed,0,6,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05330455,Part 1: Cohort 2 - GSK3965193 Dose 8,bepirovirsen,exposed,0,6,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05330455,Part 1: Cohorts 1 and 2 - Placebo,placebo_or_sham_control,comparator,1,16,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,TERMINATED,1
+NCT05330455,Part 2A: Cohort 3 - GSK3965193 Dose 5 BID,bepirovirsen,exposed,0,7,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05330455,Part 2A: Cohort 4 - GSK3965193 Dose 6 BID,bepirovirsen,exposed,0,4,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05330455,Part 2A: Cohort 5 - GSK3965193 Dose 9 BID,bepirovirsen,exposed,0,6,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05330455,Part 2A: Placebo,placebo_or_sham_control,comparator,1,6,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,TERMINATED,1
+NCT05330455,Part 2B: Cohort 6 - GSK3965193 Dose 10 Fasted,bepirovirsen,exposed,0,11,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05330455,Part 2B: Cohort 6 - GSK3965193 Dose 10 Fed,bepirovirsen,exposed,0,13,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05330455,Part 3: Cohort 7 - GSK3965193 Dose 9,bepirovirsen,exposed,0,14,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05330455,Part 3: Cohort 7 - Placebo,placebo_or_sham_control,comparator,1,4,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,TERMINATED,1
+NCT05355402,Olezarsen 50 mg,olezarsen,exposed,0,58,0,0,0,0,none,0,subcutaneous,0,Hypertriglyceridemia; Atherosclerotic Cardiovascular Disease; Severe Hypertrigly,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT05355402,Olezarsen 80 mg,olezarsen,exposed,0,57,0,0,0,0,none,0,subcutaneous,0,Hypertriglyceridemia; Atherosclerotic Cardiovascular Disease; Severe Hypertrigly,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT05355402,Placebo,placebo_or_sham_control,comparator,1,39,0,0,0,0,none,0,subcutaneous,0,Hypertriglyceridemia; Atherosclerotic Cardiovascular Disease; Severe Hypertrigly,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT05583552,Imetelstat Sodium (1 Treatment / Cycle),imetelstat,exposed,0,23,0,0,0,0,none,0,intravenous,0,Myelodysplastic Syndromes; Acute Myeloid Leukemia,other,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT05583552,Imetelstat Sodium (2 Treatments / Cycle),imetelstat,exposed,0,23,0,0,0,0,none,0,intravenous,0,Myelodysplastic Syndromes; Acute Myeloid Leukemia,other,NOT_REPORTED,NOT_REPORTED,0,ACTIVE_NOT_RECRUITING,1
+NCT05635045,Silencer Only,patisiran; vutrisiran,exposed,0,1,0,0,0,0,none,0,NOT_REPORTED,0,Transthyretin Amyloidosis,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT05635045,Stabilizer Only,patisiran; vutrisiran,exposed,0,4,0,0,0,0,none,0,NOT_REPORTED,0,Transthyretin Amyloidosis,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT05635045,Stabilizer and Silencer (Tafamidis + Patisiran),patisiran; vutrisiran,exposed,0,3,0,0,0,0,none,0,NOT_REPORTED,0,Transthyretin Amyloidosis,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT05635045,Stabilizer and Silencer (Vutrisiran + Diflunisal),patisiran; vutrisiran,exposed,0,2,0,0,0,0,none,0,NOT_REPORTED,0,Transthyretin Amyloidosis,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT05763875,Ezetimibe,placebo_or_sham_control,comparator,1,89,0,0,0,0,none,0,subcutaneous,0,Hypercholesterolemia,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT05763875,Inclisiran,placebo_or_sham_control,comparator,1,174,0,0,0,0,none,0,subcutaneous,0,Hypercholesterolemia,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT05763875,Placebo,placebo_or_sham_control,comparator,1,87,0,0,0,0,none,0,subcutaneous,0,Hypercholesterolemia,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT05763875,Total,inclisiran,exposed,0,350,0,0,0,0,none,0,subcutaneous,0,Hypercholesterolemia,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT05814666,Danvatirsen Plus Pembrolizumab,danvatirsen,exposed,0,45,0,0,0,0,none,0,intravenous,0,HNSCC,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05814666,Pembrolizumab,danvatirsen,exposed,0,21,0,0,0,0,none,0,intravenous,0,HNSCC,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,TERMINATED,1
+NCT05888103,Inclisiran - Inclisiran: Core Part,inclisiran,exposed,0,103,0,0,0,0,none,0,NOT_REPORTED,0,Primary Hypercholesterolemia or Mixed Dyslipidemia,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT05888103,Inclisiran - Inclisiran: Extension Part,inclisiran,exposed,0,100,0,0,0,0,none,0,NOT_REPORTED,0,Primary Hypercholesterolemia or Mixed Dyslipidemia,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT05888103,Placebo - Inclisiran: Core Part,placebo_or_sham_control,comparator,1,104,0,0,0,0,none,0,NOT_REPORTED,0,Primary Hypercholesterolemia or Mixed Dyslipidemia,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT05888103,Placebo - Inclisiran: Extension Part,placebo_or_sham_control,comparator,1,101,0,0,0,0,none,0,NOT_REPORTED,0,Primary Hypercholesterolemia or Mixed Dyslipidemia,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT06058390,Bepirovirsen 300 mg PFS SSD Self-administered Post-training,bepirovirsen,exposed,0,32,0,0,0,0,none,0,NOT_REPORTED,0,Hepatitis B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT06058390,Bepirovirsen 300 mg PFS SSD Self-administered Without Training,bepirovirsen,exposed,0,32,0,0,0,0,none,0,NOT_REPORTED,0,Hepatitis B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT06058390,Bepirovirsen 300 mg PFS SSD by HCP,bepirovirsen,exposed,0,49,0,0,0,0,none,0,NOT_REPORTED,0,Hepatitis B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT06058390,Bepirovirsen 300 mg Vial by HCP,bepirovirsen,exposed,0,46,0,0,0,0,none,0,NOT_REPORTED,0,Hepatitis B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT06422767,Bepirovirsen: Four-Dose SC Injection,bepirovirsen,exposed,0,5,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT06422767,Bepirovirsen: Three-Dose SC Injection,bepirovirsen,exposed,0,18,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT06422767,Placebo: Four SC Injections,placebo_or_sham_control,comparator,1,5,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT06422767,Placebo: Three SC Injections,placebo_or_sham_control,comparator,1,18,0,0,0,0,none,0,subcutaneous,0,Hepatitis B,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1

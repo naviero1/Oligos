@@ -1,0 +1,259 @@
+{
+ "n_arms": 526,
+ "n_trials": 155,
+ "n_compounds": 41,
+ "n_participants": 36084,
+ "n_armsA": 9,
+ "n_armsB": 78,
+ "route": [
+  {
+   "label": "CNS-delivered (intrathecal / ICV)",
+   "arms": 81,
+   "arms_with_event": 5,
+   "participants": 2531,
+   "participants_affected": 10,
+   "rate_per_1000": 3.951007506914263,
+   "ci_lo_per_1000": 2.147547335414394,
+   "ci_hi_per_1000": 7.257955615364266
+  },
+  {
+   "label": "Systemically delivered",
+   "arms": 374,
+   "arms_with_event": 4,
+   "participants": 30725,
+   "participants_affected": 7,
+   "rate_per_1000": 0.22782750203417412,
+   "ci_lo_per_1000": 0.11036595065507784,
+   "ci_hi_per_1000": 0.47024359964649226
+  }
+ ],
+ "route_fisher": {
+  "odds_ratio": 17.406924689748966,
+  "p_value": 7.572122354994592e-08,
+  "table": [
+   [
+    10,
+    2521
+   ],
+   [
+    7,
+    30718
+   ]
+  ]
+ },
+ "by_compound": [
+  {
+   "oligo_name": "trabedersen",
+   "arms": 2,
+   "arms_with_event": 1,
+   "affected": 1,
+   "at_risk": 24,
+   "cns": 0,
+   "rate_per_1000": 41.666666666666664,
+   "lo": 7.393456165505769,
+   "hi": 202.4180647865594
+  },
+  {
+   "oligo_name": "tominersen",
+   "arms": 12,
+   "arms_with_event": 5,
+   "affected": 10,
+   "at_risk": 902,
+   "cns": 1,
+   "rate_per_1000": 11.086474501108647,
+   "lo": 6.032939290583164,
+   "hi": 20.286742358491587
+  },
+  {
+   "oligo_name": "defibrotide",
+   "arms": 11,
+   "arms_with_event": 1,
+   "affected": 3,
+   "at_risk": 1833,
+   "cns": 0,
+   "rate_per_1000": 1.6366612111292962,
+   "lo": 0.5567651633584794,
+   "hi": 4.801050979909885
+  },
+  {
+   "oligo_name": "imetelstat",
+   "arms": 36,
+   "arms_with_event": 1,
+   "affected": 1,
+   "at_risk": 648,
+   "cns": 0,
+   "rate_per_1000": 1.5432098765432098,
+   "lo": 0.27246639771466746,
+   "hi": 8.689005355343877
+  },
+  {
+   "oligo_name": "placebo_or_sham_control",
+   "arms": 100,
+   "arms_with_event": 1,
+   "affected": 2,
+   "at_risk": 8083,
+   "cns": 1,
+   "rate_per_1000": 0.24743288383026105,
+   "lo": 0.06785764410939082,
+   "hi": 0.90179890976568
+  },
+  {
+   "oligo_name": "BIIB105",
+   "arms": 4,
+   "arms_with_event": 0,
+   "affected": 0,
+   "at_risk": 71,
+   "cns": 1,
+   "rate_per_1000": 0.0,
+   "lo": 0.0,
+   "hi": 51.327952196890344
+  },
+  {
+   "oligo_name": "WVE-003",
+   "arms": 4,
+   "arms_with_event": 0,
+   "affected": 0,
+   "at_risk": 47,
+   "cns": 0,
+   "rate_per_1000": 0.0,
+   "lo": 0.0,
+   "hi": 75.55760416399629
+  },
+  {
+   "oligo_name": "WVE-120101",
+   "arms": 8,
+   "arms_with_event": 0,
+   "affected": 0,
+   "at_risk": 80,
+   "cns": 1,
+   "rate_per_1000": 0.0,
+   "lo": 0.0,
+   "hi": 45.818129535527106
+  },
+  {
+   "oligo_name": "BIIB080",
+   "arms": 8,
+   "arms_with_event": 0,
+   "affected": 0,
+   "at_risk": 59,
+   "cns": 1,
+   "rate_per_1000": 0.0,
+   "lo": 0.0,
+   "hi": 61.12937052678838
+  },
+  {
+   "oligo_name": "casimersen",
+   "arms": 5,
+   "arms_with_event": 0,
+   "affected": 0,
+   "at_risk": 44,
+   "cns": 0,
+   "rate_per_1000": 0.0,
+   "lo": 0.0,
+   "hi": 80.29560375848067
+  },
+  {
+   "oligo_name": "bepirovirsen",
+   "arms": 20,
+   "arms_with_event": 0,
+   "affected": 0,
+   "at_risk": 285,
+   "cns": 0,
+   "rate_per_1000": 0.0,
+   "lo": 0.0,
+   "hi": 13.299540988258238
+  },
+  {
+   "oligo_name": "apatorsen",
+   "arms": 8,
+   "arms_with_event": 0,
+   "affected": 0,
+   "at_risk": 569,
+   "cns": 0,
+   "rate_per_1000": 0.0,
+   "lo": 0.0,
+   "hi": 6.705972065294501
+  },
+  {
+   "oligo_name": "alicaforsen",
+   "arms": 1,
+   "arms_with_event": 0,
+   "affected": 0,
+   "at_risk": 69,
+   "cns": 0,
+   "rate_per_1000": 0.0,
+   "lo": 0.0,
+   "hi": 52.73725818905173
+  },
+  {
+   "oligo_name": "WVE-120102",
+   "arms": 10,
+   "arms_with_event": 0,
+   "affected": 0,
+   "at_risk": 144,
+   "cns": 1,
+   "rate_per_1000": 0.0,
+   "lo": 0.0,
+   "hi": 25.983637143036745
+  }
+ ],
+ "paired_trials": 61,
+ "paired_treated_events": 2,
+ "paired_ctrl_events": 2,
+ "paired_treated_n": 15477,
+ "paired_ctrl_n": 8019,
+ "paired_fisher": {
+  "odds_ratio": 0.5180613893376413,
+  "p_value": 0.6097961589351129
+ },
+ "models": [
+  {
+   "name": "route only",
+   "features": [
+    "delivery_route"
+   ],
+   "auc": 0.884,
+   "n_scored": 526
+  },
+  {
+   "name": "route + indication",
+   "features": [
+    "delivery_route",
+    "indication"
+   ],
+   "auc": 0.901,
+   "n_scored": 526
+  },
+  {
+   "name": "route + indication + chemistry",
+   "features": [
+    "delivery_route",
+    "indication",
+    "oligo_class",
+    "backbone_chemistry"
+   ],
+   "auc": 0.832,
+   "n_scored": 526
+  },
+  {
+   "name": "LEAKAGE PROBE: trial identity only",
+   "features": [
+    "nct_id"
+   ],
+   "auc": 0.681,
+   "n_scored": 526
+  },
+  {
+   "name": "LEAKAGE PROBE: compound identity only",
+   "features": [
+    "oligo_name"
+   ],
+   "auc": 0.102,
+   "n_scored": 526
+  }
+ ],
+ "best_model_auc_ci": [
+  0.837,
+  0.941
+ ]
+}
