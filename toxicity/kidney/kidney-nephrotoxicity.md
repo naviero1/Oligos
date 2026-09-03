@@ -3,8 +3,8 @@
 **Endpoint key:** `kidney-nephrotoxicity` · **Status:** delivered (volume target met); **12 open defects in §6, of which 2 are release blockers** · **Register:** [`toxicity/README.md`](./README.md)
 
 Kidney toxicity is one of the eight endpoints named on page 1 of the Challenge brief, quoted verbatim in [the register
-index](./README.md#scope-authority). It is the only endpoint here that carries extracted data: `is_kidney_specific` is `TRUE` on 111 of 111 rows
-of [`data/measurements.csv`](data/measurements.csv) and no `FALSE` row exists, so all 65 oligos and all 111 rows belong here and no measurement
+index](./README.md#scope-authority). It is the only endpoint here that carries extracted data: `is_kidney_specific` is `TRUE` on 159 of 159 rows
+of [`data/measurements.csv`](data/measurements.csv) and no `FALSE` row exists, so all 65 oligos and all 159 rows belong here and no measurement
 row is shared with another endpoint. Two of the 16 `source_id` values are shared at document level rather than row level: `N3` and `M1` also carry
 liver-side readouts, cited in [`hepatotoxicity.md` §4 "Data", sub-section "Molecule-level liver/kidney pairings the repo holds and does not record"](../hepatotoxicity.md). Grading rules, extraction
 paths and the data dictionary are not restated — see
@@ -17,13 +17,13 @@ paths and the data dictionary are not restated — see
 | | Value | Source of the figure |
 |---|---|---|
 | Unique oligos | 65 | `data/oligos.csv` (65 rows × 17 columns) |
-| Measurement rows | 111 | `data/measurements.csv` (111 rows × 23 columns) |
+| Measurement rows | 159 | `data/measurements.csv` (159 rows × 24 columns) |
 | `source_id` values in use | 16 | `data/measurements.csv`, `source_id` column |
 | PDFs in `sources/kidney/` | 8 | 7 endpoint-dedicated + 1 multi-endpoint volume; 5 produced rows (§3a) |
 | `source_id`s with a local PDF | 5 of 16 | N2, N3, M1, K1, REV — 55 rows; WS and A1–A10 have none — 56 rows |
 | Sequences filled | 55 of 65 | `sequence_5to3 != 'TBD'`; the 10 gaps are itemised at `METHODOLOGY.md:192-201` |
 | ≥ 100-record Phase 2 target | met | `README.md` § "Record counter" |
-| In-vitro volume | incomplete (19 of 111) | `METHODOLOGY.md:217-219` |
+| In-vitro volume | human in-vitro now the largest class (67 of 159, 42.1%) after the Table 2 extraction | `schema.md` QC log 2026-09-03 |
 | Grades signed off | 0 of 111 | all rows carry `grade_provisional` in `notes` (`METHODOLOGY.md:122`) |
 
 "Delivered" is this register's own status label, not a claim made anywhere in the repository.
@@ -39,7 +39,7 @@ Everything below was produced under it.
 |---|---|---|
 | Oligo table | [`data/oligos.csv`](data/oligos.csv) | 65 × 17 — identity and design predictors |
 | Measurement table | [`data/measurements.csv`](data/measurements.csv) | 111 × 23 — one row per oligo × model × delivery × dose × readout |
-| Merged analysis view | [`data/oligotox_kidney_merged.csv`](data/oligotox_kidney_merged.csv) | 111 × 40; generated, not canonical (`schema.md:131-146`) |
+| Merged analysis view | [`data/oligotox_kidney_merged.csv`](data/oligotox_kidney_merged.csv) | 159 × 40; generated, not canonical (`schema.md:131-146`) |
 | Clinical-row validation | [`CLINICAL_VALIDATION.md`](CLINICAL_VALIDATION.md) | 85 lines; August 2026 audit of the 39 `study_type=clinical` rows |
 | Merge script | [`scripts/build_merged.py`](scripts/build_merged.py) | Hard-codes the kidney output filename (line 22) and the measurement column list (`MEAS_COLS`, lines 30-35) |
 | Slide deck | [`PRESENTATION.md`](PRESENTATION.md), built to `OligoTox-Kidney.pptx`, `OligoTox-Kidney-editable.pptx`, `OligoTox-Kidney.pdf` | 832 lines, 29 slides (30 `^---$` lines less the 2 front-matter delimiters = 28 separators); 29 slides/pages in each binary |

@@ -144,12 +144,31 @@ oligo may differ by model/dose. Record the rationale in `notes` when non-obvious
   columns. After this round: all enum/FK/range checks pass, 0 orphans, 0 broken
   documentation links.
 
+- **2026-09-03 (b)** — Extracted **US 11,105,794 Table 2**, acquired with the patent in
+  June but never mined (`SOURCES.md` recorded it as "not yet extracted"). 48 quantitative
+  **human in-vitro** rows (`MSR112`–`MSR159`): compounds 1-1 / 3-1 / 4-1 (`OLG045`,
+  `OLG047`, `OLG048`) × 4 concentrations (3/10/30/100 µM) × 2 human systems (primary
+  human PTEC, PTEC-TERT1) × 2 timepoints (day 3, day 6), readout `extracellular_EGF` as
+  % of saline control under **gymnotic** (naked, untransfected) exposure. The page's
+  naive text layer interleaves the columns into an unusable number stream, so
+  `scripts/extract_patent_table2.py` re-parses the layout-preserving extraction on every
+  run and checks 4 values against the patent's printed table before writing — no number
+  is hand-transcribed. Grades assigned by a stated fold-over-saline rubric (<200 / 200–499
+  / 500–1499 / ≥1500 → 0/1/2/3) whose floor is anchored so the patent's own innocuous
+  control grades 0 in all 16 of its cells; verified, and grade tracks the patent's in-vivo
+  class monotonically (innocuous 16×g0; medium 10/3/2/1; high 4/4/4/4). All rows
+  `grade_provisional`; raw % and SD retained so any regrade needs no return to the PDF.
+  Effect: measurements 111 → **159**; **human in-vitro 19 → 67 (17.1% → 42.1%, now the
+  largest class)**; human/animal bridge set 9 → **12 oligos**, the three new ones being
+  same-compound/same-lab human-in-vitro-vs-rat-in-vivo pairs with no cross-study
+  confounding.
+
 ## Derived table — `data/oligotox_kidney_merged.csv` (generated, not canonical)
 
 An analysis-ready **denormalized join** of the two canonical tables on `oligo_id`,
 produced by `scripts/build_merged.py`.
 
-- **Grain / size:** one row per measurement — **111 rows × 40 columns**.
+- **Grain / size:** one row per measurement — **159 rows × 40 columns**.
 - **Columns:** `measurement_id`, `oligo_id`, then all 15 oligo **design predictors**
   + `notes_oligo`, then all 21 measurement **outcome/context** fields + `notes_measurement`
   (including `subject_class`, so the human/animal split is filterable in the flat view).
