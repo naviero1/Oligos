@@ -198,3 +198,13 @@ mechanically without re-reading sources row by row.
    retrieval gaps.
 4. Subject-matter review of the grading, after which `grade_status` can move off
    `provisional`.
+5. **Two human systems sit unextracted inside patents already in the dataset**, found while
+   resolving system origin and recorded here so they are not lost:
+   - `COG-S034` (US 9,376,680, SERPINC1) **Example 8**: "thrombin generation studies were
+     performed on Factor IX (FIX) and Antithrombin- (AT-) depleted human plasma" — the one
+     genuinely human functional coagulation assay in that patent, and currently uncaptured.
+   - `COG-S035` (US 10,772,906, Factor XI) **Example 7** uses human HepB3 cells, and
+     Examples 1–5 and 30–32 measure human Factor XI mRNA in HepG2.
+   Both would add human rows to a dataset whose human/animal balance is its main weakness.
+   Note also that this patent defines "animal" as including humans (`:472`), so the phrase
+   cannot be read as non-human anywhere in it — a trap for any future sweep.
