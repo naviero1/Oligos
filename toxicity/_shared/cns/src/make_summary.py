@@ -23,6 +23,7 @@ def main() -> int:
     m = json.loads((ROOT / "figures" / "baseline_model.json").read_text())
     g = n["grade_distribution"]
     sd = n["study_type_distribution"]
+    sc = n["subject_class_distribution"]
     pct = lambda a, b: f"{100 * a / b:.1f}%"
 
     md = f"""# OligoTox-CNS — summary
@@ -53,6 +54,32 @@ Split across the three endpoint folders, none of which mixes toxicities:
 | `toxicity/acute-neurotoxicity/` | {n['measurements_per_endpoint']['acute-neurotoxicity']:,} | **no** — the deprioritised axis, plus general clinical CNS AEs |
 | `toxicity/chronic-neurotoxicity/` | {n['measurements_per_endpoint']['chronic-neurotoxicity']} | yes |
 | `toxicity/hydrocephalus/` | {n['measurements_per_endpoint']['hydrocephalus']} | yes |
+
+### Human versus animal — the division the brief singles out
+
+The Challenge brief prioritises datasets *"based on in vitro human systems or able to extrapolate
+data between in vitro human systems and animal data"*. Each endpoint folder therefore carries
+`measurements_human.csv` and `measurements_animal.csv` alongside the full table, and every row
+declares a `subject_class`:
+
+| subject class | rows | what it is |
+|---|---:|---|
+| `human_clinical` | {sc['human_clinical']} | adverse events in dosed patients |
+| `human_invitro` | **{sc['human_invitro']}** | **human-derived cells — the class the brief prioritises, and it is empty** |
+| `animal_invivo` | {sc['animal_invivo']} | dosed mice and rats |
+| `animal_invitro` | {sc['animal_invitro']} | rat primary cortical neurons |
+
+**Stated plainly: this dataset contains no human in vitro data at all**, and both halves of the
+brief's priority require it — "based on in vitro human systems" *or* "able to extrapolate data
+between in vitro human systems and animal data". **On a strict reading the dataset satisfies
+neither.**
+
+What it does have is the *structure* that clause asks for, one species short: {m['n_both']}
+compounds carry paired in vitro and in vivo readouts on the same molecules, so the
+extrapolation machinery — matched compounds, matched grading, a measured assay-noise floor — is
+built and working. It is rat-in-vitro to mouse-in-vivo, an animal-to-animal bridge. Substituting a
+human in vitro arm would make it the bridge the brief actually asks for, and is the single highest-
+value addition available to this module.
 
 **Severity grades 0/1/2/3** — {g.get('0',0)} / {g.get('1',0)} / {g.get('2',0)} / {g.get('3',0)}.
 **Study types** — {sd.get('in_vitro',0):,} in vitro, {sd.get('animal_invivo',0)} in vivo, {sd.get('clinical',0)} clinical.

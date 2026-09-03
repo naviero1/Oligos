@@ -17,7 +17,7 @@ Phase 2. Release **v1.0**. Licence **CC BY 4.0** (see `LICENSE.md` for the per-r
 | Sources | **5** — 4 contributing rows, 1 contributing measurement instruments only |
 | Sequences published | 1,830 / 1,839 (99.5%) |
 | Position-resolved modification maps | 1,830 / 1,839 (99.5%) |
-| Structural QC | **30/30 checks pass** |
+| Structural QC | **34/34 checks pass** |
 
 Split across the three endpoint folders, none of which mixes toxicities:
 
@@ -26,6 +26,32 @@ Split across the three endpoint folders, none of which mixes toxicities:
 | `toxicity/acute-neurotoxicity/` | 2,058 | **no** — the deprioritised axis, plus general clinical CNS AEs |
 | `toxicity/chronic-neurotoxicity/` | 6 | yes |
 | `toxicity/hydrocephalus/` | 1 | yes |
+
+### Human versus animal — the division the brief singles out
+
+The Challenge brief prioritises datasets *"based on in vitro human systems or able to extrapolate
+data between in vitro human systems and animal data"*. Each endpoint folder therefore carries
+`measurements_human.csv` and `measurements_animal.csv` alongside the full table, and every row
+declares a `subject_class`:
+
+| subject class | rows | what it is |
+|---|---:|---|
+| `human_clinical` | 12 | adverse events in dosed patients |
+| `human_invitro` | **0** | **human-derived cells — the class the brief prioritises, and it is empty** |
+| `animal_invivo` | 228 | dosed mice and rats |
+| `animal_invitro` | 1825 | rat primary cortical neurons |
+
+**Stated plainly: this dataset contains no human in vitro data at all**, and both halves of the
+brief's priority require it — "based on in vitro human systems" *or* "able to extrapolate data
+between in vitro human systems and animal data". **On a strict reading the dataset satisfies
+neither.**
+
+What it does have is the *structure* that clause asks for, one species short: 181
+compounds carry paired in vitro and in vivo readouts on the same molecules, so the
+extrapolation machinery — matched compounds, matched grading, a measured assay-noise floor — is
+built and working. It is rat-in-vitro to mouse-in-vivo, an animal-to-animal bridge. Substituting a
+human in vitro arm would make it the bridge the brief actually asks for, and is the single highest-
+value addition available to this module.
 
 **Severity grades 0/1/2/3** — 56 / 87 / 40 / 57.
 **Study types** — 1,825 in vitro, 228 in vivo, 12 clinical.

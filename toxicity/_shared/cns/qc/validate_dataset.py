@@ -175,6 +175,27 @@ def main(as_json: bool = False) -> int:
     empty = [ep for ep, rows in per_ep.items() if not rows]
     check("no endpoint folder is empty", not empty, f"empty: {empty}")
 
+    # ---- human / animal division ----------------------------------------------------------
+    bad_class = [m["measurement_id"] for m in meas
+                 if m.get("subject_class") != endpoints.subject_class_of(m)]
+    check("subject_class is derivable from the row, not hand-assigned", not bad_class,
+          f"{len(bad_class)} rows disagree with the rule")
+
+    bad_group = [m["measurement_id"] for m in meas
+                 if m.get("subject_group") != endpoints.SUBJECT_GROUP.get(m.get("subject_class"))]
+    check("subject_group agrees with subject_class", not bad_group, f"{len(bad_group)} mismatched")
+
+    split_total, split_overlap = 0, 0
+    for ep in endpoints.ENDPOINTS:
+        h = {r["measurement_id"] for r in endpoints.read_group(ep, "human")}
+        a = {r["measurement_id"] for r in endpoints.read_group(ep, "animal")}
+        split_total += len(h) + len(a)
+        split_overlap += len(h & a)
+    check("no measurement is in both the human and animal file", not split_overlap,
+          f"{split_overlap} in both")
+    check("the human/animal files account for every measurement", split_total == len(meas),
+          f"split holds {split_total}, dataset holds {len(meas)}")
+
     # ---- report -------------------------------------------------------------------------
     passed = sum(1 for _, ok, _ in results if ok)
     summary = {
@@ -185,6 +206,9 @@ def main(as_json: bool = False) -> int:
         "sequences_present": sum(1 for o in oligos if o["sequence_base"] not in MISSING_TOKENS),
         "position_resolved_oligos": len(should),
         "human_system_measurements": sum(1 for m in meas if m["is_human_system"] == "TRUE"),
+        # every class listed, including the empty one -- human_invitro = 0 is the finding
+        "subject_class_distribution": {c: sum(1 for m in meas if m.get("subject_class") == c)
+                                       for c in endpoints.SUBJECT_CLASSES},
         "measurements_per_endpoint": {ep: len(rows) for ep, rows in per_ep.items()},
         "grade_distribution": dict(sorted(collections.Counter(
             m["cns_tox_grade"] for m in meas if m["cns_tox_grade"] != "").items())),

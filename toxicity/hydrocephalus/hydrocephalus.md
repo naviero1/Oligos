@@ -38,6 +38,24 @@ spontaneous, from a population of uncertain size, so no denominator exists and t
 no frequency. The module's rule is that a missing number stays missing. **No incidence has been
 estimated for this endpoint, and none can be from this source.**
 
+## Human versus animal
+
+The Challenge brief prioritises datasets *"based on in vitro human systems or able to extrapolate
+data between in vitro human systems and animal data"*, so this folder splits its measurements on
+that axis. Both files are written even when one is empty, so an absence is a file you can open
+rather than something you have to notice.
+
+| file | rows | subject classes present |
+|---|---:|---|
+| [`data/measurements_human.csv`](./data/measurements_human.csv) | 1 | human_clinical |
+| [`data/measurements_animal.csv`](./data/measurements_animal.csv) | 0 | — none — |
+
+Every row also carries `subject_class` (`human_clinical`, `human_invitro`, `animal_invivo`,
+`animal_invitro`) and `subject_group`, both derived by
+[`../_shared/cns/src/endpoints.py`](../_shared/cns/src/endpoints.py) and checked by four QC rules.
+**`human_invitro` is zero across the whole CNS module** — that class is named precisely so its
+emptiness is visible in the data rather than only in a caveat.
+
 ## 3. What is adjacent but is not this endpoint
 
 Nusinersen appears in two endpoint folders — its one hydrocephalus row here, its three other

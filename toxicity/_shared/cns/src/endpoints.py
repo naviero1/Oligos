@@ -56,6 +56,35 @@ TABLES = ["oligos", "measurements", "modifications", "sources"]
 # explicitly to the endpoint they inform.
 ZERO_ROW_SOURCE_ENDPOINT = {"O1": "acute-neurotoxicity"}
 
+# --- human vs animal ---------------------------------------------------------------------
+# The Challenge brief singles out datasets "based on in vitro human systems or able to
+# extrapolate data between in vitro human systems and animal data". That makes the human/animal
+# boundary a first-class axis, not a detail, so it is split out explicitly rather than left to be
+# reconstructed from study_type + species.
+#
+# Four classes, and the fourth is the point: `human_invitro` is the class the brief prioritises,
+# and this dataset has ZERO rows in it. Naming the empty class makes that visible in the data
+# itself instead of only in a caveat.
+SUBJECT_CLASSES = ["human_clinical", "human_invitro", "animal_invivo", "animal_invitro"]
+
+SUBJECT_GROUP = {"human_clinical": "human", "human_invitro": "human",
+                 "animal_invivo": "animal", "animal_invitro": "animal"}
+
+
+def subject_class_of(measurement: dict) -> str:
+    """Which subject class a measurement belongs to. Derived from the row, never hand-assigned."""
+    human = measurement.get("is_human_system") == "TRUE" or measurement.get("species") == "human"
+    if measurement["study_type"] == "clinical":
+        return "human_clinical" if human else "animal_invivo"
+    if measurement["study_type"] == "in_vitro":
+        return "human_invitro" if human else "animal_invitro"
+    return "animal_invivo"
+
+
+def subject_group_of(measurement: dict) -> str:
+    """`human` or `animal` -- the coarse split the brief cares about."""
+    return SUBJECT_GROUP[subject_class_of(measurement)]
+
 
 def endpoint_of(measurement: dict) -> str:
     """The one endpoint a measurement row belongs to. See the module docstring for the rule."""
@@ -72,6 +101,15 @@ def data_dir(endpoint: str) -> pathlib.Path:
 
 def read(endpoint: str, table: str) -> list[dict]:
     p = data_dir(endpoint) / f"{table}.csv"
+    if not p.exists():
+        return []
+    with p.open(newline="") as fh:
+        return list(csv.DictReader(fh))
+
+
+def read_group(endpoint: str, group: str) -> list[dict]:
+    """One endpoint's human-only or animal-only measurement file."""
+    p = data_dir(endpoint) / f"measurements_{group}.csv"
     if not p.exists():
         return []
     with p.open(newline="") as fh:
@@ -133,6 +171,18 @@ def write_split(oligos: list[dict], measurements: list[dict], modifications: lis
                 w = csv.DictWriter(fh, fieldnames=cols)
                 w.writeheader()
                 w.writerows(rows)
+
+        # human vs animal, as separate files under the endpoint's data/. Written even when a
+        # group is empty, with a header row, so "this endpoint has no human data" is a file you
+        # can open rather than an absence you have to notice.
+        mcols = columns["measurements"]
+        for group in ("human", "animal"):
+            sub = [m for m in meas if subject_group_of(m) == group]
+            with (d / f"measurements_{group}.csv").open("w", newline="") as fh:
+                w = csv.DictWriter(fh, fieldnames=mcols)
+                w.writeheader()
+                w.writerows(sub)
+            counts.setdefault(ep, {})[f"{group}_rows"] = len(sub)
         counts[ep] = {"oligos": len(eps_oligos), "measurements": len(meas),
                       "modifications": len(eps_mods), "sources": len(eps_sources)}
     return counts

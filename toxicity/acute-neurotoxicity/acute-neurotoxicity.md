@@ -51,6 +51,24 @@ alternative was a fourth folder for a category the brief does not name. If a fin
 wanted they separate cleanly — they are exactly the `clinical_*` axes from source `C1`, minus the
 one hydrocephalus row already filed separately.
 
+## Human versus animal
+
+The Challenge brief prioritises datasets *"based on in vitro human systems or able to extrapolate
+data between in vitro human systems and animal data"*, so this folder splits its measurements on
+that axis. Both files are written even when one is empty, so an absence is a file you can open
+rather than something you have to notice.
+
+| file | rows | subject classes present |
+|---|---:|---|
+| [`data/measurements_human.csv`](./data/measurements_human.csv) | 11 | human_clinical |
+| [`data/measurements_animal.csv`](./data/measurements_animal.csv) | 2047 | animal_invitro, animal_invivo |
+
+Every row also carries `subject_class` (`human_clinical`, `human_invitro`, `animal_invivo`,
+`animal_invitro`) and `subject_group`, both derived by
+[`../_shared/cns/src/endpoints.py`](../_shared/cns/src/endpoints.py) and checked by four QC rules.
+**`human_invitro` is zero across the whole CNS module** — that class is named precisely so its
+emptiness is visible in the data rather than only in a caveat.
+
 ## 3. Sources allocated
 
 | `source_id` | Source | Licence | Rows |

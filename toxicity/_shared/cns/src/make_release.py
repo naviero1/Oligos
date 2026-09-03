@@ -338,7 +338,13 @@ def main() -> int:
                   f"{n:,} rows × {len(cols)} columns.", "",
                   "| column | definition |", "|---|---|"]
         for c, d in cols:
-            lines.append(f"| `{c}` | {d or 'Provenance registry field.'} |")
+            # Escape pipes: many definitions are enumerations written "a | b | c", and an
+            # unescaped pipe splits the markdown row into extra cells. 18 rows rendered wrong
+            # before this was caught.
+            text = (d or "Provenance registry field.").replace("|", "\\|")
+            row = f"| `{c}` | {text} |"
+            assert row.count("|") - row.count("\\|") == 3, f"malformed dictionary row for {c}"
+            lines.append(row)
         lines.append("")
     OUT_MD.write_text("\n".join(lines))
     print(f"wrote {OUT_MD.relative_to(ROOT)}")

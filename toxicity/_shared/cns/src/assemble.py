@@ -86,6 +86,8 @@ MEASUREMENT_COLUMNS = [
     ("strain", "Strain, sex and age where stated."),
     ("system_model", "The experimental system and instrument."),
     ("is_human_system", "TRUE if the measurement was made in a human or in human-derived cells. The challenge prioritises these."),
+    ("subject_class", "human_clinical | human_invitro | animal_invivo | animal_invitro. Derived from study_type and species by src/endpoints.py; the human/animal division the Challenge brief singles out. human_invitro is the class the brief prioritises."),
+    ("subject_group", "human | animal. The coarse split; measurements_human.csv and measurements_animal.csv in each endpoint's data/ are partitioned on this."),
     ("cns_region", "CNS compartment measured."),
     ("delivery_route", "intracerebroventricular | intrathecal | in_culture_medium | ..."),
     ("dose_value", "Dose or concentration."),
@@ -239,6 +241,10 @@ def main() -> int:
     nm = collections.Counter(r["source_id"] for r in meas)
     srcs = [dict(s, n_oligos=no.get(s["source_id"], 0), n_measurements=nm.get(s["source_id"], 0))
             for s in SOURCES]
+
+    for m in meas:
+        m["subject_class"] = endpoints.subject_class_of(m)
+        m["subject_group"] = endpoints.subject_group_of(m)
 
     columns = {"oligos": [c for c, _ in OLIGO_COLUMNS],
                "measurements": [c for c, _ in MEASUREMENT_COLUMNS],
