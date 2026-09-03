@@ -34,7 +34,10 @@ features hypothesized to drive toxicity.
 | `gapmer_design` | string | Wing-gap-wing motif if applicable, e.g. `5-10-5_MOE`; else `NA`. |
 | `conjugate` | enum | `none` \| `GalNAc` \| `lipid` \| `peptide` \| `PEG` \| `other`. |
 | `ps_count` | int | Number of phosphorothioate linkages, or `TBD`. **Central predictor for this endpoint** — PS content drives platelet binding. |
-| `sequence_5to3` | string | 5′→3′ sequence. **`TBD` unless from a redistribution-permitted source. Never guessed.** |
+| `sequence_5to3` | string | 5′→3′ sequence, bases only. **`TBD` unless from a redistribution-permitted source. Never guessed.** `NA` where no sequence exists (mononucleotide controls). |
+| `modification_map` | string | **Per-residue modification notation exactly as printed by the source**, e.g. `mG*mC*mG*mA*…` where `*` marks a phosphorothioate linkage and a leading letter a 2′-modified residue. Phase 2 requires "the location of all chemical modifications in each oligo"; `sequence_5to3` holds bases only, so this column carries the positional detail that would otherwise be normalised away. `TBD` where the source printed no residue-level notation — `gapmer_design` then gives wing/gap boundaries and `sugar_modifications` the chemistries present. |
+| `purity_pct` | float | Reported purity, e.g. `95.2`. `TBD` where the source does not state it — **which is the usual case**, see the note below. |
+| `purity_method` | string | Method behind `purity_pct` / identity confirmation, e.g. `HPLC`, `LC-MS`, `CE`, `MALDI-TOF`. `TBD` where unstated. |
 | `design_source` | string | Source for the design metadata (DOI / patent / label). |
 | `notes` | string | Free text. |
 
@@ -66,6 +69,7 @@ A single oligo at a single dose reporting platelet count *and* P-selectin =
 | `effect_vs_control` | string | Quantified effect vs control if available (e.g. `3.2x`, `-45%`, `12pct_vs_2pct_placebo`), else `TBD`. |
 | `thrombocytopenia_grade` | int 0–3 | Graded label (rubric below). |
 | `is_platelet_specific` | bool | `TRUE` = strict platelet/thrombocytopenia row; `FALSE` = adjacent-hematology fallback row (flagged). |
+| `subject_class` | enum | **Derived, never hand-entered** — the human/animal division: `human_clinical` \| `human_in_vitro` \| `human_ex_vivo` \| `human_other` \| `animal_in_vivo` \| `animal_in_vitro` \| `animal_ex_vivo` \| `animal_other` \| `multi_species` \| `unspecified`. Computed from `study_type` × `species` at assembly and **independently re-derived by `qc_thrombo.py`**, which fails the build on any disagreement, so it cannot drift from the columns it summarises. Pooled multi-species findings are assigned to **neither** side rather than forced. See `../STATUS.md` for why this axis is called out separately. |
 | `source_id` | string | → entry in `SOURCES.md` (e.g. `T1`). |
 | `source_ref` | string | DOI, PMID/PMCID, patent number, or regulatory label ID. |
 | `source_table` | string | Exact locus, e.g. `Table 2`, `Fig 3B`, `Claim 7`, `label sec 5.1`. |
@@ -122,6 +126,21 @@ when the assignment is non-obvious. Where a source reports an incidence
 (e.g. "3 % of patients had grade 4"), the row is graded on the **severity of the
 event described**, and the incidence is carried in `readout_value`.
 
+### A note on `purity_pct` / `purity_method`
+
+Phase 2 requires the dataset to carry "**data on the purity and characterization of
+each**" oligo. That requirement is written for teams *synthesising* compounds, who
+hold HPLC/MS data for everything they made. This dataset is an **in-silico curation
+of published results**, and the source literature very rarely reports purity for the
+compounds it tests.
+
+The columns exist so that purity is recorded wherever a source *does* state it
+(patents sometimes do; some papers state ">90 % by HPLC"), and so the shortfall is
+**visible rather than absent** — `qc_thrombo.py` reports coverage of these fields on
+every run. They are not populated by inference, and a purity figure will never be
+carried over from a different compound, batch, or paper.
+
+---
 ## Provenance rules
 
 - Every row MUST carry `source_id` + `source_ref` + `source_table`.

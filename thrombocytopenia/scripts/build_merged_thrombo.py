@@ -30,14 +30,15 @@ OUT = os.path.join(BASE, "oligotox_thrombo_merged.csv")
 OLIGO_PRED = ["oligo_name", "aliases", "oligo_class", "target_gene", "indication",
               "developer", "max_phase", "length_nt", "backbone_chemistry",
               "sugar_modifications", "gapmer_design", "conjugate", "ps_count",
-              "sequence_5to3", "design_source"]
+              "sequence_5to3", "modification_map", "purity_pct", "purity_method",
+              "design_source"]
 # measurement outcome/context columns (all measurements.csv columns except keys and notes)
 MEAS_COLS = ["study_type", "species", "system_model", "tissue", "delivery_method",
              "dose_or_conc_value", "dose_or_conc_unit", "exposure_duration",
              "readout_category", "readout_name", "readout_value", "readout_unit",
              "effect_direction", "effect_vs_control", "thrombocytopenia_grade",
-             "is_platelet_specific", "source_id", "source_ref", "source_table",
-             "redistribution"]
+             "is_platelet_specific", "subject_class", "source_id", "source_ref",
+             "source_table", "redistribution"]
 
 
 def main():

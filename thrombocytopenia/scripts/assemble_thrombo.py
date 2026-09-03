@@ -40,14 +40,15 @@ BASE = os.path.join(ENDPOINT, "data")
 OLIGO_COLS = ["oligo_id", "oligo_name", "aliases", "oligo_class", "target_gene",
               "indication", "developer", "max_phase", "length_nt",
               "backbone_chemistry", "sugar_modifications", "gapmer_design",
-              "conjugate", "ps_count", "sequence_5to3", "design_source", "notes"]
+              "conjugate", "ps_count", "sequence_5to3", "modification_map",
+              "purity_pct", "purity_method", "design_source", "notes"]
 
 MEAS_COLS = ["measurement_id", "oligo_id", "study_type", "species", "system_model",
              "tissue", "delivery_method", "dose_or_conc_value", "dose_or_conc_unit",
              "exposure_duration", "readout_category", "readout_name", "readout_value",
              "readout_unit", "effect_direction", "effect_vs_control",
-             "thrombocytopenia_grade", "is_platelet_specific", "source_id",
-             "source_ref", "source_table", "redistribution", "notes"]
+             "thrombocytopenia_grade", "is_platelet_specific", "subject_class",
+             "source_id", "source_ref", "source_table", "redistribution", "notes"]
 
 EMPTY = {"", None, "TBD", "NA", "n/a", "N/A", "null", "None", "unknown"}
 
@@ -211,6 +212,45 @@ def normalize_sequence(seq, notes):
             bases.append(m.group(1))
         return "".join(bases), (notes or "") + f";sequence_as_printed:{s}"
     return s, notes
+
+# ---------------------------------------------------------------------------
+# SUBJECT CLASS — the human/animal division, derived not hand-entered.
+#
+# The Phase 2 announcement singles out datasets "based on in vitro human systems
+# or able to extrapolate data between in vitro human systems and animal data".
+# That axis was previously only implicit, recoverable by joining study_type to
+# species. Making it a first-class column means a consumer can split human from
+# animal evidence without reconstructing the rule — and, because it is COMPUTED
+# from (study_type, species) on every assembly rather than typed by an agent, it
+# cannot drift out of agreement with the columns it summarises.
+#
+# `qc_thrombo.py` re-derives it independently and fails the build on any mismatch.
+ANIMAL_SPECIES = {"monkey", "rat", "mouse", "dog", "minipig"}
+
+
+def derive_subject_class(study_type, species):
+    st = (study_type or "").strip().lower()
+    sp = (species or "").strip().lower()
+    if sp == "human":
+        if st == "clinical":
+            return "human_clinical"
+        if st == "ex_vivo":
+            return "human_ex_vivo"
+        if st == "in_vitro":
+            return "human_in_vitro"
+        return "human_other"
+    if sp in ANIMAL_SPECIES:
+        if st == "animal_invivo":
+            return "animal_in_vivo"
+        if st == "ex_vivo":
+            return "animal_ex_vivo"
+        if st == "in_vitro":
+            return "animal_in_vitro"
+        return "animal_other"
+    if sp == "multi_species":
+        # a finding pooled across species — deliberately NOT forced to one side
+        return "multi_species"
+    return "unspecified"
 
 def norm_name(n):
     """Normalize an oligo name to a join key: case- and punctuation-insensitive."""
@@ -423,10 +463,17 @@ def main():
         w.writeheader()
         for _, row in ordered:
             out = {c: row.get(c, "TBD") for c in OLIGO_COLS}
-            seq, nts = normalize_sequence(out.get("sequence_5to3"), out.get("notes"))
-            if seq != out.get("sequence_5to3"):
-                seq_fixed.append(f"{out['oligo_name']}: {out['sequence_5to3'][:34]!r} -> {seq!r}")
+            raw_seq = out.get("sequence_5to3")
+            seq, nts = normalize_sequence(raw_seq, out.get("notes"))
+            if seq != raw_seq:
+                seq_fixed.append(f"{out['oligo_name']}: {raw_seq[:34]!r} -> {seq!r}")
                 out["sequence_5to3"], out["notes"] = seq, nts
+                # The announcement requires "the location of all chemical
+                # modifications in each oligo". Per-residue notation carries exactly
+                # that, and normalising it to bases would throw it away, so the
+                # as-printed form is promoted into its own column.
+                if out.get("modification_map") in EMPTY and "*" in (raw_seq or ""):
+                    out["modification_map"] = raw_seq
             for col, fixes in VOCAB_FIXES.items():
                 if col in out and out[col] in fixes:
                     vocab_fixed.append(f"{col}: {out[col]!r} -> {fixes[out[col]]!r}")
@@ -444,6 +491,8 @@ def main():
                     vocab_fixed.append(f"{col}: {v!r} -> {fixes[v]!r}")
                     row[col] = fixes[v]
             row["measurement_id"] = f"TMSR{i:03d}"
+            row["subject_class"] = derive_subject_class(row.get("study_type"),
+                                                        row.get("species"))
             row["oligo_id"] = keymap.get(norm_name(m.get("oligo_name")), "TBD")
             if row["source_id"] in EMPTY:
                 row["source_id"] = m.get("_lane", "TBD")

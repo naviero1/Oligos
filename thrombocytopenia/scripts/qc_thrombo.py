@@ -24,14 +24,15 @@ BASE = os.path.join(ENDPOINT, "data")
 OLIGO_COLS = ["oligo_id", "oligo_name", "aliases", "oligo_class", "target_gene",
               "indication", "developer", "max_phase", "length_nt",
               "backbone_chemistry", "sugar_modifications", "gapmer_design",
-              "conjugate", "ps_count", "sequence_5to3", "design_source", "notes"]
+              "conjugate", "ps_count", "sequence_5to3", "modification_map",
+              "purity_pct", "purity_method", "design_source", "notes"]
 
 MEAS_COLS = ["measurement_id", "oligo_id", "study_type", "species", "system_model",
              "tissue", "delivery_method", "dose_or_conc_value", "dose_or_conc_unit",
              "exposure_duration", "readout_category", "readout_name", "readout_value",
              "readout_unit", "effect_direction", "effect_vs_control",
-             "thrombocytopenia_grade", "is_platelet_specific", "source_id",
-             "source_ref", "source_table", "redistribution", "notes"]
+             "thrombocytopenia_grade", "is_platelet_specific", "subject_class",
+             "source_id", "source_ref", "source_table", "redistribution", "notes"]
 
 ENUMS = {
     "oligo_class": {"ASO_gapmer", "siRNA", "GalNAc_siRNA", "splice_switching_ASO",
@@ -60,6 +61,9 @@ ENUMS = {
     "is_platelet_specific": {"TRUE", "FALSE"},
     "redistribution": {"public_domain", "cc_by", "derived_features_only",
                        "summary_stat", "verify"},
+    "subject_class": {"human_clinical", "human_ex_vivo", "human_in_vitro", "human_other",
+                      "animal_in_vivo", "animal_ex_vivo", "animal_in_vitro", "animal_other",
+                      "multi_species", "unspecified"},
 }
 
 SEQ_RE = re.compile(r"^[ACGTUacgtu]+$")
@@ -106,6 +110,30 @@ def main():
                 if col in r and r[col] and r[col] not in allowed:
                     errors.append(f"{label} {pk}: {col}={r[col]!r} not in controlled vocabulary")
 
+    # --- subject_class must AGREE with the columns it summarises ---------------
+    # Re-derived here independently of the assembler, so a stale or hand-edited
+    # value cannot survive: the human/animal split is a headline property of this
+    # dataset and must never disagree with study_type/species.
+    ANIMAL = {"monkey", "rat", "mouse", "dog", "minipig"}
+
+    def expect(st, sp):
+        st, sp = (st or "").lower(), (sp or "").lower()
+        if sp == "human":
+            return {"clinical": "human_clinical", "ex_vivo": "human_ex_vivo",
+                    "in_vitro": "human_in_vitro"}.get(st, "human_other")
+        if sp in ANIMAL:
+            return {"animal_invivo": "animal_in_vivo", "ex_vivo": "animal_ex_vivo",
+                    "in_vitro": "animal_in_vitro"}.get(st, "animal_other")
+        return "multi_species" if sp == "multi_species" else "unspecified"
+
+    for m in meas:
+        want = expect(m.get("study_type"), m.get("species"))
+        got = m.get("subject_class", "")
+        if got != want:
+            errors.append(f"measurements {m['measurement_id']}: subject_class={got!r} "
+                          f"disagrees with study_type={m.get('study_type')!r}/"
+                          f"species={m.get('species')!r} (expected {want!r})")
+
     # --- range checks -----------------------------------------------------------
     for m in meas:
         g = m.get("thrombocytopenia_grade", "")
@@ -147,6 +175,27 @@ def main():
             f"per the rubric, but MODELS MUST EXCLUDE dose_or_conc_value=='0' before "
             f"joining grade to design features: {ctrl_nonzero[:5]}")
 
+    # --- Phase 2 dataset-content requirements, reported every run --------------
+    # The announcement requires the dataset file to contain "the sequences of all
+    # oligos tested, as well as the location of all chemical modifications in each
+    # oligo, data on the purity and characterization of each". Coverage of those
+    # three is a submission-blocking property, so it is surfaced on every QC run
+    # rather than discovered late. These are WARNINGS, not errors: the shortfall is
+    # a genuine limitation of curating published data, not a defect to be papered
+    # over, and it is documented in STATUS.md and the methodology.
+    def filled(col):
+        return sum(1 for o in oligos if o.get(col, "") not in ("", "TBD", "NA"))
+
+    n = len(oligos) or 1
+    for col, label in (("sequence_5to3", "sequences"),
+                       ("modification_map", "per-residue modification maps"),
+                       ("purity_pct", "purity values"),
+                       ("purity_method", "characterization methods")):
+        k = filled(col)
+        if k < n:
+            warnings.append(f"Phase 2 dataset requirement — {label}: {k}/{n} "
+                            f"({100*k//n}%) present; the rest are TBD")
+
     # --- sequence policy (case-insensitive; case encodes chemistry) -------------
     for o in oligos:
         s = o.get("sequence_5to3", "")
@@ -165,6 +214,12 @@ def main():
               " / ".join(str(gd.get(str(i), 0)) for i in range(4)))
         print("study types                :",
               dict(collections.Counter(m["study_type"] for m in meas)))
+        sc = collections.Counter(m.get("subject_class", "?") for m in meas)
+        nh = sum(v for k, v in sc.items() if k.startswith("human"))
+        na = sum(v for k, v in sc.items() if k.startswith("animal"))
+        print(f"HUMAN / ANIMAL split       : {nh} human · {na} animal · "
+              f"{len(meas) - nh - na} other")
+        print("  subject_class            :", dict(sc.most_common()))
         print("platelet-specific TRUE     :",
               sum(1 for m in meas if m["is_platelet_specific"] == "TRUE"), "/", len(meas))
         print("distinct sources           :",

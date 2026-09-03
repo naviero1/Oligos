@@ -221,6 +221,32 @@ sequence listings; and the shared `../sources/reference/` challenge brief.
 `scripts/ingest_thrombo.sh` anchors every path it writes to this folder, so it
 can be invoked from anywhere without leaking output.
 
+## Human and animal evidence are separated
+
+The Phase 2 announcement singles out datasets "based on **in vitro human systems**
+or able to **extrapolate data between in vitro human systems and animal data**".
+That axis is a first-class column, `subject_class`, **derived** from
+`study_type` × `species` and re-derived independently by QC, so it cannot drift.
+
+| | rows | compounds |
+|---|---:|---:|
+| **Human** (`clinical` 852 · `in_vitro` 424 · `ex_vivo` 15) | **1,291** | 70 |
+| **Animal** (`in_vivo` 419 · `in_vitro` 55 · `ex_vivo` 13) | **487** | 173 |
+| Pooled multi-species / unstated — assigned to **neither** | 8 | — |
+
+Ready-made splits: `data/measurements_human.csv`, `data/measurements_animal.csv`.
+
+**`data/bridge_human_animal.csv` is the one that matters for extrapolation.**
+Holding human rows and animal rows does not demonstrate cross-species
+extrapolation; having the *same compound* characterised on both sides does.
+**21 compounds** qualify — inotersen (178 human / 22 animal rows), mipomersen
+(114 / 31), volanesorsen (108 / 18) among them, each with a published sequence.
+That is the set a cross-species model can actually be trained and validated on.
+
+Regenerate with `scripts/split_human_animal.py`. It reports the animal-minus-human
+grade gap descriptively and explicitly declines to read a translation result into
+it — the bridge set is small and grade is partly confounded with study type.
+
 ## Data model
 
 Two normalized tables joined on `oligo_id` (full dictionary in **`schema.md`**):
