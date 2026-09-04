@@ -370,7 +370,13 @@ def main() -> int:
             "oligo": o["oligo_name"],
             "sequence": o.get("sequence_5to3_asprinted", "NOT_REPORTED"),
             "modification": mod_text or "NOT_REPORTED",
-            "toxicity": GRADE_LABEL.get(str(d["worst"]), "not graded") if d["worst"] is not None else "not graded",
+            # Three states, kept apart because they mean different things to a reader:
+            # a grade; measured but the readout is continuous and ungraded; and characterised
+            # with no measurement at all in this dataset. Collapsing the last two into
+            # "not graded" invites reading an absent measurement as a benign one.
+            "toxicity": (GRADE_LABEL.get(str(d["worst"]), "not graded")
+                         if d["worst"] is not None
+                         else ("not graded" if d["n"] else "no measurement in this dataset")),
             "toxicity_grade_numeric": d["worst"] if d["worst"] is not None else "",
             "n_measurements": d["n"],
             "subject_class": "; ".join(sorted(c for c in d["classes"] if c)),
@@ -391,7 +397,8 @@ def main() -> int:
         ws.cell(row=1, column=i).value = lab
     gs = sum(1 for r in ga_rows if r["sequence"] not in ("NOT_REPORTED", ""))
     print(f"  German's analysis: {len(ga_rows)} oligonucleotides, {gs} with a sequence, "
-          f"{sum(1 for r in ga_rows if r['toxicity'] != 'not graded')} graded")
+          f"{sum(1 for r in ga_rows if r['toxicity'] not in ('not graded', 'no measurement in this dataset'))} graded, "
+          f"{sum(1 for r in ga_rows if r['toxicity'] == 'no measurement in this dataset')} characterised-only")
 
     # ---------------- data sheets ---------------------------------------------------------
     data_sheet(wb, "oligos", OLIGO_COLUMNS, oligos,

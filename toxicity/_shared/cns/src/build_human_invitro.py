@@ -51,6 +51,9 @@ def norm_seq(s: str) -> str:
     return re.sub(r"[^ACGTU]", "", (s or "").upper())
 
 
+CHARACTERISED_ONLY = "CHARACTERISED_ONLY:"
+
+
 def main(path: str) -> int:
     data = json.loads(pathlib.Path(path).read_text())
     sources = data["sources"] if isinstance(data, dict) and "sources" in data else data
@@ -177,6 +180,24 @@ def main(path: str) -> int:
                 "notes": (m.get("notes") or "") + f" | licence as stated by PMC: {licence}",
             })
         src_rows[key] = sum(1 for m in measurements if m["source_id"] == key)
+
+    # A compound can be fully characterised and still carry no measurement: the source names it,
+    # prints its sequence and chemistry, and then reports its result only inside a pooled figure
+    # panel with no per-compound value. Reading a number off such a panel would be estimating it,
+    # which this pipeline does not do -- so the compound is kept for its chemistry and declared,
+    # in the row itself, to have no measurement and why. qc/validate_dataset.py enforces that
+    # every unmeasured oligo carries this declaration, so an ACCIDENTAL orphan still fails.
+    measured = {m["oligo_id"] for m in measurements}
+    n_declared = 0
+    for o in oligos:
+        if o["oligo_id"] not in measured:
+            o["notes"] = (CHARACTERISED_ONLY + " retained for its published sequence and "
+                          "chemistry; the source reports no per-compound toxicity readout for it "
+                          "that could be extracted without estimating a value from a figure. | "
+                          + (o.get("notes") or "")).strip(" |")
+            n_declared += 1
+    print(f"{n_declared} oligo(s) declared {CHARACTERISED_ONLY.strip(':')} "
+          f"(characterised, no extractable measurement)")
 
     for name, recs in (("HV_oligos", oligos), ("HV_measurements", measurements)):
         if not recs:

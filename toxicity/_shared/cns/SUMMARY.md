@@ -11,12 +11,12 @@ Phase 2. Release **v1.0**. Licence **CC BY 4.0** (see `LICENSE.md` for the per-r
 
 | | |
 |---|---|
-| Oligonucleotides | **1,858** |
+| Oligonucleotides | **1,879** |
 | CNS toxicity measurements | **4,428** |
 | Per-position chemical-modification records | **32,569** |
 | Sources | **9** — 4 contributing rows, 1 contributing measurement instruments only |
-| Sequences published | 1,840 / 1,858 (99.0%) |
-| Position-resolved modification maps | 1,830 / 1,858 (98.5%) |
+| Sequences published | 1,858 / 1,879 (98.9%) |
+| Position-resolved modification maps | 1,830 / 1,879 (97.4%) |
 | Structural QC | **34/34 checks pass** |
 
 Split across the three endpoint folders, none of which mixes toxicities:
@@ -107,8 +107,8 @@ features.
 ## Limitations, stated plainly
 
 - **Per-compound purity is absent from the literature.** `purity_pct` is `NOT_REPORTED` for all
-  1,858 oligonucleotides; the purification *method* is captured for
-  1,838. Nothing was estimated to close this.
+  1,879 oligonucleotides; the purification *method* is captured for
+  1,859. Nothing was estimated to close this.
 - **The in vitro arm is rat, not human.** Only 2375 of
   4,428 measurements are human-derived, and all are clinical. No public,
   sequence-resolved human iPSC/organoid oligo-CNS dataset was found.
@@ -136,6 +136,6 @@ features.
 
 - **OI-05** — confirm a *curated* (not wet-lab-generated) module is what is wanted for Phase 2.
 - **OI-06** — confirm deliverable filenames match what the submission portal expects.
-- **OI-07** — the human *in vitro* layer the challenge prioritises does not appear to exist
-  publicly; closing it would mean generating data, not curating it.
+- **OI-07** — the human *in vitro* layer is open on scale, not existence: 34 rows are in, eight
+  further sources are identified with verified identifiers and none is extracted yet.
 - **OI-08** — the cation-rescue contradiction needs a domain expert to confirm the reconciliation.

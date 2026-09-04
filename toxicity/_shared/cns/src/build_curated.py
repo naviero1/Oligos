@@ -181,7 +181,7 @@ def kuroda_records(seqs: dict) -> tuple[list, list, list]:
             "is_cns_specific": "TRUE",
             "source_ref": "Kuroda2025_MTNA_PMC12744863",
             "source_location": "Figure 1A-D and Results text",
-            "redistribution": "cc_by_nc",
+            "redistribution": "cc_by",
             "notes": "Late-onset axis: onset >=3 days, distinct from acute (<1 h) toxicity. "
                      "Authors state acute toxicity was absent for ASO1/3/4 and resolved within "
                      "1 day for ASO2.",
@@ -208,7 +208,7 @@ def kuroda_records(seqs: dict) -> tuple[list, list, list]:
         "grade_basis": "mortality (1/4) plus severe paraplegia = grade 3",
         "grade_status": "provisional", "tox_axis": "late_onset_neurodegeneration",
         "is_cns_specific": "TRUE", "source_ref": "Kuroda2025_MTNA_PMC12744863",
-        "source_location": "Figure 1E-F and Results text", "redistribution": "cc_by_nc",
+        "source_location": "Figure 1E-F and Results text", "redistribution": "cc_by",
         "notes": "Demonstrates the same late-onset phenotype via the clinical route (intrathecal) "
                  "in a second species.",
     })
@@ -316,7 +316,7 @@ def khvorova_records(recs: list[dict]) -> tuple[list, list]:
             "grade_status": "provisional", "tox_axis": "acute_behavioural",
             "is_cns_specific": "TRUE", "source_ref": "Miller2024_MTNA_PMC11185713",
             "source_location": f"Supplementary Table S2 (paper figure {r['figure']})",
-            "redistribution": "cc_by_nc",
+            "redistribution": "summary_stat_only",
             "notes": "Formulation Ca2+/Mg2+ are experimental variables, not incidental: this "
                      "source is the divalent-cation rescue experiment.",
         })

@@ -1,7 +1,7 @@
 F1: study types {'in_vitro': 1859, 'animal_invivo': 228, 'clinical': 2341}; axes {'acute_neuronal_excitability': 1825, 'acute_behavioural': 222, 'invitro_human_neural_toxicity': 34, 'clinical_serious_neurological': 565, 'clinical_neuroinflammatory': 228, 'clinical_cns_tolerability': 1548, 'late_onset_neurodegeneration': 6}
-F2 length_nt: n=1840 median=17 min=13 max=25
-F2 gc_content_pct: n=1838 median=41.18 min=5 max=87.5
-F2 n_G: n=1838 median=1 min=0 max=10
+F2 length_nt: n=1858 median=17 min=13 max=25
+F2 gc_content_pct: n=1856 median=41.18 min=5 max=87.5
+F2 n_G: n=1856 median=1 min=0 max=10
 F2 g_free_3prime_len: n=1825 median=6 min=0 max=20
 F2 n_lna: n=1830 median=6 min=0 max=10
 F2 gap_length_nt: n=1731 median=11 min=6 max=19
@@ -16,4 +16,4 @@ F6 replicate control TAGccctaaagtcCCA: n=14 mean=92.38 sd=15.99 CV=17.3% range 6
 F7 dose-response [(1.25, 2.0), (2.5, 2.5), (5.0, 8.4), (10.0, 14.2)]
 F7 Ca rescue [(0.0, 19.5), (4.0, 11.75), (8.0, 6.75), (12.0, 3.25), (16.0, 1.5), (32.0, 1.0)]
 F7 Mg rescue [(0.0, 19.5), (4.0, 9.8), (8.0, 8.5), (12.0, 8.5), (16.0, 2.75), (32.0, 4.0)]
-F8 completeness: Sequence 1840/1858, Modification positions 1832/1858, Purity/characterisation method 1838/1858, Purity value (%) 0/1858
+F8 completeness: Sequence 1858/1879, Modification positions 1832/1879, Purity/characterisation method 1859/1879, Purity value (%) 0/1879

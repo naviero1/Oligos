@@ -145,26 +145,32 @@ SOURCES = [
          notes="Supplementary Table S1. Sequence case encodes LNA (upper) vs DNA (lower); "
                "all backbones full PS."),
     dict(source_id="K1", source_key="Miller_2024",
-         citation="Miller BR, Paquette JD, Barker AR, et al. Chemical and physical variables "
-                  "influencing the acute tolerability of oligonucleotides delivered to the CNS. "
-                  "Mol Ther Nucleic Acids. 2024;35(2):102359.",
+         citation="Miller BR, Paquette JD, Barker AR, et al. Preventing acute neurotoxicity of "
+                  "CNS therapeutic oligonucleotides with the addition of Ca2+ and Mg2+ in the "
+                  "formulation. Mol Ther Nucleic Acids. 2024;35(4):102359. Journal record "
+                  "PMC11567125; the supplementary file read here was retrieved from the bioRxiv "
+                  "preprint record PMC11185713 (doi 10.1101/2024.06.06.597639), which carries the "
+                  "same title, the same authors and the same Table S2.",
          first_author="Miller BR", year="2024", journal="Molecular Therapy Nucleic Acids",
-         doi="10.1016/j.omtn.2024.102359", pmid="", pmcid="PMC11185713",
-         url="https://pmc.ncbi.nlm.nih.gov/articles/PMC11185713/",
-         access="open_access", license="CC BY-NC", redistribution="cc_by_nc",
+         doi="10.1016/j.omtn.2024.102359", pmid="39554992", pmcid="PMC11567125",
+         url="https://pmc.ncbi.nlm.nih.gov/articles/PMC11567125/",
+         access="open_access", license="CC BY-NC-ND 4.0", redistribution="summary_stat_only",
          evidence_tier="primary_supplementary_data",
-         retrieved_via="Europe PMC supplementaryFiles REST endpoint",
+         retrieved_via="Europe PMC supplementaryFiles REST endpoint on PMC11185713 (media-1.pdf)",
          notes="Supplementary Table S2: per-group acute tolerability scores with injectate "
-               "Ca2+/Mg2+ as experimental variables."),
+               "Ca2+/Mg2+ as experimental variables. LICENCE: the permissions block of BOTH the "
+               "journal record (PMC11567125) and the preprint record (PMC11185713) reads CC "
+               "BY-NC-ND 4.0 -- NoDerivatives -- so these rows are summary_stat_only: cite and "
+               "read, do not redistribute as dataset content."),
     dict(source_id="L1", source_key="Kuroda_2025",
          citation="Kuroda T, Yoshioka K, Lei Mon SS, Katsuyama M, Sato K, Isogai E, "
                   "Yoshida-Tanaka K, Iwata-Hara R, Yamaguchi T, Obika S, Yokota T. Unraveling and "
                   "controlling late-onset neurotoxicity of antisense oligonucleotides through "
                   "strategic chemical modifications. Mol Ther Nucleic Acids. 2025;36.",
          first_author="Kuroda T", year="2025", journal="Molecular Therapy Nucleic Acids",
-         doi="10.1016/j.omtn.2025.102692", pmid="", pmcid="PMC12744863",
+         doi="10.1016/j.omtn.2025.102692", pmid="41467114", pmcid="PMC12744863",
          url="https://pmc.ncbi.nlm.nih.gov/articles/PMC12744863/",
-         access="open_access", license="CC BY-NC", redistribution="cc_by_nc",
+         access="open_access", license="CC BY 4.0", redistribution="cc_by",
          evidence_tier="primary_supplementary_data",
          retrieved_via="Europe PMC supplementaryFiles REST endpoint",
          notes="Supplementary Table S1 encodes chemistry in typeface; recovered by parsing PDF "
@@ -239,10 +245,11 @@ SOURCES = [
     dict(source_id="O1", source_key="ORourke_2026",
          citation="O'Rourke JJ, Bravo-Hernandez M, et al. Acute neuronal inhibition response "
                   "caused by phosphorothioate antisense oligonucleotides following local delivery "
-                  "to the central nervous system. Nucleic Acids Res. 2026;54(3):gkaf1333.",
+                  "to the central nervous system. Nucleic Acids Res. 2026;54(3):gkaf1333. "
+                  "Publisher page: academic.oup.com/nar/article/54/3/gkaf1333/8415850.",
          first_author="O'Rourke JJ", year="2026", journal="Nucleic Acids Research",
          doi="10.1093/nar/gkaf1333", pmid="41494985", pmcid="PMC12865454",
-         url="https://academic.oup.com/nar/article/54/3/gkaf1333/8415850",
+         url="https://pmc.ncbi.nlm.nih.gov/articles/PMC12865454/",
          access="open_access", license="CC BY-NC", redistribution="cc_by_nc",
          evidence_tier="primary_fulltext_instruments_only",
          retrieved_via="Europe PMC supplementaryFiles REST endpoint",
@@ -315,7 +322,20 @@ def main() -> int:
               f"modifications={c['modifications']:>6}  sources={c['sources']}   ({listed})")
     total = sum(c["measurements"] for c in counts.values())
     assert total == len(meas), f"split lost rows: {total} != {len(meas)}"
-    print(f"  {'TOTAL':<24} measurements={total} (every assembled row allocated exactly once)")
+    # Oligos and modifications may legitimately repeat across endpoints (one compound can be
+    # measured under two of them), so these assert that nothing was LOST, not that nothing
+    # repeats. An earlier revision dropped every oligo that carried no measurement.
+    split_o = {o["oligo_id"] for ep in endpoints.ENDPOINTS
+               for o in endpoints.read(ep, "oligos")}
+    assert split_o == {o["oligo_id"] for o in oligos}, (
+        f"split lost {len(oligos) - len(split_o)} oligo(s): "
+        f"{sorted({o['oligo_id'] for o in oligos} - split_o)[:10]}")
+    split_m = {(md["oligo_id"], md["position_5to3"]) for ep in endpoints.ENDPOINTS
+               for md in endpoints.read(ep, "modifications")}
+    assert split_m == {(md["oligo_id"], md["position_5to3"]) for md in mods}, (
+        f"split lost {len(mods) - len(split_m)} modification record(s)")
+    print(f"  {'TOTAL':<24} measurements={total} (every assembled row allocated exactly once); "
+          f"{len(split_o)} oligos and {len(split_m)} modification records all retained")
 
     print("\nper-source contribution:")
     for s in srcs:

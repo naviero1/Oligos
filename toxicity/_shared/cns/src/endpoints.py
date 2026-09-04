@@ -38,6 +38,7 @@ endpoint and appears in one folder.
 """
 from __future__ import annotations
 
+import collections
 import csv
 import pathlib
 import re
@@ -59,15 +60,23 @@ TABLES = ["oligos", "measurements", "modifications", "sources"]
 # explicitly to the endpoint they inform.
 ZERO_ROW_SOURCE_ENDPOINT = {"O1": "acute-neurotoxicity"}
 
+# The same trap one level down. A published oligonucleotide can be fully characterised -- name,
+# sequence, chemistry, per-position modification map -- and still carry no measurement, because
+# the source screened it but printed its result only in a figure with no per-compound value. An
+# earlier revision allocated oligos purely by the measurements that reach them, which silently
+# dropped 21 such compounds, 18 of them sequence-resolved and all of them human. Those are the
+# rows this module exists to publish, so a measurement-less oligo is now filed with the endpoint
+# its own source predominantly serves, and assemble.py asserts that the split loses none.
+
 # --- human vs animal ---------------------------------------------------------------------
 # The Challenge brief singles out datasets "based on in vitro human systems or able to
 # extrapolate data between in vitro human systems and animal data". That makes the human/animal
 # boundary a first-class axis, not a detail, so it is split out explicitly rather than left to be
 # reconstructed from study_type + species.
 #
-# Four classes, and the fourth is the point: `human_invitro` is the class the brief prioritises,
-# and this dataset has ZERO rows in it. Naming the empty class makes that visible in the data
-# itself instead of only in a caveat.
+# Four classes, and the second is the point: `human_invitro` is the class the brief prioritises.
+# It was empty in the first release, and naming the empty class is what made that visible in the
+# data rather than only in a caveat. It is no longer empty.
 SUBJECT_CLASSES = ["human_clinical", "human_invitro", "animal_invivo", "animal_invitro"]
 
 SUBJECT_GROUP = {"human_clinical": "human", "human_invitro": "human",
@@ -174,9 +183,28 @@ def write_split(oligos: list[dict], measurements: list[dict], modifications: lis
         mods_by_oligo.setdefault(md["oligo_id"], []).append(md)
     source_by_id = {s["source_id"]: s for s in sources}
 
+    # An oligo with at least one measurement belongs to the endpoints its measurements reach.
+    # One with none belongs to the endpoint where its source contributes most measurements --
+    # deterministic, with an alphabetical tie-break and a documented fallback -- so that no
+    # characterised compound falls out of the release.
+    src_weight: dict[str, collections.Counter] = collections.defaultdict(collections.Counter)
+    for ep, meas in by_ep.items():
+        for m in meas:
+            src_weight[m["source_id"]][ep] += 1
+    measured = {m["oligo_id"] for m in measurements}
+    homeless: dict[str, list[str]] = {ep: [] for ep in ENDPOINTS}
+    for oid, o in oligo_by_id.items():
+        if oid in measured:
+            continue
+        w = src_weight.get(o["source_id"])
+        ep = (min(sorted(w.items()), key=lambda kv: (-kv[1], kv[0]))[0] if w
+              else ZERO_ROW_SOURCE_ENDPOINT.get(o["source_id"], ENDPOINTS[0]))
+        homeless[ep].append(oid)
+
     counts = {}
     for ep, meas in by_ep.items():
-        oids = [oid for oid in oligo_by_id if oid in {m["oligo_id"] for m in meas}]
+        oids = [oid for oid in oligo_by_id
+                if oid in {m["oligo_id"] for m in meas} or oid in homeless[ep]]
         oids.sort()
         eps_oligos = [oligo_by_id[o] for o in oids]
         eps_mods = [md for o in oids for md in mods_by_oligo.get(o, [])]
@@ -205,6 +233,6 @@ def write_split(oligos: list[dict], measurements: list[dict], modifications: lis
                 w.writeheader()
                 w.writerows(sub)
             counts.setdefault(ep, {})[f"{group}_rows"] = len(sub)
-        counts[ep] = {"oligos": len(eps_oligos), "measurements": len(meas),
-                      "modifications": len(eps_mods), "sources": len(eps_sources)}
+        counts[ep].update({"oligos": len(eps_oligos), "measurements": len(meas),
+                           "modifications": len(eps_mods), "sources": len(eps_sources)})
     return counts

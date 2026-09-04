@@ -125,23 +125,29 @@ new contributed layer) should be added on top. **Proceeding on the curation assu
 
 ---
 
-## OI-07 — No public human *in vitro* CNS oligonucleotide toxicity data was found
+## OI-07 — The human *in vitro* layer is open but no longer empty
 
-**Owner:** Claude · **Status:** OPEN — ACCEPTED-LIMITATION for v1.0 · **Raised:** 2026-08-26
+**Owner:** Claude · **Status:** PARTLY CLOSED · **Raised:** 2026-08-26 · **Revised:** 2026-09-04
 
 The challenge prioritises datasets *"based on in vitro human systems or able to extrapolate data
-between in vitro human systems and animal data."* This release satisfies the **second** clause —
-181 compounds carry paired in vitro and in vivo readouts — but not the first: only 12 of 2,065
-measurements are human-derived, and all twelve are clinical adverse-event incidences. The field's
-standard predictive screen is a **rat** primary-neuron calcium assay.
+between in vitro human systems and animal data."*
 
-A targeted search for published, sequence-resolved human iPSC-neuron or organoid data on
-oligonucleotide CNS toxicity found a 2023 review describing such models as *"promising"* for
-seizure-liability assessment — i.e. a future direction — and no public dataset.
+**This item was originally filed saying no such public data existed. That was wrong**, and it was
+wrong because the first sweep searched for oligonucleotide *neurotoxicity screening platforms*
+rather than for oligonucleotide studies that happen to report a toxicity readout in a human
+neural system. A targeted re-sweep found eleven, three of which are now ingested (HV1–HV3), and
+`human_invitro` holds 34 measurements. See `FINDINGS.md` F-11.
 
-*This is reported as a finding (F-10), not hidden.* If the intent is to compete specifically on
-the human in vitro criterion, closing this would require generating data rather than curating it,
-which is a scope decision for the user.
+**What remains open** is scale, not existence. 34 rows against 2,053 animal ones is a real
+imbalance, and the field's standard predictive screen is still a **rat** primary-neuron calcium
+assay (F-10). Eight further sources are identified, with verified identifiers, in
+`sources/RESEARCH_QUEUE.md` and §7 of the source register; the largest, Flynn 2022, carries 90+
+sequences across four chemistries. Extracting them is the highest-value next move and needs no
+new decision.
+
+**The extrapolation clause** is separately served: 181 compounds carry paired in vitro and in vivo
+readouts from the same laboratory. A source that bridges human in vitro to human clinical on one
+molecule — Ottesen 2026, an 18-mer with nusinersen's sequence and chemistry — is queued.
 
 ---
 

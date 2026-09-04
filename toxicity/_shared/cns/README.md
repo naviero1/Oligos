@@ -76,15 +76,22 @@ PROJECT_STATE.md                       assignment, intake, and phase log
 ## Rebuilding from scratch
 
 ```bash
-python3 src/build_hagedorn.py     # source H1  → data/staged/
-python3 src/build_curated.py      # sources K1, L1, C1 → data/staged/
-python3 src/assemble.py           # staged → data/*.csv
-python3 qc/validate_dataset.py    # 26 checks; exit 0 = all pass
-python3 src/make_figures.py       # data/ → figures/
-python3 src/make_release.py       # data/ → deliverables/*.xlsx + docs/DATA_DICTIONARY.md
-python3 src/make_pdfs.py          # → deliverables/*.pdf
-python3 src/make_summary.py       # → SUMMARY.md
+python3 src/build_hagedorn.py      # source H1  → data/staged/
+python3 src/build_curated.py       # sources K1, L1, C1 → data/staged/
+python3 src/build_ctgov.py         # source CT1 → data/staged/
+python3 src/build_human_invitro.py # sources HV1-HV3 → data/staged/
+python3 src/assemble.py            # staged → toxicity/<endpoint>/data/*.csv
+python3 qc/validate_dataset.py     # 34 checks; exit 0 = all pass
+python3 src/make_figures.py        # data/ → figures/
+python3 src/baseline_model.py      # data/ → figures/baseline_model.json
+python3 src/make_release.py        # data/ → deliverables/*.xlsx + docs/DATA_DICTIONARY.md
+python3 src/make_pdfs.py           # → narrative + methodology PDFs
+python3 src/make_padp.py           # → PADP PDF
+python3 src/make_sources.py        # → source register PDF
+python3 src/make_summary.py        # → SUMMARY.md + LICENSE.md
 ```
+
+No network access is needed: every source the build reads is committed under `sources/`.
 
 Dependencies: `openpyxl`, `pymupdf`, `matplotlib`, `reportlab`.
 

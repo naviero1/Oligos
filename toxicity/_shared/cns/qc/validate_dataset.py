@@ -73,9 +73,18 @@ def main(as_json: bool = False) -> int:
           f"{len(orphan_mod)} orphan oligo_ids")
     bad_src = ({o["source_id"] for o in oligos} | {m["source_id"] for m in meas}) - src_ids
     check("every source_id is registered in sources.csv", not bad_src, f"unknown: {sorted(bad_src)}")
+    # An oligo with no measurement is allowed ONLY where the row itself declares why: the source
+    # characterised the compound but printed no per-compound readout that could be extracted
+    # without estimating one from a figure. Requiring the declaration keeps the check able to
+    # catch an accidental orphan, which a bare "every oligo has a measurement" rule stopped doing
+    # the moment the endpoint split silently dropped unmeasured oligos instead of filing them.
     unmeasured = oid_set - {m["oligo_id"] for m in meas}
-    check("every oligo has at least one measurement", not unmeasured,
-          f"{len(unmeasured)} oligos with no measurement")
+    undeclared = sorted(o["oligo_id"] for o in oligos if o["oligo_id"] in unmeasured
+                        and not o.get("notes", "").startswith("CHARACTERISED_ONLY:"))
+    check("every oligo either has a measurement or declares why it has none",
+          not undeclared,
+          f"{len(undeclared)} undeclared orphan(s): {undeclared[:8]}"
+          if undeclared else f"{len(unmeasured)} declared characterised-only")
 
     # ---- controlled vocabulary ----------------------------------------------------------
     for col, allowed in VOCAB.items():
