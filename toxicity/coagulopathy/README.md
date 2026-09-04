@@ -33,6 +33,15 @@ what the repository held before this dataset existed, and what changed — is
 | Dataset + data dictionary | — | `OligoTox-Coagulopathy_Dataset.xlsx`, `data/*.csv`, `schema.md` |
 | Sources & provenance (supporting) | — | `OligoTox-Coagulopathy_Sources.pdf` — all 100 sources, the database each came from, and a link-checked URL for every one |
 
+**Getting the original papers.** `sources/DOWNLOAD_MANIFEST.csv` gives, per source, the
+landing page, a direct-download URL where one exists, the licence, and whether we may
+redistribute it. `bash scripts/fetch_original_papers.sh` downloads the 53 that are fetchable
+without a subscription — USPTO patent PDFs, DailyMed label PDFs and open-access full text —
+into a git-ignored `originals/` folder. The remaining 26 are publisher-restricted: the
+manifest points at the landing page, which is where institutional access applies. FDA review
+packages and EMA assessment reports are free but sit behind a document picker rather than a
+stable URL, so the manifest names the exact document and links the application record.
+
 The workbook carries two analysis tabs beyond the raw tables: **`human_measurements`** —
 every human row with the compound's sequence, per-position chemistry map and toxicity score
 carried onto it, so the most important subset needs no join — and **`German's analysis`** —

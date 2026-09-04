@@ -24,6 +24,7 @@ STEPS = [("build_dataset.py", "assemble the tables"),
          ("build_documents.py", "narrative, methodology, PADP"),
          ("build_release_xlsx.py", "release workbook"),
          ("build_sources_pdf.py", "sources & provenance document"),
+         ("build_download_manifest.py", "download manifest + fetch script"),
          ("build_sources_md.py", "source registry")]
 
 for script, what in STEPS:
