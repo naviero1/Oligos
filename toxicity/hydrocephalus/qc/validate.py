@@ -327,6 +327,23 @@ def main():
         check("ML_REPORT.md quotes the numbers in ml/results.json", not missing,
               "not found in the report: %s" % [(k, res[k]) for k in missing])
 
+    # 11d-quinquies every DOI resolves ------------------------------------
+    #     The URL sweep passed for two releases while the AQP4 source carried
+    #     DOI 10.12659/MSM.907186, which resolves to nothing -- its `url` column
+    #     pointed at a good PMC page, so nothing looked at the DOI.
+    lc = os.path.join(ROOT, "notes", "link_check.json")
+    if os.path.exists(lc):
+        checked = json.load(open(lc)).get("dois", {})
+        recorded = sorted({r["doi"] for r in s if r["doi"]})
+        unchecked = [d for d in recorded if d not in checked]
+        unresolved = [d for d in recorded
+                      if checked.get(d, {}).get("verdict") not in (None, "ok")]
+        check("every recorded DOI has been resolved", not unchecked,
+              "not in notes/link_check.json: %s (run scripts/check_source_links.py)"
+              % unchecked[:5])
+        check("every recorded DOI resolves", not unresolved,
+              "did not resolve: %s" % [(d, checked[d]["status"]) for d in unresolved[:4]])
+
     # 11e endpoint isolation — no other toxicity's material may leak in ----
     #     Requested explicitly: the endpoints are separate deliverables and their
     #     files must not mix. This makes that a check rather than a convention.

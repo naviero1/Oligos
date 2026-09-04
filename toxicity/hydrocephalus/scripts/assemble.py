@@ -122,9 +122,10 @@ SOURCE_META = {
                "over a study window that ends at nusinersen approval, so it is "
                "uncontaminated by the drug.")),
     "Tofersen_seriousAE_2025_MuscleNerve": dict(
-        citation=("Serious Neurologic Adverse Events in Tofersen Clinical Trials for "
-                  "Amyotrophic Lateral Sclerosis. Muscle Nerve. 2025."),
-        first_author="NOT_REPORTED", year="2025", journal="Muscle & Nerve",
+        citation=("Lovett A, Chary S, Babu S, et al. Serious Neurologic Adverse Events "
+                  "in Tofersen Clinical Trials for Amyotrophic Lateral Sclerosis. "
+                  "Muscle Nerve. 2025;71:1006-1015."),
+        first_author="Lovett A", year="2025", journal="Muscle & Nerve",
         doi="10.1002/mus.28372", pmid="40017137", pmcid="PMC12060635", nct_id="",
         url="https://pmc.ncbi.nlm.nih.gov/articles/PMC12060635/",
         access="open_access", license="CC BY-NC-ND",
@@ -137,10 +138,11 @@ SOURCE_META = {
 
 SOURCE_META.update({
     "Choroid_plexus_siSPAK_LNP_2025_NatCommun": dict(
-        citation=("Targeting modulation of the choroid plexus blood-CSF barrier and CSF "
-                  "hypersecretion via lipid nanoparticle-mediated co-delivery of SPAK "
-                  "siRNA and resveratrol. Nat Commun. 2025;16."),
-        first_author="NOT_REPORTED", year="2025", journal="Nature Communications",
+        citation=("Wang Q, Xia X, Zhang H, et al. Targeting modulation of the choroid "
+                  "plexus blood-CSF barrier and CSF hypersecretion via lipid "
+                  "nanoparticle-mediated co-delivery of siRNA and resveratrol. "
+                  "Nat Commun. 2025;16:6389."),
+        first_author="Wang Q", year="2025", journal="Nature Communications",
         doi="10.1038/s41467-025-61543-1", pmid="40640139", pmcid="PMC12246246",
         nct_id="", url="https://pmc.ncbi.nlm.nih.gov/articles/PMC12246246/",
         access="open_access", license="CC BY-NC-ND 4.0",
@@ -149,10 +151,16 @@ SOURCE_META.update({
         notes=("Supplies the only published sequences in this release (four SPAK siRNA "
                "duplexes, Methods/Materials) and the only protective-direction rows.")),
     "AQP4_siRNA_hydrocephalus_2018_MedSciMonit": dict(
-        citation=("Aquaporin 4 Silencing Aggravates Hydrocephalus Induced by Injection "
-                  "of Autologous Blood in Rats. Med Sci Monit. 2018;24."),
-        first_author="NOT_REPORTED", year="2018", journal="Medical Science Monitor",
-        doi="10.12659/MSM.907186", pmid="29921834", pmcid="PMC6042309",
+        # DOI CORRECTION. This entry recorded 10.12659/MSM.907186, which resolves
+        # to nothing: Crossref returns 404 for it. The article's own PMC XML, the
+        # publisher PDF's running header and Crossref all give 10.12659/MSM.906936
+        # for volume 24, pages 4204-4212. The locator check now resolves DOIs as
+        # well as URLs, so a citation cannot again carry a DOI that goes nowhere.
+        citation=("Guo J, Mi X, Zhan R, Li M, Wei L, Sun J. Aquaporin 4 Silencing "
+                  "Aggravates Hydrocephalus Induced by Injection of Autologous Blood "
+                  "in Rats. Med Sci Monit. 2018;24:4204-4212."),
+        first_author="Guo J", year="2018", journal="Medical Science Monitor",
+        doi="10.12659/MSM.906936", pmid="29921834", pmcid="PMC6042309",
         nct_id="", url="https://pmc.ncbi.nlm.nih.gov/articles/PMC6042309/",
         access="open_access", license="CC BY-NC", redistribution="cc_by_nc",
         evidence_tier="primary_fulltext",

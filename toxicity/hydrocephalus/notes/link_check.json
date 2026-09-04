@@ -1,5 +1,74 @@
 {
   "checked_on": "2026-09-04",
+  "doi_tally": {
+    "ok": 7
+  },
+  "dois": {
+    "10.1002/mds.28359": {
+      "checked": "2026-09-04",
+      "container": "Movement Disorders",
+      "page": "263-264",
+      "status": 200,
+      "title": "Hydrocephalus Complicating Intrathecal Antisense Oligonucleotide Therapy for Huntington's Disease",
+      "verdict": "ok",
+      "volume": "36"
+    },
+    "10.1002/mus.28372": {
+      "checked": "2026-09-04",
+      "container": "Muscle &amp; Nerve",
+      "page": "1006-1015",
+      "status": 200,
+      "title": "Serious Neurologic Adverse Events in Tofersen Clinical Trials for Amyotrophic Lateral Sclerosis",
+      "verdict": "ok",
+      "volume": "71"
+    },
+    "10.1038/s41467-025-61543-1": {
+      "checked": "2026-09-04",
+      "container": "Nature Communications",
+      "page": "",
+      "status": 200,
+      "title": "Targeting modulation of the choroid plexus blood-CSF barrier and CSF hypersecretion via lipid nanoparticle-mediated co-delivery of siRNA and resveratrol",
+      "verdict": "ok",
+      "volume": "16"
+    },
+    "10.1038/s41591-026-04314-9": {
+      "checked": "2026-09-04",
+      "container": "Nature Medicine",
+      "page": "1411-1420",
+      "status": 200,
+      "title": "Antisense oligonucleotide-mediated knockdown therapy in two infants with severe KCNT1 epileptic encephalopathy",
+      "verdict": "ok",
+      "volume": "32"
+    },
+    "10.1186/1471-2202-8-26": {
+      "checked": "2026-09-04",
+      "container": "BMC Neuroscience",
+      "page": "",
+      "status": 200,
+      "title": "Intracerebroventricular antisense knockdown of G\u03b1i2 results in ciliary stasis and ventricular dilatation in the rat",
+      "verdict": "ok",
+      "volume": "8"
+    },
+    "10.1186/s13023-021-01822-4": {
+      "checked": "2026-09-04",
+      "container": "Orphanet Journal of Rare Diseases",
+      "page": "",
+      "status": 200,
+      "title": "The incidence of hydrocephalus among patients with and without spinal muscular atrophy (SMA): Results from a US electronic health records study",
+      "verdict": "ok",
+      "volume": "16"
+    },
+    "10.12659/MSM.906936": {
+      "checked": "2026-09-04",
+      "container": "Medical Science Monitor",
+      "page": "4204-4212",
+      "status": 200,
+      "title": "Aquaporin 4 Silencing Aggravates Hydrocephalus Induced by Injection of Autologous Blood in Rats",
+      "verdict": "ok",
+      "volume": "24"
+    }
+  },
+  "n_dois": 7,
   "n_urls": 193,
   "results": {
     "https://api.fda.gov/drug/event.json": {

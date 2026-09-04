@@ -103,7 +103,7 @@ report*; the four documents are the November block.
 
 | Step | Status |
 |---|---|
-| Data prep | **Done**, and extended past the original scope: <!--stat:n_measurements-->1,361<!--/stat--> rows, <!--stat:n_oligos-->53<!--/stat--> compounds, <!--stat:n_sources-->193<!--/stat--> sources, <!--stat:n_trials-->161<!--/stat--> trials, <!--stat:checks_run-->51<!--/stat--> QC checks. |
+| Data prep | **Done**, and extended past the original scope: <!--stat:n_measurements-->1,361<!--/stat--> rows, <!--stat:n_oligos-->53<!--/stat--> compounds, <!--stat:n_sources-->193<!--/stat--> sources, <!--stat:n_trials-->161<!--/stat--> trials, <!--stat:checks_run-->53<!--/stat--> QC checks. |
 | **Finish ML** | **Done.** Arm-level analysis with leave-one-compound-out validation and explicit leakage probes; `ml/ML_REPORT.md` is generated from `ml/results.json`, not typed. |
 | Write up report | **Done.** Narrative, methodology and PADP PDFs, plus a supplementary source and provenance register. |
 
