@@ -8,3 +8,8 @@ data/staged/
 sources/S1_Schobel2021/
 sources/B2_Boak_McColgan_CHDI2022/
 sources/M1_McColgan2023/
+
+# Full-text articles fetched by src/fetch_papers.py. Open access, but ~53 MB of binaries the
+# build never reads -- it reads the supplementary tables under each source folder, which ARE
+# committed. Reconstitute on demand with: python3 src/fetch_papers.py
+sources/papers/*.pdf

@@ -91,6 +91,14 @@ python3 src/make_sources.py        # → source register PDF
 python3 src/make_summary.py        # → SUMMARY.md + LICENSE.md
 ```
 
+The full-text articles are not needed to rebuild, and are gitignored because they are large
+binaries the pipeline never reads. To reconstitute them:
+
+```bash
+python3 src/fetch_papers.py        # → sources/papers/, 11 papers, each verified against
+                                   #   its expected title, not just its HTTP status
+```
+
 No network access is needed: every source the build reads is committed under `sources/`.
 
 Dependencies: `openpyxl`, `pymupdf`, `matplotlib`, `reportlab`.
