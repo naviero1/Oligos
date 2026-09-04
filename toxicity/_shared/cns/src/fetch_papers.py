@@ -61,6 +61,13 @@ PAPERS = [
      "81356b45-1cb7-4eef-88ea-e44cc18b47c5", "qalsody"),
     ("C1_SPINRAZA_nusinersen_FDA_PI", "dailymed",
      "dd70cd5f-b0fc-4ba4-a5ea-89a34778bd94", "spinraza"),
+    # An earlier fetch of this one wrote a 385-byte Google Cloud "AccessDenied" XML error to
+    # us10799523.pdf and it was committed, unread, for a week -- the exact trap this script's
+    # magic-byte check exists to catch, sprung on our own file. The stub is gone; the patent is
+    # fetched and verified here instead. Its full text was never missing: raw/us10799523b2.txt
+    # and the saved HTML are committed and are what the extraction would read.
+    ("P1_Olson_US10799523B2_patent", "patentimages",
+     "25/87/12/7a717a6d09e0fd/US10799523.pdf", "tau antisense oligomers"),
 ]
 
 ROUTES = {
@@ -68,6 +75,9 @@ ROUTES = {
             "https://www.ebi.ac.uk/europepmc/webservices/rest/{id}/fullTextPDF"],
     "dailymed": ["https://dailymed.nlm.nih.gov/dailymed/downloadpdffile.cfm?setId={id}&type=display",
                  "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid={id}&type=pdf"],
+    # Google's patent PDFs are content-addressed, so the path cannot be built from the patent
+    # number; this one was read out of the saved Google Patents HTML in the P1 source folder.
+    "patentimages": ["https://patentimages.storage.googleapis.com/{id}"],
 }
 
 
@@ -90,8 +100,8 @@ def main(argv: list[str]) -> int:
     OUT.mkdir(parents=True, exist_ok=True)
     failed = []
     for stem, route, ident, phrase in PAPERS:
-        suffix = ident if route == "pmc" else ident[:8]
-        path = OUT / f"{stem}_{suffix}.pdf"
+        suffix = {"pmc": ident, "dailymed": ident[:8]}.get(route, "")
+        path = OUT / (f"{stem}_{suffix}.pdf" if suffix else f"{stem}.pdf")
         if path.exists() and not force:
             ok, why = verify(path, phrase)
             print(f"  {'have  ' if ok else 'BAD   '}{path.name}  ({why})")

@@ -20,6 +20,7 @@ attribution is required for all of the CC-licensed ones.
 | **HV3** | Woffindale 2026, Mol Ther Nucleic Acids 102848 | `HV3_Woffindale2026_MTNA_PMC12925542.pdf` | 12 | CC BY-NC-ND 4.0 | 10.1016/j.omtn.2026.102848 · PMC12925542 | 24 / 17. The 23 sequences are in mmc1.pdf, NOT in this article text. |
 | **O1** | O'Rourke 2026, Nucleic Acids Res 54(3):gkaf1333 | `O1_ORourke2026_NAR_PMC12865454.pdf` | 17 | CC BY-NC 4.0 | 10.1093/nar/gkaf1333 · PMC12865454 | Instruments only, 0 rows. Acute-inhibition scales. |
 | **B1** | Bravo-Hernandez 2026, Nucleic Acids Res 54(3):gkag057 | `B1_BravoHernandez2026_NAR_PMC12867516.pdf` | 20 | CC BY-NC 4.0 | 10.1093/nar/gkag057 · PMC12867516 | Held, 0 rows. Would add the first non-human-primate rows. |
+| **P1** | Olson RE, et al. Tau antisense oligomers and uses thereof. US Patent 10,799,523 B2 | `P1_Olson_US10799523B2_patent.pdf` | 500 | US Government work — public domain | US 10,799,523 B2 | Held, 0 rows. Patent tables pair sequence with toxicity rating. |
 
 ## Not here, and why
 
@@ -32,8 +33,12 @@ redistribution, so they are named rather than copied. Retrieve your own copy:
 | **S1** | Schobel S. *Preliminary results from GENERATION HD1*. CHDI Therapeutics Conference, 2021. | CHDI Foundation conference materials |
 | **B2** | Boak L, McColgan P. *Treatment and post-treatment effects of tominersen in GENERATION HD1*. CHDI Therapeutics Conference, 2022. | CHDI Foundation conference materials |
 
-**P1**, US Patent 10,799,523 B2 (Olson et al.), is a US Government work in the public domain and
-is already in the repository at `sources/P1_Olson_US10799523B2/raw/us10799523.pdf`.
+**P1 was broken in the repository until 2026-09-04.** `raw/us10799523.pdf` was a 385-byte Google
+Cloud `AccessDenied` XML error saved with a `.pdf` extension — the download had failed and the
+error page was written to disk and committed, unread. It is exactly the trap this folder's
+fetcher checks for, sprung on our own file. The stub has been removed and the real 500-page
+patent is fetched and verified here instead. **Its text was never missing**: `raw/us10799523b2.txt`
+(466 KB) and the saved Google Patents HTML are committed, and are what an extraction would read.
 
 **CT1** is not a paper. Its 29 ClinicalTrials.gov records are committed as JSON at
 `sources/CT1_ClinicalTrialsGov/`, exactly as the API returned them.
