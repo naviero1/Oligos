@@ -305,6 +305,94 @@ def main() -> int:
     ws.column_dimensions["C"].width = 96
     ws.freeze_panes = "A2"
 
+    # ---------------- human_measurements ---------------------------------------------------
+    # The human rows are the most important subset, so they get their own sheet with the
+    # oligonucleotide's SEQUENCE and CHEMISTRY joined inline and the TOXICITY GRADE placed up
+    # front - rather than requiring a join against oligos.csv to see either.
+    by_oligo = {o["oligo_id"]: o for o in oligos}
+    HUMAN_FRONT = [
+        ("oligo_name", "Oligonucleotide"),
+        ("sequence_5to3_asprinted", "Sequence (5'->3', as printed)"),
+        ("sequence_base", "Sequence (bases only)"),
+        ("length_nt", "Length (nt)"),
+        ("backbone_chemistry", "Backbone"),
+        ("sugar_modifications", "Sugar modifications"),
+        ("modification_pattern", "Modification pattern"),
+        ("modification_positions", "Modification positions (5'->3')"),
+        ("modification_position_basis", "Position basis"),
+    ]
+    hm_cols = ([("cns_tox_grade", "Toxicity grade (0-3)"), ("grade_basis", "How the grade was assigned")]
+               + HUMAN_FRONT
+               + [(c, c) for c, _ in MEASUREMENT_COLUMNS if c != "cns_tox_grade" and c != "grade_basis"])
+    human_rows = []
+    for m in meas:
+        if m.get("subject_group") != "human":
+            continue
+        o = by_oligo.get(m["oligo_id"], {})
+        row = {}
+        for key, _ in hm_cols:
+            row[key] = o.get(key, "") if key in dict(HUMAN_FRONT) else m.get(key, "")
+        human_rows.append(row)
+    ws = data_sheet(wb, "human_measurements", [(k, "") for k, _ in hm_cols], human_rows,
+                    numeric_cols=("cns_tox_grade", "length_nt"))
+    for i, (_, label) in enumerate(hm_cols, start=1):
+        ws.cell(row=1, column=i).value = label
+    with_seq = sum(1 for r in human_rows if r["sequence_5to3_asprinted"] not in ("NOT_REPORTED", ""))
+    print(f"  human_measurements: {len(human_rows)} rows, {with_seq} carry a sequence "
+          f"({100 * with_seq / max(len(human_rows), 1):.0f}%)")
+
+    # ---------------- German's analysis ----------------------------------------------------
+    # One row per oligonucleotide: what it is, its sequence, what was done to that sequence, and
+    # how toxic it turned out. Deliberately narrow - the modelling view, not the provenance view.
+    GRADE_LABEL = {"0": "0 - none", "1": "1 - mild", "2": "2 - moderate", "3": "3 - severe"}
+    per_oligo = {}
+    for m in meas:
+        g = m.get("cns_tox_grade", "")
+        d = per_oligo.setdefault(m["oligo_id"], {"n": 0, "worst": None, "classes": set(),
+                                                 "readouts": set()})
+        d["n"] += 1
+        d["classes"].add(m.get("subject_class", ""))
+        d["readouts"].add(m.get("readout_name", ""))
+        if g != "" and (d["worst"] is None or int(g) > d["worst"]):
+            d["worst"] = int(g)
+    ga_rows = []
+    for o in oligos:
+        d = per_oligo.get(o["oligo_id"], {"n": 0, "worst": None, "classes": set(), "readouts": set()})
+        # NB: named mod_text, not mods -- `mods` is the modifications table in the enclosing
+        # scope and shadowing it silently corrupted that sheet.
+        mod_text = o.get("modification_pattern", "")
+        pos = o.get("modification_positions", "")
+        if pos not in ("", "NOT_REPORTED"):
+            mod_text = (f"{mod_text} | per-position: {pos}"
+                        if mod_text not in ("", "NOT_REPORTED") else f"per-position: {pos}")
+        ga_rows.append({
+            "oligo_id": o["oligo_id"],
+            "oligo": o["oligo_name"],
+            "sequence": o.get("sequence_5to3_asprinted", "NOT_REPORTED"),
+            "modification": mod_text or "NOT_REPORTED",
+            "toxicity": GRADE_LABEL.get(str(d["worst"]), "not graded") if d["worst"] is not None else "not graded",
+            "toxicity_grade_numeric": d["worst"] if d["worst"] is not None else "",
+            "n_measurements": d["n"],
+            "subject_class": "; ".join(sorted(c for c in d["classes"] if c)),
+            "readouts": "; ".join(sorted(r for r in d["readouts"] if r))[:250],
+            "source_id": o.get("source_id", ""),
+        })
+    ga_rows.sort(key=lambda r: (r["sequence"] in ("NOT_REPORTED", ""),
+                                -(r["toxicity_grade_numeric"] if isinstance(r["toxicity_grade_numeric"], int) else -1),
+                                r["oligo_id"]))
+    ga_cols = [("oligo_id", ""), ("oligo", ""), ("sequence", ""), ("modification", ""),
+               ("toxicity", ""), ("toxicity_grade_numeric", ""), ("n_measurements", ""),
+               ("subject_class", ""), ("readouts", ""), ("source_id", "")]
+    ws = data_sheet(wb, "German's analysis", ga_cols, ga_rows,
+                    numeric_cols=("toxicity_grade_numeric", "n_measurements"))
+    LABELS = ["Oligo ID", "Oligonucleotide", "Sequence (5'->3')", "Modification to that sequence",
+              "Toxicity", "Toxicity grade", "Measurements", "Subject class", "Readouts", "Source"]
+    for i, lab in enumerate(LABELS, start=1):
+        ws.cell(row=1, column=i).value = lab
+    gs = sum(1 for r in ga_rows if r["sequence"] not in ("NOT_REPORTED", ""))
+    print(f"  German's analysis: {len(ga_rows)} oligonucleotides, {gs} with a sequence, "
+          f"{sum(1 for r in ga_rows if r['toxicity'] != 'not graded')} graded")
+
     # ---------------- data sheets ---------------------------------------------------------
     data_sheet(wb, "oligos", OLIGO_COLUMNS, oligos,
                numeric_cols=("length_nt", "n_lna", "n_moe", "n_dna", "n_5methyl_C",

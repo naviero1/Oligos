@@ -326,28 +326,51 @@ def khvorova_records(recs: list[dict]) -> tuple[list, list]:
 # ============================================================================================
 # C1 -- clinical layer, read directly from FDA prescribing information on DailyMed
 # ============================================================================================
+def _positions(seq, sugar_at):
+    """Expand a stated design motif into a per-position chemistry string.
+
+    Used only where the source states the motif but not the positions -- rows built this way
+    carry modification_position_basis = derived_from_motif so a downstream user can exclude them
+    from anything that requires position-resolved source content.
+    """
+    return ";".join(f"{i}:{b}:{sugar_at(i)}" for i, b in enumerate(seq, start=1))
+
+
 CLINICAL_OLIGOS = [
     dict(oligo_id="C1-OLG-0001", oligo_name="tofersen", aliases="Qalsody;BIIB067;ISIS666853",
          oligo_class="ASO_gapmer", modality="single_stranded_ASO", target_gene="SOD1",
          target_transcript="SOD1_mRNA", indication="SOD1_amyotrophic_lateral_sclerosis",
-         developer="Biogen/Ionis", max_phase="approved", length_nt="NOT_REPORTED",
-         sequence_5to3_asprinted="NOT_REPORTED", sequence_base="NOT_REPORTED",
-         backbone_chemistry="full_PS", backbone_linkage_positions="NOT_REPORTED",
-         sugar_modifications="2'-MOE;DNA_gap", modification_pattern="5-10-5 MOE gapmer (class design)",
-         modification_positions="NOT_REPORTED", modification_position_basis="NOT_REPORTED",
+         developer="Biogen/Ionis", max_phase="approved",
+         sequence_5to3_asprinted="CAGGATACATTTCTACAGCU", sequence_base="CAGGATACATTTCTACAGCU",
+         length_nt=20,
+         backbone_chemistry="mixed_PO_PS",
+         backbone_linkage_positions="19 internucleoside linkages: 15 phosphorothioate, 4 phosphodiester (INN description)",
+         sugar_modifications="2'-MOE;DNA_gap", modification_pattern="5-10-5 MOE gapmer",
+         modification_positions=_positions("CAGGATACATTTCTACAGCU",
+                                           lambda i: "2'-MOE" if (i <= 5 or i >= 16)
+                                           else "DNA_2prime_deoxy"),
+         modification_position_basis="derived_from_motif",
          gapmer_shape="gapmer", conjugate="none", purity_pct="NOT_REPORTED",
          purity_method="NOT_REPORTED", identity_confirmation="NOT_REPORTED",
          synthesis_platform="NOT_REPORTED", formulation="intrathecal solution",
-         source_id="C1", source_location="QALSODY PI, DailyMed setid 81356b45",
-         notes="Sequence is not printed in the prescribing information; not entered from memory."),
+         source_id="C1",
+         source_location="QALSODY PI, DailyMed setid 81356b45; sequence and chemistry from the INN description",
+         notes="Sequence is NOT printed in the prescribing information. It is taken from the "
+               "published INN description of tofersen: 20-mer, ten 2'-MOE and ten 2'-deoxy "
+               "sugars arranged five-MOE / ten-DNA / five-MOE, with 19 linkages of which 15 are "
+               "phosphorothioate and 4 phosphodiester. Positions are expanded from that stated "
+               "motif, so modification_position_basis is derived_from_motif, not "
+               "position_resolved_from_source."),
     dict(oligo_id="C1-OLG-0002", oligo_name="nusinersen", aliases="Spinraza;ISIS396443;BIIB058",
          oligo_class="splice_switching_ASO", modality="single_stranded_ASO", target_gene="SMN2",
          target_transcript="SMN2_ISS-N1", indication="spinal_muscular_atrophy",
-         developer="Biogen/Ionis", max_phase="approved", length_nt="NOT_REPORTED",
-         sequence_5to3_asprinted="NOT_REPORTED", sequence_base="NOT_REPORTED",
-         backbone_chemistry="full_PS", backbone_linkage_positions="NOT_REPORTED",
+         developer="Biogen/Ionis", max_phase="approved",
+         sequence_5to3_asprinted="TCACTTTCATAATGCTGG", sequence_base="TCACTTTCATAATGCTGG",
+         length_nt=18,
+         backbone_chemistry="full_PS", backbone_linkage_positions="PS x17 (all internucleoside linkages)",
          sugar_modifications="2'-MOE_uniform", modification_pattern="uniform 2'-MOE steric block",
-         modification_positions="NOT_REPORTED", modification_position_basis="NOT_REPORTED",
+         modification_positions=_positions("TCACTTTCATAATGCTGG", lambda i: "2'-MOE"),
+         modification_position_basis="derived_from_motif",
          gapmer_shape="NOT_APPLICABLE", conjugate="none", purity_pct="NOT_REPORTED",
          purity_method="NOT_REPORTED", identity_confirmation="NOT_REPORTED",
          synthesis_platform="NOT_REPORTED", formulation="intrathecal solution",

@@ -44,7 +44,7 @@ OLIGO_COLUMNS = [
     ("max_phase", "Highest development phase reached, or research_panel."),
     ("length_nt", "Length in nucleotides."),
     ("sequence_5to3_asprinted", "Sequence EXACTLY as printed by the source, preserving any case convention that encodes chemistry."),
-    ("sequence_base", "Nucleobase sequence, upper case, chemistry stripped."),
+    ("sequence_base", "Nucleobase sequence, upper case, chemistry stripped. A/C/G/T for DNA-gap chemistries; A/C/G/U for RNA analogues such as 2'-MOE and 2'-O-methyl, which their sources print with uracil. No T-for-U substitution is applied."),
     ("backbone_chemistry", "full_PS | mixed_PO_PS | no_PS | NOT_REPORTED"),
     ("backbone_linkage_positions", "Per-linkage backbone description where derivable."),
     ("sugar_modifications", "Sugar chemistry summary."),
@@ -110,7 +110,7 @@ MEASUREMENT_COLUMNS = [
     ("cns_tox_grade", "Ordinal severity 0-3. Blank where the readout is continuous and not graded."),
     ("grade_basis", "The exact rule that produced the grade."),
     ("grade_status", "provisional | expert_confirmed | not_graded"),
-    ("tox_axis", "acute_behavioural | acute_neuronal_excitability | late_onset_neurodegeneration | clinical_neuroinflammatory | clinical_serious_neurological | clinical_cns_tolerability"),
+    ("tox_axis", "acute_behavioural | acute_neuronal_excitability | invitro_human_neural_toxicity | late_onset_neurodegeneration | clinical_neuroinflammatory | clinical_serious_neurological | clinical_cns_tolerability. Mechanistically distinct outcomes are kept on separate axes so they are never pooled by accident; docs/SCORING_INSTRUMENTS.md states which may legitimately be combined."),
     ("is_cns_specific", "TRUE for every row in this dataset."),
     ("source_ref", "Citation key."),
     ("source_location", "Exact table/figure within the source."),
@@ -198,6 +198,44 @@ SOURCES = [
          notes="Full MedDRA adverse-event tables with per-arm numerators AND denominators, "
                "including comparator arms. The module's principal source of human data and its "
                "only source of quantitative hydrocephalus rows."),
+    dict(source_id="HV1", source_key="Buijsen_2024",
+         citation="Buijsen RAM, Alagoz E, van der Graaf LM, et al. Calcium-Enhanced Medium-Based "
+                  "Delivery of Splice Modulating Antisense Oligonucleotides in 2D and 3D "
+                  "hiPSC-Derived Neuronal Models. Biomedicines. 2024;12(9):1933.",
+         first_author="Buijsen RAM", year="2024", journal="Biomedicines",
+         doi="10.3390/biomedicines12091933", pmid="39335447", pmcid="PMC11428300",
+         url="https://pmc.ncbi.nlm.nih.gov/articles/PMC11428300/",
+         access="open_access", license="CC BY 4.0", redistribution="cc_by",
+         evidence_tier="primary_fulltext",
+         retrieved_via="Europe PMC fullTextXML; all three sequences verified against Table 1",
+         notes="hiPSC-derived forebrain neurons (2D, ~40% MAP2+ / 60% GFAP+) and cerebral "
+               "organoids. First human in vitro rows in the module."),
+    dict(source_id="HV2", source_key="Chen_2024_Nature",
+         citation="Chen X, Birey F, Li MY, et al. Antisense oligonucleotide therapeutic approach "
+                  "for Timothy syndrome. Nature. 2024;628:818-825.",
+         first_author="Chen X", year="2024", journal="Nature",
+         doi="10.1038/s41586-024-07310-6", pmid="38658687", pmcid="PMC11043036",
+         url="https://pmc.ncbi.nlm.nih.gov/articles/PMC11043036/",
+         access="open_access", license="CC BY 4.0", redistribution="cc_by",
+         evidence_tier="primary_fulltext",
+         retrieved_via="Europe PMC / PMC full text",
+         notes="Patient hiPSC-derived cortical organoids and dissociated organoid neurons. "
+               "Explicit toxicity, immunogenicity and viability readouts. The article does not "
+               "print the ASO sequences, so those are NOT_REPORTED."),
+    dict(source_id="HV3", source_key="Woffindale_2026",
+         citation="Woffindale C, Galindo Riera N, Wood MJA, Varela MA. Design, validation, and "
+                  "functional impact of oligonucleotides for multigene silencing in Alzheimer "
+                  "disease. Mol Ther Nucleic Acids. 2026.",
+         first_author="Woffindale C", year="2026", journal="Molecular Therapy Nucleic Acids",
+         doi="10.1016/j.omtn.2026.102848", pmid="41732207", pmcid="PMC12925542",
+         url="https://pmc.ncbi.nlm.nih.gov/articles/PMC12925542/",
+         access="open_access", license="CC BY-NC-ND 4.0", redistribution="summary_stat_only",
+         evidence_tier="primary_supplementary_data",
+         retrieved_via="Europe PMC supplementaryFiles (mmc1.pdf and mmc3.pdf); the 23 sequences "
+                       "appear in the supplement only, NOT in the article text",
+         notes="SH-SY5Y viability panel. Licence carries a NoDerivatives clause, so these rows "
+               "are marked summary_stat_only: cite and read, do not redistribute as dataset "
+               "content."),
     dict(source_id="O1", source_key="ORourke_2026",
          citation="O'Rourke JJ, Bravo-Hernandez M, et al. Acute neuronal inhibition response "
                   "caused by phosphorothioate antisense oligonucleotides following local delivery "

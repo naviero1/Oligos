@@ -11,19 +11,19 @@ Phase 2. Release **v1.0**. Licence **CC BY 4.0** (see `LICENSE.md` for the per-r
 
 | | |
 |---|---|
-| Oligonucleotides | **1,845** |
-| CNS toxicity measurements | **4,394** |
+| Oligonucleotides | **1,858** |
+| CNS toxicity measurements | **4,428** |
 | Per-position chemical-modification records | **32,569** |
-| Sources | **6** — 4 contributing rows, 1 contributing measurement instruments only |
-| Sequences published | 1,830 / 1,845 (99.2%) |
-| Position-resolved modification maps | 1,830 / 1,845 (99.2%) |
+| Sources | **9** — 4 contributing rows, 1 contributing measurement instruments only |
+| Sequences published | 1,840 / 1,858 (99.0%) |
+| Position-resolved modification maps | 1,830 / 1,858 (98.5%) |
 | Structural QC | **34/34 checks pass** |
 
 Split across the three endpoint folders, none of which mixes toxicities:
 
 | Endpoint folder | Measurements | On the brief's list? |
 |---|---:|---|
-| `toxicity/acute-neurotoxicity/` | 2,047 | **no** — the deprioritised axis, plus general clinical CNS AEs |
+| `toxicity/acute-neurotoxicity/` | 2,081 | **no** — the deprioritised axis, plus general clinical CNS AEs |
 | `toxicity/chronic-neurotoxicity/` | 2335 | yes |
 | `toxicity/hydrocephalus/` | 12 | yes |
 
@@ -37,7 +37,7 @@ declares a `subject_class`:
 | subject class | rows | what it is |
 |---|---:|---|
 | `human_clinical` | 2341 | adverse events in dosed patients |
-| `human_invitro` | **0** | **human-derived cells — the class the brief prioritises, and it is empty** |
+| `human_invitro` | **34** | **human-derived cells — the class the brief prioritises, and it is empty** |
 | `animal_invivo` | 228 | dosed mice and rats |
 | `animal_invitro` | 1825 | rat primary cortical neurons |
 
@@ -53,8 +53,8 @@ built and working. It is rat-in-vitro to mouse-in-vivo, an animal-to-animal brid
 human in vitro arm would make it the bridge the brief actually asks for, and is the single highest-
 value addition available to this module.
 
-**Severity grades 0/1/2/3** — 1595 / 673 / 126 / 175.
-**Study types** — 1,825 in vitro, 228 in vivo, 2341 clinical.
+**Severity grades 0/1/2/3** — 1615 / 673 / 130 / 175.
+**Study types** — 1,859 in vitro, 228 in vivo, 2341 clinical.
 
 ## What makes it useful
 
@@ -64,7 +64,7 @@ model needs, and it did not previously exist in one place for the CNS.
 
 - **181 compounds carry paired in vitro and in vivo readouts** — the in-vitro-to-in-vivo
   extrapolation the challenge asks for.
-- **All four severity grades are populated**, including 1595 grade-0 rows and 13 designed
+- **All four severity grades are populated**, including 1615 grade-0 rows and 13 designed
   guanine-free negative controls, so a classifier has a negative class.
 - **Four mechanistically distinct toxicity axes** are kept separate rather than collapsed into one
   toxic/not label.
@@ -107,10 +107,10 @@ features.
 ## Limitations, stated plainly
 
 - **Per-compound purity is absent from the literature.** `purity_pct` is `NOT_REPORTED` for all
-  1,845 oligonucleotides; the purification *method* is captured for
-  1,825. Nothing was estimated to close this.
-- **The in vitro arm is rat, not human.** Only 2341 of
-  4,394 measurements are human-derived, and all are clinical. No public,
+  1,858 oligonucleotides; the purification *method* is captured for
+  1,838. Nothing was estimated to close this.
+- **The in vitro arm is rat, not human.** Only 2375 of
+  4,428 measurements are human-derived, and all are clinical. No public,
   sequence-resolved human iPSC/organoid oligo-CNS dataset was found.
 - **Chemistry is narrow** — the core is one class (LNA/DNA full-phosphorothioate) from one study.
 - **Grades are provisional**, pending subject-matter-expert review.

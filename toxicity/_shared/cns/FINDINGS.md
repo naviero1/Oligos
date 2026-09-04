@@ -207,3 +207,58 @@ asks for does not appear to exist publicly yet.**
 | Grading rubric | Reproduces the source authors' stated "roughly 60 % suitable for further development" at 112/181 = 61.9 % |
 | End-to-end usability | A baseline classifier trained only on the released CSVs reaches the accuracy the original authors report on their own held-out set |
 | Every figure and PDF page | Rendered to an image and read; five substantive errors found and fixed this way (F-03, F-05, and three in the PDFs — see `CHANGES.md`) |
+
+---
+
+## F-11 — The human *in vitro* class is no longer empty
+
+`human_invitro` was 0 across the whole module and both halves of the brief's priority clause
+require it. Three sources now populate it: hiPSC-derived forebrain neurons and cerebral organoids
+(Buijsen 2024, CC BY 4.0), Timothy-syndrome patient cortical organoids (Chen 2024 *Nature*,
+CC BY 4.0), and an SH-SY5Y viability panel (Woffindale 2026, CC BY-NC-ND).
+
+> `python3 qc/validate_dataset.py` → `subject_class_distribution` shows `human_invitro` non-zero
+
+**Both sequence sets were verified by hand, not taken from the extractor.** Buijsen's three
+sequences were checked against the Europe PMC full-text XML for PMC11428300: Table 1 matches
+character-for-character, and only three `5'…3'` strings occur anywhere in that article.
+Woffindale's 23 LNA-notation sequences (`+N` = LNA, `/IDSP/` = internal DSpacer) were checked
+against the supplementary PDFs — and they appear **only** there, not in the article text, so an
+extraction relying on full text alone would have found none of them.
+
+**Licence caveat carried into the data.** Woffindale is CC BY-NC-ND. The NoDerivatives clause
+means we cannot license a restructured derivative, so those rows carry
+`redistribution = summary_stat_only` rather than being presented as freely reusable dataset
+content. The check for `NC-ND` runs *before* the check for `NC`, because a substring match on
+"CC BY-NC" alone would have silently mislabelled them as merely non-commercial.
+
+**A rejected source, recorded so it is not re-proposed.** Drygin 2004 (*NAR*) offers 43
+oligonucleotides with per-compound cytotoxicity — the largest human panel found — but the assays
+are in A549 lung and HepG2/Hep3B liver lines. It is human but not CNS, and admitting it would
+have contaminated this module with another organ's toxicity. Excluded.
+
+---
+
+## F-12 — Kuroda's non-toxic control may be tominersen, which would bridge animal and human
+
+**Stated as a hypothesis, not a result.** Source `L1` designates its ASO5 a *"non-toxic ASO
+targeting HTT mRNA, already used in clinical trials"* and prints its sequence, which we verified
+from the supplement:
+
+    C(5)TC(5)AGTAAC(5)ATTGAC(5)AC(5)C(5)AC(5)   →   CTCAGTAACATTGACACCAC
+
+20-mer, 5-10-5 2′-MOE gapmer, HTT. Vendor structure listings for **tominersen** describe a 20-mer
+5-10-5 2′-MOE gapmer against HTT whose base sequence, once ribothymidine is written as T, is the
+same string.
+
+If that identity holds, it is the **only compound in the dataset carrying both animal late-onset
+neurotoxicity data and human clinical adverse events** — including the hydrocephalus rows — which
+is precisely the cross-species bridge the Challenge brief asks for.
+
+**Why it is not in the data.** Kuroda does not name the drug; the identity is our inference from a
+sequence match. And the tominersen structure reached us through a summarising search layer, not a
+source we read directly, so it does not meet this project's bar for entering a sequence. The
+`CT1` tominersen record therefore still reads `sequence_5to3_asprinted = NOT_REPORTED`.
+
+**To close it:** read the tominersen INN description or a supplier certificate of analysis
+directly and compare. It is a cheap check with a large payoff.

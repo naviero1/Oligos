@@ -123,7 +123,10 @@ def main(as_json: bool = False) -> int:
 
     alphabet = {c for o in oligos if o["sequence_base"] not in MISSING_TOKENS
                 for c in o["sequence_base"]}
-    check("sequence_base uses only A/C/G/T", alphabet <= set("ACGT"),
+    # U is legitimate, not a defect: 2'-MOE and 2'-O-methyl oligonucleotides are RNA analogues
+    # and their sources print uracil. Rejecting U would have forced a silent T-for-U substitution,
+    # which would corrupt the sequence. DNA-gap chemistries use T; both are allowed.
+    check("sequence_base uses only A/C/G/T/U", alphabet <= set("ACGTU"),
           f"alphabet: {sorted(alphabet)}")
 
     # ---- modification table consistency -------------------------------------------------
