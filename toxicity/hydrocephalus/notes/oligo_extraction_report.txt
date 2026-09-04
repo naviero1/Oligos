@@ -1,4 +1,4 @@
-oligos.csv build report, 2026-09-03
+oligos.csv build report, 2026-09-04
 ================================================================
 nusinersen                 label=yes parsed=backbone_chemistry,formulation,molecular_formula,molecular_weight,sugar_modifications
 tofersen                   label=yes parsed=backbone_chemistry,formulation,length_nt,modification_pattern,molecular_formula,molecular_weight,sugar_modifications
@@ -22,6 +22,9 @@ lumasiran                  label=yes parsed=molecular_weight
 nedosiran                  label=yes parsed=none
 inclisiran                 label=yes parsed=molecular_weight
 valeriasen                 label=no  parsed=none
+Gai2_AS_ODN                label=no  parsed=none
+Gai2_mismatch_ODN          label=no  parsed=none
+Gai2_nonsense_ODN          label=no  parsed=none
 SPAK_siRNA1                label=no  parsed=none
 SPAK_siRNA2                label=no  parsed=none
 SPAK_siRNA3                label=no  parsed=none

@@ -99,8 +99,14 @@ def main():
         ("data_dictionary    every column in every table, with its definition", None),
         ("oligos             one row per oligonucleotide — the predictor variables", None),
         ("measurements       one row per measured outcome — the response variables", None),
-        ("measurements_human   GENERATED view: the human evidence only", None),
-        ("measurements_animal  GENERATED view: the animal evidence only", None),
+        ("measurements_human   GENERATED view: the human evidence only — the most "
+         "important subset. Every row carries the compound's SEQUENCE and design "
+         "alongside its toxicity grade, so nothing has to be joined back.", None),
+        ("measurements_animal  GENERATED view: the animal evidence only, same "
+         "enrichment", None),
+        ("German's analysis    GENERATED view: one row per compound — the oligo, its "
+         "sequence, the per-position modification maps for that sequence, and its "
+         "toxicity", None),
         ("modifications      one row per NUCLEOTIDE POSITION — the per-position "
          "chemistry", None),
         ("sources            the provenance registry", None),
@@ -118,12 +124,13 @@ def main():
          "arm for a single-arm case report).", None),
         ("An empty cell    the field does not apply to this table's row type.", None),
         ("", None),
-        ("In particular, purity_pct is NOT_REPORTED for every oligonucleotide here. A "
-         "full-text sweep of all 16 committed US labels finds no statement of "
+        ("In particular, purity_pct is NOT_REPORTED for all but three oligonucleotides "
+         "here. A full-text sweep of all 16 committed US labels finds no statement of "
          "drug-substance purity, purification method or identity-confirmation method "
-         "in any of them. That is a property of the published record, not an omission "
-         "in the curation; the sibling OligoTox-CNS release reports the same for all "
-         "1,839 of its compounds.", None),
+         "in any of them; the only stated purity value in the release (HPLC-purified, "
+         "90-97%) comes from a 2007 academic paper. That is a property of the "
+         "published record, not an omission in the curation; the sibling OligoTox-CNS "
+         "release reports the same for all 1,839 of its compounds.", None),
         ("", None),
         ("Human and animal evidence are separated, in one column", "head"),
         ("subject_class divides every row into human_in_vivo, human_in_vitro, "
@@ -135,11 +142,25 @@ def main():
          "individual dosed and no per-subject observation, so it is not a trial and "
          "must not be pooled with one.", None),
         ("", None),
-        ("This release is 909 human rows against 5 animal rows, and NO in vitro rows "
-         "at all. The Challenge brief singles out in vitro human systems, and "
-         "extrapolation between in vitro human systems and animal data, as of "
-         "particular interest — so that imbalance is the clearest limitation of this "
-         "release and is stated here rather than left to be discovered.", None),
+        ("This release is overwhelmingly human clinical evidence, with ten animal rows "
+         "and only two in vitro rows — both animal, from the one study that measures "
+         "the same oligonucleotide in vitro and in vivo. The Challenge brief singles "
+         "out in vitro HUMAN systems, and extrapolation between in vitro human systems "
+         "and animal data, as of particular interest. This release has neither a human "
+         "in vitro arm nor a substantial animal one, so it cannot support that "
+         "extrapolation; that is the clearest limitation of the release and is stated "
+         "here rather than left to be discovered.", None),
+        ("", None),
+        ("Reading the per-position modification maps", "head"),
+        ("On the German's analysis sheet the three map columns are strings aligned to "
+         "the sequence, one character per nucleotide. Sugar: M = 2'-MOE, d = 2'-deoxy "
+         "(DNA), L = LNA, o = 2'-OMe, P = morpholino. Linkage (to the NEXT residue): "
+         "S = phosphorothioate, o = phosphodiester, . = 3' terminus. 5-methyl: m where "
+         "the base carries a 5-methyl group. So tofersen's sugar map "
+         "MMMMMddddddddddMMMMM is a 5-10-5 gapmer read directly off the molecule. "
+         "A '?' at a position means that dimension is NOT_REPORTED for that residue, and "
+         "a column reading NOT_REPORTED means no per-position map could be established "
+         "at all without guessing.", None),
         ("", None),
         ("Two tiers, never silently pooled", "head"),
         ("endpoint_tier A is the core endpoint: hydrocephalus, ventriculomegaly, "
@@ -256,7 +277,8 @@ def main():
     # on measurements.subject_class, not independent tables; the canonical
     # measurements sheet above contains every row exactly once.
     for sheet, fname in (("measurements_human", "measurements_human.csv"),
-                         ("measurements_animal", "measurements_animal.csv")):
+                         ("measurements_animal", "measurements_animal.csv"),
+                         ("German's analysis", "germans_analysis.csv")):
         write_table(wb.create_sheet(sheet), load(fname))
 
     wb.save(OUT)

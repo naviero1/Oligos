@@ -59,6 +59,35 @@ DESIGNS = {
               "label says every cytosine and uridine is 5-methylated, but the "
               "sequence is not printed, so which positions those are is unknown."),
     ),
+    # Unmodified DNA oligodeoxynucleotides. The source states "Sequences for
+    # unmodified 18-mer oligonucleotides" and that the authors chose unmodified
+    # chemistry "In order to avoid potential toxic effects due to the use of
+    # stable, modified oligonucleotides" — so every sugar is 2'-deoxy and every
+    # linkage a plain phosphodiester. Sourced, not assumed.
+    "Gai2_AS_ODN": dict(
+        length=18, sugar=lambda i, n: "DNA_2prime_deoxy",
+        linkage="phosphodiester",
+        basis="position_resolved_from_source_uniform_chemistry_statement",
+        source_id="Gai2_antisense_ependymal_2007_BMCNeurosci",
+        location="Methods, 'Oligonucleotides'",
+        note=("Unmodified 18-mer DNA oligodeoxynucleotide; the source states the "
+              "chemistry in words and gives the sequence in full. HPLC-purified, "
+              "purity 90-97% — the only stated purity value in this release.")),
+    "Gai2_nonsense_ODN": dict(
+        length=18, sugar=lambda i, n: "DNA_2prime_deoxy",
+        linkage="phosphodiester",
+        basis="position_resolved_from_source_uniform_chemistry_statement",
+        source_id="Gai2_antisense_ependymal_2007_BMCNeurosci",
+        location="Methods, 'Oligonucleotides'",
+        note="Designed nonsense control; unmodified 18-mer DNA."),
+    "Gai2_mismatch_ODN": dict(
+        length=18, sugar=lambda i, n: "DNA_2prime_deoxy",
+        linkage="phosphodiester",
+        basis="position_resolved_from_source_uniform_chemistry_statement",
+        source_id="Gai2_antisense_ependymal_2007_BMCNeurosci",
+        location="Methods, 'Oligonucleotides'",
+        note=("Designed mismatch control, eight mismatches with equal base "
+              "composition to the antisense; unmodified 18-mer DNA.")),
     "nusinersen": dict(
         length=18,
         sugar=lambda i, n: "2'-MOE",
@@ -155,17 +184,27 @@ def main():
         seq = o["sequence_5to3_asprinted"]
         if seq in ("NOT_REPORTED", "NOT_APPLICABLE") or name in inn:
             continue
+        # A compound may have BOTH a published sequence and a stated uniform
+        # chemistry (the unmodified DNA oligodeoxynucleotides). Where a design
+        # rule exists, use it for sugar and linkage instead of NOT_REPORTED.
+        d = DESIGNS.get(name)
+        n = len(seq)
         for i, base in enumerate(seq, 1):
             rows.append(dict(
                 oligo_id=o["oligo_id"], oligo_name=name,
-                strand="antisense_guide", position_5to3=i, nucleobase=base,
-                sugar_chemistry="NOT_REPORTED", base_modification="NOT_REPORTED",
-                linkage_3prime=("terminal_none" if i == len(seq) else "NOT_REPORTED"),
-                basis="position_resolved_from_published_sequence",
-                source_id=SEQUENCED_SOURCE,
-                source_location="Methods, 'Materials'", notes=SEQUENCED_NOTE))
-        report.append("%-24s %2d positions, base resolved, chemistry NOT_REPORTED"
-                      % (name, len(seq)))
+                strand=("single_strand" if d else "antisense_guide"),
+                position_5to3=i, nucleobase=base,
+                sugar_chemistry=(d["sugar"](i, n) if d else "NOT_REPORTED"),
+                base_modification="NOT_REPORTED",
+                linkage_3prime=("terminal_none" if i == n
+                                else (d["linkage"] if d else "NOT_REPORTED")),
+                basis=(d["basis"] if d else "position_resolved_from_published_sequence"),
+                source_id=(d["source_id"] if d else SEQUENCED_SOURCE),
+                source_location=(d["location"] if d else "Methods, 'Materials'"),
+                notes=(d["note"] if d else SEQUENCED_NOTE)))
+        report.append("%-24s %2d positions, base resolved, chemistry %s"
+                      % (name, n, "resolved from stated uniform chemistry" if d
+                         else "NOT_REPORTED"))
 
     for name in list(EXCLUDED):
         if name in inn:

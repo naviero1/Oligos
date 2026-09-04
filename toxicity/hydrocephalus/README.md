@@ -22,31 +22,32 @@ one."* This directory is that second dataset.
 
 | | Count |
 |---|---:|
-| Measurement rows | **1324** |
-| Oligonucleotides described | **50** |
-| — of which carry at least one measurement | 44 |
-| Distinct sources | 189 |
-| Tier-A rows with a positive finding | 61 |
+| Measurement rows | **1329** |
+| Oligonucleotides described | **53** |
+| — of which carry at least one measurement | 47 |
+| Distinct sources | 190 |
+| Tier-A rows with a positive finding | 62 |
 | Tier-A rows that are explicit measured negatives | 735 |
 | Grade-3 (severe) rows | 22 |
-| Oligonucleotides with a published sequence | 10 |
+| Oligonucleotides with a published sequence | 13 |
 | QC checks run / failed | 47 / 0 |
 
 **Endpoint tier** — **A** = hydrocephalus (communicating, obstructive or normal-pressure), ventriculomegaly / ventricular dilatation, shunt or drain placement. **B** = raised intracranial pressure, papilloedema, aseptic or chemical meningitis, arachnoiditis, CSF leak or protein rise, post-lumbar-puncture syndrome.
 
 | Tier | Rows |
 |---|---:|
-| A | 797 |
-| B | 527 |
+| A | 798 |
+| B | 531 |
 
 **Study type**
 
 | Study type | Rows |
 |---|---:|
-| animal_invivo | 5 |
+| animal_invivo | 8 |
 | background_epidemiology | 3 |
 | clinical_case | 15 |
 | clinical_trial | 757 |
+| in_vitro | 2 |
 | pharmacovigilance | 456 |
 | regulatory_label | 88 |
 
@@ -54,8 +55,8 @@ one."* This directory is that second dataset.
 
 | Ascertainment | Rows |
 |---|---:|
-| measured_null | 1106 |
-| measured_positive | 217 |
+| measured_null | 1108 |
+| measured_positive | 220 |
 | not_assessed | 1 |
 
 **Attribution, as stated by the source** — what the SOURCE concluded about causation. `not_discussed` dominates because registry and pharmacovigilance records carry no causality assessment at all — that is a property of those sources, not an omission here
@@ -63,29 +64,29 @@ one."* This directory is that second dataset.
 | Attribution | Rows |
 |---|---:|
 | disease_attributed | 3 |
-| drug_attributed | 30 |
-| not_discussed | 1291 |
+| drug_attributed | 33 |
+| not_discussed | 1293 |
 
 **Toxicity axis** — `disease_background_rate` rows carry no compound; `delivery_procedure_complication` rows are attributable to the lumbar puncture rather than to any molecule
 
 | Axis | Rows |
 |---|---:|
 | csf_composition_disturbance | 210 |
-| csf_dynamics | 1 |
+| csf_dynamics | 3 |
 | csf_pressure_disturbance | 126 |
 | delivery_procedure_complication | 188 |
 | disease_background_rate | 3 |
 | therapeutic_ventricular_effect | 2 |
-| ventricular_enlargement | 794 |
+| ventricular_enlargement | 797 |
 
 **Severity grade** — rubric in [`SCHEMA.md`](SCHEMA.md#hydroceph_grade-rubric-03); all grades are provisional
 
 | `hydroceph_grade` | Rows |
 |---|---:|
 | *(not graded)* | 26 |
-| 0 | 1106 |
+| 0 | 1108 |
 | 1 | 94 |
-| 2 | 76 |
+| 2 | 79 |
 | 3 | 22 |
 
 **Delivery route** — systemically dosed oligonucleotides are included as a deliberate route contrast
@@ -94,7 +95,8 @@ one."* This directory is that second dataset.
 |---|---:|
 | NOT_APPLICABLE | 3 |
 | NOT_REPORTED | 124 |
-| intracerebroventricular | 3 |
+| in_culture_medium | 2 |
+| intracerebroventricular | 6 |
 | intrathecal_lumbar | 321 |
 | intravenous | 359 |
 | intravitreal | 59 |
@@ -107,19 +109,19 @@ one."* This directory is that second dataset.
 | Category | Rows |
 |---|---:|
 | csf_composition | 188 |
-| csf_dynamics | 66 |
+| csf_dynamics | 68 |
 | csf_pressure | 126 |
-| histopathology_choroid_ependyma | 1 |
+| histopathology_choroid_ependyma | 3 |
 | hydrocephalus_event | 629 |
 | procedure_complication | 165 |
 | shunt_or_drain_intervention | 43 |
-| ventricular_morphometry | 106 |
+| ventricular_morphometry | 107 |
 
 **Redistribution rights** — tracked per row
 
 | Rights | Rows |
 |---|---:|
-| cc_by | 8 |
+| cc_by | 13 |
 | cc_by_nc | 3 |
 | public_domain | 1290 |
 | summary_stat_only | 15 |
@@ -136,8 +138,9 @@ one."* This directory is that second dataset.
 | `L5-PT2` | 6 |
 | `N1-SPAK` | 2 |
 | `N2-AQP4` | 3 |
+| `N3-GAI2` | 5 |
 
-**Largest sources** (top 10 of 189)
+**Largest sources** (top 10 of 190)
 
 | `source_id` | Rows |
 |---|---:|
@@ -269,6 +272,16 @@ asserting; every one traces to a row and a locus.
   consistent with hydrocephalus". Results are not posted. That row carries no
   grade and `ascertainment = not_assessed`: it is evidence about how this endpoint
   is now ascertained, not about the endpoint.
+- **One oligonucleotide is measured both in vitro and in vivo — the only such
+  pair here.** An unmodified 18-mer oligodeoxynucleotide against Gαi2 produces
+  irreversible ciliary stasis in cultured ependymal cells and, by the
+  intracerebroventricular route in vivo, unilateral ventricular dilatation
+  restricted to the infused side with a ruptured ependymal layer. It ships with
+  two designed control oligonucleotides — a nonsense and an eight-mismatch
+  sequence with equal base composition — both null on the same readouts, and it
+  is the only source in the release stating a purity value (HPLC-purified,
+  90–97%). Its chemistry is a contrast too: unmodified DNA, chosen by the authors
+  expressly to avoid the toxicity of stable modified backbones.
 - **Two rodent studies put an oligonucleotide on both sides of the endpoint.** A
   SPAK-targeting siRNA delivered in a lipid nanoparticle *prevents*
   ventriculomegaly in a kaolin-induced model; an AQP4-targeting siRNA *aggravates*

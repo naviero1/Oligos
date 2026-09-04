@@ -1,6 +1,6 @@
 modifications.csv build report
 ============================================================
-202 position rows over 10 oligonucleotides
+256 position rows over 13 oligonucleotides
 
 nusinersen               label-motif map and INN map AGREE (18 positions)
 nusinersen               18 positions from WHO INN List 74 — base, sugar, 5-methyl and linkage all resolved
@@ -12,6 +12,9 @@ eplontersen              20 positions from WHO INN List 85 — base, sugar, 5-me
 zorevunersen             parsed from INN but absent from oligos.csv; no rows
 elsunersen               parsed from INN but absent from oligos.csv; no rows
 volanesorsen             20 positions from WHO INN List 75 — base, sugar, 5-methyl and linkage all resolved
+Gai2_AS_ODN              18 positions, base resolved, chemistry resolved from stated uniform chemistry
+Gai2_mismatch_ODN        18 positions, base resolved, chemistry resolved from stated uniform chemistry
+Gai2_nonsense_ODN        18 positions, base resolved, chemistry resolved from stated uniform chemistry
 SPAK_siRNA1              21 positions, base resolved, chemistry NOT_REPORTED
 SPAK_siRNA2              21 positions, base resolved, chemistry NOT_REPORTED
 SPAK_siRNA3              21 positions, base resolved, chemistry NOT_REPORTED

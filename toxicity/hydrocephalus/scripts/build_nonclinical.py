@@ -60,6 +60,96 @@ N2 = dict(
     redistribution="cc_by_nc",
 )
 
+N3 = dict(
+    source_key="Gai2_antisense_ependymal_2007_BMCNeurosci",
+    source_ref="PMID 17430589; PMC1855344; doi 10.1186/1471-2202-8-26",
+    file="sources/raw/invitro_ft_PMC1855344.xml",
+    system=("Rat; continuous intracerebroventricular infusion of unmodified 18-mer "
+            "oligodeoxynucleotide, 25 ug/day for 7 days from age 24 days; and cultured "
+            "rat ependymal cells for ciliary beat frequency"),
+    redistribution="cc_by",
+)
+
+# The only source in the release that measures the SAME oligonucleotide both in
+# vitro and in vivo, which is the extrapolation the Phase 2 brief calls a
+# particular interest. It is also the only source that states a PURITY VALUE.
+ROWS_N3 = [
+    dict(oligo="Gai2_AS_ODN", tier="B", cat="csf_dynamics",
+         axis="csf_dynamics", route="in_culture_medium", subject="animal_in_vitro",
+         readout="ciliary_beat_frequency", direction="decrease", grade=2,
+         status="provisional",
+         basis=("2 = irreversible ciliary stasis in cultured ependymal cells, a "
+                "measured CSF-propulsion abnormality (SCHEMA.md rubric grade 2). "
+                "Confounded: the source states the cells 'gradually started showing "
+                "decreased viability' over the 48-hour observation, so ciliary stasis "
+                "is not cleanly separable from general cytotoxicity."),
+         asc="measured_positive", attribution="drug_attributed",
+         evidence=('"AS-ODN administration resulted in decreased CBF, leading to '
+                   'irreversible ciliary stasis while the control oligo had no such '
+                   'effect (Figure 9)." Absolute CBF values are published only as a '
+                   'figure and were not read off it.'),
+         loc="Results, 'Ciliary beat frequency measurements on cultured rat ependymal "
+             "cells'; Figure 9", comparator="mismatch control ODN; artificial CSF"),
+    dict(oligo="Gai2_mismatch_ODN", tier="B", cat="csf_dynamics",
+         axis="csf_dynamics", route="in_culture_medium", subject="animal_in_vitro",
+         readout="ciliary_beat_frequency", direction="no_change", grade=0,
+         status="provisional",
+         basis=("0 = a DESIGNED control oligonucleotide, assessed on the same readout "
+                "in the same experiment, with no effect (SCHEMA.md rubric grade 0)."),
+         asc="measured_null", attribution="not_discussed",
+         evidence=('"...while the control oligo had no such effect (Figure 9)." The '
+                   'mismatch was chosen as "a more stringent control, maintaining '
+                   'equal base composition to the antisense molecule but with eight '
+                   'mismatches."'),
+         loc="Results, CBF section; Figure 9; sequences in Methods 'Oligonucleotides'",
+         comparator="anti-Gai2 AS-ODN"),
+    dict(oligo="Gai2_AS_ODN", tier="A", cat="ventricular_morphometry",
+         axis="ventricular_enlargement", route="intracerebroventricular",
+         subject="animal_in_vivo", readout="lateral_ventricular_volume_MRI",
+         direction="increase", grade=2, status="provisional",
+         basis=("2 = measured ventricular dilatation on high-resolution MRI, "
+                "restricted to the infused side (SCHEMA.md rubric grade 2). No CSF "
+                "diversion is available in this model, so grade 3 is not reachable."),
+         asc="measured_positive", attribution="drug_attributed",
+         evidence=('"High resolution MRI studies revealed that continuous icv-infusion '
+                   'of Gai2-specific antisense oligonucleotide caused unilateral '
+                   'ventricular dilatation that was restricted to the '
+                   'antisense-receiving ventricle." Volumes are published as a figure '
+                   'and were not read off it.'),
+         loc="Results, first paragraph; Figure 1 'Ventricular volumes and wall surface "
+             "areas imaged by high resolution MRI in vivo'",
+         comparator="contralateral ventricle; nonsense ODN; saline"),
+    dict(oligo="Gai2_AS_ODN", tier="B", cat="histopathology_choroid_ependyma",
+         axis="ventricular_enlargement", route="intracerebroventricular",
+         subject="animal_in_vivo", readout="ependymal_layer_integrity",
+         direction="increase", grade=2, status="provisional",
+         basis=("2 = structural injury to the ependymal lining accompanying the "
+                "ventricular change (SCHEMA.md rubric grade 2)."),
+         asc="measured_positive", attribution="drug_attributed",
+         evidence=('"...ruptured structure of the ependymal cell layer in AS-ODN '
+                   'treated animals. Numerous dying cell populations float inside the '
+                   'ventricle and scarcely any cilia are present. The ependymal cell '
+                   'layer of ODN control (nonsense oligodeoxynucleotide) and saline '
+                   'control animals show a normal, uniform ependymal cell row with '
+                   'numerous cilia."'),
+         loc="Results, ependymal histology; haematoxylin-eosin figure legend",
+         comparator="nonsense ODN; saline"),
+    dict(oligo="Gai2_nonsense_ODN", tier="B",
+         cat="histopathology_choroid_ependyma", axis="ventricular_enlargement",
+         route="intracerebroventricular", subject="animal_in_vivo",
+         readout="ependymal_layer_integrity", direction="no_change", grade=0,
+         status="provisional",
+         basis=("0 = a DESIGNED control oligonucleotide dosed by the same route for "
+                "the same duration, with a normal ependymal layer (SCHEMA.md rubric "
+                "grade 0)."),
+         asc="measured_null", attribution="not_discussed",
+         evidence=('"The ependymal cell layer of ODN control (nonsense '
+                   'oligodeoxynucleotide) and saline control animals show a normal, '
+                   'uniform ependymal cell row with numerous cilia (arrowheads)."'),
+         loc="Results, ependymal histology; haematoxylin-eosin figure legend",
+         comparator="anti-Gai2 AS-ODN"),
+]
+
 ROWS = [
     dict(src=N1, oligo="SPAK_siRNA4", tier="A", cat="ventricular_morphometry",
          axis="therapeutic_ventricular_effect", route="intravenous",
@@ -184,6 +274,55 @@ def main():
                    "qualitative because the source publishes them graphically and this "
                    "project reads no number off a figure. Retrieved %s."
                    % (src["file"], TODAY)),
+        ))
+
+    for r in ROWS_N3:
+        rows.append(dict(
+            oligo_name=r["oligo"], source_key=N3["source_key"],
+            study_type=("in_vitro" if r["subject"].endswith("in_vitro")
+                        else "animal_invivo"),
+            species="rat", strain="NOT_REPORTED", system_model=N3["system"],
+            is_human_system="FALSE",
+            indication_population="healthy rat; ependymal Gai2 knockdown model",
+            arm_label=r["oligo"], arm_description=N3["system"][:200],
+            arm_role=("comparator" if "control" in r["basis"] else "exposed"),
+            cns_compartment=("ependyma" if "ependymal" in r["readout"]
+                             else "lateral_ventricles"),
+            delivery_route=r["route"], dose_value="25", dose_unit="ug/day",
+            dose_regimen="continuous intracerebroventricular infusion for 7 days",
+            exposure_duration="7 days", timepoint="NOT_REPORTED",
+            endpoint_tier=r["tier"], readout_category=r["cat"],
+            readout_name=r["readout"], readout_term_verbatim="NOT_APPLICABLE",
+            readout_value="NOT_REPORTED", readout_unit="NOT_APPLICABLE",
+            readout_is_qualitative="TRUE",
+            n_affected="NOT_REPORTED", n_at_risk="NOT_REPORTED",
+            comparator_arm=r["comparator"], n_affected_comparator="NOT_REPORTED",
+            n_at_risk_comparator="NOT_REPORTED",
+            statistic=("group sizes: saline 22, antisense 27, nonsense 17, mismatch 5 "
+                       "animals; MRI series n = 4-10 per timepoint. Values published "
+                       "as figures only and not read off them."),
+            effect_direction=r["direction"],
+            effect_vs_control="stated in words; see attribution_evidence",
+            seriousness="NOT_APPLICABLE", assessment_type="investigator_assessment",
+            organ_system="Nervous system disorders",
+            source_vocabulary="NOT_APPLICABLE",
+            hydroceph_grade=r["grade"], grade_basis=r["basis"],
+            grade_status=r["status"], ascertainment=r["asc"],
+            ascertainment_basis=("Protocol-driven: the study's purpose was to measure "
+                                 "the ventricular and ciliary consequence of this "
+                                 "knockdown, so MRI, histology and ciliary beat "
+                                 "frequency were performed in every group."),
+            attribution_as_stated=r["attribution"],
+            attribution_evidence=r["evidence"], tox_axis=r["axis"],
+            event_cluster_id="N3-GAI2", source_ref=N3["source_ref"],
+            source_location=r["loc"], redistribution=N3["redistribution"],
+            notes=("The only source in this release measuring the SAME oligonucleotide "
+                   "both in vitro and in vivo -- the extrapolation the Phase 2 brief "
+                   "calls a particular interest -- and the only one stating a purity "
+                   "value. Unmodified DNA chemistry (no phosphorothioate), chosen by "
+                   "the authors 'In order to avoid potential toxic effects due to the "
+                   "use of stable, modified oligonucleotides'. Full text at %s. "
+                   "Retrieved %s." % (N3["file"], TODAY)),
         ))
 
     out = os.path.join(DATA, "_nonclinical_measurements.csv")

@@ -125,6 +125,20 @@ OLIGOS = [
      "Nat Med 2026 PMC13099374; sequence and per-position chemistry are in Extended "
      "Data Table 1, published as an image whose bold/underline 2'-MOE encoding does "
      "not survive text extraction, so NOT transcribed (OI-02)"),
+    ("Gai2_AS_ODN", "anti-Gai2 antisense oligodeoxynucleotide", "ASO_gapmer",
+     "single_stranded_ASO", "GNAI2", "ependymal_ciliary_function_research",
+     "Sigma-Genosys (reagent)", "research_panel", "intracerebroventricular",
+     "BMC Neuroscience 2007 PMC1855344, Methods 'Oligonucleotides'"),
+    ("Gai2_mismatch_ODN", "mismatch control oligodeoxynucleotide, 8 mismatches",
+     "other", "single_stranded_ASO", "none_no_transcriptome_match",
+     "designed_negative_control", "Sigma-Genosys (reagent)", "research_panel",
+     "in_culture_medium",
+     "BMC Neuroscience 2007 PMC1855344, Methods 'Oligonucleotides'"),
+    ("Gai2_nonsense_ODN", "nonsense control oligodeoxynucleotide", "other",
+     "single_stranded_ASO", "none_no_transcriptome_match",
+     "designed_negative_control", "Sigma-Genosys (reagent)", "research_panel",
+     "intracerebroventricular",
+     "BMC Neuroscience 2007 PMC1855344, Methods 'Oligonucleotides'"),
     # --- Nonclinical research-grade siRNAs with PUBLISHED sequences --------
     # These are the only compounds in the release whose sequence is published.
     # Each SPAK duplex passes the sense/antisense reverse-complement check.
@@ -194,6 +208,11 @@ PATTERNS = {
 # Convention matches the sibling datasets: sequence_5to3_asprinted holds the
 # ANTISENSE (guide) strand; the sense strand is recorded in notes.
 SEQUENCES = {
+    # Unmodified 18-mer DNA oligodeoxynucleotides; single-stranded, so the second
+    # element is NOT_APPLICABLE rather than a sense strand.
+    "Gai2_AS_ODN": ("CTTGTCGATCATCTTAGA", "NOT_APPLICABLE"),
+    "Gai2_nonsense_ODN": ("GGGGGAAGTAGGTCTTGG", "NOT_APPLICABLE"),
+    "Gai2_mismatch_ODN": ("TCTGCTGATACTCTTGAA", "NOT_APPLICABLE"),
     "SPAK_siRNA1": ("UUGAUGAUAUCCAACAUGGTT", "CCAUGUUGGAUAUCAUCAATT"),
     "SPAK_siRNA2": ("AUAGCCUCUCACCUGUUCCTT", "GGAACAGGUGAGAGGCUAUTT"),
     "SPAK_siRNA3": ("UAUUUGUGGUAAGGCGCUGTT", "CAGCGCCUUACCACAAAUATT"),
@@ -254,6 +273,12 @@ def inn_motif(rec):
 # research-reagent sources name a supplier but no method.
 PURITY = {
     # name: (purity_method, identity_confirmation, synthesis_platform)
+    # The ONLY compounds in this release with a stated purity value.
+    "Gai2_AS_ODN": ("HPLC-purified", "NOT_REPORTED", "Sigma-Genosys, Haverhill, UK"),
+    "Gai2_nonsense_ODN": ("HPLC-purified", "NOT_REPORTED",
+                          "Sigma-Genosys, Haverhill, UK"),
+    "Gai2_mismatch_ODN": ("HPLC-purified", "NOT_REPORTED",
+                          "Sigma-Genosys, Haverhill, UK"),
     "SPAK_siRNA1": ("NOT_REPORTED", "NOT_REPORTED",
                     "GenePharma (Shanghai); commercial synthesis, platform not stated"),
     "SPAK_siRNA2": ("NOT_REPORTED", "NOT_REPORTED",
@@ -384,7 +409,8 @@ def main():
                              "NOT_REPORTED — no US label prints the base sequence; the "
                              "structure is a figure with no text layer. See "
                              "METHODOLOGY.md open item OI-02."),
-            backbone_chemistry=(inn_backbone(INN[name]) if name in INN
+            backbone_chemistry=("no_PS" if name.startswith("Gai2_")
+                                else inn_backbone(INN[name]) if name in INN
                                 else parsed.get("backbone_chemistry", "NOT_REPORTED")),
             sugar_modifications=parsed.get("sugar_modifications", "NOT_REPORTED"),
             modification_pattern=(inn_motif(INN[name]) if name in INN
@@ -397,7 +423,7 @@ def main():
             molecular_weight=parsed.get("molecular_weight", "NOT_REPORTED"),
             conjugate="NOT_REPORTED",
             formulation=parsed.get("formulation", "NOT_REPORTED"),
-            purity_pct="NOT_REPORTED",
+            purity_pct=("90-97" if name.startswith("Gai2_") else "NOT_REPORTED"),
             purity_method=PURITY.get(name, ("NOT_REPORTED",) * 3)[0],
             identity_confirmation=PURITY.get(name, ("NOT_REPORTED",) * 3)[1],
             synthesis_platform=PURITY.get(name, ("NOT_REPORTED",) * 3)[2],

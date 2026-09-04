@@ -168,7 +168,11 @@ is almost nothing. A full-text sweep of all sixteen committed US labels for
 purity, purification, chromatography, mass-spectrometry, identity and
 characterisation language returns **no statement about the drug substance in any
 of them**; every hit is a patient baseline characteristic or an efficacy assay.
-`purity_pct` is `NOT_REPORTED` for all 35 compounds. The two research-reagent
+`purity_pct` is `NOT_REPORTED` for all but three compounds. The exception is the
+Gai2 oligodeoxynucleotide set, whose source states "The HPLC-purified (purity
+90-97%) oligonucleotides" — the only stated purity value anywhere in this
+release, and it comes from a 2007 academic paper rather than from any of the
+sixteen regulatory labels. The two research-reagent
 sources name a supplier (GenePharma, Shanghai) but no purification or
 identity-confirmation method. No purity value has been estimated, inferred from a
 synthesis platform, or carried across from another compound.
@@ -419,12 +423,17 @@ recorded the matching hazard in its own QC log — "judging letter case from
 rendered pixels is unreliable at x-height". It is not transcribed. Recovering it
 needs a second human reader, not a better parser.
 
-**OI-03 — PARTIALLY CLOSED.** Five rodent rows are now carried from two studies
-(`scripts/build_nonclinical.py`). Both publish their ventricular measurements
-graphically only, so all five are qualitative — the dose–response resolution this
-item was opened for is still missing. Systematic extraction of
-intracerebroventricular and intrathecal animal tolerability studies has not been
-attempted.
+**OI-03 — PARTIALLY CLOSED, and the in vitro arm is open.** Ten rodent rows are
+now carried from three studies (`scripts/build_nonclinical.py`). The third,
+added last, is the most useful: an unmodified 18-mer oligodeoxynucleotide against
+Gai2, measured **both in cultured ependymal cells (ciliary beat frequency) and in
+vivo by MRI ventricular volumetry in the same animals' species and protocol**.
+That is the only in vitro-to-in vivo pair in the release, and it is the shape the
+Phase 2 brief asks for — though it is animal in vitro, not human. It also carries
+two designed control oligonucleotides with published sequences, and the only
+purity value in the dataset. All ten rows remain qualitative: every source
+publishes its ventricular measurements graphically, and this project reads no
+number off a figure.
 
 **OI-04 — CLOSED.** `tox_axis = therapeutic_ventricular_effect` now carries two
 rows: a SPAK-targeting siRNA that prevents ventriculomegaly in a kaolin-induced
@@ -432,9 +441,12 @@ model. The axis exists so these rows can be excluded from compound-toxicity
 analysis in one filter; they are graded `not_graded`, because grading a prevented
 lesion on a harm scale would make a beneficial effect look like an absent one.
 
-**OI-08 — NEW: the dataset now has one designed control, and needs more.** The
-AQP4 study's scrambled non-targeting siRNA is the only compound in the release
-built to be inactive. Every other negative is a comparator arm, a reported zero
+**OI-08 — PARTIALLY CLOSED: three designed controls, still no human one.** The
+AQP4 study's scrambled non-targeting siRNA, and the Gai2 study's nonsense and
+eight-mismatch control oligodeoxynucleotides — the latter two with published
+sequences and stated chemistry. All three are animal-facing; no human arm in this
+dataset uses a designed inactive oligonucleotide, because no clinical trial
+does. Every other negative is a comparator arm, a reported zero
 or a silent label. A review of the sibling kidney dataset found its "negative
 controls" were negative *observations* rather than designed controls; this
 release has the same weakness, now with one exception and with the distinction

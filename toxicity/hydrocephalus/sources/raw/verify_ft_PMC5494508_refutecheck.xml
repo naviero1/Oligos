@@ -1,0 +1,1413 @@
+
+<!DOCTYPE article
+  PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" "JATS-archivearticle1-4-mathml3.dtd">
+<article article-type="research-article" xml:lang="en" dtd-version="1.4"><front><journal-meta><journal-id journal-id-type="nlm-ta">EMBO Mol Med</journal-id><journal-id journal-id-type="iso-abbrev">EMBO Mol Med</journal-id><journal-id journal-id-type="pmc-domain-id">1758</journal-id><journal-id journal-id-type="pmc-domain">emmolmed</journal-id><journal-id journal-id-type="nlm-id">101487380</journal-id><journal-id journal-id-type="publisher-id">EMMM</journal-id><journal-title-group><journal-title>EMBO Molecular Medicine</journal-title></journal-title-group><issn pub-type="ppub">1757-4676</issn><issn pub-type="epub">1757-4684</issn><?publisher_abbrev naturepg?><publisher><publisher-name>Nature Publishing Group</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC5494508</article-id><article-id pub-id-type="pmcid-ver">PMC5494508.1</article-id><article-id pub-id-type="pmcaid">5494508</article-id><article-id pub-id-type="pmcaiid">5494508</article-id><article-id pub-id-type="pmid">28500065</article-id><article-id pub-id-type="doi">10.15252/emmm.201606430</article-id><article-id pub-id-type="publisher-id">EMMM201606430</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="overline"><subject>Research Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Research Articles</subject></subj-group></article-categories><title-group><article-title>Loss of Mpdz impairs ependymal cell integrity leading to perinatal‐onset hydrocephalus in mice</article-title><alt-title alt-title-type="left-running-head">Anja Feldner <italic toggle="yes">et al</italic></alt-title></title-group><contrib-group><contrib id="emmm201606430-cr-0001" contrib-type="author"><name name-style="western"><surname>Feldner</surname><given-names initials="A">Anja</given-names></name><xref ref-type="aff" rid="emmm201606430-aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib id="emmm201606430-cr-0002" contrib-type="author"><name name-style="western"><surname>Adam</surname><given-names initials="MG">M Gordian</given-names></name><xref ref-type="aff" rid="emmm201606430-aff-0001">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="emmm201606430-curr-0001">
+<sup>12</sup>
+</xref></contrib><contrib id="emmm201606430-cr-0003" contrib-type="author"><name name-style="western"><surname>Tetzlaff</surname><given-names initials="F">Fabian</given-names></name><xref ref-type="aff" rid="emmm201606430-aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib id="emmm201606430-cr-0004" contrib-type="author"><name name-style="western"><surname>Moll</surname><given-names initials="I">Iris</given-names></name><xref ref-type="aff" rid="emmm201606430-aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib id="emmm201606430-cr-0005" contrib-type="author"><name name-style="western"><surname>Komljenovic</surname><given-names initials="D">Dorde</given-names></name><xref ref-type="aff" rid="emmm201606430-aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib id="emmm201606430-cr-0006" contrib-type="author"><name name-style="western"><surname>Sahm</surname><given-names initials="F">Felix</given-names></name><xref ref-type="aff" rid="emmm201606430-aff-0003">
+<sup>3</sup>
+</xref><xref ref-type="aff" rid="emmm201606430-aff-0004">
+<sup>4</sup>
+</xref></contrib><contrib id="emmm201606430-cr-0007" contrib-type="author"><name name-style="western"><surname>Bäuerle</surname><given-names initials="T">Tobias</given-names></name><xref ref-type="aff" rid="emmm201606430-aff-0002">
+<sup>2</sup>
+</xref><xref ref-type="aff" rid="emmm201606430-curr-0002">
+<sup>13</sup>
+</xref></contrib><contrib id="emmm201606430-cr-0008" contrib-type="author"><name name-style="western"><surname>Ishikawa</surname><given-names initials="H">Hiroshi</given-names></name><xref ref-type="aff" rid="emmm201606430-aff-0005">
+<sup>5</sup>
+</xref></contrib><contrib id="emmm201606430-cr-0009" contrib-type="author"><name name-style="western"><surname>Schroten</surname><given-names initials="H">Horst</given-names></name><xref ref-type="aff" rid="emmm201606430-aff-0006">
+<sup>6</sup>
+</xref></contrib><contrib id="emmm201606430-cr-0010" contrib-type="author"><name name-style="western"><surname>Korff</surname><given-names initials="T">Thomas</given-names></name><xref ref-type="aff" rid="emmm201606430-aff-0007">
+<sup>7</sup>
+</xref></contrib><contrib id="emmm201606430-cr-0011" contrib-type="author"><name name-style="western"><surname>Hofmann</surname><given-names initials="I">Ilse</given-names></name><xref ref-type="aff" rid="emmm201606430-aff-0008">
+<sup>8</sup>
+</xref><xref ref-type="aff" rid="emmm201606430-aff-0009">
+<sup>9</sup>
+</xref></contrib><contrib id="emmm201606430-cr-0012" contrib-type="author"><name name-style="western"><surname>Wolburg</surname><given-names initials="H">Hartwig</given-names></name><xref ref-type="aff" rid="emmm201606430-aff-0010">
+<sup>10</sup>
+</xref></contrib><contrib id="emmm201606430-cr-0013" contrib-type="author"><name name-style="western"><surname>von Deimling</surname><given-names initials="A">Andreas</given-names></name><xref ref-type="aff" rid="emmm201606430-aff-0003">
+<sup>3</sup>
+</xref><xref ref-type="aff" rid="emmm201606430-aff-0004">
+<sup>4</sup>
+</xref></contrib><contrib id="emmm201606430-cr-0014" contrib-type="author" corresp="yes"><name name-style="western"><surname>Fischer</surname><given-names initials="A">Andreas</given-names></name><contrib-id contrib-id-type="orcid" authenticated="false">http://orcid.org/0000-0002-4889-0909</contrib-id><address><email>a.fischer@dkfz.de</email></address><xref ref-type="aff" rid="emmm201606430-aff-0001">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="emmm201606430-aff-0009">
+<sup>9</sup>
+</xref><xref ref-type="aff" rid="emmm201606430-aff-0011">
+<sup>11</sup>
+</xref></contrib></contrib-group><aff id="emmm201606430-aff-0001"><label><sup>1</sup></label><named-content content-type="organisation-division">Vascular Signaling and Cancer</named-content><institution>German Cancer Research Center (DKFZ)</institution><named-content content-type="city">Heidelberg</named-content><country country="DE">Germany</country></aff><aff id="emmm201606430-aff-0002"><label><sup>2</sup></label><named-content content-type="organisation-division">Division of Medical Physics in Radiology</named-content><institution>German Cancer Research Center (DKFZ)</institution><named-content content-type="city">Heidelberg</named-content><country country="DE">Germany</country></aff><aff id="emmm201606430-aff-0003"><label><sup>3</sup></label><named-content content-type="organisation-division">Department of Neuropathology</named-content><named-content content-type="organisation-division">Institute of Pathology</named-content><institution>Ruprecht‐Karls‐University Heidelberg</institution><named-content content-type="city">Heidelberg</named-content><country country="DE">Germany</country></aff><aff id="emmm201606430-aff-0004"><label><sup>4</sup></label><named-content content-type="organisation-division">Clinical Cooperation Unit Neuropathology</named-content><named-content content-type="organisation-division">German Consortium for Translational Cancer Research (DKTK)</named-content><institution>German Cancer Research Center (DKFZ)</institution><named-content content-type="city">Heidelberg</named-content><country country="DE">Germany</country></aff><aff id="emmm201606430-aff-0005"><label><sup>5</sup></label><named-content content-type="organisation-division">Department of NDU Life Sciences</named-content><named-content content-type="organisation-division">School of Life Dentistry</named-content><institution>Nippon Dental University</institution><named-content content-type="city">Chiyoda‐ku</named-content><named-content content-type="city">Tokyo</named-content><country country="JP">Japan</country></aff><aff id="emmm201606430-aff-0006"><label><sup>6</sup></label><named-content content-type="organisation-division">Pediatric Infectious Diseases</named-content><institution>University Children's Hospital Mannheim</institution><institution>Heidelberg University</institution><named-content content-type="city">Mannheim</named-content><country country="DE">Germany</country></aff><aff id="emmm201606430-aff-0007"><label><sup>7</sup></label><named-content content-type="organisation-division">Department of Cardiovascular Research</named-content><named-content content-type="organisation-division">Institute of Physiology and Pathophysiology</named-content><institution>Heidelberg University</institution><named-content content-type="city">Heidelberg</named-content><country country="DE">Germany</country></aff><aff id="emmm201606430-aff-0008"><label><sup>8</sup></label><named-content content-type="organisation-division">Vascular Oncology and Metastasis</named-content><institution>German Cancer Research Center (DKFZ)</institution><named-content content-type="city">Heidelberg</named-content><country country="DE">Germany</country></aff><aff id="emmm201606430-aff-0009"><label><sup>9</sup></label><named-content content-type="organisation-division">Vascular Biology, CBTM</named-content><named-content content-type="organisation-division">Medical Faculty Mannheim</named-content><institution>Heidelberg University</institution><named-content content-type="city">Mannheim</named-content><country country="DE">Germany</country></aff><aff id="emmm201606430-aff-0010"><label><sup>10</sup></label><named-content content-type="organisation-division">Department of Pathology and Neuropathology</named-content><institution>University of Tuebingen</institution><named-content content-type="city">Tuebingen</named-content><country country="DE">Germany</country></aff><aff id="emmm201606430-aff-0011"><label><sup>11</sup></label><named-content content-type="organisation-division">Medical Clinic I, Endocrinology and Clinical Chemistry</named-content><institution>Heidelberg University Hospital</institution><named-content content-type="city">Heidelberg</named-content><country country="DE">Germany</country></aff><aff id="emmm201606430-curr-0001"><label><sup>12</sup></label>Present address: <institution>Immunocore Limited</institution><named-content content-type="city">Abingdon</named-content><named-content content-type="country-part">Oxon</named-content><country country="GB">UK</country></aff><aff id="emmm201606430-curr-0002"><label><sup>13</sup></label>Present address: <named-content content-type="organisation-division">Institute of Radiology</named-content><named-content content-type="organisation-division">University Medical Center Erlangen</named-content><institution>Friedrich‐Alexander‐Universität Erlangen‐Nürnberg</institution><named-content content-type="city">Erlangen</named-content><country country="DE">Germany</country></aff><author-notes><corresp id="correspondenceTo"><label>*</label>Corresponding author. Tel: +49 6221 424150; E‐mail: <email>a.fischer@dkfz.de</email></corresp></author-notes><pub-date pub-type="epub"><day>12</day><month>5</month><year>2017</year></pub-date><pub-date pub-type="ppub"><month>7</month><year>2017</year></pub-date><volume>9</volume><issue>7</issue><issue-id pub-id-type="pmc-issue-id">294725</issue-id><issue-id pub-id-type="doi">10.1002/emmm.v9.7</issue-id><fpage>890</fpage><lpage>905</lpage><history><date date-type="received"><day>21</day><month>3</month><year>2016</year></date><date date-type="rev-recd"><day>11</day><month>4</month><year>2017</year></date><date date-type="accepted"><day>12</day><month>4</month><year>2017</year></date></history><pub-history><event event-type="pmc-release"><date><day>01</day><month>07</month><year>2017</year></date></event><event event-type="pmc-live"><date><day>05</day><month>07</month><year>2017</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2024-05-21 13:25:12.183"><day>21</day><month>05</month><year>2024</year></date></event></pub-history><permissions><copyright-statement content-type="article-copyright">© 2017 The Authors. Published under the terms of the CC BY 4.0 license</copyright-statement><license license-type="creativeCommonsBy"><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbylicense">https://creativecommons.org/licenses/by/4.0/</ali:license_ref><license-p>This is an open access article under the terms of the <ext-link xmlns:xlink="http://www.w3.org/1999/xlink" ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="EMMM-9-890.pdf"><?pdf-name EMMM-9-890.pdf?><?pdf-size 4346725?><?pdf-md5 95b0ff10c8ba139f93a814fe44c3ed7c?><?pdf-image-server-status NEVER_LOAD?><?pdf-cloudpmc-urn urn:app:3a41/5494508/95b0ff10c8ba/EMMM-9-890.pdf?></self-uri><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pdf" xlink:href="file:EMMM-9-890.pdf"/><abstract id="emmm201606430-abs-0001"><title>Abstract</title><p>Hydrocephalus is a common congenital anomaly. <italic toggle="yes"><styled-content style="fixed-case">LCAM</styled-content>1</italic> and <italic toggle="yes"><styled-content style="fixed-case">MPDZ</styled-content></italic> (<italic toggle="yes"><styled-content style="fixed-case">MUPP</styled-content>1</italic>) are the only known human gene loci associated with non‐syndromic hydrocephalus. To investigate functions of the tight junction‐associated protein Mpdz, we generated mouse models. Global <italic toggle="yes">Mpdz</italic> gene deletion or conditional inactivation in Nestin‐positive cells led to formation of supratentorial hydrocephalus in the early postnatal period. Blood vessels, epithelial cells of the choroid plexus, and cilia on ependymal cells, which line the ventricular system, remained morphologically intact in <italic toggle="yes">Mpdz</italic>‐deficient brains. However, flow of cerebrospinal fluid through the cerebral aqueduct was blocked from postnatal day 3 onward. Silencing of <italic toggle="yes">Mpdz</italic> expression in cultured epithelial cells impaired barrier integrity, and loss of <italic toggle="yes">Mpdz</italic> in astrocytes increased RhoA activity. In <italic toggle="yes">Mpdz</italic>‐deficient mice, ependymal cells had morphologically normal tight junctions, but expression of the interacting planar cell polarity protein Pals1 was diminished and barrier integrity got progressively lost. Ependymal denudation was accompanied by reactive astrogliosis leading to aqueductal stenosis. This work provides a relevant hydrocephalus mouse model and demonstrates that <italic toggle="yes">Mpdz</italic> is essential to maintain integrity of the ependyma.</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="emmm201606430-kwd-0001">aqueductal stenosis</kwd><kwd id="emmm201606430-kwd-0002">cerebrospinal fluid</kwd><kwd id="emmm201606430-kwd-0003">ependymal cells</kwd><kwd id="emmm201606430-kwd-0004">hydrocephalus</kwd><kwd id="emmm201606430-kwd-0005">tight junction</kwd></kwd-group><kwd-group kwd-group-type="subject-categories"><title>Subject Categories</title><kwd>Neuroscience</kwd></kwd-group><funding-group><award-group><funding-source>Deutsche Forschungsgemeinschaft (DFG)</funding-source><award-id>SFB‐TR23 (A7)</award-id></award-group></funding-group><funding-group><award-group><funding-source>Helmholtz‐Gemeinschaft (HGF)</funding-source><award-id>DFKZ A270</award-id></award-group></funding-group><funding-group><award-group><funding-source>Chica and Heinz Schaller Foundation</funding-source></award-group></funding-group><counts><fig-count count="12"/><table-count count="0"/><page-count count="16"/><word-count count="10124"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY</meta-value></custom-meta><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>component-id</meta-name><meta-value>emmm201606430</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>July 2017</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_NLMPMC version:5.1.2 mode:remove_FC converted:03.07.2017</meta-value></custom-meta></custom-meta-group></article-meta><notes><p content-type="self-citation">
+<mixed-citation publication-type="journal" id="emmm201606430-cit-1001">
+<source>EMBO Mol Med</source> (<year>2017</year>) <volume>9</volume>: <fpage>890</fpage>–<lpage>905</lpage>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.15252/emmm.201606430</pub-id><pub-id pub-id-type="pmcid">PMC5494508</pub-id><pub-id pub-id-type="pmid">28500065</pub-id></mixed-citation>
+</p></notes></front><body><sec id="emmm201606430-sec-0001"><title>Introduction</title><p>Congenital hydrocephalus, an abnormal accumulation of cerebrospinal fluid (CSF) in brain cavities, is diagnosed in ~1 of 2,000 newborns (Schrander‐Stumpel &amp; Fryns, <xref rid="emmm201606430-bib-0041" ref-type="ref">1998</xref>; Garne <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0015" ref-type="ref">2010</xref>). Increasing amounts of CSF in the ventricular system raise the intracranial pressure leading to compression of brain tissue and enlargement of the head circumference. The most common treatment is surgical insertion of a catheter to drain excess CSF into another body cavity. However, this does not reverse 80–90% of the neurological impairment of neonates with fetal onset hydrocephalus. Therefore, hydrocephalus may not only be a disorder of CSF dynamics, but also a brain disorder (Guerra <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0016" ref-type="ref">2015</xref>).</p><p>Disturbance of CSF formation, flow, or absorption can cause congenital hydrocephalus (Jiménez <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0020" ref-type="ref">2014</xref>). Overproduction of CSF has been described in rare cases, in particular choroid plexus hyperplasia or papilloma (Fujimoto <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0014" ref-type="ref">2004</xref>). Brain malformations (e.g., Arnold–Chiari or Dandy–Walker syndrome) can obstruct CSF flow (Schrander‐Stumpel &amp; Fryns, <xref rid="emmm201606430-bib-0041" ref-type="ref">1998</xref>), which is driven by pressure gradients generated, for example, by blood pulsations. However, it is assumed that motile, water‐propelling cilia on ependymal cells lining the ventricular system are also required for proper CSF flow (Lee, <xref rid="emmm201606430-bib-0025" ref-type="ref">2013</xref>; Jiménez <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0020" ref-type="ref">2014</xref>). This hypothesis is supported by the fact that some ciliopathies are associated with hydrocephalus and that various rodent models carrying mutations in genes required for cilia function develop postnatal hydrocephalus (Davy &amp; Robinson, <xref rid="emmm201606430-bib-0011" ref-type="ref">2003</xref>; Ibañez‐Tallon <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0017" ref-type="ref">2004</xref>; Banizs <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0006" ref-type="ref">2005</xref>; Lechtreck <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0024" ref-type="ref">2008</xref>; Jacquet <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0019" ref-type="ref">2009</xref>; Wodarczyk <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0051" ref-type="ref">2009</xref>; Tissir <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0046" ref-type="ref">2010</xref>; Liu <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0028" ref-type="ref">2014</xref>; Koschützke <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0022" ref-type="ref">2015</xref>; Rachel <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0036" ref-type="ref">2015</xref>). Lastly, congenital hydrocephalus can also be acquired due to prenatal cerebral infections, injuries, or hemorrhages, which either inhibit CSF flow or CSF reabsorption (Tully &amp; Dobyns, <xref rid="emmm201606430-bib-0048" ref-type="ref">2014</xref>).</p><p>A genetic etiology is assumed for a large proportion of patients suffering from congenital hydrocephalus. Up to date, mutations that cause non‐syndromic congenital hydrocephalus in humans have been detected in only two genes. (i) Mutations in <italic toggle="yes">L1CAM</italic> on chromosome Xq28 are responsible for X‐linked recessive congenital hydrocephalus (HSAS, OMIM #307000). <italic toggle="yes">L1CAM</italic> mutations can also lead to syndromic disorders (L1 syndrome, CRASH syndrome) associated with hydrocephalus (Tully &amp; Dobyns, <xref rid="emmm201606430-bib-0048" ref-type="ref">2014</xref>). (ii) Homozygous <italic toggle="yes">MPDZ</italic> loss‐of‐function mutations on chromosome 9p23 are responsible for autosomal recessive non‐syndromic hydrocephalus (HYC2, OMIM #615219). Fetuses carrying truncating <italic toggle="yes">MPDZ</italic> mutations developed macrocephaly, extreme dilation of the lateral ventricles with dangling of the choroids and thinning of the cerebral cortex (Al‐Dosari <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0003" ref-type="ref">2013</xref>).</p><p>Interestingly, both L1CAM and the multi‐PDZ domain protein (MPDZ<italic toggle="yes">,</italic> also known as MUPP1) are involved in cell–cell adhesion. In mice, loss of the <italic toggle="yes">junctional adhesion molecule C</italic> (<italic toggle="yes">Jam3</italic>) also causes hydrocephalus (Wyss <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0054" ref-type="ref">2012</xref>). It was therefore hypothesized that disruption of the junctions between cells of the ventricular zone may be the common cause (Al‐Dosari <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0003" ref-type="ref">2013</xref>; Jiménez <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0020" ref-type="ref">2014</xref>; Guerra <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0016" ref-type="ref">2015</xref>). Mechanistically, this could occur due to reactive astrogliosis following ependymal cell injury (Wagner <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0050" ref-type="ref">2003</xref>) to re‐establish a surface between brain tissue and CSF (Sarnat, <xref rid="emmm201606430-bib-0040" ref-type="ref">1995</xref>). In particular, astrogliosis within the cerebral aqueduct would then obstruct CSF flow.</p><p>MPDZ contains 13 PDZ domains, which mediate multiple protein–protein interactions, and thereby acts as a scaffold protein for tight junction‐associated proteins (JAM‐A, claudin‐1, ZO‐3, Pals1, Par6), adherens junction proteins (Nectins), transmembrane receptors (Adachi <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0002" ref-type="ref">2009</xref>), and the RhoA‐specific guanine exchange factor Syx (PLEKHG) (Estévez <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0012" ref-type="ref">2008</xref>). <italic toggle="yes">Mpdz</italic> is expressed ubiquitously in the brain of mouse embryos with highest mRNA levels in the ependymal lining of the ventricular system, and the choroid plexus (Ullmer <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0049" ref-type="ref">1998</xref>; Bécamel <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0007" ref-type="ref">2001</xref>; Sitek <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0044" ref-type="ref">2003</xref>). The role of MPDZ for restricting epithelial permeability is unclear. Silencing of <italic toggle="yes">MPDZ</italic> expression did not alter paracellular permeability of EpH4 breast carcinoma cells (Adachi <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0002" ref-type="ref">2009</xref>). However, loss of MPDZ may be compensated by increased expression of INADL (also known as InaD‐like or PATJ), a structural paralogue of the MPDZ protein (Adachi <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0002" ref-type="ref">2009</xref>; Assémat <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0005" ref-type="ref">2013</xref>).</p><p>In this study, we generated global and conditional mouse models to elucidate the pathogenesis of autosomal recessive non‐syndromic hydrocephalus by targeting the murine <italic toggle="yes">Mdpz</italic> locus.</p></sec><sec id="emmm201606430-sec-0002"><title>Results</title><sec id="emmm201606430-sec-0003"><title>Targeting <italic toggle="yes">Mpdz</italic> in mice</title><p>A homozygous <italic toggle="yes">MPDZ</italic> nonsense mutation in exon 6 which truncates the MPDZ protein after the first PDZ domain was found in patients suffering from autosomal recessive hydrocephalus (Al‐Dosari <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0003" ref-type="ref">2013</xref>). To target <italic toggle="yes">Mpdz</italic> in mice, we used embryonic stem cells, in which a stop cassette had been inserted into intron 11–12 (clone XG734; BayGenomics), and injected into mouse blastocysts. This strategy leads to a premature stop codon and truncates the Mpdz protein after the 3<sup>rd</sup> PDZ domain (Fig <xref rid="emmm201606430-fig-0001" ref-type="fig">1</xref>A). After germline transmission, we obtained heterozygous <italic toggle="yes">Mpdz</italic>
+<sup>Gt(XG734)Byg(+/−)1AFis</sup> mice (<italic toggle="yes">Mpdz</italic>
+<sup>+/−</sup> mice), which were viable and fertile, and backcrossed into the C57BL/6 strain. Western blotting revealed that intact Mpdz protein could no longer be detected in brain lysates derived from neonatal <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice (Fig <xref rid="emmm201606430-fig-0001" ref-type="fig">1</xref>B).</p><fig fig-type="Figure" xml:lang="en" id="emmm201606430-fig-0001" orientation="portrait" position="float"><label>Figure 1</label><caption><title>Generation of global and conditional <italic toggle="yes">Mpdz</italic> knockout mice</title><p>
+<list list-type="simple" id="emmm201606430-list-0002"><list-item><label>A</label><p>Schematic representation of the <italic toggle="yes">Mpdz</italic> gene locus and the translated protein. The numbered boxes represent exons 1–47 of the wild‐type allele. The relative position of the translational start and stop sites is indicated at exon 2 and exon 47, respectively. A gene‐trap cassette (β‐geo) was inserted into intron 11–12 leading to a stop signal that truncates the Mpdz protein after the third PDZ domain.</p></list-item><list-item><label>B</label><p>Western blotting to detect Mpdz protein in brain lysates of littermate wild‐type and global knockout <italic toggle="yes">Mpdz</italic> mice.</p></list-item><list-item><label>C</label><p>Schematic drawing of the conditional <italic toggle="yes">Mpdz</italic> gene targeting strategy. LoxP sites flanking exon 4 and a neomycin resistance cassette were inserted by homologous recombination. Transgenic mice were crossed with Flp deleter mice to remove the FRT‐flanked neomycin cassette. Cre recombinase removes exons 4 and 5 leading to a frameshift and a nonsense mutation. This truncates the Mpdz protein after the L27 domain.</p></list-item><list-item><label>D</label><p>Western blotting to detect Mpdz protein in brain lysates of <italic toggle="yes">Mpdz</italic>
+<sup>fl/fl</sup> and CMV‐Cre;<italic toggle="yes">Mpdz</italic>
+<sup>Δ/Δ</sup> mice.</p></list-item><list-item><label>E, F</label><p>Kaplan–Meier survival analysis of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> vs. <italic toggle="yes">Mpdz</italic>
+<sup>+/+</sup> mice (<italic toggle="yes">n</italic> &gt; 41 mice per genotype) and CMV‐Cre;<italic toggle="yes">Mpdz</italic>
+<sup>Δ/Δ</sup> vs. <italic toggle="yes">Mpdz</italic>
+<sup>fl/fl</sup> mice (<italic toggle="yes">n</italic> &gt; 48 mice per genotype).</p></list-item><list-item><label>G, H</label><p>Representative images of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> and <italic toggle="yes">Mpdz</italic>
+<sup>+/+</sup> mice at postnatal day 27 (P27) and CMV‐Cre;<italic toggle="yes">Mpdz</italic>
+<sup>Δ/Δ</sup> and <italic toggle="yes">Mpdz</italic>
+<sup>fl/fl</sup> mice at P24. Arrows indicate the enlarged and dome‐shaped skull and the enlarged brain hemispheres.</p></list-item></list>
+</p><p>
+<named-content content-type="attribution">Source data are available online for this figure.</named-content>
+</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="nlm-graphic-5" position="float" orientation="portrait" xlink:href="EMMM-9-890-g002.jpg"><?image-name EMMM-9-890-g002.jpg?><?image-size 109309?><?image-md5 0dbf9d5cbf0412e642fc38d87b2fbb53?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1428?><?image-original-width 1064?><?image-scaled-height 952?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/3a41/5494508/0dbf9d5cbf04/EMMM-9-890-g002.jpg?><?thumb-name EMMM-9-890-g002.gif?><?thumb-size 9068?><?thumb-md5 6f027c93dec68e54b000f8b6c55492e5?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 134?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/3a41/5494508/6f027c93dec6/EMMM-9-890-g002.gif?></graphic></fig><p>In a second approach, loxP sequences were inserted into introns 3–4 and 5–6 by homologous recombination in ES cells. This allows recombination of the floxed allele by Cre recombinase to delete exons 4 and 5 (Mpdz<sup>Δ</sup>) resulting in a truncating frameshift mutation removing all 13 PDZ domains (Fig <xref rid="emmm201606430-fig-0001" ref-type="fig">1</xref>C). Cre recombinase was expressed under control of the ubiquitously active CMV promoter (Schwenk <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0042" ref-type="ref">1995</xref>), leading to a strong reduction of Mpdz protein expression levels in astrocytes isolated from neonatal mice (Fig <xref rid="emmm201606430-fig-0001" ref-type="fig">1</xref>D) Homozygous floxed <italic toggle="yes">Mpdz</italic>
+<sup>fl/fl</sup> mice and heterozygous CMV‐Cre;<italic toggle="yes">Mpdz</italic>
+<sup>+/Δ</sup> were viable, fertile, and indistinguishable from control littermates.</p></sec><sec id="emmm201606430-sec-0004"><title>Homozygous <italic toggle="yes">Mpdz</italic> mutations cause postnatal lethality</title><p>
+<italic toggle="yes">Mdpz</italic>
+<sup>+/−</sup> mice were interbred and we obtained offspring in the expected Mendelian ratio (1:2:1) when animals were genotyped in the embryo–fetal period. Genotyping between postnatal days 1 and 10 (P1–P10) revealed 88 (24%) wild‐type, 205 (56%) heterozygous, 73 (20%) knockout mice, indicating a non‐Mendelian distribution [<italic toggle="yes">P</italic> = 0.038; chi‐square test (Montoliu, <xref rid="emmm201606430-bib-0031" ref-type="ref">2012</xref>)]. Indeed, knockout animals died in the postnatal period and median survival of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice was 20 days (Fig <xref rid="emmm201606430-fig-0001" ref-type="fig">1</xref>E). No significant sex‐specific differences in survival were detectable. Similar data were obtained with CMV‐Cre;<italic toggle="yes">Mpdz</italic>
+<sup>Δ/Δ</sup> mice. After crossing CMV‐Cre;<italic toggle="yes">Mpdz</italic>
+<sup>wt/Δ</sup> with <italic toggle="yes">Mpdz</italic>
+<sup>fl/fl</sup> mice, offspring CMV‐Cre;<italic toggle="yes">Mpdz</italic>
+<sup>Δ/Δ</sup> mice were born at expected Mendelian frequency of 25% [<italic toggle="yes">n</italic> = 167; <italic toggle="yes">P</italic> = 0.02; chi‐square test (Montoliu, <xref rid="emmm201606430-bib-0031" ref-type="ref">2012</xref>)] and died during the first month of life (median survival 25 days) (Fig <xref rid="emmm201606430-fig-0001" ref-type="fig">1</xref>F).</p><p>
+<italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mouse pups looked unremarkable at P1 and P2. There were no obvious phenotypic differences compared to littermate controls. At P3, some of the homozygous mice could already be recognized due to a slightly enlarged and dome‐shaped skull. Brains isolated from <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice at P4 were enlarged (Fig <xref rid="emmm201606430-fig-0001" ref-type="fig">1</xref>G). From P5 onward, <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice showed growth retardation and increased frequency and severity of neurological symptoms (decreased alertness, lethargy, movement disorders, muscle weakness, apathy). Therefore, all mice were sacrificed upon exhibition of movement disorders or lethargy.</p><p>Clinical autopsy and histopathological examination of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice at P7 revealed macrocephaly, enlarged hemispheres, and massive CSF accumulation in lateral brain ventricles. Hydrocephalus was never detected in any of the wild‐type or heterozygous mice. CSF was clear and there were no signs of brain hemorrhage. Compared to wild‐type littermates, no obvious alterations in heart, liver, kidney, and gut were detectable. This resembles findings from patients with homozygous <italic toggle="yes">MPDZ</italic> mutations (Al‐Dosari <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0003" ref-type="ref">2013</xref>).</p><p>CMV‐Cre;<italic toggle="yes">Mpdz</italic>
+<sup>Δ/Δ</sup> mice also developed macrocephaly and severe CSF accumulation in lateral brain ventricles, indicating that truncation of Mpdz acts as a null allele (Fig <xref rid="emmm201606430-fig-0001" ref-type="fig">1</xref>H). In older mice (P21) with advanced hydrocephalus, brain hemorrhages were frequently observed.</p></sec><sec id="emmm201606430-sec-0005"><title>
+<italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice develop hydrocephalus after birth</title><p>Computed tomography showed massive enlargement of the skull, rupture of sutures, and thinning of skull bones in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> animals at P27 (Fig <xref rid="emmm201606430-fig-0002" ref-type="fig">2</xref>A). Magnetic resonance imaging revealed massive accumulation of CSF in the lateral ventricles with severe thinning of the cerebral cortex and severe compression of the brain stem and cerebellum (Fig <xref rid="emmm201606430-fig-0002" ref-type="fig">2</xref>B). This finding was very similar to the congenital hydrocephalus observed in human patients carrying homozygous <italic toggle="yes">MPDZ</italic> mutations (Al‐Dosari <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0003" ref-type="ref">2013</xref>).</p><fig fig-type="Figure" xml:lang="en" id="emmm201606430-fig-0002" orientation="portrait" position="float"><label>Figure 2</label><caption><title>
+<italic toggle="yes">Mpdz</italic>‐deficient mice develop hydrocephalus</title><p>
+<list list-type="alpha-upper" id="emmm201606430-list-0003"><list-item><p>At postnatal day 27 (P27), <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> and wild‐type littermates were subjected to a computed tomography. Three‐dimensional reconstruction shows macrocephaly and thinning of skull bones (arrows).</p></list-item><list-item><p>T2‐weighted coronal and sagittal magnetic resonance images of the head of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> vs. <italic toggle="yes">Mpdz</italic>
+<sup>+/+</sup> mice at P27. CSF in the enlarged lateral ventricles appears hyperintense (asterisks).</p></list-item></list>
+</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="nlm-graphic-7" position="float" orientation="portrait" xlink:href="EMMM-9-890-g004.jpg"><?image-name EMMM-9-890-g004.jpg?><?image-size 104124?><?image-md5 dabb42ec2ff6616663a38b0a733850d1?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 980?><?image-original-width 1064?><?image-scaled-height 653?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/3a41/5494508/dabb42ec2ff6/EMMM-9-890-g004.jpg?><?thumb-name EMMM-9-890-g004.gif?><?thumb-size 9916?><?thumb-md5 ea3f2d4eb2db90d2f5228b2d7f353485?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 92?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/3a41/5494508/ea3f2d4eb2db/EMMM-9-890-g004.gif?></graphic></fig><p>In humans, severe hydrocephalus was detected in fetuses carrying homozygous <italic toggle="yes">MPDZ</italic> mutations at 30 weeks of gestation (Al‐Dosari <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0003" ref-type="ref">2013</xref>). Analysis of formalin‐fixed brain tissue derived from <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mouse embryos did not show any signs of enlarged brain ventricles at embryonic stage E14.5. Even at birth (P0), no obvious enlargement of the lateral ventricles was visible. At P3, a substantial enlargement of the lateral ventricles occurred, while we did not detect other major changes in brain anatomy. At P7, a severe enlargement of the lateral ventricles, but not of the 4<sup>th</sup> ventricle, was observed indicating aqueductal stenosis (Fig <xref rid="emmm201606430-fig-0003" ref-type="fig">3</xref>).</p><fig fig-type="Figure" xml:lang="en" id="emmm201606430-fig-0003" orientation="portrait" position="float"><label>Figure 3</label><caption><title>
+<italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice develop postnatal hydrocephalus</title><p>H&amp;E staining of brain sections from <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> and littermate <italic toggle="yes">Mpdz</italic>
+<sup>+/+</sup> mice at different developmental stages. At embryonic stage E14.5 and at birth (P0), coronal sections showed no overt alterations in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mouse brains. At P3 and P7, enlarged lateral ventricles (*) were detected in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice. Horizontal sections demonstrate ventriculomegaly in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice at P3 and P7. Aq, cerebral aqueduct; Hi, hippocampus; LV, lateral ventricle; V, ventricle (3<sup>rd</sup>, 4<sup>th</sup>). Scale bars: E14.5, 500 μm; P0, P3, and P7, 1 mm.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="nlm-graphic-9" position="float" orientation="portrait" xlink:href="EMMM-9-890-g006.jpg"><?image-name EMMM-9-890-g006.jpg?><?image-size 141321?><?image-md5 86598d3108394cf090998ba180b4ba39?><?image-image-server-status NEVER_LOAD?><?image-original-height 693?><?image-original-width 708?><?image-scaled-height 693?><?image-scaled-width 708?><?image-cloudpmc-urn urn:cdn:blobs/3a41/5494508/86598d310839/EMMM-9-890-g006.jpg?><?thumb-name EMMM-9-890-g006.gif?><?thumb-size 21704?><?thumb-md5 80c01556eef7e73ae541f7ae0d7c5792?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 98?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/3a41/5494508/80c01556eef7/EMMM-9-890-g006.gif?></graphic></fig></sec><sec id="emmm201606430-sec-0006"><title>No morphological alterations in the brain vasculature of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice</title><p>We asked whether the development of hydrocephalus in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice might be due to impaired cerebrovascular integrity. H&amp;E staining showed no signs of brain hemorrhage at P3 and P7 (Fig <xref rid="emmm201606430-fig-0003" ref-type="fig">3</xref>). CSF in the enlarged lateral ventricles was clear and did not contain erythrocytes. Therefore, we concluded that hydrocephalus cannot be acquired due to hemorrhage. Staining of endothelial cells with antibodies against CD31 revealed normal vascular patterning and no changes in microvessel density in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice compared to littermate controls (Fig <xref rid="emmm201606430-fig-0001ev" ref-type="fig">EV1</xref>A).</p><fig fig-type="Figure" xml:lang="en" specific-use="collapsible" id="emmm201606430-fig-0001ev" orientation="portrait" position="float"><label>Figure EV1</label><caption><title>Loss of <italic toggle="yes">Mpdz</italic> does not alter the brain microvasculature and endothelial‐restricted loss of <italic toggle="yes">Mpdz</italic> does not cause hydrocephalus</title><p>
+<list list-type="alpha-upper" id="emmm201606430-list-0008"><list-item><p>Brain sections from <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> and littermate <italic toggle="yes">Mpdz</italic>
+<sup>+/+</sup> mice were stained for the endothelial marker CD31. Scale bars, 50 μm. Graph showing relative changes in microvessel density. <italic toggle="yes">n</italic> = 3 animals per genotype; n.s., not significant (unpaired two‐sided Student's <italic toggle="yes">t</italic>‐test). Data are presented as mean ± SD.</p></list-item><list-item><p>Brain section stained for the tight junction proteins claudin‐5 and ZO‐1. No differences were observed between <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> and littermate <italic toggle="yes">Mpdz</italic>
+<sup>+/+</sup> mice at P7. Scale bar, 50 μm.</p></list-item><list-item><p>Transmission electron micrograph of cortical brain capillaries shows no difference in tight junction assembly between <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> and <italic toggle="yes">Mpdz</italic>
+<sup>+/+</sup> littermates. Boxes are highlighting endothelial cell junctions. One representative box shows the area as a zoom‐in. Scale bars, 1 μm and 100 nm. EC, endothelial cell; PC, pericyte.</p></list-item><list-item><p>Western blot to determine Mpdz protein expression in isolated lung endothelial cells from adult Tie2‐Cre;<italic toggle="yes">Mpdz</italic>
+<sup>ΔEC/ΔEC</sup> mice.</p></list-item><list-item><p>Endothelial cell‐specific <italic toggle="yes">Mpdz</italic>‐deficient mice (ΔEC/ΔEC) developed normally with no indication for hydrocephalus (<italic toggle="yes">n</italic> &gt; 200 ΔEC/ΔEC observed for more than four months of age). H&amp;E staining of brain sections from three‐month‐old mice.</p></list-item></list>
+</p><p>
+<named-content content-type="attribution">Source data are available online for this figure.</named-content>
+</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="nlm-graphic-11" position="float" orientation="portrait" xlink:href="EMMM-9-890-g003.jpg"><?image-name EMMM-9-890-g003.jpg?><?image-size 136928?><?image-md5 05d4793a4b6001cb8f1504afcf3d61c7?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1339?><?image-original-width 1064?><?image-scaled-height 892?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/3a41/5494508/05d4793a4b60/EMMM-9-890-g003.jpg?><?thumb-name EMMM-9-890-g003.gif?><?thumb-size 10579?><?thumb-md5 ecac5aeacf3b3466b0ffa51a5d40f0e8?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 126?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/3a41/5494508/ecac5aeacf3b/EMMM-9-890-g003.gif?></graphic></fig><p>Immunohistochemical staining of the vascular tight junction proteins claudin‐5 and ZO‐1 also showed no differences in cortical vessels of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice compared to controls (Fig <xref rid="emmm201606430-fig-0001ev" ref-type="fig">EV1</xref>B).</p><p>After P21, we frequently observed brain hemorrhages and blood in CSF of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> and CMV‐Cre;<italic toggle="yes">Mpdz</italic>
+<sup>Δ/Δ</sup> mice. A substantial increase in hydrostatic pressure is most likely responsible for the rupturing of blood vessels in very advanced stages of hydrocephalus. However, even at P27, electron microscopy analysis of brain sections from <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice revealed no overt alterations in the composition of blood vessels with numerous tight junctions between endothelial cells (Fig <xref rid="emmm201606430-fig-0001ev" ref-type="fig">EV1</xref>C).</p></sec><sec id="emmm201606430-sec-0007"><title>Endothelial‐specific deletion of <italic toggle="yes">Mpdz</italic> does not cause hydrocephalus</title><p>To further analyze the potential involvement of the vasculature in hydrocephalus development of <italic toggle="yes">Mpdz</italic>‐deficient mice, we ablated <italic toggle="yes">Mpdz</italic> specifically in endothelial cells using a Tie2‐Cre driver line (Constien <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0010" ref-type="ref">2001</xref>). Mpdz protein expression was strongly reduced in isolated lung endothelial cells derived from Tie2‐Cre;<italic toggle="yes">Mpdz</italic>
+<sup>ΔEC/ΔEC</sup> mice (Fig <xref rid="emmm201606430-fig-0001ev" ref-type="fig">EV1</xref>D). Tie2‐Cre;<italic toggle="yes">Mpdz</italic>
+<sup>ΔEC/ΔEC</sup> mice were viable and did not show any signs of hydrocephalus (<italic toggle="yes">n</italic> &gt; 200 transgenic animals). In addition, adult Tie2‐Cre;<italic toggle="yes">Mpdz</italic>
+<sup>ΔEC/ΔEC</sup> mice (4 months old) appeared healthy and showed normal brain morphology (Fig <xref rid="emmm201606430-fig-0001ev" ref-type="fig">EV1</xref>E).</p><p>Taken together, there were no obvious alterations in blood vessel composition and morphology in <italic toggle="yes">Mpdz</italic>‐deficient mice and endothelial‐specific <italic toggle="yes">Mpdz</italic> ablation did not cause hydrocephalus.</p></sec><sec id="emmm201606430-sec-0008"><title>Normal development of the choroid plexus</title><p>The blood–CSF barrier requires very dense tight junctions between epithelial cells at the choroid plexus (Wolburg &amp; Paulus, <xref rid="emmm201606430-bib-0052" ref-type="ref">2010</xref>; Liddelow, <xref rid="emmm201606430-bib-0027" ref-type="ref">2015</xref>), where <italic toggle="yes">Mpdz</italic> is abundantly expressed (Ullmer <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0049" ref-type="ref">1998</xref>; Bécamel <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0007" ref-type="ref">2001</xref>; Sitek <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0044" ref-type="ref">2003</xref>). Choroid plexus epithelial cells transport ions from the plasma ultrafiltrate into the ventricular lumen to generate CSF (Liddelow, <xref rid="emmm201606430-bib-0027" ref-type="ref">2015</xref>). Scanning electron microscopy analysis of the choroid plexus in the lateral ventricles of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice at P7 revealed that epithelial cells and microvilli on their apical surface were indistinguishable to wild‐type littermates (Fig <xref rid="emmm201606430-fig-0002ev" ref-type="fig">EV2</xref>A). Electron microscopy of ultrathin sections showed normal cell morphology and numerous tight junctions between choroid plexus epithelial cells. As well, the fenestrated endothelial cells of the capillaries in the stroma of the choroid plexus appeared normal at P3 and P7 (Fig <xref rid="emmm201606430-fig-0002ev" ref-type="fig">EV2</xref>B).</p><fig fig-type="Figure" xml:lang="en" specific-use="collapsible" id="emmm201606430-fig-0002ev" orientation="portrait" position="float"><label>Figure EV2</label><caption><title>Normal morphology of choroid plexus, liver, and kidney in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice</title><p>
+<list list-type="alpha-upper" id="emmm201606430-list-0009"><list-item><p>Scanning electron micrograph of choroid plexus epithelium of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> and <italic toggle="yes">Mpdz</italic>
+<sup>+/+</sup> littermate mice at P7 shows no morphological abnormalities in cilia or microvilli. Scale bars, 3 μm.</p></list-item><list-item><p>Electron microscopic analysis of the choroid plexus from a lateral ventricle of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> and <italic toggle="yes">Mpdz</italic>
+<sup>+/+</sup> littermates at postnatal day 3 and day 7. The plexus epithelial cells are typically polarized, carry apical microvilli (asterisks), and are interconnected by tight junctions (arrows). In the stroma, beneath the epithelium the fenestrated capillaries are seen (hashtags; for comparison, see Wolburg &amp; Paulus, <xref rid="emmm201606430-bib-0052" ref-type="ref">2010</xref>). Scale bars indicated in images.</p></list-item><list-item><p>Kidney and liver of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> and <italic toggle="yes">Mpdz</italic>
+<sup>+/+</sup> littermates at P7 were embedded in paraffin. H&amp;E staining of sections shows no overt differences between the genotypes. Scale bar, 50 μm.</p></list-item></list>
+</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="nlm-graphic-13" position="float" orientation="portrait" xlink:href="EMMM-9-890-g005.jpg"><?image-name EMMM-9-890-g005.jpg?><?image-size 235914?><?image-md5 78843bafd95925086353023c2c6c4fa3?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1214?><?image-original-width 1064?><?image-scaled-height 809?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/3a41/5494508/78843bafd959/EMMM-9-890-g005.jpg?><?thumb-name EMMM-9-890-g005.gif?><?thumb-size 12361?><?thumb-md5 c741250dcc0701ab257463fa689f988c?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 114?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/3a41/5494508/c741250dcc07/EMMM-9-890-g005.gif?></graphic></fig><p>Cerebrospinal fluid analysis in mice is extremely challenging due to the very small volume. Also, the amount of CSF derived from <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice at P3 (mild hydrocephalus) precluded chemical tests. In advanced stages of hydrocephalus (P10−P12), the lateral ventricles were filled with up to 100 μl of CSF. Here, total CSF protein levels were 0.59 ± 0.18 g/l (<italic toggle="yes">n</italic> = 5 mice; only such without obvious brain hemorrhage and clear CSF). In very advanced stages of hydrocephalus (P27), CSF protein levels were 1.12 ± 0.11 g/l (<italic toggle="yes">n</italic> = 5 mice; only such without obvious brain hemorrhage and clear CSF). While there is no reference range for mice, in rats total protein in CSF is less than 0.35 g/l (Lehtinen <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0026" ref-type="ref">2011</xref>). The increased CSF protein concentration may indicate secondary brain damage due to hydrocephalus, but does not allow drawing any conclusions about the pathogenesis of hydrocephalus <italic toggle="yes">per se</italic>.</p></sec><sec id="emmm201606430-sec-0009"><title>Aqueductal stenosis after postnatal day 3</title><p>Cerebrospinal fluid produced by choroid plexus in the lateral ventricles passes through the foramina of Monro into the 3<sup>rd</sup> ventricle, followed by passage through the cerebral aqueduct into the 4<sup>th</sup> ventricle. To analyze the flow of CSF through the ventricular system in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice, Evans blue dye was injected into the right lateral ventricle. When injected at P1, the tracer could be observed in the contralateral ventricle as well as in the 3<sup>rd</sup> and 4<sup>th</sup> ventricles and in the spinal subarachnoid space 5 min after injection (Fig <xref rid="emmm201606430-fig-0004" ref-type="fig">4</xref>A, upper row). There were no differences between <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> and wild‐type littermate controls. This shows again that there is no aqueductal stenosis in newborn <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice. However, at P3, Evans blue reached the 3<sup>rd</sup> and the contralateral ventricle, but only very little or no tracer could be detected in the 4<sup>th</sup> ventricle of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice. At P5, this was even more pronounced, indicating a complete blockage of tracer flow through the cerebral aqueduct (Fig <xref rid="emmm201606430-fig-0004" ref-type="fig">4</xref>A). These data verify that the development of a macroscopically visible hydrocephalus from P3 onward is associated with aqueductal stenosis. We thus focused on determining the potential cause for the lack of flow through the cerebral aqueduct.</p><fig fig-type="Figure" xml:lang="en" id="emmm201606430-fig-0004" orientation="portrait" position="float"><label>Figure 4</label><caption><title>Impaired flow of <styled-content style="fixed-case">CSF</styled-content> through the cerebral aqueduct after postnatal day 3</title><p>
+<list list-type="alpha-upper" id="emmm201606430-list-0004"><list-item><p>Flow of Evans blue dye injected into a lateral ventricle trough the ventricular system of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> and <italic toggle="yes">Mpdz</italic>
+<sup>+/+</sup> littermates was analyzed at postnatal day 1 (P1), P3, and P5. Sagittal sections show the lateral (LV) and fourth ventricles (4<sup>th</sup> V, arrowhead). In mice at P1, flow of Evans blue from one lateral ventricle through the third into the contralateral and the fourth ventricles was unremarkable in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> and <italic toggle="yes">Mpdz</italic>
+<sup>+/+</sup> mice. At P3 and P5, no flow of Evans blue through the cerebral aqueduct (Aq) into the fourth ventricle could be detected in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice.</p></list-item><list-item><p>Scanning electron micrograph of ependymal cells lining the roof of lateral ventricles at P7. No morphological alterations in motile cilia of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> compared to <italic toggle="yes">Mpdz</italic>
+<sup>+/+</sup> mice. Scale bar, 20 μm.</p></list-item><list-item><p>Antibody staining against cleaved caspase‐3 (white color, arrows and arrowheads) to detect apoptotic cells. CP, choroid plexus; SVZ, subventricular zone. Scale bar, 100 μm.</p></list-item></list>
+</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="nlm-graphic-15" position="float" orientation="portrait" xlink:href="EMMM-9-890-g008.jpg"><?image-name EMMM-9-890-g008.jpg?><?image-size 177633?><?image-md5 91b63094d1d4ac6799079679a5f7a338?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1363?><?image-original-width 1064?><?image-scaled-height 908?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/3a41/5494508/91b63094d1d4/EMMM-9-890-g008.jpg?><?thumb-name EMMM-9-890-g008.gif?><?thumb-size 13024?><?thumb-md5 7658e5e3caa516f44cafe8c58d3da86d?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 128?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/3a41/5494508/7658e5e3caa5/EMMM-9-890-g008.gif?></graphic></fig></sec><sec id="emmm201606430-sec-0010"><title>No overt cilia dysfunction in <italic toggle="yes">Mpdz</italic>‐deficient brains</title><p>In humans, CSF flow is commonly ascribed to a pressure gradient generated by blood pulsations between the sites of production and absorption. However, it is also assumed that CSF movement through the ventricular system is facilitated by motile 9 + 2 cilia at the apical cell membrane of ependymal cells (Lee, <xref rid="emmm201606430-bib-0025" ref-type="ref">2013</xref>; Jiménez <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0020" ref-type="ref">2014</xref>). In mice, motile cilia generate CSF flow from P8 onward (Tissir <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0046" ref-type="ref">2010</xref>; Siyahhan <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0045" ref-type="ref">2014</xref>), and cilia dysfunction causes postnatal hydrocephalus (Davy &amp; Robinson, <xref rid="emmm201606430-bib-0011" ref-type="ref">2003</xref>; Ibañez‐Tallon <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0017" ref-type="ref">2004</xref>; Banizs <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0006" ref-type="ref">2005</xref>; Lechtreck <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0024" ref-type="ref">2008</xref>; Jacquet <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0019" ref-type="ref">2009</xref>; Wodarczyk <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0051" ref-type="ref">2009</xref>; Tissir <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0046" ref-type="ref">2010</xref>; Liu <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0028" ref-type="ref">2014</xref>; Koschützke <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0022" ref-type="ref">2015</xref>; Rachel <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0036" ref-type="ref">2015</xref>).</p><p>Scanning electron microscopy revealed normal numbers of cilia on the ependymal cell surface within the lateral ventricles of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice at P7 (Fig <xref rid="emmm201606430-fig-0004" ref-type="fig">4</xref>B). In accordance with normal cilia morphology, we could not detect typical signs of a ciliopathy in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice, such as cysts in liver or kidney (Fig <xref rid="emmm201606430-fig-0002ev" ref-type="fig">EV2</xref>C).</p><p>Serum analyses also showed no pathological alterations of creatinine, urea, uric acid, and albumin serum levels and no significant differences between <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> and control mice at P14. This indicates that renal function was not impaired in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice. Taken together, the normal cilia morphology and the fact that motile cilia generate significant CSF flow in mice only from P8 and onward (Tissir <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0046" ref-type="ref">2010</xref>) dismisses the idea of cilia dysfunction as the primary cause for hydrocephalus development in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice.</p><p>Next we performed immunostaining to detect apoptotic cells by the presence of active caspase‐3 in the choroid plexus, the ependyma, and the subventricular zone. This revealed that at P0, there were very few apoptotic cells detectable. However, at P3 there were substantially more cells positive for cleaved caspase‐3 in the choroid plexus and the ependyma of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice compared to controls. At P7, we detected strong caspase‐3 activity within the ependymal cell layer and throughout the choroid plexus (Fig <xref rid="emmm201606430-fig-0004" ref-type="fig">4</xref>C).</p></sec><sec id="emmm201606430-sec-0011"><title>Loss of <italic toggle="yes">Mpdz</italic> leads to defects in the ependyma</title><p>The ventricular system is lined by the ependyma, a single layer of simple cuboidal to columnar epithelium with microvilli and motile cilia on the apical surface. <italic toggle="yes">Mpdz</italic> expression is very pronounced in this cell layer (Bécamel <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0007" ref-type="ref">2001</xref>; Sitek <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0044" ref-type="ref">2003</xref>), which separates CSF from brain tissue. Immunostaining indicated higher rates of cell death in the ependyma of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> compared to wild‐type littermate controls (Fig <xref rid="emmm201606430-fig-0004" ref-type="fig">4</xref>C). H&amp;E staining revealed that at P0, there were some sporadic defects within the ependymal layer of the lateral ventricles of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice. Most notably, we found severe defects in the ependymal lining of the cerebral aqueduct. Here single cells or a whole stretch of ependymal cells was missing. At P3 and P7, this was even more severe. In parts of the cerebral aqueduct, ependymal denudation had occurred (Fig <xref rid="emmm201606430-fig-0005" ref-type="fig">5</xref>). This indicates that loss of tight junction‐associated protein Mpdz disturbs the integrity of the ependymal layer leading to partial ependymal denudation.</p><fig fig-type="Figure" xml:lang="en" id="emmm201606430-fig-0005" orientation="portrait" position="float"><label>Figure 5</label><caption><title>Ependymal defects in the cerebral aqueduct of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice</title><p>H&amp;E staining of horizontal brain sections from of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> and <italic toggle="yes">Mpdz</italic>
+<sup>+/+</sup> littermates at postnatal days 0, 3, and 7 (P0, P3, and P7). A continuous single layer of ependymal cells lines the aqueduct in controls. Disruption of the ependymal cell layer was frequently observed in <italic toggle="yes">Mpdz</italic>‐deficient mice. The images at the right show areas of interest (boxed) in higher magnification. Arrows indicate regions where the ependymal layer is disturbed. Please note that images of <italic toggle="yes">Mpdz</italic>
+<sup>+/+</sup> brains (P0, P3) are close‐ups of the images shown in Fig <xref rid="emmm201606430-fig-0003" ref-type="fig">3</xref>. Scale bars are indicated in images.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="nlm-graphic-17" position="float" orientation="portrait" xlink:href="EMMM-9-890-g010.jpg"><?image-name EMMM-9-890-g010.jpg?><?image-size 198689?><?image-md5 83ca0e447d46181a771ef385f245660e?><?image-image-server-status NEVER_LOAD?><?image-original-height 715?><?image-original-width 589?><?image-scaled-height 715?><?image-scaled-width 589?><?image-cloudpmc-urn urn:cdn:blobs/3a41/5494508/83ca0e447d46/EMMM-9-890-g010.jpg?><?thumb-name EMMM-9-890-g010.gif?><?thumb-size 24939?><?thumb-md5 4979939ff3b5235bbb473e048cae3c48?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 121?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/3a41/5494508/4979939ff3b5/EMMM-9-890-g010.gif?></graphic></fig></sec><sec id="emmm201606430-sec-0012"><title>Inactivation of <italic toggle="yes">Mpdz</italic> with Nestin‐Cre leads to hydrocephalus formation</title><p>To further test this hypothesis, we inactivated the <italic toggle="yes">Mpdz</italic> gene in radial glia cells, the precursors for ependymal cells, and neuronal precursors using the Nestin‐Cre driver line (Tronche <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0047" ref-type="ref">1999</xref>). Indeed, Nestin‐Cre<sup>+/+</sup>;<italic toggle="yes">Mpdz</italic>
+<sup>Δ/Δ</sup> mice developed hydrocephalus in the early postnatal period. Very similar to the global <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice, there was severe enlargement of the lateral ventricles (Fig <xref rid="emmm201606430-fig-0003ev" ref-type="fig">EV3</xref>).</p><fig fig-type="Figure" xml:lang="en" specific-use="collapsible" id="emmm201606430-fig-0003ev" orientation="portrait" position="float"><label>Figure EV3</label><caption><title>
+<italic toggle="yes">Mpdz</italic> inactivation using Nestin‐Cre mice causes hydrocephalus</title><p>Floxed <italic toggle="yes">Mpdz</italic> mice were crossed with Nestin‐Cre to delete <italic toggle="yes">Mpdz</italic> in glial and neuronal precursors. 
+<list list-type="alpha-upper" id="emmm201606430-list-0010"><list-item><p>Dome‐shaped skull (arrow) and the enlarged brain hemispheres (arrow) at postnatal day 7.</p></list-item><list-item><p>Lateral ventricles (LV) were enlarged (asterisk). Scale bar, 1,000 μm.</p></list-item></list>
+</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="nlm-graphic-19" position="float" orientation="portrait" xlink:href="EMMM-9-890-g007.jpg"><?image-name EMMM-9-890-g007.jpg?><?image-size 63976?><?image-md5 ea5759fcaddf92faaf503de9b87c9482?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 865?><?image-original-width 1064?><?image-scaled-height 576?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/3a41/5494508/ea5759fcaddf/EMMM-9-890-g007.jpg?><?thumb-name EMMM-9-890-g007.gif?><?thumb-size 7814?><?thumb-md5 08c9c30e8910f896a4959e67bc53b5ce?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 81?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/3a41/5494508/08c9c30e8910/EMMM-9-890-g007.gif?></graphic></fig></sec><sec id="emmm201606430-sec-0013"><title>Loss of <italic toggle="yes">Mpdz</italic> leads to impaired epithelial barrier function</title><p>As the loss of <italic toggle="yes">Mpdz</italic> induced major changes in the ependyma, we were wondering whether <italic toggle="yes">Mpdz</italic> might have a function in epithelial barrier control. It is important to note that presence and normal morphological appearance of tight junctions do not exclude a barrier defect. This had been shown, for example, in occludin (<italic toggle="yes">Ocln</italic>)‐ or claudin‐5 (<italic toggle="yes">Cldn5</italic>)‐deficient mice, in which tight junctions are still formed but are not fully functional (Saitou <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0039" ref-type="ref">2000</xref>; Nitta <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0034" ref-type="ref">2003</xref>). Therefore, we analyzed cellular permeability after silencing of <italic toggle="yes">Mpdz</italic> expression. Due to a lack of suitable ependymal cell lines and the difficulty to culture suitable amounts of primary ependymal cells from mice, we employed human MCF7 cells as surrogate model to study cellular barrier functions. <italic toggle="yes">MPDZ</italic> expression was silenced by transfection with siRNAs or by transduction with lentiviral particles expressing shRNAs by 80 ± 7%. Cellular permeability was determined by measuring transepithelial electrical resistance (TER) and corresponding capacitance (C<sub>cl</sub>). Once cells had reached full confluence, as indicated by low C<sub>cl</sub>, we observed severely reduced TER in MCF7 cells, indicating impaired barrier properties (Fig <xref rid="emmm201606430-fig-0006" ref-type="fig">6</xref>A–C). These findings could be verified with human choroid plexus epithelial papilloma (HIBCPP) cells. HIBCPP cells form tight junctions, develop a high electrical resistance and minimal levels of macromolecular flux when grown on transwell filters, and thereby represent an excellent model system for the blood–cerebrospinal fluid barrier (Schwerk <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0043" ref-type="ref">2012</xref>). Silencing of <italic toggle="yes">MPDZ</italic> expression led to lower TER indicating impaired barrier function of HIBCPP cells (Fig <xref rid="emmm201606430-fig-0006" ref-type="fig">6</xref>D).</p><fig fig-type="Figure" xml:lang="en" id="emmm201606430-fig-0006" orientation="portrait" position="float"><label>Figure 6</label><caption><title>Loss of <styled-content style="fixed-case">MPDZ</styled-content> increases epithelial cell permeability</title><p>
+<list list-type="simple" id="emmm201606430-list-0005"><list-item><label>A, B</label><p>Representative graph of transepithelial electrical resistance (TER; upper graph) and corresponding capacitance (C<sub>cl</sub>; lower graph) of MCF‐7 monolayers for 5 days after silencing of <italic toggle="yes">MPDZ</italic> expression. The reduction of <italic toggle="yes">MPDZ</italic> expression led to a significant decrease of TER indicating increased permeability. The low corresponding capacitance (C<sub>cl</sub>) values indicate formation of a dense cell monolayer. <italic toggle="yes">n</italic> = 3 technical replicates.</p></list-item><list-item><label>C</label><p>Mean TER values of five (siRNA) or three (shRNA) independent experiments with each three replicates at time point 72 h. **<italic toggle="yes">P</italic> = 0.008; *<italic toggle="yes">P</italic> = 0.0113 by two‐sided, unpaired Student's <italic toggle="yes">t</italic>‐test.</p></list-item><list-item><label>D</label><p>Representative graph of TER and corresponding capacitance (C<sub>cl</sub>) of HIPCC cell monolayers for 5 days after silencing of <italic toggle="yes">MPDZ</italic> expression. <italic toggle="yes">n</italic> = 3 replicates.</p></list-item><list-item><label>E</label><p>Levels of active RhoA (RhoA‐GTP) and total RhoA levels in isolated astrocytes derived from brains of neonatal <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> and <italic toggle="yes">Mpdz</italic>
+<sup>+/+</sup> mice were detected by G‐LISA. Graph shows ratio of active RhoA vs. total RhoA. <italic toggle="yes">n</italic> = 3; <italic toggle="yes">P</italic> = 0.0171 by two‐sided, unpaired Student's <italic toggle="yes">t</italic>‐test).</p></list-item></list>Data information: All data are presented as mean ± SD.<named-content content-type="attribution">Source data are available online for this figure.</named-content>
+</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="nlm-graphic-21" position="float" orientation="portrait" xlink:href="EMMM-9-890-g011.jpg"><?image-name EMMM-9-890-g011.jpg?><?image-size 111160?><?image-md5 ab461acefe68cc4a3f159b76e2090d33?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1493?><?image-original-width 1064?><?image-scaled-height 995?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/3a41/5494508/ab461acefe68/EMMM-9-890-g011.jpg?><?thumb-name EMMM-9-890-g011.gif?><?thumb-size 8416?><?thumb-md5 7e99abfde3abcd5fd73c49cc47039766?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 140?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/3a41/5494508/7e99abfde3ab/EMMM-9-890-g011.gif?></graphic></fig><p>Mpdz binds to the RhoA‐specific guanine exchange factor Syx (PLEKHG) (Estévez <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0012" ref-type="ref">2008</xref>), and recruits it to the Pals1 polarity complex. Thereby, Mpdz is involved in controlling the activity of RhoA. This small G protein can remodel the cytoskeleton and cell–cell junctions leading to increased endothelial permeability (Wu <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0053" ref-type="ref">2011</xref>; Ngok <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0033" ref-type="ref">2012</xref>). In oligodendrocytes, NG2 stimulates RhoA activity at the cell periphery via Mpdz (MUPP1) and Syx1 (Biname <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0008" ref-type="ref">2013</xref>). Notably, increased Rho kinase activity after deletion of myosin IXa can lead to hydrocephalus in mice (Abouhamed <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0001" ref-type="ref">2009</xref>). To test whether Mpdz also controls RhoA activity in cells of the CNS, we analyzed its activity in primary astrocytes isolated from neonatal mouse brains. Astrocyte lysates derived from <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice had significantly higher RhoA activity levels compared to those derived from wild‐type littermate controls (Fig <xref rid="emmm201606430-fig-0006" ref-type="fig">6</xref>E).</p><p>Taken together, the data showed that <italic toggle="yes">Mpdz</italic> is critical to maintain an intact ependymal cell layer and epithelial barrier integrity.</p></sec><sec id="emmm201606430-sec-0014"><title>Disturbed Pals1 expression in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice</title><p>Mpdz is associated with components of the planar cell polarity complex via binding to Pals1 (Wu <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0053" ref-type="ref">2011</xref>), and disturbance of planar cell polarity can lead to hydrocephalus in mouse models (Tissir <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0046" ref-type="ref">2010</xref>; Ohata <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0035" ref-type="ref">2014</xref>). We detected that the onset of Pals1 expression in the ependymal cell layer is delayed in neonatal <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice. Whereas wild‐type littermate controls showed robust Pals1 expression in ependymal cells of the lateral ventricles already at P0, this was almost absent in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice. Only from P7 on there was Pals1 expression detectable in ependymal cells but still not continuous through the ependymal layer (Fig <xref rid="emmm201606430-fig-0007" ref-type="fig">7</xref>A). However, the expression levels and dynamic expression pattern of the planar cell polarity protein Crb3 were unremarkable in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice (Fig <xref rid="emmm201606430-fig-0007" ref-type="fig">7</xref>B). Also, the expression pattern of adherens junction protein E‐cadherin was not altered in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice (Fig <xref rid="emmm201606430-fig-0007" ref-type="fig">7</xref>C).</p><fig fig-type="Figure" xml:lang="en" id="emmm201606430-fig-0007" orientation="portrait" position="float"><label>Figure 7</label><caption><title>Diminished expression of Pals1 in ependymal cells of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice</title><p>Immunostaining for the planar cell polarity proteins Pals1 and Crb3 (white color) and the adherens junction protein E‐cadherin (brown color) in brains of <italic toggle="yes">Mpdz</italic>‐deficient mice at postnatal days 0, 3, and 7 (P0, P3, and P7).
+<list list-type="alpha-upper" id="emmm201606430-list-0006"><list-item><p>Expression of Pals1 (white color, arrows) is absent (*) or diminished in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice. Scale bars: 10 μm for P0, 20 μm for P3, 10 μm for P7.</p></list-item><list-item><p>Expression of Crb3 is not altered in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> compared to control mice. Scale bars: 10 μm for P0, 20 μm for P3, 10 μm for P7.</p></list-item><list-item><p>The dynamic expression pattern of E‐cadherin is not altered in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> compared to control mice. Scale bars: 100 μm and for zoom‐ins 10 μm.</p></list-item></list>Data information: CP, choroid plexus; EP, ependymal cells; LV, lateral ventricle.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="nlm-graphic-23" position="float" orientation="portrait" xlink:href="EMMM-9-890-g012.jpg"><?image-name EMMM-9-890-g012.jpg?><?image-size 214837?><?image-md5 b45a653d9d0f4543d52dc2f0762c65d6?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 1421?><?image-original-width 1064?><?image-scaled-height 947?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/3a41/5494508/b45a653d9d0f/EMMM-9-890-g012.jpg?><?thumb-name EMMM-9-890-g012.gif?><?thumb-size 15464?><?thumb-md5 bf28d4c4cae3a873eb8b9ed474fb036b?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 134?><?thumb-scaled-width 100?><?thumb-cloudpmc-urn urn:cdn:blobs/3a41/5494508/bf28d4c4cae3/EMMM-9-890-g012.gif?></graphic></fig></sec><sec id="emmm201606430-sec-0015"><title>Hydrocephalus development is preceded by astrogliosis</title><p>Defects of the ependyma lead to reactive astrogliosis, which can obstruct the cerebral aqueduct (Wagner <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0050" ref-type="ref">2003</xref>). Therefore, we tested whether ependymal defects in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice are accompanied by astrogliosis. This repair mechanism is characterized by enhanced glial fibrillary acidic protein (GFAP) expression, cellular hypertrophy, and astrocyte proliferation (Fawcett &amp; Asher, <xref rid="emmm201606430-bib-0013" ref-type="ref">1999</xref>). At P0, when no hydrocephalus was present, GFAP expression was prominent in the ependyma of the lateral ventricles and in the subependymal zone of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice. Strong GFAP expression was also observed in the hippocampal region of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> but not in control mice. Most importantly, we observed astrogliosis within the cerebral aqueduct of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice (Figs <xref rid="emmm201606430-fig-0008" ref-type="fig">8</xref> and <xref rid="emmm201606430-fig-0004ev" ref-type="fig">EV4</xref>). This clearly indicates that these cells are subjected to stress or damage prior to the development of a hydrocephalus.</p><fig fig-type="Figure" xml:lang="en" id="emmm201606430-fig-0008" orientation="portrait" position="float"><label>Figure 8</label><caption><title>Hydrocephalus in <italic toggle="yes">Mpdz</italic>‐deficient mice is preceded by reactive gliosis</title><p>Immunostaining for glial fibrillary acidic protein (GFAP; white color, arrows). 
+<list list-type="alpha-upper" id="emmm201606430-list-0007"><list-item><p>Progressive astrogliosis in the subventricular zone (SVZ) of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice. CP, choroid plexus. Scale bars: 10 μm for P0, 40 μm for P3, 50 μm for P7.</p></list-item><list-item><p>Progressive astrogliosis (indicated by arrow) around the cerebral aqueduct of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice. Scale bars: 100 μm.</p></list-item><list-item><p>Progressive astrogliosis in the hippocampal region of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice. Scale bars: 100 μm for P0, 50 μm for P3 and P7.</p></list-item></list>
+</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="nlm-graphic-25" position="float" orientation="portrait" xlink:href="EMMM-9-890-g013.jpg"><?image-name EMMM-9-890-g013.jpg?><?image-size 123077?><?image-md5 18769698f0de636452b6af6bec08efa3?><?image-image-server-status LOAD_COMPLETED?><?image-original-height 614?><?image-original-width 1064?><?image-scaled-height 409?><?image-scaled-width 709?><?image-cloudpmc-urn urn:cdn:blobs/3a41/5494508/18769698f0de/EMMM-9-890-g013.jpg?><?thumb-name EMMM-9-890-g013.gif?><?thumb-size 13810?><?thumb-md5 539d2994fb336d9fc812399c6054a0ed?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 80?><?thumb-scaled-width 138?><?thumb-cloudpmc-urn urn:cdn:blobs/3a41/5494508/539d2994fb33/EMMM-9-890-g013.gif?></graphic></fig><fig fig-type="Figure" xml:lang="en" specific-use="collapsible" id="emmm201606430-fig-0004ev" orientation="portrait" position="float"><label>Figure EV4</label><caption><title>Reactive astrogliosis in <italic toggle="yes">Mpdz</italic>‐deficient mice</title><p>Staining of glial fibrillary acidic protein (GFAP, DAB stain: brown color) at postnatal days 0, 3, and 7 (P0, P3, and P7) on paraffin‐embedded brain sections. GFAP expression is more intense and widespread in <italic toggle="yes">Mpdz</italic>‐deficient mice compared to wild‐type littermate controls. Boxed areas are shown in higher magnification at right row. Please note that the <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> brain section (P3) is derived from the same specimen than in Fig <xref rid="emmm201606430-fig-0003" ref-type="fig">3</xref>. SVZ, subventricular zone; CP, choroid plexus; EP, ependymal cells. Scale bars: 500 μm left row, 200 μm middle row, 20 μm right row.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" id="nlm-graphic-27" position="float" orientation="portrait" xlink:href="EMMM-9-890-g009.jpg"><?image-name EMMM-9-890-g009.jpg?><?image-size 83396?><?image-md5 adc998613fde9acebcef09d908bfc56e?><?image-image-server-status NEVER_LOAD?><?image-original-height 279?><?image-original-width 708?><?image-scaled-height 279?><?image-scaled-width 708?><?image-cloudpmc-urn urn:cdn:blobs/3a41/5494508/adc998613fde/EMMM-9-890-g009.jpg?><?thumb-name EMMM-9-890-g009.gif?><?thumb-size 21688?><?thumb-md5 84e9cffedac6cc5fb1e673cafa1ada17?><?thumb-image-server-status NEVER_LOAD?><?thumb-scaled-height 79?><?thumb-scaled-width 200?><?thumb-cloudpmc-urn urn:cdn:blobs/3a41/5494508/84e9cffedac6/EMMM-9-890-g009.gif?></graphic></fig><p>At P3, we detected much stronger GFAP expression in the ependyma and the subependymal zone in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice compared to control, which was even more pronounced at P7. In particular, the cerebral aqueduct was affected. In addition, strong astrogliosis in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice was observed in the hippocampal region of <italic toggle="yes">Mpdz</italic>‐deficient mice at P7 (Figs <xref rid="emmm201606430-fig-0008" ref-type="fig">8</xref> and <xref rid="emmm201606430-fig-0004ev" ref-type="fig">EV4</xref>). Gliosis within the cerebral aqueduct narrows the lumen and impairs CSF flow (Cinalli <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0009" ref-type="ref">2011</xref>).</p><p>In summary, the data show that astrogliosis—secondary to ependymal cell dysfunction—obstructs CSF flow through the cerebral aqueduct leading to extreme dilation of the supratentorial ventricular system in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice.</p></sec></sec><sec id="emmm201606430-sec-0016"><title>Discussion</title><p>
+<italic toggle="yes">MPDZ</italic> is the only human gene locus known to be associated with autosomal recessive non‐syndromic congenital hydrocephalus (Al‐Dosari <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0003" ref-type="ref">2013</xref>). We generated ubiquitous and cell type‐specific mouse models verifying that homozygous truncating <italic toggle="yes">Mpdz</italic> mutations cause hydrocephalus. <italic toggle="yes">Mpdz</italic>‐deficient mice developed supratentorial hydrocephalus with ventriculomegaly leading to macrocephaly and compression of the brain cortex and brain stem. In contrast to human patients (Al‐Dosari <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0003" ref-type="ref">2013</xref>), this occurred only after birth in <italic toggle="yes">Mpdz</italic>‐deficient mice. Interestingly, <italic toggle="yes">L1cam</italic>‐deficient mice also develop postnatal hydrocephalus, while in humans carrying <italic toggle="yes">LCAM1</italic> mutations hydrocephalus often develops already before birth (Rolf <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0038" ref-type="ref">2001</xref>).</p><p>MPDZ localizes to tight junctions and directly interacts with several other tight junction proteins (e.g., claudin‐1, JAM‐A, ZO‐3) (Adachi <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0002" ref-type="ref">2009</xref>). There is some evidence that alterations in cell–cell junctions within neuroepithelial cells might be causative for congenital hydrocephalus (Jiménez <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0020" ref-type="ref">2014</xref>; Guerra <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0016" ref-type="ref">2015</xref>). Our study demonstrates that <italic toggle="yes">Mpdz</italic> is not essential for tight junction formation <italic toggle="yes">in vivo</italic>. Consistently, there were also no signs of cell polarity defects in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice. This may be due to compensation by increased expression of the related INADL protein upon loss of MPDZ (Adachi <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0002" ref-type="ref">2009</xref>; Assémat <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0005" ref-type="ref">2013</xref>). We observed a significant increase in <italic toggle="yes">INADL</italic> mRNA expression upon silencing of <italic toggle="yes">MPDZ</italic> in endothelial cells (HUVEC and isolated brain endothelial cells from <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice) (<xref rid="emmm201606430-sup-0001" ref-type="supplementary-material">Appendix Fig S1</xref>). Simultaneous targeting of both genes will unravel this issue in the future. However, it is important to note that although tight junctions were formed upon inhibition of <italic toggle="yes">Mpdz</italic> expression, epithelial barrier integrity was disturbed. This is reminiscent of other knockout models of tight junction molecules (e.g., <italic toggle="yes">Jam3‐</italic>, occludin (<italic toggle="yes">Ocln</italic>)‐, or claudin‐5 (<italic toggle="yes">Cldn5</italic>)‐deficient mice), in which tight junctions are present but are not fully functional (Saitou <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0039" ref-type="ref">2000</xref>; Nitta <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0034" ref-type="ref">2003</xref>; Wyss <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0054" ref-type="ref">2012</xref>). As such, Mpdz appears to be a critical protein for fine‐tuning the tightness of cell–cell junctions.</p><p>Similar as in <italic toggle="yes">Jam3</italic>‐deficient mice (Wyss <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0054" ref-type="ref">2012</xref>), the endothelium was not responsible for hydrocephalus development in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice. Based on the presented data, we propose that loss of <italic toggle="yes">Mpdz</italic> disturbs integrity of the ependymal cell layer. Loss of either cell–cell or cell–matrix interactions would trigger apoptosis, as observed by increased caspase‐3 activity in the ependyma of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice. <italic toggle="yes">Mpdz</italic> inactivation using the Nestin‐Cre line further indicated that defects in the ependyma are the primary cause of hydrocephalus. <italic toggle="yes">Nestin</italic> is expressed in glial and neuronal precursors. Deleting <italic toggle="yes">Mpdz</italic> specifically in cilia‐containing ependymal cells by using the FoxJ1‐Cre line (Meletis <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0030" ref-type="ref">2008</xref>) will finally resolve this issue.</p><p>Mechanistically, we could show that expression of the planar cell polarity protein Pals1 is strongly reduced in ependymal cells of newborn <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice. Pals1 directly interacts with Mpdz and also stabilizes this protein (Assémat <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0004" ref-type="ref">2008</xref>, <xref rid="emmm201606430-bib-0005" ref-type="ref">2013</xref>). Therefore, one could assume that Mpdz helps to stabilize Pals1 expression at the membrane of ependymal cells. Defects in proteins of the planar cell polarity complex can lead to hydrocephalus formation in mice (Tissir <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0046" ref-type="ref">2010</xref>; Ohata <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0035" ref-type="ref">2014</xref>). The expression of another cell polarity protein Crb3 was not affected in the ependyma of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice, indicating not a general impairment of planar cell polarity. Pals1 is linked to the RhoA‐specific guanine exchange factor Syx via the adaptor protein Mpdz (Estévez <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0012" ref-type="ref">2008</xref>). As such, Mpdz is involved in the control of RhoA activity (Wu <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0053" ref-type="ref">2011</xref>; Ngok <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0033" ref-type="ref">2012</xref>; Biname <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0008" ref-type="ref">2013</xref>). RhoA‐dependent kinases play a major role in controlling the stability of cell–cell junctions. Increased RhoA activity after deletion of myosin IXa (<italic toggle="yes">Myo9a</italic>), a motor molecule with a Rho GTPase‐activating (GAP) domain, leads to hydrocephalus formation in mice (Abouhamed <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0001" ref-type="ref">2009</xref>). The <italic toggle="yes">Myo9a</italic> knockout model shows many similarities with <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice with distortion of the ependymal cell layer, stenosis of the aqueduct, and dilation of the lateral and third ventricles. Similar as observed after silencing of <italic toggle="yes">Mpdz</italic> expression, there was increased RhoA activity in cultured epithelial cells after silencing of <italic toggle="yes">Myo9a</italic> (Abouhamed <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0001" ref-type="ref">2009</xref>).</p><p>Disturbance of ependymal integrity induces hydrocephalus in other mouse models, for example, mice deficient for <italic toggle="yes">Myo9a, Pkcl, Numbl, Ophn1, Myh4, Dlg5,</italic> or <italic toggle="yes">Mdnah5</italic> (Ibañez‐Tallon <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0017" ref-type="ref">2004</xref>; Imai <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0018" ref-type="ref">2006</xref>; Kuo <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0023" ref-type="ref">2006</xref>; Khelfaoui <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0021" ref-type="ref">2007</xref>; Ma <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0029" ref-type="ref">2007</xref>; Nechiporuk <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0032" ref-type="ref">2007</xref>; Abouhamed <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0001" ref-type="ref">2009</xref>). Ependymal damage most likely impairs the brain–CSF barrier and disturbs CSF homeostasis. We suggest that this subsequently results in the initiation of repair processes, in particular reactive astrogliosis. The data indicate that at birth, when no signs of hydrocephalus are yet visible, ependymal defects and reactive gliosis are present in the ependyma and subventricular zone of <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice. Astrogliosis is, in principle, beneficial; however, in the narrow aqueduct, astrogliosis can rapidly obstruct CSF flow into the 4<sup>th</sup> ventricle. As such, this work showed that slight impairment of ependymal integrity triggers astrogliosis in the subependymal zone, resulting in aqueductal stenosis and ventriculomegaly in <italic toggle="yes">Mpdz</italic>
+<sup>−/−</sup> mice.</p></sec><sec id="emmm201606430-sec-0017"><title>Materials and Methods</title><sec id="emmm201606430-sec-0018"><title>Animal experiments</title><p>Mice were kept under pathogen‐free barrier conditions, and animal procedures were performed in accordance with the institutional and national regulations and approved by the local committees for animal experimentation (Heidelberg University and DKFZ) and the local government (Regierungspräsidium Karlsruhe, Germany). Murine embryonic stem cells containing a gene trap in intron 11–12 of the <italic toggle="yes">Mpdz</italic> gene were obtained from the Mutant Mouse Resource &amp; Research Center (MMRRC) and injected into blastocysts. Anesthesia was administered by intraperitoneal injection of 100 mg/kg ketamine (Ketavet, Pfizer) and 20 mg/kg xylazine (Rompun 2%, Bayer). Chimeric mice were crossed to C57BL/6 mice. Heterozygous <italic toggle="yes">Mpdz</italic>
+<sup>Gt(XG734)Byg(+/−)1AFis</sup> mice (<italic toggle="yes">Mpdz</italic>
+<sup>+/−</sup> mice) were further backcrossed to C57BL/6 mice for at least eight generations.</p><p>Floxed <italic toggle="yes">Mpdz</italic> mice were generated by homologous recombination in C57Bl/6 × 129/SvEv hybrid ES cells (inGenious Targeting Laboratory, Ronkonkoma, NY, USA) and crossed with mice expressing Cre recombinase under control of the CMV promoter for ubiquitous gene ablation (Schwenk <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0042" ref-type="ref">1995</xref>). Tie2‐Cre mice allowed gene deletion primarily in endothelial cells and a subset of hematopoietic cells (Constien <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0010" ref-type="ref">2001</xref>) and Nestin‐Cre for deletion in radial glia (Tronche <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0047" ref-type="ref">1999</xref>). All Cre lines were backcrossed into C57Bl/6 for more than 10 generations.</p></sec><sec id="emmm201606430-sec-0019"><title>Magnetic resonance imaging and volumetric computed tomography</title><p>Mice were anaesthetized using a mixture of isofluran (1.5%) and oxygen (0.5 l/min). Magnetic resonance (MR) images were acquired on a 1.5‐T clinical MR scanner (Symphony, Siemens, Germany) using a homebuilt coil for radiofrequency excitation and detection, designed as a cylindrical volume resonator (<italic toggle="yes">n</italic> = 3 mice per genotype). Morphological T2‐weighted images were acquired using a turbo spin‐echo sequence (orientation axial, TR 3,240 ms, TE 81 ms, matrix 152 × 256, resolution 0.35 × 0.35 × 1.5 mm<sup>3</sup>, 3 averages, 15 images, scan time 3:40 min).</p><p>Volumetric computed tomography (VCT) imaging was obtained using the following parameters: tube voltage 80 kV, tube current 50 mA, scan time 51 s, rotation speed 10 s, frames per second 120, and slice thickness 0.2 mm. Image reconstructions were performed using a modified FDK (Feldkamp Davis Kress) cone beam reconstruction algorithm (kernel H80a; Afra, Erlangen, Germany). Unenhanced VCT images and MRI‐acquired T2‐weighted images were analyzed using Osirix Imaging Software.</p></sec><sec id="emmm201606430-sec-0020"><title>Antibodies</title><p>For immunofluorescence analysis, the following primary antibodies were used: rabbit anti‐ZO‐1 (1:100 dilution, Thermo Fisher, #61‐7300), rabbit anti‐claudin‐5 (1:400, Abcam, #ab53765), rabbit anti‐GFAP (1:500, DAKO, #Z0334), rat anti‐CD31 (clone Mec13.3, BD Biosciences), Pals1 (1:100, Merck, #7‐708), rat anti‐Crb3 (14F9, Abcam, ab180835), mouse anti‐E‐cadherin (1:200, BD Bioscience, #610181), and rabbit anti‐cleaved caspase‐3 (Asp175, 1:100 Cell Signaling, #9661). Secondary antibodies were 3 mg/ml Alexa 546‐conjugated goat anti‐rabbit IgG and 3 mg/ml Alexa 488‐conjugated goat anti‐rat IgG (all from Invitrogen). For Western blotting, rabbit anti‐MPDZ (1:500, Thermo Scientific, 42‐2700) and mouse anti‐beta actin (1:2,500, Sigma‐Aldrich #A5441) were used.</p></sec><sec id="emmm201606430-sec-0021"><title>Immunofluorescence and histology</title><p>Freshly dissected brains were embedded in Tissue‐Tek (Sakura, Netherlands), frozen, and stored at −80°C. Sections (7 μm) were fixed in methanol for 20 min at −20°C. For GFAP staining, mice were perfused with 4% paraformaldehyde in PBS through the left ventricle of the heart and tissue was embedded in paraffin. Paraffin was removed from fresh sections (4 μm), and antigen retrieval was carried out in citrate buffer (pH 6.0). Blocking solution was 10% goat serum. Primary and secondary antibodies were diluted in blocking solution. Primary antibodies were incubated overnight at 4°C and secondary antibodies for 1 h at room temperature. Sections were washed with TBS‐T between incubation steps and finally mounted with Fluoromount (Dako). Confocal images were obtained using a LSM 700 microscope (Carl Zeiss) and analyzed using the Fiji software.</p><p>For histology, paraffin‐embedded tissue sections were stained with hematoxylin and eosin. Images were taken with a CellObserver microscope (Carl Zeiss) and analyzed using the ZEN Blue software (Carl Zeiss).</p></sec><sec id="emmm201606430-sec-0022"><title>Electron microscopy</title><p>Newborn <italic toggle="yes">Mpdz</italic>‐deficient and wild‐type littermates (<italic toggle="yes">n</italic> = 3 for each age and genotype) were euthanized and perfused with PBS and subsequently with 4% glutaraldehyde and 4% formaldehyde in 0.1 M cacodylate buffer through the left ventricle of the heart. Dissected brains were fixed in 2.0% glutaraldehyde in 0.05 M cacodylate buffer for 2 h and stained with 1% OsO<sub>4</sub> in cacodylate buffer for another 2 h followed by contrasting in 0.5% uranyl‐acetate. After dehydration in an ascending series of ethanol and propylene oxide, the samples were flat‐embedded in Epon (Serva, Germany). Using an ultramicrotome (Ultracut, Leica, Bensheim, Germany), 0.5‐μm‐ and 50‐nm‐thin sections were cut. Ultrathin sections were stained with 2% uranyl‐acetate for 15 min and contrasted in lead citrate for 5 min, mounted on copper grids, and finally analyzed with a Zeiss‐EM910 electron microscope.</p><p>For scanning electron microscopy, glutaraldehyde‐fixed brains were dehydrated, transferred into hexamethyldisilazane, and slowly air‐dried. Samples were cut and coated with gold using the agar sputter coater (Agar Scientific, England). Images were taken using the Hitachi S4500 and analyzed with the digital image processing 2.6 software (Point Electronic, Halle).</p></sec><sec id="emmm201606430-sec-0023"><title>Ventricular dye injections</title><p>For intracranial dye injection, mice (<italic toggle="yes">n</italic> = 5 per genotype) were anesthetized by intraperitoneal injection of ketamine and xylazine according to approved experimental protocols. Evans blue dye (5 μl, 1% in PBS) was injected slowly into the lateral ventricle using a 0.1‐ml syringe. The syringe was left in the injection site to prevent reflux of fluid. Mice were well euthanized 5 min after the injection and the heads were immediately fixed in 4% paraformaldehyde overnight. Brains were dissected, and photographed with an SMZ800 stereo microscope (Nikon).</p></sec><sec id="emmm201606430-sec-0024"><title>Analysis of serum creatinine, urea, and albumin</title><p>Plasma and CSF metabolites were measured in the central laboratory of the University Hospital Heidelberg by the same procedures used and validated for routine diagnostic analysis (<italic toggle="yes">n</italic> = 5 mice). Creatinine, urea, and uric acid were measured enzymatically, and total protein in CSF was measured by precipitation with pyrogallol red on an ADVIA 2400 clinical chemistry XPT analyzer (Siemens Healthcare Diagnostics, Eschborn, Germany).</p></sec><sec id="emmm201606430-sec-0025"><title>Cell culture</title><p>MCF7 cells were cultured in DMEM containing 10% fetal calf serum (FCS), 100 units/ml penicillin, and 100 μg/ml streptomycin. Human choroid plexus epithelial papilloma HIBCPP cells were cultured in DMEM/F12 supplemented with 10% FCS, 5 μg/ml insulin, 100 U/ml penicillin, and 100 μg/ml streptomycin. For experiments, cells grown in the standard and the inverted cell culture insert system were used as previously described (Schwerk <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0043" ref-type="ref">2012</xref>). Three different lentiviral shRNA vectors for silencing MPDZ were obtained from Biocat (V2LHS_3656, 16945 16946). Transduced MCF7 cells were selected with 10 μM blasticidin‐S. Transient transfections were performed using Oligofectamine (Life Technologies). Subsequently, MCF7 cells were seeded onto transwell inserts (0.4 μm pore diameter, Greiner BioOne) and used for transepithelial resistance measurements (cellZscope, nanoAnalytics). Medium was exchanged every second day. Astrocytes from neonatal mice (P2) were isolated and cultured as described (Reischl <italic toggle="yes">et al</italic>, <xref rid="emmm201606430-bib-0037" ref-type="ref">2014</xref>).</p><p>Standardized multiplex cell contamination and cell line authentication testing (Multiplexion, Germany) were conducted on a regular basis.</p></sec><sec id="emmm201606430-sec-0026"><title>Quantitative real‐time PCR</title><p>Total RNA was isolated with the innuPREP RNA Mini Kit (Jena Analytics) and transcribed into cDNA (High Capacity cDNA Reverse Transcription Kit; Applied Biosystems). cDNA was mixed with POWER SYBR Green Master Mix and qPCR performed using an ABI StepOnePlus cycler (Applied Biosystems). The housekeeping genes <italic toggle="yes">GAPDH</italic>,<italic toggle="yes"> RPL32,</italic> and <italic toggle="yes">OAZ1</italic> were used for normalization. Primer sequences are provided upon request<bold>.</bold> All experiments included two technical and three biological replicates.</p></sec><sec id="emmm201606430-sec-0027"><title>RhoA activity analysis</title><p>RhoA activation (ratio RhoA‐GTP/total RhoA) was determined using the RhoA G‐LISA Activation Assay (Cytoskeleton Inc., BK124).</p></sec><sec id="emmm201606430-sec-0028"><title>Statistical analyses</title><p>Results are expressed as means plus/minus standard deviation. Comparisons between groups were made by a two‐sided, unpaired <italic toggle="yes">t</italic>‐test. Comparison between multiple groups was made by ANOVA. Alterations in Mendelian distribution were calculated with the software tool Mendel.xls based on a chi‐square test (Montoliu, <xref rid="emmm201606430-bib-0031" ref-type="ref">2012</xref>). <italic toggle="yes">P</italic>‐values &lt; 0.05 were considered as significant.</p></sec><sec id="emmm201606430-sec-0029"><title>Study approval</title><p>All animal work was approved by the local committees for animal experimentation (Heidelberg University and DKFZ) and the local government (Regierungspräsidium Karlsruhe, Germany). This work is not considered “Human Subjects Research”.</p></sec></sec><sec id="emmm201606430-sec-0031"><title>Author contributions</title><p>AFe and MGA performed the majority of experiments. FT performed Western blotting and characterized the Nestin‐Cre;flox‐Mpdz line, IM performed immunohistochemistry, DK and TB performed CT scans and MRI, FS and AvD performed histopathological examination, IH and HW performed electron microscopy, and HI, HS, and TK provided essential material and methodology and assisted with experimental design. All authors analyzed data. AFe and AFi wrote the manuscript. AFi conceived and directed the project.</p></sec><sec id="emmm201606430-sec-0032"><title>Conflict of interest</title><p>The authors declare that they have no conflict of interest.</p></sec><sec id="emmm201606430-sec-0033"><boxed-text position="float" content-type="box" id="emmm201606430-blk-0001" orientation="portrait"><caption><title>The paper explained</title></caption><sec id="emmm201606430-sec-0034"><title>Problem</title><p>Congenital hydrocephalus, an abnormal accumulation of CSF in brain cavities, is diagnosed in ~1 of 2,000 newborns. A genetic etiology is assumed for a large proportion of patients. Mutations that cause non‐syndromic congenital hydrocephalus in humans have been detected in only two genes: <italic toggle="yes">L1CAM</italic> and <italic toggle="yes">MPDZ</italic>. The function of <italic toggle="yes">MPDZ</italic> is not fully understood.</p></sec><sec id="emmm201606430-sec-0035"><title>Results</title><p>Mouse models to inactivate the <italic toggle="yes">Mpdz</italic> gene were generated, and these mimic the human pathology. <italic toggle="yes">Mpdz</italic> is needed to maintain the integrity of the ependymal cell layer in the brain that forms the cerebrospinal fluid–brain barrier. Loss of <italic toggle="yes">Mpdz</italic> leads to detachment of ependymal cells resulting in astrogliosis, a repair process that leads to obstruction of CSF transport through the cerebral aqueduct.</p></sec><sec id="emmm201606430-sec-0036"><title>Impact</title><p>The work provides a fully penetrant and clinical relevant model to study the pathogenesis of non‐syndromic congenital hydrocephalus.</p></sec></boxed-text></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material content-type="local-data" position="float" orientation="portrait"/><supplementary-material content-type="local-data" id="emmm201606430-sup-0001" position="float" orientation="portrait"><caption><p>Appendix</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="EMMM-9-890-s001.pdf" position="float" orientation="portrait"><?suppdata-name EMMM-9-890-s001.pdf?><?suppdata-size 80094?><?suppdata-md5 586a171ebffb81dbf8fcca928fe39162?><?suppdata-image-server-status NEVER_LOAD?><?suppdata-mime-type application?><?suppdata-mime-sub-type pdf?><?suppdata-cloudpmc-urn urn:app:3a41/5494508/586a171ebffb/EMMM-9-890-s001.pdf?><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="emmm201606430-sup-0002" position="float" orientation="portrait"><caption><p>Expanded View Figures PDF</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="EMMM-9-890-s002.pdf" position="float" orientation="portrait"><?suppdata-name EMMM-9-890-s002.pdf?><?suppdata-size 2227601?><?suppdata-md5 8ac435a5be6e4a150bd26991db3d85cb?><?suppdata-image-server-status NEVER_LOAD?><?suppdata-mime-type application?><?suppdata-mime-sub-type pdf?><?suppdata-cloudpmc-urn urn:app:3a41/5494508/8ac435a5be6e/EMMM-9-890-s002.pdf?><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="emmm201606430-sup-0005" position="float" orientation="portrait"><caption><p>Source Data for Expanded View</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="EMMM-9-890-s005.zip" position="float" orientation="portrait"><?suppdata-name EMMM-9-890-s005.zip?><?suppdata-size 65223?><?suppdata-md5 159a61f5b793dd7c4f10e6e5a345a2ec?><?suppdata-image-server-status NEVER_LOAD?><?suppdata-mime-type application?><?suppdata-mime-sub-type zip?><?suppdata-cloudpmc-urn urn:app:3a41/5494508/159a61f5b793/EMMM-9-890-s005.zip?><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" position="float" orientation="portrait"><caption><p>Review Process File</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="EMMM-9-890-s006.pdf" position="float" orientation="portrait"><?suppdata-name EMMM-9-890-s006.pdf?><?suppdata-size 518125?><?suppdata-md5 8a67e78d53e37639a3b0501a0a57bcce?><?suppdata-image-server-status NEVER_LOAD?><?suppdata-mime-type application?><?suppdata-mime-sub-type pdf?><?suppdata-cloudpmc-urn urn:app:3a41/5494508/8a67e78d53e3/EMMM-9-890-s006.pdf?><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="emmm201606430-supp-data-0001" position="float" orientation="portrait"><caption><p>Source Data for Figure 1</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="EMMM-9-890-s003.pdf" position="float" orientation="portrait"><?suppdata-name EMMM-9-890-s003.pdf?><?suppdata-size 133226?><?suppdata-md5 e759dacdd714cf8c225c0acfb7d9adcb?><?suppdata-image-server-status NEVER_LOAD?><?suppdata-mime-type application?><?suppdata-mime-sub-type pdf?><?suppdata-cloudpmc-urn urn:app:3a41/5494508/e759dacdd714/EMMM-9-890-s003.pdf?><caption><p>Click here for additional data file.</p></caption></media></supplementary-material><supplementary-material content-type="local-data" id="emmm201606430-supp-data-0002" position="float" orientation="portrait"><caption><p>Source Data for Figure 6</p></caption><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="EMMM-9-890-s004.pdf" position="float" orientation="portrait"><?suppdata-name EMMM-9-890-s004.pdf?><?suppdata-size 265090?><?suppdata-md5 706743265f0269b0dbde013fb1029ed4?><?suppdata-image-server-status NEVER_LOAD?><?suppdata-mime-type application?><?suppdata-mime-sub-type pdf?><?suppdata-cloudpmc-urn urn:app:3a41/5494508/706743265f02/EMMM-9-890-s004.pdf?><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec></body><back><ack id="emmm201606430-sec-0030"><title>Acknowledgements</title><p>We thank Katharina Neumeier, Christian Clappier, and Sonja Reidenbach for technical assistance, Ulrich Kloz and Frank van der Hoeven for generating transgenic mice, Dr. Damir Krunic (DKFZ microscopy core facility) for help with FIJI software data analysis, Dr. Manfred Ruppel (Frankfurt University) for performing scanning electron microscopy, and members of the DKFZ Laboratory Animal Facility for support. We are grateful to Gabi Frommer‐Kästle for skillful help with the ultrathin sectioning, to Dr. Bernd Arnold (DFKZ Heidelberg) for providing Tie2‐Cre mice, and to Dr. Hai‐Kun Liu (DKFZ Heidelberg) for providing Nestin‐Cre mice. This work was supported by the Deutsche Forschungsgemeinschaft (DFG, SFB‐TR23 Vascular Differentiation and Remodeling) and the Chica and Heinz Schaller Foundation. A.F. is supported by the Helmholtz Society.</p></ack><ref-list content-type="cited-references" id="emmm201606430-bibl-0001"><title>References</title><ref id="emmm201606430-bib-0001"><mixed-citation publication-type="journal" id="emmm201606430-cit-0001">
+<string-name name-style="western">
+<surname>Abouhamed</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Grobe</surname>
+<given-names>K</given-names>
+</string-name>, <string-name name-style="western">
+<surname>San</surname>
+<given-names>IVLC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Thelen</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Honnert</surname>
+<given-names>U</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Balda</surname>
+<given-names>MS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Matter</surname>
+<given-names>K</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bähler</surname>
+<given-names>M</given-names>
+</string-name> (<year>2009</year>) <article-title>Myosin IXa regulates epithelial differentiation and its deficiency results in hydrocephalus</article-title>. <source>Mol Biol Cell</source>
+<volume>20</volume>: <fpage>5074</fpage>–<lpage>5085</lpage>
+<pub-id pub-id-type="pmid">19828736</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1091/mbc.E09-04-0291</pub-id><pub-id pub-id-type="pmcid">PMC2793285</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0002"><mixed-citation publication-type="journal" id="emmm201606430-cit-0002">
+<string-name name-style="western">
+<surname>Adachi</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hamazaki</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kobayashi</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Itoh</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tsukita</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Furuse</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tsukita</surname>
+<given-names>S</given-names>
+</string-name> (<year>2009</year>) <article-title>Similar and distinct properties of MUPP1 and PATJ, two homologous PDZ domain‐containing tight‐junction proteins</article-title>. <source>Mol Cell Biol</source>
+<volume>29</volume>: <fpage>2372</fpage>–<lpage>2389</lpage>
+<pub-id pub-id-type="pmid">19255144</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1128/MCB.01505-08</pub-id><pub-id pub-id-type="pmcid">PMC2668367</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0003"><mixed-citation publication-type="journal" id="emmm201606430-cit-0003">
+<string-name name-style="western">
+<surname>Al‐Dosari</surname>
+<given-names>MS</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Al‐Owain</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tulbah</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kurdi</surname>
+<given-names>W</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Adly</surname>
+<given-names>N</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Al‐Hemidan</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Masoodi</surname>
+<given-names>TA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Albash</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Alkuraya</surname>
+<given-names>FS</given-names>
+</string-name> (<year>2013</year>) <article-title>Mutation in MPDZ causes severe congenital hydrocephalus</article-title>. <source>J Med Genet</source>
+<volume>50</volume>: <fpage>54</fpage>–<lpage>58</lpage>
+<pub-id pub-id-type="pmid">23240096</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1136/jmedgenet-2012-101294</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0004"><mixed-citation publication-type="journal" id="emmm201606430-cit-0004">
+<string-name name-style="western">
+<surname>Assémat</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bazellières</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Pallesi‐Pocachard</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Le Bivic</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Massey‐Harroche</surname>
+<given-names>D</given-names>
+</string-name> (<year>2008</year>) <article-title>Polarity complex proteins</article-title>. <source>Biochim Biophys Acta</source>
+<volume>1778</volume>: <fpage>614</fpage>–<lpage>630</lpage>
+<pub-id pub-id-type="pmid">18005931</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.bbamem.2007.08.029</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0005"><mixed-citation publication-type="journal" id="emmm201606430-cit-0005">
+<string-name name-style="western">
+<surname>Assémat</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Crost</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ponserre</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Wijnholds</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Le Bivic</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Massey‐Harroche</surname>
+<given-names>D</given-names>
+</string-name> (<year>2013</year>) <article-title>The multi‐PDZ domain protein‐1 (MUPP‐1) expression regulates cellular levels of the PALS‐1/PATJ polarity complex</article-title>. <source>Exp Cell Res</source>
+<volume>319</volume>: <fpage>2514</fpage>–<lpage>2525</lpage>
+<pub-id pub-id-type="pmid">23880463</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.yexcr.2013.07.011</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0006"><mixed-citation publication-type="journal" id="emmm201606430-cit-0006">
+<string-name name-style="western">
+<surname>Banizs</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Pike</surname>
+<given-names>MM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Millican</surname>
+<given-names>CL</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ferguson</surname>
+<given-names>WB</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Komlosi</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Sheetz</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bell</surname>
+<given-names>PD</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Schwiebert</surname>
+<given-names>EM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Yoder</surname>
+<given-names>BK</given-names>
+</string-name> (<year>2005</year>) <article-title>Dysfunctional cilia lead to altered ependyma and choroid plexus function, and result in the formation of hydrocephalus</article-title>. <source>Development</source>
+<volume>132</volume>: <fpage>5329</fpage>–<lpage>5339</lpage>
+<pub-id pub-id-type="pmid">16284123</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1242/dev.02153</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0007"><mixed-citation publication-type="journal" id="emmm201606430-cit-0007">
+<string-name name-style="western">
+<surname>Bécamel</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Figge</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Poliak</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Dumuis</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Peles</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bockaert</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lübbert</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ullmer</surname>
+<given-names>C</given-names>
+</string-name> (<year>2001</year>) <article-title>Interaction of serotonin 5‐hydroxytryptamine type 2C receptors with PDZ10 of the multi‐PDZ domain protein MUPP1</article-title>. <source>J Biol Chem</source>
+<volume>276</volume>: <fpage>12974</fpage>–<lpage>12982</lpage>
+<pub-id pub-id-type="pmid">11150294</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1074/jbc.M008089200</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0008"><mixed-citation publication-type="journal" id="emmm201606430-cit-0008">
+<string-name name-style="western">
+<surname>Biname</surname>
+<given-names>F</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Sakry</surname>
+<given-names>D</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Dimou</surname>
+<given-names>L</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Jolivel</surname>
+<given-names>V</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Trotter</surname>
+<given-names>J</given-names>
+</string-name> (<year>2013</year>) <article-title>NG2 regulates directional migration of oligodendrocyte precursor cells via Rho GTPases and polarity complex proteins</article-title>. <source>J Neurosci</source>
+<volume>33</volume>: <fpage>10858</fpage>–<lpage>10874</lpage>
+<pub-id pub-id-type="pmid">23804106</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1523/JNEUROSCI.5010-12.2013</pub-id><pub-id pub-id-type="pmcid">PMC6618486</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0009"><mixed-citation publication-type="journal" id="emmm201606430-cit-0009">
+<string-name name-style="western">
+<surname>Cinalli</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Spennato</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Nastro</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Aliberti</surname>
+<given-names>F</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Trischitta</surname>
+<given-names>V</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ruggiero</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Mirone</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Cianciulli</surname>
+<given-names>E</given-names>
+</string-name> (<year>2011</year>) <article-title>Hydrocephalus in aqueductal stenosis</article-title>. <source>Childs Nerv Syst</source>
+<volume>27</volume>: <fpage>1621</fpage>–<lpage>1642</lpage>
+<pub-id pub-id-type="pmid">21928028</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s00381-011-1546-2</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0010"><mixed-citation publication-type="journal" id="emmm201606430-cit-0010">
+<string-name name-style="western">
+<surname>Constien</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Forde</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Liliensiek</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gröne</surname>
+<given-names>H‐J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Nawroth</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hämmerling</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Arnold</surname>
+<given-names>B</given-names>
+</string-name> (<year>2001</year>) <article-title>Characterization of a novel EGFP reporter mouse to monitor Cre recombination as demonstrated by a Tie2Cre mouse line</article-title>. <source>Genesis</source>
+<volume>30</volume>: <fpage>36</fpage>–<lpage>44</lpage>
+<pub-id pub-id-type="pmid">11353516</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/gene.1030</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0011"><mixed-citation publication-type="journal" id="emmm201606430-cit-0011">
+<string-name name-style="western">
+<surname>Davy</surname>
+<given-names>BE</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Robinson</surname>
+<given-names>ML</given-names>
+</string-name> (<year>2003</year>) <article-title>Congenital hydrocephalus in hy3 mice is caused by a frameshift mutation in Hydin, a large novel gene</article-title>. <source>Hum Mol Genet</source>
+<volume>12</volume>: <fpage>1163</fpage>–<lpage>1170</lpage>
+<pub-id pub-id-type="pmid">12719380</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/hmg/ddg122</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0012"><mixed-citation publication-type="journal" id="emmm201606430-cit-0012">
+<string-name name-style="western">
+<surname>Estévez</surname>
+<given-names>MA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Henderson</surname>
+<given-names>JA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ahn</surname>
+<given-names>D</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Zhu</surname>
+<given-names>XR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Poschmann</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lübbert</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Marx</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Baraban</surname>
+<given-names>JM</given-names>
+</string-name> (<year>2008</year>) <article-title>The neuronal RhoA GEF, Tech, interacts with the synaptic multi‐PDZ‐domain‐containing protein, MUPP1</article-title>. <source>J Neurochem</source>
+<volume>106</volume>: <fpage>1287</fpage>–<lpage>1297</lpage>
+<pub-id pub-id-type="pmid">18537874</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/j.1471-4159.2008.05472.x</pub-id><pub-id pub-id-type="pmcid">PMC2574673</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0013"><mixed-citation publication-type="journal" id="emmm201606430-cit-0013">
+<string-name name-style="western">
+<surname>Fawcett</surname>
+<given-names>JW</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Asher</surname>
+<given-names>RA</given-names>
+</string-name> (<year>1999</year>) <article-title>The glial scar and central nervous system repair</article-title>. <source>Brain Res Bull</source>
+<volume>49</volume>: <fpage>377</fpage>–<lpage>391</lpage>
+<pub-id pub-id-type="pmid">10483914</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/s0361-9230(99)00072-6</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0014"><mixed-citation publication-type="journal" id="emmm201606430-cit-0014">
+<string-name name-style="western">
+<surname>Fujimoto</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Matsushita</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Plese</surname>
+<given-names>JP</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Marino</surname>
+<given-names>R</given-names>
+</string-name> (<year>2004</year>) <article-title>Hydrocephalus due to diffuse villous hyperplasia of the choroid plexus: case report and review of the literature</article-title>. <source>Pediatr Neurosurg</source>
+<volume>40</volume>: <fpage>32</fpage>–<lpage>36</lpage>
+<pub-id pub-id-type="pmid">15007227</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1159/000076575</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0015"><mixed-citation publication-type="journal" id="emmm201606430-cit-0015">
+<string-name name-style="western">
+<surname>Garne</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Loane</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Addor</surname>
+<given-names>MC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Boyd</surname>
+<given-names>PA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Barisic</surname>
+<given-names>I</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Dolk</surname>
+<given-names>H</given-names>
+</string-name> (<year>2010</year>) <article-title>Congenital hydrocephalus—prevalence, prenatal diagnosis and outcome of pregnancy in four European regions</article-title>. <source>Eur J Paediatr Neurol</source>
+<volume>14</volume>: <fpage>150</fpage>–<lpage>155</lpage>
+<pub-id pub-id-type="pmid">19410489</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.ejpn.2009.03.005</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0016"><mixed-citation publication-type="journal" id="emmm201606430-cit-0016">
+<string-name name-style="western">
+<surname>Guerra</surname>
+<given-names>MM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Henzi</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ortloff</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lichtin</surname>
+<given-names>N</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Vio</surname>
+<given-names>K</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Jimenez</surname>
+<given-names>AJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Dominguez‐Pinos</surname>
+<given-names>MD</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gonzalez</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Jara</surname>
+<given-names>MC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hinostroza</surname>
+<given-names>F</given-names>
+</string-name>
+<italic toggle="yes">et al</italic> (<year>2015</year>) <article-title>Cell junction pathology of neural stem cells is associated with ventricular zone disruption, hydrocephalus, and abnormal neurogenesis</article-title>. <source>J Neuropathol Exp Neurol</source>
+<volume>74</volume>: <fpage>653</fpage>–<lpage>671</lpage>
+<pub-id pub-id-type="pmid">26079447</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/NEN.0000000000000203</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0017"><mixed-citation publication-type="journal" id="emmm201606430-cit-0017">
+<string-name name-style="western">
+<surname>Ibañez‐Tallon</surname>
+<given-names>I</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Pagenstecher</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Fliegauf</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Olbrich</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kispert</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ketelsen</surname>
+<given-names>UP</given-names>
+</string-name>, <string-name name-style="western">
+<surname>North</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Heintz</surname>
+<given-names>N</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Omran</surname>
+<given-names>H</given-names>
+</string-name> (<year>2004</year>) <article-title>Dysfunction of axonemal dynein heavy chain Mdnah5 inhibits ependymal flow and reveals a novel mechanism for hydrocephalus formation</article-title>. <source>Hum Mol Genet</source>
+<volume>13</volume>: <fpage>2133</fpage>–<lpage>2141</lpage>
+<pub-id pub-id-type="pmid">15269178</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/hmg/ddh219</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0018"><mixed-citation publication-type="journal" id="emmm201606430-cit-0018">
+<string-name name-style="western">
+<surname>Imai</surname>
+<given-names>F</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hirai</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Akimoto</surname>
+<given-names>K</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Koyama</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Miyata</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ogawa</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Noguchi</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Sasaoka</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Noda</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ohno</surname>
+<given-names>S</given-names>
+</string-name> (<year>2006</year>) <article-title>Inactivation of aPKClambda results in the loss of adherens junctions in neuroepithelial cells without affecting neurogenesis in mouse neocortex</article-title>. <source>Development</source>
+<volume>133</volume>: <fpage>1735</fpage>–<lpage>1744</lpage>
+<pub-id pub-id-type="pmid">16571631</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1242/dev.02330</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0019"><mixed-citation publication-type="journal" id="emmm201606430-cit-0019">
+<string-name name-style="western">
+<surname>Jacquet</surname>
+<given-names>BV</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Salinas‐Mondragon</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Liang</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Therit</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Buie</surname>
+<given-names>JD</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Dykstra</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Campbell</surname>
+<given-names>K</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ostrowski</surname>
+<given-names>LE</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Brody</surname>
+<given-names>SL</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ghashghaei</surname>
+<given-names>HT</given-names>
+</string-name> (<year>2009</year>) <article-title>FoxJ1‐dependent gene expression is required for differentiation of radial glia into ependymal cells and a subset of astrocytes in the postnatal brain</article-title>. <source>Development</source>
+<volume>136</volume>: <fpage>4021</fpage>–<lpage>4031</lpage>
+<pub-id pub-id-type="pmid">19906869</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1242/dev.041129</pub-id><pub-id pub-id-type="pmcid">PMC3118431</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0020"><mixed-citation publication-type="journal" id="emmm201606430-cit-0020">
+<string-name name-style="western">
+<surname>Jiménez</surname>
+<given-names>AJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Domínguez‐Pinos</surname>
+<given-names>M‐D</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Guerra</surname>
+<given-names>MM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Fernández‐Llebrez</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Pérez‐Fígares</surname>
+<given-names>J‐M</given-names>
+</string-name> (<year>2014</year>) <article-title>Structure and function of the ependymal barrier and diseases associated with ependyma disruption</article-title>. <source>Tissue Barriers</source>
+<volume>2</volume>: <fpage>e28426</fpage>
+<pub-id pub-id-type="pmid">25045600</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.4161/tisb.28426</pub-id><pub-id pub-id-type="pmcid">PMC4091052</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0021"><mixed-citation publication-type="journal" id="emmm201606430-cit-0021">
+<string-name name-style="western">
+<surname>Khelfaoui</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Denis</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>van Galen</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>de Bock</surname>
+<given-names>F</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Schmitt</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Houbron</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Morice</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Giros</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ramakers</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Fagni</surname>
+<given-names>L</given-names>
+</string-name>
+<italic toggle="yes">et al</italic> (<year>2007</year>) <article-title>Loss of X‐linked mental retardation gene oligophrenin1 in mice impairs spatial memory and leads to ventricular enlargement and dendritic spine immaturity</article-title>. <source>J Neurosci</source>
+<volume>27</volume>: <fpage>9439</fpage>–<lpage>9450</lpage>
+<pub-id pub-id-type="pmid">17728457</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1523/JNEUROSCI.2029-07.2007</pub-id><pub-id pub-id-type="pmcid">PMC6673114</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0022"><mixed-citation publication-type="journal" id="emmm201606430-cit-0022">
+<string-name name-style="western">
+<surname>Koschützke</surname>
+<given-names>L</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bertram</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hartmann</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bartsch</surname>
+<given-names>D</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lotze</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>von Bohlen und Halbach</surname>
+<given-names>O</given-names>
+</string-name> (<year>2015</year>) <article-title>SrGAP3 knockout mice display enlarged lateral ventricles and specific cilia disturbances of ependymal cells in the third ventricle</article-title>. <source>Cell Tissue Res</source>
+<volume>361</volume>: <fpage>645</fpage>–<lpage>650</lpage>
+<pub-id pub-id-type="pmid">26104135</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s00441-015-2224-6</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0023"><mixed-citation publication-type="journal" id="emmm201606430-cit-0023">
+<string-name name-style="western">
+<surname>Kuo</surname>
+<given-names>CT</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Mirzadeh</surname>
+<given-names>Z</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Soriano‐Navarro</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rašin</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Wang</surname>
+<given-names>D</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Shen</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Šestan</surname>
+<given-names>N</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Garcia‐Verdugo</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Alvarez‐Buylla</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Jan</surname>
+<given-names>LY</given-names>
+</string-name>
+<italic toggle="yes">et al</italic> (<year>2006</year>) <article-title>Postnatal deletion of numb/numblike reveals repair and remodeling capacity in the subventricular neurogenic niche</article-title>. <source>Cell</source>
+<volume>127</volume>: <fpage>1253</fpage>–<lpage>1264</lpage>
+<pub-id pub-id-type="pmid">17174898</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.cell.2006.10.041</pub-id><pub-id pub-id-type="pmcid">PMC1876765</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0024"><mixed-citation publication-type="journal" id="emmm201606430-cit-0024">
+<string-name name-style="western">
+<surname>Lechtreck</surname>
+<given-names>KF</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Delmotte</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Robinson</surname>
+<given-names>ML</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Sanderson</surname>
+<given-names>MJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Witman</surname>
+<given-names>GB</given-names>
+</string-name> (<year>2008</year>) <article-title>Mutations in Hydin impair ciliary motility in mice</article-title>. <source>J Cell Biol</source>
+<volume>180</volume>: <fpage>633</fpage>–<lpage>643</lpage>
+<pub-id pub-id-type="pmid">18250199</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.200710162</pub-id><pub-id pub-id-type="pmcid">PMC2234243</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0025"><mixed-citation publication-type="journal" id="emmm201606430-cit-0025">
+<string-name name-style="western">
+<surname>Lee</surname>
+<given-names>L</given-names>
+</string-name> (<year>2013</year>) <article-title>Riding the wave of ependymal cilia: genetic susceptibility to hydrocephalus in primary ciliary dyskinesia</article-title>. <source>J Neurosci Res</source>
+<volume>91</volume>: <fpage>1117</fpage>–<lpage>1132</lpage>
+<pub-id pub-id-type="pmid">23686703</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1002/jnr.23238</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0026"><mixed-citation publication-type="journal" id="emmm201606430-cit-0026">
+<string-name name-style="western">
+<surname>Lehtinen</surname>
+<given-names>MK</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Zappaterra</surname>
+<given-names>MW</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Chen</surname>
+<given-names>X</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Yang</surname>
+<given-names>YJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hill</surname>
+<given-names>AD</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lun</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Maynard</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gonzalez</surname>
+<given-names>D</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kim</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ye</surname>
+<given-names>P</given-names>
+</string-name>
+<italic toggle="yes">et al</italic> (<year>2011</year>) <article-title>The cerebrospinal fluid provides a proliferative niche for neural progenitor cells</article-title>. <source>Neuron</source>
+<volume>69</volume>: <fpage>893</fpage>–<lpage>905</lpage>
+<pub-id pub-id-type="pmid">21382550</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.neuron.2011.01.023</pub-id><pub-id pub-id-type="pmcid">PMC3085909</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0027"><mixed-citation publication-type="journal" id="emmm201606430-cit-0027">
+<string-name name-style="western">
+<surname>Liddelow</surname>
+<given-names>SA</given-names>
+</string-name> (<year>2015</year>) <article-title>Development of the choroid plexus and blood‐CSF barrier</article-title>. <source>Front Neurosci</source>
+<volume>9</volume>: <fpage>32</fpage>
+<pub-id pub-id-type="pmid">25784848</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.3389/fnins.2015.00032</pub-id><pub-id pub-id-type="pmcid">PMC4347429</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0028"><mixed-citation publication-type="journal" id="emmm201606430-cit-0028">
+<string-name name-style="western">
+<surname>Liu</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Chen</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Johnson</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Helms</surname>
+<given-names>JA</given-names>
+</string-name> (<year>2014</year>) <article-title>A ciliopathy with hydrocephalus, isolated craniosynostosis, hypertelorism, and clefting caused by deletion of Kif3a</article-title>. <source>Reprod Toxicol</source>
+<volume>48</volume>: <fpage>88</fpage>–<lpage>97</lpage>
+<pub-id pub-id-type="pmid">24887031</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.reprotox.2014.05.009</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0029"><mixed-citation publication-type="journal" id="emmm201606430-cit-0029">
+<string-name name-style="western">
+<surname>Ma</surname>
+<given-names>X</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bao</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Adelstein</surname>
+<given-names>RS</given-names>
+</string-name> (<year>2007</year>) <article-title>Loss of cell adhesion causes hydrocephalus in nonmuscle myosin II‐B‐ablated and mutated mice</article-title>. <source>Mol Biol Cell</source>
+<volume>18</volume>: <fpage>2305</fpage>–<lpage>2312</lpage>
+<pub-id pub-id-type="pmid">17429076</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1091/mbc.E07-01-0073</pub-id><pub-id pub-id-type="pmcid">PMC1877086</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0030"><mixed-citation publication-type="journal" id="emmm201606430-cit-0030">
+<string-name name-style="western">
+<surname>Meletis</surname>
+<given-names>K</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Barnabé‐Heider</surname>
+<given-names>F</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Carlén</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Evergren</surname>
+<given-names>E</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tomilin</surname>
+<given-names>N</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Shupliakov</surname>
+<given-names>O</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Frisén</surname>
+<given-names>J</given-names>
+</string-name> (<year>2008</year>) <article-title>Spinal cord injury reveals multilineage differentiation of ependymal cells</article-title>. <source>PLoS Biol</source>
+<volume>6</volume>: <fpage>1494</fpage>–<lpage>1507</lpage>
+<pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pbio.0060182</pub-id><pub-id pub-id-type="pmcid">PMC2475541</pub-id><pub-id pub-id-type="pmid">18651793</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0031"><mixed-citation publication-type="journal" id="emmm201606430-cit-0031">
+<string-name name-style="western">
+<surname>Montoliu</surname>
+<given-names>L</given-names>
+</string-name> (<year>2012</year>) <article-title>Mendel: a simple excel workbook to compare the observed and expected distributions of genotypes/phenotypes in transgenic and knockout mouse crosses involving up to three unlinked loci by means of a χ<sup>2</sup> test</article-title>. <source>Transgenic Res</source>
+<volume>21</volume>: <fpage>677</fpage>–<lpage>681</lpage>
+<pub-id pub-id-type="pmid">21853295</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s11248-011-9544-4</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0032"><mixed-citation publication-type="journal" id="emmm201606430-cit-0032">
+<string-name name-style="western">
+<surname>Nechiporuk</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Fernandez</surname>
+<given-names>TE</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Vasioukhin</surname>
+<given-names>V</given-names>
+</string-name> (<year>2007</year>) <article-title>Failure of epithelial tube maintenance causes hydrocephalus and renal cysts in Dlg5<sup>−/−</sup> mice</article-title>. <source>Dev Cell</source>
+<volume>13</volume>: <fpage>338</fpage>–<lpage>350</lpage>
+<pub-id pub-id-type="pmid">17765678</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.devcel.2007.07.017</pub-id><pub-id pub-id-type="pmcid">PMC2023971</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0033"><mixed-citation publication-type="journal" id="emmm201606430-cit-0033">
+<string-name name-style="western">
+<surname>Ngok</surname>
+<given-names>SP</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Geyer</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Liu</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kourtidis</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Agrawal</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Wu</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Seerapu</surname>
+<given-names>HR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lewis‐Tuffin</surname>
+<given-names>LJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Moodie</surname>
+<given-names>KL</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Huveldt</surname>
+<given-names>D</given-names>
+</string-name>
+<italic toggle="yes">et al</italic> (<year>2012</year>) <article-title>VEGF and angiopoietin‐1 exert opposing effects on cell junctions by regulating the Rho GEF Syx</article-title>. <source>J Cell Biol</source>
+<volume>199</volume>: <fpage>1103</fpage>–<lpage>1115</lpage>
+<pub-id pub-id-type="pmid">23253477</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.201207009</pub-id><pub-id pub-id-type="pmcid">PMC3529520</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0034"><mixed-citation publication-type="journal" id="emmm201606430-cit-0034">
+<string-name name-style="western">
+<surname>Nitta</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hata</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gotoh</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Seo</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Sasaki</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hashimoto</surname>
+<given-names>N</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Furuse</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tsukita</surname>
+<given-names>S</given-names>
+</string-name> (<year>2003</year>) <article-title>Size‐selective loosening of the blood‐brain barrier in claudin‐5‐deficient mice</article-title>. <source>J Cell Biol</source>
+<volume>161</volume>: <fpage>653</fpage>–<lpage>660</lpage>
+<pub-id pub-id-type="pmid">12743111</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1083/jcb.200302070</pub-id><pub-id pub-id-type="pmcid">PMC2172943</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0035"><mixed-citation publication-type="journal" id="emmm201606430-cit-0035">
+<string-name name-style="western">
+<surname>Ohata</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Nakatani</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Herranz‐Pérez</surname>
+<given-names>V</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Cheng</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Belinson</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Inubushi</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Snider</surname>
+<given-names>WD</given-names>
+</string-name>, <string-name name-style="western">
+<surname>García‐Verdugo</surname>
+<given-names>JM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Wynshaw‐Boris</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Álvarez‐Buylla</surname>
+<given-names>A</given-names>
+</string-name> (<year>2014</year>) <article-title>Loss of dishevelleds disrupts planar polarity in ependymal motile cilia and results in hydrocephalus</article-title>. <source>Neuron</source>
+<volume>83</volume>: <fpage>558</fpage>–<lpage>571</lpage>
+<pub-id pub-id-type="pmid">25043421</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.neuron.2014.06.022</pub-id><pub-id pub-id-type="pmcid">PMC4126882</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0036"><mixed-citation publication-type="journal" id="emmm201606430-cit-0036">
+<string-name name-style="western">
+<surname>Rachel</surname>
+<given-names>RA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Yamamoto</surname>
+<given-names>EA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Dewanjee</surname>
+<given-names>MK</given-names>
+</string-name>, <string-name name-style="western">
+<surname>May‐Simera</surname>
+<given-names>HL</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Sergeev</surname>
+<given-names>YV</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Hackett</surname>
+<given-names>AN</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Pohida</surname>
+<given-names>K</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Munasinghe</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gotoh</surname>
+<given-names>N</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Wickstead</surname>
+<given-names>B</given-names>
+</string-name>
+<italic toggle="yes">et al</italic> (<year>2015</year>) <article-title>CEP290 alleles in mice disrupt tissue‐specific cilia biogenesis and recapitulate features of syndromic ciliopathies</article-title>. <source>Hum Mol Genet</source>
+<volume>24</volume>: <fpage>3775</fpage>–<lpage>3791</lpage>
+<pub-id pub-id-type="pmid">25859007</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/hmg/ddv123</pub-id><pub-id pub-id-type="pmcid">PMC4459394</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0037"><mixed-citation publication-type="journal" id="emmm201606430-cit-0037">
+<string-name name-style="western">
+<surname>Reischl</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Li</surname>
+<given-names>L</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Walkinshaw</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Flippin</surname>
+<given-names>LA</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Marti</surname>
+<given-names>HH</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kunze</surname>
+<given-names>R</given-names>
+</string-name> (<year>2014</year>) <article-title>Inhibition of HIF prolyl‐4‐hydroxylases by FG‐4497 reduces brain tissue injury and edema formation during ischemic stroke</article-title>. <source>PLoS One</source>
+<volume>9</volume>: <fpage>e84767</fpage>
+<pub-id pub-id-type="pmid">24409307</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pone.0084767</pub-id><pub-id pub-id-type="pmcid">PMC3883663</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0038"><mixed-citation publication-type="journal" id="emmm201606430-cit-0038">
+<string-name name-style="western">
+<surname>Rolf</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kutsche</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bartsch</surname>
+<given-names>U</given-names>
+</string-name> (<year>2001</year>) <article-title>Severe hydrocephalus in L1‐deficient mice</article-title>. <source>Brain Res</source>
+<volume>891</volume>: <fpage>247</fpage>–<lpage>252</lpage>
+<pub-id pub-id-type="pmid">11164829</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/s0006-8993(00)03219-4</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0039"><mixed-citation publication-type="journal" id="emmm201606430-cit-0039">
+<string-name name-style="western">
+<surname>Saitou</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Furuse</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Sasaki</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Schulzke</surname>
+<given-names>JD</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Fromm</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Takano</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Noda</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tsukita</surname>
+<given-names>S</given-names>
+</string-name> (<year>2000</year>) <article-title>Complex phenotype of mice lacking occludin, a component of tight junction strands</article-title>. <source>Mol Biol Cell</source>
+<volume>11</volume>: <fpage>4131</fpage>–<lpage>4142</lpage>
+<pub-id pub-id-type="pmid">11102513</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1091/mbc.11.12.4131</pub-id><pub-id pub-id-type="pmcid">PMC15062</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0040"><mixed-citation publication-type="journal" id="emmm201606430-cit-0040">
+<string-name name-style="western">
+<surname>Sarnat</surname>
+<given-names>HB</given-names>
+</string-name> (<year>1995</year>) <article-title>Ependymal reactions to injury. A review</article-title>. <source>J Neuropathol Exp Neurol</source>
+<volume>54</volume>: <fpage>1</fpage>–<lpage>15</lpage>
+<pub-id pub-id-type="pmid">7815072</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1097/00005072-199501000-00001</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0041"><mixed-citation publication-type="journal" id="emmm201606430-cit-0041">
+<string-name name-style="western">
+<surname>Schrander‐Stumpel</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Fryns</surname>
+<given-names>JP</given-names>
+</string-name> (<year>1998</year>) <article-title>Congenital hydrocephalus: nosology and guidelines for clinical approach and genetic counselling</article-title>. <source>Eur J Pediatr</source>
+<volume>157</volume>: <fpage>355</fpage>–<lpage>362</lpage>
+<pub-id pub-id-type="pmid">9625330</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s004310050830</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0042"><mixed-citation publication-type="journal" id="emmm201606430-cit-0042">
+<string-name name-style="western">
+<surname>Schwenk</surname>
+<given-names>F</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Baron</surname>
+<given-names>U</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rajewsky</surname>
+<given-names>K</given-names>
+</string-name> (<year>1995</year>) <article-title>A cre‐transgenic mouse strain for the ubiquitous deletion of loxP‐flanked gene segments including deletion in germ cells</article-title>. <source>Nucleic Acids Res</source>
+<volume>23</volume>: <fpage>5080</fpage>–<lpage>5081</lpage>
+<pub-id pub-id-type="pmid">8559668</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/nar/23.24.5080</pub-id><pub-id pub-id-type="pmcid">PMC307516</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0043"><mixed-citation publication-type="journal" id="emmm201606430-cit-0043">
+<string-name name-style="western">
+<surname>Schwerk</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Papandreou</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Schuhmann</surname>
+<given-names>D</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Nickol</surname>
+<given-names>L</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Borkowski</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Steinmann</surname>
+<given-names>U</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Quednau</surname>
+<given-names>N</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Stump</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Weiss</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Berger</surname>
+<given-names>J</given-names>
+</string-name>
+<italic toggle="yes">et al</italic> (<year>2012</year>) <article-title>Polar invasion and translocation of <italic toggle="yes">Neisseria meningitidis</italic> and <italic toggle="yes">Streptococcus suis</italic> in a novel human model of the blood‐cerebrospinal fluid barrier</article-title>. <source>PLoS One</source>
+<volume>7</volume>: <fpage>e30069</fpage>
+<pub-id pub-id-type="pmid">22253884</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pone.0030069</pub-id><pub-id pub-id-type="pmcid">PMC3256222</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0044"><mixed-citation publication-type="journal" id="emmm201606430-cit-0044">
+<string-name name-style="western">
+<surname>Sitek</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Poschmann</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Schmidtke</surname>
+<given-names>K</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Ullmer</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Maskri</surname>
+<given-names>L</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Andriske</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Stichel</surname>
+<given-names>CC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Zhu</surname>
+<given-names>XR</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Luebbert</surname>
+<given-names>H</given-names>
+</string-name> (<year>2003</year>) <article-title>Expression of MUPP1 protein in mouse brain</article-title>. <source>Brain Res</source>
+<volume>970</volume>: <fpage>178</fpage>–<lpage>187</lpage>
+<pub-id pub-id-type="pmid">12706259</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/s0006-8993(03)02338-2</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0045"><mixed-citation publication-type="journal" id="emmm201606430-cit-0045">
+<string-name name-style="western">
+<surname>Siyahhan</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Knobloch</surname>
+<given-names>V</given-names>
+</string-name>, <string-name name-style="western">
+<surname>de Zélicourt</surname>
+<given-names>D</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Asgari</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Schmid Daners</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Poulikakos</surname>
+<given-names>D</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kurtcuoglu</surname>
+<given-names>V</given-names>
+</string-name> (<year>2014</year>) <article-title>Flow induced by ependymal cilia dominates near‐wall cerebrospinal fluid dynamics in the lateral ventricles</article-title>. <source>J R Soc Interface</source>
+<volume>11</volume>: <fpage>20131189</fpage>
+<pub-id pub-id-type="pmid">24621815</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1098/rsif.2013.1189</pub-id><pub-id pub-id-type="pmcid">PMC3973363</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0046"><mixed-citation publication-type="journal" id="emmm201606430-cit-0046">
+<string-name name-style="western">
+<surname>Tissir</surname>
+<given-names>F</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Qu</surname>
+<given-names>Y</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Montcouquiol</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Zhou</surname>
+<given-names>L</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Komatsu</surname>
+<given-names>K</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Shi</surname>
+<given-names>D</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Fujimori</surname>
+<given-names>T</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Labeau</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tyteca</surname>
+<given-names>D</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Courtoy</surname>
+<given-names>P</given-names>
+</string-name>
+<italic toggle="yes">et al</italic> (<year>2010</year>) <article-title>Lack of cadherins Celsr2 and Celsr3 impairs ependymal ciliogenesis, leading to fatal hydrocephalus</article-title>. <source>Nat Neurosci</source>
+<volume>13</volume>: <fpage>700</fpage>–<lpage>707</lpage>
+<pub-id pub-id-type="pmid">20473291</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/nn.2555</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0047"><mixed-citation publication-type="journal" id="emmm201606430-cit-0047">
+<string-name name-style="western">
+<surname>Tronche</surname>
+<given-names>F</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kellendonk</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Kretz</surname>
+<given-names>O</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Gass</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Anlag</surname>
+<given-names>K</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Orban</surname>
+<given-names>PC</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Bock</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Klein</surname>
+<given-names>R</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Schutz</surname>
+<given-names>G</given-names>
+</string-name> (<year>1999</year>) <article-title>Disruption of the glucocorticoid receptor gene in the nervous system results in reduced anxiety</article-title>. <source>Nat Genet</source>
+<volume>23</volume>: <fpage>99</fpage>–<lpage>103</lpage>
+<pub-id pub-id-type="pmid">10471508</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1038/12703</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0048"><mixed-citation publication-type="journal" id="emmm201606430-cit-0048">
+<string-name name-style="western">
+<surname>Tully</surname>
+<given-names>HM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Dobyns</surname>
+<given-names>WB</given-names>
+</string-name> (<year>2014</year>) <article-title>Infantile hydrocephalus: a review of epidemiology, classification and causes</article-title>. <source>Eur J Med Genet</source>
+<volume>57</volume>: <fpage>359</fpage>–<lpage>368</lpage>
+<pub-id pub-id-type="pmid">24932902</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.ejmg.2014.06.002</pub-id><pub-id pub-id-type="pmcid">PMC4334358</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0049"><mixed-citation publication-type="journal" id="emmm201606430-cit-0049">
+<string-name name-style="western">
+<surname>Ullmer</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Schmuck</surname>
+<given-names>K</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Figge</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Lübbert</surname>
+<given-names>H</given-names>
+</string-name> (<year>1998</year>) <article-title>Cloning and characterization of MUPP1, a novel PDZ domain protein</article-title>. <source>FEBS Lett</source>
+<volume>424</volume>: <fpage>63</fpage>–<lpage>68</lpage>
+<pub-id pub-id-type="pmid">9537516</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/s0014-5793(98)00141-0</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0050"><mixed-citation publication-type="journal" id="emmm201606430-cit-0050">
+<string-name name-style="western">
+<surname>Wagner</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Batiz</surname>
+<given-names>LF</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rodríguez</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Jiménez</surname>
+<given-names>AJ</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Páez</surname>
+<given-names>P</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Tomé</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Pérez‐Fígares</surname>
+<given-names>JM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rodríguez</surname>
+<given-names>EM</given-names>
+</string-name> (<year>2003</year>) <article-title>Cellular mechanisms involved in the stenosis and obliteration of the cerebral aqueduct of hyh mutant mice developing congenital hydrocephalus</article-title>. <source>J Neuropathol Exp Neurol</source>
+<volume>62</volume>: <fpage>1019</fpage>–<lpage>1040</lpage>
+<pub-id pub-id-type="pmid">14575238</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/jnen/62.10.1019</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0051"><mixed-citation publication-type="journal" id="emmm201606430-cit-0051">
+<string-name name-style="western">
+<surname>Wodarczyk</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Rowe</surname>
+<given-names>I</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Chiaravalli</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Pema</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Qian</surname>
+<given-names>F</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Boletta</surname>
+<given-names>A</given-names>
+</string-name> (<year>2009</year>) <article-title>A novel mouse model reveals that polycystin‐1 deficiency in ependyma and choroid plexus results in dysfunctional cilia and hydrocephalus</article-title>. <source>PLoS One</source>
+<volume>4</volume>: <fpage>e7137</fpage>
+<pub-id pub-id-type="pmid">19774080</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pone.0007137</pub-id><pub-id pub-id-type="pmcid">PMC2743994</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0052"><mixed-citation publication-type="journal" id="emmm201606430-cit-0052">
+<string-name name-style="western">
+<surname>Wolburg</surname>
+<given-names>H</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Paulus</surname>
+<given-names>W</given-names>
+</string-name> (<year>2010</year>) <article-title>Choroid plexus: biology and pathology</article-title>. <source>Acta Neuropathol</source>
+<volume>119</volume>: <fpage>75</fpage>–<lpage>88</lpage>
+<pub-id pub-id-type="pmid">20033190</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1007/s00401-009-0627-8</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0053"><mixed-citation publication-type="journal" id="emmm201606430-cit-0053">
+<string-name name-style="western">
+<surname>Wu</surname>
+<given-names>C</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Agrawal</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Vasanji</surname>
+<given-names>A</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Drazba</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Sarkaria</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Xie</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Welch</surname>
+<given-names>CM</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Liu</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Anand‐Apte</surname>
+<given-names>B</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Horowitz</surname>
+<given-names>A</given-names>
+</string-name> (<year>2011</year>) <article-title>Rab13‐dependent trafficking of RhoA is required for directional migration and angiogenesis</article-title>. <source>J Biol Chem</source>
+<volume>286</volume>: <fpage>23511</fpage>–<lpage>23520</lpage>
+<pub-id pub-id-type="pmid">21543326</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1074/jbc.M111.245209</pub-id><pub-id pub-id-type="pmcid">PMC3123114</pub-id></mixed-citation></ref><ref id="emmm201606430-bib-0054"><mixed-citation publication-type="journal" id="emmm201606430-cit-0054">
+<string-name name-style="western">
+<surname>Wyss</surname>
+<given-names>L</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Schäfer</surname>
+<given-names>J</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Liebner</surname>
+<given-names>S</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Mittelbronn</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Deutsch</surname>
+<given-names>U</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Enzmann</surname>
+<given-names>G</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Adams</surname>
+<given-names>RH</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Aurrand‐Lions</surname>
+<given-names>M</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Plate</surname>
+<given-names>KH</given-names>
+</string-name>, <string-name name-style="western">
+<surname>Imhof</surname>
+<given-names>BA</given-names>
+</string-name>
+<italic toggle="yes">et al</italic> (<year>2012</year>) <article-title>Junctional adhesion molecule (JAM)‐C deficient C57BL/6 mice develop a severe hydrocephalus</article-title>. <source>PLoS One</source>
+<volume>7</volume>: <fpage>e45619</fpage>
+<pub-id pub-id-type="pmid">23029139</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pone.0045619</pub-id><pub-id pub-id-type="pmcid">PMC3445510</pub-id></mixed-citation></ref></ref-list></back></article>

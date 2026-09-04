@@ -1,68 +1,72 @@
 {
-  "n_measurements": 1324,
-  "n_oligos": 50,
-  "n_sources": 189,
-  "n_modification_positions": 202,
-  "n_oligos_with_position_map": 10,
-  "n_oligos_with_length": 10,
-  "n_oligos_with_measurements": 44,
+  "n_measurements": 1329,
+  "n_oligos": 53,
+  "n_sources": 190,
+  "n_modification_positions": 256,
+  "n_oligos_with_position_map": 13,
+  "n_oligos_with_length": 13,
+  "n_oligos_with_measurements": 47,
   "by_subject_class": {
-    "animal_in_vivo": 5,
+    "animal_in_vitro": 2,
+    "animal_in_vivo": 8,
     "human_in_vivo": 1316,
     "human_population": 3
   },
   "by_subject_class_and_tier": {
-    "animal_in_vivo / tier A": 3,
-    "animal_in_vivo / tier B": 2,
+    "animal_in_vitro / tier B": 2,
+    "animal_in_vivo / tier A": 4,
+    "animal_in_vivo / tier B": 4,
     "human_in_vivo / tier A": 791,
     "human_in_vivo / tier B": 525,
     "human_population / tier A": 3
   },
   "n_human_rows": 1319,
-  "n_animal_rows": 5,
-  "n_in_vitro_rows": 0,
+  "n_animal_rows": 10,
+  "n_in_vitro_rows": 2,
   "by_endpoint_tier": {
-    "A": 797,
-    "B": 527
+    "A": 798,
+    "B": 531
   },
   "by_study_type": {
-    "animal_invivo": 5,
+    "animal_invivo": 8,
     "background_epidemiology": 3,
     "clinical_case": 15,
     "clinical_trial": 757,
+    "in_vitro": 2,
     "pharmacovigilance": 456,
     "regulatory_label": 88
   },
   "by_ascertainment": {
-    "measured_null": 1106,
-    "measured_positive": 217,
+    "measured_null": 1108,
+    "measured_positive": 220,
     "not_assessed": 1
   },
   "by_attribution": {
     "disease_attributed": 3,
-    "drug_attributed": 30,
-    "not_discussed": 1291
+    "drug_attributed": 33,
+    "not_discussed": 1293
   },
   "by_tox_axis": {
     "csf_composition_disturbance": 210,
-    "csf_dynamics": 1,
+    "csf_dynamics": 3,
     "csf_pressure_disturbance": 126,
     "delivery_procedure_complication": 188,
     "disease_background_rate": 3,
     "therapeutic_ventricular_effect": 2,
-    "ventricular_enlargement": 794
+    "ventricular_enlargement": 797
   },
   "by_grade": {
     "": 26,
-    "0": 1106,
+    "0": 1108,
     "1": 94,
-    "2": 76,
+    "2": 79,
     "3": 22
   },
   "by_delivery_route": {
     "NOT_APPLICABLE": 3,
     "NOT_REPORTED": 124,
-    "intracerebroventricular": 3,
+    "in_culture_medium": 2,
+    "intracerebroventricular": 6,
     "intrathecal_lumbar": 321,
     "intravenous": 359,
     "intravitreal": 59,
@@ -72,23 +76,23 @@
   },
   "by_readout_category": {
     "csf_composition": 188,
-    "csf_dynamics": 66,
+    "csf_dynamics": 68,
     "csf_pressure": 126,
-    "histopathology_choroid_ependyma": 1,
+    "histopathology_choroid_ependyma": 3,
     "hydrocephalus_event": 629,
     "procedure_complication": 165,
     "shunt_or_drain_intervention": 43,
-    "ventricular_morphometry": 106
+    "ventricular_morphometry": 107
   },
   "by_redistribution": {
-    "cc_by": 8,
+    "cc_by": 13,
     "cc_by_nc": 3,
     "public_domain": 1290,
     "summary_stat_only": 15,
     "verify": 8
   },
   "by_source_tier": {
-    "NOT_REPORTED": 4,
+    "NOT_REPORTED": 5,
     "case_report": 1,
     "epidemiology": 1,
     "pharmacovigilance_api": 1,
@@ -153,6 +157,7 @@
     "DailyMed_SPL_viltolarsen": 5,
     "DailyMed_SPL_vutrisiran": 5,
     "EMA_SmPC_Qalsody": 5,
+    "Gai2_antisense_ependymal_2007_BMCNeurosci": 5,
     "NCT01839604": 5,
     "NCT03338816": 5,
     "Stoker_2021_MovDisord": 5,
@@ -294,13 +299,14 @@
     "L5-PT1": 3,
     "L5-PT2": 6,
     "N1-SPAK": 2,
-    "N2-AQP4": 3
+    "N2-AQP4": 3,
+    "N3-GAI2": 5
   },
-  "tier_A_positive": 61,
+  "tier_A_positive": 62,
   "tier_A_null": 735,
   "grade3_rows": 22,
   "duplexes_checked": 4,
-  "oligos_with_sequence": 10,
+  "oligos_with_sequence": 13,
   "checks_run": 47,
   "checks_failed": 0
 }

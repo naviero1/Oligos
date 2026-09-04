@@ -314,13 +314,101 @@ def main():
         "measurements_human.csv": lambda r: r["subject_class"].startswith("human"),
         "measurements_animal.csv": lambda r: r["subject_class"].startswith("animal"),
     }
+    # The human subset is the dataset's most important slice, so it is enriched:
+    # every row carries the compound's SEQUENCE and design alongside its toxicity
+    # grade, so a reader never has to join back to oligos.csv to see them.
+    obyid = {o["oligo_id"]: o for o in oligos}
+    ENRICH = ["sequence_5to3_asprinted", "sequence_base", "length_nt",
+              "backbone_chemistry", "sugar_modifications", "modification_pattern",
+              "oligo_class", "target_gene", "conjugate", "purity_pct",
+              "sequence_source"]
+    view_cols = MEASUREMENT_COLS + ["oligo__" + c for c in ENRICH]
     for fname, keep in splits.items():
-        subset = [r for r in rows if keep(r)]
+        subset = []
+        for r in rows:
+            if not keep(r):
+                continue
+            o = obyid.get(r["oligo_id"], {})
+            row = dict(r)
+            for c in ENRICH:
+                row["oligo__" + c] = o.get(c, "NOT_APPLICABLE")
+            subset.append(row)
         with open(os.path.join(DATA, fname), "w", newline="") as fh:
-            w = csv.DictWriter(fh, fieldnames=MEASUREMENT_COLS)
+            w = csv.DictWriter(fh, fieldnames=view_cols)
             w.writeheader()
             w.writerows(subset)
-        print("%-30s %4d rows (GENERATED view)" % ("data/" + fname, len(subset)))
+        with_seq = sum(1 for r in subset if r["oligo__sequence_5to3_asprinted"]
+                       not in ("NOT_REPORTED", "NOT_APPLICABLE"))
+        print("%-30s %4d rows (GENERATED view; %d carry a sequence)"
+              % ("data/" + fname, len(subset), with_seq))
+
+    # ---- German's analysis: one row per compound ---------------------------
+    # Requested slice: oligo, its sequence, the modification to that sequence,
+    # and its toxicity. One row per compound, so it reads as a compound-level
+    # summary rather than a measurement list.
+    mods = []
+    mpath = os.path.join(DATA, "modifications.csv")
+    if os.path.exists(mpath):
+        with open(mpath) as fh:
+            mods = list(csv.DictReader(fh))
+    bymod = {}
+    for r in mods:
+        bymod.setdefault(r["oligo_id"], []).append(r)
+
+    ga = []
+    for o in oligos:
+        if o["oligo_name"] in ("placebo_or_sham_control", "NOT_APPLICABLE"):
+            continue
+        mine = [r for r in rows if r["oligo_id"] == o["oligo_id"]]
+        graded = [int(r["hydroceph_grade"]) for r in mine if r["hydroceph_grade"]]
+        pos = sorted(bymod.get(o["oligo_id"], []),
+                     key=lambda r: int(r["position_5to3"]))
+        sugar_map = "".join({"2'-MOE": "M", "DNA_2prime_deoxy": "d", "LNA": "L",
+                             "2'-OMe": "o", "morpholino": "P"}.get(
+                                 r["sugar_chemistry"], "?") for r in pos)
+        link_map = "".join({"phosphorothioate": "S", "phosphodiester": "o",
+                            "terminal_none": "."}.get(
+                                r["linkage_3prime"], "?") for r in pos)
+        methyl_map = "".join("m" if r["base_modification"].startswith("5-methyl")
+                             else "-" for r in pos)
+        tierA_pos = sum(1 for r in mine if r["endpoint_tier"] == "A"
+                        and r["ascertainment"] == "measured_positive")
+        ga.append(dict(
+            oligo_id=o["oligo_id"], oligo_name=o["oligo_name"],
+            oligo_class=o["oligo_class"], target_gene=o["target_gene"],
+            route_of_administration=o["route_of_administration"],
+            length_nt=o["length_nt"],
+            sequence_5to3=o["sequence_5to3_asprinted"],
+            sequence_base=o["sequence_base"],
+            sequence_source=o["sequence_source"][:200],
+            backbone_chemistry=o["backbone_chemistry"],
+            sugar_modifications=o["sugar_modifications"],
+            modification_pattern=o["modification_pattern"],
+            per_position_sugar_map=sugar_map or "NOT_REPORTED",
+            per_position_linkage_map=link_map or "NOT_REPORTED",
+            per_position_5methyl_map=methyl_map or "NOT_REPORTED",
+            n_positions_mapped=len(pos),
+            purity_pct=o["purity_pct"],
+            max_hydroceph_grade=(max(graded) if graded else ""),
+            n_measurements=len(mine),
+            n_tierA_positive=tierA_pos,
+            n_tierA_measured_null=sum(1 for r in mine if r["endpoint_tier"] == "A"
+                                      and r["ascertainment"] == "measured_null"),
+            any_human_evidence=("TRUE" if any(r["subject_class"].startswith("human")
+                                              for r in mine) else "FALSE"),
+            tox_axes=";".join(sorted({r["tox_axis"] for r in mine})) or "none",
+        ))
+    ga.sort(key=lambda r: (-(r["max_hydroceph_grade"] or 0), -r["n_tierA_positive"],
+                           r["oligo_name"]))
+    gpath = os.path.join(DATA, "germans_analysis.csv")
+    with open(gpath, "w", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=list(ga[0].keys()))
+        w.writeheader()
+        w.writerows(ga)
+    print("%-30s %4d compounds (GENERATED view; %d with a sequence)"
+          % ("data/germans_analysis.csv", len(ga),
+             sum(1 for r in ga if r["sequence_5to3"]
+                 not in ("NOT_REPORTED", "NOT_APPLICABLE"))))
 
     print("data/oligos.csv        %4d rows" % len(oligos))
     print("data/measurements.csv  %4d rows x %d cols" % (len(rows), len(MEASUREMENT_COLS)))
