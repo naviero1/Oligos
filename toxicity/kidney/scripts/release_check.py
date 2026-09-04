@@ -80,7 +80,9 @@ for f, label in [("NARRATIVE.md", "narrative document"),
                  ("data/OligoTox-Kidney.xlsx", "dataset: Excel workbook"),
                  ("NARRATIVE.pdf", "narrative rendered to PDF"),
                  ("METHODOLOGY_PHASE2.pdf", "methodology rendered to PDF"),
-                 ("PADP.pdf", "PADP rendered to PDF")]:
+                 ("PADP.pdf", "PADP rendered to PDF"),
+                 ("SOURCE_REGISTER.md", "source register"),
+                 ("SOURCE_REGISTER.pdf", "source register rendered to PDF")]:
     check(os.path.exists(D(f)), f"{label} ({f})")
 
 # the workbook must carry the tabs the reviewer specified, and every human-trial row
