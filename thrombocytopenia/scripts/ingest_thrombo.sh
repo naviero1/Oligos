@@ -100,6 +100,7 @@ echo
 echo "== 9. regenerate submission artefacts =="
 python3 "$S_DIR/build_workbook.py"
 python3 "$S_DIR/render_submission.py"
+python3 "$S_DIR/build_sources_doc.py"
 
 echo
 echo "ingestion round complete."

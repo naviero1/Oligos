@@ -312,7 +312,7 @@ python3 scripts/refresh_docs.py                             # regenerate the tab
 | — of which adjacent-haematology (flagged) | **225** |
 | Grade distribution (0/1/2/3) | 852 / 499 / 388 / 220 |
 | Distinct target genes | **67** |
-| Distinct sources (`source_ref`) | **72** |
+| Distinct sources (`source_ref`) | **70** |
 | Oligos with sequence (not TBD) | **195 / 259** |
 
 ## Independent (predictor) variables — `oligos.csv`

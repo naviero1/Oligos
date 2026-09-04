@@ -252,6 +252,54 @@ def derive_subject_class(study_type, species):
         return "multi_species"
     return "unspecified"
 
+# ---------------------------------------------------------------------------
+# SOURCE-REFERENCE CANONICALISATION.
+#
+# Different extraction agents cite the same source with differently-detailed
+# strings — one stops at the DOI, another appends the author-year. Left alone the
+# same paper counts as two sources, which inflates a headline number the
+# submission documents quote. Rows are therefore grouped by the IDENTIFIERS inside
+# the reference (NCT / PMID / PMCID / DOI / patent / NDA / EMEA), and the most
+# complete string in each group becomes canonical for all of them.
+#
+# Grouping is on identifiers, never on string similarity: two papers by the same
+# authors in the same year must not be merged just because their citations look
+# alike.
+SRC_ID_PATTERNS = [
+    r"(NCT\d{8})", r"PMID[:\s]*(\d{6,8})", r"(PMC\d{6,8})",
+    r"(10\.\d{4,9}/[^\s;,()]+)", r"(US\s?[\d,]{7,12}\s?[AB]\d?)",
+    r"(NDA\s?\d{6})", r"(EMEA/H/C/\d+)",
+]
+
+
+def _source_key(ref):
+    ids = set()
+    for pat in SRC_ID_PATTERNS:
+        for g in re.findall(pat, ref or "", re.I):
+            ids.add(g.rstrip(".").rstrip(")").lower())
+    return frozenset(ids) if ids else frozenset({(ref or "").lower()[:60]})
+
+
+def canonicalise_sources(rows):
+    """Fold source_ref variants that carry the same identifiers onto one string."""
+    groups = collections.defaultdict(set)
+    for r in rows:
+        groups[_source_key(r.get("source_ref"))].add(r.get("source_ref") or "")
+    canon, folded = {}, collections.Counter()
+    for k, variants in groups.items():
+        if len(variants) < 2:
+            continue
+        best = max(variants, key=len)          # the most complete citation wins
+        for v in variants:
+            if v != best:
+                canon[v] = best
+                folded[f"{v[:48]}... -> {best[:48]}..."] += 1
+    for r in rows:
+        v = r.get("source_ref")
+        if v in canon:
+            r["source_ref"] = canon[v]
+    return folded
+
 def norm_name(n):
     """Normalize an oligo name to a join key: case- and punctuation-insensitive."""
     return re.sub(r"[^a-z0-9]", "", (n or "").lower())
@@ -384,6 +432,7 @@ def main():
 
     name_fixes = disambiguate(meas_rows)
     alias_fixes = canonicalize_names(meas_rows)
+    src_fixes = canonicalise_sources(meas_rows)
 
     # --- deduplicate measurements on their natural key --------------------------
     seen, deduped = {}, []
@@ -501,6 +550,11 @@ def main():
     print(f"oligos.csv        {len(ordered)} rows")
     print(f"measurements.csv  {len(deduped)} rows")
     print("verdicts:", dict(all_stats))
+    if src_fixes:
+        print(f"canonicalised {sum(src_fixes.values())} source_ref(s) onto a fuller "
+              f"citation of the same source:")
+        for k, n in src_fixes.most_common(5):
+            print(f"    {k}  (x{n})")
     if alias_fixes:
         print("synonym names folded (one molecule, two names):")
         for k, n in alias_fixes.most_common():
