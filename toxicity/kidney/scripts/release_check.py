@@ -76,8 +76,31 @@ for f, label in [("NARRATIVE.md", "narrative document"),
                  ("PADP.md", "public access & dissemination plan"),
                  ("schema.md", "dataset: data dictionary & schema"),
                  ("data/oligos.csv", "dataset: oligo table"),
-                 ("data/measurements.csv", "dataset: measurement table")]:
+                 ("data/measurements.csv", "dataset: measurement table"),
+                 ("data/OligoTox-Kidney.xlsx", "dataset: Excel workbook"),
+                 ("NARRATIVE.pdf", "narrative rendered to PDF"),
+                 ("METHODOLOGY_PHASE2.pdf", "methodology rendered to PDF"),
+                 ("PADP.pdf", "PADP rendered to PDF")]:
     check(os.path.exists(D(f)), f"{label} ({f})")
+
+# the workbook must carry the tabs the reviewer specified, and every human-trial row
+# must carry a sequence cell and a grade -- the spec's central requirement
+try:
+    from openpyxl import load_workbook
+    wbk = load_workbook(D("data", "OligoTox-Kidney.xlsx"))
+    for tab in ("Human trials", "German's analysis"):
+        check(tab in wbk.sheetnames, f"workbook tab present: {tab}")
+    htab = wbk["Human trials"]
+    hdr = [htab.cell(2, c).value for c in range(1, htab.max_column + 1)]
+    check("sequence_5to3" in hdr and "nephrotox_grade" in hdr,
+          "Human trials carries sequence_5to3 and nephrotox_grade")
+    si, gi = hdr.index("sequence_5to3") + 1, hdr.index("nephrotox_grade") + 1
+    blanks = [r for r in range(3, htab.max_row + 1)
+              if not str(htab.cell(r, si).value or "").strip()
+              or not str(htab.cell(r, gi).value or "").strip()]
+    check(not blanks, f"every Human trials row has a sequence cell and a grade ({len(blanks)} blank)")
+except ImportError:
+    warns.append("openpyxl unavailable - workbook not inspected")
 
 print("\n" + "=" * 62)
 if fails:
