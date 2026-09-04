@@ -56,6 +56,81 @@ def sheet(wb, name, rows, freeze="A2"):
     return ws
 
 
+def _runs(pairs):
+    """Compact a per-position attribute into runs: [(1,'2\'-MOE'),...] -> "1-5:2'-MOE; 6-15:DNA"."""
+    if not pairs:
+        return "NOT_REPORTED"
+    out, start, prev_pos, prev_val = [], pairs[0][0], pairs[0][0], pairs[0][1]
+    for pos, val in pairs[1:]:
+        if val != prev_val or pos != prev_pos + 1:
+            out.append(f"{start}-{prev_pos}:{prev_val}" if start != prev_pos else f"{start}:{prev_val}")
+            start, prev_val = pos, val
+        prev_pos = pos
+    out.append(f"{start}-{prev_pos}:{prev_val}" if start != prev_pos else f"{start}:{prev_val}")
+    return "; ".join(out)
+
+
+def sequence_status(o):
+    """Why a compound has no sequence -- so a gap is actionable rather than blank.
+
+    'published' means this release carries it. The other four say what kind of gap it is,
+    which is the difference between a compound whose sequence CANNOT exist as one string
+    and one that simply has not been recovered yet."""
+    if o["sequence_base"] not in ("NOT_REPORTED", "NOT_APPLICABLE", ""):
+        return "published"
+    if o["oligo_class"] == "polydisperse_ssDNA":
+        return "not_applicable_polydisperse_mixture"
+    if o["modality"] == "double_stranded_siRNA" or "duplex" in str(o["sequence_note"]).lower() \
+       or "sense" in str(o["sequence_note"]).lower():
+        return "not_applicable_duplex_two_strands"
+    if "pprov" in str(o["max_phase"]) or "arket" in str(o["max_phase"]):
+        return "recoverable_from_WHO_INN_nomenclature"
+    return "not_published_by_source"
+
+def modification_maps(M):
+    """Per-oligo compact chemistry maps, built from the per-position table."""
+    by = {}
+    for r in M:
+        by.setdefault(r["oligo_id"], []).append(r)
+    out = {}
+    for oid, rows in by.items():
+        rows = sorted(rows, key=lambda r: int(r["position"]) if str(r["position"]).isdigit() else 0)
+        out[oid] = {
+            "sugar_map": _runs([(int(r["position"]), r["sugar_mod"]) for r in rows if str(r["position"]).isdigit()]),
+            "backbone_map": _runs([(int(r["position"]), r["backbone_linkage_3p"]) for r in rows if str(r["position"]).isdigit()]),
+            "n_positions": len(rows),
+            "per_position": " ".join(f"{r['position']}{r['nucleobase']}({r['sugar_mod']}/{r['backbone_linkage_3p']})" for r in rows),
+        }
+    return out
+
+
+def toxicity_rollup(D):
+    """Per-oligo toxicity summary. worst_grade is the maximum ASSIGNED grade; an oligo whose
+    rows are all ungraded gets NOT_REPORTED, never 0 -- absence of a grade is not safety."""
+    by = {}
+    for r in D:
+        by.setdefault(r["oligo_id"], []).append(r)
+    out = {}
+    for oid, rows in by.items():
+        gr = [int(r["coag_tox_grade"]) for r in rows if r["coag_tox_grade"] in ("0", "1", "2", "3")]
+        sev = [r["severity_stated_by_source"] for r in rows
+               if r["severity_stated_by_source"] not in ("NOT_REPORTED", "NOT_APPLICABLE", "")]
+        sg = [r["source_stated_grade"] for r in rows if r["source_stated_grade"] != "NOT_APPLICABLE"]
+        out[oid] = {
+            "worst_coag_tox_grade": str(max(gr)) if gr else "NOT_REPORTED",
+            "grade_distribution_0_1_2_3": "/".join(str(sum(1 for g in gr if g == k)) for k in range(4)) if gr else "NOT_REPORTED",
+            "n_graded_rows": len(gr),
+            "n_rows_flagged_grade_caveat": sum(1 for r in rows if r["grade_caveat"] == "within_reference_range_resolution"),
+            "max_source_stated_grade": max(sg) if sg else "NOT_APPLICABLE",
+            "severity_in_source_words": (sev[0][:300] if sev else "NOT_REPORTED"),
+            "n_human_rows": sum(1 for r in rows if r["species_class"] == "human"),
+            "n_animal_rows": sum(1 for r in rows if r["species_class"] == "animal"),
+            "on_target_rows": sum(1 for r in rows if r["on_target_effect"] == "TRUE"),
+            "unintended_toxicity_rows": sum(1 for r in rows if r["unintended_toxicity"] == "TRUE"),
+        }
+    return out
+
+
 def main():
     S, O, M, D = load("sources.csv"), load("oligos.csv"), load("modifications.csv"), load("measurements.csv")
     wb = Workbook()
@@ -147,6 +222,18 @@ def main():
                    ("unintended toxicity only", sum(1 for r in D if r["on_target_effect"] == "FALSE" and r["unintended_toxicity"] == "TRUE")),
                    ("both", sum(1 for r in D if r["on_target_effect"] == "TRUE" and r["unintended_toxicity"] == "TRUE")),
                    ("neither (context rows)", sum(1 for r in D if r["on_target_effect"] == "FALSE" and r["unintended_toxicity"] == "FALSE"))])
+    hum_rows = [r for r in D if r["species_class"] == "human"]
+    hum_oligos = {r["oligo_id"] for r in hum_rows}
+    block("The human subset (see the human_measurements sheet)", [
+        ("Human measurements", len(hum_rows)),
+        ("Compounds measured in humans", len(hum_oligos)),
+        ("…of which a published sequence is held", sum(1 for i in hum_oligos
+            if next(r for r in O if r["oligo_id"] == i)["sequence_base"] not in (NR, "NOT_APPLICABLE", ""))),
+        ("…of which per-position chemistry is held", len(hum_oligos & {r["oligo_id"] for r in M})),
+        ("Human rows carrying a sequence", sum(1 for r in hum_rows
+            if next(o for o in O if o["oligo_id"] == r["oligo_id"])["sequence_base"] not in (NR, "NOT_APPLICABLE", ""))),
+        ("Human rows carrying an assigned grade", sum(1 for r in hum_rows if r["coag_tox_grade"] != NR)),
+    ])
     block("Redistribution", [(k, v) for k, v in Counter(r["redistribution"] for r in D).most_common()])
     ws.column_dimensions["A"].width = 66
     ws.column_dimensions["B"].width = 16
@@ -163,10 +250,81 @@ def main():
     sheet(wb, "measurements", D)
     sheet(wb, "modifications", M)
 
+
+    # ---- human_measurements ------------------------------------------------
+    # Every human row, with the compound's sequence and the toxicity score carried onto it,
+    # so the most important subset of the dataset is usable without a join.
+    mm, tx = modification_maps(M), toxicity_rollup(D)
+    om = {r["oligo_id"]: r for r in O}
+    OLIGO_COLS = ["oligo_name", "aliases", "oligo_class", "target_gene", "indication",
+                  "developer", "max_phase", "length_nt", "sequence_5to3_asprinted",
+                  "sequence_base", "sequence_note", "terminal_modification", "sequence_locus",
+                  "backbone_chemistry", "sugar_modifications", "gapmer_design", "conjugate",
+                  "ps_count", "purity_pct", "purity_method", "identity_confirmation"]
+    hum = []
+    for r in D:
+        if r["species_class"] != "human":
+            continue
+        o = om[r["oligo_id"]]
+        row = {"measurement_id": r["measurement_id"], "oligo_id": r["oligo_id"]}
+        row.update({c: o[c] for c in OLIGO_COLS})
+        m = mm.get(r["oligo_id"], {})
+        row["sugar_modification_map"] = m.get("sugar_map", "NOT_REPORTED")
+        row["backbone_linkage_map"] = m.get("backbone_map", "NOT_REPORTED")
+        row["n_modification_positions"] = m.get("n_positions", 0)
+        row["sequence_status"] = sequence_status(o)
+        row.update({c: r[c] for c in D[0] if c not in ("measurement_id", "oligo_id")})
+        hum.append(row)
+    sheet(wb, "human_measurements", hum)
+
+    # ---- German's analysis -------------------------------------------------
+    # One row per compound: the oligo, its sequence, the modification to that sequence, and
+    # its toxicity. Nothing else.
+    ga = []
+    for o in sorted(O, key=lambda r: r["oligo_id"]):
+        m, t = mm.get(o["oligo_id"], {}), tx.get(o["oligo_id"], {})
+        ga.append({
+            "oligo_id": o["oligo_id"], "oligo_name": o["oligo_name"], "aliases": o["aliases"],
+            "oligo_class": o["oligo_class"], "target_gene": o["target_gene"],
+            "max_phase": o["max_phase"], "developer": o["developer"],
+            "length_nt": o["length_nt"],
+            "sequence_5to3_asprinted": o["sequence_5to3_asprinted"],
+            "sequence_base": o["sequence_base"],
+            "sequence_note": o["sequence_note"],
+            "sequence_status": sequence_status(o),
+            "terminal_modification": o["terminal_modification"],
+            "backbone_chemistry": o["backbone_chemistry"],
+            "sugar_modifications": o["sugar_modifications"],
+            "gapmer_design": o["gapmer_design"], "conjugate": o["conjugate"], "ps_count": o["ps_count"],
+            "sugar_modification_map": m.get("sugar_map", "NOT_REPORTED"),
+            "backbone_linkage_map": m.get("backbone_map", "NOT_REPORTED"),
+            "per_position_chemistry": m.get("per_position", "NOT_REPORTED"),
+            "n_modification_positions": m.get("n_positions", 0),
+            "worst_coag_tox_grade": t.get("worst_coag_tox_grade", "NOT_REPORTED"),
+            "grade_distribution_0_1_2_3": t.get("grade_distribution_0_1_2_3", "NOT_REPORTED"),
+            "n_graded_rows": t.get("n_graded_rows", 0),
+            "n_rows_flagged_grade_caveat": t.get("n_rows_flagged_grade_caveat", 0),
+            "max_source_stated_grade": t.get("max_source_stated_grade", "NOT_APPLICABLE"),
+            "severity_in_source_words": t.get("severity_in_source_words", "NOT_REPORTED"),
+            "n_measurements": o["n_measurements"],
+            "n_human_rows": t.get("n_human_rows", 0), "n_animal_rows": t.get("n_animal_rows", 0),
+            "on_target_rows": t.get("on_target_rows", 0),
+            "unintended_toxicity_rows": t.get("unintended_toxicity_rows", 0),
+            "has_human_and_animal_data": o["has_human_and_animal_data"],
+            "source_ids": o["source_ids"],
+        })
+    sheet(wb, "German's analysis", ga)
+
     wb.save(OUT)
     print(f"  wrote {os.path.relpath(OUT, ROOT)}")
     print(f"    {len(S)} sources · {len(O)} oligos · {len(D)} measurements · {len(M)} modification rows")
     print(f"    data_dictionary: {len(dd)} columns documented")
+    seq_ok = sum(1 for r in hum if r["sequence_base"] not in ("NOT_REPORTED", "NOT_APPLICABLE", ""))
+    gr_ok = sum(1 for r in hum if r["coag_tox_grade"] != "NOT_REPORTED")
+    print(f"    human_measurements: {len(hum)} rows — {seq_ok} carry a sequence, {gr_ok} carry a grade")
+    print(f"    German's analysis:  {len(ga)} compounds — "
+          f"{sum(1 for r in ga if r['sequence_base'] not in ('NOT_REPORTED','NOT_APPLICABLE',''))} with a sequence, "
+          f"{sum(1 for r in ga if r['n_modification_positions'])} with per-position chemistry")
 
 
 DEFS = {
@@ -248,6 +406,13 @@ DEFS = {
     ("measurements", "severity_stated_by_source"): "Severity in the source's own words, verbatim.",
     ("measurements", "on_target_effect"): "TRUE where the compound is DESIGNED to act on coagulation.",
     ("measurements", "unintended_toxicity"): "TRUE where the source presents the finding as an adverse or unintended effect. Both flags may be true.",
+    ("*", "sequence_status"): "Why a compound has no sequence: published | not_applicable_polydisperse_mixture | not_applicable_duplex_two_strands | recoverable_from_WHO_INN_nomenclature | not_published_by_source.",
+    ("*", "sugar_modification_map"): "Per-position sugar chemistry, run-length encoded, e.g. 1-5:2'-MOE; 6-15:DNA; 16-20:2'-MOE.",
+    ("*", "backbone_linkage_map"): "Per-position backbone linkage, run-length encoded.",
+    ("*", "per_position_chemistry"): "The full per-residue map: position, nucleobase, sugar and 3' linkage.",
+    ("*", "worst_coag_tox_grade"): "Highest ASSIGNED grade across the compound's rows. NOT_REPORTED where no row could be graded -- absence of a grade is not a grade of 0.",
+    ("*", "grade_distribution_0_1_2_3"): "Count of the compound's rows at each grade.",
+    ("*", "severity_in_source_words"): "Severity as the source states it, verbatim.",
     ("measurements", "value_origin"): "measured_in_this_document | cited_from_another_source",
     ("measurements", "source_locus"): "Exact locus - table, figure, section, label section or page.",
     ("measurements", "redistribution"): "Inherited from the source.",

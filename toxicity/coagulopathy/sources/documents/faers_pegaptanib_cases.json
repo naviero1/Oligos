@@ -1,0 +1,196 @@
+{
+ "INTERNATIONAL NORMALISED RATIO INCREASED": {
+  "n_total": 4,
+  "exact_query": "https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:\"MACUGEN\"+AND+patient.reaction.reactionmeddrapt.exact:\"INTERNATIONAL NORMALISED RATIO INCREASED\"&limit=5",
+  "records": [
+   {
+    "safetyreportid": "5093151-2",
+    "receivedate": "20060828",
+    "country": null,
+    "serious": "1",
+    "age": "78",
+    "ageunit": "801",
+    "sex": "2",
+    "reactions": [
+     "ALANINE AMINOTRANSFERASE INCREASED",
+     "ASPARTATE AMINOTRANSFERASE INCREASED",
+     "DRUG INEFFECTIVE",
+     "INTERNATIONAL NORMALISED RATIO INCREASED",
+     "PROTHROMBIN TIME PROLONGED"
+    ],
+    "macugen_entries": [
+     {
+      "prod": "MACUGEN",
+      "char": "1",
+      "ind": "MACULAR DEGENERATION",
+      "dose": "INTRAVITREOUS",
+      "route": null
+     }
+    ]
+   },
+   {
+    "safetyreportid": "5506364-X",
+    "receivedate": "20071101",
+    "country": null,
+    "serious": "1",
+    "age": "76",
+    "ageunit": "801",
+    "sex": "2",
+    "reactions": [
+     "INTERNATIONAL NORMALISED RATIO INCREASED"
+    ],
+    "macugen_entries": [
+     {
+      "prod": "MACUGEN",
+      "char": "1",
+      "ind": null,
+      "dose": "INTRA-VITREAL",
+      "route": null
+     }
+    ]
+   },
+   {
+    "safetyreportid": "5463519-0",
+    "receivedate": "20070920",
+    "country": null,
+    "serious": "1",
+    "age": null,
+    "ageunit": null,
+    "sex": "2",
+    "reactions": [
+     "ECCHYMOSIS",
+     "INTERNATIONAL NORMALISED RATIO INCREASED"
+    ],
+    "macugen_entries": [
+     {
+      "prod": "MACUGEN",
+      "char": "1",
+      "ind": null,
+      "dose": null,
+      "route": "031"
+     }
+    ]
+   },
+   {
+    "safetyreportid": "5468141-8",
+    "receivedate": "20070924",
+    "country": null,
+    "serious": "1",
+    "age": null,
+    "ageunit": null,
+    "sex": "2",
+    "reactions": [
+     "ECCHYMOSIS",
+     "INTERNATIONAL NORMALISED RATIO INCREASED"
+    ],
+    "macugen_entries": [
+     {
+      "prod": "MACUGEN",
+      "char": "1",
+      "ind": null,
+      "dose": "0.3 MG, INTRA-VITREAL",
+      "route": null
+     }
+    ]
+   }
+  ]
+ },
+ "ACTIVATED PARTIAL THROMBOPLASTIN TIME PROLONGED": {
+  "n_total": 1,
+  "exact_query": "https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:\"MACUGEN\"+AND+patient.reaction.reactionmeddrapt.exact:\"ACTIVATED PARTIAL THROMBOPLASTIN TIME PROLONGED\"&limit=5",
+  "records": [
+   {
+    "safetyreportid": "4878630-2",
+    "receivedate": "20060110",
+    "country": null,
+    "serious": "1",
+    "age": "84",
+    "ageunit": "801",
+    "sex": "2",
+    "reactions": [
+     "ACTIVATED PARTIAL THROMBOPLASTIN TIME PROLONGED",
+     "ASPARTATE AMINOTRANSFERASE INCREASED",
+     "ENDOPHTHALMITIS",
+     "STAPHYLOCOCCAL INFECTION"
+    ],
+    "macugen_entries": [
+     {
+      "prod": "MACUGEN",
+      "char": "1",
+      "ind": "MACULAR DEGENERATION",
+      "dose": null,
+      "route": null
+     }
+    ]
+   }
+  ]
+ },
+ "PROTHROMBIN TIME PROLONGED": {
+  "n_total": 1,
+  "exact_query": "https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:\"MACUGEN\"+AND+patient.reaction.reactionmeddrapt.exact:\"PROTHROMBIN TIME PROLONGED\"&limit=5",
+  "records": [
+   {
+    "safetyreportid": "5093151-2",
+    "receivedate": "20060828",
+    "country": null,
+    "serious": "1",
+    "age": "78",
+    "ageunit": "801",
+    "sex": "2",
+    "reactions": [
+     "ALANINE AMINOTRANSFERASE INCREASED",
+     "ASPARTATE AMINOTRANSFERASE INCREASED",
+     "DRUG INEFFECTIVE",
+     "INTERNATIONAL NORMALISED RATIO INCREASED",
+     "PROTHROMBIN TIME PROLONGED"
+    ],
+    "macugen_entries": [
+     {
+      "prod": "MACUGEN",
+      "char": "1",
+      "ind": "MACULAR DEGENERATION",
+      "dose": "INTRAVITREOUS",
+      "route": null
+     }
+    ]
+   }
+  ]
+ },
+ "FIBRIN D DIMER INCREASED": {
+  "n_total": 1,
+  "exact_query": "https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:\"MACUGEN\"+AND+patient.reaction.reactionmeddrapt.exact:\"FIBRIN D DIMER INCREASED\"&limit=5",
+  "records": [
+   {
+    "safetyreportid": "5285455-5",
+    "receivedate": "20070328",
+    "country": null,
+    "serious": "1",
+    "age": "77",
+    "ageunit": "801",
+    "sex": "2",
+    "reactions": [
+     "ASTHENIA",
+     "BLOOD PRESSURE DECREASED",
+     "BRAIN NATRIURETIC PEPTIDE INCREASED",
+     "CARDIAC ARREST",
+     "CHEST PAIN",
+     "CONFUSIONAL STATE",
+     "DISORIENTATION",
+     "FIBRIN D DIMER INCREASED",
+     "HYPERPYREXIA",
+     "PYELONEPHRITIS",
+     "RESPIRATORY ARREST"
+    ],
+    "macugen_entries": [
+     {
+      "prod": "MACUGEN (PEGAPTANIB)",
+      "char": "2",
+      "ind": null,
+      "dose": null,
+      "route": null
+     }
+    ]
+   }
+  ]
+ }
+}

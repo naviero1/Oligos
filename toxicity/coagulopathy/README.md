@@ -10,18 +10,18 @@ what the repository held before this dataset existed, and what changed — is
 
 | | Count |
 |---|---:|
-| Oligonucleotides | **213** |
-| Coagulation measurements | **2,388** |
-| Per-position modification records | **941** (47 oligos) |
-| Sources | **75** |
-| Oligos with a published sequence | 97 / 213 |
+| Oligonucleotides | **218** |
+| Coagulation measurements | **2,685** |
+| Per-position modification records | **1,039** (52 oligos) |
+| Sources | **100** |
+| Oligos with a published sequence | 104 / 218 |
 | Graded rows (0/1/2/3) | 867 — 463 / 312 / 66 / 26 |
 | Structural QC | 55 / 55 checks pass |
-| Numeric values located in their cited source | 1,876 / 1,876 |
+| Numeric values located in their cited source | 2,019 / 2,019 |
 | Rows adversarially re-checked against sources | 174 — 0 fabrications found |
-| Human-system measurements | 886 (433 of them human in-vitro / ex-vivo) |
+| Human-system measurements | **1,183** (44%) |
 | Animal-system measurements | 1,476 |
-| Compounds with both human and animal data | 30 of 213 |
+| Compounds with both human and animal data | 30 of 218 |
 
 **Phase 2 submission package** — all four required parts, built by one command:
 
@@ -31,6 +31,12 @@ what the repository held before this dataset existed, and what changed — is
 | Methodology document | ≤5 pp | `OligoTox-Coagulopathy_Methodology.pdf` (5 pp) |
 | Public Access & Dissemination Plan | ≤5 pp | `OligoTox-Coagulopathy_PADP.pdf` (4 pp) |
 | Dataset + data dictionary | — | `OligoTox-Coagulopathy_Dataset.xlsx`, `data/*.csv`, `schema.md` |
+
+The workbook carries two analysis tabs beyond the raw tables: **`human_measurements`** —
+every human row with the compound's sequence, per-position chemistry map and toxicity score
+carried onto it, so the most important subset needs no join — and **`German's analysis`** —
+one row per compound with just the oligo, its sequence, the modification to that sequence,
+and its toxicity.
 
 `python3 scripts/make_release.py` rebuilds all of it from the committed extraction records
 and fails rather than shipping: 55 structural checks, every numeric value re-checked against
@@ -210,7 +216,16 @@ Missing values are `NOT_REPORTED` (the source does not report it) or `NOT_APPLIC
 
 - **Grades are provisional** and mechanical; no subject-matter expert has reviewed them.
   Grade 1 in particular should be filtered on `grade_caveat` (see Grading).
-- **97 of 213 oligos have a published sequence**, and no *clinical* compound does —
+- **104 of 218 oligos have a published sequence.** 787 human rows belong to compounds
+  without one. A `sequence_status` column says which kind of gap each is: a polydisperse
+  mixture and a two-strand duplex *cannot* have one 5′→3′ string, but ~12 approved
+  compounds are marked `recoverable_from_WHO_INN_nomenclature` — the WHO INN chemical name
+  spells out every residue, and the sibling kidney dataset already proved that parse
+  (`toxicity/kidney/scripts/fill_inn_sequences.py`). That is the single highest-value
+  remaining task for the human subset.
+- Historically no *clinical* compound had a sequence; three now do (nusinersen,
+  volanesorsen, tofersen), reconstructed from per-residue chemical nomenclature in the EMA
+  and FDA dossiers —
   inotersen, nusinersen, fitusiran, eplontersen, olezarsen, imetelstat and fesomersen are
   all sequence-less in the public record used here. Sequence-to-phenotype modelling is
   therefore restricted to patent and preclinical compounds; clinical rows can only be

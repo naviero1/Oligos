@@ -40,9 +40,9 @@ structural checks, and a verification pass that re-reads every source document.
 
 | Challenge preference | Where we stand |
 |---|---|
-| "Datasets based on **in vitro human systems**" | 886 of 2,388 rows are human or human-derived; 433 of those are human in-vitro and ex-vivo. Explicit in `species_class` / `human_system`, including for purified-protein assays where a species field cannot express it. |
-| "…or able to **extrapolate between in vitro human systems and animal data**" | Supported but **bounded**: only 30 of 213 compounds carry both human and animal measurements. This is the honest ceiling on any translation claim from this release. |
-| Reduce reliance on animal studies | 1,476 animal rows against 886 human. The imbalance is real and is the main open weakness; a human-source expansion is in flight. |
+| "Datasets based on **in vitro human systems**" | 1,183 of 2,685 rows (44%) are human or human-derived, up from 886 after a targeted human sweep added the EMA assessment reports, the FDA reviews with named coagulation sections, and the pharmacovigilance tier. Explicit in `species_class` / `human_system`, including for purified-protein assays where a species field cannot express it. |
+| "…or able to **extrapolate between in vitro human systems and animal data**" | Supported but **bounded**: only 30 of 218 compounds carry both human and animal measurements. This is the honest ceiling on any translation claim from this release. |
+| Reduce reliance on animal studies | 1,476 animal against 1,183 human. Materially improved and still the main open weakness; five extraction bundles were cut short by a session limit and are resumable. |
 | High-quality, AI-ready, open | Four normalised tables, controlled vocabularies, a data dictionary covering all 90 columns, CC BY 4.0, and a build that fails rather than ships a broken table. |
 | Positive/negative controls | 572 measured nulls, distinguished throughout from "never measured" — the failure mode a prior review found in the sibling kidney dataset, tested here by four independent reviewers and not reproduced. |
 
@@ -69,7 +69,15 @@ Ranked by how much it would change the submission:
 
 1. **Grades are unreviewed.** Every grade carries `grade_status = provisional`. This is the
    one item that needs a subject-matter expert and cannot be closed by more curation.
-2. **The human/animal imbalance.** A human-source expansion is running: FDA reviews with
+2. **Sequences for the human subset.** 787 human rows belong to compounds with no published
+   sequence. `sequence_status` separates the gaps that cannot be closed (polydisperse
+   mixtures, duplexes) from ~12 approved compounds marked
+   `recoverable_from_WHO_INN_nomenclature`. Recovering those is the highest-value remaining
+   task, and the kidney dataset's `fill_inn_sequences.py` is the validated precedent.
+3. **Five extraction bundles were cut short by a session limit** and are resumable from
+   their run IDs: the 120 ClinicalTrials.gov records, the human ex-vivo aptamer panels, the
+   PMO/siRNA FDA reviews, and the phase 1 clinical set including brogidirsen.
+4. **The human/animal imbalance.** The sweep that ran added: FDA reviews with
    named coagulation sections (Kynamro §7.3.5.7, Spinraza §8.4.6.3), the Waylivra EPAR
    which closes the volanesorsen gap, 120 ClinicalTrials.gov records with structured
    results, and human ex-vivo aptamer panels. When those rows land the release rebuilds

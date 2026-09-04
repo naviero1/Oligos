@@ -1,0 +1,2298 @@
+{
+ "nusinersen||ACTIVATED PARTIAL THROMBOPLASTIN TIME PROLONGED": {
+  "exact_query": "https://api.fda.gov/drug/event.json?search=patient.drug.openfda.substance_name:\"nusinersen\"+AND+patient.reaction.reactionmeddrapt.exact:\"ACTIVATED PARTIAL THROMBOPLASTIN TIME PROLONGED\"&limit=5",
+  "n_total": 19,
+  "records": [
+   {
+    "safetyreportid": "13683967",
+    "receivedate": "20170623",
+    "primarysourcecountry": "US",
+    "serious": "1",
+    "seriousnessdeath": null,
+    "seriousnesshospitalization": null,
+    "seriousnesslifethreatening": null,
+    "patientonsetage": "5",
+    "patientonsetageunit": "801",
+    "patientsex": "2",
+    "reactions": [
+     "Activated partial thromboplastin time prolonged"
+    ],
+    "reaction_outcomes": [
+     "1"
+    ],
+    "drugs": [
+     {
+      "product": "FLONASE",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "MELATONIN",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "VERSED",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "AQUAPHOR",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "VITAMIN D",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "CLARITIN",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "SPINRAZA",
+      "role": "1",
+      "indication": "SPINAL MUSCULAR ATROPHY",
+      "dose": "FIRST 3 LOADING DOSES EVERY 14 DAYS, 4TH LOADING DOSE 1 PER 30 DAYS, THEN MAINTENANCE DOSE OF 1 PER",
+      "route": "037"
+     },
+     {
+      "product": "XOPENEX",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "ZOFRAN",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "TRIAMCINOLONE",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "ACETYLCYSTEINE.",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "CALCIUM",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "LEVOCARNITINE.",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "ZANTAC",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": null,
+      "route": "065"
+     }
+    ]
+   },
+   {
+    "safetyreportid": "14191712",
+    "receivedate": "20171115",
+    "primarysourcecountry": "US",
+    "serious": "2",
+    "seriousnessdeath": null,
+    "seriousnesshospitalization": null,
+    "seriousnesslifethreatening": null,
+    "patientonsetage": "17",
+    "patientonsetageunit": "801",
+    "patientsex": "2",
+    "reactions": [
+     "Activated partial thromboplastin time prolonged"
+    ],
+    "reaction_outcomes": [
+     "3"
+    ],
+    "drugs": [
+     {
+      "product": "SPINRAZA",
+      "role": "1",
+      "indication": "SPINAL MUSCULAR ATROPHY",
+      "dose": null,
+      "route": "037"
+     }
+    ]
+   },
+   {
+    "safetyreportid": "14422470",
+    "receivedate": "20180123",
+    "primarysourcecountry": "US",
+    "serious": "1",
+    "seriousnessdeath": null,
+    "seriousnesshospitalization": "1",
+    "seriousnesslifethreatening": null,
+    "patientonsetage": "13",
+    "patientonsetageunit": "801",
+    "patientsex": "2",
+    "reactions": [
+     "Haemoglobin decreased",
+     "Weight decreased",
+     "Diarrhoea",
+     "Metabolic acidosis",
+     "Urine protein/creatinine ratio increased",
+     "Wound",
+     "Dehydration",
+     "Thrombocytopenia",
+     "Blood fibrinogen increased",
+     "Gastroenteritis",
+     "Coagulation time prolonged",
+     "Haemorrhage",
+     "Metamyelocyte count increased",
+     "Inappropriate schedule of drug administration",
+     "Blood triglycerides increased",
+     "Activated partial thromboplastin time prolonged"
+    ],
+    "reaction_outcomes": [
+     "6",
+     "6",
+     "6",
+     "3",
+     "6",
+     "6",
+     "3",
+     "3",
+     "6",
+     "3",
+     "3",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6"
+    ],
+    "drugs": [
+     {
+      "product": "HYDROCHLOROTHIAZIDE.",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": "TAKE 0.5 TAB BY MOUTH TWICE A DAY",
+      "route": "048"
+     },
+     {
+      "product": "REFRESH LACRI LUBE",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": "PLACE 0.5 INCHES INTO BOTH EYES FOUR TIMES A DAY",
+      "route": "065"
+     },
+     {
+      "product": "DOXYCYCLINE MONOHYDRATE",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": null,
+      "route": "050"
+     },
+     {
+      "product": "MESALAMINE.",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": "PLACE 0.5 SUPPOSITORIES RECTALLY EVERY NIGHT AT BEDTIME",
+      "route": "054"
+     },
+     {
+      "product": "SODIUM BICARBONATE.",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": "TAKE 3 TAB BY MOUTH FOUR TIMES PER DAY",
+      "route": "048"
+     },
+     {
+      "product": "TRILEPTAL",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": "300 MG/5ML; TAKE 1.5 ML BY MOUTH TWO TIMES PER DAY",
+      "route": "048"
+     },
+     {
+      "product": "ZANTAC",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": "TAKE 0.5 TABS BY MOUTH TWO TIMES PER DAY FOR THE STOMACH",
+      "route": "048"
+     },
+     {
+      "product": "GLYCERIN.",
+      "role": "2",
+      "indication": "CONSTIPATION",
+      "dose": "PLACE 1 SUPOSSITORY RECTALLY 2-3 TIMES A DAY AS NEEDED",
+      "route": "054"
+     },
+     {
+      "product": "SPINRAZA",
+      "role": "1",
+      "indication": null,
+      "dose": "DOSE 2",
+      "route": "065"
+     },
+     {
+      "product": "DAKINS FULL",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": "APPLY 30 ML TOPICALLY ONE TIME PER DAY FOR 30 DAYS",
+      "route": "061"
+     },
+     {
+      "product": "SPINRAZA",
+      "role": "1",
+      "indication": null,
+      "dose": "DOSE 3",
+      "route": "065"
+     },
+     {
+      "product": "FUROSEMIDE.",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": "TAKE 1 TAB BY MOUTH TWO TIMES PER DAY",
+      "route": "048"
+     },
+     {
+      "product": "ZINC SULFATE",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": "PLACE 1.6 ML VIA G-TUBE ONE TIMES PER DAY FOR 30 DAYS",
+      "route": "050"
+     },
+     {
+      "product": "SODIUM CHLORIDE.",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": "INHALE 15 ML AS DIRECTED EVERY TWO HOURS AS NEEDED (NASAL CONGESTION)",
+      "route": "065"
+     },
+     {
+      "product": "SPINRAZA",
+      "role": "1",
+      "indication": "SPINAL MUSCULAR ATROPHY",
+      "dose": "DOSE 1",
+      "route": "065"
+     },
+     {
+      "product": "POTASSIUM CITRATE-CITRIC ACID",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": "TAKE 4 ML BY MOUTH THREE TIMES PER DAY FOR 120 DAYS",
+      "route": "048"
+     },
+     {
+      "product": "NYSTATIN.",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": "POWDER; 10000 UNITS/GRAM; APPLY WITH PICC DRESSING CHANGES",
+      "route": "065"
+     },
+     {
+      "product": "KEPPRA",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": "TAKE 3 ML BY MOUTH EVERY MORNING",
+      "route": "048"
+     },
+     {
+      "product": "KEPPRA",
+      "role": "2",
+      "indication": null,
+      "dose": "TAKE 3.5 ML BY MOUTH EVERY EVENING",
+      "route": "048"
+     },
+     {
+      "product": "SODIUM CHLORIDE.",
+      "role": "2",
+      "indication": null,
+      "dose": "INHALE 3 ML AS DIRECTED EVERY 2 HOURS AS NEEDED",
+      "route": "065"
+     },
+     {
+      "product": "XOPENEX",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": "INHALE 3 ML AS DIRECTED EVERY 4 HOURS AS NEEDED (DESATURATION NOT RELIVED WITH SUCTION.COUGH ASSIST)",
+      "route": "065"
+     },
+     {
+      "product": "POLYETHLENE GLYCOL",
+      "role": "2",
+      "indication": "FAECES HARD",
+      "dose": "TAKE 8 G BY MOUTH 2 TIMES PER DAY AS NEEDED",
+      "route": "065"
+     }
+    ]
+   },
+   {
+    "safetyreportid": "14567785",
+    "receivedate": "20180223",
+    "primarysourcecountry": "US",
+    "serious": "2",
+    "seriousnessdeath": null,
+    "seriousnesshospitalization": null,
+    "seriousnesslifethreatening": null,
+    "patientonsetage": "19",
+    "patientonsetageunit": "801",
+    "patientsex": "1",
+    "reactions": [
+     "Activated partial thromboplastin time prolonged"
+    ],
+    "reaction_outcomes": [
+     "6"
+    ],
+    "drugs": [
+     {
+      "product": "SPINRAZA",
+      "role": "1",
+      "indication": "SPINAL MUSCULAR ATROPHY",
+      "dose": null,
+      "route": "065"
+     }
+    ]
+   },
+   {
+    "safetyreportid": "17029487",
+    "receivedate": "20191114",
+    "primarysourcecountry": "US",
+    "serious": "2",
+    "seriousnessdeath": null,
+    "seriousnesshospitalization": null,
+    "seriousnesslifethreatening": null,
+    "patientonsetage": "9",
+    "patientonsetageunit": "801",
+    "patientsex": "1",
+    "reactions": [
+     "Activated partial thromboplastin time prolonged"
+    ],
+    "reaction_outcomes": [
+     "6"
+    ],
+    "drugs": [
+     {
+      "product": "SPINRAZA",
+      "role": "1",
+      "indication": "SPINAL MUSCULAR ATROPHY",
+      "dose": null,
+      "route": "037"
+     }
+    ]
+   }
+  ]
+ },
+ "nusinersen||DISSEMINATED INTRAVASCULAR COAGULATION": {
+  "exact_query": "https://api.fda.gov/drug/event.json?search=patient.drug.openfda.substance_name:\"nusinersen\"+AND+patient.reaction.reactionmeddrapt.exact:\"DISSEMINATED INTRAVASCULAR COAGULATION\"&limit=5",
+  "n_total": 6,
+  "records": [
+   {
+    "safetyreportid": "16360794",
+    "receivedate": "20190528",
+    "primarysourcecountry": "TR",
+    "serious": "1",
+    "seriousnessdeath": "1",
+    "seriousnesshospitalization": "1",
+    "seriousnesslifethreatening": null,
+    "patientonsetage": "11",
+    "patientonsetageunit": "802",
+    "patientsex": "2",
+    "reactions": [
+     "Pneumonia",
+     "Sepsis",
+     "Disseminated intravascular coagulation"
+    ],
+    "reaction_outcomes": [
+     "6",
+     "5",
+     "5"
+    ],
+    "drugs": [
+     {
+      "product": "DOPAMINE",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "MIDAZOLAM",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "FENTANYL.",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "SPINRAZA",
+      "role": "1",
+      "indication": "SPINAL MUSCULAR ATROPHY",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "CLINDAMYCIN.",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "PIPERACILLIN AND TAZOBACTAM",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": null,
+      "route": "065"
+     }
+    ]
+   },
+   {
+    "safetyreportid": "17331725",
+    "receivedate": "20200127",
+    "primarysourcecountry": "JP",
+    "serious": "1",
+    "seriousnessdeath": "1",
+    "seriousnesshospitalization": null,
+    "seriousnesslifethreatening": null,
+    "patientonsetage": "5",
+    "patientonsetageunit": "801",
+    "patientsex": "1",
+    "reactions": [
+     "Disseminated intravascular coagulation",
+     "Encephalopathy",
+     "Drug ineffective",
+     "Myocarditis"
+    ],
+    "reaction_outcomes": [
+     "5",
+     "5",
+     "6",
+     "5"
+    ],
+    "drugs": [
+     {
+      "product": "ATROPINE SULFATE HYDRATE",
+      "role": "2",
+      "indication": "ANAESTHESIA PROCEDURE",
+      "dose": null,
+      "route": "042"
+     },
+     {
+      "product": "SPINRAZA",
+      "role": "1",
+      "indication": "SPINAL MUSCULAR ATROPHY",
+      "dose": null,
+      "route": "037"
+     },
+     {
+      "product": "SOSEGON",
+      "role": "2",
+      "indication": "ANAESTHESIA PROCEDURE",
+      "dose": null,
+      "route": "042"
+     },
+     {
+      "product": "ATARAX-P",
+      "role": "2",
+      "indication": "ANAESTHESIA PROCEDURE",
+      "dose": null,
+      "route": "042"
+     },
+     {
+      "product": "SPINRAZA",
+      "role": "1",
+      "indication": null,
+      "dose": null,
+      "route": "037"
+     }
+    ]
+   },
+   {
+    "safetyreportid": "18565407",
+    "receivedate": "20201201",
+    "primarysourcecountry": "RO",
+    "serious": "1",
+    "seriousnessdeath": "1",
+    "seriousnesshospitalization": "1",
+    "seriousnesslifethreatening": "1",
+    "patientonsetage": "19",
+    "patientonsetageunit": "802",
+    "patientsex": "2",
+    "reactions": [
+     "Dyspnoea",
+     "Hepatic enzyme increased",
+     "Renal impairment",
+     "Tachycardia",
+     "Platelet count decreased",
+     "Hepatocellular injury",
+     "Gastrointestinal haemorrhage",
+     "Abnormal faeces",
+     "Mouth haemorrhage",
+     "Troponin I increased",
+     "Pyrexia",
+     "General physical health deterioration",
+     "Thrombocytopenia",
+     "Cardio-respiratory arrest",
+     "Amylase increased",
+     "Renal haemorrhage",
+     "Regurgitation",
+     "Multiple organ dysfunction syndrome",
+     "Haemorrhage",
+     "Anuria",
+     "Blood creatinine increased",
+     "Blood sodium decreased",
+     "Cerebral haemorrhage",
+     "Depressed level of consciousness",
+     "Alanine aminotransferase increased",
+     "Aspartate aminotransferase increased",
+     "Cardiac failure",
+     "Respiratory arrest",
+     "Disseminated intravascular coagulation",
+     "Multiple organ dysfunction syndrome",
+     "Red blood cell sedimentation rate increased",
+     "Acute kidney injury",
+     "Epistaxis",
+     "Somnolence",
+     "Pancreatitis",
+     "Pyrexia",
+     "Blood urea increased",
+     "Partial seizures",
+     "Central nervous system lesion",
+     "Bacterial infection",
+     "Hypersomnia"
+    ],
+    "reaction_outcomes": [
+     "1",
+     "3",
+     "3",
+     "1",
+     "2",
+     "2",
+     "1",
+     "1",
+     "6",
+     "6",
+     "1",
+     "6",
+     "6",
+     "1",
+     "6",
+     "1",
+     "1",
+     "5",
+     "1",
+     "1",
+     "3",
+     "1",
+     "6",
+     "6",
+     "3",
+     "3",
+     "5",
+     "1",
+     "1",
+     "1",
+     "6",
+     "1",
+     "1",
+     "6",
+     "1",
+     "6",
+     "1",
+     "1",
+     "6",
+     "6",
+     "6"
+    ],
+    "drugs": [
+     {
+      "product": "PREDNISONE.",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": "8.75 UG, QD",
+      "route": "065"
+     },
+     {
+      "product": "ZOLGENSMA",
+      "role": "1",
+      "indication": "SPINAL MUSCULAR ATROPHY",
+      "dose": "49.5 ML, ONCE/SINGLE",
+      "route": "042"
+     },
+     {
+      "product": "METHYLPREDNISOLON",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": "UNK",
+      "route": "065"
+     },
+     {
+      "product": "NUSINERSEN",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": "UNK",
+      "route": "065"
+     }
+    ]
+   },
+   {
+    "safetyreportid": "19201121",
+    "receivedate": "20210430",
+    "primarysourcecountry": "RS",
+    "serious": "1",
+    "seriousnessdeath": "1",
+    "seriousnesshospitalization": "1",
+    "seriousnesslifethreatening": null,
+    "patientonsetage": null,
+    "patientonsetageunit": null,
+    "patientsex": "2",
+    "reactions": [
+     "Disseminated intravascular coagulation",
+     "Dehydration",
+     "Gastroenteritis clostridial",
+     "Acute kidney injury",
+     "Shock",
+     "Cardio-respiratory arrest"
+    ],
+    "reaction_outcomes": [
+     "5",
+     "5",
+     "5",
+     "5",
+     "5",
+     "5"
+    ],
+    "drugs": [
+     {
+      "product": "SPINRAZA",
+      "role": "1",
+      "indication": null,
+      "dose": null,
+      "route": "037"
+     },
+     {
+      "product": "SPINRAZA",
+      "role": "1",
+      "indication": "SPINAL MUSCULAR ATROPHY",
+      "dose": null,
+      "route": "037"
+     },
+     {
+      "product": "SPINRAZA",
+      "role": "1",
+      "indication": null,
+      "dose": null,
+      "route": "065"
+     }
+    ]
+   },
+   {
+    "safetyreportid": "19507297",
+    "receivedate": "20210708",
+    "primarysourcecountry": "RU",
+    "serious": "1",
+    "seriousnessdeath": "1",
+    "seriousnesshospitalization": null,
+    "seriousnesslifethreatening": null,
+    "patientonsetage": null,
+    "patientonsetageunit": null,
+    "patientsex": "1",
+    "reactions": [
+     "Sepsis",
+     "Disseminated intravascular coagulation"
+    ],
+    "reaction_outcomes": [
+     "5",
+     "6"
+    ],
+    "drugs": [
+     {
+      "product": "SPINRAZA",
+      "role": "1",
+      "indication": "SPINAL MUSCULAR ATROPHY",
+      "dose": null,
+      "route": "065"
+     }
+    ]
+   }
+  ]
+ },
+ "nusinersen||COAGULOPATHY": {
+  "exact_query": "https://api.fda.gov/drug/event.json?search=patient.drug.openfda.substance_name:\"nusinersen\"+AND+patient.reaction.reactionmeddrapt.exact:\"COAGULOPATHY\"&limit=5",
+  "n_total": 7,
+  "records": [
+   {
+    "safetyreportid": "20365486",
+    "receivedate": "20220122",
+    "primarysourcecountry": "CZ",
+    "serious": "1",
+    "seriousnessdeath": "2",
+    "seriousnesshospitalization": "2",
+    "seriousnesslifethreatening": "2",
+    "patientonsetage": "1",
+    "patientonsetageunit": "801",
+    "patientsex": "1",
+    "reactions": [
+     "Thrombocytopenia",
+     "Liver disorder",
+     "Faeces pale",
+     "Coagulopathy",
+     "Vomiting",
+     "Pyrexia"
+    ],
+    "reaction_outcomes": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    "drugs": [
+     {
+      "product": "ZOLGENSMA",
+      "role": "1",
+      "indication": "Spinal muscular atrophy",
+      "dose": "55 ML",
+      "route": "065"
+     },
+     {
+      "product": "VITAMIN D3",
+      "role": "2",
+      "indication": "Product used for unknown indication",
+      "dose": "(0-2-0 DROPS)",
+      "route": "048"
+     },
+     {
+      "product": "OMEPRAZOLE",
+      "role": "2",
+      "indication": "Product used for unknown indication",
+      "dose": "5 ML(5ML-0-0)",
+      "route": "048"
+     },
+     {
+      "product": "NUSINERSEN",
+      "role": "2",
+      "indication": "Product used for unknown indication",
+      "dose": "12 MG  (12 MG I.T.)",
+      "route": "065"
+     },
+     {
+      "product": "NUSINERSEN",
+      "role": "2",
+      "indication": null,
+      "dose": "12 MG  (12 MG I.T.)",
+      "route": "065"
+     },
+     {
+      "product": "NUSINERSEN",
+      "role": "2",
+      "indication": null,
+      "dose": "12 MG  (12 MG I.T.)",
+      "route": "065"
+     },
+     {
+      "product": "NUSINERSEN",
+      "role": "2",
+      "indication": null,
+      "dose": "12 MG  (12 MG I.T.)",
+      "route": "065"
+     }
+    ]
+   },
+   {
+    "safetyreportid": "21906798",
+    "receivedate": "20230125",
+    "primarysourcecountry": "US",
+    "serious": "2",
+    "seriousnessdeath": "2",
+    "seriousnesshospitalization": "2",
+    "seriousnesslifethreatening": "2",
+    "patientonsetage": null,
+    "patientonsetageunit": null,
+    "patientsex": "2",
+    "reactions": [
+     "Coagulopathy"
+    ],
+    "reaction_outcomes": [
+     "6"
+    ],
+    "drugs": [
+     {
+      "product": "SPINRAZA",
+      "role": "1",
+      "indication": "Product used for unknown indication",
+      "dose": null,
+      "route": "050"
+     }
+    ]
+   },
+   {
+    "safetyreportid": "22149258",
+    "receivedate": "20230329",
+    "primarysourcecountry": "JP",
+    "serious": "1",
+    "seriousnessdeath": "2",
+    "seriousnesshospitalization": "1",
+    "seriousnesslifethreatening": "2",
+    "patientonsetage": "0",
+    "patientonsetageunit": "801",
+    "patientsex": "1",
+    "reactions": [
+     "Septic shock",
+     "Streptococcal sepsis",
+     "Meningitis bacterial",
+     "Coagulopathy",
+     "Hepatic function abnormal"
+    ],
+    "reaction_outcomes": [
+     "1",
+     "1",
+     "1",
+     "1",
+     "1"
+    ],
+    "drugs": [
+     {
+      "product": "SPINRAZA",
+      "role": "1",
+      "indication": "Spinal muscular atrophy",
+      "dose": null,
+      "route": "050"
+     }
+    ]
+   },
+   {
+    "safetyreportid": "24311105",
+    "receivedate": "20240912",
+    "primarysourcecountry": "US",
+    "serious": "2",
+    "seriousnessdeath": "2",
+    "seriousnesshospitalization": "2",
+    "seriousnesslifethreatening": "2",
+    "patientonsetage": null,
+    "patientonsetageunit": null,
+    "patientsex": "1",
+    "reactions": [
+     "Coagulopathy",
+     "Acquired factor VIII deficiency"
+    ],
+    "reaction_outcomes": [
+     "6",
+     "6"
+    ],
+    "drugs": [
+     {
+      "product": "SPINRAZA",
+      "role": "1",
+      "indication": "Spinal muscular atrophy",
+      "dose": null,
+      "route": "050"
+     }
+    ]
+   },
+   {
+    "safetyreportid": "24314118",
+    "receivedate": "20240912",
+    "primarysourcecountry": "US",
+    "serious": "2",
+    "seriousnessdeath": "2",
+    "seriousnesshospitalization": "2",
+    "seriousnesslifethreatening": "2",
+    "patientonsetage": "24",
+    "patientonsetageunit": "801",
+    "patientsex": "2",
+    "reactions": [
+     "Coagulopathy"
+    ],
+    "reaction_outcomes": [
+     "6"
+    ],
+    "drugs": [
+     {
+      "product": "SPINRAZA",
+      "role": "1",
+      "indication": "Spinal muscular atrophy",
+      "dose": null,
+      "route": "050"
+     }
+    ]
+   }
+  ]
+ },
+ "defibrotide||ACTIVATED PARTIAL THROMBOPLASTIN TIME PROLONGED": {
+  "exact_query": "https://api.fda.gov/drug/event.json?search=patient.drug.openfda.substance_name:\"defibrotide\"+AND+patient.reaction.reactionmeddrapt.exact:\"ACTIVATED PARTIAL THROMBOPLASTIN TIME PROLONGED\"&limit=5",
+  "n_total": 8,
+  "records": [
+   {
+    "safetyreportid": "20376804",
+    "receivedate": "20220125",
+    "primarysourcecountry": "JP",
+    "serious": "1",
+    "seriousnessdeath": "2",
+    "seriousnesshospitalization": "1",
+    "seriousnesslifethreatening": "2",
+    "patientonsetage": "67",
+    "patientonsetageunit": "801",
+    "patientsex": "1",
+    "reactions": [
+     "Activated partial thromboplastin time prolonged",
+     "Purpura",
+     "Puncture site haemorrhage",
+     "Off label use"
+    ],
+    "reaction_outcomes": [
+     "1",
+     "1",
+     "1",
+     "6"
+    ],
+    "drugs": [
+     {
+      "product": "DEFITELIO",
+      "role": "1",
+      "indication": "Venoocclusive liver disease",
+      "dose": "25 MILLIGRAM/KILOGRAM/24 HOURS",
+      "route": "042"
+     },
+     {
+      "product": "DEFITELIO",
+      "role": "1",
+      "indication": null,
+      "dose": "25 MILLIGRAM/KILOGRAM/24 HOURS",
+      "route": "042"
+     },
+     {
+      "product": "DEFITELIO",
+      "role": "1",
+      "indication": null,
+      "dose": "25 MILLIGRAM/KILOGRAM/24 HOURS",
+      "route": "042"
+     },
+     {
+      "product": "HEPARIN SODIUM",
+      "role": "1",
+      "indication": "Product used for unknown indication",
+      "dose": "25 MG/KG/24 HOURS",
+      "route": "042"
+     },
+     {
+      "product": "HEPARIN SODIUM",
+      "role": "1",
+      "indication": null,
+      "dose": "25 MG/KG/24 HOURS",
+      "route": "042"
+     },
+     {
+      "product": "PLATELETS",
+      "role": "2",
+      "indication": "Puncture site haemorrhage",
+      "dose": "UNK",
+      "route": null
+     },
+     {
+      "product": "MENATETRENONE",
+      "role": "2",
+      "indication": "Puncture site haemorrhage",
+      "dose": "UNK",
+      "route": null
+     },
+     {
+      "product": "FRESH FROZEN PLASMA",
+      "role": "2",
+      "indication": "Puncture site haemorrhage",
+      "dose": "UNK",
+      "route": null
+     }
+    ]
+   },
+   {
+    "safetyreportid": "20453808",
+    "receivedate": "20220210",
+    "primarysourcecountry": "JP",
+    "serious": "1",
+    "seriousnessdeath": "1",
+    "seriousnesshospitalization": "2",
+    "seriousnesslifethreatening": "2",
+    "patientonsetage": "54",
+    "patientonsetageunit": "801",
+    "patientsex": "1",
+    "reactions": [
+     "Activated partial thromboplastin time prolonged",
+     "Renal failure",
+     "Venoocclusive liver disease",
+     "Disease progression"
+    ],
+    "reaction_outcomes": [
+     "6",
+     "6",
+     "5",
+     "6"
+    ],
+    "drugs": [
+     {
+      "product": "DEFITELIO",
+      "role": "1",
+      "indication": "Venoocclusive liver disease",
+      "dose": "200 MILLIGRAM",
+      "route": "042"
+     },
+     {
+      "product": "DEFITELIO",
+      "role": "1",
+      "indication": null,
+      "dose": "25 MILLIGRAM/KILOGRAM, QD",
+      "route": "042"
+     }
+    ]
+   },
+   {
+    "safetyreportid": "20964605",
+    "receivedate": "20220615",
+    "primarysourcecountry": "JP",
+    "serious": "1",
+    "seriousnessdeath": "1",
+    "seriousnesshospitalization": "1",
+    "seriousnesslifethreatening": "2",
+    "patientonsetage": "32",
+    "patientonsetageunit": "801",
+    "patientsex": "2",
+    "reactions": [
+     "Myocarditis",
+     "Lymphoma",
+     "Activated partial thromboplastin time prolonged"
+    ],
+    "reaction_outcomes": [
+     "5",
+     "5",
+     "2"
+    ],
+    "drugs": [
+     {
+      "product": "DEFITELIO",
+      "role": "1",
+      "indication": "Venoocclusive liver disease",
+      "dose": "25 MILLIGRAM/KILOGRAM, QD",
+      "route": "042"
+     }
+    ]
+   },
+   {
+    "safetyreportid": "23065373",
+    "receivedate": "20231013",
+    "primarysourcecountry": "JP",
+    "serious": "1",
+    "seriousnessdeath": "2",
+    "seriousnesshospitalization": "2",
+    "seriousnesslifethreatening": "2",
+    "patientonsetage": "60",
+    "patientonsetageunit": "801",
+    "patientsex": "1",
+    "reactions": [
+     "Cystitis haemorrhagic",
+     "Activated partial thromboplastin time prolonged"
+    ],
+    "reaction_outcomes": [
+     "6",
+     "1"
+    ],
+    "drugs": [
+     {
+      "product": "DEFITELIO",
+      "role": "1",
+      "indication": "Venoocclusive liver disease",
+      "dose": "25 MILLIGRAM/KILOGRAM, QD",
+      "route": "042"
+     }
+    ]
+   },
+   {
+    "safetyreportid": "23111050",
+    "receivedate": "20231026",
+    "primarysourcecountry": "JP",
+    "serious": "2",
+    "seriousnessdeath": "2",
+    "seriousnesshospitalization": "2",
+    "seriousnesslifethreatening": "2",
+    "patientonsetage": null,
+    "patientonsetageunit": null,
+    "patientsex": null,
+    "reactions": [
+     "Activated partial thromboplastin time prolonged"
+    ],
+    "reaction_outcomes": [
+     "6"
+    ],
+    "drugs": [
+     {
+      "product": "DEFITELIO",
+      "role": "1",
+      "indication": "Product used for unknown indication",
+      "dose": null,
+      "route": "042"
+     }
+    ]
+   }
+  ]
+ },
+ "defibrotide||DISSEMINATED INTRAVASCULAR COAGULATION": {
+  "exact_query": "https://api.fda.gov/drug/event.json?search=patient.drug.openfda.substance_name:\"defibrotide\"+AND+patient.reaction.reactionmeddrapt.exact:\"DISSEMINATED INTRAVASCULAR COAGULATION\"&limit=5",
+  "n_total": 11,
+  "records": [
+   {
+    "safetyreportid": "15099557",
+    "receivedate": "20180702",
+    "primarysourcecountry": "FR",
+    "serious": "1",
+    "seriousnessdeath": "1",
+    "seriousnesshospitalization": null,
+    "seriousnesslifethreatening": null,
+    "patientonsetage": null,
+    "patientonsetageunit": null,
+    "patientsex": null,
+    "reactions": [
+     "Multiple organ dysfunction syndrome",
+     "Septic shock",
+     "Disseminated intravascular coagulation"
+    ],
+    "reaction_outcomes": [
+     "5",
+     "5",
+     "6"
+    ],
+    "drugs": [
+     {
+      "product": "DEFITELIO",
+      "role": "1",
+      "indication": "VENOOCCLUSIVE DISEASE",
+      "dose": null,
+      "route": null
+     },
+     {
+      "product": "DEFITELIO",
+      "role": "1",
+      "indication": "PROPHYLAXIS",
+      "dose": "25 MG/KG, QD",
+      "route": "042"
+     },
+     {
+      "product": "CHLORPROMAZINE.",
+      "role": "2",
+      "indication": "VOMITING",
+      "dose": "UNK",
+      "route": null
+     },
+     {
+      "product": "CEFTAZIDIME.",
+      "role": "2",
+      "indication": "INFECTION PROPHYLAXIS",
+      "dose": "UNK",
+      "route": null
+     },
+     {
+      "product": "AMIKACIN.",
+      "role": "2",
+      "indication": "INFECTION PROPHYLAXIS",
+      "dose": "UNK",
+      "route": null
+     },
+     {
+      "product": "AMBISONE",
+      "role": "2",
+      "indication": "ANTIFUNGAL PROPHYLAXIS",
+      "dose": "UNK",
+      "route": null
+     },
+     {
+      "product": "CYCLOSPORIN",
+      "role": "2",
+      "indication": null,
+      "dose": null,
+      "route": null
+     },
+     {
+      "product": "CHOLURSO",
+      "role": "2",
+      "indication": "PROPHYLAXIS",
+      "dose": "UNK",
+      "route": null
+     }
+    ]
+   },
+   {
+    "safetyreportid": "15879786",
+    "receivedate": "20190128",
+    "primarysourcecountry": "KR",
+    "serious": "1",
+    "seriousnessdeath": null,
+    "seriousnesshospitalization": null,
+    "seriousnesslifethreatening": null,
+    "patientonsetage": "10",
+    "patientonsetageunit": "801",
+    "patientsex": "2",
+    "reactions": [
+     "Acute graft versus host disease",
+     "Disseminated intravascular coagulation",
+     "Gastrointestinal haemorrhage"
+    ],
+    "reaction_outcomes": [
+     "1",
+     "1",
+     "1"
+    ],
+    "drugs": [
+     {
+      "product": "DEFITELIO",
+      "role": "1",
+      "indication": "VENOOCCLUSIVE DISEASE",
+      "dose": "6.25 MG/KG, QID",
+      "route": "042"
+     },
+     {
+      "product": "MEROPENEM.",
+      "role": "2",
+      "indication": "INFECTION",
+      "dose": "550 MG, TID",
+      "route": "042"
+     },
+     {
+      "product": "CURAN",
+      "role": "2",
+      "indication": "PROPHYLAXIS",
+      "dose": "50 MG, BID",
+      "route": "042"
+     },
+     {
+      "product": "FAMOTIDINE.",
+      "role": "2",
+      "indication": "PROPHYLAXIS",
+      "dose": "15 MG, BID",
+      "route": "042"
+     },
+     {
+      "product": "ACICLOVIR",
+      "role": "2",
+      "indication": "ANTIVIRAL PROPHYLAXIS",
+      "dose": "140 MG, TID",
+      "route": "042"
+     }
+    ]
+   },
+   {
+    "safetyreportid": "16285311",
+    "receivedate": "20190508",
+    "primarysourcecountry": "FR",
+    "serious": "1",
+    "seriousnessdeath": "1",
+    "seriousnesshospitalization": null,
+    "seriousnesslifethreatening": null,
+    "patientonsetage": null,
+    "patientonsetageunit": null,
+    "patientsex": null,
+    "reactions": [
+     "Shock haemorrhagic",
+     "Disseminated intravascular coagulation",
+     "Multiple organ dysfunction syndrome",
+     "Embolism"
+    ],
+    "reaction_outcomes": [
+     "6",
+     "6",
+     "5",
+     "6"
+    ],
+    "drugs": [
+     {
+      "product": "DEFITELIO",
+      "role": "1",
+      "indication": "PROPHYLAXIS",
+      "dose": "24.2 MG/KG, QD",
+      "route": null
+     }
+    ]
+   },
+   {
+    "safetyreportid": "16431229",
+    "receivedate": "20190614",
+    "primarysourcecountry": "FR",
+    "serious": "1",
+    "seriousnessdeath": "1",
+    "seriousnesshospitalization": null,
+    "seriousnesslifethreatening": null,
+    "patientonsetage": null,
+    "patientonsetageunit": null,
+    "patientsex": null,
+    "reactions": [
+     "Acute myeloid leukaemia recurrent",
+     "Disseminated intravascular coagulation",
+     "Off label use",
+     "Mouth haemorrhage",
+     "Cystitis haemorrhagic"
+    ],
+    "reaction_outcomes": [
+     "5",
+     "1",
+     "6",
+     "1",
+     "1"
+    ],
+    "drugs": [
+     {
+      "product": "DEFITELIO",
+      "role": "1",
+      "indication": "PROPHYLAXIS",
+      "dose": "22.8 MG/KG, QD",
+      "route": "042"
+     },
+     {
+      "product": "FORTUMSET",
+      "role": "2",
+      "indication": "INFECTION PROPHYLAXIS",
+      "dose": "UNK",
+      "route": null
+     },
+     {
+      "product": "CIPROFLOXACIN.",
+      "role": "2",
+      "indication": "INFECTION PROPHYLAXIS",
+      "dose": "UNK",
+      "route": null
+     },
+     {
+      "product": "ZELITREX",
+      "role": "2",
+      "indication": "PROPHYLAXIS",
+      "dose": "UNK",
+      "route": null
+     },
+     {
+      "product": "NOXAFIL",
+      "role": "2",
+      "indication": "PROPHYLAXIS",
+      "dose": "UNK",
+      "route": null
+     },
+     {
+      "product": "IMOVANE",
+      "role": "2",
+      "indication": "INSOMNIA",
+      "dose": "UNK",
+      "route": null
+     },
+     {
+      "product": "CYCLOSPORINE.",
+      "role": "2",
+      "indication": "PROPHYLAXIS AGAINST GRAFT VERSUS HOST DISEASE",
+      "dose": "UNK",
+      "route": null
+     },
+     {
+      "product": "HEPARIN",
+      "role": "2",
+      "indication": "PROPHYLAXIS",
+      "dose": "7000 IU",
+      "route": null
+     },
+     {
+      "product": "ONDANSETRON",
+      "role": "2",
+      "indication": "VOMITING",
+      "dose": "UNK",
+      "route": null
+     },
+     {
+      "product": "URSOLVAN",
+      "role": "2",
+      "indication": "PROPHYLAXIS",
+      "dose": "UNK",
+      "route": null
+     }
+    ]
+   },
+   {
+    "safetyreportid": "16807136",
+    "receivedate": "20190913",
+    "primarysourcecountry": "FR",
+    "serious": "1",
+    "seriousnessdeath": "1",
+    "seriousnesshospitalization": "1",
+    "seriousnesslifethreatening": null,
+    "patientonsetage": null,
+    "patientonsetageunit": null,
+    "patientsex": null,
+    "reactions": [
+     "Acute lymphocytic leukaemia",
+     "Disease progression",
+     "Acute respiratory distress syndrome",
+     "Disseminated intravascular coagulation",
+     "Off label use",
+     "Pulmonary alveolar haemorrhage"
+    ],
+    "reaction_outcomes": [
+     "5",
+     "5",
+     "1",
+     "1",
+     "6",
+     "1"
+    ],
+    "drugs": [
+     {
+      "product": "DEFITELIO",
+      "role": "1",
+      "indication": null,
+      "dose": "25 MG/KG/DAY",
+      "route": "042"
+     },
+     {
+      "product": "DEFITELIO",
+      "role": "1",
+      "indication": "PROPHYLAXIS",
+      "dose": "25 MG/KG/DAY",
+      "route": "042"
+     }
+    ]
+   }
+  ]
+ },
+ "inotersen||COAGULOPATHY": {
+  "exact_query": "https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:\"TEGSEDI\"+AND+patient.reaction.reactionmeddrapt.exact:\"COAGULOPATHY\"&limit=5",
+  "n_total": 2,
+  "records": [
+   {
+    "safetyreportid": "17535181",
+    "receivedate": "20200312",
+    "primarysourcecountry": "US",
+    "serious": "2",
+    "seriousnessdeath": null,
+    "seriousnesshospitalization": null,
+    "seriousnesslifethreatening": null,
+    "patientonsetage": null,
+    "patientonsetageunit": null,
+    "patientsex": null,
+    "reactions": [
+     "Alanine aminotransferase increased",
+     "Agitation",
+     "Aspartate aminotransferase increased",
+     "Platelet disorder",
+     "Blood bilirubin increased",
+     "Coagulopathy"
+    ],
+    "reaction_outcomes": [
+     "3",
+     "6",
+     "3",
+     "3",
+     "3",
+     "6"
+    ],
+    "drugs": [
+     {
+      "product": "VENLAFAXINE HCL",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": "100 MG, UNK",
+      "route": "048"
+     },
+     {
+      "product": "TEGSEDI",
+      "role": "1",
+      "indication": "HEREDITARY NEUROPATHIC AMYLOIDOSIS",
+      "dose": "284 MG, QW",
+      "route": "058"
+     },
+     {
+      "product": "TACROLIMUS.",
+      "role": "2",
+      "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+      "dose": "0.5 MG, UNK",
+      "route": "048"
+     }
+    ]
+   },
+   {
+    "safetyreportid": "18438069",
+    "receivedate": "20201029",
+    "primarysourcecountry": null,
+    "serious": "1",
+    "seriousnessdeath": null,
+    "seriousnesshospitalization": null,
+    "seriousnesslifethreatening": null,
+    "patientonsetage": "69",
+    "patientonsetageunit": "801",
+    "patientsex": "1",
+    "reactions": [
+     "Urine protein/creatinine ratio increased",
+     "Platelet count decreased",
+     "Blood creatinine increased",
+     "Glomerular filtration rate decreased",
+     "Protein urine present",
+     "Drug interaction",
+     "Coagulopathy",
+     "Cardiac disorder",
+     "Thrombocytopenia"
+    ],
+    "reaction_outcomes": [
+     "3",
+     "3",
+     "6",
+     "6",
+     "6",
+     "3",
+     "6",
+     "3",
+     "6"
+    ],
+    "drugs": [
+     {
+      "product": "TEGSEDI",
+      "role": "1",
+      "indication": "Hereditary neuropathic amyloidosis",
+      "dose": null,
+      "route": "058"
+     },
+     {
+      "product": "TEGSEDI",
+      "role": "1",
+      "indication": "Polyneuropathy",
+      "dose": null,
+      "route": null
+     },
+     {
+      "product": "DEVICE",
+      "role": "1",
+      "indication": null,
+      "dose": null,
+      "route": null
+     },
+     {
+      "product": "TEGSEDI",
+      "role": "1",
+      "indication": null,
+      "dose": null,
+      "route": "058"
+     },
+     {
+      "product": "SIMPONI ARIA",
+      "role": "2",
+      "indication": null,
+      "dose": null,
+      "route": "065"
+     }
+    ]
+   }
+  ]
+ },
+ "inotersen||ACTIVATED PARTIAL THROMBOPLASTIN TIME PROLONGED": {
+  "exact_query": "https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:\"TEGSEDI\"+AND+patient.reaction.reactionmeddrapt.exact:\"ACTIVATED PARTIAL THROMBOPLASTIN TIME PROLONGED\"&limit=5",
+  "n_total": 2,
+  "records": [
+   {
+    "safetyreportid": "22071673",
+    "receivedate": "20230307",
+    "primarysourcecountry": "ES",
+    "serious": "1",
+    "seriousnessdeath": "2",
+    "seriousnesshospitalization": "2",
+    "seriousnesslifethreatening": "2",
+    "patientonsetage": null,
+    "patientonsetageunit": null,
+    "patientsex": null,
+    "reactions": [
+     "Brain natriuretic peptide increased",
+     "Red blood cell count decreased",
+     "Mean cell volume increased",
+     "Mean cell haemoglobin increased",
+     "International normalised ratio increased",
+     "Activated partial thromboplastin time prolonged",
+     "Blood fibrinogen increased",
+     "Cystatin C increased",
+     "Visual impairment",
+     "Blood urea increased",
+     "Lymphocyte count decreased",
+     "Prothrombin time ratio decreased",
+     "Swelling face",
+     "Haematoma",
+     "Rhinorrhoea",
+     "Aphonia",
+     "Haemoglobin decreased",
+     "Haematocrit decreased",
+     "Gamma-glutamyltransferase increased",
+     "Mean cell haemoglobin concentration decreased",
+     "Blood alkaline phosphatase increased",
+     "Vitamin A decreased",
+     "Vitamin E increased",
+     "Prealbumin decreased",
+     "Retinol binding protein decreased",
+     "Lymphocyte percentage decreased",
+     "Monocyte percentage increased",
+     "Monocyte count increased",
+     "Prothrombin time shortened",
+     "Arthralgia",
+     "Limb discomfort",
+     "Vision blurred",
+     "Musculoskeletal discomfort",
+     "Insomnia",
+     "Pruritus",
+     "Pain in extremity",
+     "Fatigue",
+     "Asthenia"
+    ],
+    "reaction_outcomes": [
+     "6",
+     "1",
+     "1",
+     "1",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "3",
+     "1",
+     "3",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "3",
+     "3",
+     "3",
+     "2",
+     "2",
+     "3",
+     "3",
+     "6"
+    ],
+    "drugs": [
+     {
+      "product": "TEGSEDI",
+      "role": "1",
+      "indication": "Hereditary neuropathic amyloidosis",
+      "dose": "284 MILLIGRAM, QW",
+      "route": "065"
+     },
+     {
+      "product": "ZALDIAR",
+      "role": "2",
+      "indication": "Product used for unknown indication",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "METAMIZOLE MAGNESIUM",
+      "role": "2",
+      "indication": "Product used for unknown indication",
+      "dose": "SI PRECISA (IF YOU NEED)",
+      "route": "065"
+     },
+     {
+      "product": "ACETAMINOPHEN",
+      "role": "2",
+      "indication": "Product used for unknown indication",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "PRADAXA",
+      "role": "2",
+      "indication": "Product used for unknown indication",
+      "dose": "110 MILLIGRAM, 1-0-1",
+      "route": "065"
+     }
+    ]
+   },
+   {
+    "safetyreportid": "22325931",
+    "receivedate": "20230516",
+    "primarysourcecountry": "BR",
+    "serious": "1",
+    "seriousnessdeath": "2",
+    "seriousnesshospitalization": "1",
+    "seriousnesslifethreatening": "2",
+    "patientonsetage": null,
+    "patientonsetageunit": null,
+    "patientsex": null,
+    "reactions": [
+     "Thrombosis",
+     "Cardiac assistance device user",
+     "Brain natriuretic peptide decreased",
+     "International normalised ratio increased",
+     "Mean cell volume increased",
+     "Red cell distribution width increased",
+     "Lymphocyte count decreased",
+     "Monocyte count increased",
+     "White blood cell count decreased",
+     "Activated partial thromboplastin time prolonged",
+     "Atrial enlargement",
+     "Platelet disorder",
+     "Left ventricular hypertrophy",
+     "Diastolic dysfunction",
+     "Left atrial dilatation",
+     "Heart valve calcification",
+     "Tricuspid valve incompetence",
+     "Platelet count decreased",
+     "Mean cell haemoglobin concentration decreased",
+     "Haematocrit decreased",
+     "Haemoglobin decreased",
+     "Red blood cell count decreased",
+     "Leukopenia",
+     "Platelet count decreased",
+     "Gait disturbance",
+     "Walking aid user",
+     "Disease progression",
+     "Orthosis user",
+     "Off label use",
+     "Muscular weakness",
+     "Asthenia",
+     "Weight decreased",
+     "Varices oesophageal"
+    ],
+    "reaction_outcomes": [
+     "1",
+     "3",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "6",
+     "3",
+     "6",
+     "6",
+     "6",
+     "6",
+     "3",
+     "2",
+     "3",
+     "3",
+     "3",
+     "3",
+     "1",
+     "3",
+     "3",
+     "3",
+     "1"
+    ],
+    "drugs": [
+     {
+      "product": "TEGSEDI",
+      "role": "1",
+      "indication": "Hereditary neuropathic amyloidosis",
+      "dose": "UNK UNK, HALF A DOSE OF THE SYRINGE TWICE A WEEK",
+      "route": "058"
+     },
+     {
+      "product": "TEGSEDI",
+      "role": "1",
+      "indication": null,
+      "dose": "UNK, BID, HALD A DOSE OF THE SYRINGE",
+      "route": "058"
+     },
+     {
+      "product": "TEGSEDI",
+      "role": "1",
+      "indication": null,
+      "dose": "UNK, BID, HALD A DOSE OF THE SYRINGE",
+      "route": "058"
+     },
+     {
+      "product": "TEGSEDI",
+      "role": "1",
+      "indication": null,
+      "dose": "UNK",
+      "route": "065"
+     },
+     {
+      "product": "TEGSEDI",
+      "role": "1",
+      "indication": null,
+      "dose": "UNK, HALF A DOSE OF THE SYRINGE OF 1,5ML BID",
+      "route": "058"
+     },
+     {
+      "product": "TEGSEDI",
+      "role": "1",
+      "indication": null,
+      "dose": "UNK, HALF A DOSE OF THE SYRINGE OF 1,5ML BID",
+      "route": "058"
+     },
+     {
+      "product": "TEGSEDI",
+      "role": "1",
+      "indication": null,
+      "dose": "UNK",
+      "route": "065"
+     },
+     {
+      "product": "CARVEDILOL",
+      "role": "2",
+      "indication": "Product used for unknown indication",
+      "dose": "6.5 MILLIGRAM, 5 TABLETS OF 2.5MG",
+      "route": "065"
+     }
+    ]
+   }
+  ]
+ },
+ "fitusiran||ANTITHROMBIN III DECREASED": {
+  "exact_query": "https://api.fda.gov/drug/event.json?search=patient.drug.openfda.substance_name:\"fitusiran\"+AND+patient.reaction.reactionmeddrapt.exact:\"ANTITHROMBIN III DECREASED\"&limit=5",
+  "n_total": 1,
+  "records": [
+   {
+    "safetyreportid": "26088970",
+    "receivedate": "20251125",
+    "primarysourcecountry": "US",
+    "serious": "1",
+    "seriousnessdeath": "2",
+    "seriousnesshospitalization": "2",
+    "seriousnesslifethreatening": "2",
+    "patientonsetage": "40",
+    "patientonsetageunit": "801",
+    "patientsex": "1",
+    "reactions": [
+     "Hodgkin^s disease",
+     "Fatigue",
+     "Pain",
+     "Gait disturbance",
+     "Traumatic haemorrhage",
+     "Antithrombin III decreased",
+     "Arthralgia",
+     "Central venous catheterisation"
+    ],
+    "reaction_outcomes": [
+     "1",
+     "1",
+     "1",
+     "6",
+     "6",
+     "1",
+     "6",
+     "6"
+    ],
+    "drugs": [
+     {
+      "product": "QFITLIA",
+      "role": "1",
+      "indication": "Factor VIII deficiency",
+      "dose": "UNK",
+      "route": null
+     },
+     {
+      "product": "QFITLIA",
+      "role": "1",
+      "indication": "Factor IX deficiency",
+      "dose": "20 (UNITS NOT PROVIDED) Q2M",
+      "route": null
+     },
+     {
+      "product": "QFITLIA",
+      "role": "1",
+      "indication": null,
+      "dose": "50 (UNITS NOT PROVIDED), Q2M",
+      "route": null
+     },
+     {
+      "product": "ALTUVIIIO",
+      "role": "1",
+      "indication": "Pain",
+      "dose": "1000 IU",
+      "route": null
+     }
+    ]
+   }
+  ]
+ },
+ "patisiran||DISSEMINATED INTRAVASCULAR COAGULATION": {
+  "exact_query": "https://api.fda.gov/drug/event.json?search=patient.drug.openfda.substance_name:\"patisiran\"+AND+patient.reaction.reactionmeddrapt.exact:\"DISSEMINATED INTRAVASCULAR COAGULATION\"&limit=5",
+  "n_total": 1,
+  "records": [
+   {
+    "safetyreportid": "20918009",
+    "receivedate": "20220606",
+    "primarysourcecountry": "JP",
+    "serious": "1",
+    "seriousnessdeath": "1",
+    "seriousnesshospitalization": "1",
+    "seriousnesslifethreatening": "2",
+    "patientonsetage": null,
+    "patientonsetageunit": null,
+    "patientsex": null,
+    "reactions": [
+     "Cardiac failure congestive",
+     "Sepsis",
+     "Disseminated intravascular coagulation",
+     "Ureterolithiasis"
+    ],
+    "reaction_outcomes": [
+     "5",
+     "5",
+     "5",
+     "1"
+    ],
+    "drugs": [
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": "Hereditary neuropathic amyloidosis",
+      "dose": "13.2 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "12.6 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "13.5 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "12.9 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "13.2 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "13.8 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "13.2 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "12.6 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "12.9 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "13.2 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "12.9 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "13.2 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "12.3 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "12.6 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "12.3 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "12.6 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "12.3 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "12 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "12.3 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "12 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "12.9 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "11.7 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "11.4 MILLIGRAM",
+      "route": "041"
+     },
+     {
+      "product": "ONPATTRO",
+      "role": "1",
+      "indication": null,
+      "dose": "12.9 MILLIGRAM, Q3W",
+      "route": "041"
+     },
+     {
+      "product": "DECADRON",
+      "role": "2",
+      "indication": "Prophylaxis",
+      "dose": "9.9 MILLIGRAM, SINGLE",
+      "route": "041"
+     },
+     {
+      "product": "ACETAMINOPHEN",
+      "role": "2",
+      "indication": "Prophylaxis",
+      "dose": "600 MILLIGRAM, SINGLE",
+      "route": "048"
+     },
+     {
+      "product": "POLARAMINE",
+      "role": "2",
+      "indication": "Prophylaxis",
+      "dose": "5 MILLIGRAM, SINGLE",
+      "route": "041"
+     },
+     {
+      "product": "FAMOTIDINE",
+      "role": "2",
+      "indication": "Prophylaxis",
+      "dose": "20 MILLIGRAM, SINGLE",
+      "route": "041"
+     },
+     {
+      "product": "RAMOSETRON HYDROCHLORIDE",
+      "role": "2",
+      "indication": "Diarrhoea",
+      "dose": "10 MICROGRAM, QD",
+      "route": "048"
+     },
+     {
+      "product": "LOPERAMIDE",
+      "role": "2",
+      "indication": "Diarrhoea",
+      "dose": "3 MILLIGRAM, QD",
+      "route": "048"
+     },
+     {
+      "product": "TRIMEBUTINE MALEATE",
+      "role": "2",
+      "indication": "Irritable bowel syndrome",
+      "dose": "300 MILLIGRAM, QD",
+      "route": "048"
+     },
+     {
+      "product": "HERBALS",
+      "role": "2",
+      "indication": "Gastritis",
+      "dose": "7.5 GRAM, QD",
+      "route": "048"
+     },
+     {
+      "product": "METOCLOPRAMIDE",
+      "role": "2",
+      "indication": "Gastritis",
+      "dose": "15 MILLIGRAM, QD",
+      "route": "048"
+     },
+     {
+      "product": "MIYA-BM",
+      "role": "2",
+      "indication": "Gastrointestinal motility disorder",
+      "dose": "6 DOSAGE FORM, QD",
+      "route": "048"
+     }
+    ]
+   }
+  ]
+ },
+ "imetelstat||COAGULATION TIME PROLONGED": {
+  "exact_query": "https://api.fda.gov/drug/event.json?search=patient.drug.openfda.substance_name:\"imetelstat\"+AND+patient.reaction.reactionmeddrapt.exact:\"COAGULATION TIME PROLONGED\"&limit=5",
+  "n_total": 1,
+  "records": [
+   {
+    "safetyreportid": "26387774",
+    "receivedate": "20260213",
+    "primarysourcecountry": "US",
+    "serious": "2",
+    "seriousnessdeath": "2",
+    "seriousnesshospitalization": "2",
+    "seriousnesslifethreatening": "2",
+    "patientonsetage": "73",
+    "patientonsetageunit": "801",
+    "patientsex": "1",
+    "reactions": [
+     "Feeling abnormal",
+     "Coagulation time prolonged",
+     "Wound",
+     "Diarrhoea"
+    ],
+    "reaction_outcomes": [
+     "6",
+     "6",
+     "6",
+     "1"
+    ],
+    "drugs": [
+     {
+      "product": "RYTELO",
+      "role": "1",
+      "indication": "Myelodysplastic syndrome",
+      "dose": "UNK MILLIGRAM/KILOGRAM, MONTHLY",
+      "route": "042"
+     },
+     {
+      "product": "TESTOSTERONE",
+      "role": "2",
+      "indication": "Product used for unknown indication",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "AMLODIPINE",
+      "role": "2",
+      "indication": "Product used for unknown indication",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "FLUTICASONE FUROATE",
+      "role": "2",
+      "indication": "Product used for unknown indication",
+      "dose": null,
+      "route": "065"
+     },
+     {
+      "product": "MULTIVIT [VITAMINS NOS]",
+      "role": "2",
+      "indication": "Product used for unknown indication",
+      "dose": null,
+      "route": null
+     }
+    ]
+   }
+  ]
+ }
+}

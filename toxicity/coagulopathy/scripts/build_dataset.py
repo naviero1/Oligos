@@ -289,7 +289,7 @@ SCOPE_ADJACENT_READOUTS = {
 }
 
 COAG_LEXICON = re.compile(
-    r"aptt|ptt|prothrombin|\bpt\b|pt_ratio|\btt\b|inr|thrombin|thrombus|clot|coagul|fibrin|d[_ -]?dimer|antithrombin|anti[_-]?xa|anti[_-]?iia|bleed|blood_loss|blood_flow|blood_transfusion|h(?:ae|e|a)?morrhag|h(?:ae|e|a)?mostas|h(?:ae|e|a)?mostatic|thromb|kallikrein|tenase|xase|\bact\b|tfpi|vwf|von[_ ]willebrand|platelet|heparin|protamine|bivalirudin|argatroban|hirudin|\btat\b|epistaxis|h(?:ae|e|a)?matoma|h(?:ae|e|a)?maturia|contusion|transfusion|\bF(?:I|II|V|VII|VIII|IX|X|XI|XII)a?(?:se)?[_ ]|fxa|fixa|fviia|fxia|fxiia|fviii|factor|serpin|plasmin|PAI[_ ]?1|tPA|PF4|ecarin|russell|reptilase|TEG|ROTEM|bradykinin|P[_ ]selectin|occlusion|patency|perfusion|neurologic_deficit|mortality|Evans_blue|oxygenator|cerebrovascular|saphenous|carotid|jugular", re.I)
+    r"aptt|ptt|prothrombin|\bpt\b|pt_ratio|\btt\b|inr|thrombin|thrombus|clot|coagul|fibrin|d[_ -]?dimer|antithrombin|anti[_-]?xa|anti[_-]?iia|bleed|blood_loss|blood_flow|blood_transfusion|h(?:ae|e|a)?morrhag|h(?:ae|e|a)?mostas|h(?:ae|e|a)?mostatic|thromb|kallikrein|tenase|xase|\bact\b|tfpi|vwf|von[_ ]willebrand|platelet|heparin|protamine|bivalirudin|argatroban|hirudin|\btat\b|epistaxis|h(?:ae|e|a)?matoma|h(?:ae|e|a)?maturia|contusion|transfusion|\bF(?:I|II|V|VII|VIII|IX|X|XI|XII)a?(?:se)?[_ ]|fxa|fixa|fviia|fxia|fxiia|fviii|factor|serpin|plasmin|PAI[_ ]?1|tPA|PF4|ecarin|russell|reptilase|TEG|ROTEM|bradykinin|P[_ ]selectin|occlusion|patency|perfusion|neurologic_deficit|mortality|Evans_blue|oxygenator|cerebrovascular|saphenous|carotid|jugular|contact_pathway|proenzyme|zymogen|prekallikrein|injection_site", re.I)
 
 def apply_endpoint_scope(rows, log):
     for r in rows:
@@ -478,10 +478,17 @@ def main():
                 # fill gaps only; never overwrite a value already sourced
                 for k in ("sequence_5to3_asprinted", "sequence_locus",
                           "backbone_chemistry", "sugar_modifications", "target_gene",
-                          "developer", "max_phase", "length_nt", "gapmer_design",
+                          "developer", "max_phase", "gapmer_design",
                           "conjugate", "ps_count", "oligo_class", "modality", "indication"):
                     if str(hit.get(k, NR)) in ("", NR) and str(o.get(k, NR)) not in ("", NR):
                         hit[k] = o[k]
+                # length and sequence must go through the same cleaners as the first write,
+                # or a later source's prose cell overwrites a cleaned one.
+                if str(hit.get("length_nt", NR)) in ("", NR) and _len not in ("", NR):
+                    hit["length_nt"] = _len
+                if str(hit.get("sequence_base", NR)) in ("", NR, NA) and _seq not in ("", NR, NA):
+                    hit["sequence_base"] = _seq
+                    hit["length_nt_from_sequence"] = str(len(_seq))
                 if norm_name(o.get("oligo_name")) != norm_name(hit["oligo_name"]):
                     al = str(hit.get("aliases") or "")
                     if o.get("oligo_name") and o["oligo_name"] not in al:
@@ -586,6 +593,37 @@ def main():
     mods = kept
     mods.sort(key=lambda r: (r["oligo_id"], int(r["position"]) if str(r["position"]).isdigit() else 0))
 
+
+    # A source that prints per-residue chemical nomenclature (as the EMA assessment reports
+    # and FDA reviews do) publishes the sequence implicitly: it is the nucleobase at each
+    # position. Where the position set is complete and contiguous, reconstruct it. This is
+    # derivation from the source's own transcribed residues, not inference -- and it is what
+    # gives the approved clinical compounds a sequence at all.
+    bypos = defaultdict(dict)
+    for r in mods:
+        if str(r["position"]).isdigit():
+            bypos[r["oligo_id"]][int(r["position"])] = r["nucleobase"]
+    derived = 0
+    for o in oligos:
+        if o["sequence_base"] not in (NR, NA, ""):
+            continue
+        pos = bypos.get(o["oligo_id"])
+        if not pos:
+            continue
+        ks = sorted(pos)
+        if ks != list(range(1, len(ks) + 1)):
+            continue
+        bases = [str(pos[i]).upper() for i in ks]
+        if not all(b in ("A", "C", "G", "T", "U") for b in bases):
+            continue
+        o["sequence_base"] = "".join(bases)
+        o["length_nt_from_sequence"] = str(len(bases))
+        note = f"sequence_base DERIVED from the per-position chemistry ({len(bases)} residues, contiguous)"
+        o["sequence_note"] = note if o["sequence_note"] in (NA, NR, "") else o["sequence_note"] + "; " + note
+        if str(o["length_nt"]) == NR:
+            o["length_nt"] = str(len(bases))
+        derived += 1
+
     # ---- roll-ups ----------------------------------------------------------
     per_o, per_s = defaultdict(int), defaultdict(int)
     hum_o, ani_o = defaultdict(int), defaultdict(int)
@@ -634,6 +672,7 @@ def main():
         print(f"    {_k:<44} {_log[_k]:>5} rows")
     print(f"\n  merged compounds across sources : {len(merges)}")
     print(f"  terminal caps lifted to oligo   : {lifted}")
+    print(f"  sequences derived from chemistry: {derived}")
     print(f"  orphan measurements dropped     : {orphans}")
     print(f"  orphan modification rows dropped: {mod_orphans}")
     print(f"  graded rows                     : {len(graded)} / {len(measurements)}"
