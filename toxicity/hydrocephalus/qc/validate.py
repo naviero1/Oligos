@@ -277,6 +277,56 @@ def main():
     check("data dictionary documents no column that does not exist", not phantom,
           "phantom: %s" % phantom[:8])
 
+    # 11d-bis every source is actually CITED -----------------------------
+    #     assemble.source_meta_for() falls back to a stub whose citation is just
+    #     the source_id and whose url, licence, tier and retrieval route are all
+    #     NOT_REPORTED. Five sources carrying 23 measurement rows and 54
+    #     modification rows sat in that stub because their citation details lived
+    #     only in a comment in their builder. A row whose provenance is a comment
+    #     in a script is not a cited row, so the stub is now a failure.
+    cited_by = collections.Counter(r["source_id"] for r in m)
+    for r in mods:
+        cited_by[r["source_id"]] += 1
+    stubs, thin = [], []
+    for r in s:
+        if cited_by.get(r["source_id"], 0) == 0:
+            continue
+        if r["citation"].strip() == r["source_id"].strip():
+            stubs.append(r["source_id"])
+            continue
+        for col in ("url", "access", "license", "evidence_tier", "retrieved_via"):
+            if r[col] in ("", "NOT_REPORTED"):
+                thin.append("%s.%s" % (r["source_id"], col))
+    check("every source carrying rows has a real citation", not stubs,
+          "citation is just the source_id for: %s" % stubs[:6])
+    check("every source carrying rows states link, rights, tier and route",
+          not thin, "unstated: %s" % thin[:8])
+
+    # 11d-ter every URL is a resolvable locator, not a bare hostname -------
+    #     "https://dailymed.nlm.nih.gov/dailymed/" told a reader which database
+    #     was used but not which document, and a US label is revised in place.
+    bare = [r["source_id"] for r in s
+            if cited_by.get(r["source_id"], 0)
+            and re.match(r"^https?://[^/]+/?$", r["url"] or "")]
+    check("source URLs identify a document, not just a host", not bare,
+          "bare host: %s" % bare[:6])
+
+    # 11d-quater the ML report agrees with the results it claims to quote ---
+    #     ml/ML_REPORT.md opens with "Every number here is read from
+    #     ml/results.json; none is typed" -- which was false: analyse.py listed it
+    #     as an output but never wrote it, and adding four trials left the report
+    #     asserting 526 arms against a results.json saying 546. analyse.py now
+    #     generates it; this check stops anyone editing the generated file by hand.
+    rp = os.path.join(ROOT, "ml", "results.json")
+    mdp = os.path.join(ROOT, "ml", "ML_REPORT.md")
+    if os.path.exists(rp) and os.path.exists(mdp):
+        res = json.load(open(rp))
+        md = open(mdp).read()
+        missing = [k for k in ("n_arms", "n_trials", "n_compounds", "n_participants")
+                   if "{:,}".format(res[k]) not in md and str(res[k]) not in md]
+        check("ML_REPORT.md quotes the numbers in ml/results.json", not missing,
+              "not found in the report: %s" % [(k, res[k]) for k in missing])
+
     # 11e endpoint isolation — no other toxicity's material may leak in ----
     #     Requested explicitly: the endpoints are separate deliverables and their
     #     files must not mix. This makes that a check rather than a convention.

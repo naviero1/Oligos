@@ -22,22 +22,22 @@ one."* This directory is that second dataset.
 
 | | Count |
 |---|---:|
-| Measurement rows | **1329** |
+| Measurement rows | **1361** |
 | Oligonucleotides described | **53** |
 | — of which carry at least one measurement | 47 |
-| Distinct sources | 190 |
+| Distinct sources | 193 |
 | Tier-A rows with a positive finding | 62 |
-| Tier-A rows that are explicit measured negatives | 735 |
+| Tier-A rows that are explicit measured negatives | 755 |
 | Grade-3 (severe) rows | 22 |
 | Oligonucleotides with a published sequence | 13 |
-| QC checks run / failed | 47 / 0 |
+| QC checks run / failed | 51 / 0 |
 
 **Endpoint tier** — **A** = hydrocephalus (communicating, obstructive or normal-pressure), ventriculomegaly / ventricular dilatation, shunt or drain placement. **B** = raised intracranial pressure, papilloedema, aseptic or chemical meningitis, arachnoiditis, CSF leak or protein rise, post-lumbar-puncture syndrome.
 
 | Tier | Rows |
 |---|---:|
-| A | 798 |
-| B | 531 |
+| A | 818 |
+| B | 543 |
 
 **Study type**
 
@@ -46,7 +46,7 @@ one."* This directory is that second dataset.
 | animal_invivo | 8 |
 | background_epidemiology | 3 |
 | clinical_case | 15 |
-| clinical_trial | 757 |
+| clinical_trial | 789 |
 | in_vitro | 2 |
 | pharmacovigilance | 456 |
 | regulatory_label | 88 |
@@ -55,8 +55,8 @@ one."* This directory is that second dataset.
 
 | Ascertainment | Rows |
 |---|---:|
-| measured_null | 1108 |
-| measured_positive | 220 |
+| measured_null | 1133 |
+| measured_positive | 227 |
 | not_assessed | 1 |
 
 **Attribution, as stated by the source** — what the SOURCE concluded about causation. `not_discussed` dominates because registry and pharmacovigilance records carry no causality assessment at all — that is a property of those sources, not an omission here
@@ -65,7 +65,7 @@ one."* This directory is that second dataset.
 |---|---:|
 | disease_attributed | 3 |
 | drug_attributed | 33 |
-| not_discussed | 1293 |
+| not_discussed | 1325 |
 
 **Toxicity axis** — `disease_background_rate` rows carry no compound; `delivery_procedure_complication` rows are attributable to the lumbar puncture rather than to any molecule
 
@@ -74,18 +74,18 @@ one."* This directory is that second dataset.
 | csf_composition_disturbance | 210 |
 | csf_dynamics | 3 |
 | csf_pressure_disturbance | 126 |
-| delivery_procedure_complication | 188 |
+| delivery_procedure_complication | 200 |
 | disease_background_rate | 3 |
 | therapeutic_ventricular_effect | 2 |
-| ventricular_enlargement | 797 |
+| ventricular_enlargement | 817 |
 
 **Severity grade** — rubric in [`SCHEMA.md`](SCHEMA.md#hydroceph_grade-rubric-03); all grades are provisional
 
 | `hydroceph_grade` | Rows |
 |---|---:|
 | *(not graded)* | 26 |
-| 0 | 1108 |
-| 1 | 94 |
+| 0 | 1133 |
+| 1 | 101 |
 | 2 | 79 |
 | 3 | 22 |
 
@@ -97,11 +97,11 @@ one."* This directory is that second dataset.
 | NOT_REPORTED | 124 |
 | in_culture_medium | 2 |
 | intracerebroventricular | 6 |
-| intrathecal_lumbar | 321 |
-| intravenous | 359 |
+| intrathecal_lumbar | 339 |
+| intravenous | 368 |
 | intravitreal | 59 |
 | oral | 1 |
-| subcutaneous | 452 |
+| subcutaneous | 457 |
 | topical_enema | 2 |
 
 **Readout category**
@@ -112,8 +112,8 @@ one."* This directory is that second dataset.
 | csf_dynamics | 68 |
 | csf_pressure | 126 |
 | histopathology_choroid_ependyma | 3 |
-| hydrocephalus_event | 629 |
-| procedure_complication | 165 |
+| hydrocephalus_event | 649 |
+| procedure_complication | 177 |
 | shunt_or_drain_intervention | 43 |
 | ventricular_morphometry | 107 |
 
@@ -123,7 +123,7 @@ one."* This directory is that second dataset.
 |---|---:|
 | cc_by | 13 |
 | cc_by_nc | 3 |
-| public_domain | 1290 |
+| public_domain | 1322 |
 | summary_stat_only | 15 |
 | verify | 8 |
 
@@ -140,11 +140,12 @@ one."* This directory is that second dataset.
 | `N2-AQP4` | 3 |
 | `N3-GAI2` | 5 |
 
-**Largest sources** (top 10 of 190)
+**Largest sources** (top 10 of 193)
 
 | `source_id` | Rows |
 |---|---:|
 | `FAERS_openFDA` | 456 |
+| `NCT02519036` | 36 |
 | `NCT02594124` | 36 |
 | `NCT02623699` | 36 |
 | `NCT03070119` | 24 |
@@ -153,7 +154,6 @@ one."* This directory is that second dataset.
 | `NCT03334617` | 22 |
 | `NCT03225846` | 21 |
 | `NCT02499328` | 19 |
-| `NCT02519036` | 18 |
 
 <!-- END GENERATED -->
 
@@ -316,10 +316,12 @@ asserting; every one traces to a row and a locus.
 | `data/modifications.csv` | **One row per nucleotide position** — the location of each chemical modification |
 | `data/sources.csv` | Provenance registry; row counts recomputed, never typed |
 | `data/hydrocephalus_merged.csv` | **Generated** denormalized join. Never hand-edit; regenerate with `scripts/assemble.py` |
-| `scripts/` | The six extraction and build components, the assembler and the doc renderer |
+| `scripts/` | The extraction and build components, the assembler, the link checker and the doc renderer |
 | `qc/validate.py` | Quality-control suite; exits non-zero on failure and writes `qc/stats.json` |
 | `sources/raw/` | Every retrieved payload, committed, so any value can be re-derived offline |
 | `notes/` | Per-component audit trails |
+| `OligoTox-Hydrocephalus_Sources.pdf` | **Source and provenance register** — every database, document and link behind the release, with per-source rights and a resolved-URL check |
+| `notes/link_check.json` | HTTP status of every URL in the register, with the date checked |
 | `OligoTox-Hydrocephalus_Dataset.xlsx` | The dataset as a single workbook — README, Summary, data_dictionary, oligos, measurements, modifications, sources — in the same sheet layout as the sibling CNS release |
 | [`scripts/data_dictionary.py`](scripts/data_dictionary.py) | The authoritative column definitions, enforced by QC in both directions |
 
@@ -339,9 +341,15 @@ python3 scripts/parse_inn_sequences.py    # sequences + per-position chemistry f
 python3 scripts/build_oligos.py           # design predictors from labels and INN
 python3 scripts/assemble.py               # canonical tables + provenance registry + merged view
 python3 scripts/build_modifications.py    # per-position chemistry (needs the keys assemble assigns)
-python3 qc/validate.py                    # 44 checks; writes qc/stats.json
+python3 scripts/assemble.py               # re-run: modification rows join the provenance registry
+python3 scripts/check_source_links.py     # resolves every URL in the register; caches the status
+python3 qc/validate.py                    # 50 checks; writes qc/stats.json
+python3 ml/build_analysis_set.py          # aggregate to trial arms
+python3 ml/analyse.py                     # route stratification, LOCO CV, leakage probes, ML_REPORT.md
 python3 scripts/render_docs.py            # regenerates the counts in this file
 python3 scripts/export_xlsx.py            # the .xlsx workbook (needs openpyxl)
+python3 docs/build_pdfs.py                # narrative, methodology, PADP
+python3 docs/build_sources_pdf.py         # the source and provenance register
 ```
 
 Every network call is cached under `sources/raw/`, so a re-run is offline and

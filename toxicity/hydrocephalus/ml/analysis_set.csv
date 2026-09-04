@@ -182,6 +182,12 @@ NCT02499328,B8: AZD9150 400mg q2w + MEDI4736 1.5g Q4W,danvatirsen,exposed,0,50,0
 NCT02510261,Prior Patisiran Group of Study 003,patisiran,exposed,0,25,0,0,0,0,none,0,intravenous,0,Amyloidosis,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
 NCT02510261,Prior Patisiran Group of Study 004,patisiran,exposed,0,137,0,0,0,0,none,0,intravenous,0,Amyloidosis,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
 NCT02510261,Prior Placebo Group of Study 004,patisiran,exposed,0,49,0,0,0,0,none,0,intravenous,0,Amyloidosis,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT02519036,ISIS 443139 10 mg,tominersen,exposed,0,3,0,1,0,1,none,1,intrathecal_lumbar,1,Huntington's Disease,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,3
+NCT02519036,ISIS 443139 120 mg,tominersen,exposed,0,10,0,5,0,1,none,1,intrathecal_lumbar,1,Huntington's Disease,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,3
+NCT02519036,ISIS 443139 30 mg,tominersen,exposed,0,6,0,2,0,1,none,1,intrathecal_lumbar,1,Huntington's Disease,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,3
+NCT02519036,ISIS 443139 60 mg,tominersen,exposed,0,6,0,1,0,1,none,1,intrathecal_lumbar,1,Huntington's Disease,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,3
+NCT02519036,ISIS 443139 90 mg,tominersen,exposed,0,9,0,3,0,1,none,1,intrathecal_lumbar,1,Huntington's Disease,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,3
+NCT02519036,Placebo,placebo_or_sham_control,comparator,1,12,0,4,0,1,none,1,intrathecal_lumbar,1,Huntington's Disease,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,3
 NCT02525523,Alicaforsen,alicaforsen,exposed,0,69,0,0,0,0,none,0,topical_enema,0,Pouchitis,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
 NCT02525523,Placebo,placebo_or_sham_control,comparator,1,69,0,0,0,0,none,0,topical_enema,0,Pouchitis,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
 NCT02527343,Open-Label Extension Period (OLE and OLE Post-Treatment Follow-up): Placebo/Volanesorsen,placebo_or_sham_control,comparator,1,12,0,0,0,0,none,0,subcutaneous,0,Familial Partial Lipodystrophy,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,TERMINATED,1
@@ -248,6 +254,12 @@ NCT02706886,Part B: MAD: Lumasiran 1.0 mg/kg qM,lumasiran,exposed,0,8,0,0,0,0,no
 NCT02706886,Part B: MAD: Lumasiran 3.0 mg/kg q3M,lumasiran,exposed,0,4,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria Type 1 (PH1),siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
 NCT02706886,Part B: MAD: Lumasiran 3.0 mg/kg qM,lumasiran,exposed,0,8,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria Type 1 (PH1),siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
 NCT02706886,Part B: MAD: Placebo,placebo_or_sham_control,comparator,1,3,0,0,0,0,none,0,subcutaneous,0,Primary Hyperoxaluria Type 1 (PH1),NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT02740972,NS-065/NCNP-01 40mg/kg (Period 1),placebo_or_sham_control,comparator,1,6,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT02740972,NS-065/NCNP-01 40mg/kg (Period 2),viltolarsen,exposed,0,8,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT02740972,NS-065/NCNP-01 80mg/kg (Period 1),placebo_or_sham_control,comparator,1,5,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT02740972,NS-065/NCNP-01 80mg/kg (Period 2),viltolarsen,exposed,0,8,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT02740972,Placebo (Period 1),placebo_or_sham_control,comparator,1,5,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
+NCT02740972,Total,viltolarsen,exposed,0,16,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
 NCT02851407,Best Supportive Care,defibrotide,exposed,0,174,0,1,0,1,none,2,intravenous,0,Veno-occlusive Disease,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,2
 NCT02851407,Defibrotide Prophylaxis,defibrotide,exposed,0,181,0,0,0,0,none,0,intravenous,0,Veno-occlusive Disease,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,2
 NCT02876601,Defibrotide Plus LPS,defibrotide,exposed,0,16,0,0,0,0,none,0,intravenous,0,Healthy Volunteers; Endotoxemia,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
@@ -264,6 +276,9 @@ NCT03070119,233AS101: Part C (Prior Placebo),tofersen,exposed,0,32,0,6,0,1,none,
 NCT03070119,233AS101: Parts A and B (All Doses),tofersen,exposed,0,44,0,13,0,1,none,2,NOT_REPORTED,0,ALS Caused by Superoxide Dismutase 1 (SOD1) Mutation,ASO_gapmer,mixed_PO_PS,5-10-5,1,COMPLETED,8
 NCT03140969,QR-110 Low Dose,sepofarsen,exposed,0,6,0,0,0,0,none,0,intravitreal,0,Leber's Congenital Amaurosis,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
 NCT03140969,QR-110 Mid Dose,sepofarsen,exposed,0,5,0,0,0,0,none,0,intravitreal,0,Leber's Congenital Amaurosis,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03167255,NS-065/NCNP-01 40mg/kg,viltolarsen,exposed,0,8,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT03167255,NS-065/NCNP-01 80mg/kg,viltolarsen,exposed,0,8,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
+NCT03167255,Total NS-065/NCNP-01 Group,viltolarsen,exposed,0,16,0,0,0,0,none,0,intravenous,0,Duchenne Muscular Dystrophy,PMO,PMO_neutral,NOT_REPORTED,0,COMPLETED,1
 NCT03186989,Part 1: Cohort A: ISIS 814907 10 mg,BIIB080,exposed,0,6,0,3,0,1,none,1,intrathecal_lumbar,1,Mild Alzheimer's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,2
 NCT03186989,Part 1: Cohort B: ISIS 814907 30 mg,BIIB080,exposed,0,6,0,1,0,1,none,1,intrathecal_lumbar,1,Mild Alzheimer's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,2
 NCT03186989,Part 1: Cohort C: ISIS 814907 60 mg,BIIB080,exposed,0,9,0,2,0,1,none,1,intrathecal_lumbar,1,Mild Alzheimer's Disease,ASO_gapmer,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,2
@@ -324,6 +339,11 @@ NCT03342053,RO7234292 Monthly,tominersen,exposed,0,23,2,4,1,1,cerebral_ventricle
 NCT03350451,Lumasiran (ALN-GO1): 1.0 mg/kg QM or 3.0 mg/kg Q3M,lumasiran,exposed,0,13,0,0,0,0,none,0,subcutaneous,0,PH1; Primary Hyperoxaluria; RNAi Therapeutic; siRNA; AGT,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
 NCT03350451,Lumasiran (ALN-GO1): 3.0 mg/kg QM,lumasiran,exposed,0,7,0,0,0,0,none,0,subcutaneous,0,PH1; Primary Hyperoxaluria; RNAi Therapeutic; siRNA; AGT,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
 NCT03384693,Prophylactic Defibrotide,defibrotide,exposed,0,25,0,0,0,0,none,0,intravenous,0,Thrombotic Microangiopathies,other,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03385239,Cohort A: ISIS 678354: 10 mg Q4W,olezarsen,exposed,0,22,0,0,0,0,none,0,subcutaneous,0,Hypertriglyceridemia; Cardiovascular Diseases,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03385239,Cohort B: ISIS 678354: 50 mg Q4W,olezarsen,exposed,0,22,0,0,0,0,none,0,subcutaneous,0,Hypertriglyceridemia; Cardiovascular Diseases,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03385239,Cohort C: ISIS 678354: 15 mg Q2W,olezarsen,exposed,0,23,0,0,0,0,none,0,subcutaneous,0,Hypertriglyceridemia; Cardiovascular Diseases,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03385239,Cohort D: ISIS 678354: 10 mg QW,olezarsen,exposed,0,23,0,0,0,0,none,0,subcutaneous,0,Hypertriglyceridemia; Cardiovascular Diseases,NOT_REPORTED,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
+NCT03385239,Pooled Placebo,placebo_or_sham_control,comparator,1,24,0,0,0,0,none,0,subcutaneous,0,Hypertriglyceridemia; Cardiovascular Diseases,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
 NCT03397121,Inclisiran,inclisiran,exposed,0,241,0,0,0,0,none,0,subcutaneous,0,Heterozygous Familial Hypercholesterolemia; Elevated Cholesterol,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1
 NCT03397121,Placebo,placebo_or_sham_control,comparator,1,240,0,0,0,0,none,0,subcutaneous,0,Heterozygous Familial Hypercholesterolemia; Elevated Cholesterol,NOT_APPLICABLE,NOT_APPLICABLE,NOT_APPLICABLE,0,COMPLETED,1
 NCT03399370,Inclisiran,inclisiran,exposed,0,781,0,0,0,0,none,0,subcutaneous,0,ASCVD; Elevated Cholesterol,siRNA,NOT_REPORTED,NOT_REPORTED,0,COMPLETED,1

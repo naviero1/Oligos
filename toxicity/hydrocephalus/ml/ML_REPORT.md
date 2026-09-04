@@ -12,21 +12,21 @@ marks). Treating them as independent inflates n by an order of magnitude and
 shrinks every interval.
 
 The analysis set aggregates to **one row per (trial, arm)**, which is a binomial
-observation with a real denominator: 526 arms across 155
-trials and 41 compounds, 36,084 participants
-at risk. It keeps only `clinical_trial` rows with a denominator, so every
-observation is the same kind of thing.
+observation with a real denominator: 546 arms across 159 trials and
+41 compounds, 36,324 participants at risk. It keeps only
+`clinical_trial` rows with a denominator, so every observation is the same kind
+of thing.
 
 | | |
 |---|---:|
-| Arms | 526 |
-| Trials | 155 |
+| Arms | 546 |
+| Trials | 159 |
 | Compounds | 41 |
-| Participants at risk (arm-sum) | 36,084 |
+| Participants at risk (arm-sum) | 36,324 |
 | Arms with a tier-A (ventricular) event | **9** |
-| Arms with a tier-B (CSF-dynamics) event | 78 |
+| Arms with a tier-B (CSF-dynamics) event | 84 |
 
-**Nine tier-A arms will not support a classifier**, and this report does not
+**9 tier-A arms will not support a classifier**, and this report does not
 present one. What the data supports is route stratification, a modellable
 tier-B outcome, and a leakage diagnosis.
 
@@ -34,21 +34,20 @@ tier-B outcome, and a leakage diagnosis.
 
 | Route | Participants | Affected | Rate / 1,000 | 95% Wilson |
 |---|---:|---:|---:|---|
-| CNS-delivered (intrathecal / ICV) | 2,531 | 10 | **3.95** | 2.15–7.26 |
-| Systemically delivered | 30,725 | 7 | 0.23 | 0.11–0.47 |
+| CNS-delivered (intrathecal / ICV) | 2,577 | 10 | **3.88** | 2.11–7.13 |
+| Systemically delivered | 30,919 | 7 | 0.23 | 0.11–0.47 |
 
-Fisher exact odds ratio **17.4**,
-p = 7.57e-08.
+Fisher exact odds ratio **17.20**, p = 8.39e-08.
 
 ## 2. And the contrast vanishes inside randomised comparisons
 
-Restricting to the 61 trials carrying their own concurrent
+Restricting to the 64 trials carrying their own concurrent
 comparator arm:
 
 | | Events | Participants |
 |---|---:|---:|
-| Treated arms | 2 | 15,477 |
-| Comparator arms | 2 | 8,019 |
+| Treated arms | 2 | 15,633 |
+| Comparator arms | 2 | 8,071 |
 
 Odds ratio **0.52**, p = 0.61.
 **No detectable within-trial effect.**
@@ -60,34 +59,34 @@ this dataset, which is why both are in it.
 
 ## 3. Models, and what they actually learn
 
-Outcome: tier-B (CSF-dynamics) event in an arm — 78 of
-526 arms, the mechanistic precursor the index case documents.
-Validation is **leave-one-compound-out**: arms of one compound are correlated, so
-a random split leaks the compound across folds and inflates the score.
+Outcome: tier-B (CSF-dynamics) event in an arm — 84 of 546 arms, the
+mechanistic precursor the index case documents. Validation is
+**leave-one-compound-out**: arms of one compound are correlated, so a random
+split leaks the compound across folds and inflates the score.
 
 | Model | LOCO AUC |
 |---|---:|
-| Route only | 0.884 |
-| **Route + indication** | **0.901** |
-| Route + indication + chemistry | 0.832 |
-| *Leakage probe: trial identity only* | *0.681* |
-| *Leakage probe: compound identity only* | *0.102* |
+| Route only | 0.890 |
+| **Route + indication** | **0.910** |
+| Route + indication + chemistry | 0.878 |
+| *Leakage probe: trial identity only* | *0.709* |
+| *Leakage probe: compound identity only* | *0.094* |
 
-Bootstrap 95% CI for the best model: 0.837–0.941.
+Bootstrap 95% CI for the best model: 0.848–0.951.
 
 Three things worth reading off that table:
 
 - **Adding chemistry makes it worse.** Chemistry is `NOT_REPORTED` for most
   compounds, so the feature contributes noise. This is a data-coverage result,
   not a biological one.
-- **Trial identity alone reaches 0.681.** A
-  material share of any apparent performance is provenance, not biology. We ran
-  this because a review of our sibling kidney dataset found `study_type` and
-  `source_id` were strong shortcut predictors of its label.
-- **Compound identity alone scores 0.102 —
-  below chance.** That is the *correct* behaviour under leave-one-compound-out and
-  confirms the validation is doing its job: a model that knows only which compound
-  a row belongs to cannot generalise to a compound it has never seen.
+- **Trial identity alone reaches 0.709.** A material share of any apparent
+  performance is provenance, not biology. We ran this because a review of our
+  sibling kidney dataset found `study_type` and `source_id` were strong shortcut
+  predictors of its label.
+- **Compound identity alone scores 0.094 — below chance.** That is the
+  *correct* behaviour under leave-one-compound-out and confirms the validation is
+  doing its job: a model that knows only which compound a row belongs to cannot
+  generalise to a compound it has never seen.
 
 ## 4. What this supports, and what it does not
 
@@ -97,9 +96,8 @@ as a covariate; hypothesis generation for CSF-dynamics monitoring in intrathecal
 programmes.
 
 **Not supported:** sequence-to-toxicity prediction across the roster
-(10 of 50 compounds carry a sequence);
-within-compound dose–response for tier A; in vitro-to-in vivo extrapolation
-(no in vitro rows exist); any causal claim about an individual compound, given §2.
+(13 of 53 compounds carry a sequence); within-compound dose–response for
+tier A; in vitro-to-in vivo extrapolation beyond the single compound that carries both (2 in vitro rows in the release); any causal claim about an individual compound, given §2.
 
 ## Reproducing
 

@@ -36,7 +36,8 @@ This is the part owned by this workstream, so it is broken out in full.
 | Requirement (quoted) | Status | Evidence |
 |---|---|---|
 | "a data dictionary and schema documenting all metadata" | **Met** | [`scripts/data_dictionary.py`](scripts/data_dictionary.py) is the authoritative definition, rendered as the workbook's `data_dictionary` sheet. The QC suite asserts in **both directions** that every column has an entry and every entry is a real column. [`SCHEMA.md`](SCHEMA.md) carries the conceptual schema: tiers, rubric, missing-value convention. |
-| "access to the raw data … by including a data file in Excel (or similar format)" | **Met** | `OligoTox-Hydrocephalus_Dataset.xlsx`, 9 sheets, same layout as the sibling CNS release. CSVs in `data/` are the canonical form. |
+| "access to the raw data … by including a data file in Excel (or similar format)" | **Met** | `OligoTox-Hydrocephalus_Dataset.xlsx`, 10 sheets, same layout as the sibling CNS release. CSVs in `data/` are the canonical form. |
+| Provenance of every value (supplementary, not separately required) | **Met** | `OligoTox-Hydrocephalus_Sources.pdf` — every database, document and link, with per-source rights, exclusions with reasons, the retrieved-but-unextracted backlog, and a resolved-URL check on all source locators. |
 | "the sequences of all oligos tested" | **Partly met — gap** | **10 of 50** compounds carry a published sequence. Recovered from WHO INN Recommended lists by deterministic parse, validated against each label's molecular formula. Missing for the double-stranded siRNAs, the morpholinos, and 15 compounds that reach the dataset only through the trial registry. See `METHODOLOGY.md` **OI-02**. |
 | "the location of all chemical modifications in each oligo" | **Partly met — gap** | [`data/modifications.csv`](data/modifications.csv): **202 rows, one per nucleotide position, over 10 compounds**, giving sugar, base, 5-methylation and phosphorothioate-vs-phosphodiester at every position. Same 40 compounds missing as above. |
 | "data on the purity and characterization of each" | **Met, as a negative finding** | `purity_pct` is `NOT_REPORTED` for all 50, from evidence: a full-text sweep of all 16 committed US labels finds no drug-substance purity, purification or identity statement in any of them. Recorded with the sweep as its basis, not left blank. The sibling CNS release reports the same for all 1,839 of its compounds. |
@@ -48,14 +49,22 @@ This is the part owned by this workstream, so it is broken out in full.
 > "Datasets based on in vitro human systems or able to extrapolate data between in
 > vitro human systems and animal data are of particular interest."
 
-**This is the release's weakest point and it is structural.** The dataset is
-**1,319 human rows, 5 animal rows and 0 in vitro rows**. It cannot currently
-support in vitro-to-animal extrapolation, because it contains neither an in vitro
-arm nor a substantial animal arm.
+**This remains the release's weakest point, though it is no longer empty.** The
+dataset is **<!--stat:n_human_rows-->1,351<!--/stat--> human rows,
+<!--stat:n_animal_rows-->10<!--/stat--> animal rows and
+<!--stat:n_in_vitro_rows-->2<!--/stat--> in vitro rows**. The in vitro rows come
+from the one source that measures the same oligonucleotide both in cultured
+ependymal cells and by MRI in the living animal, so the release now contains a
+genuine in vitro-to-in vivo pair — but it is an **animal** pair. The brief's
+interest is *in vitro human* systems, and the dataset has none. The nearest
+candidate found was a human choroid-plexus study using a lentiviral shRNA
+construct, excluded here as a gene-therapy vector rather than an oligonucleotide
+therapeutic; that exclusion is a curation judgement worth a reviewer's scrutiny.
 
 What it does support, and should be argued on instead:
 
-- **Human clinical evidence at scale** — 757 trial rows from 155 registered
+- **Human clinical evidence at scale** — <!--stat:n_ctgov_rows-->786<!--/stat-->
+  trial rows from <!--stat:n_trials-->161<!--/stat--> registered
   trials, with denominators and comparator arms.
 - **A route contrast** — intrathecal against systemically dosed oligonucleotides,
   so the delivery hypothesis is testable rather than assumed.
@@ -94,9 +103,9 @@ report*; the four documents are the November block.
 
 | Step | Status |
 |---|---|
-| Data prep | **Done**, and extended past the original scope: 1,324 rows, 50 compounds, 189 sources, 155 trials, 44 QC checks. |
-| **Finish ML** | **Not started.** This is the next step in the plan's own order, and it is what the narrative's predictive-model section needs. |
-| Write up report | Not started. |
+| Data prep | **Done**, and extended past the original scope: <!--stat:n_measurements-->1,361<!--/stat--> rows, <!--stat:n_oligos-->53<!--/stat--> compounds, <!--stat:n_sources-->193<!--/stat--> sources, <!--stat:n_trials-->161<!--/stat--> trials, <!--stat:checks_run-->51<!--/stat--> QC checks. |
+| **Finish ML** | **Done.** Arm-level analysis with leave-one-compound-out validation and explicit leakage probes; `ml/ML_REPORT.md` is generated from `ml/results.json`, not typed. |
+| Write up report | **Done.** Narrative, methodology and PADP PDFs, plus a supplementary source and provenance register. |
 
 ---
 

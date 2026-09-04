@@ -1,7 +1,7 @@
 ClinicalTrials.gov extraction audit trail
 ============================================================
-payloads scanned: 203
-rows emitted: 733
+payloads scanned: 234
+rows emitted: 765
 
 NCT00094835 (imetelstat) — 39 serious terms, 191 other terms, threshold=5, tierA_serious=no
 NCT00101907 (imetelstat) — 42 serious terms, 246 other terms, threshold=5, tierA_serious=no
@@ -70,7 +70,7 @@ NCT02426086 (imetelstat) — 60 serious terms, 97 other terms, threshold=5, tier
 NCT02462759 (nusinersen) — 38 serious terms, 187 other terms, threshold=5, tierA_serious=no
 NCT02499328 (danvatirsen) — 150 serious terms, 676 other terms, threshold=0, tierA_serious=no
 NCT02510261 (patisiran) — 220 serious terms, 111 other terms, threshold=5, tierA_serious=no
-NCT02519036 SKIPPED — no oligonucleotide mapping recorded
+NCT02519036 (tominersen) — 1 serious terms, 87 other terms, threshold=5, tierA_serious=no
 NCT02525523 (alicaforsen) — 6 serious terms, 5 other terms, threshold=5, tierA_serious=no
 NCT02527343 (volanesorsen) — 21 serious terms, 207 other terms, threshold=5, tierA_serious=no
 NCT02530905 (casimersen) — 5 serious terms, 89 other terms, threshold=5, tierA_serious=no
@@ -82,6 +82,7 @@ NCT02623699 (tofersen) — 22 serious terms, 149 other terms, threshold=5, tierA
 NCT02639286 (volanesorsen) — 1 serious terms, 11 other terms, threshold=5, tierA_serious=no
 NCT02658175 (volanesorsen) — 17 serious terms, 126 other terms, threshold=5, tierA_serious=no
 NCT02706886 (lumasiran) — 6 serious terms, 78 other terms, threshold=0, tierA_serious=no
+NCT02740972 (viltolarsen) — 0 serious terms, 38 other terms, threshold=5, tierA_serious=no
 NCT02851407 (defibrotide) — 151 serious terms, 82 other terms, threshold=5, tierA_serious=no
 NCT02876601 (defibrotide) — 0 serious terms, 11 other terms, threshold=1, tierA_serious=no
 NCT02949830 (givosiran) — 13 serious terms, 147 other terms, threshold=5, tierA_serious=no
@@ -89,6 +90,7 @@ NCT02963311 (inclisiran) — 1 serious terms, 14 other terms, threshold=0, tierA
 NCT03060577 (inclisiran) — 149 serious terms, 793 other terms, threshold=0, tierA_serious=no
 NCT03070119 (tofersen) — 86 serious terms, 132 other terms, threshold=5, tierA_serious=no
 NCT03140969 (sepofarsen) — 1 serious terms, 24 other terms, threshold=5, tierA_serious=no
+NCT03167255 (viltolarsen) — 3 serious terms, 100 other terms, threshold=5, tierA_serious=no
 NCT03186989 (BIIB080) — 8 serious terms, 141 other terms, threshold=5, tierA_serious=no
 NCT03218995 (eteplirsen) — 1 serious terms, 107 other terms, threshold=0, tierA_serious=no
 NCT03225833 (WVE-120101) — 12 serious terms, 109 other terms, threshold=5, tierA_serious=no
@@ -99,6 +101,7 @@ NCT03339297 (defibrotide) — 82 serious terms, 122 other terms, threshold=5, ti
 NCT03342053 (tominersen) — 19 serious terms, 51 other terms, threshold=5, tierA_serious=YES
 NCT03350451 (lumasiran) — 10 serious terms, 98 other terms, threshold=5, tierA_serious=no
 NCT03384693 (defibrotide) — 1 serious terms, 0 other terms, threshold=5, tierA_serious=no
+NCT03385239 (olezarsen) — 13 serious terms, 45 other terms, threshold=5, tierA_serious=no
 NCT03397121 (inclisiran) — 51 serious terms, 5 other terms, threshold=5, tierA_serious=no
 NCT03399370 (inclisiran) — 234 serious terms, 4 other terms, threshold=5, tierA_serious=YES
 NCT03400800 (inclisiran) — 266 serious terms, 5 other terms, threshold=5, tierA_serious=no
@@ -163,6 +166,34 @@ NCT05814666 (danvatirsen) — 51 serious terms, 52 other terms, threshold=5, tie
 NCT05888103 (inclisiran) — 13 serious terms, 4 other terms, threshold=5, tierA_serious=no
 NCT06058390 (bepirovirsen) — 0 serious terms, 92 other terms, threshold=0, tierA_serious=no
 NCT06422767 (bepirovirsen) — 0 serious terms, 31 other terms, threshold=0, tierA_serious=no
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
+None SKIPPED — no oligonucleotide mapping recorded
 None SKIPPED — no oligonucleotide mapping recorded
 None SKIPPED — no oligonucleotide mapping recorded
 None SKIPPED — no oligonucleotide mapping recorded

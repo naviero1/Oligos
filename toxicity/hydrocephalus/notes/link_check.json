@@ -1,0 +1,1167 @@
+{
+  "checked_on": "2026-09-04",
+  "n_urls": 193,
+  "results": {
+    "https://api.fda.gov/drug/event.json": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl74.pdf": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl75.pdf": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl77.pdf": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl81.pdf": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl83.pdf": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl85.pdf": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00094835": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00101907": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00138658": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00159250": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00239928": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00242580": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00327340": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00327470": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00358501": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00362180": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00406107": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00427349": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00460408": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00477594": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00549055": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00574951": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00605280": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00607373": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00628498": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00694109": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00706849": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00707746": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00735943": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00761280": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00770146": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00787319": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00790803": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00794664": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00844597": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT00858208": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01100307": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01189461": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01245387": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01396239": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01475825": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01486238": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01540409": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01573572": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01617967": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01681433": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01703988": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01731951": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01737398": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01780545": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01829113": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01836549": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01839604": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01839656": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01844817": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01960348": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT01961921": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02175004": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02193074": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02211209": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02255552": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02286947": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02292537": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02300233": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02310906": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02386553": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02417753": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02420379": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02426086": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02462759": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02499328": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02510261": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02519036": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02525523": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02527343": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02530905": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02554773": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02594124": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02597127": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02598661": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02623699": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02639286": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02658175": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02706886": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02740972": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02851407": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02876601": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02949830": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT02963311": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03060577": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03070119": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03140969": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03167255": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03186989": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03218995": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03225833": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03225846": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03334617": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03338816": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03339297": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03342053": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03350451": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03384693": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03385239": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03397121": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03399370": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03400800": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03417102": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03417245": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03532542": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03549871": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03681184": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03728634": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03759379": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03761849": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03794544": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03814187": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03842969": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03847909": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03851705": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03862807": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03905694": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03913130": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03954106": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03985878": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT03997383": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04000594": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04030598": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04060199": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04089566": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04136184": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04152200": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04153149": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04179409": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04306510": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04307381": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04494256": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04530604": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04568434": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04617847": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04617860": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04652726": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04659863": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04666298": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04807400": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04873934": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04929249": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT04956289": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT05001269": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT05032196": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT05085964": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT05139810": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT05158296": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT05161936": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT05176717": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT05192941": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT05330455": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT05355402": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT05583552": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT05635045": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT05686551": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT05763875": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT05814666": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT05888103": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT06058390": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://clinicaltrials.gov/study/NCT06422767": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=167e663c-11e1-497b-a3fc-951d65d58eaa": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=16985a31-f5e4-4557-9266-fc78d4bc5055": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1ffff9a8-6d6a-4dcb-8493-1b6cc3a5d123": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2c3db989-d7ad-41ed-9ebf-698dcf6c24ec": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=33bff678-7829-479e-9110-b8e33a0bc0aa": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=35c227d1-5b24-44b0-b5d3-f0f6b1c46bd5": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3d31f4c0-35bb-c990-e063-6394a90a749f": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6fc0afca-4513-4c35-b594-6544aee29a44": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=81356b45-1cb7-4eef-88ea-e44cc18b47c5": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8db0facb-81b6-4006-9239-27dc6409c5d3": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ace9d4bc-4d20-4beb-9e9d-888690424833": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0fab7ca-e578-43c5-9df6-bdaff4182257": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d7dcb847-71dd-4fff-82d0-d43a465fc096": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dd70cd5f-b0fc-4ba4-a5ea-89a34778bd94": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e87ec36f-b4b4-49d4-aea4-d4ffb09b0970": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e9e5fd44-eeda-4580-bba1-a734828bbcc3": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12060635/": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12246246/": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC13099374/": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC1855344/": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6042309/": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC7894279/": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC8105953/": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://www.ema.europa.eu/en/documents/product-information/qalsody-epar-product-information_en.pdf": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://www.ema.europa.eu/en/documents/product-information/spinraza-epar-product-information_en.pdf": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://www.ema.europa.eu/en/documents/product-information/tegsedi-epar-product-information_en.pdf": {
+      "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    }
+  },
+  "tally": {
+    "ok": 193
+  }
+}

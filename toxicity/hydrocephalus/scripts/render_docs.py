@@ -11,8 +11,10 @@ in the documentation cannot drift from the data.
 
 Usage: python3 scripts/render_docs.py    (run after qc/validate.py)
 """
+import csv
 import json
 import os
+import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -110,6 +112,51 @@ def main():
     post = text[text.index(END) + len(END):]
     open(path, "w").write(pre + block + post)
     print("rendered %d statistics tables into README.md" % len(parts))
+
+    n_sub = render_tokens(s)
+    print("substituted %d inline statistics tokens" % n_sub)
+
+
+# Files carrying inline <!--stat:KEY-->value<!--/stat--> tokens. The dossier warned
+# of itself that "the counts in this dossier are transcribed, not regenerated, and
+# will drift if the dataset changes" -- and it did drift, claiming zero in vitro
+# rows after two were added. A count a document states is now a count it renders.
+TOKEN_FILES = ["PHASE2_COMPLIANCE.md", os.path.join("..", "hydrocephalus.md")]
+TOKEN = re.compile(r"(<!--stat:([a-z_0-9]+)-->)(.*?)(<!--/stat-->)", re.S)
+
+
+def stat_values(s):
+    """Every value a document may quote inline, formatted for prose."""
+    trials = list(csv.DictReader(open(os.path.join(ROOT, "data",
+                                                   "trial_registry.csv"))))
+    meas = list(csv.DictReader(open(os.path.join(ROOT, "data", "measurements.csv"))))
+    v = {k: s[k] for k in s if isinstance(s[k], int)}
+    v["n_trials"] = len(trials)
+    v["n_ctgov_rows"] = sum(1 for r in meas if r["source_id"].startswith("NCT"))
+    return {k: "{:,}".format(n) for k, n in v.items()}
+
+
+def render_tokens(s):
+    vals = stat_values(s)
+    n = 0
+    for rel in TOKEN_FILES:
+        path = os.path.join(ROOT, rel)
+        if not os.path.exists(path):
+            continue
+        text = open(path).read()
+
+        def repl(m):
+            nonlocal n
+            key = m.group(2)
+            if key not in vals:
+                raise SystemExit("%s: unknown statistic token %r" % (rel, key))
+            n += 1
+            return m.group(1) + vals[key] + m.group(4)
+
+        out = TOKEN.sub(repl, text)
+        if out != text:
+            open(path, "w").write(out)
+    return n
 
 
 if __name__ == "__main__":

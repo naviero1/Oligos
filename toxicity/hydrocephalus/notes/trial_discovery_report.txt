@@ -1,11 +1,11 @@
 ClinicalTrials.gov trial discovery
 ==============================================================
-157 trials with posted results; 157 usable (oligonucleotide, has an adverse-event module)
-routes among usable trials: {'intravenous': 44, 'NOT_REPORTED': 20, 'intravitreal': 16, 'subcutaneous': 57, 'oral': 1, 'intrathecal_lumbar': 18, 'topical_enema': 1}
+161 trials with posted results; 161 usable (oligonucleotide, has an adverse-event module)
+routes among usable trials: {'intravenous': 46, 'NOT_REPORTED': 20, 'intravitreal': 16, 'subcutaneous': 58, 'oral': 1, 'intrathecal_lumbar': 19, 'topical_enema': 1}
 
 nusinersen       9 trials with posted results
 tofersen         2 trials with posted results
-tominersen       4 trials with posted results
+tominersen       5 trials with posted results
 eplontersen      2 trials with posted results
 inotersen        4 trials with posted results
 eteplirsen      10 trials with posted results
@@ -42,3 +42,7 @@ trabedersen      1 trials with posted results
 alicaforsen      1 trials with posted results
 sepofarsen       2 trials with posted results
 ultevursen       3 trials with posted results
+olezarsen      + NCT03385239 via harvested code 'ISIS 678354' (from NCT04568434)
+viltolarsen    + NCT02740972 via harvested code 'NCNP-01' (from NCT04060199)
+viltolarsen    + NCT03167255 via harvested code 'NCNP-01' (from NCT04060199)
+alias harvest: 26 codes tried, 3 further trials reached

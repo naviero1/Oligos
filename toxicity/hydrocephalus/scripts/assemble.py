@@ -21,6 +21,7 @@ Usage: python3 scripts/assemble.py
 """
 import csv
 import os
+import re
 from datetime import date
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -161,6 +162,98 @@ SOURCE_META.update({
 })
 
 
+# Sources that carry measurement or modification rows but whose citation details
+# lived only in their builder's module header, never reaching this registry. A
+# row whose provenance is a comment in a script is not a cited row: qc/validate.py
+# now refuses any source that resolves to the fallback stub.
+SOURCE_META.update({
+    "Gai2_antisense_ependymal_2007_BMCNeurosci": dict(
+        citation=("M\u00f6nkk\u00f6nen KS, Hakum\u00e4ki JM, Hirst RA, et al. "
+                  "Intracerebroventricular antisense knockdown of G-alpha-i2 results "
+                  "in ciliary stasis and ventricular dilatation in the rat. "
+                  "BMC Neurosci. 2007;8:26."),
+        first_author="M\u00f6nkk\u00f6nen KS", year="2007", journal="BMC Neuroscience",
+        doi="10.1186/1471-2202-8-26", pmid="17430589", pmcid="PMC1855344", nct_id="",
+        url="https://pmc.ncbi.nlm.nih.gov/articles/PMC1855344/",
+        access="open_access", license="CC BY 2.0", redistribution="cc_by",
+        evidence_tier="primary_fulltext",
+        retrieved_via="Europe PMC REST fullTextXML endpoint",
+        notes=("The only source measuring one oligonucleotide BOTH in vitro (ciliary "
+               "beat frequency in cultured ependymal cells) and in vivo (MRI "
+               "ventricular volume), which is the extrapolation the Phase 2 brief "
+               "calls a particular interest. Supplies three published sequences "
+               "including two designed controls, and the only stated purity value in "
+               "the release (HPLC-purified, 90-97%).")),
+    "Nakayama_2026_NatMed_KCNT1": dict(
+        citation=("Nakayama T, El Achkar CM, Burbano LE, et al. Antisense "
+                  "oligonucleotide-mediated knockdown therapy in two infants with "
+                  "severe KCNT1 epileptic encephalopathy. Nat Med. 2026;32:1411."),
+        first_author="Nakayama T", year="2026", journal="Nature Medicine",
+        doi="10.1038/s41591-026-04314-9", pmid="41981306", pmcid="PMC13099374",
+        nct_id="", url="https://pmc.ncbi.nlm.nih.gov/articles/PMC13099374/",
+        access="open_access", license="CC BY-NC-ND 4.0",
+        redistribution="summary_stat_only", evidence_tier="case_report",
+        retrieved_via="Europe PMC REST fullTextXML endpoint",
+        notes=("The SECOND independent drug-attributed signal, and the reason this "
+               "release does not call hydrocephalus a tominersen-specific finding: a "
+               "different ASO (valeriasen/KT777), a different target, indication and "
+               "age group, and both treated infants developed the endpoint. ND "
+               "licence term: summary statistics only.")),
+})
+
+# EMA Summaries of Product Characteristics (Annex I of the EPAR product
+# information). Included because the EU and US regulators reached materially
+# different positions on the same molecules. EMA reuse terms were not established
+# in this session, so redistribution stays `verify` rather than assumed open.
+_EMA_SMPC = {
+    "EMA_SmPC_Spinraza": ("Spinraza", "nusinersen", "spinraza",
+                          "first authorised 30 May 2017, latest renewal 31 January 2022"),
+    "EMA_SmPC_Qalsody": ("Qalsody", "tofersen", "qalsody",
+                         "first authorised 29 May 2024"),
+    "EMA_SmPC_Tegsedi": ("Tegsedi", "inotersen", "tegsedi",
+                         "first authorised 06 July 2018, latest renewal 24 March 2023"),
+}
+for _key, (_brand, _inn, _slug, _auth) in _EMA_SMPC.items():
+    SOURCE_META[_key] = dict(
+        citation=("European Medicines Agency. %s (%s) EPAR product information, "
+                  "Annex I Summary of Product Characteristics (%s)."
+                  % (_brand, _inn, _auth)),
+        first_author="NOT_APPLICABLE", year="NOT_REPORTED",
+        journal="EMA European Public Assessment Report", doi="", pmid="", pmcid="",
+        nct_id="",
+        url="https://www.ema.europa.eu/en/documents/product-information/"
+            "%s-epar-product-information_en.pdf" % _slug,
+        access="open_access",
+        license="EMA publication; reuse terms not established in this session",
+        redistribution="verify", evidence_tier="regulatory_primary",
+        retrieved_via=("ema.europa.eu EPAR product-information PDF, text extracted "
+                       "and swept section by section"),
+        notes=("EU label, quoted verbatim with its Annex I section number. The EPAR "
+               "landing page is https://www.ema.europa.eu/en/medicines/human/EPAR/%s "
+               "and the PDF is revised in place, so the retrieval date fixes which "
+               "revision was read." % _slug))
+
+
+_LABEL_VERSIONS = None
+
+
+def _label_version(drug):
+    """(setid, published_date) for a drug, read from the label component's own
+    source_ref. Parsed rather than typed so the citation cannot drift from the
+    document the extractor actually read."""
+    global _LABEL_VERSIONS
+    if _LABEL_VERSIONS is None:
+        _LABEL_VERSIONS = {}
+        path = os.path.join(DATA, "_label_measurements.csv")
+        if os.path.exists(path):
+            for r in csv.DictReader(open(path)):
+                m = re.match(r"DailyMed setid ([0-9a-f-]+), label published (.+)$",
+                             r.get("source_ref", "") or "")
+                if m:
+                    _LABEL_VERSIONS.setdefault(r.get("oligo_name", ""), m.groups())
+    return _LABEL_VERSIONS.get(drug, (None, None))
+
+
 def source_meta_for(key):
     if key in SOURCE_META:
         return SOURCE_META[key]
@@ -194,14 +287,24 @@ def source_meta_for(key):
                   "this source.")
     if key.startswith("DailyMed_SPL_"):
         drug = key[len("DailyMed_SPL_"):]
+        # A generic dailymed.nlm.nih.gov link does not identify WHICH label was
+        # read, and a US label is revised in place. The setid and publication date
+        # recorded by the extractor on every label row make the citation resolve to
+        # one specific document version.
+        setid, published = _label_version(drug)
+        url = ("https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=%s" % setid
+               if setid else "https://dailymed.nlm.nih.gov/dailymed/")
         return dict(
-            citation="FDA prescribing information for %s (Structured Product Label)" % drug,
+            citation=("FDA prescribing information for %s (DailyMed Structured "
+                      "Product Label, setid %s, published %s)"
+                      % (drug, setid or "NOT_REPORTED", published or "NOT_REPORTED")),
             first_author="NOT_APPLICABLE", year="NOT_REPORTED",
             journal="NOT_APPLICABLE", doi="", pmid="", pmcid="", nct_id="",
-            url="https://dailymed.nlm.nih.gov/dailymed/",
+            url=url,
             access="public_domain", license="US Government work / public domain",
             redistribution="public_domain", evidence_tier="regulatory_primary",
-            retrieved_via="DailyMed v2 API, spls/<setid>.xml",
+            retrieved_via=("DailyMed v2 API, GET /dailymed/services/v2/spls/%s.xml"
+                           % (setid or "<setid>")),
             notes="Label text quoted verbatim with its LOINC-coded section.")
     return dict(citation=key, first_author="NOT_REPORTED", year="NOT_REPORTED",
                 journal="NOT_APPLICABLE", doi="", pmid="", pmcid="", nct_id="",
