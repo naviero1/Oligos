@@ -31,6 +31,7 @@ what the repository held before this dataset existed, and what changed — is
 | Methodology document | ≤5 pp | `OligoTox-Coagulopathy_Methodology.pdf` (5 pp) |
 | Public Access & Dissemination Plan | ≤5 pp | `OligoTox-Coagulopathy_PADP.pdf` (4 pp) |
 | Dataset + data dictionary | — | `OligoTox-Coagulopathy_Dataset.xlsx`, `data/*.csv`, `schema.md` |
+| Sources & provenance (supporting) | — | `OligoTox-Coagulopathy_Sources.pdf` — all 100 sources, the database each came from, and a link-checked URL for every one |
 
 The workbook carries two analysis tabs beyond the raw tables: **`human_measurements`** —
 every human row with the compound's sequence, per-position chemistry map and toxicity score

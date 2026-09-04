@@ -32,6 +32,12 @@ characterisation data (method where stated; `purity_pct` is `NOT_REPORTED` throu
 which is a property of the literature, not of the curation), additional metadata, and an
 open licence.
 
+A fifth, supporting document accompanies them: **`OligoTox-Coagulopathy_Sources.pdf`**,
+which lists every one of the 100 sources with the database it was retrieved from, the exact
+API endpoint used, a resolvable link, the licence, and the number of dataset rows it
+contributed. Every link in it is HTTP-checked at build time and reported with its real
+status, so the document does not assert that a link works without having tried it.
+
 **Optional documentation** the instructions invite — code used to collect and process the
 dataset — is present and is the strongest part of the submission: a deterministic build, 55
 structural checks, and a verification pass that re-reads every source document.
