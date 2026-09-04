@@ -4,7 +4,7 @@
 <h1>OligoTox-Thrombocytopenia: a curated, per-measurement dataset of oligonucleotide platelet toxicity</h1>
 <p class="sub">Narrative document — NIH/NCATS Oligonucleotide Toxicity (OligoTox) Open Data Challenge, Phase 2 (Data Generation)</p>
 <p class="meta"><b>Endpoint:</b> thrombocytopenia / platelet toxicity &nbsp;·&nbsp;
-<b>Dataset:</b> 254 oligonucleotides × 1,878 graded measurements from 60 primary sources &nbsp;·&nbsp;
+<b>Dataset:</b> {{n_oligos}} oligonucleotides × {{n_meas}} graded measurements from {{n_sources}} primary sources &nbsp;·&nbsp;
 <b>Licence:</b> CC-BY 4.0 &nbsp;·&nbsp; <b>Repository:</b> <code>naviero1/Oligos → thrombocytopenia/</code></p>
 </div>
 
@@ -18,11 +18,11 @@ both the <b>design predictors</b> (sequence, backbone, phosphorothioate count, s
 and a <b>graded outcome</b> on an ordinal 0–3 scale, together with per-row provenance and rights status.</p>
 
 <div class="kpi">
-<div><b>1,878</b><span>measurements</span></div>
-<div><b>254</b><span>oligonucleotides</span></div>
-<div><b>1,372</b><span>human rows</span></div>
-<div><b>60</b><span>primary sources</span></div>
-<div><b>22</b><span>cross-species compounds</span></div>
+<div><b>{{n_meas}}</b><span>measurements</span></div>
+<div><b>{{n_oligos}}</b><span>oligonucleotides</span></div>
+<div><b>{{n_human}}</b><span>human rows</span></div>
+<div><b>{{n_sources}}</b><span>primary sources</span></div>
+<div><b>{{n_bridge}}</b><span>cross-species compounds</span></div>
 </div>
 
 <h3>The endpoint is bimodal, and the dataset is built to preserve that</h3>
@@ -69,10 +69,10 @@ exactly as that hypothesis predicts:</p>
 <table>
 <tr><th>Backbone</th><th class="n">rows</th><th class="n">compounds</th><th class="n">mean grade</th>
 <th>PS linkages</th><th class="n">mean grade</th></tr>
-<tr><td><code>PMO_neutral</code></td><td class="n">10</td><td class="n">6</td><td class="n"><b>0.10</b></td><td>0</td><td class="n">0.39</td></tr>
-<tr><td><code>PS_PO_mix</code></td><td class="n">26</td><td class="n">6</td><td class="n">0.27</td><td>13–16</td><td class="n">0.60</td></tr>
-<tr><td><code>full_PO</code></td><td class="n">57</td><td class="n">6</td><td class="n">0.44</td><td>17–19</td><td class="n">1.09</td></tr>
-<tr><td><code>full_PS</code></td><td class="n">1,483</td><td class="n">167</td><td class="n"><b>0.99</b></td><td>20+</td><td class="n"><b>1.47</b></td></tr>
+<tr><td><code>PMO_neutral</code></td><td class="n">{{n_pmo}}</td><td class="n">{{c_pmo}}</td><td class="n"><b>{{mg_pmo}}</b></td><td>0</td><td class="n">{{mg_ps0}}</td></tr>
+<tr><td><code>PS_PO_mix</code></td><td class="n">{{n_mix}}</td><td class="n">{{c_mix}}</td><td class="n">{{mg_mix}}</td><td>13–16</td><td class="n">{{mg_ps13}}</td></tr>
+<tr><td><code>full_PO</code></td><td class="n">{{n_po}}</td><td class="n">{{c_po}}</td><td class="n">{{mg_po}}</td><td>17–19</td><td class="n">{{mg_ps17}}</td></tr>
+<tr><td><code>full_PS</code></td><td class="n">{{n_ps}}</td><td class="n">{{c_ps}}</td><td class="n"><b>{{mg_ps}}</b></td><td>20+</td><td class="n"><b>{{mg_ps20}}</b></td></tr>
 </table>
 <p>Modality orders in the same direction: PMO 0.10 &lt; GalNAc-siRNA 0.27 &lt; siRNA 0.50 &lt;
 splice-switching 0.67 &lt; ASO gapmer 0.89 &lt; aptamer 1.60. That a curated dataset recovers a relationship
@@ -101,21 +101,21 @@ APOC3 analogue, with the stated molecular formula <code>P20S19</code> independen
 at 20 residues. Two derivation paths reaching the same string is meaningful evidence against transcription
 artefact.</p>
 
-<h3>2.3 Human and animal evidence are separated, and 22 compounds bridge them</h3>
+<h3>2.3 Human and animal evidence are separated, and {{n_bridge}} compounds bridge them</h3>
 <p>The announcement singles out datasets "based on in vitro human systems or able to <b>extrapolate data
-between in vitro human systems and animal data</b>". The dataset is <b>73 % human</b> (1,372 of 1,878 rows),
+between in vitro human systems and animal data</b>". The dataset is <b>{{pct_human}} % human</b> ({{n_human}} of {{n_meas}} rows),
 and the axis is a first-class derived column, <code>subject_class</code>, computed from study type × species
 and independently re-derived by the QC gate so it cannot drift.</p>
 <table>
 <tr><th>Human</th><th class="n">rows</th><th>Animal</th><th class="n">rows</th></tr>
-<tr><td>clinical (trials)</td><td class="n">933</td><td>in vivo</td><td class="n">429</td></tr>
-<tr><td>in vitro (platelets, PRP, whole blood)</td><td class="n">424</td><td>in vitro</td><td class="n">55</td></tr>
-<tr><td>ex vivo</td><td class="n">15</td><td>ex vivo</td><td class="n">13</td></tr>
-<tr><td><b>total</b></td><td class="n"><b>1,372</b> (72 compounds)</td><td><b>total</b></td><td class="n"><b>497</b> (174 compounds)</td></tr>
+<tr><td>clinical (trials)</td><td class="n">{{hc_clinical}}</td><td>in vivo</td><td class="n">{{ac_invivo}}</td></tr>
+<tr><td>in vitro (platelets, PRP, whole blood)</td><td class="n">{{hc_invitro}}</td><td>in vitro</td><td class="n">{{ac_invitro}}</td></tr>
+<tr><td>ex vivo</td><td class="n">{{hc_exvivo}}</td><td>ex vivo</td><td class="n">{{ac_exvivo}}</td></tr>
+<tr><td><b>total</b></td><td class="n"><b>{{n_human}}</b> ({{n_human_comp}} compounds)</td><td><b>total</b></td><td class="n"><b>{{n_animal}}</b> ({{n_animal_comp}} compounds)</td></tr>
 </table>
 <p>Containing human rows and animal rows does not by itself demonstrate extrapolation. Having the <i>same
-compound</i> characterised on both sides does, and <b>22 compounds</b> qualify — inotersen (197 human / 22
-animal rows), volanesorsen (155 / 18), mipomersen (114 / 31) among them, each with a published sequence.
+compound</i> characterised on both sides does, and <b>{{n_bridge}} compounds</b> qualify — {{bridge1_name}} ({{bridge1_h}} human / {{bridge1_a}}
+animal rows), {{bridge2_name}} ({{bridge2_h}} / {{bridge2_a}}), {{bridge3_name}} ({{bridge3_h}} / {{bridge3_a}}) among them, each with a published sequence.
 <code>data/bridge_human_animal.csv</code> presents them side by side with their human and animal grades. That
 set, not the raw totals, is what a cross-species model can be trained and validated on.</p>
 
@@ -206,32 +206,32 @@ incidence is. <b>Bleeding is graded on attribution</b>: grade 3 requires haemorr
 thrombocytopenia, so a trial reporting mild bleeding at or below the placebo rate is not scored severe.</p>
 <table>
 <tr><th>Grade</th><th class="n">rows</th><th>Readout category</th><th class="n">rows</th><th>Study type</th><th class="n">rows</th></tr>
-<tr><td>0 — none</td><td class="n">795</td><td>platelet count</td><td class="n">1,030</td><td>clinical</td><td class="n">933</td></tr>
-<tr><td>1 — mild</td><td class="n">487</td><td>clinical outcome</td><td class="n">212</td><td>in vitro</td><td class="n">483</td></tr>
-<tr><td>2 — moderate</td><td class="n">386</td><td>platelet activation</td><td class="n">195</td><td>animal in vivo</td><td class="n">434</td></tr>
-<tr><td>3 — severe</td><td class="n">210</td><td>binding / aggregation</td><td class="n">231</td><td>ex vivo</td><td class="n">28</td></tr>
-<tr><td></td><td class="n"></td><td>immunogenicity</td><td class="n">103</td><td></td><td class="n"></td></tr>
-<tr><td></td><td class="n"></td><td>megakaryocyte / other</td><td class="n">107</td><td></td><td class="n"></td></tr>
+<tr><td>0 — none</td><td class="n">{{g0}}</td><td>platelet count</td><td class="n">{{rc_count}}</td><td>clinical</td><td class="n">{{st_clinical}}</td></tr>
+<tr><td>1 — mild</td><td class="n">{{g1}}</td><td>clinical outcome</td><td class="n">{{rc_clinical}}</td><td>in vitro</td><td class="n">{{st_invitro}}</td></tr>
+<tr><td>2 — moderate</td><td class="n">{{g2}}</td><td>platelet activation</td><td class="n">{{rc_activation}}</td><td>animal in vivo</td><td class="n">{{st_animal}}</td></tr>
+<tr><td>3 — severe</td><td class="n">{{g3}}</td><td>binding / aggregation</td><td class="n">{{rc_bindagg}}</td><td>ex vivo</td><td class="n">{{st_exvivo}}</td></tr>
+<tr><td></td><td class="n"></td><td>immunogenicity</td><td class="n">{{rc_immuno}}</td><td></td><td class="n"></td></tr>
+<tr><td></td><td class="n"></td><td>megakaryocyte / other</td><td class="n">{{rc_other}}</td><td></td><td class="n"></td></tr>
 </table>
-<p>Readouts deliberately emphasise the <b>functional and immunological</b> axes over viability: 1,030
-platelet-count rows, 195 activation, 231 binding/aggregation, and 103 immunogenicity rows capturing the
+<p>Readouts deliberately emphasise the <b>functional and immunological</b> axes over viability: {{rc_count}}
+platelet-count rows, {{rc_activation}} activation, {{rc_bindagg}} binding/aggregation, and {{rc_immuno}} immunogenicity rows capturing the
 antiplatelet-antibody mechanism that distinguishes the severe mode.</p>
 
-<h3>4.2 Predictor distribution among the 254 tested oligos</h3>
+<h3>4.2 Predictor distribution among the {{n_oligos}} tested oligos</h3>
 <table>
 <tr><th>Modality</th><th class="n">n</th><th>Backbone</th><th class="n">n</th><th>Conjugate</th><th class="n">n</th><th>Stage</th><th class="n">n</th></tr>
-<tr><td>ASO gapmer</td><td class="n">188</td><td>full PS</td><td class="n">193</td><td>none</td><td class="n">227</td><td>research panel</td><td class="n">135</td></tr>
-<tr><td>other / tool</td><td class="n">44</td><td>PS/PO mix</td><td class="n">10</td><td>GalNAc</td><td class="n">14</td><td>preclinical</td><td class="n">53</td></tr>
-<tr><td>PMO</td><td class="n">6</td><td>full PO</td><td class="n">6</td><td>lipid</td><td class="n">5</td><td>phase 1</td><td class="n">24</td></tr>
-<tr><td>aptamer</td><td class="n">5</td><td>PMO neutral</td><td class="n">6</td><td>PEG / other</td><td class="n">2</td><td>phase 2–3</td><td class="n">16</td></tr>
-<tr><td>splice-switching</td><td class="n">5</td><td>mixed / NA</td><td class="n">4</td><td>TBD</td><td class="n">6</td><td>approved</td><td class="n">17</td></tr>
-<tr><td>GalNAc-siRNA / siRNA</td><td class="n">6</td><td>TBD</td><td class="n">35</td><td></td><td class="n"></td><td>class review</td><td class="n">8</td></tr>
+<tr><td>ASO gapmer</td><td class="n">{{oc_gapmer}}</td><td>full PS</td><td class="n">{{bb_fullps}}</td><td>none</td><td class="n">{{cj_none}}</td><td>research panel</td><td class="n">135</td></tr>
+<tr><td>other / tool</td><td class="n">{{oc_other}}</td><td>PS/PO mix</td><td class="n">{{bb_mix}}</td><td>GalNAc</td><td class="n">{{cj_galnac}}</td><td>preclinical</td><td class="n">53</td></tr>
+<tr><td>PMO</td><td class="n">{{oc_pmo}}</td><td>full PO</td><td class="n">{{bb_fullpo}}</td><td>lipid</td><td class="n">{{cj_lipid}}</td><td>phase 1</td><td class="n">24</td></tr>
+<tr><td>aptamer</td><td class="n">{{oc_aptamer}}</td><td>PMO neutral</td><td class="n">{{bb_pmo}}</td><td>PEG / other</td><td class="n">{{cj_peg}}</td><td>phase 2–3</td><td class="n">16</td></tr>
+<tr><td>splice-switching</td><td class="n">{{oc_sso}}</td><td>mixed / NA</td><td class="n">{{bb_other}}</td><td>TBD</td><td class="n">{{cj_tbd}}</td><td>approved</td><td class="n">17</td></tr>
+<tr><td>GalNAc-siRNA / siRNA</td><td class="n">{{oc_sirna}}</td><td>TBD</td><td class="n">{{bb_tbd}}</td><td></td><td class="n"></td><td>class review</td><td class="n">8</td></tr>
 </table>
-<p><b>Sequences are present for 193 of 254 oligos (76 %)</b> and were never guessed: the remainder are
+<p><b>Sequences are present for {{n_seq}} of {{n_oligos}} oligos ({{pct_seq}} %)</b> and were never guessed: the remainder are
 proprietary, class-level aggregates, or development-code compounds with no published sequence.
-<b>63 distinct target genes</b> are represented. Provenance is complete — every row carries a source
-identifier, an exact locus (table, figure, claim or label section) and a rights class: <b>748 rows are
-public-domain</b> (patents, FDA/EMA), 203 are CC-BY, and 927 are reproduced as summary statistics.</p>
+<b>{{n_targets}} distinct target genes</b> are represented. Provenance is complete — every row carries a source
+identifier, an exact locus (table, figure, claim or label section) and a rights class: <b>{{rd_public}} rows are
+public-domain</b> (patents, FDA/EMA), {{rd_ccby}} are CC-BY, and {{rd_summary}} are reproduced as summary statistics.</p>
 
 <h2 class="pb">5. The gap this addresses</h2>
 <p>Phase 1 of this Challenge was dominated by hepatotoxicity; over half the winning teams targeted liver
@@ -252,7 +252,7 @@ no existing source performs.</li>
 <li><b>A deliberately populated negative class</b> (795 grade-0 rows). Negative results are systematically
 under-published; sourcing them from regulatory documents, where monitoring is reported whether or not it was
 eventful, is a contribution in itself.</li>
-<li><b>Controlled comparisons and a 22-compound cross-species bridge</b>, which are what make mechanism
+<li><b>Controlled comparisons and a {{n_bridge}}-compound cross-species bridge</b>, which are what make mechanism
 learnable rather than merely correlated.</li>
 <li><b>Per-row rights tracking</b>, so a consumer can filter to exactly the rows they may lawfully reuse.</li>
 </ul>
@@ -260,32 +260,32 @@ learnable rather than merely correlated.</li>
 <h2>6. Using the data to build a predictive model</h2>
 <p>A worked demonstration is included (<code>scripts/model_demo.py</code>) rather than an assertion. The task:
 predict whether an oligo × condition shows <i>any</i> platelet effect (grade ≥ 1) from design features.
-Control-arm rows and the mechanism-confounded compound are excluded, leaving 1,655 rows over 223 compounds.</p>
+Control-arm rows and the mechanism-confounded compound are excluded, leaving {{ml_rows}} rows over {{ml_comp}} compounds.</p>
 <table>
 <tr><th>Evaluation</th><th class="n">ROC-AUC</th><th class="n">balanced acc.</th><th>What it shows</th></tr>
 <tr><td>Baseline — always predict majority</td><td class="n">—</td><td class="n">0.500</td><td>reference</td></tr>
-<tr><td><b>[A] Design features only</b>, grouped by compound</td><td class="n"><b>0.616</b></td><td class="n">0.638</td>
+<tr><td><b>[A] Design features only</b>, grouped by compound</td><td class="n"><b>{{ml_design}}</b></td><td class="n">0.633</td>
 <td>chemistry alone carries real signal</td></tr>
-<tr><td>[B] Design + study context, grouped</td><td class="n">0.681</td><td class="n">0.670</td>
-<td>+0.065 — the study-type confound, <i>not</i> biology</td></tr>
+<tr><td>[B] Design + study context, grouped</td><td class="n">{{ml_context}}</td><td class="n">0.687</td>
+<td>{{ml_gap}} — the study-type confound, <i>not</i> biology</td></tr>
 <tr><td>Ungrouped random row split</td><td class="n">0.752</td><td class="n">0.690</td>
 <td>+0.081 of pure leakage</td></tr>
 </table>
 <p>Three points matter more than the score. <b>Grouped cross-validation is mandatory</b>: rows are not
 independent — one compound contributes nearly 200 — so a random row split lets a model memorise compounds
 rather than learn chemistry, and we quantify that illusion at +0.081 ROC-AUC. <b>Chemistry alone beats
-baseline</b>, with <code>ps_count</code> the single most important feature, so the dataset supports its own
+baseline</b>, with <code>{{ml_top}}</code> the single most important feature, so the dataset supports its own
 stated hypothesis under a split that forbids memorisation. And the <b>A-versus-B gap is reported precisely so
 it is not banked as chemistry performance</b> — it reflects severe events being observed in trials and not in
 dishes.</p>
-<p>Beyond this baseline the dataset supports: <b>sequence-level models</b> (193 sequences with graded
-outcomes), <b>cross-species translation</b> on the 22-compound bridge, <b>dose–response modelling</b> from
+<p>Beyond this baseline the dataset supports: <b>sequence-level models</b> ({{n_seq}} sequences with graded
+outcomes), <b>cross-species translation</b> on the {{n_bridge}}-compound bridge, <b>dose–response modelling</b> from
 the banded clinical incidence grids, and — the clinically decisive task — <b>separating the mild
 dose-dependent mode from the severe immune-mediated mode</b>, for which the <code>immunogenicity</code>
 readout category provides the labels.</p>
 <div class="note"><b>What we do not claim.</b> This is a feasibility demonstration, not a validated clinical
 predictor. Grade remains partly confounded with study type; the severe idiosyncratic mode is antibody-driven
-and is <i>not</i> expected to be predictable from design at all; and 33 % of rows have completed adversarial
+and is <i>not</i> expected to be predictable from design at all; and {{pct_verified}} % of rows have completed adversarial
 verification, so the remainder should be treated as curated-but-unverified. These limits are documented in
 the methodology rather than left for a reader to discover.</div>
 

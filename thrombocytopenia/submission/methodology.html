@@ -9,7 +9,7 @@ grading, provenance and quality control — how the dataset was assembled and co
 </div>
 
 <h2>1. Materials — the sources</h2>
-<p>The material of this dataset is <b>60 primary sources</b>, each retrieved in full and cited to an exact
+<p>The material of this dataset is <b>{{n_sources}} primary sources</b>, each retrieved in full and cited to an exact
 locus. Four classes, in descending order of redistribution freedom:</p>
 <table>
 <tr><th>Class</th><th>Examples</th><th>Retrieval route</th><th class="n">rows</th></tr>
@@ -18,16 +18,16 @@ locus. Four classes, in descending order of redistribution freedom:</p>
 (NDA 211172, 217779, 203568, 210922, 212194, 214012, 215515, 206488, 217225); EMA SmPCs and EPAR
 assessment reports (Waylivra, Tegsedi, Onpattro, Oxlumo, Amvuttra, Qalsody)</td>
 <td>DailyMed SPL REST API (structured XML); accessdata.fda.gov (browser User-Agent required);
-ema.europa.eu PDFs parsed with PyMuPDF</td><td class="n">748</td></tr>
+ema.europa.eu PDFs parsed with PyMuPDF</td><td class="n">{{rd_public}}</td></tr>
 <tr><td><b>Patents</b> — public domain</td>
 <td>Ionis panels: US 2023/0263822, US 11,535,849, US 2021/0355497, US 2015/0031747, US 10,927,377,
 US 10,100,310</td><td>Google Patents HTML (USPTO print PDFs are image-only); examples tables and formal
 sequence listings</td><td class="n">(within above)</td></tr>
 <tr><td><b>CC-BY literature</b></td><td>Sewing 2017 (PLOS); Valenzuela 2023 (MDPI); the ASO adverse-event
-meta-analysis</td><td>Europe PMC / NCBI full-text XML plus supplementary files</td><td class="n">203</td></tr>
+meta-analysis</td><td>Europe PMC / NCBI full-text XML plus supplementary files</td><td class="n">{{rd_ccby}}</td></tr>
 <tr><td><b>Other literature</b> — summary statistics</td>
 <td>Crooke 2017 pooled safety database; Lundberg Slingsby 2022; Flierl 2015; Jaax 2013; Zaslavsky 2021;
-clinical trial reports</td><td>as above; PDF render where XML is abstract-only</td><td class="n">927</td></tr>
+clinical trial reports</td><td>as above; PDF render where XML is abstract-only</td><td class="n">{{rd_summary}}</td></tr>
 </table>
 <p>Sources were discovered by a parallel sweep across ten independent lanes and ranked by <b>extractable
 per-measurement content</b>, not topicality. Each had to be actually fetched before being listed, so the
@@ -56,7 +56,7 @@ deterministic parse rather than transcription.</li>
 validated against INN nomenclature and patent listings: <b>zero conflicts</b> across all shared compounds.
 Two independent derivation paths reaching the same string is evidence against transcription artefact.</li>
 </ol>
-<p><b>Sequences are recorded for 193 of 254 oligos (76 %) and were never guessed.</b> The remainder are
+<p><b>Sequences are recorded for {{n_seq}} of {{n_oligos}} oligos ({{pct_seq}} %) and were never guessed.</b> The remainder are
 proprietary, class-level aggregates, or development-code compounds with no published sequence; they carry
 <code>TBD</code>.</p>
 
@@ -65,8 +65,8 @@ proprietary, class-level aggregates, or development-code compounds with no publi
 <code>modification_map</code> holds <b>per-residue notation exactly as printed</b> (e.g.
 <code>mG*mC*mG*mA*…</code>, where <code>*</code> marks a phosphorothioate linkage and a leading letter a
 2′-modified residue); <code>gapmer_design</code> gives wing–gap–wing boundaries (e.g. <code>5-10-5_MOE</code>)
-for 170 compounds; and <code>sugar_modifications</code> plus <code>ps_count</code> record which chemistries
-are present and the backbone load (232 and 197 compounds respectively). Where a source printed residue-level
+for {{n_gapmer_design}} compounds; and <code>sugar_modifications</code> plus <code>ps_count</code> record which chemistries
+are present and the backbone load ({{n_sugar}} and {{n_pscount}} compounds respectively). Where a source printed residue-level
 notation it is preserved verbatim rather than normalised away, because <code>sequence_5to3</code> holds bases
 only and would otherwise discard the positional detail.</p>
 <p>Two encoding hazards were met and are recorded so others avoid them. <b>Letter case is significant</b> —

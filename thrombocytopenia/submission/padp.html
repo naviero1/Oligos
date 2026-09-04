@@ -12,12 +12,12 @@ to use or distribute it.</p>
 <h2>1. Scope — the solution covered by this plan</h2>
 <table>
 <tr><th>Artefact</th><th>Description</th></tr>
-<tr><td><code>data/oligos.csv</code></td><td>254 oligonucleotides — identity and design predictors (20 columns),
+<tr><td><code>data/oligos.csv</code></td><td>{{n_oligos}} oligonucleotides — identity and design predictors (20 columns),
 including sequence, per-residue modification map, phosphorothioate count and purity fields</td></tr>
-<tr><td><code>data/measurements.csv</code></td><td>1,878 graded per-measurement platelet-toxicity records
+<tr><td><code>data/measurements.csv</code></td><td>{{n_meas}} graded per-measurement platelet-toxicity records
 (24 columns) with per-row provenance and rights status</td></tr>
 <tr><td><code>data/measurements_human.csv</code> · <code>_animal.csv</code> · <code>bridge_human_animal.csv</code></td>
-<td>human (1,372) and animal (497) splits, plus the 22 compounds characterised on both sides</td></tr>
+<td>human ({{n_human}}) and animal ({{n_animal}}) splits, plus the {{n_bridge}} compounds characterised on both sides</td></tr>
 <tr><td><code>data/oligotox_thrombo_merged.csv</code></td><td>generated denormalised analysis view</td></tr>
 <tr><td><code>schema.md</code></td><td>data dictionary, controlled vocabularies and the 0–3 grade rubric</td></tr>
 <tr><td><code>METHODOLOGY.md</code> · <code>SOURCES.md</code> · <code>README.md</code></td>
@@ -49,11 +49,11 @@ consumer can filter to exactly the records they may lawfully reuse:</p>
 <table>
 <tr><th>Class</th><th>Meaning</th><th>Typical source</th><th class="n">rows</th></tr>
 <tr><td><code>public_domain</code></td><td>reproduce without restriction</td>
-<td>USPTO patents; FDA and EMA documents</td><td class="n">748</td></tr>
+<td>USPTO patents; FDA and EMA documents</td><td class="n">{{rd_public}}</td></tr>
 <tr><td><code>cc_by</code></td><td>raw values reproducible <b>with attribution</b></td>
-<td>CC-BY open-access articles, licence confirmed from the article's own licence field</td><td class="n">203</td></tr>
+<td>CC-BY open-access articles, licence confirmed from the article's own licence field</td><td class="n">{{rd_ccby}}</td></tr>
 <tr><td><code>summary_stat</code> / <code>derived_features_only</code></td>
-<td>summary statistics or derived features under fair use</td><td>copyrighted journal content</td><td class="n">927</td></tr>
+<td>summary statistics or derived features under fair use</td><td>copyrighted journal content</td><td class="n">{{rd_summary}}</td></tr>
 <tr><td><code>verify</code></td><td>rights unresolved — settled before release</td><td>—</td><td class="n">0</td></tr>
 </table>
 <p>A <code>cc_by</code> classification is taken from the article's own licence field, never from the fact that

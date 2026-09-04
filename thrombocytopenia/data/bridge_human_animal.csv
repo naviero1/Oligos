@@ -1,23 +1,24 @@
 oligo_id,oligo_name,oligo_class,backbone_chemistry,ps_count,conjugate,sequence_5to3,n_human_rows,human_mean_grade,human_max_grade,n_animal_rows,animal_mean_grade,animal_max_grade,animal_species,grade_gap_animal_minus_human
-TOLG068,inotersen,ASO_gapmer,full_PS,19,none,TCTTGGTTACATGAAATCCC,197,1.72,3,22,1.73,3,monkey;mouse;rat,+0.01
-TOLG253,volanesorsen,ASO_gapmer,full_PS,19,none,AGCTTCTTGTCCAGCTTTAT,155,1.68,3,18,0.89,3,monkey;mouse;rat,-0.79
-TOLG232,mipomersen,ASO_gapmer,full_PS,19,none,GCCTCAGTCTGCTTCGCACC,114,0.47,2,31,0.77,3,monkey;mouse;rat,+0.30
-TOLG240,ODN2395_Thio,other,full_PS,21,none,TCGTCGTTTTCGGCGCGCGCCG,93,1.58,3,20,1.65,3,minipig;mouse,+0.07
-TOLG066,imetelstat,other,mixed,0,lipid,TBD,85,1.98,3,8,0.88,1,monkey;mouse,-1.10
-TOLG070,ISIS 104838,ASO_gapmer,full_PS,19,none,GCTGATTAGAGAGAGGTCCC,42,0.83,2,13,1.23,3,minipig;monkey;mouse,+0.40
+TOLG072,inotersen,ASO_gapmer,full_PS,19,none,TCTTGGTTACATGAAATCCC,199,1.73,3,22,1.73,3,monkey;mouse;rat,-0.00
+TOLG258,volanesorsen,ASO_gapmer,full_PS,19,none,AGCTTCTTGTCCAGCTTTAT,172,1.55,3,18,0.89,3,monkey;mouse;rat,-0.66
+TOLG236,mipomersen,ASO_gapmer,full_PS,19,none,GCCTCAGTCTGCTTCGCACC,114,0.47,2,31,0.77,3,monkey;mouse;rat,+0.30
+TOLG244,ODN2395_Thio,other,full_PS,21,none,TCGTCGTTTTCGGCGCGCGCCG,93,1.58,3,20,1.65,3,minipig;mouse,+0.07
+TOLG070,imetelstat,other,mixed,0,lipid,TBD,85,1.98,3,8,0.88,1,monkey;mouse,-1.10
+TOLG074,ISIS 104838,ASO_gapmer,full_PS,19,none,GCTGATTAGAGAGAGGTCCC,42,0.83,2,13,1.23,3,minipig;monkey;mouse,+0.40
 TOLG020,2'MOE chimeric ASO pooled panel (12 ASOs),ASO_gapmer,full_PS,16-19,none,TBD,19,0.16,2,25,0.60,2,monkey,+0.44
-TOLG073,ISIS 120704,other,full_PS,23,none,TBD,34,1.06,2,2,1.00,2,mouse,-0.06
-TOLG170,ISIS 501861,ASO_gapmer,full_PS,19,none,TBD,33,0.79,2,1,0.00,0,mouse,-0.79
-TOLG238,ODN2395,other,full_PO,0,none,TCGTCGTTTTCGGCGCGCGCCG,20,0.05,1,3,0.00,0,mouse,-0.05
-TOLG234,NC5 ME/PS-ASO,ASO_gapmer,full_PS,19,none,GCGACTATACGCGCAAUAUG,17,1.18,2,4,1.00,2,mouse,-0.18
-TOLG235,NC5 PS-ASO,other,full_PS,19,none,GCGACTATACGCGCAATATG,16,1.06,2,4,1.00,2,mouse,-0.06
-TOLG247,RTR5001,ASO_gapmer,full_PS,13,none,TGCTACAAAACCCA,1,0.00,0,17,0.00,0,minipig;monkey,+0.00
-TOLG167,ISIS 487660,ASO_gapmer,full_PS,19,none,TBD,15,0.13,1,1,0.00,0,mouse,-0.13
+TOLG077,ISIS 120704,other,full_PS,23,none,TBD,34,1.06,2,2,1.00,2,mouse,-0.06
+TOLG174,ISIS 501861,ASO_gapmer,full_PS,19,none,TBD,33,0.79,2,1,0.00,0,mouse,-0.79
+TOLG242,ODN2395,other,full_PO,0,none,TCGTCGTTTTCGGCGCGCGCCG,20,0.05,1,3,0.00,0,mouse,-0.05
+TOLG238,NC5 ME/PS-ASO,ASO_gapmer,full_PS,19,none,GCGACTATACGCGCAAUAUG,17,1.18,2,4,1.00,2,mouse,-0.18
+TOLG239,NC5 PS-ASO,other,full_PS,19,none,GCGACTATACGCGCAATATG,16,1.06,2,4,1.00,2,mouse,-0.06
+TOLG252,RTR5001,ASO_gapmer,full_PS,13,none,TGCTACAAAACCCA,1,0.00,0,17,0.00,0,minipig;monkey,+0.00
+TOLG171,ISIS 487660,ASO_gapmer,full_PS,19,none,TBD,15,0.13,1,1,0.00,0,mouse,-0.13
 TOLG035,alicaforsen,other,full_PS,19,none,GCCCAAGCTGGCATCCGTCA,3,0.00,0,10,0.00,0,monkey,+0.00
-TOLG104,ISIS 416858,ASO_gapmer,full_PS,19,none,ACGGCATTGGTGCACAGTTT,2,0.50,1,9,0.89,2,monkey;mouse,+0.39
-TOLG243,patisiran,siRNA,PS_PO_mix,0,none,AUGGAAUACUCUUGGUUACTT,4,0.25,1,5,0.60,1,rat,+0.35
+TOLG108,ISIS 416858,ASO_gapmer,full_PS,19,none,ACGGCATTGGTGCACAGTTT,2,0.50,1,9,0.89,2,monkey;mouse,+0.39
+TOLG247,patisiran,siRNA,PS_PO_mix,0,none,AUGGAAUACUCUUGGUUACTT,4,0.25,1,5,0.60,1,rat,+0.35
+TOLG243,ODN2395-PO,other,full_PO,0,none,TCGTCGTTTTCGGCGCGCGCCG,1,0.00,0,6,0.17,1,minipig,+0.17
 TOLG025,44mer-DNA protein C aptamer,aptamer,TBD,TBD,none,TBD,4,2.00,3,3,1.33,2,mouse,-0.67
-TOLG239,ODN2395-PO,other,full_PO,0,none,TCGTCGTTTTCGGCGCGCGCCG,1,0.00,0,6,0.17,1,minipig,+0.17
-TOLG059,fesomersen,ASO_gapmer,PS_PO_mix,13,GalNAc,ACGGCATTGGTGCACAGTTT,2,0.00,0,4,0.00,0,monkey,+0.00
-TOLG053,cellular RNA,other,TBD,TBD,none,TBD,3,1.67,3,1,0.00,0,mouse,-1.67
-TOLG083,ISIS 404173,ASO_gapmer,full_PS,19,none,AATGGTTTATTCCATGGCCA,1,1.00,1,3,2.33,3,monkey,+1.33
+TOLG063,fesomersen,ASO_gapmer,PS_PO_mix,13,GalNAc,ACGGCATTGGTGCACAGTTT,2,0.00,0,4,0.00,0,monkey,+0.00
+TOLG184,ISIS 546254,ASO_gapmer,full_PS,19,none,TGCAAGTCTCTTGGCAAACA,4,0.25,1,1,0.00,0,monkey,-0.25
+TOLG055,cellular RNA,other,TBD,TBD,none,TBD,3,1.67,3,1,0.00,0,mouse,-1.67
+TOLG087,ISIS 404173,ASO_gapmer,full_PS,19,none,AATGGTTTATTCCATGGCCA,1,1.00,1,3,2.33,3,monkey,+1.33

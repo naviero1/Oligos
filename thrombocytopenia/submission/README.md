@@ -18,22 +18,25 @@ which remain the source of truth.
 
 ## Rebuilding the PDFs
 
-Sources are HTML with a shared stylesheet, rendered by headless Chromium — no
-proprietary toolchain:
+Sources are HTML with a shared stylesheet carrying `{{placeholders}}`; every number
+is substituted from the live dataset at render time, so a document cannot quote a
+stale figure. Rendering is headless Chromium — no proprietary toolchain. The script
+fails if a placeholder has no value, or if a document exceeds its page limit:
 
 ```
-scripts/build_submission.sh
+scripts/render_submission.py
 ```
 
 ## What part 4 comprises
 
 | File | Content |
 |---|---|
-| `../data/oligos.csv` | 254 oligonucleotides — identity and design predictors, incl. sequence, per-residue modification map, PS count, purity fields |
-| `../data/measurements.csv` | 1,878 graded per-measurement records with per-row provenance and rights |
-| `../data/measurements_human.csv` | 1,372 human rows |
-| `../data/measurements_animal.csv` | 497 animal rows |
-| `../data/bridge_human_animal.csv` | 22 compounds characterised on **both** sides — the extrapolation set |
+| `../data/oligos.csv` | oligonucleotides — identity and design predictors, incl. sequence, per-residue modification map, PS count, purity fields |
+| `../data/measurements.csv` | graded per-measurement records with per-row provenance and rights |
+| `../data/germans_analysis.csv` | **German's analysis** — one row per compound: oligo · sequence · modification · toxicity, worst-first |
+| `../data/measurements_human.csv` | human rows, **denormalised** so sequence and toxicity grade sit beside every row |
+| `../data/measurements_animal.csv` | animal rows, same denormalised shape |
+| `../data/bridge_human_animal.csv` | compounds characterised on **both** sides — the extrapolation set |
 | `../data/oligotox_thrombo_merged.csv` | generated denormalised analysis view |
 | `../data/model_demo_results.json` | predictive-model demonstration results |
 | `../schema.md` | data dictionary, controlled vocabularies, 0–3 grade rubric |

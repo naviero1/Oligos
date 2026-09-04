@@ -94,5 +94,12 @@ python3 "$S_DIR/build_merged_thrombo.py"
 python3 "$S_DIR/refresh_docs.py"
 python3 "$S_DIR/split_human_animal.py"
 
+# The submission artefacts are generated from the data too, so a round that changes
+# the dataset cannot leave a stale workbook or a PDF quoting last round's counts.
+echo
+echo "== 9. regenerate submission artefacts =="
+python3 "$S_DIR/build_workbook.py"
+python3 "$S_DIR/render_submission.py"
+
 echo
 echo "ingestion round complete."
