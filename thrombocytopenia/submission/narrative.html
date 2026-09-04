@@ -1,0 +1,294 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="style.css"></head><body>
+
+<div class="hdr">
+<h1>OligoTox-Thrombocytopenia: a curated, per-measurement dataset of oligonucleotide platelet toxicity</h1>
+<p class="sub">Narrative document — NIH/NCATS Oligonucleotide Toxicity (OligoTox) Open Data Challenge, Phase 2 (Data Generation)</p>
+<p class="meta"><b>Endpoint:</b> thrombocytopenia / platelet toxicity &nbsp;·&nbsp;
+<b>Dataset:</b> {{n_oligos}} oligonucleotides × {{n_meas}} graded measurements from {{n_sources}} primary sources &nbsp;·&nbsp;
+<b>Licence:</b> CC-BY 4.0 &nbsp;·&nbsp; <b>Repository:</b> <code>naviero1/Oligos → thrombocytopenia/</code></p>
+</div>
+
+<h2>1. Executive summary</h2>
+
+<p><b>OligoTox-Thrombocytopenia</b> is an openly-releasable, per-measurement dataset of platelet-toxicity
+signals for therapeutic oligonucleotides. Thrombocytopenia is one of the toxicities of interest named in
+the Challenge announcement, and — unlike hepatotoxicity — no comparable public, structured, per-compound
+resource for it exists. One row is one <i>oligo × model/subject × delivery × dose × readout</i>, carrying
+both the <b>design predictors</b> (sequence, backbone, phosphorothioate count, sugar chemistry, conjugate)
+and a <b>graded outcome</b> on an ordinal 0–3 scale, together with per-row provenance and rights status.</p>
+
+<div class="kpi">
+<div><b>{{n_meas}}</b><span>measurements</span></div>
+<div><b>{{n_oligos}}</b><span>oligonucleotides</span></div>
+<div><b>{{n_human}}</b><span>human rows</span></div>
+<div><b>{{n_sources}}</b><span>primary sources</span></div>
+<div><b>{{n_bridge}}</b><span>cross-species compounds</span></div>
+</div>
+
+<h3>The endpoint is bimodal, and the dataset is built to preserve that</h3>
+<p>Oligonucleotide-associated thrombocytopenia is not one phenomenon. The literature consistently describes
+(i) a <b>common, mild, dose- and plasma-concentration-dependent</b> platelet decline that plateaus and is
+reversible, and (ii) a <b>rare, severe, idiosyncratic, immune-mediated</b> thrombocytopenia with
+treatment-emergent antiplatelet antibodies and counts below 25 × 10<sup>9</sup>/L. A dataset that averages
+these together destroys the distinction a predictive model most needs. Inotersen's FDA label documents both
+modes in one compound — the basis of its Boxed Warning — and is the anchor against which the grading rubric
+was calibrated. The FDA clinical review for that product states the same typology explicitly ("Rare" vs
+"Common"), which is independent regulatory confirmation of the framing rather than our inference.</p>
+
+<h3>Positive and negative controls</h3>
+<table>
+<tr><th>Role</th><th>Exemplars</th><th>Evidence</th></tr>
+<tr><td><b>Positive — severe mode</b></td><td>inotersen; volanesorsen</td>
+<td>Boxed Warning; platelets &lt; 25 × 10<sup>9</sup>/L in 3 % with antiplatelet IgG in 3/3; one fatal
+intracranial haemorrhage. Volanesorsen: dose-limiting, &lt; 100 × 10<sup>9</sup>/L in 47 % vs 0 % placebo.</td></tr>
+<tr><td><b>Positive — mild mode</b></td><td>olezarsen; ISIS 104838; the (AC)<sub>n</sub> series</td>
+<td>Mean platelet decline of 6–10 % without bleeding; in-vitro activation with monotonic dependence on PS count.</td></tr>
+<tr><td><b>Negative — neutral backbone</b></td><td>eteplirsen, golodirsen, viltolarsen, casimersen</td>
+<td>PMO morpholino backbone; zero platelet content across their FDA labels; a pooled meta-analysis reports an
+explicit <b>zero</b> for the PMO subgroup against a 21.2 % overall rate.</td></tr>
+<tr><td><b>Negative — targeted conjugate</b></td><td>inclisiran, givosiran, lumasiran, vutrisiran, patisiran</td>
+<td>Explicit reported zeros, e.g. <i>Platelets ≤ 75 × 10<sup>9</sup>/L: 0 (0.0 %)</i> in the inclisiran FDA
+review; an FDA-generated platelet shift table for vutrisiran/patisiran.</td></tr>
+<tr><td><b>Negative — isosequential</b></td><td>ODN2395 phosphodiester; fesomersen</td>
+<td>Same base sequence as an active comparator, differing only in backbone or conjugate.</td></tr>
+<tr><td><b>Negative — mechanistic</b></td><td>GPVI-deficient donor platelets</td>
+<td>No binding or activation up to 10 µM — a receptor-level negative that isolates the mechanism.</td></tr>
+</table>
+
+<div class="note"><b>A discipline that shapes the negative class.</b> A compound whose label never mentions
+platelets is <i>not</i> a measured zero. Every grade-0 row is backed by a source that reports platelet
+monitoring having been performed and found unremarkable. Absence of mention was never converted into
+evidence of absence, and the code that swept the labels states this in its own output.</p></div>
+
+<h2 class="pb">2. Main findings and conclusions</h2>
+
+<h3>2.1 The dataset reproduces the field's structure–activity relationship from curation alone</h3>
+<p>Platelet effects are held to track <b>phosphorothioate (PS) content and protein binding</b> rather than the
+hybridisation target, mechanistically via glycoprotein VI. Without any modelling, the assembled data orders
+exactly as that hypothesis predicts:</p>
+<table>
+<tr><th>Backbone</th><th class="n">rows</th><th class="n">compounds</th><th class="n">mean grade</th>
+<th>PS linkages</th><th class="n">mean grade</th></tr>
+<tr><td><code>PMO_neutral</code></td><td class="n">{{n_pmo}}</td><td class="n">{{c_pmo}}</td><td class="n"><b>{{mg_pmo}}</b></td><td>0</td><td class="n">{{mg_ps0}}</td></tr>
+<tr><td><code>PS_PO_mix</code></td><td class="n">{{n_mix}}</td><td class="n">{{c_mix}}</td><td class="n">{{mg_mix}}</td><td>13–16</td><td class="n">{{mg_ps13}}</td></tr>
+<tr><td><code>full_PO</code></td><td class="n">{{n_po}}</td><td class="n">{{c_po}}</td><td class="n">{{mg_po}}</td><td>17–19</td><td class="n">{{mg_ps17}}</td></tr>
+<tr><td><code>full_PS</code></td><td class="n">{{n_ps}}</td><td class="n">{{c_ps}}</td><td class="n"><b>{{mg_ps}}</b></td><td>20+</td><td class="n"><b>{{mg_ps20}}</b></td></tr>
+</table>
+<p>Modality orders in the same direction: PMO 0.10 &lt; GalNAc-siRNA 0.27 &lt; siRNA 0.50 &lt;
+splice-switching 0.67 &lt; ASO gapmer 0.89 &lt; aptamer 1.60. That a curated dataset recovers a relationship
+the field established experimentally is the primary evidence that it is fit to train on.</p>
+
+<h3>2.2 Five controlled comparisons — the dataset's most distinctive content</h3>
+<p>Curation deliberately sought <b>matched pairs and titration series</b>: cases where one design variable
+moves while the others are held fixed. These let a model learn a mechanism rather than a correlation.</p>
+<table>
+<tr><th>#</th><th>Comparison</th><th>Variable isolated</th><th>Result</th></tr>
+<tr><td>1</td><td><code>ODN2395</code> phosphodiester vs phosphorothioate</td><td>backbone only (0 → 21 PS); identical 22-mer</td>
+<td>PAC-1 binding 1.65 → <b>18.94</b> MFI on human platelets</td></tr>
+<tr><td>2</td><td>the <code>(AC)<sub>n</sub></code> series, n = 5…11</td><td>length, hence PS count, sequence held constant</td>
+<td>monotonic 2.12 → 16.79 MFI; threshold between 9 and 11 linkages</td></tr>
+<tr><td>3</td><td><code>ISIS 416858</code> vs <code>fesomersen</code></td><td>19 → 13 PS + GalNAc; identical sequence and 5-10-5 design</td>
+<td>dose-dependent monkey platelet decline vs none</td></tr>
+<tr><td>4</td><td><code>volanesorsen</code> vs <code>olezarsen</code></td><td>GalNAc conjugate and the ~20× lower dose it permits</td>
+<td>dose-limiting (47 % &lt; 100 × 10<sup>9</sup>/L) vs a 6–10 % mean decline, no major bleeding</td></tr>
+<tr><td>5</td><td><code>ISIS 972163</code> vs <code>ISIS 972116</code></td><td><b>one nucleoside</b> in a wing (cEt → 2′-MOE)</td>
+<td>556 vs 325 K/µL in the same rat table — a 41 % difference</td></tr>
+</table>
+<p>Comparison 4 required recovering olezarsen's sequence, which is not published as a string, by deterministic
+parse of the IUPAC chemical name in its FDA label. The parse returns <code>AGCTTCTTGTCCAGCTTTAT</code> —
+identical to volanesorsen's independently published sequence, exactly as expected for the GalNAc-conjugated
+APOC3 analogue, with the stated molecular formula <code>P20S19</code> independently fixing full-PS chemistry
+at 20 residues. Two derivation paths reaching the same string is meaningful evidence against transcription
+artefact.</p>
+
+<h3>2.3 Human and animal evidence are separated, and {{n_bridge}} compounds bridge them</h3>
+<p>The announcement singles out datasets "based on in vitro human systems or able to <b>extrapolate data
+between in vitro human systems and animal data</b>". The dataset is <b>{{pct_human}} % human</b> ({{n_human}} of {{n_meas}} rows),
+and the axis is a first-class derived column, <code>subject_class</code>, computed from study type × species
+and independently re-derived by the QC gate so it cannot drift.</p>
+<table>
+<tr><th>Human</th><th class="n">rows</th><th>Animal</th><th class="n">rows</th></tr>
+<tr><td>clinical (trials)</td><td class="n">{{hc_clinical}}</td><td>in vivo</td><td class="n">{{ac_invivo}}</td></tr>
+<tr><td>in vitro (platelets, PRP, whole blood)</td><td class="n">{{hc_invitro}}</td><td>in vitro</td><td class="n">{{ac_invitro}}</td></tr>
+<tr><td>ex vivo</td><td class="n">{{hc_exvivo}}</td><td>ex vivo</td><td class="n">{{ac_exvivo}}</td></tr>
+<tr><td><b>total</b></td><td class="n"><b>{{n_human}}</b> ({{n_human_comp}} compounds)</td><td><b>total</b></td><td class="n"><b>{{n_animal}}</b> ({{n_animal_comp}} compounds)</td></tr>
+</table>
+<p>Containing human rows and animal rows does not by itself demonstrate extrapolation. Having the <i>same
+compound</i> characterised on both sides does, and <b>{{n_bridge}} compounds</b> qualify — {{bridge1_name}} ({{bridge1_h}} human / {{bridge1_a}}
+animal rows), {{bridge2_name}} ({{bridge2_h}} / {{bridge2_a}}), {{bridge3_name}} ({{bridge3_h}} / {{bridge3_a}}) among them, each with a published sequence.
+<code>data/bridge_human_animal.csv</code> presents them side by side with their human and animal grades. That
+set, not the raw totals, is what a cross-species model can be trained and validated on.</p>
+
+<h3>2.4 Mechanism must be labelled, not assumed</h3>
+<p>Imetelstat causes severe thrombocytopenia, but by <b>on-target telomerase-inhibitor myelosuppression</b>,
+not PS-backbone platelet binding. Left unflagged, its 93 high-grade rows made up 74 % of the zero-PS bucket
+and pushed that bucket's mean grade <i>above every phosphorothioate bucket</i> — inverting the headline
+result. It is mechanism-flagged and excluded from structure–activity analysis while remaining in the dataset.
+Similarly, volanesorsen's anti-<i>drug</i> antibodies carried no altered safety profile and must not be
+conflated with inotersen's anti-<i>platelet</i> IgG, which tracked with severe events.</p>
+
+<h2 class="pb">3. How the data were produced</h2>
+
+<p>This is an <b>in-silico curation</b> of pre-existing, publicly reported data — not wet-lab-generated data.
+"Experimental design" therefore describes source identification, extraction, harmonisation, grading,
+provenance and quality control. Full detail is in the accompanying methodology document.</p>
+
+<h3>3.1 Design</h3>
+<ul>
+<li><b>Grain:</b> one row per oligo × model/subject × delivery × dose/concentration × readout. A compound
+measured for platelet count <i>and</i> P-selectin at one dose yields two rows.</li>
+<li><b>Two normalised tables</b> joined on <code>oligo_id</code>: <code>oligos.csv</code> (identity and design
+predictors, 20 columns) and <code>measurements.csv</code> (outcome and context, 24 columns). A denormalised
+analysis view is generated, never hand-edited.</li>
+<li><b>Coverage goal:</b> all modalities, all study types, the full severity range, and <b>well-sourced
+negative controls</b> — which are what make the chemistry hypothesis falsifiable.</li>
+<li>Missing values are the literal string <code>TBD</code> — never guessed, never imputed as zero.</li>
+</ul>
+
+<h3>3.2 Acquisition</h3>
+<p>Sources were discovered by a <b>parallel multi-agent sweep across ten independent lanes</b> (clinical,
+regulatory, in-vitro human platelet, mechanism/immune, preclinical, non-ASO negatives, patents,
+reviews/meta-analyses, megakaryocyte models, sequence–chemistry panels), each blind to the others. Lanes that
+overlapped provided cross-confirmation; lanes that did not surfaced sources the others missed. Sources were
+ranked by <b>extractable per-measurement content</b>, not topicality, and each had to be <i>fetched</i> before
+being proposed. Primary sources were retrieved directly: NCBI E-utilities and Europe PMC full text plus
+supplementary files, the DailyMed SPL API for FDA labels, accessdata.fda.gov for FDA review documents, the EMA
+for SmPCs and EPAR assessment reports, and USPTO/Google Patents for patent full text and sequence listings.</p>
+<p>Regulatory review documents proved the highest-value and least-mined vein: FDA multidiscipline reviews and
+EMA assessment reports carry per-patient platelet nadir listings, antibody cross-tabulations and dose-banded
+incidence grids that the corresponding journal publications do not.</p>
+
+<h3>3.3 Computational processing</h3>
+<p>The path from extraction to published CSV is fully scripted and re-runnable
+(<code>scripts/ingest_thrombo.sh</code>): harvest → merge lanes in a deterministic precedence order →
+assemble (apply verification verdicts, deduplicate on a natural key, assign stable keys) → re-apply committed
+verdicts → <b>QC gate</b> → rebuild the derived view and the generated documentation sections. QC gates the
+round: if it fails, the derived artefacts are not regenerated, so a broken dataset cannot ship with
+fresh-looking documentation. The <b>raw curation record</b> — every agent's returned rows, the verification
+verdicts, the source sweep — is committed alongside the data, so the published tables are reproducible from
+their inputs rather than merely re-checkable against their citations. Rebuilding from that record reproduces
+both CSVs byte-for-byte.</p>
+
+<h3>3.4 Accuracy control</h3>
+<ul>
+<li><b>Adversarial verification.</b> Extracted rows are passed to an independent agent instructed to
+<i>refute</i> them against the cited source. Two blocks totalling 659 rows have completed:
+<b>628 confirmed, 31 corrected, 0 rejected</b>. For one block every value was recomputed from the paper's raw
+per-replicate workbook and every mean, SD and n reproduced exactly.</li>
+<li><b>Held-out known-answer test.</b> The inotersen label was parsed independently and its figures recorded
+<i>before</i> any extraction ran; the assembled dataset matched all six.</li>
+<li><b>Cross-dataset sequence agreement.</b> Sequences were checked against a sister dataset's records, which
+were validated there against WHO INN nomenclature and patent sequence listings: <b>zero conflicts</b>.</li>
+</ul>
+
+<div class="warn"><b>Four defects found and corrected, worth reporting because three were invisible to schema
+validation.</b> (i) A cross-source <b>name collision</b>: <code>ODN 2395</code> denotes a phosphorothioate
+reagent everywhere except one paper that made a phosphodiester variant under the bare name — 39 rows
+describing an active PS compound had attached to a record asserting <code>ps_count = 0</code>, undercutting
+the central hypothesis. (ii) The <b>mechanism confound</b> of §2.4. (iii) A <b>header-misalignment</b> in
+three patent tables that silently returned red-cell counts where platelet counts were intended in 35 of 55
+rows — real haematology numbers, of plausible magnitude, from the correct study. (iv) A controlled-vocabulary
+typo. All four produced structurally valid data; they were caught by asking whether the assembled data still
+reproduced a relationship the field already knows, which is why that check runs every round.</div>
+
+<h2 class="pb">4. Indicators, predictors, and their distributions</h2>
+
+<h3>4.1 The graded indicator</h3>
+<p>Each measurement carries an ordinal <b>thrombocytopenia_grade (0–3)</b>, CTCAE-aligned for clinical rows
+with explicit in-vitro analogues so a bench readout and a trial outcome land on a comparable scale:
+<b>0</b> no signal at tested exposure · <b>1</b> mild/reversible, ≥ 100 × 10<sup>9</sup>/L or activation only
+at supra-clinical concentration · <b>2</b> moderate, 50–99 × 10<sup>9</sup>/L or activation at clinically
+relevant concentration · <b>3</b> severe, &lt; 50 × 10<sup>9</sup>/L, CTCAE grade 4, antibody-mediated,
+bleeding attributable to thrombocytopenia, or discontinuation.</p>
+<p>Two conventions are applied uniformly, both stated because they are the easiest places to introduce
+systematic error. An <b>incidence row is graded by the severity of the event</b>, not by how small the
+incidence is. <b>Bleeding is graded on attribution</b>: grade 3 requires haemorrhage attributable to
+thrombocytopenia, so a trial reporting mild bleeding at or below the placebo rate is not scored severe.</p>
+<table>
+<tr><th>Grade</th><th class="n">rows</th><th>Readout category</th><th class="n">rows</th><th>Study type</th><th class="n">rows</th></tr>
+<tr><td>0 — none</td><td class="n">{{g0}}</td><td>platelet count</td><td class="n">{{rc_count}}</td><td>clinical</td><td class="n">{{st_clinical}}</td></tr>
+<tr><td>1 — mild</td><td class="n">{{g1}}</td><td>clinical outcome</td><td class="n">{{rc_clinical}}</td><td>in vitro</td><td class="n">{{st_invitro}}</td></tr>
+<tr><td>2 — moderate</td><td class="n">{{g2}}</td><td>platelet activation</td><td class="n">{{rc_activation}}</td><td>animal in vivo</td><td class="n">{{st_animal}}</td></tr>
+<tr><td>3 — severe</td><td class="n">{{g3}}</td><td>binding / aggregation</td><td class="n">{{rc_bindagg}}</td><td>ex vivo</td><td class="n">{{st_exvivo}}</td></tr>
+<tr><td></td><td class="n"></td><td>immunogenicity</td><td class="n">{{rc_immuno}}</td><td></td><td class="n"></td></tr>
+<tr><td></td><td class="n"></td><td>megakaryocyte / other</td><td class="n">{{rc_other}}</td><td></td><td class="n"></td></tr>
+</table>
+<p>Readouts deliberately emphasise the <b>functional and immunological</b> axes over viability: {{rc_count}}
+platelet-count rows, {{rc_activation}} activation, {{rc_bindagg}} binding/aggregation, and {{rc_immuno}} immunogenicity rows capturing the
+antiplatelet-antibody mechanism that distinguishes the severe mode.</p>
+
+<h3>4.2 Predictor distribution among the {{n_oligos}} tested oligos</h3>
+<table>
+<tr><th>Modality</th><th class="n">n</th><th>Backbone</th><th class="n">n</th><th>Conjugate</th><th class="n">n</th><th>Stage</th><th class="n">n</th></tr>
+<tr><td>ASO gapmer</td><td class="n">{{oc_gapmer}}</td><td>full PS</td><td class="n">{{bb_fullps}}</td><td>none</td><td class="n">{{cj_none}}</td><td>research panel</td><td class="n">135</td></tr>
+<tr><td>other / tool</td><td class="n">{{oc_other}}</td><td>PS/PO mix</td><td class="n">{{bb_mix}}</td><td>GalNAc</td><td class="n">{{cj_galnac}}</td><td>preclinical</td><td class="n">53</td></tr>
+<tr><td>PMO</td><td class="n">{{oc_pmo}}</td><td>full PO</td><td class="n">{{bb_fullpo}}</td><td>lipid</td><td class="n">{{cj_lipid}}</td><td>phase 1</td><td class="n">24</td></tr>
+<tr><td>aptamer</td><td class="n">{{oc_aptamer}}</td><td>PMO neutral</td><td class="n">{{bb_pmo}}</td><td>PEG / other</td><td class="n">{{cj_peg}}</td><td>phase 2–3</td><td class="n">16</td></tr>
+<tr><td>splice-switching</td><td class="n">{{oc_sso}}</td><td>mixed / NA</td><td class="n">{{bb_other}}</td><td>TBD</td><td class="n">{{cj_tbd}}</td><td>approved</td><td class="n">17</td></tr>
+<tr><td>GalNAc-siRNA / siRNA</td><td class="n">{{oc_sirna}}</td><td>TBD</td><td class="n">{{bb_tbd}}</td><td></td><td class="n"></td><td>class review</td><td class="n">8</td></tr>
+</table>
+<p><b>Sequences are present for {{n_seq}} of {{n_oligos}} oligos ({{pct_seq}} %)</b> and were never guessed: the remainder are
+proprietary, class-level aggregates, or development-code compounds with no published sequence.
+<b>{{n_targets}} distinct target genes</b> are represented. Provenance is complete — every row carries a source
+identifier, an exact locus (table, figure, claim or label section) and a rights class: <b>{{rd_public}} rows are
+public-domain</b> (patents, FDA/EMA), {{rd_ccby}} are CC-BY, and {{rd_summary}} are reproduced as summary statistics.</p>
+
+<h2 class="pb">5. The gap this addresses</h2>
+<p>Phase 1 of this Challenge was dominated by hepatotoxicity; over half the winning teams targeted liver
+models. Thrombocytopenia is a named toxicity of interest that <b>no public, structured, per-compound resource
+covers</b>, despite being the toxicity that carries a Boxed Warning on a marketed oligonucleotide, that was
+dose-limiting for another, and that has caused a trial death.</p>
+<p>The gap is not that the information is secret — it is that it is <b>scattered and unusable</b>. The
+evidence sits in FDA multidiscipline reviews, EMA assessment reports, patent example tables and the
+supplementary files of individual papers, in incompatible formats, without harmonised severity grading, and
+without any linkage between a compound's chemistry and its platelet outcome. Nothing lets a modeller ask
+"what does phosphorothioate count do to platelets across every compound ever reported?"</p>
+<p>This dataset closes that specific gap. It contributes:</p>
+<ul>
+<li><b>Harmonised grading</b> across in-vitro, ex-vivo, animal and clinical evidence on one 0–3 scale, so
+sources that never shared a metric become comparable.</li>
+<li><b>Design predictors joined to outcomes</b> — sequence, PS count, backbone, conjugate — which is the join
+no existing source performs.</li>
+<li><b>A deliberately populated negative class</b> (795 grade-0 rows). Negative results are systematically
+under-published; sourcing them from regulatory documents, where monitoring is reported whether or not it was
+eventful, is a contribution in itself.</li>
+<li><b>Controlled comparisons and a {{n_bridge}}-compound cross-species bridge</b>, which are what make mechanism
+learnable rather than merely correlated.</li>
+<li><b>Per-row rights tracking</b>, so a consumer can filter to exactly the rows they may lawfully reuse.</li>
+</ul>
+
+<h2>6. Using the data to build a predictive model</h2>
+<p>A worked demonstration is included (<code>scripts/model_demo.py</code>) rather than an assertion. The task:
+predict whether an oligo × condition shows <i>any</i> platelet effect (grade ≥ 1) from design features.
+Control-arm rows and the mechanism-confounded compound are excluded, leaving {{ml_rows}} rows over {{ml_comp}} compounds.</p>
+<table>
+<tr><th>Evaluation</th><th class="n">ROC-AUC</th><th class="n">balanced acc.</th><th>What it shows</th></tr>
+<tr><td>Baseline — always predict majority</td><td class="n">—</td><td class="n">0.500</td><td>reference</td></tr>
+<tr><td><b>[A] Design features only</b>, grouped by compound</td><td class="n"><b>{{ml_design}}</b></td><td class="n">0.633</td>
+<td>chemistry alone carries real signal</td></tr>
+<tr><td>[B] Design + study context, grouped</td><td class="n">{{ml_context}}</td><td class="n">0.687</td>
+<td>{{ml_gap}} — the study-type confound, <i>not</i> biology</td></tr>
+<tr><td>Ungrouped random row split</td><td class="n">0.752</td><td class="n">0.690</td>
+<td>+0.081 of pure leakage</td></tr>
+</table>
+<p>Three points matter more than the score. <b>Grouped cross-validation is mandatory</b>: rows are not
+independent — one compound contributes nearly 200 — so a random row split lets a model memorise compounds
+rather than learn chemistry, and we quantify that illusion at +0.081 ROC-AUC. <b>Chemistry alone beats
+baseline</b>, with <code>{{ml_top}}</code> the single most important feature, so the dataset supports its own
+stated hypothesis under a split that forbids memorisation. And the <b>A-versus-B gap is reported precisely so
+it is not banked as chemistry performance</b> — it reflects severe events being observed in trials and not in
+dishes.</p>
+<p>Beyond this baseline the dataset supports: <b>sequence-level models</b> ({{n_seq}} sequences with graded
+outcomes), <b>cross-species translation</b> on the {{n_bridge}}-compound bridge, <b>dose–response modelling</b> from
+the banded clinical incidence grids, and — the clinically decisive task — <b>separating the mild
+dose-dependent mode from the severe immune-mediated mode</b>, for which the <code>immunogenicity</code>
+readout category provides the labels.</p>
+<div class="note"><b>What we do not claim.</b> This is a feasibility demonstration, not a validated clinical
+predictor. Grade remains partly confounded with study type; the severe idiosyncratic mode is antibody-driven
+and is <i>not</i> expected to be predictable from design at all; and {{pct_verified}} % of rows have completed adversarial
+verification, so the remainder should be treated as curated-but-unverified. These limits are documented in
+the methodology rather than left for a reader to discover.</div>
+
+<p class="foot">OligoTox-Thrombocytopenia · narrative document · CC-BY 4.0 · dataset, schema, methodology,
+pipeline and full curation record at <code>naviero1/Oligos → thrombocytopenia/</code></p>
+</body></html>

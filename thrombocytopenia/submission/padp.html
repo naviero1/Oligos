@@ -1,0 +1,144 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="style.css"></head><body>
+
+<div class="hdr">
+<h1>Public Access &amp; Dissemination Plan</h1>
+<p class="sub">OligoTox-Thrombocytopenia · NIH/NCATS OligoTox Open Data Challenge, Phase 2</p>
+<p class="meta">This plan covers the <b>thrombocytopenia / platelet-toxicity</b> endpoint. It describes how
+the dataset is licensed, made publicly accessible and disseminated, and — as the Challenge requires — how the
+U.S. Government can allow interested parties to use it even if the submitting team does not itself continue
+to use or distribute it.</p>
+</div>
+
+<h2>1. Scope — the solution covered by this plan</h2>
+<table>
+<tr><th>Artefact</th><th>Description</th></tr>
+<tr><td><code>data/oligos.csv</code></td><td>{{n_oligos}} oligonucleotides — identity and design predictors (20 columns),
+including sequence, per-residue modification map, phosphorothioate count and purity fields</td></tr>
+<tr><td><code>data/measurements.csv</code></td><td>{{n_meas}} graded per-measurement platelet-toxicity records
+(24 columns) with per-row provenance and rights status</td></tr>
+<tr><td><code>data/measurements_human.csv</code> · <code>_animal.csv</code> · <code>bridge_human_animal.csv</code></td>
+<td>human ({{n_human}}) and animal ({{n_animal}}) splits, plus the {{n_bridge}} compounds characterised on both sides</td></tr>
+<tr><td><code>data/oligotox_thrombo_merged.csv</code></td><td>generated denormalised analysis view</td></tr>
+<tr><td><code>schema.md</code></td><td>data dictionary, controlled vocabularies and the 0–3 grade rubric</td></tr>
+<tr><td><code>METHODOLOGY.md</code> · <code>SOURCES.md</code> · <code>README.md</code></td>
+<td>assembly and QC record, source registry with per-source rights, overview and findings</td></tr>
+<tr><td><code>scripts/</code></td><td>the complete pipeline — assembly, verification, QC, reporting, splits,
+and the predictive-model demonstration</td></tr>
+<tr><td><code>curation/</code></td><td>the full curation record: raw extractions, verification verdicts,
+source sweep</td></tr>
+</table>
+<p>The dataset is a <b>curation of already-published data</b>. It contains <b>no human-subjects data, no
+personally identifiable information and no protected health information</b> — only aggregate experimental and
+clinical toxicology values and chemical design descriptors drawn from public literature, regulatory documents
+and patents. There are therefore <b>no privacy, consent or data-use-agreement constraints</b> on
+redistribution.</p>
+<p>The curation record is included deliberately: it makes the published tables <b>reproducible from their
+inputs</b> rather than merely re-checkable against citations. It contains no third-party full texts — sources
+are referenced by identifier and exact locus, never redistributed — so it carries the same rights position as
+the tables themselves.</p>
+
+<h2>2. Licensing scheme</h2>
+<p>All material produced by the team — data tables, documentation, scripts and curation record — is released
+under the <b>Creative Commons Attribution 4.0 International (CC-BY 4.0)</b> licence: permissive, irrevocable,
+and permitting <b>anyone</b>, including the U.S. Government and any third party, to access, reuse,
+redistribute, modify and build upon the dataset in perpetuity subject only to attribution. A more permissive
+dedication such as CC0 1.0 can be substituted at NCATS's preference. These are <b>non-exclusive</b> licences
+for research and any other purpose.</p>
+<p><b>Underlying third-party full texts are never redistributed.</b> Rights are tracked <b>per row</b>, so a
+consumer can filter to exactly the records they may lawfully reuse:</p>
+<table>
+<tr><th>Class</th><th>Meaning</th><th>Typical source</th><th class="n">rows</th></tr>
+<tr><td><code>public_domain</code></td><td>reproduce without restriction</td>
+<td>USPTO patents; FDA and EMA documents</td><td class="n">{{rd_public}}</td></tr>
+<tr><td><code>cc_by</code></td><td>raw values reproducible <b>with attribution</b></td>
+<td>CC-BY open-access articles, licence confirmed from the article's own licence field</td><td class="n">{{rd_ccby}}</td></tr>
+<tr><td><code>summary_stat</code> / <code>derived_features_only</code></td>
+<td>summary statistics or derived features under fair use</td><td>copyrighted journal content</td><td class="n">{{rd_summary}}</td></tr>
+<tr><td><code>verify</code></td><td>rights unresolved — settled before release</td><td>—</td><td class="n">0</td></tr>
+</table>
+<p>A <code>cc_by</code> classification is taken from the article's own licence field, never from the fact that
+it happens to be free to read. <b>No patents, trade secrets or restrictive intellectual property</b> are or
+will be claimed over the dataset, and there is no proprietary component whose withdrawal could remove public
+access. Because the licence is <b>irrevocable once granted</b>, third-party use does not depend on the team's
+continued participation.</p>
+
+<h2>3. Public access — hosting and persistence</h2>
+<ul>
+<li><b>Primary distribution:</b> a public code-hosting repository (<code>naviero1/Oligos</code>), openly
+accessible without registration or account.</li>
+<li><b>Independent archival persistence and a citable identifier:</b> a versioned snapshot of each release
+will be deposited in a public long-term archive — <b>Zenodo</b> or an <b>NIH-designated repository</b> — and
+assigned a <b>DOI</b>. This guarantees the dataset remains findable and retrievable <b>independently of the
+team or any single hosting account</b>.</li>
+<li><b>Non-proprietary formats:</b> UTF-8 CSV for data, Markdown for documentation, JSON for the curation
+record, Python for tooling. No software licence or paid dependency is needed to read or rebuild any of it.</li>
+</ul>
+
+<h2>4. Dissemination</h2>
+<p><b>Knowledge necessary to use the dataset</b> is published with it, not held back: the data dictionary and
+schema, the methodology including grading conventions and QC, the source registry with per-source rights, the
+complete pipeline, and a worked predictive-model demonstration that shows how to load the data and train on
+it. Discoverability is supported by stable primary keys, descriptive metadata and keywords, the archival DOI,
+and links from the Challenge submission record.</p>
+<table>
+<tr><th>FAIR principle</th><th>How this dataset meets it</th></tr>
+<tr><td><b>Findable</b></td><td>Stable primary keys (<code>TOLG###</code>, <code>TMSR###</code>); archival
+DOI; descriptive metadata; public repository</td></tr>
+<tr><td><b>Accessible</b></td><td>Open repository and archive; open formats; no gatekeeping, registration or
+request process</td></tr>
+<tr><td><b>Interoperable</b></td><td>Controlled vocabularies; normalised two-table schema shared with a sister
+endpoint so the two join on oligo identity; standard formats</td></tr>
+<tr><td><b>Reusable</b></td><td>CC-BY 4.0; per-row provenance (source identifier, reference, exact locus) so
+any value is re-verifiable; per-row rights so lawful reuse is decidable at the record level; committed inputs
+so the tables can be rebuilt</td></tr>
+</table>
+
+<h2>5. Continuity and U.S. Government use contingency</h2>
+<p>The Challenge requires a plan for how the U.S. Government can allow interested parties to use the solution
+if the team fails to use it and does not permit others to use it on reasonable terms. Three scenarios cover
+this, with the licensing scheme that applies to each:</p>
+<table>
+<tr><th>Scenario</th><th>Condition</th><th>Licensing scheme employed</th></tr>
+<tr><td><b>A — Normal operation</b></td><td>The team maintains the repository and archival deposit and
+disseminates updates.</td><td>CC-BY 4.0 to all third parties; no action required of any user beyond
+attribution.</td></tr>
+<tr><td><b>B — Team ceases activity</b></td><td>The team stops maintaining or disseminating the dataset.</td>
+<td><b>No action by the team is needed for continued public use.</b> The dataset has already been released
+under an <b>irrevocable CC-BY 4.0 licence</b> and a copy is deposited in an <b>independent public archive with
+a DOI</b>. The Government and any interested party may continue to access, copy, host, modify and build upon
+it without further permission. The permissive licence and the independent archival copy are the mechanisms
+that accomplish this.</td></tr>
+<tr><td><b>C — Explicit government grant</b></td><td>The Government wishes to authorise others directly.</td>
+<td>The team grants the U.S. Government a <b>non-exclusive, irrevocable, royalty-free right</b> to use,
+reproduce, distribute, publicly display, host copies of, and <b>authorise others to use</b> the dataset and
+its documentation. This right survives any cessation of the team's activity.</td></tr>
+</table>
+<p>In no scenario does third-party or Government use depend on the team's ongoing involvement, on a
+proprietary service, or on any revocable permission. The team agrees to abide by the terms of this plan as a
+condition of award, and understands that NIH intends to post or otherwise publicly display it.</p>
+
+<h2>6. Maintenance, versioning and honest status reporting</h2>
+<ul>
+<li><b>Versioned releases</b> with a changelog; each release archived under its own DOI so prior versions
+remain citable and retrievable.</li>
+<li><b>Verification status is tracked in-repo and reported, not glossed.</b> Rows verified against their
+primary source carry a marker; the methodology states which blocks are verified and which remain outstanding.
+A release must not be described as fully verified while any block is outstanding.</li>
+<li><b>Known limitations travel with the data</b>, including the purity-data limitation inherent to curating
+published results, the partial confounding of grade with study type, and the provisional status of grades
+pending subject-matter review.</li>
+<li>Corrections and additions are tracked through the repository's public history.</li>
+</ul>
+
+<h2>7. Stewardship and compliance</h2>
+<p><b>Maintainer:</b> the submitting team, via the public repository, until and beyond archival deposit.
+<b>Fallback steward:</b> the independent public archive, which preserves the deposited snapshot and DOI
+irrespective of team status. <b>Challenge contact:</b> as listed in the Phase 2 submission record.</p>
+<p>The plan is consistent with <b>NIH Scientific Data Sharing and Public Access policy</b> and with
+<b>FAIR</b>. An open, irrevocable licence ensures perpetual public usability; the absence of PII, PHI and
+human-subjects data removes any privacy or consent barrier to sharing; and per-row provenance and rights
+tracking make lawful reuse verifiable at the record level.</p>
+
+<p class="foot">OligoTox-Thrombocytopenia · public access &amp; dissemination plan · CC-BY 4.0 ·
+<code>naviero1/Oligos → thrombocytopenia/</code></p>
+</body></html>
