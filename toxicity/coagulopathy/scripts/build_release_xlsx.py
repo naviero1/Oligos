@@ -133,6 +133,11 @@ def toxicity_rollup(D):
 
 def main():
     S, O, M, D = load("sources.csv"), load("oligos.csv"), load("modifications.csv"), load("measurements.csv")
+    ST = load("studies.csv") if os.path.exists(os.path.join(DATA, "studies.csv")) else []
+    trials = [r for r in ST if r.get("design") == "interventional_trial"
+              and str(r.get("endpoint_evaluable", "")).upper() == "TRUE"]
+    # A trial total is quoted only when it can be reproduced from verified study identifiers.
+    TRIALS_LABEL = len(trials) if ST else "UNESTABLISHED - no study register built yet"
     wb = Workbook()
     wb.remove(wb.active)
 
@@ -207,7 +212,24 @@ def main():
     block("Coverage", [("Oligonucleotides with a published sequence", len(seq)),
                        ("Oligonucleotides with a reported purity value", sum(1 for r in O if r["purity_pct"] not in (NR, "NOT_APPLICABLE", ""))),
                        ("Oligonucleotides with BOTH human and animal data", sum(1 for r in O if r["has_human_and_animal_data"] == "TRUE"))])
-    block("Human versus animal (species_class)", [(k, v) for k, v in sc.most_common()])
+    block("HUMAN EVIDENCE (the primary evidence; see the human_* sheets)", [
+        ("Human measurements", sc.get("human", 0)),
+        ("  of which participants in clinical studies", sum(1 for r in D if r["human_system_subtype"] == "participant")),
+        ("  of which primary human blood or plasma", sum(1 for r in D if r["human_system_subtype"] == "primary_blood_or_plasma")),
+        ("  of which human cells or tissue", sum(1 for r in D if r["human_system_subtype"] == "cells_or_tissue")),
+        ("  of which purified or recombinant human protein", sum(1 for r in D if r["human_system_subtype"] == "purified_or_recombinant_protein")),
+        ("  of which unresolved human system", sum(1 for r in D if r["human_system_subtype"] == "unresolved")),
+        ("Human clinical trials (verified, deduplicated)", TRIALS_LABEL),
+    ])
+    block("SUPPORTING ANIMAL EVIDENCE (appendix; excluded from every human total)", [
+        ("Animal measurements", sc.get("animal", 0)),
+        ("See sheet", "animal_appendix"),
+    ])
+    block("UNRESOLVED ORIGIN (neither human nor animal until a source says)", [
+        ("Measurements", sc.get("not_determined", 0)),
+    ])
+    block("What kind of observation each row is (evidence_class)",
+          [(k.replace("_", " "), v) for k, v in Counter(r["evidence_class"] for r in D).most_common()])
     block("Study type", [(k, v) for k, v in st.most_common()])
     block("Measurements in a human or human-derived system", [("human_system = TRUE", sum(1 for r in D if r["human_system"] == "TRUE"))])
     block("Readout category", [(k, v) for k, v in rc.most_common()])
@@ -314,6 +336,25 @@ def main():
             "source_ids": o["source_ids"],
         })
     sheet(wb, "German's analysis", ga)
+
+    # ---- animal appendix ---------------------------------------------------
+    # Animal evidence is retained in full -- nothing is deleted -- but it is moved out of the
+    # human-facing sheets and named as supporting, so it cannot be read into a human total.
+    ani = [r for r in D if r["species_class"] == "animal"]
+    sheet(wb, "animal_appendix", ani)
+
+    # ---- unresolved origin -------------------------------------------------
+    und = [r for r in D if r["species_class"] == "not_determined"]
+    if und:
+        sheet(wb, "unresolved_origin", und)
+
+    # Human-first sheet order. The full measurements table stays in the workbook -- no source
+    # data is removed -- but the human views come first and the animal appendix last.
+    want = ["README", "Summary", "human_trials", "human_measurements", "German's analysis",
+            "data_dictionary", "sources", "oligos", "modifications", "measurements",
+            "unresolved_origin", "animal_appendix"]
+    order = [n for n in want if n in wb.sheetnames] + [n for n in wb.sheetnames if n not in want]
+    wb._sheets = [wb[n] for n in order]
 
     wb.save(OUT)
     print(f"  wrote {os.path.relpath(OUT, ROOT)}")

@@ -16,10 +16,11 @@ what the repository held before this dataset existed, and what changed — is
 | Sources | **100** |
 | Oligos with a published sequence | 104 / 218 |
 | Graded rows (0/1/2/3) | 867 — 463 / 312 / 66 / 26 |
-| Structural QC | 55 / 55 checks pass |
+| Structural QC | 64 / 64 checks pass |
 | Numeric values located in their cited source | 2,019 / 2,019 |
 | Rows adversarially re-checked against sources | 174 — 0 fabrications found |
-| Human-system measurements | **1,183** (44%) |
+| Human-system measurements | **1,183** (44%) — 749 participants · 380 primary blood/plasma · 40 purified human protein · 11 cells/tissue · 3 unresolved |
+| Human clinical trials (deduplicated) | **UNESTABLISHED** — register in progress |
 | Animal-system measurements | 1,476 |
 | Compounds with both human and animal data | 30 of 218 |
 
@@ -94,6 +95,37 @@ a complement marker, a transcript level, blanket adverse-event statements — ke
 their extractor flagged, but never counted as coagulation measurements. A QC check fails the
 build if a readout is neither recognisably coagulation nor marked, and no source document in
 this folder is shared with another endpoint's.
+
+## Counting: what is and is not a trial
+
+**This release does not yet quote a human clinical-trial total.** It holds 749 human
+*clinical measurement rows*, which is not 749 trials: the same study appears under its
+registry record, its publication, its regulatory review and its label, and 89 of those rows
+are FAERS spontaneous reports, which are not a study at all. A deduplicated study register
+keyed on registry identifiers is being built; until it exists the trial count is marked
+**UNESTABLISHED** rather than approximated. Measurement rows, papers, participants, labels,
+cases, spontaneous reports and animal experiments are never substituted for trials.
+
+## What kind of observation each row is
+
+Two booleans could not express the difference between a bleeding event, a prolonged assay
+in a healthy volunteer, an intended anticoagulant effect and a measured null. `evidence_class`
+does, and `evidence_class_basis` names the rule that assigned it:
+
+| Class | Rows | |
+|---|---:|---|
+| `intended_pharmacodynamic` | 971 | on-target effect of a compound designed to alter coagulation |
+| `measured_negative` | 640 | endpoint measured and unchanged |
+| `unintended_lab_disturbance` | 408 | laboratory change the source presents as unintended |
+| `clinical_outcome_unattributed` | 292 | bleeding/thrombotic outcome the source does *not* present as adverse |
+| **`adverse_clinical_outcome`** | **160** | **bleeding/thrombotic outcome the source presents as adverse** |
+| `baseline_reference` | 120 | pre-dose draw — a reference point, not an outcome |
+| `unresolved_observation` | 77 | no direction, no flag, or endpoint not reported |
+| `unattributed_lab_change` | 17 | measured change with neither flag set |
+
+The adverse-outcome subset is therefore derivable without re-reading the inventory. Every
+value is `evidence_class_review_status = curator_derived_unreviewed`: it is a rule, not a
+scientist's adjudication.
 
 ## Read this before using the data: the dataset has two axes, not one
 

@@ -1,0 +1,134 @@
+{
+  "endpoint": "coagulopathy",
+  "generated": "2026-09-30",
+  "commit": "1e432a2de0d405195b1bfedd11e25c462c7aac02",
+  "branch": "claude/coagulopathy-oligos-toxicity-ap70gf",
+  "tree_dirty": true,
+  "counts": {
+    "sources": 100,
+    "compounds": 218,
+    "measurements": 2685,
+    "modification_positions": 1039,
+    "human_measurements": 1183,
+    "animal_measurements": 1476,
+    "undetermined_origin": 26,
+    "compounds_with_sequence": 104,
+    "compounds_with_purity_value": 0
+  },
+  "human_study_register": {
+    "present": false,
+    "study_records": 0,
+    "verified_interventional_trials_endpoint_evaluable": null,
+    "by_design": {},
+    "note": "UNESTABLISHED - no register built yet; do not quote a trial total."
+  },
+  "evidence_class": {
+    "measured_negative": 640,
+    "intended_pharmacodynamic": 971,
+    "unintended_lab_disturbance": 408,
+    "clinical_outcome_unattributed": 292,
+    "adverse_clinical_outcome": 160,
+    "unresolved_observation": 77,
+    "unattributed_lab_change": 17,
+    "baseline_reference": 120
+  },
+  "human_system_subtype": {
+    "primary_blood_or_plasma": 380,
+    "participant": 749,
+    "purified_or_recombinant_protein": 40,
+    "cells_or_tissue": 11,
+    "unresolved": 3
+  },
+  "grade_authority": {
+    "curator_derived_research_score": 913,
+    "ungraded": 1748,
+    "source_reported": 19,
+    "both_source_reported_and_curator_derived": 5
+  },
+  "grading": {
+    "scored_rows": 918,
+    "source_reported_grades": 24,
+    "rows_flagged_near_unity": 157,
+    "validated_clinical_grades": 0,
+    "all_provisional": true
+  },
+  "files": {
+    "data/measurements.csv": {
+      "sha256": "b9a630d06c2ec24eaf4cf30fd1bf1f86d559e619027b32e58317be8f0e1006f0",
+      "bytes": 5739161
+    },
+    "data/oligos.csv": {
+      "sha256": "e2f1887456dfa0ace57060f1872ed13b0291b71a68422ad94eae02b4712547c9",
+      "bytes": 293196
+    },
+    "data/modifications.csv": {
+      "sha256": "a257ab0858e72aac0f515e363ec0f7f22ddb016414f7b4da73bbf900cf9ed9f2",
+      "bytes": 740532
+    },
+    "data/sources.csv": {
+      "sha256": "c56dc6e25ebaf39df294500d5fe280d279653d777c54fafe34549df6fa5735aa",
+      "bytes": 61514
+    },
+    "schema.md": {
+      "sha256": "2b8dfd0effdc4274c7c39dd595b06bb4ecc89201bcb089752dc122e432a6e8be",
+      "bytes": 18122
+    },
+    "METHODOLOGY.md": {
+      "sha256": "7b8ba6bd836fba25a85b4ed2bcf4fb4a193c3107dea95faf3966d14b5753ab29",
+      "bytes": 11683
+    },
+    "README.md": {
+      "sha256": "90a2cfcd2d939f168f6ae27cd99d4bdf3cb71207d967aa83d65f320f128fa9e6",
+      "bytes": 17493
+    },
+    "PADP.md": {
+      "sha256": "23de62eb194006b404d94ea2e93eb32bec74cbd5581ac9efc76f5d124c38cf71",
+      "bytes": 9500
+    },
+    "STATUS.md": {
+      "sha256": "41f9a5fa06acaceee575566c464aef889269b4755c7edf354d3301c8b8adc888",
+      "bytes": 7930
+    },
+    "coagulopathy.md": {
+      "sha256": "b60cc679150eb5c5e185fba2b89186887512ef684e5f14e619f68d222dffa8bf",
+      "bytes": 13986
+    },
+    "SOURCES.md": {
+      "sha256": "d5a0833281fbcc4e79c8b062dc696187086b6f5b258d413f433f0a7e1bc90320",
+      "bytes": 22334
+    },
+    "OligoTox-Coagulopathy_Dataset.xlsx": {
+      "sha256": "dbba28da12058412c213de914897d6c205b9f4017d60c3f81aa76e6a09e97dca",
+      "bytes": 2424453
+    },
+    "OligoTox-Coagulopathy_Narrative.pdf": {
+      "sha256": "34e6d83fe1c741cb9d383849423441fb83aab52b681f1a9485fe784076c872ec",
+      "bytes": 207496
+    },
+    "OligoTox-Coagulopathy_Methodology.pdf": {
+      "sha256": "cbfedd4c8de0fdac4b12e4003d2d0c0f8e6e8d9c503a5254e0446ff13f424086",
+      "bytes": 161555
+    },
+    "OligoTox-Coagulopathy_PADP.pdf": {
+      "sha256": "0724f3cd8177af99478cbcb95a7dd54487efb0c55304c4d24892c482c543f10b",
+      "bytes": 148902
+    },
+    "OligoTox-Coagulopathy_Sources.pdf": {
+      "sha256": "b4c8ecdc7c139de95ea4605f7723812e78b2caa1121f2b7d7c7fb29560ea12a2",
+      "bytes": 672645
+    },
+    "sources/DOWNLOAD_MANIFEST.csv": {
+      "sha256": "8fb56b37593ca1a9edcb64fb27383a763f5218d3026035ecc1ced90a05ed9681",
+      "bytes": 62096
+    }
+  },
+  "checks": {
+    "note": "Run scripts/validate_dataset.py and scripts/verify_against_sources.py; both exit non-zero on failure. Results are not asserted here."
+  },
+  "scientific_status": {
+    "grades_reviewed_by_subject_matter_expert": false,
+    "evidence_class_reviewed": false,
+    "challenge_eligibility_assessed": false,
+    "note": "Structural checks passing is not scientific approval. Labels, controls, model eligibility and final claims remain with the team's scientist."
+  }
+}

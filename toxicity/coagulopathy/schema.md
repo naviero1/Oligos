@@ -132,49 +132,58 @@ synthetic coagulation proteome are human in-vitro systems; bovine thrombin or mu
 are not. Rows whose source never states the origin are `not_determined` — not quietly
 assigned to either class.
 
-## `coag_tox_grade` rubric (0–3)
+## `coag_tox_grade` — a curator-derived research score, not a clinical grade
 
-Grades use the **CTCAE v5.0** (NCI, 27 November 2017) laboratory criteria. The thresholds
-are the published ones; none was devised for this dataset.
+**Read this first.** `coag_tox_grade` is a **research severity score computed by this
+project**. It borrows the CTCAE v5.0 (NCI, 27 November 2017) laboratory *cut-offs*, but it
+does not apply them the way CTCAE does, and **no value in this column has been adjudicated
+against a clinical grading authority by a subject-matter expert**. Every row says so:
+`grade_authority` records who graded it, `is_validated_clinical_grade` is `FALSE` on all
+2,685 rows, and `grade_status` is `provisional` throughout.
 
-| Grade | Prolongation readouts (aPTT, PT, INR, TT, ACT) | Fibrinogen |
+The distinction is not pedantic. CTCAE grades a laboratory value against the **upper (or
+lower) limit of normal**. These sources publish a matched experimental control, not a
+reference range, so this score uses the **control** as the denominator. Because the ULN sits
+*above* a control mean, the substitution biases the score upward at the low end — a compound
+can score 1 here on a difference a clinician would not call abnormal at all. That is the
+single most important limitation of this column.
+
+Only **24 of 2,685 rows** carry a severity grade that a *source* actually reported; those
+live in `source_stated_grade` and are the only graded values in this release with external
+authority. 918 rows carry the curator-derived score; 1,767 are ungraded.
+
+| Score | Prolongation readouts (aPTT, PT, INR, TT, ACT) | Fibrinogen |
 |---|---|---|
 | **0** | ratio ≤ 1.0 × control | ratio ≥ 1.0 × control |
 | **1** | > 1.0 – 1.5 × | < 1.0 – 0.75 × |
 | **2** | > 1.5 – 2.5 × | < 0.75 – 0.5 × |
 | **3** | > 2.5 × | < 0.5 × |
 
-Two guards keep the rule from manufacturing findings, both added after adversarial
-verification showed it doing exactly that:
+`grade_basis` names the rule applied on every row, and the rule name is
+`CTCAE_v5.0_control_referenced` precisely so the substituted denominator travels with the
+value rather than being recoverable only from this page.
 
-- **A source-stated measured null outranks the ratio.** Where the source reports the
-  endpoint as unchanged, the grade is 0 regardless of a ratio marginally above 1.00
-  (122 rows). Before this, rows the source called unremarkable carried grade 1, and
-  `coag_tox_grade` contradicted `effect_direction` in the same row.
-- **Grades resting on a near-unity ratio are flagged, not hidden.** 155 rows with a ratio
-  in 1.0–1.2× carry `grade_caveat = within_reference_range_resolution`.
-- **Pre-dose baselines are never graded** (120 rows): a draw taken before dosing is a
-  reference point, not an effect.
+Three guards stop the rule manufacturing findings, all added after adversarial verification
+showed it doing exactly that:
 
-**A deviation, stated plainly, and it is the rubric's main weakness.** CTCAE defines these
-ratios against the upper (or lower) limit of normal. This dataset applies them to a ratio
-against the **matched experimental control**, because that is what the sources publish —
-few report a laboratory reference range. Because the ULN sits *above* the control mean,
-this substitution biases grades upward at the low end: it is why the two guards above
-exist, and why `grade_caveat` must be respected. The rule name recorded in every `grade_basis` is therefore
-`CTCAE_v5.0_control_referenced`, so the substitution is visible on every graded row rather
-than buried in documentation. Where a source reports a measured null on a CTCAE-graded
-readout without a derivable ratio, the grade is `0` with basis
-`source_states_measured_no_change_on_a_CTCAE_graded_readout`.
+- **A source-stated measured null outranks the ratio** (225 rows). Where the source reports
+  the endpoint measured and unchanged, the score is 0 whatever the ratio. Before this, rows
+  a source called unremarkable scored 1, and the score contradicted `effect_direction` in
+  the same row.
+- **Scores resting on a near-unity ratio are flagged, not hidden** (157 rows carry
+  `grade_caveat = within_reference_range_resolution`, for ratios in 1.0–1.2×). **Filter on
+  it before treating a score of 1 as a finding.**
+- **Pre-dose baselines are never scored** (120 rows): a draw taken before dosing is a
+  reference point, not an outcome. `evidence_class = baseline_reference` marks them.
 
 **What is deliberately not graded.** CTCAE defines no criterion for factor activity,
 antithrombin activity, thrombin generation, bleeding volume, thrombus fluorescence or
-clinical event counts. Those 1,446 rows are `NOT_REPORTED` with the reason in
+clinical event counts. Those 1,767 rows are `NOT_REPORTED` with the reason in
 `grade_basis` — grading them would mean inventing thresholds and presenting them with the
 authority of a published standard.
 
 **Reproducibility.** Grades are a pure function of `ratio_to_control` and `readout_name`.
-`validate_dataset.py` re-derives every one of the 942 graded rows and fails if any
+`validate_dataset.py` re-derives every one of the 918 scored rows and fails if any
 disagrees, so a hand-edited grade cannot survive a build.
 
 ---

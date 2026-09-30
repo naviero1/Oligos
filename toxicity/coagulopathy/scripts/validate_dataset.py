@@ -269,6 +269,47 @@ bad = [r["measurement_id"] for r in D
        if r["endpoint_scope"] == "scope_adjacent" and r["endpoint_scope_note"] in ("", NA)]
 check("every scope_adjacent row says why it is out of scope", not bad, f"{len(bad)}: {bad[:5]}")
 
+
+# ---- 56-63 invariants added after the Beebop review (2026-09-30) -------------
+EV = {"baseline_reference", "measured_negative", "adverse_clinical_outcome",
+      "clinical_outcome_unattributed", "unintended_lab_disturbance",
+      "intended_pharmacodynamic", "unattributed_lab_change", "unresolved_observation"}
+bad = sorted({r["evidence_class"] for r in D if r["evidence_class"] not in EV})
+check("vocabulary: measurements.evidence_class", not bad, f"unexpected {bad[:5]}")
+
+bad = [r["measurement_id"] for r in D if not str(r["evidence_class_basis"]).strip()]
+check("every evidence_class states the rule that assigned it", not bad, f"{len(bad)}: {bad[:5]}")
+
+bad = sorted({r["evidence_class_review_status"] for r in D
+              if r["evidence_class_review_status"] != "curator_derived_unreviewed"})
+check("evidence_class is declared unreviewed on every row", not bad, f"{bad[:3]}")
+
+SUB = {"participant", "primary_blood_or_plasma", "cells_or_tissue",
+       "purified_or_recombinant_protein", "unresolved", NA}
+bad = sorted({r["human_system_subtype"] for r in D if r["human_system_subtype"] not in SUB})
+check("vocabulary: measurements.human_system_subtype", not bad, f"unexpected {bad[:5]}")
+
+bad = [r["measurement_id"] for r in D
+       if (r["species_class"] == "human") != (r["human_system_subtype"] != NA)]
+check("human_system_subtype is set on exactly the human rows", not bad, f"{len(bad)}: {bad[:5]}")
+
+AUTH = {"source_reported", "curator_derived_research_score",
+        "both_source_reported_and_curator_derived", "ungraded"}
+bad = sorted({r["grade_authority"] for r in D if r["grade_authority"] not in AUTH})
+check("vocabulary: measurements.grade_authority", not bad, f"unexpected {bad[:5]}")
+
+bad = [r["measurement_id"] for r in D if r["is_validated_clinical_grade"] != "FALSE"]
+check("no row claims a validated clinical grade", not bad, f"{len(bad)}: {bad[:5]}")
+
+bad = [r["measurement_id"] for r in D
+       if r["grade_authority"] == "ungraded" and r["coag_tox_grade"] != NR]
+check("grade_authority agrees with the grade columns", not bad, f"{len(bad)}: {bad[:5]}")
+
+# A baseline is a reference point; it must never be counted as an outcome.
+bad = [r["measurement_id"] for r in D
+       if r["evidence_class"] == "baseline_reference" and r["coag_tox_grade"] != NR]
+check("a baseline_reference row carries no grade", not bad, f"{len(bad)}: {bad[:5]}")
+
 # ---- report -----------------------------------------------------------------
 w = max(len(n) for n, _, _ in checks)
 for n, ok, detail in checks:

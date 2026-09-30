@@ -291,6 +291,89 @@ SCOPE_ADJACENT_READOUTS = {
 COAG_LEXICON = re.compile(
     r"aptt|ptt|prothrombin|\bpt\b|pt_ratio|\btt\b|inr|thrombin|thrombus|clot|coagul|fibrin|d[_ -]?dimer|antithrombin|anti[_-]?xa|anti[_-]?iia|bleed|blood_loss|blood_flow|blood_transfusion|h(?:ae|e|a)?morrhag|h(?:ae|e|a)?mostas|h(?:ae|e|a)?mostatic|thromb|kallikrein|tenase|xase|\bact\b|tfpi|vwf|von[_ ]willebrand|platelet|heparin|protamine|bivalirudin|argatroban|hirudin|\btat\b|epistaxis|h(?:ae|e|a)?matoma|h(?:ae|e|a)?maturia|contusion|transfusion|\bF(?:I|II|V|VII|VIII|IX|X|XI|XII)a?(?:se)?[_ ]|fxa|fixa|fviia|fxia|fxiia|fviii|factor|serpin|plasmin|PAI[_ ]?1|tPA|PF4|ecarin|russell|reptilase|TEG|ROTEM|bradykinin|P[_ ]selectin|occlusion|patency|perfusion|neurologic_deficit|mortality|Evans_blue|oxygenator|cerebrovascular|saphenous|carotid|jugular|contact_pathway|proenzyme|zymogen|prekallikrein|injection_site", re.I)
 
+# --------------------------------------------- evidence class, system subtype, grade authority
+# Added after Beebop's 2026-09-30 review. Two booleans (on_target_effect, unintended_toxicity)
+# collapse six genuinely different kinds of observation into four cells, so a reader cannot
+# derive the actual adverse-outcome subset without re-reading every row. These columns make
+# that subset derivable, and record that the derivation is a curator rule awaiting review --
+# they do not overwrite the flags, which stay as curated.
+
+_CELL = re.compile(r"cell|HepG2|HepB3|HUVEC|iPSC|ciPTEC|endotheli|hepatocyte|platelet-rich|PRP\b", re.I)
+
+def apply_evidence_class(rows, log):
+    for r in rows:
+        cat, dirn = r.get("readout_category", ""), r.get("effect_direction", "")
+        on = r.get("on_target_effect") == "TRUE"
+        un = r.get("unintended_toxicity") == "TRUE"
+        if r.get("is_baseline") == "TRUE":
+            cls, basis = "baseline_reference", "is_baseline=TRUE: a pre-dose draw is a reference point, not an outcome"
+        elif dirn == "no_change":
+            cls, basis = "measured_negative", "source reports the endpoint measured and unchanged"
+        elif cat in ("bleeding_outcome", "thrombotic_outcome") and un:
+            cls, basis = "adverse_clinical_outcome", "bleeding/thrombotic outcome the source presents as adverse"
+        elif cat in ("bleeding_outcome", "thrombotic_outcome"):
+            cls, basis = "clinical_outcome_unattributed", "bleeding/thrombotic outcome NOT presented as adverse by the source (e.g. efficacy or on-target context)"
+        elif un:
+            cls, basis = "unintended_lab_disturbance", "laboratory coagulation change the source presents as unintended"
+        elif on:
+            cls, basis = "intended_pharmacodynamic", "on-target pharmacodynamic effect of a compound designed to alter coagulation"
+        elif dirn in ("increase", "decrease"):
+            cls, basis = "unattributed_lab_change", "measured change with neither flag set by curation"
+        else:
+            cls, basis = "unresolved_observation", "no direction, no flag, or the endpoint was not reported"
+        r["evidence_class"] = cls
+        r["evidence_class_basis"] = basis
+        # Every value in this column is a curator rule, not a scientist's adjudication.
+        r["evidence_class_review_status"] = "curator_derived_unreviewed"
+        log["C_evidence_" + cls] += 1
+    return rows
+
+
+def apply_human_subtype(rows, log):
+    """Which KIND of human system. Human origin alone does not establish physiological
+    relevance: a purified-protein assay and a dosed participant are both 'human' and are not
+    comparable evidence."""
+    for r in rows:
+        if r.get("species_class") != "human":
+            r["human_system_subtype"] = NA
+            continue
+        st, mx, sm = r.get("study_type", ""), r.get("matrix", ""), r.get("system_model", "")
+        if st == "clinical":
+            sub = "participant"
+        elif mx == "purified_system":
+            sub = "purified_or_recombinant_protein"
+        elif _CELL.search(sm):
+            sub = "cells_or_tissue"
+        elif mx in ("plasma", "whole_blood", "serum"):
+            sub = "primary_blood_or_plasma"
+        else:
+            sub = "unresolved"
+        r["human_system_subtype"] = sub
+        log["H_subtype_" + sub] += 1
+    return rows
+
+
+def apply_grade_authority(rows, log):
+    """Say who graded it. A ratio-derived score computed here is NOT a validated clinical
+    adverse-event grade, and must never be read as one."""
+    for r in rows:
+        src = r.get("source_stated_grade", NA) != NA
+        own = r.get("coag_tox_grade", NR) != NR
+        if src and own:
+            a = "both_source_reported_and_curator_derived"
+        elif src:
+            a = "source_reported"
+        elif own:
+            a = "curator_derived_research_score"
+        else:
+            a = "ungraded"
+        r["grade_authority"] = a
+        # No grade in this release has been adjudicated by a subject-matter expert against a
+        # clinical grading authority. Stated per row so it cannot be lost in documentation.
+        r["is_validated_clinical_grade"] = "FALSE"
+        log["G_authority_" + a] += 1
+    return rows
+
 def apply_endpoint_scope(rows, log):
     for r in rows:
         nm = r.get("readout_name", "")
@@ -552,6 +635,9 @@ def main():
     measurements = apply_corrections(measurements, _log)
     measurements = apply_species_split(measurements, _log)
     measurements = apply_endpoint_scope(measurements, _log)
+    measurements = apply_evidence_class(measurements, _log)
+    measurements = apply_human_subtype(measurements, _log)
+    measurements = apply_grade_authority(measurements, _log)
 
     # ---- modifications -----------------------------------------------------
     mods, mod_orphans = [], 0
