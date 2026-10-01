@@ -1,4 +1,4 @@
-oligos.csv build report, 2026-09-04
+oligos.csv build report, 2026-10-01
 ================================================================
 nusinersen                 label=yes parsed=backbone_chemistry,formulation,molecular_formula,molecular_weight,sugar_modifications
 tofersen                   label=yes parsed=backbone_chemistry,formulation,length_nt,modification_pattern,molecular_formula,molecular_weight,sugar_modifications
@@ -47,7 +47,7 @@ donidalorsen                       auto-added from trial registry (3 trials, rou
 eplontersen; inotersen             auto-added from trial registry (1 trials, route subcutaneous)
 fitusiran                          auto-added from trial registry (4 trials, route subcutaneous)
 olezarsen                          auto-added from trial registry (3 trials, route subcutaneous)
-patisiran; vutrisiran              auto-added from trial registry (2 trials, route subcutaneous)
+patisiran; vutrisiran              auto-added from trial registry (1 trials, route subcutaneous)
 sepofarsen                         auto-added from trial registry (2 trials, route intravitreal)
 trabedersen                        auto-added from trial registry (1 trials, route subcutaneous)
 ultevursen                         auto-added from trial registry (3 trials, route intravitreal)

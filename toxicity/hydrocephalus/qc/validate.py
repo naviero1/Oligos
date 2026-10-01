@@ -51,7 +51,11 @@ VOCAB = {
                          "csf_composition", "csf_dynamics", "procedure_complication",
                          "histopathology_choroid_ependyma"},
     "ascertainment": {"measured_positive", "measured_null",
+                      "reported_zero_no_denominator",
                       "reported_threshold_limited", "not_assessed"},
+    "denominator_type": {"participants_at_risk", "faers_total_reports_for_drug",
+                         "NOT_APPLICABLE"},
+    "denominator_unit": {"persons", "reports", "NOT_APPLICABLE"},
     "attribution_as_stated": {"drug_attributed", "procedure_attributed",
                               "disease_attributed", "multifactorial", "undetermined",
                               "not_discussed"},
@@ -106,11 +110,36 @@ def main():
            and len(r["grade_basis"].strip()) < 20]
     check("every graded row has a grade_basis", not bad, "offending: %s" % bad[:5])
 
-    # 6 SCHEMA rule: grade 0 requires ascertainment = measured_null --------
+    # 6 SCHEMA rule: grade 0 requires an ascertainment that can carry it ---
+    ZERO_OK = {"measured_null", "reported_zero_no_denominator"}
     bad = [r["measurement_id"] for r in m
-           if r["hydroceph_grade"] == "0" and r["ascertainment"] != "measured_null"]
-    check("grade 0 implies ascertainment=measured_null", not bad,
+           if r["hydroceph_grade"] == "0" and r["ascertainment"] not in ZERO_OK]
+    check("grade 0 implies measured_null or reported_zero_no_denominator", not bad,
           "%d rows e.g. %s" % (len(bad), bad[:5]))
+
+    # 6b THE RATCHET. Without this, re-editing extract_faers.py silently restores
+    #    the old label and QC passes. A spontaneous report can never be a measured
+    #    negative, so this is a property of the SOURCE, not of any one row.
+    bad = [r["measurement_id"] for r in m
+           if r["study_type"] == "pharmacovigilance"
+           and r["ascertainment"] == "measured_null"]
+    check("no pharmacovigilance row claims measured_null", not bad,
+          "%d rows e.g. %s" % (len(bad), bad[:5]))
+
+    # 6c a reported zero must declare a denominator that is not a person count
+    bad = [r["measurement_id"] for r in m
+           if r["ascertainment"] == "reported_zero_no_denominator"
+           and (r["denominator_type"] == "participants_at_risk"
+                or len(r["ascertainment_basis"].strip()) < 20)]
+    check("reported zeros declare a non-person denominator and a basis", not bad,
+          "offending: %s" % bad[:5])
+
+    # 6d denominator_type must agree with study_type
+    bad = [r["measurement_id"] for r in m
+           if (r["study_type"] == "pharmacovigilance")
+           != (r["denominator_type"] == "faers_total_reports_for_drug")]
+    check("denominator_type agrees with study_type", not bad,
+          "offending: %s" % bad[:5])
 
     # 7 not_assessed rows must not carry a grade ---------------------------
     bad = [r["measurement_id"] for r in m
@@ -428,10 +457,39 @@ def main():
             ((r["source_id"], int(r["n_measurements"])) for r in s),
             key=lambda kv: -kv[1])),
         multi_row_event_clusters={k: v for k, v in clusters.items() if v > 1},
+        # tier_A_positive was a single number pooling three axes: ventricular
+        # enlargement, disease-background rate (no compound at all) and ONE
+        # therapeutic row whose own grade_basis says to exclude it from any
+        # compound-toxicity analysis. Published as one figure it reads as
+        # "hydrocephalus events", which it is not. Split.
         tier_A_positive=sum(1 for r in m if r["endpoint_tier"] == "A"
                             and r["ascertainment"] == "measured_positive"),
+        tier_A_positive_ventricular=sum(
+            1 for r in m if r["endpoint_tier"] == "A"
+            and r["ascertainment"] == "measured_positive"
+            and r["tox_axis"] == "ventricular_enlargement"
+            and r["oligo_name"] not in ("NOT_APPLICABLE", "placebo_or_sham_control")),
+        tier_A_positive_disease_background=sum(
+            1 for r in m if r["endpoint_tier"] == "A"
+            and r["ascertainment"] == "measured_positive"
+            and r["tox_axis"] == "disease_background_rate"),
+        tier_A_positive_therapeutic=sum(
+            1 for r in m if r["endpoint_tier"] == "A"
+            and r["ascertainment"] == "measured_positive"
+            and r["tox_axis"] == "therapeutic_ventricular_effect"),
+        tier_A_positive_on_placeholder_arm=sum(
+            1 for r in m if r["endpoint_tier"] == "A"
+            and r["ascertainment"] == "measured_positive"
+            and r["oligo_name"] in ("NOT_APPLICABLE", "placebo_or_sham_control")),
+        # tier_A_null previously pooled assessed negatives with FAERS reporting
+        # zeros; 176 of the old 755 could not establish an absence at all.
         tier_A_null=sum(1 for r in m if r["endpoint_tier"] == "A"
                         and r["ascertainment"] == "measured_null"),
+        tier_A_reported_zero_no_denominator=sum(
+            1 for r in m if r["endpoint_tier"] == "A"
+            and r["ascertainment"] == "reported_zero_no_denominator"),
+        n_compounds_real=0,  # filled below
+        n_oligo_records=len(o),
         grade3_rows=sum(1 for r in m if r["hydroceph_grade"] == "3"),
         duplexes_checked=dup_checked,
         oligos_with_sequence=sum(
@@ -439,6 +497,69 @@ def main():
                                                                  "NOT_APPLICABLE")),
         checks_run=len(CHECKS), checks_failed=len(FAILURES),
     )
+    PLACEHOLDERS = {"NOT_APPLICABLE", "placebo_or_sham_control"}
+    stats["n_compounds_real"] = sum(1 for r in o
+                                    if r["oligo_name"] not in PLACEHOLDERS)
+    # Trial counters. The release previously published four disagreeing trial
+    # figures (161 / 159 / 155 / none) and qc/stats.json held none at all.
+    reg = list(csv.DictReader(open(os.path.join(ROOT, "data", "trial_registry.csv"))))
+    kept = [r for r in reg if not r["excluded_reason"]]
+    ct = [r for r in m if r["study_type"] == "clinical_trial"]
+    with_rows = {r["source_id"] for r in ct if r["source_id"].startswith("NCT")}
+    evaluable = {r["source_id"] for r in ct
+                 if r["assessment_type"] not in ("NOT_APPLICABLE", "", "NOT_REPORTED")}
+    stats["trials_registry_rows"] = len(reg)
+    stats["trials_excluded_identity"] = len(reg) - len(kept)
+    stats["trials_human_unique"] = len({r["nct_id"] for r in kept} & with_rows)
+    stats["trials_with_systematic_assessment"] = len(evaluable & with_rows)
+    stats["trial_outcome_records"] = len(ct)
+
+    # ---- HUMAN-SUBSET characterization completeness -----------------------
+    #     The release published completeness for the whole roster, which is
+    #     flattering: the three purity-carrying constructs and 7 of the 13
+    #     sequence-resolved compounds are animal-only, so the human subset is far
+    #     thinner than the headline. Published separately so it cannot be misread.
+    PLACE = {"NOT_APPLICABLE", "placebo_or_sham_control"}
+    obyname = {r["oligo_name"]: r for r in o}
+    human_cmpds = {r["oligo_name"] for r in m
+                   if r["subject_class"].startswith("human")
+                   and r["oligo_name"] not in PLACE}
+    def _has(name, col):
+        v = (obyname.get(name, {}) or {}).get(col, "")
+        return v not in ("", "NOT_REPORTED", "NOT_APPLICABLE")
+    modded = {r["oligo_name"] for r in mods}
+    hrows = [r for r in m if r["subject_class"].startswith("human")]
+    stats["human_subset"] = dict(
+        compounds=len(human_cmpds),
+        with_sequence=sum(1 for c in human_cmpds
+                          if _has(c, "sequence_5to3_asprinted")),
+        with_position_map=sum(1 for c in human_cmpds if c in modded),
+        with_purity=sum(1 for c in human_cmpds if _has(c, "purity_pct")),
+        with_conjugate=sum(1 for c in human_cmpds if _has(c, "conjugate")),
+        rows=len(hrows),
+        rows_with_dose=sum(1 for r in hrows
+                           if r["dose_value"] not in ("", "NOT_REPORTED",
+                                                      "NOT_APPLICABLE")),
+        rows_with_duration=sum(1 for r in hrows
+                               if r["exposure_duration"] not in
+                               ("", "NOT_REPORTED", "NOT_APPLICABLE")),
+    )
+    stats["human_in_vitro_rows"] = sum(1 for r in m
+                                       if r["subject_class"] == "human_in_vitro")
+
+    # ---- release identifier ----------------------------------------------
+    #     Different branches and Drive exports held different versions with no key
+    #     binding dataset, figures and documents together. The commit is the key.
+    try:
+        rev = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=ROOT,
+                             capture_output=True, text=True).stdout.strip()
+        dirty = bool(subprocess.run(["git", "status", "--porcelain", "."], cwd=ROOT,
+                                    capture_output=True, text=True).stdout.strip())
+    except Exception:
+        rev, dirty = "", False
+    stats["release_id"] = ("hydrocephalus-%s%s" % (rev or "unknown",
+                                                   "-dirty" if dirty else ""))
+
     with open(os.path.join(HERE, "stats.json"), "w") as fh:
         json.dump(stats, fh, indent=2)
 

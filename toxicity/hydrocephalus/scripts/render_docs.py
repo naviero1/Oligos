@@ -52,7 +52,13 @@ def main():
         "| — of which carry at least one measurement | %(n_oligos_with_measurements)d |\n"
         "| Distinct sources | %(n_sources)d |\n"
         "| Tier-A rows with a positive finding | %(tier_A_positive)d |\n"
-        "| Tier-A rows that are explicit measured negatives | %(tier_A_null)d |\n"
+        "| Tier-A rows that are ASSESSED measured negatives | %(tier_A_null)d |\n"
+        "| Tier-A spontaneous-report zeros (no exposure denominator, NOT negatives) | %(tier_A_reported_zero_no_denominator)d |\n"
+        "| Tier-A positives on the ventricular axis, real compounds | %(tier_A_positive_ventricular)d |\n"
+        "| Verified unique human clinical trials | %(trials_human_unique)d |\n"
+        "| &nbsp;&nbsp;of those with a systematic/protocol assessment | %(trials_with_systematic_assessment)d |\n"
+        "| Trials excluded on compound-identity grounds | %(trials_excluded_identity)d |\n"
+        "| Compounds (excluding 2 non-compound placeholders) | %(n_compounds_real)d |\n"
         "| Grade-3 (severe) rows | %(grade3_rows)d |\n"
         "| Oligonucleotides with a published sequence | %(oligos_with_sequence)d |\n"
         "| QC checks run / failed | %(checks_run)d / %(checks_failed)d |\n" % s)
@@ -97,11 +103,38 @@ def main():
             "clinical episode and must not be counted as independent events.\n\n"
             "| `event_cluster_id` | Rows |\n|---|---:|\n%s\n" % rows)
 
+    hs = s.get("human_subset", {})
+    if hs:
+        parts.append(
+            "**Human-subset characterization completeness.** The whole-roster figures "
+            "flatter the release: the three purity-carrying constructs and 7 of the 13 "
+            "sequence-resolved compounds are animal-only. This table is the human "
+            "evidence on its own.\n\n"
+            "| Human subset | Count | of |\n|---|---:|---:|\n"
+            "| Compounds appearing in human rows | %d | %d |\n"
+            "| &nbsp;&nbsp;with a published sequence | %d | %d |\n"
+            "| &nbsp;&nbsp;with a position-resolved chemistry map | %d | %d |\n"
+            "| &nbsp;&nbsp;with a purity value | %d | %d |\n"
+            "| &nbsp;&nbsp;with a conjugate stated | %d | %d |\n"
+            "| Human rows with a numeric dose | %d | %d |\n"
+            "| Human rows with an exposure duration | %d | %d |\n"
+            "| Human in vitro / ex vivo rows | %d | &mdash; |\n"
+            % (hs["compounds"], hs["compounds"],
+               hs["with_sequence"], hs["compounds"],
+               hs["with_position_map"], hs["compounds"],
+               hs["with_purity"], hs["compounds"],
+               hs["with_conjugate"], hs["compounds"],
+               hs["rows_with_dose"], hs["rows"],
+               hs["rows_with_duration"], hs["rows"],
+               s.get("human_in_vitro_rows", 0)))
+
     top = list(s["rows_per_source"].items())[:10]
     rows = "\n".join("| `%s` | %d |" % (k, v) for k, v in top)
     parts.append("**Largest sources** (top 10 of %d)\n\n| `source_id` | Rows |\n|---|---:|\n%s\n"
                  % (s["n_sources"], rows))
 
+    parts.append("Release identifier: `%s` (binds this table, the workbook, the "
+                 "figures and the PDFs to one commit).\n" % s.get("release_id", "unknown"))
     block = BEGIN + "\n\n" + "\n".join(parts) + "\n" + END
 
     path = os.path.join(ROOT, "README.md")

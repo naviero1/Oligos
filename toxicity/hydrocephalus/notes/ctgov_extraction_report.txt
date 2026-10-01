@@ -1,10 +1,10 @@
 ClinicalTrials.gov extraction audit trail
 ============================================================
 payloads scanned: 234
-rows emitted: 765
+rows emitted: 746
 
-NCT00094835 (imetelstat) — 39 serious terms, 191 other terms, threshold=5, tierA_serious=no
-NCT00101907 (imetelstat) — 42 serious terms, 246 other terms, threshold=5, tierA_serious=no
+NCT00094835 SKIPPED — no oligonucleotide mapping recorded
+NCT00101907 SKIPPED — no oligonucleotide mapping recorded
 NCT00138658 (custirsen) — 40 serious terms, 85 other terms, threshold=5, tierA_serious=no
 NCT00159250 (eteplirsen) — 0 serious terms, 5 other terms, threshold=0, tierA_serious=no
 NCT00239928 (pegaptanib) — 20 serious terms, 11 other terms, threshold=5, tierA_serious=no
@@ -15,11 +15,11 @@ NCT00327470 (pegaptanib) — 59 serious terms, 266 other terms, threshold=0, tie
 NCT00358501 (defibrotide) — 83 serious terms, 23 other terms, threshold=5, tierA_serious=no
 NCT00362180 (mipomersen) — 1 serious terms, 115 other terms, threshold=0, tierA_serious=no
 NCT00406107 (pegaptanib) — 0 serious terms, 1 other terms, threshold=5, tierA_serious=no
-NCT00427349 (imetelstat) — 33 serious terms, 37 other terms, threshold=5, tierA_serious=no
+NCT00427349 SKIPPED — no oligonucleotide mapping recorded
 NCT00460408 (pegaptanib) — 26 serious terms, 56 other terms, threshold=0, tierA_serious=no
 NCT00477594 (mipomersen) — 6 serious terms, 121 other terms, threshold=0, tierA_serious=no
 NCT00549055 (pegaptanib) — 0 serious terms, 1 other terms, threshold=5, tierA_serious=no
-NCT00574951 (imetelstat) — 10 serious terms, 61 other terms, threshold=0, tierA_serious=no
+NCT00574951 SKIPPED — no oligonucleotide mapping recorded
 NCT00605280 (pegaptanib) — 97 serious terms, 33 other terms, threshold=5, tierA_serious=no
 NCT00607373 (mipomersen) — 3 serious terms, 93 other terms, threshold=0, tierA_serious=no
 NCT00628498 (defibrotide) — 278 serious terms, 3 other terms, threshold=5, tierA_serious=YES
@@ -159,7 +159,7 @@ NCT05330455 (bepirovirsen) — 0 serious terms, 61 other terms, threshold=0, tie
 NCT05355402 (olezarsen) — 23 serious terms, 25 other terms, threshold=5, tierA_serious=no
 NCT05386680 EXCLUDED — OAV101 (onasemnogene abeparvovec) is an AAV9 gene therapy, not an oligonucleotide. Out of the Challenge's scope. Retained in sources/raw/ as an available same-route, same-disease non-oligonucleotide comparator; contributes no row.
 NCT05583552 (imetelstat) — 32 serious terms, 164 other terms, threshold=0, tierA_serious=no
-NCT05635045 (patisiran; vutrisiran) — 0 serious terms, 1 other terms, threshold=0, tierA_serious=no
+NCT05635045 SKIPPED — no oligonucleotide mapping recorded
 NCT05686551 SKIPPED — no oligonucleotide mapping recorded
 NCT05763875 (inclisiran) — 1 serious terms, 12 other terms, threshold=2, tierA_serious=no
 NCT05814666 (danvatirsen) — 51 serious terms, 52 other terms, threshold=5, tierA_serious=no

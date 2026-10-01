@@ -74,6 +74,18 @@ def write_report(R):
     sysd = next(b for b in R["route"] if not b["label"].startswith("CNS"))
     by_name = {m["name"]: m for m in R["models"]}
 
+    def _diag(which):
+        for m in R["models"]:
+            if "LEAKAGE" in m["name"] and which in m["name"]:
+                return m.get("diagnostic", {"folds": 0, "constant_folds": 0})
+        return {"folds": 0, "constant_folds": 0}
+
+    def _np(name):
+        for m in R.get("models_nonprocedure", []):
+            if m["name"] == name and m["auc"] is not None:
+                return "%.3f" % m["auc"]
+        return "n/a"
+
     def auc(name):
         m = by_name.get(name)
         return "%.3f" % m["auc"] if m and m["auc"] is not None else "n/a"
@@ -167,14 +179,49 @@ Three things worth reading off that table:
 - **Adding chemistry makes it worse.** Chemistry is `NOT_REPORTED` for most
   compounds, so the feature contributes noise. This is a data-coverage result,
   not a biological one.
-- **Trial identity alone reaches {auc_trial}.** A material share of any apparent
+- **Trial identity alone reaches {auc_trial}**, and unlike the compound probe it
+  is only partly degenerate (constant in {trial_const} of {trial_folds} folds), so
+  this one does carry signal. A material share of any apparent
   performance is provenance, not biology. We ran this because a review of our
   sibling kidney dataset found `study_type` and `source_id` were strong shortcut
   predictors of its label.
-- **Compound identity alone scores {auc_cmpd} \u2014 below chance.** That is the
-  *correct* behaviour under leave-one-compound-out and confirms the validation is
-  doing its job: a model that knows only which compound a row belongs to cannot
-  generalise to a compound it has never seen.
+- **Compound identity alone scores {auc_cmpd}, and that number means nothing.**
+  An earlier version of this report read the below-chance value as "the correct
+  behaviour under leave-one-compound-out" that "confirms the validation is doing
+  its job". That reasoning was wrong, and a wrong reason quoted as a validation
+  check is worse than no check. The probe is DEGENERATE: the held-out compound's
+  own indicator column never exists in training, so its test design matrix is
+  all-zero and every prediction in the fold is sigmoid(intercept) \u2014 a constant.
+  The diagnostic now reports this directly: predictions are constant in
+  {cmpd_const} of {cmpd_folds} folds. Pooled AUC therefore ranks fold constants
+  against each other, not cases against controls, and lands far below 0.5 because
+  removing an event-rich compound lowers the training base rate for exactly the
+  fold that holds the events. The no-information value for this probe is 0.5;
+  {auc_cmpd} is an artefact of pooled scoring, not evidence of anything. It is
+  retained only as a transparency diagnostic.
+
+## 3b. The headline number is mostly a procedure effect
+
+This is the most important correction in this report. The modelled outcome is any
+tier-B (CSF-dynamics) event in an arm. But {proc_only} of the {n_armsB} tier-B
+positive arms carry `delivery_procedure_complication` as their ONLY positive axis
+\u2014 a lumbar-puncture complication, not a compound toxicity. The dataset's own
+documentation says that axis must be excluded from compound-toxicity analysis.
+
+Re-running the identical leave-one-compound-out procedure against an outcome with
+that axis removed ({n_armsB_nonproc} positive arms):
+
+| Model | tier-B (all axes) | tier-B excluding procedure complications |
+|---|---:|---:|
+| Route only | {auc_route} | {auc_route_np} |
+| Route + indication | {auc_ri} | {auc_ri_np} |
+| Route + indication + chemistry | {auc_ric} | {auc_ric_np} |
+
+The headline {auc_ri} falls to {auc_ri_np}, and the chemistry model falls below
+chance. So the model was substantially predicting *was this arm lumbar-punctured*
+from a route feature \u2014 a tautology, since the route is how the procedure happens.
+What survives is weak and rests on {n_armsB_nonproc} positive arms. No predictive
+claim in this release should be quoted without this table beside it.
 
 ## 4. What this supports, and what it does not
 
@@ -213,6 +260,14 @@ python3 ml/analyse.py
         auc_ric=auc("route + indication + chemistry"),
         auc_trial=auc("LEAKAGE PROBE: trial identity only"),
         auc_cmpd=auc("LEAKAGE PROBE: compound identity only"),
+        cmpd_const=_diag("compound")["constant_folds"],
+        cmpd_folds=_diag("compound")["folds"],
+        trial_const=_diag("trial")["constant_folds"],
+        trial_folds=_diag("trial")["folds"],
+        proc_only=R["n_armsB"] - R["n_armsB_nonprocedure"],
+        n_armsB_nonproc=R["n_armsB_nonprocedure"],
+        auc_route_np=_np("route only"), auc_ri_np=_np("route + indication"),
+        auc_ric_np=_np("route + indication + chemistry"),
         ci_lo=R["best_model_auc_ci"][0], ci_hi=R["best_model_auc_ci"][1],
         n_seq=n_seq, n_olg=n_olg, vitro_clause=vitro_clause)
 
@@ -312,6 +367,35 @@ def main():
             return None, len(truth)
         return roc_auc_score(truth, preds), len(truth)
 
+    def loco_degeneracy(frame, y, cols):
+        """Is this probe DEGENERATE — i.e. constant within every fold?
+
+        For a feature that identifies the held-out group itself, the test design
+        matrix is all-zero (the group's own column never existed in training), so
+        every prediction in the fold is sigmoid(intercept): a constant. Pooled AUC
+        then compares fold constants to each other, not cases to controls, and
+        lands far below 0.5 because removing an event-rich compound lowers the
+        training base rate for exactly the fold that holds the events. That is an
+        artefact of the scoring, NOT evidence that leakage protection works.
+        """
+        n_folds = const = 0
+        for comp in frame.oligo_name.unique():
+            te = frame.oligo_name == comp
+            tr = ~te
+            if y[tr].nunique() < 2 or te.sum() == 0:
+                continue
+            Xtr, names = design(frame[tr], cols)
+            Xte, _ = design(frame[te], cols)
+            Xte = Xte.reindex(columns=names, fill_value=0.0)
+            mdl = LogisticRegression(max_iter=2000, class_weight="balanced", C=1.0)
+            mdl.fit(Xtr, y[tr])
+            p = mdl.predict_proba(Xte)[:, 1]
+            n_folds += 1
+            if len(set(p.round(10))) == 1:
+                const += 1
+        return dict(folds=n_folds, constant_folds=const,
+                    degenerate=(n_folds > 0 and const == n_folds))
+
     yB = df.tierB_event
     models = {
         "route only": ["delivery_route"],
@@ -324,9 +408,28 @@ def main():
     R["models"] = []
     for name, cols in models.items():
         auc, n = loco(df, yB, cols)
-        R["models"].append(dict(name=name, features=cols,
-                                auc=None if auc is None else round(float(auc), 3),
-                                n_scored=n))
+        entry = dict(name=name, features=cols,
+                     auc=None if auc is None else round(float(auc), 3),
+                     n_scored=n)
+        if "LEAKAGE PROBE" in name:
+            entry["diagnostic"] = loco_degeneracy(df, yB, cols)
+        R["models"].append(entry)
+
+    # ---- SENSITIVITY: the same models against an outcome with the procedure
+    #      complications removed. 78.6% of the tier-B positive arms carry
+    #      delivery_procedure_complication as their ONLY positive axis, so the
+    #      headline model is largely predicting "was this arm lumbar-punctured"
+    #      from its own route feature — tautology, not compound toxicity.
+    yBn = df.tierB_event_nonprocedure
+    R["n_armsB_nonprocedure"] = int(yBn.sum())
+    R["models_nonprocedure"] = []
+    for name, cols in models.items():
+        if "LEAKAGE" in name:
+            continue
+        auc, n = loco(df, yBn, cols)
+        R["models_nonprocedure"].append(
+            dict(name=name, features=cols,
+                 auc=None if auc is None else round(float(auc), 3), n_scored=n))
 
     # bootstrap CI for the best legitimate model
     best = ["delivery_route", "indication"]

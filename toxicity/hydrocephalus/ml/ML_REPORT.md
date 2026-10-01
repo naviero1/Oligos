@@ -12,17 +12,17 @@ marks). Treating them as independent inflates n by an order of magnitude and
 shrinks every interval.
 
 The analysis set aggregates to **one row per (trial, arm)**, which is a binomial
-observation with a real denominator: 546 arms across 159 trials and
-41 compounds, 36,324 participants at risk. It keeps only
+observation with a real denominator: 519 arms across 154 trials and
+41 compounds, 29,728 participants at risk. It keeps only
 `clinical_trial` rows with a denominator, so every observation is the same kind
 of thing.
 
 | | |
 |---|---:|
-| Arms | 546 |
-| Trials | 159 |
+| Arms | 519 |
+| Trials | 154 |
 | Compounds | 41 |
-| Participants at risk (arm-sum) | 36,324 |
+| Participants at risk (arm-sum) | 29,728 |
 | Arms with a tier-A (ventricular) event | **9** |
 | Arms with a tier-B (CSF-dynamics) event | 84 |
 
@@ -35,21 +35,21 @@ tier-B outcome, and a leakage diagnosis.
 | Route | Participants | Affected | Rate / 1,000 | 95% Wilson |
 |---|---:|---:|---:|---|
 | CNS-delivered (intrathecal / ICV) | 2,577 | 10 | **3.88** | 2.11–7.13 |
-| Systemically delivered | 30,919 | 7 | 0.23 | 0.11–0.47 |
+| Systemically delivered | 24,355 | 7 | 0.29 | 0.14–0.59 |
 
-Fisher exact odds ratio **17.20**, p = 8.39e-08.
+Fisher exact odds ratio **13.55**, p = 6.54e-07.
 
 ## 2. And the contrast vanishes inside randomised comparisons
 
-Restricting to the 64 trials carrying their own concurrent
+Restricting to the 63 trials carrying their own concurrent
 comparator arm:
 
 | | Events | Participants |
 |---|---:|---:|
-| Treated arms | 2 | 15,633 |
-| Comparator arms | 2 | 8,071 |
+| Treated arms | 2 | 10,239 |
+| Comparator arms | 2 | 7,569 |
 
-Odds ratio **0.52**, p = 0.61.
+Odds ratio **0.74**, p = 1.
 **No detectable within-trial effect.**
 
 The two results are not in conflict; they are measuring different things. §1
@@ -59,34 +59,69 @@ this dataset, which is why both are in it.
 
 ## 3. Models, and what they actually learn
 
-Outcome: tier-B (CSF-dynamics) event in an arm — 84 of 546 arms, the
+Outcome: tier-B (CSF-dynamics) event in an arm — 84 of 519 arms, the
 mechanistic precursor the index case documents. Validation is
 **leave-one-compound-out**: arms of one compound are correlated, so a random
 split leaks the compound across folds and inflates the score.
 
 | Model | LOCO AUC |
 |---|---:|
-| Route only | 0.890 |
+| Route only | 0.889 |
 | **Route + indication** | **0.910** |
-| Route + indication + chemistry | 0.878 |
-| *Leakage probe: trial identity only* | *0.709* |
-| *Leakage probe: compound identity only* | *0.094* |
+| Route + indication + chemistry | 0.879 |
+| *Leakage probe: trial identity only* | *0.724* |
+| *Leakage probe: compound identity only* | *0.098* |
 
-Bootstrap 95% CI for the best model: 0.848–0.951.
+Bootstrap 95% CI for the best model: 0.835–0.947.
 
 Three things worth reading off that table:
 
 - **Adding chemistry makes it worse.** Chemistry is `NOT_REPORTED` for most
   compounds, so the feature contributes noise. This is a data-coverage result,
   not a biological one.
-- **Trial identity alone reaches 0.709.** A material share of any apparent
+- **Trial identity alone reaches 0.724**, and unlike the compound probe it
+  is only partly degenerate (constant in 19 of 41 folds), so
+  this one does carry signal. A material share of any apparent
   performance is provenance, not biology. We ran this because a review of our
   sibling kidney dataset found `study_type` and `source_id` were strong shortcut
   predictors of its label.
-- **Compound identity alone scores 0.094 — below chance.** That is the
-  *correct* behaviour under leave-one-compound-out and confirms the validation is
-  doing its job: a model that knows only which compound a row belongs to cannot
-  generalise to a compound it has never seen.
+- **Compound identity alone scores 0.098, and that number means nothing.**
+  An earlier version of this report read the below-chance value as "the correct
+  behaviour under leave-one-compound-out" that "confirms the validation is doing
+  its job". That reasoning was wrong, and a wrong reason quoted as a validation
+  check is worse than no check. The probe is DEGENERATE: the held-out compound's
+  own indicator column never exists in training, so its test design matrix is
+  all-zero and every prediction in the fold is sigmoid(intercept) — a constant.
+  The diagnostic now reports this directly: predictions are constant in
+  41 of 41 folds. Pooled AUC therefore ranks fold constants
+  against each other, not cases against controls, and lands far below 0.5 because
+  removing an event-rich compound lowers the training base rate for exactly the
+  fold that holds the events. The no-information value for this probe is 0.5;
+  0.098 is an artefact of pooled scoring, not evidence of anything. It is
+  retained only as a transparency diagnostic.
+
+## 3b. The headline number is mostly a procedure effect
+
+This is the most important correction in this report. The modelled outcome is any
+tier-B (CSF-dynamics) event in an arm. But 66 of the 84 tier-B
+positive arms carry `delivery_procedure_complication` as their ONLY positive axis
+— a lumbar-puncture complication, not a compound toxicity. The dataset's own
+documentation says that axis must be excluded from compound-toxicity analysis.
+
+Re-running the identical leave-one-compound-out procedure against an outcome with
+that axis removed (18 positive arms):
+
+| Model | tier-B (all axes) | tier-B excluding procedure complications |
+|---|---:|---:|
+| Route only | 0.889 | 0.650 |
+| Route + indication | 0.910 | 0.606 |
+| Route + indication + chemistry | 0.879 | 0.492 |
+
+The headline 0.910 falls to 0.606, and the chemistry model falls below
+chance. So the model was substantially predicting *was this arm lumbar-punctured*
+from a route feature — a tautology, since the route is how the procedure happens.
+What survives is weak and rests on 18 positive arms. No predictive
+claim in this release should be quoted without this table beside it.
 
 ## 4. What this supports, and what it does not
 

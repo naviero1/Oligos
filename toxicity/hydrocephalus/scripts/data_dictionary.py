@@ -126,7 +126,17 @@ DICTIONARY = {
                                   "words or only as a figure. No number is ever read "
                                   "off a figure.",
         "n_affected": "Participants/animals with the event in this arm.",
-        "n_at_risk": "Denominator of this arm.",
+        "n_at_risk": "Denominator of this arm. Its MEANING is given by "
+                     "denominator_type and must not be assumed: for trial, label "
+                     "and animal rows it counts subjects; for pharmacovigilance "
+                     "rows it is the drug's TOTAL FAERS report count, so "
+                     "n_affected/n_at_risk is a reporting proportion within that "
+                     "drug's own reports and is NOT an incidence.",
+        "denominator_type": "What n_at_risk counts: participants_at_risk | "
+                            "faers_total_reports_for_drug | NOT_APPLICABLE. Added "
+                            "because one column held two incommensurable "
+                            "denominators with nothing marking which.",
+        "denominator_unit": "persons | reports | NOT_APPLICABLE.",
         "comparator_arm": "What this arm is compared against.",
         "n_affected_comparator": "Events in the comparator arm.",
         "n_at_risk_comparator": "Denominator of the comparator arm.",
@@ -148,8 +158,15 @@ DICTIONARY = {
                        "stated basis is a defect.",
         "grade_status": "provisional | expert_confirmed | not_graded",
         "ascertainment": "measured_positive | measured_null | "
-                         "reported_threshold_limited | not_assessed. A grade of 0 is "
-                         "permitted only where this is measured_null.",
+                         "reported_zero_no_denominator | "
+                         "reported_threshold_limited | not_assessed. A grade of 0 "
+                         "is permitted only where ascertainment is measured_null "
+                         "or reported_zero_no_denominator. "
+                         "reported_zero_no_denominator means a source that CANNOT "
+                         "establish absence returned no event: a spontaneous-"
+                         "reporting query with no exposure denominator. It is a "
+                         "reported zero, never an experimentally confirmed "
+                         "negative, and must not be pooled with measured_null.",
         "ascertainment_basis": "How that was established, citing the source's own "
                                "statement or the governing reporting rule.",
         "attribution_as_stated": "What the SOURCE concluded about causation: "

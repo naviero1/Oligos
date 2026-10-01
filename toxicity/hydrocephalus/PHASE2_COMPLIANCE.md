@@ -40,7 +40,7 @@ This is the part owned by this workstream, so it is broken out in full.
 | Provenance of every value (supplementary, not separately required) | **Met** | `OligoTox-Hydrocephalus_Sources.pdf` — every database, document and link, with per-source rights, exclusions with reasons, the retrieved-but-unextracted backlog, and a resolved-URL check on all source locators. |
 | "the sequences of all oligos tested" | **Partly met — gap** | **10 of 50** compounds carry a published sequence. Recovered from WHO INN Recommended lists by deterministic parse, validated against each label's molecular formula. Missing for the double-stranded siRNAs, the morpholinos, and 15 compounds that reach the dataset only through the trial registry. See `METHODOLOGY.md` **OI-02**. |
 | "the location of all chemical modifications in each oligo" | **Partly met — gap** | [`data/modifications.csv`](data/modifications.csv): **202 rows, one per nucleotide position, over 10 compounds**, giving sugar, base, 5-methylation and phosphorothioate-vs-phosphodiester at every position. Same 40 compounds missing as above. |
-| "data on the purity and characterization of each" | **Met, as a negative finding** | `purity_pct` is `NOT_REPORTED` for all 50, from evidence: a full-text sweep of all 16 committed US labels finds no drug-substance purity, purification or identity statement in any of them. Recorded with the sweep as its basis, not left blank. The sibling CNS release reports the same for all 1,839 of its compounds. |
+| "data on the purity and characterization of each" | **Partly met; a hard gap on the human subset** | `purity_pct` carries a published range (90-97%, HPLC-purified) for three constructs and is `NOT_REPORTED` for the rest. Those three are **rat-only**, so purity for the human-evidence subset is zero of <!--stat:n_compounds_real-->51<!--/stat--> compounds. From evidence: a full-text sweep of all 16 committed US labels finds no drug-substance purity, purification or identity statement in any of them. Recorded with the sweep as its basis, not left blank. The sibling CNS release reports the same for all 1,839 of its compounds. |
 | "any additional metadata" | **Met** | 53 measurement columns, 32 oligo columns, 12 modification columns, 20 source columns — including provenance, ascertainment, attribution and rights on every row. |
 | "terms for data access and data use … allowing for open and public access, such as through a creative commons license" | **Partly met — gap** | Rights are tracked **per row** (`redistribution`): 1,290 public domain, 8 CC BY, 3 CC BY-NC, 15 summary-statistic-only, 8 `verify`. But **no LICENSE file exists** in the repository, so the dataset's own licence has not been granted. This blocks the PADP, whose continuity argument rests on an irrevocable grant already being in place. |
 
@@ -50,7 +50,7 @@ This is the part owned by this workstream, so it is broken out in full.
 > vitro human systems and animal data are of particular interest."
 
 **This remains the release's weakest point, though it is no longer empty.** The
-dataset is **<!--stat:n_human_rows-->1,351<!--/stat--> human rows,
+dataset is **<!--stat:n_human_rows-->1,332<!--/stat--> human rows,
 <!--stat:n_animal_rows-->10<!--/stat--> animal rows and
 <!--stat:n_in_vitro_rows-->2<!--/stat--> in vitro rows**. The in vitro rows come
 from the one source that measures the same oligonucleotide both in cultured
@@ -63,7 +63,7 @@ therapeutic; that exclusion is a curation judgement worth a reviewer's scrutiny.
 
 What it does support, and should be argued on instead:
 
-- **Human clinical evidence at scale** — <!--stat:n_ctgov_rows-->786<!--/stat-->
+- **Human clinical evidence at scale** — <!--stat:n_ctgov_rows-->767<!--/stat-->
   trial rows from <!--stat:n_trials-->161<!--/stat--> registered
   trials, with denominators and comparator arms.
 - **A route contrast** — intrathecal against systemically dosed oligonucleotides,
@@ -103,7 +103,7 @@ report*; the four documents are the November block.
 
 | Step | Status |
 |---|---|
-| Data prep | **Done**, and extended past the original scope: <!--stat:n_measurements-->1,361<!--/stat--> rows, <!--stat:n_oligos-->53<!--/stat--> compounds, <!--stat:n_sources-->193<!--/stat--> sources, <!--stat:n_trials-->161<!--/stat--> trials, <!--stat:checks_run-->53<!--/stat--> QC checks. |
+| Data prep | **Done**, and extended past the original scope: <!--stat:n_measurements-->1,342<!--/stat--> rows, <!--stat:n_oligos-->53<!--/stat--> compounds, <!--stat:n_sources-->188<!--/stat--> sources, <!--stat:n_trials-->161<!--/stat--> trials, <!--stat:checks_run-->58<!--/stat--> QC checks. |
 | **Finish ML** | **Done.** Arm-level analysis with leave-one-compound-out validation and explicit leakage probes; `ml/ML_REPORT.md` is generated from `ml/results.json`, not typed. |
 | Write up report | **Done.** Narrative, methodology and PADP PDFs, plus a supplementary source and provenance register. |
 

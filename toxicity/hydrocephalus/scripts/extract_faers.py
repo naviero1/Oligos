@@ -207,7 +207,12 @@ def main():
             total = totals.get(generic, 0)
             if total == 0:
                 continue           # drug absent from FAERS entirely; no denominator
-            asc = "measured_positive" if n else "measured_null"
+            # NOT measured_null. A spontaneous-reporting system that returns no
+            # report for a term has not MEASURED an absence: it has recorded that
+            # nobody filed one, with no exposure denominator and no assessment.
+            # Calling that a measured negative put 176 reporting zeros inside the
+            # release's headline "tier-A measured negatives" figure.
+            asc = "measured_positive" if n else "reported_zero_no_denominator"
             if n:
                 grade = 3 if category == "hydrocephalus_event" else (
                     1 if category in ("ventricular_morphometry", "procedure_complication") else 2)
@@ -249,11 +254,15 @@ def main():
                 readout_is_qualitative="FALSE",
                 n_affected=n,
                 n_at_risk=total,
+                denominator_type="faers_total_reports_for_drug",
+                denominator_unit="reports",
                 comparator_arm="NOT_APPLICABLE",
                 n_affected_comparator="NOT_APPLICABLE",
                 n_at_risk_comparator="NOT_APPLICABLE",
                 statistic="NOT_REPORTED",
-                effect_direction=("increase" if n else "no_change"),
+                # "no_change" asserts a comparison that was never made: these rows
+                # have no comparator arm.
+                effect_direction=("increase" if n else "NOT_APPLICABLE"),
                 seriousness="NOT_REPORTED",
                 assessment_type="spontaneous_report",
                 organ_system="NOT_REPORTED",

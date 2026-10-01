@@ -1,7 +1,7 @@
 {
-  "n_measurements": 1361,
+  "n_measurements": 1342,
   "n_oligos": 53,
-  "n_sources": 193,
+  "n_sources": 188,
   "n_modification_positions": 256,
   "n_oligos_with_position_map": 13,
   "n_oligos_with_length": 13,
@@ -9,42 +9,43 @@
   "by_subject_class": {
     "animal_in_vitro": 2,
     "animal_in_vivo": 8,
-    "human_in_vivo": 1348,
+    "human_in_vivo": 1329,
     "human_population": 3
   },
   "by_subject_class_and_tier": {
     "animal_in_vitro / tier B": 2,
     "animal_in_vivo / tier A": 4,
     "animal_in_vivo / tier B": 4,
-    "human_in_vivo / tier A": 811,
+    "human_in_vivo / tier A": 792,
     "human_in_vivo / tier B": 537,
     "human_population / tier A": 3
   },
-  "n_human_rows": 1351,
+  "n_human_rows": 1332,
   "n_animal_rows": 10,
   "n_in_vitro_rows": 2,
   "by_endpoint_tier": {
-    "A": 818,
+    "A": 799,
     "B": 543
   },
   "by_study_type": {
     "animal_invivo": 8,
     "background_epidemiology": 3,
     "clinical_case": 15,
-    "clinical_trial": 789,
+    "clinical_trial": 770,
     "in_vitro": 2,
     "pharmacovigilance": 456,
     "regulatory_label": 88
   },
   "by_ascertainment": {
-    "measured_null": 1133,
+    "measured_null": 703,
     "measured_positive": 227,
-    "not_assessed": 1
+    "not_assessed": 1,
+    "reported_zero_no_denominator": 411
   },
   "by_attribution": {
     "disease_attributed": 3,
     "drug_attributed": 33,
-    "not_discussed": 1325
+    "not_discussed": 1306
   },
   "by_tox_axis": {
     "csf_composition_disturbance": 210,
@@ -53,24 +54,23 @@
     "delivery_procedure_complication": 200,
     "disease_background_rate": 3,
     "therapeutic_ventricular_effect": 2,
-    "ventricular_enlargement": 817
+    "ventricular_enlargement": 798
   },
   "by_grade": {
     "": 26,
-    "0": 1133,
+    "0": 1114,
     "1": 101,
     "2": 79,
     "3": 22
   },
   "by_delivery_route": {
     "NOT_APPLICABLE": 3,
-    "NOT_REPORTED": 124,
+    "NOT_REPORTED": 119,
     "in_culture_medium": 2,
     "intracerebroventricular": 6,
     "intrathecal_lumbar": 339,
-    "intravenous": 368,
+    "intravenous": 355,
     "intravitreal": 59,
-    "oral": 1,
     "subcutaneous": 457,
     "topical_enema": 2
   },
@@ -79,7 +79,7 @@
     "csf_dynamics": 68,
     "csf_pressure": 126,
     "histopathology_choroid_ependyma": 3,
-    "hydrocephalus_event": 649,
+    "hydrocephalus_event": 630,
     "procedure_complication": 177,
     "shunt_or_drain_intervention": 43,
     "ventricular_morphometry": 107
@@ -87,7 +87,7 @@
   "by_redistribution": {
     "cc_by": 13,
     "cc_by_nc": 3,
-    "public_domain": 1322,
+    "public_domain": 1303,
     "summary_stat_only": 15,
     "verify": 8
   },
@@ -96,7 +96,7 @@
     "epidemiology": 1,
     "pharmacovigilance_api": 1,
     "primary_fulltext": 4,
-    "registry_results": 160,
+    "registry_results": 155,
     "regulatory_primary": 25
   },
   "rows_per_source": {
@@ -124,11 +124,9 @@
     "NCT02706886": 9,
     "NCT02597127": 8,
     "NCT03549871": 8,
-    "NCT00094835": 7,
     "NCT02310906": 7,
     "NCT02598661": 7,
     "NCT04307381": 7,
-    "NCT00101907": 6,
     "NCT00605280": 6,
     "NCT00844597": 6,
     "NCT01617967": 6,
@@ -179,7 +177,6 @@
     "NCT04666298": 4,
     "NCT04807400": 4,
     "NCT05001269": 4,
-    "NCT05635045": 4,
     "NCT05763875": 4,
     "NCT05888103": 4,
     "NCT06058390": 4,
@@ -260,9 +257,7 @@
     "NCT00138658": 1,
     "NCT00239928": 1,
     "NCT00358501": 1,
-    "NCT00427349": 1,
     "NCT00549055": 1,
-    "NCT00574951": 1,
     "NCT00628498": 1,
     "NCT00694109": 1,
     "NCT00735943": 1,
@@ -305,10 +300,34 @@
     "N3-GAI2": 5
   },
   "tier_A_positive": 62,
-  "tier_A_null": 755,
+  "tier_A_positive_ventricular": 54,
+  "tier_A_positive_disease_background": 3,
+  "tier_A_positive_therapeutic": 1,
+  "tier_A_positive_on_placeholder_arm": 7,
+  "tier_A_null": 560,
+  "tier_A_reported_zero_no_denominator": 176,
+  "n_compounds_real": 51,
+  "n_oligo_records": 53,
   "grade3_rows": 22,
   "duplexes_checked": 4,
   "oligos_with_sequence": 13,
-  "checks_run": 53,
-  "checks_failed": 0
+  "checks_run": 58,
+  "checks_failed": 0,
+  "trials_registry_rows": 161,
+  "trials_excluded_identity": 6,
+  "trials_human_unique": 154,
+  "trials_with_systematic_assessment": 27,
+  "trial_outcome_records": 770,
+  "human_subset": {
+    "compounds": 41,
+    "with_sequence": 6,
+    "with_position_map": 6,
+    "with_purity": 0,
+    "with_conjugate": 0,
+    "rows": 1332,
+    "rows_with_dose": 0,
+    "rows_with_duration": 739
+  },
+  "human_in_vitro_rows": 0,
+  "release_id": "hydrocephalus-f3d5bcf-dirty"
 }

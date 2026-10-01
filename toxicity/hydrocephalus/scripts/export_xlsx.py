@@ -171,7 +171,10 @@ def main():
         ("", None),
         ("Negatives are as load-bearing as positives", "head"),
         ("The ascertainment column separates measured_positive, measured_null "
-         "(actively assessed and not found), reported_threshold_limited and "
+         "(actively assessed and not found), reported_zero_no_denominator (a "
+         "source that CANNOT establish absence returned nothing - a spontaneous-"
+         "report query with no exposure denominator; never a confirmed negative), "
+         "reported_threshold_limited and "
          "not_assessed. A grade of 0 is permitted ONLY where ascertainment is "
          "measured_null — enforced by qc/validate.py, not merely documented. For this "
          "endpoint that distinction is decisive, because ventricular imaging is almost "
@@ -238,7 +241,13 @@ def main():
     for label, key in [("Oligonucleotides with a published sequence", "oligos_with_sequence"),
                        ("Oligonucleotides with a known length", "n_oligos_with_length"),
                        ("Tier-A rows with a positive finding", "tier_A_positive"),
-                       ("Tier-A rows that are explicit measured negatives", "tier_A_null"),
+                       ("Tier-A ASSESSED measured negatives", "tier_A_null"),
+                       ("Tier-A spontaneous-report zeros (NOT negatives)",
+                        "tier_A_reported_zero_no_denominator"),
+                       ("Verified unique human clinical trials", "trials_human_unique"),
+                       ("  of those with a systematic assessment",
+                        "trials_with_systematic_assessment"),
+                       ("Compounds (excl. 2 placeholders)", "n_compounds_real"),
                        ("Grade-3 (severe) rows", "grade3_rows")]:
         ws.append([label, st.get(key)])
     for title, key in [("Rows by subject class (human / animal division)", "by_subject_class"),

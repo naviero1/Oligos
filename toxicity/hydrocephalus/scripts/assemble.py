@@ -64,7 +64,8 @@ MEASUREMENT_COLS = [
     "exposure_duration", "timepoint",
     "endpoint_tier", "readout_category", "readout_name", "readout_term_verbatim",
     "readout_value", "readout_unit", "readout_is_qualitative",
-    "n_affected", "n_at_risk", "comparator_arm", "n_affected_comparator",
+    "n_affected", "n_at_risk", "denominator_type", "denominator_unit",
+    "comparator_arm", "n_affected_comparator",
     "n_at_risk_comparator", "statistic", "effect_direction", "effect_vs_control",
     "seriousness", "assessment_type", "organ_system", "source_vocabulary",
     "hydroceph_grade", "grade_basis", "grade_status",
@@ -364,6 +365,15 @@ def main():
         raise SystemExit("oligo_name values absent from oligos.csv: %s" % sorted(unknown))
 
     for r in rows:
+        if r["denominator_type"] in ("", "NOT_REPORTED"):
+            # Every non-pharmacovigilance denominator in this release counts
+            # subjects, not reports. Stated explicitly so no consumer has to infer
+            # it from study_type.
+            r["denominator_type"] = ("NOT_APPLICABLE" if r["n_at_risk"] in
+                                     ("", "NOT_REPORTED", "NOT_APPLICABLE")
+                                     else "participants_at_risk")
+            r["denominator_unit"] = ("NOT_APPLICABLE" if r["denominator_type"] ==
+                                     "NOT_APPLICABLE" else "persons")
         r["subject_class"] = subject_class_for(r["species"], r["study_type"])
         if r["subject_class"] not in SUBJECT_CLASSES:
             raise SystemExit("unmapped subject_class for species=%r study_type=%r"

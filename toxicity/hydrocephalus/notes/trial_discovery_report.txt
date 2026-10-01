@@ -1,7 +1,7 @@
 ClinicalTrials.gov trial discovery
 ==============================================================
-161 trials with posted results; 161 usable (oligonucleotide, has an adverse-event module)
-routes among usable trials: {'intravenous': 46, 'NOT_REPORTED': 20, 'intravitreal': 16, 'subcutaneous': 58, 'oral': 1, 'intrathecal_lumbar': 19, 'topical_enema': 1}
+161 trials with posted results; 155 usable (oligonucleotide, has an adverse-event module)
+routes among usable trials: {'intravenous': 44, 'NOT_REPORTED': 18, 'intravitreal': 16, 'subcutaneous': 58, 'intrathecal_lumbar': 18, 'topical_enema': 1}
 
 nusinersen       9 trials with posted results
 tofersen         2 trials with posted results
@@ -46,3 +46,15 @@ olezarsen      + NCT03385239 via harvested code 'ISIS 678354' (from NCT04568434)
 viltolarsen    + NCT02740972 via harvested code 'NCNP-01' (from NCT04060199)
 viltolarsen    + NCT03167255 via harvested code 'NCNP-01' (from NCT04060199)
 alias harvest: 26 codes tried, 3 further trials reached
+NCT00094835 IDENTITY — dropped imetelstat: imetelstat is named nowhere in this record; interventions are Panitumumab; Vectibix; ABX-EGF; Motesanib diphosphate
+NCT00094835 EXCLUDED — no attributed compound is named by any of its interventions
+NCT00101907 IDENTITY — dropped imetelstat: imetelstat is named nowhere in this record; interventions are AMG 706; Panitumumab; Vectibix; Gemcitabine
+NCT00101907 EXCLUDED — no attributed compound is named by any of its interventions
+NCT00427349 IDENTITY — dropped imetelstat: imetelstat is named nowhere in this record; interventions are AMG 706; motesanib diphosphate; octreotide; L-cysteinamide
+NCT00427349 EXCLUDED — no attributed compound is named by any of its interventions
+NCT00574951 IDENTITY — dropped imetelstat: imetelstat is named nowhere in this record; interventions are motesanib diphosphate
+NCT00574951 EXCLUDED — no attributed compound is named by any of its interventions
+NCT05386680 IDENTITY — dropped nusinersen: administers oav101 — OAV101 / onasemnogene abeparvovec (Zolgensma) is an AAV9 gene-therapy vector, not an oligonucleotide; nusinersen appears only as prior therapy
+NCT05386680 EXCLUDED — no attributed compound is named by any of its interventions
+NCT05635045 IDENTITY — dropped patisiran: administers evuzamitide — I-124-evuzamitide is a radio-diagnostic PET tracer; the TTR oligonucleotides appear only as background therapy | vutrisiran: administers evuzamitide — I-124-evuzamitide is a radio-diagnostic PET tracer; the TTR oligonucleotides appear only as background therapy
+NCT05635045 EXCLUDED — no attributed compound is named by any of its interventions

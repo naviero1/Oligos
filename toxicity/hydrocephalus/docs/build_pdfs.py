@@ -161,7 +161,9 @@ def main():
         f"The dataset is not a list of toxic compounds. Its negative class is larger and "
         f"more deliberate than its positive class, which is what makes it trainable.", BODY)]
     f += bullets([
-        f"<b>{st['tier_A_null']} tier-A explicit measured negatives.</b> Not absences: "
+        f"<b>{st['tier_A_null']} tier-A assessed negatives, and separately "
+        f"{st['tier_A_reported_zero_no_denominator']} spontaneous-report zeros that "
+        f"establish no absence at all.</b> The assessed negatives are not absences: "
         "arms where the endpoint term is listed with a reported count of zero, or where "
         "42 CFR 11.48(a)(4)(ii)(A) requires the serious-adverse-event table to be "
         "complete and no ventricular term appears in it.",
@@ -494,7 +496,7 @@ def main():
         "information documents for purity, purification, chromatography, mass-spectrometry, "
         "identity and characterisation language returns <b>no statement about the drug "
         f"substance in any of them</b>; every hit is a patient baseline characteristic or "
-        f"an efficacy assay. purity_pct is NOT_REPORTED for all {st['n_oligos']} "
+        f"an efficacy assay. purity_pct carries a published 90-97% range for three rat-only constructs and is NOT_REPORTED for the other {st['n_compounds_real'] - 3} "
         "compounds. The two research-reagent sources name a supplier but no method. No "
         "purity value has been estimated, inferred from a synthesis platform, or carried "
         "across from another compound. Our sibling OligoTox-CNS release reports the same "

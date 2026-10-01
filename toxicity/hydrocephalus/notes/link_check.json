@@ -1,5 +1,5 @@
 {
-  "checked_on": "2026-09-04",
+  "checked_on": "2026-10-01",
   "doi_tally": {
     "ok": 7
   },
@@ -69,7 +69,7 @@
     }
   },
   "n_dois": 7,
-  "n_urls": 193,
+  "n_urls": 188,
   "results": {
     "https://api.fda.gov/drug/event.json": {
       "checked": "2026-09-04",
@@ -108,18 +108,6 @@
       "verdict": "ok"
     },
     "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl85.pdf": {
-      "checked": "2026-09-04",
-      "final_url": "",
-      "status": 200,
-      "verdict": "ok"
-    },
-    "https://clinicaltrials.gov/study/NCT00094835": {
-      "checked": "2026-09-04",
-      "final_url": "",
-      "status": 200,
-      "verdict": "ok"
-    },
-    "https://clinicaltrials.gov/study/NCT00101907": {
       "checked": "2026-09-04",
       "final_url": "",
       "status": 200,
@@ -179,12 +167,6 @@
       "status": 200,
       "verdict": "ok"
     },
-    "https://clinicaltrials.gov/study/NCT00427349": {
-      "checked": "2026-09-04",
-      "final_url": "",
-      "status": 200,
-      "verdict": "ok"
-    },
     "https://clinicaltrials.gov/study/NCT00460408": {
       "checked": "2026-09-04",
       "final_url": "",
@@ -198,12 +180,6 @@
       "verdict": "ok"
     },
     "https://clinicaltrials.gov/study/NCT00549055": {
-      "checked": "2026-09-04",
-      "final_url": "",
-      "status": 200,
-      "verdict": "ok"
-    },
-    "https://clinicaltrials.gov/study/NCT00574951": {
       "checked": "2026-09-04",
       "final_url": "",
       "status": 200,
@@ -1031,12 +1007,6 @@
       "status": 200,
       "verdict": "ok"
     },
-    "https://clinicaltrials.gov/study/NCT05635045": {
-      "checked": "2026-09-04",
-      "final_url": "",
-      "status": 200,
-      "verdict": "ok"
-    },
     "https://clinicaltrials.gov/study/NCT05686551": {
       "checked": "2026-09-04",
       "final_url": "",
@@ -1231,6 +1201,6 @@
     }
   },
   "tally": {
-    "ok": 193
+    "ok": 188
   }
 }

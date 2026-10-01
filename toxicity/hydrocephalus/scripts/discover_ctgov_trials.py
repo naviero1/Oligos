@@ -199,10 +199,81 @@ def harvest_codes(doc, canonical, aliases):
     return out
 
 
+# Agents that a drug-name query returns but that this dataset must never attribute
+# to an oligonucleotide, keyed by a string appearing in the intervention name.
+# Both were real contaminants: the trial administers one of these, and the
+# oligonucleotide is named only as prior or background therapy in the record.
+NOT_THIS_COMPOUND = {
+    "oav101": "OAV101 / onasemnogene abeparvovec (Zolgensma) is an AAV9 gene-therapy "
+              "vector, not an oligonucleotide; nusinersen appears only as prior therapy",
+    "onasemnogene": "AAV9 gene-therapy vector, not an oligonucleotide",
+    "evuzamitide": "I-124-evuzamitide is a radio-diagnostic PET tracer; the TTR "
+                   "oligonucleotides appear only as background therapy",
+}
+
+
+def attribution_supported(doc, canonical, names):
+    """Does this trial's OWN record support attributing it to this compound?
+
+    ClinicalTrials.gov `query.intr` matches fuzzily. Querying "imetelstat" returns
+    panitumumab/motesanib trials in which the string "imetelstat" appears NOWHERE,
+    and nothing downstream re-checked identity, so four motesanib trials entered
+    the release carrying measurement rows under imetelstat.
+
+    No single text rule settles drug identity, so this is tiered and every
+    acceptance records WHICH tier carried it:
+
+      intervention_alias  an intervention name or otherName matches a name we hold
+                          for this compound. Strongest.
+      record_mention      the compound is named somewhere in the trial's own
+                          record while an intervention carries an unrecognised
+                          development code or brand (AVI-4658 for eteplirsen,
+                          Macugen for pegaptanib, AZD9150 for danvatirsen). The
+                          record itself is the evidence linking the two.
+      (rejected)          the compound is named nowhere in the record -- the
+                          motesanib case -- or the trial administers an agent on
+                          NOT_THIS_COMPOUND.
+
+    A strict intervention-only rule was tried first and rejected: it dropped 17
+    legitimate trials, including the tominersen first-in-human study NCT02519036,
+    whose record names only ISIS 443139.
+
+    Returns (ok, tier, evidence_or_reason).
+    """
+    ps = doc.get("protocolSection", {})
+    ivs = ps.get("armsInterventionsModule", {})
+    seen = []
+    for iv in ivs.get("interventions", []):
+        for nm in [iv.get("name", "") or ""] + [n or "" for n in (iv.get("otherNames") or [])]:
+            if nm:
+                seen.append(nm)
+
+    ivblob = " ".join(seen).lower()
+    for bad, why in NOT_THIS_COMPOUND.items():
+        if bad in ivblob:
+            return False, "rejected", "administers %s — %s" % (bad, why)
+
+    for nm in seen:
+        for k in names:
+            if k.lower() in nm.lower():
+                return True, "intervention_alias", "intervention %r names %r" % (nm[:60], k)
+
+    whole = json.dumps(doc).lower()
+    for k in names:
+        if k.lower() in whole:
+            return True, "record_mention", (
+                "%r appears in the trial record; interventions are %s"
+                % (k, "; ".join(seen[:3])[:90] or "(none listed)"))
+
+    return False, "rejected", ("%s is named nowhere in this record; interventions are %s"
+                               % (canonical, "; ".join(seen[:4])[:140] or "(none listed)"))
+
+
 def main():
     for d in (RAW, DATA, NOTES):
         os.makedirs(d, exist_ok=True)
     found, report, alias_evidence = {}, [], {}
+    names_used = {c: set(a) | {c} for c, a in DRUGS.items()}
 
     # ---- round 1: the INN and any alias stated in DRUGS ---------------------
     for canonical, aliases in DRUGS.items():
@@ -232,6 +303,7 @@ def main():
             if canonical in found.get(nct, set()):
                 continue
             found.setdefault(nct, set()).add(canonical)
+            names_used.setdefault(canonical, set()).add(code)
             alias_evidence[(nct, canonical)] = (
                 "found via development code %r, harvested from the intervention "
                 "record of %s" % (code, from_nct))
@@ -257,11 +329,31 @@ def main():
         for name, why in NOT_OLIGONUCLEOTIDE.items():
             if name.lower() in ivnames.lower() and len(drugs) == 1 and name in drugs:
                 excluded = why
+
+        # IDENTITY GATE. Keep only the attributions this trial's own intervention
+        # records support; drop the rest with the reason recorded, never silently.
+        supported, dropped, tiers = set(), [], []
+        for c in sorted(drugs):
+            ok, tier, why = attribution_supported(doc, c, names_used.get(c, {c}))
+            if ok:
+                supported.add(c)
+                tiers.append("%s:%s" % (c, tier))
+            else:
+                dropped.append("%s: %s" % (c, why))
+        if dropped:
+            report.append("%s IDENTITY — dropped %s" % (nct, " | ".join(dropped))[:300])
+        if not supported:
+            report.append("%s EXCLUDED — no attributed compound is named by any of "
+                          "its interventions" % nct)
+            excluded = excluded or ("no compound this trial was attributed to is "
+                                    "supported by its own record")
+        drugs = supported or drugs
         route, evidence = route_of(doc)
         has_ae = bool((doc.get("resultsSection") or {}).get("adverseEventsModule"))
         rows.append(dict(
             nct_id=nct, drug="; ".join(sorted(drugs)), route=route,
             route_evidence=evidence, has_adverse_event_module=str(has_ae).upper(),
+            attribution_basis="; ".join(sorted(tiers)) or "none",
             discovery=("; ".join(sorted(
                 alias_evidence[(nct, d)] for d in drugs
                 if (nct, d) in alias_evidence)) or "found by drug-name query"),
@@ -271,7 +363,7 @@ def main():
 
     cols = ["nct_id", "drug", "route", "route_evidence", "has_adverse_event_module",
             "overall_status", "brief_title", "conditions", "interventions",
-            "excluded_reason", "discovery"]
+            "excluded_reason", "discovery", "attribution_basis"]
     with open(os.path.join(DATA, "trial_registry.csv"), "w", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=cols)
         w.writeheader()

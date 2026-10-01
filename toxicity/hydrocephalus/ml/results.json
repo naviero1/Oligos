@@ -1,8 +1,8 @@
 {
- "n_arms": 546,
- "n_trials": 159,
+ "n_arms": 519,
+ "n_trials": 154,
  "n_compounds": 41,
- "n_participants": 36324,
+ "n_participants": 29728,
  "n_armsA": 9,
  "n_armsB": 84,
  "route": [
@@ -18,18 +18,18 @@
   },
   {
    "label": "Systemically delivered",
-   "arms": 388,
+   "arms": 366,
    "arms_with_event": 4,
-   "participants": 30919,
+   "participants": 24355,
    "participants_affected": 7,
-   "rate_per_1000": 0.22639800769753227,
-   "ci_lo_per_1000": 0.10967343763291097,
-   "ci_hi_per_1000": 0.4672935543704994
+   "rate_per_1000": 0.2874153151303634,
+   "ci_lo_per_1000": 0.1392333334831442,
+   "ci_hi_per_1000": 0.5932094984493848
   }
  ],
  "route_fisher": {
-  "odds_ratio": 17.20296065446046,
-  "p_value": 8.392466336488139e-08,
+  "odds_ratio": 13.550002782569981,
+  "p_value": 6.538715953884836e-07,
   "table": [
    [
     10,
@@ -37,7 +37,7 @@
    ],
    [
     7,
-    30912
+    24348
    ]
   ]
  },
@@ -65,6 +65,17 @@
    "hi": 19.554117511155994
   },
   {
+   "oligo_name": "imetelstat",
+   "arms": 21,
+   "arms_with_event": 1,
+   "affected": 1,
+   "at_risk": 495,
+   "cns": 0,
+   "rate_per_1000": 2.0202020202020203,
+   "lo": 0.35670431986904383,
+   "hi": 11.353346473631273
+  },
+  {
    "oligo_name": "defibrotide",
    "arms": 11,
    "arms_with_event": 1,
@@ -76,26 +87,15 @@
    "hi": 4.801050979909885
   },
   {
-   "oligo_name": "imetelstat",
-   "arms": 36,
-   "arms_with_event": 1,
-   "affected": 1,
-   "at_risk": 648,
-   "cns": 0,
-   "rate_per_1000": 1.5432098765432098,
-   "lo": 0.27246639771466746,
-   "hi": 8.689005355343877
-  },
-  {
    "oligo_name": "placebo_or_sham_control",
-   "arms": 105,
+   "arms": 103,
    "arms_with_event": 1,
    "affected": 2,
-   "at_risk": 8135,
+   "at_risk": 7983,
    "cns": 1,
-   "rate_per_1000": 0.24585125998770743,
-   "lo": 0.06742387238082974,
-   "hi": 0.8960374335518135
+   "rate_per_1000": 0.2505323813102844,
+   "lo": 0.0687077042353276,
+   "hi": 0.9130895257615184
   },
   {
    "oligo_name": "BIIB105",
@@ -197,14 +197,14 @@
    "hi": 25.983637143036745
   }
  ],
- "paired_trials": 64,
+ "paired_trials": 63,
  "paired_treated_events": 2,
  "paired_ctrl_events": 2,
- "paired_treated_n": 15633,
- "paired_ctrl_n": 8071,
+ "paired_treated_n": 10239,
+ "paired_ctrl_n": 7569,
  "paired_fisher": {
-  "odds_ratio": 0.5162177723754079,
-  "p_value": 0.6092901529066738
+  "odds_ratio": 0.7391814008010159,
+  "p_value": 1.0
  },
  "models": [
   {
@@ -212,8 +212,8 @@
    "features": [
     "delivery_route"
    ],
-   "auc": 0.89,
-   "n_scored": 546
+   "auc": 0.889,
+   "n_scored": 519
   },
   {
    "name": "route + indication",
@@ -222,7 +222,7 @@
     "indication"
    ],
    "auc": 0.91,
-   "n_scored": 546
+   "n_scored": 519
   },
   {
    "name": "route + indication + chemistry",
@@ -232,28 +232,69 @@
     "oligo_class",
     "backbone_chemistry"
    ],
-   "auc": 0.878,
-   "n_scored": 546
+   "auc": 0.879,
+   "n_scored": 519
   },
   {
    "name": "LEAKAGE PROBE: trial identity only",
    "features": [
     "nct_id"
    ],
-   "auc": 0.709,
-   "n_scored": 546
+   "auc": 0.724,
+   "n_scored": 519,
+   "diagnostic": {
+    "folds": 41,
+    "constant_folds": 19,
+    "degenerate": false
+   }
   },
   {
    "name": "LEAKAGE PROBE: compound identity only",
    "features": [
     "oligo_name"
    ],
-   "auc": 0.094,
-   "n_scored": 546
+   "auc": 0.098,
+   "n_scored": 519,
+   "diagnostic": {
+    "folds": 41,
+    "constant_folds": 41,
+    "degenerate": true
+   }
+  }
+ ],
+ "n_armsB_nonprocedure": 18,
+ "models_nonprocedure": [
+  {
+   "name": "route only",
+   "features": [
+    "delivery_route"
+   ],
+   "auc": 0.65,
+   "n_scored": 519
+  },
+  {
+   "name": "route + indication",
+   "features": [
+    "delivery_route",
+    "indication"
+   ],
+   "auc": 0.606,
+   "n_scored": 519
+  },
+  {
+   "name": "route + indication + chemistry",
+   "features": [
+    "delivery_route",
+    "indication",
+    "oligo_class",
+    "backbone_chemistry"
+   ],
+   "auc": 0.492,
+   "n_scored": 519
   }
  ],
  "best_model_auc_ci": [
-  0.848,
-  0.951
+  0.835,
+  0.947
  ]
 }

@@ -22,21 +22,27 @@ one."* This directory is that second dataset.
 
 | | Count |
 |---|---:|
-| Measurement rows | **1361** |
+| Measurement rows | **1342** |
 | Oligonucleotides described | **53** |
 | — of which carry at least one measurement | 47 |
-| Distinct sources | 193 |
+| Distinct sources | 188 |
 | Tier-A rows with a positive finding | 62 |
-| Tier-A rows that are explicit measured negatives | 755 |
+| Tier-A rows that are ASSESSED measured negatives | 560 |
+| Tier-A spontaneous-report zeros (no exposure denominator, NOT negatives) | 176 |
+| Tier-A positives on the ventricular axis, real compounds | 54 |
+| Verified unique human clinical trials | 154 |
+| &nbsp;&nbsp;of those with a systematic/protocol assessment | 27 |
+| Trials excluded on compound-identity grounds | 6 |
+| Compounds (excluding 2 non-compound placeholders) | 51 |
 | Grade-3 (severe) rows | 22 |
 | Oligonucleotides with a published sequence | 13 |
-| QC checks run / failed | 53 / 0 |
+| QC checks run / failed | 58 / 0 |
 
 **Endpoint tier** — **A** = hydrocephalus (communicating, obstructive or normal-pressure), ventriculomegaly / ventricular dilatation, shunt or drain placement. **B** = raised intracranial pressure, papilloedema, aseptic or chemical meningitis, arachnoiditis, CSF leak or protein rise, post-lumbar-puncture syndrome.
 
 | Tier | Rows |
 |---|---:|
-| A | 818 |
+| A | 799 |
 | B | 543 |
 
 **Study type**
@@ -46,7 +52,7 @@ one."* This directory is that second dataset.
 | animal_invivo | 8 |
 | background_epidemiology | 3 |
 | clinical_case | 15 |
-| clinical_trial | 789 |
+| clinical_trial | 770 |
 | in_vitro | 2 |
 | pharmacovigilance | 456 |
 | regulatory_label | 88 |
@@ -55,9 +61,10 @@ one."* This directory is that second dataset.
 
 | Ascertainment | Rows |
 |---|---:|
-| measured_null | 1133 |
+| measured_null | 703 |
 | measured_positive | 227 |
 | not_assessed | 1 |
+| reported_zero_no_denominator | 411 |
 
 **Attribution, as stated by the source** — what the SOURCE concluded about causation. `not_discussed` dominates because registry and pharmacovigilance records carry no causality assessment at all — that is a property of those sources, not an omission here
 
@@ -65,7 +72,7 @@ one."* This directory is that second dataset.
 |---|---:|
 | disease_attributed | 3 |
 | drug_attributed | 33 |
-| not_discussed | 1325 |
+| not_discussed | 1306 |
 
 **Toxicity axis** — `disease_background_rate` rows carry no compound; `delivery_procedure_complication` rows are attributable to the lumbar puncture rather than to any molecule
 
@@ -77,14 +84,14 @@ one."* This directory is that second dataset.
 | delivery_procedure_complication | 200 |
 | disease_background_rate | 3 |
 | therapeutic_ventricular_effect | 2 |
-| ventricular_enlargement | 817 |
+| ventricular_enlargement | 798 |
 
 **Severity grade** — rubric in [`SCHEMA.md`](SCHEMA.md#hydroceph_grade-rubric-03); all grades are provisional
 
 | `hydroceph_grade` | Rows |
 |---|---:|
 | *(not graded)* | 26 |
-| 0 | 1133 |
+| 0 | 1114 |
 | 1 | 101 |
 | 2 | 79 |
 | 3 | 22 |
@@ -94,13 +101,12 @@ one."* This directory is that second dataset.
 | Route | Rows |
 |---|---:|
 | NOT_APPLICABLE | 3 |
-| NOT_REPORTED | 124 |
+| NOT_REPORTED | 119 |
 | in_culture_medium | 2 |
 | intracerebroventricular | 6 |
 | intrathecal_lumbar | 339 |
-| intravenous | 368 |
+| intravenous | 355 |
 | intravitreal | 59 |
-| oral | 1 |
 | subcutaneous | 457 |
 | topical_enema | 2 |
 
@@ -112,7 +118,7 @@ one."* This directory is that second dataset.
 | csf_dynamics | 68 |
 | csf_pressure | 126 |
 | histopathology_choroid_ependyma | 3 |
-| hydrocephalus_event | 649 |
+| hydrocephalus_event | 630 |
 | procedure_complication | 177 |
 | shunt_or_drain_intervention | 43 |
 | ventricular_morphometry | 107 |
@@ -123,7 +129,7 @@ one."* This directory is that second dataset.
 |---|---:|
 | cc_by | 13 |
 | cc_by_nc | 3 |
-| public_domain | 1322 |
+| public_domain | 1303 |
 | summary_stat_only | 15 |
 | verify | 8 |
 
@@ -140,7 +146,20 @@ one."* This directory is that second dataset.
 | `N2-AQP4` | 3 |
 | `N3-GAI2` | 5 |
 
-**Largest sources** (top 10 of 193)
+**Human-subset characterization completeness.** The whole-roster figures flatter the release: the three purity-carrying constructs and 7 of the 13 sequence-resolved compounds are animal-only. This table is the human evidence on its own.
+
+| Human subset | Count | of |
+|---|---:|---:|
+| Compounds appearing in human rows | 41 | 41 |
+| &nbsp;&nbsp;with a published sequence | 6 | 41 |
+| &nbsp;&nbsp;with a position-resolved chemistry map | 6 | 41 |
+| &nbsp;&nbsp;with a purity value | 0 | 41 |
+| &nbsp;&nbsp;with a conjugate stated | 0 | 41 |
+| Human rows with a numeric dose | 0 | 1332 |
+| Human rows with an exposure duration | 739 | 1332 |
+| Human in vitro / ex vivo rows | 0 | &mdash; |
+
+**Largest sources** (top 10 of 188)
 
 | `source_id` | Rows |
 |---|---:|
@@ -154,6 +173,8 @@ one."* This directory is that second dataset.
 | `NCT03334617` | 22 |
 | `NCT03225846` | 21 |
 | `NCT02499328` | 19 |
+
+Release identifier: `hydrocephalus-f3d5bcf-dirty` (binds this table, the workbook, the figures and the PDFs to one commit).
 
 <!-- END GENERATED -->
 
@@ -184,6 +205,9 @@ excluded from compound-attributable analysis in one filter.
 **3. Almost nobody images the ventricles.** For most compounds, the absence of a
 hydrocephalus finding means nobody looked. The `ascertainment` column separates
 `measured_positive`, `measured_null` (actively assessed and not found),
+`reported_zero_no_denominator` (a source that cannot establish absence returned
+nothing -- a spontaneous-report query with no exposure denominator; never a
+confirmed negative),
 `reported_threshold_limited` and `not_assessed`, and the QC suite **enforces**
 that a grade of 0 can only be assigned where ascertainment is `measured_null`.
 

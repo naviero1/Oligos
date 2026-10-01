@@ -27,6 +27,7 @@ Usage:  python3 ml/build_analysis_set.py
 """
 import csv
 import os
+import re
 from collections import defaultdict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -52,7 +53,8 @@ def main():
 
     arms = defaultdict(lambda: dict(
         tierA_affected=0, tierB_affected=0, n_at_risk=None,
-        tierA_terms=set(), grades=set(), rows=0))
+        tierA_terms=set(), grades=set(), rows=0,
+        tierB_axes=set(), tierB_affected_nonproc=0))
 
     for r in rows:
         if r["study_type"] != "clinical_trial":
@@ -78,8 +80,47 @@ def main():
                 rec["tierA_terms"].add(r["readout_name"])
         else:
             rec["tierB_affected"] = max(rec["tierB_affected"], a)
+            if a > 0:
+                rec["tierB_axes"].add(r["tox_axis"])
+                # A lumbar-puncture complication is a PROCEDURE outcome. 78.6% of
+                # the tier-B positive arms carry it as their ONLY positive axis,
+                # so a model scored on undifferentiated tier-B is largely learning
+                # "was this arm lumbar-punctured" from its own route feature.
+                if r["tox_axis"] != "delivery_procedure_complication":
+                    rec["tierB_affected_nonproc"] = max(
+                        rec["tierB_affected_nonproc"], a)
         if r["hydroceph_grade"]:
             rec["grades"].add(r["hydroceph_grade"])
+
+    # ---- drop pooled arms that re-count their own siblings ------------------
+    # ClinicalTrials.gov results tables often carry a "Total"/"Overall" column
+    # ALONGSIDE the arms it sums. Keying on (trial, arm_label) ingested both, so
+    # those participants were counted twice inside a single trial. The published
+    # "36,324 participants at risk" exceeded the declared enrollment of the very
+    # trials it was built from by 28%, which is arithmetically impossible.
+    POOLED = re.compile(r"\b(total|overall|pooled|combined|all\s+participants)\b", re.I)
+    by_trial = defaultdict(list)
+    for key in arms:
+        by_trial[key[0]].append(key)
+    dropped_pooled = []
+    for nct, keys in by_trial.items():
+        if len(keys) < 2:
+            continue
+        for k in keys:
+            if not POOLED.search(k[1] or ""):
+                continue
+            mine = arms[k]["n_at_risk"] or 0
+            others = sum(arms[j]["n_at_risk"] or 0 for j in keys if j != k)
+            # Only drop when it really is a sum of the siblings, not a cohort that
+            # merely has "total" in its name.
+            if mine and others and abs(mine - others) <= max(1, 0.02 * mine):
+                dropped_pooled.append((k[0], k[1], mine))
+                del arms[k]
+    if dropped_pooled:
+        print("  dropped %d pooled arms double-counting %d participants"
+              % (len(dropped_pooled), sum(n for _, _, n in dropped_pooled)))
+        for nct, lab, n in sorted(dropped_pooled, key=lambda x: -x[2])[:8]:
+            print("     %-14s %-42s n=%d" % (nct, lab[:42], n))
 
     out = []
     for (nct, arm), rec in sorted(arms.items()):
@@ -95,6 +136,8 @@ def main():
             tierB_affected=rec["tierB_affected"],
             tierA_event=int(rec["tierA_affected"] > 0),
             tierB_event=int(rec["tierB_affected"] > 0),
+            tierB_axes=";".join(sorted(rec["tierB_axes"])) or "none",
+            tierB_event_nonprocedure=int(rec["tierB_affected_nonproc"] > 0),
             tierA_terms=";".join(sorted(rec["tierA_terms"])) or "none",
             max_grade=(max(rec["grades"]) if rec["grades"] else ""),
             delivery_route=route,
