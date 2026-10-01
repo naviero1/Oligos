@@ -100,9 +100,14 @@ def main():
         # compounds whose human and animal evidence come from the SAME source document
         # are genuinely paired; the rest are compound overlap across studies and are
         # hypothesis-generating at best.
-        hsrc = {x["source_ref"] for x in human}
-        asrc = {x["source_ref"] for x in animal}
-        paired = bool(hsrc & asrc)
+        # An adversarial review found this test was computed over ALL human and animal
+        # rows, so a compound could be labelled "paired" while the two grades being
+        # compared came from documents the other side has no row in. Compute it from the
+        # ARGMAX rows only -- the rows that actually produce hmax and amax.
+        hbest = [x for x in human if int(x["nephrotox_grade"]) == hmax]
+        abest = [x for x in animal if int(x["nephrotox_grade"]) == amax]
+        shared = {x["source_ref"] for x in hbest} & {x["source_ref"] for x in abest}
+        paired = bool(shared)
 
         # A concordance verdict must not rest on a human negative that failed
         # eligibility -- "animal over-predicts" is unsupportable if nobody established
@@ -130,6 +135,9 @@ def main():
             "animal_max_grade": amax,
             "concordance": verdict,
             "comparison_type": "paired_same_source" if paired else "cross_study_overlap",
+            "shared_source": ";".join(sorted(shared)) if shared else "",
+            "human_argmax_rows": ";".join(sorted(x["measurement_id"] for x in hbest)),
+            "animal_argmax_rows": ";".join(sorted(x["measurement_id"] for x in abest)),
             "human_negative_eligible": "TRUE" if human_neg_ok else "FALSE",
             "human_species_models": ";".join(sorted({x["system_model"] for x in human})),
             "animal_species": ";".join(sorted({x["species"] for x in animal})),

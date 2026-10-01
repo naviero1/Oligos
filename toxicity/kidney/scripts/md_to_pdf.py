@@ -64,6 +64,9 @@ def inline(t):
     t = t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
     t = re.sub(r"`([^`]+)`", r'<font face="Courier" size="8.4">\1</font>', t)
     t = re.sub(r"\*\*\*(.+?)\*\*\*", r"<b><i>\1</i></b>", t)
+    # Guard: bold and italic that OVERLAP rather than nest (e.g. "**a *b***") produce
+    # mis-ordered tags and crash reportlab's parser. Collapse any such span to bold only.
+    t = re.sub(r"\*\*([^*]*)\*([^*]+)\*\*\*", r"<b>\1\2</b>", t)
     t = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", t)
     t = re.sub(r"(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)", r"<i>\1</i>", t)
     t = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r"\1", t)          # keep label, drop URL

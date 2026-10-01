@@ -50,7 +50,8 @@ limitation of the curation approach, which is our recommendation, rather than as
 blank.
 
 **b. The negative class is improved but not clean.** The provenance/outcome confound was
-weakened modestly (risk difference 57.9 → 50.0 percentage points) by adding measured negatives, and
+**not** measurably weakened — the apparent movement was denominator change, and the rows
+credited with it are gated out as ineligible negatives (`scripts/confound_stats.py`) — and
 `renal_endpoints_measured` now flags **13 grade-0 clinical rows as not supported as
 measured negatives**. The hazard is now machine-readable rather than hidden, which is the
 important change. But 36 `WS` rows remain search-derived, and closing them needs NEJM /

@@ -172,7 +172,7 @@ def main():
             kin = [x for x in reg if x["study_key"] == r["study_key"]]
             trial_rows.append([
                 r["study_key"], r["evidence_class"], r["counts_toward_trial_total"],
-                r["primary_source_read"], len(kin),
+                r["source_access"], len(kin),
                 ";".join(sorted({x["oligo_name"] for x in kin})),
                 ";".join(sorted({x["population"] for x in kin})),
                 ";".join(sorted({x["renal_endpoint"] for x in kin})),
@@ -180,14 +180,14 @@ def main():
                 r["source_ref"], r["source_locus"], r["attribution_basis"]])
         write_sheet(wb.create_sheet("1 Human trials (verified)"),
                     ["study_key", "evidence_class", "counts_toward_trial_total",
-                     "primary_source_read", "n_measurement_rows", "compounds", "population",
+                     "source_access", "n_measurement_rows", "compounds", "population",
                      "renal_endpoints", "grades", "source_ref", "source_locus",
                      "attribution_basis"], trial_rows,
                     widths={"study_key": 30, "attribution_basis": 52, "source_ref": 34,
                             "compounds": 22, "renal_endpoints": 30},
                     note="HUMAN CLINICAL EVIDENCE, DEDUPLICATED BY STUDY. One row per distinct study. "
                          "A trial counts ONCE however many measurement rows, papers or labels cite it. "
-                         "17 trials identified; 3 with the primary document read = the headline verified "
+                         "12 trials identified; 2 with the trial report read = the headline verified "
                          "count. 13 regulatory labels are NOT trials and appear in their own class. "
                          "Counting rules: scripts/build_study_register.py")
 

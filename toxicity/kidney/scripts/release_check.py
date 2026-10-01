@@ -78,8 +78,7 @@ if os.path.exists(reg_p):
     check(len(reg) == len([r for r in m if r["study_type"] == "clinical"]),
           f"register covers every clinical row ({len(reg)})")
     trials = {r["study_key"] for r in reg if r["evidence_class"] == "trial"}
-    readt = {r["study_key"] for r in reg
-             if r["evidence_class"] == "trial" and r["primary_source_read"] == "TRUE"}
+    readt = {r["study_key"] for r in reg if r.get("counts_as_verified") == "TRUE"}
     print(f"        trials identified {len(trials)}; primary source read {len(readt)}; "
           f"clinical rows {len(reg)}")
     check(len(trials) < len(reg), "trial count is deduplicated below the row count")
@@ -95,6 +94,29 @@ check(all(r["nephrotox_grade"] in "0123" for r in m),
       "source nephrotox_grade preserved on every row (never overwritten)")
 n_gated = sum(1 for r in m if not r["nephrotox_grade_modeling"].strip())
 print(f"        rows gated out of negative training: {n_gated}")
+
+print("\n[4c] RELEASE MANIFEST BINDING")
+man_p = D("RELEASE_MANIFEST.json")
+check(os.path.exists(man_p), "RELEASE_MANIFEST.json present")
+if os.path.exists(man_p):
+    import hashlib, json as _json
+    man = _json.load(open(man_p))
+    def _sha(fp):
+        h = hashlib.sha256()
+        with open(fp, "rb") as fh:
+            for ch in iter(lambda: fh.read(65536), b""):
+                h.update(ch)
+        return h.hexdigest()
+    drift = []
+    for group in ("canonical_sha256", "derived_sha256", "document_sha256"):
+        for rel, want in man.get(group, {}).items():
+            fp = D(rel)
+            if not os.path.exists(fp) or _sha(fp) != want:
+                drift.append(rel)
+    check(not drift, f"every file bound by the manifest matches its hash ({len(drift)} drifted)")
+    if drift:
+        print("        drifted: " + ", ".join(sorted(drift)[:8]))
+    print(f"        release_id {man.get('release_id')}")
 
 print("\n[5] SUBMISSION ARTEFACTS")
 for f, label in [("NARRATIVE.md", "narrative document"),

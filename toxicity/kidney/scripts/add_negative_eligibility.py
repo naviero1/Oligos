@@ -79,7 +79,7 @@ def main():
     read_studies = set()
     if os.path.exists(REG):
         for r in csv.DictReader(open(REG, newline="")):
-            if r["primary_source_read"] == "TRUE":
+            if r.get("counts_as_verified") == "TRUE":
                 read_studies.add(r["measurement_id"])
 
     with open(MEAS, newline="") as fh:
@@ -108,7 +108,20 @@ def main():
             cls, why = ("asserted_negative_regulatory",
                         "reported negative but primary study source not yet read in this project")
         else:
-            cls, why = "confirmed_negative", "safety endpoint measured and reported; primary source read"
+            # The quantitative requirement is MACHINE-CHECKED, not asserted. An adversarial
+            # review found the tier's docstring demanded a quantitative result while the gate
+            # admitted absence statements and rejected every row that carried a number.
+            try:
+                float(r["readout_value"])
+                numeric = True
+            except (TypeError, ValueError):
+                numeric = False
+            if numeric:
+                cls, why = ("confirmed_negative",
+                            "safety endpoint measured, quantitative result reported, trial report read")
+            else:
+                cls, why = ("asserted_negative_regulatory",
+                            "trial report read but no quantitative result recorded on this row")
 
         r["negative_eligibility"] = cls
         eligible = cls in ("positive_finding", "confirmed_negative")

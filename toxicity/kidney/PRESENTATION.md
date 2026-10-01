@@ -1,3 +1,12 @@
+<!-- DECK IS STALE — DO NOT PRESENT AS-IS (flagged 2026-10-01, release kidney-*) -->
+<!-- Totals and at least one headline finding predate the current release. Specifically:   -->
+<!--  * a slide headlined "animal tests over-predict human risk" states a claim this        -->
+<!--    release SUPPRESSED: 5 of 6 such verdicts are now                                    -->
+<!--    indeterminate_human_negative_unsupported (see data/human_animal_bridge.csv).        -->
+<!--  * the scoreboard carries 111-measurement-era totals and no trial count at all.        -->
+<!-- Regenerate against data/ and lead with verified trials / clinical rows / compounds.    -->
+<!-- Tracked in ROCKSTEADY_RESPONSE_KIDNEY.md as an open item.                              -->
+
 ---
 marp: true
 size: 16:9

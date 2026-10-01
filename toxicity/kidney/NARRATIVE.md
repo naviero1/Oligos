@@ -159,8 +159,11 @@ on prospective compounds, which have no dossier and would be scored non-toxic by
 construction. That is the wrong error direction for a safety model.
 
 Two corrections were applied. First, three approved drugs with *measured* human negatives
-were added (§4.2), moving the association to p = 1.65 × 10⁻⁴. Second, and more
-importantly, the schema now carries **`renal_endpoints_measured`** (§4.5), which separates
+were added (§4.2) — which on review produced **no measurable weakening** of the association,
+since the unverified arm is unchanged at 0 of 20 and the added rows are themselves gated out
+as ineligible negatives (`scripts/confound_stats.py`). Second, and the change that actually
+matters, the schema now carries **`renal_endpoints_measured`** and **`negative_eligibility`**
+(§4.5), which separate
 "measured and unremarkable" from "never looked". **13 grade-0 clinical rows are explicitly
 flagged as not supported as measured negatives.** Consumers can exclude, down-weight or
 impute them; they can no longer be mistaken for safety evidence.

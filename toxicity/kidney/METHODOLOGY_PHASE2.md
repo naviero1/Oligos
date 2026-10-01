@@ -199,8 +199,9 @@ by sourcing quality against outcome showed provenance predicting outcome almost 
 — 0 of 20 search-derived rows reached grade ≥2 against 11 of 22 anchor-sourced rows,
 one-sided Fisher p = 4.5 × 10⁻⁵. Direct retrieval of 7 unverified absence claims left only
 one standing as a measured negative. Two mitigations were applied: three approved drugs
-with *measured* human negatives were added (moving the association to
-p = 1.65 × 10⁻⁴), and the schema now carries **`renal_endpoints_measured`**, separating
+with human negatives were added, though that produced **no measurable weakening** of the
+association (see `scripts/confound_stats.py`; the unverified arm is unchanged at 0 of 20).
+The schema now carries **`renal_endpoints_measured`** and `negative_eligibility`, separating
 "measured and unremarkable" from "never looked". 13 grade-0 clinical rows are explicitly
 flagged as not supported as measured negatives. Full analysis in `CLINICAL_VALIDATION.md`.
 

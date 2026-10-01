@@ -40,8 +40,7 @@ def main():
     reg = (list(csv.DictReader(open(D("data/clinical_study_register.csv"), newline="")))
            if os.path.exists(D("data/clinical_study_register.csv")) else [])
     trials = {r["study_key"] for r in reg if r["evidence_class"] == "trial"}
-    readt = {r["study_key"] for r in reg
-             if r["evidence_class"] == "trial" and r["primary_source_read"] == "TRUE"}
+    readt = {r["study_key"] for r in reg if r.get("counts_as_verified") == "TRUE"}
     cls = {}
     for r in m:
         cls[r["subject_class"]] = cls.get(r["subject_class"], 0) + 1
@@ -60,7 +59,7 @@ def main():
             "oligos": len(o),
             "measurements": len(m),
             "human_clinical_trials_identified": len(trials),
-            "human_clinical_trials_primary_source_read": len(readt),
+            "human_clinical_trials_report_read": len(readt),
             "clinical_measurement_rows": cls.get("human_clinical", 0),
             "human_laboratory_rows": cls.get("human_invitro", 0),
             "animal_appendix_rows": cls.get("animal_invitro", 0) + cls.get("animal_invivo", 0),

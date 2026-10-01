@@ -182,9 +182,10 @@ oligo may differ by model/dose. Record the rationale in `notes` when non-obvious
   protein-to-creatinine ratio ... monitor urine dipstick every month, and serum cystatin C
   and UPCR every three months") and then state the result was negative. That is the
   distinction `CLINICAL_VALIDATION.md` found missing from the WS grade-0 rows, and adding
-  them **weakened the provenance/outcome confound modestly** (one-sided Fisher
-  p = 4.5 × 10⁻⁵ → **1.65 × 10⁻⁴**; anchor-sourced grade-0 clinical rows 1 → 4). The
-  confound is reduced, not resolved.
+  them produced **no measurable weakening** of the provenance/outcome confound: the
+  unverified arm is unchanged at 0 of 20, and the added rows are themselves gated out as
+  ineligible negatives. Computed in `scripts/confound_stats.py`; the earlier "weakening"
+  claim is withdrawn.
   All three labels also warn that "creatinine may not be a reliable measure of kidney
   function in DMD patients" because of reduced skeletal muscle mass — recorded in `notes`,
   and relevant to every DMD row in the dataset (drisapersen, eteplirsen, golodirsen,

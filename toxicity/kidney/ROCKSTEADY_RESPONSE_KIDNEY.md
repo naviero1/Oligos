@@ -47,6 +47,12 @@ Implemented as `scripts/build_study_register.py` → `data/clinical_study_regist
 seven counting rules stated in the script so disagreement lands on the rule rather than the
 arithmetic. See §4 for the resulting counts.
 
+**Corrected after adversarial review (§5a).** My first pass over-credited trial identity: I
+accepted bare trial-name tokens in `source_ref` as evidence of trial identity, and conflated
+"read a web-fetched page" with "hold the trial report". Five rows were reclassified and the
+read flag replaced with a three-valued `source_access`. **The headline fell from 17/3 to
+12 trials identified / 2 verified.**
+
 **One place I went further than proposed.** Beebop asked for "verified, deduplicated"
 trials. Deduplication is mechanical; *verification* needed a definition, so I split it into
 two tiers: `trial_identified` (resolves to a distinguishable study) and
@@ -195,18 +201,20 @@ identifier is unresolved and does not count. No identifier was invented.
 
 | Human clinical evidence (deduplicated by study) | count |
 |---|---:|
-| **Verified trials** (identified **and** primary document read) | **3** |
-| Trials identified but not yet read | 14 |
-| → total distinct trials identified | 17 |
-| Distinct regulatory labels (not trials) | 13 |
+| **Verified trials** (class `trial` **and** the trial report itself was read) | **2** |
+| Trials identified but not yet read | 10 |
+| → total distinct trials identified | 12 |
+| Distinct regulatory labels (not trials) | 15 |
+| Reviews / editorials / secondary reports | 3 |
 | Pooled cross-trial analyses | 1 |
-| Reviews / editorials | 2 |
 | Case reports | 1 |
-| Unresolved citations | 1 |
+| Unresolved citations | 2 |
 | Clinical **measurement rows** *(not a trial count)* | 42 |
 | Unique compounds with clinical evidence | 31 |
 
-Verified trials: **DMD114673**, **Cemdisiran phase 2 IgAN**, **SEQUOIA**.
+Verified trials: **DMD114673** (`document_in_hand` — Janssen 2019 PDF held in `sources/`)
+and **Cemdisiran phase 2 IgAN** (`fetched_and_read` — PMC11020434 retrieved and read, no
+local copy). `source_access` is three-valued precisely so these two tiers are not conflated.
 
 | Other evidence classes | count |
 |---|---:|
@@ -218,6 +226,8 @@ Verified trials: **DMD114673**, **Cemdisiran phase 2 IgAN**, **SEQUOIA**.
 | Oligos / with sequence | 65 / 55 |
 | Rows gated out of negative training | 20 |
 | Clinical grade-0 rows that are confirmed negatives | **1** |
+| Confound, all clinical rows (risk difference) | 50.0 pp (p = 1.65 × 10⁻⁴) |
+| Confound, eligible rows only | **61.1 pp** (p = 0.045) — *larger*, on 4 unverified rows |
 
 ---
 
@@ -233,7 +243,36 @@ Verified trials: **DMD114673**, **Cemdisiran phase 2 IgAN**, **SEQUOIA**.
 4. **The release gate caught my own tab rename** before I shipped it, which is the argument
    for having it.
 5. **Statistical framing matters more than I treated it.** The "3.7×" claim was not a small
-   wording issue; it misrepresented a 7.9-point effect as a 3.7-fold one.
+   wording issue; it misrepresented a p-value ratio as an effect size.
+
+## 5a. Adversarial review of this work, and what it changed
+
+Before publishing, I ran a six-lens adversarial review of my own changes, each lens
+instructed to refute rather than confirm. **Five of six returned `refuted`** (69 findings:
+17 blocker, 35 major). The substantive ones were right, and I verified each myself rather
+than accepting them:
+
+| Finding | Verified how | Action |
+|---|---|---|
+| `MSR078` SEQUOIA credited as a verified trial, but PMC12369710 is a **secondary report** in *Annals of Medicine and Surgery*, not the trial report — violating my own rule R5 | NCBI esummary lookup confirmed journal and title | **Accepted.** Reclassified `review_derived`. Verified count 3 → 2 |
+| `MSR012` APPROACH counted as a trial, but the value was read from the **EMA SmPC**, sharing `source_id` A8 with `MSR013` which I had classed label-derived | Register + `SOURCE_REGISTER.md` §4 | **Accepted.** Reclassified `label_derived`; NCT kept as a pointer |
+| `MSR047` HELIOS-A counted as a trial on the **Amvuttra label alone**, asymmetric with `MSR044` which I classed label-derived on identical evidence | `CLINICAL_VALIDATION.md` §2 records it UNSUPPORTED | **Accepted.** Reclassified `label_derived` |
+| `MSR045` ILLUMINATE-B counted as a trial on label + Bookshelf monograph + a bare name token, while another script downgraded the same row to efficacy-derived | Cross-file inconsistency | **Accepted.** Reclassified `label_derived` |
+| `MSR068` B-Clear counted as a trial, but PMC9804925 is a **phase 1 healthy-volunteer study**, contradicting `population=chronic_HBV_patients` | NCBI lookup | **Accepted.** Marked `unresolved` per R7 |
+| The read flag was TRUE for documents my own `SOURCES_TO_ACQUIRE.md` lists as unretrieved | Direct grep of that file | **Accepted.** Boolean replaced with three-valued `source_access` |
+| The risk-difference correction was **self-refuting**: the unverified arm is bit-identical (0/20 both ways), so all movement came from the denominator — and from rows this release gates out | Recomputed both arms myself | **Accepted.** Weakening claim **withdrawn entirely**; now computed in `scripts/confound_stats.py` |
+| "Corrected in all five documents" was false for four of five — my edit deleted "3.7×" but left the p-values, from which 3.65 is recoverable by division | Grep of all five | **Accepted.** All five now carry the computed result, not a deletion |
+| Bridge `paired` was computed over **all** rows, not the argmax rows, so a compound could be "paired" while the compared grades came from unrelated documents | Re-read the code | **Accepted.** Now computed from argmax rows; `RocheNTX_Cmpd3-1` correctly demoted; paired 10 → 8 |
+| `RELEASE_MANIFEST.json` binding already broken — PDFs were rendered *after* the manifest, and nothing verified it | Hash check | **Accepted.** Render now precedes manifest; `release_check.py` recomputes every hash |
+| `CLINICAL_VALIDATION.md` contradicted the release on four points after a one-line edit | Read the file | **Accepted.** Marked a dated, partly superseded record with the four points named |
+| `PRESENTATION.md` still headlines "animal tests over-predict human risk" — the claim this release suppressed | Read the deck | **Accepted as a gap.** Flagged stale in-file; regeneration is an open item, not silently fixed |
+
+**One finding I did not act on.** The review argued the remaining `animal_over_predicts`
+verdict (AON-C) is a grading error, citing an in-vitro grade column in Moisan Table 1. I
+searched the PDF and found the paper's prose ("AON-C was more cytotoxic than AON-B, and
+AON-A appeared innocuous") consistent with that direction, **but could not locate the
+specific numeric grade column cited**. I will not regrade a toxicity value on a claim I
+cannot verify; it is routed to German in §6 instead.
 
 ---
 
@@ -252,6 +291,12 @@ Verified trials: **DMD114673**, **Cemdisiran phase 2 IgAN**, **SEQUOIA**.
    them paired; they are the same laboratory and compounds but different experiments.
 4. **The two grading rubrics** (`NARRATIVE` §4.3) — thresholds are anchored on each source's
    own innocuous control, but the cut-points are mine.
+4b. **AON-C (`MSR082`/`MSR083`) in-vitro grade.** The adversarial review argued these should
+   be grade 3 rather than 2, citing an in-vitro grade column in Moisan Table 1. The paper's
+   prose supports the direction — "AON-C was more cytotoxic than AON-B" — but I could not
+   locate that numeric column and did not regrade. **This is the sole remaining
+   `animal_over_predicts` verdict in the dataset**, so the decision determines whether the
+   dataset reports any animal over-prediction at all.
 5. **Whether 3 verified trials is the right headline**, or whether identified-but-unread
    trials should be reported as a second headline tier.
 
@@ -281,8 +326,10 @@ sequence cell and a grade. All derived files regenerated through the existing sc
 
 **Limitations.**
 
-- Only **3 of 17** trials have had the primary document read. The headline verified count is
-  genuinely small and should not be inflated.
+- Only **2 of 12** trials have had the trial report read, and only one of those is held
+  locally. The headline verified count is genuinely small and should not be inflated.
+- **`PRESENTATION.md` and the three built decks are stale** and carry a headline claim this
+  release suppressed. Flagged in-file; regeneration is outstanding.
 - **One** confirmed clinical negative. The clinical negative class is effectively unusable
   for modelling as it stands.
 - Purity unreported for all 65 oligos; targeted supplements and batch records unexamined.
@@ -292,10 +339,13 @@ sequence cell and a grade. All derived files regenerated through the existing sc
 - Scope confirmed kidney-only; no other endpoint's data was read or written.
 
 **Readiness.** The dataset and its four submission artefacts are **structurally complete
-and internally consistent at release `kidney-5d82de234c71`**, and the human-first
+and internally consistent at the release recorded in `RELEASE_MANIFEST.json`** (the id is
+content-derived, so it changed with these corrections), and the human-first
 presentation Oscar asked for is implemented rather than described. It is **not
 scientifically signed off**: the trial verification tier, the negative-eligibility
 downgrades and the grading thresholds are curation judgements awaiting German. The honest
 summary is that this round made the dataset's weaknesses legible and machine-readable rather
-than making them smaller — the trial count fell from an implied 42 to a verified 3, and the
-confirmed clinical negatives from 21 to 1. Both are corrections, not regressions.
+than making them smaller — the trial count fell from an implied 42 to a verified **2**, the
+confirmed clinical negatives from 21 to **1**, and a claimed reduction in confounding was
+withdrawn as unsupported. All three are corrections, not regressions, and two of them were
+found by adversarially reviewing my own first answer rather than by Beebop or by me.

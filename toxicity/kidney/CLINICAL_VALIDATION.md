@@ -1,5 +1,19 @@
 # Clinical-row validation — human trials, August 2026
 
+> **STATUS: DATED RECORD, PARTLY SUPERSEDED — read with `ROCKSTEADY_RESPONSE_KIDNEY.md`.**
+> This file records the August-2026 validation round that first identified the
+> provenance/outcome confound. Three of its statements have since been overtaken and are
+> retained here as history rather than as current guidance:
+> (1) the `renal_endpoints_measured` field it *recommends* is now implemented on all 246
+> rows, joined by `negative_eligibility` and `nephrotox_grade_modeling`;
+> (2) its "weakened 3.7×" / risk-difference framing is **withdrawn** — see
+> `scripts/confound_stats.py`, which finds no measurable weakening;
+> (3) its blanket "should not be used to train a nephrotoxicity model" is superseded by the
+> per-row eligibility gate, which blocks the 20 specific rows rather than the dataset.
+> Its §2 per-row retrieval findings stand and are still the basis for several
+> reclassifications.
+
+
 Validation of the 39 `study_type=clinical` rows against their cited primary sources,
 prompted by a structural concern found before any source was opened (§1). Seven of the
 13 unverified absence claims were checked directly; results in §2. **Grades in
@@ -95,10 +109,16 @@ missing from the WS rows.
 
 Effect on the confound: anchor-sourced grade-0 clinical rows **1 → 4**, and the
 association weakens from one-sided Fisher **p = 4.5 × 10⁻⁵ to p = 1.65 × 10⁻⁴**. That is
-a real but modest weakening, achieved the right way — by adding well-sourced negatives, not by
-removing positives. It is **not a resolution**: p = 1.65 × 10⁻⁴ still evidences strong
-confounding, the 20 WS rows are unchanged, and the `renal_endpoints_measured` field
-recommended in §3 remains unimplemented.
+**No measurable weakening is claimed.** An earlier version of this analysis reported that
+adding three label-derived rows "weakened" the confound. That claim is withdrawn: the
+unverified arm is unchanged at **0 of 20** reaching grade ≥2 before and after, so every bit
+of the apparent movement came from three rows entering the *other* arm's denominator — and
+this release reclassifies those same three rows (`MSR160`/`162`/`164`) as
+`asserted_negative_regulatory` and gates them out of modelling. A weakening resting on rows
+the release declares unfit is not a finding. Computed by `scripts/confound_stats.py`:
+on all clinical rows the risk difference is **50.0 pp** (one-sided Fisher p = 1.65 × 10⁻⁴);
+on the rows that pass `negative_eligibility` it is **61.1 pp** (p = 0.045) — *larger*, on far
+less data, because the unverified arm collapses to 4 rows.
 
 These three also strengthen the extrapolation evidence in the right direction. All three
 are now bridge compounds with animal grade 2 against human grade 0, and unlike lumasiran
