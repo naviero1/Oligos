@@ -67,15 +67,23 @@ evidence of absence, and the code that swept the labels states this in its own o
 hybridisation target, mechanistically via glycoprotein VI. Without any modelling, the assembled data orders
 exactly as that hypothesis predicts:</p>
 <table>
-<tr><th>Backbone</th><th class="n">rows</th><th class="n">compounds</th><th class="n">mean grade</th>
+<tr><th>Backbone</th><th class="n">human rows</th><th class="n">compounds</th><th class="n">mean grade</th>
 <th>PS linkages</th><th class="n">mean grade</th></tr>
-<tr><td><code>PMO_neutral</code></td><td class="n">{{n_pmo}}</td><td class="n">{{c_pmo}}</td><td class="n"><b>{{mg_pmo}}</b></td><td>0</td><td class="n">{{mg_ps0}}</td></tr>
-<tr><td><code>PS_PO_mix</code></td><td class="n">{{n_mix}}</td><td class="n">{{c_mix}}</td><td class="n">{{mg_mix}}</td><td>13–16</td><td class="n">{{mg_ps13}}</td></tr>
-<tr><td><code>full_PO</code></td><td class="n">{{n_po}}</td><td class="n">{{c_po}}</td><td class="n">{{mg_po}}</td><td>17–19</td><td class="n">{{mg_ps17}}</td></tr>
-<tr><td><code>full_PS</code></td><td class="n">{{n_ps}}</td><td class="n">{{c_ps}}</td><td class="n"><b>{{mg_ps}}</b></td><td>20+</td><td class="n"><b>{{mg_ps20}}</b></td></tr>
+<tr><td><code>PMO_neutral</code></td><td class="n">{{hn_pmo}}</td><td class="n">{{hc_pmo}}</td><td class="n"><b>{{hmg_pmo}}</b></td><td>0</td><td class="n">{{hmg_ps0}}</td></tr>
+<tr><td><code>PS_PO_mix</code></td><td class="n">{{hn_mix}}</td><td class="n">{{hc_mix}}</td><td class="n">{{hmg_mix}}</td><td>13–16</td><td class="n">{{hmg_ps13}}</td></tr>
+<tr><td><code>full_PO</code></td><td class="n">{{hn_po}}</td><td class="n">{{hc_po}}</td><td class="n">{{hmg_po}}</td><td>17–19</td><td class="n">{{hmg_ps17}}</td></tr>
+<tr><td><code>full_PS</code></td><td class="n">{{hn_ps}}</td><td class="n">{{hc_ps}}</td><td class="n"><b>{{hmg_ps}}</b></td><td>20+</td><td class="n"><b>{{hmg_ps20}}</b></td></tr>
 </table>
-<p>Modality orders in the same direction: PMO 0.10 &lt; GalNAc-siRNA 0.27 &lt; siRNA 0.50 &lt;
-splice-switching 0.67 &lt; ASO gapmer 0.89 &lt; aptamer 1.60. That a curated dataset recovers a relationship
+<div class="note"><p><b>These are HUMAN rows only.</b> Earlier versions of this table pooled human and
+animal evidence, which averages across species, exposures and assay systems and produces a number no
+reviewer should rely on. Restricting to human evidence does not weaken the relationship — it sharpens
+it: the PS-count gradient runs {{hmg_ps0}} → {{hmg_ps13}} → {{hmg_ps17}} → {{hmg_ps20}}. Animal evidence
+is retained in full in <code>data/measurements_animal.csv</code> and influences no human figure. Cells
+backed by few rows are shown with their row and compound counts so the reader can discount them;
+<code>PMO_neutral</code> in particular rests on {{hn_pmo}} human row(s).</p></div>
+<p>Modality orders in the same direction, again in human evidence alone: PMO {{hmg_mod_pmo}} &lt;
+GalNAc-siRNA {{hmg_mod_galnac}} &lt; siRNA {{hmg_mod_sirna}} &lt; splice-switching {{hmg_mod_sso}} &lt;
+ASO gapmer {{hmg_mod_gapmer}} &lt; aptamer {{hmg_mod_aptamer}}. That a curated dataset recovers a relationship
 the field established experimentally is the primary evidence that it is fit to train on.</p>
 
 <h3>2.2 Five controlled comparisons — the dataset's most distinctive content</h3>
@@ -258,31 +266,48 @@ learnable rather than merely correlated.</li>
 </ul>
 
 <h2>6. Using the data to build a predictive model</h2>
-<p>A worked demonstration is included (<code>scripts/model_demo.py</code>) rather than an assertion. The task:
-predict whether an oligo × condition shows <i>any</i> platelet effect (grade ≥ 1) from design features.
-Control-arm rows and the mechanism-confounded compound are excluded, leaving {{ml_rows}} rows over {{ml_comp}} compounds.</p>
+<div class="note"><p><b>A model this dataset previously demonstrated has been withdrawn.</b> Earlier
+versions of this narrative reported grouped ROC-AUC for a classifier predicting platelet effect
+(grade&nbsp;≥&nbsp;1) from design features across 228 compounds. The project's scientific governance
+package classifies that exact model — a sequence-only clinical thrombocytopenia classifier — as
+<b>BLOCKED</b>, with training prohibited and no permitted claim. It is no longer run and its scores are
+retracted (<code>data/model_demo_results.json</code> now holds the retraction record). Five
+independently checkable reasons: it used 228 compounds where {{ml_mech_constructs}} are authorised for
+mechanistic work and 7 carry any <i>provisional</i> clinical eligibility; it grouped folds by compound
+rather than by exact sequence, so isosequential pairs such as volanesorsen/olezarsen and
+inotersen/eplontersen fell on both sides of a split; it used grade&nbsp;0 rows as negatives although
+the qualified clinical-negative count is zero; it treated pooled dose-band rows as independent
+observations; and <code>is_human</code> ranked second of eighteen features, meaning the model was
+substantially learning which rows came from human studies.</p></div>
+<p>What the dataset supports instead is reported in <code>data/approved_analyses.json</code>, generated
+by <code>scripts/model_demo.py</code>, restricted to the lanes the governance package authorises:</p>
 <table>
-<tr><th>Evaluation</th><th class="n">ROC-AUC</th><th class="n">balanced acc.</th><th>What it shows</th></tr>
-<tr><td>Baseline — always predict majority</td><td class="n">—</td><td class="n">0.500</td><td>reference</td></tr>
-<tr><td><b>[A] Design features only</b>, grouped by compound</td><td class="n"><b>{{ml_design}}</b></td><td class="n">0.633</td>
-<td>chemistry alone carries real signal</td></tr>
-<tr><td>[B] Design + study context, grouped</td><td class="n">{{ml_context}}</td><td class="n">0.687</td>
-<td>{{ml_gap}} — the study-type confound, <i>not</i> biology</td></tr>
-<tr><td>Ungrouped random row split</td><td class="n">0.752</td><td class="n">0.690</td>
-<td>+0.081 of pure leakage</td></tr>
+<tr><th>Lane</th><th>Status</th><th>Result</th></tr>
+<tr><td><b>Matched-sequence mechanistic contrasts</b></td><td>approved, descriptive</td>
+<td>{{ml_contrasts}} contrasts; direction concordance <b>{{ml_direction_concordance}}</b></td></tr>
+<tr><td>Pooled clinical dose-response baseline</td><td>approved with limitations</td>
+<td>dose bands described; pooled rows never treated as independent</td></tr>
+<tr><td>Mechanistic proof of concept</td><td>conditionally approved</td>
+<td>{{ml_mech_constructs}} constructs over {{ml_mech_groups}} independent sequence groups; trained: {{ml_trained}}</td></tr>
+<tr><td>Sequence-only clinical classifier</td><td><b>{{model_status}}</b></td><td>not run</td></tr>
 </table>
-<p>Three points matter more than the score. <b>Grouped cross-validation is mandatory</b>: rows are not
-independent — one compound contributes nearly 200 — so a random row split lets a model memorise compounds
-rather than learn chemistry, and we quantify that illusion at +0.081 ROC-AUC. <b>Chemistry alone beats
-baseline</b>, with <code>{{ml_top}}</code> the single most important feature, so the dataset supports its own
-stated hypothesis under a split that forbids memorisation. And the <b>A-versus-B gap is reported precisely so
-it is not banked as chemistry performance</b> — it reflects severe events being observed in trials and not in
-dishes.</p>
-<p>Beyond this baseline the dataset supports: <b>sequence-level models</b> ({{n_seq}} sequences with graded
-outcomes), <b>cross-species translation</b> on the {{n_bridge}}-compound bridge, <b>dose–response modelling</b> from
-the banded clinical incidence grids, and — the clinically decisive task — <b>separating the mild
-dose-dependent mode from the severe immune-mediated mode</b>, for which the <code>immunogenicity</code>
-readout category provides the labels.</p>
+<p><b>The strongest defensible result in this dataset is the concordance figure above.</b> Each matched
+contrast shares a nucleotide sequence and differs in exactly one named chemical factor — PS versus PO
+backbone, LNA wings added, or sequence alone — so the comparison isolates that factor. For
+{{ml_direction_concordance}} contrasts, this dataset and the independently curated scientific package
+agree on the <i>sign</i> of the effect, under different scoring rubrics and separate extraction work.
+Absolute grades agree in {{ml_absolute_concordance}}, which is expected: the rubrics differ, and the
+disagreements are listed for scientific adjudication rather than silently reconciled. The clearest
+single contrast is the phosphorothioate/phosphodiester pair of one 22-mer, where both datasets place the
+PS form at the top of the scale and its isosequential PO control at zero. That is a reproducibility
+statement about a mechanism, not a performance claim about a model — and for a dataset whose purpose is
+to let others build models, a reproducible mechanistic contrast is the more useful deliverable.</p>
+<p>Beyond this, the dataset is structured to support <b>dose–response modelling</b> from the banded
+clinical incidence grids, <b>cross-species comparison</b> on the {{n_bridge}}-compound bridge (with
+exposures shown side by side and every row carrying an explicit statement of whether the comparison is
+qualified), and — the clinically decisive task — <b>separating the mild dose-dependent mode from the
+severe immune-mediated mode</b>, for which the <code>immunogenicity</code> readout category provides the
+labels. Each of those remains gated on scientific review, and none is claimed as achieved here.</p>
 <div class="note"><b>What we do not claim.</b> This is a feasibility demonstration, not a validated clinical
 predictor. Grade remains partly confounded with study type; the severe idiosyncratic mode is antibody-driven
 and is <i>not</i> expected to be predictable from design at all; and {{pct_verified}} % of rows have completed adversarial

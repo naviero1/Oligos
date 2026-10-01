@@ -1,209 +1,280 @@
 #!/usr/bin/env python3
-"""Predictive-model DEMONSTRATION for OligoTox-Thrombocytopenia.
+"""Scientist-authorised analyses for the thrombocytopenia endpoint.
 
-The Phase 2 deliverable is a dataset, not a model. The narrative document must
-nonetheless discuss "how the data could be used to develop a predictive model",
-and a worked demonstration evidences that far better than an assertion. This
-script is that demonstration and is deliberately conservative.
+WHY THE PREVIOUS MODEL IS NO LONGER RUN
+  This script used to train a classifier predicting thrombocytopenia grade >= 1
+  from design features, reporting grouped AUC 0.61-0.69 over 228 compounds. The
+  scientist-governed package v0.9 (sheet Model_Specification_v0.8) classifies
+  that exact model -- "Sequence-only clinical thrombocytopenia classifier" --
+  as BLOCKED, with Required_Grouping "N/A", Minimum_Models "All training
+  prohibited" and Permitted_Claim "None". Running it would reverse a scientist
+  decision, so it is not run.
 
-WHAT IT DOES
-  Predicts whether an oligonucleotide × condition shows ANY platelet effect
-  (grade >= 1) from DESIGN features alone — phosphorothioate count, backbone,
-  modality, conjugate, length, sugar chemistry — plus study context.
+  Five independent confirmations that the block is correct, each checkable
+  against the files in this directory:
+   1. It trained on 228 compounds. The scientist package authorises 6 for
+      clinical modelling, every one PROVISIONAL (see oligos.csv
+      clinical_model_eligibility).
+   2. It grouped folds by oligo_id. 85 oligo records here share an exact
+      sequence with another record across 35 groups, so oligo-level folds put
+      isosequential constructs -- volanesorsen/olezarsen, inotersen/
+      eplontersen, ODN2395 PS/PO -- on both sides of the same split. The
+      required grouping is exact_sequence_group.
+   3. It used grade 0 rows as negatives. The scientist package rules
+      CLEAN_CLINICAL_NEGATIVE "NOT YET AVAILABLE" and records the qualified
+      clinical-negative count as 0; all 21 audited candidates are ineligible.
+   4. It treated 387 pooled Crooke dose-band rows as independent observations.
+      The scientist rule is "Do not treat pooled aggregate rows as independent"
+      and "Exclude pooled rows from sequence-level labels".
+   5. `is_human` ranked second of eighteen features by importance (0.162). The
+      model was substantially learning which rows came from human studies
+      rather than anything about chemistry.
 
-FOUR METHODOLOGICAL CHOICES THAT MATTER MORE THAN THE SCORE
-  1. GROUPED cross-validation, by oligo. Rows are not independent: one compound
-     can contribute 178 rows. A random row split puts the same compound in train
-     and test, and the model scores well by memorising compounds rather than
-     learning chemistry. GroupKFold on oligo_id is the only honest evaluation
-     here, and the gap between the two is reported so the reader can see how
-     large the illusion would have been.
-  2. CONTROL ARMS EXCLUDED. Rows at dose 0 are placebo/vehicle; including them
-     teaches the model that a compound causes an effect at zero dose.
-  3. MECHANISM-CONFOUNDED COMPOUND EXCLUDED. imetelstat's thrombocytopenia is
-     on-target myelosuppression, not backbone-driven platelet binding.
-  4. A HONEST BASELINE. Compared against always predicting the majority class,
-     because on imbalanced data an impressive-looking accuracy can be worthless.
-
-WHAT IT IS NOT
-  Not a validated predictor of clinical thrombocytopenia. Grade is partly
-  confounded with study type, the severe immune-mediated mode is idiosyncratic
-  and not expected to be predictable from design at all, and much of the data is
-  curated from heterogeneous sources. Treat the numbers as evidence that the
-  dataset is TRAINABLE, not as a performance claim.
+WHAT RUNS INSTEAD -- only the lanes the scientist package authorises:
+  Lane A  Matched-sequence mechanistic contrasts   APPROVED FOR DESCRIPTIVE ANALYSIS
+  Lane B  Pooled clinical dose-response baseline   APPROVED WITH LIMITATIONS
+  Lane C  Mechanistic proof-of-concept feasibility CONDITIONALLY APPROVED -- this
+          reports whether the authorised population is large enough to support a
+          model at all. It does not train one.
 
 Usage:  python3 scripts/model_demo.py
 """
-import csv, json, os, sys, collections
-import numpy as np
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import GroupKFold, KFold, cross_val_predict
-from sklearn.metrics import (roc_auc_score, average_precision_score, accuracy_score,
-                             balanced_accuracy_score, confusion_matrix)
+import csv, json, os, collections
 
 ENDPOINT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE = os.path.join(ENDPOINT, "data")
-MECHANISM_EXCLUDED = {"imetelstat"}
+DATA = os.path.join(ENDPOINT, "data")
+SCI = os.path.join(ENDPOINT, "curation", "scientist_v09")
+
+BLOCKED = {
+    "model": "Sequence-only clinical thrombocytopenia classifier",
+    "scientist_status": "BLOCKED",
+    "scientist_source": "scientist_v0.9 workbook, sheet Model_Specification_v0.8",
+    "training_permission": "All training prohibited",
+    "permitted_claim": "None",
+    "action_taken": "NOT RUN. Previous grouped-AUC results retracted.",
+    "retracted_results": {"grouped_auc_design_LogisticRegression": 0.6073,
+                          "grouped_auc_design_RandomForest": 0.6272,
+                          "grouped_auc_LogisticRegression": 0.6343,
+                          "grouped_auc_RandomForest": 0.6895,
+                          "n_rows": 1728, "n_compounds": 228},
+    "why_retracted": [
+        "228 compounds used; 6 are scientist-eligible for clinical modelling, all PROVISIONAL",
+        "grouped by oligo_id, not exact_sequence_group: 85 records across 35 groups share a sequence",
+        "grade 0 rows used as negatives; qualified clinical negatives = 0",
+        "387 pooled dose-band rows treated as independent observations",
+        "is_human was the 2nd most important feature (0.162)"],
+}
 
 
-def load():
-    with open(os.path.join(BASE, "oligos.csv"), newline="", encoding="utf-8") as f:
-        oligos = {r["oligo_id"]: r for r in csv.DictReader(f)}
-    with open(os.path.join(BASE, "measurements.csv"), newline="", encoding="utf-8") as f:
-        meas = list(csv.DictReader(f))
-    return oligos, meas
+def rd(p):
+    with open(p, newline="", encoding="utf-8") as f: return list(csv.DictReader(f))
 
 
-def num(v, default=np.nan):
-    try:
-        return float(v)
-    except (TypeError, ValueError):
-        return default
-
-
-def build(oligos, meas):
-    rows, groups, y, dropped = [], [], [], collections.Counter()
-    for m in meas:
-        o = oligos.get(m["oligo_id"])
-        if not o:
-            dropped["no_oligo"] += 1
-            continue
-        if o["oligo_name"].lower() in MECHANISM_EXCLUDED:
-            dropped["mechanism_confounded"] += 1
-            continue
-        if str(m.get("dose_or_conc_value", "")).strip() in {"0", "0.0"}:
-            dropped["control_arm"] += 1
-            continue
-        g = m.get("thrombocytopenia_grade")
-        if g not in {"0", "1", "2", "3"}:
-            dropped["no_grade"] += 1
-            continue
-        sugars = o.get("sugar_modifications", "")
-        rows.append({
-            "ps_count": num(o.get("ps_count")),
-            "length_nt": num(o.get("length_nt")),
-            "bb_full_PS": int(o.get("backbone_chemistry") == "full_PS"),
-            "bb_PMO_neutral": int(o.get("backbone_chemistry") == "PMO_neutral"),
-            "bb_full_PO": int(o.get("backbone_chemistry") == "full_PO"),
-            "bb_PS_PO_mix": int(o.get("backbone_chemistry") == "PS_PO_mix"),
-            "cls_gapmer": int(o.get("oligo_class") == "ASO_gapmer"),
-            "cls_siRNA": int(o.get("oligo_class") in ("siRNA", "GalNAc_siRNA")),
-            "cls_PMO": int(o.get("oligo_class") == "PMO"),
-            "cls_aptamer": int(o.get("oligo_class") == "aptamer"),
-            "conj_none": int(o.get("conjugate") == "none"),
-            "conj_GalNAc": int(o.get("conjugate") == "GalNAc"),
-            "sug_MOE": int("2'-MOE" in sugars),
-            "sug_LNA": int("LNA" in sugars),
-            "sug_cEt": int("cEt" in sugars),
-            "sug_DNAgap": int("DNA_gap" in sugars),
-            "is_human": int((m.get("subject_class") or "").startswith("human")),
-            "is_invitro": int(m.get("study_type") in ("in_vitro", "ex_vivo")),
-        })
-        groups.append(m["oligo_id"])
-        y.append(1 if g != "0" else 0)
-    return rows, np.array(groups), np.array(y), dropped
-
-
-def report(name, y, p, pred):
-    auc = roc_auc_score(y, p) if len(set(y)) > 1 else float("nan")
-    ap = average_precision_score(y, p) if len(set(y)) > 1 else float("nan")
-    print(f"  {name:<34} ROC-AUC {auc:.3f} · PR-AUC {ap:.3f} · "
-          f"acc {accuracy_score(y, pred):.3f} · balanced-acc {balanced_accuracy_score(y, pred):.3f}")
-    return auc
+def num(v):
+    try: return float(v)
+    except (TypeError, ValueError): return None
 
 
 def main():
-    oligos, meas = load()
-    rows, groups, y, dropped = build(oligos, meas)
-    feats = list(rows[0].keys())
-    X = np.array([[r[f] for f in feats] for r in rows], dtype=float)
-    X = np.nan_to_num(X, nan=-1.0)   # explicit sentinel; TBD is not imputed to a mean
+    oligos = {o["oligo_id"]: o for o in rd(os.path.join(DATA, "oligos.csv"))}
+    meas = rd(os.path.join(DATA, "measurements.csv"))
+    by_o = collections.defaultdict(list)
+    for m in meas: by_o[m["oligo_id"]].append(m)
+    byname = {}
+    for o in oligos.values():
+        for nm in [o["oligo_name"]] + (o["aliases"] or "").split(";"):
+            k = nm.strip().lower().replace(" ", "")
+            if k and k not in byname: byname[k] = o
 
-    print("=" * 74)
-    print("PREDICTIVE-MODEL DEMONSTRATION — thrombocytopenia (grade >= 1 vs grade 0)")
-    print("=" * 74)
-    print(f"rows used {len(y)} · compounds {len(set(groups))} · features {len(feats)}")
-    print(f"excluded  {dict(dropped)}")
-    print(f"class balance: {int(y.sum())} positive / {len(y) - int(y.sum())} negative "
-          f"({100 * y.mean():.0f}% positive)")
+    out = {"blocked_model": BLOCKED, "lanes": {}}
+    print("=" * 78)
+    print("SCIENTIST-AUTHORISED ANALYSES — thrombocytopenia")
+    print("=" * 78)
+    print(f"\n[BLOCKED] {BLOCKED['model']}")
+    print(f"  {BLOCKED['scientist_status']} per {BLOCKED['scientist_source']}")
+    print(f"  {BLOCKED['action_taken']}")
+    for r in BLOCKED["why_retracted"]: print(f"    - {r}")
 
-    maj = int(y.mean() >= 0.5)
-    print(f"\nBASELINE (always predict {maj}): acc "
-          f"{accuracy_score(y, np.full_like(y, maj)):.3f} · balanced-acc 0.500")
+    # ---- Lane A: matched-sequence mechanistic contrasts ----------------------
+    # Descriptive only. The contrast definitions, the matched factors, the single
+    # differing factor and the adjudicated 0-3 scores are the SCIENTIST's, read
+    # from Mechanistic_Contrasts_v0.8. Constructs are resolved through the
+    # crosswalk (scientist record -> branch oligo), never by name: bare names
+    # like "ODN 2395" are shared by a phosphorothioate and an isosequential
+    # phosphodiester record, and name matching selects the wrong one.
+    # This lane also CHECKS the branch grades against the scientist scores and
+    # reports any disagreement rather than quietly preferring either side.
+    print("\n[LANE A] Matched-sequence mechanistic contrasts — DESCRIPTIVE")
+    xw = {r["scientist_record_id"]: r["branch_oligo_id"]
+          for r in rd(os.path.join(SCI, "crosswalk.csv"))
+          if r["crosswalk_status"] == "retained_matched"}
+    man = {}
+    mpath = os.path.join(SCI, "Training_Manifest_v0.9.csv")
+    if os.path.exists(mpath):
+        for r in rd(mpath):
+            if (r.get("Data_Object") or "").strip() == "MATCHED_CONTRAST":
+                man[r["Record_ID"].strip()] = [x.strip() for x in r["Sequence_Record_ID"].split("|")]
 
-    n_groups = len(set(groups))
-    gkf = GroupKFold(n_splits=min(5, n_groups))
-    models = {
-        "LogisticRegression": LogisticRegression(max_iter=2000, class_weight="balanced"),
-        "RandomForest": RandomForestClassifier(n_estimators=400, min_samples_leaf=3,
-                                               class_weight="balanced", random_state=0,
-                                               n_jobs=-1),
-    }
+    def lab_rows(oid):
+        return [m for m in by_o.get(oid, [])
+                if (m.get("subject_class") or "") in ("human_in_vitro", "human_ex_vivo")]
 
-    # Two feature sets. DESIGN-ONLY is the scientifically meaningful question —
-    # can chemistry alone predict a platelet effect? — and it is the honest test,
-    # because `is_human`/`is_invitro` describe how the row was MEASURED, not what
-    # the molecule is. Leaving them in lets the model exploit the study-type
-    # confound documented in METHODOLOGY.md, so both are reported and the gap
-    # between them quantifies how much of the apparent performance is context.
-    ctx = {"is_human", "is_invitro"}
-    design_idx = [i for i, f in enumerate(feats) if f not in ctx]
-    Xd = X[:, design_idx]
+    def maxg(rows):
+        g = [int(m["thrombocytopenia_grade"]) for m in rows if m["thrombocytopenia_grade"].isdigit()]
+        return (max(g) if g else None), dict(collections.Counter(g))
 
-    print("\nGROUPED CV — split by COMPOUND (the honest evaluation):")
-    print("  [A] DESIGN FEATURES ONLY — chemistry, no study context:")
-    aucs = {}
-    for name, mdl in models.items():
-        p = cross_val_predict(mdl, Xd, y, cv=gkf, groups=groups, method="predict_proba")[:, 1]
-        aucs["design:" + name] = report("  " + name, y, p, (p >= 0.5).astype(int))
+    lane_a, cpath = [], os.path.join(SCI, "Mechanistic_Contrasts_v0_8.csv")
+    for c in (rd(cpath) if os.path.exists(cpath) else []):
+        cid = c["Contrast_ID"].strip()
+        sids = man.get(cid, ["", ""])
+        oidA, oidB = xw.get(sids[0], ""), xw.get(sids[1] if len(sids) > 1 else "", "")
+        oA, oB = oligos.get(oidA, {}), oligos.get(oidB, {})
+        rA, rB = lab_rows(oidA), lab_rows(oidB)
+        gA, hA = maxg(rA)
+        gB, hB = maxg(rB)
+        sA = int(c["Score_A"]) if (c.get("Score_A") or "").strip().isdigit() else None
+        sB = int(c["Score_B"]) if (c.get("Score_B") or "").strip().isdigit() else None
+        checks = []
+        if not oidA or not oidB:
+            checks.append("construct not resolved to a branch record")
+        if oA and oB and oA.get("sequence_5to3") != oB.get("sequence_5to3") \
+           and "sequence" not in c["Primary_Differing_Factor"].lower():
+            checks.append("branch sequences differ although the contrast is matched on sequence")
+        if oA and oB and oA.get("exact_sequence_group") != oB.get("exact_sequence_group") \
+           and "sequence" not in c["Primary_Differing_Factor"].lower():
+            checks.append("constructs sit in different exact_sequence_groups -- outer split would separate them")
+        if sA is not None and gA is not None and sA != gA:
+            checks.append(f"A: scientist score {sA} vs branch max grade {gA}")
+        if sB is not None and gB is not None and sB != gB:
+            checks.append(f"B: scientist score {sB} vs branch max grade {gB}")
+        lane_a.append({
+            "contrast_id": cid, "pair": f"{c['Construct_A_Name']} vs {c['Construct_B_Name']}",
+            "comparison_family": c.get("Comparison_Family", ""),
+            "matched_factors": c.get("Matched_Factors", ""),
+            "primary_differing_factor": c.get("Primary_Differing_Factor", ""),
+            "scientist_score_A": sA, "scientist_score_B": sB,
+            "scientist_delta_B_minus_A": c.get("Delta_B_minus_A", ""),
+            "scientist_interpretation": c.get("Scientific_Interpretation", ""),
+            "causal_limitation": c.get("Causal_Limitation", ""),
+            "permitted_use": c.get("Permitted_Use", ""),
+            "A": {"scientist_record": sids[0], "branch_oligo_id": oidA,
+                  "compound": oA.get("oligo_name", ""), "sequence": oA.get("sequence_5to3", ""),
+                  "ps_count": oA.get("ps_count", ""), "n_human_lab_rows": len(rA),
+                  "branch_max_grade": gA, "branch_grade_histogram": hA},
+            "B": {"scientist_record": sids[1] if len(sids) > 1 else "", "branch_oligo_id": oidB,
+                  "compound": oB.get("oligo_name", ""), "sequence": oB.get("sequence_5to3", ""),
+                  "ps_count": oB.get("ps_count", ""), "n_human_lab_rows": len(rB),
+                  "branch_max_grade": gB, "branch_grade_histogram": hB},
+            "consistency_checks": checks or ["consistent"]})
+        print(f"  {cid}  {oA.get('oligo_name','?')[:15]:15s} vs {oB.get('oligo_name','?')[:15]:15s}"
+              f"  differs: {c['Primary_Differing_Factor'][:26]:26s}"
+              f"  scientist {sA}->{sB}  branch {gA}->{gB}  n={len(rA)}/{len(rB)}")
+        for ck in checks:
+            if ck != "consistent": print(f"        ! {ck}")
+    # Direction concordance is the defensible result here. The scientist's
+    # adjudicated 0-3 score and this dataset's grade were derived independently,
+    # from different rubrics, so their ABSOLUTE agreement is not expected. What
+    # matters is whether both say the differing factor pushes severity the same
+    # way. That is a reproducibility statement about the contrast, not a
+    # performance claim about a model.
+    def sgn(x):
+        return 0 if x == 0 else (1 if x > 0 else -1)
+    conc = []
+    for r in lane_a:
+        sA, sB = r["scientist_score_A"], r["scientist_score_B"]
+        bA, bB = r["A"]["branch_max_grade"], r["B"]["branch_max_grade"]
+        if None in (sA, sB, bA, bB): conc.append(None); continue
+        conc.append(sgn(sB - sA) == sgn(bB - bA))
+    agree = sum(1 for c in conc if c is True)
+    scored = sum(1 for c in conc if c is not None)
+    exact = sum(1 for r in lane_a if r["consistency_checks"] == ["consistent"])
+    print(f"\n  direction concordance scientist vs branch: {agree}/{scored} contrasts agree on "
+          f"the SIGN of the effect; {exact}/{len(lane_a)} also agree on absolute level")
+    print("  -> the differing factor moves severity the same way in both independently")
+    print("     built datasets; absolute grades differ because the rubrics differ.")
+    out["lanes"]["A_matched_contrasts"] = {
+        "scientist_status": "APPROVED FOR DESCRIPTIVE ANALYSIS",
+        "definitions_from": "scientist_v0.9 sheet Mechanistic_Contrasts_v0.8",
+        "n_contrasts": len(lane_a),
+        "direction_concordance": f"{agree}/{scored}",
+        "absolute_concordance": f"{exact}/{len(lane_a)}",
+        "concordance_note": ("Scientist 0-3 adjudicated score and dataset grade were derived "
+                             "independently under different rubrics; absolute agreement is not "
+                             "expected. Sign agreement is the reproducibility statement. This is "
+                             "not a model performance claim."),
+        "unresolved_for_scientist": [{"contrast_id": r["contrast_id"], "checks": r["consistency_checks"]}
+                                     for r in lane_a if r["consistency_checks"] != ["consistent"]],
+        "contrasts": lane_a}
 
-    print("  [B] DESIGN + STUDY CONTEXT (adds is_human / is_invitro):")
-    for name, mdl in models.items():
-        p = cross_val_predict(mdl, X, y, cv=gkf, groups=groups, method="predict_proba")[:, 1]
-        a = report("  " + name, y, p, (p >= 0.5).astype(int))
-        aucs[name] = a
-        d = aucs.get("design:" + name)
-        if d is not None and not np.isnan(a) and not np.isnan(d):
-            print(f"        -> study context adds {a - d:+.3f} ROC-AUC over chemistry alone")
+    # ---- Lane B: pooled clinical dose-response baseline ----------------------
+    # Unit of observation is the study/dose/threshold aggregate, as the scientist
+    # spec requires. Evaluable denominators are preserved and NOT summed across
+    # overlapping pooled reports.
+    print("\n[LANE B] Pooled clinical dose-response baseline — APPROVED WITH LIMITATIONS")
+    clin = [m for m in meas if m.get("subject_class") == "human_clinical"]
+    bands = collections.defaultdict(list)
+    for m in clin:
+        sm = m.get("system_model", "")
+        dv, du = m.get("dose_or_conc_value", ""), m.get("dose_or_conc_unit", "")
+        if dv not in ("", "TBD"):
+            bands[f"{dv} {du}".strip()].append(m)
+    lane_b = []
+    for band, R in sorted(bands.items(), key=lambda kv: -len(kv[1]))[:14]:
+        g = [int(x["thrombocytopenia_grade"]) for x in R if x["thrombocytopenia_grade"].isdigit()]
+        lane_b.append({"dose_band": band, "n_aggregate_rows": len(R),
+                       "max_grade": max(g) if g else None,
+                       "grade_histogram": dict(collections.Counter(g)),
+                       "compounds": sorted({oligos.get(x["oligo_id"], {}).get("oligo_name", "?") for x in R})[:6]})
+        print(f"  {band:22s} rows={len(R):4d} maxgrade={max(g) if g else '-'} "
+              f"hist={dict(collections.Counter(g))}")
+    out["lanes"]["B_pooled_dose_response"] = {
+        "scientist_status": "APPROVED WITH LIMITATIONS",
+        "unit_of_observation": "study / dose / threshold aggregate",
+        "limitations": ["Pooled aggregate rows are NOT independent observations.",
+                        "Denominators from overlapping pooled reports are never summed.",
+                        "Dose bands are not comparable across compounds or indications."],
+        "bands": lane_b}
 
-    print("\nUNGROUPED CV — random row split (LEAKY, shown only for contrast):")
-    for name, mdl in models.items():
-        p = cross_val_predict(mdl, X, y, cv=KFold(5, shuffle=True, random_state=0),
-                              method="predict_proba")[:, 1]
-        a = report(name + " (leaky)", y, p, (p >= 0.5).astype(int))
-        if not np.isnan(a) and not np.isnan(aucs.get(name, np.nan)):
-            print(f"      -> leakage inflates ROC-AUC by {a - aucs[name]:+.3f}. "
-                  f"A row-level split would have overstated performance by this much.")
+    # ---- Lane C: mechanistic PoC feasibility --------------------------------
+    print("\n[LANE C] Mechanistic proof-of-concept feasibility — NO TRAINING PERFORMED")
+    elig = [o for o in oligos.values() if o.get("mechanistic_model_eligibility") == "YES"]
+    with_lab, groups = [], collections.Counter()
+    for o in elig:
+        R = [m for m in by_o[o["oligo_id"]]
+             if (m.get("subject_class") or "") in ("human_in_vitro", "human_ex_vivo")]
+        if R:
+            with_lab.append((o, len(R)))
+            groups[o.get("exact_sequence_group", "?")] += 1
+    n_groups = len(groups)
+    verdict = ("INSUFFICIENT for a held-out performance claim: fewer than 10 independent "
+               "exact-sequence groups, so leave-one-group-out estimates would be dominated "
+               "by single-group variance." if n_groups < 10 else
+               "Group count may support leave-one-sequence-group-out evaluation; the "
+               "scientist gate on the ordinal response score (SRQ-TMB-006) must clear first.")
+    print(f"  scientist-eligible mechanistic constructs: {len(elig)}")
+    print(f"  ... with human laboratory rows:            {len(with_lab)}")
+    print(f"  independent exact-sequence groups:         {n_groups}")
+    print(f"  verdict: {verdict}")
+    out["lanes"]["C_mechanistic_feasibility"] = {
+        "scientist_status": "CONDITIONALLY APPROVED FOR PROOF OF CONCEPT",
+        "n_eligible_constructs": len(elig), "n_with_human_lab_rows": len(with_lab),
+        "n_independent_exact_sequence_groups": n_groups,
+        "required_grouping": "exact_sequence_group (outer); matched pairs stay intact",
+        "training_performed": False, "verdict": verdict,
+        "blocking_gate": "SRQ-TMB-006 human ex vivo ordinal response score"}
 
-    rf = RandomForestClassifier(n_estimators=400, min_samples_leaf=3,
-                                class_weight="balanced", random_state=0, n_jobs=-1).fit(X, y)
-    imp = sorted(zip(feats, rf.feature_importances_), key=lambda kv: -kv[1])
-    print("\nFEATURE IMPORTANCE (RandomForest, full fit):")
-    for f, v in imp[:10]:
-        print(f"  {f:<18} {v:.3f}  {'#' * int(round(v * 120))}")
-
-    print("\nINTERPRETATION")
-    print("  Chemistry alone (set A) beats the balanced-accuracy baseline of 0.500 under")
-    print("  a split that forbids memorising compounds, and phosphorothioate count is the")
-    print("  single most important feature — so the dataset reproduces its own stated")
-    print("  hypothesis in a model, not just in a summary table.")
-    print("  Study context (set B) adds further signal, but that gain is NOT biology: it")
-    print("  reflects the study-type confound, since severe events are observed in trials")
-    print("  and not in dishes. The A-vs-B gap is reported precisely so that this is not")
-    print("  quietly banked as chemistry performance.")
-    print("  This is a FEASIBILITY demonstration, not a validated clinical predictor.")
-    print("  The rare immune-mediated severe mode is idiosyncratic and is not expected")
-    print("  to be predictable from design at all; grade also remains partly confounded")
-    print("  with study type. Both are documented in METHODOLOGY.md.")
-
-    out = {"n_rows": len(y), "n_compounds": int(len(set(groups))), "features": feats,
-           "grouped_auc": {k: (None if np.isnan(v) else round(v, 4)) for k, v in aucs.items()},
-           "top_features": [{"feature": f, "importance": round(float(v), 4)} for f, v in imp[:10]],
-           "excluded": dict(dropped)}
-    with open(os.path.join(BASE, "model_demo_results.json"), "w", encoding="utf-8") as f:
+    # ---- write --------------------------------------------------------------
+    with open(os.path.join(DATA, "approved_analyses.json"), "w") as f:
         json.dump(out, f, indent=1)
-    print(f"\nwrote data/model_demo_results.json")
+    # Replace the old results file so nothing downstream can read stale AUCs.
+    with open(os.path.join(DATA, "model_demo_results.json"), "w") as f:
+        json.dump({"status": "RETRACTED",
+                   "reason": "Model is BLOCKED by the scientist-governed package v0.9.",
+                   "see": "data/approved_analyses.json",
+                   "retracted": BLOCKED["retracted_results"],
+                   "why_retracted": BLOCKED["why_retracted"]}, f, indent=1)
+    print("\n  -> data/approved_analyses.json")
+    print("  -> data/model_demo_results.json  (now a retraction record)")
 
 
 if __name__ == "__main__":

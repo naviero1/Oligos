@@ -121,20 +121,54 @@ def stats():
     for key, band in (("ps0", (0, 0)), ("ps13", (13, 16)), ("ps17", (17, 19)), ("ps20", (20, 99))):
         d["mg_" + key] = f"{mg(psband(*band)):.2f}"
 
-    ml_path = os.path.join(BASE, "model_demo_results.json")
-    if os.path.exists(ml_path):
-        ml = json.load(open(ml_path, encoding="utf-8"))
-        d["ml_rows"] = fmt(ml["n_rows"])
-        d["ml_comp"] = fmt(ml["n_compounds"])
-        ga = ml.get("grouped_auc", {})
-        d["ml_design"] = f"{ga.get('design:RandomForest', 0):.3f}"
-        d["ml_context"] = f"{ga.get('RandomForest', 0):.3f}"
-        d["ml_gap"] = f"{ga.get('RandomForest', 0) - ga.get('design:RandomForest', 0):+.3f}"
-        d["ml_top"] = ml["top_features"][0]["feature"] if ml.get("top_features") else "ps_count"
+    # HUMAN-ONLY structure-activity statistics. The mg_* values above pool human
+    # and animal rows, which Beebop's Priority 3 rightly objects to: a mean over
+    # heterogeneous species, exposures and assay systems is not a quantity the
+    # documents should lead with. These hmg_* values restrict to human evidence,
+    # and the narrative quotes them instead.
+    def only_human(rows):
+        return [r for r in rows if (r.get("subject_class") or "").startswith("human")]
+    for key, rows in (("hmg_pmo", bb_rows.get("PMO_neutral", [])),
+                      ("hmg_mix", bb_rows.get("PS_PO_mix", [])),
+                      ("hmg_po", bb_rows.get("full_PO", [])),
+                      ("hmg_ps", bb_rows.get("full_PS", []))):
+        H = only_human(rows)
+        d[key] = f"{mg(H):.2f}" if H else "n/a"
+        d["hn" + key[3:]] = fmt(len(H))
+        d["hc" + key[3:]] = fmt(len({r["oligo_id"] for r in H}))
+    for key, band in (("ps0", (0, 0)), ("ps13", (13, 16)), ("ps17", (17, 19)), ("ps20", (20, 99))):
+        H = only_human(psband(*band))
+        d["hmg_" + key] = f"{mg(H):.2f}" if H else "n/a"
+    oc_rows = collections.defaultdict(list)
+    for r in keep:
+        oc_rows[odesign.get(r["oligo_id"], {}).get("oligo_class", "?")].append(r)
+    for cls, key in (("PMO", "hmg_mod_pmo"), ("GalNAc_siRNA", "hmg_mod_galnac"),
+                     ("siRNA", "hmg_mod_sirna"), ("splice_switching_ASO", "hmg_mod_sso"),
+                     ("ASO_gapmer", "hmg_mod_gapmer"), ("aptamer", "hmg_mod_aptamer")):
+        H = only_human(oc_rows.get(cls, []))
+        d[key] = f"{mg(H):.2f}" if H else "n/a"
+
+    # The sequence-only classifier these placeholders used to carry is BLOCKED by
+    # the scientist-governed package, and its AUCs are retracted. The submission
+    # documents now quote the authorised lanes instead. Reading the old keys would
+    # silently emit 0.000, so they are gone rather than defaulted.
+    ap = os.path.join(BASE, "approved_analyses.json")
+    if os.path.exists(ap):
+        aa = json.load(open(ap, encoding="utf-8"))
+        la = aa.get("lanes", {}).get("A_matched_contrasts", {})
+        lc = aa.get("lanes", {}).get("C_mechanistic_feasibility", {})
+        d["model_status"] = aa.get("blocked_model", {}).get("scientist_status", "BLOCKED")
+        d["ml_contrasts"] = fmt(la.get("n_contrasts", 0))
+        d["ml_direction_concordance"] = la.get("direction_concordance", "-")
+        d["ml_absolute_concordance"] = la.get("absolute_concordance", "-")
+        d["ml_mech_constructs"] = fmt(lc.get("n_eligible_constructs", 0))
+        d["ml_mech_groups"] = fmt(lc.get("n_independent_exact_sequence_groups", 0))
+        d["ml_trained"] = "no"
     for b in bridge[:3]:
         i = bridge.index(b) + 1
         d[f"bridge{i}_name"] = b["oligo_name"]
-        d[f"bridge{i}_h"] = b["n_human_rows"]
+        d[f"bridge{i}_h"] = fmt(int(b.get("n_human_clinical_rows", 0) or 0)
+                                + int(b.get("n_human_lab_rows", 0) or 0))
         d[f"bridge{i}_a"] = b["n_animal_rows"]
     return d
 

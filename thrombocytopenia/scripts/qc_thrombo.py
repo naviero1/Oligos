@@ -25,7 +25,15 @@ OLIGO_COLS = ["oligo_id", "oligo_name", "aliases", "oligo_class", "target_gene",
               "indication", "developer", "max_phase", "length_nt",
               "backbone_chemistry", "sugar_modifications", "gapmer_design",
               "conjugate", "ps_count", "sequence_5to3", "modification_map",
-              "purity_pct", "purity_method", "design_source", "notes"]
+              "purity_pct", "purity_method", "design_source", "notes",
+              # --- scientific governance, ported from the scientist package v0.9 ---
+              # Beebop P2 acceptance: "Every model-eligible row traces to a current
+              # scientific disposition." These columns carry that trace, plus the
+              # leakage grouping the scientist package requires for any split.
+              "scientist_record_id", "scientist_disposition",
+              "clinical_model_eligibility", "mechanistic_model_eligibility",
+              "exact_sequence_group", "scaffold_family", "publication_group",
+              "matched_pair_id", "modification_map_notation", "characterization_source"]
 
 MEAS_COLS = ["measurement_id", "oligo_id", "study_type", "species", "system_model",
              "tissue", "delivery_method", "dose_or_conc_value", "dose_or_conc_unit",
@@ -204,6 +212,102 @@ def main():
         if s and s not in ("TBD", "NA") and o.get("length_nt", "TBD") not in ("TBD", "", str(len(s))):
             warnings.append(
                 f"oligos {o['oligo_id']}: length_nt={o['length_nt']} != len(sequence)={len(s)}")
+
+    # --- GOVERNANCE GATES -------------------------------------------------------
+    # Added 2026-10-01 in response to Beebop's Priority 5, which asks for targeted
+    # checks against four specific failure modes. Each is an ERROR, not a warning:
+    # every one of them would put a scientifically false claim into a release.
+
+    # (1) No reversal of a scientist decision. Model eligibility may only be
+    #     non-NO where a scientist record actually grants it.
+    ELIG_OK = {"NO", "", "PROVISIONAL ONLY", "PROVISIONAL COMPARATOR",
+               "PROVISIONAL - POSITIVE ONLY", "TREATMENT-AWARE ONLY"}
+    for o in oligos:
+        ce = (o.get("clinical_model_eligibility") or "").strip()
+        me = (o.get("mechanistic_model_eligibility") or "").strip()
+        sid = (o.get("scientist_record_id") or "").strip()
+        if ce not in ELIG_OK:
+            errors.append(f"oligos {o['oligo_id']}: clinical_model_eligibility={ce!r} "
+                          f"not a scientist-defined value")
+        if ce not in ("NO", "") and not sid:
+            errors.append(f"oligos {o['oligo_id']}: clinical_model_eligibility={ce!r} "
+                          f"without a scientist_record_id — a scientist decision cannot be "
+                          f"granted by this pipeline")
+        if me == "YES" and not sid:
+            errors.append(f"oligos {o['oligo_id']}: mechanistic_model_eligibility=YES "
+                          f"without a scientist_record_id")
+        if sid and not (o.get("scientist_disposition") or "").strip():
+            errors.append(f"oligos {o['oligo_id']}: has scientist_record_id {sid} but no disposition")
+
+    # (2) No unsupported negatives. The scientist package rules
+    #     CLEAN_CLINICAL_NEGATIVE "NOT YET AVAILABLE" and the qualified
+    #     clinical-negative count 0. Nothing in this dataset may assert one.
+    NEG_WORDS = re.compile(r"clean[_ ]clinical[_ ]negative|qualified[_ ]negative|"
+                           r"confirmed[_ ]negative|clinical[_ ]negative", re.I)
+    for m in meas:
+        blob = f"{m.get('notes','')} {m.get('readout_name','')} {m.get('effect_vs_control','')}"
+        if NEG_WORDS.search(blob):
+            errors.append(f"measurements {m['measurement_id']}: asserts a clinical negative "
+                          f"({NEG_WORDS.search(blob).group()!r}); the scientist package records "
+                          f"zero qualified clinical negatives")
+
+    # (3) No animal leakage into the human-facing views. Any compound ranked in
+    #     germans_analysis.csv above a compound WITH human evidence must itself
+    #     have human evidence.
+    gpath = os.path.join(BASE, "germans_analysis.csv")
+    if os.path.exists(gpath):
+        with open(gpath, newline="", encoding="utf-8") as f:
+            g = list(csv.DictReader(f))
+        seen_no = None
+        for r in g:
+            if r.get("has_human_evidence") == "no" and seen_no is None:
+                seen_no = r.get("rank")
+            elif r.get("has_human_evidence") == "yes" and seen_no is not None:
+                errors.append(f"germans_analysis.csv: {r.get('oligo_name')} (rank {r.get('rank')}) "
+                              f"has human evidence but ranks BELOW an animal-only compound at "
+                              f"rank {seen_no} — animal data is influencing the human ranking")
+                break
+        for r in g:
+            if r.get("has_human_evidence") == "no" and (r.get("human_clinical_max_grade")
+                                                        or r.get("human_lab_max_grade")):
+                errors.append(f"germans_analysis.csv: {r.get('oligo_name')} flagged no human "
+                              f"evidence but carries a human grade")
+
+    # (4) Exact-sequence group integrity. Every oligo sharing a normalised
+    #     sequence must share one group label, or an outer split separates
+    #     isosequential constructs and the leakage the grouping exists to
+    #     prevent happens anyway.
+    bysq = collections.defaultdict(set)
+    for o in oligos:
+        sq = re.sub(r"[^ACGTU]", "", (o.get("sequence_5to3") or "").upper()).replace("U", "T")
+        if len(sq) >= 8:
+            bysq[sq].add((o.get("exact_sequence_group") or "").strip())
+    for sq, labels in bysq.items():
+        if len(labels) > 1:
+            errors.append(f"exact_sequence_group split across one sequence {sq[:20]}: {sorted(labels)}")
+
+    # (5) Trial double-counting, once the study registry exists.
+    spath = os.path.join(BASE, "studies.csv")
+    if os.path.exists(spath):
+        with open(spath, newline="", encoding="utf-8") as f:
+            studies = list(csv.DictReader(f))
+        seen_reg = collections.defaultdict(list)
+        for st in studies:
+            rid = (st.get("registry_id") or "").strip().upper()
+            if rid.startswith("NCT"):
+                seen_reg[rid].append(st.get("study_id", "?"))
+        for rid, ids in seen_reg.items():
+            if len(ids) > 1:
+                errors.append(f"studies.csv: registry id {rid} appears under {len(ids)} study "
+                              f"records {ids} — one trial counted more than once")
+        counted = [st for st in studies
+                   if (st.get("evidence_unit_type") or "") == "registered_trial"
+                   and (st.get("eligibility_decision") or "") == "included"]
+        warnings.append(f"study registry: {len(studies)} evidence units, "
+                        f"{len(counted)} counted as verified included registered trials")
+    else:
+        warnings.append("data/studies.csv not built yet — the headline human trial count "
+                        "remains 'not yet established'; row counts must NOT be reported as trials")
 
     # --- report -----------------------------------------------------------------
     print(f"oligos.csv        {len(oligos):>4} rows x {len(OLIGO_COLS)} cols   {opath}")

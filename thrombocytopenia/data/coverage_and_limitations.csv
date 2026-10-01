@@ -1,0 +1,12 @@
+item,count,limitation
+human clinical outcome records,1002,"OUTCOME RECORDS, NOT TRIALS. Many are dose-band cells of one pooled table. See data/studies.csv for the trial-grain count."
+human laboratory / ex vivo records,451,Human in vitro and ex vivo platelet systems. Not clinical trials; directly relevant to the challenge's stated in-vitro-human priority.
+animal records (appendix),497,"Supporting evidence only. Excluded from every human count, label and ranking."
+unresolved records,9,Species or subject class not established. Assigned to neither side.
+compounds,259,"Compound records, not trials."
+compounds with a sequence,198,61 carry TBD.
+compounds with a per-residue modification map,36,223 carry TBD. Location of chemical modifications is a Phase 2 requirement.
+compounds with a purity value,0,"Purity is NOT REPORTED in the sources curated so far, including the scientist-governed package. Recorded as TBD, never inferred."
+compounds scientist-eligible for clinical modelling,7,PROVISIONAL in every case. All other compounds are model-ineligible by default.
+compounds scientist-eligible for mechanistic modelling,16,Per the scientist-governed package v0.9 training manifest.
+qualified clinical negatives,0,The scientist package rules CLEAN_CLINICAL_NEGATIVE 'NOT YET AVAILABLE'. Absence of a reported platelet event is NOT a measured negative.

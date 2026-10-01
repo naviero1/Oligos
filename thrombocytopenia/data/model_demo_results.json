@@ -1,76 +1,20 @@
 {
- "n_rows": 1728,
- "n_compounds": 228,
- "features": [
-  "ps_count",
-  "length_nt",
-  "bb_full_PS",
-  "bb_PMO_neutral",
-  "bb_full_PO",
-  "bb_PS_PO_mix",
-  "cls_gapmer",
-  "cls_siRNA",
-  "cls_PMO",
-  "cls_aptamer",
-  "conj_none",
-  "conj_GalNAc",
-  "sug_MOE",
-  "sug_LNA",
-  "sug_cEt",
-  "sug_DNAgap",
-  "is_human",
-  "is_invitro"
- ],
- "grouped_auc": {
-  "design:LogisticRegression": 0.6073,
-  "design:RandomForest": 0.6272,
-  "LogisticRegression": 0.6343,
-  "RandomForest": 0.6895
+ "status": "RETRACTED",
+ "reason": "Model is BLOCKED by the scientist-governed package v0.9.",
+ "see": "data/approved_analyses.json",
+ "retracted": {
+  "grouped_auc_design_LogisticRegression": 0.6073,
+  "grouped_auc_design_RandomForest": 0.6272,
+  "grouped_auc_LogisticRegression": 0.6343,
+  "grouped_auc_RandomForest": 0.6895,
+  "n_rows": 1728,
+  "n_compounds": 228
  },
- "top_features": [
-  {
-   "feature": "ps_count",
-   "importance": 0.1673
-  },
-  {
-   "feature": "is_human",
-   "importance": 0.1616
-  },
-  {
-   "feature": "length_nt",
-   "importance": 0.1281
-  },
-  {
-   "feature": "is_invitro",
-   "importance": 0.1207
-  },
-  {
-   "feature": "conj_GalNAc",
-   "importance": 0.0741
-  },
-  {
-   "feature": "conj_none",
-   "importance": 0.0631
-  },
-  {
-   "feature": "sug_MOE",
-   "importance": 0.058
-  },
-  {
-   "feature": "sug_DNAgap",
-   "importance": 0.0447
-  },
-  {
-   "feature": "bb_full_PS",
-   "importance": 0.0389
-  },
-  {
-   "feature": "bb_full_PO",
-   "importance": 0.0336
-  }
- ],
- "excluded": {
-  "control_arm": 138,
-  "mechanism_confounded": 93
- }
+ "why_retracted": [
+  "228 compounds used; 6 are scientist-eligible for clinical modelling, all PROVISIONAL",
+  "grouped by oligo_id, not exact_sequence_group: 85 records across 35 groups share a sequence",
+  "grade 0 rows used as negatives; qualified clinical negatives = 0",
+  "387 pooled dose-band rows treated as independent observations",
+  "is_human was the 2nd most important feature (0.162)"
+ ]
 }

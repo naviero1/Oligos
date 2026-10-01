@@ -1,0 +1,23 @@
+Gate_ID,Freeze_Requirement,Status,Evidence_or_Current_State,Required_Action
+FRZ-01,All 40 source PDFs identity-audited,PASS,Source_QC has 40 records and mismatch dispositions.,Preserve source hashes.
+FRZ-02,All model-eligible oligos have stable IDs,PASS,45 oligo/product records with stable Sequence_Record_ID.,Oscar enforces unique key.
+FRZ-03,Exact sequence represented correctly,PASS WITH DUPLEX EXCEPTION HANDLED,44 exact single/core maps; Givosiran represented by component rows.,Do not concatenate duplex strands.
+FRZ-04,Position-resolved chemistry complete for exact constructs,PASS,831 main + 44 duplex-component position rows.,Run automated count/uniqueness checks.
+FRZ-05,Human clinical and ex vivo evidence separated,PASS,Distinct ground-truth tables and evidence tiers.,Preserve in exports/models.
+FRZ-06,Clinical endpoint ontology frozen,PROVISIONAL PASS,"Platelet count, activation, coagulation, bleeding, thrombosis, intended pharmacology, and therapeutic correction separated.",German final signoff before model freeze.
+FRZ-07,Evidence-quality score and tier assigned,PASS IN v0.9,110 human evidence records scored with transparent criteria.,Do not use tier as outcome label.
+FRZ-08,Training eligibility manifest frozen,PASS IN v0.9,57 permitted/held data objects mapped to model lanes.,German signs manifest before Gustavo runs.
+FRZ-09,Sequence/scaffold leakage groups defined,PASS,"All 45 oligos grouped by sequence, family, publication, and program.",Oscar validates no split leakage.
+FRZ-10,Human mechanistic POC protocol prespecified,PASS IN v0.9,Twenty-step protocol with stop criteria and prohibited claims.,Gustavo accepts protocol unchanged or returns deviations.
+FRZ-11,Clean sequence-linked clinical negatives available,FAIL / BLOCKER,Zero candidates pass all seven negative gates.,Do not train sequence-only clinical classifier.
+FRZ-12,Clinical positive anchors sufficient for descriptive analysis,PASS WITH LIMITATIONS,Four sequence-linked positive anchors plus pooled/class/context evidence.,No balanced classifier claim.
+FRZ-13,Raw numeric ex vivo outcomes sufficiently complete,PARTIAL,26/75 curated ex vivo rows have numeric observed values.,Acquire Sewing S1; retain qualitative status.
+FRZ-14,Analytical identity methods available,FAIL / MAJOR GAP,0/45 reported.,Recover or disclose NOT_REPORTED.
+FRZ-15,Purity values available,FAIL / MAJOR GAP,0/45 reported.,Recover or disclose NOT_REPORTED.
+FRZ-16,SafeSense structured data locally acquired,FAIL / EXTERNAL INPUT,Official mmc4.csv URL identified; automated transfer blocked.,Manual browser download/upload.
+FRZ-17,Sewing S1 raw XLSX locally acquired,FAIL / EXTERNAL INPUT,Supplement confirmed; local file absent.,Manual browser download/upload.
+FRZ-18,Oscar relational implementation tested,NOT STARTED,Schema/data dictionary/QA specifications ready.,Implement database and deterministic export tests.
+FRZ-19,Gustavo POC outputs scientifically reviewed,NOT STARTED,Model card and analysis plan ready.,Run only after manifest acceptance.
+FRZ-20,"Public repository, license, DOI/persistent ID selected",NOT STARTED,PADP outline exists.,Select repository and preservation plan.
+FRZ-21,Final public export independently reproducible,NOT STARTED,Provisional CSV/JSON export exists.,Recreate from code and compare hashes.
+FRZ-22,Final scientist signoff,NOT GRANTED,Engineering/POC may proceed; final public/clinical claims blocked.,German signs after all mandatory gates.

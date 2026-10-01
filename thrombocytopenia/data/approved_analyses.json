@@ -1,0 +1,556 @@
+{
+ "blocked_model": {
+  "model": "Sequence-only clinical thrombocytopenia classifier",
+  "scientist_status": "BLOCKED",
+  "scientist_source": "scientist_v0.9 workbook, sheet Model_Specification_v0.8",
+  "training_permission": "All training prohibited",
+  "permitted_claim": "None",
+  "action_taken": "NOT RUN. Previous grouped-AUC results retracted.",
+  "retracted_results": {
+   "grouped_auc_design_LogisticRegression": 0.6073,
+   "grouped_auc_design_RandomForest": 0.6272,
+   "grouped_auc_LogisticRegression": 0.6343,
+   "grouped_auc_RandomForest": 0.6895,
+   "n_rows": 1728,
+   "n_compounds": 228
+  },
+  "why_retracted": [
+   "228 compounds used; 6 are scientist-eligible for clinical modelling, all PROVISIONAL",
+   "grouped by oligo_id, not exact_sequence_group: 85 records across 35 groups share a sequence",
+   "grade 0 rows used as negatives; qualified clinical negatives = 0",
+   "387 pooled dose-band rows treated as independent observations",
+   "is_human was the 2nd most important feature (0.162)"
+  ]
+ },
+ "lanes": {
+  "A_matched_contrasts": {
+   "scientist_status": "APPROVED FOR DESCRIPTIVE ANALYSIS",
+   "definitions_from": "scientist_v0.9 sheet Mechanistic_Contrasts_v0.8",
+   "n_contrasts": 6,
+   "direction_concordance": "6/6",
+   "absolute_concordance": "1/6",
+   "concordance_note": "Scientist 0-3 adjudicated score and dataset grade were derived independently under different rubrics; absolute agreement is not expected. Sign agreement is the reproducibility statement. This is not a model performance claim.",
+   "unresolved_for_scientist": [
+    {
+     "contrast_id": "MCON-TMB-002",
+     "checks": [
+      "B: scientist score 0 vs branch max grade 1"
+     ]
+    },
+    {
+     "contrast_id": "MCON-TMB-003",
+     "checks": [
+      "A: scientist score 3 vs branch max grade 2",
+      "B: scientist score 0 vs branch max grade 1"
+     ]
+    },
+    {
+     "contrast_id": "MCON-TMB-004",
+     "checks": [
+      "A: scientist score 3 vs branch max grade 2",
+      "B: scientist score 0 vs branch max grade 1"
+     ]
+    },
+    {
+     "contrast_id": "MCON-TMB-005",
+     "checks": [
+      "A: scientist score 0 vs branch max grade 1"
+     ]
+    },
+    {
+     "contrast_id": "MCON-TMB-006",
+     "checks": [
+      "A: scientist score 0 vs branch max grade 1"
+     ]
+    }
+   ],
+   "contrasts": [
+    {
+     "contrast_id": "MCON-TMB-001",
+     "pair": "ODN 2395 vs ODN 2395-PO",
+     "comparison_family": "ODN2395 matched sequence",
+     "matched_factors": "Same 22-mer sequence and human platelet assay family",
+     "primary_differing_factor": "Backbone PS vs PO",
+     "scientist_score_A": 3,
+     "scientist_score_B": 0,
+     "scientist_delta_B_minus_A": "-3",
+     "scientist_interpretation": "Full PS ODN2395 was strongly activating whereas the identical-sequence PO control was low/inactive, supporting a backbone contribution in this assay context.",
+     "causal_limitation": "One matched construct pair in a defined in vitro system; not a universal estimate of PS risk.",
+     "permitted_use": "Descriptive matched-contrast analysis; keep paired constructs in the same leakage group.",
+     "A": {
+      "scientist_record": "OLG-TMB-007",
+      "branch_oligo_id": "TOLG244",
+      "compound": "ODN2395_Thio",
+      "sequence": "TCGTCGTTTTCGGCGCGCGCCG",
+      "ps_count": "21",
+      "n_human_lab_rows": 93,
+      "branch_max_grade": 3,
+      "branch_grade_histogram": {
+       "0": 23,
+       "1": 11,
+       "2": 41,
+       "3": 18
+      }
+     },
+     "B": {
+      "scientist_record": "OLG-TMB-042",
+      "branch_oligo_id": "TOLG243",
+      "compound": "ODN2395-PO",
+      "sequence": "TCGTCGTTTTCGGCGCGCGCCG",
+      "ps_count": "0",
+      "n_human_lab_rows": 1,
+      "branch_max_grade": 0,
+      "branch_grade_histogram": {
+       "0": 1
+      }
+     },
+     "consistency_checks": [
+      "consistent"
+     ]
+    },
+    {
+     "contrast_id": "MCON-TMB-002",
+     "pair": "AC8-PS vs AC8-LNA-PS",
+     "comparison_family": "AC8 matched sequence",
+     "matched_factors": "Same 16-mer alternating AC sequence; full PS backbone",
+     "primary_differing_factor": "LNA wings added",
+     "scientist_score_A": 3,
+     "scientist_score_B": 0,
+     "scientist_delta_B_minus_A": "-3",
+     "scientist_interpretation": "LNA-wing variants were markedly attenuated relative to their same-sequence unmodified DNA parents in the Sewing assay panel.",
+     "causal_limitation": "Scaffold- and assay-specific mitigation evidence; do not generalize that LNA is universally protective.",
+     "permitted_use": "Descriptive matched-contrast analysis; keep paired constructs in the same leakage group.",
+     "A": {
+      "scientist_record": "OLG-TMB-035",
+      "branch_oligo_id": "TOLG007",
+      "compound": "(AC)8",
+      "sequence": "ACACACACACACACAC",
+      "ps_count": "15",
+      "n_human_lab_rows": 32,
+      "branch_max_grade": 3,
+      "branch_grade_histogram": {
+       "2": 11,
+       "0": 8,
+       "3": 4,
+       "1": 9
+      }
+     },
+     "B": {
+      "scientist_record": "OLG-TMB-039",
+      "branch_oligo_id": "TOLG008",
+      "compound": "(AC)8 LNA",
+      "sequence": "ACACACACACACACAC",
+      "ps_count": "15",
+      "n_human_lab_rows": 6,
+      "branch_max_grade": 1,
+      "branch_grade_histogram": {
+       "0": 5,
+       "1": 1
+      }
+     },
+     "consistency_checks": [
+      "B: scientist score 0 vs branch max grade 1"
+     ]
+    },
+    {
+     "contrast_id": "MCON-TMB-003",
+     "pair": "AC9-PS vs AC9-LNA-PS",
+     "comparison_family": "AC9 matched sequence",
+     "matched_factors": "Same 18-mer alternating AC sequence; full PS backbone",
+     "primary_differing_factor": "LNA wings added",
+     "scientist_score_A": 3,
+     "scientist_score_B": 0,
+     "scientist_delta_B_minus_A": "-3",
+     "scientist_interpretation": "LNA-wing variants were markedly attenuated relative to their same-sequence unmodified DNA parents in the Sewing assay panel.",
+     "causal_limitation": "Scaffold- and assay-specific mitigation evidence; do not generalize that LNA is universally protective.",
+     "permitted_use": "Descriptive matched-contrast analysis; keep paired constructs in the same leakage group.",
+     "A": {
+      "scientist_record": "OLG-TMB-036",
+      "branch_oligo_id": "TOLG009",
+      "compound": "(AC)9",
+      "sequence": "ACACACACACACACACAC",
+      "ps_count": "17",
+      "n_human_lab_rows": 9,
+      "branch_max_grade": 2,
+      "branch_grade_histogram": {
+       "2": 4,
+       "1": 4,
+       "0": 1
+      }
+     },
+     "B": {
+      "scientist_record": "OLG-TMB-040",
+      "branch_oligo_id": "TOLG010",
+      "compound": "(AC)9 LNA",
+      "sequence": "ACACACACACACACACAC",
+      "ps_count": "17",
+      "n_human_lab_rows": 6,
+      "branch_max_grade": 1,
+      "branch_grade_histogram": {
+       "0": 4,
+       "1": 2
+      }
+     },
+     "consistency_checks": [
+      "A: scientist score 3 vs branch max grade 2",
+      "B: scientist score 0 vs branch max grade 1"
+     ]
+    },
+    {
+     "contrast_id": "MCON-TMB-004",
+     "pair": "AC10-PS vs AC10-LNA-PS",
+     "comparison_family": "AC10 matched sequence",
+     "matched_factors": "Same 20-mer alternating AC sequence; full PS backbone",
+     "primary_differing_factor": "LNA wings added",
+     "scientist_score_A": 3,
+     "scientist_score_B": 0,
+     "scientist_delta_B_minus_A": "-3",
+     "scientist_interpretation": "LNA-wing variants were markedly attenuated relative to their same-sequence unmodified DNA parents in the Sewing assay panel.",
+     "causal_limitation": "Scaffold- and assay-specific mitigation evidence; do not generalize that LNA is universally protective.",
+     "permitted_use": "Descriptive matched-contrast analysis; keep paired constructs in the same leakage group.",
+     "A": {
+      "scientist_record": "OLG-TMB-037",
+      "branch_oligo_id": "TOLG001",
+      "compound": "(AC)10",
+      "sequence": "ACACACACACACACACACAC",
+      "ps_count": "19",
+      "n_human_lab_rows": 9,
+      "branch_max_grade": 2,
+      "branch_grade_histogram": {
+       "2": 4,
+       "1": 4,
+       "0": 1
+      }
+     },
+     "B": {
+      "scientist_record": "OLG-TMB-041",
+      "branch_oligo_id": "TOLG002",
+      "compound": "(AC)10 LNA",
+      "sequence": "ACACACACACACACACACAC",
+      "ps_count": "19",
+      "n_human_lab_rows": 6,
+      "branch_max_grade": 1,
+      "branch_grade_histogram": {
+       "1": 4,
+       "0": 2
+      }
+     },
+     "consistency_checks": [
+      "A: scientist score 3 vs branch max grade 2",
+      "B: scientist score 0 vs branch max grade 1"
+     ]
+    },
+    {
+     "contrast_id": "MCON-TMB-005",
+     "pair": "487660 vs 104838",
+     "comparison_family": "2\u2032MOE gapmer architecture comparator",
+     "matched_factors": "Same 20-mer 5-10-5 2\u2032MOE full-PS architecture in Slingsby panel",
+     "primary_differing_factor": "Nucleotide sequence",
+     "scientist_score_A": 0,
+     "scientist_score_B": 2,
+     "scientist_delta_B_minus_A": "2",
+     "scientist_interpretation": "Different nucleotide sequences produced different responses despite similar length and 2\u2032MOE/full-PS architecture, supporting a sequence contribution.",
+     "causal_limitation": "Small within-study panel; cannot estimate sequence causality independently of all unmeasured physicochemical features.",
+     "permitted_use": "Descriptive matched-contrast analysis; keep paired constructs in the same leakage group.",
+     "A": {
+      "scientist_record": "OLG-TMB-003",
+      "branch_oligo_id": "TOLG171",
+      "compound": "ISIS 487660",
+      "sequence": "CCAGCTCAACCCTTCTTTAA",
+      "ps_count": "19",
+      "n_human_lab_rows": 15,
+      "branch_max_grade": 1,
+      "branch_grade_histogram": {
+       "1": 2,
+       "0": 13
+      }
+     },
+     "B": {
+      "scientist_record": "OLG-TMB-004",
+      "branch_oligo_id": "TOLG074",
+      "compound": "ISIS 104838",
+      "sequence": "GCTGATTAGAGAGAGGTCCC",
+      "ps_count": "19",
+      "n_human_lab_rows": 34,
+      "branch_max_grade": 2,
+      "branch_grade_histogram": {
+       "0": 18,
+       "1": 3,
+       "2": 13
+      }
+     },
+     "consistency_checks": [
+      "A: scientist score 0 vs branch max grade 1"
+     ]
+    },
+    {
+     "contrast_id": "MCON-TMB-006",
+     "pair": "487660 vs 501861",
+     "comparison_family": "2\u2032MOE gapmer architecture comparator",
+     "matched_factors": "Same 20-mer 5-10-5 2\u2032MOE full-PS architecture in Slingsby panel",
+     "primary_differing_factor": "Nucleotide sequence",
+     "scientist_score_A": 0,
+     "scientist_score_B": 2,
+     "scientist_delta_B_minus_A": "2",
+     "scientist_interpretation": "Different nucleotide sequences produced different responses despite similar length and 2\u2032MOE/full-PS architecture, supporting a sequence contribution.",
+     "causal_limitation": "Small within-study panel; cannot estimate sequence causality independently of all unmeasured physicochemical features.",
+     "permitted_use": "Descriptive matched-contrast analysis; keep paired constructs in the same leakage group.",
+     "A": {
+      "scientist_record": "OLG-TMB-003",
+      "branch_oligo_id": "TOLG171",
+      "compound": "ISIS 487660",
+      "sequence": "CCAGCTCAACCCTTCTTTAA",
+      "ps_count": "19",
+      "n_human_lab_rows": 15,
+      "branch_max_grade": 1,
+      "branch_grade_histogram": {
+       "1": 2,
+       "0": 13
+      }
+     },
+     "B": {
+      "scientist_record": "OLG-TMB-005",
+      "branch_oligo_id": "TOLG174",
+      "compound": "ISIS 501861",
+      "sequence": "TCACAGAATTATCAGCAGTA",
+      "ps_count": "19",
+      "n_human_lab_rows": 33,
+      "branch_max_grade": 2,
+      "branch_grade_histogram": {
+       "0": 19,
+       "1": 2,
+       "2": 12
+      }
+     },
+     "consistency_checks": [
+      "A: scientist score 0 vs branch max grade 1"
+     ]
+    }
+   ]
+  },
+  "B_pooled_dose_response": {
+   "scientist_status": "APPROVED WITH LIMITATIONS",
+   "unit_of_observation": "study / dose / threshold aggregate",
+   "limitations": [
+    "Pooled aggregate rows are NOT independent observations.",
+    "Denominators from overlapping pooled reports are never summed.",
+    "Dose bands are not comparable across compounds or indications."
+   ],
+   "bands": [
+    {
+     "dose_band": "300 mg",
+     "n_aggregate_rows": 317,
+     "max_grade": 3,
+     "grade_histogram": {
+      "0": 39,
+      "3": 91,
+      "1": 104,
+      "2": 83
+     },
+     "compounds": [
+      "ISIS 416858",
+      "alicaforsen",
+      "bepirovirsen",
+      "inclisiran",
+      "inotersen",
+      "volanesorsen"
+     ]
+    },
+    {
+     "dose_band": "0 mg",
+     "n_aggregate_rows": 122,
+     "max_grade": 2,
+     "grade_histogram": {
+      "0": 80,
+      "2": 7,
+      "1": 35
+     },
+     "compounds": [
+      "2'-MOE ASO class pool",
+      "2'MOE chimeric ASO pooled panel (12 ASOs)",
+      "GalNAc3-2'-MOE ASO class pool (Crooke 2018 phase 1 integrated)",
+      "ISIS 104838",
+      "eplontersen",
+      "inclisiran"
+     ]
+    },
+    {
+     "dose_band": "7.1 mg/kg",
+     "n_aggregate_rows": 61,
+     "max_grade": 3,
+     "grade_histogram": {
+      "3": 35,
+      "1": 13,
+      "2": 8,
+      "0": 5
+     },
+     "compounds": [
+      "imetelstat"
+     ]
+    },
+    {
+     "dose_band": ">175-275 mg",
+     "n_aggregate_rows": 46,
+     "max_grade": 2,
+     "grade_histogram": {
+      "0": 23,
+      "1": 17,
+      "2": 6
+     },
+     "compounds": [
+      "2'-MOE ASO class pool",
+      "2'MOE chimeric ASO pooled panel (12 ASOs)"
+     ]
+    },
+    {
+     "dose_band": ">375-475 mg",
+     "n_aggregate_rows": 36,
+     "max_grade": 2,
+     "grade_histogram": {
+      "0": 13,
+      "2": 8,
+      "1": 15
+     },
+     "compounds": [
+      "2'-MOE ASO class pool",
+      "2'MOE chimeric ASO pooled panel (12 ASOs)"
+     ]
+    },
+    {
+     "dose_band": ">75-175 mg",
+     "n_aggregate_rows": 36,
+     "max_grade": 1,
+     "grade_histogram": {
+      "0": 24,
+      "1": 12
+     },
+     "compounds": [
+      "2'-MOE ASO class pool",
+      "2'MOE chimeric ASO pooled panel (12 ASOs)"
+     ]
+    },
+    {
+     "dose_band": ">275-375 mg",
+     "n_aggregate_rows": 35,
+     "max_grade": 2,
+     "grade_histogram": {
+      "0": 18,
+      "1": 14,
+      "2": 3
+     },
+     "compounds": [
+      "2'-MOE ASO class pool",
+      "2'MOE chimeric ASO pooled panel (12 ASOs)"
+     ]
+    },
+    {
+     "dose_band": ">0-75 mg",
+     "n_aggregate_rows": 31,
+     "max_grade": 1,
+     "grade_histogram": {
+      "0": 23,
+      "1": 8
+     },
+     "compounds": [
+      "2'-MOE ASO class pool"
+     ]
+    },
+    {
+     "dose_band": ">475 mg",
+     "n_aggregate_rows": 31,
+     "max_grade": 2,
+     "grade_histogram": {
+      "0": 19,
+      "1": 10,
+      "2": 2
+     },
+     "compounds": [
+      "2'-MOE ASO class pool",
+      "2'MOE chimeric ASO pooled panel (12 ASOs)"
+     ]
+    },
+    {
+     "dose_band": "200 mg",
+     "n_aggregate_rows": 17,
+     "max_grade": 3,
+     "grade_histogram": {
+      "3": 5,
+      "1": 6,
+      "2": 1,
+      "0": 5
+     },
+     "compounds": [
+      "ISIS 104838",
+      "ISIS 404173",
+      "danvatirsen",
+      "inclisiran"
+     ]
+    },
+    {
+     "dose_band": "285 mg",
+     "n_aggregate_rows": 13,
+     "max_grade": 3,
+     "grade_histogram": {
+      "2": 6,
+      "3": 2,
+      "1": 3,
+      "0": 2
+     },
+     "compounds": [
+      "volanesorsen"
+     ]
+    },
+    {
+     "dose_band": "pooled_all_doses mg",
+     "n_aggregate_rows": 12,
+     "max_grade": 0,
+     "grade_histogram": {
+      "0": 12
+     },
+     "compounds": [
+      "GalNAc3-2'-MOE ASO class pool (Crooke 2018 phase 1 integrated)"
+     ]
+    },
+    {
+     "dose_band": "640 mg",
+     "n_aggregate_rows": 9,
+     "max_grade": 3,
+     "grade_histogram": {
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "0": 3
+     },
+     "compounds": [
+      "custirsen"
+     ]
+    },
+    {
+     "dose_band": "100 mg",
+     "n_aggregate_rows": 6,
+     "max_grade": 2,
+     "grade_histogram": {
+      "0": 3,
+      "1": 2,
+      "2": 1
+     },
+     "compounds": [
+      "ISIS 104838",
+      "inclisiran",
+      "tofersen"
+     ]
+    }
+   ]
+  },
+  "C_mechanistic_feasibility": {
+   "scientist_status": "CONDITIONALLY APPROVED FOR PROOF OF CONCEPT",
+   "n_eligible_constructs": 16,
+   "n_with_human_lab_rows": 16,
+   "n_independent_exact_sequence_groups": 12,
+   "required_grouping": "exact_sequence_group (outer); matched pairs stay intact",
+   "training_performed": false,
+   "verdict": "Group count may support leave-one-sequence-group-out evaluation; the scientist gate on the ordinal response score (SRQ-TMB-006) must clear first.",
+   "blocking_gate": "SRQ-TMB-006 human ex vivo ordinal response score"
+  }
+ }
+}

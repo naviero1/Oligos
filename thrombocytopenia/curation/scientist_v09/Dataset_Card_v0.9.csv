@@ -1,0 +1,32 @@
+THROMBO DATASET CARD v0.9,
+"Scope, intended use, limitations, governance, and release state for the human-centric Phase 2 derivative dataset.",
+Field,Current_v0.9_State
+Dataset name,GOG OligoTox Thrombo Human Evidence Dataset
+Version,v0.9 - Evidence Quality and Model Governance
+Scientific owner,"German García-Fresco, PhD - Lead Scientist & Domain Expert"
+Phase 2 purpose,"Create an auditable, human-centric, AI-ready oligonucleotide platelet/toxicity dataset with exact sequence, position-level chemistry, outcome context, adjudication, and provenance."
+Scope,"Thrombocytopenia, platelet-count decline, platelet activation, platelet-leukocyte aggregates, GPVI/PF4 interactions, recovery/monitoring, bleeding/thrombosis context, and separate coagulation/intended-pharmacology lanes."
+Source corpus,40 uploaded PDFs plus verified regulatory/primary-source recovery used in prior versions.
+Current human clinical rows,35
+Current curated human ex vivo rows,75
+Current qualified Sewing reconstruction rows,81
+Oligo/product records,45
+Exact single/core sequence maps,44 plus exact Givosiran duplex components
+Position-level chemistry,831 main rows plus 44 duplex-component rows
+Human mechanistic candidates,16 exact-sequence constructs
+Matched mechanistic contrasts,6
+Matched clinical sequence-context pairs,2
+Clinical positive anchors,4 sequence-linked positive anchors
+Clean clinical negatives,0; no candidate passes all seven scientific gates
+Evidence tiers,Record-level GOLD/SILVER/BRONZE/SUPPORT/HOLD framework added in v0.9.
+Intended uses,Data engineering; source-traceable descriptive analysis; grouped mechanistic proof-of-concept; matched-context analysis; Phase 2 methodology/narrative development.
+Prohibited uses,Clinical decision support; universal sequence-only thrombocytopenia prediction; causal attribution from observational matched pairs; treating unreported events as negatives.
+Primary biases,"Source availability, publication/reporting bias, heterogeneous monitoring, dose and disease confounding, selected mechanistic panels, limited negative controls, missing analytical characterization."
+Missingness policy,"Use explicit NOT_REPORTED/UNKNOWN/HOLD states; never infer dose, outcome, purity, or negative status."
+Characterization limitation,"Analytical identity method, purity, observed molecular weight, and lot data are not reported for the current 45 product records."
+Versioning,"Immutable versioned releases with change log, manifests, checksums, and scientist disposition."
+Public release status,PROVISIONAL INTERNAL/ENGINEERING RELEASE; not final public dataset freeze.
+License approach,Open license for original derivative tables/code where legally permitted; citations/links instead of redistributing restricted full-text sources.
+Maintenance,Oscar maintains technical exports/QA; Gustavo integrates narrative/model outputs; German controls scientific labels and release eligibility.
+Next expansion trigger,"Local acquisition of SafeSense mmc4.csv, Sewing S1 XLSX, or another verified structured human dataset."
+Final release gate,"Relational QA pass, license approval, repository/persistent identifier, characterization disclosure, model-lane freeze, and final scientist signoff."

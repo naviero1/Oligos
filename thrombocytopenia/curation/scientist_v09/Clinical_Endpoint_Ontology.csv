@@ -1,0 +1,13 @@
+Ontology_ID,Outcome_Class,Operational_Definition,Minimum_Required_Data,Permitted_Use,Prohibited_Inference
+ONT-TMB-001,THROMBOCYTOPENIA,Actual reduction in circulating platelet count.,"Absolute count, percent decline, nadir, time to nadir, recovery.",Clinical platelet-count model.,Do not merge with platelet activation or bleeding.
+ONT-TMB-002,PHENOTYPE_1_MODERATE,"Moderate, often dose-dependent and reversible decline.",Typically >30% decline or moderate nadir under defined study rules.,Clinical positive subtype.,Threshold and study definition must be preserved.
+ONT-TMB-003,PHENOTYPE_2_SEVERE_IMMUNE,Rare profound thrombocytopenia with immune evidence or abrupt severe nadir.,"Severe absolute counts, platelet-reactive antibodies, hemorrhage, immune predisposition.",Case-series/severe-risk lane.,Do not combine with phenotype 1.
+ONT-TMB-004,PLATELET_ACTIVATION,Platelet signaling/activation without necessarily lowering counts.,"P-selectin, PAC-1, GPVI, aggregates, degranulation.",Human mechanistic model.,Not equivalent to clinical thrombocytopenia.
+ONT-TMB-005,PLATELET_PRODUCTION,Megakaryocyte maturation or proplatelet production.,Human marrow/megakaryocyte assay.,Mechanistic exclusion or support.,Normal production does not prove normal clearance.
+ONT-TMB-006,COAGULATION,Effect on clotting pathways or tests.,"aPTT, PT/INR, factors, fibrinogen, complement-associated coagulation.",Separate coagulopathy module.,Intended factor inhibition must be flagged.
+ONT-TMB-007,BLEEDING,Clinical hemorrhagic event.,"Location, severity, timing, relationship to platelet count.",Separate clinical outcome.,Do not infer from platelet count alone.
+ONT-TMB-008,THROMBOSIS,Clinical thrombotic event.,"Event type, timing, risk factors.",Separate clinical outcome.,Do not infer from antithrombotic pharmacology.
+ONT-TMB-009,INTENDED_ANTITHROMBOTIC,Deliberate inhibition of platelet or coagulation function.,Target engagement and pharmacodynamic inhibition.,Intended pharmacology control.,Not toxicity unless off-target/excessive adverse effect is demonstrated.
+ONT-TMB-010,THERAPEUTIC_PLATELET_CORRECTION,Increase/normalization of platelets in a disease state.,Baseline and post-treatment platelet values.,Ontology/control only.,Not a clean negative for oligo-induced toxicity.
+ONT-TMB-011,ENDPOINT_SPECIFIC_NEGATIVE,No event at one defined threshold under adequate monitoring.,"Explicit endpoint, threshold, duration, and denominator.",Comparator for that endpoint only.,Cannot become universal safe label.
+ONT-TMB-012,UNKNOWN,"Endpoint not measured, not reported, or evidence insufficient.",Explicit missingness reason.,No model label.,Never convert to negative.
