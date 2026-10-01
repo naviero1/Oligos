@@ -54,7 +54,8 @@ TOXDIR = os.path.dirname(HERE)
 CORPUS = os.path.join(TOXDIR, "notes", "cns", "corpus", "cns_measurements.csv")
 
 NEW_COLS = ["evidence_class", "trial_key", "trial_key_basis",
-            "ascertainment", "negative_eligible", "event_cluster"]
+            "ascertainment", "negative_eligible", "event_cluster",
+            "hydroceph_tier"]
 
 NCT = re.compile(r"NCT\d{8}")
 
@@ -354,9 +355,76 @@ def ascertainment(r, cls):
     return REVIEW
 
 
-def negative_eligible(r, asc):
+
+# ---------------------------------------------------------------------------
+# Hydrocephalus is not one endpoint, and the rows that bear on it are not
+# interchangeable. Ventricular enlargement measured on protocol imaging, a raised
+# opening pressure, an optic-disc sign, ependymal cilia failing in culture, a
+# background rate in unexposed patients and an ASO that REDUCES hydrocephalus in a
+# disease model are six different kinds of claim. `endpoint_domain` cannot carry
+# that: it has one `hydrocephalus` value, and in this corpus its use drifted by
+# extraction lane - 10 papilloedema rows sit under `hydrocephalus` and 4 under
+# `clinical_neuro_ae`, including two readings of the SAME trial under two lanes.
+#
+# `hydroceph_tier` is derived from the readout instead, so it is lane-independent
+# and consistent by construction. The curated `endpoint_domain` is left alone: this
+# column adds a distinction rather than overwriting a judgement.
+# ---------------------------------------------------------------------------
+TIERS = [
+    # A disease-background row measures humans given no oligonucleotide. It is a
+    # baseline rate, and it is checked first because it must never be read as an
+    # effect of a compound.
+    ("disease_background", re.compile(r"no_oligo_exposure|_mixed_DMT_not_stratified")),
+    # The compound REDUCED the endpoint. Checked before the enlargement tier, since
+    # the readout name is the same one.
+    ("therapeutic_reduction", None),          # decided on effect_direction, below
+    ("ventricular_enlargement", re.compile(
+        r"ventricul|ventricle|hydroceph|macrocephal|arachnoid_space|brain_volume"
+        r"|macrostructural")),
+    ("pressure_or_composition", re.compile(
+        r"intracranial_pressure|csf_pressure|csf_outflow|csf_volume|alps_index"
+        r"|opening_pressure")),
+    ("procedure_or_mechanism", re.compile(
+        r"ependymal|cilia|ciliary|meningitis|arachnoiditis|myelitis")),
+    ("related_clinical_sign", re.compile(r"papill|optic|vision|visual")),
+]
+
+
+def hydroceph_tier(r, asc):
+    """Which kind of hydrocephalus claim a row makes, or blank if it makes none."""
+    if norm(r.get("endpoint_domain")) not in ("hydrocephalus", "clinical_neuro_ae"):
+        return ""
+    name = low(r.get("readout_name"))
+    if norm(r.get("endpoint_domain")) == "clinical_neuro_ae" \
+            and not re.search(r"papill|optic|hydroceph|ventricul|intracranial", name):
+        return ""
+    for tier, pat in TIERS:
+        if tier == "therapeutic_reduction":
+            # A grade-0 row whose direction is a FALL in the endpoint, in a disease
+            # model, is the compound working - not a measurement of its toxicity.
+            if (low(r.get("effect_direction")) == "decrease"
+                    and norm(r.get("neurotox_grade")) == "0"
+                    and re.search(r"hydroceph|ventricul", name)):
+                return tier
+            continue
+        if pat and pat.search(name):
+            return tier
+    return "related_clinical_sign"
+
+
+def negative_eligible(r, asc, tier=""):
     if norm(r.get("neurotox_grade")) != "0":
         return "NA"
+    # A grade of 0 reached because the compound IMPROVED the endpoint is not
+    # evidence that the compound is non-toxic. It is an efficacy result in a
+    # disease model, and counting it as a negative control would teach a model
+    # that this molecule is safe on the strength of it working.
+    if tier == "therapeutic_reduction":
+        return "FALSE"
+    # A background rate in patients given no oligonucleotide is not a negative
+    # for any compound either.
+    if tier == "disease_background":
+        return "FALSE"
     return "TRUE" if asc in NEGATIVE_ELIGIBLE else "FALSE"
 
 
@@ -397,12 +465,14 @@ def main():
         cls = evidence_class(r)
         tkey, basis = trial_key(r, cls)
         asc = ascertainment(r, cls)
+        tier = hydroceph_tier(r, asc)
         r["evidence_class"] = cls
         r["trial_key"] = tkey
         r["trial_key_basis"] = basis
         r["ascertainment"] = asc
-        r["negative_eligible"] = negative_eligible(r, asc)
+        r["negative_eligible"] = negative_eligible(r, asc, tier)
         r["event_cluster"] = event_cluster(r, tkey)
+        r["hydroceph_tier"] = tier
 
     out_cols = cols + [c for c in NEW_COLS if c not in cols]
 
@@ -433,6 +503,9 @@ def main():
     for k, v in Counter(r["ascertainment"] for r in rows).most_common():
         flag = "" if k in NEGATIVE_ELIGIBLE or k == REPORTED_EVENT else "   <- not negative-eligible"
         print("  %-32s %5d%s" % (k, v, flag))
+    print("\nhydroceph_tier (rows bearing on the hydrocephalus endpoint)")
+    for k, v in Counter(r["hydroceph_tier"] for r in rows if r["hydroceph_tier"]).most_common():
+        print("  %-28s %5d" % (k, v))
     ne = Counter(r["negative_eligible"] for r in rows)
     print("\ngrade-0 rows: %d eligible as negatives, %d NOT eligible"
           % (ne["TRUE"], ne["FALSE"]))

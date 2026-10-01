@@ -6,6 +6,8 @@ Hydrocephalus is the eighth and last endpoint in the Challenge brief's list of t
 
 > **This file previously said the opposite.** Until 2026-08-28 it recorded the endpoint as `not-addressed` — "nothing was acquired, extracted or decided… zero rows, zero oligos, zero `source_id`s" — and recommended recording it as out of scope. That was an accurate description of one branch (the 111-row kidney lineage) and a wrong description of the project. The recommendation is withdrawn; §"What the original sweep established" preserves the part of the record that still holds.
 
+**Review correspondence:** Beebop's 2026-09-30 proposals and the response recording each disposition are at [`hydrocephalus/ROCKSTEADY_RESPONSE_TO_BEEBOP_2026-09-30.md`](./hydrocephalus/ROCKSTEADY_RESPONSE_TO_BEEBOP_2026-09-30.md). Its §0 records that this branch is one of three parallel CNS lineages.
+
 ## Status — human evidence first
 
 Phase 2 asks for human-relevant data, so the table below is ordered by the
@@ -53,17 +55,30 @@ The human-laboratory row is **zero, and stated rather than hidden**: no in vitro
 
 Pending candidates are excluded from the verified total on purpose. A publication reporting a trial establishes the trial, but its registry identifier has to come from a document — supplying one from recall would be exactly the fabricated trial identifier this dataset refuses to contain.
 
+**Which hydrocephalus claim each row makes.** The endpoint is not one thing, and `endpoint_domain` cannot carry the distinction — it has a single `hydrocephalus` value, and its use in this corpus drifted by extraction lane. `hydroceph_tier` is derived from the readout instead, so it is lane-independent.
+
+| Tier | Rows | What it is |
+|---|---:|---|
+| `ventricular_enlargement` | 90 | ventricular volume, ventriculomegaly, hydrocephalus incidence, macrocephaly — the endpoint itself |
+| `pressure_or_composition` | 29 | raised intracranial or CSF opening pressure, CSF volume, outflow resistance, DTI-ALPS — supports a mechanism, is not a confirmed hydrocephalus event |
+| `related_clinical_sign` | 14 | papilloedema and optic findings — a pressure sign, recorded separately because the two dissociate |
+| `procedure_or_mechanism` | 4 | ependymal damage, cilia loss, meningitis, arachnoiditis — mechanism and procedure effects |
+| `disease_background` | 7 | measured in patients given no oligonucleotide: a baseline rate, never an effect of a compound |
+| `therapeutic_reduction` | 1 | the compound REDUCED the endpoint — an efficacy result, not a toxicity negative |
+
 **Which zeros are negatives.** A grade of 0 means four different things, and only two of them are a measured negative.
 
 | | Rows |
 |---|---:|
 | Grade-0 rows | 63 |
-| …eligible as a measured negative (`negative_eligible=TRUE`) | 57 |
-| …**not** eligible | 6 |
+| …eligible as a measured negative (`negative_eligible=TRUE`) | 51 |
+| …**not** eligible | 12 |
 
 The ineligible rows are kept, with their evidence, and excluded from negative counts by one predicate:
 
-- `review_required` — 6 row(s): no ascertainment basis could be established from the row's own source fields
+- `disease_background` — 7 row(s): measured in patients given no oligonucleotide — a baseline rate, not a negative for any compound
+- `review_required` — 4 row(s): no ascertainment basis could be established from the row's own source fields
+- `therapeutic_reduction` — 1 row(s): the compound REDUCED the endpoint — measured, but an efficacy result, not evidence the compound is non-toxic
 
 <!-- END generated:evidence -->
 

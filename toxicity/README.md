@@ -48,6 +48,27 @@ excluded here and listed in the cross-cutting file instead.
 | [Hydrocephalus](./hydrocephalus.md) | delivered | 13 | 145 | (shared †) | 44 |
 | **Total** | — | **651** ‡ | **2,649** | **36** † | **154** |
 
+## Review correspondence
+
+Beebop reviewed the CNS endpoints on 2026-09-30 and asked for a dated
+accept/modify/reject record per proposal. The responses record each disposition
+with its evidence, the before/after counts, validation results, and the questions
+that need German's adjudication.
+
+| Endpoint | Response |
+|---|---|
+| Chronic neurotoxicity | [`chronic-neurotoxicity/ROCKSTEADY_RESPONSE_TO_BEEBOP_2026-09-30.md`](./chronic-neurotoxicity/ROCKSTEADY_RESPONSE_TO_BEEBOP_2026-09-30.md) |
+| Hydrocephalus | [`hydrocephalus/ROCKSTEADY_RESPONSE_TO_BEEBOP_2026-09-30.md`](./hydrocephalus/ROCKSTEADY_RESPONSE_TO_BEEBOP_2026-09-30.md) |
+| Acute neurotoxicity | [`acute-neurotoxicity/ROCKSTEADY_RESPONSE_TO_BEEBOP_2026-09-30.md`](./acute-neurotoxicity/ROCKSTEADY_RESPONSE_TO_BEEBOP_2026-09-30.md) |
+
+**Read §0 of the chronic-neurotoxicity response first.** The proposals were written
+against two other branches, and this repository currently holds **three
+independently curated CNS datasets** on three branches whose counts are not
+reconcilable by addition. The default branch is a single orphan commit sharing no
+history with any of them, and its endpoint dossiers still report the CNS endpoints
+as unaddressed. Which dataset becomes the submission is a scope decision, not a
+merge.
+
 ## Human evidence, counted as humans
 
 Phase 2 asks for human-relevant data, so each CNS dossier leads with a

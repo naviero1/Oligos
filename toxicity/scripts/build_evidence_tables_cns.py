@@ -69,7 +69,14 @@ BANDS = [
 HUMAN = [b for b, _, _ in BANDS if b.startswith("human")]
 TRIAL_TIER = ["human_trial_registry", "human_trial_publication", "human_trial_sponsor"]
 
+# Why a grade-0 row is not a negative. The tier reasons come first, because they
+# override a sound ascertainment: a row can be perfectly well measured and still
+# not be a negative for the compound that was given.
 INELIGIBLE_GLOSS = {
+    "therapeutic_reduction": "the compound REDUCED the endpoint — measured, but an "
+                             "efficacy result, not evidence the compound is non-toxic",
+    "disease_background": "measured in patients given no oligonucleotide — a "
+                          "baseline rate, not a negative for any compound",
     "threshold_limited_zero": "the table lists only terms above a frequency "
                               "cut-off, so the term's absence may be a reporting artefact",
     "not_assessed_in_source": "the source does not report this endpoint at all",
@@ -78,6 +85,23 @@ INELIGIBLE_GLOSS = {
     "review_required": "no ascertainment basis could be established from the "
                        "row's own source fields",
 }
+
+
+TIER_GLOSS = [
+    ("ventricular_enlargement", "ventricular volume, ventriculomegaly, hydrocephalus "
+                                "incidence, macrocephaly — the endpoint itself"),
+    ("pressure_or_composition", "raised intracranial or CSF opening pressure, CSF "
+                                "volume, outflow resistance, DTI-ALPS — supports a "
+                                "mechanism, is not a confirmed hydrocephalus event"),
+    ("related_clinical_sign", "papilloedema and optic findings — a pressure sign, "
+                              "recorded separately because the two dissociate"),
+    ("procedure_or_mechanism", "ependymal damage, cilia loss, meningitis, "
+                               "arachnoiditis — mechanism and procedure effects"),
+    ("disease_background", "measured in patients given no oligonucleotide: a "
+                           "baseline rate, never an effect of a compound"),
+    ("therapeutic_reduction", "the compound REDUCED the endpoint — an efficacy "
+                              "result, not a toxicity negative"),
+]
 
 
 def read(p):
@@ -156,6 +180,21 @@ def block(ep):
     zero = [r for r in meas if r["neurotox_grade"] == "0"]
     elig = [r for r in zero if r["negative_eligible"] == "TRUE"]
     inel = [r for r in zero if r["negative_eligible"] == "FALSE"]
+    tiers = Counter(r["hydroceph_tier"] for r in meas if r["hydroceph_tier"])
+    if tiers:
+        L.append("**Which hydrocephalus claim each row makes.** The endpoint is not "
+                 "one thing, and `endpoint_domain` cannot carry the distinction — it "
+                 "has a single `hydrocephalus` value, and its use in this corpus "
+                 "drifted by extraction lane. `hydroceph_tier` is derived from the "
+                 "readout instead, so it is lane-independent.")
+        L.append("")
+        L.append("| Tier | Rows | What it is |")
+        L.append("|---|---:|---|")
+        for key, gloss in TIER_GLOSS:
+            if tiers[key]:
+                L.append("| `%s` | %d | %s |" % (key, tiers[key], gloss))
+        L.append("")
+
     L.append("**Which zeros are negatives.** A grade of 0 means four different "
              "things, and only two of them are a measured negative.")
     L.append("")
@@ -170,7 +209,13 @@ def block(ep):
         L.append("The ineligible rows are kept, with their evidence, and excluded "
                  "from negative counts by one predicate:")
         L.append("")
-        for k, v in Counter(r["ascertainment"] for r in inel).most_common():
+        def why(r):
+            # The tier overrides the ascertainment where it applies, so it is the
+            # reason to report.
+            if r["hydroceph_tier"] in ("therapeutic_reduction", "disease_background"):
+                return r["hydroceph_tier"]
+            return r["ascertainment"]
+        for k, v in Counter(why(r) for r in inel).most_common():
             L.append("- `%s` — %d row(s): %s" % (k, v, INELIGIBLE_GLOSS.get(k, "")))
         L.append("")
     L.append(END)

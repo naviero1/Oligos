@@ -415,6 +415,7 @@ comparator chosen badly, a claim of recovery imported from adjacent prose. That
 is the more tractable class of error, because it can be corrected by rule rather
 than by re-extraction — which is what was done.
 
+
 ## 9. Independent variables
 
 Design predictors per `cns_oligos.csv`, and the axes they are meant to support:
@@ -480,6 +481,40 @@ on every matched CNS readout.
 - **Oligos without measurements.** A small number of oligo rows carry verified
   identity and sequence but no measurement yet; they are retained as a reference
   identity table for the next ingestion round.
+
+### 10a. Two unresolved things about the acute scales, recorded rather than smoothed
+
+**`score_0_to_7` is not one instrument.** 642 rows carry
+`readout_name=acute_neurotoxicity_score`, and `readout_unit` is what separates
+their scales — `score_0_to_20`, `score_0_to_11`, `score_0_to_75`,
+`score_qualitative` and so on. For most pairs that works. `score_0_to_7` does not:
+it spans five sources whose own notes define different instruments.
+
+| Source | What its notes say the score is | Rows |
+|---|---|---:|
+| `US10968453B2`, `US9605263B2`, `US9683235B2` | 7-region functional observational battery (tail, hind paws, hind legs, hind end, front posture, fore paws, head), 0/1 each, summed 0–7, read at 3 h | 266 |
+| `doi:10.1093/nar/gkaf1333` | ordinal acute-**inhibition** ladder: 0 bright/alert, 1 tail without tone, 2 drooping hind end, … 6 forelimbs immobile, read at 3 h | 73 |
+| `doi:10.1093/nar/gkag057` | acute neuronal **activation** response: shaking, twitching, cramping, hyperactivity, vocalisation, tremors, convulsions, seizures, scored in 15-minute blocks over 120 min | 36 |
+
+Inhibition and activation are opposite phenotypes on different time courses. A
+consumer pooling the column on name and unit would average a paralysed animal with
+a seizing one. `scripts/qc_cns.py` prints a warning naming all five sources on
+every run. It is **not** auto-corrected: rewriting 375 rows' units on a reading of
+their notes is a scale-harmonisation judgement for a toxicologist, not a data fix.
+The scale definitions are transcribed verbatim in each row's `notes`, so the
+information needed to make that judgement is in the data.
+
+**The vehicle is part of the condition, and the sources do not agree on it.** Two
+of those sources record their divalent-cation content explicitly, because they
+treat it as a variable rather than a detail: `doi:10.1093/nar/gkaf1333` dosed a
+single ICV bolus in **PBS without Ca²⁺/Mg²⁺**, and `doi:10.1093/nar/gkag057` dosed
+in **standard aCSF at a divalent cation-to-ASO ratio of 0.16:1**. Whether divalent
+cations in the vehicle modulate acute ASO neurotoxicity — and in which direction —
+is unsettled in the literature, and this corpus holds rows from both conditions
+without adjudicating between them. That is deliberate. Nothing in this
+documentation presents a divalent-cation mechanism as established, and nothing
+should: the formulation is recorded where the source records it, and the
+disagreement is a question for subject-matter review.
 
 ## 11. Reproducibility
 

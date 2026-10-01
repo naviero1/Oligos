@@ -6,6 +6,8 @@ Chronic neurotoxicity is the seventh endpoint on the Challenge's list of toxicit
 
 > **This file previously said the opposite.** Until 2026-08-28 it recorded the endpoint as `not-addressed` — "no source acquired, no rows extracted" — and proposed **out of scope for Phase 2** as its deliverable. That was an accurate description of one branch (the 111-row kidney lineage) and a wrong description of the project: the CNS curation was carried out on a separate branch that the review could not see. The recommendation is withdrawn, and §4 below preserves what the original sweeps did and did not establish, since that record is still useful.
 
+**Review correspondence:** Beebop's 2026-09-30 proposals and the response recording each disposition are at [`chronic-neurotoxicity/ROCKSTEADY_RESPONSE_TO_BEEBOP_2026-09-30.md`](./chronic-neurotoxicity/ROCKSTEADY_RESPONSE_TO_BEEBOP_2026-09-30.md). Its §0 records that this branch is one of three parallel CNS lineages.
+
 ## 1. What this endpoint holds — human evidence first
 
 Phase 2 asks for human-relevant data, so the table below is ordered by the
@@ -52,6 +54,13 @@ Molecule counts do **not** sum down that column: one molecule can carry rows in 
 | Human laboratory / ex-vivo measurement rows | 116 |
 
 Pending candidates are excluded from the verified total on purpose. A publication reporting a trial establishes the trial, but its registry identifier has to come from a document — supplying one from recall would be exactly the fabricated trial identifier this dataset refuses to contain.
+
+**Which hydrocephalus claim each row makes.** The endpoint is not one thing, and `endpoint_domain` cannot carry the distinction — it has a single `hydrocephalus` value, and its use in this corpus drifted by extraction lane. `hydroceph_tier` is derived from the readout instead, so it is lane-independent.
+
+| Tier | Rows | What it is |
+|---|---:|---|
+| `pressure_or_composition` | 2 | raised intracranial or CSF opening pressure, CSF volume, outflow resistance, DTI-ALPS — supports a mechanism, is not a confirmed hydrocephalus event |
+| `related_clinical_sign` | 1 | papilloedema and optic findings — a pressure sign, recorded separately because the two dissociate |
 
 **Which zeros are negatives.** A grade of 0 means four different things, and only two of them are a measured negative.
 

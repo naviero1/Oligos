@@ -49,7 +49,8 @@ MEAS_COLS = ["measurement_id", "oligo_id", "study_type", "species", "system_mode
              # columns above, never read from a new document, so they can be
              # deleted and regenerated without losing evidence.
              "evidence_class", "trial_key", "trial_key_basis",
-             "ascertainment", "negative_eligible", "event_cluster"]
+             "ascertainment", "negative_eligible", "event_cluster",
+             "hydroceph_tier"]
 
 # The evidence classes, and which of them are claims about humans. A human total
 # computed over anything outside HUMAN_CLASSES is wrong by construction, so the
@@ -103,6 +104,9 @@ ENUMS = {
                       "not_assessed_in_source", "absence_of_label_warning",
                       "review_required"},
     "negative_eligible": {"TRUE", "FALSE", "NA"},
+    "hydroceph_tier": {"ventricular_enlargement", "pressure_or_composition",
+                       "procedure_or_mechanism", "disease_background",
+                       "therapeutic_reduction", "related_clinical_sign", ""},
 }
 
 # Readouts where a RISE is recovery, not injury. Without this the grade-0 check
@@ -272,14 +276,57 @@ def main():
     # thing standing between that row and a model is this predicate.
     for m in meas:
         mid, asc, g = m["measurement_id"], m["ascertainment"], m["neurotox_grade"]
+        tier = m["hydroceph_tier"]
+        # A grade of 0 reached because the compound IMPROVED the endpoint, or
+        # measured in patients given no oligonucleotide at all, is not a negative
+        # for that compound however sound its ascertainment.
         want = "NA" if g != "0" else (
-            "TRUE" if asc in NEGATIVE_ELIGIBLE_ASC else "FALSE")
+            "FALSE" if tier in ("therapeutic_reduction", "disease_background")
+            else "TRUE" if asc in NEGATIVE_ELIGIBLE_ASC else "FALSE")
         if m["negative_eligible"] != want:
             err(f"{mid}: negative_eligible={m['negative_eligible']!r} but grade={g} "
                 f"with ascertainment={asc} implies {want!r} — re-run "
                 f"classify_evidence_cns.py")
         if g == "0" and asc == "reported_event":
             err(f"{mid}: ascertainment=reported_event on a grade-0 row")
+
+    # --- one readout name, how many scales? -------------------------------
+    # `acute_neurotoxicity_score` is carried by 642 rows from ten sources, and
+    # `readout_unit` is what separates their scales. For most pairs it does the job,
+    # but `score_0_to_7` spans five sources whose own notes define DIFFERENT
+    # instruments: three patents use a 7-region functional-observational battery
+    # summed 0-7, one paper uses a 0-6 ordinal acute-INHIBITION ladder, and one uses
+    # an acute neuronal-ACTIVATION score - shaking, tremors, convulsions - read in
+    # 15-minute blocks rather than at 3 h. Inhibition and activation are opposite
+    # phenotypes. Pooling them on the shared name and unit would average a paralysed
+    # animal with a seizing one.
+    #
+    # A warning, not an error, and deliberately not auto-corrected: rewriting 375
+    # rows' units on a reading of their notes is a scale-harmonisation judgement,
+    # and the right person to make it is a toxicologist. What this rule guarantees is
+    # that the hazard is printed on every run instead of being discovered by whoever
+    # pools the column.
+    scales = {}
+    for m in meas:
+        scales.setdefault((m["readout_name"], m["readout_unit"]), set()).add(m["source_ref"])
+    multi = {k: v for k, v in scales.items() if len(v) > 2 and k[1].startswith("score_")}
+    for (name, unit), refs in sorted(multi.items()):
+        warn(f"readout '{name}' with unit '{unit}' spans {len(refs)} sources — "
+             f"confirm they are the same instrument before pooling: "
+             f"{sorted(refs)[:5]}")
+
+    # --- the hydrocephalus endpoint tiers ---------------------------------
+    # Ventricular enlargement, a raised pressure, an optic-disc sign, an ependymal
+    # mechanism, a background rate and a therapeutic reduction are six different
+    # claims. A tier on a row that bears on none of them would mean the derivation
+    # has drifted.
+    for m in meas:
+        t, dom = m["hydroceph_tier"], m["endpoint_domain"]
+        if t and dom not in ("hydrocephalus", "clinical_neuro_ae"):
+            err(f"{m['measurement_id']}: hydroceph_tier={t} on endpoint_domain={dom}")
+        if dom == "hydrocephalus" and not t:
+            err(f"{m['measurement_id']}: endpoint_domain=hydrocephalus with no "
+                f"hydroceph_tier")
 
     # --- trial keys must say how they were established --------------------
     for m in meas:

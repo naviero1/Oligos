@@ -78,17 +78,24 @@ and found none.
 
 But a grade of 0 means four different things, and only two of them are a measured
 negative. The derived `ascertainment` column says which, and `negative_eligible`
-turns it into one predicate: **1,192 grade-0 rows are eligible as negatives and 54
-are not.** The 54 are kept, with their sources, and excluded from every negative
-count. They break down as 43 rows where no ascertainment basis could be
+turns it into one predicate: **1,186 grade-0 rows are eligible as negatives and 60
+are not.** The 60 are kept, with their sources, and excluded from every negative
+count. They break down as 41 rows where no ascertainment basis could be
 established from the row's own source fields, four whose adverse-event table lists
 only terms above a frequency cut-off, four where the source reports no CNS
-endpoint at all, and three whose entire finding is a *warning not appearing* in a
-label. The last group is the clearest case: one of those rows cites a label
-section stating that carcinogenicity studies *had not been conducted*, which had
-been recorded as grade 0 — an endpoint never assessed, standing as evidence of no
-toxicity. A document's silence is not a measurement, and it now cannot be counted
-as one.
+endpoint at all, three whose entire finding is a *warning not appearing* in a
+label, seven measured in patients given no oligonucleotide at all, and one where
+the compound *reduced* the endpoint.
+
+Three of those groups are worth naming. The label-absence rows are the clearest
+case: one cites a label section stating that carcinogenicity studies *had not been
+conducted*, which had been recorded as grade 0 — an endpoint never assessed,
+standing as evidence of no toxicity. A document's silence is not a measurement.
+The disease-background rows measure hydrocephalus in SMA patients who received no
+oligonucleotide; they are a baseline the exposed rows must be read against, not a
+negative for any compound. And the single therapeutic-reduction row is an ASO that
+*prevented* hydrocephalus in a transgenic mouse model — perfectly well measured,
+and an efficacy result rather than evidence that the compound is safe.
 
 ### Human evidence first
 
