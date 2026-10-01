@@ -155,6 +155,32 @@ structure should read it from `gapmer_design` rather than infer it from case.
 
 ---
 
+## Derived columns — written by `scripts/classify_evidence_cns.py`
+
+Six columns are *computed from the columns above* and appended to the measurement
+table. None of them reads a new document, so they can be deleted and regenerated
+without losing evidence, and the pass is reversible by construction. They exist
+because the canonical columns cannot express distinctions the Challenge's
+human-first framing depends on.
+
+| Column | Values | What it is for |
+|---|---|---|
+| `evidence_class` | `human_trial_registry`, `human_trial_publication`, `human_trial_sponsor`, `human_laboratory`, `human_label_pooled`, `human_postmarketing`, `human_case_report`, `human_observational`, `human_background_epi`, `human_class_review`, `animal_invivo`, `animal_laboratory` | `study_type` has three values, so it cannot separate a patient-derived iPSC neuron from a rat cortical culture, or a registry-posted trial table from a label's pooled safety summary. Human totals are computed over this column. |
+| `trial_key` | an `NCT########`, or `PUB:<source_id>`, or empty | Collapses every representation of one trial. A five-arm trial contributes five rows and stays one trial; a trial reaching the corpus as a registry posting *and* a paper *and* a label stays one trial. |
+| `trial_key_basis` | `registry_posting`, `named_in_source`, `publication_only`, `not_a_trial` | How the key was established. Only the first two count toward verified trial totals. `publication_only` means no source here names a registry entry — supplying one from recall would be a fabricated trial identifier. |
+| `ascertainment` | `measured`, `reported_event`, `assessed_no_effect`, `explicit_zero_with_denominator`, `threshold_limited_zero`, `not_assessed_in_source`, `absence_of_label_warning`, `review_required` | Says *which kind* of zero a grade-0 row is. An assay that measured no effect, a safety table reporting the term with a zero count, a thresholded table that did not list the term, and a document that never assessed the endpoint are four different things that otherwise look identical. |
+| `negative_eligible` | `TRUE`, `FALSE`, `NA` | The one predicate that follows from `ascertainment`. `NA` on any row that is not grade 0. Only `measured`, `assessed_no_effect` and `explicit_zero_with_denominator` are eligible. |
+| `event_cluster` | `<NCT>\|<arm>\|<term>`, or empty | ClinicalTrials.gov posts serious and non-serious events in separate tables and one participant can appear in both. Both counts are real and both are kept, but rows sharing a cluster are one episode reported twice, not two independent events. |
+
+**The rule `negative_eligible` enforces.** A document not mentioning something is
+not a measurement of its absence. This is the same failure mode as treating a
+spontaneous-reporting system's silence as a measured zero — there is no exposure
+denominator behind it — and it was present in this corpus in a different guise:
+rows whose entire readout was a CNS warning *not appearing* in a label, graded 0.
+[`scripts/qc_cns.py`](./scripts/qc_cns.py) fails if `negative_eligible` ever
+disagrees with `ascertainment`, so regeneration cannot restore the misleading
+classification.
+
 ## Derived table — `data/oligotox_cns_merged.csv` (generated, not canonical)
 
 An analysis-ready **denormalized join** of the two canonical CNS tables on

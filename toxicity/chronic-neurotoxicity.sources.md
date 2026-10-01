@@ -43,7 +43,7 @@ Reviews were used to *find* primary sources and to cross-check them, not as the
 cited source for a value.
 
 
-## Source registry — 108 documents, 2540 rows
+## Source registry — 108 documents, 2538 rows
 
 | Source class | Documents |
 |---|---:|
@@ -72,7 +72,7 @@ cited source for a value.
 | `NCT02623699` | ClinicalTrials.gov | 25 | `public_domain` | clinical 25 |
 | `EMA/276404/2024` | EMA document | 24 | `public_domain` | clinical 16, animal_invivo 8 |
 | `doi:10.1002/mus.28372` | Journal article | 24 | `summary_stat` | clinical 24 |
-| `NCT03342053` | ClinicalTrials.gov | 22 | `public_domain` | clinical 22 |
+| `NCT03342053` | ClinicalTrials.gov | 21 | `public_domain` | clinical 21 |
 | `US9683235B2` | US patent | 21 | `public_domain` | animal_invivo 21 |
 | `NCT03070119` | ClinicalTrials.gov | 19 | `public_domain` | clinical 19 |
 | `doi:10.1093/hmg/ddaf153` | Journal article | 19 | `cc_by` | in_vitro 19 |
@@ -85,8 +85,8 @@ cited source for a value.
 | `doi:10.1186/s13024-024-00725-9` | Journal article | 15 | `cc_by` | in_vitro 15 |
 | `doi:10.1038/s41591-026-04314-9` | Journal article | 14 | `summary_stat` | clinical 11, in_vitro 3 |
 | `NCT03225833` | ClinicalTrials.gov | 12 | `public_domain` | clinical 12 |
-| `NCT04089566` | ClinicalTrials.gov | 12 | `public_domain` | clinical 12 |
 | `Roche medical-affairs slide deck, CHDI 2023, M-XX-000...` | Other / grey literature | 12 | `verify` | clinical 12 |
+| `NCT04089566` | ClinicalTrials.gov | 11 | `public_domain` | clinical 11 |
 | `US11834660B2` | US patent | 10 | `public_domain` | animal_invivo 10 |
 | `doi:10.1186/1471-2202-8-26` | Journal article | 10 | `cc_by` | animal_invivo 8, in_vitro 2 |
 | `doi:10.1212/NXG.0000000000200193` | Journal article | 9 | `summary_stat` | clinical 9 |

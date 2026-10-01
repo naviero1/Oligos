@@ -31,6 +31,8 @@ MEAS = os.path.join(ROOT, "notes", "cns", "corpus", "cns_measurements.csv")
 
 TBD = "TBD"
 
+NCT_RE = re.compile(r"^NCT\d{8}$")
+
 OLIGO_COLS = ["oligo_id", "oligo_name", "aliases", "oligo_class", "target_gene",
               "indication", "developer", "max_phase", "length_nt", "backbone_chemistry",
               "sugar_modifications", "gapmer_design", "conjugate", "ps_count",
@@ -42,7 +44,25 @@ MEAS_COLS = ["measurement_id", "oligo_id", "study_type", "species", "system_mode
              "readout_category", "readout_name", "readout_value", "readout_unit",
              "effect_direction", "effect_vs_control", "neurotox_grade", "reversibility",
              "is_cns_specific", "source_id", "source_ref", "source_table",
-             "redistribution", "notes"]
+             "redistribution", "notes",
+             # Derived by scripts/classify_evidence_cns.py. Computed from the
+             # columns above, never read from a new document, so they can be
+             # deleted and regenerated without losing evidence.
+             "evidence_class", "trial_key", "trial_key_basis",
+             "ascertainment", "negative_eligible", "event_cluster"]
+
+# The evidence classes, and which of them are claims about humans. A human total
+# computed over anything outside HUMAN_CLASSES is wrong by construction, so the
+# membership lives here rather than in each consumer.
+HUMAN_CLASSES = {"human_trial_registry", "human_trial_publication",
+                 "human_trial_sponsor", "human_laboratory", "human_label_pooled",
+                 "human_postmarketing", "human_case_report", "human_observational",
+                 "human_background_epi", "human_class_review"}
+ANIMAL_CLASSES = {"animal_invivo", "animal_laboratory"}
+# Which ascertainment categories let a grade-0 row stand as a negative. Kept in
+# step with classify_evidence_cns.py, and checked against it below.
+NEGATIVE_ELIGIBLE_ASC = {"measured", "assessed_no_effect",
+                         "explicit_zero_with_denominator"}
 
 ENUMS = {
     "oligo_class": {"ASO_gapmer", "siRNA", "GalNAc_siRNA", "splice_switching_ASO",
@@ -75,6 +95,14 @@ ENUMS = {
     "is_cns_specific": {"TRUE", "FALSE"},
     "redistribution": {"public_domain", "cc_by", "derived_features_only",
                        "summary_stat", "verify"},
+    "evidence_class": HUMAN_CLASSES | ANIMAL_CLASSES,
+    "trial_key_basis": {"registry_posting", "named_in_source",
+                        "publication_only", "not_a_trial"},
+    "ascertainment": {"measured", "reported_event", "assessed_no_effect",
+                      "explicit_zero_with_denominator", "threshold_limited_zero",
+                      "not_assessed_in_source", "absence_of_label_warning",
+                      "review_required"},
+    "negative_eligible": {"TRUE", "FALSE", "NA"},
 }
 
 # Readouts where a RISE is recovery, not injury. Without this the grade-0 check
@@ -218,6 +246,79 @@ def main():
                 and re.search(r"method", m["source_table"], re.I):
             err(f"{m['measurement_id']}: grade 0 with no value, no direction and a "
                 f"Methods-section locus — this is silence, not a measured negative")
+
+    # --- the human/animal firewall ----------------------------------------
+    # The point of evidence_class is that "no animal row contributes to a human
+    # total" can be checked. It is only checkable if the class never disagrees
+    # with the species and study_type it was derived from.
+    for m in meas:
+        mid, cls = m["measurement_id"], m["evidence_class"]
+        human_row = m["species"] == "human"
+        if cls in HUMAN_CLASSES and not human_row:
+            err(f"{mid}: evidence_class={cls} claims human evidence but "
+                f"species={m['species']}")
+        if cls in ANIMAL_CLASSES and human_row:
+            err(f"{mid}: evidence_class={cls} on a human row")
+        if cls == "human_laboratory" and m["study_type"] == "clinical":
+            err(f"{mid}: human_laboratory on a clinical row — a trial is not a "
+                f"laboratory system")
+        if cls == "animal_invivo" and m["study_type"] != "animal_invivo":
+            err(f"{mid}: evidence_class=animal_invivo but "
+                f"study_type={m['study_type']}")
+
+    # --- a negative must be eligible to be a negative ---------------------
+    # This is the rule the FAERS-style failure mode needs. A grade of 0 reached by
+    # a document not mentioning something is not a measured negative, and the only
+    # thing standing between that row and a model is this predicate.
+    for m in meas:
+        mid, asc, g = m["measurement_id"], m["ascertainment"], m["neurotox_grade"]
+        want = "NA" if g != "0" else (
+            "TRUE" if asc in NEGATIVE_ELIGIBLE_ASC else "FALSE")
+        if m["negative_eligible"] != want:
+            err(f"{mid}: negative_eligible={m['negative_eligible']!r} but grade={g} "
+                f"with ascertainment={asc} implies {want!r} — re-run "
+                f"classify_evidence_cns.py")
+        if g == "0" and asc == "reported_event":
+            err(f"{mid}: ascertainment=reported_event on a grade-0 row")
+
+    # --- trial keys must say how they were established --------------------
+    for m in meas:
+        mid, k, basis = m["measurement_id"], m["trial_key"], m["trial_key_basis"]
+        if m["evidence_class"] == "human_trial_registry" and basis != "registry_posting":
+            err(f"{mid}: a registry-posted row must carry "
+                f"trial_key_basis=registry_posting, not {basis!r}")
+        if basis == "publication_only" and not k.startswith("PUB:"):
+            err(f"{mid}: trial_key_basis=publication_only but trial_key={k!r}")
+        if basis in ("registry_posting", "named_in_source") and not NCT_RE.match(k):
+            err(f"{mid}: trial_key_basis={basis} but trial_key={k!r} is not a "
+                f"registry identifier")
+        if basis == "not_a_trial" and k:
+            err(f"{mid}: trial_key={k!r} on a row that is not trial-derived")
+
+    # --- one observation, one row ------------------------------------------
+    # Two extraction lanes read the same ClinicalTrials.gov posting under two
+    # source_id conventions and both copies survived semantic de-duplication,
+    # because they encoded the same count differently (2_of_40 against 5.0%).
+    # The identity that catches it is the observation, not the value: one trial,
+    # one compound, one endpoint, one term, one seriousness table.
+    lanes = {}
+    for m in meas:
+        if not m["trial_key"].startswith("NCT"):
+            continue
+        t = m["source_table"].lower()
+        bucket = ("serious" if "seriousevents" in t or "serious adverse event" in t
+                  else "nonserious" if "otherevents" in t or "not including serious" in t
+                  else "unspecified")
+        lane = ("ctgov_api_sweep" if m["source_id"].startswith("CT_NCT")
+                else "ctgov_curated" if m["source_id"].startswith("CNSSRC_CTG_")
+                else "other")
+        key = (m["trial_key"], m["oligo_id"], m["endpoint_domain"],
+               re.sub(r"[^a-z0-9]", "", m["readout_name"].lower()), bucket)
+        lanes.setdefault(key, {}).setdefault(lane, []).append(m["measurement_id"])
+    for key, by_lane in sorted(lanes.items()):
+        if len(by_lane) > 1:
+            err(f"one observation extracted in {len(by_lane)} lanes: {key} -> "
+                f"{dict(by_lane)}; adjudicate it in dedupe_cross_lane_cns.py")
 
     # --- mortality invariant ----------------------------------------------
     # Death is grade 3 under the rubric, without exception and without

@@ -1,8 +1,9 @@
 > **Shared CNS-corpus document, duplicated here.** The CNS curation covered both
 > named CNS endpoints as one corpus, so this document describes the whole corpus
-> (2,540 measurements), not the 147-row hydrocephalus partition alone. It is copied into each
+> (2,538 measurements), not the 145-row hydrocephalus partition alone. It is copied into each
 > toxicity that relies on it rather than shared from a common folder, so every
 > toxicity is self-contained. The counterpart copy is `chronic-neurotoxicity.methodology.md`.
+> Both copies are written by `scripts/sync_shared_cns_docs.py`; edit the master.
 
 # Methodology — OligoTox-CNS Dataset
 
@@ -49,6 +50,8 @@ Three consequences shaped every later decision:
 3. **Neuronal-electrical-activity readouts are the lowest-value class** and are
    flagged as such. 181 rows carry `low_acute_electrophysiology`; they are present
    only because they are the matched in-vitro arm of an in-vivo panel (§4.5).
+   That panel pairs **rat** cultures with **mouse** in-vivo tolerability, so it is
+   an animal-to-animal pairing and is described as one — see §4.5.
 
 **Granularity.** One row = oligo × model/subject × CNS region × delivery ×
 dose/concentration × readout. One oligo at one dose measured for neurofilament
@@ -164,8 +167,13 @@ qualitative row is a legitimate record; a fabricated precision is not.
 Hagedorn 2022's supplementary table carries calcium-oscillation scores for 1,825
 ASOs but in-vivo scores for 181. Only the 181 were ingested, so that every
 in-vitro row added is half of a **matched in-vitro/in-vivo pair on the same
-molecule with a published sequence** — which is the form the challenge's
-"bridge animal data to in vitro systems" request actually takes. Ingesting all
+molecule with a published sequence**. **Both arms are animal:** mouse
+intracerebroventricular tolerability against rat primary cortical neurons, and
+141 molecules — not 181 — appear in both arms. This panel is therefore *not*
+evidence for the challenge's request to bridge animal studies to **human** in
+vitro systems, and an earlier version of the corpus overview wrongly presented it
+that way. The pairing is still worth having on its own terms: a matched
+in-vivo/in-vitro contrast on sequence-resolved molecules is scarce. Ingesting all
 1,825 would have made the *deprioritised* endpoint class three-quarters of the
 dataset while adding nothing to the paired set. The remainder stays available in
 the cited CC-BY supplement. The reasoning is written into

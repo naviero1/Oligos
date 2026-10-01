@@ -45,8 +45,41 @@ excluded here and listed in the cross-cutting file instead.
 | [Complement activation](./complement-activation.md) | background-only | 0 | 0 | 0 | none |
 | [Coagulopathy](./coagulopathy.md) | background-only | 0 | 0 | 0 | none |
 | [Chronic neurotoxicity](./chronic-neurotoxicity.md) | delivered | 573 | 2,393 | 23 † | 94 |
-| [Hydrocephalus](./hydrocephalus.md) | delivered | 13 | 147 | (shared †) | 44 |
-| **Total** | — | **651** ‡ | **2,651** | **36** † | **154** |
+| [Hydrocephalus](./hydrocephalus.md) | delivered | 13 | 145 | (shared †) | 44 |
+| **Total** | — | **651** ‡ | **2,649** | **36** † | **154** |
+
+## Human evidence, counted as humans
+
+Phase 2 asks for human-relevant data, so each CNS dossier leads with a
+human-first evidence table rather than a `study_type` split. `study_type` cannot
+carry that presentation: it has three values, so a patient-derived iPSC neuron and
+a rat cortical culture are both `in_vitro`, and a registry-posted trial table, a
+label's pooled safety summary and a single case report are all `clinical`. The
+derived `evidence_class` column separates them, and
+[`scripts/qc_cns.py`](./scripts/qc_cns.py) fails if any row's class disagrees with
+its own `species` or `study_type`.
+
+| | Chronic neurotoxicity | Hydrocephalus |
+|---|---:|---:|
+| Human rows — all classes | 530 | 131 |
+| …human clinical trial-derived | 295 | 84 |
+| …**human laboratory** (in vitro / ex vivo) | **116** | **0** |
+| …other human evidence | 119 | 47 |
+| Animal rows — supporting material | 1,863 | 14 |
+| **Verified unique human trials** | **27** | **12** |
+| …endpoint-evaluable | 27 | 12 |
+| Pending trial candidates (no registry id in any source) | 19 | 7 |
+| Unique compounds across verified trials | 18 | 4 |
+
+**Trial counts are not additive across the two endpoints.** 10 of those trials
+contribute rows to both, so the CNS-wide figure is **29 verified trials**, not 39.
+The measurement rows *are* additive, because they partition; trials and molecules
+are not, for the same reason the oligo counts in the table above are not. Each
+register names the trials it shares, in its `also_in_endpoint` column.
+
+Registers: [`chronic-neurotoxicity.trials.csv`](./chronic-neurotoxicity.trials.csv),
+[`hydrocephalus.trials.csv`](./hydrocephalus.trials.csv), and the pending
+candidates beside each.
 
 `sources/` originally held 18 PDFs: 13 endpoint-dedicated files, 4 cross-cutting
 reference files, and 1 off-topic file in `sources/_unrelated/`. The CNS pass added

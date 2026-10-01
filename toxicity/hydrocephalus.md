@@ -1,16 +1,77 @@
 # Hydrocephalus — endpoint dossier
 
-**Status:** `delivered` · **Register:** [`./README.md`](./README.md) · **Corpus documentation:** [`../README-CNS.md`](./hydrocephalus.corpus-overview.md)
+**Status:** `delivered` · **Register:** [`./README.md`](./README.md) · **Corpus documentation:** [`hydrocephalus.corpus-overview.md`](./hydrocephalus.corpus-overview.md)
 
-Hydrocephalus is the eighth and last endpoint in the Challenge brief's list of toxicities of interest (quoted verbatim in [`./README.md`](./README.md#scope-authority)). It is **curated and delivered**: 147 graded per-measurement rows over 13 oligonucleotides, drawn from 40 distinct source documents.
+Hydrocephalus is the eighth and last endpoint in the Challenge brief's list of toxicities of interest (quoted verbatim in [`./README.md`](./README.md#scope-authority)). It is **curated and delivered**: 145 graded per-measurement rows over 13 oligonucleotides, drawn from 40 distinct source documents.
 
 > **This file previously said the opposite.** Until 2026-08-28 it recorded the endpoint as `not-addressed` — "nothing was acquired, extracted or decided… zero rows, zero oligos, zero `source_id`s" — and recommended recording it as out of scope. That was an accurate description of one branch (the 111-row kidney lineage) and a wrong description of the project. The recommendation is withdrawn; §"What the original sweep established" preserves the part of the record that still holds.
 
-## Status
+## Status — human evidence first
+
+Phase 2 asks for human-relevant data, so the table below is ordered by the
+strength of the human claim each class of evidence supports, and animal evidence
+sits at the bottom as supporting material. `evidence_class` is what makes that
+ordering real: `study_type` has three values, so it cannot tell a registry-posted
+trial table from a label's pooled safety summary or from a single case report,
+and all three were previously counted together as "clinical". For this endpoint
+that conflation mattered most of all, because almost all of its evidence is
+clinical and the kinds are not interchangeable.
+
+<!-- BEGIN generated:evidence -->
+
+| Evidence class | Rows | Molecules | Sources | What it is |
+|---|---:|---:|---:|---|
+| Human trial — registry-posted results | 63 | 4 | 16 | arms and denominators as posted |
+| Human trial — peer-reviewed report | 13 | 3 | 5 | registry identity verified separately; see the register |
+| Human trial — sponsor or conference report | 8 | 1 | 2 | no posted table, no peer review |
+| Human — label / SmPC / EPAR, pooled | 12 | 2 | 7 | pools a development programme; never one trial |
+| Human — postmarketing signal assessment | 1 | 1 | 1 | no exposure denominator |
+| Human — case report or case series | 15 | 3 | 6 | one patient each, however serious |
+| Human — observational cohort, exposed | 12 | 2 | 2 | outside a trial protocol |
+| Human — disease background, unexposed | 7 | 1 | 3 | no oligonucleotide given; a baseline rate, not an effect |
+| Animal in vivo | 12 | 6 | 4 | supporting material |
+| Animal laboratory — in vitro | 2 | 2 | 1 | supporting material |
+| **Human — all classes** | **131** | — | — | 90% of the endpoint |
+| **Animal — all classes** | **14** | — | — | 10%, supporting material |
+
+Molecule counts do **not** sum down that column: one molecule can carry rows in several bands. Row counts do sum.
+
+**Human clinical trials, counted as trials.** From [`hydrocephalus.trials.csv`](./hydrocephalus.trials.csv), one row per trial, never per measurement.
+
+| | Count |
+|---|---:|
+| Verified unique human trials | **12** |
+| …with an endpoint-evaluable outcome | 12 |
+| …flagged by their own source as an extension or roll-over protocol | 5 |
+| …also contributing rows to the other CNS endpoint | 10 |
+| Pending candidates — a trial report naming no registry entry | 7 |
+| Human trial-derived measurement rows | 84 |
+| Unique compounds across the verified trials | 4 |
+| Human laboratory / ex-vivo measurement rows | 0 |
+
+The human-laboratory row is **zero, and stated rather than hidden**: no in vitro or ex vivo human experiment in this corpus measures this endpoint. Nothing was reclassified to fill it.
+
+Pending candidates are excluded from the verified total on purpose. A publication reporting a trial establishes the trial, but its registry identifier has to come from a document — supplying one from recall would be exactly the fabricated trial identifier this dataset refuses to contain.
+
+**Which zeros are negatives.** A grade of 0 means four different things, and only two of them are a measured negative.
+
+| | Rows |
+|---|---:|
+| Grade-0 rows | 63 |
+| …eligible as a measured negative (`negative_eligible=TRUE`) | 57 |
+| …**not** eligible | 6 |
+
+The ineligible rows are kept, with their evidence, and excluded from negative counts by one predicate:
+
+- `review_required` — 6 row(s): no ascertainment basis could be established from the row's own source fields
+
+<!-- END generated:evidence -->
+
+### Corpus-level counters
 
 | Item | Count | Basis |
 |---|---:|---|
-| Measurement rows | **147** | `challenge_priority = high_hydrocephalus` in the 2,540-row CNS corpus |
+| Measurement rows | **145** | `challenge_priority = high_hydrocephalus` in the 2,538-row CNS corpus |
 | Oligos | **13** | distinct `oligo_id` referenced by those rows |
 | Oligos with a published sequence | **6 / 13** | rest are `TBD`; never reconstructed |
 | Distinct `source_ref` documents | **40** | canonical identifiers |
@@ -20,19 +81,19 @@ Hydrocephalus is the eighth and last endpoint in the Challenge brief's list of t
 
 | `neurotox_grade` | 0 | 1 | 2 | 3 |
 |---|---:|---:|---:|---:|
-| Rows | 63 | 14 | 54 | 16 |
+| Rows | 63 | 13 | 53 | 16 |
 
-| Study type | clinical | animal in vivo | in vitro |
-|---|---:|---:|---:|
-| Rows | 133 | 12 | 2 |
-
-That shape is the endpoint's central problem, not an artifact of curation: **the evidence is almost entirely clinical.** See *Honest limits* below.
+That shape is the endpoint's central problem, not an artifact of curation: **the
+evidence is almost entirely clinical, and within that, several different kinds of
+clinical.** Twelve verified trials carry it; the remaining human rows are labels,
+case reports, an exposed cohort and a disease-background rate, none of which is a
+trial. See *Honest limits* below.
 
 ## Derivation
 
-Curated as part of a single CNS corpus of 2,540 measurements serving both named CNS endpoints, partitioned by the corpus's own `challenge_priority` column — `high_hydrocephalus` here, everything else to [`./chronic-neurotoxicity.md`](./chronic-neurotoxicity.md). The partition is disjoint and exhaustive (147 + 2,393 = 2,540). Schema, methodology, verification record and source registry are shared with that dossier and listed there.
+Curated as part of a single CNS corpus of 2,538 measurements serving both named CNS endpoints, partitioned by the corpus's own `challenge_priority` column — `high_hydrocephalus` here, everything else to [`./chronic-neurotoxicity.md`](./chronic-neurotoxicity.md). The partition is disjoint and exhaustive (145 + 2,393 = 2,538). Schema, methodology, verification record and source registry are shared with that dossier and listed there.
 
-Every row carries `endpoint_domain = hydrocephalus` (143) or a directly related clinical neuro event (4), and `challenge_priority = high_hydrocephalus`.
+Every row carries `endpoint_domain = hydrocephalus` (141) or a directly related clinical neuro event (4), and `challenge_priority = high_hydrocephalus`.
 
 ## What the data contains
 

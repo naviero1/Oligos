@@ -1,8 +1,9 @@
 > **Shared CNS-corpus document, duplicated here.** The CNS curation covered both
 > named CNS endpoints as one corpus, so this document describes the whole corpus
-> (2,540 measurements), not the 147-row hydrocephalus partition alone. It is copied into each
+> (2,538 measurements), not the 145-row hydrocephalus partition alone. It is copied into each
 > toxicity that relies on it rather than shared from a common folder, so every
 > toxicity is self-contained. The counterpart copy is `chronic-neurotoxicity.verification.md`.
+> Both copies are written by `scripts/sync_shared_cns_docs.py`; edit the master.
 
 # Verification — OligoTox-CNS
 
