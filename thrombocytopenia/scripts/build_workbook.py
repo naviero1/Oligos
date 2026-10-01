@@ -38,23 +38,54 @@ GRADE_FILL = {"0": PatternFill("solid", fgColor="E8F3E8"),
               "3": PatternFill("solid", fgColor="F8D4D4")}
 
 SHEETS = [
-    ("Germans_analysis", "germans_analysis.csv",
-     "One row per compound: what the molecule IS (sequence and modifications) and what it DID "
-     "(toxicity). Sorted worst-first. Human evidence is broken out separately because averaging "
-     "it into the animal data would hide the subset that matters most."),
-    ("measurements_human", "measurements_human.csv",
-     "THE PRIORITY SUBSET — every human row, denormalised so the sequence and the toxicity grade "
-     "sit beside each measurement without needing a join. Columns 4 and 5 are sequence and grade."),
-    ("bridge_human_animal", "bridge_human_animal.csv",
-     "Compounds characterised in BOTH human and animal systems — the set a cross-species model can "
-     "actually be trained and validated on. Holding human rows and animal rows separately does not "
-     "demonstrate extrapolation; this does."),
-    ("measurements_animal", "measurements_animal.csv",
-     "Animal rows, same denormalised shape as the human sheet."),
-    ("oligos", "oligos.csv", None),
-    ("measurements", "measurements.csv", None),
-    ("merged_analysis_view", "oligotox_thrombo_merged.csv", None),
+    # Reading order follows the evidence hierarchy, not the schema. Coverage and
+    # limitations first, so nobody reads a number before reading what it does not
+    # support; then human clinical, then human laboratory (the evidence class the
+    # challenge singles out), then unresolved, then the animal APPENDIX, then the
+    # canonical tables. Animal evidence is last among the evidence sheets and is
+    # labelled an appendix, because it influences no human count or ranking.
+    ("00_coverage_limitations", "coverage_and_limitations.csv",
+     "READ THIS FIRST. What this dataset contains and, for each item, what it does NOT support. "
+     "Row counts are outcome records, not trials. The trial-grain count lives in study_registry."),
+    ("01_study_registry", "studies.csv",
+     "HUMAN STUDIES AT TRIAL GRAIN. One row per evidence unit, typed: a registered trial, a pooled "
+     "analysis, a label summary, a case report. One trial reported across a paper, a registry record, "
+     "an EPAR and a label is ONE row here. A pooled analysis is not a trial. Overlapping participant "
+     "denominators are never summed."),
+    ("02_Germans_analysis", "germans_analysis.csv",
+     "One row per compound: what the molecule IS (sequence and per-residue modification map) and what "
+     "it DID (toxicity). RANKED ON HUMAN EVIDENCE ONLY -- a compound with no human rows cannot rank "
+     "above one that has them, whatever its animal data shows. Animal columns are present, prefixed "
+     "APPENDIX_, and never enter the sort. Grade histograms replace grade means."),
+    ("03_human_clinical", "measurements_human_clinical.csv",
+     "Human clinical outcome records, denormalised so the sequence and the toxicity grade sit beside "
+     "each measurement without a join. These are OUTCOME RECORDS: several may come from one dose band "
+     "of one table of one trial. Do not read the row count as a trial count."),
+    ("04_human_laboratory", "measurements_human_lab.csv",
+     "Human in vitro and ex vivo platelet evidence -- the class the challenge announcement singles "
+     "out. These are NOT clinical trials, and they are not interchangeable with clinical outcomes, "
+     "but for Phase 2 they are the most directly relevant human mechanistic evidence here."),
+    ("05_unresolved", "measurements_unresolved.csv",
+     "Species or subject class not established from the source. Assigned to NEITHER the human nor the "
+     "animal side, and excluded from every human total. Visible and unassigned rather than forced."),
+    ("06_APPENDIX_animal", "measurements_animal.csv",
+     "SUPPORTING EVIDENCE ONLY. Same denormalised shape. Excluded from every human count, human label "
+     "and human ranking. Retained in full -- no source data is deleted."),
+    ("07_cross_species_bridge", "bridge_human_animal.csv",
+     "Compounds characterised in BOTH human and animal systems. Each side shows its own worst finding "
+     "WITH the dose and duration it was observed at, and every row states whether the exposures are "
+     "comparable. The previous single-number animal-minus-human grade gap is removed: it differenced "
+     "means across unrelated exposures and read as a translational statistic while establishing none."),
+    ("08_oligos", "oligos.csv",
+     "Canonical compound table, including the scientist disposition, model-lane eligibility and the "
+     "exact_sequence_group that any train/test split must group on."),
+    ("09_measurements", "measurements.csv", None),
+    ("10_sources_inventory", "sources_inventory.csv",
+     "One row per source DOCUMENT, keyed by a stable source_uid. The legacy source_id is not unique: "
+     "three of its values each stand for up to eight genuinely different papers."),
+    ("11_merged_analysis_view", "oligotox_thrombo_merged.csv", None),
 ]
+
 
 
 def add_sheet(wb, title, path, note):
@@ -142,6 +173,9 @@ def main():
     ws.column_dimensions["B"].width = 112
 
     for title, path, note in SHEETS:
+        if not os.path.exists(os.path.join(BASE, path)):
+            print(f"  skip {title}: data/{path} not built yet")
+            continue
         counts[title] = add_sheet(wb, title, path, note)
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)

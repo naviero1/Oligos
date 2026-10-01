@@ -140,31 +140,47 @@ than coerced to zero. Run it after any ingestion round.
 <!-- BEGIN FITNESS ANALYSIS -->
 
 **Backbone chemistry orders as the phosphorothioate hypothesis predicts**,
-with no modelling:
+with no modelling, in human evidence alone:
 
-| backbone | n rows | n oligos | mean grade |
+| backbone | n human rows | n oligos | mean grade |
 |---|---:|---:|---:|
-| `PMO_neutral` | 10 | 6 | 0.10 |
-| `PS_PO_mix` | 54 | 7 | 0.15 |
-| `full_PO` | 57 | 6 | 0.44 |
-| `full_PS` | 1611 | 170 | 0.99 |
+| `PMO_neutral` | 1 | 1 | 0.00 |
+| `PS_PO_mix` | 39 | 5 | 0.10 |
+| `full_PO` | 35 | 4 | 0.46 |
+| `full_PS` | 1190 | 43 | 1.10 |
 
-Mean grade also rises with phosphorothioate count (0 → 0.39; 13–16 → 0.60; 17–19 → 1.07; 20+ → 1.47 linkages).
+Mean grade also rises with phosphorothioate count (0 → 0.42; 13–16 → 1.06; 17–19 → 1.22; 20+ → 1.45 linkages), again in human evidence alone.
 
-Modality orders PMO 0.10 < GalNAc_siRNA 0.10 < siRNA 0.50 < splice_switching_ASO 0.90 < ASO_gapmer 0.91 < other 1.13 < aptamer 1.39.
+Modality orders GalNAc_siRNA 0.09 < splice_switching_ASO 0.90 < ASO_gapmer 1.00 < other 1.22 < aptamer 1.55.
 
 **The caveat that must travel with this.** Grade is partly confounded with
-study type — severe thrombocytopenia is observed in trials, not in dishes:
+study type. Read the **% grade 3** column, not the mean: grade 3 requires a
+clinically severe event, which is observed in trials and not in dishes. The
+mean runs the other way only because the in vitro rows contain proportionally
+fewer grade 0 observations — a sampling artefact of which assays get published,
+not a biological statement:
 
 | study type | n rows | mean grade | % grade 3 |
 |---|---:|---:|---:|
-| in_vitro | 481 | 1.06 | 7.3% |
+| in_vitro | 422 | 1.15 | 8.3% |
 | clinical | 923 | 1.00 | 12.4% |
-| ex_vivo | 36 | 1.00 | 11.1% |
-| animal_invivo | 426 | 0.68 | 6.3% |
+| ex_vivo | 23 | 0.48 | 0.0% |
 
 Any model trained here must account for study type rather than learn it
-as biology.
+as biology. The retired classifier did exactly that: `is_human` was its
+second most important feature. See `data/approved_analyses.json`.
+
+**Animal evidence, reported separately.** The same ordering is present,
+which is why the cross-species bridge is worth keeping — but these rows
+sit at different doses and durations, so the two columns are not a
+translational statistic:
+
+| backbone | n animal rows | n oligos | mean grade |
+|---|---:|---:|---:|
+| `PMO_neutral` | 9 | 5 | 0.11 |
+| `PS_PO_mix` | 15 | 4 | 0.27 |
+| `full_PO` | 20 | 4 | 0.45 |
+| `full_PS` | 415 | 143 | 0.70 |
 
 <!-- END FITNESS ANALYSIS -->
 
@@ -313,7 +329,7 @@ python3 scripts/refresh_docs.py                             # regenerate the tab
 | Grade distribution (0/1/2/3) | 852 / 499 / 388 / 220 |
 | Distinct target genes | **67** |
 | Distinct sources (`source_ref`) | **70** |
-| Oligos with sequence (not TBD) | **195 / 259** |
+| Oligos with sequence (not TBD) | **199 / 259** |
 
 ## Independent (predictor) variables — `oligos.csv`
 
@@ -324,7 +340,7 @@ python3 scripts/refresh_docs.py                             # regenerate the tab
 | **Conjugate** | none 228 · GalNAc 15 · TBD 7 · lipid 5 · PEG 3 · other 1 |
 | **Development stage (`max_phase`)** | research_panel 135 · preclinical 53 · phase_1 24 · approved 17 · phase_2 13 · class_review 8 · phase_3 4 · phase_3_discontinued 3 · TBD 1 · approved_EMA 1 |
 | **Sugar modifications** | DNA_gap 175 · 2'-MOE 157 · cEt 37 · TBD 22 · 5-methylcytosine 19 · DNA 17 · 2'-OMe 12 · LNA 9 · DNA_deoxyribose 8 · RNA_ribose 7 |
-| **Sequence available** | 195 / 259 (rest `TBD`, never guessed) |
+| **Sequence available** | 199 / 259 (rest `TBD`, never guessed) |
 
 ## Dependent (indicator) variables — `measurements.csv`
 

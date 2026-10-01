@@ -41,6 +41,52 @@ features hypothesized to drive toxicity.
 | `design_source` | string | Source for the design metadata (DOI / patent / label). |
 | `notes` | string | Free text. |
 
+### Scientific governance columns (added 2026-10-01)
+
+Ported from the scientist-governed package v0.9 by `scripts/reconcile_scientist_v09.py`.
+The scientist package is **authoritative** on every value in this block; this pipeline
+may fill these columns but may never grant, widen or reverse a decision recorded there.
+`scripts/qc_thrombo.py` fails the build if it tries.
+
+| column | type | meaning |
+|---|---|---|
+| `scientist_record_id` | string | The matching `Sequence_Record_ID` in the scientist package (`OLG-TMB-###`), or empty. Empty means **not adjudicated**. |
+| `scientist_disposition` | enum | The scientist's current disposition, e.g. `PROVISIONALLY_APPROVED_CLINICAL_*`, `SUPPORT_ONLY_CROSS_DOMAIN`, `HOLD_PER_SEQUENCE_OUTCOME`, `EXCLUDE_FROM_PLATELET_COUNT_*`. `NOT_ADJUDICATED` where no scientist record matched. |
+| `clinical_model_eligibility` | enum | `NO` · `PROVISIONAL ONLY` · `PROVISIONAL COMPARATOR` · `PROVISIONAL - POSITIVE ONLY` · `TREATMENT-AWARE ONLY`. **`NO` is the default**, including for every unadjudicated compound. No value here is unconditional. |
+| `mechanistic_model_eligibility` | enum | `YES` / `NO`. `YES` only where the scientist package's training manifest lists the construct. |
+| `exact_sequence_group` | string | **Outer split group.** Every oligo record sharing a normalised nucleotide sequence carries the same label, so a split cannot separate isosequential constructs. Scientist labels (`EXACT-APOC3-VOL-OLE`) win where they exist and are propagated to unadjudicated records sharing that sequence; otherwise a derived `EXACT-<sha1>`, or `SINGLETON-<oligo_id>` / `NO_SEQUENCE-<oligo_id>`. |
+| `scaffold_family` | string | Chemistry-relative family. Scaffold relatives are not independent and belong in the same outer validation group. |
+| `publication_group` | string | Source-publication group, for leave-one-publication-out evaluation: assay and laboratory signatures can otherwise dominate. |
+| `matched_pair_id` | string | Matched parent/derivative pair (volanesorsen/olezarsen, inotersen/eplontersen). The pair must stay intact in any split. |
+| `modification_map_notation` | enum | `source_verbatim` where `modification_map` is reproduced exactly as a source printed it; `rocksteady_v1` where this pipeline composed it from per-residue data (see below). Empty where `modification_map` is `TBD`. |
+| `characterization_source` | string | Where a composed `modification_map` came from, e.g. `scientist_v0.9 Position_Chemistry (OLG-TMB-001)`. |
+
+#### `rocksteady_v1` modification-map notation
+
+Composed from per-residue chemistry so that the Phase 2 requirement — *the location
+of all chemical modifications in each oligo* — is met positionally rather than
+summarised away. One token per residue, read 5'→3':
+
+```
+<sugar><BASE>[(5m)]<linkage-to-next>
+```
+
+| element | values |
+|---|---|
+| sugar prefix | `e` 2′-O-methoxyethyl (2′MOE) · `m` 2′-O-methyl · `d` 2′-deoxy · `l` LNA · `k` constrained ethyl (cEt) |
+| base | `A` `C` `G` `T` `U` |
+| base modification | `(5m)` 5-methylcytosine; absent otherwise |
+| linkage to next | `*` phosphorothioate · `-` phosphodiester · absent on the 3′ residue |
+
+So `eA*eG*eC(5m)*dC(5m)*…` is a 2′MOE wing running into a 5-methyl-C DNA gap, fully
+phosphorothioate. The notation is lossless and reversible: the base sequence,
+every sugar, every 5-methyl-C and every backbone linkage can be read back off it,
+and `ps_count` is recomputable as the number of `*`.
+
+**A `source_verbatim` map is never overwritten by a composed one.** Where they
+disagree the branch value is kept and the disagreement is written to
+`curation/scientist_v09/conflicts.csv` for scientific review.
+
 ---
 
 ## Table 2 — `data/measurements.csv`

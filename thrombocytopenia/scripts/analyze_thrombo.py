@@ -113,9 +113,20 @@ def emit_markdown(oligos, meas):
               "Those rows remain in the dataset; they are excluded only from this "
               "hypothesis test, because a different mechanism is evidence neither for "
               "nor against the phosphorothioate hypothesis.*\n")
+    # HUMAN EVIDENCE ONLY. Pooling human and animal rows into one mean averages
+    # across species, exposures and assay systems; the resulting number reads as a
+    # structure-activity result while resting on incomparable observations. Animal
+    # rows are retained in full in data/measurements_animal.csv and are reported
+    # separately below, never folded into a human figure.
+    meas_all = meas
+    meas = [m for m in meas_all if (m.get("subject_class") or "").startswith("human")]
+    animal = [m for m in meas_all if (m.get("subject_class") or "").startswith("animal")]
+    print(f"*All structure-activity figures below use **human evidence only** "
+          f"({len(meas)} rows). Animal evidence ({len(animal)} rows) is reported "
+          f"separately at the end and is never averaged into a human figure.*\n")
     print("**Backbone chemistry orders as the phosphorothioate hypothesis predicts**,")
-    print("with no modelling:\n")
-    print("| backbone | n rows | n oligos | mean grade |")
+    print("with no modelling, in human evidence alone:\n")
+    print("| backbone | n human rows | n oligos | mean grade |")
     print("|---|---:|---:|---:|")
     by = collections.defaultdict(list)
     for m in meas:
@@ -136,7 +147,7 @@ def emit_markdown(oligos, meas):
         if rows:
             parts.append(f"{label} → {mean_grade(rows):.2f}")
     print(f"\nMean grade also rises with phosphorothioate count "
-          f"({'; '.join(parts)} linkages).\n")
+          f"({'; '.join(parts)} linkages), again in human evidence alone.\n")
 
     bym = collections.defaultdict(list)
     for m in meas:
@@ -146,7 +157,11 @@ def emit_markdown(oligos, meas):
     print("Modality orders " + " < ".join(f"{k} {g:.2f}" for k, g in mod) + ".\n")
 
     print("**The caveat that must travel with this.** Grade is partly confounded with")
-    print("study type — severe thrombocytopenia is observed in trials, not in dishes:\n")
+    print("study type. Read the **% grade 3** column, not the mean: grade 3 requires a")
+    print("clinically severe event, which is observed in trials and not in dishes. The")
+    print("mean runs the other way only because the in vitro rows contain proportionally")
+    print("fewer grade 0 observations — a sampling artefact of which assays get published,")
+    print("not a biological statement:\n")
     print("| study type | n rows | mean grade | % grade 3 |")
     print("|---|---:|---:|---:|")
     bys = collections.defaultdict(list)
@@ -156,7 +171,27 @@ def emit_markdown(oligos, meas):
         g3 = 100.0 * sum(1 for r in rows if r["thrombocytopenia_grade"] == "3") / len(rows)
         print(f"| {k} | {len(rows)} | {mean_grade(rows):.2f} | {g3:.1f}% |")
     print("\nAny model trained here must account for study type rather than learn it")
-    print("as biology.")
+    print("as biology. The retired classifier did exactly that: `is_human` was its")
+    print("second most important feature. See `data/approved_analyses.json`.\n")
+
+    # Animal evidence, stated separately so the comparison is visible without
+    # either side contaminating the other's mean.
+    if animal:
+        print("**Animal evidence, reported separately.** The same ordering is present,")
+        print("which is why the cross-species bridge is worth keeping — but these rows")
+        print("sit at different doses and durations, so the two columns are not a")
+        print("translational statistic:\n")
+        print("| backbone | n animal rows | n oligos | mean grade |")
+        print("|---|---:|---:|---:|")
+        bya = collections.defaultdict(list)
+        for m in animal:
+            bya[oligos.get(m["oligo_id"], {}).get("backbone_chemistry", "TBD")].append(m)
+        for k in order:
+            rows = bya.get(k)
+            if rows:
+                print(f"| `{k}` | {len(rows)} | {len({m['oligo_id'] for m in rows})} | "
+                      f"{mean_grade(rows):.2f} |")
+        print()
 
 
 def main():

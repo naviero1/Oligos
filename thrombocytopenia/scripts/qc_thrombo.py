@@ -286,6 +286,31 @@ def main():
         if len(labels) > 1:
             errors.append(f"exact_sequence_group split across one sequence {sq[:20]}: {sorted(labels)}")
 
+    # (4b) Composed modification maps must round-trip. The rocksteady_v1 notation
+    #      claims to be lossless in schema.md: the base sequence must be readable
+    #      back off it and ps_count must equal the number of PS linkage marks. A
+    #      map that fails this is a positional-chemistry claim that cannot be
+    #      checked, which is worse than TBD.
+    TOK = re.compile(r"([emdlk])([ACGTU])(\(5m\))?([*-]?)")
+    for o in oligos:
+        if (o.get("modification_map_notation") or "") != "rocksteady_v1":
+            continue
+        mm = o.get("modification_map", "")
+        toks = TOK.findall(mm)
+        if sum(len("".join(t)) for t in toks) != len(mm):
+            errors.append(f"oligos {o['oligo_id']}: modification_map does not fully parse "
+                          f"under rocksteady_v1: {mm[:60]!r}")
+            continue
+        seq = "".join(t[1] for t in toks).replace("U", "T")
+        want = re.sub(r"[^ACGTU]", "", (o.get("sequence_5to3") or "").upper()).replace("U", "T")
+        if want and seq != want:
+            errors.append(f"oligos {o['oligo_id']}: modification_map bases {seq!r} != "
+                          f"sequence_5to3 {want!r}")
+        ps = mm.count("*")
+        if (o.get("ps_count") or "").isdigit() and int(o["ps_count"]) != ps:
+            errors.append(f"oligos {o['oligo_id']}: ps_count={o['ps_count']} but "
+                          f"modification_map has {ps} phosphorothioate linkage(s)")
+
     # (5) Trial double-counting, once the study registry exists.
     spath = os.path.join(BASE, "studies.csv")
     if os.path.exists(spath):
