@@ -1,0 +1,45 @@
+{
+  "release_id": "kidney-5d82de234c71",
+  "endpoint": "kidney / nephrotoxicity",
+  "git_commit": "9d01bfdbbc8d",
+  "counts": {
+    "oligos": 65,
+    "measurements": 246,
+    "human_clinical_trials_identified": 17,
+    "human_clinical_trials_primary_source_read": 3,
+    "clinical_measurement_rows": 42,
+    "human_laboratory_rows": 67,
+    "animal_appendix_rows": 137,
+    "unique_compounds_with_clinical_evidence": 31,
+    "sequences_present": 55,
+    "rows_gated_from_negative_training": 20
+  },
+  "canonical_sha256": {
+    "data/oligos.csv": "040ea8cd097c775e43d7aa953b492e434ee41c1c0f14d2f1b2149ae179a94c1e",
+    "data/measurements.csv": "b4abe9e6be3b7fdf2ccce70699252b34d00dd1028311a7a6efa57d2610a4fc42"
+  },
+  "derived_sha256": {
+    "data/oligotox_kidney_merged.csv": "608618e44c296bad6bc639de5aaa95c001943b186da12f4024fdbe84522e9800",
+    "data/human_animal_bridge.csv": "c9312255f92587872d9dd4233047d460f9cfe2271fc1880049e43f8fb7d33ca5",
+    "data/clinical_study_register.csv": "d02b36753a3627cd3c4f6c67071108934d28e6468cd271d79aecf8cab5105ba4",
+    "data/OligoTox-Kidney.xlsx": "9d4b1f7ecded2c5aa03bbd9d49322468ba255dff8c02a5b94c1742b4fdc0316f"
+  },
+  "document_sha256": {
+    "NARRATIVE.md": "d198d6c3b464c46383dd2eefa854c55654c8afd1f5ea162621177159861770ad",
+    "METHODOLOGY_PHASE2.md": "2ac7854134c1a6e378de739bca1880b3af116b79041025b9781f994e63074611",
+    "PADP.md": "3ddf7cf680a6b718e5aaa4b0458111a2e8f930e612f5b10bcd7a6d1111e3c4cb",
+    "schema.md": "7b9e886f476a9a12c5fdd37bc9ad1124657ee5e207b80e8642f82083f1ea1a06",
+    "SOURCE_REGISTER.md": "e13721453c672ddc2ea9129ee78a89746ca76cd7d0c31d9afda9491b8a464b40",
+    "CLINICAL_VALIDATION.md": "7c06810557b9fd10693df957fbfd9dd054d4da2051a96c26567f8d7a2f148cc6",
+    "STATUS.md": "4c27093b1ad2f1a88ce6407a929e61964ed8d52e2f4011a38757a874126f8fc9",
+    "NARRATIVE.pdf": "e250a4caa4795500ee7741ba60f7f5f2f3473811a92159c64e4331b244eb40bc",
+    "METHODOLOGY_PHASE2.pdf": "6aa25be59a7a5472170482bcbd76394f0d7c2eb3b7406b2b1e806eb419852212",
+    "PADP.pdf": "04e98f41c97ff5d0408095ecee4cdc2dfae107fb2d85607e5aeb62914b072a31",
+    "SOURCE_REGISTER.pdf": "c92f26949fd6a7839a5cc3d159c90962cdfa1cfa69c3c3d1066411e1ed4b34f2"
+  },
+  "notes": [
+    "release_id is content-derived from the canonical tables; identical data yields an identical id, and any table change changes it.",
+    "Derived files are regenerable: build_merged.py, split_human_animal.py, build_study_register.py, build_workbook.py.",
+    "All grades remain provisional pending scientific sign-off."
+  ]
+}

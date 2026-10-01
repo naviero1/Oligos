@@ -17,7 +17,7 @@ need a team decision rather than more curation.
 | 1 | Narrative document (≤12 pp) | `NARRATIVE.md` | **Drafted** — exec summary, controls, findings, production, variables, gap, modelling |
 | 2 | Methodology document (≤5 pp) | `METHODOLOGY_PHASE2.md` | **Drafted** — including the required "methods used to purify and characterize oligo identity" (§5) |
 | 3 | Public Access & Dissemination Plan (≤5 pp) | `PADP.md` | **Complete** — CC BY 4.0, three continuity scenarios incl. U.S. Government grant |
-| 4 | Dataset (dictionary + schema + data) | `schema.md`, `data/*.csv` | **Complete** — 65 oligos × 20, 246 measurements × 25, merged 246 × 44, bridge view |
+| 4 | Dataset (dictionary + schema + data) | `schema.md`, `data/*.csv` | **Complete** — 65 oligos × 20, 246 measurements × 25, merged 246 × 46, bridge view |
 
 Rendering to PDF is the only remaining mechanical step; all four are written to the
 brief's required section structure.
@@ -39,7 +39,7 @@ to second-largest), bridge set **9 → 15**.
 
 ## 3. Open on merit — needs a team decision
 
-**a. Purity data is absent for all 65 oligos, and cannot be curated.** The brief requires
+**a. Purity is not reported in any source reviewed, for all 65 oligos.** The brief requires
 it twice. We verified rather than assumed: both source patents were searched for purity /
 HPLC / UPLC / LC-MS / mass-spec language and neither reports any; labels and trial papers
 do not publish per-batch purity. No wet lab was run. `purity_pct` and `purity_method` are
@@ -50,7 +50,7 @@ limitation of the curation approach, which is our recommendation, rather than as
 blank.
 
 **b. The negative class is improved but not clean.** The provenance/outcome confound was
-weakened 3.7× (Fisher p = 4.5 × 10⁻⁵ → 1.65 × 10⁻⁴) by adding measured negatives, and
+weakened modestly (risk difference 57.9 → 50.0 percentage points) by adding measured negatives, and
 `renal_endpoints_measured` now flags **13 grade-0 clinical rows as not supported as
 measured negatives**. The hazard is now machine-readable rather than hidden, which is the
 important change. But 36 `WS` rows remain search-derived, and closing them needs NEJM /

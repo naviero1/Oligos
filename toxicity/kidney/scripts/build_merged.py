@@ -33,7 +33,7 @@ MEAS_COLS = ["study_type", "species", "subject_class", "system_model", "tissue",
              "dose_or_conc_value", "dose_or_conc_unit", "exposure_duration",
              "readout_category", "readout_name", "readout_value", "readout_unit",
              "effect_direction", "effect_vs_control", "renal_endpoints_measured",
-             "nephrotox_grade",
+             "nephrotox_grade", "negative_eligibility", "nephrotox_grade_modeling",
              "is_kidney_specific", "source_id", "source_ref", "source_table",
              "redistribution"]
 

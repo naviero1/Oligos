@@ -95,7 +95,7 @@ missing from the WS rows.
 
 Effect on the confound: anchor-sourced grade-0 clinical rows **1 → 4**, and the
 association weakens from one-sided Fisher **p = 4.5 × 10⁻⁵ to p = 1.65 × 10⁻⁴**. That is
-a 3.7× weakening achieved the right way — by adding well-sourced negatives, not by
+a real but modest weakening, achieved the right way — by adding well-sourced negatives, not by
 removing positives. It is **not a resolution**: p = 1.65 × 10⁻⁴ still evidences strong
 confounding, the 20 WS rows are unchanged, and the `renal_endpoints_measured` field
 recommended in §3 remains unimplemented.

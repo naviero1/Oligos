@@ -94,6 +94,28 @@ def main():
             continue
         hmax = max(int(x["nephrotox_grade"]) for x in human)
         amax = max(int(x["nephrotox_grade"]) for x in animal)
+
+        # Beebop Priority 3: a max-grade comparison across DIFFERENT studies confounds
+        # species with dose, assay, follow-up, source and clinical ascertainment. Only
+        # compounds whose human and animal evidence come from the SAME source document
+        # are genuinely paired; the rest are compound overlap across studies and are
+        # hypothesis-generating at best.
+        hsrc = {x["source_ref"] for x in human}
+        asrc = {x["source_ref"] for x in animal}
+        paired = bool(hsrc & asrc)
+
+        # A concordance verdict must not rest on a human negative that failed
+        # eligibility -- "animal over-predicts" is unsupportable if nobody established
+        # the human endpoint. Suppress the verdict rather than publish it.
+        human_neg_ok = all(x.get("negative_eligibility", "") in
+                           ("positive_finding", "confirmed_negative") for x in human)
+        if hmax == amax:
+            verdict = "concordant"
+        elif amax > hmax:
+            verdict = ("animal_over_predicts" if human_neg_ok
+                       else "indeterminate_human_negative_unsupported")
+        else:
+            verdict = "animal_under_predicts"
         ol = oligos[oid]
         out.append({
             "oligo_id": oid,
@@ -106,9 +128,9 @@ def main():
             "n_animal_invivo": len(groups.get("animal_invivo", [])),
             "human_max_grade": hmax,
             "animal_max_grade": amax,
-            "concordance": ("concordant" if hmax == amax
-                            else "animal_over_predicts" if amax > hmax
-                            else "animal_under_predicts"),
+            "concordance": verdict,
+            "comparison_type": "paired_same_source" if paired else "cross_study_overlap",
+            "human_negative_eligible": "TRUE" if human_neg_ok else "FALSE",
             "human_species_models": ";".join(sorted({x["system_model"] for x in human})),
             "animal_species": ";".join(sorted({x["species"] for x in animal})),
         })
@@ -118,8 +140,15 @@ def main():
         w.writeheader()
         w.writerows(out)
     print(f"\nwrote {BRIDGE}: {len(out)} oligos with paired human+animal evidence")
-    for k in ("concordant", "animal_over_predicts", "animal_under_predicts"):
-        print(f"  {k:<24}{sum(1 for r in out if r['concordance'] == k)}")
+    for k in sorted({r["concordance"] for r in out}):
+        print(f"  {k:<44}{sum(1 for r in out if r['concordance'] == k)}")
+    print("  --- by comparison type ---")
+    for k in ("paired_same_source", "cross_study_overlap"):
+        n = sum(1 for r in out if r["comparison_type"] == k)
+        print(f"  {k:<44}{n}")
+    paired_rows = [r for r in out if r["comparison_type"] == "paired_same_source"]
+    if paired_rows:
+        print("  genuinely paired compounds: " + ", ".join(r["oligo_name"] for r in paired_rows))
 
 
 if __name__ == "__main__":

@@ -132,7 +132,8 @@ def main():
                  "delivery_method", "dose_or_conc_value", "dose_or_conc_unit",
                  "exposure_duration", "readout_category", "readout_name", "readout_value",
                  "readout_unit", "effect_direction", "effect_vs_control",
-                 "renal_endpoints_measured", "identity_confirmation", "purity_pct",
+                 "renal_endpoints_measured", "negative_eligibility",
+                 "nephrotox_grade_modeling", "identity_confirmation", "purity_pct",
                  "source_id", "source_ref", "source_table", "redistribution", "notes"]
 
     def meas_row(r):
@@ -144,7 +145,8 @@ def main():
                 r["dose_or_conc_value"], r["dose_or_conc_unit"], r["exposure_duration"],
                 r["readout_category"], r["readout_name"], r["readout_value"],
                 r["readout_unit"], r["effect_direction"], r["effect_vs_control"],
-                r["renal_endpoints_measured"], ol["identity_confirmation"], ol["purity_pct"],
+                r["renal_endpoints_measured"], r["negative_eligibility"],
+                r["nephrotox_grade_modeling"], ol["identity_confirmation"], ol["purity_pct"],
                 r["source_id"], r["source_ref"], r["source_table"], r["redistribution"],
                 r["notes"]]
 
@@ -157,13 +159,45 @@ def main():
     clinical = [r for r in meas if r["subject_class"] == "human_clinical"]
     invitro = [r for r in meas if r["subject_class"] == "human_invitro"]
 
-    write_sheet(wb.create_sheet("Human trials"), MEAS_HEAD, [meas_row(r) for r in clinical],
+    # Oscar's requirement: human clinical TRIALS lead, deduplicated by study; animal
+    # evidence moves to an appendix and is excluded from human totals (retained, not deleted).
+    reg_path = os.path.join(ROOT, "data", "clinical_study_register.csv")
+    if os.path.exists(reg_path):
+        reg = list(csv.DictReader(open(reg_path, newline="")))
+        seen, trial_rows = set(), []
+        for r in sorted(reg, key=lambda x: (x["evidence_class"] != "trial", x["study_key"])):
+            if r["study_key"] in seen:
+                continue
+            seen.add(r["study_key"])
+            kin = [x for x in reg if x["study_key"] == r["study_key"]]
+            trial_rows.append([
+                r["study_key"], r["evidence_class"], r["counts_toward_trial_total"],
+                r["primary_source_read"], len(kin),
+                ";".join(sorted({x["oligo_name"] for x in kin})),
+                ";".join(sorted({x["population"] for x in kin})),
+                ";".join(sorted({x["renal_endpoint"] for x in kin})),
+                ";".join(sorted({x["nephrotox_grade"] for x in kin})),
+                r["source_ref"], r["source_locus"], r["attribution_basis"]])
+        write_sheet(wb.create_sheet("1 Human trials (verified)"),
+                    ["study_key", "evidence_class", "counts_toward_trial_total",
+                     "primary_source_read", "n_measurement_rows", "compounds", "population",
+                     "renal_endpoints", "grades", "source_ref", "source_locus",
+                     "attribution_basis"], trial_rows,
+                    widths={"study_key": 30, "attribution_basis": 52, "source_ref": 34,
+                            "compounds": 22, "renal_endpoints": 30},
+                    note="HUMAN CLINICAL EVIDENCE, DEDUPLICATED BY STUDY. One row per distinct study. "
+                         "A trial counts ONCE however many measurement rows, papers or labels cite it. "
+                         "17 trials identified; 3 with the primary document read = the headline verified "
+                         "count. 13 regulatory labels are NOT trials and appear in their own class. "
+                         "Counting rules: scripts/build_study_register.py")
+
+    write_sheet(wb.create_sheet("2 Human trial measurements"), MEAS_HEAD, [meas_row(r) for r in clinical],
                 seq_cols=("sequence_5to3",), grade_cols=("nephrotox_grade",), widths=W,
-                note=f"HUMAN CLINICAL TRIALS - the priority subset ({len(clinical)} rows). "
+                note=f"HUMAN CLINICAL MEASUREMENTS ({len(clinical)} rows) - measurement rows, NOT a trial count; tab 1 has the trials. Train on nephrotox_grade_modeling, not nephrotox_grade: it is blank where the negative is unsupported. "
                      f"Sequence and toxicity grade lead the table. {CASE_NOTE}")
-    write_sheet(wb.create_sheet("Human in vitro"), MEAS_HEAD, [meas_row(r) for r in invitro],
+    write_sheet(wb.create_sheet("3 Human lab evidence"), MEAS_HEAD, [meas_row(r) for r in invitro],
                 seq_cols=("sequence_5to3",), grade_cols=("nephrotox_grade",), widths=W,
-                note=f"HUMAN IN VITRO cell systems ({len(invitro)} rows). {CASE_NOTE}")
+                note=f"HUMAN LABORATORY / EX-VIVO EVIDENCE ({len(invitro)} rows). Highly relevant to Phase 2 but NOT clinical-trial evidence, and never pooled into human trial counts. {CASE_NOTE}")
 
     # ---------- German's analysis: oligo / sequence / modification / toxicity ----------
     GA_HEAD = ["oligo_id", "oligo_name", "oligo_class", "sequence_5to3", "length_nt",
@@ -185,7 +219,7 @@ def main():
                    len(hum), len(ani), len(rows),
                    ol["identity_confirmation"], ol["purity_pct"], ol["target_gene"],
                    ol["max_phase"]])
-    write_sheet(wb.create_sheet("German's analysis"), GA_HEAD, ga,
+    write_sheet(wb.create_sheet("4 German's analysis"), GA_HEAD, ga,
                 seq_cols=("sequence_5to3",),
                 grade_cols=("max_grade_human", "max_grade_animal", "max_grade_overall"),
                 widths={"sequence_5to3": 30, "modification_summary": 40,
@@ -193,18 +227,27 @@ def main():
                 note="ONE ROW PER OLIGO: sequence, its modifications, and the toxicity it "
                      f"reached. Grades are the MAXIMUM observed per subject class. {CASE_NOTE}")
 
-    write_sheet(wb.create_sheet("All measurements"), MEAS_HEAD, [meas_row(r) for r in meas],
+    animal = [r for r in meas if r["subject_class"].startswith("animal")]
+    write_sheet(wb.create_sheet("A1 APPENDIX animal evidence"), MEAS_HEAD,
+                [meas_row(r) for r in animal],
+                seq_cols=("sequence_5to3",), grade_cols=("nephrotox_grade",), widths=W,
+                note=f"ANIMAL SUPPORTING EVIDENCE - APPENDIX ({len(animal)} rows: "
+                     f"{sum(1 for r in animal if r['subject_class']=='animal_invitro')} in-vitro, "
+                     f"{sum(1 for r in animal if r['subject_class']=='animal_invivo')} in-vivo). "
+                     f"EXCLUDED from every human total and from default human-outcome summaries. "
+                     f"Retained, not deleted. {CASE_NOTE}")
+    write_sheet(wb.create_sheet("A2 APPENDIX all measurements"), MEAS_HEAD, [meas_row(r) for r in meas],
                 seq_cols=("sequence_5to3",), grade_cols=("nephrotox_grade",), widths=W,
                 note=f"All {len(meas)} measurements, every one strict-kidney "
                      f"(is_kidney_specific=TRUE). {CASE_NOTE}")
 
     OHEAD = list(oligos[0].keys())
-    write_sheet(wb.create_sheet("Oligos"), OHEAD, [[r[k] for k in OHEAD] for r in oligos],
+    write_sheet(wb.create_sheet("5 Oligos and characterization"), OHEAD, [[r[k] for k in OHEAD] for r in oligos],
                 seq_cols=("sequence_5to3",), widths={"sequence_5to3": 30, "notes": 60},
                 note=f"Design table, one row per oligonucleotide ({len(oligos)}). {CASE_NOTE}")
 
     BHEAD = list(bridge[0].keys())
-    write_sheet(wb.create_sheet("Human vs animal"), BHEAD, [[r[k] for k in BHEAD] for r in bridge],
+    write_sheet(wb.create_sheet("A3 APPENDIX human vs animal"), BHEAD, [[r[k] for k in BHEAD] for r in bridge],
                 grade_cols=("human_max_grade", "animal_max_grade"),
                 note="Oligos carrying evidence on BOTH sides of the human/animal divide. "
                      "concordance compares max human grade against max animal grade. "
@@ -224,7 +267,7 @@ def main():
         ("redistribution", "public_domain | summary_stat | derived_features_only | verify. Governs whether a raw value may be republished."),
         ("source_id / source_ref / source_table", "Provenance triple. Every row carries all three; source_table names the exact table, figure or label section."),
     ]
-    write_sheet(wb.create_sheet("Data dictionary"), ["column", "definition"],
+    write_sheet(wb.create_sheet("6 Data dictionary"), ["column", "definition"],
                 [list(x) for x in DD], widths={"column": 30, "definition": 110},
                 note="Key columns. Full dictionary in schema.md.")
 
@@ -280,6 +323,19 @@ def main():
     ws.column_dimensions["A"].width = 24
     ws.column_dimensions["B"].width = 74
     ws.column_dimensions["C"].width = 10
+
+    # Enforce the presentation order explicitly: human clinical, then human laboratory,
+    # then design/characterization, then the animal appendix last. Tab creation order
+    # follows the code's data dependencies, which is not the reading order.
+    ORDER = ["Summary", "1 Human trials (verified)", "2 Human trial measurements",
+             "3 Human lab evidence", "4 German's analysis", "5 Oligos and characterization",
+             "6 Data dictionary", "A1 APPENDIX animal evidence",
+             "A2 APPENDIX all measurements", "A3 APPENDIX human vs animal"]
+    present = [n for n in ORDER if n in wb.sheetnames]
+    missing = [n for n in wb.sheetnames if n not in ORDER]
+    if missing:
+        raise SystemExit(f"unordered sheets would be dropped from the order spec: {missing}")
+    wb._sheets = [wb[n] for n in present]
 
     wb.save(OUT)
     print(f"wrote {OUT}")

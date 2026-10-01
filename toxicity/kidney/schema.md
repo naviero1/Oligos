@@ -28,7 +28,7 @@ are the chemistry/sequence/design features hypothesized to drive nephrotoxicity.
 | `conjugate` | enum | `none` \| `GalNAc` \| `lipid` \| `peptide` \| `PEG` (e.g. `PEG_5prime`) \| `other`. (Affects renal exposure.) |
 | `ps_count` | int | Number of phosphorothioate linkages, or `TBD`. |
 | `sequence_5to3` | string | 5′→3′ sequence. **`TBD` unless from a redistribution-permitted source. Never guessed.** |
-| `purity_pct` | float | Reported purity of the tested oligo, %. **`TBD` for all 65** — verified unavailable, not merely unrecorded: both in-repo patents were searched for purity/HPLC/UPLC/LC-MS/mass-spec language and neither reports any, and labels and trial papers do not publish per-batch purity. No wet lab was run, so this cannot be closed by further curation. |
+| `purity_pct` | float | Reported purity of the tested oligo, %. **`TBD` for all 65** — verified unavailable, not merely unrecorded: both in-repo patents were searched for purity/HPLC/UPLC/LC-MS/mass-spec language and neither reports any, and labels and trial papers do not publish per-batch purity. No wet lab was run. This states what the sources reviewed contain, not that no source anywhere could report it; targeted supplements and manufacturer batch records remain unexamined. |
 | `purity_method` | string | Analytical method behind `purity_pct` (e.g. `HPLC`, `LC-MS`). `TBD` for all 65, same reason. |
 | `identity_confirmation` | enum | **How each oligo's identity was established** — the half of the Phase 2 "purify and characterize oligo identity" requirement a curated dataset can answer. `who_inn_chemical_nomenclature` (residue-by-residue INN parse, reverse-complement and molecular-formula checked) \| `patent_sequence_listing` \| `regulatory_label` \| `peer_reviewed_publication` \| `not_established` (sequence still `TBD`). Derived by `scripts/add_identity_characterization.py`. |
 | `design_source` | string | Source for the design metadata (DOI / patent / label). |
@@ -62,7 +62,9 @@ single oligo at a single concentration measured with KIM-1 *and* viability =
 | `effect_direction` | enum | `increase` \| `decrease` \| `no_change` \| `TBD`. |
 | `effect_vs_control` | string | Quantified effect vs control if available (e.g. `3.2x`, `-45%`), else `TBD`. |
 | `renal_endpoints_measured` | enum | **Stops grade 0 meaning two different things.** `measured_and_reported` (endpoint assayed, result reported — a real negative) \| `not_measured` (study never assessed renal endpoints) \| `not_reported_in_source` (cited source does not report them) \| `cannot_determine` (not yet verified against the primary source). Only `measured_and_reported` supports a grade of 0 as evidence of safety. Assigned deterministically by `scripts/add_endpoint_provenance.py`; see `CLINICAL_VALIDATION.md`. |
-| `nephrotox_grade` | int 0–3 | Graded label (rubric below). **Read together with `renal_endpoints_measured`** — a grade of 0 on a row that is not `measured_and_reported` means "not established", not "safe". |
+| `nephrotox_grade` | int 0–3 | Graded label (rubric below). **The preserved source assertion — never overwritten.** Read together with `negative_eligibility`: a grade of 0 on a row that is not `confirmed_negative` means "not established", not "safe". |
+| `negative_eligibility` | enum | **Whether a grade of 0 may be used as a negative.** `positive_finding` (grade ≥1; n/a) \| `confirmed_negative` (safety endpoint measured and reported; for clinical rows the primary study source was also read) \| `asserted_negative_regulatory` (a label asserts no finding in the studies, with no endpoint table behind it) \| `efficacy_derived_negative` (renal endpoint reported, but for efficacy or eligibility rather than safety) \| `not_eligible_negative` (ascertainment is not_measured / not_reported_in_source / cannot_determine). Derived by `scripts/add_negative_eligibility.py`; reason recorded per row in `notes`. **Curation proposals pending scientific review, not settled judgements.** |
+| `nephrotox_grade_modeling` | int 0–3 or blank | **The column to train on.** Equals `nephrotox_grade` except it is **blank** wherever `negative_eligibility` is not `positive_finding` or `confirmed_negative`. A flag column alone does not stop a model treating an unsupported 0 as a negative; this one makes the value *missing* rather than zero. Currently blank on 20 rows. |
 | `is_kidney_specific` | bool | `TRUE` = strict-kidney row; `FALSE` = hepatotox/other fallback row (flagged). |
 | `source_id` | string | → entry in `sources/SOURCES.md` (e.g. `N2`). |
 | `source_ref` | string | DOI or patent number. |
@@ -180,7 +182,7 @@ oligo may differ by model/dose. Record the rationale in `notes` when non-obvious
   protein-to-creatinine ratio ... monitor urine dipstick every month, and serum cystatin C
   and UPCR every three months") and then state the result was negative. That is the
   distinction `CLINICAL_VALIDATION.md` found missing from the WS grade-0 rows, and adding
-  them **weakened the provenance/outcome confound 3.7×** (one-sided Fisher
+  them **weakened the provenance/outcome confound modestly** (one-sided Fisher
   p = 4.5 × 10⁻⁵ → **1.65 × 10⁻⁴**; anchor-sourced grade-0 clinical rows 1 → 4). The
   confound is reduced, not resolved.
   All three labels also warn that "creatinine may not be a reliable measure of kidney
@@ -233,6 +235,23 @@ produced by `scripts/build_merged.py`.
   `python scripts/build_merged.py` after any change, and never hand-edit it
   (denormalization repeats each oligo's design across its measurement rows).
 
+## Derived table — `data/clinical_study_register.csv` (generated, not canonical)
+
+Resolves each of the 42 clinical measurement rows to the **study** underneath it, so a
+human trial total can be counted once per trial rather than once per row. Produced by
+`scripts/build_study_register.py`, which states its seven counting rules in full.
+
+- **Grain:** one row per clinical measurement (42), carrying `study_key` (the deduplication
+  key), `evidence_class`, `counts_toward_trial_total`, `primary_source_read`, population,
+  renal endpoint, source reference and locus, and `attribution_basis` (why that class).
+- **`evidence_class`:** `trial` \| `label_derived` \| `case_report` \| `review_derived` \|
+  `pooled_analysis` \| `unresolved`. Only `trial` increments the trial count.
+- **Headline:** 17 distinct trials identified, **3** with the primary document read, 14
+  identified but unread. A regulatory label is not a trial; 13 distinct labels are counted
+  in their own class.
+- No trial identifier is ever invented. A study with neither a name nor a registry ID is
+  `unresolved`.
+
 ## Derived table — `data/human_animal_bridge.csv` (generated, not canonical)
 
 One row per oligo carrying evidence on **both** sides of the human/animal divide,
@@ -244,8 +263,17 @@ so it is materialised rather than left for each consumer to recompute.
 - **Columns:** `oligo_id`, `oligo_name`, `oligo_class`, `sequence_known`,
   `n_human_clinical`, `n_human_invitro`, `n_animal_invivo`, `human_max_grade`,
   `animal_max_grade`, `concordance`, `human_species_models`, `animal_species`.
-- **`concordance`:** `concordant` \| `animal_over_predicts` \| `animal_under_predicts`,
-  comparing the maximum human grade against the maximum animal grade for that oligo.
+- **`concordance`:** `concordant` \| `animal_over_predicts` \| `animal_under_predicts` \|
+  `indeterminate_human_negative_unsupported`, comparing the maximum human grade against the
+  maximum animal grade. The fourth value exists because an over-prediction claim requires a
+  human negative somebody established; where the human side fails `negative_eligibility` the
+  verdict is **suppressed rather than published**. 5 of 15 currently sit there.
+- **`comparison_type`:** `paired_same_source` (human and animal evidence from the same source
+  document — 10 of 15) \| `cross_study_overlap` (the same compound in unrelated studies — 5 of
+  15, which confounds species with dose, assay, follow-up and ascertainment, and is
+  hypothesis-generating at best).
+- **`human_negative_eligible`:** whether every human row for that compound passed
+  `negative_eligibility`.
 - **Read with care.** Concordance inherits the reliability of both grades. Where the
   human grade is an unvalidated 0 (see `CLINICAL_VALIDATION.md`), an
   `animal_over_predicts` verdict may be an artefact of *nobody having measured the

@@ -224,18 +224,21 @@ Automated checks run after every ingestion round:
   unverified absence claims retrieved directly, 1 survived as a measured negative
   (`CLINICAL_VALIDATION.md`). Treat the remaining `WS` rows as unvalidated.
 - **Species translation is bidirectional here, not one-way.** The received wisdom is
-  that animal toxicology *over-predicts* human renal effects for 2′-MOE ASOs. The 9
+  that animal toxicology *over-predicts* human renal effects for 2′-MOE ASOs. The 15
   oligos in `data/human_animal_bridge.csv` that carry both human and animal evidence
-  do **not** support that as a blanket rule: 4 concordant, 3 animal-over-predicts,
-  and **2 animal-under-predicts** — inotersen (human grade 3 crescentic
+  do **not** support that as a blanket rule: 7 concordant, **5 indeterminate because the
+  human negative is unsupported**, **2 animal-under-predicts**, and only 1
+  animal-over-predicts — inotersen (human grade 3 crescentic
   glomerulonephritis against animal grade 1) and givosiran (human 2, animal 1). The
   under-prediction cases are the safety-relevant direction and involve the dataset's
   most severe human findings.
-  Two caveats bound this. The bridge set is 9 oligos, too small for a rule. And two
-  of the three over-prediction verdicts (lumasiran, vutrisiran) rest on human grade-0
-  values that direct source retrieval could not support, so they may reflect an
-  unmeasured human endpoint rather than a species difference. Model the direction as
-  an open question, not a known constant.
+  Three caveats bound this. The bridge set is 15 oligos, too small for a rule. Only 10 are
+  genuinely paired — human and animal evidence from the same source document — while 5 are
+  cross-study compound overlap that confounds species with dose, assay and ascertainment
+  (`comparison_type`). And an over-prediction verdict requires a human negative that was
+  actually established: five former over-prediction verdicts are now
+  `indeterminate_human_negative_unsupported`. Model the direction as an open question, not
+  a known constant.
 - **In-vitro human-system rows were under-represented** (19/111); the US 11,105,794
   Table 2 extraction (2026-09-03) raised this to **67/165 = 40.6%**, now the largest
   class. Further expansion

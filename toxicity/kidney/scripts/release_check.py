@@ -70,6 +70,32 @@ print(f"        grade-0 clinical rows flagged unsupported: {len(unsupported)}")
 check(all(r["source_id"] and r["source_ref"] and r["source_table"] for r in m),
       "every row carries source_id + source_ref + source_table")
 
+print("\n[4b] TRIAL COUNTING AND NEGATIVE ELIGIBILITY")
+reg_p = D("data", "clinical_study_register.csv")
+check(os.path.exists(reg_p), "clinical study register present")
+if os.path.exists(reg_p):
+    reg = list(csv.DictReader(open(reg_p, newline="")))
+    check(len(reg) == len([r for r in m if r["study_type"] == "clinical"]),
+          f"register covers every clinical row ({len(reg)})")
+    trials = {r["study_key"] for r in reg if r["evidence_class"] == "trial"}
+    readt = {r["study_key"] for r in reg
+             if r["evidence_class"] == "trial" and r["primary_source_read"] == "TRUE"}
+    print(f"        trials identified {len(trials)}; primary source read {len(readt)}; "
+          f"clinical rows {len(reg)}")
+    check(len(trials) < len(reg), "trial count is deduplicated below the row count")
+    check(not [r for r in reg if r["evidence_class"] != "trial"
+               and r["counts_toward_trial_total"] == "TRUE"],
+          "no label/review/case/pooled row counts toward the trial total")
+# the modeling grade must be blank exactly where the negative is not eligible
+ELIG = ("positive_finding", "confirmed_negative")
+bad_blank = [r["measurement_id"] for r in m
+             if (r["negative_eligibility"] in ELIG) != bool(r["nephrotox_grade_modeling"].strip())]
+check(not bad_blank, f"nephrotox_grade_modeling blank iff negative not eligible ({len(bad_blank)} off)")
+check(all(r["nephrotox_grade"] in "0123" for r in m),
+      "source nephrotox_grade preserved on every row (never overwritten)")
+n_gated = sum(1 for r in m if not r["nephrotox_grade_modeling"].strip())
+print(f"        rows gated out of negative training: {n_gated}")
+
 print("\n[5] SUBMISSION ARTEFACTS")
 for f, label in [("NARRATIVE.md", "narrative document"),
                  ("METHODOLOGY_PHASE2.md", "methodology document"),
@@ -90,9 +116,16 @@ for f, label in [("NARRATIVE.md", "narrative document"),
 try:
     from openpyxl import load_workbook
     wbk = load_workbook(D("data", "OligoTox-Kidney.xlsx"))
-    for tab in ("Human trials", "German's analysis"):
+    for tab in ("1 Human trials (verified)", "2 Human trial measurements",
+                "3 Human lab evidence", "4 German's analysis",
+                "A1 APPENDIX animal evidence"):
         check(tab in wbk.sheetnames, f"workbook tab present: {tab}")
-    htab = wbk["Human trials"]
+    # human-first presentation: every human tab must precede every appendix tab
+    order = wbk.sheetnames
+    last_human = max(order.index(t) for t in order if t[:1] in "1234")
+    first_appx = min(order.index(t) for t in order if t.startswith("A"))
+    check(last_human < first_appx, "all human/design tabs precede the animal appendix")
+    htab = wbk["2 Human trial measurements"]
     hdr = [htab.cell(2, c).value for c in range(1, htab.max_column + 1)]
     check("sequence_5to3" in hdr and "nephrotox_grade" in hdr,
           "Human trials carries sequence_5to3 and nephrotox_grade")

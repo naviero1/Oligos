@@ -20,19 +20,54 @@ values that exist today only as scattered patent tables, label sections and supp
 files, reduced to one schema with one grading rubric and per-row provenance, so they can
 be trained on and audited.
 
-### Composition
+### Human clinical evidence — trials first
 
-| `subject_class` | rows | share |
-|---|---:|---:|
-| `animal_invitro` (rat primary PTEC) | 81 | 32.9% |
-| `human_invitro` (primary human PTEC, PTEC-TERT1, ciPTEC, 3D-RPTEC, tubule-on-chip) | 67 | 27.2% |
-| `animal_invivo` (rat, mouse, monkey) | 56 | 22.8% |
-| `human_clinical` (trials, labels, case reports) | 42 | 17.1% |
+The dataset is counted per **measurement**, so a row count is not a trial count. Resolving
+each clinical row to its underlying study (`data/clinical_study_register.csv`, counting rules
+in `scripts/build_study_register.py`) gives the following. **These are the headline human
+numbers**; a trial is counted once however many rows, publications, labels or outcomes
+reference it.
 
-**109 of 246 rows (44.3%) are human**, and **67 are human in-vitro** — the category the
-Phase 2 announcement names as of particular interest. A further 81 rows are animal
-in-vitro on the *same assay and compounds*, which is what makes the human↔animal
-extrapolation analysis in §5 possible.
+| Human clinical evidence, deduplicated by study | count |
+|---|---:|
+| Distinct clinical **trials** identified | **17** |
+| — of which the primary trial document has been read | **3** |
+| — identified but not yet read (acquisition worklist) | **14** |
+| Distinct regulatory **labels** (each summarises studies; not a trial) | 13 |
+| Pooled cross-trial analyses (component trials not identified) | 1 |
+| Reviews / editorials | 2 |
+| Case reports | 1 |
+| Unresolved citations (no name, no registry ID) | 1 |
+| Clinical **measurement rows** *(not a trial count)* | 42 |
+| Unique compounds with clinical evidence | 31 |
+
+We report **3** as the verified trial count rather than 17, because "verified" should mean
+the trial document was opened, not merely named. The 14 identified-but-unread trials are
+real evidence of a weaker tier and are listed as the acquisition worklist in
+`SOURCES_TO_ACQUIRE.md`. No trial identifier was invented; the one unresolved citation
+(`MSR064`, recorded only as "KARDIA_trials") is reported as unresolved rather than guessed.
+
+### Human laboratory evidence — separate, and not a substitute for trials
+
+**67 rows** of human cell-system evidence (primary human PTEC, PTEC-TERT1, ciPTEC,
+3D-RPTEC, proximal-tubule-on-chip). This is the category the Phase 2 announcement names as
+of particular interest, and it is the dataset's strongest quantitative material — but it is
+**not** clinical-trial evidence and is never pooled into the human trial counts above.
+
+### Full composition, all evidence classes
+
+| `subject_class` | rows | share | class |
+|---|---:|---:|---|
+| `human_clinical` | 42 | 17.1% | **human — clinical** |
+| `human_invitro` | 67 | 27.2% | **human — laboratory** |
+| `animal_invitro` (rat primary PTEC) | 81 | 32.9% | animal — supporting (appendix) |
+| `animal_invivo` (rat, mouse, monkey) | 56 | 22.8% | animal — supporting (appendix) |
+
+**109 of 246 rows (44.3%) are human.** The 137 animal rows are supporting material: they are
+excluded from every human total above, and in the workbook they sit in an appendix after all
+human evidence. They are retained, not deleted — 81 of them are animal in-vitro on the *same
+assay and compounds* as the human cell work, which is what makes the extrapolation analysis
+in §5 possible at all.
 
 ### Controls
 
@@ -74,17 +109,27 @@ human/animal divide — do not support that as a rule:
 | concordance | oligos |
 |---|---:|
 | concordant | 7 |
-| animal over-predicts | 6 |
+| **indeterminate — human negative unsupported** | **5** |
 | **animal under-predicts** | **2** |
+| animal over-predicts | 1 |
+
+Of the 15, only **10 are genuinely paired** (human and animal evidence from the *same*
+source document); the other 5 are the same compound appearing in unrelated studies, which
+confounds species with dose, assay, follow-up and ascertainment, and is hypothesis-generating
+at best. The `comparison_type` column distinguishes them.
 
 The two under-predictions are the safety-relevant direction and involve the dataset's most
 severe human findings: **inotersen** (human grade 3 crescentic glomerulonephritis against
 animal grade 1) and **givosiran** (human 2, animal 1). A screening cascade calibrated on
 the assumption that animals over-predict would have under-called both.
 
-This is a bounded finding, and we state the bounds: 15 oligos is not a rule, and 3 of the
-6 over-prediction verdicts rest on human grade-0 values that direct source retrieval could
-not support (§3). Model the direction as an open question, not a constant.
+This is a bounded finding, and the bounds tightened on review. 15 oligos is not a rule. And
+**five verdicts that previously read "animal over-predicts" have been reclassified
+`indeterminate_human_negative_unsupported`**, because an over-prediction claim requires a
+human negative somebody actually established — and those did not survive eligibility
+screening (§3, §4.5). One over-prediction verdict remains. The under-predictions are
+unaffected, because they rest on positive human findings rather than on negatives. Model the
+direction as an open question, not a constant.
 
 ### 2.2 Human cell systems can be more sensitive than the animal in-vivo grade
 
@@ -114,7 +159,7 @@ on prospective compounds, which have no dossier and would be scored non-toxic by
 construction. That is the wrong error direction for a safety model.
 
 Two corrections were applied. First, three approved drugs with *measured* human negatives
-were added (§4.2), weakening the association **3.7×** to p = 1.65 × 10⁻⁴. Second, and more
+were added (§4.2), moving the association to p = 1.65 × 10⁻⁴. Second, and more
 importantly, the schema now carries **`renal_endpoints_measured`** (§4.5), which separates
 "measured and unremarkable" from "never looked". **13 grade-0 clinical rows are explicitly
 flagged as not supported as measured negatives.** Consumers can exclude, down-weight or
@@ -143,7 +188,7 @@ lysosomal load alongside function.
   The same oligo at one concentration read on KIM-1 *and* viability is two rows.
 - **Two normalised tables**, joined on `oligo_id`: `oligos.csv` (identity and design
   predictors, 65 rows × 20 columns) and `measurements.csv` (outcomes and context, 246 × 25).
-  A denormalised analysis view (`oligotox_kidney_merged.csv`, 246 × 44) is **generated,
+  A denormalised analysis view (`oligotox_kidney_merged.csv`, 246 × 46) is **generated,
   never hand-edited**.
 - **Strict-kidney scope.** Verified, not asserted: 246/246 rows `is_kidney_specific=TRUE`,
   tissue values only `kidney` (79) and `proximal_tubule` (167), zero hepatic readouts,
@@ -367,7 +412,7 @@ Source PDFs are included for verification and are not covered by that licence.
 |---|---|
 | Oligo design table | `data/oligos.csv` (65 × 20) |
 | Measurement table | `data/measurements.csv` (246 × 25) |
-| Merged analysis view | `data/oligotox_kidney_merged.csv` (246 × 44, generated) |
+| Merged analysis view | `data/oligotox_kidney_merged.csv` (246 × 46, generated) |
 | Human/animal bridge view | `data/human_animal_bridge.csv` (15 oligos) |
 | Data dictionary & schema | `schema.md` |
 | Methodology | `METHODOLOGY.md` (long form), `METHODOLOGY_PHASE2.md` (submission) |

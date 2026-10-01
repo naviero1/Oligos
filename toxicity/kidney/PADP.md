@@ -20,7 +20,7 @@ The solution is the **curated, openly-releasable dataset** and its documentation
 |---|---|
 | `data/oligos.csv` | 65 oligonucleotides — identity, sequence, purity/identity characterization + design predictors (20 columns) |
 | `data/measurements.csv` | 246 graded per-measurement nephrotoxicity records (25 columns), each carrying `subject_class` and `renal_endpoints_measured` |
-| `data/oligotox_kidney_merged.csv` | denormalised analysis view, 246 × 44 (generated, not canonical) |
+| `data/oligotox_kidney_merged.csv` | denormalised analysis view, 246 × 46 (generated, not canonical) |
 | `data/human_animal_bridge.csv` | 15 oligos carrying paired human and animal evidence (generated) |
 | `LICENSE` | CC BY 4.0 grant at the repository root, third-party source PDFs excluded |
 | `schema.md` | Full data dictionary, controlled vocabularies, and the 0–3 grade rubric |
