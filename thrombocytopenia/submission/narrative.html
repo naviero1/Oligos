@@ -116,11 +116,31 @@ and the axis is a first-class derived column, <code>subject_class</code>, comput
 and independently re-derived by the QC gate so it cannot drift.</p>
 <table>
 <tr><th>Human</th><th class="n">rows</th><th>Animal</th><th class="n">rows</th></tr>
-<tr><td>clinical (trials)</td><td class="n">{{hc_clinical}}</td><td>in vivo</td><td class="n">{{ac_invivo}}</td></tr>
+<tr><td>clinical (outcome records)</td><td class="n">{{hc_clinical}}</td><td>in vivo</td><td class="n">{{ac_invivo}}</td></tr>
 <tr><td>in vitro (platelets, PRP, whole blood)</td><td class="n">{{hc_invitro}}</td><td>in vitro</td><td class="n">{{ac_invitro}}</td></tr>
 <tr><td>ex vivo</td><td class="n">{{hc_exvivo}}</td><td>ex vivo</td><td class="n">{{ac_exvivo}}</td></tr>
 <tr><td><b>total</b></td><td class="n"><b>{{n_human}}</b> ({{n_human_comp}} compounds)</td><td><b>total</b></td><td class="n"><b>{{n_animal}}</b> ({{n_animal_comp}} compounds)</td></tr>
 </table>
+<div class="note"><p><b>Those are outcome RECORDS, not trials, and the difference is large.</b> Several
+rows are commonly dose-band cells of a single supplementary table of a single pooled analysis. Resolving
+the {{hc_clinical}} human clinical records to study grain yields <b>{{n_units}} evidence units</b>:
+{{n_trials_typed}} typed as a trial, {{n_trials_reg}} with a registry identifier verified against
+ClinicalTrials.gov or EudraCT, and {{n_pools}} pooled analyses that are <i>not</i> trials.</p>
+<p><b>No single headline trial count is published, because none is defensible.</b> Of the units typed as a
+trial, only <b>{{n_trials_rows}}</b> carry any measurement row at all — the rest are trial-grain
+<i>anchors</i>, identified so that pooled data can be attributed to a real study rather than floating free.
+Of those, {{n_trials_eval}} have a platelet endpoint demonstrably assessed under a defined exposure and
+observation window, and <b>{{n_trials_defensible}}</b> remain once units are excluded in which a platelet
+change is the intended pharmacology or the treated disease — an anti-von-Willebrand aptamer that raises
+platelets in type 2B von Willebrand disease, and a telomerase inhibitor dosed into thrombocythaemia. That
+last figure is the honest denominator for a platelet-toxicity claim. The full ladder, with each definition,
+is in <code>data/study_counts.csv</code>.</p>
+<p><b>Overlap is declared, not assumed away.</b> {{n_nested}} edges in
+<code>data/study_nesting_ledger.csv</code> record a trial that appears here individually and also inside a
+pooled analysis recorded here. Each was established by arithmetic agreement on arm sizes against the
+pooling source's own table — not by compound-name similarity, which produced several false overlap claims
+during resolution. Participant totals are therefore <b>not summable</b>, and the dataset says so rather
+than printing a tempting grand total.</p></div>
 <p>Containing human rows and animal rows does not by itself demonstrate extrapolation. Having the <i>same
 compound</i> characterised on both sides does, and <b>{{n_bridge}} compounds</b> qualify — {{bridge1_name}} ({{bridge1_h}} human / {{bridge1_a}}
 animal rows), {{bridge2_name}} ({{bridge2_h}} / {{bridge2_a}}), {{bridge3_name}} ({{bridge3_h}} / {{bridge3_a}}) among them, each with a published sequence.

@@ -9,11 +9,12 @@ reproduces exactly**: 259 oligos, 1,959 measurements, 1,002 `human_clinical`,
 194 of 259 sequences populated, 0 of 259 purity values. I checked each
 independently before acting on any of it. The proposal is accurate.
 
-**Status of this response:** Priorities 2, 3, 4 and 5 are implemented. **Priority 1
-is partially implemented** — the study registry is being resolved cluster by cluster
-and `data/studies.csv` is not yet complete. Until it is, this dataset publishes **no
-trial count at all**, which is the behaviour Priority 1 asks for. Nothing below
-describes work as finished that is not.
+**Status of this response:** all five priorities are implemented. The study registry
+is built (`data/studies.csv`, 85 evidence units) and publishes a **count ladder**
+rather than a single trial number, because a single number is not defensible here —
+the reasoning is in Priority 1 below. Two things remain genuinely open and are
+labelled as such: the numeric purity criterion, and 18 catalogued coverage gaps with
+a recovery plan. Nothing below describes work as finished that is not.
 
 ---
 
@@ -21,10 +22,10 @@ describes work as finished that is not.
 
 | # | Priority | Disposition | Core evidence |
 |---|---|---|---|
-| 1 | Defensible human clinical-trial count | **ACCEPTED — partially implemented** | 1,002 rows resolve to far fewer studies; Crooke 2017 alone pools **59 trials / 3,476 subjects**. Trial total published as *not yet established*. |
+| 1 | Defensible human clinical-trial count | **ACCEPTED — implemented as a ladder** | 1,002 rows → **85 evidence units**; of 56 typed as a trial only 39 carry data and **22** support a platelet-toxicity claim |
 | 2 | Preserve scientist authority while reconciling | **ACCEPTED — implemented** | 85-sheet scientist package read and reconciled; 35/45 records matched, 0 conflicts outstanding, dispositions now first-class columns |
 | 3 | Human evidence first, animal support retained | **ACCEPTED — implemented** | A compound with **zero human rows** ranked **2nd** in `germans_analysis.csv`; now 88th |
-| 4 | Close characterization and source-verification gaps | **ACCEPTED — partially implemented** | per-residue modification maps 2 → 36 of 259; 4 sequences recovered; purity still 0 and honestly so |
+| 4 | Close characterization and source-verification gaps | **ACCEPTED — implemented; purity question settled** | maps 2 → **44**; purity **withheld as Confidential Commercial Information**, with FOIA page-count evidence; method recovered for 11 |
 | 5 | Rebuild qualified outputs, document residual limits | **ACCEPTED — implemented, and went further than proposed** | the committed ML demonstration was running a model the scientist package **BLOCKS**; retracted |
 
 I accepted all five. I did not reject any. Two I extended materially beyond what was
@@ -64,25 +65,72 @@ The per-compound trial counts in `Crooke_2017_Panel` sum to 59 independently. So
 in the source. That makes `constituents_identifiable = partial`: the count is
 supported, the registry identifiers are not, and I will not invent them.
 
-**Implemented so far.** `scripts/prep_study_clusters.py` slices the clinical evidence
-into 7 resolution clusters; `curation/studies/registry_*.json` is being populated at
-trial grain with typed evidence units (`registered_trial`, `pooled_analysis`,
-`label_summary`, `case_report`, `observational_cohort`, …), eligibility decisions,
-separate `n_enrolled` and `n_analyzed_platelet`, and `platelet_endpoint_evaluable`
-backed by a quoted locus. Resolution has recovered verified registry identifiers that
-were not in the dataset at all — for volanesorsen, CS2 `NCT01529424`,
-CS6/APPROACH `NCT02211209`, CS16/COMPASS `NCT02300233`, CS7 OLE `NCT02658175`; for
-mipomersen, `NCT00607373`, `NCT00794664`, `NCT00706849`, `NCT00770146`, `NCT01475825`,
-`NCT00694109`, `NCT00477594`.
+**A correction to my own reasoning, forced by the resolution.** I assumed Crooke 2017's
+59 pooled trials overlapped the pivotal trials in the per-compound clusters. **That was
+wrong, and the arithmetic disproves it.** Crooke's Table 1 gives ISIS 304801
+(volanesorsen) as 3 trials / 136 subjects / 99 ASO-treated — and CS1 (25+8) + CS4 (10+5)
++ CS2 (64+24) reproduces both columns exactly. 136 subjects cannot contain APPROACH (67)
+and COMPASS (114). The overlap is with the **phase 1 and phase 2** records, not the
+pivotal ones. Same for inotersen: Crooke's single ISIS 420915 trial is 65 subjects, so it
+cannot be NEURO-TTR (173) — it is the phase 1 healthy-volunteer study. I had the right
+concern and the wrong mechanism.
 
-**Not yet done:** cross-cluster deduplication. Resolution has already shown this is
-not hypothetical — the volanesorsen cluster surfaced inclisiran ORION-1 and two
-class-level Crooke pools that my clustering had swept in, and Crooke 2017's 59 trials
-overlap the per-compound clusters. The headline count stays **not yet established**
-until that dedup is done, and `qc_thrombo.py` now *fails the build* if two study
-records ever claim the same `NCT` id.
+**What the registry publishes: a ladder, not a number.** `data/studies.csv` holds 85
+evidence units; `data/study_counts.csv` holds this:
 
-**Acceptance not yet met.** I am not claiming it is.
+| Count | n | What it means |
+|---|---:|---|
+| evidence units resolved | 85 | every unit the 1,002 rows resolve to, any type |
+| ... typed as a trial | 56 | registered + unregistered |
+| ... with a verified registry identifier | 52 | NCT or EudraCT confirmed against the registry |
+| ... carrying at least one measurement row | **39** | the rest are trial-grain **anchors**, not trials this dataset has data for |
+| ... platelet endpoint evaluable | 23 | endpoint demonstrably assessed under a defined exposure and observation window |
+| ... and not intended pharmacology | **22** | **the defensible denominator for a platelet-toxicity claim** |
+| pooled analyses (NOT trials) | 24 | integrated analyses, meta-analyses, label pools |
+| participants | — | **not summable**; denominators overlap across nested strata |
+
+Publishing one figure would have meant choosing between 56, 39 and 22 and hiding the
+choice. The ladder makes the choice the reader's, with each definition attached. QC now
+*fails the build* if two study records claim the same NCT — and it caught a real one
+immediately: my own registry-id harmoniser extracted an NCT from a pooled analysis's
+prose list of constituents, so the custirsen meta-analysis claimed SYNERGY's identifier.
+Unit type is now checked before any identifier is parsed.
+
+**That last filter matters more than its size suggests.** Three units were excluded
+because a platelet change is the *intended* effect, not a toxicity: an anti-von-Willebrand
+aptamer in type 2B von Willebrand disease where platelets rose 40 → 146 ×10⁹/L, and a
+telomerase inhibitor dosed into essential thrombocythaemia and polycythaemia vera — a
+thrombocyt**osis** population where platelet reduction is the therapeutic goal. Without
+an `intended_pharmacology` flag an automated harvest of grade plus
+`platelet_endpoint_evaluable` would ingest all of them as platelet toxicity. This aligns
+with the scientist package's existing `THERAPEUTIC_CORRECTION_OR_PRESERVATION` control
+class.
+
+**Overlap is declared, not assumed away.** `data/study_nesting_ledger.csv` records 23
+edges covering 21 trials that appear both individually and inside a pooled analysis. Each
+was established by arithmetic agreement on arm sizes against the pooling source's own
+table — never by compound-name similarity, which produced four false overlap claims
+during resolution (ISIS 5132 and oblimersen were asserted to overlap clusters that
+contain neither). The resolution agents' `constituent_of` field was single-valued and
+overloaded for two different relations, so wherever a trial fed two pools one edge was
+silently dropped and no edge could cross between cluster files at all; traversing it
+under-counted volanesorsen by four trials and inotersen by two. `pool_memberships` is now
+multi-valued and cross-file, and `parent_study_id` carries the extension-of relation
+separately.
+
+**Evaluability was over-claimed in eight units, and is downgraded.** The clearest case:
+two records typed `platelet_endpoint_evaluable = yes` on a single Discussion sentence —
+"no evidence of liver test elevation, renal dysfunction, or decreases in platelet count"
+— with no value, threshold, denominator or sampling schedule, while a *third* record
+resting on the *same sentence in the same paper* was typed `partial`. That is the
+fabricated-negative pattern `METHODOLOGY.md` forbids; both are now `no`, with the reason
+recorded in the row. Others downgraded: a patent example the resolver could not retrieve,
+an exposure-response model justified as "assessed by construction" with both denominators
+TBD, a figure with every value TBD, and a grade derived from the words "dose-limiting
+toxicity" rather than a measurement.
+
+**Acceptance met**, with the ladder replacing the single headline figure Priority 1 asked
+me not to publish prematurely.
 
 ---
 
@@ -204,18 +252,38 @@ A `source_verbatim` map is never overwritten by a composed one; `modification_ma
 records which kind each is, so scientist-derived positional chemistry can never be
 mistaken for something a source printed.
 
-**On your challenge to "structurally unobtainable" purity — you were right to press,
-and I withdraw the phrasing.** My earlier characterisation was overconfident. The
-scientist package is more careful than I was: it records `NOT REPORTED IN CURRENT
-CORPUS` for all 45 of its records, which is a claim about a searched corpus rather
-than about the world. The correct status is **not reported in any source either of us
-has curated**, which leaves regulatory CMC sections — EMA EPAR *Quality aspects*, FDA
-Product Quality reviews — as a live, untested route. That search is running now and is
-not yet concluded, so purity stays `TBD` for all 259 compounds. It is never inferred
-from a patent sequence or a reference identity.
+**On your challenge to "structurally unobtainable" purity — you were right to press, and
+the answer is now evidenced rather than asserted.** I withdraw the phrasing. Two agents
+downloaded and read 12 EMA EPARs (~3.9 MB of unredacted text) and 11 FDA review packages
+in full, then swept them exhaustively for any purity, assay or full-length-product term
+adjacent to a percentage or an NLT/NMT qualifier. Zero numeric acceptance criteria.
 
-**Acceptance partially met**: the identity and positional-chemistry half is
-substantially advanced; purity has a live recovery route rather than a verdict.
+The reason is not that the records are absent. **The criteria are Confidential Commercial
+Information and are actively withheld**, with citable stamps: nusinersen NDA 209531, *"136
+Page(s) has been Withheld in Full as b4 (CCI/TS)"*; defibrotide NDA 208114, 125 pages;
+pegaptanib NDA 21-756, 56 pages then 46. For imetelstat NDA 217779, 24 of 156 pages are
+released and the withheld portion is precisely the section titled *"Characterization of
+Drug Substance and Impurities"*. In the 1998 fomivirsen review the specification pages are
+physically removed from the scan.
+
+So your challenge is **partly upheld**: CMC sections do state the specification parameter
+and the analytical method, and those are now recovered for **11 compounds** — the Waylivra
+EPAR names identification by IP-HPLC-TOF-MS and T·m, most abundant mass by IP-HPLC-UV-MS,
+sodium counter-ion by ICP-OES, and assay, purity and impurities all by IP-HPLC-UV-MS;
+Tegsedi names full-length product content as the purity analyte. The numeric value they do
+not state. `purity_pct` therefore stays TBD for all 259 compounds and `purity_method` is
+populated: the requirement is met on characterization method, unmet on numeric purity, and
+the dataset now says which rather than reporting one gap for both.
+
+**One thing worth flagging before anyone chases the number.** A specification value
+describes a released lot against an acceptance criterion. It is not a measurement of the
+material dosed in a given trial, and these documents carry no lot linkage, so even
+recovered it could not honestly be attached to a measurement row as the purity of the
+tested article. Whether a specification value is the right quantity at all is in the
+decisions list for German rather than resolved by me.
+
+**Acceptance met** on characterization; the numeric purity gap is now a *characterised*
+gap with a named cause and a recommended next action, rather than a shrug or a guess.
 
 ---
 
@@ -282,6 +350,75 @@ does not yet reproduce the study registry, because the registry is not finished.
 
 ---
 
+## Chemistry errors found by independent verification — reported, not overwritten
+
+Verifying identity against WHO INN documents, FDA labels, EPARs and CAS chemical names
+turned up **21 disagreements** with `oligos.csv`. None was overwritten; all are in
+`curation/scientist_v09/conflicts.csv` for adjudication. Several are backed by atom
+arithmetic from a published molecular formula, which makes them hard to argue with:
+
+| Compound | Dataset says | Evidence against it |
+|---|---|---|
+| **tofersen** | `full_PS`, `ps_count = 19` | The label states 15 phosphorothioate + 4 phosphodiester **and its molecular formula contains S15, not S19**. Sulfur count settles it; the IUPAC name localises the four phosphodiesters to linkages 2, 4, 17, 19. Also omits the 5-methylcytosine and 5-methyluracil the label states explicitly. |
+| **patisiran** | `sugar_modifications` includes `2'-F` | **Patisiran contains no fluorine.** The label formula C412H480N148Na40O290P40 has no F atom and the CAS name annotates only 2′-O-methyl and dT. Almost certainly bled in from the GalNAc-siRNA rows (inclisiran, vutrisiran) which genuinely do contain 2′-F — a cross-row contamination pattern worth checking elsewhere. |
+| **aprinocarsen / ISIS 3521** | `oligo_class = ASO_gapmer` | A first-generation uniform phosphorothioate oligodeoxynucleotide, not a gapmer: C196 and N68 are reproduced exactly by 20 unmodified 2′-deoxy residues, and any 2′-MOE wing or 5-methyl-C would raise both counts. Misclassifying it would corrupt any sugar-chemistry-stratified analysis. |
+| **IONIS-TTRRx (TOLG073)** | a separate compound from inotersen (TOLG072) | It is a development code for ISIS 420915 = inotersen. **The same molecule under two `oligo_id`s**, and because TOLG073 has no sequence the `exact_sequence_group` leakage control cannot bind them. 2 clinical rows and 199 clinical rows are evidence about one substance. |
+| **ISIS 757456** | `ps_count = 19` with GalNAc conjugation | Not wrong, but unverified and high-risk: of three verified GalNAc3 conjugates, eplontersen and fesomersen are 13 PS / 6 PO while olezarsen is a full 19 PS. Conjugation does not determine backbone, and this is the same platform label the two mixed-backbone compounds carry. |
+
+Ten genuine recoveries *were* written, into fields that were TBD so nothing could be
+overwritten: per-residue maps (now **44 of 259**, from 2 at baseline), four sequences from
+the scientist package plus aprinocarsen's and oblimersen's from CAS chemical names, and
+five verified `ps_count` values.
+
+## An error this pipeline introduced, and retracted
+
+Worth stating plainly because it is the kind of mistake the governance rules exist to
+catch. My reconciliation composed `modification_map` for **eplontersen** from the scientist
+package's position chemistry, which records 19 phosphorothioate linkages for it —
+**byte-identical to inotersen**, with which eplontersen shares a nucleobase sequence. But
+eplontersen is the GalNAc3 LICA conjugate and carries a *mixed* backbone; the row's own
+`backbone_chemistry` column already read `PS_PO_mix`. So the pipeline wrote a positional
+chemistry claim that contradicted its own record, on 6 of 19 linkages.
+
+My round-trip QC gate did not catch it, because that gate compares a map against
+`ps_count` and `ps_count` was TBD for that row. **A new gate now rejects any map
+disagreeing with its own `backbone_chemistry`**, and it fires on exactly this case. The map
+is reverted to TBD rather than replaced with the proposed correction: the error originates
+in the scientist package's position data, and correcting that is German's call, not mine.
+The same gate then caught a second instance when I ported the verification results — a
+tofersen map with 15 PS onto a row still carrying `ps_count = 19` — which is now refused
+rather than silently written. Map porting is gated on agreement with the row's own
+backbone, PS count and sequence before anything is written.
+
+## Known gaps now carry a plan rather than a status
+
+You asked that a missing requirement not be met by recording `NOT_REPORTED`.
+`data/recovery_ledger.csv` holds **18 entries, 10 critical**, each with the missing item,
+why it matters, the sources already searched, a next action, a stopping criterion and an
+owner. The largest are compounds the dataset's own hypothesis depends on:
+
+- **Oblimersen** — an 18-mer uniform PS oligodeoxynucleotide, the exact chemistry class the
+  mechanistic hypothesis concerns, with randomised phase 3 datasets in which
+  thrombocytopenia was a principal toxicity. Present here as **one unassignable secondary
+  clause**.
+- **Drisapersen** — the dataset asserts a MOE-versus-OMe chemistry contrast while holding
+  trial-grain data for only one side of it. DEMAND-II and DEMAND-III have posted registry
+  results, i.e. public domain.
+- **The PMO class** — the neutral-backbone comparator is the load-bearing negative control
+  for the claim that the liability is PS-dependent rather than a universal oligonucleotide
+  class effect, and it is currently **one pooled percentage** against a pseudo-compound.
+- **Donidalorsen** — the GalNAc3 successor to a compound the dataset already holds
+  unconjugated, i.e. the matched pair for the conjugation question.
+- **Mipomersen** — the largest and longest-exposure 2′MOE dataset in existence (21 trials,
+  1,414 subjects, exposure to 4.6 years) is here only at pooled grain, and the two
+  documents that would fix that are named.
+
+Also catalogued: 460 of 1,462 human rows have no evidence-unit record of any type (correct
+for human laboratory rows, which are not trials — but nothing in the dataset *said* so);
+and the Vermeer 2026 meta-analysis **double-counts NEURO-TTR internally** (its studies 8
+and 101 both report 112 treated / 60 placebo), so its headline "101 studies / 6,163
+patients" is inflated and the 10 rows derived from it need that caveat.
+
 ## Gaps Beebop did not flag
 
 Both were found while verifying the proposal, and both would have corrupted
@@ -340,10 +477,17 @@ Measured by reading both revisions out of git, not from notes.
 | human laboratory / ex vivo | 451 | 451 | now a first-class separate view |
 | animal | 497 | 497 | now labelled an appendix, excluded from human figures |
 | unresolved | 9 | 9 | now its own visible view |
-| **verified unique human trials** | *mislabelled as 1,002* | **not yet established** | registry in progress |
-| sequences populated | 194 | **198** | +4 recovered |
-| per-residue modification maps | 2 | **36** | +34 from 831 scientist position rows |
-| purity values | 0 | 0 | genuinely open; route under test |
+| **evidence units at study grain** | *none; 1,002 rows mislabelled as trials* | **85** | `data/studies.csv` |
+| ... typed as a trial | — | 56 | 52 with a verified registry id |
+| ... carrying a measurement row | — | 39 | the rest are trial-grain anchors |
+| **... supporting a platelet-toxicity claim** | *implicitly 1,002* | **22** | the defensible denominator |
+| declared pool/trial overlaps | 0 | **23** | each proved by arm-size arithmetic |
+| sequences populated | 194 | **200** | +6 recovered |
+| per-residue modification maps | 2 | **44** | +42; one retracted as this pipeline's own error |
+| purity **values** | 0 | 0 | withheld as Confidential Commercial Information, with FOIA page-count evidence |
+| purity **methods** | 0 | **11** | recovered from regulatory CMC sections |
+| catalogued gaps with a recovery plan | 0 | **18** (10 critical) | `data/recovery_ledger.csv` |
+| chemistry disagreements flagged for adjudication | 0 | **21** | none overwritten |
 | source **documents** (stable key) | — | **70** | from 55 colliding legacy ids |
 | compounds with a scientist disposition | 0 | **35** | |
 | clinical-model-eligible compounds | *228 used by the model* | **7, all PROVISIONAL** | |
@@ -373,18 +517,22 @@ Measured by reading both revisions out of git, not from notes.
 
 ## Limitations
 
-1. **No trial count.** Priority 1 is not finished. Cross-cluster deduplication is
-   outstanding and the registry omits it, so no trial total may be quoted from this
-   dataset today.
-2. **Purity 0/259.** An explicit Phase 2 requirement at zero coverage. A recovery route
-   exists and is untested; I withdraw the earlier "structurally unobtainable" framing.
-3. **Source verification is partial**, not complete. 48 rows cite an abstract rather
+1. **No single trial count, by design.** 56 units are typed as a trial, 39 carry data, 22
+   support a platelet-toxicity claim. Quote one of those three with its definition, or the
+   ladder — never the row count.
+2. **Numeric purity 0/259**, because the criteria are withheld as Confidential Commercial
+   Information. The method is recovered for 11. I withdraw the earlier "structurally
+   unobtainable" framing as imprecise.
+3. **Coverage is materially incomplete** in ways now catalogued: 18 ledger entries, 10
+   critical, including whole compounds (oblimersen, drisapersen, donidalorsen, pelacarsen)
+   and the PMO comparator class on which the central chemistry claim leans.
+4. **Source verification is partial**, not complete. 48 rows cite an abstract rather
    than a numbered table or figure because the full text is paywalled.
-4. **No qualified clinical negatives.** Any clinical modelling claim must state this
+5. **No qualified clinical negatives.** Any clinical modelling claim must state this
    limit. Class balance must not be manufactured from reporting silence or animal controls.
-5. **The matched-contrast concordance rests on 6 pairs.** It is a reproducibility
+6. **The matched-contrast concordance rests on 6 pairs.** It is a reproducibility
    statement, not a performance estimate, and I have not presented it as one.
-6. **This response covers thrombocytopenia only.**
+7. **This response covers thrombocytopenia only.**
 
 ## Decisions requiring scientific review
 
@@ -403,7 +551,17 @@ Measured by reading both revisions out of git, not from notes.
    as `purity_pct` for a compound whose *tested material* is not the specified lot. They
    are a specification, not a measurement of what was dosed. My instinct is that they
    belong in a distinct field; I have not created one unilaterally.
-5. **Release gate SRQ-TMB-012** has not cleared. Nothing here should be read as
+5. **Chemistry corrections requiring sign-off before they are applied**: tofersen's
+   backbone (15 PS + 4 PO, not 19 PS — the formula's S15 settles it), patisiran's spurious
+   2′-F, aprinocarsen's class, and whether TOLG073 should be merged into TOLG072 as the
+   same molecule. All four are evidenced; none is applied.
+6. **The scientist package's position chemistry for eplontersen** records 19 PS where the
+   compound is mixed-backbone. That needs correcting at source; I reverted the map I
+   composed from it rather than patching over it.
+7. **Seven class-pool pseudo-compounds carry no sequence**, so a sequence-based grouping
+   key treats them as independent compounds and the leakage control cannot see them. They
+   need an explicit pseudo-compound flag before any modelling population is drawn.
+8. **Release gate SRQ-TMB-012** has not cleared. Nothing here should be read as
    release-eligible.
 
 ---

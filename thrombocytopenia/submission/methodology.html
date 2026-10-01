@@ -75,24 +75,47 @@ from rendered pixels. And in one source <b>chemistry is encoded by font colour a
 colour was recoverable from text-layer span attributes, underline was not, so those records retain
 <code>TBD</code> rather than a guess.</p>
 
-<div class="warn"><h3 style="margin-top:0">2.3 Purity data — a structural limitation, stated plainly</h3>
-<p>The Challenge requires the dataset to contain "<b>data on the purity and characterization of each</b>"
-oligo. <b>Purity is not available for the great majority of compounds in this dataset, and no purity value
-has been inferred, estimated, or carried across from another compound or batch.</b></p>
-<p>The requirement is written for submitters who <i>synthesise</i> the oligonucleotides they test and
-therefore hold HPLC, LC-MS or capillary-electrophoresis records for every batch. This dataset curates
-<b>published</b> results for compounds made by third parties, and the source literature almost never reports
-purity for the material it tested — a regulatory review states a platelet count, not a chromatogram.</p>
-<p>The response is threefold rather than cosmetic. (i) The columns <code>purity_pct</code> and
-<code>purity_method</code> exist and are populated wherever a source <i>does</i> state purity. (ii) The QC
-gate <b>reports coverage of purity, characterisation method, sequence and modification map on every run</b>,
-so the shortfall is a visible standing warning rather than something a reader must discover. (iii) The
-limitation is declared here and in the dataset documentation.</p>
-<p>Where identity assurance <i>is</i> available it is recorded in §2.1: for a large share of compounds the
-identity is confirmed against a formal patent sequence listing or a regulatory chemical name with a matching
-molecular formula, which is a stronger identity check than a purity percentage alone. Closing the purity gap
-properly would require either wet-lab characterisation of the compounds or access to sponsors' certificates
-of analysis; neither is achievable by curation, and we do not represent otherwise.</p></div>
+<div class="warn"><h3 style="margin-top:0">2.3 Purity data — withheld, not missing</h3>
+<p>The Challenge requires the dataset to contain "<b>data on the purity and characterization of
+each</b>" oligo. <b>No numeric purity value is reported for any of the {{n_oligos}} compounds, and none
+has been inferred, estimated, or carried across from another compound or batch.</b> An earlier version of
+this document called that a structural limit of curation. That was imprecise, and the sharper answer
+matters because it tells a consumer what the gap actually is.</p>
+<p><b>The purity specification exists and is deliberately not public.</b> Twelve EMA EPARs (about 3.9 MB
+of unredacted text) and eleven FDA review packages were downloaded and read in full for this question.
+Two exhaustive sweeps for any purity, assay or full-length-product term adjacent to a percentage or an
+NLT/NMT qualifier returned <b>zero</b> numeric acceptance criteria. The reason is stated by the regulators
+themselves: the criteria are Confidential Commercial Information. FDA withholds them under FOIA Exemption
+4 with citable page-count stamps — nusinersen NDA 209531, "136 Page(s) has been Withheld in Full as b4
+(CCI/TS)"; defibrotide NDA 208114, 125 pages; pegaptanib NDA 21-756, 56 pages and then 46. For imetelstat
+NDA 217779, 24 of 156 pages are released and the withheld portion is precisely the section titled
+"Characterization of Drug Substance and Impurities". In the 1998 fomivirsen review the specification pages
+are physically removed from the scan. This is not an absence of records; it is an active exemption.</p>
+<p><b>The characterization method is public, and is now recorded.</b> The same documents name the
+specification parameters and the analytical methods behind them, and those are captured for
+{{n_purity_method}} compounds in <code>purity_method</code> — for example the Waylivra EPAR's active
+substance specification lists identification by IP-HPLC-TOF-MS and T<sub>m</sub>, most abundant mass by
+IP-HPLC-UV-MS, sodium counter-ion by ICP-OES, and assay, purity, specified and unspecified impurities,
+total degradation products and total impurities all by IP-HPLC-UV-MS; the Tegsedi EPAR names full-length
+product content as the purity analyte. So the requirement is met on characterization method and unmet on
+numeric purity, and the dataset now says which.</p>
+<p><b>What a specification value would and would not have told you.</b> It describes a released lot
+against an acceptance criterion. It is not a measurement of the material dosed in any particular trial.
+Even recovered, it could not be attached to a measurement row as the purity of the tested article without
+a lot linkage that these documents do not provide. That is recorded as an open scientific question rather
+than resolved unilaterally.</p>
+<p><b>Positional chemistry, which is the other half of the requirement, advanced substantially.</b>
+Per-residue modification maps now cover {{n_modmap}} compounds against 2 at the start of this round, in a
+documented lossless notation from which the base sequence, every sugar, every 5-methylcytosine and every
+backbone linkage can be read back; a QC gate rejects any map that disagrees with its own sequence,
+phosphorothioate count or backbone column. Identity is independently confirmed for a large share of
+compounds against a patent sequence listing or a regulatory chemical name with a matching molecular
+formula — a stronger check than a purity percentage alone, and the route by which several chemistry errors
+in this dataset were caught.</p>
+<p><b>The gap carries a plan, not a shrug.</b> <code>data/recovery_ledger.csv</code> records
+{{n_gaps}} open items ({{n_gaps_critical}} critical), each with the sources already searched, a next
+action, an owner and a stopping criterion. For purity that next action — a FOIA request, or sponsor
+outreach — is recommended for the team's decision; no contact has been initiated.</p></div>
 
 <h2>3. Extraction methods</h2>
 <p>Extraction ran as a multi-agent pipeline over the verified source list, one agent per source, each

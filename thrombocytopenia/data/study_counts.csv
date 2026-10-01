@@ -1,0 +1,11 @@
+measure,n,definition
+evidence units resolved,85,"every unit the 1,002 human clinical rows resolve to, of any type"
+... typed as a trial,56,registered_trial + unregistered_trial
+... with a verified registry identifier,52,NCT or EudraCT confirmed against the registry
+... carrying at least one measurement row,39,"THE REST ARE TRIAL-GRAIN ANCHORS, not trials this dataset holds data for"
+... platelet endpoint evaluable,23,endpoint demonstrably assessed under a defined exposure and observation window
+... and not intended pharmacology,22,DEFENSIBLE TOXICITY DENOMINATOR: excludes units where a platelet change is the intended effect or the treated disease
+pooled analyses (NOT trials),24,"integrated analyses, meta-analyses, label pools"
+trials declared nested inside a pooled analysis,21,these subjects are counted inside a pool as well; NEVER sum a pool with its members
+unique compounds across included units,28,
+participants,0,NOT SUMMABLE. Denominators overlap across nested pools and strata; summing them double-counts. Use a single stratum's denominator and say which.

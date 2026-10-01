@@ -81,6 +81,10 @@ echo "== 6. reconcile against the scientist-governed package v0.9 =="
 # Must run BEFORE QC: QC's governance gates check the columns this writes, and a
 # compound with no scientist disposition is model-ineligible by default.
 python3 "$S_DIR/reconcile_scientist_v09.py"
+# Verified characterization recoveries. Runs after the scientist reconciliation
+# because it only ever writes into fields still TBD, and validates every
+# proposed modification map against the row's own backbone/ps_count first.
+python3 "$S_DIR/port_characterization.py"
 
 echo
 echo "== 7. QC (gates the round) =="
@@ -100,6 +104,7 @@ python3 "$S_DIR/build_merged_thrombo.py"
 python3 "$S_DIR/refresh_docs.py"
 python3 "$S_DIR/split_human_animal.py"
 python3 "$S_DIR/prep_study_clusters.py"
+python3 "$S_DIR/assemble_studies.py"
 python3 "$S_DIR/model_demo.py"
 python3 "$S_DIR/build_status.py"
 

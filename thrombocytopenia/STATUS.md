@@ -22,9 +22,24 @@ finished. The four axes:
 
 ## 2. Human clinical trials
 
-Verified unique human clinical trials: **not yet established**.
+Verified unique human clinical trials: **22** trials carry a defensible platelet-toxicity claim: endpoint demonstrably assessed, measurement rows present, and a platelet change is not the intended effect.
 
-**Status: NOT ESTABLISHED. The study registry is still being built. Until it exists this dataset reports OUTCOME RECORDS only and must not publish a trial count.**
+**Status: ESTABLISHED AS A LADDER, NOT A SINGLE NUMBER — see `data/study_counts.csv`. A single headline figure is not defensible here: of the 56 units typed as a trial, 39 carry any measurement row at all; the rest are trial-grain ANCHORS, identified so that pooled data can be attributed, not trials this dataset holds data for.**
+
+| Count | n | Definition |
+|---|---:|---|
+| evidence units resolved | 85 | every unit the 1,002 human clinical rows resolve to, of any type |
+| ... typed as a trial | 56 | registered_trial + unregistered_trial |
+| ... with a verified registry identifier | 52 | NCT or EudraCT confirmed against the registry |
+| ... carrying at least one measurement row | 39 | THE REST ARE TRIAL-GRAIN ANCHORS, not trials this dataset holds data for |
+| ... platelet endpoint evaluable | 23 | endpoint demonstrably assessed under a defined exposure and observation window |
+| ... and not intended pharmacology | 22 | DEFENSIBLE TOXICITY DENOMINATOR: excludes units where a platelet change is the intended effect or the treated disease |
+| pooled analyses (NOT trials) | 24 | integrated analyses, meta-analyses, label pools |
+| trials declared nested inside a pooled analysis | 21 | these subjects are counted inside a pool as well; NEVER sum a pool with its members |
+| unique compounds across included units | 28 |  |
+| participants | — | NOT SUMMABLE. Denominators overlap across nested pools and strata; summing them double-counts. Use a single stratum's denominator and say which. |
+
+`data/study_nesting_ledger.csv` declares **23 overlaps** where a trial recorded here individually is also inside a pooled analysis recorded here. Each edge was established by arithmetic agreement on arm sizes, never by compound-name similarity. **Never sum a pooled analysis with its member trials.**
 
 The distinction that matters: a trial is not a row. The table below counts rows.
 
@@ -49,8 +64,8 @@ Reconciled against `GOG_OligoTox_Thrombo_Integrated_Phase2_v0.9.xlsx` (45 scient
 |---|---:|
 | retained_matched | 35 |
 | newly_proposed_by_scientist_absent_from_branch | 10 |
-| conflicts outstanding | 0 |
-| values recovered from the scientist package | 4 |
+| conflicts outstanding | 23 |
+| values recovered from the scientist package | 0 |
 
 - Compounds carrying a scientist disposition: **35 / 259**. The remaining 224 are `NOT_ADJUDICATED` and therefore model-ineligible by default.
 - Clinical model eligibility: **7** compounds, all PROVISIONAL (ISIS 104838, ISIS 404173, eplontersen, inotersen, mipomersen, olezarsen, volanesorsen).
@@ -86,11 +101,26 @@ the contrasts. It is **not** a model performance claim.
 
 | Requirement | Coverage | Note |
 |---|---:|---|
-| sequences of all oligos tested | 198/259 (76%) | rest TBD, never guessed |
-| location of all chemical modifications | 36/259 (13%) | per-residue maps; 4 recovered this round from the scientist package |
+| sequences of all oligos tested | 200/259 (77%) | rest TBD, never guessed |
+| location of all chemical modifications | 44/259 (16%) | per-residue maps; 0 recovered this round from the scientist package |
 | purity and characterization data | 0/259 (0%) | **OPEN**. Not reported in any source curated so far, including the scientist package, which records `NOT REPORTED IN CURRENT CORPUS` for all 45 of its records. Recorded as TBD, never inferred from a patent or a reference identity. |
 | data dictionary / schema | yes | `schema.md` |
 | CC licence | yes | see `README.md` |
+
+## 5b. Known gaps with a recovery plan
+
+`data/recovery_ledger.csv` holds **18 entries** (10 critical), each with the missing item, the sources already searched, the next action, a stopping criterion and an owner. The largest are compounds whose chemistry class the dataset's own hypothesis depends on:
+
+| Priority | Missing | Next action |
+|---|---|---|
+| critical | Oblimersen (G3139 / Genasense) trial-grain platelet data | Fetch O'Brien 2007 JCO (CLL, NCT00024440) and Bedikian 2006 (melanoma); extract platelet A |
+| critical | Drisapersen (GSK2402968) trial-grain platelet data | Pull DEMAND-II (NCT01254019) and DEMAND-III (NCT01480245) posted results — both are regist |
+| critical | Donidalorsen (Dawnzera, ISIS 721744 / IONIS-PKK-LRx) | Add the compound; pull OASIS-HAE (NCT05139810) and OASISplus (NCT05392114) plus Fijen et a |
+| critical | Olezarsen phase 2 dose-ranging (NCT03385239) | Pull Tardif et al. and extract platelet data at arm grain |
+| critical | PMO class — no trial-grain representation at all | Create trial records for the 4 approved PMOs from their posted registry results and labels |
+| critical | Mipomersen per-trial platelet values | Fetch the EMA CHMP assessment report for Kynamro (EMA/305826/2013) CLINICAL SAFETY section |
+| critical | TOLG072 / TOLG073 are the same molecule under two oligo_ids | SCIENTIST DECISION: merge TOLG073 into TOLG072, or state why they are distinct |
+| critical | 7 class-pool pseudo-compounds have no sequence | Give them an explicit pseudo_compound flag and a shared grouping label so they cannot ente |
 
 ## 6. What is blocking release
 
@@ -102,4 +132,29 @@ the contrasts. It is **not** a model performance claim.
    gate SRQ-TMB-012 has not cleared.
 4. **No qualified clinical negatives** — any clinical modelling claim must state this
    limit rather than manufacture class balance from reporting silence.
+
+## 7. Decisions requiring scientific review
+
+| Kind | Compound | Scientist value | Branch value |
+|---|---|---|---|
+| modification_map_retracted | eplontersen | eT*eC(5m)*eT*eT*eG*dG*dT*dT*dA*dC(5m)*dA | TBD (reverted) |
+| chemistry_disagreement | ARC1779 | TBD (dataset value NOT overwritten; see  | bb=TBD ps=TBD sugar=2'-OMe;DNA;inverted_ |
+| chemistry_disagreement | imetelstat | NOTATION EXTENSION REQUIRED - see notes. | bb=mixed ps=0 sugar=N3'-P5'_thiophosphor |
+| chemistry_disagreement | inotersen | eT*eC(5m)*eT*eT*eG*dG*dT*dT*dA*dC(5m)*dA | bb=full_PS ps=19 sugar=2'-MOE;DNA_gap;5- |
+| chemistry_disagreement | IONIS-TTRRx | TBD - and should remain TBD until the du | bb=TBD ps=TBD sugar=2'-MOE;DNA_gap |
+| chemistry_disagreement | ISIS 104838 | eG*eC(5m)*eT*eG*eA*dT*dT*dA*dG*dA*dG*dA* | bb=full_PS ps=19 sugar=2'-MOE;DNA_gap;5- |
+| chemistry_disagreement | ISIS 3521 | dG*dT*dT*dC*dT*dC*dG*dC*dT*dG*dG*dT*dG*d | bb=full_PS ps=19 sugar=TBD |
+| chemistry_disagreement | ISIS 757456 | TBD | bb=full_PS ps=19 sugar=2'-MOE;DNA_gap |
+| chemistry_disagreement | mipomersen | eG*eC(5m)*eC(5m)*eT*eC(5m)*dA*dG*dT*dC(5 | bb=full_PS ps=19 sugar=2'-MOE;DNA_gap;5- |
+| chemistry_disagreement | nusinersen | eT*eC(5m)*eA*eC(5m)*eT*eT*eT*eC(5m)*eA*e | bb=full_PS ps=17 sugar=2'-MOE_uniform;2' |
+| chemistry_disagreement | oblimersen | dT*dC*dT*dC*dC*dC*dA*dG*dC*dG*dT*dG*dC*d | bb=full_PS ps=17 sugar=TBD |
+| chemistry_disagreement | olezarsen | eA*eG*eC(5m)*eT*eT*dC(5m)*dT*dT*dG*dT*dC | bb=full_PS ps=19 sugar=2'-MOE;DNA_gap |
+| chemistry_disagreement | patisiran | NOTATION EXTENSION REQUIRED - rocksteady | bb=PS_PO_mix ps=0 sugar=2'-OMe;2'-F;DNA_ |
+| modification_map_rejected | tofersen | eC(5m)*eA-eG*eG-eA*dT*dA*dC(5m)*dA*dT*dT | bb=full_PS ps=19 |
+| chemistry_disagreement | tofersen | eC(5m)*eA-eG*eG-eA*dT*dA*dC(5m)*dA*dT*dT | bb=full_PS ps=19 sugar=2'-MOE;DNA_gap |
+| chemistry_disagreement | volanesorsen | eA*eG*eC(5m)*eT*eT*dC(5m)*dT*dT*dG*dT*dC | bb=full_PS ps=19 sugar=2'-MOE;DNA_gap;5- |
+| chemistry_disagreement | 2'-MOE ASO class pool | NOT_APPLICABLE (not TBD-pending-recovery | bb=full_PS ps=TBD sugar=2'-MOE;DNA_gap;5 |
+| chemistry_disagreement | 2'-MOE-PS ASO clinical pooled panel (Bijl 2026 meta-analysis) | NOT_APPLICABLE (not TBD-pending-recovery | bb=full_PS ps=TBD sugar=2'-MOE |
+| chemistry_disagreement | 2'-OMe-PS ASO clinical pooled panel (Bijl 2026 meta-analysis) | NOT_APPLICABLE (not TBD-pending-recovery | bb=full_PS ps=TBD sugar=2'-OMe |
+| chemistry_disagreement | 2'MOE chimeric ASO pooled panel (12 ASOs) | NOT_APPLICABLE (not TBD-pending-recovery | bb=full_PS ps=16-19 sugar=2'-MOE;DNA_gap |
 

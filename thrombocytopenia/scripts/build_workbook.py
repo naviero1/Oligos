@@ -52,6 +52,14 @@ SHEETS = [
      "analysis, a label summary, a case report. One trial reported across a paper, a registry record, "
      "an EPAR and a label is ONE row here. A pooled analysis is not a trial. Overlapping participant "
      "denominators are never summed."),
+    ("01b_study_counts", "study_counts.csv",
+     "THE COUNT LADDER. Read this before quoting any trial number. A single headline trial count is "
+     "not defensible: many units typed as a trial are trial-grain ANCHORS carrying no measurement "
+     "row, identified so pooled data can be attributed."),
+    ("01c_study_nesting", "study_nesting_ledger.csv",
+     "Declared overlaps: a trial recorded individually that is ALSO inside a pooled analysis "
+     "recorded here. Each edge is backed by arithmetic agreement on arm sizes. Never sum a pool "
+     "with its members."),
     ("02_Germans_analysis", "germans_analysis.csv",
      "One row per compound: what the molecule IS (sequence and per-residue modification map) and what "
      "it DID (toxicity). RANKED ON HUMAN EVIDENCE ONLY -- a compound with no human rows cannot rank "
@@ -80,6 +88,10 @@ SHEETS = [
      "Canonical compound table, including the scientist disposition, model-lane eligibility and the "
      "exact_sequence_group that any train/test split must group on."),
     ("09_measurements", "measurements.csv", None),
+    ("09b_recovery_ledger", "recovery_ledger.csv",
+     "Known gaps with a plan. Each row: the missing item, why it matters, the sources already "
+     "searched, the next action, a stopping criterion and an owner. Recording NOT_REPORTED alone "
+     "does not meet a missing requirement; this is the alternative."),
     ("10_sources_inventory", "sources_inventory.csv",
      "One row per source DOCUMENT, keyed by a stable source_uid. The legacy source_id is not unique: "
      "three of its values each stand for up to eight genuinely different papers."),

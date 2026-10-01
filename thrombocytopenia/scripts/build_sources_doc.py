@@ -98,10 +98,52 @@ def esc(s):
     return (str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
 
 
+def build_inventory():
+    """Compute the source inventory from the committed data.
+
+    This used to read a JSON file written into a scratch directory by a separate
+    step. That made the sources document silently stale whenever the dataset
+    moved without that step rerunning -- and it broke outright when the scratch
+    directory went away. The inventory is now derived from
+    data/measurements.csv on every build, so it cannot disagree with the dataset
+    it claims to document.
+    """
+    path = os.path.join(BASE, "measurements.csv")
+    with open(path, newline="", encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+    inv = {}
+    for r in rows:
+        ref = r["source_ref"]
+        v = inv.setdefault(ref, {"n": 0, "human": 0, "animal": 0, "redist": set(),
+                                 "clinical": 0, "lab": 0, "oligos": set(), "loci": set()})
+        v["n"] += 1
+        sc = r.get("subject_class") or ""
+        if sc.startswith("human"):
+            v["human"] += 1
+            if sc == "human_clinical": v["clinical"] += 1
+            else: v["lab"] += 1
+        elif sc.startswith("animal"):
+            v["animal"] += 1
+        if r.get("redistribution"): v["redist"].add(r["redistribution"])
+        if r.get("source_table"): v["loci"].add(r["source_table"])
+        v["oligos"].add(r["oligo_id"])
+    for v in inv.values():
+        v["redist"] = sorted(v["redist"])
+        v["oligos"] = len(v["oligos"])
+        v["loci"] = sorted(v["loci"])
+    return inv
+
+
 def main():
-    inv = json.load(open(os.path.join(SCRATCH, "source_inventory.json"), encoding="utf-8"))
-    cit = json.load(open(os.path.join(SCRATCH, "citations.json"), encoding="utf-8"))
-    ids_all, meta = cit["ids"], cit["meta"]
+    inv = build_inventory()
+    cpath = os.path.join(SCRATCH, "citations.json")
+    if os.path.exists(cpath):
+        cit = json.load(open(cpath, encoding="utf-8"))
+        ids_all, meta = cit["ids"], cit["meta"]
+    else:
+        # Citation enrichment is optional decoration; the document must build
+        # from the dataset alone rather than fail when a cache is absent.
+        ids_all, meta = {}, {}
 
     groups = collections.defaultdict(list)
     for ref, v in inv.items():

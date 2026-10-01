@@ -164,6 +164,26 @@ def stats():
         d["ml_mech_constructs"] = fmt(lc.get("n_eligible_constructs", 0))
         d["ml_mech_groups"] = fmt(lc.get("n_independent_exact_sequence_groups", 0))
         d["ml_trained"] = "no"
+    # Trial ladder and characterization coverage, read from the generated files
+    # so the documents cannot quote a trial count the registry does not support.
+    sc_path = os.path.join(BASE, "study_counts.csv")
+    if os.path.exists(sc_path):
+        L = {r["measure"]: r["n"] for r in csv.DictReader(open(sc_path, encoding="utf-8"))}
+        d["n_units"] = fmt(int(L.get("evidence units resolved", 0)))
+        d["n_trials_typed"] = fmt(int(L.get("... typed as a trial", 0)))
+        d["n_trials_reg"] = fmt(int(L.get("... with a verified registry identifier", 0)))
+        d["n_trials_rows"] = fmt(int(L.get("... carrying at least one measurement row", 0)))
+        d["n_trials_eval"] = fmt(int(L.get("... platelet endpoint evaluable", 0)))
+        d["n_trials_defensible"] = fmt(int(L.get("... and not intended pharmacology", 0)))
+        d["n_pools"] = fmt(int(L.get("pooled analyses (NOT trials)", 0)))
+        d["n_nested"] = fmt(int(L.get("trials declared nested inside a pooled analysis", 0)))
+    d["n_purity_method"] = fmt(sum(1 for r in o if r["purity_method"] not in ("", "TBD")))
+    d["n_modmap"] = fmt(sum(1 for r in o if r["modification_map"] not in ("", "TBD")))
+    rl = os.path.join(BASE, "recovery_ledger.csv")
+    if os.path.exists(rl):
+        R = list(csv.DictReader(open(rl, encoding="utf-8")))
+        d["n_gaps"] = fmt(len(R))
+        d["n_gaps_critical"] = fmt(sum(1 for r in R if r["priority"] == "critical"))
     for b in bridge[:3]:
         i = bridge.index(b) + 1
         d[f"bridge{i}_name"] = b["oligo_name"]

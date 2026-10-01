@@ -57,12 +57,22 @@ def main():
     ap = os.path.join(DATA, "approved_analyses.json")
     if os.path.exists(ap): approved = json.load(open(ap))
 
-    if studies:
-        counted = [s for s in studies if s.get("evidence_unit_type") == "registered_trial"
-                   and s.get("eligibility_decision") == "included"]
-        trial_line = (f"**{len(counted)}** verified, deduplicated, included registered trials "
-                      f"from {len(studies)} evidence units")
-        trial_state = "established — see `data/studies.csv`"
+    ladder = rd(os.path.join(DATA, "study_counts.csv"))
+    if studies and ladder:
+        L = {r["measure"]: r for r in ladder}
+        def n(k, default="?"):
+            r = L.get(k)
+            return r["n"] if r else default
+        defensible = n("... and not intended pharmacology")
+        trial_line = (f"**{defensible}** trials carry a defensible platelet-toxicity claim: "
+                      f"endpoint demonstrably assessed, measurement rows present, and a platelet "
+                      f"change is not the intended effect")
+        trial_state = ("ESTABLISHED AS A LADDER, NOT A SINGLE NUMBER — see `data/study_counts.csv`. "
+                       "A single headline figure is not defensible here: of the "
+                       f"{n('... typed as a trial')} units typed as a trial, "
+                       f"{n('... carrying at least one measurement row')} carry any measurement "
+                       "row at all; the rest are trial-grain ANCHORS, identified so that pooled "
+                       "data can be attributed, not trials this dataset holds data for.")
     else:
         trial_line = "**not yet established**"
         trial_state = ("NOT ESTABLISHED. The study registry is still being built. Until it "
@@ -97,6 +107,17 @@ def main():
     w("## 2. Human clinical trials\n")
     w(f"Verified unique human clinical trials: {trial_line}.\n")
     w(f"**Status: {trial_state}**\n")
+    if studies and ladder:
+        w("| Count | n | Definition |")
+        w("|---|---:|---|")
+        for r in ladder:
+            w(f"| {r['measure']} | {r['n'] if r['n'] != '0' else '—'} | {r['definition']} |")
+        w("")
+        nest = rd(os.path.join(DATA, "study_nesting_ledger.csv"))
+        w(f"`data/study_nesting_ledger.csv` declares **{len(nest)} overlaps** where a trial recorded "
+          "here individually is also inside a pooled analysis recorded here. Each edge was "
+          "established by arithmetic agreement on arm sizes, never by compound-name similarity. "
+          "**Never sum a pooled analysis with its member trials.**\n")
     w("The distinction that matters: a trial is not a row. The table below counts rows.\n")
     w("| Evidence class | Outcome records | Compounds |")
     w("|---|---:|---:|")
@@ -178,6 +199,20 @@ def main():
     w("| data dictionary / schema | yes | `schema.md` |")
     w("| CC licence | yes | see `README.md` |")
     w("")
+    rec = rd(os.path.join(DATA, "recovery_ledger.csv"))
+    if rec:
+        crit = [r for r in rec if r.get("priority") == "critical"]
+        w("## 5b. Known gaps with a recovery plan\n")
+        w(f"`data/recovery_ledger.csv` holds **{len(rec)} entries** ({len(crit)} critical), each "
+          "with the missing item, the sources already searched, the next action, a stopping "
+          "criterion and an owner. The largest are compounds whose chemistry class the dataset's "
+          "own hypothesis depends on:\n")
+        w("| Priority | Missing | Next action |")
+        w("|---|---|---|")
+        for r in crit[:8]:
+            w(f"| {r['priority']} | {r['missing_item'][:70]} | {r['next_action'][:90]} |")
+        w("")
+
     w("## 6. What is blocking release\n")
     w("1. **Study registry incomplete** — the human trial count is not yet established, so no")
     w("   trial total may be published.")

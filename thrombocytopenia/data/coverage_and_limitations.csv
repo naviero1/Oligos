@@ -4,8 +4,8 @@ human laboratory / ex vivo records,451,Human in vitro and ex vivo platelet syste
 animal records (appendix),497,"Supporting evidence only. Excluded from every human count, label and ranking."
 unresolved records,9,Species or subject class not established. Assigned to neither side.
 compounds,259,"Compound records, not trials."
-compounds with a sequence,198,61 carry TBD.
-compounds with a per-residue modification map,36,223 carry TBD. Location of chemical modifications is a Phase 2 requirement.
+compounds with a sequence,200,59 carry TBD.
+compounds with a per-residue modification map,44,215 carry TBD. Location of chemical modifications is a Phase 2 requirement.
 compounds with a purity value,0,"Purity is NOT REPORTED in the sources curated so far, including the scientist-governed package. Recorded as TBD, never inferred."
 compounds scientist-eligible for clinical modelling,7,PROVISIONAL in every case. All other compounds are model-ineligible by default.
 compounds scientist-eligible for mechanistic modelling,16,Per the scientist-governed package v0.9 training manifest.

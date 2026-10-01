@@ -311,6 +311,30 @@ def main():
             errors.append(f"oligos {o['oligo_id']}: ps_count={o['ps_count']} but "
                           f"modification_map has {ps} phosphorothioate linkage(s)")
 
+    # (4c) A modification map must agree with its own backbone_chemistry column.
+    #      This gate exists because a real error slipped past gate 4b: the
+    #      eplontersen map was composed from scientist position data that had
+    #      propagated inotersen's all-phosphorothioate backbone onto a compound
+    #      whose own backbone_chemistry column reads PS_PO_mix. Gate 4b compares
+    #      the map against ps_count, and ps_count was TBD for that row, so
+    #      nothing caught a positional claim that contradicted its own record.
+    for o in oligos:
+        mm = o.get("modification_map", "")
+        if mm in ("", "TBD"):
+            continue
+        bb = (o.get("backbone_chemistry") or "").strip()
+        n_ps, n_po = mm.count("*"), mm.count("-")
+        if bb == "full_PS" and n_po:
+            errors.append(f"oligos {o['oligo_id']}: backbone_chemistry=full_PS but "
+                          f"modification_map has {n_po} phosphodiester linkage(s)")
+        if bb == "full_PO" and n_ps:
+            errors.append(f"oligos {o['oligo_id']}: backbone_chemistry=full_PO but "
+                          f"modification_map has {n_ps} phosphorothioate linkage(s)")
+        if bb == "PS_PO_mix" and not (n_ps and n_po):
+            errors.append(f"oligos {o['oligo_id']}: backbone_chemistry=PS_PO_mix but "
+                          f"modification_map has {n_ps} PS and {n_po} PO linkage(s) — a mixed "
+                          f"backbone must show both")
+
     # (5) Trial double-counting, once the study registry exists.
     spath = os.path.join(BASE, "studies.csv")
     if os.path.exists(spath):
@@ -325,11 +349,24 @@ def main():
             if len(ids) > 1:
                 errors.append(f"studies.csv: registry id {rid} appears under {len(ids)} study "
                               f"records {ids} — one trial counted more than once")
-        counted = [st for st in studies
-                   if (st.get("evidence_unit_type") or "") == "registered_trial"
-                   and (st.get("eligibility_decision") or "") == "included"]
-        warnings.append(f"study registry: {len(studies)} evidence units, "
-                        f"{len(counted)} counted as verified included registered trials")
+        # Report the DEFENSIBLE denominator, not the count of units typed as a
+        # trial. Many are trial-grain anchors carrying no measurement row, and a
+        # few are units in which a platelet change is the intended effect.
+        typed = [st for st in studies
+                 if (st.get("evidence_unit_type") or "") in ("registered_trial", "unregistered_trial")
+                 and (st.get("eligibility_decision") or "") == "included"]
+        with_rows = [st for st in typed if (st.get("n_measurement_rows") or "0") not in ("", "0")]
+        defensible = [st for st in with_rows
+                      if st.get("platelet_endpoint_evaluable") == "yes"
+                      and st.get("intended_pharmacology") != "yes"]
+        warnings.append(
+            f"study registry: {len(studies)} evidence units · {len(typed)} typed as a trial · "
+            f"{len(with_rows)} carrying a measurement row · {len(defensible)} with a DEFENSIBLE "
+            f"platelet-toxicity claim. Quote the last figure, or the ladder in "
+            f"data/study_counts.csv — never the row count and never the typed count.")
+        for st in studies:
+            if st.get("intended_pharmacology") == "yes" and not st.get("intended_pharmacology_reason"):
+                errors.append(f"studies {st.get('study_id')}: intended_pharmacology=yes without a reason")
     else:
         warnings.append("data/studies.csv not built yet — the headline human trial count "
                         "remains 'not yet established'; row counts must NOT be reported as trials")

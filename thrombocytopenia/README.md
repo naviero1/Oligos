@@ -149,7 +149,7 @@ with no modelling, in human evidence alone:
 | `full_PO` | 35 | 4 | 0.46 |
 | `full_PS` | 1190 | 43 | 1.10 |
 
-Mean grade also rises with phosphorothioate count (0 → 0.42; 13–16 → 1.06; 17–19 → 1.22; 20+ → 1.45 linkages), again in human evidence alone.
+Mean grade also rises with phosphorothioate count (0 → 0.42; 13–16 → 1.21; 17–19 → 1.24; 20+ → 1.44 linkages), again in human evidence alone.
 
 Modality orders GalNAc_siRNA 0.09 < splice_switching_ASO 0.90 < ASO_gapmer 1.00 < other 1.22 < aptamer 1.55.
 
@@ -329,7 +329,7 @@ python3 scripts/refresh_docs.py                             # regenerate the tab
 | Grade distribution (0/1/2/3) | 852 / 499 / 388 / 220 |
 | Distinct target genes | **67** |
 | Distinct sources (`source_ref`) | **70** |
-| Oligos with sequence (not TBD) | **199 / 259** |
+| Oligos with sequence (not TBD) | **201 / 259** |
 
 ## Independent (predictor) variables — `oligos.csv`
 
@@ -340,7 +340,7 @@ python3 scripts/refresh_docs.py                             # regenerate the tab
 | **Conjugate** | none 228 · GalNAc 15 · TBD 7 · lipid 5 · PEG 3 · other 1 |
 | **Development stage (`max_phase`)** | research_panel 135 · preclinical 53 · phase_1 24 · approved 17 · phase_2 13 · class_review 8 · phase_3 4 · phase_3_discontinued 3 · TBD 1 · approved_EMA 1 |
 | **Sugar modifications** | DNA_gap 175 · 2'-MOE 157 · cEt 37 · TBD 22 · 5-methylcytosine 19 · DNA 17 · 2'-OMe 12 · LNA 9 · DNA_deoxyribose 8 · RNA_ribose 7 |
-| **Sequence available** | 199 / 259 (rest `TBD`, never guessed) |
+| **Sequence available** | 201 / 259 (rest `TBD`, never guessed) |
 
 ## Dependent (indicator) variables — `measurements.csv`
 
