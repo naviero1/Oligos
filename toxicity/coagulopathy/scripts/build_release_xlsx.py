@@ -337,6 +337,15 @@ def main():
         })
     sheet(wb, "German's analysis", ga)
 
+    # ---- human_trials ------------------------------------------------------
+    # The deduplicated study register. Headline trials first, then every other study record
+    # that was identified and deliberately NOT counted as a trial, with the reason visible.
+    if ST:
+        ordered = sorted(ST, key=lambda r: (r.get("headline_trial") != "TRUE",
+                                            r.get("design", ""),
+                                            r.get("registry_id", "")))
+        sheet(wb, "human_trials", ordered)
+
     # ---- animal appendix ---------------------------------------------------
     # Animal evidence is retained in full -- nothing is deleted -- but it is moved out of the
     # human-facing sheets and named as supporting, so it cannot be read into a human total.

@@ -310,6 +310,37 @@ bad = [r["measurement_id"] for r in D
        if r["evidence_class"] == "baseline_reference" and r["coag_tox_grade"] != NR]
 check("a baseline_reference row carries no grade", not bad, f"{len(bad)}: {bad[:5]}")
 
+
+# ---- 65-69 study register ----------------------------------------------------
+import csv as _csv
+_sp = os.path.join(ROOT, "data", "studies.csv")
+if os.path.exists(_sp):
+    ST = list(_csv.DictReader(open(_sp, newline="", encoding="utf-8")))
+    ids = [r["study_id"] for r in ST]
+    check("PK unique: studies.study_id", len(set(ids)) == len(ids), "duplicated study ids")
+
+    DES = {"interventional_trial", "observational_study", "case_report", "pooled_analysis",
+           "regulatory_summary", "product_label", "spontaneous_reporting",
+           "healthy_volunteer_lab", "not_a_human_study"}
+    bad = sorted({r["design"] for r in ST if r["design"] not in DES})
+    check("vocabulary: studies.design", not bad, f"unexpected {bad[:4]}")
+
+    # The headline rule, re-derived. A trial total that cannot be recomputed from the
+    # columns is not reproducible, which is the whole point of the register.
+    bad = [r["study_id"] for r in ST
+           if (r["headline_trial"] == "TRUE") != (
+               r["design"] == "interventional_trial"
+               and r["endpoint_evaluable"] == "TRUE"
+               and r["identity_basis"] in ("registry_number", "trial_acronym", "sponsor_protocol"))]
+    check("headline_trial is reproducible from design + endpoint + identity", not bad, f"{len(bad)}: {bad[:4]}")
+
+    bad = [r["study_id"] for r in ST
+           if r["headline_trial"] == "TRUE" and r["design"] != "interventional_trial"]
+    check("no pooled analysis, label or report counts as a trial", not bad, f"{len(bad)}: {bad[:4]}")
+
+    bad = [r["study_id"] for r in ST if r["identity_basis"] == "no_identifier" and r["headline_trial"] == "TRUE"]
+    check("an unidentifiable study never enters the headline total", not bad, f"{len(bad)}: {bad[:4]}")
+
 # ---- report -----------------------------------------------------------------
 w = max(len(n) for n, _, _ in checks)
 for n, ok, detail in checks:

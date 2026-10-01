@@ -17,7 +17,8 @@ No network access is required at any step. Any failing step stops the release.
 import os, subprocess, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-STEPS = [("build_dataset.py", "assemble the tables"),
+STEPS = [("build_study_register.py", "deduplicated human study register"),
+         ("build_dataset.py", "assemble the tables"),
          ("validate_dataset.py", "structural QC"),
          ("verify_against_sources.py", "values against their sources"),
          ("make_figures.py", "figures"),
@@ -25,7 +26,8 @@ STEPS = [("build_dataset.py", "assemble the tables"),
          ("build_release_xlsx.py", "release workbook"),
          ("build_sources_pdf.py", "sources & provenance document"),
          ("build_download_manifest.py", "download manifest + fetch script"),
-         ("build_sources_md.py", "source registry")]
+         ("build_sources_md.py", "source registry"),
+         ("build_release_manifest.py", "release manifest (binds everything to one commit)")]
 
 for script, what in STEPS:
     print(f"\n== {what} ({script})")

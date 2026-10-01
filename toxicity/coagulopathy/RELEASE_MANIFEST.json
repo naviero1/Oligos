@@ -1,7 +1,7 @@
 {
   "endpoint": "coagulopathy",
-  "generated": "2026-09-30",
-  "commit": "1e432a2de0d405195b1bfedd11e25c462c7aac02",
+  "generated": "2026-10-01",
+  "commit": "aa25169d9259650346b165d662f53f35e732dbfe",
   "branch": "claude/coagulopathy-oligos-toxicity-ap70gf",
   "tree_dirty": true,
   "counts": {
@@ -16,11 +16,29 @@
     "compounds_with_purity_value": 0
   },
   "human_study_register": {
-    "present": false,
-    "study_records": 0,
-    "verified_interventional_trials_endpoint_evaluable": null,
-    "by_design": {},
-    "note": "UNESTABLISHED - no register built yet; do not quote a trial total."
+    "present": true,
+    "study_records": 198,
+    "headline_human_interventional_trials": 30,
+    "of_which_registry_identified": 18,
+    "flagged_for_manual_verification": [
+      "COG-STU001",
+      "COG-STU002",
+      "COG-STU003",
+      "COG-STU005",
+      "COG-STU006",
+      "COG-STU007"
+    ],
+    "headline_rule": "design=interventional_trial AND a coagulation endpoint AND a verifiable identity (registry number, trial acronym or sponsor protocol token). Pooled analyses, labels, regulatory summaries, observational studies, case reports, healthy-volunteer laboratory work and spontaneous reporting are excluded.",
+    "by_design": {
+      "interventional_trial": 150,
+      "pooled_analysis": 24,
+      "spontaneous_reporting": 3,
+      "healthy_volunteer_lab": 6,
+      "observational_study": 13,
+      "regulatory_summary": 1,
+      "case_report": 1
+    },
+    "note": "Headline human-trial total. Counts each study once across its registry record, publications, regulatory reports and label."
   },
   "evidence_class": {
     "measured_negative": 640,
@@ -69,6 +87,10 @@
       "sha256": "c56dc6e25ebaf39df294500d5fe280d279653d777c54fafe34549df6fa5735aa",
       "bytes": 61514
     },
+    "data/studies.csv": {
+      "sha256": "6a4fa2845a8c253471fa8a52c7f54d05b45b7319b55144adeee66260aeaf0147",
+      "bytes": 365428
+    },
     "schema.md": {
       "sha256": "2b8dfd0effdc4274c7c39dd595b06bb4ecc89201bcb089752dc122e432a6e8be",
       "bytes": 18122
@@ -78,16 +100,16 @@
       "bytes": 11683
     },
     "README.md": {
-      "sha256": "90a2cfcd2d939f168f6ae27cd99d4bdf3cb71207d967aa83d65f320f128fa9e6",
-      "bytes": 17493
+      "sha256": "e81be436dc821c1b6150fee8230c28c70e406a3140eb35c290a03de577e10ba7",
+      "bytes": 18470
     },
     "PADP.md": {
       "sha256": "23de62eb194006b404d94ea2e93eb32bec74cbd5581ac9efc76f5d124c38cf71",
       "bytes": 9500
     },
     "STATUS.md": {
-      "sha256": "41f9a5fa06acaceee575566c464aef889269b4755c7edf354d3301c8b8adc888",
-      "bytes": 7930
+      "sha256": "b23b932c14e0aa4c6ede0ca18c3937e4e5e37749f87bb19a2b9ef81f82c24c17",
+      "bytes": 8293
     },
     "coagulopathy.md": {
       "sha256": "b60cc679150eb5c5e185fba2b89186887512ef684e5f14e619f68d222dffa8bf",
@@ -98,24 +120,24 @@
       "bytes": 22334
     },
     "OligoTox-Coagulopathy_Dataset.xlsx": {
-      "sha256": "dbba28da12058412c213de914897d6c205b9f4017d60c3f81aa76e6a09e97dca",
-      "bytes": 2424453
+      "sha256": "8b0fbe09162852d23b0182f290bbf39ec08963b0ff26d6c4578a8ac83689e924",
+      "bytes": 2557396
     },
     "OligoTox-Coagulopathy_Narrative.pdf": {
-      "sha256": "34e6d83fe1c741cb9d383849423441fb83aab52b681f1a9485fe784076c872ec",
+      "sha256": "a0524d1efa1cc8f450652122240795ab6d2fb9bff85fe85f4915324c1f7a365d",
       "bytes": 207496
     },
     "OligoTox-Coagulopathy_Methodology.pdf": {
-      "sha256": "cbfedd4c8de0fdac4b12e4003d2d0c0f8e6e8d9c503a5254e0446ff13f424086",
+      "sha256": "396227dac7e262bce610078e2773fe6cef979847b93d8e59b56611354efdc52c",
       "bytes": 161555
     },
     "OligoTox-Coagulopathy_PADP.pdf": {
-      "sha256": "0724f3cd8177af99478cbcb95a7dd54487efb0c55304c4d24892c482c543f10b",
+      "sha256": "be6976b42ef6591e70bd2a8bda455cbe1c9692f29d239652c3bbbcbe86190af0",
       "bytes": 148902
     },
     "OligoTox-Coagulopathy_Sources.pdf": {
-      "sha256": "b4c8ecdc7c139de95ea4605f7723812e78b2caa1121f2b7d7c7fb29560ea12a2",
-      "bytes": 672645
+      "sha256": "4b584fdd12fc6022ff4c59fd8347cdece5841728f1d39dd3318ee168cf6f2a00",
+      "bytes": 684163
     },
     "sources/DOWNLOAD_MANIFEST.csv": {
       "sha256": "8fb56b37593ca1a9edcb64fb27383a763f5218d3026035ecc1ced90a05ed9681",

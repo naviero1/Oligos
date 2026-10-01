@@ -44,6 +44,12 @@ structural checks, and a verification pass that re-reads every source document.
 
 ## 2. Against what the Challenge says it values
 
+**Human clinical trials: 30**, deduplicated from 336 raw study observations across 198
+distinct study records. 18 carry a registry number. The count excludes pooled analyses,
+labels, regulatory summaries, observational studies, case reports, healthy-volunteer
+laboratory work and spontaneous reporting, and is re-derivable by QC from the register's
+own columns.
+
 | Challenge preference | Where we stand |
 |---|---|
 | "Datasets based on **in vitro human systems**" | 1,183 of 2,685 rows (44%) are human or human-derived, up from 886 after a targeted human sweep added the EMA assessment reports, the FDA reviews with named coagulation sections, and the pharmacovigilance tier. Explicit in `species_class` / `human_system`, including for purified-protein assays where a species field cannot express it. |

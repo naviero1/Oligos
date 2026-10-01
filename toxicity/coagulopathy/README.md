@@ -20,7 +20,7 @@ what the repository held before this dataset existed, and what changed — is
 | Numeric values located in their cited source | 2,019 / 2,019 |
 | Rows adversarially re-checked against sources | 174 — 0 fabrications found |
 | Human-system measurements | **1,183** (44%) — 749 participants · 380 primary blood/plasma · 40 purified human protein · 11 cells/tissue · 3 unresolved |
-| Human clinical trials (deduplicated) | **UNESTABLISHED** — register in progress |
+| Human interventional trials (deduplicated, coagulation endpoint) | **30** (18 registry-identified; 6 flagged for verification) |
 | Animal-system measurements | 1,476 |
 | Compounds with both human and animal data | 30 of 218 |
 
@@ -98,13 +98,28 @@ this folder is shared with another endpoint's.
 
 ## Counting: what is and is not a trial
 
-**This release does not yet quote a human clinical-trial total.** It holds 749 human
-*clinical measurement rows*, which is not 749 trials: the same study appears under its
-registry record, its publication, its regulatory review and its label, and 89 of those rows
-are FAERS spontaneous reports, which are not a study at all. A deduplicated study register
-keyed on registry identifiers is being built; until it exists the trial count is marked
-**UNESTABLISHED** rather than approximated. Measurement rows, papers, participants, labels,
-cases, spontaneous reports and animal experiments are never substituted for trials.
+**30 verified human interventional trials with a coagulation endpoint** — 18 of them
+identified by a registry number. That is the headline total, and it is reproducible: a
+study enters it only when it is an interventional trial, reports a coagulation endpoint,
+and carries an identity (registry number, trial acronym or sponsor protocol token) that
+lets it be deduplicated against its other appearances. A QC check re-derives the flag from
+those three columns and fails the build if it cannot.
+
+The register ([`data/studies.csv`](data/studies.csv), sheet `human_trials`) holds **198
+distinct study records** from 336 raw observations — 138 duplicate appearances were merged,
+because the same trial is reported by its registry entry, its publication, its regulatory
+assessment *and* its label. 120 identified trials are registered and **excluded** from the
+headline: 93 report no coagulation endpoint, and the rest are pooled analyses, labels,
+regulatory summaries, observational studies, case reports, healthy-volunteer laboratory
+work or spontaneous reporting. None of those is a trial.
+
+For scale: the dataset's 749 human *clinical measurement rows* were never 749 trials, and
+89 of them are FAERS spontaneous reports, which are not a study at all.
+
+**Six headline trials carry `review_flag` and should be confirmed before the number is
+quoted externally** — their clusters merged more than eight source records each, which is
+either a heavily-reported trial or an over-merge, and that is a scientific judgement rather
+than a clustering rule.
 
 ## What kind of observation each row is
 

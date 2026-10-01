@@ -55,8 +55,11 @@ def main():
             files[rel] = {"sha256": digest(p), "bytes": os.path.getsize(p)}
 
     hum = [r for r in D if r["species_class"] == "human"]
-    trials = [r for r in studies if r.get("design") == "interventional_trial"
-              and r.get("endpoint_evaluable") in ("TRUE", "True", "true")]
+    # Use the register's own decision column. Recomputing the rule here produced a second,
+    # higher number (57 vs 30) because it omitted the identity requirement -- exactly the
+    # kind of drift this manifest exists to prevent.
+    trials = [r for r in studies if r.get("headline_trial") == "TRUE"]
+    flagged = [r for r in trials if r.get("review_flag")]
 
     man = {
         "endpoint": "coagulopathy",
@@ -76,7 +79,14 @@ def main():
         "human_study_register": {
             "present": bool(studies),
             "study_records": len(studies),
-            "verified_interventional_trials_endpoint_evaluable": len(trials) if studies else None,
+            "headline_human_interventional_trials": len(trials) if studies else None,
+            "of_which_registry_identified": sum(1 for r in trials if r.get("identity_basis") == "registry_number"),
+            "flagged_for_manual_verification": [r["study_id"] for r in flagged],
+            "headline_rule": ("design=interventional_trial AND a coagulation endpoint AND a "
+                              "verifiable identity (registry number, trial acronym or sponsor "
+                              "protocol token). Pooled analyses, labels, regulatory summaries, "
+                              "observational studies, case reports, healthy-volunteer laboratory "
+                              "work and spontaneous reporting are excluded."),
             "by_design": dict(Counter(r.get("design", "") for r in studies)) if studies else {},
             "note": ("Headline human-trial total. Counts each study once across its registry "
                      "record, publications, regulatory reports and label."
@@ -108,7 +118,7 @@ def main():
         json.dump(man, fh, indent=2)
         fh.write("\n")
     print(f"  wrote RELEASE_MANIFEST.json  commit {man['commit'][:10]}  {len(files)} files hashed")
-    print(f"    trials: {man['human_study_register']['verified_interventional_trials_endpoint_evaluable']}"
+    print(f"    trials: {man['human_study_register']['headline_human_interventional_trials']}"
           f"  human rows: {man['counts']['human_measurements']}  animal rows: {man['counts']['animal_measurements']}")
 
 
