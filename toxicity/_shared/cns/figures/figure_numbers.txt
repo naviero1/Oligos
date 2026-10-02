@@ -1,11 +1,11 @@
-F1: study types {'in_vitro': 1859, 'animal_invivo': 228, 'clinical': 2341}; axes {'acute_neuronal_excitability': 1825, 'acute_behavioural': 222, 'invitro_human_neural_toxicity': 34, 'clinical_serious_neurological': 565, 'clinical_neuroinflammatory': 228, 'clinical_cns_tolerability': 1548, 'late_onset_neurodegeneration': 6}
+F1: study types {'in_vitro': 1859, 'animal_invivo': 228, 'clinical': 2341}; axes {'acute_neuronal_excitability': 1825, 'acute_behavioural': 222, 'invitro_human_neural_toxicity': 28, 'invitro_human_context_not_toxicity': 6, 'clinical_serious_neurological': 565, 'clinical_neuroinflammatory': 228, 'clinical_cns_tolerability': 1548, 'late_onset_neurodegeneration': 6}
 F2 length_nt: n=1858 median=17 min=13 max=25
 F2 gc_content_pct: n=1856 median=41.18 min=5 max=87.5
 F2 n_G: n=1856 median=1 min=0 max=10
 F2 g_free_3prime_len: n=1825 median=6 min=0 max=20
 F2 n_lna: n=1830 median=6 min=0 max=10
 F2 gap_length_nt: n=1731 median=11 min=6 max=19
-F3 grade distribution: {'0': 1615, '1': 673, '2': 130, '3': 175}, total graded 2593
+F3 grade distribution: {'0': 1614, '1': 673, '2': 130, '3': 175}, total graded 2592
 F4 tertile most affected in vitro: n=60 median ANS=6.67
 F4 tertile middle: n=60 median ANS=3.25
 F4 tertile least affected in vitro: n=61 median ANS=0.83

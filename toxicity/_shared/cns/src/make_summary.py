@@ -159,6 +159,43 @@ CC BY-NC-ND 4.0 — {LICENCE_TEXT['summary_stat_only']}
     return md
 
 
+
+def write_readme(n) -> None:
+    """Rewrite the README's generated regions. Hand-maintained, it drifted three releases behind
+    and claimed no human in vitro data existed while the module held 34 such rows."""
+    import re as _re
+    path = ROOT / "README.md"
+    txt = path.read_text()
+    sc = n["subject_class_distribution"]
+    hum = sum(v for k, v in sc.items() if k.startswith("human"))
+    pc = lambda a, b: f"{100 * a / b:.1f} %"
+    headline = f"""| | |
+|---|---|
+| Oligonucleotides | **{n['n_oligos']:,}** |
+| CNS toxicity measurements | **{n['n_measurements']:,}** |
+| Per-position chemical-modification records | **{n['n_modification_rows']:,}** |
+| Sources | **{n['n_sources']}** ({n['n_sources'] - 1} contributing data, 1 contributing instruments) |
+| Sequences published | {n['sequences_present']:,} / {n['n_oligos']:,} ({pc(n['sequences_present'], n['n_oligos'])}) |
+| Position-resolved modification maps | {n['position_resolved_oligos']:,} / {n['n_oligos']:,} ({pc(n['position_resolved_oligos'], n['n_oligos'])}) |
+| Verified unique human trials | **{n.get('n_trials', 0)}** ({n.get('n_index_cohorts', 0)} independent cohorts) &mdash; see `docs/TRIAL_REGISTER.md` |
+| Human laboratory measurements | **{sc.get('human_invitro', 0)}** &mdash; the class the Challenge prioritises |
+| Licence | CC BY 4.0 for our work; per-row source terms in `LICENSE.md` |
+| Structural QC | **{n['checks_passed']} / {n['checks_total']} checks pass** (`qc/validate_dataset.py`) |"""
+    human = f"""- **The human arm is clinical, and the human laboratory arm is thin.** {hum:,} of
+  {n['n_measurements']:,} measurements are human-derived: {sc.get('human_clinical', 0):,} are
+  adverse-event counts from clinical trials and **{sc.get('human_invitro', 0)} are human *in
+  vitro***. The Challenge prioritises the latter class, and {sc.get('human_invitro', 0)} rows is
+  not a strong showing in it. The predictive in vitro screen in this field remains **rat** primary
+  neurons. No compound in this release carries both a human and an animal row, so the dataset
+  cannot yet extrapolate between human in vitro and animal systems &mdash; see
+  `docs/TRANSLATIONAL_PAIRING.md`."""
+    for tag, body in (("headline", headline), ("human", human)):
+        txt = _re.sub(f"<!-- GENERATED:{tag} -->.*?<!-- /GENERATED:{tag} -->",
+                      f"<!-- GENERATED:{tag} -->\n{body}\n<!-- /GENERATED:{tag} -->",
+                      txt, flags=_re.S)
+    path.write_text(txt)
+
+
 def main() -> int:
     q = json.loads(subprocess.run([sys.executable, str(ROOT / "qc" / "validate_dataset.py"),
                                    "--json"], capture_output=True, text=True).stdout)
@@ -313,6 +350,20 @@ features.
 """
     (ROOT / "SUMMARY.md").write_text(md)
     print(f"wrote SUMMARY.md ({len(md.splitlines())} lines)")
+
+    # trial counts for the README headline
+    import csv as _csv
+    trials, seen = [], set()
+    for ep in endpoints.ENDPOINTS:
+        f = endpoints.data_dir(ep) / "trials.csv"
+        if f.exists():
+            for r in _csv.DictReader(f.open()):
+                if r["trial_key"] not in seen and r["endpoint_evaluable"] == "TRUE":
+                    seen.add(r["trial_key"]); trials.append(r)
+    n["n_trials"] = len(trials)
+    n["n_index_cohorts"] = sum(1 for r in trials if r["cohort_role"] == "index_cohort")
+    write_readme(n)
+    print("wrote README.md generated regions")
 
     lic = write_license(endpoints.load_all("measurements"), endpoints.load_all("oligos"))
     print(f"wrote LICENSE.md ({len(lic.splitlines())} lines)")

@@ -17,7 +17,7 @@ Phase 2. Release **v1.0**. Licence **CC BY 4.0** (see `LICENSE.md` for the per-r
 | Sources | **9** — 4 contributing rows, 1 contributing measurement instruments only |
 | Sequences published | 1,858 / 1,879 (98.9%) |
 | Position-resolved modification maps | 1,830 / 1,879 (97.4%) |
-| Structural QC | **34/34 checks pass** |
+| Structural QC | **43/43 checks pass** |
 
 Split across the three endpoint folders, none of which mixes toxicities:
 
@@ -53,7 +53,7 @@ built and working. It is rat-in-vitro to mouse-in-vivo, an animal-to-animal brid
 human in vitro arm would make it the bridge the brief actually asks for, and is the single highest-
 value addition available to this module.
 
-**Severity grades 0/1/2/3** — 1615 / 673 / 130 / 175.
+**Severity grades 0/1/2/3** — 1614 / 673 / 130 / 175.
 **Study types** — 1,859 in vitro, 228 in vivo, 2341 clinical.
 
 ## What makes it useful
@@ -64,7 +64,7 @@ model needs, and it did not previously exist in one place for the CNS.
 
 - **181 compounds carry paired in vitro and in vivo readouts** — the in-vitro-to-in-vivo
   extrapolation the challenge asks for.
-- **All four severity grades are populated**, including 1615 grade-0 rows and 13 designed
+- **All four severity grades are populated**, including 1614 grade-0 rows and 13 designed
   guanine-free negative controls, so a classifier has a negative class.
 - **Four mechanistically distinct toxicity axes** are kept separate rather than collapsed into one
   toxic/not label.

@@ -77,6 +77,55 @@ ZERO_ROW_SOURCE_ENDPOINT = {"O1": "acute-neurotoxicity"}
 # Four classes, and the second is the point: `human_invitro` is the class the brief prioritises.
 # It was empty in the first release, and naming the empty class is what made that visible in the
 # data rather than only in a caveat. It is no longer empty.
+# --- can the SOURCE support calling this outcome chronic? ------------------------------------
+# Beebop asked for a chronic-qualification rubric over the clinical rows. Building one turned out
+# to be impossible from the source, and that is the finding rather than a failure to deliver.
+#
+# Every key in a ClinicalTrials.gov adverse-event record was enumerated across all 29 retrieved
+# files. An event carries exactly: term, organSystem, assessmentType, sourceVocabulary, an
+# occasional free-text note, and stats{groupId, numAffected, numAtRisk, numEvents}. There is no
+# onset, no duration, no persistence, no resolution and no time-to-event field at any level. The
+# module's timeFrame is a collection window for the whole table, not a property of an event.
+#
+# So no per-event chronic/acute split is derivable from the registry at any level of effort, and
+# saying so is more useful than a rubric that would silently manufacture one.
+CHRONIC_QUALIFICATIONS = {"chronic_supported_by_source", "acute_by_design",
+                          "not_derivable_from_source"}
+
+
+def chronic_qualification_of(measurement) -> str:
+    if measurement["study_type"] == "clinical":
+        return "not_derivable_from_source"
+    if measurement["tox_axis"] == "late_onset_neurodegeneration":
+        # L1 observes onset from day 3, with sacrifice at days 7-21; the source states the timing.
+        return "chronic_supported_by_source"
+    return "acute_by_design"
+
+
+def incidence_is_zero_of(measurement) -> str:
+    """TRUE where the row records that the event did not occur in that arm."""
+    n = (measurement.get("n_per_group") or "").strip()
+    return "TRUE" if n.startswith("0/") else "FALSE"
+
+
+# --- does this readout measure injury at all? ------------------------------------------------
+# Kept here, next to the endpoint and subject-class rules, because it is the same kind of thing:
+# a property of a row derived by one documented rule rather than asserted by whoever built it.
+#
+# The distinction is not pedantic. A delivery measure (how much compound entered the cell) and an
+# off-target expression measure (what the transcriptome did) are legitimate, valuable context --
+# and neither is harm. Grading them produces a toxicity value the source never reported.
+INJURY_CATEGORIES = {"viability", "apoptosis", "histopathology", "injury_biomarker",
+                     "morphological", "behavioural", "electrophysiology_calcium",
+                     "functional", "clinical_cns_outcome"}
+CONTEXT_CATEGORIES = {"accumulation", "off_target_expression"}
+READOUT_CATEGORIES = INJURY_CATEGORIES | CONTEXT_CATEGORIES
+
+
+def readout_is_toxicity_of(measurement) -> str:
+    return "TRUE" if measurement["readout_category"] in INJURY_CATEGORIES else "FALSE"
+
+
 SUBJECT_CLASSES = ["human_clinical", "human_invitro", "animal_invivo", "animal_invitro"]
 
 SUBJECT_GROUP = {"human_clinical": "human", "human_invitro": "human",
@@ -171,7 +220,7 @@ def load_all(table: str) -> list[dict]:
 
 
 def write_split(oligos: list[dict], measurements: list[dict], modifications: list[dict],
-                sources: list[dict], columns: dict) -> dict:
+                sources: list[dict], columns: dict, trials: list[dict] | None = None) -> dict:
     """Partition the assembled tables into one `data/` per endpoint. Returns per-endpoint counts."""
     by_ep: dict[str, list[dict]] = {ep: [] for ep in ENDPOINTS}
     for m in measurements:
@@ -214,8 +263,24 @@ def write_split(oligos: list[dict], measurements: list[dict], modifications: lis
 
         d = data_dir(ep)
         d.mkdir(parents=True, exist_ok=True)
+        # Each endpoint folder carries the trials its OWN rows came from, with the shared
+        # trial_key, and with n_cns_measurements recounted for this endpoint only. A trial that
+        # feeds two endpoints appears in both files under one key -- which is the point: it is
+        # how a consolidated submission can tell that it is one trial, not two.
+        here = {re.match(r"(NCT\d+)", m["source_location"]).group(1)
+                for m in meas if m["source_id"] == "CT1" and re.match(r"(NCT\d+)", m["source_location"])}
+        eps_trials = []
+        for tr in (trials or []):
+            if tr["trial_key"] in here:
+                n = sum(1 for m in meas if m["source_id"] == "CT1"
+                        and m["source_location"].startswith(tr["trial_key"]))
+                eps_trials.append(dict(tr, n_cns_measurements=n,
+                                       endpoint_evaluable="TRUE" if n else "FALSE"))
+        eps_trials.sort(key=lambda r: r["trial_key"])
+
         for table, rows in (("oligos", eps_oligos), ("measurements", meas),
-                            ("modifications", eps_mods), ("sources", eps_sources)):
+                            ("modifications", eps_mods), ("sources", eps_sources),
+                            ("trials", eps_trials)):
             cols = columns[table]
             with (d / f"{table}.csv").open("w", newline="") as fh:
                 w = csv.DictWriter(fh, fieldnames=cols)
@@ -233,6 +298,7 @@ def write_split(oligos: list[dict], measurements: list[dict], modifications: lis
                 w.writeheader()
                 w.writerows(sub)
             counts.setdefault(ep, {})[f"{group}_rows"] = len(sub)
-        counts[ep].update({"oligos": len(eps_oligos), "measurements": len(meas),
+        counts[ep].update({"trials": len(eps_trials),
+                           "oligos": len(eps_oligos), "measurements": len(meas),
                            "modifications": len(eps_mods), "sources": len(eps_sources)})
     return counts

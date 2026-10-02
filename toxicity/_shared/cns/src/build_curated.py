@@ -424,13 +424,26 @@ def clinical_records() -> tuple[list, list]:
     ms = []
     for oid, name, val, unit, comp, nt, nc, grade, axis, loc in CLINICAL_MEASUREMENTS:
         dose, dunit, route = DOSE[oid]
+        postmarketing = "6.2" in loc or "postmarketing" in loc.lower()
         ms.append({
             "measurement_id": f"C1-MSR-{len(ms) + 1:05d}", "oligo_id": oid, "source_id": "C1",
             "study_type": "clinical", "species": "human", "strain": "NOT_APPLICABLE",
-            "system_model": "randomised placebo/sham-controlled trial, patient cohort",
+            # Section 6.2 of a label is post-marketing spontaneous reporting: no trial, no arm,
+            # no denominator. Describing those rows as a randomised controlled cohort, and
+            # asserting "chronic dosing" for them, invented both a design and an exposure the
+            # label does not state. Oscar's counting rule is explicit that a spontaneous report
+            # is not a trial, so the distinction is carried in the row itself.
+            "system_model": ("post-marketing spontaneous reporting; no trial, no denominator"
+                             if postmarketing else
+                             "controlled registrational trial cohort, as summarised in the label"),
+            "arm_role": "spontaneous_report" if postmarketing else "active",
             "is_human_system": "TRUE", "cns_region": "CSF_and_neuraxis",
             "delivery_route": route, "dose_value": dose, "dose_unit": dunit,
-            "exposure_duration": "chronic dosing", "timepoint": "trial duration",
+            # The label gives no exposure duration for these summaries.
+            "exposure_duration": "NOT_REPORTED",
+            "observation_window": ("not applicable -- spontaneous reporting" if postmarketing
+                                   else "trial duration as summarised in the label"),
+            "timepoint": "trial duration",
             "readout_category": "clinical_cns_outcome", "readout_name": name,
             "readout_value": val, "readout_is_qualitative": "FALSE" if val != "NOT_REPORTED" else "TRUE",
             "readout_unit": unit, "n_per_group": f"treated {nt}; control {nc}",

@@ -37,6 +37,34 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "deliverables"
 
 
+
+# The licence table is computed from the released rows. Asserting it as a literal let this
+# binding document offer CC BY-NC derivative rights over rows whose sources are CC BY-NC-ND --
+# a grant we do not hold and cannot make.
+TERMS = {
+    "cc_by": ("CC BY 4.0", "any use, with attribution to this dataset and the primary source"),
+    "public_domain": ("public domain", "any use, no conditions"),
+    "cc_by_nc": ("CC BY-NC 4.0", "non-commercial research use, with attribution"),
+    "summary_stat_only": ("CC BY-NC-ND 4.0 at source",
+                          "cite and read at source. NoDerivatives: we hold no right to license "
+                          "this content onward and do not purport to"),
+}
+LABEL = {"cc_by": "Rows curated from a CC BY source",
+         "public_domain": "Rows from US Government works (FDA labels, trial registry)",
+         "cc_by_nc": "Rows curated from a CC BY-NC source",
+         "summary_stat_only": "Rows curated from a CC BY-NC-ND source"}
+
+
+def licence_rows(n):
+    dist = n["redistribution_distribution"]
+    out = []
+    for cls in ("cc_by", "public_domain", "cc_by_nc", "summary_stat_only"):
+        if dist.get(cls):
+            lic, may = TERMS[cls]
+            out.append([f"{LABEL[cls]} ({dist[cls]:,} rows)", lic, may])
+    return out
+
+
 def padp(n):
     sc = n["subject_class_distribution"]
     s = []
@@ -110,9 +138,7 @@ def padp(n):
         ["Component", "Licence", "What a researcher may do"],
         ["Everything created by this project &mdash; schema, code, documentation, figures, all "
          "derived and computed fields", "<b>CC BY 4.0</b>", "any use, including commercial, with attribution"],
-        ["Rows curated from a CC BY source", "CC BY 4.0", "any use, with attribution to this dataset and the primary source"],
-        ["Rows curated from a CC BY-NC source", "CC BY-NC 4.0", "non-commercial research use, with attribution"],
-        ["Rows from US Government works (FDA labels)", "public domain", "any use"],
+        *licence_rows(n),
         ["Build pipeline and QC suite", "CC BY 4.0", "any use, including commercial"]],
         [50 * mm, 34 * mm, 86 * mm]))
     s.append(P(
@@ -120,15 +146,19 @@ def padp(n):
         f"<b>per row</b> in a <font face='Courier'>redistribution</font> column rather than "
         f"asserted uniformly. {n['open_rows']:,} of {n['n_measurements']:,} measurements "
         f"({n['pct_open']}%) are CC BY 4.0 or US public domain and are reusable for any purpose "
-        f"including commercially; the remainder derive from CC BY-NC sources, are individually "
-        f"marked, and are removable with a one-line filter. <b>This is stated rather than "
-        f"smoothed over: labelling the whole release CC BY would over-claim, and labelling it all "
-        f"non-commercial would needlessly restrict {n['pct_open']}% of it.</b>"))
+        f"including commercially. The remaining {n['n_measurements'] - n['open_rows']} derive from "
+        f"<b>CC BY-NC-ND</b> sources. NoDerivatives means we cannot license a restructured "
+        f"derivative of that material onward at all, so those rows are marked "
+        f"<font face='Courier'>summary_stat_only</font>: cite them, read them at source, and do "
+        f"not treat them as content this plan grants you rights over. <b>We cannot grant what we "
+        f"were not granted, and an earlier revision of this plan mistakenly offered them under "
+        f"CC BY-NC.</b>"))
     s.append(P(
-        "For research purposes specifically, no separate permission is needed for any part: the "
-        "CC BY-NC portion already permits non-commercial research, and the remainder permits "
-        "everything. A researcher can therefore use the entire dataset for research without "
-        "contacting us."))
+        "For research purposes, no separate permission is needed for any part we are able to "
+        "license: those rows permit research outright. The <font face='Courier'>summary_stat_only"
+        "</font> rows need no permission from us either &mdash; they are a pointer to a published "
+        "article, and every one carries its exact source and location so a reader can go and read "
+        "the value where it was published."))
 
     # ---------------- 4
     s.append(P("4&nbsp;&nbsp;If we cannot maximise public access ourselves", "h1"))

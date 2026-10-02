@@ -34,6 +34,15 @@ VOCAB = {
     "effect_direction": {"increase", "decrease", "no_change"},
     "redistribution": {"cc_by", "cc_by_nc", "public_domain", "summary_stat_only"},
     "readout_is_qualitative": {"TRUE", "FALSE", ""},
+    # readout_category was documented as an enum in the data dictionary but never enforced here,
+    # which is how a free-text label -- "off_target_safety (NOT a cytotoxicity readout - recorded
+    # as context)" -- reached the released tables and defeated every downstream filter.
+    "readout_category": endpoints.READOUT_CATEGORIES,
+    "readout_is_toxicity": {"TRUE", "FALSE"},
+    "arm_role": {"active", "placebo_or_sham", "no_intervention", "spontaneous_report",
+                 "not_applicable"},
+    "chronic_qualification": endpoints.CHRONIC_QUALIFICATIONS,
+    "incidence_is_zero": {"TRUE", "FALSE"},
 }
 
 results: list[tuple[str, bool, str]] = []
@@ -78,6 +87,40 @@ def main(as_json: bool = False) -> int:
     # without estimating one from a figure. Requiring the declaration keeps the check able to
     # catch an accidental orphan, which a bare "every oligo has a measurement" rule stopped doing
     # the moment the endpoint split silently dropped unmeasured oligos instead of filing them.
+    # A grade is a statement that the source observed harm of a given severity. A row that does
+    # not measure harm cannot carry one -- the value would be invented. This check exists because
+    # exactly that shipped: HV-MSR-00007, a transfection-efficiency row, carried grade 0 because
+    # a substring regex matched "non-toxic" inside "Not a toxicity readout."
+    # A control-arm event is not evidence about the compound. Filing it under the compound's
+    # oligo_id with no arm marking let 288 placebo rows into the drug's event population.
+    unmarked = sorted(m["measurement_id"] for m in meas
+                      if m["study_type"] == "clinical" and m.get("arm_role") in (None, "", "not_applicable"))
+    check("every clinical row states its arm role", not unmarked,
+          f"{len(unmarked)} unmarked: {unmarked[:6]}" if unmarked else
+          f"{sum(1 for m in meas if m.get('arm_role') == 'placebo_or_sham')} control-arm rows marked")
+
+    # No row may assert an exposure duration the registry does not record.
+    ct_exposure = sorted(m["measurement_id"] for m in meas
+                         if m["source_id"] == "CT1" and m.get("exposure_duration") not in ("NOT_REPORTED", "", None))
+    check("no registry row asserts an exposure duration", not ct_exposure,
+          f"{len(ct_exposure)} assert one: {ct_exposure[:6]}" if ct_exposure else
+          "0 -- the registry records a collection window, not exposure")
+
+    graded_context = sorted(m["measurement_id"] for m in meas
+                            if m.get("readout_is_toxicity") == "FALSE"
+                            and str(m.get("cns_tox_grade", "")).strip() != "")
+    check("no non-toxicity readout carries a toxicity grade", not graded_context,
+          f"{len(graded_context)} graded context row(s): {graded_context[:6]}" if graded_context
+          else f"{sum(1 for m in meas if m.get('readout_is_toxicity') == 'FALSE')} context rows, none graded")
+
+    # Context rows must not sit on a toxicity axis either, or they rejoin the toxicity population
+    # the moment anyone groups by tox_axis.
+    ctx_on_tox_axis = sorted(m["measurement_id"] for m in meas
+                             if m.get("readout_is_toxicity") == "FALSE"
+                             and "not_toxicity" not in m.get("tox_axis", ""))
+    check("context readouts are not filed on a toxicity axis", not ctx_on_tox_axis,
+          f"{len(ctx_on_tox_axis)} misfiled: {ctx_on_tox_axis[:6]}" if ctx_on_tox_axis else "0 misfiled")
+
     unmeasured = oid_set - {m["oligo_id"] for m in meas}
     undeclared = sorted(o["oligo_id"] for o in oligos if o["oligo_id"] in unmeasured
                         and not o.get("notes", "").startswith("CHARACTERISED_ONLY:"))

@@ -34,6 +34,7 @@ they are heart ventricles, not brain ventricles.
 """
 from __future__ import annotations
 
+import collections
 import csv
 import json
 import pathlib
@@ -104,13 +105,85 @@ DRUG_CLASS = {
 }
 
 
+
+# An arm's role is a property of the arm, not of the prose describing it. 288 control-arm rows
+# previously carried the active compound's oligo_id with nothing but a parenthetical in
+# effect_vs_control to mark them, so any group-by on oligo_id pooled placebo events into the
+# drug's event rate.
+PLACEBO_RE = re.compile(r"\bplacebo\b|\bplb\b|\bsham\b", re.I)
+UNTREATED_RE = re.compile(r"untreated|no intervention|natural history|observation(al)? cohort", re.I)
+# The registry prints the dose in the arm title for 71 of 109 arms ("Cohort 2: BIIB067 20 mg").
+# Reading it there is transcription from the source, not inference; arms without one stay
+# NOT_REPORTED.
+DOSE_RE = re.compile(r"(\d+(?:\.\d+)?)\s*(mg|mcg|µg|ug)\b", re.I)
+
+
+def arm_role_of(title: str) -> str:
+    if PLACEBO_RE.search(title or ""):
+        return "placebo_or_sham"
+    if UNTREATED_RE.search(title or ""):
+        return "no_intervention"
+    return "active"
+
+
+def arm_dose(title: str):
+    """The dose stated in the arm title, or (NOT_REPORTED, NOT_REPORTED)."""
+    m = DOSE_RE.search(title or "")
+    if not m:
+        return "NOT_REPORTED", "NOT_REPORTED"
+    unit = m.group(2).lower().replace("ug", "mcg").replace("\u00b5g", "mcg")
+    return m.group(1), unit
+
+
+def design_phrase(ps: dict) -> str:
+    """Describe the trial as the registry describes it, not as we assume it."""
+    alloc = (ps.get("designModule", {}).get("designInfo", {}) or {}).get("allocation", "")
+    return {"RANDOMIZED": "randomised clinical trial arm",
+            "NON_RANDOMIZED": "non-randomised clinical trial arm",
+            "NA": "single-group clinical trial arm"}.get(alloc, "clinical trial arm")
+
+
+
+# ---------------------------------------------------------------------------------------------
+# The trial register. Measurement rows are not trials, and the difference is not pedantic: the
+# 2,329 clinical rows in this module come from 22 registry records, which are themselves only 16
+# independent enrolling cohorts. Publishing any of those three numbers in place of another
+# misstates the evidence by up to two orders of magnitude.
+#
+# A standalone extension study re-enrols participants who completed a parent trial, so its
+# participants are not new people. It is identified from the trial's own TITLE, which states it
+# ("An Open-Label Extension Study to ...", "... Who Previously Participated in ..."). Two trials
+# whose titles contain the word "extension" are NOT extensions -- NCT03186989 and NCT04494256 are
+# single studies with an extension PHASE ("A Randomized ... Study, Followed by an Open-Label
+# Extension"), so they enrol their own participants and are index cohorts. Matching on the word
+# alone would have mislabelled both.
+IS_EXTENSION_STUDY = re.compile(
+    r"^an?\s+(open[- ]label\s+)?extension\s+study"
+    r"|^an?\s+extension\s+study"
+    r"|^an?\s+multicenter,\s*open[- ]label\s+extension"
+    r"|^an?\s+open[- ]label\s+extension"
+    r"|who\s+previously\s+participated"
+    r"|^an?\s+extension\s+study\s+to\s+assess\s+the\s+long[- ]term", re.I)
+CONTAINS_EXTENSION_PHASE = re.compile(r"followed\s+by\s+an?\s+(open[- ]label\s+)?extension", re.I)
+
+
+def classify_cohort(official_title: str, brief_title: str) -> str:
+    """index_cohort (enrols its own participants) or extension_study (re-enrols from a parent)."""
+    blob = f"{official_title} {brief_title}"
+    if CONTAINS_EXTENSION_PHASE.search(blob):
+        return "index_cohort"
+    if IS_EXTENSION_STUDY.search(official_title or "") or IS_EXTENSION_STUDY.search(brief_title or ""):
+        return "extension_study"
+    return "index_cohort"
+
+
 def is_comparator(title: str) -> bool:
     return bool(re.search(r"placebo|sham|untreated|vehicle", title, re.I))
 
 
 def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
-    oligos, measurements = [], []
+    oligos, measurements, trials = [], [], []
     oligo_id_of, skipped = {}, []
 
     for f in sorted(SRC.glob("NCT*.json")):
@@ -163,6 +236,36 @@ def main() -> int:
                          "NOT_REPORTED rather than filled from elsewhere.",
             })
 
+        im = ps.get("identificationModule", {})
+        dm = ps.get("designModule", {})
+        enrol = dm.get("enrollmentInfo", {}) or {}
+        cohort = classify_cohort(im.get("officialTitle", ""), im.get("briefTitle", ""))
+        trials.append({
+            "trial_key": nct,                       # stable across every package in the submission
+            "nct_id": nct,
+            "brief_title": im.get("briefTitle", "NOT_REPORTED"),
+            "compound": drug,
+            "study_type": dm.get("studyType", ps.get("studyType", "NOT_REPORTED")),
+            "phase": "; ".join(dm.get("phases", [])) or "NOT_REPORTED",
+            "allocation": (dm.get("designInfo", {}) or {}).get("allocation", "NOT_REPORTED"),
+            "overall_status": ps.get("statusModule", {}).get("overallStatus", "NOT_REPORTED"),
+            "lead_sponsor": (ps.get("sponsorCollaboratorsModule", {}).get("leadSponsor", {})
+                             or {}).get("name", "NOT_REPORTED"),
+            "enrollment_count": enrol.get("count", "NOT_REPORTED"),
+            "enrollment_type": enrol.get("type", "NOT_REPORTED"),
+            "cohort_role": cohort,
+            "has_posted_results": "TRUE" if d.get("hasResults") else "FALSE",
+            "n_ae_arms": len(ae.get("eventGroups", [])),
+            # filled after the measurement loop
+            "n_cns_measurements": 0,
+            "endpoint_evaluable": "FALSE",
+            "source_location": f"{nct} protocolSection + resultsSection.adverseEventsModule",
+            "notes": ("Extension study: re-enrols participants who completed a parent trial, so "
+                      "its enrolment is NOT additional participants."
+                      if cohort == "extension_study" else
+                      "Index cohort: enrols its own participants."),
+        })
+
         groups = {g["id"]: g for g in ae.get("eventGroups", [])}
         for serious, bucket in ((True, "seriousEvents"), (False, "otherEvents")):
             for ev in ae.get(bucket, []):
@@ -188,17 +291,26 @@ def main() -> int:
                         grade, basis = 1, "non-serious symptomatic CNS adverse event"
 
                     hyd = bool(HYDROCEPHALUS.search(term))
+                    gtitle = g.get("title", "")
+                    role = arm_role_of(gtitle)
+                    dval, dunit = arm_dose(gtitle)
                     measurements.append({
                         "measurement_id": f"CT1-MSR-{len(measurements) + 1:05d}",
                         "oligo_id": oligo_id_of[drug], "source_id": SOURCE_ID,
                         "study_type": "clinical", "species": "human",
                         "strain": "NOT_APPLICABLE",
-                        "system_model": f"randomised clinical trial arm: {g.get('title','')}",
+                        "system_model": f"{design_phrase(ps)}: {gtitle}",
+                        "arm_role": role,
                         "is_human_system": "TRUE",
                         "cns_region": "CSF_and_neuraxis",
                         "delivery_route": "intrathecal_or_intracerebroventricular",
-                        "dose_value": "NOT_REPORTED", "dose_unit": "NOT_REPORTED",
-                        "exposure_duration": ae.get("timeFrame", "NOT_REPORTED"),
+                        "dose_value": dval, "dose_unit": dunit,
+                        # The registry's timeFrame is the window over which adverse events were
+                        # COLLECTED. It is not an exposure duration, and copying it into
+                        # exposure_duration made 2,318 rows assert a drug exposure the source
+                        # never states -- including 242 rows from explicitly single-dose arms.
+                        "exposure_duration": "NOT_REPORTED",
+                        "observation_window": ae.get("timeFrame", "NOT_REPORTED"),
                         "timepoint": "trial adverse-event collection period",
                         "readout_category": "clinical_cns_outcome",
                         "readout_name": term,
@@ -208,9 +320,8 @@ def main() -> int:
                         "n_per_group": f"{affected}/{at_risk}",
                         "statistic": "count affected of count at risk; no p-value posted",
                         "effect_direction": "increase" if affected else "no_change",
-                        "effect_vs_control": (f"{affected}/{at_risk} in arm "
-                                              f"'{g.get('title','')}'"
-                                              f"{' (comparator arm)' if is_comparator(g.get('title','')) else ''}"),
+                        "effect_vs_control": (f"{affected}/{at_risk} in arm '{gtitle}'"
+                                              f"{' (comparator arm)' if role != 'active' else ''}"),
                         "cns_tox_grade": grade, "grade_basis": basis,
                         "grade_status": "provisional",
                         "tox_axis": ("clinical_serious_neurological" if (hyd or serious)
@@ -224,10 +335,25 @@ def main() -> int:
                                             f"{st.get('groupId')} ({g.get('title','')})"),
                         "redistribution": "public_domain",
                         "notes": (f"MedDRA organ class: {organ}. Trial: {title[:90]}. "
-                                  f"{'Comparator arm.' if is_comparator(g.get('title','')) else 'Treated arm.'}"),
+                                  f"{'Comparator arm.' if role != 'active' else 'Treated arm.'} "
+                                  f"Incidence within the trial's adverse-event collection window; "
+                                  f"the registry records no event onset, duration or persistence."),
                     })
 
-    for name, recs in (("CT1_oligos", oligos), ("CT1_measurements", measurements)):
+    per_trial = collections.Counter(
+        re.match(r"(NCT\d+)", m["source_location"]).group(1) for m in measurements)
+    for tr in trials:
+        tr["n_cns_measurements"] = per_trial.get(tr["trial_key"], 0)
+        tr["endpoint_evaluable"] = "TRUE" if per_trial.get(tr["trial_key"], 0) else "FALSE"
+
+    idx = [t_ for t_ in trials if t_["cohort_role"] == "index_cohort" and t_["endpoint_evaluable"] == "TRUE"]
+    ev = [t_ for t_ in trials if t_["endpoint_evaluable"] == "TRUE"]
+    print(f"  trial register: {len(trials)} registry records retrieved, {len(ev)} contribute CNS rows, "
+          f"of which {len(idx)} are independent enrolling cohorts and "
+          f"{len(ev) - len(idx)} are extension studies")
+
+    for name, recs in (("CT1_oligos", oligos), ("CT1_measurements", measurements),
+                       ("CT1_trials", trials)):
         keys = []
         for r in recs:
             for k in r:
@@ -239,7 +365,6 @@ def main() -> int:
             w.writeheader(); w.writerows(recs)
         print(f"wrote {p.relative_to(ROOT)}: {len(recs)} rows x {len(keys)} cols")
 
-    import collections
     print(f"\ntrials ingested: {len(list(SRC.glob('NCT*.json'))) - len(skipped)}; "
           f"no posted results: {len(skipped)} ({', '.join(skipped)})")
     print("oligonucleotides:", ", ".join(sorted(oligo_id_of)))

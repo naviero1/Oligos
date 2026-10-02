@@ -182,11 +182,24 @@ Tracked as **OI-02**.
 Only **12 of 2,065** measurements are human-derived, and all twelve are clinical adverse-event
 incidences. The in vitro arm is rat primary cortical neuron.
 
-> `python3 qc/validate_dataset.py` → `human_system_measurements: 12`
+> `python3 qc/validate_dataset.py` → `human_system_measurements` (2,375 at the current release)
 
 The challenge specifically prioritises *"datasets based on in vitro human systems or able to
-extrapolate data between in vitro human systems and animal data."* This dataset satisfies the
-second clause — 181 compounds carry paired in vitro and in vivo readouts — but **not the first**.
+extrapolate data between in vitro human systems and animal data."*
+
+**This release satisfies neither clause, and an earlier version of this finding wrongly claimed it
+satisfied the second.** Both phrases require human cells on one side. The 181-compound pairing is
+rat primary cortical neurons to mouse intracerebroventricular tolerability — animal to animal,
+both sides carrying `is_human_system = FALSE`, both from source H1. It is a real and useful
+in-vitro-to-in-vivo bridge; it is not the bridge the Challenge asks for.
+
+Checked directly rather than argued: **no oligonucleotide in this dataset carries both a
+human-system row and an animal row**, and no sequence is shared between the human sources
+(HV1–HV3) and the animal sources (H1/K1/L1) by exact match, reverse complement, containment or
+above-chance similarity. Tofersen and nusinersen appear only in human clinical rows. The
+cross-system compound count is zero.
+
+> `python3 -c "import csv,itertools; ..."` — see `docs/TRANSLATIONAL_PAIRING.md` for the comparison
 
 We searched for published, sequence-resolved human iPSC-neuron or organoid data on
 oligonucleotide CNS toxicity. A 2023 review states that *"using human induced pluripotent stem

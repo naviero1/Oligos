@@ -27,13 +27,14 @@ Nothing here counts toward the brief's endpoint coverage. The two listed CNS end
 | Item | Count |
 |---|---:|
 | Measurement rows | **2,047** |
-| Oligonucleotides | **1,832** |
+| Oligonucleotides | **1,866** |
 | Per-position modification records | **32,478** |
-| `source_id`s | 2 — H1, K1 |
-| Sequences published | 1,825 / 1,832 (99.6%), all position-resolved |
-| Graded rows | 222 — 0/1/2/3 = 55 / 81 / 35 / 51 |
+| `source_id`s | 5 — H1, HV1, HV2, HV3, K1 |
+| Sequences published | 1,851 / 1,866 — see `../_shared/cns/docs/CHARACTERIZATION_COVERAGE.md`, which keeps the human and animal subsets apart |
+| Graded rows | 245 — 0/1/2/3 = 74 / 81 / 39 / 51 |
 | Ungraded rows | 1,825 — the in vitro readout is continuous and the source defines no severity bands |
-| Human rows | **0** — this endpoint is entirely animal |
+| Human rows | **34** — all human *in vitro* (hiPSC forebrain neurons, cortical organoids, SH-SY5Y), from HV1–HV3. **Zero clinical.** |
+| Verified human clinical trials | **0** — `data/trials.csv` is present and empty, which is the claim, not an omission |
 
 ### What is in here
 
@@ -41,18 +42,27 @@ Nothing here counts toward the brief's endpoint coverage. The two listed CNS end
 |---|---:|---|
 | `acute_neuronal_excitability` | 1,825 | spontaneous calcium oscillations, rat cortical neurons — *literally* the phrase the brief deprioritises |
 | `acute_behavioural` | 222 | 0–20 tolerability score, ≤1 h after ICV dosing |
+| `invitro_human_neural_toxicity` | 28 | **human** iPSC neurons, cortical organoids and SH-SY5Y — viability, apoptosis and neurite readouts |
+| `invitro_human_context_not_toxicity` | 6 | human rows that measure **uptake or off-target expression, not injury**. Carried for context and never graded |
 
 **This folder is now purely acute.** An earlier revision also held the general clinical CNS adverse
 events, because they mapped to no listed endpoint. They have since moved to
 [`../chronic-neurotoxicity/`](../chronic-neurotoxicity/): trial adverse events are collected across
 chronic exposure, which makes them the human arm of a **listed** endpoint rather than a residual
-here. Nothing in this folder is human.
+here.
+
+**This folder nonetheless holds the module's only human laboratory data.** An earlier revision of
+this dossier stated in three places that the endpoint was entirely animal. That was wrong from the
+moment sources HV1–HV3 were ingested, and it was wrong about exactly the data class the Challenge
+prioritises. The human rows are *in vitro*, never clinical: `data/trials.csv` exists here and is
+empty, which states a verified human clinical-trial count of **zero in this module** — not that no
+such trials exist in the world.
 
 ## Human versus animal
 
 | file | rows |
 |---|---:|
-| [`data/measurements_human.csv`](./data/measurements_human.csv) | 0 — empty by construction |
+| [`data/measurements_human.csv`](./data/measurements_human.csv) | 34 — all `human_invitro` |
 | [`data/measurements_animal.csv`](./data/measurements_animal.csv) | 2,047 |
 
 ## 3. Sources allocated

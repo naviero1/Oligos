@@ -7,16 +7,20 @@ Built for the NIH/NCATS Oligonucleotide Toxicity Open Data Challenge, **Phase 2 
 Generation)**. Sibling modules in the same programme cover nephrotoxicity and immunotoxicity;
 this is the CNS module.
 
+<!-- GENERATED:headline -->
 | | |
 |---|---|
-| Oligonucleotides | **1,839** |
-| CNS toxicity measurements | **2,065** |
+| Oligonucleotides | **1,879** |
+| CNS toxicity measurements | **4,428** |
 | Per-position chemical-modification records | **32,569** |
-| Sources | **5** (4 contributing data, 1 contributing instruments) |
-| Sequences published | 1,830 / 1,839 (99.5 %) |
-| Position-resolved modification maps | 1,830 / 1,839 (99.5 %) |
-| Licence | CC BY 4.0; 97.7 % of rows freely reusable including commercially |
-| Structural QC | **26 / 26 checks pass** (`qc/validate_dataset.py`) |
+| Sources | **9** (8 contributing data, 1 contributing instruments) |
+| Sequences published | 1,858 / 1,879 (98.9 %) |
+| Position-resolved modification maps | 1,830 / 1,879 (97.4 %) |
+| Verified unique human trials | **22** (16 independent cohorts) &mdash; see `docs/TRIAL_REGISTER.md` |
+| Human laboratory measurements | **34** &mdash; the class the Challenge prioritises |
+| Licence | CC BY 4.0 for our work; per-row source terms in `LICENSE.md` |
+| Structural QC | **43 / 43 checks pass** (`qc/validate_dataset.py`) |
+<!-- /GENERATED:headline -->
 
 ---
 
@@ -114,9 +118,16 @@ Stated plainly here and in full in [`OPEN_ITEMS.md`](OPEN_ITEMS.md):
   the source states it (1,825 / 1,839). This is the largest gap between what this dataset is and
   what the challenge text describes, and it is a property of the published record, not of the
   curation.
-- **The in vitro arm is rat, not human.** Only 12 of 2,065 measurements are human-derived, and
-  all of them are clinical. There is no human in vitro CNS oligonucleotide toxicity data in this
-  release because we did not find a published, sequence-resolved source of it.
+<!-- GENERATED:human -->
+- **The human arm is clinical, and the human laboratory arm is thin.** 2,375 of
+  4,428 measurements are human-derived: 2,341 are
+  adverse-event counts from clinical trials and **34 are human *in
+  vitro***. The Challenge prioritises the latter class, and 34 rows is
+  not a strong showing in it. The predictive in vitro screen in this field remains **rat** primary
+  neurons. No compound in this release carries both a human and an animal row, so the dataset
+  cannot yet extrapolate between human in vitro and animal systems &mdash; see
+  `docs/TRANSLATIONAL_PAIRING.md`.
+<!-- /GENERATED:human -->
 - **Chemistry is narrow.** 1,825 of 1,839 oligonucleotides are LNA/DNA full-phosphorothioate
   gapmers from one study. That is a strength for isolating sequence effects (chemistry is held
   constant) and a weakness for generalising across chemistries.

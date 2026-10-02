@@ -98,7 +98,12 @@ MEASUREMENT_COLUMNS = [
     ("formulation_mg_mM", "Mg2+ in the injectate (mM). An experimental variable in source K1."),
     ("exposure_duration", "Duration of exposure."),
     ("timepoint", "When the readout was taken."),
-    ("readout_category", "behavioural | electrophysiology_calcium | histopathology | injury_biomarker | functional | viability | accumulation | clinical_cns_outcome"),
+    ("readout_category", "behavioural | electrophysiology_calcium | histopathology | injury_biomarker | functional | viability | apoptosis | morphological | accumulation | off_target_expression | clinical_cns_outcome. Controlled and enforced by the QC suite."),
+    ("arm_role", "For a clinical row: active | placebo_or_sham | no_intervention, read from the trial arm's own title. not_applicable for laboratory and animal rows. Without this, a group-by on oligo_id pools control-arm events into the compound's event rate."),
+    ("observation_window", "For a clinical row: the window over which adverse events were COLLECTED, verbatim from the registry's timeFrame. This is NOT an exposure duration and must never be read as one."),
+    ("chronic_qualification", "Whether the SOURCE supports calling this outcome chronic. chronic_supported_by_source | acute_by_design | not_derivable_from_source. Derived by one rule in src/endpoints.py. See docs/CHRONIC_QUALIFICATION.md."),
+    ("incidence_is_zero", "TRUE where the row records that the event did NOT occur in that arm (numAffected = 0). These rows are evidence of absence, not adverse events, and 1,539 of them exist."),
+    ("readout_is_toxicity", "TRUE where this readout measures INJURY, FALSE where it measures context -- compound uptake/delivery (accumulation) or transcriptome response (off_target_expression). Derived from readout_category by one rule in src/endpoints.py, never set by a builder, so the four builders cannot disagree. Only a TRUE row may carry a cns_tox_grade."),
     ("readout_name", "Name of the specific readout."),
     ("readout_value", "The value EXACTLY as reported, or NOT_REPORTED."),
     ("readout_is_qualitative", "TRUE where the source reports the result only in words or only as a figure."),
@@ -127,6 +132,29 @@ MODIFICATION_COLUMNS = [
     ("linkage_3prime", "Linkage to the next nucleotide, or terminal_none at the 3' end."),
     ("basis", "How the position was established."),
     ("source_id", "Foreign key to sources.csv."),
+]
+
+TRIAL_COLUMNS = [
+    ("trial_key", "Primary key. Stable across every package in the submission, so a consolidated "
+                  "entry cannot count one trial twice because two endpoints both drew rows from it."),
+    ("nct_id", "ClinicalTrials.gov registry identifier."),
+    ("brief_title", "Registry brief title, verbatim."),
+    ("compound", "The oligonucleotide under study."),
+    ("study_type", "INTERVENTIONAL or OBSERVATIONAL, verbatim from the registry."),
+    ("phase", "Registry phase(s)."),
+    ("allocation", "RANDOMIZED | NON_RANDOMIZED | NA, verbatim. Not assumed."),
+    ("overall_status", "Registry overall status."),
+    ("lead_sponsor", "Registry lead sponsor."),
+    ("enrollment_count", "Registry enrolment count. NEVER sum this across trials -- see cohort_role."),
+    ("enrollment_type", "ACTUAL or ESTIMATED."),
+    ("cohort_role", "index_cohort | extension_study. An extension study re-enrols participants who "
+                    "completed a parent trial, so summing its enrolment double counts people."),
+    ("has_posted_results", "TRUE where the registry holds a results section."),
+    ("n_ae_arms", "Number of adverse-event reporting groups."),
+    ("n_cns_measurements", "How many measurement rows in THIS endpoint folder trace to this trial."),
+    ("endpoint_evaluable", "TRUE where the trial yields at least one usable CNS outcome row here."),
+    ("source_location", "Where in the record this was read."),
+    ("notes", "Free text."),
 ]
 
 SOURCES = [
@@ -292,6 +320,8 @@ def main() -> int:
     oligos = normalise(read("*_oligos.csv"), OLIGO_COLUMNS)
     meas = normalise(read("*_measurements.csv"), MEASUREMENT_COLUMNS)
     mods = normalise(read("*_modifications.csv"), MODIFICATION_COLUMNS)
+    trials = normalise(read("*_trials.csv"), TRIAL_COLUMNS)
+    trials.sort(key=lambda r: r["trial_key"])
 
     oligos.sort(key=lambda r: r["oligo_id"])
     meas.sort(key=lambda r: r["measurement_id"])
@@ -307,12 +337,28 @@ def main() -> int:
     for m in meas:
         m["subject_class"] = endpoints.subject_class_of(m)
         m["subject_group"] = endpoints.subject_group_of(m)
+        m["readout_is_toxicity"] = endpoints.readout_is_toxicity_of(m)
+        m["chronic_qualification"] = endpoints.chronic_qualification_of(m)
+        m["incidence_is_zero"] = endpoints.incidence_is_zero_of(m)
+        if not m.get("arm_role"):
+            m["arm_role"] = "not_applicable"
+        if not m.get("observation_window"):
+            m["observation_window"] = "NOT_REPORTED"
+
+    # A grade on a row that does not measure injury is a fabricated number, which this project
+    # forbids outright. One such row shipped (a transfection-efficiency measurement graded 0
+    # because a regex matched "non-toxic" inside the sentence "Not a toxicity readout"), so the
+    # invariant is asserted here at assembly rather than left to the QC suite alone.
+    bad = [m["measurement_id"] for m in meas
+           if m["readout_is_toxicity"] == "FALSE" and str(m.get("cns_tox_grade", "")).strip() != ""]
+    assert not bad, (f"{len(bad)} non-toxicity row(s) carry a toxicity grade: {bad[:10]}")
 
     columns = {"oligos": [c for c, _ in OLIGO_COLUMNS],
                "measurements": [c for c, _ in MEASUREMENT_COLUMNS],
                "modifications": [c for c, _ in MODIFICATION_COLUMNS],
-               "sources": list(srcs[0].keys())}
-    counts = endpoints.write_split(oligos, meas, mods, srcs, columns)
+               "sources": list(srcs[0].keys()),
+               "trials": [c for c, _ in TRIAL_COLUMNS]}
+    counts = endpoints.write_split(oligos, meas, mods, srcs, columns, trials)
 
     print("per-endpoint data written to toxicity/<endpoint>/data/:")
     for ep in endpoints.ENDPOINTS:

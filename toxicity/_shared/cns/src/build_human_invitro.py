@@ -53,6 +53,39 @@ def norm_seq(s: str) -> str:
 
 CHARACTERISED_ONLY = "CHARACTERISED_ONLY:"
 
+# Which readout categories measure INJURY. Everything else is context: a delivery or uptake
+# measure says how much compound got in, and an off-target expression measure says what the
+# transcriptome did -- neither is harm, and neither may carry a toxicity grade.
+INJURY_CATEGORIES = {"viability", "apoptosis", "histopathology", "injury_biomarker",
+                     "morphological", "behavioural", "electrophysiology_calcium",
+                     "functional", "clinical_cns_outcome"}
+
+# The extractor writes category labels in prose when it is unsure, e.g.
+# "off_target_safety (NOT a cytotoxicity readout - recorded as context)". That is honest, but a
+# free-text value in a controlled column defeats every downstream filter, so it is mapped onto
+# the vocabulary here and the qualifying prose is preserved in the row's notes by the caller.
+CATEGORY_ALIASES = [
+    (re.compile(r"off[_ ]?target", re.I), "off_target_expression"),
+    (re.compile(r"apopto", re.I), "apoptosis"),
+    (re.compile(r"morpholog|neurite", re.I), "morphological"),
+    (re.compile(r"accumulat|uptake|transfection|delivery", re.I), "accumulation"),
+    (re.compile(r"viabilit|cytotox", re.I), "viability"),
+]
+
+
+def normalise_category(raw):
+    """Map an extractor's category label onto the controlled vocabulary."""
+    v = (raw or "").strip()
+    if not v:
+        return "viability"
+    if v in INJURY_CATEGORIES or v == "accumulation" or v == "off_target_expression":
+        return v
+    for rx, canon in CATEGORY_ALIASES:
+        if rx.search(v):
+            return canon
+    return v  # unrecognised -> left as-is so the QC vocabulary check fails loudly
+
+
 
 def main(path: str) -> int:
     data = json.loads(pathlib.Path(path).read_text())
@@ -141,8 +174,18 @@ def main(path: str) -> int:
             if not oid:
                 rej["no_oligo_match"] += 1
                 continue
+            # readout_category is the gate, and it is checked BEFORE the prose is read.
+            # An earlier revision graded on the prose alone, and a substring match on
+            # "non-toxic" inside the sentence "Not a toxicity readout. ... non-toxic" put
+            # cns_tox_grade=0 on a transfection-efficiency row. A delivery or
+            # gene-expression measurement cannot be graded for toxicity at any value of
+            # its prose, so it is never offered to the regex.
+            rcat = normalise_category(m.get("readout_category"))
             call = (m.get("toxic_call") or "").lower()
-            if re.search(r"non[- ]?toxic|no (significant )?(drop|effect|toxicity)|well tolerated", call):
+            if rcat not in INJURY_CATEGORIES:
+                grade, basis = "", (f"not a toxicity readout (readout_category={rcat}); "
+                                    f"recorded as context, never graded")
+            elif re.search(r"non[- ]?toxic|no (significant )?(drop|effect|toxicity)|well tolerated", call):
                 grade, basis = 0, "authors state the compound was non-toxic in this system"
             elif re.search(r"\btoxic\b|significant (drop|reduction|decrease)|cytotox", call):
                 grade, basis = 2, "authors state a significant toxicity or viability loss in this system"
@@ -161,7 +204,7 @@ def main(path: str) -> int:
                 "dose_unit": m.get("concentration_unit") or "NOT_REPORTED",
                 "exposure_duration": m.get("exposure_duration") or "NOT_REPORTED",
                 "timepoint": m.get("exposure_duration") or "NOT_REPORTED",
-                "readout_category": m.get("readout_category") or "viability",
+                "readout_category": rcat,
                 "readout_name": rname,
                 "readout_value": m.get("readout_value") or "NOT_REPORTED",
                 "readout_is_qualitative": "TRUE" if (m.get("readout_value") in NOT) else "FALSE",
@@ -172,7 +215,8 @@ def main(path: str) -> int:
                 "effect_vs_control": m.get("comparator") or "NOT_REPORTED",
                 "cns_tox_grade": grade, "grade_basis": basis,
                 "grade_status": "provisional" if grade != "" else "not_graded",
-                "tox_axis": "invitro_human_neural_toxicity",
+                "tox_axis": ("invitro_human_neural_toxicity" if rcat in INJURY_CATEGORIES
+                             else "invitro_human_context_not_toxicity"),
                 "is_cns_specific": "TRUE",
                 "source_ref": f"{key} ({ex.get('doi') or ex.get('pmcid') or ''})",
                 "source_location": m.get("source_location") or "NOT_REPORTED",

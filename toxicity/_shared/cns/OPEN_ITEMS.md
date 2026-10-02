@@ -145,9 +145,13 @@ assay (F-10). Eight further sources are identified, with verified identifiers, i
 sequences across four chemistries. Extracting them is the highest-value next move and needs no
 new decision.
 
-**The extrapolation clause** is separately served: 181 compounds carry paired in vitro and in vivo
-readouts from the same laboratory. A source that bridges human in vitro to human clinical on one
-molecule — Ottesen 2026, an 18-mer with nusinersen's sequence and chemistry — is queued.
+**The extrapolation clause is NOT served.** An earlier version of this item said it was, on the
+strength of 181 compounds carrying paired in vitro and in vivo readouts. That pairing is rat
+neurons to mouse brain — animal to animal — and the clause requires human cells on one side. Zero
+oligonucleotides in this dataset carry both a human-system and an animal row, and zero sequences
+are shared between the human and animal sources. A source that would bridge human in vitro to
+human clinical on one molecule — Ottesen 2026, an 18-mer with nusinersen's sequence and chemistry
+— is queued and remains the single highest-value acquisition in the module.
 
 ---
 
