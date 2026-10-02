@@ -1,0 +1,270 @@
+[
+ {
+  "n": 1,
+  "resource": "PubMed",
+  "query": "oligonucleotide nephrotoxicity",
+  "date": "2026-10-02",
+  "http": "200",
+  "n_results": "148",
+  "ids": [
+   "42687304",
+   "42578809",
+   "42385712",
+   "42128554",
+   "41831026"
+  ],
+  "status": "searched_ok",
+  "note": "E-utilities esearch; machine API, no wall"
+ },
+ {
+  "n": 2,
+  "resource": "Europe PMC",
+  "query": "oligonucleotide nephrotoxicity",
+  "date": "2026-10-02",
+  "http": "200",
+  "n_results": 2319,
+  "ids": [
+   "41500580",
+   "42385712",
+   "PMC13409724",
+   "PMC13326304",
+   "41078095"
+  ],
+  "status": "searched_ok",
+  "note": "REST API; also serves fullTextXML for OA subset"
+ },
+ {
+  "n": 3,
+  "resource": "OpenAlex",
+  "query": "oligonucleotide nephrotoxicity",
+  "date": "2026-10-02",
+  "http": "429",
+  "n_results": "?",
+  "ids": [],
+  "status": "technical_block",
+  "note": "open API; used to find best_oa_location"
+ },
+ {
+  "n": 4,
+  "resource": "Semantic Scholar",
+  "query": "oligonucleotide nephrotoxicity",
+  "date": "2026-10-02",
+  "http": "200",
+  "n_results": 183651,
+  "ids": [
+   "10.1016/j.jval.2025.09.270",
+   "10.1016/j.cotox.2022.100373",
+   "10.1053/j.ajkd.2022.08.018",
+   "10.1007/s00204-021-03062-8",
+   "10.1016/j.omtn.2018.11.005"
+  ],
+  "status": "searched_ok",
+  "note": "Graph API free tier; openAccessPdf field checked"
+ },
+ {
+  "n": 5,
+  "resource": "ResearchRabbit",
+  "query": "oligonucleotide nephrotoxicity",
+  "date": "2026-10-02",
+  "http": "200",
+  "n_results": "n/a",
+  "ids": [],
+  "status": "login_required_not_searched",
+  "note": "no public search API; account sign-in required - NOT searched, not a paywall on content"
+ },
+ {
+  "n": 6,
+  "resource": "Undermind",
+  "query": "oligonucleotide nephrotoxicity",
+  "date": "2026-10-02",
+  "http": "200",
+  "n_results": "n/a",
+  "ids": [],
+  "status": "subscription_required_not_searched",
+  "note": "paid research-agent service; no public API - NOT searched"
+ },
+ {
+  "n": 7,
+  "resource": "Elicit",
+  "query": "oligonucleotide nephrotoxicity",
+  "date": "2026-10-02",
+  "http": "200",
+  "n_results": "n/a",
+  "ids": [],
+  "status": "login_required_not_searched",
+  "note": "account/subscription required; no public API - NOT searched"
+ },
+ {
+  "n": 8,
+  "resource": "Consensus",
+  "query": "oligonucleotide nephrotoxicity",
+  "date": "2026-10-02",
+  "http": "200",
+  "n_results": "n/a",
+  "ids": [],
+  "status": "login_required_not_searched",
+  "note": "account required for results; no public API - NOT searched"
+ },
+ {
+  "n": 9,
+  "resource": "GEO",
+  "query": "antisense oligonucleotide kidney",
+  "date": "2026-10-02",
+  "http": "200",
+  "n_results": "100",
+  "ids": [
+   "200345276",
+   "200325585",
+   "200325256",
+   "200324616",
+   "200293681"
+  ],
+  "status": "searched_ok",
+  "note": "Entrez gds database"
+ },
+ {
+  "n": 10,
+  "resource": "SRA",
+  "query": "antisense oligonucleotide kidney",
+  "date": "2026-10-02",
+  "http": "200",
+  "n_results": "40",
+  "ids": [
+   "46882309",
+   "46882197",
+   "46882186",
+   "46882147",
+   "46882136"
+  ],
+  "status": "searched_ok",
+  "note": "Entrez sra database"
+ },
+ {
+  "n": 11,
+  "resource": "PRIDE",
+  "query": "oligonucleotide kidney",
+  "date": "2026-10-02",
+  "http": "200",
+  "n_results": 0,
+  "ids": [],
+  "status": "searched_ok",
+  "note": "EBI PRIDE archive REST v2"
+ },
+ {
+  "n": 12,
+  "resource": "ProteomeXchange",
+  "query": "oligonucleotide",
+  "date": "2026-10-02",
+  "http": "200",
+  "n_results": "?",
+  "ids": [],
+  "status": "searched_ok",
+  "note": "PROXI API at ProteomeCentral"
+ },
+ {
+  "n": 13,
+  "resource": "BioStudies",
+  "query": "oligonucleotide kidney",
+  "date": "2026-10-02",
+  "http": "200",
+  "n_results": 100732,
+  "ids": [
+   "S-EPMC11760729",
+   "S-EPMC11616628",
+   "S-EPMC187478",
+   "S-EPMC2580739",
+   "S-EPMC3042965"
+  ],
+  "status": "searched_ok",
+  "note": "EBI BioStudies REST"
+ },
+ {
+  "n": 14,
+  "resource": "ArrayExpress",
+  "query": "oligonucleotide kidney",
+  "date": "2026-10-02",
+  "http": "200",
+  "n_results": 6284,
+  "ids": [
+   "E-GEOD-28496",
+   "E-GEOD-41715",
+   "E-GEOD-18969",
+   "E-GEOD-18609",
+   "E-GEOD-20677"
+  ],
+  "status": "searched_ok",
+  "note": "ArrayExpress collection within BioStudies"
+ },
+ {
+  "n": 15,
+  "resource": "ClinicalTrials.gov",
+  "query": "antisense oligonucleotide kidney",
+  "date": "2026-10-02",
+  "http": "200",
+  "n_results": "?",
+  "ids": [
+   "NCT04504669",
+   "NCT05065463",
+   "NCT00059813",
+   "NCT06839833",
+   "NCT04843020"
+  ],
+  "status": "searched_ok",
+  "note": "API v2"
+ },
+ {
+  "n": 16,
+  "resource": "CTD",
+  "query": "mipomersen diseases_curated",
+  "date": "2026-10-02",
+  "http": "302",
+  "n_results": "?",
+  "ids": [],
+  "status": "technical_block",
+  "note": "batchQuery endpoint; oligos poorly represented as chemicals"
+ },
+ {
+  "n": 17,
+  "resource": "ICE",
+  "query": "(portal reachability)",
+  "date": "2026-10-02",
+  "http": "200",
+  "n_results": "n/a",
+  "ids": [],
+  "status": "reachable_no_endpoint_applicability",
+  "note": "interactive portal; curated assay data is small-molecule oriented, no oligo nephrotox assays"
+ },
+ {
+  "n": 18,
+  "resource": "ToxCast",
+  "query": "(portal reachability)",
+  "date": "2026-10-02",
+  "http": "200",
+  "n_results": "n/a",
+  "ids": [],
+  "status": "reachable_no_endpoint_applicability",
+  "note": "ToxCast/Tox21 chemical library does not include therapeutic oligonucleotides"
+ },
+ {
+  "n": 19,
+  "resource": "Zenodo",
+  "query": "oligonucleotide nephrotoxicity",
+  "date": "2026-10-02",
+  "http": "200",
+  "n_results": 1155,
+  "ids": [],
+  "status": "searched_ok",
+  "note": "REST API"
+ },
+ {
+  "n": 20,
+  "resource": "Dryad",
+  "query": "oligonucleotide kidney",
+  "date": "2026-10-02",
+  "http": "200",
+  "n_results": 2,
+  "ids": [],
+  "status": "searched_ok",
+  "note": "REST API v2"
+ }
+]

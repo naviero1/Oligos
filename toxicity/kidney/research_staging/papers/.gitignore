@@ -1,0 +1,14 @@
+# Third-party primary sources retrieved for research staging.
+#
+# Deliberately NOT committed. The repository is CC BY 4.0 for OUR curated data; the
+# publishers' articles carry their own terms and redistributing them here would both
+# misapply that license and misstate provenance.
+#
+# What IS committed is everything needed to reproduce the retrieval:
+#   ../logs/acquisition_manifest.json  — source URL, retrieval date, HTTP code, bytes, SHA-256
+#   ../trial_verification_2026-10-02.csv — the facts extracted, with exact locus per row
+#
+# Re-fetch with the URLs in the manifest and check the SHA-256 to confirm you have the
+# same bytes this extraction was made from.
+*
+!.gitignore
