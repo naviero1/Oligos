@@ -1,0 +1,11 @@
+# Bulk retrieved source material is NOT committed. It is third-party content that
+# would bloat the repository and whose redistribution rights vary per publisher.
+# What IS committed: the condition-level extraction, the manifests, and
+# staged_inventory.csv, which records every retrieved file with its sha256, byte
+# count, original filename and retrieval URL so any of it can be re-fetched and
+# verified. The one exception committed in full is the Sewing 2017 S1 workbook,
+# which is a small CC-BY supplement central to the mechanistic lane.
+*.zip
+*.xml
+*.pdf
+!sewing2017_pone.0187574_S1.xlsx

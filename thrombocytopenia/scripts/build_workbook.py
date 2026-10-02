@@ -60,6 +60,15 @@ SHEETS = [
      "Declared overlaps: a trial recorded individually that is ALSO inside a pooled analysis "
      "recorded here. Each edge is backed by arithmetic agreement on arm sizes. Never sum a pool "
      "with its members."),
+    ("01d_controls_inventory", "controls_inventory.csv",
+     "POSITIVE/NEGATIVE CONTROLS — Phase 2 requires the narrative to report these. Each row states what "
+     "the control controls for, its permitted use and its PROHIBITED use. A control is not a clinical "
+     "negative: the project records zero qualified clinical negatives and no compound here is labelled "
+     "clinically safe."),
+    ("01e_toxicity_audit", "toxicity_denominator_audit.csv",
+     "The independent four-test audit that sets the defensible toxicity denominator: is monitoring "
+     "quoted (not merely absence reported), are dose and duration stated, is there a platelet-specific "
+     "at-risk denominator, is the locus retrievable. QUOTE THE SURVIVING COUNT, not the classified one."),
     ("02_Germans_analysis", "germans_analysis.csv",
      "One row per compound: what the molecule IS (sequence and per-residue modification map) and what "
      "it DID (toxicity). RANKED ON HUMAN EVIDENCE ONLY -- a compound with no human rows cannot rank "

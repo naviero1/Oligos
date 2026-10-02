@@ -55,10 +55,26 @@ review; an FDA-generated platelet shift table for vutrisiran/patisiran.</td></tr
 <td>No binding or activation up to 10 µM — a receptor-level negative that isolates the mechanism.</td></tr>
 </table>
 
-<div class="note"><b>A discipline that shapes the negative class.</b> A compound whose label never mentions
-platelets is <i>not</i> a measured zero. Every grade-0 row is backed by a source that reports platelet
-monitoring having been performed and found unremarkable. Absence of mention was never converted into
-evidence of absence, and the code that swept the labels states this in its own output.</p></div>
+<p>The inventory is enumerated in <code>data/controls_inventory.csv</code>: <b>{{n_controls}} control
+records across {{n_control_compounds}} compounds</b>, comprising {{n_iso_pairs}} isosequential backbone
+pairs, {{n_lna_comparators}} chemistry-variant comparators, {{n_vehicle_controls}} vehicle or
+concurrent-control arms, and {{n_intended_pharm}} intended-pharmacology comparators. Each row records
+what the control controls for, its permitted use and its prohibited use.</p>
+
+<div class="note"><b>A control is not a clinical negative, and this dataset has the first and not the
+second.</b> The distinction decides what may be claimed. A <i>control</i> is a comparator measured
+alongside an exposure — an isosequential phosphodiester arm, a vehicle arm, a receptor-deficient donor.
+A <i>qualified clinical negative</i> would be a compound licensed to carry a "clinically negative for
+thrombocytopenia" label. The project's scientific governance records <b>zero</b> qualified clinical
+negatives: the clean-negative rule is <i>not yet available</i> and all twenty-one audited candidates are
+ineligible. So the controls above are reported as controls, and no compound in this dataset is labelled
+clinically safe.</p>
+<p>The discipline that follows: a compound whose label never mentions platelets is <i>not</i> a measured
+zero. Every grade-0 row is backed by a source reporting that platelet monitoring was performed and found
+unremarkable. Absence of mention was never converted into evidence of absence, and the code that swept
+the labels states this in its own output. The neutral-backbone and targeted-conjugate rows above rest on
+<i>explicit reported zeros</i> for that reason, not on silence — though their trial-grain coverage is
+thin and is logged as an open gap in <code>data/recovery_ledger.csv</code>.</p></div>
 
 <h2 class="pb">2. Main findings and conclusions</h2>
 
@@ -130,11 +146,16 @@ ClinicalTrials.gov or EudraCT, and {{n_pools}} pooled analyses that are <i>not</
 trial, only <b>{{n_trials_rows}}</b> carry any measurement row at all — the rest are trial-grain
 <i>anchors</i>, identified so that pooled data can be attributed to a real study rather than floating free.
 Of those, {{n_trials_eval}} have a platelet endpoint demonstrably assessed under a defined exposure and
-observation window, and <b>{{n_trials_defensible}}</b> remain once units are excluded in which a platelet
-change is the intended pharmacology or the treated disease — an anti-von-Willebrand aptamer that raises
-platelets in type 2B von Willebrand disease, and a telomerase inhibitor dosed into thrombocythaemia. That
-last figure is the honest denominator for a platelet-toxicity claim. The full ladder, with each definition,
-is in <code>data/study_counts.csv</code>.</p>
+observation window, and {{n_trials_defensible}} remain once units are excluded in which a platelet change
+is the intended pharmacology or the treated disease — an anti-von-Willebrand aptamer that raises platelets
+in type 2B von Willebrand disease, and a telomerase inhibitor dosed into thrombocythaemia.</p>
+<p>Those {{n_tox_audited}} were then <b>independently re-audited</b> against four explicit tests: that the
+cited basis quotes evidence platelets were <i>measured</i> rather than merely reported absent; that dose
+and duration are both stated; that a platelet-specific at-risk denominator exists; and that the basis
+cites a retrievable locus. <b>{{n_tox_survives}} of {{n_tox_audited}} survive all four.</b> That is the
+honest denominator for a platelet-toxicity claim, and it is the figure to quote. The per-unit results are
+in <code>data/toxicity_denominator_audit.csv</code> and the full ladder in
+<code>data/study_counts.csv</code>.</p>
 <p><b>Overlap is declared, not assumed away.</b> {{n_nested}} edges in
 <code>data/study_nesting_ledger.csv</code> record a trial that appears here individually and also inside a
 pooled analysis recorded here. Each was established by arithmetic agreement on arm sizes against the
@@ -311,17 +332,32 @@ by <code>scripts/model_demo.py</code>, restricted to the lanes the governance pa
 <td>{{ml_mech_constructs}} constructs over {{ml_mech_groups}} independent sequence groups; trained: {{ml_trained}}</td></tr>
 <tr><td>Sequence-only clinical classifier</td><td><b>{{model_status}}</b></td><td>not run</td></tr>
 </table>
-<p><b>The strongest defensible result in this dataset is the concordance figure above.</b> Each matched
-contrast shares a nucleotide sequence and differs in exactly one named chemical factor — PS versus PO
-backbone, LNA wings added, or sequence alone — so the comparison isolates that factor. For
-{{ml_direction_concordance}} contrasts, this dataset and the independently curated scientific package
-agree on the <i>sign</i> of the effect, under different scoring rubrics and separate extraction work.
-Absolute grades agree in {{ml_absolute_concordance}}, which is expected: the rubrics differ, and the
-disagreements are listed for scientific adjudication rather than silently reconciled. The clearest
-single contrast is the phosphorothioate/phosphodiester pair of one 22-mer, where both datasets place the
-PS form at the top of the scale and its isosequential PO control at zero. That is a reproducibility
-statement about a mechanism, not a performance claim about a model — and for a dataset whose purpose is
-to let others build models, a reproducible mechanistic contrast is the more useful deliverable.</p>
+<p><b>The most distinctive content in this dataset is the matched-contrast set.</b> Each contrast shares
+a nucleotide sequence and differs in exactly one named chemical factor — PS versus PO backbone, LNA wings
+added, or sequence alone — so the comparison isolates that factor. Across
+{{ml_direction_concordance}} contrasts, this dataset and the project's independently curated scientific
+package agree on the <i>sign</i> of the effect; absolute grades agree in {{ml_absolute_concordance}},
+and the disagreements are listed for scientific adjudication rather than silently reconciled.</p>
+
+<div class="warn"><p><b>What that agreement is, stated precisely — because an earlier version of this
+document overstated it.</b> Both the scientific package's adjudicated score and this dataset's grade
+derive from the <i>same underlying publications</i>. Their agreement is therefore evidence that the
+extraction is <b>reproducible and consistently transcribed</b> by two independent curation efforts. It
+is <b>not</b> independent biological validation, and it is not external validation of any grade. Nothing
+in it replicates an experiment. An earlier draft described these as "two independently built datasets"
+agreeing, which is true of the curation and false of the evidence; the claim is corrected here.</p>
+<p>The same correction applies to volume. Per-replicate numerical cells recovered from a source's own raw
+workbook are not independent observations: recovering them reconstructs that publication's reported
+measurements at finer grain. The staging manifest in <code>curation/research_staging/</code> states this
+on its face, and separates the count of cells from the count of constructs they describe.</p></div>
+
+<p>What the contrasts do establish is narrower and still useful. The clearest is the
+phosphorothioate/phosphodiester pair of one 22-mer, where both curation efforts place the PS form at the
+top of the scale and its isosequential PO control at zero — the same nucleotide sequence, the backbone as
+the only variable. That is a <i>mechanistic</i> statement supported by a matched control, not a
+performance claim about a model. For a dataset whose purpose is to let others build models, a
+well-controlled mechanistic contrast with its raw measurements traceable is the more useful deliverable
+than a score.</p>
 <p>Beyond this, the dataset is structured to support <b>dose–response modelling</b> from the banded
 clinical incidence grids, <b>cross-species comparison</b> on the {{n_bridge}}-compound bridge (with
 exposures shown side by side and every row carrying an explicit statement of whether the comparison is

@@ -359,10 +359,23 @@ def main():
         defensible = [st for st in with_rows
                       if st.get("platelet_endpoint_evaluable") == "yes"
                       and st.get("intended_pharmacology") != "yes"]
+        # The curator classification is superseded by the independent four-test
+        # audit where that exists: it is the figure a reader should quote.
+        apath = os.path.join(BASE, "toxicity_denominator_audit.csv")
+        audited = None
+        if os.path.exists(apath):
+            with open(apath, newline="", encoding="utf-8") as af:
+                A = list(csv.DictReader(af))
+            audited = sum(1 for r in A if r.get("audit_verdict") == "SURVIVES_ALL_FOUR")
+        tail = (f"{len(defensible)} classified as a defensible platelet-toxicity claim · "
+                f"{audited} SURVIVING an independent four-test audit (monitoring quoted, exposure "
+                f"stated, platelet denominator present, retrievable locus). QUOTE THE AUDITED "
+                f"FIGURE ({audited})"
+                if audited is not None else
+                f"{len(defensible)} classified as a defensible platelet-toxicity claim; NO AUDIT RUN")
         warnings.append(
             f"study registry: {len(studies)} evidence units · {len(typed)} typed as a trial · "
-            f"{len(with_rows)} carrying a measurement row · {len(defensible)} with a DEFENSIBLE "
-            f"platelet-toxicity claim. Quote the last figure, or the ladder in "
+            f"{len(with_rows)} carrying a measurement row · {tail}, or the ladder in "
             f"data/study_counts.csv — never the row count and never the typed count.")
         for st in studies:
             if st.get("intended_pharmacology") == "yes" and not st.get("intended_pharmacology_reason"):

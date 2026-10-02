@@ -177,6 +177,30 @@ def stats():
         d["n_trials_defensible"] = fmt(int(L.get("... and not intended pharmacology", 0)))
         d["n_pools"] = fmt(int(L.get("pooled analyses (NOT trials)", 0)))
         d["n_nested"] = fmt(int(L.get("trials declared nested inside a pooled analysis", 0)))
+    cp = os.path.join(BASE, "controls_inventory.csv")
+    if os.path.exists(cp):
+        C = list(csv.DictReader(open(cp, encoding="utf-8")))
+        import collections as _c
+        ct = _c.Counter(r["control_type"] for r in C)
+        d["n_controls"] = fmt(len(C))
+        d["n_control_compounds"] = fmt(len({r["oligo_id"] for r in C}))
+        d["n_iso_pairs"] = fmt(ct.get("isosequential_backbone_pair", 0) // 2)
+        d["n_lna_comparators"] = fmt(ct.get("chemistry_variant_comparator", 0))
+        d["n_vehicle_controls"] = fmt(ct.get("vehicle_or_control_arm", 0))
+        d["n_intended_pharm"] = fmt(ct.get("intended_pharmacology_comparator", 0))
+    ap2 = os.path.join(BASE, "toxicity_denominator_audit.csv")
+    if os.path.exists(ap2):
+        A = list(csv.DictReader(open(ap2, encoding="utf-8")))
+        d["n_tox_audited"] = fmt(len(A))
+        d["n_tox_survives"] = fmt(sum(1 for r in A if r["audit_verdict"] == "SURVIVES_ALL_FOUR"))
+    rp = os.path.join(os.path.dirname(BASE), "curation", "rights", "rights_audit.csv")
+    if os.path.exists(rp):
+        R2 = list(csv.DictReader(open(rp, encoding="utf-8")))
+        openable = sum(int(r["n_rows"]) for r in R2 if r["rights_tier"].startswith(("A_", "B_")))
+        tot = sum(int(r["n_rows"]) for r in R2)
+        d["n_rows_open"] = fmt(openable)
+        d["pct_rows_open"] = f"{100*openable//max(tot,1)}"
+        d["n_rows_rights_decision"] = fmt(tot - openable)
     d["n_purity_method"] = fmt(sum(1 for r in o if r["purity_method"] not in ("", "TBD")))
     d["n_modmap"] = fmt(sum(1 for r in o if r["modification_map"] not in ("", "TBD")))
     rl = os.path.join(BASE, "recovery_ledger.csv")

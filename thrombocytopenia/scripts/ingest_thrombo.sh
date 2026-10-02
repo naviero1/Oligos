@@ -105,6 +105,10 @@ python3 "$S_DIR/refresh_docs.py"
 python3 "$S_DIR/split_human_animal.py"
 python3 "$S_DIR/prep_study_clusters.py"
 python3 "$S_DIR/assemble_studies.py"
+# Derived views required by Phase 2 reporting, plus the audit that sets the
+# defensible toxicity denominator. Both read only committed data.
+python3 "$S_DIR/build_controls_inventory.py"
+python3 "$S_DIR/audit_toxicity_denominator.py"
 python3 "$S_DIR/model_demo.py"
 python3 "$S_DIR/build_status.py"
 
