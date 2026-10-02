@@ -30,7 +30,7 @@ rats dying at day 14 after intrathecal dosing. All five compounds carry position
 chemistry recovered from the source's typeface.
 
 **Human clinical (2,329 rows, sources `CT1` and `C1`).** Adverse-event counts from
-24 distinct sources covering
+the 22 verified trials in `data/trials.csv` (16 independent cohorts, 6 extension studies) covering
 trials of intrathecally delivered oligonucleotides. These are filed here because trial adverse
 events are collected across **chronic exposure** — months to years of repeat dosing — making them
 the human evidence for this endpoint.
@@ -53,8 +53,8 @@ files are written even when one is empty, so an absence is a file you can open.
 
 Every row carries `subject_class` and `subject_group`, derived by
 [`../_shared/cns/src/endpoints.py`](../_shared/cns/src/endpoints.py) and checked by four QC rules.
-**`human_invitro` is still zero across the whole module** — the class the brief prioritises. An
-identified, unextracted backlog of 18 candidate human *in vitro* sources is registered in
+**`human_invitro` holds 34 measurements across the module** — all of them in the acute folder, from sources HV1–HV3 over 13 compounds. That is the class the brief prioritises, and 34 rows is a thin showing in it. An
+identified, unextracted backlog of 8 candidate human *in vitro* sources is registered in
 [`../_shared/cns/sources/RESEARCH_QUEUE.md`](../_shared/cns/sources/RESEARCH_QUEUE.md).
 
 ## 3. Sources

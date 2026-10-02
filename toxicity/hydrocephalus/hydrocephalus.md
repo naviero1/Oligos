@@ -42,8 +42,8 @@ files are written even when one is empty, so an absence is a file you can open.
 
 Every row carries `subject_class` and `subject_group`, derived by
 [`../_shared/cns/src/endpoints.py`](../_shared/cns/src/endpoints.py) and checked by four QC rules.
-**`human_invitro` is still zero across the whole module** — the class the brief prioritises. An
-identified, unextracted backlog of 18 candidate human *in vitro* sources is registered in
+**`human_invitro` holds 34 measurements across the module** — all of them in the acute folder, from sources HV1–HV3 over 13 compounds. That is the class the brief prioritises, and 34 rows is a thin showing in it. An
+identified, unextracted backlog of 8 candidate human *in vitro* sources is registered in
 [`../_shared/cns/sources/RESEARCH_QUEUE.md`](../_shared/cns/sources/RESEARCH_QUEUE.md).
 
 ## 3. Known issues

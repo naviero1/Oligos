@@ -30,7 +30,7 @@ of them additionally carry an in vivo readout.
 `modifications.csv` is the unusual table, and it exists for a specific reason: the challenge
 requires *"the location of all chemical modifications in each oligo"*. A summary string
 ("5-10-5 MOE gapmer") does not satisfy that; a table with one row per position does. It is the
-largest table in the release (32,569 rows) and is directly joinable to `oligos.csv`.
+largest table in the release (32,898 rows) and is directly joinable to `oligos.csv`.
 
 The same information is also carried in `oligos.modification_positions` as a compact token
 string, for users who would rather not join:
@@ -143,7 +143,7 @@ distinct outcomes from being pooled by accident:
 Broken out as its own boolean because the challenge specifically prioritises *"datasets based on
 in vitro human systems or able to extrapolate data between in vitro human systems and animal
 data."* Filtering on it is the honest way to see how much of this release is human-derived:
-**12 of 2,065 measurements**, all of them clinical. The in vitro arm is rat. That gap is the
+**2,375 of 4,428 measurements** are human-derived — 2,341 clinical and **34 human *in vitro*** (HV1–HV3, 13 compounds). The predictive in vitro screen is still rat. That gap is the
 subject of the narrative document's discussion.
 
 ---
@@ -156,10 +156,10 @@ subject of the narrative document's discussion.
 | `NOT_APPLICABLE` | the field has no meaning for this row. |
 | *(empty)* | the field does not apply to this table's row type. |
 
-`purity_pct` is `NOT_REPORTED` for **all 1,839** oligonucleotides. This is not an oversight; it
+`purity_pct` is `NOT_REPORTED` for **all 1,879** oligonucleotides. This is not an oversight; it
 is what the literature contains. Where a source states its purification and identity-confirmation
 *method*, that is captured verbatim in `purity_method` and `identity_confirmation` — present for
-1,825 of 1,839. See `OPEN_ITEMS.md` OI-02 and the methodology document.
+1,825 of 1,879. See `OPEN_ITEMS.md` OI-02 and the methodology document.
 
 ---
 
@@ -169,7 +169,7 @@ is what the literature contains. Where a source states its purification and iden
 python3 src/build_hagedorn.py     # source H1  -> data/staged/
 python3 src/build_curated.py      # sources K1, L1, C1 -> data/staged/
 python3 src/assemble.py           # staged -> data/*.csv
-python3 qc/validate_dataset.py    # 26 structural checks, exit 0 = all pass
+python3 qc/validate_dataset.py    # 47 structural checks, exit 0 = all pass
 python3 src/make_figures.py       # data/ -> figures/
 python3 src/make_release.py       # data/ -> deliverables/*.xlsx + docs/DATA_DICTIONARY.md
 ```

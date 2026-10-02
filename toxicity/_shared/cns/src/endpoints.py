@@ -77,6 +77,36 @@ ZERO_ROW_SOURCE_ENDPOINT = {"O1": "acute-neurotoxicity"}
 # Four classes, and the second is the point: `human_invitro` is the class the brief prioritises.
 # It was empty in the first release, and naming the empty class is what made that visible in the
 # data rather than only in a caveat. It is no longer empty.
+# --- is this compound a control? -------------------------------------------------------------
+# The Challenge scores this twice: the narrative must open with "the dataset(s) generated, and
+# positive/negative controls included", and the 20-point Experimental design criterion names
+# "relevant positive/negative control oligos" explicitly. The information was present but not
+# queryable -- 13 compounds carried the authors' own "Control" designation inside
+# dataset_split_asPublished, a column meant for train/test splits, while the control compounds of
+# three other sources were marked only in free prose. A reviewer could not filter for them.
+#
+# Derived ONLY from an explicit designation by the source. A compound is a test compound unless
+# its source says otherwise; nothing is inferred from a name resembling "control".
+CONTROL_ROLES = {"negative_control", "positive_control", "vehicle", "test_compound"}
+
+
+def control_role_of(oligo) -> str:
+    klass = (oligo.get("oligo_class") or "").lower()
+    notes = (oligo.get("notes") or "").lower()
+    split = (oligo.get("dataset_split_asPublished") or "").strip().lower()
+    if "vehicle" in klass:
+        return "vehicle"
+    # H1 publishes its own Control designation in the split column; the HV sources mark theirs in
+    # the oligo_class text and with an explicit "designated control compound" note.
+    if split == "control":
+        return "negative_control"
+    if notes.startswith("designated control compound"):
+        return "negative_control"
+    if "negative control" in klass or "non-targeting" in klass or "scrambled" in klass:
+        return "negative_control"
+    return "test_compound"
+
+
 # --- which measuring instrument produced this row? -------------------------------------------
 # Four distinct instruments in this module share the unit label "score_0_to_20", across two
 # species and two routes of administration: Hagedorn's mouse ICV acute tolerability scale,

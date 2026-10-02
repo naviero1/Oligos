@@ -132,6 +132,46 @@ def main(as_json: bool = False) -> int:
     check("context readouts are not filed on a toxicity axis", not ctx_on_tox_axis,
           f"{len(ctx_on_tox_axis)} misfiled: {ctx_on_tox_axis[:6]}" if ctx_on_tox_axis else "0 misfiled")
 
+    bad_roles = sorted({o["control_role"] for o in oligos} - endpoints.CONTROL_ROLES)
+    check("controlled vocabulary: oligos.control_role", not bad_roles,
+          f"unexpected: {bad_roles}" if bad_roles else
+          f"{sum(1 for o in oligos if o['control_role'] != 'test_compound')} designated controls")
+
+    # ---- documentation freshness ---------------------------------------------------------
+    # Every structural check in this suite passed while the shared README claimed a 1,839-oligo /
+    # 2,065-measurement release and SUMMARY.md asserted the dataset held no human in vitro data
+    # beside a table printing 34 such rows. Structural validity says nothing about prose, so a
+    # figure retired by a release is blocklisted here and the build fails if it reappears.
+    #
+    # Dated history is exempt: CHANGES.md records what past releases said, and the response and
+    # review files quote the figures they were written against.
+    # Only tokens that CANNOT be correct in any current context. The first cut of this list
+    # blocklisted "2,047" and "1,830 /", which are the live animal row count and the live animal
+    # sequence coverage, and bare "1839", which matches inside NCT01839656. A freshness check that
+    # cries wolf is worse than none, because it gets switched off -- so each token below was
+    # checked against the live data before being retired.
+    RETIRED = {"1,839": "superseded n_oligos", "2,065": "superseded n_measurements",
+               "32,569": "superseded n_modification_rows", "2,058": "superseded acute rows",
+               "26 checks": "superseded checks_total", "34 checks": "superseded checks_total",
+               "26 structural": "superseded checks_total"}
+    HISTORY = ("CHANGES.md", "BEEBOP_", "ROCKSTEADY_")
+    docroots = [ROOT, ROOT / "docs", endpoints.TOXICITY]
+    stale = []
+    for d in docroots:
+        for f in sorted(d.glob("*.md")) + sorted(d.glob("*/*.md")):
+            if any(h in f.name for h in HISTORY) or "_shared" in str(f.relative_to(endpoints.TOXICITY.parent)) and d is endpoints.TOXICITY:
+                continue
+            try:
+                body = f.read_text(errors="replace")
+            except OSError:
+                continue
+            for tok, what in RETIRED.items():
+                if tok in body:
+                    stale.append(f"{f.name}:{tok}({what})")
+    check("no document quotes a retired release figure", not stale,
+          "; ".join(sorted(set(stale))[:6]) if stale else
+          f"{len(RETIRED)} retired figures, none present in current docs")
+
     unmeasured = oid_set - {m["oligo_id"] for m in meas}
     undeclared = sorted(o["oligo_id"] for o in oligos if o["oligo_id"] in unmeasured
                         and not o.get("notes", "").startswith("CHARACTERISED_ONLY:"))

@@ -2,7 +2,7 @@
 
 **Status:** `delivered` · **Not on the Challenge's endpoint list** · **Register:** [`../README.md`](../README.md) · **Data:** [`./data/`](./data/) · **Shared CNS pipeline:** [`../_shared/cns/`](../_shared/cns/)
 
-This folder holds the acute axis of the CNS curation: **2,047 measurements**. It exists
+This folder holds the acute axis of the CNS curation: **2,081 measurements**. It exists
 because the data exists and has to be filed somewhere honest — **not** because the Challenge asks
 for it.
 
@@ -14,7 +14,7 @@ activity"*, are **lower priority** than the eight listed toxicities. A previous 
 register drew the consequence explicitly: *"Acute neurotoxicity therefore has no dossier here."*
 
 **This folder reverses that**, and the reversal is a filing decision, not a scope claim. The
-curation produced 2,047 rows on this axis; leaving them undossiered would have meant either
+curation produced 2,081 rows on this axis; leaving them undossiered would have meant either
 discarding them or hiding them inside another endpoint's folder. Both are worse than filing them
 under their own name with the caveat attached.
 
@@ -104,8 +104,9 @@ original authors report, which is also the check that the restructured table is 
 
 - **Not a listed endpoint.** §1. Nothing here counts toward the brief's coverage.
 - **The folder holds 11 rows that are not acute neurotoxicity** — §2.
-- **The in vitro arm is rat, not human.** 11 of 2,058 rows are human-derived and all are
-  clinical. No public, sequence-resolved human iPSC or organoid oligo-CNS dataset was found —
+- **The large in vitro arm is rat, not human.** 1,825 of this folder's 2,081 rows are the rat
+  primary-neuron calcium screen. 34 rows are human *in vitro* (HV1-HV3, 13 compounds) and none is
+  clinical. That layer is thin, and extending it is the module's highest-value work —
   [`../_shared/cns/OPEN_ITEMS.md`](../_shared/cns/OPEN_ITEMS.md) OI-07.
 - **Chemistry is narrow** — 1,825 of 1,834 compounds are LNA/DNA full-phosphorothioate
   oligonucleotides from a single study (1,726 gapmers, 99 mixmers).
@@ -120,7 +121,7 @@ original authors report, which is also the check that the restructured table is 
 
 | Not done | Cause |
 |---|---|
-| Human *in vitro* data | None found in the public literature — the largest scientific gap. |
+| Human *in vitro* data | **34 rows over 13 compounds** (HV1–HV3), all held in this folder. Still thin against 2,047 animal rows, and the module's largest scientific gap. |
 | Chemistry breadth | One chemistry class dominates; the queued `B1` (non-human primate) and `P1` (patent) sources would widen it. |
 | Extraction of the queued sources | Five sources gathered, none extracted — [`../_shared/cns/sources/RESEARCH_QUEUE.md`](../_shared/cns/sources/RESEARCH_QUEUE.md). |
 

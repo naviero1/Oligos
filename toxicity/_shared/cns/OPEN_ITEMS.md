@@ -13,7 +13,7 @@ within this submission; disclosed instead).
 **Owner:** Claude (this session) · **Status:** RESOLVED (2026-08-26) · **Raised:** 2026-08-26
 
 *Resolution:* five sources located and retrieved over the network; four contribute data
-(1,839 oligonucleotides / 2,065 measurements) and one contributes measurement instruments. All
+(1,879 oligonucleotides / 4,428 measurements) and one contributes measurement instruments. All
 retrieved files are committed to `sources/` so the dataset stays rebuildable. The schema
 assumption below was carried through and is now visible in `docs/SCHEMA.md` for review.
 
@@ -61,7 +61,7 @@ dataset is and what the challenge text describes.
 
 **Owner:** Claude · **Status:** RESOLVED (2026-08-26) · **Raised:** 2026-08-26
 
-*Resolution:* in the released data **no row needed the motif-expansion path**. 1,830 of 1,839
+*Resolution:* in the released data **no row needed the motif-expansion path**. 1,830 of 1,879
 oligonucleotides are `position_resolved_from_source` (1,825, case convention) or
 `position_resolved_from_source_typeface` (5, PDF span styling); the remaining 9 are
 `NOT_REPORTED`. `derived_from_motif` exists in the vocabulary but has a count of zero, so no

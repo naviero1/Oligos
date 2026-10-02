@@ -14,10 +14,10 @@ Phase 2. Release **v1.0**. Licence **CC BY 4.0** (see `LICENSE.md` for the per-r
 | Oligonucleotides | **1,879** |
 | CNS toxicity measurements | **4,428** |
 | Per-position chemical-modification records | **32,898** |
-| Sources | **9** — 4 contributing rows, 1 contributing measurement instruments only |
+| Sources | **9** — 8 contributing rows, 1 contributing measurement instruments only |
 | Sequences published | 1,858 / 1,879 (98.9%) |
 | Position-resolved modification maps | 1,853 / 1,879 (98.6%) |
-| Structural QC | **45/45 checks pass** |
+| Structural QC | **47/47 checks pass** |
 
 Split across the three endpoint folders, none of which mixes toxicities:
 
@@ -37,16 +37,18 @@ declares a `subject_class`:
 | subject class | rows | what it is |
 |---|---:|---|
 | `human_clinical` | 2341 | adverse events in dosed patients |
-| `human_invitro` | **34** | **human-derived cells — the class the brief prioritises, and it is empty** |
+| `human_invitro` | **34** | **human-derived cells — the class the brief prioritises** |
 | `animal_invivo` | 228 | dosed mice and rats |
 | `animal_invitro` | 1825 | rat primary cortical neurons |
 
-**Stated plainly: this dataset contains no human in vitro data at all**, and both halves of the
-brief's priority require it — "based on in vitro human systems" *or* "able to extrapolate data
-between in vitro human systems and animal data". **On a strict reading the dataset satisfies
-neither.**
+**Stated plainly: the human *in vitro* layer is 34 rows over 13 compounds**,
+against 2,053 animal rows. That is the class the brief
+prioritises — "based on in vitro human systems" *or* "able to extrapolate data between in vitro
+human systems and animal data" — and 34 rows is a thin showing in it. **The
+second clause is not met at all:** no compound in this release carries both a human and an animal
+row, verified by exact, containment and reverse-complement comparison.
 
-What it does have is the *structure* that clause asks for, one species short: 181
+What the dataset does have is the *structure* that clause asks for, one species short: 181
 compounds carry paired in vitro and in vivo readouts on the same molecules, so the
 extrapolation machinery — matched compounds, matched grading, a measured assay-noise floor — is
 built and working. It is rat-in-vitro to mouse-in-vivo, an animal-to-animal bridge. Substituting a
@@ -62,12 +64,14 @@ Every row pairs an oligonucleotide's **design** — its sequence and the positio
 modification in it — with a **measured CNS toxicity outcome**. That pairing is what a predictive
 model needs, and it did not previously exist in one place for the CNS.
 
-- **181 compounds carry paired in vitro and in vivo readouts** — the in-vitro-to-in-vivo
-  extrapolation the challenge asks for.
+- **181 compounds carry paired in vitro and in vivo readouts** — a real in-vitro-to-in-vivo
+  bridge, but **rat to mouse**. The challenge asks for one with human cells on one side; see
+  `docs/TRANSLATIONAL_PAIRING.md`.
 - **All four severity grades are populated**, including 1614 grade-0 rows and 13 designed
   guanine-free negative controls, so a classifier has a negative class.
-- **Four mechanistically distinct toxicity axes** are kept separate rather than collapsed into one
-  toxic/not label.
+- **8 mechanistically distinct toxicity axes** are kept separate rather
+  than collapsed into one toxic/not label, and context readouts that measure uptake or off-target
+  expression rather than injury are held off the toxicity axes entirely.
 - **Nothing is invented.** Where the literature is silent the field reads `NOT_REPORTED`, and the
   completeness report counts those explicitly.
 
@@ -109,9 +113,10 @@ features.
 - **Per-compound purity is absent from the literature.** `purity_pct` is `NOT_REPORTED` for all
   1,879 oligonucleotides; the purification *method* is captured for
   1,859. Nothing was estimated to close this.
-- **The in vitro arm is rat, not human.** Only 2375 of
-  4,428 measurements are human-derived, and all are clinical. No public,
-  sequence-resolved human iPSC/organoid oligo-CNS dataset was found.
+- **The predictive in vitro screen is rat, not human.** 2,375 of
+  4,428 measurements are human-derived, but only 34 of those are
+  *in vitro* — the rest are clinical adverse-event incidences. The field's standard predictive assay
+  remains rat primary cortical neurons.
 - **Chemistry is narrow** — the core is one class (LNA/DNA full-phosphorothioate) from one study.
 - **Grades are provisional**, pending subject-matter-expert review.
 - **One row is one group, not one animal** (group means over 4–6 mice).

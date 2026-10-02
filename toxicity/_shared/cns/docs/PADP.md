@@ -36,7 +36,7 @@ Licence, in full, in `LICENSE.md`:
 - Everything created by this project — schema, code, documentation, figures, derived fields —
   is **CC BY 4.0**.
 - Row-level content carries the terms of its source, recorded per row in `redistribution`:
-  **2,018 of 2,065 measurements (97.7 %)** are CC BY 4.0 or US public domain and are reusable
+  **2,018 of 4,428 measurements (97.7 %)** are CC BY 4.0 or US public domain and are reusable
   for any purpose including commercially; **47 (2.3 %)** derive from CC BY-NC sources, are
   individually marked, and are removable with a one-line filter.
 
@@ -71,7 +71,7 @@ missing-value vocabulary that distinguishes "not reported" from "not applicable"
 
 ## 5. Quality control
 
-`qc/validate_dataset.py` runs 26 checks covering key uniqueness, referential integrity,
+`qc/validate_dataset.py` runs 46 checks covering key uniqueness, referential integrity,
 controlled-vocabulary conformance, grade range, sequence self-consistency (declared length and
 base counts against the actual sequence), modification-table completeness and contiguity, and
 the provenance rule that **no numeric readout may exist without a named source table or
@@ -89,7 +89,7 @@ Version 1.0 is a complete, self-consistent release. Anticipated future work, in 
 2. Extraction of the two acute-inhibition and acute-activation scoring datasets currently
    documented as instruments only (`docs/SCORING_INSTRUMENTS.md` §§ 3–4), which would add
    non-human-primate rows and a second chemistry class (2′-MOE).
-3. Any human in vitro CNS data that becomes available — the largest scientific gap in v1.0.
+3. Extension of the human *in vitro* layer. HV1–HV3 now contribute 34 rows over 13 compounds; it remains the module's largest scientific gap.
 
 Corrections will be made by pull request against the public repository, with the QC suite as
 the merge gate; each release will be re-deposited to Zenodo with a new version DOI, and the

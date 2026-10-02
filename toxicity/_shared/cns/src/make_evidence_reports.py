@@ -330,7 +330,12 @@ says nothing about the purity or identity of the material actually dosed in the 
 |---|---|
 | Purity / identity for the HV compounds | supplementary methods of HV1–HV3; vendor certificates of analysis are not in the public record |
 | Modification positions for clinical compounds | the published INN descriptions, which print per-position chemistry formally — this is how tofersen's map was obtained |
-| Modification positions for HV3's 23 sequences | printed in `mmc1.pdf` Table S2 in LNA notation; parsing `+N` into positions is mechanical and has not been done |
+| Purity / identity for the clinical compounds | not published; vendor certificates of analysis for an investigational oligonucleotide are not in the public record |
+
+**Closed since the first revision of this report.** HV3's 23 sequences were printed in `mmc1.pdf`
+Table S2 in LNA notation (`+N` = LNA, `/IDSP/` = abasic DSpacer) and have been parsed into
+per-position maps, with the phosphorothioate backbone transcribed from the source's own wording.
+That moved human source-resolved modification coverage off zero.
 
 Nothing above is promised. Each is a specific document that may or may not contain the value.
 """

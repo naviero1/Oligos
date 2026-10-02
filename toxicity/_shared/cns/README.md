@@ -19,7 +19,7 @@ this is the CNS module.
 | Verified unique human trials | **22** (16 independent cohorts) &mdash; see `docs/TRIAL_REGISTER.md` |
 | Human laboratory measurements | **34** &mdash; the class the Challenge prioritises |
 | Licence | CC BY 4.0 for our work; per-row source terms in `LICENSE.md` |
-| Structural QC | **45 / 45 checks pass** (`qc/validate_dataset.py`) |
+| Structural QC | **47 / 47 checks pass** (`qc/validate_dataset.py`) |
 <!-- /GENERATED:headline -->
 
 ---
@@ -31,7 +31,7 @@ predictive model needs and what the public literature has not previously offered
 
 1. **Sequence *and* modification position, for nearly every compound.** Not "5-10-5 MOE gapmer",
    but a per-nucleotide table: position 1 is an LNA adenine, position 4 is a 2′-deoxy thymine,
-   and so on, for all 32,569 positions.
+   and so on, for all 32,898 positions.
 2. **Paired in vitro and in vivo readouts on the same molecules.** 181 oligonucleotides carry
    both a rat primary-neuron calcium-oscillation score and a mouse acute tolerability score,
    which is exactly the in-vitro-to-in-vivo extrapolation the challenge asks for.
@@ -51,9 +51,9 @@ predictive model needs and what the public literature has not previously offered
 ```
 SUMMARY.md              one-page consolidated summary — START HERE
 data/                   the dataset
-  oligos.csv              1,839 × 45   one row per oligonucleotide — the predictors
-  measurements.csv        2,065 × 36   one row per outcome — the response
-  modifications.csv      32,569 ×  8   one row per nucleotide position
+  oligos.csv              1,879 × 45   one row per oligonucleotide — the predictors
+  measurements.csv        4,428 × 36   one row per outcome — the response
+  modifications.csv      32,898 ×  8   one row per nucleotide position
   sources.csv                 5 × 18   provenance registry
 deliverables/
   OligoTox-CNS_Dataset.xlsx            the same data as a workbook, with README,
@@ -67,7 +67,7 @@ docs/
   PADP.md                              public access and dissemination plan
 figures/                               eight figures, all rendered from data/
 qc/
-  validate_dataset.py                  26 structural and provenance checks
+  validate_dataset.py                  46 structural and provenance checks
   verify_nephro_intake.py              verifies the sibling module used as pattern reference
 src/                                   the build pipeline (see below)
 sources/                               the retrieved source files the build reads
@@ -85,14 +85,17 @@ python3 src/build_curated.py       # sources K1, L1, C1 → data/staged/
 python3 src/build_ctgov.py         # source CT1 → data/staged/
 python3 src/build_human_invitro.py # sources HV1-HV3 → data/staged/
 python3 src/assemble.py            # staged → toxicity/<endpoint>/data/*.csv
-python3 qc/validate_dataset.py     # 34 checks; exit 0 = all pass
+python3 qc/validate_dataset.py     # 46 checks; exit 0 = all pass
 python3 src/make_figures.py        # data/ → figures/
 python3 src/baseline_model.py      # data/ → figures/baseline_model.json
 python3 src/make_release.py        # data/ → deliverables/*.xlsx + docs/DATA_DICTIONARY.md
 python3 src/make_pdfs.py           # → narrative + methodology PDFs
 python3 src/make_padp.py           # → PADP PDF
 python3 src/make_sources.py        # → source register PDF
-python3 src/make_summary.py        # → SUMMARY.md + LICENSE.md
+python3 src/make_evidence_reports.py    # → docs/TRIAL_REGISTER, CHRONIC_QUALIFICATION,
+                                   #   TRANSLATIONAL_PAIRING, CHARACTERIZATION_COVERAGE
+python3 src/make_validation_manifest.py # → docs/VALIDATION_MANIFEST.md (+ artefact checksums)
+python3 src/make_summary.py        # → SUMMARY.md + LICENSE.md + README generated regions
 ```
 
 The full-text articles are not needed to rebuild, and are gitignored because they are large
@@ -114,8 +117,8 @@ Dependencies: `openpyxl`, `pymupdf`, `matplotlib`, `reportlab`.
 Stated plainly here and in full in [`OPEN_ITEMS.md`](OPEN_ITEMS.md):
 
 - **Per-compound purity is not in the literature.** `purity_pct` is `NOT_REPORTED` for all
-  1,839 oligonucleotides. The purification and identity-confirmation *method* is captured where
-  the source states it (1,825 / 1,839). This is the largest gap between what this dataset is and
+  1,879 oligonucleotides. The purification and identity-confirmation *method* is captured where
+  the source states it (1,825 / 1,879). This is the largest gap between what this dataset is and
   what the challenge text describes, and it is a property of the published record, not of the
   curation.
 <!-- GENERATED:human -->
@@ -128,7 +131,7 @@ Stated plainly here and in full in [`OPEN_ITEMS.md`](OPEN_ITEMS.md):
   cannot yet extrapolate between human in vitro and animal systems &mdash; see
   `docs/TRANSLATIONAL_PAIRING.md`.
 <!-- /GENERATED:human -->
-- **Chemistry is narrow.** 1,825 of 1,839 oligonucleotides are LNA/DNA full-phosphorothioate
+- **Chemistry is narrow.** 1,825 of 1,879 oligonucleotides are LNA/DNA full-phosphorothioate
   gapmers from one study. That is a strength for isolating sequence effects (chemistry is held
   constant) and a weakness for generalising across chemistries.
 - **Grades are provisional** pending subject-matter-expert review.
@@ -140,5 +143,5 @@ Stated plainly here and in full in [`OPEN_ITEMS.md`](OPEN_ITEMS.md):
 ## Licence
 
 CC BY 4.0 for everything we created. Row-level content carries its source's terms in the
-`redistribution` column: 2,018 of 2,065 measurements (97.7 %) are CC BY 4.0 or US public domain;
+`redistribution` column: 2,018 of 4,428 measurements (97.7 %) are CC BY 4.0 or US public domain;
 47 are CC BY-NC and are individually marked. See [`LICENSE.md`](LICENSE.md).

@@ -71,6 +71,7 @@ OLIGO_COLUMNS = [
     ("identity_confirmation", "How identity was confirmed (e.g. RP-UPLC-MS), verbatim, or NOT_REPORTED."),
     ("synthesis_platform", "Synthesiser/chemistry platform, or NOT_REPORTED."),
     ("formulation", "Vehicle the oligo was dosed in."),
+    ("control_role", "negative_control | positive_control | vehicle | test_compound. Derived in src/endpoints.py from an EXPLICIT designation by the source only; a compound is a test compound unless its source says otherwise. The Challenge scores positive/negative controls in its narrative requirements and in the 20-point Experimental design criterion."),
     ("dataset_split_asPublished", "The source's own train/test/validate/control label, where it has one."),
     ("source_id", "Foreign key to sources.csv."),
     ("source_location", "Exact table/figure within the source."),
@@ -324,6 +325,8 @@ def main() -> int:
     trials = normalise(read("*_trials.csv"), TRIAL_COLUMNS)
     trials.sort(key=lambda r: r["trial_key"])
 
+    for o in oligos:
+        o["control_role"] = endpoints.control_role_of(o)
     oligos.sort(key=lambda r: r["oligo_id"])
     meas.sort(key=lambda r: r["measurement_id"])
     mods.sort(key=lambda r: (r["oligo_id"], int(r["position_5to3"])))
