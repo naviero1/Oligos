@@ -141,6 +141,24 @@ therapeutic benefit and a toxic injury act on the same measurement in opposite d
 not separable from a single between-arm difference. Our own `CLINICAL_VALIDATION.md:51` contains the
 tell in writing: *"A genuine measured negative, **in fact favourable vs placebo**."*
 
+**The source settles it in its own words.** I retrieved the cemdisiran report (`PMC11020434`,
+121,950 B) and read its End Points section. The primary end point is percentage change from
+baseline in **urine protein-to-creatinine ratio**; the secondary end points are UPCR variants and
+clinical remission. Of the week-32 eGFR change that `MSR066` records, the paper says:
+
+> *"Exploratory end points included change from baseline in eGFR at week 32 and eGFR slope over the
+> course of the study."*
+
+and, of its statistics:
+
+> *"No formal statistical hypothesis testing was performed, and no multiplicity adjustments were made."*
+
+So the number behind our only `confirmed_negative` is a **prespecified exploratory endpoint, inside
+the efficacy family, with no hypothesis testing and no multiplicity adjustment**. It is not a safety
+measurement by the source's own framing, and it carries no inferential weight even as efficacy.
+That is three independent reasons it cannot serve as a toxicity-negative control, and it makes the
+reclassification below a correction rather than a judgment call.
+
 **The independent finding: this is not one mislabelled row, it is an unruled class.** Four of our 42
 clinical rows are drugs whose *indication is itself a kidney disease*. All four are grade 0. All four
 are classified differently:
@@ -213,6 +231,15 @@ Beebop's rule appeared within this round:
   free and contains no renal numbers; the VALOR tofersen paper is free and contains no renal content
   at all. Open access and evidentiary value are independent properties, and the register should carry
   both.
+
+**And the error runs in both directions — a caution for whoever works the access list.** I
+mis-stated paywalls; discovery tools mis-state openness. Semantic Scholar advertises an
+`openAccessPdf` for ENVISION (`10.1056/NEJMoa1913147`) at
+`nejm.org/doi/pdf/10.1056/NEJMoa1913147?articleTools=true`. That URL returns a **Cloudflare 403
+interstitial** — it is the publisher's own paywalled PDF, not an open deposit. An aggregator's
+open-access flag is a claim to be tested, exactly like a 403 is. This surfaced because a
+cross-checking agent asserted ENVISION was freely available from an institutional repository; I
+tested the route and could not substantiate it, so ENVISION remains on the access list below.
 
 Corrected taxonomy for every source previously called blocked is in §5.
 
@@ -340,7 +367,7 @@ was checked, and no purchase, subscription or credential was used.
 | Vupanorsen TRANSLATE-TIMI 70 **supplement** | `10.1161/CIRCULATIONAHA.122.059266` | Oct-1 reply | **supplement only** | quantitative renal safety for `MSR079` | publisher suppl; PMC bin | **403 / 404** | **technical block** on a free supplement | 4 |
 | NEURO-TTR inotersen | `PMC12611561`; `10.1056/NEJMoa1716793` | register | article + renal AE tables | our top signal | EPMC XML; PMC HTML; europepmc HTML | XML refused; **reCAPTCHA**; Cloudflare | in EPMC, `OA=N`; **technical block** | 5 |
 | van Poelgeest SPC5001 | `PMC4693495`; `10.1111/bcp.12738` | register | article | SPC5001 human data | same three routes | same | in EPMC, `OA=N`; **technical block** | 6 |
-| ENVISION givosiran | `10.1056/NEJMoa1913147` | register | article + supplement | trial verification | EPMC search | **no PMC deposit** | missing deposit; paywall **unverified** | 7 |
+| ENVISION givosiran | `10.1056/NEJMoa1913147` | register | article + supplement | trial verification | EPMC search; Semantic Scholar `openAccessPdf`; CORE | **no PMC deposit**; the advertised open PDF is a publisher **Cloudflare 403**; CORE 403 | missing deposit + technical block; paywall **unverified** | 7 |
 | Donidalorsen phase 3 | `10.1056/NEJMoa2402478` | register | article + supplement | trial verification | EPMC search | no PMC deposit | missing deposit; paywall unverified | 8 |
 | OCEANa-DOSE olpasiran | `10.1056/NEJMoa2211023` | register | article + supplement | trial verification | EPMC search | no PMC deposit | missing deposit; paywall unverified | 9 |
 | Mongersen phase 2 | `10.1056/NEJMoa1407250` | register | article | trial verification | EPMC search | no PMC deposit | missing deposit; paywall unverified | 10 |
