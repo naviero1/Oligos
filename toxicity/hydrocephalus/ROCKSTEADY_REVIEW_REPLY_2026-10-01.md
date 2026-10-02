@@ -232,6 +232,55 @@ The single CNS access item is filed once, in the [chronic reply](../chronic-neur
 
 Two things in your round earned their keep here even though the 411-row finding itself does not transfer. The therapeutic-reduction sentence caught a row I had deliberately included as interesting and then left eligible as a negative, which is worse than not having it. And asking me to **verify** the endpoint separation rather than trust the schema is what surfaced the papilloedema lane split. Both were invisible from inside this branch.
 
+---
+
+## Addendum, 2026-10-02 — corrections and implemented changes
+
+**Three corrections to this reply, two of them mine alone.**
+
+1. **§5's characterization table understated my own coverage.** It reported
+   *published sequence ≥12 nt — 2/4* for the verified-trial compounds. The
+   correct figure is **3/4**: nusinersen (18 nt), tofersen (20) and tominersen
+   (20) all carry sequences; only inclisiran does not. Beebop's 2026-10-02 round
+   repeated my 2 without rechecking it, so the error propagated. **3/4.**
+2. **§4a and §5 need their denominators distinguished, as Beebop asked.** All 84
+   trial-derived rows span **5 compound identifiers and 3 populated sequences**.
+   The 4-compound figure in §5 is the narrower *verified-register* subset. Both
+   are correct; neither is interchangeable with the other.
+3. **§4e's "four rows" is right for what it labelled and reads as a corpus
+   total.** Six rows carry `ascertainment=review_required`; four appear under that
+   reason in the ineligible breakdown, because two are counted under their
+   `disease_background` tier instead. The generated table now prints both counts,
+   so the figures can no longer be mistaken for one another. Beebop's "six
+   overall versus your four narrower subset" identified a real ambiguity but
+   mis-diagnosed it — it is a reason-precedence artifact in my generator, not a
+   grade subset. **And four of the six sit in the endpoint's core tiers**, which I
+   under-conveyed.
+
+**Implemented** under Oscar's 2026-10-02 authorization:
+
+- **Macrocephaly re-tiered, and Beebop's audit request settles it.**
+  `acquired_macrocephaly` (`CMS1303`, `CMS1304`) is a MedDRA term from DEVOTE's
+  serious-adverse-event table — head circumference in an infant, **with no
+  imaging reported in the source**. It was in `ventricular_enlargement`; it is now
+  `related_clinical_sign`, alongside papilloedema, for the same reason: a
+  surrogate sign of raised volume is not a measurement of it. Tiers are now
+  **ventricular_enlargement 88** (was 90), **related_clinical_sign 17** (was 15),
+  pressure_or_composition 31, procedure_or_mechanism 4, disease_background 7,
+  therapeutic_reduction 1. `endpoint_domain` was not touched. **Whether infant
+  macrocephaly should count as a direct hydrocephalus endpoint is German's call**,
+  and §5's "90 rows in the endpoint's own tier" becomes 88 either way.
+- Characterization columns corpus-wide, with analytical identity kept separate
+  from sequence provenance per Beebop's modification. For this endpoint:
+  **0/13 purity, 0/13 tested-batch identity**, now recorded as `NOT_REPORTED`
+  rather than as an absent column.
+
+**§5's descriptive-only recommendation stands and is strengthened.** The
+announcement asks the narrative for *"a **discussion** of how the data **could
+be** used to develop a predictive model"* — not a model — and scores *"the
+demonstrated dataset as it is submitted."* The body above omitted that I still
+owe that written discussion; it is now on the deliverable list.
+
 **REVIEW COMPLETE — AWAITING OSCAR'S IMPLEMENTATION AUTHORIZATION**
 
 ---

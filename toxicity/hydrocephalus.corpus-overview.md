@@ -200,13 +200,33 @@ Beebop's 2026-09-30 review of the acute module and is recorded in
 What the corpus can actually say about bridging systems, computed by
 `scripts/cross_system_pairs_cns.py` rather than asserted:
 
+Three relations, deliberately kept apart. An earlier version of this table
+combined them into one "bridging" count, which overstated what the corpus
+supports — the combined figure leant on a base-sequence match that collapses U to
+T, and that makes an siRNA and an ASO of the same text compare equal.
+
+**By identity** — one `oligo_id` carrying rows of both kinds:
+
 | Molecules measured in both… | Count |
 |---|---:|
-| animal in vivo **and** animal laboratory | 193 |
-| animal in vivo **and** human clinical | 12 |
+| animal in vivo **and** animal laboratory | 143 |
+| animal in vivo **and** human clinical | 5 |
 | **human laboratory and animal laboratory** | **2** |
 | **human laboratory and animal in vivo** | **0** |
 | **human laboratory and human clinical** | **1** |
+
+**By exact construct** — same base sequence *and* every recorded chemistry field
+(backbone, sugar modifications, gapmer design, conjugate, PS count, length,
+class): **8 cross-band groups, every one of them animal-to-animal.** Not one
+exact-construct match spans a human band. And **168 of 581 records cannot be
+keyed at all**, because a sequence or a chemistry field is missing — which is the
+characterization gap measured a different way, not a matching failure.
+
+**By leakage group** — base sequence with U collapsed to T. This finds more
+groups, including animal-in-vivo against human-clinical, and it exists only to
+keep related molecules in one train/test fold. It is **not** a claim that the
+grouped constructs are experimentally interchangeable, and it must never be
+reported as an identity count.
 
 The two human-laboratory/animal-laboratory molecules are APOE ASO-1 and
 TREM2 ASO-171, each assayed in human iPSC-derived microglia and human whole blood

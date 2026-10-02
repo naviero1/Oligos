@@ -33,8 +33,46 @@ BANDS = {
 
 
 def canon(s):
-    """Nucleobase sequence, RNA and DNA comparable, everything else dropped."""
+    """Nucleobase sequence with U collapsed to T, everything else dropped.
+
+    THIS IS A LEAKAGE-GROUPING KEY, NOT AN IDENTITY KEY. Collapsing U to T makes
+    an siRNA and an ASO of the same base sequence compare equal, and they are not
+    the same construct. Beebop's 2026-10-02 review asked for the two to be
+    separated and the thrombocytopenia request raised the same normalisation as a
+    question; both are right. Use it only to keep related molecules in the same
+    train/test fold - never to assert that two records are the same compound.
+    """
     return re.sub(r"[^ACGT]", "", (s or "").upper().replace("U", "T"))
+
+
+# The chemistry that distinguishes two molecules sharing a base sequence. Phase 2
+# asks for "the location of all chemical modifications in each oligo", and the
+# announcement's own framing is that sequence alone is insufficient: sugar, base
+# and linkage position, strand identity, conjugates and formulation can separate
+# constructs that read identically as text.
+CHEM_FIELDS = ("backbone_chemistry", "sugar_modifications", "gapmer_design",
+               "conjugate", "ps_count", "length_nt", "oligo_class")
+
+
+def chem_key(o):
+    """Exact-construct key: base sequence AND the recorded chemistry.
+
+    Returns None where the sequence or any chemistry field is unknown, because an
+    exact-identity claim cannot rest on blanks. A record that cannot be keyed is
+    reported as unkeyable rather than silently matched or silently dropped.
+    """
+    seq = canon(o.get("sequence_5to3"))
+    if len(seq) < 12:
+        return None
+    vals = []
+    for f in CHEM_FIELDS:
+        v = (o.get(f) or "").strip()
+        if v in ("", "TBD", "NA"):
+            return None
+        vals.append(v.lower())
+    # RNA/DNA is not collapsed here: the un-normalised text is part of the key.
+    raw = re.sub(r"[^A-Z]", "", (o.get("sequence_5to3") or "").upper())
+    return (raw, tuple(vals))
 
 
 def band(cls):
@@ -76,7 +114,35 @@ def main():
                      ", ".join("%s %s" % (s, oligos.get(s, {}).get("oligo_name", ""))
                                for s in shared[:4])))
 
-    print("\npairs by SEQUENCE (different ids, identical nucleobase sequence)")
+    # --- exact construct identity, chemistry included ---------------------
+    print("\npairs by EXACT CONSTRUCT (same base sequence AND same recorded "
+          "chemistry)")
+    by_chem = defaultdict(set)
+    unkeyable = set()
+    for oid in set().union(*members.values()):
+        k = chem_key(oligos.get(oid, {}))
+        if k is None:
+            unkeyable.add(oid)
+        else:
+            by_chem[k].add(oid)
+    exact = 0
+    for k, ids in by_chem.items():
+        if len(ids) < 2:
+            continue
+        bands_hit = {b for b in order for i in ids if i in members[b]}
+        if len(bands_hit) > 1:
+            exact += 1
+            print("  %s... %s across %s" % (k[0][:22], sorted(ids), sorted(bands_hit)))
+    if not exact:
+        print("  none. No two records with FULL chemistry recorded and an "
+              "identical construct sit in different system bands.")
+    print("  records that cannot be keyed exactly (sequence or chemistry "
+          "incomplete): %d of %d" % (len(unkeyable), len(set().union(*members.values()))))
+    print("  -> an exact-identity claim is impossible for those, and this is the "
+          "characterization gap, not a matching failure.")
+
+    print("\nLEAKAGE GROUPS by base sequence (U collapsed to T) — NOT identity "
+          "claims")
     by_seq = defaultdict(set)
     for oid in set().union(*members.values()):
         s = canon(oligos.get(oid, {}).get("sequence_5to3"))
@@ -92,6 +158,9 @@ def main():
             print("  %s... %s across %s" % (s[:24], sorted(ids), sorted(bands_hit)))
     if not found:
         print("  none. Every sequence-identical record pair sits inside one band.")
+    print("  These groups exist to keep related molecules in one train/test fold. "
+          "They do NOT\n  establish that the grouped constructs are "
+          "experimentally interchangeable.")
 
     # The bridge the dataset can actually claim: molecules with evidence in two
     # bands counted by identity OR sequence, since the same molecule curated twice

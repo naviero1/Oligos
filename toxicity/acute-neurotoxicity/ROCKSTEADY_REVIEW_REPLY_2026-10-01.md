@@ -198,6 +198,43 @@ I recommend **against** expanding animal row counts in this module. Your request
 
 Of your three proposals I expected this one to have least to do with, since there is no acute module here to reform. It produced the most useful single correction of the set — the 181-compound sentence, wrong on species *and* on count — and chasing your divalent-cation note into those same two sources turned up three instruments sharing one unit string. Both were invisible from inside this branch, and both are the kind of error that survives verification because every individual row is correct.
 
+---
+
+## Addendum, 2026-10-02 — corrections and implemented changes
+
+**Correction to §5a.** The table reported *animal in vivo and human clinical = 12*
+molecule-records. That came from a base-sequence key collapsing U to T — the very
+normalisation §5b flagged as unsafe, which I then relied on two sections earlier.
+Corrected: **by identity 5**; **by exact construct, counting base sequence plus
+every recorded chemistry field, zero cross-band matches involve a human band.**
+All 8 exact-construct cross-band groups are animal-to-animal. The zero human
+laboratory × animal in-vivo result in §5a is unchanged and now rests on the
+stricter key.
+
+**Implemented** under Oscar's 2026-10-02 authorization, answering §3b and §5b:
+
+- `scripts/cross_system_pairs_cns.py` now reports **exact construct identity**
+  (sequence + chemistry, `None` where either is incomplete) separately from
+  **leakage grouping** (U→T base sequence), with the second explicitly labelled
+  as not an identity claim. **168 of 581 records cannot be keyed exactly** — the
+  characterization gap, measured as a matching limit.
+- The three instruments sharing `score_0_to_7` are **separated by unit string**,
+  with the phenotype direction written into the name so it survives an export:
+  `score_0_to_7_fob7_regional_sum` (376), `score_0_to_7_ordinal_inhibition_ladder`
+  (73), `score_0_to_7_acute_activation` (36). The observation window needed no new
+  field — `exposure_duration` already separates `3h`, `8wk`,
+  `0-15min_post_single_dose` and `0-120min_post_dose`. **I was too conservative in
+  the body above:** separating is recording what each source already states, and
+  only *pooling* is the scientific judgement. The Phase 2 criteria score FAIR
+  consistency, and one unit naming three instruments fails interoperability.
+- Characterization columns added corpus-wide; see the chronic addendum.
+
+**§5's human-electrophysiology question is withdrawn from German's list.** The
+announcement resolves it: the deprioritisation names *"large data sets focused on
+acute neurotoxicity"*, while Phase 2 states that *"datasets based on in vitro
+human systems … are of particular interest."* Two human iPSC-neuron rows are not
+a large animal screen. I over-escalated.
+
 **REVIEW COMPLETE — AWAITING OSCAR'S IMPLEMENTATION AUTHORIZATION**
 
 ---

@@ -36,7 +36,27 @@ NCT_RE = re.compile(r"^NCT\d{8}$")
 OLIGO_COLS = ["oligo_id", "oligo_name", "aliases", "oligo_class", "target_gene",
               "indication", "developer", "max_phase", "length_nt", "backbone_chemistry",
               "sugar_modifications", "gapmer_design", "conjugate", "ps_count",
-              "sequence_5to3", "design_source", "notes"]
+              "sequence_5to3", "design_source", "notes",
+              # Tested-material characterization, written by
+              # scripts/add_characterization_cns.py. Mandatory Phase 2 content:
+              # the dataset must carry "data on the purity and characterization of
+              # each" oligo. `sequence_provenance` is where the SEQUENCE TEXT came
+              # from; `identity_confirmation` is analysis of the MATERIAL THAT WAS
+              # DOSED. They are deliberately separate columns - reference identity
+              # is not batch identity, and filling the second from the first would
+              # manufacture the appearance of characterization.
+              "sequence_provenance", "purity_pct", "purity_method",
+              "identity_confirmation"]
+
+# A characterization cell is never blank. Either a value read from a document, or
+# NOT_REPORTED (looked, nothing published), or NOT_APPLICABLE (the record is not a
+# molecule). A blank would be the ambiguity these columns exist to remove.
+CHARACTERIZATION_COLS = ["purity_pct", "purity_method", "identity_confirmation",
+                         "sequence_provenance"]
+MISSINGNESS = {"NOT_REPORTED", "NOT_APPLICABLE"}
+SEQ_PROVENANCE = {"patent_sequence_listing", "publication_supplement",
+                  "publication_main_text", "who_inn_nomenclature",
+                  "regulatory_document", "registry_metadata"} | MISSINGNESS
 
 MEAS_COLS = ["measurement_id", "oligo_id", "study_type", "species", "system_model",
              "cns_region", "delivery_method", "dose_or_conc_value", "dose_or_conc_unit",
@@ -96,6 +116,7 @@ ENUMS = {
     "is_cns_specific": {"TRUE", "FALSE"},
     "redistribution": {"public_domain", "cc_by", "derived_features_only",
                        "summary_stat", "verify"},
+    "sequence_provenance": SEQ_PROVENANCE,
     "evidence_class": HUMAN_CLASSES | ANIMAL_CLASSES,
     "trial_key_basis": {"registry_posting", "named_in_source",
                         "publication_only", "not_a_trial"},
@@ -178,6 +199,34 @@ def main():
     unused = known - {m["oligo_id"] for m in meas}
     if unused:
         warn(f"cns_oligos: {len(unused)} oligo(s) with no measurement: {sorted(unused)[:5]}")
+
+    # --- characterization is explicit, never blank -------------------------
+    # The Phase 2 announcement requires purity and characterization data for each
+    # oligo tested. This corpus has none to report, which is a finding rather than
+    # an omission - but only if it is written down. A blank cell cannot be
+    # distinguished from an unasked question, so blanks fail.
+    for o in oligos:
+        oid = o["oligo_id"]
+        for col in CHARACTERIZATION_COLS:
+            v = (o.get(col) or "").strip()
+            if not v:
+                err(f"{oid}: {col} is blank — use NOT_REPORTED or NOT_APPLICABLE")
+        # A record with no sequence cannot have a sequence provenance, and a
+        # record that has one must say where it came from.
+        seq = re.sub(r"[^ACGT]", "", (o["sequence_5to3"] or "").upper().replace("U", "T"))
+        prov = o.get("sequence_provenance", "")
+        if len(seq) >= 12 and prov == "NOT_APPLICABLE":
+            err(f"{oid}: has a {len(seq)}-nt sequence but sequence_provenance="
+                f"NOT_APPLICABLE")
+        if len(seq) < 12 and prov not in MISSINGNESS:
+            err(f"{oid}: sequence_provenance={prov} but no sequence is recorded")
+        # The one substantive rule: analytical identity must not be back-filled
+        # from where a sequence was read. If it ever equals a provenance category,
+        # the distinction has collapsed.
+        if o.get("identity_confirmation") in SEQ_PROVENANCE - MISSINGNESS:
+            err(f"{oid}: identity_confirmation={o['identity_confirmation']!r} is a "
+                f"sequence-provenance category — reference identity is not "
+                f"tested-batch identity")
 
     # --- controlled vocabularies -----------------------------------------
     check_enums(oligos, "cns_oligos")
@@ -309,11 +358,24 @@ def main():
     scales = {}
     for m in meas:
         scales.setdefault((m["readout_name"], m["readout_unit"]), set()).add(m["source_ref"])
-    multi = {k: v for k, v in scales.items() if len(v) > 2 and k[1].startswith("score_")}
+    # Groups already adjudicated against each source's own transcribed scale
+    # definition. `scripts/disambiguate_scales_cns.py` split the three
+    # instruments that were sharing `score_0_to_7`; what remains here is a group
+    # whose sources describe the SAME instrument, so the warning would be noise
+    # and a permanently-firing check teaches people to ignore QC.
+    ADJUDICATED = {
+        # All three patents' notes define one instrument: "7 regions (tail, hind
+        # paws, hind legs, hind end, front posture, fore paws, head), 0/1 each,
+        # summed 0-7". Species differs and `species` already carries that.
+        ("acute_neurotoxicity_score", "score_0_to_7_fob7_regional_sum"),
+        ("FOB_score_8wk", "score_0_to_7_fob7_regional_sum"),
+    }
+    multi = {k: v for k, v in scales.items()
+             if len(v) > 2 and k[1].startswith("score_") and k not in ADJUDICATED}
     for (name, unit), refs in sorted(multi.items()):
         warn(f"readout '{name}' with unit '{unit}' spans {len(refs)} sources — "
-             f"confirm they are the same instrument before pooling: "
-             f"{sorted(refs)[:5]}")
+             f"confirm they are the same instrument before pooling, then add the "
+             f"pair to ADJUDICATED with the definition you read: {sorted(refs)[:5]}")
 
     # --- the hydrocephalus endpoint tiers ---------------------------------
     # Ventricular enlargement, a raised pressure, an optic-disc sign, an ependymal

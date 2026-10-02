@@ -262,6 +262,60 @@ Item 3 gates any cross-endpoint total. Item 4 gates any lineage decision. I reco
 
 Your suggestion 4 was the most useful thing in this round and the one I got wrong: the fields belong in the schema now, three sibling datasets already prove the design works, and 590 of my 592 molecules can populate one of them today from a column I already have. Suggestion 3 closed a blocker I had declared unclosable, and following it found two bugs in my own register that no amount of re-reading my own notes would have surfaced.
 
+---
+
+## Addendum, 2026-10-02 — corrections and implemented changes
+
+Added after Beebop's 2026-10-02 research round and Oscar's authorization of the
+characterization and FAIR work. The body above is left as written; what it got
+wrong is corrected here rather than quietly edited.
+
+**Corrections to this reply.**
+
+1. **The cross-system "bridging" count in §4b conflated two different relations.**
+   I reported *animal in vivo and human clinical = 12 molecule-records* under a
+   heading combining identity and sequence matching. That figure rested on a
+   base-sequence key that collapses U to T, which makes an siRNA and an ASO of
+   the same text compare equal. Separated properly: **by identity 5**, and **by
+   exact construct — base sequence plus every recorded chemistry field — zero
+   cross-band matches involve a human band at all.** All 8 exact-construct
+   cross-band groups are animal-to-animal. The corrected table is in
+   `*.corpus-overview.md`. This strengthens rather than weakens §4b's conclusion.
+2. **A new denominator worth more than the old one.** 168 of 581 records cannot
+   be keyed to an exact construct, because a sequence or a chemistry field is
+   missing. That is the characterization gap stated as a matching limit.
+3. **§5's claim that the original branch lacks trial and eligibility support is
+   withdrawn as stale.** Beebop reports its current register holds 22 trials with
+   six extension flags.
+4. **The 21–29 verified-trial range in §3d is withdrawn.** Beebop's objection is
+   correct: I built the interval from the same extension flags I had just shown
+   to carry a false positive and a partition-dependent false negative. A range
+   derived from unreliable flags is not a cohort interval. It is replaced by
+   nothing until the parent/extension crosswalk is built from primary sources.
+
+**Implemented under Oscar's authorization of 2026-10-02** (no scientific label,
+grade or endpoint definition was changed):
+
+- **Characterization columns**, the Phase 2 announcement's mandatory content
+  (*"data on the purity and characterization of each"*). `sequence_provenance`,
+  `purity_pct`, `purity_method`, `identity_confirmation` on all 592 molecules,
+  never blank. **Beebop's modification was adopted in full:** analytical identity
+  is reserved for tested-material evidence and is **not** filled from
+  `design_source`; sequence provenance is its own column. Result:
+  466 molecules carry a recorded sequence provenance, and purity, purity method
+  and tested-batch identity are `NOT_REPORTED` for all 585 compounds and
+  `NOT_APPLICABLE` for the 7 class-level records. Zero reported values is the
+  verified state — a full-text search of every row for purity values,
+  purification methods and identity statements returns no hits — and it is now
+  countable instead of invisible.
+- **The three instruments sharing `score_0_to_7` are separated** into
+  `score_0_to_7_fob7_regional_sum` (376), `score_0_to_7_ordinal_inhibition_ladder`
+  (73) and `score_0_to_7_acute_activation` (36), each read from its own source's
+  transcribed definition. Separation only; whether they may ever be pooled
+  remains German's.
+- **Exact-construct identity is now computed separately from leakage grouping**
+  in `scripts/cross_system_pairs_cns.py`.
+
 **REVIEW COMPLETE — AWAITING OSCAR'S IMPLEMENTATION AUTHORIZATION**
 
 ---

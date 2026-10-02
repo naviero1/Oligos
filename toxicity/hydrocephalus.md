@@ -59,9 +59,9 @@ Pending candidates are excluded from the verified total on purpose. A publicatio
 
 | Tier | Rows | What it is |
 |---|---:|---|
-| `ventricular_enlargement` | 90 | ventricular volume, ventriculomegaly, hydrocephalus incidence, macrocephaly — the endpoint itself |
+| `ventricular_enlargement` | 88 | ventricular volume, ventriculomegaly, hydrocephalus incidence, macrocephaly — the endpoint itself |
 | `pressure_or_composition` | 29 | raised intracranial or CSF opening pressure, CSF volume, outflow resistance, DTI-ALPS — supports a mechanism, is not a confirmed hydrocephalus event |
-| `related_clinical_sign` | 14 | papilloedema and optic findings — a pressure sign, recorded separately because the two dissociate |
+| `related_clinical_sign` | 16 | papilloedema and optic findings — a pressure sign, recorded separately because the two dissociate |
 | `procedure_or_mechanism` | 4 | ependymal damage, cilia loss, meningitis, arachnoiditis — mechanism and procedure effects |
 | `disease_background` | 7 | measured in patients given no oligonucleotide: a baseline rate, never an effect of a compound |
 | `therapeutic_reduction` | 1 | the compound REDUCED the endpoint — an efficacy result, not a toxicity negative |
@@ -79,6 +79,11 @@ The ineligible rows are kept, with their evidence, and excluded from negative co
 - `disease_background` — 7 row(s): measured in patients given no oligonucleotide — a baseline rate, not a negative for any compound
 - `review_required` — 4 row(s): no ascertainment basis could be established from the row's own source fields
 - `therapeutic_reduction` — 1 row(s): the compound REDUCED the endpoint — measured, but an efficacy result, not evidence the compound is non-toxic
+
+Rows can qualify under more than one reason, and the list above reports the tier reason first. Counted by `ascertainment` alone, independently of tier:
+
+- `ascertainment = measured` — 6 row(s)
+- `ascertainment = review_required` — 6 row(s)
 
 <!-- END generated:evidence -->
 

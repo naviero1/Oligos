@@ -218,6 +218,24 @@ def block(ep):
         for k, v in Counter(why(r) for r in inel).most_common():
             L.append("- `%s` — %d row(s): %s" % (k, v, INELIGIBLE_GLOSS.get(k, "")))
         L.append("")
+        # The grouping above reports ONE reason per row, and a tier reason
+        # outranks an ascertainment reason where both apply. That made a count
+        # ambiguous once: four rows appeared under `review_required` while six
+        # rows actually carry that ascertainment, the other two being counted
+        # under `disease_background`. Both figures are now printed, so neither
+        # can be mistaken for the other.
+        asc = Counter(r["ascertainment"] for r in inel)
+        overlap = [k for k in asc
+                   if asc[k] != sum(1 for r in inel
+                                    if r["ascertainment"] == k and why(r) == k)]
+        if overlap:
+            L.append("Rows can qualify under more than one reason, and the list "
+                     "above reports the tier reason first. Counted by "
+                     "`ascertainment` alone, independently of tier:")
+            L.append("")
+            for k, v in asc.most_common():
+                L.append("- `ascertainment = %s` — %d row(s)" % (k, v))
+            L.append("")
     L.append(END)
     return "\n".join(L)
 

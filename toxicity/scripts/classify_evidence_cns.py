@@ -378,15 +378,26 @@ TIERS = [
     # The compound REDUCED the endpoint. Checked before the enlargement tier, since
     # the readout name is the same one.
     ("therapeutic_reduction", None),          # decided on effect_direction, below
+    # Ventricular enlargement measured as such: volume, dilatation,
+    # ventriculomegaly, a hydrocephalus diagnosis. NOT macrocephaly - see below.
     ("ventricular_enlargement", re.compile(
-        r"ventricul|ventricle|hydroceph|macrocephal|arachnoid_space|brain_volume"
+        r"ventricul|ventricle|hydroceph|arachnoid_space|brain_volume"
         r"|macrostructural")),
     ("pressure_or_composition", re.compile(
         r"intracranial_pressure|csf_pressure|csf_outflow|csf_volume|alps_index"
         r"|opening_pressure")),
     ("procedure_or_mechanism", re.compile(
         r"ependymal|cilia|ciliary|meningitis|arachnoiditis|myelitis")),
-    ("related_clinical_sign", re.compile(r"papill|optic|vision|visual")),
+    # A surrogate SIGN of raised volume or pressure, not a measurement of it.
+    # `acquired_macrocephaly` is a MedDRA adverse-event term from a serious-AE
+    # table - head circumference crossing a percentile in an infant, with no
+    # imaging reported in the source. It is highly suggestive and it is not
+    # ventricular enlargement, exactly as papilloedema is not. Beebop's
+    # 2026-10-02 review asked for this audit; the source table settles it.
+    # Whether infant macrocephaly should count as a direct hydrocephalus endpoint
+    # is a clinical judgement reserved for German.
+    ("related_clinical_sign", re.compile(
+        r"papill|optic|vision|visual|macrocephal")),
 ]
 
 

@@ -162,6 +162,60 @@ structure should read it from `gapmer_design` rather than infer it from case.
 
 ---
 
+## Tested-material characterization — written by `scripts/add_characterization_cns.py`
+
+The Phase 2 announcement makes this content **mandatory**: the dataset *"must
+contain the sequences of all oligos tested, as well as the location of all
+chemical modifications in each oligo, **data on the purity and characterization of
+each**, and any additional metadata"*, and the methodology document *"should
+include the methods used to purify and characterize oligo identity."* The same
+announcement warns that *"submission packages that are missing listed materials
+may not be judged."*
+
+Four columns on the oligo table. **None is ever blank** —
+[`scripts/qc_cns.py`](./scripts/qc_cns.py) fails on a blank, because a blank
+cannot be told apart from a question nobody asked.
+
+| Column | Values | What it means |
+|---|---|---|
+| `sequence_provenance` | `patent_sequence_listing`, `publication_supplement`, `publication_main_text`, `who_inn_nomenclature`, `regulatory_document`, `registry_metadata`, `NOT_REPORTED`, `NOT_APPLICABLE` | Where the **sequence text** was read from. `NOT_APPLICABLE` where no sequence is recorded, or the record is not a molecule. |
+| `purity_pct` | a value or range, `NOT_REPORTED`, `NOT_APPLICABLE` | The purity reported for the **material that was dosed**. |
+| `purity_method` | verbatim method text, `NOT_REPORTED`, `NOT_APPLICABLE` | How that material was purified. A method is **not** a purity value; the two are separate columns so one can exist without the other. |
+| `identity_confirmation` | verbatim analytical evidence, `NOT_REPORTED`, `NOT_APPLICABLE` | Analysis confirming the identity of the **tested batch** — mass spectrometry, RP-UPLC-MS, and the like. |
+
+**The distinction these columns exist to protect.** `sequence_provenance` records
+where a sequence was *printed*; that is **reference identity**, the designed
+molecule as a document describes it. `identity_confirmation` records analysis of
+the **vial that was actually dosed**. Filling the second from the first would
+manufacture the appearance of characterization, which is worse than recording
+none — so the obvious shortcut of copying `design_source` into
+`identity_confirmation` is refused, and QC fails if `identity_confirmation` ever
+equals a provenance category. This correction came from Beebop's 2026-10-02
+review.
+
+**`NOT_REPORTED` versus `NOT_APPLICABLE`.** `NOT_REPORTED` means the sources were
+searched and published nothing. `NOT_APPLICABLE` means the question is undefined:
+seven records are class-level or cohort-level aggregates — a safety database, an
+adverse-event atlas, an unexposed disease-background comparator — and the purity
+of "the ASO class" is a category error, not a gap.
+
+**Current state, and it is a finding rather than an omission.** Purity, purity
+method and tested-batch identity are `NOT_REPORTED` for **all 585 compounds** and
+`NOT_APPLICABLE` for the 7 aggregates. **Zero reported values**, verified: a
+full-text search of every measurement row's `notes` and `source_table`, and of
+every oligo record's `notes`, for purity values, purification methods (HPLC,
+UPLC, AEX, mass spectrometry, desalting, salt exchange, phosphoramidite
+synthesis) and identity-confirmation statements returns **no hits across 2,538
+measurement rows and 592 oligo records**. 466 molecules do carry a recorded
+sequence provenance.
+
+**How a value may ever enter.** Only through the `REPORTED` table in
+`add_characterization_cns.py`, keyed on `oligo_id`, which **requires** the
+document and the exact locus the value was read from and fails without them. The
+table is empty and must stay empty until someone reads a document that states a
+value — the same no-fabrication rule that governs every other column here.
+Recording the columns' existence is **not** closure of the requirement.
+
 ## Derived columns — written by `scripts/classify_evidence_cns.py`
 
 Six columns are *computed from the columns above* and appended to the measurement
