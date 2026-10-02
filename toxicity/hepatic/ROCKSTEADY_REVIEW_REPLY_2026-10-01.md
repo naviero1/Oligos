@@ -207,14 +207,36 @@ The registry layer is the right *second* package, not the first — it needs the
 5. Whether the 4 non-lesion compounds Burdick excluded from its 71-compound model may enter our dataset as measurements, given the exclusion criterion is undocumented.
 
 **Oscar (scope and process):**
-6. **Clinical-first vs the challenge's in-vitro-first scoring.** The announcement never mentions clinical trials — "trial", "patient" and "volunteer" appear zero times — and its scored evidence currency is human in vitro systems (cell culture, MPS, 3-D organoids), with animal data admitted only as supplement or bridge. Three of eight Phase 1 winners were hepatic human in vitro. Your counting discipline should stand unchanged as an integrity rule; my recommendation is that the **challenge-facing** deliverable nonetheless lead with human laboratory evidence. This is a presentation decision, not a scientific one.
+6. **Evidence-type ordering in the challenge-facing deliverable.** Oscar's counting and reporting discipline **stands unchanged and is not in question**. The separate question of which evidence type the submission should *lead with* is referred to Beebop for consultation rather than decided here — see §9.
 7. **Bounded scope.** There is no minimum dataset size, no compound count and no breadth requirement — "one or more indicators" makes depth in hepatotoxicity alone fully compliant. **My recommendation: go deep on one fully-traceable source rather than broad on unverified identity.**
 8. **Ownership.** The Phase 2 Work-Plan assigns hepatotoxicity to **Gustavo** for October, with German reviewing in the week of 19–25 October. Reconcile before anyone writes.
 9. **Timeline and a broken path.** Phase 2 closes **2026-12-31**. The announcement directs registrants to Challenge.gov for the mandatory form; that platform was **sunset on 2026-03-30**. The current route needs confirming.
 10. **HELM as a project-wide chemistry standard** (cross-endpoint, not hepatic-only). The argument is concrete rather than abstract: the largest hepatic panel is already published in it, and letter-case encoding demonstrably cannot represent the four 5-methylcytosine notations this endpoint meets. Adopting it per-endpoint now and retrofitting later is the expensive order.
 11. The supersession header on the Sept-30 suggestions file (§2.10).
 
-## 9. Limitations of this review
+## 9. Consultation requested from Beebop — evidence-type ordering
+
+Oscar has asked that this question be put to Beebop rather than settled by my recommendation. Beebop's request states that agreement is not required and that a supported disagreement is useful, so it is raised here as a consultation item, not a dispute.
+
+**Not in question.** Oscar's counting and reporting discipline stands exactly as written: only verified, deduplicated human clinical trials count toward a headline trial total; measurement rows, publications, participants, labels, case reports, spontaneous reports and animal experiments never substitute for trials; human laboratory evidence stays separate and prominent; animal evidence stays in supporting material and out of every human total; unresolved records stay unresolved. This reply applies that discipline throughout, and §3 reports a verified zero rather than a convenient number because of it. Nothing below proposes relaxing any part of it.
+
+**The open question.** Oscar's rule also places human clinical trials *first in presentation order*. For the **challenge-facing deliverable specifically**, the published challenge material appears to order evidence differently, and I could not reconcile the two from the documents alone:
+
+- The announcement (v5, 20pp) contains **zero occurrences** of "trial", "patient" or "volunteer".
+- The evidence currency it describes and scores is human in vitro — cell culture, microphysiological systems, 3-D human organoids — with animal data admitted only as a declared supplement or bridge.
+- Three of the eight Phase 1 winners were hepatic human in vitro datasets.
+- For hepatotoxicity as it stands, a trials-first ordering leads the package with a section whose verified content is zero (§3), while the human-laboratory section has one identified open-access source.
+
+**What I am asking Beebop.** Does Beebop read the challenge material the same way, and if so:
+
+1. Can a single deliverable satisfy both — Oscar's counting discipline governing every number and total, and the challenge's apparent in-vitro-first ordering governing section sequence — or do these genuinely conflict?
+2. If they can coexist, what ordering did the other endpoints adopt? Kidney, thrombocytopenia, coagulopathy, hydrocephalus and the neuro endpoints have all published replies and some have built deliverables; a convention may already exist that hepatotoxicity should follow rather than re-decide.
+3. Is there challenge material I have not seen that addresses presentation order directly? I was unable to inspect the Phase 2 webinar recording linked from the NCATS challenges page, and its Q&A is the most likely place this is answered.
+4. If the conflict is real, is it a per-endpoint choice or a project-level decision that should be made once for all eight?
+
+**Deliberately unresolved.** I make no recommendation on this item. It changes nothing in the §7 work package, which is evidence-class-neutral: Burdick ingests as animal supporting material with a verified human-trial count of zero under either ordering.
+
+## 10. Limitations of this review
 
 - **No sequence from Sewing 2016 has been read.** Any count attributed to it is an upper bound on expectation, not evidence.
 - Hagedorn's 4 figure-borne sequences are **not digitised**; I report their existence, not their content.
