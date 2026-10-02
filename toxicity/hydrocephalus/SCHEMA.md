@@ -20,8 +20,19 @@ two, produced by `scripts/build_merged.py`. It is never hand-edited.
 
 ## Missing-value convention
 
-Inherited from the sibling **OligoTox-CNS** release so the two datasets can be
-pooled. Three distinct states, never collapsed:
+Inherited from the sibling **OligoTox-CNS** release so the two use one convention.
+
+> **This is a shared convention, not an invitation to union the two releases.**
+> An earlier version of this line said the datasets "can be pooled", which was
+> wrong and hazardous. The releases share **no identifier values** across
+> `measurement_id`, `oligo_id` or `source_id`, and only a subset of columns, so a
+> naive concatenation produces silent duplicates with no key that would reveal
+> them — 12 hydrocephalus rows on the nervous-system branch are already present
+> here, and a union would double them. Reconciling two releases requires matching
+> on source identity (NCT, PMID/PMCID/DOI, DailyMed setid) and an explicit
+> decision about overlapping cohorts. Compare them by all means; do not add them.
+
+Three distinct states, never collapsed:
 
 | Literal | Meaning |
 |---|---|

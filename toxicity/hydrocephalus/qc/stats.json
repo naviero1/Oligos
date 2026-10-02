@@ -311,8 +311,25 @@
   "grade3_rows": 22,
   "duplexes_checked": 4,
   "oligos_with_sequence": 13,
-  "checks_run": 58,
+  "checks_run": 61,
   "checks_failed": 0,
+  "trials_verified_register": 156,
+  "trials_by_evaluability": {
+    "adverse_event_table_absence_only": 127,
+    "systematically_assessed_no_event": 19,
+    "tier_A_event_observed": 8,
+    "identified_only_no_outcome_record": 1,
+    "planned_outcome_no_results_posted": 1
+  },
+  "trials_marked_extension": 4,
+  "human_outcome_records_by_class": {
+    "clinical_trial": 770,
+    "pharmacovigilance": 456,
+    "regulatory_label": 88,
+    "clinical_case": 15,
+    "background_epidemiology": 3
+  },
+  "animal_rows": 10,
   "trials_registry_rows": 161,
   "trials_excluded_identity": 6,
   "trials_human_unique": 154,
@@ -329,5 +346,5 @@
     "rows_with_duration": 739
   },
   "human_in_vitro_rows": 0,
-  "release_id": "hydrocephalus-f3d5bcf-dirty"
+  "release_id": "hydrocephalus-20fc9bb-dirty"
 }

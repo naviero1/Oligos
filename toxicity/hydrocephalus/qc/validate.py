@@ -294,7 +294,11 @@ def main():
     # 11d the data dictionary covers every column, and only real columns ----
     #     This is the check whose absence let SCHEMA.md promise purity_pct,
     #     purity_method and identity_confirmation while the builder emitted none.
+    treg_path = os.path.join(ROOT, "data", "trial_register.csv")
+    treg = list(csv.DictReader(open(treg_path))) if os.path.exists(treg_path) else []
     tables = {"oligos": o, "measurements": m, "modifications": mods, "sources": s}
+    if treg:
+        tables["trial_register"] = treg
     undocumented, phantom = [], []
     for tname, rows_ in tables.items():
         actual = set(rows_[0].keys())
@@ -372,6 +376,25 @@ def main():
               % unchecked[:5])
         check("every recorded DOI resolves", not unresolved,
               "did not resolve: %s" % [(d, checked[d]["status"]) for d in unresolved[:4]])
+
+    # 11d-sexies the trial register is one row per trial, and its own counts ---
+    if treg:
+        dupes = [r["nct_id"] for r in treg
+                 if sum(1 for x in treg if x["nct_id"] == r["nct_id"]) > 1]
+        check("trial_register holds one row per trial", not dupes,
+              "duplicated: %s" % sorted(set(dupes))[:5])
+        ct_ncts = {r["source_id"] for r in m
+                   if r["study_type"] == "clinical_trial"
+                   and r["source_id"].startswith("NCT")}
+        reg_ncts = {r["nct_id"] for r in treg}
+        orphan = sorted(ct_ncts - reg_ncts)
+        check("every trial contributing rows is in the register", not orphan,
+              "missing from register: %s" % orphan[:5])
+        bad = [r["nct_id"] for r in treg
+               if r["endpoint_evaluability"] == "identified_only_no_outcome_record"
+               and int(r["n_outcome_records"] or 0) > 0]
+        check("evaluability agrees with the outcome-record count", not bad,
+              "offending: %s" % bad[:5])
 
     # 11e endpoint isolation — no other toxicity's material may leak in ----
     #     Requested explicitly: the endpoints are separate deliverables and their
@@ -508,6 +531,17 @@ def main():
     with_rows = {r["source_id"] for r in ct if r["source_id"].startswith("NCT")}
     evaluable = {r["source_id"] for r in ct
                  if r["assessment_type"] not in ("NOT_APPLICABLE", "", "NOT_REPORTED")}
+    if treg:
+        _ev = collections.Counter(r["endpoint_evaluability"] for r in treg)
+        stats["trials_verified_register"] = len(treg)
+        stats["trials_by_evaluability"] = dict(_ev)
+        stats["trials_marked_extension"] = sum(
+            1 for r in treg if r["participants_overlap_warning"] == "TRUE")
+    # Evidence classes kept apart, so no reader can build one denominator.
+    stats["human_outcome_records_by_class"] = dict(collections.Counter(
+        r["study_type"] for r in m if r["subject_class"].startswith("human")))
+    stats["animal_rows"] = sum(1 for r in m
+                               if r["subject_class"].startswith("animal"))
     stats["trials_registry_rows"] = len(reg)
     stats["trials_excluded_identity"] = len(reg) - len(kept)
     stats["trials_human_unique"] = len({r["nct_id"] for r in kept} & with_rows)

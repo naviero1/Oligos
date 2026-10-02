@@ -20,7 +20,11 @@ Conflating the two would let curation choices masquerade as experimental fact.
 This separation follows the sibling **OligoTox-CNS** release, whose conventions —
 the `NOT_REPORTED` / `NOT_APPLICABLE` / empty distinction, `grade_basis`,
 `grade_status`, `readout_is_qualitative`, and a QC suite that exits non-zero —
-this dataset adopts so the two can be pooled.
+this dataset adopts so the two share one convention. That is a shared
+convention only: the two releases must **not** be concatenated. They share no
+identifier values and a union would carry silent duplicates — see SCHEMA.md,
+"Missing-value convention". Reconciliation must match on source identity (NCT,
+PMID/PMCID/DOI, DailyMed setid) and state what it does with overlapping cohorts.
 
 ### No-fabrication policy (strict)
 

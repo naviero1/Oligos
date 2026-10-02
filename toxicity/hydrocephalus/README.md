@@ -20,23 +20,62 @@ one."* This directory is that second dataset.
 
 <!-- BEGIN GENERATED: qc/validate.py writes qc/stats.json; scripts/render_docs.py renders this block. Do not hand-edit. -->
 
+### 1. Human clinical trials &mdash; the headline evidence
+
+Counted once per trial. Arms, repeated outcomes, papers, labels, case reports, spontaneous reports and animal experiments contribute **zero** to this total.
+
+| | Trials |
+|---|---:|
+| **Verified unique human clinical trials** | **156** |
+| &nbsp;&nbsp;a tier-A ventricular event was observed | 8 |
+| &nbsp;&nbsp;systematically assessed, no event | 19 |
+| &nbsp;&nbsp;adverse-event-table absence only | 127 |
+| &nbsp;&nbsp;identified, but contributes no outcome record | 1 |
+| Marked as an extension of another listed trial (shared participants) | 4 |
+| Excluded: no compound attribution its own record supports | 6 |
+
+Identifying a trial is not the same as evaluating the endpoint in it: **127 of 156** rest on the absence of a term from an adverse-event table, which is a reported zero under 42 CFR 11.48(a)(4)(ii)(A) but is not a ventricular assessment. Per-trial detail is in `data/trial_register.csv` and workbook sheet `1_trial_register_human`.
+
+### 2. Human laboratory / ex-vivo evidence
+
+**0 rows.** The Challenge brief calls in vitro human systems a particular interest; this release has none, and says so rather than letting the gap be inferred. The only in vitro/in vivo pair here is animal. Workbook sheet `3_human_lab_evidence` is present and empty for the same reason.
+
+### 3. Other human evidence &mdash; OUTCOME records, never trials
+
+| Evidence class | Outcome records |
+|---|---:|
+| clinical trial | 770 |
+| pharmacovigilance | 456 |
+| regulatory label | 88 |
+| clinical case | 15 |
+| background epidemiology | 3 |
+
+These are rows, not trials, and not participants. Spontaneous reports carry no exposure denominator at all.
+
+### 4. Compounds and endpoint findings
+
 | | Count |
 |---|---:|
-| Measurement rows | **1342** |
-| Oligonucleotides described | **53** |
-| — of which carry at least one measurement | 47 |
-| Distinct sources | 188 |
-| Tier-A rows with a positive finding | 62 |
-| Tier-A rows that are ASSESSED measured negatives | 560 |
-| Tier-A spontaneous-report zeros (no exposure denominator, NOT negatives) | 176 |
-| Tier-A positives on the ventricular axis, real compounds | 54 |
-| Verified unique human clinical trials | 154 |
-| &nbsp;&nbsp;of those with a systematic/protocol assessment | 27 |
-| Trials excluded on compound-identity grounds | 6 |
-| Compounds (excluding 2 non-compound placeholders) | 51 |
+| Compounds (excluding 2 non-compound placeholders) | **51** |
+| &nbsp;&nbsp;with a published sequence | 13 |
+| &nbsp;&nbsp;appearing in human rows, with a sequence | 6 |
+| Tier-A positives, ventricular axis, real compounds | 54 |
+| Tier-A ASSESSED measured negatives | 560 |
+| Tier-A spontaneous-report zeros (no denominator, NOT negatives) | 176 |
 | Grade-3 (severe) rows | 22 |
-| Oligonucleotides with a published sequence | 13 |
-| QC checks run / failed | 58 / 0 |
+
+### 5. Animal evidence &mdash; appendix
+
+**10 rows**, excluded from every human total above and from the default human-outcome summaries. Retained in full, never deleted: workbook sheet `9_APPENDIX_animal` and `data/measurements_animal.csv`.
+
+### 6. Dataset size and quality control
+
+| | Count |
+|---|---:|
+| Measurement rows (all evidence classes) | 1342 |
+| Distinct sources | 188 |
+| Per-position chemistry rows | 256 |
+| QC checks run / failed | 61 / 0 |
 
 **Endpoint tier** — **A** = hydrocephalus (communicating, obstructive or normal-pressure), ventriculomegaly / ventricular dilatation, shunt or drain placement. **B** = raised intracranial pressure, papilloedema, aseptic or chemical meningitis, arachnoiditis, CSF leak or protein rise, post-lumbar-puncture syndrome.
 
@@ -174,7 +213,7 @@ one."* This directory is that second dataset.
 | `NCT03225846` | 21 |
 | `NCT02499328` | 19 |
 
-Release identifier: `hydrocephalus-f3d5bcf-dirty` (binds this table, the workbook, the figures and the PDFs to one commit).
+Release identifier: `hydrocephalus-20fc9bb-dirty` (binds this table, the workbook, the figures and the PDFs to one commit).
 
 <!-- END GENERATED -->
 

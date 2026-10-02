@@ -45,22 +45,88 @@ def main():
     s = json.load(open(stats_path))
 
     parts = []
+    ev = s.get("trials_by_evaluability", {})
+    hc = s.get("human_outcome_records_by_class", {})
+
+    # ORDER IS THE ARGUMENT. Human clinical trials first, then human laboratory
+    # evidence, then other human evidence, then compounds, with animal evidence
+    # in an appendix. An earlier version opened with measurement-row and
+    # oligonucleotide totals, which invited exactly the pooled denominator the
+    # counting rules forbid.
     parts.append(
+        "### 1. Human clinical trials &mdash; the headline evidence\n\n"
+        "Counted once per trial. Arms, repeated outcomes, papers, labels, case "
+        "reports, spontaneous reports and animal experiments contribute **zero** "
+        "to this total.\n\n"
+        "| | Trials |\n|---|---:|\n"
+        "| **Verified unique human clinical trials** | **%d** |\n"
+        "| &nbsp;&nbsp;a tier-A ventricular event was observed | %d |\n"
+        "| &nbsp;&nbsp;systematically assessed, no event | %d |\n"
+        "| &nbsp;&nbsp;adverse-event-table absence only | %d |\n"
+        "| &nbsp;&nbsp;identified, but contributes no outcome record | %d |\n"
+        "| Marked as an extension of another listed trial (shared participants) | %d |\n"
+        "| Excluded: no compound attribution its own record supports | %d |\n"
+        % (s.get("trials_verified_register", 0),
+           ev.get("tier_A_event_observed", 0),
+           ev.get("systematically_assessed_no_event", 0),
+           ev.get("adverse_event_table_absence_only", 0),
+           ev.get("identified_only_no_outcome_record", 0),
+           s.get("trials_marked_extension", 0),
+           s.get("trials_excluded_identity", 0)))
+    parts.append(
+        "Identifying a trial is not the same as evaluating the endpoint in it: "
+        "**%d of %d** rest on the absence of a term from an adverse-event table, "
+        "which is a reported zero under 42 CFR 11.48(a)(4)(ii)(A) but is not a "
+        "ventricular assessment. Per-trial detail is in `data/trial_register.csv` "
+        "and workbook sheet `1_trial_register_human`.\n"
+        % (ev.get("adverse_event_table_absence_only", 0),
+           s.get("trials_verified_register", 0)))
+
+    parts.append(
+        "### 2. Human laboratory / ex-vivo evidence\n\n"
+        "**%d rows.** The Challenge brief calls in vitro human systems a "
+        "particular interest; this release has none, and says so rather than "
+        "letting the gap be inferred. The only in vitro/in vivo pair here is "
+        "animal. Workbook sheet `3_human_lab_evidence` is present and empty for "
+        "the same reason.\n" % s.get("human_in_vitro_rows", 0))
+
+    parts.append(
+        "### 3. Other human evidence &mdash; OUTCOME records, never trials\n\n"
+        "| Evidence class | Outcome records |\n|---|---:|\n"
+        + "".join("| %s | %d |\n" % (k.replace("_", " "), v)
+                  for k, v in sorted(hc.items(), key=lambda kv: -kv[1]))
+        + "\nThese are rows, not trials, and not participants. Spontaneous "
+          "reports carry no exposure denominator at all.\n")
+
+    parts.append(
+        "### 4. Compounds and endpoint findings\n\n"
         "| | Count |\n|---|---:|\n"
-        "| Measurement rows | **%(n_measurements)d** |\n"
-        "| Oligonucleotides described | **%(n_oligos)d** |\n"
-        "| — of which carry at least one measurement | %(n_oligos_with_measurements)d |\n"
+        "| Compounds (excluding %d non-compound placeholders) | **%d** |\n"
+        "| &nbsp;&nbsp;with a published sequence | %d |\n"
+        "| &nbsp;&nbsp;appearing in human rows, with a sequence | %d |\n"
+        "| Tier-A positives, ventricular axis, real compounds | %d |\n"
+        "| Tier-A ASSESSED measured negatives | %d |\n"
+        "| Tier-A spontaneous-report zeros (no denominator, NOT negatives) | %d |\n"
+        "| Grade-3 (severe) rows | %d |\n"
+        % (s["n_oligo_records"] - s["n_compounds_real"], s["n_compounds_real"],
+           s["oligos_with_sequence"],
+           s.get("human_subset", {}).get("with_sequence", 0),
+           s["tier_A_positive_ventricular"], s["tier_A_null"],
+           s["tier_A_reported_zero_no_denominator"], s["grade3_rows"]))
+
+    parts.append(
+        "### 5. Animal evidence &mdash; appendix\n\n"
+        "**%d rows**, excluded from every human total above and from the default "
+        "human-outcome summaries. Retained in full, never deleted: workbook sheet "
+        "`9_APPENDIX_animal` and `data/measurements_animal.csv`.\n"
+        % s.get("animal_rows", 0))
+
+    parts.append(
+        "### 6. Dataset size and quality control\n\n"
+        "| | Count |\n|---|---:|\n"
+        "| Measurement rows (all evidence classes) | %(n_measurements)d |\n"
         "| Distinct sources | %(n_sources)d |\n"
-        "| Tier-A rows with a positive finding | %(tier_A_positive)d |\n"
-        "| Tier-A rows that are ASSESSED measured negatives | %(tier_A_null)d |\n"
-        "| Tier-A spontaneous-report zeros (no exposure denominator, NOT negatives) | %(tier_A_reported_zero_no_denominator)d |\n"
-        "| Tier-A positives on the ventricular axis, real compounds | %(tier_A_positive_ventricular)d |\n"
-        "| Verified unique human clinical trials | %(trials_human_unique)d |\n"
-        "| &nbsp;&nbsp;of those with a systematic/protocol assessment | %(trials_with_systematic_assessment)d |\n"
-        "| Trials excluded on compound-identity grounds | %(trials_excluded_identity)d |\n"
-        "| Compounds (excluding 2 non-compound placeholders) | %(n_compounds_real)d |\n"
-        "| Grade-3 (severe) rows | %(grade3_rows)d |\n"
-        "| Oligonucleotides with a published sequence | %(oligos_with_sequence)d |\n"
+        "| Per-position chemistry rows | %(n_modification_positions)d |\n"
         "| QC checks run / failed | %(checks_run)d / %(checks_failed)d |\n" % s)
 
     parts.append(table(

@@ -278,17 +278,74 @@ def main():
     write_table(ws, dd)
     ws.column_dimensions["C"].width = 100
 
-    # ---- data sheets -----------------------------------------------------
-    for name in ("oligos", "measurements", "modifications", "sources"):
-        write_table(wb.create_sheet(name), load(name + ".csv"))
+    # ---- sheet order: HUMAN EVIDENCE FIRST, ANIMAL IN AN APPENDIX ---------
+    # The order is the presentation. Previously the canonical `measurements`
+    # sheet -- every evidence type mixed together -- came before the human and
+    # animal splits, and there was no trial register at all, so the first table
+    # a reader met invited exactly the pooled denominator the counting rules
+    # forbid. Now: the verified human clinical-trial register, then human
+    # evidence, then the human laboratory sheet (empty, and that emptiness is
+    # the finding), then supporting tables, with animal evidence last and
+    # explicitly labelled an appendix.
 
-    # Human and animal evidence as separate sheets. These are GENERATED filters
-    # on measurements.subject_class, not independent tables; the canonical
-    # measurements sheet above contains every row exactly once.
-    for sheet, fname in (("measurements_human", "measurements_human.csv"),
-                         ("measurements_animal", "measurements_animal.csv"),
-                         ("German's analysis", "germans_analysis.csv")):
-        write_table(wb.create_sheet(sheet), load(fname))
+    # 1. The human clinical-trial register: one row per TRIAL. Every headline
+    #    trial count in this release is computed from this sheet.
+    write_table(wb.create_sheet("1_trial_register_human"),
+                load("trial_register.csv"))
+
+    # 2. Human outcome records. One row per trial x arm x readout -- OUTCOMES,
+    #    not trials. Never collapse this sheet into a trial count.
+    write_table(wb.create_sheet("2_measurements_human"),
+                load("measurements_human.csv"))
+
+    # 3. Human laboratory / ex-vivo evidence, kept separate and prominent
+    #    because the Challenge brief calls it a particular interest. This
+    #    release has NONE: the sheet is deliberately present and empty so the
+    #    gap is visible rather than inferred from a missing sheet.
+    hl = wb.create_sheet("3_human_lab_evidence")
+    hlab = [r for r in load("measurements.csv")[1:]
+            if r[load("measurements.csv")[0].index("subject_class")]
+            in ("human_in_vitro", "human_ex_vivo")]
+    if hlab:
+        write_table(hl, [load("measurements.csv")[0]] + hlab)
+    else:
+        hl.append(["Human laboratory / ex-vivo evidence in this release"])
+        hl.append(["NONE. Zero rows carry subject_class = human_in_vitro or "
+                   "human_ex_vivo."])
+        hl.append([""])
+        hl.append(["This sheet is intentionally present and empty. The Challenge "
+                   "brief calls datasets based on in vitro human systems, or able "
+                   "to extrapolate between human in vitro and animal data, of "
+                   "particular interest. This release cannot support that."])
+        hl.append(["The only in vitro / in vivo pair here is ANIMAL: an "
+                   "unmodified 18-mer against G-alpha-i2 measured in cultured rat "
+                   "ependymal cells and by MRI in the living rat "
+                   "(Monkkonen 2007, PMC1855344)."])
+        hl.append(["The nearest human candidate found was a choroid-plexus study "
+                   "using a lentiviral shRNA construct, excluded as a gene-therapy "
+                   "vector rather than an oligonucleotide therapeutic. That "
+                   "exclusion is a curation judgement open to review."])
+        hl.column_dimensions["A"].width = 110
+
+    # 4. Per-compound sequence / modification / toxicity view.
+    write_table(wb.create_sheet("4_German's analysis"),
+                load("germans_analysis.csv"))
+
+    # 5-8. Supporting tables.
+    for i, name in enumerate(("oligos", "modifications", "measurements",
+                              "sources"), start=5):
+        write_table(wb.create_sheet("%d_%s" % (i, name)), load(name + ".csv"))
+
+    # 9. APPENDIX. Animal evidence, excluded from every human total and from
+    #    the default human-outcome summaries. Retained in full, never deleted.
+    write_table(wb.create_sheet("9_APPENDIX_animal"),
+                load("measurements_animal.csv"))
+
+    # data_dictionary is reference material, not evidence: send it to the back
+    # so the first sheets a reader meets are the human evidence.
+    for ref in ("data_dictionary",):
+        if ref in wb.sheetnames:
+            wb.move_sheet(ref, offset=len(wb.sheetnames) - wb.sheetnames.index(ref) - 1)
 
     wb.save(OUT)
     size = os.path.getsize(OUT)
