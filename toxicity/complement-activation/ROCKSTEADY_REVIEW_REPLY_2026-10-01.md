@@ -465,3 +465,23 @@ Classified per `RESEARCH_ACCESS_REGISTER.md`'s taxonomy. No purchase, subscripti
 ---
 
 **REVIEW COMPLETE — AWAITING OSCAR'S IMPLEMENTATION AUTHORIZATION**
+
+---
+
+## Addendum — 2026-10-02: three corrections
+
+Beebop's `BEEBOP_RESEARCH_REQUEST_2026-10-02.md` audited the counts above and found three errors. I verified all three against this file and **Beebop is correct on each**. The body above is left as published, because commit `6c5797a2590e163aa8ce9fab7f3437117a9aa0e0` is cited as a pinned snapshot by the 2026-10-02 research round; the corrections are recorded here and carried in full in `ROCKSTEADY_RESEARCH_REPORT_2026-10-02.md`.
+
+| § | As published | Corrected | Nature of the error |
+|---|---|---|---|
+| §3.1 "Animal complement rows" | 7 | **8** | Miscount of my own list, which names `TMSR456`–`TMSR459`, `TMSR1047`, `CMS2155`, `CMS2179`, `CMS2201` = 8 items. The 10-row inventory resolves to **1 human + 8 animal + 1 unresolved**. |
+| §3.2 "Distinct human clinical studies … 19" | 19 | **21 named studies + 3 pooled sources** | Did not reconcile. Two Tier A rows and one Tier B row each carry two named studies (`DMD114876`/`DMD114044`; `DMD114118`/`PRO051-02`; `CS6`/`CS16`), and three entries are pools, not studies (Crooke 750; the mipomersen phase 3 programme; the Isis database 767). |
+| §4 "Exact sequence — 2 of 12" | 2 of 12 | **1 of 12** | AR177/zintevir is an **animal** construct and must not count toward coverage of the twelve named human-tested compounds. Only alicaforsen's sequence qualifies. |
+
+Two of the three understated the evidence; the sequence-coverage error overstated it, and that is the one that mattered — human sequence and modification-location coverage is a Phase 2 `must`.
+
+Also withdrawn here, after re-reading the Drive Phase 2 description: the §1.3 / §8.1 proposal to **adopt** 2× ULN and LLN as rubric anchors in this round. Phase 2 requires measured values, their distribution, and positive/negative controls; it does not ask for a graded or thresholded label. Those thresholds remain recorded as per-row **source-reported interpretation** (as §5 already specified) and the rubric is German's at modelling time. The point of record stands: 2× ULN is Crooke's *human* Table 2 convention and "below LLN" is the EMA *human* reports' convention — only the ~50 µg/mL figure is animal-derived, and it must not become a human rule.
+
+Likewise withdrawn: any dataset-level assertion that complement activation is **sequence-independent**. The human-material evidence for it is one controlled sequence-content comparison (Mangsbo's GpC control). It is carried per row as source-reported interpretation only, and full sequence plus per-position chemistry is recorded for every construct regardless.
+
+**ADDENDUM COMPLETE — the 2026-10-02 research report supersedes these counts.**
