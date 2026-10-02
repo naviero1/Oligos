@@ -13,11 +13,11 @@ Phase 2. Release **v1.0**. Licence **CC BY 4.0** (see `LICENSE.md` for the per-r
 |---|---|
 | Oligonucleotides | **1,879** |
 | CNS toxicity measurements | **4,428** |
-| Per-position chemical-modification records | **32,569** |
+| Per-position chemical-modification records | **32,898** |
 | Sources | **9** — 4 contributing rows, 1 contributing measurement instruments only |
 | Sequences published | 1,858 / 1,879 (98.9%) |
-| Position-resolved modification maps | 1,830 / 1,879 (97.4%) |
-| Structural QC | **43/43 checks pass** |
+| Position-resolved modification maps | 1,853 / 1,879 (98.6%) |
+| Structural QC | **45/45 checks pass** |
 
 Split across the three endpoint folders, none of which mixes toxicities:
 

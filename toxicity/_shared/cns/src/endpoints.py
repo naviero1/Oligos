@@ -77,6 +77,55 @@ ZERO_ROW_SOURCE_ENDPOINT = {"O1": "acute-neurotoxicity"}
 # Four classes, and the second is the point: `human_invitro` is the class the brief prioritises.
 # It was empty in the first release, and naming the empty class is what made that visible in the
 # data rather than only in a caveat. It is no longer empty.
+# --- which measuring instrument produced this row? -------------------------------------------
+# Four distinct instruments in this module share the unit label "score_0_to_20", across two
+# species and two routes of administration: Hagedorn's mouse ICV acute tolerability scale,
+# Miller's mouse ICV scale, Kuroda's mouse ICV late-onset scale, and Kuroda's rat INTRATHECAL
+# late-onset scale. Grouping by readout_unit silently pools all four. readout_name distinguishes
+# them, but only if a consumer knows to use it -- so the instrument is named explicitly here.
+#
+# Whether any two of these scales are mutually comparable is a scientific question, not a schema
+# one. This column lets the question be asked; it does not answer it. docs/SCORING_INSTRUMENTS.md
+# holds the scale definitions.
+INSTRUMENTS = {
+    "INS-01": ("rat primary cortical neuron spontaneous calcium oscillation",
+               "pct_of_untreated_control", "rat", "in_culture_medium", "H1"),
+    "INS-02": ("Hagedorn 0-20 acute tolerability score, mouse ICV",
+               "score_0_to_20", "mouse", "intracerebroventricular", "H1"),
+    "INS-03": ("Miller 0-20 average acute tolerability score, mouse ICV",
+               "score_0_to_20", "mouse", "intracerebroventricular", "K1"),
+    "INS-04": ("Kuroda 0-20 late-onset tolerability score, mouse ICV",
+               "score_0_to_20", "mouse", "intracerebroventricular", "L1"),
+    "INS-05": ("Kuroda rat-modified late-onset tolerability score, rat intrathecal",
+               "score_0_to_20", "rat", "intrathecal", "L1"),
+    "INS-06": ("ClinicalTrials.gov posted MedDRA adverse-event incidence, per arm",
+               "pct_of_arm", "human", "intrathecal_or_intracerebroventricular", "CT1"),
+    "INS-07": ("FDA label adverse-reaction incidence / warnings statement",
+               "various", "human", "intrathecal", "C1"),
+    "INS-08": ("human neural culture or organoid injury readout (viability, apoptosis, neurite)",
+               "various", "human", "in_culture_medium", "HV1/HV2/HV3"),
+    "INS-09": ("human neural culture CONTEXT readout (uptake, off-target expression) -- not injury",
+               "various", "human", "in_culture_medium", "HV1/HV2/HV3"),
+}
+
+
+def instrument_of(measurement) -> str:
+    src, name = measurement["source_id"], measurement["readout_name"]
+    if src == "H1":
+        return "INS-02" if "tolerability" in name else "INS-01"
+    if src == "K1":
+        return "INS-03"
+    if src == "L1":
+        return "INS-05" if name.endswith("_rat") else "INS-04"
+    if src == "CT1":
+        return "INS-06"
+    if src == "C1":
+        return "INS-07"
+    if src.startswith("HV"):
+        return "INS-08" if measurement["readout_is_toxicity"] == "TRUE" else "INS-09"
+    return "NOT_REPORTED"
+
+
 # --- can the SOURCE support calling this outcome chronic? ------------------------------------
 # Beebop asked for a chronic-qualification rubric over the clinical rows. Building one turned out
 # to be impossible from the source, and that is the finding rather than a failure to deliver.

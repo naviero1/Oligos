@@ -99,6 +99,7 @@ MEASUREMENT_COLUMNS = [
     ("exposure_duration", "Duration of exposure."),
     ("timepoint", "When the readout was taken."),
     ("readout_category", "behavioural | electrophysiology_calcium | histopathology | injury_biomarker | functional | viability | apoptosis | morphological | accumulation | off_target_expression | clinical_cns_outcome. Controlled and enforced by the QC suite."),
+    ("instrument_id", "Which measuring instrument produced this row (see docs/SCORING_INSTRUMENTS.md). Four distinct scales share the unit label score_0_to_20 across two species and two routes, so readout_unit must never be used to group measurements."),
     ("arm_role", "For a clinical row: active | placebo_or_sham | no_intervention, read from the trial arm's own title. not_applicable for laboratory and animal rows. Without this, a group-by on oligo_id pools control-arm events into the compound's event rate."),
     ("observation_window", "For a clinical row: the window over which adverse events were COLLECTED, verbatim from the registry's timeFrame. This is NOT an exposure duration and must never be read as one."),
     ("chronic_qualification", "Whether the SOURCE supports calling this outcome chronic. chronic_supported_by_source | acute_by_design | not_derivable_from_source. Derived by one rule in src/endpoints.py. See docs/CHRONIC_QUALIFICATION.md."),
@@ -126,8 +127,8 @@ MEASUREMENT_COLUMNS = [
 MODIFICATION_COLUMNS = [
     ("oligo_id", "Foreign key to oligos.csv."),
     ("position_5to3", "1-based position from the 5' end."),
-    ("nucleobase", "A | C | G | T"),
-    ("sugar_chemistry", "LNA | 2'-MOE | DNA_2prime_deoxy"),
+    ("nucleobase", "A | C | G | T | U | none_abasic (an abasic spacer position)."),
+    ("sugar_chemistry", "LNA | 2'-MOE | DNA_2prime_deoxy | abasic_DSpacer. An abasic DSpacer occupies a position and carries no nucleobase, so its nucleobase is none_abasic."),
     ("base_modification", "5-methylcytosine | none"),
     ("linkage_3prime", "Linkage to the next nucleotide, or terminal_none at the 3' end."),
     ("basis", "How the position was established."),
@@ -338,6 +339,7 @@ def main() -> int:
         m["subject_class"] = endpoints.subject_class_of(m)
         m["subject_group"] = endpoints.subject_group_of(m)
         m["readout_is_toxicity"] = endpoints.readout_is_toxicity_of(m)
+        m["instrument_id"] = endpoints.instrument_of(m)
         m["chronic_qualification"] = endpoints.chronic_qualification_of(m)
         m["incidence_is_zero"] = endpoints.incidence_is_zero_of(m)
         if not m.get("arm_role"):

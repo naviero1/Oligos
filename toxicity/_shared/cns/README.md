@@ -12,14 +12,14 @@ this is the CNS module.
 |---|---|
 | Oligonucleotides | **1,879** |
 | CNS toxicity measurements | **4,428** |
-| Per-position chemical-modification records | **32,569** |
+| Per-position chemical-modification records | **32,898** |
 | Sources | **9** (8 contributing data, 1 contributing instruments) |
 | Sequences published | 1,858 / 1,879 (98.9 %) |
-| Position-resolved modification maps | 1,830 / 1,879 (97.4 %) |
+| Position-resolved modification maps | 1,853 / 1,879 (98.6 %) |
 | Verified unique human trials | **22** (16 independent cohorts) &mdash; see `docs/TRIAL_REGISTER.md` |
 | Human laboratory measurements | **34** &mdash; the class the Challenge prioritises |
 | Licence | CC BY 4.0 for our work; per-row source terms in `LICENSE.md` |
-| Structural QC | **43 / 43 checks pass** (`qc/validate_dataset.py`) |
+| Structural QC | **45 / 45 checks pass** (`qc/validate_dataset.py`) |
 <!-- /GENERATED:headline -->
 
 ---

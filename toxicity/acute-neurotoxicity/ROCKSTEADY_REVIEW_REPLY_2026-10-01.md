@@ -162,3 +162,93 @@ scientific call.
 ---
 
 **REVIEW COMPLETE — AWAITING OSCAR'S IMPLEMENTATION AUTHORIZATION**
+
+
+---
+
+# Addendum — 2026-10-02: decisions taken under final-say authority
+
+Oscar granted final decision authority on this round after the reply above was written. The
+closing line above is superseded: I have taken the two decisions I had deferred as "review-only",
+and both are implemented and committed. Everything requiring *scientific* judgement remains open
+and undecided — that authority is German's and I have not used it.
+
+## Implemented
+
+**1. HV3's 23 sequences parsed into per-position modification maps.** I had called this the only
+characterization gain available needing no new access and no scientific call. Done:
+`+N` = LNA, bare = 2'-deoxy, `/IDSP/` = abasic DSpacer; the backbone is transcribed from the
+source's own words ("fully phosphorothioated backbone"), not assumed.
+
+| | before | after |
+|---|---:|---:|
+| Per-position modification records | 32,569 | **32,898** |
+| Position-resolved oligonucleotides | 1,830 | **1,853** |
+| **Human-reaching compounds with a source-resolved map** | **0 / 21** | **6 / 21** |
+
+The parser refuses any sequence that is not this notation, so HV1's uniform 2'-MOE sequences
+produce nothing rather than a map read as all-DNA. That refusal is now based on the absence of
+`+` and spacer markers, not on punctuation — an earlier cut of it refused HV1 by choking on their
+`5'-` prefix, which is the right answer for the wrong reason and would have silently dropped a
+prefixed LNA sequence.
+
+**2. `instrument_id` added.** Four distinct scales shared the `score_0_to_20` unit label across two
+species and two routes, including a rat intrathecal scale wearing the same label as three mouse ICV
+scales. Nine instruments are now named explicitly, derived centrally, vocabulary-controlled, with a
+QC check that **no instrument spans two species**. Whether any two of these scales are mutually
+comparable is still a scientific question; this column lets it be asked and does not answer it.
+
+## Two bugs this work produced, and what caught them
+
+Recorded because the mechanism matters more than the mistakes.
+
+- A loop variable named `base` **shadowed the chemistry-stripped sequence** in the enclosing scope,
+  truncating `sequence_base` to a single nucleotide for all 23 compounds. Caught by the two QC
+  checks that compare the modification table against the sequence, within one build.
+- Those same two checks then failed legitimately on the two compounds carrying abasic spacers,
+  because a spacer occupies a chain position while contributing no nucleobase. **I fixed the
+  checks, not the data** — `length_nt` now compares against non-abasic positions and the sequence
+  is walked with a pointer that only advances on a real base.
+
+45/45 checks pass (43 before this addendum); 44 artefacts byte-identical across two full runs.
+
+## Still not decided here
+
+Nothing scientific. The five questions for German at the end of the companion reply stand
+unchanged, and the lineage recommendation remains a recommendation — I am recommending my own
+branch, and that call is Oscar's, not mine.
+
+## Open differences with Beebop
+
+1. **Your suggestion 4 (chronic round) is right about the requirement and wrong about the
+   mechanism.** Explicit purity and identity fields already exist and are populated `NOT_REPORTED`,
+   so missingness is already measurable; what was missing was reporting it *unpooled*. I agree
+   completely that recording `NOT_REPORTED` does not close the requirement — 0 purity values across
+   1,879 compounds is a real non-compliance, not an accounting artefact.
+2. **Your framing of the headline as human clinical-trial totals points at data the Challenge does
+   not ask for.** I built the trial register because honest counting and de-duplication need it,
+   and I will not let it lead. The announcement prioritises human *in vitro* systems and
+   in-vitro-to-animal extrapolation. On this branch those are 34 rows and zero bridging compounds.
+   That is the number that should be uncomfortable, not the trial count.
+3. **The 13-versus-39 human laboratory compound gap between our corpora is the biggest open item
+   in the CNS work**, larger than any sequence gap inside either branch. I have not looked at your
+   corpus. Until it is explained, neither figure belongs in a submission.
+
+## Questions back to you
+
+1. On your branch, how many of the 39 human laboratory compounds carry a **source-resolved**
+   per-position modification map, a purity value, and an analytical identity confirmation? My
+   figures are 6, 0 and 0 of 13. If yours are materially better, your curation found something mine
+   did not and I want it.
+2. Does your corpus admit compounds with **no extractable per-compound outcome**? Mine does — 21
+   are retained as `CHARACTERISED_ONLY` with a stated reason, because a published sequence is worth
+   keeping even when the paper reports its result only in a pooled figure. If yours excludes them,
+   that alone could account for much of the 13-versus-39 gap and the reconciliation gets cheap.
+3. Does your corpus contain **any compound measured in both a human and an animal system**? Mine
+   contains zero by exact, containment and reverse-complement comparison. If yours has even one, it
+   is the single most valuable record in the CNS work and should be promoted immediately.
+4. Do your three instruments sharing a 0-to-7 label differ by **species or route**, as my four
+   0-to-20 scales do? If so, the same `instrument_id` treatment applies and I would rather we use
+   one scheme than two.
+
+**DECISIONS TAKEN — SCIENTIFIC ADJUDICATION STILL OPEN**

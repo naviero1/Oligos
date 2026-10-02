@@ -39,6 +39,7 @@ VOCAB = {
     # as context)" -- reached the released tables and defeated every downstream filter.
     "readout_category": endpoints.READOUT_CATEGORIES,
     "readout_is_toxicity": {"TRUE", "FALSE"},
+    "instrument_id": set(endpoints.INSTRUMENTS) | {"NOT_REPORTED"},
     "arm_role": {"active", "placebo_or_sham", "no_intervention", "spontaneous_report",
                  "not_applicable"},
     "chronic_qualification": endpoints.CHRONIC_QUALIFICATIONS,
@@ -105,6 +106,16 @@ def main(as_json: bool = False) -> int:
     check("no registry row asserts an exposure duration", not ct_exposure,
           f"{len(ct_exposure)} assert one: {ct_exposure[:6]}" if ct_exposure else
           "0 -- the registry records a collection window, not exposure")
+
+    # One instrument must not span two species or two routes -- that is precisely the conflation
+    # the column exists to prevent.
+    by_instrument = collections.defaultdict(set)
+    for m in meas:
+        by_instrument[m["instrument_id"]].add(m["species"])
+    spans = sorted(f"{ins} spans {sorted(sp)}" for ins, sp in by_instrument.items() if len(sp) > 1)
+    check("no instrument spans two species", not spans,
+          "; ".join(spans) if spans else
+          f"{len(by_instrument)} instruments in use, each single-species")
 
     graded_context = sorted(m["measurement_id"] for m in meas
                             if m.get("readout_is_toxicity") == "FALSE"
@@ -182,24 +193,41 @@ def main(as_json: bool = False) -> int:
           f"alphabet: {sorted(alphabet)}")
 
     # ---- modification table consistency -------------------------------------------------
+    # A chain position does not always carry a nucleobase: an abasic spacer (DSpacer) occupies a
+    # position and contributes nothing to the nucleobase sequence. So length_nt, which counts
+    # NUCLEOTIDES, is compared against the non-abasic positions, and the sequence is walked with
+    # its own pointer that only advances on a real base. Comparing raw indices instead would
+    # report a false mismatch on every position after a spacer.
+    ABASIC = "none_abasic"
     by_oligo = collections.defaultdict(list)
     for m in mods:
-        by_oligo[m["oligo_id"]].append(int(m["position_5to3"]))
+        by_oligo[m["oligo_id"]].append(m)
+    for v in by_oligo.values():
+        v.sort(key=lambda r: int(r["position_5to3"]))
     pos_bad, count_bad, base_mismatch = [], [], []
     seq_of = {o["oligo_id"]: o["sequence_base"] for o in oligos}
     len_of = {o["oligo_id"]: o["length_nt"] for o in oligos}
-    for oid, positions in by_oligo.items():
+    for oid, rows in by_oligo.items():
+        positions = [int(r["position_5to3"]) for r in rows]
         if sorted(positions) != list(range(1, len(positions) + 1)):
             pos_bad.append(oid)
-        if len_of.get(oid) not in MISSING_TOKENS and int(len_of[oid]) != len(positions):
+        n_nt = sum(1 for r in rows if r["nucleobase"] != ABASIC)
+        if len_of.get(oid) not in MISSING_TOKENS and int(len_of[oid]) != n_nt:
             count_bad.append(oid)
-    for m in mods:
-        seq = seq_of.get(m["oligo_id"], "")
-        i = int(m["position_5to3"])
-        if seq not in MISSING_TOKENS and i <= len(seq) and seq[i - 1] != m["nucleobase"]:
-            base_mismatch.append(m["oligo_id"])
+
+        seq = seq_of.get(oid, "")
+        if seq in MISSING_TOKENS:
+            continue
+        k = 0
+        for r in rows:
+            if r["nucleobase"] == ABASIC:
+                continue
+            if k < len(seq) and seq[k] != r["nucleobase"]:
+                base_mismatch.append(oid)
+            k += 1
     check("modification positions are contiguous 1..n", not pos_bad, f"{len(pos_bad)} oligos")
-    check("modification row count equals oligo length", not count_bad, f"{len(count_bad)} oligos")
+    check("modification nucleotide count equals oligo length (abasic positions excluded)",
+          not count_bad, f"{len(count_bad)} oligos")
     check("modification nucleobase matches the sequence at that position", not base_mismatch,
           f"{len(set(base_mismatch))} oligos")
 

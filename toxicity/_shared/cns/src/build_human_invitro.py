@@ -51,6 +51,55 @@ def norm_seq(s: str) -> str:
     return re.sub(r"[^ACGTU]", "", (s or "").upper())
 
 
+
+# ---------------------------------------------------------------------------------------------
+# HV3 (Woffindale 2026) prints its 23 sequences in LNA notation in supplementary Table S2:
+#   +N      locked nucleic acid at that position
+#   N       2'-deoxy (DNA)
+#   /IDSP/  internal DSpacer -- an abasic spacer occupying a position, carrying no nucleobase
+# The source states the backbone verbatim as a "fully phosphorothioated backbone", so the linkage
+# is transcribed, not assumed; base modifications are recorded by the source as "None reported".
+#
+# The extraction already described the 3-8-3 pattern in prose and the per-position map was simply
+# never expanded, leaving every human oligo in the module with zero source-resolved modification
+# positions while 1,830 animal oligos had them. This parser closes that for the compounds whose
+# chemistry the source actually prints.
+LNA_TOKEN = re.compile(r"/IDSP/|\+([ACGTU])|([ACGTU])", re.I)
+
+
+def parse_lna_notation(seq: str):
+    """[(nucleobase, sugar_chemistry)] 5'->3', or None if the string is not this notation."""
+    if not seq or seq in NOT:
+        return None
+    # Strip a 5'/3' wrapper and separators first, so the decision to parse rests on the NOTATION
+    # and not on incidental punctuation. Without this the function refused HV1's sequences by
+    # choking on their "5\u2032-" prefix -- the right answer for the wrong reason, which would have
+    # silently dropped any LNA sequence that happened to carry the same prefix.
+    s = re.sub(r"^\s*5[\u2032']?\s*-\s*|\s*-\s*3[\u2032']?\s*$", "", seq.strip())
+    s = s.replace(" ", "")
+    # This notation marks chemistry per position. A sequence with no "+" and no spacer is a plain
+    # base string whose chemistry lives in prose (e.g. uniform 2'-MOE), and a per-position map for
+    # it would be derived, not read. Those are refused here and left NOT_REPORTED.
+    if "+" not in s and "/IDSP/" not in s.upper():
+        return None
+    pos, out = 0, []
+    while pos < len(s):
+        m = LNA_TOKEN.match(s, pos)
+        if not m:
+            if s[pos] in " -'":          # tolerate separators, never silently skip a base
+                pos += 1
+                continue
+            return None                   # unknown token: refuse rather than guess
+        if m.group(0).upper() == "/IDSP/":
+            out.append(("none_abasic", "abasic_DSpacer"))
+        elif m.group(1):
+            out.append((m.group(1).upper(), "LNA"))
+        else:
+            out.append((m.group(2).upper(), "DNA_2prime_deoxy"))
+        pos = m.end()
+    return out or None
+
+
 CHARACTERISED_ONLY = "CHARACTERISED_ONLY:"
 
 # Which readout categories measure INJURY. Everything else is context: a delivery or uptake
@@ -91,7 +140,7 @@ def main(path: str) -> int:
     data = json.loads(pathlib.Path(path).read_text())
     sources = data["sources"] if isinstance(data, dict) and "sources" in data else data
 
-    oligos, measurements = [], []
+    oligos, measurements, mods = [], [], []
     rej = {"source_unusable": 0, "not_neural": 0, "efficacy_readout": 0,
            "sequence_unconfirmed": 0, "no_oligo_match": 0}
     src_rows = {}
@@ -128,8 +177,29 @@ def main(path: str) -> int:
                 seq_raw = "NOT_REPORTED"
                 rej["sequence_unconfirmed"] += 1
             base = norm_seq(seq_raw) if seq_raw not in NOT else "NOT_REPORTED"
+            backbone = o.get("backbone_chemistry") or ""
             oid = f"HV-OLG-{len(oligos) + 1:04d}"
             oid_of[name] = oid
+
+            # Expand the source's own notation into per-position records. Only where the source
+            # PRINTS the chemistry -- an unparseable or absent sequence yields nothing rather
+            # than a guessed map.
+            parsed = parse_lna_notation(seq_raw) if seq_raw not in NOT else None
+            posmap = ""
+            if parsed:
+                posmap = ";".join(f"{i}:{b}:{s}" for i, (b, s) in enumerate(parsed, 1))
+                ps = "phosphorothioate" if re.search(r"phosphorothioat", backbone, re.I) else "NOT_REPORTED"
+                # NB: named nt_base, not base -- `base` is the chemistry-stripped sequence in
+                # the enclosing scope, and shadowing it here silently truncated sequence_base to
+                # the final nucleotide for all 23 compounds. Caught by the two QC checks that
+                # compare the modification table against the sequence.
+                for i, (nt_base, sugar) in enumerate(parsed, 1):
+                    mods.append({
+                        "oligo_id": oid, "position_5to3": i, "nucleobase": nt_base,
+                        "sugar_chemistry": sugar, "base_modification": "",
+                        "linkage_3prime": ps if i < len(parsed) else "terminal_none",
+                        "basis": "position_resolved_from_source", "source_id": key,
+                    })
             oligos.append({
                 "oligo_id": oid, "oligo_name": f"{key}_{name}", "aliases": name,
                 "oligo_class": o.get("modality") or "ASO_gapmer",
@@ -144,8 +214,9 @@ def main(path: str) -> int:
                 "backbone_linkage_positions": "NOT_REPORTED",
                 "sugar_modifications": o.get("sugar_modifications") or "NOT_REPORTED",
                 "modification_pattern": o.get("modification_positions") or "NOT_REPORTED",
-                "modification_positions": "NOT_REPORTED",
-                "modification_position_basis": "NOT_REPORTED",
+                "modification_positions": posmap or "NOT_REPORTED",
+                "modification_position_basis": ("position_resolved_from_source" if posmap
+                                                else "NOT_REPORTED"),
                 "gapmer_shape": "NOT_REPORTED", "conjugate": "none",
                 "n_A": base.count("A") if base not in NOT else "",
                 "n_C": base.count("C") if base not in NOT else "",
@@ -243,7 +314,8 @@ def main(path: str) -> int:
     print(f"{n_declared} oligo(s) declared {CHARACTERISED_ONLY.strip(':')} "
           f"(characterised, no extractable measurement)")
 
-    for name, recs in (("HV_oligos", oligos), ("HV_measurements", measurements)):
+    for name, recs in (("HV_oligos", oligos), ("HV_measurements", measurements),
+                       ("HV_modifications", mods)):
         if not recs:
             print(f"  no rows for {name}")
             continue
@@ -260,6 +332,9 @@ def main(path: str) -> int:
 
     seqs = sum(1 for o in oligos if o["sequence_base"] not in NOT)
     print(f"\noligos {len(oligos)} ({seqs} with a verified sequence); measurements {len(measurements)}")
+    nmapped = len({m["oligo_id"] for m in mods})
+    print(f"per-position modification records: {len(mods)} across {nmapped} oligo(s), "
+          f"all position_resolved_from_source")
     print("per source:", src_rows)
     print("rejected:", rej)
     return 0

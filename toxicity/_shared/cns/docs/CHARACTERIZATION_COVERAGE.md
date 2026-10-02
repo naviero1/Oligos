@@ -11,16 +11,16 @@ completeness. Pooled figures are not reported here at all.
 |---|---:|---:|---:|---:|
 | Sequence as printed | 10 / 21 | 48% | 1,830 / 1,837 | 100% |
 | Nucleobase sequence | 10 / 21 | 48% | 1,830 / 1,837 | 100% |
-| Per-position modification map | 2 / 21 | 10% | 1,830 / 1,837 | 100% |
+| Per-position modification map | 8 / 21 | 38% | 1,830 / 1,837 | 100% |
 | Purity value | 0 / 21 | 0% | 0 / 1,837 | 0% |
 | Purification method | 13 / 21 | 62% | 1,825 / 1,837 | 99% |
 | Analytical identity confirmation | 0 / 21 | 0% | 1,825 / 1,837 | 99% |
-| *of those, source-resolved positions* | 0 / 21 | 0% | 1,830 / 1,837 | 100% |
+| *of those, source-resolved positions* | 6 / 21 | 29% | 1,830 / 1,837 | 100% |
 
 ## Read this honestly
 
 **The human subset is essentially uncharacterized.** Of the 21 oligonucleotides that reach
-a human measurement, 10 carry a sequence, **0 carry a
+a human measurement, 10 carry a sequence, **6 carry a
 source-resolved modification map**, **0 carry a purity value** and
 **0 carry an identity confirmation**. The mandatory
 characterization requirement is currently met for the rat screen and not for the data class the
