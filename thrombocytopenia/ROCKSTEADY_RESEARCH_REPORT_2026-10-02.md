@@ -192,14 +192,22 @@ cannot be attributed per sequence; they correctly carry no measurements.
 
 ### Source-verified characterisation coverage, with denominators
 
-| | human clinical (34 cpds) | human laboratory (48 cpds) |
-|---|---:|---:|
-| sequence text | 25/34 | 25/48 |
-| position-chemistry map | 18/34 | 20/48 |
-| — of which **source-verbatim** | **0/34** | **2/48** |
-| ps_count | 26/34 | 27/48 |
-| purity **method** | 11/34 | 2/48 |
-| purity **value** | **0/34** | **0/48** |
+**Dataset-wide first, subsets beside it.** Crank's delegation directs this endpoint to report
+modification-map coverage at the dataset-wide denominator rather than the clinical subset alone;
+both are given here, each with its denominator stated, because the subsets are what the human-first
+reading needs and the dataset-wide figure is what a reviewer will quote.
+
+| | **dataset-wide (259 cpds)** | human clinical (34 cpds) | human laboratory (48 cpds) |
+|---|---:|---:|---:|
+| sequence text | **200/259** | 25/34 | 25/48 |
+| position-chemistry map | **44/259 (16%)** | 18/34 | 20/48 |
+| — of which **source-verbatim** | **2/259** | **0/34** | **2/48** |
+| ps_count | — | 26/34 | 27/48 |
+| purity **method** | 11/259 | 11/34 | 2/48 |
+| purity **value** | **0/259** | **0/34** | **0/48** |
+
+Provenance tag for the above: **measured-by-me** at commit `989a581`, computed directly from
+`data/oligos.csv` and `data/measurements.csv`, not read from a generated artifact or from prose.
 
 Row-level: **628 of 1,959 (32%)** carry `verified_against_source`; human clinical 382/1,002 (38%),
 human laboratory 240/451 (53%). 48 rows cite an abstract rather than a numbered locus.
