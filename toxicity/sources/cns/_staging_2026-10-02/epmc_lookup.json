@@ -1,0 +1,171 @@
+{
+ "10.1016/j.omtn.2025.102692": {
+  "id": "41467114",
+  "source": "MED",
+  "pmid": "41467114",
+  "pmcid": "PMC12744863",
+  "fullTextIdList": {
+   "fullTextId": [
+    "PMC12744863"
+   ]
+  },
+  "doi": "10.1016/j.omtn.2025.102692",
+  "title": "Unraveling and controlling late-onset neurotoxicity of antisense oligonucleotides through strategic chemical modifications.",
+  "authorString": "Kuroda T, Yoshioka K, Mon SSL, Katsuyama M, Sato K, Isogai E, Yoshida-Tanaka K, Iwata-Hara R, Yamaguchi T, Obika S, Yokota T.",
+  "journalTitle": "Mol Ther Nucleic Acids",
+  "issue": "4",
+  "journalVolume": "36",
+  "pubYear": "2025",
+  "journalIssn": "2162-2531",
+  "pageInfo": "102692",
+  "pubType": "research-article; journal article",
+  "isOpenAccess": "Y",
+  "inEPMC": "Y",
+  "inPMC": "Y",
+  "citedByCount": 6,
+  "hasReferences": "Y",
+  "hasTextMinedTerms": "Y",
+  "hasDbCrossReferences": "N",
+  "hasPDF": "Y",
+  "hasBook": "N",
+  "hasSuppl": "Y",
+  "hasLabsLinks": "Y",
+  "hasTMAccessionNumbers": "Y",
+  "tmAccessionTypeList": {
+   "accessionType": [
+    "doi"
+   ]
+  },
+  "firstPublicationDate": "2025-09-12",
+  "firstIndexDate": "2026-01-02"
+ },
+ "10.1016/j.xhgg.2025.100450": {
+  "id": "40340253",
+  "source": "MED",
+  "pmid": "40340253",
+  "pmcid": "PMC12148737",
+  "fullTextIdList": {
+   "fullTextId": [
+    "PMC12148737"
+   ]
+  },
+  "doi": "10.1016/j.xhgg.2025.100450",
+  "title": "Pathogenic PPP2R5D variants disrupt neuronal development and neurite outgrowth in patient-derived neurons that are reversed by allele-specific knockdown.",
+  "authorString": "Young RE, Zuccaro MV, LeDuc CA, Germain ND, Kim TH, Sarmiere P, Chung WK.",
+  "journalTitle": "HGG Adv",
+  "issue": "3",
+  "journalVolume": "6",
+  "pubYear": "2025",
+  "journalIssn": "2666-2477",
+  "pageInfo": "100450",
+  "pubType": "research-article; journal article",
+  "isOpenAccess": "Y",
+  "inEPMC": "Y",
+  "inPMC": "Y",
+  "citedByCount": 2,
+  "hasReferences": "Y",
+  "hasTextMinedTerms": "Y",
+  "hasDbCrossReferences": "Y",
+  "dbCrossReferenceList": {
+   "dbName": [
+    "EMBL"
+   ]
+  },
+  "hasPDF": "Y",
+  "hasBook": "N",
+  "hasSuppl": "Y",
+  "hasLabsLinks": "Y",
+  "hasTMAccessionNumbers": "Y",
+  "tmAccessionTypeList": {
+   "accessionType": [
+    "omim",
+    "refseq"
+   ]
+  },
+  "firstPublicationDate": "2025-05-08",
+  "firstIndexDate": "2025-05-10"
+ },
+ "10.1186/s13024-024-00725-9": {
+  "id": "38654375",
+  "source": "MED",
+  "pmid": "38654375",
+  "pmcid": "PMC11040766",
+  "fullTextIdList": {
+   "fullTextId": [
+    "PMC11040766"
+   ]
+  },
+  "doi": "10.1186/s13024-024-00725-9",
+  "title": "Regulation of human microglial gene expression and function via RNAase-H active antisense oligonucleotides in vivo in Alzheimer's disease.",
+  "authorString": "Vandermeulen L, Geric I, Fumagalli L, Kreir M, Lu A, Nonneman A, Premereur J, Wolfs L, Policarpo R, Fattorelli N, De Bondt A, Van Den Wyngaert I, Asselbergh B, Fiers M, De Strooper B, d'Ydewalle C, Mancuso R.",
+  "journalTitle": "Mol Neurodegener",
+  "issue": "1",
+  "journalVolume": "19",
+  "pubYear": "2024",
+  "journalIssn": "1750-1326",
+  "pageInfo": "37",
+  "pubType": "research support, non-u.s. gov't; research-article; journal article",
+  "isOpenAccess": "Y",
+  "inEPMC": "Y",
+  "inPMC": "Y",
+  "citedByCount": 10,
+  "hasReferences": "Y",
+  "hasTextMinedTerms": "Y",
+  "hasDbCrossReferences": "Y",
+  "dbCrossReferenceList": {
+   "dbName": [
+    "EMBL"
+   ]
+  },
+  "hasPDF": "Y",
+  "hasBook": "N",
+  "hasSuppl": "Y",
+  "hasLabsLinks": "Y",
+  "hasTMAccessionNumbers": "Y",
+  "tmAccessionTypeList": {
+   "accessionType": [
+    "cellosaurus",
+    "hPSCreg",
+    "gen",
+    "doi"
+   ]
+  },
+  "firstPublicationDate": "2024-04-24",
+  "firstIndexDate": "2024-04-24"
+ },
+ "10.1056/NEJMoa2204705": {
+  "id": "36129998",
+  "source": "MED",
+  "pmid": "36129998",
+  "doi": "10.1056/nejmoa2204705",
+  "title": "Trial of Antisense Oligonucleotide Tofersen for <i>SOD1</i> ALS.",
+  "authorString": "Miller TM, Cudkowicz ME, Genge A, Shaw PJ, Sobue G, Bucelli RC, Chi\u00f2 A, Van Damme P, Ludolph AC, Glass JD, Andrews JA, Babu S, Benatar M, McDermott CJ, Cochrane T, Chary S, Chew S, Zhu H, Wu F, Nestorov I, Graham D, Sun P, McNeill M, Fanning L, Ferguson TA, Fradette S, VALOR and OLE Working Group.",
+  "journalTitle": "N Engl J Med",
+  "issue": "12",
+  "journalVolume": "387",
+  "pubYear": "2022",
+  "journalIssn": "0028-4793; 1533-4406; ",
+  "pageInfo": "1099-1110",
+  "pubType": "clinical trial, phase iii; comparative study; research support, non-u.s. gov't; randomized controlled trial; journal article",
+  "isOpenAccess": "N",
+  "inEPMC": "N",
+  "inPMC": "N",
+  "citedByCount": 772,
+  "hasReferences": "Y",
+  "hasTextMinedTerms": "Y",
+  "hasDbCrossReferences": "N",
+  "hasPDF": "N",
+  "hasBook": "N",
+  "hasSuppl": "N",
+  "hasLabsLinks": "Y",
+  "hasTMAccessionNumbers": "Y",
+  "tmAccessionTypeList": {
+   "accessionType": [
+    "eudract",
+    "nct"
+   ]
+  },
+  "firstPublicationDate": "2022-09-01",
+  "firstIndexDate": "2022-09-23"
+ }
+}

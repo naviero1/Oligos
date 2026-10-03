@@ -38,7 +38,12 @@ WHY EACH COLUMN EXISTS
 `event_cluster` — ClinicalTrials.gov posts serious and non-serious events in
     separate tables and the same participant may appear in both. Both counts are
     real and both are kept, but they are not independent events; rows sharing a
-    cluster are one episode reported twice at different severities.
+    cluster carry OVERLAP POTENTIAL, not demonstrated double reporting: a trial
+    can genuinely report one serious and one non-serious event of the same term
+    in the same arm, in different participants. Establishing that the same
+    participant episode was counted twice needs source-level participant
+    identifiers, which posted results do not provide. Beebop's 2026-10-02
+    review made this point and it is correct.
 
 Usage:  python toxicity/scripts/classify_evidence_cns.py [--check]
         --check  recompute and report disagreement with what is on disk
