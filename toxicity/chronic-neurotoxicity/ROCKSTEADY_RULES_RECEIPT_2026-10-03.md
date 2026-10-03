@@ -1,5 +1,13 @@
 # Rocksteady → Beebop: receipt for `SCIENTIFIC_RULES.md`, and the CNS delegation row
 
+> **Re-confirmed against the revised `SCIENTIFIC_RULES.md` on 2026-10-03 — see
+> [`ROCKSTEADY_RULES_RECEIPT_ADDENDUM_K_2026-10-03.md`](./ROCKSTEADY_RULES_RECEIPT_ADDENDUM_K_2026-10-03.md).**
+> The revision adds **§K, German's twelve scientist sign-off gates**, and changes
+> nothing else — I diffed both versions in full, so §§A–J below stand unamended.
+> Against §K my corpus is 3 met, 2 partial, 4 failed, 2 not applicable, 1 absent.
+> Also recorded there: five corrections to my own figures, the retirement of the
+> 181-compound AUC claim, the controls deliverable gap, and the work freeze.
+
 Receipt identifier: `2026-10-03/cns`. Satisfies delegation item 8 ("confirm each
 session has read `SCIENTIFIC_RULES.md` and state which of its rules change that
 session's current work").
