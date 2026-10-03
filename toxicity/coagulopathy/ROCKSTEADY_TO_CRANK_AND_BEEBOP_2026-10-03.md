@@ -210,3 +210,91 @@ clinical-accuracy or trained-model claim appears in any shipped document.
 
 AWAITING: Q1 (MQR definition — blocks the scorecard), Q2 (held-document recovery ruling —
 blocks two §C fields), Q3 (priority confirmation), Q4 (yes/no on the staged rescope).
+
+---
+
+## 5. Addendum, same day — Oscar's decisions, relayed
+
+Oscar read §1 and decided three of the four questions. Recorded here because two of them are
+instructions to you rather than answers to me.
+
+### Q2 — ANSWERED by Oscar: recover it, and tag it
+
+> "As long as we can tag that somewhere in the dataset with an identifying column, the more
+> information we can get, the better."
+
+So recovering characterisation from documents we already hold **proceeds**, with the condition
+that each recovered value carries a column identifying it as such. That condition is already
+half-built: `characterisation_basis` records
+`regulatory_quality_section:<source_id>`, and `purity_source_id`, `purity_locus` and
+`purity_evidence_quote` bind each value to the place it came from. I am extending the same
+tagging to the fields this round recovers, so a reader can always separate
+*recovered-from-a-held-document* from *extracted-at-first-pass*.
+
+Under way now: endotoxin across the held EMA and FDA quality sections (absent for all 218
+compounds, named as a §C minimum field), the remaining missing characterisation fields, and
+COG-S023's per-batch molecular weight and DNA content across 19 porcine and 9 ovine API
+batches. Same method as the purity round — parallel extraction, independent adversarial
+verification of every quote and number against the cited file. **Still no purity value for
+COG-S023**, because the word does not appear in that paper, and the extraction agents have
+been told so explicitly.
+
+Note for the other endpoints, since the ruling generalises: the lesson is not "look in EPARs".
+It is that **a document already in the repository can contain whole categories of evidence
+that the first extraction pass never opened**, because the first pass went looking for the
+endpoint's own readouts. Purity came out of those sections; endotoxin was in the same
+sections and nobody looked. It is worth one pass per endpoint.
+
+### Q3 — Oscar declined to decide and routed it to you
+
+> "Ask Crank."
+
+So this is live and it is yours: **the 325 unresolved row-to-trial links, or describing the
+five staged papers plus the two recoverables?** My recommendation stands — the papers,
+decisively. The links refine attribution within the lane that is already this dataset's
+strongest; the papers are the only route into the strict human in-vitro lane, which Item 1 of
+the new joint review queue shows contributes **zero** qualified rows if a qualified record
+requires position chemistry. I will proceed on the papers unless you say otherwise, and I
+will say so plainly in the next status rather than let silence stand for assent.
+
+### Oscar's instruction to you both: create the joint review files and funnel into them
+
+> "Have this question be explained with the right context, why it is important, and addressed
+> to Gustavo and German; propose the creation of a file that is for items to review by them
+> both. We know there is one for German's questions. Tell Crank I decided this and to instruct
+> Beebop to create such files and start funnelling certain information."
+
+**Crank: Oscar has decided this, and asks you to instruct Beebop to create such files per
+endpoint and begin funnelling.** The gap it closes is one you identified yourself —
+`German_requests_100326.md` collects German's decisions, nothing collects the items where a
+scientific ruling and a modelling consequence are the *same* decision, and you recorded that
+you have no channel to Gustavo at all.
+
+First instance published as a worked example:
+[`REVIEW_QUEUE_GERMAN_GUSTAVO_2026-10-03.md`](REVIEW_QUEUE_GERMAN_GUSTAVO_2026-10-03.md),
+eight items. The structure, if it is worth copying:
+
+- one item per decision, each stating **the question, the measured facts, why it matters, who
+  decides, who else needs it, and what is blocked** until it is answered;
+- every figure computed from the committed tables, with the script that reproduces it named;
+- a closing table of who blocks what, so the reader can triage without reading the body;
+- nothing acted on, and §A restated at the top so no item can be read as awaiting silence.
+
+The leading item is the MQR question from §1 above, written out with its full consequence — and
+that consequence is the reason Oscar wanted it addressed to both. Requiring position-resolved
+chemistry would give this endpoint **0 qualified rows from the strict human in-vitro lane and
+1,048 from the animal lane**, which inverts the Challenge's own stated priority. It is
+simultaneously German's call on what qualifies as evidence and Gustavo's constraint on which
+lane can be modelled, and until now it had nowhere to be asked.
+
+This also supersedes my own suggestion S4: a joint review file per endpoint is a better
+instrument than the `GUSTAVO_HANDOFF.md` I offered, because it carries the questions rather
+than only the outputs. I withdraw S4 in favour of Oscar's version.
+
+### Q1 and Q4 remain open
+
+**Q1** (does a qualified record require position-resolved chemistry) is now Item 1 of the joint
+queue, with the figures. Beebop still owns the mechanical derivation from German's gates.
+**Q4** (should I pre-build the §E grade rescope as a staged candidate column) is still yours,
+Beebop — and it is cheap: it would turn German's Item 2 decision into an approval instead of a
+design exercise.
