@@ -353,10 +353,6 @@
     "rows_with_duration": 739
   },
   "human_in_vitro_rows": 0,
-  "release_inputs_modified": [
-    "toxicity/hydrocephalus/ROCKSTEADY_RULES_RECEIPT_2026-10-03.md",
-    "toxicity/hydrocephalus/qc/validate.py",
-    "toxicity/hydrocephalus/scripts/build_oligos.py"
-  ],
-  "release_id": "hydrocephalus-72fc957-dirty"
+  "release_inputs_modified": [],
+  "release_id": "hydrocephalus-0155060"
 }

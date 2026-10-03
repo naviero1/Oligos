@@ -264,6 +264,38 @@
    }
   }
  ],
+ "n_sequence_families": 39,
+ "n_compounds_in_model": 41,
+ "models_sequence_family": [
+  {
+   "name": "route only",
+   "features": [
+    "delivery_route"
+   ],
+   "auc": 0.65,
+   "n_scored": 519
+  },
+  {
+   "name": "route + indication",
+   "features": [
+    "delivery_route",
+    "indication"
+   ],
+   "auc": 0.606,
+   "n_scored": 519
+  },
+  {
+   "name": "route + indication + chemistry",
+   "features": [
+    "delivery_route",
+    "indication",
+    "oligo_class",
+    "backbone_chemistry"
+   ],
+   "auc": 0.516,
+   "n_scored": 519
+  }
+ ],
  "n_armsB_nonprocedure": 18,
  "models_all_axes": [
   {

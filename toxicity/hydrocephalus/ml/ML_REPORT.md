@@ -116,6 +116,36 @@ Three things worth reading off that table:
   0.114 is an artefact of pooled scoring, not evidence of anything. It is
   retained only as a transparency diagnostic.
 
+## 3a. Grouped splits: compound, and sequence family
+
+SCIENTIFIC_RULES §G requires grouped splits by sequence family, not only by
+compound. Leave-one-compound-out is not sufficient on its own here: two pairs
+share a base sequence and differ only in conjugation
+(eplontersen/inotersen, olezarsen/volanesorsen), so holding out one leaves its
+twin in training. Grouping by exact base-sequence equality collapses
+41 compounds into 39 families.
+
+| Model | Leave-one-compound-out | Leave-one-sequence-family-out |
+|---|---:|---:|
+| Route only | 0.650 | 0.650 |
+| Route + indication | 0.606 | 0.606 |
+| Route + indication + chemistry | 0.517 | 0.516 |
+
+**The two agree to within 0.001, so shared-sequence leakage is not material for
+this endpoint.** That is a result, not a formality: it had to be measured rather
+than assumed, and it could only have moved the score downwards.
+
+This grouping is a **validation-safety measure, not an identity claim.** It
+merges no inventory record, changes no count, and asserts nothing about whether
+two constructs are the same molecule — it says only that they must not sit on
+opposite sides of a split. The identity question stays unadjudicated.
+
+Still outstanding under §G: **near-neighbour** grouping needs a sequence-similarity
+threshold, which is a scientific judgement and is not set here; leave-one-paper-out
+has no natural unit for this endpoint, where 155 of 195 sources are trial registry
+records rather than papers; and transparent baselines (null/majority, length-only,
+chemistry-only, family-only) are not yet fitted.
+
 ## 3b. What excluding procedure complications changed
 
 This is the most consequential decision in this report, so the discarded
