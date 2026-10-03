@@ -318,7 +318,7 @@
   "grade3_rows": 22,
   "duplexes_checked": 4,
   "oligos_with_sequence": 26,
-  "checks_run": 64,
+  "checks_run": 81,
   "checks_failed": 0,
   "oligos_without_sequence": 25,
   "oligos_with_sequence_marketed": 11,
@@ -424,17 +424,6 @@
   "n_modification_cols": 12,
   "n_source_cols": 20,
   "prose_figures_unaccounted": 0,
-  "release_inputs_modified": [
-    "toxicity/hydrocephalus/METHODOLOGY.md",
-    "toxicity/hydrocephalus/ROCKSTEADY_GERMAN_QUESTION_absence_negatives_2026-10-03.md",
-    "toxicity/hydrocephalus/ROCKSTEADY_GERMAN_QUESTION_model_permission_2026-10-03.md",
-    "toxicity/hydrocephalus/SCHEMA.md",
-    "toxicity/hydrocephalus/ml/analyse.py",
-    "toxicity/hydrocephalus/ml/build_analysis_set.py",
-    "toxicity/hydrocephalus/qc/prose_constants.json",
-    "toxicity/hydrocephalus/qc/validate.py",
-    "toxicity/hydrocephalus/scripts/assemble.py",
-    "toxicity/hydrocephalus/scripts/build_nonclinical.py"
-  ],
-  "release_id": "hydrocephalus-a9280bc-dirty"
+  "release_inputs_modified": [],
+  "release_id": "hydrocephalus-e694e0e"
 }

@@ -75,7 +75,7 @@ These are rows, not trials, and not participants. Spontaneous reports carry no e
 | Measurement rows (all evidence classes) | 1342 |
 | Distinct sources | 195 |
 | Per-position chemistry rows | 555 |
-| QC checks run / failed | 64 / 0 |
+| QC checks run / failed | 81 / 0 |
 
 **Endpoint tier** — **A** = hydrocephalus (communicating, obstructive or normal-pressure), ventriculomegaly / ventricular dilatation, shunt or drain placement. **B** = raised intracranial pressure, papilloedema, aseptic or chemical meningitis, arachnoiditis, CSF leak or protein rise, post-lumbar-puncture syndrome.
 
@@ -213,7 +213,7 @@ These are rows, not trials, and not participants. Spontaneous reports carry no e
 | `NCT03225846` | 21 |
 | `NCT02499328` | 19 |
 
-Release identifier: `hydrocephalus-8ff856c` (binds this table, the workbook, the figures and the PDFs to one commit).
+Release identifier: `hydrocephalus-e694e0e` (binds this table, the workbook, the figures and the PDFs to one commit).
 
 <!-- END GENERATED -->
 
@@ -407,7 +407,7 @@ python3 scripts/assemble.py               # canonical tables + provenance regist
 python3 scripts/build_modifications.py    # per-position chemistry (needs the keys assemble assigns)
 python3 scripts/assemble.py               # re-run: modification rows join the provenance registry
 python3 scripts/check_source_links.py     # resolves every URL in the register; caches the status
-python3 qc/validate.py                    # <!--stat:checks_run-->64<!--/stat--> checks; writes qc/stats.json
+python3 qc/validate.py                    # <!--stat:checks_run-->81<!--/stat--> checks; writes qc/stats.json
 python3 ml/build_analysis_set.py          # aggregate to trial arms
 python3 ml/analyse.py                     # route stratification, LOCO CV, leakage probes, ML_REPORT.md
 python3 scripts/render_docs.py            # regenerates the counts in this file
