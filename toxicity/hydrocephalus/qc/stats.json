@@ -318,7 +318,7 @@
   "grade3_rows": 22,
   "duplexes_checked": 4,
   "oligos_with_sequence": 26,
-  "checks_run": 63,
+  "checks_run": 64,
   "checks_failed": 0,
   "trials_verified_register": 156,
   "trials_by_evaluability": {
@@ -353,6 +353,10 @@
     "rows_with_duration": 739
   },
   "human_in_vitro_rows": 0,
-  "release_inputs_modified": [],
-  "release_id": "hydrocephalus-3d76b77"
+  "release_inputs_modified": [
+    "toxicity/hydrocephalus/ROCKSTEADY_RULES_RECEIPT_2026-10-03.md",
+    "toxicity/hydrocephalus/qc/validate.py",
+    "toxicity/hydrocephalus/scripts/build_oligos.py"
+  ],
+  "release_id": "hydrocephalus-72fc957-dirty"
 }

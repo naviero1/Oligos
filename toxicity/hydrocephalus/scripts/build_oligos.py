@@ -218,9 +218,9 @@ SEQUENCES = {
     "SPAK_siRNA3": ("UAUUUGUGGUAAGGCGCUGTT", "CAGCGCCUUACCACAAAUATT"),
     "SPAK_siRNA4": ("AUCGUAUGUCAUUAAGUUCTT", "GAACUUAAUGACAUACGAUTT"),
 }
-SEQ_SOURCE = ("Nature Communications 2025, PMC12246246, Methods section 'Materials': "
-              "the four SPAK siRNA duplexes are printed in full with sense and "
-              "antisense strands.")
+# Retired: a single sequence-source string cannot be correct for compounds drawn
+# from different papers. sequence_source is now taken per compound from the
+# curated table's own locus field (see the sequence_source expression below).
 
 # Sequences and per-position chemistry recovered from the WHO INN Recommended
 # lists by scripts/parse_inn_sequences.py. The INN entry spells every residue out
@@ -405,7 +405,15 @@ def main():
                               "source prints no sequence string. Parser and its "
                               "validation: scripts/parse_inn_sequences.py."
                               % INN[name]["citation"]) if name in INN
-                             else SEQ_SOURCE if name in SEQUENCES else
+                             # PER-COMPOUND, not a shared constant. A single
+                             # SEQ_SOURCE naming the SPAK paper was applied to
+                             # every curated-sequence compound, so the three
+                             # Gai2 ODNs -- whose sequences come from BMC
+                             # Neuroscience 2007 PMC1855344 -- were credited to
+                             # Nature Communications 2025 PMC12246246. The
+                             # curated table already carried the right locus per
+                             # compound; it was simply ignored here.
+                             else identity_source if name in SEQUENCES else
                              "NOT_REPORTED — no US label prints the base sequence; the "
                              "structure is a figure with no text layer. See "
                              "METHODOLOGY.md open item OI-02."),

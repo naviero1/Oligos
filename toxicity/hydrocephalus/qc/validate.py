@@ -419,6 +419,33 @@ def main():
         check("evaluability agrees with the outcome-record count", not bad,
               "offending: %s" % bad[:5])
 
+    # 11d-septies sequence_source must name the SAME source as the per-position
+    #     rows for that compound. A single shared SEQ_SOURCE constant credited the
+    #     three Gai2 ODNs (BMC Neuroscience 2007, PMC1855344) to the SPAK paper
+    #     (Nature Communications 2025, PMC12246246). measurements.csv and
+    #     modifications.csv had it right; only the oligo roster was wrong, so no
+    #     existing check compared them.
+    src_by_id = {r["source_id"]: r for r in s}
+    mod_src = collections.defaultdict(set)
+    for r in mods:
+        mod_src[r["oligo_name"]].add(r["source_id"])
+    bad = []
+    for r in o:
+        name, ss = r["oligo_name"], r.get("sequence_source", "")
+        pmcs = set(re.findall(r"PMC\d+", ss))
+        if not pmcs or name not in mod_src:
+            continue
+        allowed = set()
+        for sid in mod_src[name]:
+            allowed |= set(re.findall(r"PMC\d+", sid + " "
+                                      + src_by_id.get(sid, {}).get("pmcid", "")
+                                      + " " + src_by_id.get(sid, {}).get("url", "")))
+        if allowed and not (pmcs & allowed):
+            bad.append("%s: sequence_source cites %s but its position rows cite %s"
+                       % (name, sorted(pmcs), sorted(allowed)))
+    check("oligos.sequence_source agrees with the modification rows' source",
+          not bad, "; ".join(bad[:4]))
+
     # 11e endpoint isolation — no other toxicity's material may leak in ----
     #     Requested explicitly: the endpoints are separate deliverables and their
     #     files must not mix. This makes that a check rather than a convention.

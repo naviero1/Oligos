@@ -75,7 +75,7 @@ These are rows, not trials, and not participants. Spontaneous reports carry no e
 | Measurement rows (all evidence classes) | 1342 |
 | Distinct sources | 195 |
 | Per-position chemistry rows | 555 |
-| QC checks run / failed | 63 / 0 |
+| QC checks run / failed | 64 / 0 |
 
 **Endpoint tier** — **A** = hydrocephalus (communicating, obstructive or normal-pressure), ventriculomegaly / ventricular dilatation, shunt or drain placement. **B** = raised intracranial pressure, papilloedema, aseptic or chemical meningitis, arachnoiditis, CSF leak or protein rise, post-lumbar-puncture syndrome.
 
@@ -213,7 +213,7 @@ These are rows, not trials, and not participants. Spontaneous reports carry no e
 | `NCT03225846` | 21 |
 | `NCT02499328` | 19 |
 
-Release identifier: `hydrocephalus-3d76b77` (binds this table, the workbook, the figures and the PDFs to one commit).
+Release identifier: `hydrocephalus-72fc957-dirty` (binds this table, the workbook, the figures and the PDFs to one commit).
 
 <!-- END GENERATED -->
 
