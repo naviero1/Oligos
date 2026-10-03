@@ -607,13 +607,33 @@ def main():
     # ---- release identifier ----------------------------------------------
     #     Different branches and Drive exports held different versions with no key
     #     binding dataset, figures and documents together. The commit is the key.
+    #     The flag must test the INPUTS, not the whole directory. Testing
+    #     everything made `-dirty` unavoidable: a build rewrites stats.json, the
+    #     CSVs, the PDFs and the workbook, so the very act of computing the
+    #     release id dirtied the tree that the id describes. Every shipped
+    #     statistic therefore carried `-dirty` and matched no commit — the
+    #     reproducibility claim the identifier exists to make was never true.
+    #     Dirty now means: a file that FEEDS the build has uncommitted changes.
+    GENERATED = ("qc/stats.json", "data/", "ml/results.json", "ml/ML_REPORT.md",
+                 "ml/analysis_set.csv", "ml/figures/", "notes/", "README.md",
+                 "PHASE2_COMPLIANCE.md", ".pdf", ".xlsx")
+
+    def _is_generated(path):
+        rel = path.split("toxicity/hydrocephalus/", 1)[-1]
+        return any(rel.startswith(g) or rel.endswith(g) for g in GENERATED)
+
     try:
         rev = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=ROOT,
                              capture_output=True, text=True).stdout.strip()
-        dirty = bool(subprocess.run(["git", "status", "--porcelain", "."], cwd=ROOT,
-                                    capture_output=True, text=True).stdout.strip())
+        porcelain = subprocess.run(["git", "status", "--porcelain", "."], cwd=ROOT,
+                                   capture_output=True, text=True).stdout
+        changed = [ln[3:].strip() for ln in porcelain.splitlines() if ln[3:].strip()]
+        inputs_changed = sorted(p_ for p_ in changed if not _is_generated(p_))
+        dirty = bool(inputs_changed)
+        stats["release_inputs_modified"] = inputs_changed[:10]
     except Exception:
         rev, dirty = "", False
+        stats["release_inputs_modified"] = []
     stats["release_id"] = ("hydrocephalus-%s%s" % (rev or "unknown",
                                                    "-dirty" if dirty else ""))
 
