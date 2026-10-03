@@ -108,4 +108,60 @@ Ingestion, promotion and release remain gated on the Tier 0 crosswalk (schema) a
 
 ---
 
-**RECEIPT COMPLETE — RULES READ; §B GRAIN GAP FLAGGED, NOT RE-GRAINED; WORKBOOK MADE AUDITABLE; AWAITING GERMAN ON THE CRITICAL ITEMS AND THE STORE-GOVERNANCE RULE**
+# Addendum — re-confirmation against §K (added 2026-10-03, after the original receipt)
+
+`SCIENTIFIC_RULES.md` gained **§K (German's twelve scientist sign-off gates)** after this receipt
+was first filed. Re-confirmed against §K at commit `8466cd7`. The twelve gates are the generalization
+source for Beebop's MQR; mapping my endpoint against them:
+
+| Gate | Immunotoxicity state | Changes my work? |
+|---|---|---|
+| 1 traceable source + exact location | No workbook column records figure/table/page/cell | Yes — the observation skeleton adds Beebop's source-lineage fields; existing rows can't satisfy it |
+| 2 sequence verified 5′→3′, strand + duplex | Catalog sequences present; Goodchild S1 now supplies duplex partners | Partial — duplex identity now sourceable for one paper |
+| 3 chemistry **by position** | **41 cells populated, but these include figure-referencing prose ("positions 1-3 and 18-20 LNA (per Fig. 1)") and single-position notes — not 41 complete structured maps** | Yes — corrected below |
+| 4 assay context (cell/donor/delivery/dose/time) | Absent at row level; `Assay Context` is one boilerplate string per paper | Yes — this is the condition-grain gap the skeleton targets |
+| 5 raw outcomes retained; binary marked derived | 3 of 33 observations numeric; Yoshida S1 adds ~39 | Yes — raw-value fields now exist in the skeleton |
+| 6 agonist/antagonist/inert separated | Direction populated; 58/142 Unknown; 4 reporter negatives mis-inert | Open escalation to German |
+| 7 human/animal not pooled | 25 animal-only flagged training-ready | Open escalation |
+| 8 TLR7/8/9 not collapsed | Receptor field present | No change |
+| 9 citation/file identity QC | Peacock=Goodchild, Hornung file=Herzner — reproduced and carried per §I | No change |
+| 10 leakage: exact/counterpart/strand/family/paper/series | ODN2006 cross-paper cluster; ~10/142 cross-paper | Open escalation (§G) |
+| 11 LOPO + grouped with uncertainty | Not tested; 0.94 vs 0.65 symptom noted | Gustavo/German |
+| 12 claims no stronger than evidence | Report FAIL in sign-off gates | Governs all my language |
+
+**§K's proposal clause** ("a proposal may be derived from this file and submitted for German's
+ratification … do not stall a proposal for want of a source you need only to assert finality")
+authorizes the **empty observation-layer skeleton** I built this turn
+(`observation_layer/`, conformed to Beebop, zero rows) without waiting on German's primary documents.
+
+## Corrections carried this turn (from Crank, verified)
+
+1. **The 64 is a discovery inventory.** My ClinicalTrials.gov pull of 64 deduplicated
+   catalog-compound trials is a *discovery inventory* — **not** the workbook's adjudication count and
+   **not** 64 validated toxicity trials. The workbook's adjudication is **54 provisionally approved /
+   48 held / 40 support-only**, and "64" appears in zero workbook cells. Any prior phrasing that read
+   as a count is corrected to "discovery inventory."
+2. **41 populated positional entries ≠ 41 complete maps.** Verified in
+   `Oligo_Sequence_Catalog.Modification Positions`: 41 non-empty cells, but they include
+   figure-referencing prose pointers and single-position notes awaiting structured encoding. The
+   count of complete, structured per-position maps is lower and is a case-by-case encoding task
+   (gated). I do not assert a precise complete-map count without that encoding.
+
+## Access route reconciled (Fucini 2012, PMC4047996)
+
+My coordination note classified this "unavailable via one open-access service" (Europe PMC returns
+verbatim *"not open access one"*; its fullTextXML 500s). Crank's dispatch records a working
+article-page route. **Reconciled by testing Crank's route directly:** the article-page bin URL
+returns HTTP 200 but serves an NCBI *"Preparing to download…"* interstitial that resolves to a
+**Google reCAPTCHA bot-challenge** — which a human browser passes and this automated environment
+cannot. So both observations were right and it is **not a proven publisher paywall**: the file is
+retrievable by a human (Oscar) from the article page; it is blocked for automated retrieval here by
+an anti-bot challenge, and it is absent from the PMC open-access subset (no API/FTP route).
+Classification updated from "unavailable" to **"retrievable by human; automated route blocked by
+reCAPTCHA."** Exact URL for Oscar:
+`https://pmc.ncbi.nlm.nih.gov/articles/PMC4047996/` → supplementary data. This remains the single
+file that releases the six held Fucini records (not Goodchild/Valentin).
+
+---
+
+**RECEIPT COMPLETE — RE-CONFIRMED AGAINST §K; OBSERVATION-LAYER SKELETON BUILT (EMPTY, CONFORMED TO BEEBOP); 64-AS-INVENTORY AND 41≠COMPLETE-MAPS CORRECTIONS CARRIED; FUCINI ROUTE RECONCILED TO A RECAPTCHA BOT-CHALLENGE, HANDED TO OSCAR; POPULATION AND RE-GRAINING REMAIN GATED ON GERMAN**

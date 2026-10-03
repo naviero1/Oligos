@@ -40,7 +40,7 @@ in local staging, not committed.
 
 | Source | DOI / PMCID | Barrier (classified) | Why it matters |
 |---|---|---|---|
-| **Fucini 2012 Supp. Table S1** | 10.1089/nat.2011.0334 / PMC4047996 | **In PMC but outside the OA subset** — Europe PMC returns verbatim *"not open access one"*; fullTextXML 500s. Not a confirmed publisher paywall, not a login gate | **Only file that releases already-held records** — the 6 `HOLD_SUPPLEMENT` records are all Fucini, not Goodchild/Valentin |
+| **Fucini 2012 Supp. Table S1** | 10.1089/nat.2011.0334 / PMC4047996 | **RECONCILED 2026-10-03 with Crank's dispatch route** — article-page bin URL returns HTTP 200 but an NCBI "Preparing to download…" interstitial that resolves to a **Google reCAPTCHA bot-challenge**; not in the PMC OA subset (Europe PMC: *"not open access one"*, fullTextXML 500). **Not a proven publisher paywall:** retrievable by a human browser (Oscar), blocked for automated retrieval here. Hand to Oscar: `https://pmc.ncbi.nlm.nih.gov/articles/PMC4047996/` | **Only file that releases already-held records** — the 6 `HOLD_SUPPLEMENT` records are all Fucini, not Goodchild/Valentin |
 | **Burel 2022 Supp. Table S1** | 10.1089/nat.2022.0033 | No PMCID, not OA, no supplement listed | The clinical anchor has 0 sequence rows |
 | Hornung 2005 | 10.1038/nm1191 / PMID 15723075 | No PMCID, not OA | Fills the P08 slot (currently Herzner 2015) |
 

@@ -1,0 +1,34 @@
+observation_id,paper_id,oligo_or_group,blocker_class,what_would_unblock,condition_rows_derivable_now
+OBS-001,P01,ISIS 353512,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-002,P01,ISIS 104838,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-003,P01,ISIS 329993,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-004,P01,ISIS 330012,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-005,P02,CpG 2006 vs M362,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-006,P02,eGFP siRNA unmodified vs 3×2'OMe,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-007,P02,9.2s RNA,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-008,P05,GU-rich vs AU-rich ORNs,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-009,P05,TLR8 ORNs across species,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-010,P06,Nucleotide-specific 2'OMe/2'F variants,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-011,P06,2'F vs 2'OMe,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-012,P07,RNA40 vs RNA42,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-013,P09,RNA63M,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-014,P09,RNA63D/RNA63F,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-015,P10,Antagonists 1–3,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-016,P10,Antagonists 1–3,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-017,P11,Modified vs unmodified RNA,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-018,P12,CpG vs non-CpG ODN,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-019,P13,INH-ODN classes,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-020,P14,207 siRNA screen,AGGREGATE_NARRATIVE,figure digitization or source-defined qualitative per-construct result required,0
+OBS-021,P15,SECA028 modification series,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-022,P15,SECA141 vs SECA166,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-023,P15,SECA083 vs SECA138,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-024,P15,LNA gapmer series,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-025,P16,2'OMe RNA,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-026,P16,2'OMe RNA + CpG ODN,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-027,P17,ss vs ds siRNA,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-028,P17,2' modifications of uridine,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-029,P18,32 siRNA panel,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-030,P18,siRNA27,SINGLE_NO_NUMERIC,qualitative only; needs sourced numeric or explicit qualitative endpoint,0
+OBS-031,P18,siRNA27 naked vs DOTAP,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-032,P19,80 2'OMe gapmer ASOs,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
+OBS-033,P20,CpG ODN A/B/C classes,GROUP_COMPARISON,split into per-construct conditions; each needs its own sourced measurement,0
