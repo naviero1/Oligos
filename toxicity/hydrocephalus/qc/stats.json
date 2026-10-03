@@ -328,7 +328,7 @@
     "identified_only_no_outcome_record": 1,
     "planned_outcome_no_results_posted": 1
   },
-  "trials_marked_extension": 4,
+  "trials_marked_extension": 8,
   "human_outcome_records_by_class": {
     "clinical_trial": 770,
     "pharmacovigilance": 456,
@@ -353,5 +353,5 @@
     "rows_with_duration": 739
   },
   "human_in_vitro_rows": 0,
-  "release_id": "hydrocephalus-6e888e1-dirty"
+  "release_id": "hydrocephalus-673de20-dirty"
 }

@@ -31,7 +31,7 @@ Counted once per trial. Arms, repeated outcomes, papers, labels, case reports, s
 | &nbsp;&nbsp;systematically assessed, no event | 19 |
 | &nbsp;&nbsp;adverse-event-table absence only | 127 |
 | &nbsp;&nbsp;identified, but contributes no outcome record | 1 |
-| Marked as an extension of another listed trial (shared participants) | 4 |
+| Marked as an extension of another listed trial (shared participants) | 8 |
 | Excluded: no compound attribution its own record supports | 6 |
 
 Identifying a trial is not the same as evaluating the endpoint in it: **127 of 156** rest on the absence of a term from an adverse-event table, which is a reported zero under 42 CFR 11.48(a)(4)(ii)(A) but is not a ventricular assessment. Per-trial detail is in `data/trial_register.csv` and workbook sheet `1_trial_register_human`.
@@ -213,7 +213,7 @@ These are rows, not trials, and not participants. Spontaneous reports carry no e
 | `NCT03225846` | 21 |
 | `NCT02499328` | 19 |
 
-Release identifier: `hydrocephalus-6e888e1-dirty` (binds this table, the workbook, the figures and the PDFs to one commit).
+Release identifier: `hydrocephalus-673de20-dirty` (binds this table, the workbook, the figures and the PDFs to one commit).
 
 <!-- END GENERATED -->
 

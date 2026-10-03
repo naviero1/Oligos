@@ -26,6 +26,7 @@ Output: data/trial_register.csv
 Usage:  python3 scripts/build_trial_register.py   (after scripts/assemble.py)
 """
 import csv
+import json
 import os
 import re
 from collections import defaultdict
@@ -35,6 +36,34 @@ ROOT = os.path.dirname(HERE)
 DATA = os.path.join(ROOT, "data")
 
 NCT_RE = re.compile(r"\bNCT\d{8}\b")
+RAW = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                   "toxicity", "hydrocephalus", "sources", "raw")
+
+
+def org_study_ids(ncts):
+    """Map each trial's SPONSOR study code to its NCT id.
+
+    An extension trial usually names its parent by the sponsor's own study code,
+    not by NCT number: NCT03070119's arms read "the parent study 233AS101", and
+    233AS101 is NCT02623699's orgStudyId. A matcher that looks only for NCT
+    strings misses the pair entirely -- which is exactly what happened, and what
+    Beebop's tofersen lead correctly pointed at.
+    """
+    out = {}
+    raw = os.path.join(ROOT, "sources", "raw")
+    for nct in ncts:
+        path = os.path.join(raw, "ctgov_%s.json" % nct)
+        if not os.path.exists(path):
+            continue
+        try:
+            with open(path) as fh:
+                ident = json.load(fh)["protocolSection"]["identificationModule"]
+        except Exception:
+            continue
+        code = (ident.get("orgStudyIdInfo") or {}).get("id", "")
+        if code and len(code) >= 5 and not code.upper().startswith("NCT"):
+            out[code.upper()] = nct
+    return out
 
 
 def main():
@@ -70,6 +99,8 @@ def main():
         if r["study_type"] == "clinical_trial" and r["source_id"].startswith("NCT"):
             rows_by_nct[r["source_id"]].append(r)
 
+    ORG_IDS = org_study_ids(known)
+
     out = []
     for t in trials:
         nct = t["nct_id"]
@@ -100,9 +131,14 @@ def main():
         parents = set()
         for r in rows:
             for blob in (r["arm_description"], r["arm_label"], r["notes"]):
-                for hit in NCT_RE.findall(blob or ""):
+                blob = blob or ""
+                for hit in NCT_RE.findall(blob):
                     if hit != nct and hit in known:
                         parents.add(hit)
+                up = blob.upper()
+                for code, other in ORG_IDS.items():
+                    if other != nct and code in up:
+                        parents.add(other)
 
         out.append(dict(
             nct_id=nct,
