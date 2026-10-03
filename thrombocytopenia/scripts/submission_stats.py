@@ -222,11 +222,13 @@ def stats():
         d["lc_cc_nd"] = fmt(lc.get("cc_nd_derivatives_restricted", 0))
         d["lc_closed"] = fmt(lc.get("closed_no_open_licence", 0))
         d["n_holds"] = fmt(sum(1 for r in SR if r["proposed_hold"] == "PROPOSED_HOLD"))
-    rp = os.path.join(os.path.dirname(BASE), "curation", "rights", "rights_audit.csv")
-    if os.path.exists(rp):
-        R2 = list(csv.DictReader(open(rp, encoding="utf-8")))
-        openable = sum(int(r["n_rows"]) for r in R2 if r["rights_tier"].startswith(("A_", "B_")))
-        tot = sum(int(r["n_rows"]) for r in R2)
+    # Released-row counts come from the ROW-LEVEL ledger, which is the authoritative artifact.
+    # They used to be recomputed from the source-level tiers with an A_/B_ prefix test; that
+    # happened to agree, but only because the source-level tier A still keys off the retired
+    # legacy tag. Deriving both figures from one column makes them agree by construction.
+    if SR:
+        openable = sum(1 for r in SR if r["extracted_data_release"] == "permitted")
+        tot = len(SR)
         d["n_rows_open"] = fmt(openable)
         d["pct_rows_open"] = f"{100*openable//max(tot,1)}"
         d["n_rows_rights_decision"] = fmt(tot - openable)

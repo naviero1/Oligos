@@ -85,6 +85,34 @@ def licence_class(tier, lic, ref=""):
     return "closed_no_open_licence"
 
 
+
+# The source-level tier in rights_audit.csv keys tier A off the LEGACY `public_domain` tag,
+# which was the retired blanket tag that lumped FDA, EMA and USPTO material together. So the
+# EMA mis-classification I corrected at licence_class level survived one layer down, in
+# rights_tier, where 216 EMA rows still read A_public_domain while their own licence_class
+# read ema_reuse_with_attribution. The two columns contradicted each other.
+#
+# Fix: derive the tier from licence_class, which is resolved per publisher and per regulator,
+# so the tier can no longer disagree with the class it summarises. Crank's project-wide rights
+# proposal (CRANK_PROPOSAL_RIGHTS_TAGGING_2026-10-03.md) asks for exactly this shape and for
+# tier B to be split, because CC-BY and CC-BY-NC are materially different postures. The
+# proposed A/B/C/D vocabulary is Oscar's to ratify; the mapping onto it is given per row below
+# so ratification is a rename, not a re-determination.
+TIER_OF_CLASS = {
+    # licence_class                  -> (tier, maps onto proposed tier)
+    "public_domain_us_federal":      ("A_public_domain", "A"),
+    "public_domain_uspto_patent":    ("A_public_domain", "A"),
+    # NOT tier A. EMA material is not a US Government work; reuse, commercial included,
+    # is permitted WITH ATTRIBUTION. That is an open licence posture, not public domain.
+    "ema_reuse_with_attribution":    ("B_reuse_with_attribution", "B"),
+    "cc_permissive":                 ("B_open_licensed", "B"),
+    # Terms exist and they restrict. Kept apart from CC-BY/CC0 per the proposal.
+    "cc_nc_noncommercial":           ("C_restricted_licence", "C"),
+    "cc_nd_derivatives_restricted":  ("C_restricted_licence", "C"),
+    # Nothing declared by the publisher at all, so there is no licence text to reason about.
+    "closed_no_open_licence":        ("D_no_licence_declared", "D"),
+}
+
 def main():
     M = rd(os.path.join(DATA, "measurements.csv"))
     R = {r["source_ref"]: r for r in rd(os.path.join(RIGHTS, "rights_audit.csv"))}
@@ -92,8 +120,10 @@ def main():
     rows = []
     for m in M:
         r = R.get(m["source_ref"], {})
-        tier = r.get("rights_tier", "D_unresolved")
+        source_tier = r.get("rights_tier", "D_unresolved")
         lic = r.get("declared_licence", "")
+        lcls = licence_class(source_tier, lic, m["source_ref"])
+        tier, proposed = TIER_OF_CLASS.get(lcls, ("D_no_licence_declared", "D"))
         rows.append({
             "measurement_id": m["measurement_id"], "oligo_id": m["oligo_id"],
             # Never truncate the join key. Truncating it at 110 chars silently broke the join
@@ -101,15 +131,20 @@ def main():
             # FDA review and registry rows whose licence was in fact resolved.
             "subject_class": m["subject_class"], "source_ref": m["source_ref"],
             "legacy_redistribution": m["redistribution"],
-            "rights_tier": tier, "declared_licence": lic,
-            "licence_class": licence_class(tier, lic, m["source_ref"]),
+            "rights_tier": tier, "proposed_tier": proposed,
+            "source_level_tier": source_tier, "declared_licence": lic,
+            "licence_class": lcls,
             "regulator": regulator_of(m["source_ref"]),
             "licence_basis": REGULATOR_CLASS.get(regulator_of(m["source_ref"]), ("", ""))[1],
             "journal": r.get("journal", ""),
-            "extracted_data_release": ("permitted" if tier.startswith(("A_", "B_"))
+            # Disposition is unchanged by the tier correction: everything with a declared
+            # licence or a regulator-stated position releases on those terms, and the 224 with
+            # nothing declared stay DECISION_REQUIRED awaiting Oscar's ruling. Neither included
+            # nor excluded here.
+            "extracted_data_release": ("permitted" if lcls != "closed_no_open_licence"
                                        else "DECISION_REQUIRED"),
-            "proposed_hold": ("no" if tier.startswith(("A_", "B_")) else "PROPOSED_HOLD"),
-            "hold_reason": ("" if tier.startswith(("A_", "B_"))
+            "proposed_hold": ("no" if lcls != "closed_no_open_licence" else "PROPOSED_HOLD"),
+            "hold_reason": ("" if lcls != "closed_no_open_licence"
                             else "no open licence declared by the publisher; extracted values are "
                                  "facts rather than expression, but the release of facts from a "
                                  "closed-access source is Oscar's call, not this pipeline's"),
