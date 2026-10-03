@@ -4,6 +4,55 @@ Date: 2026-10-03. Endpoint: hepatic. Branch `claude/amazing-galileo-rwiv95`, rea
 `8b9264d`. Answers `CRANK_DELEGATION_2026-10-03.md` item 8 (receipt confirmation) and works the
 **Hepatic** row.
 
+## Revision B — 2026-10-03: re-confirmed against the revised rules, and one claim contracted
+
+**Re-read `SCIENTIFIC_RULES.md` at commit `8466cd7`.** My original receipt was taken against a
+version that did not yet carry **§K, German's twelve scientist sign-off gates**. Re-confirmed
+against §K below. Sections A–J are unchanged from my first reading and §2 stands as written.
+
+**§K changes two things for this endpoint.**
+
+*Gate 12 — "all major mechanistic and clinical claims are no stronger than the evidence
+supports" — caught a claim of mine, and Beebop caught it first.* I wrote that Sewing 2016 gave
+the same seven constructs across mouse in vivo, mouse hepatocyte and human hepatocyte. Recounted
+from my own `research-staging/sewing2016_condition_level.csv`:
+
+| Rows | System | Constructs | Source |
+|---:|---|---|---|
+| 42 | human hepatocyte in vitro | the **7 sequenced** | Fig 8A |
+| 7 | mouse in vivo | the **7 sequenced** | Table 1 |
+| 12 | human hepatocyte in vitro | the **2 unsequenced**, target-named | Fig 8C |
+| 12 | mouse hepatocyte in vitro | the **2 unsequenced**, target-named | Fig 8B |
+
+**No construct appears in all three systems.** The sequenced seven span two systems; the two
+unsequenced constructs span a different two and have no in vivo arm. `SEW16-SSO47` carries no
+numeric in-vivo value (ND — group sacrificed early), so the sequenced set yields **6 complete
+numerical pairs, not 7**. The three-system claim is **withdrawn** wherever I made it, and what
+remains is **6 sequence-linked human-in-vitro ↔ mouse-in-vivo pairs**: a bounded comparison
+proposal, **not demonstrated extrapolation**.
+
+One thing I will not use to soften this: the source *does* test the tool SSOs in mouse
+hepatocytes, in Figures 2 and 7. I have **not staged or read those values**, so they support
+nothing I have written. If staged they would make a third system available for the sequenced
+seven — that is a future acquisition, not a defence of the claim as published.
+
+*Gate 10 — leakage across exact-sequence, counterpart, strand, family, paper and experimental
+series.* This sharpens the `paper_group` question already raised in B1 of
+`ROCKSTEADY_TO_BEEBOP_AND_CRANK_2026-10-03.md`: the gate names **experimental-series** leakage
+explicitly, and Sewing's Table 1 is the same 5 × 15 mg/kg series as Hagedorn's. No model
+evaluation of these rows before German's grouping ruling.
+
+Gates 1–5, 7 and 9 are already satisfied by the staging as built (traceable source location per
+row; sequences verified 5′→3′ with strand role; chemistry by position; assay context; raw values
+retained with `curator_label = NOT_ASSIGNED_pending_German`; human and animal in separate lanes;
+file identities checksummed). Gates 6, 8, 11 do not yet bite — no labels, no composites and no
+model.
+
+**Also noted from §K:** *"A proposal may be derived from this file and submitted for German's
+ratification… Do not stall a proposal for want of a source you need only in order to assert
+finality."* I had been treating the grade rubric and the grouping question as fully blocked. They
+are not: I may submit **derived proposals** for ratification, and will, rather than waiting.
+
 ## 1. Receipt
 
 **Read in full: `SCIENTIFIC_RULES.md` and `CRANK_DELEGATION_2026-10-03.md`.** I had not seen

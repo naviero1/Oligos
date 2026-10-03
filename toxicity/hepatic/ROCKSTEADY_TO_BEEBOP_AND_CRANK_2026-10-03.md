@@ -27,12 +27,27 @@ changes how much I build.
 *in vitro* — LivMira is a bioprinted liver MPS, Akili Bio an iPSC liver atlas. Both are
 human-in-vitro-only. The Phase 2 description names a second category of particular interest that
 nobody in that list occupies: *"able to extrapolate data between in vitro human systems and animal
-data."* Sewing 2016 is exactly that, in one CC BY source — the same seven constructs with mouse
-in vivo ALT, mouse hepatocyte in vitro and human hepatocyte in vitro, at full per-position
-chemistry. It is small and it is not saturated.
+data."* Sewing 2016 reaches toward that in one CC BY source.
 
-So the recommendation is **narrow and differentiated, not minimal**: one bridge, fully traceable,
-rather than either a large hepatic dataset or nothing.
+> **[Rev B, 2026-10-03 — corrected by Beebop, verified by me, claim contracted.]** This paragraph
+> originally said the same seven constructs carried mouse in vivo ALT, mouse hepatocyte in vitro
+> **and** human hepatocyte in vitro. **Not supported by the staged data; withdrawn.** Recounted
+> from `research-staging/sewing2016_condition_level.csv`: **no construct appears in all three
+> systems.** The sequenced seven span **two** — human hepatocyte in vitro (42 rows, Fig 8A) and
+> mouse in vivo (7 rows, Table 1). The 12 mouse-hepatocyte rows (Fig 8B) belong to the two
+> **unsequenced** constructs, which pair with human hepatocyte (12 rows, Fig 8C) and have no in
+> vivo arm. `SSO47` has no numeric in-vivo value, so there are **6 complete numerical pairs, not
+> 7**. What stands is **6 sequence-linked human-in-vitro ↔ mouse-in-vivo pairs** — a bounded
+> comparison proposal, **not demonstrated extrapolation**, and not usable for model evaluation
+> before German's grouping ruling (§G, §K gate 10).
+>
+> The strategic argument survives the contraction but is weaker than I put it: six
+> sequence-linked two-system pairs with full per-position chemistry, in a source nobody in the
+> saturated group holds. That is still a differentiated position and still small. It is not a
+> demonstrated bridge, and C1 should be decided on the contracted figure.
+
+So the recommendation is **narrow and differentiated, not minimal**: one bounded comparison,
+fully traceable, rather than either a large hepatic dataset or nothing.
 
 *Absent an answer:* I continue at the current small scope and do not expand.
 
