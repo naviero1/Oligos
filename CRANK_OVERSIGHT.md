@@ -218,7 +218,9 @@ fabrication, always.**
 | D1 | Harmonized cross-endpoint schema and data dictionary | Oscar | **open — blocking** |
 | D2 | Minimum Qualified Record floor ratified | Oscar + German | **open — blocking** |
 | D3 | Authoritative CNS lineage after crosswalk | Oscar | open |
-| D4 | Open-licence terms; NC clause on 758 rows; 224 rows | Oscar | open |
+| D4 | Open-licence terms; NC clause on 758 rows; 224 rows | Oscar | **partly resolved 2026-10-03** — see `CRANK_DECISIONS_2026-10-03.md`. Facts-not-expression basis adopted project-wide; PMDA facts-only; TGA retry then stop; Elsevier grant recorded verbatim as `conditional_publisher_grant`. Per-row holds still pending the two-part rights audit |
+| D8 | **Phosphorothioate stereochemistry — are stereoisomers distinct constructs, and may they be pooled?** | **German** | **open — blocks GSRS ingestion and the schema's chemistry representation** |
+| D9 | **Does DEVOTE (NCT04089566) pass all seven clean-negative gates?** | **German** | **open — blocks the clinical classifier German has frozen** |
 | D5 | Kidney MSR066 — favourable renal result as confirmed negative | German | open |
 | D6 | Thrombocytopenia clinical sequence classifier (blocked: no clean sequence-linked clinical negatives) | German | open |
 | D7 | Shared trial/extension counting convention across endpoints | Oscar + German | open |
