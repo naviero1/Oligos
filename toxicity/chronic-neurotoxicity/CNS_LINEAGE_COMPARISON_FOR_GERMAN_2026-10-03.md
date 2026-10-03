@@ -80,6 +80,44 @@ with a sequence) and A's chronic table the intersection is **7**, not 144. So
 | unique to B | **1,535** |
 | shared | 150 |
 
+### On chronic neurotoxicity specifically, A strictly dominates
+
+B's chronic table holds 13 records carrying **7** distinct canonical sequences
+(the other 6 are `NOT_REPORTED`). A's chronic table holds 573 records carrying
+**276**. **All 7 of B's chronic sequences are present in A's chronic set — B is a
+strict sequence-subset of A on this endpoint.**
+
+So for the endpoint that actually carries priority, choosing A loses **zero**
+sequences, and choosing B loses 269. The 144/150 overlap figure obscures this
+because it is dominated by the acute partition. This is the single cleanest fact
+I can offer G-1, and it is one-directional.
+
+### The 150 is a candidate-link count, not a merge basis — measured
+
+§G requires that "shared-sequence grouping must **not** merge chemically
+distinct administered constructs. Reference identity is not experimental-batch
+identity." That is not hypothetical here:
+
+| of the 150 shared canonical sequences | count |
+|---|---:|
+| mapping to **more than one** distinct as-printed construct on B's side | **11** |
+| whose `sugar_modifications` sets **disagree between the lineages** | **9** |
+| carrying **more than one chemistry inside A alone** | **5** |
+
+Worked example — `ATTTCCAAATTCACTT` is one base sequence and three constructs in
+A (`LNA;DNA_gap`, `LNA;DNA_gap;2'-OMe_single_gap_substitution`,
+`LNA;DNA_gap;5'-cyclopropylene_DNA_single_gap_substitution`) against one in B.
+`ATCACTGATTTTGAAGTCCC` is `2'-MOE;DNA_gap;5-methylcytosine` **and** `LNA;DNA_gap`
+in A, `LNA;DNA_gap` only in B — two different backbone chemistries behind one
+sequence string.
+
+**Also: the two lineages share zero `oligo_id` strings.** The identifier
+namespaces are completely disjoint, so canonical sequence is the *only* available
+join key — which is precisely why the 144/150 figure keeps being read as stronger
+than it is. Any crosswalk must carry these links as **candidate and
+unadjudicated**, which is also what the Tier 0 instruction requires. I have not
+merged anything.
+
 A structural point worth German's attention, and a defect in A it exposes.
 **A's partition file names do not correspond to endpoint domains.** Only 290 of
 the 2,393 rows in A's `chronic-neurotoxicity.measurements.csv` carry
@@ -111,6 +149,31 @@ lineage and would be lost outright by a straight choice.
 | species represented | **5** — mouse 1,014, rat 622, monkey 239, human 661, sheep 2 | **3** — human 2,375, rat 1,826, mouse 227 |
 | **non-human primate rows** | **239** | **0** |
 
+### Row counts flatter both lineages. The molecule counts are the real sample size.
+
+Added after reading Crank's 2026-10-03 oversight audit, which reports the
+project-wide figure "the real sample size is ~25 molecules, not thousands of
+rows". Its CNS numbers reproduce exactly on my recomputation, and they correct
+the row-count framing above — including in my own favour, so I state them
+plainly:
+
+| | A — tijib6 | B — k394sz (acute) |
+|---|---:|---:|
+| human in-vitro **rows** | 116 | 34 |
+| distinct oligos behind those rows | 39 | 13 |
+| …of which graded | 39 | 9 |
+| **…of which graded AND sequence-bearing** | **13** | **7** |
+
+So the honest statement of A's human-laboratory advantage is **13 molecules
+against 7**, not 116 rows against 34. A 3.4× row advantage is a 1.9× molecule
+advantage, and 13 is a very small training set by any standard. A's human
+*clinical* mass is similarly concentrated: 545 rows rest on 30 oligos, only 10
+of them sequence-bearing.
+
+Neither lineage has a human-laboratory sample size that supports a sequence-level
+model. That is a finding about the field, not about either curation, and it
+belongs in the narrative's required discussion of the public-data gap.
+
 Two things follow, and they point in opposite directions.
 
 **In A's favour.** The Challenge prioritises human laboratory evidence, and B's
@@ -126,6 +189,22 @@ sequence-to-toxicity model, B is the only lineage with enough distinct sequences
 to attempt it; A's 282 sequences across 2,538 rows will not support it. B also
 leaves its in-vitro continuous readouts explicitly `not_graded` rather than
 grading them — see §4, where that turns out to be the §E-compliant choice.
+
+**But B's sequence advantage is entirely in the deprioritised endpoint.** All
+**1,535** of B's unique sequences are present in its **acute** partition and
+**none** appears in its chronic or hydrocephalus partitions — 100%, not a
+majority. And **2,006 of B's 2,081 acute rows (96%) come from a single
+`source_id`, `H1`.** The Phase 2 brief states acute neurotoxicity is explicitly
+lower priority and carried only as a supporting module, and Crank's convergence
+plan P4 states it "does not receive breadth budget".
+
+So for the endpoints that actually carry priority, the roster comparison
+inverts: on **chronic neurotoxicity** B holds **13** oligos and A holds **573**.
+B's 6× sequence lead is a lead in one large single-source screen of the
+lowest-priority endpoint. This does not make that screen worthless — held at
+near-constant chemistry it is the best available substrate for isolating
+sequence effects — but it is not an argument about chronic neurotoxicity or
+hydrocephalus, and it should not be weighed as one.
 
 A's evidence breakdown, for completeness (`evidence_class`, 12 values):
 animal_invivo 1,696 · human_trial_registry 196 · animal_laboratory 181 ·
@@ -195,7 +274,10 @@ in-vitro grades are ruled on.
 **If A is chosen, B's unique contribution is lost:**
 
 - 1,535 sequences — with them, any realistic prospect of a sequence-level
-  predictive model, since A retains only 282.
+  predictive model, since A retains only 282. Note what this loss is and is not:
+  all 1,535 sit in the **acute** partition, 96% of whose rows come from one
+  source, and acute is the endpoint the brief deprioritises. On chronic
+  neurotoxicity itself B holds 13 oligos against A's 573.
 - 2,341 human clinical rows drop to 545.
 - B's acute partition (2,081 rows) as a *partitioned* endpoint. A retains 931
   acute-domain rows of its own, so this is a loss of B's specific acute corpus
