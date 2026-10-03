@@ -232,7 +232,7 @@
     "oligo_class",
     "backbone_chemistry"
    ],
-   "auc": 0.879,
+   "auc": 0.893,
    "n_scored": 519
   },
   {
@@ -289,7 +289,7 @@
     "oligo_class",
     "backbone_chemistry"
    ],
-   "auc": 0.492,
+   "auc": 0.517,
    "n_scored": 519
   }
  ],

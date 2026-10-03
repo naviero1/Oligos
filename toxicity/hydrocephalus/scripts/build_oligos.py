@@ -468,10 +468,27 @@ def main():
                 modality="NOT_REPORTED", target_gene="NOT_REPORTED",
                 indication="; ".join(conds)[:160] or "NOT_REPORTED",
                 developer="NOT_REPORTED", max_phase="NOT_REPORTED",
-                route_of_administration=route, length_nt="NOT_REPORTED",
-                length_nt_basis="NOT_REPORTED",
-                sequence_5to3_asprinted="NOT_REPORTED", sequence_base="NOT_REPORTED",
-                sequence_source="NOT_REPORTED", backbone_chemistry="NOT_REPORTED",
+                # Compounds auto-added from the trial registry were hardcoded to
+                # NOT_REPORTED here, so a sequence recovered from the WHO INN
+                # lists never reached them: apatorsen, danvatirsen, donidalorsen
+                # and olezarsen all had a parsed sequence sitting unused in
+                # data/inn_sequences.json. Consult INN first.
+                route_of_administration=route,
+                # NB the loop variable here is `drug`, not `name`: an earlier
+                # version of this fix keyed on `name`, which resolved to a stale
+                # outer-scope value and silently matched nothing.
+                length_nt=(str(INN[drug]["length_nt"]) if drug in INN
+                           else "NOT_REPORTED"),
+                length_nt_basis=("counted_from_WHO_INN_chemical_name" if drug in INN
+                                 else "NOT_REPORTED"),
+                sequence_5to3_asprinted=(INN[drug]["sequence_base"] if drug in INN
+                                         else "NOT_REPORTED"),
+                sequence_base=(INN[drug]["sequence_base"].replace("U", "T")
+                               if drug in INN else "NOT_REPORTED"),
+                sequence_source=("WHO INN List %s, deterministic parse of the "
+                                 "chemical name" % INN[drug]["inn_list"]
+                                 if drug in INN else "NOT_REPORTED"),
+                backbone_chemistry="NOT_REPORTED",
                 sugar_modifications="NOT_REPORTED", modification_pattern="NOT_REPORTED",
                 gapmer_shape="NOT_APPLICABLE", molecular_formula="NOT_REPORTED",
                 molecular_weight="NOT_REPORTED", conjugate="NOT_REPORTED",

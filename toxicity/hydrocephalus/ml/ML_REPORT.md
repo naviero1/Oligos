@@ -68,7 +68,7 @@ split leaks the compound across folds and inflates the score.
 |---|---:|
 | Route only | 0.889 |
 | **Route + indication** | **0.910** |
-| Route + indication + chemistry | 0.879 |
+| Route + indication + chemistry | 0.893 |
 | *Leakage probe: trial identity only* | *0.724* |
 | *Leakage probe: compound identity only* | *0.098* |
 
@@ -115,7 +115,7 @@ that axis removed (18 positive arms):
 |---|---:|---:|
 | Route only | 0.889 | 0.650 |
 | Route + indication | 0.910 | 0.606 |
-| Route + indication + chemistry | 0.879 | 0.492 |
+| Route + indication + chemistry | 0.893 | 0.517 |
 
 The headline 0.910 falls to 0.606, and the chemistry model falls below
 chance. So the model was substantially predicting *was this arm lumbar-punctured*
@@ -131,7 +131,7 @@ as a covariate; hypothesis generation for CSF-dynamics monitoring in intrathecal
 programmes.
 
 **Not supported:** sequence-to-toxicity prediction across the roster
-(13 of 53 compounds carry a sequence); within-compound dose–response for
+(26 of 53 compounds carry a sequence); within-compound dose–response for
 tier A; in vitro-to-in vivo extrapolation beyond the single compound that carries both (2 in vitro rows in the release); any causal claim about an individual compound, given §2.
 
 ## Reproducing

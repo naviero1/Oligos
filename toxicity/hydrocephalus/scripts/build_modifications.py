@@ -116,11 +116,14 @@ SEQUENCED_NOTE = (
     "it is recorded as base T with the sugar unstated.")
 
 # Compounds deliberately excluded, with the reason carried into the audit output.
+# The four morpholinos were excluded here for two releases on the grounds that
+# their length was "ambiguous from the molecular formula". That was true and
+# irrelevant: the length never had to be derived from the formula, because the
+# WHO INN entry PRINTS the base sequence outright, e.g.
+# (G-T-T-G-C-C-T-C-C-G-G-T-T-C-T-G-A-A-G-G-T-G-T-T-C) for golodirsen. They are
+# now parsed from that printed run and come out at their known lengths
+# (eteplirsen 30, golodirsen 25, casimersen 22, viltolarsen 21).
 EXCLUDED = {
-    "eteplirsen": "morpholino; length ambiguous from formula (P = n vs n-1 across class)",
-    "golodirsen": "morpholino; length ambiguous from formula",
-    "viltolarsen": "morpholino; length ambiguous from formula",
-    "casimersen": "morpholino; length ambiguous from formula",
     "valeriasen": ("sequence and per-position chemistry exist in the source's Extended "
                    "Data Table 1 but are published as an image whose bold/underline "
                    "2'-MOE encoding does not survive text extraction; not transcribed "
@@ -159,9 +162,19 @@ def main():
                     "  label: %s\n  INN  : %s" % (name, label_map, inn_map))
             report.append("%-24s label-motif map and INN map AGREE (%d positions)"
                           % (name, n))
-        for pos in rec["positions"]:
+        strands = [("sense_passenger" if rec.get("strand_kind") == "duplex"
+                    else "single_strand", rec["positions"])]
+        if rec.get("antisense_positions"):
+            # Both strands of a duplex are administered material. Recording only
+            # the sense strand would misstate what was given to the patient, and
+            # the Challenge asks for the location of all modifications in each
+            # oligo. The two strands' cores are reverse-complement verified by
+            # scripts/parse_inn_sequences.py before either is emitted.
+            strands.append(("antisense_guide", rec["antisense_positions"]))
+        for strand_label, strand_positions in strands:
+          for pos in strand_positions:
             rows.append(dict(
-                oligo_id=o["oligo_id"], oligo_name=name, strand="single_strand",
+                oligo_id=o["oligo_id"], oligo_name=name, strand=strand_label,
                 position_5to3=pos["position_5to3"], nucleobase=pos["nucleobase"],
                 sugar_chemistry=pos["sugar_chemistry"],
                 base_modification=pos["base_modification"],

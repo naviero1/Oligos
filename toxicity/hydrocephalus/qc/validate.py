@@ -250,24 +250,46 @@ def main():
     bad = sorted({r["oligo_id"] for r in mods if r["oligo_id"] not in oid})
     check("FK modifications.oligo_id -> oligos", not bad, "orphans: %s" % bad[:4])
 
-    by_oligo = collections.defaultdict(list)
+    # STRAND-AWARE. A duplex siRNA contributes two strands, each numbered 1..n,
+    # so grouping positions by oligo_id alone made a correct duplex look like a
+    # broken single strand. Group by (oligo, strand); the length and sequence
+    # checks then compare the SENSE/single strand, which is what oligos.length_nt
+    # and oligos.sequence_5to3_asprinted describe.
+    PRIMARY = {"single_strand", "sense_passenger", "antisense_guide"}
+    by_strand = collections.defaultdict(list)
     for r in mods:
-        by_oligo[r["oligo_id"]].append(int(r["position_5to3"]))
-    bad = [k for k, v_ in by_oligo.items() if sorted(v_) != list(range(1, len(v_) + 1))]
-    check("modifications positions are contiguous 1..n", not bad,
-          "offending oligo_ids: %s" % bad[:4])
+        by_strand[(r["oligo_id"], r["strand"])].append(int(r["position_5to3"]))
+    bad = ["%s/%s" % k for k, v_ in by_strand.items()
+           if sorted(v_) != list(range(1, len(v_) + 1))]
+    check("modifications positions are contiguous 1..n within each strand",
+          not bad, "offending: %s" % bad[:4])
+
+    bad = sorted({r["strand"] for r in mods if r["strand"] not in PRIMARY})
+    check("vocabulary: modifications.strand", not bad, "unexpected: %s" % bad)
+
+    # Every duplex must carry BOTH strands: a half-recorded duplex misstates the
+    # administered material.
+    duplex_oligos = {k[0] for k in by_strand if k[1] == "sense_passenger"}
+    bad = sorted(d for d in duplex_oligos
+                 if (d, "antisense_guide") not in by_strand)
+    check("every duplex records both strands", not bad, "sense only: %s" % bad[:4])
 
     lengths = {r["oligo_id"]: r["length_nt"] for r in o}
-    bad = ["%s: %d rows vs length_nt=%s" % (k, len(v_), lengths.get(k))
-           for k, v_ in by_oligo.items() if lengths.get(k) != str(len(v_))]
-    check("modifications row count equals oligos.length_nt", not bad, "; ".join(bad[:4]))
+    primary = {k: v_ for k, v_ in by_strand.items()
+               if k[1] in ("single_strand", "sense_passenger")}
+    bad = ["%s: %d rows vs length_nt=%s" % (k[0], len(v_), lengths.get(k[0]))
+           for k, v_ in primary.items() if lengths.get(k[0]) != str(len(v_))]
+    check("modifications row count equals oligos.length_nt (primary strand)",
+          not bad, "; ".join(bad[:4]))
 
     allowed_base = {"A", "C", "G", "T", "U", "NOT_REPORTED"}
     bad = sorted({r["nucleobase"] for r in mods if r["nucleobase"] not in allowed_base})
     check("vocabulary: modifications.nucleobase", not bad, "unexpected: %s" % bad[:6])
 
+    # cEt (constrained ethyl), 2'-F and RNA_2prime_OH entered with the WHO INN
+    # duplex and conjugated-ASO parses; morpholino with the printed base runs.
     allowed_sugar = {"2'-MOE", "DNA_2prime_deoxy", "LNA", "morpholino", "2'-OMe",
-                     "2'-F", "RNA_2prime_OH", "NOT_REPORTED"}
+                     "cEt", "2'-F", "RNA_2prime_OH", "NOT_REPORTED"}
     bad = sorted({r["sugar_chemistry"] for r in mods
                   if r["sugar_chemistry"] not in allowed_sugar})
     check("vocabulary: modifications.sugar_chemistry", not bad, "unexpected: %s" % bad[:6])
@@ -281,7 +303,8 @@ def main():
     seqs = {r["oligo_id"]: r["sequence_5to3_asprinted"] for r in o}
     bad = []
     built_by = collections.defaultdict(list)
-    for r in sorted((x for x in mods if x["nucleobase"] != "NOT_REPORTED"),
+    for r in sorted((x for x in mods if x["nucleobase"] != "NOT_REPORTED"
+                     and x["strand"] in ("single_strand", "sense_passenger")),
                     key=lambda x: (x["oligo_id"], int(x["position_5to3"]))):
         built_by[r["oligo_id"]].append(r["nucleobase"])
     for k, bases in built_by.items():

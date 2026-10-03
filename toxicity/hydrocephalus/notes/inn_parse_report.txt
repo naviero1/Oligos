@@ -16,3 +16,43 @@ elsunersen     20 nt  PS 13  PO 6  (no independent check available)
                CCACGACATATTTTTCUACA
 volanesorsen   20 nt  PS 19  PO 0  (no independent check available)
                AGCUUCTTGTCCAGCUUUAU
+apatorsen      20 nt  PS 19  PO 0  (no independent check available)
+               GGGACGCGGCGCTCGGUCAU
+alicaforsen    FAILED — no chemical name in rl79
+danvatirsen    16 nt  PS 15  PO 0  (no independent check available)
+               CUATTTGGATGTCAGC
+bepirovirsen   FAILED — no chemical name in rl85
+donidalorsen   20 nt  PS 15  PO 4  (no independent check available)
+               UGCAAGTCTCTTGGCAAACA
+olezarsen      20 nt  PS 19  PO 0  (no independent check available)
+               AGCUUCTTGTCCAGCUUUAU
+sepofarsen     17 nt  PS 16  PO 0  (no independent check available)
+               GGUGGAUCACGAGUUCA
+ultevursen     21 nt  PS 20  PO 0  (no independent check available)
+               AGCUUCGGAGAAAUUUAAAUC
+patisiran      21 nt  PS  0  PO 20  (no independent check available)
+patisiran      DUPLEX 21+21 nt, cores reverse-complement VERIFIED (2-nt 3' overhang on both strands)
+                 antisense AUGGAAUACUCUUGGUUACTT
+               GUAACCAAGAGUAUUCCAUTT
+fitusiran      FAILED (duplex) — duplex entry has no joiner between the two strands
+givosiran      FAILED (duplex) — duplex entry has no joiner between the two strands
+inclisiran     FAILED (duplex) — duplex entry has no joiner between the two strands
+lumasiran      21 nt  PS  2  PO 18  (no independent check available)
+lumasiran      DUPLEX 21+23 nt, cores reverse-complement VERIFIED (21+23: antisense = revcomp(sense) + 2-nt 3' overhang)
+                 antisense UAUAUUUCCAGGAUGAAAGUCCA
+               GACUUUCAUCCUGGAAAUAUA
+vutrisiran      1 nt  PS  0  PO 0  (no independent check available)
+               U
+nedosiran      FAILED (duplex) — duplex cores are not reverse complements under any known overhang convention (sense AUGUUGUCCUUUUUAUCUGAGCAGCCGAAAGGCUGC / antisense U)
+golodirsen     25 nt  PS  0  PO 0  (no independent check available)
+golodirsen     MORPHOLINO 25 nt from the entry's printed base run; no molecular formula in entry
+               GTTGCCTCCGGTTCTGAAGGTGTTC
+casimersen     22 nt  PS  0  PO 0  (no independent check available)
+casimersen     MORPHOLINO 22 nt from the entry's printed base run; no molecular formula in entry
+               CAATGCCATCCTGGAGTTCCTG
+viltolarsen    21 nt  PS  0  PO 0  (no independent check available)
+viltolarsen    MORPHOLINO 21 nt from the entry's printed base run; no molecular formula in entry
+               CCTCCGGTTCTGAAGGTGTTC
+eteplirsen     30 nt  PS  0  PO 0  (no independent check available)
+eteplirsen     MORPHOLINO 30 nt from the entry's printed base run; no molecular formula in entry
+               CTCCAACATCAAGGAAGATGGCATTTCTAG

@@ -1,10 +1,10 @@
 {
   "n_measurements": 1342,
   "n_oligos": 53,
-  "n_sources": 188,
-  "n_modification_positions": 256,
-  "n_oligos_with_position_map": 13,
-  "n_oligos_with_length": 13,
+  "n_sources": 195,
+  "n_modification_positions": 555,
+  "n_oligos_with_position_map": 26,
+  "n_oligos_with_length": 26,
   "n_oligos_with_measurements": 47,
   "by_subject_class": {
     "animal_in_vitro": 2,
@@ -97,7 +97,7 @@
     "pharmacovigilance_api": 1,
     "primary_fulltext": 4,
     "registry_results": 155,
-    "regulatory_primary": 25
+    "regulatory_primary": 32
   },
   "rows_per_source": {
     "FAERS_openFDA": 456,
@@ -282,12 +282,19 @@
     "NCT04956289": 1,
     "NCT05085964": 1,
     "NCT05686551": 1,
+    "WHO_INN_List_71": 0,
+    "WHO_INN_List_72": 0,
     "WHO_INN_List_74": 0,
     "WHO_INN_List_75": 0,
     "WHO_INN_List_77": 0,
+    "WHO_INN_List_79": 0,
+    "WHO_INN_List_80": 0,
     "WHO_INN_List_81": 0,
     "WHO_INN_List_83": 0,
-    "WHO_INN_List_85": 0
+    "WHO_INN_List_85": 0,
+    "WHO_INN_List_86": 0,
+    "WHO_INN_List_87": 0,
+    "WHO_INN_List_89": 0
   },
   "multi_row_event_clusters": {
     "L1-EVT-01": 5,
@@ -310,8 +317,8 @@
   "n_oligo_records": 53,
   "grade3_rows": 22,
   "duplexes_checked": 4,
-  "oligos_with_sequence": 13,
-  "checks_run": 61,
+  "oligos_with_sequence": 26,
+  "checks_run": 63,
   "checks_failed": 0,
   "trials_verified_register": 156,
   "trials_by_evaluability": {
@@ -337,8 +344,8 @@
   "trial_outcome_records": 770,
   "human_subset": {
     "compounds": 41,
-    "with_sequence": 6,
-    "with_position_map": 6,
+    "with_sequence": 19,
+    "with_position_map": 19,
     "with_purity": 0,
     "with_conjugate": 0,
     "rows": 1332,
@@ -346,5 +353,5 @@
     "rows_with_duration": 739
   },
   "human_in_vitro_rows": 0,
-  "release_id": "hydrocephalus-20fc9bb-dirty"
+  "release_id": "hydrocephalus-6e888e1-dirty"
 }

@@ -57,8 +57,8 @@ These are rows, not trials, and not participants. Spontaneous reports carry no e
 | | Count |
 |---|---:|
 | Compounds (excluding 2 non-compound placeholders) | **51** |
-| &nbsp;&nbsp;with a published sequence | 13 |
-| &nbsp;&nbsp;appearing in human rows, with a sequence | 6 |
+| &nbsp;&nbsp;with a published sequence | 26 |
+| &nbsp;&nbsp;appearing in human rows, with a sequence | 19 |
 | Tier-A positives, ventricular axis, real compounds | 54 |
 | Tier-A ASSESSED measured negatives | 560 |
 | Tier-A spontaneous-report zeros (no denominator, NOT negatives) | 176 |
@@ -73,9 +73,9 @@ These are rows, not trials, and not participants. Spontaneous reports carry no e
 | | Count |
 |---|---:|
 | Measurement rows (all evidence classes) | 1342 |
-| Distinct sources | 188 |
-| Per-position chemistry rows | 256 |
-| QC checks run / failed | 61 / 0 |
+| Distinct sources | 195 |
+| Per-position chemistry rows | 555 |
+| QC checks run / failed | 63 / 0 |
 
 **Endpoint tier** — **A** = hydrocephalus (communicating, obstructive or normal-pressure), ventriculomegaly / ventricular dilatation, shunt or drain placement. **B** = raised intracranial pressure, papilloedema, aseptic or chemical meningitis, arachnoiditis, CSF leak or protein rise, post-lumbar-puncture syndrome.
 
@@ -190,15 +190,15 @@ These are rows, not trials, and not participants. Spontaneous reports carry no e
 | Human subset | Count | of |
 |---|---:|---:|
 | Compounds appearing in human rows | 41 | 41 |
-| &nbsp;&nbsp;with a published sequence | 6 | 41 |
-| &nbsp;&nbsp;with a position-resolved chemistry map | 6 | 41 |
+| &nbsp;&nbsp;with a published sequence | 19 | 41 |
+| &nbsp;&nbsp;with a position-resolved chemistry map | 19 | 41 |
 | &nbsp;&nbsp;with a purity value | 0 | 41 |
 | &nbsp;&nbsp;with a conjugate stated | 0 | 41 |
 | Human rows with a numeric dose | 0 | 1332 |
 | Human rows with an exposure duration | 739 | 1332 |
 | Human in vitro / ex vivo rows | 0 | &mdash; |
 
-**Largest sources** (top 10 of 188)
+**Largest sources** (top 10 of 195)
 
 | `source_id` | Rows |
 |---|---:|
@@ -213,7 +213,7 @@ These are rows, not trials, and not participants. Spontaneous reports carry no e
 | `NCT03225846` | 21 |
 | `NCT02499328` | 19 |
 
-Release identifier: `hydrocephalus-20fc9bb-dirty` (binds this table, the workbook, the figures and the PDFs to one commit).
+Release identifier: `hydrocephalus-6e888e1-dirty` (binds this table, the workbook, the figures and the PDFs to one commit).
 
 <!-- END GENERATED -->
 

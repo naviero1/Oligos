@@ -1,5 +1,5 @@
 {
-  "checked_on": "2026-10-01",
+  "checked_on": "2026-10-03",
   "doi_tally": {
     "ok": 7
   },
@@ -69,10 +69,22 @@
     }
   },
   "n_dois": 7,
-  "n_urls": 188,
+  "n_urls": 195,
   "results": {
     "https://api.fda.gov/drug/event.json": {
       "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl71.pdf": {
+      "checked": "2026-10-03",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl72.pdf": {
+      "checked": "2026-10-03",
       "final_url": "",
       "status": 200,
       "verdict": "ok"
@@ -95,6 +107,18 @@
       "status": 200,
       "verdict": "ok"
     },
+    "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl79.pdf": {
+      "checked": "2026-10-03",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl80.pdf": {
+      "checked": "2026-10-03",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
     "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl81.pdf": {
       "checked": "2026-09-04",
       "final_url": "",
@@ -109,6 +133,24 @@
     },
     "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl85.pdf": {
       "checked": "2026-09-04",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl86.pdf": {
+      "checked": "2026-10-03",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl87.pdf": {
+      "checked": "2026-10-03",
+      "final_url": "",
+      "status": 200,
+      "verdict": "ok"
+    },
+    "https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/rl89.pdf": {
+      "checked": "2026-10-03",
       "final_url": "",
       "status": 200,
       "verdict": "ok"
@@ -1201,6 +1243,6 @@
     }
   },
   "tally": {
-    "ok": 188
+    "ok": 195
   }
 }
