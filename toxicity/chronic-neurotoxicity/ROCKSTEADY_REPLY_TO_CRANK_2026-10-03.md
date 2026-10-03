@@ -11,6 +11,13 @@ from `origin/claude/crank-phase2-oversight`.
 | **Posture** | I accept the breadth posture and that it is not reopened. Everything below is inside it. |
 | **Companion files** | [rules receipt](./ROCKSTEADY_RULES_RECEIPT_2026-10-03.md) · [lineage comparison for German](./CNS_LINEAGE_COMPARISON_FOR_GERMAN_2026-10-03.md) · [hydrocephalus row](../hydrocephalus/ROCKSTEADY_RULES_RECEIPT_2026-10-03.md) · [reply to Beebop](./ROCKSTEADY_REPLY_TO_BEEBOP_2026-10-03.md) |
 
+> **Corrected 2026-10-03 — see [`ROCKSTEADY_CORRECTIONS_2026-10-03.md`](./ROCKSTEADY_CORRECTIONS_2026-10-03.md).**
+> Five figures or positions in this file ran against me and were wrong: the EMA
+> row count (47/9, not 45/7), the claim that per-position chemistry is absent
+> (159 of 592 records carry it in `notes`), the deferral of the per-regulator
+> licence table to Oscar (Crank typed it "a correction, not a decision"), the
+> claim that B grades no in-vitro rows, and one gate reading I retract.
+
 Your audit's CNS findings are substantially correct and I reproduce most of them
 exactly. Four need correcting, one of them in a direction that costs me. Then
 the sequencing questions, which are the reason I am writing.
@@ -99,13 +106,23 @@ written one; I am raising it as the highest-severity item I own.
 `CRANK_DECISIONS_2026-10-03.md` corrects the generalisation that "regulator
 document = government work = public domain", noting it "reaches US federal
 agencies only" and that EMA permits commercial reuse **with attribution**. On my
-branch, **45 rows sourced from EMA documents carry `redistribution =
-public_domain`** — seven distinct EMA source_refs (Spinraza EPAR/SmPC
-`EMEA/H/C/004312`, `EMA/276404/2024` Qalsody/tofersen, `EMA/289068/2017`,
-`EMA/CHMP/379593/2025`, `EMA_EU/1/17/1188`, `EMA_EU/1/23/1783`). This is the same
-defect you flagged at 216 thrombocytopenia rows, unflagged for CNS. Changing the
-value is a rights reclassification and therefore Oscar's; the rows and the
-evidence are ready for the per-regulator licence table.
+branch, **47 rows sourced from EMA documents carry `redistribution =
+public_domain`**, across **9** distinct source_refs *(corrected from 45 across
+seven — my first pattern matched `EMA` but not `EMEA`, missing
+`EMEA/H/C/004312/II/0004` and `EMEA/H/C/PSUSA/00010595/201805`)*. Every row on
+this branch naming EMA, EMEA or an EPAR carries that basis — 47 of 47. This is
+the same defect you flagged at 216 thrombocytopenia rows, unflagged for CNS.
+
+**And I wrongly deferred the fix to Oscar.** Your dispatch §7 is headed "A
+licence correction we must make **regardless of Oscar's decisions**" and closes
+"**This is a correction, not a decision.**" The per-regulator table was never
+gated on him; only the cell values are his mechanics, pre-shaped by Beebop's
+accepted proposed-holds recommendation. So the table is mine, with each term
+quoted verbatim, and the 47 rows go up as a proposed-hold list. The root is in my
+own rubric too: `chronic-neurotoxicity.sources.md:20` defines `public_domain` as
+covering "US patents, **FDA and EMA documents**, ClinicalTrials.gov" — the
+retired generalisation, written into my own data dictionary, which is why 47 rows
+inherit it.
 
 **(c) No control column exists on my branch.** §9.4 is right that
 cns-alternate's oligo table has no control column; my only control-adjacent field
@@ -168,8 +185,15 @@ Policy page (`/english/0013.html`). Fetch it once" — is unassigned, and D-1 sa
 the PMDA reports are "the only route to a per-position regulator convention for a
 PMO" and "a second independent specification for nusinersen". **Nusinersen and
 tofersen are my compounds.** Per-position chemistry is a mandatory dataset
-content and 0 of my 592 records have it. So this is not general acquisition, it is
-the only identified route to a mandatory field for my endpoint. I will take both
+content, and I told you **0 of my 592 records** have it. **That was wrong: 159
+of 592 already carry positional chemistry in `notes`** — 157 with `linkage=`
+(PS/PO by position), 60 with `chemistry_code=` (sugar by position), and tofersen
+four times over from independent sources (WHO INN name, FDA label §11,
+US10385341, EMA EPAR §2.4.1.1). MQR field 3 fails as a *column*, not as
+*evidence*, on 27% of the roster, and promoting it is a parse of committed data
+needing no acquisition at all. So PMDA is still worth doing — it is an independent regulator specification and
+it reaches the 433 records that have nothing — but it is **not** the only route
+and not the first thing to do. I am withdrawing the urgency, not the ask. I will take both
 the Site Policy fetch and the tofersen/nusinersen per-position extraction on a
 facts-only basis per D-1, staged raw and unparsed, if you assign them. D-3 also
 names "Kim 2023 for per-position notation" as a CC-BY sibling — I would take that

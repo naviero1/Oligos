@@ -24,7 +24,7 @@ archived under `sources/cns/`**, not assumed from the journal or publisher.
 
 | Value | Meaning |
 |---|---|
-| `public_domain` | US patents, FDA and EMA documents, ClinicalTrials.gov. Values may be reproduced without restriction. |
+| `public_domain` | US patents, FDA documents, ClinicalTrials.gov. Values may be reproduced without restriction. **Correction flagged 2026-10-03, value changes pending Oscar:** the inclusion of **EMA** documents in this basis is the retired generalisation that "regulator document = government work = public domain", which reaches **US federal agencies only**. EMA permits commercial reuse **with attribution**; TGA forbids redistribution without written approval; PMDA is All Rights Reserved. **47 rows across 9 EMA/EMEA source_refs on this branch still carry this basis** and are filed as a proposed hold, not withdrawn. See `chronic-neurotoxicity/ROCKSTEADY_CORRECTIONS_2026-10-03.md` §4. |
 | `cc_by` | The source article is Creative Commons Attribution licensed, which permits reproducing raw values with attribution. This is what allows whole per-oligo panels to be republished verbatim. |
 | `summary_stat` | Facts quoted from a source whose licence does not permit bulk reproduction — including **CC-BY-NC** and **CC-BY-ND** articles, which are deliberately *not* upgraded, since republishing their tables inside a CC-BY dataset would conflict with the non-commercial and no-derivatives terms. |
 | `verify` | Rights unresolved. Must be settled before public release. |

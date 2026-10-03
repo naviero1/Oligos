@@ -133,7 +133,11 @@ re-partitioning is a re-graining act and the delegation forbids me to re-grain.
 Whichever
 lineage is chosen, those 150 sequences are the only place a record-level
 crosswalk can be built, and 132 + 1,535 = 1,667 sequences exist in exactly one
-lineage and would be lost outright by a straight choice.
+lineage and would be lost outright by a straight choice. (That sum adds across
+lineages, which the standing rule otherwise forbids. It is set arithmetic over
+two **disjoint** sequence sets, used only to size what a straight choice
+destroys — it is **not** a combined dataset size, and no row or compound total
+from the two branches may be added.)
 
 ---
 
@@ -173,6 +177,37 @@ of them sequence-bearing.
 Neither lineage has a human-laboratory sample size that supports a sequence-level
 model. That is a finding about the field, not about either curation, and it
 belongs in the narrative's required discussion of the public-data gap.
+
+### A's 13 depend entirely on the §E ruling, and could be 0
+
+This must be read before §3 is weighed, and I am stating it because the
+comparison is otherwise misleading in my own favour.
+
+**All 13 of A's qualified human-laboratory molecules** — `CNS546`, `CNS549`,
+`CNS564`, `CNS565`, `CNS566`, `CNS567`, `CNS570`, `CNS572`, `CNS573`, `CNS574`,
+`CNS577`, `CNS581`, `CNS583` — **are graded only on in-vitro rows. Not one of
+them carries a single graded non-in-vitro row** (verified per molecule: every one
+has `study_type` ∈ {`in_vitro`} exclusively). And all 116 of A's
+`human_laboratory` rows are `study_type = in_vitro`.
+
+So the 13 are a subset of the 297 rows I have reported as a §E violation.
+**If German withdraws those grades rather than relabelling them, A's
+human-laboratory qualified-molecule count goes from 13 to 0**, and §3 — which I
+headed "the decisive difference, and it favours A" — is void. If German instead
+adopts §E's own remedy and relabels them "experimental response severity", the
+13 survive as experimental-response molecules but are no longer graded on the
+clinical scale, which changes what they can be used for rather than whether they
+exist.
+
+B's equivalent count faces the same question at smaller scale: 7 molecules, of
+which B's human in-vitro grades are author-anchored and so may survive §E
+untouched (see §4).
+
+**Consequence for sequencing: the §E ruling logically precedes G-1.** A lineage
+chosen on §3's evidence composition, before §E is settled, is chosen on a figure
+that the §E ruling can set to zero. I am not asking for a particular order — that
+is Crank's to sequence and German's to rule — only recording that the dependency
+exists and which way it runs.
 
 Two things follow, and they point in opposite directions.
 
@@ -223,7 +258,7 @@ scopes.
 |---|---|---|
 | coverage | all 2,538 rows | 2,592 of 4,428; 1,836 `not_graded` |
 | grade distribution | 0:1,246 1:590 2:566 3:136 | 0:1,614 1:673 2:130 3:175 |
-| in-vitro rows graded | **297 — yes** | **0 — deliberately not** (`grade_basis = in_vitro_continuous_readout_not_graded`, 1,825 rows) |
+| in-vitro rows graded | **297 — yes** | **23 of its 34 *human* in-vitro rows; 0 of its 1,825 *animal* in-vitro rows** (see the correction below) |
 | basis recorded per row | no `grade_basis` column; rubric in `schema.md:98`, rationale in `notes` when non-obvious | **`grade_basis` + `grade_status` on every row**, quoting the cutoff applied (e.g. "ANS>7 marked/severe (Hagedorn2022 Fig.1B cutoffs 7,18)") |
 | status flag | none | `provisional` / `not_graded` |
 
@@ -239,10 +274,27 @@ is "transient acute behavioural signs resolving within hours–days". It contain
 `CMS2054`, a BE(2)-M17 cell-culture row whose whole result is "higher LDH than
 parent compound", graded **3**.
 
-B does not do this. By leaving 1,825 in-vitro continuous readouts ungraded, **B
-is §E-compliant on exactly the point where A is not**, and B's per-row
-`grade_basis` satisfies §E's requirement that the author's result and the
-curator's label stay separable, which A's schema currently does not.
+**Correction, published 2026-10-03, to a claim I made in B's favour and got
+wrong.** I previously wrote that B grades "0 — deliberately not" in-vitro rows
+and concluded that "B is §E-compliant on exactly the point where A is not."
+**That was false as stated.** Measured: B leaves 0 of its 1,825 *animal*
+in-vitro rows graded, but it grades **23 of its 34 *human* in-vitro rows** (19 at
+grade 0, 4 at grade 2, 9 of 13 oligos, `grade_status = provisional`). The "0" is
+true only of the animal screen.
+
+The conclusion survives, but for a different and more precise reason than I
+gave, and the distinction is the one §E actually turns on. B's 23 in-vitro grades
+are anchored to explicit author calls — its `grade_basis` on those rows reads
+"authors state the compound was non-toxic in this system" (19) and "authors state
+a significant toxicity or viability loss in this system" (4). §E permits exactly
+this: "Binary calls are marked curator-derived **unless the source explicitly
+defines them**." B's are source-defined. **A's 297 are curator-derived against an
+organism-level rubric that contains no in-vitro branch**, which is the act §E
+prohibits.
+
+So B is better disciplined here, not because it declines to grade in-vitro rows
+— it grades them — but because every grade it does assign names the author
+statement it rests on, and A's schema has no field in which to say so.
 
 Compounding it on A's side: **203 of A's 2,538 graded rows (8.0%) have no
 `readout_value`** — figure-only sources — of which 69 are in-vitro and 14 are
