@@ -22,18 +22,19 @@ finished. The four axes:
 
 ## 2. Human clinical trials
 
-Verified unique human clinical trials: **22** trials carry a defensible platelet-toxicity claim: endpoint demonstrably assessed, measurement rows present, and a platelet change is not the intended effect.
+Verified unique human clinical trials: **?** trials carry a defensible platelet-toxicity claim: endpoint demonstrably assessed, measurement rows present, and a platelet change is not the intended effect.
 
-**Status: ESTABLISHED AS A LADDER, NOT A SINGLE NUMBER — see `data/study_counts.csv`. A single headline figure is not defensible here: of the 56 units typed as a trial, 39 carry any measurement row at all; the rest are trial-grain ANCHORS, identified so that pooled data can be attributed, not trials this dataset holds data for.**
+**Status: ESTABLISHED AS A LADDER, NOT A SINGLE NUMBER — see `data/study_counts.csv`. A single headline figure is not defensible here: of the ? units typed as a trial, ? carry any measurement row at all; the rest are trial-grain ANCHORS, identified so that pooled data can be attributed, not trials this dataset holds data for.**
 
 | Count | n | Definition |
 |---|---:|---|
 | evidence units resolved | 85 | every unit the 1,002 human clinical rows resolve to, of any type |
-| ... typed as a trial | 56 | registered_trial + unregistered_trial |
+| ... TYPED as a trial | 56 | registered_trial + unregistered_trial. A TYPE, not a qualification. These are NOT qualified trials and must never be reported as such. |
 | ... with a verified registry identifier | 52 | NCT or EudraCT confirmed against the registry |
-| ... carrying at least one measurement row | 39 | THE REST ARE TRIAL-GRAIN ANCHORS, not trials this dataset holds data for |
+| ... WITH MEASUREMENTS | 39 | carrying at least one measurement row. THE REST ARE TRIAL-GRAIN ANCHORS, not trials this dataset holds data for. |
 | ... platelet endpoint evaluable | 23 | endpoint demonstrably assessed under a defined exposure and observation window |
-| ... and not intended pharmacology | 22 | DEFENSIBLE TOXICITY DENOMINATOR: excludes units where a platelet change is the intended effect or the treated disease |
+| ... classified as a platelet-toxicity claim | 22 | endpoint evaluable AND not intended pharmacology. A CURATOR CLASSIFICATION, superseded by the audited figure below. |
+| ... PASSING THIS ENDPOINT'S FOUR-TEST AUDIT | 19 | monitoring QUOTED (not absence reported) + dose and duration stated + platelet-specific at-risk denominator + retrievable locus. THIS IS THE FIGURE TO QUOTE. It is this endpoint's own audit, NOT qualification against the project sign-off gates, which is the scientist's determination and has not been made. |
 | pooled analyses (NOT trials) | 24 | integrated analyses, meta-analyses, label pools |
 | trials declared nested inside a pooled analysis | 21 | these subjects are counted inside a pool as well; NEVER sum a pool with its members |
 | unique compounds across included units | 28 |  |
@@ -72,6 +73,27 @@ Reconciled against `GOG_OligoTox_Thrombo_Integrated_Phase2_v0.9.xlsx` (45 scient
 - Mechanistic model eligibility: **16** compounds.
 - Qualified clinical negatives: **0**. The scientist package rules `CLEAN_CLINICAL_NEGATIVE` *NOT YET AVAILABLE* and all 21 audited candidates ineligible. Absence of a reported platelet event is never encoded as a negative.
 - Leakage grouping: **35 exact-sequence groups** cover **85 oligo records** that share a sequence with at least one other. Any outer split must group on `exact_sequence_group`.
+
+### Sign-off gates (`SCIENTIFIC_RULES.md` §K)
+
+**Zero rows clear all twelve.** Gates 2, 5, 6 require fields absent from the schema entirely, so they fail identically on every row — three missing columns, not 1,959 deficient rows. Tally: **3 FAIL** · **1 NOT APPLICABLE** · **4 PARTIAL** · **4 PASS**.
+
+| # | Gate | Verdict | Measured |
+|---:|---|---|---|
+| 1 | Traceable primary source and exact source location | **PASS** | source_ref 1959/1959; in-document locus 1959/1959, of which 1719 name a table/figure/supplement cell and 240 name a document section (prose-derived... |
+| 2 | Sequence verified 5'->3', with strand identity and duplex partner whe... | **FAIL** | sequence_5to3 present 200/259; strand_role column ABSENT; duplex_partner_id column ABSENT; double-stranded constructs 6 |
+| 3 | Chemical modification encoded by position, not only as a molecule-lev... | **PARTIAL** | position-resolved modification_map 44/259; of those, source-verbatim 0; molecule-level flags only 194/259 |
+| 4 | Assay context includes cell system, donor information, delivery/formu... | **PARTIAL** | system_model 1959/1959; delivery_method 1950/1959; dose 1748/1959; exposure_duration 1839/1959; donor_id column ABSENT |
+| 5 | Raw/continuous outcomes retained when available; curator-derived labe... | **FAIL** | continuous readout_value retained 1589/1959; curator-assigned grades 1959; derived-label marker column ABSENT |
+| 6 | Agonist, antagonist, potentiator and inert/low-response states are se... | **FAIL** | response-state column ABSENT; effect_direction distribution {'increase': 706, 'no_change': 647, 'decrease': 603, 'TBD': 3} |
+| 7 | Human and animal observations are not pooled as interchangeable groun... | **PASS** | separate views written True; human rows 1453; animal rows 497; assigned to neither (unresolved or multi-species) 9; pooled grade-difference column... |
+| 8 | Endpoint-specific outcomes are not collapsed into a composite (genera... | **PASS** | distinct readout_name values 439; readout_category distribution {'platelet_count': 1083, 'clinical_outcome': 226, 'platelet_activation': 196, 'plat... |
+| 9 | Citation metadata and file identities pass QC | **PASS** | sources in inventory 70; stable source_uid assigned True; QC gates in scripts/qc_thrombo.py: 5 governance + round-trip + backbone-consistency |
+| 10 | Train/test splitting checked for exact-sequence, modified/unmodified... | **PARTIAL** | exact_sequence_group 259/259; scaffold_family 35/259; publication_group 35/259; matched_pair_id 4/259; strand grouping ABSENT; experimental-series... |
+| 11 | LOPO and sequence-family grouped performance reported with uncertainty | **NOT APPLICABLE** | classifier release state BLOCKED; model trained this round: no |
+| 12 | All major mechanistic and clinical claims are no stronger than the ev... | **PARTIAL** | count ladder published with every rung and its loss reason; endpoint audit survivors 19/22; in-vitro rows whose grade derives from a clinical scale... |
+
+These verdicts are the curator's own, measured and reproducible via `scripts/audit_signoff_gates.py`. **They are not a sign-off** — only the project scientist signs off, and he can overturn any of them. Full detail including the reasoning per gate: `data/signoff_gate_audit.csv`.
 
 ## 4. Modelling
 

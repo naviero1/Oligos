@@ -1,10 +1,11 @@
 measure,n,definition
 evidence units resolved,85,"every unit the 1,002 human clinical rows resolve to, of any type"
-... typed as a trial,56,registered_trial + unregistered_trial
+... TYPED as a trial,56,"registered_trial + unregistered_trial. A TYPE, not a qualification. These are NOT qualified trials and must never be reported as such."
 ... with a verified registry identifier,52,NCT or EudraCT confirmed against the registry
-... carrying at least one measurement row,39,"THE REST ARE TRIAL-GRAIN ANCHORS, not trials this dataset holds data for"
+... WITH MEASUREMENTS,39,"carrying at least one measurement row. THE REST ARE TRIAL-GRAIN ANCHORS, not trials this dataset holds data for."
 ... platelet endpoint evaluable,23,endpoint demonstrably assessed under a defined exposure and observation window
-... and not intended pharmacology,22,DEFENSIBLE TOXICITY DENOMINATOR: excludes units where a platelet change is the intended effect or the treated disease
+... classified as a platelet-toxicity claim,22,"endpoint evaluable AND not intended pharmacology. A CURATOR CLASSIFICATION, superseded by the audited figure below."
+... PASSING THIS ENDPOINT'S FOUR-TEST AUDIT,19,"monitoring QUOTED (not absence reported) + dose and duration stated + platelet-specific at-risk denominator + retrievable locus. THIS IS THE FIGURE TO QUOTE. It is this endpoint's own audit, NOT qualification against the project sign-off gates, which is the scientist's determination and has not been made."
 pooled analyses (NOT trials),24,"integrated analyses, meta-analyses, label pools"
 trials declared nested inside a pooled analysis,21,these subjects are counted inside a pool as well; NEVER sum a pool with its members
 unique compounds across included units,28,

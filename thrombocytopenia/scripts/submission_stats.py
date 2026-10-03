@@ -170,11 +170,23 @@ def stats():
     if os.path.exists(sc_path):
         L = {r["measure"]: r["n"] for r in csv.DictReader(open(sc_path, encoding="utf-8"))}
         d["n_units"] = fmt(int(L.get("evidence units resolved", 0)))
-        d["n_trials_typed"] = fmt(int(L.get("... typed as a trial", 0)))
-        d["n_trials_reg"] = fmt(int(L.get("... with a verified registry identifier", 0)))
-        d["n_trials_rows"] = fmt(int(L.get("... carrying at least one measurement row", 0)))
-        d["n_trials_eval"] = fmt(int(L.get("... platelet endpoint evaluable", 0)))
-        d["n_trials_defensible"] = fmt(int(L.get("... and not intended pharmacology", 0)))
+        # Rung labels are deliberately shouty in study_counts.csv so a reader cannot skim
+        # past the qualifier. Match on a stable substring rather than the full label, and
+        # fail loudly if a rung goes missing — a silent 0 here would publish a wrong ladder,
+        # which is exactly the failure this ladder exists to prevent.
+        def rung(needle, label):
+            for k, v in L.items():
+                if needle.lower() in k.lower():
+                    return fmt(int(v))
+            raise SystemExit(f"submission_stats: ladder rung '{label}' not found in "
+                             f"study_counts.csv (looked for {needle!r}). Re-run "
+                             f"scripts/assemble_studies.py, or fix the match.")
+        d["n_trials_typed"] = rung("typed as a trial", "typed")
+        d["n_trials_reg"] = rung("verified registry identifier", "registry id")
+        d["n_trials_rows"] = rung("with measurements", "with measurements")
+        d["n_trials_eval"] = rung("platelet endpoint evaluable", "endpoint evaluable")
+        d["n_trials_classified"] = rung("classified as a platelet-toxicity claim", "classified")
+        d["n_trials_audited"] = rung("four-test audit", "audit survivors")
         d["n_pools"] = fmt(int(L.get("pooled analyses (NOT trials)", 0)))
         d["n_nested"] = fmt(int(L.get("trials declared nested inside a pooled analysis", 0)))
     cp = os.path.join(BASE, "controls_inventory.csv")
@@ -193,6 +205,23 @@ def stats():
         A = list(csv.DictReader(open(ap2, encoding="utf-8")))
         d["n_tox_audited"] = fmt(len(A))
         d["n_tox_survives"] = fmt(sum(1 for r in A if r["audit_verdict"] == "SURVIVES_ALL_FOUR"))
+    # Corrected per-regulator / per-licence classes. The legacy `redistribution`
+    # column is NOT used for any published figure: it was a blanket tag, it
+    # collapsed EMA into US public domain, and the PADP built on it asserted a
+    # fair-use conclusion this project has no standing to assert.
+    sp2 = os.path.join(os.path.dirname(BASE), "curation", "rights", "shipped_row_rights.csv")
+    if os.path.exists(sp2):
+        import collections as _c2
+        SR = list(csv.DictReader(open(sp2, encoding="utf-8")))
+        lc = _c2.Counter(r["licence_class"] for r in SR)
+        d["lc_pd_federal"] = fmt(lc.get("public_domain_us_federal", 0))
+        d["lc_pd_patent"] = fmt(lc.get("public_domain_uspto_patent", 0))
+        d["lc_ema"] = fmt(lc.get("ema_reuse_with_attribution", 0))
+        d["lc_cc_permissive"] = fmt(lc.get("cc_permissive", 0))
+        d["lc_cc_nc"] = fmt(lc.get("cc_nc_noncommercial", 0))
+        d["lc_cc_nd"] = fmt(lc.get("cc_nd_derivatives_restricted", 0))
+        d["lc_closed"] = fmt(lc.get("closed_no_open_licence", 0))
+        d["n_holds"] = fmt(sum(1 for r in SR if r["proposed_hold"] == "PROPOSED_HOLD"))
     rp = os.path.join(os.path.dirname(BASE), "curation", "rights", "rights_audit.csv")
     if os.path.exists(rp):
         R2 = list(csv.DictReader(open(rp, encoding="utf-8")))
@@ -201,6 +230,24 @@ def stats():
         d["n_rows_open"] = fmt(openable)
         d["pct_rows_open"] = f"{100*openable//max(tot,1)}"
         d["n_rows_rights_decision"] = fmt(tot - openable)
+    # Acquisition tally by source class, written by build_sources_doc.py. These replace the
+    # retired rd_* legacy rights tags in the methodology table: that table describes where
+    # material came from and how it was retrieved, which is not a rights determination.
+    scpath = os.path.join(BASE, "source_class_counts.csv")
+    if os.path.exists(scpath):
+        with open(scpath, newline="", encoding="utf-8") as f:
+            sc = {r["source_class"]: r for r in csv.DictReader(f)}
+        reg = sum(int(sc[k]["n_rows"]) for k in ("fda_review", "fda_label", "ema") if k in sc)
+        d["sa_regulatory"] = fmt(reg)
+        d["sa_fda"] = fmt(sum(int(sc[k]["n_rows"]) for k in ("fda_review", "fda_label") if k in sc))
+        d["sa_ema"] = fmt(int(sc.get("ema", {}).get("n_rows", 0)))
+        d["sa_patent"] = fmt(int(sc.get("patent", {}).get("n_rows", 0)))
+        d["sa_literature"] = fmt(int(sc.get("literature", {}).get("n_rows", 0)))
+        d["sa_registry"] = fmt(int(sc.get("registry", {}).get("n_rows", 0)))
+
+    d["pct_human"] = str(round(100.0 * human / len(m))) if m else "0"
+    d["n_invitro_graded"] = fmt(sum(1 for r in m if r["study_type"] in ("in_vitro", "ex_vivo")
+                                     and r["thrombocytopenia_grade"] in "0123"))
     d["n_purity_method"] = fmt(sum(1 for r in o if r["purity_method"] not in ("", "TBD")))
     d["n_modmap"] = fmt(sum(1 for r in o if r["modification_map"] not in ("", "TBD")))
     rl = os.path.join(BASE, "recovery_ledger.csv")

@@ -295,15 +295,18 @@ def main():
     ladder = [
         ("evidence units resolved", len(rows),
          "every unit the 1,002 human clinical rows resolve to, of any type"),
-        ("... typed as a trial", len(trials), "registered_trial + unregistered_trial"),
+        ("... TYPED as a trial", len(trials),
+         "registered_trial + unregistered_trial. A TYPE, not a qualification. These are NOT "
+         "qualified trials and must never be reported as such."),
         ("... with a verified registry identifier", len(reg), "NCT or EudraCT confirmed against the registry"),
-        ("... carrying at least one measurement row", len(with_rows),
-         "THE REST ARE TRIAL-GRAIN ANCHORS, not trials this dataset holds data for"),
+        ("... WITH MEASUREMENTS", len(with_rows),
+         "carrying at least one measurement row. THE REST ARE TRIAL-GRAIN ANCHORS, not trials "
+         "this dataset holds data for."),
         ("... platelet endpoint evaluable", len(evaluable),
          "endpoint demonstrably assessed under a defined exposure and observation window"),
-        ("... and not intended pharmacology", len(tox),
-         "DEFENSIBLE TOXICITY DENOMINATOR: excludes units where a platelet change is the "
-         "intended effect or the treated disease"),
+        ("... classified as a platelet-toxicity claim", len(tox),
+         "endpoint evaluable AND not intended pharmacology. A CURATOR CLASSIFICATION, superseded "
+         "by the audited figure below."),
         ("pooled analyses (NOT trials)", len(pooled), "integrated analyses, meta-analyses, label pools"),
         ("trials declared nested inside a pooled analysis", len(nested),
          "these subjects are counted inside a pool as well; NEVER sum a pool with its members"),
@@ -312,6 +315,20 @@ def main():
          "NOT SUMMABLE. Denominators overlap across nested pools and strata; summing them "
          "double-counts. Use a single stratum's denominator and say which."),
     ]
+    # The audited rung belongs IN the ladder: a reader must not have to open a
+    # second file to learn that the curator classification was superseded.
+    apath = os.path.join(DATA, "toxicity_denominator_audit.csv")
+    if os.path.exists(apath):
+        with open(apath, newline="", encoding="utf-8") as af:
+            AUD = list(csv.DictReader(af))
+        n_aud = sum(1 for r in AUD if r.get("audit_verdict") == "SURVIVES_ALL_FOUR")
+        ladder.insert(6, ("... PASSING THIS ENDPOINT'S FOUR-TEST AUDIT", n_aud,
+                          "monitoring QUOTED (not absence reported) + dose and duration stated + "
+                          "platelet-specific at-risk denominator + retrievable locus. THIS IS THE "
+                          "FIGURE TO QUOTE. It is this endpoint's own audit, NOT qualification "
+                          "against the project sign-off gates, which is the scientist's "
+                          "determination and has not been made."))
+
     with open(os.path.join(DATA, "study_counts.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f); w.writerow(["measure", "n", "definition"]); w.writerows(ladder)
 

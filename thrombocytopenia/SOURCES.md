@@ -12,17 +12,39 @@ identifiers verified, not recalled.
 
 ## Redistribution classes
 
-| Class | Meaning | Typical source |
-|---|---|---|
-| `public_domain` | reproduce freely, no restriction | USPTO patents, FDA/EMA documents |
-| `cc_by` | reproduce **raw values** with attribution | PLOS and other CC-BY open-access articles |
-| `derived_features_only` | derived features only | copyrighted journal content |
-| `summary_stat` | summary statistics under fair use | copyrighted journal content |
-| `verify` | rights unresolved — settle before release | — |
+**Live classification** — `licence_class`, resolved per publisher and per regulator
+(`curation/rights/shipped_row_rights.csv`):
 
-A `cc_by` classification must come from the article's **own licence field**
-(Europe PMC `license`, or the article's rights statement), never from the fact
-that it happens to be free to read.
+| Class | Position on reuse of extracted facts | Rows |
+|---|---|---:|
+| `public_domain_us_federal` | No copyright under 17 U.S.C. §105; reproducible without restriction | 291 |
+| `public_domain_uspto_patent` | Patent specifications published without copyright restriction; the CLAIMS remain enforceable as patent rights, which is a separate matter from copying | 241 |
+| `ema_reuse_with_attribution` | **NOT US public domain.** EMA permits reuse, commercial included, **with attribution** | 216 |
+| `cc_permissive` | CC-BY / CC0; values reproducible with attribution | 229 |
+| `cc_nc_noncommercial` | NonCommercial clause; whether a prize submission is a commercial use is **UNSETTLED** and not ours to decide | 747 |
+| `cc_nd_derivatives_restricted` | NoDerivatives; excluded from derived outputs | 11 |
+| `closed_no_open_licence` | **PROPOSED HOLD** pending the data owner's ruling | 224 |
+
+**Zero rows withdrawn, zero rows cleared** by this curation effort — the holds are proposed.
+
+> **⚠ The `redistribution` column is a SUPERSEDED legacy tag, not a licence determination.**
+> It was a coarse curation shorthand and two of its values were actively wrong: `public_domain`
+> lumped EMA and USPTO material in with US federal works, and `summary_stat` asserted a fair-use
+> position this project is not in a position to assert. The live classification is `licence_class`
+> in `curation/rights/shipped_row_rights.csv`, resolved **per publisher and per regulator**, because
+> *regulator document = government work = public domain* reaches **US federal agencies only**: EMA
+> permits reuse with attribution, one national regulator forbids redistribution without written
+> approval, and another reserves all rights. The legacy column is retained on the rows for
+> continuity and should not be read as a rights position.
+>
+> Two separate questions, and neither column answers the first: (1) may the **source file** be
+> republished? (2) may the **facts extracted from it** be reused? Both ledgers address only (2).
+> The ledger is a **project classification, not legal clearance**.
+
+**Legacy tags, for reading the `redistribution` column only:** `public_domain` ·
+`cc_by` · `derived_features_only` · `summary_stat` · `verify`. A `cc_by` classification must come
+from the article's **own licence field** (Europe PMC `license`, or the article's rights statement),
+never from the fact that it happens to be free to read.
 
 ---
 
@@ -61,6 +83,24 @@ that it happens to be free to read.
   per-compound readouts.
 - **Redistribution:** **`cc_by`** — licence confirmed as `cc by` via the Europe
   PMC record. Raw per-compound values may be reproduced with attribution.
+- **⚠ Do not deduplicate this source on author + journal.** Sewing is first author on **three
+  distinct *PLoS One* papers**, verified against Europe PMC on 2026-10-03:
+
+  | Year | PMID | PMCID | DOI | Subject |
+  |---|---|---|---|---|
+  | 2016 | 27442522 | PMC4956313 | 10.1371/journal.pone.0159431 | *hepatotoxic* potential of oligonucleotide drugs |
+  | **2017** | **29107969** | **PMC5673186** | **10.1371/journal.pone.0187574** | **thrombocytopenia — this source** |
+  | 2020 | 32530964 | PMC7292364 | 10.1371/journal.pone.0232603 | refining LNA safety by controlling PS stereochemistry |
+
+  Same first author, same journal, three different endpoints. **Author + journal is not a
+  duplication key** — a dedup pass keyed on it would collapse all three into one and silently
+  attribute hepatotoxicity rows to a thrombocytopenia source. Only the DOI/PMID/PMCID identify a
+  document here. Checked: the 2016 paper appears in this repository **only as a reference inside the
+  2017 paper's full text** (`curation/research_staging/epmc_sewing2017_pone0187574_fulltext.xml`),
+  never as a source of rows, so there is no existing conflation to undo.
+- **Lead, not a source:** the **2020** paper above (PS stereochemistry and LNA safety) is on-endpoint
+  and is **not currently held**. Recorded as a candidate for acquisition; no rows, no claims, and it
+  is not counted anywhere in this dataset.
 
 ---
 

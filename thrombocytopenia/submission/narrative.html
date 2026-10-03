@@ -78,10 +78,29 @@ thin and is logged as an open gap in <code>data/recovery_ledger.csv</code>.</p><
 
 <h2 class="pb">2. Main findings and conclusions</h2>
 
-<h3>2.1 The dataset reproduces the field's structure–activity relationship from curation alone</h3>
+<h3>2.1 The ordering the phosphorothioate hypothesis predicts is present in the curated data</h3>
 <p>Platelet effects are held to track <b>phosphorothioate (PS) content and protein binding</b> rather than the
 hybridisation target, mechanistically via glycoprotein VI. Without any modelling, the assembled data orders
-exactly as that hypothesis predicts:</p>
+in the direction that hypothesis predicts:</p>
+
+<div class="warn"><p><b>What this ordering is, and what it is not.</b> It is a <i>description of curated
+labels</i>, not an independent reproduction of the structure–activity relationship. Three dependencies have
+to travel with it, and an earlier version of this document asserted the result without them:</p>
+<ul>
+<li><b>The indicator is a curator-assigned label.</b> Every grade in these means was assigned by this
+curation effort against a documented rubric, not read from a source as a severity grade. All
+{{n_meas}} graded rows are referred to the project scientist as <b>provisional</b>.</li>
+<li><b>The laboratory rows' grades derive from a mapping the project prohibits.</b> {{n_invitro_graded}}
+in-vitro and ex-vivo rows carry a grade derived from a clinical severity scale; the governing rules forbid
+mapping in-vitro bins to clinical grades absent clinical validation. Those rows are referred for re-scaling
+and the ordering must be re-read once they are re-scaled.</li>
+<li><b>The thinnest cell carries {{hn_pmo}} human row(s).</b> The neutral-backbone comparator — the
+load-bearing negative control for PS dependence — rests on that, and its trial-grain coverage is logged as
+an open gap.</li>
+</ul>
+<p>So the defensible statement is: <i>the curated labels order in the predicted direction, under an
+indicator that is itself provisional.</i> It is not evidence that the relationship holds independently of
+the labelling, and no causal or predictive claim follows from it.</p></div>
 <table>
 <tr><th>Backbone</th><th class="n">human rows</th><th class="n">compounds</th><th class="n">mean grade</th>
 <th>PS linkages</th><th class="n">mean grade</th></tr>
@@ -97,7 +116,7 @@ it: the PS-count gradient runs {{hmg_ps0}} → {{hmg_ps13}} → {{hmg_ps17}} →
 is retained in full in <code>data/measurements_animal.csv</code> and influences no human figure. Cells
 backed by few rows are shown with their row and compound counts so the reader can discount them;
 <code>PMO_neutral</code> in particular rests on {{hn_pmo}} human row(s).</p></div>
-<p>Modality orders in the same direction, again in human evidence alone: PMO {{hmg_mod_pmo}} &lt;
+<p>Modality orders in the same direction, under the same three dependencies, in human evidence alone: PMO {{hmg_mod_pmo}} &lt;
 GalNAc-siRNA {{hmg_mod_galnac}} &lt; siRNA {{hmg_mod_sirna}} &lt; splice-switching {{hmg_mod_sso}} &lt;
 ASO gapmer {{hmg_mod_gapmer}} &lt; aptamer {{hmg_mod_aptamer}}. That a curated dataset recovers a relationship
 the field established experimentally is the primary evidence that it is fit to train on.</p>
@@ -146,14 +165,18 @@ ClinicalTrials.gov or EudraCT, and {{n_pools}} pooled analyses that are <i>not</
 trial, only <b>{{n_trials_rows}}</b> carry any measurement row at all — the rest are trial-grain
 <i>anchors</i>, identified so that pooled data can be attributed to a real study rather than floating free.
 Of those, {{n_trials_eval}} have a platelet endpoint demonstrably assessed under a defined exposure and
-observation window, and {{n_trials_defensible}} remain once units are excluded in which a platelet change
+observation window, and {{n_trials_classified}} remain once units are excluded in which a platelet change
 is the intended pharmacology or the treated disease — an anti-von-Willebrand aptamer that raises platelets
-in type 2B von Willebrand disease, and a telomerase inhibitor dosed into thrombocythaemia.</p>
+in type 2B von Willebrand disease, and a telomerase inhibitor dosed into thrombocythaemia. That last figure
+is still a <i>curator classification</i>, not a qualification.</p>
 <p>Those {{n_tox_audited}} were then <b>independently re-audited</b> against four explicit tests: that the
 cited basis quotes evidence platelets were <i>measured</i> rather than merely reported absent; that dose
 and duration are both stated; that a platelet-specific at-risk denominator exists; and that the basis
-cites a retrievable locus. <b>{{n_tox_survives}} of {{n_tox_audited}} survive all four.</b> That is the
-honest denominator for a platelet-toxicity claim, and it is the figure to quote. The per-unit results are
+cites a retrievable locus. <b>{{n_tox_survives}} of {{n_tox_audited}} pass all four.</b>
+So the ladder reads <b>{{n_trials_typed}} typed as a trial → {{n_trials_rows}} with measurements →
+{{n_tox_survives}} passing this endpoint's audit</b>, and the last of those is the figure to quote.
+None of the three is a count of <i>qualified</i> trials: qualification against the project's
+sign-off gates is the scientist's determination, not this dataset's, and it has not been made. The per-unit results are
 in <code>data/toxicity_denominator_audit.csv</code> and the full ladder in
 <code>data/study_counts.csv</code>.</p>
 <p><b>Overlap is declared, not assumed away.</b> {{n_nested}} edges in
@@ -279,8 +302,15 @@ antiplatelet-antibody mechanism that distinguishes the severe mode.</p>
 <p><b>Sequences are present for {{n_seq}} of {{n_oligos}} oligos ({{pct_seq}} %)</b> and were never guessed: the remainder are
 proprietary, class-level aggregates, or development-code compounds with no published sequence.
 <b>{{n_targets}} distinct target genes</b> are represented. Provenance is complete — every row carries a source
-identifier, an exact locus (table, figure, claim or label section) and a rights class: <b>{{rd_public}} rows are
-public-domain</b> (patents, FDA/EMA), {{rd_ccby}} are CC-BY, and {{rd_summary}} are reproduced as summary statistics.</p>
+identifier, an exact locus (table, figure, claim or label section) and a licence class resolved
+<b>per publisher and per regulator</b>: {{lc_pd_federal}} rows from US federal agency work,
+{{lc_pd_patent}} from granted US patent text, {{lc_ema}} from EMA documents (reusable with
+attribution, <i>not</i> US public domain), {{lc_cc_permissive}} under CC-BY or CC0,
+{{lc_cc_nc}} under a NonCommercial clause, {{lc_cc_nd}} under NoDerivatives, and
+<b>{{n_holds}} on a proposed hold</b> where no open licence could be located. That last figure is a
+decision requested of the data owner, not a withdrawal: <b>zero rows withdrawn, zero rows cleared</b>
+by this curation effort. The ledger is a <b>project classification, not legal clearance</b>, and it
+addresses reuse of extracted facts rather than republication of source files.</p>
 
 <h2 class="pb">5. The gap this addresses</h2>
 <p>Phase 1 of this Challenge was dominated by hepatotoxicity; over half the winning teams targeted liver
@@ -303,7 +333,7 @@ under-published; sourcing them from regulatory documents, where monitoring is re
 eventful, is a contribution in itself.</li>
 <li><b>Controlled comparisons and a {{n_bridge}}-compound cross-species bridge</b>, which are what make mechanism
 learnable rather than merely correlated.</li>
-<li><b>Per-row rights tracking</b>, so a consumer can filter to exactly the rows they may lawfully reuse.</li>
+<li><b>Per-row rights tracking</b>, recording what each publisher or regulator declares, with the basis, so a consumer can filter to the rows matching their own reuse determination. It is a project classification, not legal clearance, and it is about reuse of extracted facts rather than republication of source files.</li>
 </ul>
 
 <h2>6. Using the data to build a predictive model</h2>

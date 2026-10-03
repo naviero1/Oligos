@@ -143,7 +143,10 @@ def main():
     bh, ba = collections.defaultdict(list), collections.defaultdict(list)
     for m in human: bh[m["oligo_id"]].append(m)
     for m in an:    ba[m["oligo_id"]].append(m)
-    bridge = sorted(set(bh) & set(ba), key=lambda k: -(len(bh[k]) + len(ba[k])))
+    # oligo_id breaks ties, so the row order is deterministic. Without it, compounds with
+    # equal evidence counts swapped places between rebuilds, which makes the diff on a
+    # shipped data file unreviewable and the build irreproducible.
+    bridge = sorted(set(bh) & set(ba), key=lambda k: (-(len(bh[k]) + len(ba[k])), k))
 
     bcols = ["oligo_id", "oligo_name", "oligo_class", "backbone_chemistry", "ps_count",
              "conjugate", "sequence_5to3", "n_human_clinical_rows", "n_human_lab_rows",
@@ -263,6 +266,13 @@ def main():
     npur = sum(1 for o in oligos.values() if o.get("purity_pct") not in ("", "TBD"))
     elig = sum(1 for o in oligos.values() if o.get("clinical_model_eligibility") not in ("NO", ""))
     mech = sum(1 for o in oligos.values() if o.get("mechanistic_model_eligibility") == "YES")
+    _G = "0123"
+    n_graded = sum(1 for r in meas if (r.get("thrombocytopenia_grade") or "").strip() in _G)
+    _lab = [r for r in meas if (r.get("study_type") or "") in ("in_vitro", "ex_vivo")]
+    n_lab_graded = sum(1 for r in _lab if (r.get("thrombocytopenia_grade") or "").strip() in _G)
+    n_lab_cont = sum(1 for r in _lab if (r.get("thrombocytopenia_grade") or "").strip() in _G
+                     and (r.get("readout_value") or "").strip() not in ("", "TBD", "NOT_REPORTED"))
+
     lim = [
         ("human clinical outcome records", len(hc),
          "OUTCOME RECORDS, NOT TRIALS. Many are dose-band cells of one pooled table. "
@@ -288,6 +298,31 @@ def main():
         ("qualified clinical negatives", 0,
          "The scientist package rules CLEAN_CLINICAL_NEGATIVE 'NOT YET AVAILABLE'. "
          "Absence of a reported platelet event is NOT a measured negative."),
+        ("compounds with a structured substance identifier", 0,
+         "NEITHER TABLE HAS AN IDENTIFIER COLUMN - no UNII, CAS, InChIKey, SMILES, ChEMBL or "
+         "DrugBank field. 8 of 259 compounds carry a CAS-shaped number inside a free-text note "
+         "and exactly 1 (danvatirsen, UNII 31N550RD05) carries a UNII value in a provenance "
+         "sentence. Prose mentions are not a join key: DO NOT describe a substance-registry "
+         "crosswalk as available. Matching on name and chemistry instead is what produced the "
+         "ODN 2395 collision, where one bare name was shared by a phosphorothioate and its "
+         "isosequential phosphodiester control."),
+        ("rows whose grade is curator-assigned", n_graded,
+         "PROVISIONAL. Every grade was assigned by this curation effort against the documented "
+         "rubric; none was read from a source as a severity grade. No column yet marks it as "
+         "derived (sign-off gate 5 fails on this). Referred to the project scientist at "
+         "curation/german_queue/GRADE_REFERRAL_2026-10-03.md. Historical values preserved."),
+        ("laboratory rows graded on a clinically-derived scale", n_lab_graded,
+         "RULE VIOLATION, STRUCTURAL. In-vitro and ex-vivo rows carrying a grade whose rubric "
+         "maps laboratory bins onto CTCAE-aligned clinical severity, which the project rules "
+         "prohibit absent clinical validation. The fault is in one rubric applied consistently, "
+         "not in individual calls. Re-scaling is the scientist's decision; nothing changed. Of "
+         "these, %d retain a continuous readout and could be recomputed rather than reinterpreted."
+         % n_lab_cont),
+        ("rows clearing all twelve scientist sign-off gates", 0,
+         "Gates 2, 5 and 6 require fields absent from the schema entirely (strand_role, "
+         "duplex_partner_id, a derived-label marker, a response-state separating measured-inert "
+         "from unmeasured), so they fail identically on every row. Three missing columns, not "
+         "1,959 deficient rows. See data/signoff_gate_audit.csv."),
     ]
     write("coverage_and_limitations.csv", ["item", "count", "limitation"],
           [{"item": a, "count": b, "limitation": c} for a, b, c in lim])

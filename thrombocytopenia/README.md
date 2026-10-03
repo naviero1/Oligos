@@ -360,11 +360,15 @@ python3 scripts/refresh_docs.py                             # regenerate the tab
 
 - Every measurement row is traceable to a **source DOI / PMCID / patent number /
   label section** (`source_id`, `source_ref`, `source_table`).
-- **Redistribution is tracked per row** (`redistribution`), so any consumer can
-  filter to the rows they are entitled to reuse:
-  `public_domain` (USPTO patents, FDA/EMA documents) · `cc_by` (raw values
-  reproducible with attribution, confirmed from the article's own licence field)
-  · `derived_features_only` / `summary_stat` (fair use) · `verify` (unresolved).
+- **Rights are classified per row**, resolved **per publisher and per regulator** in
+  `curation/rights/shipped_row_rights.csv` (`licence_class`): 291 US federal agency work ·
+  241 granted US patent text · 216 EMA documents (reusable **with attribution**, *not* US
+  public domain) · 229 CC-BY/CC0 · 747 CC-BY-NC · 11 CC-BY-ND · **224 on a proposed hold**
+  where no open licence could be located. **Zero rows withdrawn, zero rows cleared** by this
+  curation effort; the holds are a decision requested of the data owner. This is a **project
+  classification, not legal clearance**, and it addresses reuse of **extracted facts**, not
+  republication of **source files**. The older `redistribution` column is a superseded legacy
+  tag — see `SOURCES.md`.
 - **Sequences are never guessed.** `sequence_5to3` is `TBD` unless taken from a
   source that was actually retrieved.
 

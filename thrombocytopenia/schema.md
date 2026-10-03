@@ -200,8 +200,25 @@ carried over from a different compound, batch, or paper.
     Confirm from the article's own licence field (Europe PMC `license`, or the
     article's rights statement) — not from the fact that it is free to read.
   - `derived_features_only` / `summary_stat` — copyrighted journal content where
-    only derived features or summary statistics are reproduced under fair use.
+    only derived features or summary statistics were extracted. **`summary_stat` was a
+    blanket tag, never a licence determination**, and the fair-use claim it once carried
+    here has been withdrawn.
   - `verify` — rights unresolved; must be settled before release.
+
+> **⚠ The `redistribution` column is a SUPERSEDED legacy tag, not a licence determination.**
+> It was a coarse curation shorthand and two of its values were actively wrong: `public_domain`
+> lumped EMA and USPTO material in with US federal works, and `summary_stat` asserted a fair-use
+> position this project is not in a position to assert. The live classification is `licence_class`
+> in `curation/rights/shipped_row_rights.csv`, resolved **per publisher and per regulator**, because
+> *regulator document = government work = public domain* reaches **US federal agencies only**: EMA
+> permits reuse with attribution, one national regulator forbids redistribution without written
+> approval, and another reserves all rights. The legacy column is retained on the rows for
+> continuity and should not be read as a rights position.
+>
+> Two separate questions, and neither column answers the first: (1) may the **source file** be
+> republished? (2) may the **facts extracted from it** be reused? Both ledgers address only (2).
+> The ledger is a **project classification, not legal clearance**.
+
 - `sequence_5to3` and any toxicity `readout_value` are **never fabricated**.
   Use `TBD` and fetch the source.
 

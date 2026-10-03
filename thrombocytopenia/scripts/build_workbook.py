@@ -69,6 +69,12 @@ SHEETS = [
      "The independent four-test audit that sets the defensible toxicity denominator: is monitoring "
      "quoted (not merely absence reported), are dose and duration stated, is there a platelet-specific "
      "at-risk denominator, is the locus retrievable. QUOTE THE SURVIVING COUNT, not the classified one."),
+    ("01f_signoff_gate_audit", "signoff_gate_audit.csv",
+     "SELF-AUDIT AGAINST THE PROJECT SCIENTIST'S TWELVE SIGN-OFF GATES. Each verdict carries the "
+     "measurement behind it. ZERO of 1,959 rows clear all twelve: gates 2, 5 and 6 require fields "
+     "absent from the schema entirely, so they fail identically on every row. Three missing columns, "
+     "not 1,959 deficient rows. These verdicts are the curator's own, measured and reproducible; "
+     "they are NOT a sign-off, which only the project scientist can give."),
     ("02_Germans_analysis", "germans_analysis.csv",
      "One row per compound: what the molecule IS (sequence and per-residue modification map) and what "
      "it DID (toxicity). RANKED ON HUMAN EVIDENCE ONLY -- a compound with no human rows cannot rank "

@@ -96,7 +96,10 @@ def main():
         lic = r.get("declared_licence", "")
         rows.append({
             "measurement_id": m["measurement_id"], "oligo_id": m["oligo_id"],
-            "subject_class": m["subject_class"], "source_ref": m["source_ref"][:110],
+            # Never truncate the join key. Truncating it at 110 chars silently broke the join
+            # for 16 of 70 sources, which showed up downstream as an unknown rights class on
+            # FDA review and registry rows whose licence was in fact resolved.
+            "subject_class": m["subject_class"], "source_ref": m["source_ref"],
             "legacy_redistribution": m["redistribution"],
             "rights_tier": tier, "declared_licence": lic,
             "licence_class": licence_class(tier, lic, m["source_ref"]),

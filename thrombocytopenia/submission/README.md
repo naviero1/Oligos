@@ -62,5 +62,9 @@ scripts/render_submission.py
 | `../SOURCES.md` | source registry with per-source redistribution class |
 | `../curation/` | raw extractions, verification verdicts, source sweep |
 
-Licence: **CC-BY 4.0**. Rights are tracked per row so a consumer can filter to
-exactly the records they may lawfully reuse.
+Licence of **this curation work**: **CC-BY 4.0**. Source rights are classified per row,
+per publisher and per regulator, so a consumer can filter to the records matching their own
+reuse determination — a **project classification, not legal clearance**, and about reuse of
+**extracted facts** rather than republication of **source files**. 224 rows sit on a proposed
+hold awaiting the data owner's ruling; zero withdrawn, zero cleared. See `padp.pdf` and
+`../curation/rights/shipped_row_rights.csv`.

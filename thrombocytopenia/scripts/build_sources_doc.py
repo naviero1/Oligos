@@ -18,13 +18,51 @@ BASE = os.path.join(ENDPOINT, "data")
 SUB = os.path.join(ENDPOINT, "submission")
 SCRATCH = "/tmp/claude-0/-home-user-Claude-Works/189fa036-08d6-5409-99b8-7265f67bf20d/scratchpad"
 
-RIGHTS = {
-    "public_domain": ("Public domain", "US Government work (FDA/EMA/USPTO) — values reproducible without restriction"),
-    "cc_by": ("CC-BY", "Creative Commons Attribution — raw values reproducible with attribution"),
-    "summary_stat": ("Summary stat.", "Copyrighted; reproduced as summary statistics under fair use"),
-    "derived_features_only": ("Derived only", "Copyrighted; derived features only"),
-    "verify": ("Unresolved", "Rights not yet settled"),
+# SUPERSEDED. These are the LEGACY redistribution tags carried on the measurement rows.
+# They were a coarse curation shorthand, never a licence determination, and two of them were
+# actively wrong: "public_domain" lumped EMA and USPTO material in with US federal works, and
+# "summary_stat" asserted a fair-use position this project is not in a position to assert.
+# Retained here only so the legacy column remains readable; the live classification is
+# licence_class in curation/rights/shipped_row_rights.csv, built per publisher and per regulator.
+LEGACY_RIGHTS = {
+    "public_domain": ("public_domain", "legacy tag — mixed US federal, EMA and USPTO material"),
+    "cc_by": ("cc_by", "legacy tag — Creative Commons Attribution asserted"),
+    "summary_stat": ("summary_stat", "legacy blanket tag — NOT a licence determination"),
+    "derived_features_only": ("derived_features_only", "legacy tag — derived features only"),
+    "verify": ("verify", "legacy tag — rights not yet settled"),
 }
+
+# The live classification: one class per publisher-declared licence or per regulator, because
+# "regulator document = public domain" is true of US federal agencies and FALSE of the others.
+LC_SHORT = {
+    "public_domain_us_federal": "US fed PD",
+    "public_domain_uspto_patent": "patent PD",
+    "ema_reuse_with_attribution": "EMA attrib",
+    "cc_permissive": "CC-BY/CC0",
+    "cc_nc_noncommercial": "CC-NC",
+    "cc_nd_derivatives_restricted": "CC-ND",
+    "closed_no_open_licence": "HOLD",
+}
+
+LICENCE_CLASS = [
+    ("public_domain_us_federal", "US federal agency work",
+     "No copyright under 17 U.S.C. §105. Reproducible without restriction."),
+    ("public_domain_uspto_patent", "Granted US patent text",
+     "Patent specifications are published without copyright restriction. Reproducible; the "
+     "patent CLAIMS remain enforceable as patent rights, which is a separate matter from copying."),
+    ("ema_reuse_with_attribution", "EMA document",
+     "NOT US public domain. EMA permits reuse, including commercial reuse, WITH attribution."),
+    ("cc_permissive", "CC-BY / CC0 article",
+     "Publisher-declared permissive licence. Values reproducible with attribution."),
+    ("cc_nc_noncommercial", "CC-BY-NC article",
+     "NonCommercial clause. Whether a prize submission is a commercial use is UNSETTLED and is "
+     "not ours to decide; flagged, not assumed either way."),
+    ("cc_nd_derivatives_restricted", "CC-BY-ND article",
+     "NoDerivatives clause. Excluded from derived outputs."),
+    ("closed_no_open_licence", "No open licence located",
+     "PROPOSED HOLD pending the data owner's ruling. Zero rows withdrawn and zero rows cleared "
+     "by this curation effort."),
+]
 
 
 def classify(ref):
@@ -199,16 +237,59 @@ def main():
                  f"<td class='n'>{hum:,}</td></tr>")
     H.append("</table>")
 
-    H.append("<h2>Rights position across the dataset</h2><table>"
-             "<tr><th>Class</th><th>Meaning for reuse</th><th class='n'>Rows</th></tr>")
-    for k in ("public_domain", "cc_by", "summary_stat", "derived_features_only", "verify"):
-        if rights_tot.get(k):
-            lbl, mean = RIGHTS[k]
-            H.append(f"<tr><td><b>{lbl}</b></td><td>{esc(mean)}</td>"
-                     f"<td class='n'>{rights_tot[k]:,}</td></tr>")
-    H.append("</table><p>Rights are tracked <b>per row</b>, not per dataset, so a consumer can filter "
-             "to exactly the records they may lawfully reuse. A CC-BY classification is taken from the "
-             "article's own licence field, never from the fact that it is free to read.</p>")
+    # Rights: read the live per-row classification rather than the legacy tag. An earlier version
+    # of this page published the legacy tag as a rights position, which asserted a fair-use
+    # determination and treated EMA and USPTO material as US public domain. Both were wrong.
+    lc = collections.Counter()
+    src_lc = collections.defaultdict(collections.Counter)
+    lcpath = os.path.join(ENDPOINT, "curation", "rights", "shipped_row_rights.csv")
+    if os.path.exists(lcpath):
+        with open(lcpath, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                lc[r["licence_class"]] += 1
+                src_lc[r["source_ref"]][r["licence_class"]] += 1
+
+    def lc_of(ref):
+        """The live licence class for one source. A source's rows all share a publisher, so
+        this is normally unanimous; if it is not, say so rather than pick a winner."""
+        c = src_lc.get(ref)
+        if not c:
+            return "?"
+        if len(c) == 1:
+            return LC_SHORT.get(next(iter(c)), next(iter(c)))
+        return "mixed"
+
+    H.append("<h2>Rights position across the dataset</h2>")
+    H.append("<p><b>Two separate questions, and this page answers only the second.</b> "
+             "(1) May the <i>source file</i> be republished? (2) May the <i>facts extracted from it</i> "
+             "be reused? A measured value read out of a copyrighted table is not the table. This "
+             "classification is about extracted-fact reuse; nothing here licenses republication of a "
+             "source document.</p>")
+    if lc:
+        H.append("<table><tr><th>Class</th><th>What it is</th><th>Position on extracted-fact reuse</th>"
+                 "<th class='n'>Rows</th></tr>")
+        for key, what, meaning in LICENCE_CLASS:
+            if lc.get(key):
+                H.append(f"<tr><td><b>{esc(key)}</b></td><td>{esc(what)}</td>"
+                         f"<td>{esc(meaning)}</td><td class='n'>{lc[key]:,}</td></tr>")
+        H.append("</table>")
+        rel = sum(v for k, v in lc.items() if k != "closed_no_open_licence")
+        hold = lc.get("closed_no_open_licence", 0)
+        H.append(f"<p><b>{rel:,} rows</b> carry a publisher-declared or regulator-stated position "
+                 f"permitting extracted-data release. <b>{hold:,} rows</b> are on "
+                 f"<b>PROPOSED HOLD</b>: no open licence was located, and the ruling belongs to the "
+                 f"data owner. <b>Zero rows withdrawn, zero rows cleared</b> by this curation effort "
+                 f"— the holds are proposed, not applied.</p>")
+    H.append("<p><b>This ledger is a project classification, not legal clearance.</b> It records what "
+             "each publisher or regulator declares, with the basis, so the position is auditable "
+             "rather than asserted. A permissive classification is taken from the article's own "
+             "licence field, never from the fact that it is free to read. Rights are tracked "
+             "<b>per row</b>, so a consumer can filter to the records matching their own "
+             "determination. The per-regulator split matters: <b>regulator document = government work "
+             "= public domain reaches US federal agencies only.</b> EMA permits reuse with "
+             "attribution, and other national regulators are more restrictive still — one forbids "
+             "redistribution without written approval and another reserves all rights. "
+             "Full per-row ledger: <code>curation/rights/shipped_row_rights.csv</code>.</p>")
 
     for cls in ORDER:
         if cls not in groups:
@@ -248,7 +329,7 @@ def main():
             H.append(f"<tr><td class='src'>{cellsrc}</td>"
                      f"<td>{cell_link}</td>"
                      f"<td class='n'>{v['n']}</td><td class='n'>{len(v['loci'])}</td>"
-                     f"<td style='font-size:8pt'>{RIGHTS.get(sorted(v['redist'])[0], ('?', ''))[0]}</td></tr>")
+                     f"<td style='font-size:8pt'>{esc(lc_of(ref))}</td></tr>")
         H.append("</table>")
 
     H.append('<div class="pb"></div><h2>Retrieval routes, verbatim</h2>'
@@ -296,10 +377,21 @@ def main():
     import pymupdf
     print(f"wrote submission/sources.pdf — {len(pymupdf.open(out))} pages, "
           f"{len(inv)} sources, {n_rows:,} rows")
+    # Write the acquisition tally so METHODOLOGY can quote it instead of quoting the
+    # retired legacy rights tags, which conflated FDA, EMA and USPTO material.
+    tally = os.path.join(ENDPOINT, "data", "source_class_counts.csv")
+    with open(tally, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["source_class", "label", "n_sources", "n_rows"])
+        for cls in ORDER:
+            if cls in groups:
+                w.writerow([cls, DB_NAME[cls][0], len(groups[cls]),
+                            sum(v["n"] for _, v in groups[cls])])
     for cls in ORDER:
         if cls in groups:
             print(f"  {DB_NAME[cls][0]:<44} {len(groups[cls]):>3} sources  "
                   f"{sum(v['n'] for _, v in groups[cls]):>5} rows")
+    print(f"  -> {os.path.relpath(tally, ENDPOINT)}")
 
 
 if __name__ == "__main__":

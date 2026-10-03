@@ -404,7 +404,11 @@ def main():
         print("distinct sources           :",
               len({m["source_ref"] for m in meas}))
     if oligos:
-        withseq = sum(1 for o in oligos if o["sequence_5to3"] not in ("", "TBD"))
+        # "NA" here means not-applicable, not not-reported: one record is a nucleotide
+        # triphosphate mixture with no sequence to state. Excluding it keeps this line
+        # agreeing with the Phase 2 completeness gate below, which reported 200 while
+        # this line reported 201.
+        withseq = sum(1 for o in oligos if o["sequence_5to3"] not in ("", "TBD", "NA"))
         print(f"sequences filled           : {withseq} / {len(oligos)}")
         print("oligo classes              :",
               dict(collections.Counter(o["oligo_class"] for o in oligos)))

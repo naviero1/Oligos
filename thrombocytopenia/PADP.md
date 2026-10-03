@@ -23,7 +23,9 @@ itself continue to use or distribute it.**
 | `data/oligotox_thrombo_merged.csv` | generated denormalized analysis view (regenerated, never hand-edited) |
 | `schema.md` | Data dictionary, controlled vocabularies, and the 0–3 grade rubric |
 | `METHODOLOGY.md` | Assembly, grading conventions, QC, verification status, known limitations |
-| `SOURCES.md` | Source registry with per-source redistribution class |
+| `SOURCES.md` | Source registry |
+| `curation/rights/shipped_row_rights.csv` | Per-row licence class with the basis the rights holder states |
+| `curation/rights/proposed_hold_rows.csv` | Rows on proposed hold pending the project lead's ruling |
 | `README.md` | Overview, the controlled comparisons, and the fitness-for-purpose analysis |
 | `scripts/` | The full pipeline — assembly, verdict application, QC, reporting |
 | `curation/` | The curation record — raw extractions, verification verdicts, source sweep |
@@ -56,20 +58,31 @@ same licensing position as the tables.
   redistribute, modify and build upon the dataset in perpetuity, subject only to
   attribution. *(A more permissive dedication such as CC0 1.0 can be substituted
   at NCATS's preference.)*
-- **Underlying third-party full texts are never redistributed.** Every row records
-  its rights status in the `redistribution` column, so a consumer can filter to
-  exactly the rows they are entitled to reuse:
+- **Underlying third-party full texts are never redistributed.** Two questions are kept
+  separate, because conflating them is how a dataset acquires a rights claim it cannot support:
 
-| Class | Meaning |
+  1. **Source-file republication** — may the article PDF or supplementary archive itself be
+     redistributed? **No, and none is.** No retrieved third-party file is published; only its
+     checksum, retrieval URL and inner inventory.
+  2. **Extracted-fact reuse** — may the numeric values, with citation, ship inside the dataset?
+     That is what the classification below addresses, and all it addresses.
+
+  **The classification is a project classification, not legal clearance.** It records the licence
+  each publisher declares, resolved source by source. It is not a legal opinion, it asserts no
+  fair-use conclusion, and it clears no row for release.
+
+| Class | Basis, as the rights holder states it |
 |---|---|
-| `public_domain` | USPTO patents, FDA/EMA documents — reproduce without restriction |
-| `cc_by` | source is CC-BY licensed; raw values reproducible **with attribution** |
-| `derived_features_only` / `summary_stat` | copyrighted content; derived features or summary statistics under fair use |
-| `verify` | rights unresolved — must be settled before release |
+| `public_domain_us_federal` | US federal agency work — FDA reviews and labels, ClinicalTrials.gov posted results |
+| `public_domain_uspto_patent` | Published US patent text; public by design, a distinct basis from a federal-agency work |
+| `ema_reuse_with_attribution` | EMA permits reuse **including commercial, conditional on attribution** — a licence, **not** public domain. An earlier version of this file wrongly listed EMA as reproducible without restriction |
+| `cc_permissive` | CC-BY or equivalent, from the article's own licence field |
+| `cc_nc_noncommercial` | CC BY-NC / BY-NC-SA — Creative Commons, but **commercial reuse restricted** |
+| `cc_nd_derivatives_restricted` | CC BY-NC-ND — NoDerivatives, the harder clause for a restructured dataset; separately listed so a documented switch can exclude them |
+| `closed_no_open_licence` | **No open licence declared.** On **proposed hold** pending the project lead's ruling, listed per row with a reason. **Zero withdrawn, zero cleared.** |
 
-  A `cc_by` classification is taken from the article's **own licence field**,
-  never from the fact that it is free to read. This per-row tracking is what makes
-  the dataset lawfully redistributable as a whole.
+  A permissive classification is taken from the source's **own licence field**, never from the fact
+  that it is free to read.
 - **No patents, trade secrets, or restrictive IP** are or will be claimed. There
   is no proprietary component whose withdrawal could remove public access.
 

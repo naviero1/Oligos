@@ -156,6 +156,31 @@ def main():
       f"Any outer split must group on `exact_sequence_group`.")
     w("")
 
+    # The twelve sign-off gates are the operative definition of scientist-ready, so STATUS
+    # has to carry the verdict rather than leave it in a receipt nobody re-reads.
+    gates = rd(os.path.join(DATA, "signoff_gate_audit.csv"))
+    if gates:
+        tally = collections.Counter(g["verdict"] for g in gates)
+        fails = [g["gate"] for g in gates if g["verdict"] == "FAIL"]
+        w("### Sign-off gates (`SCIENTIFIC_RULES.md` §K)\n")
+        w(f"**Zero rows clear all twelve.** Gates {', '.join(fails)} require fields absent from the "
+          f"schema entirely, so they fail identically on every row — three missing columns, not "
+          f"{len(meas):,} deficient rows. Tally: "
+          + " · ".join(f"**{v} {k}**" for k, v in sorted(tally.items())) + ".\n")
+        w("| # | Gate | Verdict | Measured |")
+        w("|---:|---|---|---|")
+        for g in gates:
+            short = g["gate_text"]
+            short = short if len(short) <= 72 else short[:69].rstrip() + "..."
+            m = g["measured"]
+            m = m if len(m) <= 150 else m[:147].rstrip() + "..."
+            w(f"| {g['gate']} | {short} | **{g['verdict']}** | {m} |")
+        w("")
+        w("These verdicts are the curator's own, measured and reproducible via "
+          "`scripts/audit_signoff_gates.py`. **They are not a sign-off** — only the project "
+          "scientist signs off, and he can overturn any of them. Full detail including the "
+          "reasoning per gate: `data/signoff_gate_audit.csv`.\n")
+
     w("## 4. Modelling\n")
     if approved:
         b = approved.get("blocked_model", {})
