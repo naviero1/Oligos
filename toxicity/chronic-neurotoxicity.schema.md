@@ -108,6 +108,39 @@ Grade is assigned **per measurement** from the reported endpoint; rows for the
 same oligo may legitimately differ by model, region and dose. Record the
 rationale in `notes` when non-obvious.
 
+### Status of every grade in this corpus: **provisional and curator-derived**
+
+Per Crank's 2026-10-03 answer 1, applied across all endpoints: **existing grades
+stand as PROVISIONAL, pending German.** They are not stripped, recomputed or
+re-derived. All **2,538** rows in this corpus carry a `neurotox_grade`, **every
+one of it curator-derived** — no row's grade was taken verbatim from a source
+that explicitly defined it. Nothing in the table currently says so per row;
+§K gate 5 requires curator-derived labels to be explicitly marked, and the column
+to carry that marker (`curator_label`, alongside `staging_state`,
+`licence_class` and `measurement_intent`) is part of Beebop's four-column
+submission package, to be pasted from complement's already-populated file rather
+than designed here. Until that lands, this statement is the marker.
+
+### The in-vitro axis is **experimental response severity**, not a clinical grade
+
+Per Crank's 2026-10-03 answer 2, confirming §E: do not label in-vitro
+fold-change bins with CTCAE or any clinical grade unless clinically validated.
+**The 297 `in_vitro` rows in this corpus are on an axis of experimental response
+severity, and must not be read on the clinical scale the rubric above defines.**
+
+The rubric above is written wholly in organism-level terms — grade 3 is "neuronal
+degeneration/loss … paralysis … moribundity/death" — and has no in-vitro branch.
+Two of those 297 are cell-culture rows graded 3 against that definition
+(`CMS2054`, LDH release in BE(2)-M17 cells). That is the defect; this rename is
+its sanctioned remedy.
+
+**The numbers do not change.** Renaming the axis is not a relabelling of the
+science and no value in any row was altered. What changes is what a consumer may
+conclude: a `neurotox_grade` of 2 on a `clinical` row and a 2 on an `in_vitro`
+row are **not the same quantity and must never be pooled or compared**. Filter on
+`study_type` before using this column.
+
+
 ### Direction matters more here than in any other endpoint
 
 `NfL` is both an efficacy biomarker and a toxicity biomarker in this field. A

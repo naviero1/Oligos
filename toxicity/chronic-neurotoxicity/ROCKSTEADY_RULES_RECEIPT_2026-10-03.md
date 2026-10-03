@@ -285,7 +285,22 @@ shared molecules.
 
 ## 5. §F and §I — already satisfied, one artefact still missing
 
-**§F — `NOT_REPORTED` is the correct value.** Satisfied. The four
+**§F — `NOT_REPORTED` is the correct value.** **This claim is SUPERSEDED as of
+Crank's corrected dispatch of 2026-10-03 and must not be read as compliance.**
+The corrected instruction is: *first* harvest nonclinical lot purity from FDA
+Pharmacology/Toxicology reviews, which publish per-lot values **unredacted** in
+study headers; record withheld-with-evidence only where no lot value exists. Run
+as I had it, `NOT_REPORTED` across the board would be a **false missingness
+declaration on the one field NIH named mandatory**, for every oligo with an FDA
+review — and **10 of mine have one** (`CNS012` nusinersen, `CNS013` tofersen,
+`CNS273`–`CNS280`, across 10 FDA source_refs and 229 rows). Two of the documents
+are already committed here
+(`FDA_NDA209531_nusinersen_PharmacologyReview.pdf`,
+`FDA_NDA215887_tofersen_IntegratedReview.pdf`). The sweep is one central job
+owned by kidney per answer 8, so I am consuming it rather than duplicating it,
+and I have changed no cell. What remains true and narrower: release
+specifications and impurity profiles are withheld; measured nonclinical lot
+purity is published. Mechanically, what follows is still accurate: The four
 characterization columns are never blank: `sequence_provenance` is populated on
 466 records (222 publication supplement / 189 patent sequence listing / 43 main
 text / 9 WHO INN / 2 regulatory / 1 registry) with 126 `NOT_APPLICABLE`;
@@ -469,8 +484,15 @@ verdict from me** about whether it clears the gate. Noting also that decision 6
 names "seven gates" and lists six; settling the count matters, because it
 decides what DEVOTE is being measured against.
 
-**German's decision 2 proposes a value my schema cannot express.**
-"Withheld-with-evidence" — a regulator demonstrably holding a purity number
+**German's decision 2 — SUPERSEDED 2026-10-03.** Crank's corrected dispatch
+retires the project-wide withheld-with-evidence instruction, so the third
+enumerated value I argued for below is **not** the fix: for any oligo with an FDA
+Pharm/Tox review the value is published, not withheld, and recording it as
+withheld would be a false missingness declaration. The narrower surviving claim
+is that release specifications and impurity profiles are withheld while measured
+nonclinical lot purity is not. I leave the original paragraph below rather than
+delete it, because the reasoning is what was wrong and hiding it would obscure
+that. **Original, now superseded:** "Withheld-with-evidence" — a regulator demonstrably holding a purity number
 (FDA `(b)(4)`, 56 redactions in inotersen, 84 pages in tofersen; EMA CCI; PMDA
 asterisks) — is **not** the same state as `NOT_REPORTED`, which means nobody
 measured or published it. My corpus currently flattens both into `NOT_REPORTED`

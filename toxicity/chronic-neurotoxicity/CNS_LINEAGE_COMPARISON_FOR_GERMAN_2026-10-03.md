@@ -54,6 +54,28 @@ genuine narrowness across chemistries.
 
 ## 2. Shared sequences — the delegation's 144 is exact, and scoped to one partition
 
+> **The normalization that produced these figures, written down beside them as
+> Crank's 2026-10-03 answer 5 requires.**
+>
+> `canon(s)` = `strip()` → `upper()` → `replace("U","T")` → strip every character
+> outside `[ACGT]` → keep only if length ≥ 12. Columns: `sequence_5to3` on this
+> branch; `sequence_base` on `k394sz`, cross-checked against
+> `sequence_5to3_asprinted` with an identical result.
+>
+> **This normalization is case-INSENSITIVE, and that makes it unusable as a merge
+> basis.** Answer 5 sets case-sensitive joining as the project default precisely
+> because, in this corpus, letter case encodes modification position — uppercase
+> wing, lowercase DNA gap — so upper-casing discards chemistry and can collapse
+> two distinct molecules into one. Case-insensitive merging is **forbidden
+> without adjudication**.
+>
+> So every figure in this section — 144, 150, 132, 1,535 — is a **candidate-link
+> count for leakage control and for sizing the overlap**, and is *not* a count of
+> shared molecules or a licence to join. §3 below measures what the case
+> information would have preserved: 11 of the 150 map to more than one as-printed
+> construct, 9 disagree on chemistry across the lineages, and 5 carry more than
+> one chemistry within this branch alone. Nothing has been merged.
+
 | intersection | count |
 |---|---:|
 | A ∩ B, **full cross-lineage** | **150** |
