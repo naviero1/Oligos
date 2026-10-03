@@ -43,7 +43,7 @@ are marked in the data as well as here.
 | PubMed Central (PMC) | `https://pmc.ncbi.nlm.nih.gov/articles/` | Open-access full text | **Yes** |
 | PubMed | `https://pubmed.ncbi.nlm.nih.gov/` | Abstracts, PMIDs | Yes |
 | DailyMed (NLM) | `https://dailymed.nlm.nih.gov/dailymed/` | US prescribing information (SPL) | **Yes — our route to FDA labels** |
-| Drugs@FDA | `https://www.accessdata.fda.gov/scripts/cder/daf/` | FDA review documents | **NO — blocked** |
+| Drugs@FDA | `https://www.accessdata.fda.gov/drugsatfda_docs/nda/` | FDA review documents | **Yes — with a browser user agent.** Corrected 2026-10-03; the previous "blocked" entry was wrong. Default agent gets a 420-byte apology page; a browser agent gets the PDF. Direct document paths work even where the `…TOC.cfm` index 404s |
 | WHO INN | `https://cdn.who.int/media/docs/default-source/international-nonproprietary-names-(inn)/` | Chemical nomenclature → sequences | **Yes** |
 | NCBI Bookshelf | `https://www.ncbi.nlm.nih.gov/books/` | Monographs (NBK…) | Yes |
 | ClinicalTrials.gov | `https://clinicaltrials.gov/study/` | Trial registrations (NCT…) | Yes |
@@ -190,13 +190,13 @@ a measured negative. Full analysis in `CLINICAL_VALIDATION.md`.
 | NEJM 2015 `NEJMoa1407250` | mongersen | NEJM |
 | NEJM 2023 OCEAN(a)-DOSE `NEJMoa2211023` | olpasiran | NEJM |
 | NEJM 2024 `NEJMoa2402478` | donidalorsen | NEJM |
-| Circulation 2021 `CIRCULATIONAHA.120.053029` | teprasiran | AHA |
+| ~~Circulation 2021 `CIRCULATIONAHA.120.053029`~~ | teprasiran | **RETRIEVED 2026-10-02** via Europe PMC REST `fullTextXML` (`PMC8487715`), not via AHA |
 | TRANSLATE-TIMI 70, Circulation 2022 | vupanorsen | AHA |
 | Yu et al. 2012, *Toxicology* | ISIS 113715 | Elsevier |
 | Alicaforsen review | alicaforsen | ScienceDirect |
 | Engelhardt 2016 `nat.2015.0598` / PMID 29846725 | class | Nature |
 | **KARDIA trials** | zilebesiran | *citation unresolvable as recorded — needs a real reference* |
-| FDA reviews: `211172` PharmR · `211970` NCR · `213026` NCR · `212154` · `217388` · `219019` | various | Drugs@FDA (blocked) |
+| ~~FDA reviews: `211172` · `211970` · `213026` · `212154`~~ | inotersen, golodirsen, casimersen, viltolarsen | **RETRIEVED 2026-10-03** — Pharm/Tox reviews, 22.9 MB, staged in `research_staging/papers/`. `217388` and `219019` not located under the probed paths; still open |
 
 **Reachable — we can still retrieve these ourselves:**
 `PMC6249674` (Janas 2018) · `PMC6468299` (Janas 2019) · `PMC5790433` (Crooke 2018) ·

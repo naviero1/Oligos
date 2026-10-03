@@ -11,6 +11,18 @@ directory** for local extraction. Identifiers below were verified via
 > PMC, EMA, DailyMed, ClinicalTrials.gov, J-STAGE and `cdn.who.int` all succeed.
 > Still blocked: `accessdata.fda.gov`, NEJM, Circulation/AHA, ScienceDirect,
 > `academic.oup.com`. Only the blocked set needs hand-delivery.
+>
+> **Correction (2026-10-03):** `accessdata.fda.gov` was **never blocked** — it is
+> **user-agent gated**, and the line above was wrong. The default `curl` agent receives
+> HTTP 404 with a 420-byte apology page that reads like a block; a browser user agent
+> receives the document. Measured on the same URL:
+> `211172Orig1s000PharmR.pdf` → default **404 / 420 B**, browser **200 / 7,558,885 B**.
+> Four FDA Pharmacology/Toxicology reviews have since been retrieved this way
+> (inotersen, golodirsen, casimersen, viltolarsen — 22.9 MB total).
+>
+> The rest of the line stands and was re-tested on 2026-10-03: NEJM, Circulation/AHA,
+> ScienceDirect and `academic.oup.com` all return **403 under both** the default and a
+> browser agent. Those are genuine blocks and do need hand-delivery.
 
 ## How to hand files back for extraction
 
