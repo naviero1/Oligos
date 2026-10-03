@@ -21,11 +21,33 @@ silence.
 
 ---
 
-## Item 1 — Does a qualified record require position-resolved chemistry? **This is the one that changes the submission.**
+## Item 1 — Qualification against §K's twelve gates **(revised 2026-10-03 — the earlier framing of this item was wrong)**
 
-**German decides** (what qualifies as evidence). **Gustavo needs it** (it sets what can be
-modelled, and on which lane). Beebop is deriving the Minimum Qualified Record from German's
-sign-off gates and has been asked the mechanical half of this separately.
+> **REVISED.** This item originally asked whether a qualified record requires position-resolved
+> chemistry, and answered with a **compound-grain** count — "11 human-participant compounds with
+> sequence plus chemistry". Two corrections, both accepted:
+>
+> 1. **§K answers the question from the rules themselves.** The Minimum Qualified Record is the
+>    cross-endpoint generalization of German's twelve sign-off gates, and gate 3 requires
+>    modifications encoded by position while gate 2 requires the sequence verified 5′→3′ with
+>    strand identity and duplex partner. So position chemistry is required, and so is strand
+>    identity — which this dataset cannot express at all.
+> 2. **11 compounds is not 11 qualified records.** It is compound grain, and it tests only part
+>    of two of the twelve gates. The gates are written per row.
+>
+> Corrected answer, at row grain: **1,219 of 2,685 rows pass the four gates testable from the
+> tables today** (1, 2-sequence-present, 3, 4-context), of which **184 are human-participant
+> rows and 0 are strict human-laboratory rows**. **No row passes all twelve**, because gates 2,
+> 4 and 6 fail on columns that do not exist and gate 8 fails on 19 composite rows. The full
+> twelve-gate assessment is §8 of
+> [`ROCKSTEADY_RULES_RECEIPT_2026-10-03.md`](ROCKSTEADY_RULES_RECEIPT_2026-10-03.md).
+>
+> **What remains for German here** is not the definition — §K gives it — but the consequence
+> below, which the figures make sharper rather than softer.
+
+**German decides** the consequence. **Gustavo needs it** (it sets what can be modelled, and on
+which lane). Beebop owns the MQR derivation; §K establishes that it is a derivation of the
+twelve gates, not an invention, so no authority document is needed to propose it.
 
 ### The facts
 
@@ -265,6 +287,22 @@ corroborated throughout**, and that distinction belongs in whatever document quo
 
 ---
 
+## Item 9 — Gate 6 has no coagulation vocabulary (added on the §K re-confirmation)
+
+**German decides.** Gustavo: it is a feature-definition dependency.
+
+§K gate 6 requires agonist, antagonist, potentiator and inert/low-response states to be
+separated. **No such vocabulary exists in this endpoint**, and the obvious translation does not
+work: a factor-XI antisense, a direct thrombin aptamer and a phosphorothioate backbone effect
+are all "inhibitory" by very different mechanisms, and lumping them under one state would
+collapse exactly what the gate exists to separate. `effect_direction` plus the two axis flags
+carry part of it and no more.
+
+Defining the state vocabulary for a coagulation endpoint is a scientific judgment, so it is
+his. Until it exists, gate 6 is **absent**, not failed-but-fixable.
+
+---
+
 ## Summary: who is blocking what
 
 | Item | Decides | Also needs | Blocks |
@@ -277,6 +315,7 @@ corroborated throughout**, and that distinction belongs in whatever document quo
 | 6 — 132 both-axes rows | German | Gustavo | label resolution on the ambiguous set |
 | 7 — 19 composites | German | crosswalk | single-endpoint analysis |
 | 8 — 23 single-record trials | German | — | external quotation of 46 |
+| 9 — gate 6 state vocabulary | German | Gustavo | gate 6 compliance, and any mechanism feature |
 
 **Reproduce any figure here with:** `scripts/validate_dataset.py` (104 checks),
 `scripts/audit_scientific_rules.py` (§C/§G field coverage),

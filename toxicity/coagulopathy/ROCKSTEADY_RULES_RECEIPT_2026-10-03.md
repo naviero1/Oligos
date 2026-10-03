@@ -13,6 +13,27 @@ acknowledged as outranking any instruction from Crank or Beebop, this receipt in
 
 ---
 
+> ## RE-CONFIRMED against the revised file, same day
+>
+> **§K was added after this receipt was first filed.** The revised `SCIENTIFIC_RULES.md` was
+> re-read in full. §K states German's twelve scientist sign-off gates and says plainly that the
+> **Minimum Qualified Record is their cross-endpoint generalization, derived from them rather
+> than invented** — which answers, from the rules themselves, the question this receipt had
+> referred out as open. §8 below is the twelve-gate assessment at **row grain**, which is the
+> grain the gates are written in ("every training row").
+>
+> §K also corrects a habit of mine: *"A proposal may be derived from this file and submitted for
+> German's ratification — that is what a proposal is. Only an authority claim requires his
+> primary documents. Do not stall a proposal for want of a source you need only in order to
+> assert finality."* I had been holding proposals for want of authority I did not need.
+>
+> **Four corrections accepted from Beebop, and propagated below:** the quote repair did change
+> build scripts and output tables, so this receipt's earlier framing of it was wrong; 774 is not
+> Crank's 687 denominator; hashing output columns does not resolve the 48 non-permissive source
+> documents; and 11 compounds is compound grain, not 11 qualified records.
+
+---
+
 ## 1. The grain question, answered first because it was asked first
 
 **This endpoint is NOT built one-row-per-oligo.** `data/measurements.csv` is at
@@ -190,12 +211,24 @@ is an archive of what was said on a date and legitimately quotes superseded figu
 than rewrite history or exempt whole files silently, each now carries a superseded-figures
 banner, and the guard fails if a banner is missing.
 
-### 3.2 "Drop or hash the verbatim_quote column on 687 rows — 30,885 words of publisher prose" — CONFIRMED in substance; done by hashing
+### 3.2 "Drop or hash the verbatim_quote column on 687 rows — 30,885 words of publisher prose" — ACTED ON. **The denominators are different and I should not have equated them**
 
-Measured after the 2026-10-03 licence resolutions: **774 rows / 34,278 words** whose source
-licence does not permit republishing its text, of which **698 rows / 31,318 words** come from
-sources that forbid derivative republication outright. Crank's 687 / 30,885 is the same
-computation before ten EMA sources moved from `public_domain`/`CC_BY` to `cite_and_link_only`.
+**Correction accepted (Beebop, 2026-10-03): 774 withheld-and-hashed quotes is not Crank's
+687-row denominator, and calling it "the same computation" was wrong.** They are two different
+measurements and neither reproduces the other:
+
+| measurement | rows | words |
+|---|---:|---:|
+| Crank's figure, 2026-10-03 delegation | 687 | 30,885 |
+| Rows whose source forbids derivative republication (`publisher_restricted`, `CC_BY_NC_ND`, `cite_and_link_only`) | 698 | 31,318 |
+| **Rows actually withheld and hashed** (the three above **plus `CC_BY_NC`**) | **774** | **34,278** |
+
+The 774 is wider than Crank's figure by construction, because I chose to withhold `CC_BY_NC`
+as well: NC forbids commercial reuse and this dataset ships CC BY 4.0, which is more permissive
+than its source allows. That was my decision and it needs to be stated as a decision, not
+smuggled in as agreement with a number I did not reproduce. **I cannot reconstruct Crank's exact
+687 from the current tables**, and the overlap with the licence resolutions that moved ten EMA
+sources to `cite_and_link_only` is a plausible explanation rather than a verified one.
 
 **Hashed, not dropped.** The quote is the audit trail — it is how a reader checks that a
 number means what the row says. Deleting it protects the publisher and blinds the reviewer.
@@ -287,7 +320,14 @@ system, not for the sequence.
 
 ## 5. What was done, and what was deliberately not
 
-**Done** (mechanical, assigned, no scientific judgment, nothing promoted):
+**Done.** Mechanical, assigned, and involving no scientific judgment — but **not** free of
+changes to the build or the tables, and the earlier wording of this line implied otherwise.
+**Correction accepted (Beebop):** the quote repair changed `scripts/build_dataset.py`,
+`scripts/build_study_register.py`, `scripts/validate_dataset.py`,
+`scripts/verify_against_sources.py` and `scripts/build_release_xlsx.py`, and it changed
+`data/measurements.csv`, `data/oligos.csv`, `data/studies.csv` and `data/pooled_analyses.csv`
+by replacing 911 quote cells and adding nine columns. The defensible statement is **"no new
+scientific source evidence was ingested"** — not "no data files changed", which is false.
 
 1. Remaining stale arithmetic in four files, and the guard that missed it hardened.
 2. Quote rights: 911 quotes withheld-and-hashed across three tables; 4 QC checks; verification
@@ -344,4 +384,56 @@ Two are worth the crosswalk's attention beyond this endpoint:
 
 ---
 
-RULES RECEIPT COMPLETE — NOTHING PROMOTED, NOTHING RE-GRAINED, GRADE COMPLIANCE AWAITING GERMAN
+RULES RECEIPT RE-CONFIRMED AGAINST §K — NO NEW SCIENTIFIC SOURCE EVIDENCE INGESTED, NOTHING
+RE-GRAINED, NO SEVERITY LABEL COMPUTED, GRADE COMPLIANCE AWAITING GERMAN
+
+---
+
+## 8. §K — the twelve sign-off gates, assessed at row grain
+
+Added on re-confirmation. §K says the Minimum Qualified Record is the cross-endpoint
+generalization of these gates, so this is the honest answer to what this endpoint qualifies —
+and it replaces the compound-grain figure this receipt and the joint review queue had been
+quoting. The gates say *"every training row"*, so the assessment is per row, n = 2,685.
+
+| # | Gate | State | Measured |
+|---|---|---|---|
+| 1 | Traceable primary source and exact source location | **PASS** | 2,685 / 2,685 carry both `source_id` and a non-empty `source_locus` |
+| 2 | Sequence verified 5′→3′, with **strand identity and duplex partner** where applicable | **FAIL** | 1,754 rows sit on a compound with a printed sequence, but `strand_role` and `duplex_partner_id` do not exist as columns, so the gate cannot pass for the **505 rows on duplex compounds** at all. "Verified" is also unmet: the sequence is recorded with its locus, not independently re-read |
+| 3 | Modification encoded **by position** | **PARTIAL** | 1,353 / 2,685 (50%) |
+| 4 | Assay context: cell system, **donor information**, delivery/formulation, dose, exposure time | **FAIL** | 1,926 / 2,685 (71%) carry system + dose + unit + duration + delivery, but `donor_id` and `donor_class` do not exist, so donor information is missing on **every row** |
+| 5 | Raw/continuous retained; curator binaries **explicitly marked derived** | **PASS** | 2,685 / 2,685 retain a value or are flagged qualitative; `grade_authority` and `evidence_class_review_status` mark every derived call |
+| 6 | Agonist / antagonist / potentiator / inert-low-response separated | **ABSENT** | No such vocabulary exists. The coagulation analogue — inhibitor vs activator vs inert — is only partly carried by `effect_direction` plus the two axis flags |
+| 7 | **Human and animal not pooled** as interchangeable ground truth | **PASS** | `species_class`, `human_system`, `human_system_subtype`; separate workbook sheets; animal in a named appendix |
+| 8 | Endpoint-specific outcomes not collapsed (generalized from TLR7/8/9) | **FAIL** | 19 source-built composite rows are filed under single-endpoint categories, one of them mixing platelet count with coagulation |
+| 9 | Citation metadata and file identities pass QC | **PASS** | 100 sources, every cited document held, SHA-256 per file in `RELEASE_MANIFEST.json`, 112 structural checks |
+| 10 | Split checked for exact-sequence, modified/unmodified counterpart, **strand**, family, paper and experimental-series leakage | **CANNOT PASS** | No split is published. Two of the six axes are unconstructible: strand (gate 2) and sequence family (§G adjudication). Paper and experimental-series axes are available via `source_id` |
+| 11 | LOPO and sequence-family grouped performance reported with uncertainty | **N/A** | Nothing is trained. LOPO is computable today on `source_id`; sequence-family grouping is not |
+| 12 | Claims no stronger than the evidence supports | **PASS** | Audited: no clinical-grade, clinical-accuracy, universal-causal-rule or trained-model claim in any shipped document |
+
+**Score: 5 pass, 1 partial, 3 fail, 1 absent, 1 cannot-pass, 1 not-applicable.**
+
+### 8.1 The correction this forces on my own figures
+
+**Correction accepted (Beebop, 2026-10-03): "11 human-participant compounds with sequence plus
+chemistry" is not 11 qualified records.** It is a **compound-grain** count and it tests only
+part of gates 2 and 3. Stated correctly:
+
+- **1,219 of 2,685 rows** pass the four gates that are *testable from the tables today*
+  (1, 2-sequence-present, 3, 4-context) — over 46 compounds.
+- Of those, **184 are human-participant rows** and **0 are strict human-laboratory rows**.
+- **No row in this dataset passes all twelve gates**, because gates 2, 4 and 6 fail on columns
+  that do not exist, and gate 8 fails on 19 rows. A qualified-record count is therefore **zero**
+  under the full contract, and the 1,219 figure must always be reported as *four of twelve
+  gates*, never as "qualified".
+
+That is a worse answer than the one I gave, and it is the right one. The earlier framing invited
+a reader to treat a compound-level chemistry count as a record-level qualification.
+
+### 8.2 What §K adds to the queue for German
+
+Gate 6 is new to this endpoint's list: no agonist/antagonist/potentiator/inert separation exists,
+and for coagulation the analogue is not obvious — a factor-XI antisense and a direct thrombin
+aptamer are both "inhibitors" of very different mechanisms. **Defining that vocabulary for a
+coagulation endpoint is a scientific judgment, so it is his**, and it is now item 9 of
+`REVIEW_QUEUE_GERMAN_GUSTAVO_2026-10-03.md`.
