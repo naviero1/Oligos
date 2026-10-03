@@ -213,6 +213,13 @@ still-open blocking item** ("derived from German's published sign-off gates, not
 33 and 85 where it is used as though it already existed. **I cannot verify a count against a
 specification that has not been published**, and I decline to guess which seven fields are meant.
 
+**Refined 2026-10-03, see `ROCKSTEADY_COMPLEMENT_REPLY_TO_CRANK_AND_BEEBOP_2026-10-03.md` §1:** I have
+since tried three candidate denominators, including the seven gates named parenthetically in
+`CRANK_DIRECTIVE_CONSOLIDATED.md` P2, which is almost certainly what was meant. Against the host tables
+those seven give **4 present / 3 absent**; against a complement table, **0 present / 7 absent**. Neither
+is 6. The instruction is right under every reading; the figure is not reproducible. Q1 of that reply asks
+for the seven.
+
 What I *can* audit is §C of `SCIENTIFIC_RULES.md`, the only published field list. Measured against the
 three host tables that physically carry the ten complement rows, plus their oligo tables:
 
