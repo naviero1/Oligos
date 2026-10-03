@@ -1,0 +1,13 @@
+Gate,Current Status,Scientist Assessment,Required Before Final Sign-off,Owner
+Every training row has traceable primary source + exact source location,PARTIAL,"Primary papers are identified, but not all records have exact figure/table/supplement locations.",Populate source_location for every final experiment-level row.,Oscar + German
+Every sequence verified 5'→3' with strand/duplex identity,PARTIAL,Current 142 sequence records are largely verified; some duplex partners and motif variants remain incomplete.,Complete duplex_partner_id and strand review for siRNA records.,German
+Chemical modifications encoded by position,PARTIAL,Jung/Riera-Tur are strong; Fucini/other series require supplements for complete positional encoding.,Retrieve missing supplements and encode per-position chemistry.,Oscar + German
+Assay context includes cell/donor/delivery/dose/time,PARTIAL,"Core context is known, but current catalog is sequence-level summary rather than experiment-level observations.",Restructure into experiment-condition table.,Oscar
+Raw/continuous outcomes retained when available,FAIL,Many current labels remain qualitative or composite; raw values are not comprehensively captured.,Extract raw cytokine values/fold changes or source-defined qualitative outputs with provenance.,German + Oscar
+Agonist/antagonist/potentiator/inert states separated,PASS,v0.2 adjudication separates active antagonists from ordinary low-response controls.,Keep immunomodulatory_direction in final schema.,Oscar
+Human and animal observations separated,PASS,v0.2 explicitly marks 25 Riera-Tur mouse-series records as support-only animal evidence.,Do not pool species in final ground truth.,Gustavo + Oscar
+TLR7/TLR8/TLR9 outcomes not prematurely collapsed,PARTIAL,Scientific correction is defined; current ML model still uses a composite target.,Retrain with endpoint/pathway-resolved targets.,Gustavo
+Citation metadata/file identities pass QC,PARTIAL,Major DOI/PMID corrections identified; Hornung file mismatch and unresolved Alharbi remain.,Replace wrong source file and close remaining citation issues.,German
+Train/test leakage checked by sequence family/paper/series,NOT TESTED,No scientist-reviewed leakage audit supplied yet.,Provide split assignments; cluster exact/near-neighbor/modified-counterpart families.,Gustavo + Oscar
+LOPO + grouped performance with uncertainty,NOT TESTED,Current report cites LOPO but not a complete grouped/CI evaluation package.,Re-run and report confidence intervals and grouped validation.,Gustavo
+Scientific claims no stronger than evidence,FAIL,Current Word draft still contains overbroad chemistry/safety and clinical-accuracy claims.,Revise using ML_Corrections and scientist-approved wording.,Gustavo + German

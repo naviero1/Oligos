@@ -1,0 +1,15 @@
+"README — Scientific Use, Scope, and Curation Rules",
+,
+,
+Item,Guidance
+Purpose,Build a source-traceable immunotoxicity evidence library for the NIH/NCATS OligoTox Phase 2 dataset and scientifically validate the current ML draft.
+Official Phase 2 requirement,"NIH requires an open, AI-ready dataset; sequences of all oligos; location of chemical modifications; purity/characterization; data dictionary/schema; and raw-data access."
+NIH challenge URL,https://www.nih.gov/challenges/oligonucleotide-toxicity-oligotox-open-data-challenge
+Current upload count,20 PDFs were received in this batch although the request referenced 22. The two absent papers are not silently substituted.
+Evidence policy,Only source-supported sequence/chemistry/outcome information is entered. Missing supplements or unreadable position markup are flagged as pending rather than guessed.
+Primary data unit,Experiment-condition record: oligo × exact chemistry × strand state × dose × time × donor/cell system × delivery/formulation × endpoint.
+Label policy,Separate author-reported result from curator-derived label. Preserve continuous cytokine values when available. Overall POS/NEG is secondary only.
+Mechanism policy,"Use receptor/pathway labels only when supported by knockout, inhibitor, receptor-reporter, cell-subset, or strong mechanistic evidence. Record mechanism evidence type."
+Negative-control policy,Do not equate non-stimulatory with inert/safe. Active antagonists and potentiators require separate classes.
+Model-validation policy,Use paper/lab grouping and sequence-family/near-neighbor grouping to reduce leakage. Random held-out AUC alone is insufficient.
+Status,v0.2 scientist adjudication complete at sequence-summary level. 54 provisional model candidates; 48 hold; 40 support-only. Final Phase 2 sign-off still requires experiment-level reconstruction and revised ML validation.

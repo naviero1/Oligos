@@ -1,0 +1,46 @@
+GOG OligoTox Phase 2 — Immunotoxicity Evidence Library,,,,
+,,,,
+Scientific validation build v0.1 | Uploaded primary literature + ML-report correction map,,,,
+,,,,
+Papers in current upload batch,20.0,,Scientist decision,
+Papers user expected,22.0,,"The current immunotoxicity ML draft is a promising proof of concept, but it is NOT yet scientifically approvable for Phase 2 release. The highest-priority fixes are experiment-level ground truth, multi-label pathway outcomes, exact modification positions, assay/donor metadata, antagonist vs inert labels, grouped validation, and citation correction.",
+Sequence-level records extracted,142.0,,,
+Evidence observations curated,33.0,,,
+Critical ML corrections,9.0,,,
+Citation/QC issues,7.0,,Immediate handoff to Gustavo/Oscar,
+Phase 2 deadline,2026-12-31 11:59 PM ET,,"1) Freeze the current ML report as an unvalidated draft.
+2) Rebuild labels using Evidence_Observations + Schema_Recommendations.
+3) Correct citation/source metadata and remove unsourced synthetic NEG rows from training.
+4) Re-run models with paper-group and sequence-family splits.
+5) Return the revised dataset/model package for scientist sign-off.",
+Library status,SCIENTIFIC CURATION v0.1,,,
+,,,,
+,,,,
+,,,,
+Paper ID,Sequence Records,,,
+P01,0,,Correction Priority,Count
+P02,8,,CRITICAL,9
+P03,0,,HIGH,8
+P04,0,,MEDIUM,1
+P05,23,,,
+P06,6,,,
+P07,3,,,
+P08,0,,,
+P09,4,,,
+P10,5,,,
+P11,0,,,
+P12,0,,,
+P13,15,,,
+P14,0,,,
+P15,42,,,
+P16,0,,,
+P17,0,,,
+P18,32,,,
+P19,0,,,
+P20,4,,,
+,,,,
+Important source/QC alerts,,,,
+"• Only 20 of the stated 22 papers were attached in this batch.
+• The file named “Hornung 2005.pdf” is actually Herzner et al. 2015 (cGAS/Y-form DNA), not the expected Hornung 2005 TLR7 siRNA paper.
+• Goodchild 2009 and Valentin 2021 require supplementary sequence tables for complete high-throughput row ingestion.
+• Agonists, antagonists/potentiators, and inert/low-response controls are separated in this library.",,,,

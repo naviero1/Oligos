@@ -1,0 +1,46 @@
+Field Name,Category,Definition,Requirement,Scientific Rationale
+record_id,Primary key,One experimental observation,Yes,Unique observation-level ID
+canonical_oligo_id,Identity,Links same oligo across papers/conditions,Yes,Needed for deduplication
+source_paper_id,Provenance,Paper registry foreign key,Yes,Exact traceability
+source_location,Provenance,Figure/table/page/supplement,Yes,Allows auditing
+sequence_5to3,Oligo,Raw source sequence,Yes,Required by NIH
+normalized_sequence,Oligo,Normalized A/C/G/T/U sequence,Yes,Keep raw notation separately
+strand_role,Oligo,sense/guide/passenger/antisense/single,Yes,Critical for siRNA
+duplex_partner_id,Oligo,Partner strand if duplex,Conditional,Needed for duplex features
+modality,Oligo,ASO/siRNA/ssRNA/CpG ODN/etc.,Yes,Do not mix modalities blindly
+backbone_by_linkage,Chemistry,Per-linkage PS/PO/stereochemistry,Yes when available,Required for chemistry resolution
+sugar_mod_by_position,Chemistry,2'OMe/MOE/2'F/LNA/etc. by nucleotide,Yes when available,Percent modification alone is inadequate
+base_mod_by_position,Chemistry,5mC/Ψ/m6A/etc. by position,Yes when available,Needed for innate-sensing biology
+terminal_modifications,Chemistry,5'/3' phosphate/cap/overhang/linker,Conditional,RIG-I and TLR effects can depend on termini
+gap_length_nt,Chemistry,Unmodified DNA gap length,ASO gapmer,Burel risk signal
+purity_pct,Characterization,Method-specific full-length purity,Yes when reported,NIH requires purity/characterization
+purification_method,Characterization,HPLC/CGE/etc.,Yes when reported,Quality metadata
+identity_method,Characterization,MS/MALDI/HPLC/etc.,Yes when reported,Quality metadata
+endotoxin_level,Characterization,EU/mg or EU/mL,Strongly recommended,Prevents contamination confounding
+formulation,Exposure,LNP/naked/etc.,Yes,Can cause/alter immune response
+delivery_agent,Exposure,DOTAP/pArg/protamine/PEI/Lipofectamine/etc.,Yes,Strong mechanistic confounder
+anticoagulant,Exposure,Hirudin/heparin/EDTA/citrate,Whole blood,Coch shows direct assay effect
+dose_value,Exposure,Concentration/dose,Yes,Phenotype is dose-dependent
+dose_unit,Exposure,nM/µM/µg/mL/mg/kg,Yes,No unitless dose
+exposure_time_h,Exposure,Hours after stimulation,Yes,Endpoint timing matters
+cell_system,Biology,PBMC/whole blood/HEK/Bjab/etc.,Yes,Assay transferability
+cell_subset,Biology,pDC/B cell/monocyte/mDC/etc.,Conditional,Maps receptor/cytokine biology
+species,Biology,Human/mouse/NHP/etc.,Yes,Species-specific sensing
+donor_id,Biology,Deidentified donor,Human primary,Preserves donor variability
+donor_class,Biology,e.g. Burel discriminator/nondiscriminator,When defined,Predictive human-response phenotype
+sample_state,Biology,fresh/rested/frozen,PBMC,Burel shows major effect
+endpoint_name,Outcome,IFN-α/TNF-α/IL-6/etc.,Yes,Do not collapse prematurely
+raw_value,Outcome,Reported continuous value,When extractable,Best ground truth
+raw_unit,Outcome,pg/mL/ng/mL/etc.,When extractable,Required with raw value
+fold_change,Outcome,Normalized response,When reported,Keep normalization provenance
+author_significance,Outcome,p-value/significance/author call,When reported,Separate source from curator
+author_interpretation,Outcome,What authors concluded,Yes,Preserve source semantics
+curator_label,Outcome,Team adjudication,Derived,Mark clearly as derived
+immunomodulatory_direction,Outcome,agonist/antagonist/potentiator/inert/mixed,Yes,Critical correction
+receptor_pathway,Mechanism,TLR7/TLR8/TLR9/RIG-I/cGAS/etc.,When supported,May be inferred only with evidence flag
+mechanism_evidence_type,Mechanism,KO/inhibitor/reporter/cell-expression/inference,Yes,Separates proven vs likely receptor
+clinical_anchor,Translation,Human clinical adverse/low-risk comparator,When available,High-value ground truth
+evidence_confidence,QA,High/Moderate/Low/Pending,Yes,Scientific review gate
+scientific_review_status,QA,Unreviewed/Needs revision/Approved,Yes,Human-in-loop audit trail
+sequence_family_group,ML validation,Near-neighbor/family cluster,Yes,Prevents sequence leakage
+paper_group,ML validation,Source paper/lab grouping,Yes,Supports LOPO/group CV

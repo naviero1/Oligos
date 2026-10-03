@@ -1,0 +1,8 @@
+Issue,Current Draft,Verified/Correct,Status,Impact
+Riera-Tur DOI,10.1089/nat.2024.0025,10.1089/nat.2024.0013,CORRECT,Update bibliography and dataset source metadata.
+Fucini DOI,10.1089/nat.2011.0337,10.1089/nat.2011.0334,CORRECT,Update bibliography/source key.
+Goodchild PMID,19624849 / authors list includes names not on article,"PMID 19630977; Goodchild A, Nopper N, King A, Doan T, Tanudji M, Arndt GM, Poidinger M, Rivory LP, Passioura T",CORRECT,Fix source attribution; dataset key 'Peacock_2009_BMC' should be renamed or aliased to Goodchild_2009.
+Lenert PMID,19946694,20490286,CORRECT,Update bibliography.
+Uploaded file named Hornung 2005,Used/expected as Hornung 2005 TLR7 siRNA source,"The uploaded file is Herzner et al., Nature Immunology 2015, cGAS Y-form DNA, DOI 10.1038/ni.3267",MISMATCH,Do not use this file to validate Hornung 2005. Obtain the actual Hornung et al. 2005 Nat Med paper if that source is needed.
+NAR_2021 unresolved row,Unidentified NAR 2021 source for a specific partial-2'OMe gapmer row,"Valentin et al. 2021 (10.1093/nar/gkab451) is a valid NAR primary paper on 2'OMe gapmer immunomodulation, but the draft row provenance still requires matching to its Supplementary Tables S1/S2.",PARTIAL,Do not auto-resolve the specific row without source-to-row matching.
+Alharbi_2026 unresolved source,Wrong PMID / incomplete citation,Not resolved by the currently uploaded paper set.,OPEN,Exclude its rows from validated training data until source is identified.

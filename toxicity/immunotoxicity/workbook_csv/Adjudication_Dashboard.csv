@@ -1,0 +1,28 @@
+GOG OligoTox Phase 2 — Immunotoxicity Scientist Adjudication v0.2,,
+Record-by-record scientific triage of the 142-sequence v0.1 library | 25 Aug 2026,,
+,,
+Scientist decision,Count,Meaning
+PROVISIONALLY APPROVED,54.0,"Sequence-level record has enough source support for a defined model role, but final Phase 2 training still requires experiment-condition restructuring."
+HOLD,48.0,Do not train yet. Missing record-level outcome extraction or supplementary chemistry/variant information.
+SUPPORT ONLY,40.0,"Mechanistic/review/animal evidence retained for interpretation or transfer modeling, not pooled into primary human ground truth."
+TOTAL,142.0,All currently catalogued sequence-level records.
+,,
+Adjudication class,Count,Use
+APPROVED_CORE_HUMAN,23.0,Primary human sequence/chemistry evidence
+APPROVED_PATHWAY_CONTROL,26.0,Human pathway/control evidence
+APPROVED_AUXILIARY,5.0,Dedicated antagonist/immunomodulation model
+HOLD_OUTCOME_EXTRACTION,42.0,Sequence known; outcome needs figure-level extraction
+HOLD_SUPPLEMENT,6.0,Supplementary sequence/chemistry matrix required
+SUPPORT_ONLY_ANIMAL,25.0,Cross-species/mechanistic evidence only
+SUPPORT_ONLY_REVIEW,15.0,Review/source-discovery evidence only
+,,
+Immediate scientist conclusion,,
+54 records are provisionally approved for defined model roles; 48 remain on hold; 40 are support-only. This is NOT yet a final Phase 2 training dataset.,,
+"The next computational handoff should use Training_Candidates only as candidate identities, then rebuild them into experiment-condition rows before retraining.",,
+,,
+Next required handoff from Gustavo/Oscar,,
+1. Revised experiment-level CSV/schema using the recommended fields.,,
+2. Exact feature-generation code and all derived-feature definitions.,,
+3. Train/test/validation split assignments with paper and sequence-family groups.,,
+"4. Model outputs for TLR7, TLR8, TLR9 and cytokine-specific targets; no single composite as the sole ground truth.",,
+5. LOPO + sequence-family grouped performance with uncertainty.,,
