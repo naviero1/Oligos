@@ -213,7 +213,7 @@ These are rows, not trials, and not participants. Spontaneous reports carry no e
 | `NCT03225846` | 21 |
 | `NCT02499328` | 19 |
 
-Release identifier: `hydrocephalus-673de20-dirty` (binds this table, the workbook, the figures and the PDFs to one commit).
+Release identifier: `hydrocephalus-3d76b77` (binds this table, the workbook, the figures and the PDFs to one commit).
 
 <!-- END GENERATED -->
 
