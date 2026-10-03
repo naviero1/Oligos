@@ -392,6 +392,157 @@ def apply_grade_authority(rows, log):
         log["G_authority_" + a] += 1
     return rows
 
+# --------------------------------------------- study linkage
+# Beebop (2026-10-02) asked for the study register to be linked to measurement rows, and for
+# arm, dose, time and source location to survive the link. Dose, unit, timepoint, n and
+# source_locus are already on every row; what was missing is WHICH TRIAL the row belongs to.
+# Keying on (source_id, oligo_id) alone is not enough -- one regulatory review covers six
+# trials of the same drug, so that key resolved 243 of 749 clinical rows and left 329
+# ambiguous. This adds a second pass that reads the row's own locus, notes and quote for the
+# protocol code, registry number or acronym the row already cites.
+#
+# The link is a column on measurements, not a join table: a join table silently fans one row
+# out across several trials, which is the error to avoid. Where the row cannot be pinned to
+# exactly one study it is left NOT_RESOLVED and counted. An arm misattribution is worse than
+# a missing link.
+_TOK_NCT = re.compile(r"NCT\s?\d{8}", re.I)
+_TOK_EUD = re.compile(r"EUDRACT[\s-]?[\d-]{8,}|\b20\d{2}-\d{6}-\d{2}\b", re.I)
+_TOK_FULL = re.compile(r"(?:ISIS|ION)[\s-]*\d{5,6}[\s-]*CS\d+|ALN[\s-]*AT3SC[\s-]*\d+|"
+                       r"OGX[\s-]*\d+[\s-]*\d*|MIPO\d{6,8}|LTE\d{5}|EFC\d{5}|TDR\d{5}", re.I)
+_TOK_BARE = re.compile(r"\bCS[\s-]?(\d{1,2})\b")
+
+
+def _flat(x):
+    return re.sub(r"[^A-Z0-9]", "", str(x or "").upper())
+
+
+def apply_study_link(rows, log, studies_path):
+    if not os.path.exists(studies_path):
+        for r in rows:
+            r["study_id"], r["study_id_basis"] = NR, "register_absent"
+        return rows
+    ST = list(csv.DictReader(open(studies_path, newline="", encoding="utf-8")))
+    for r in rows:
+        if r.get("study_type") != "clinical":
+            r["study_id"], r["study_id_basis"] = NA, NA
+            continue
+        sid, oid = r.get("source_id"), r.get("oligo_id")
+        cands = [s for s in ST if sid in {x.strip() for x in s["source_ids"].split(";")}]
+        with_cmp = [s for s in cands if oid in {x.strip() for x in s["oligo_ids"].split(";")}]
+        if with_cmp:
+            cands = with_cmp
+        if not cands:
+            r["study_id"], r["study_id_basis"] = NR, "no_matching_study_in_register"
+            log["L_no_match"] += 1
+            continue
+        if len(cands) == 1:
+            r["study_id"] = cands[0]["study_id"]
+            r["study_id_basis"] = ("source_and_compound_unique" if with_cmp else "source_unique")
+            log["L_unique"] += 1
+            continue
+        # several trials of this compound in this document: read what the row itself cites
+        blob = " ".join(str(r.get(k, "")) for k in
+                        ("source_locus", "notes", "verbatim_quote", "readout_name", "control_description"))
+        for rx, basis in ((_TOK_NCT, "registry_number_in_row"), (_TOK_EUD, "registry_number_in_row"),
+                          (_TOK_FULL, "protocol_code_in_row")):
+            toks = {_flat(t) for t in rx.findall(blob)}
+            if toks:
+                hit = [s for s in cands
+                       if toks & ({_flat(s["registry_id"])} | {_flat(s["sponsor_protocol"])}
+                                  | {_flat(x) for x in _TOK_FULL.findall(s["sponsor_protocol"])}
+                                  | {_flat(x) for x in str(s["registry_ids_all"]).split(";")})]
+                if len(hit) == 1:
+                    r["study_id"], r["study_id_basis"] = hit[0]["study_id"], basis
+                    log["L_" + basis] += 1
+                    break
+        else:
+            bare = {"CS" + m for m in _TOK_BARE.findall(blob)}
+            hit = [s for s in cands if bare & ({"CS" + m for m in _TOK_BARE.findall(s["sponsor_protocol"])})]
+            if len(hit) == 1:
+                r["study_id"], r["study_id_basis"] = hit[0]["study_id"], "bare_protocol_code_in_row"
+                log["L_bare"] += 1
+            else:
+                r["study_id"] = NR
+                r["study_id_basis"] = "ambiguous_%d_candidates" % len(cands)
+                log["L_ambiguous"] += 1
+    return rows
+
+
+# Phase 2 requires the narrative's executive summary to state "the dataset(s) generated, and
+# positive/negative controls included". The control was recorded per row as free text, so the
+# controls could not be counted without re-reading every row. This classifies the reference
+# each row was compared against, which makes the controls statement reproducible -- and makes
+# the dataset's real weakness visible rather than rhetorical: the sequence-matched negative
+# control, the one that separates a sequence effect from a chemistry or vehicle effect,
+# exists on a handful of rows. Vehicle and placebo are not sequence controls.
+CONTROL_CLASSES = [
+    ("sequence_control", r"scrambl|mismatch|sense[- ]strand|\bsense\b|non[- ]?targeting|"
+                         r"reverse complement|control (?:ASO|oligo|siRNA)|inactive (?:ASO|oligo)|sham oligo"),
+    ("pharmacological_positive_control", r"heparin|enoxaparin|warfarin|bivalirudin|argatroban|"
+                                         r"hirudin|protamine|moxifloxacin|\bLPS\b|positive control"),
+    ("placebo", r"placebo"),
+    ("vehicle_or_buffer", r"vehicle|\bPBS\b|saline|HBSS|buffer|\bwater\b|dextrose|5% glucose"),
+    ("untreated_or_predose", r"untreated|no treatment|pre[- ]?dose|baseline|screening|naive|sham"),
+    ("active_comparator", r"bypassing agent|\bBPA\b|clotting factor|\bCFC\b|lanadelumab|"
+                          r"berotralstat|C1[- ]esterase|standard of care|docetaxel|prednisone"),
+]
+_CTRL = [(n, re.compile(p, re.I)) for n, p in CONTROL_CLASSES]
+
+
+def apply_control_class(rows, log):
+    for r in rows:
+        blob = f"{r.get('control_description','')} {r.get('co_administered_agent','')}"
+        cls = ""
+        for name, rx in _CTRL:
+            if rx.search(blob):
+                cls = name
+                break
+        if not cls:
+            cls = ("no_control_described"
+                   if str(r.get("control_description", "")).strip() in ("", NR, NA)
+                   else "other_described_control")
+        r["control_class"] = cls
+        log["K_control_" + cls] += 1
+    return rows
+
+
+def apply_licence_resolutions(sources, rows, log):
+    """Resolve source licences on verifiable grounds, always conservatively.
+
+    Phase 2 gates the prize on openness, and `redistribution=unresolved` is not a state a
+    submission can carry. Auditing the two unresolved records exposed a larger
+    inconsistency of my own: all ten EMA-sourced records have the standard reuse statement
+    ABSENT from the text layer of the file we hold, yet they had been given five different
+    values -- public_domain, CC_BY, publisher_restricted and unresolved. Identical
+    provenance cannot carry five licences. sources/licence_resolutions.json decides each
+    case and records what was actually read, including two corrections DOWNWARD (an EMA
+    assessment report is neither a US federal work nor a Creative Commons work).
+
+    This relicenses nothing. The release's CC BY 4.0 covers the curated compilation, its
+    schema, documentation and code; `redistribution` governs only whether a SOURCE FILE may
+    be republished in the bundle, and the bundle ships a manifest and fetch script instead
+    of third-party documents."""
+    path = os.path.join(ROOT, "sources", "licence_resolutions.json")
+    if not os.path.exists(path):
+        return sources, rows
+    res = json.load(open(path, encoding="utf-8"))["resolutions"]
+    for rec in sources:
+        r = res.get(rec["source_id"])
+        if r:
+            rec["licence"] = r["licence"]
+            rec["redistribution"] = r["redistribution"]
+            rec["licence_resolution_basis"] = r["basis"]
+            log["LIC_resolved"] += 1
+        else:
+            rec.setdefault("licence_resolution_basis", "as_extracted_from_source")
+    by_id = {rec["source_id"]: rec for rec in sources}
+    for row in rows:
+        rec = by_id.get(row.get("source_id"))
+        if rec:
+            row["redistribution"] = rec["redistribution"]
+    return sources, rows
+
+
 def apply_endpoint_scope(rows, log):
     for r in rows:
         nm = r.get("readout_name", "")
@@ -659,6 +810,7 @@ def main():
 
     from collections import Counter as _C
     _log = _C()
+    sources, measurements = apply_licence_resolutions(sources, measurements, _log)
     measurements = remediate(measurements, _log)
     measurements = apply_corrections(measurements, _log)
     measurements = apply_species_split(measurements, _log)
@@ -666,6 +818,8 @@ def main():
     measurements = apply_evidence_class(measurements, _log)
     measurements = apply_human_subtype(measurements, _log)
     measurements = apply_grade_authority(measurements, _log)
+    measurements = apply_study_link(measurements, _log, os.path.join(ROOT, "data", "studies.csv"))
+    measurements = apply_control_class(measurements, _log)
 
     # ---- modifications -----------------------------------------------------
     mods, mod_orphans = [], 0
@@ -741,6 +895,8 @@ def main():
     # ---- roll-ups ----------------------------------------------------------
     per_o, per_s = defaultdict(int), defaultdict(int)
     hum_o, ani_o = defaultdict(int), defaultdict(int)
+    vitro_o, part_o = defaultdict(int), defaultdict(int)
+    vitro_cat, ani_cat = defaultdict(set), defaultdict(set)
     for m in measurements:
         per_o[m["oligo_id"]] += 1
         per_s[m["source_id"]] += 1
@@ -748,14 +904,33 @@ def main():
             hum_o[m["oligo_id"]] += 1
         elif m["species_class"] == "animal":
             ani_o[m["oligo_id"]] += 1
+            ani_cat[m["oligo_id"]].add(m["readout_category"])
+        if m.get("human_system_subtype") in ("primary_blood_or_plasma", "cells_or_tissue",
+                                             "purified_or_recombinant_protein"):
+            vitro_o[m["oligo_id"]] += 1
+            vitro_cat[m["oligo_id"]].add(m["readout_category"])
+        elif m.get("human_system_subtype") == "participant":
+            part_o[m["oligo_id"]] += 1
     o_per_s = defaultdict(set)
     for o in oligos:
         o["n_measurements"] = per_o.get(o["oligo_id"], 0)
         o["n_human_measurements"] = hum_o.get(o["oligo_id"], 0)
         o["n_animal_measurements"] = ani_o.get(o["oligo_id"], 0)
-        # A compound measured in BOTH is a human/animal translation pair -- the shape the
-        # Challenge calls "of particular interest".
-        o["has_human_and_animal_data"] = "TRUE" if (hum_o.get(o["oligo_id"], 0) and ani_o.get(o["oligo_id"], 0)) else "FALSE"
+        # A compound measured in BOTH is a human/animal pair. But Phase 2 is specific about
+        # WHICH pair it wants: datasets "based on in vitro human systems or able to
+        # extrapolate data between IN VITRO HUMAN SYSTEMS and animal data are of particular
+        # interest". has_human_and_animal_data mixes participant-vs-animal with
+        # in-vitro-human-vs-animal and so overstates the bridge. The three columns below
+        # separate them, and the strongest form -- the same readout category measured in a
+        # human in vitro system and in an animal, so the two can actually be compared -- is
+        # reported on its own.
+        oid = o["oligo_id"]
+        o["has_human_and_animal_data"] = "TRUE" if (hum_o.get(oid, 0) and ani_o.get(oid, 0)) else "FALSE"
+        o["invitro_human_animal_bridge"] = "TRUE" if (vitro_o.get(oid, 0) and ani_o.get(oid, 0)) else "FALSE"
+        o["participant_animal_bridge"] = "TRUE" if (part_o.get(oid, 0) and ani_o.get(oid, 0)) else "FALSE"
+        shared = sorted(vitro_cat.get(oid, set()) & ani_cat.get(oid, set()))
+        o["bridge_shared_readout_categories"] = "; ".join(shared) if shared else NA
+        o["n_invitro_human_measurements"] = vitro_o.get(oid, 0)
         for sid in str(o["source_ids"]).split(";"):
             o_per_s[sid].add(o["oligo_id"])
     for s in sources:

@@ -323,6 +323,66 @@ bad = [r["measurement_id"] for r in D
        if r["readout_category_as_curated"] not in ("", NA) and r["endpoint_scope"] != "scope_adjacent"]
 check("a recategorised row is recorded only where the scope says so", not bad, f"{len(bad)}: {bad[:5]}")
 
+# ---- controls (Phase 2 executive-summary requirement) --------------------------------
+CTRL = {"sequence_control", "pharmacological_positive_control", "placebo", "vehicle_or_buffer",
+        "untreated_or_predose", "active_comparator", "other_described_control", "no_control_described"}
+bad = sorted({r["control_class"] for r in D if r["control_class"] not in CTRL})
+check("vocabulary: measurements.control_class", not bad, f"unexpected {bad[:4]}")
+
+bad = [r["measurement_id"] for r in D if r["control_class"] == "no_control_described"
+       and str(r["control_description"]).strip() not in ("", NR, NA)]
+check("no_control_described is used only where none is described", not bad, f"{len(bad)}: {bad[:5]}")
+
+# ---- openness and the human/animal bridge (Phase 2) ---------------------------------
+# "Only open datasets that are or will be made publicly available will be considered for a
+# prize", and the dataset's access terms must be defined. An unresolved source licence is
+# not a defensible state for a submission.
+bad = [r["source_id"] for r in S if r["redistribution"] in ("unresolved", "", NR)]
+check("no source carries an unresolved redistribution status", not bad, f"{len(bad)}: {bad[:5]}")
+
+RED = {"public_domain", "publisher_restricted", "cite_and_link_only",
+       "CC_BY", "CC_BY_NC", "CC_BY_NC_ND"}
+bad = sorted({r["redistribution"] for r in S if r["redistribution"] not in RED})
+check("vocabulary: sources.redistribution", not bad, f"unexpected {bad[:4]}")
+
+bad = [r["source_id"] for r in S if not str(r.get("licence_resolution_basis", "")).strip()]
+check("every source records how its licence was decided", not bad, f"{len(bad)}: {bad[:5]}")
+
+# Phase 2 wants extrapolation between IN VITRO HUMAN systems and animal data specifically.
+bad = [o["oligo_id"] for o in O if o["invitro_human_animal_bridge"] == "TRUE"
+       and not (int(o["n_invitro_human_measurements"]) and int(o["n_animal_measurements"]))]
+check("an in-vitro-human/animal bridge has rows on both sides", not bad, f"{len(bad)}: {bad[:5]}")
+
+bad = [o["oligo_id"] for o in O if o["bridge_shared_readout_categories"] not in ("", NA)
+       and o["invitro_human_animal_bridge"] != "TRUE"]
+check("a shared bridge readout is only claimed where the bridge exists", not bad, f"{len(bad)}: {bad[:5]}")
+
+# ---- study linkage (W2) --------------------------------------------------------------
+bad = [r["measurement_id"] for r in D
+       if (r["study_type"] == "clinical") == (r["study_id"] == NA)]
+check("study_id is NOT_APPLICABLE on exactly the non-clinical rows", not bad, f"{len(bad)}: {bad[:5]}")
+
+_known = set()
+_spath = os.path.join(ROOT, "data", "studies.csv")
+if os.path.exists(_spath):
+    _known = {r["study_id"] for r in csv.DictReader(open(_spath, newline="", encoding="utf-8"))}
+bad = [r["measurement_id"] for r in D
+       if r["study_id"].startswith("COG-STU") and r["study_id"] not in _known]
+check("every linked study_id exists in the register", not bad, f"{len(bad)}: {bad[:5]}")
+
+bad = [r["measurement_id"] for r in D if r["study_type"] == "clinical"
+       and not (r["study_id_basis"].startswith("ambiguous_")
+                or r["study_id_basis"] in ("source_and_compound_unique", "source_unique",
+                                           "registry_number_in_row", "protocol_code_in_row",
+                                           "bare_protocol_code_in_row",
+                                           "no_matching_study_in_register", "register_absent"))]
+check("vocabulary: measurements.study_id_basis", not bad, f"{len(bad)}: {bad[:5]}")
+
+# An unresolved link must say so, never carry a guess.
+bad = [r["measurement_id"] for r in D
+       if r["study_id_basis"].startswith("ambiguous_") and r["study_id"] != NR]
+check("an ambiguous link carries no study id", not bad, f"{len(bad)}: {bad[:5]}")
+
 AUTH = {"source_reported", "curator_derived_research_score",
         "both_source_reported_and_curator_derived", "ungraded"}
 bad = sorted({r["grade_authority"] for r in D if r["grade_authority"] not in AUTH})
