@@ -323,6 +323,30 @@ bad = [r["measurement_id"] for r in D
        if r["readout_category_as_curated"] not in ("", NA) and r["endpoint_scope"] != "scope_adjacent"]
 check("a recategorised row is recorded only where the scope says so", not bad, f"{len(bad)}: {bad[:5]}")
 
+# ---- held-document recovery (Oscar's tagging condition, 2026-10-03) ----------------
+# "As long as we can tag that somewhere in the data set with an identifying column, the more
+# information we can get, the better." These checks make the tagging condition structural:
+# a recovered value may not exist without the column that identifies it as recovered, nor
+# without its source and locus.
+for _f in ("endotoxin_level", "molecular_weight", "dna_content"):
+    bad = [o["oligo_id"] for o in O if o[_f] not in (NR, NA, "")
+           and o["characterisation_recovery_round"] in (NR, NA, "")]
+    check(f"a recovered {_f} is tagged with its recovery round", not bad, f"{len(bad)}: {bad[:5]}")
+
+    bad = [o["oligo_id"] for o in O if o[_f] not in (NR, NA, "")
+           and (o[_f + "_source_id"] in (NR, NA, "") or o[_f + "_locus"] in (NR, NA, ""))]
+    check(f"a recovered {_f} carries its source and locus", not bad, f"{len(bad)}: {bad[:5]}")
+
+# A withheld limit is a finding, not a value: the two must never coexist on one field.
+bad = [o["oligo_id"] for o in O if o["endotoxin_level_limit_redacted"] == "TRUE"
+       and o["endotoxin_level"] not in (NR, NA, "")]
+check("a withheld endotoxin limit carries no endotoxin value", not bad, f"{len(bad)}: {bad[:5]}")
+
+# The register and the field must agree about what is missing.
+bad = [o["oligo_id"] for o in O if o["endotoxin_method_named"] not in (NR, NA, "")
+       and o["endotoxin_level_limit_redacted"] != "TRUE"]
+check("a named endotoxin method implies the limit is recorded as withheld", not bad, f"{len(bad)}: {bad[:5]}")
+
 # ---- the Characterization Gap Register (SCIENTIFIC_RULES.md §F) ---------------------
 # "The field value and the register are both required: the value states the truth, the
 # register discharges the requirement." A register that lags the values discharges nothing,

@@ -1,0 +1,407 @@
+{
+ "_what": "Characterisation recovered on 2026-10-03 from documents ALREADY COMMITTED to this repository, under Oscar's decision of the same day: \"as long as we can tag that somewhere in the data set with an identifying column, the more information we can get, the better.\" Every value lands in a field tagged with its recovery round, its source and its locus, so recovered-from-a-held-document is always separable from extracted-at-first-pass.",
+ "_method": "9 parallel extraction agents over the held regulatory documents plus the already-held defibrotide paper, each checked by an independent adversarial verification agent. Quotes and printed values verified sound throughout; 8 of 9 groups reported defects, and those defects were almost entirely re-reports into existing columns, zero-delta proposals, and wrong notes-level claims (a page off by one, an SPL date, a Ph.Eur. chapter number, and one false novelty claim). Only records targeting a genuinely new field survive into this file.",
+ "_correction": "The round's most valuable output was a correction to our own artifact. The characterization gap register recorded endotoxin_level as absent for 218/218 compounds, and that was relayed upward as \"endotoxin limits appear in these documents and nobody looked\". Half wrong: the previous round had ALREADY captured a named bacterial-endotoxins test in characterisation_methods for nine compounds. What is absent is the numeric LIMIT, which the public documents withhold, exactly as they withhold purity limits. The nine are promoted here with limit_redacted=TRUE rather than presented as new evidence.",
+ "_dropped": 17,
+ "_generated": "2026-10-03",
+ "recovery_round": "2026-10-03_held_document_sweep",
+ "records": [
+  {
+   "oligo_id": "COG-OLG055",
+   "field": "endotoxin_level",
+   "value": "NOT_REPORTED",
+   "basis": "drug_substance_specification",
+   "limit_redacted": "TRUE",
+   "source_id": "COG-S076",
+   "locus": "Section 2.2.1 Active substance, sub-heading \"Specification\" (CHMP Assessment report EMA/180717/2019, p. 13/121)",
+   "verbatim_quote": "bacterial endotoxins (Ph.Eur.) and microbial examination of nonsterile",
+   "group": "volanesorsen",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG055",
+   "field": "molecular_weight",
+   "value": "7582.7 Da g/mol",
+   "basis": "NOT_REPORTED",
+   "limit_redacted": "FALSE",
+   "source_id": "COG-S076",
+   "locus": "Section 2.2.1 Active substance, sub-heading \"General information\" (CHMP Assessment report EMA/180717/2019, p. 10/121)",
+   "verbatim_quote": "The sodium salt has a relative molecular mass of 7582.7 Da g/mol and the following structure (see",
+   "group": "volanesorsen",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG217",
+   "field": "endotoxin_level",
+   "value": "NOT_REPORTED",
+   "basis": "drug_substance_specification",
+   "limit_redacted": "TRUE",
+   "source_id": "COG-S100",
+   "locus": "Section 2.3.2.3. \"Specification\" (2.3 Quality aspects > 2.3.2 Active substance), EMA/277774/2025, printed page 14/257 (text lines 713-734 of tryngolza_AR.txt; printed-page bounds set by the PAGE 14 / PAGE 15 markers at lines 684 and 734)",
+   "verbatim_quote": "endotoxins (Ph. Eur.), microbial examination (Ph. Eur.) and water content (KF).",
+   "group": "olezarsen",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG121",
+   "field": "endotoxin_level",
+   "value": "NOT_REPORTED",
+   "basis": "finished_product_specification",
+   "limit_redacted": "TRUE",
+   "source_id": "COG-S100",
+   "locus": "Section 2.3.3.3. \"Product specification\" (2.3 Quality aspects > 2.3.3 Finished Medicinal Product), EMA/277774/2025, printed page 19/257 (text lines 946-990 of tryngolza_AR.txt; printed-page bounds set by the PAGE 19 / PAGE 20 markers at lines 939 and 991)",
+   "verbatim_quote": "(USP), particulate matter (Ph. Eur.), bacterial endotoxins (Ph. Eur.), sterility (Ph. Eur.), container",
+   "group": "olezarsen",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG121",
+   "field": "molecular_weight",
+   "value": "9124.48 daltons",
+   "basis": "publication_methods",
+   "limit_redacted": "FALSE",
+   "source_id": "COG-S047",
+   "locus": "Section 11 DESCRIPTION, TRYNGOLZA (olezarsen) injection US Prescribing Information, DailyMed setid 0f51aa8e-8475-8cf9-e063-6394a90a6848, SPL v7 2026-07-06",
+   "verbatim_quote": "the molecular weight is 9124.48 daltons. The chemical name of olezarsen sodium is DNA, d(P-thio)",
+   "group": "olezarsen",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG217",
+   "field": "molecular_weight",
+   "value": "9124.48 Da (sodium salt)",
+   "basis": "publication_methods",
+   "limit_redacted": "FALSE",
+   "source_id": "COG-S100",
+   "locus": "Section 2.3.2.1 \"General Information\" (2.3 Quality aspects > 2.3.2 Active substance), EMA/277774/2025, printed page 12/257 (text line 625 of tryngolza_AR.txt; printed-page bounds set by the PAGE 12 / PAGE 13 markers at lines 602 and 633)",
+   "verbatim_quote": "It has a relative molecular mass of 9124.48 Da (sodium salt) and the following structure:",
+   "group": "olezarsen",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG122",
+   "field": "endotoxin_level",
+   "value": "NOT_REPORTED",
+   "basis": "drug_substance_specification",
+   "limit_redacted": "TRUE",
+   "source_id": "COG-S082",
+   "locus": "Section 2.4.2.3. Specification (under 2.4.2. Active Substance, 2.4. Quality aspects), CHMP assessment report EMA/CHMP/303940/2025, page 16/184",
+   "verbatim_quote": "bacterial endotoxins (USP<85>, Ph. Eur. 2.6.14, JP 4.01)",
+   "group": "donidalorsen",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG122",
+   "field": "molecular_weight",
+   "value": "9112.27 daltons",
+   "basis": "NOT_REPORTED",
+   "limit_redacted": "FALSE",
+   "source_id": "COG-S048",
+   "locus": "Section 11 DESCRIPTION, DAWNZERA US Prescribing Information (DailyMed SPL setid 3ff501e0-f75f-07da-e063-6294a90a0cb7, SPL v1 2025-10-01)",
+   "verbatim_quote": "and the molecular weight is 9112.27",
+   "group": "donidalorsen",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG119",
+   "field": "endotoxin_level",
+   "value": "NOT_REPORTED",
+   "basis": "drug_substance_specification",
+   "limit_redacted": "TRUE",
+   "source_id": "COG-S079",
+   "locus": "Section 2.2.2. Active Substance, sub-heading \"Specification\" (EMA/411876/2018, Assessment report Tegsedi, p. 16/142)",
+   "verbatim_quote": "microbiological purity (Ph. Eur.) and bacterial endotoxins (Ph. Eur).",
+   "group": "inotersen+eplontersen",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG119",
+   "field": "molecular_weight",
+   "value": "7600.73 Da",
+   "basis": "NOT_REPORTED",
+   "limit_redacted": "FALSE",
+   "source_id": "COG-S045",
+   "locus": "Section 11 DESCRIPTION (SPL <paragraph>, DailyMed setid 8513207e-b55f-417b-9473-af785146a543, SPL v10 2024-01-26)",
+   "verbatim_quote": "and the molecular weight is 7600.73 Da",
+   "group": "inotersen+eplontersen",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG218",
+   "field": "molecular_weight",
+   "value": "9046.1 daltons",
+   "basis": "NOT_REPORTED",
+   "limit_redacted": "FALSE",
+   "source_id": "COG-S050",
+   "locus": "Section 11 DESCRIPTION (SPL <paragraph>, DailyMed setid d7dcb847-71dd-4fff-82d0-d43a465fc096, SPL v20 2026-04-30)",
+   "verbatim_quote": "and the molecular weight is 9046.1 daltons",
+   "group": "inotersen+eplontersen",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG054",
+   "field": "endotoxin_level",
+   "value": "NOT_REPORTED",
+   "basis": "drug_substance_specification",
+   "limit_redacted": "TRUE",
+   "source_id": "COG-S092",
+   "locus": "2.2.2. Active Substance, 'Specification' subsection (CHMP Assessment report EMA/289068/2017, Page 15/117)",
+   "verbatim_quote": "The active substance specification includes tests for appearance (visual inspection), identity (most abundant mass: IP-HPLC-UV-MS; sequencing: IP-HPLC-TOF-MS; sodium counterion: ICP-OES), assay (IP-HPLC-UV-MS), purity (Full Length n) (IP-HPLC-UV-MS), impurities (IP-HPLC-UV-MS), residual solvents (GC), elemental impurities (ICP-MS), sodium acetate (HPLC), water content (Karl Fisher), bacterial endotoxins (Ph. Eur.) and microbial enumeration test (Ph. Eur.).",
+   "group": "nusinersen",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG054",
+   "field": "molecular_weight",
+   "value": "7501.0 daltons",
+   "basis": "NOT_REPORTED",
+   "limit_redacted": "FALSE",
+   "source_id": "COG-S049",
+   "locus": "Section 11 DESCRIPTION (SPINRAZA US Prescribing Information, DailyMed setid dd70cd5f-b0fc-4ba4-a5ea-89a34778bd94, SPL v21)",
+   "verbatim_quote": "and the molecular weight is 7501.0 daltons.",
+   "group": "nusinersen",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG216",
+   "field": "endotoxin_level",
+   "value": "NOT_REPORTED",
+   "basis": "drug_substance_specification",
+   "limit_redacted": "TRUE",
+   "source_id": "COG-S091",
+   "locus": "2.2. Quality aspects -> 2.2.2. Active Substance, subheading \"Specification\" (kynamro_AR.txt line 584; EPAR page 11/114)",
+   "verbatim_quote": "bacterial endotoxins (Ph. Eur.) and microbial enumeration tests (Ph. Eur.).",
+   "group": "mipomersen",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG216",
+   "field": "molecular_weight",
+   "value": "7594.9 g/mol",
+   "basis": "NOT_REPORTED",
+   "limit_redacted": "FALSE",
+   "source_id": "COG-S091",
+   "locus": "2.2. Quality aspects -> 2.2.2. Active Substance, general information / physicochemical description (kynamro_AR.txt line 510; EPAR page 9/114)",
+   "verbatim_quote": "molecular weight is 7594.9 g/mol.",
+   "group": "mipomersen",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG060",
+   "field": "molecular_weight",
+   "value": "17,193 Da",
+   "basis": "NOT_REPORTED",
+   "limit_redacted": "FALSE",
+   "source_id": "COG-S026",
+   "locus": "Section 11 DESCRIPTION (DailyMed SPL setid 6dd2f8ac-6f90-4cbf-b197-97d74964135c, SPL v6 2025-09-18; XML line 1338, element <title>11 DESCRIPTION</title>)",
+   "verbatim_quote": "and the molecular weight is 17,193 Da",
+   "group": "fitusiran",
+   "verify_verdict": "CLEAN"
+  },
+  {
+   "oligo_id": "COG-OLG120",
+   "field": "endotoxin_level",
+   "value": "NOT_REPORTED",
+   "basis": "drug_substance_specification",
+   "limit_redacted": "TRUE",
+   "source_id": "COG-S099",
+   "locus": "2.4.2.3. Specification, analytical procedures, reference standards, batch analysis, and container closure (under 2.4.2. Active Substance), Assessment report EMA/13310/2025, p. 17/116",
+   "verbatim_quote": "microbial limit test (Ph. Eur.) and bacterial endotoxins (Ph. Eur.).",
+   "group": "imetelstat+vutrisiran+tofersen",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG123",
+   "field": "endotoxin_level",
+   "value": "NOT_REPORTED",
+   "basis": "drug_substance_specification",
+   "limit_redacted": "TRUE",
+   "source_id": "COG-S098",
+   "locus": "2.4.1.3. Specification, analytical procedures, reference standards, batch analysis, and container closure (under 2.4.1. Active Substance), Assessment report EMA/276404/2024, p. 17/181",
+   "verbatim_quote": "bacterial endotoxins (Ph. Eur.) and bioburden (Ph. Eur.).",
+   "group": "imetelstat+vutrisiran+tofersen",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG131",
+   "field": "endotoxin_level",
+   "value": "NOT_REPORTED",
+   "basis": "drug_substance_specification",
+   "limit_redacted": "TRUE",
+   "source_id": "COG-S083",
+   "locus": "2.4.2.2. Specification (under 2.4.2. Active Substance, 2.4. Quality aspects), Assessment report EMA/CHMP/689555/2022, p. 18/158",
+   "verbatim_quote": "residual solvents (GC), bacterial endotoxins (Ph. Eur.) and bioburden (Ph. Eur.).",
+   "group": "imetelstat+vutrisiran+tofersen",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG057",
+   "field": "molecular_weight",
+   "value": "18.02 \u00b1 0.32 kDA",
+   "basis": "tested_batch",
+   "limit_redacted": "FALSE",
+   "source_id": "COG-S023",
+   "locus": "Table 7. Molecular Weight of Ovine and Porcine Defibrotide. (table-wrap id=table7-10760296261429228); same figures restated in the final paragraph of \u00a7Results",
+   "verbatim_quote": "Ovine was 16.8 \u00b1 0.24 kDA, while porcine was 18.02 \u00b1 0.32 kDA.",
+   "group": "defibrotide-batches",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG058",
+   "field": "molecular_weight",
+   "value": "16.8 \u00b1 0.24 kDA",
+   "basis": "tested_batch",
+   "limit_redacted": "FALSE",
+   "source_id": "COG-S023",
+   "locus": "Table 7. Molecular Weight of Ovine and Porcine Defibrotide. (table-wrap id=table7-10760296261429228); same figures restated in the final paragraph of \u00a7Results",
+   "verbatim_quote": "Ovine was 16.8 \u00b1 0.24 kDA, while porcine was 18.02 \u00b1 0.32 kDA.",
+   "group": "defibrotide-batches",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG057",
+   "field": "dna_content",
+   "value": "79 \u00b1 6.39 \u03bcg",
+   "basis": "tested_batch",
+   "limit_redacted": "FALSE",
+   "source_id": "COG-S023",
+   "locus": "Table 6. DNA Content of Ovine and Porcine Defibrotide. (table-wrap id=table6-10760296261429228); restated in \u00a7Results and in the structured abstract \u00a7Results",
+   "verbatim_quote": "DNA content showed no significant difference (ovine: 75.78 \u03bcg vs porcine: 79 \u03bcg/10 \u03bcg API).",
+   "group": "defibrotide-batches",
+   "verify_verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG058",
+   "field": "dna_content",
+   "value": "75.78 \u00b1 4.74 \u03bcg",
+   "basis": "tested_batch",
+   "limit_redacted": "FALSE",
+   "source_id": "COG-S023",
+   "locus": "Table 6. DNA Content of Ovine and Porcine Defibrotide. (table-wrap id=table6-10760296261429228); restated in \u00a7Results and in the structured abstract \u00a7Results",
+   "verbatim_quote": "DNA content showed no significant difference (ovine: 75.78 \u03bcg vs porcine: 79 \u03bcg/10 \u03bcg API).",
+   "group": "defibrotide-batches",
+   "verify_verdict": "DEFECTS_FOUND"
+  }
+ ],
+ "not_ingested": [
+  {
+   "oligo_id": "COG-OLG055",
+   "field": "identity_confirmation",
+   "reason": "targets an existing column: re-report or augmentation, not ingested",
+   "group": "volanesorsen",
+   "verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG055",
+   "field": "impurity_classes",
+   "reason": "targets an existing column: re-report or augmentation, not ingested",
+   "group": "volanesorsen",
+   "verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG119",
+   "field": "endotoxin_level",
+   "reason": "no value and no redaction finding: zero information",
+   "group": "inotersen+eplontersen",
+   "verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG060",
+   "field": "endotoxin_level",
+   "reason": "no value and no redaction finding: zero information",
+   "group": "fitusiran",
+   "verdict": "CLEAN"
+  },
+  {
+   "oligo_id": "COG-OLG123",
+   "field": "endotoxin_level",
+   "reason": "no value and no redaction finding: zero information",
+   "group": "imetelstat+vutrisiran+tofersen",
+   "verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG057",
+   "field": "characterisation_methods",
+   "reason": "targets an existing column: re-report or augmentation, not ingested",
+   "group": "defibrotide-batches",
+   "verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG058",
+   "field": "characterisation_methods",
+   "reason": "targets an existing column: re-report or augmentation, not ingested",
+   "group": "defibrotide-batches",
+   "verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG057",
+   "field": "endotoxin_level",
+   "reason": "no value and no redaction finding: zero information",
+   "group": "defibrotide-batches",
+   "verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG058",
+   "field": "endotoxin_level",
+   "reason": "no value and no redaction finding: zero information",
+   "group": "defibrotide-batches",
+   "verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG057",
+   "field": "purity_pct",
+   "reason": "targets an existing column: re-report or augmentation, not ingested",
+   "group": "defibrotide-batches",
+   "verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG058",
+   "field": "purity_pct",
+   "reason": "targets an existing column: re-report or augmentation, not ingested",
+   "group": "defibrotide-batches",
+   "verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG057",
+   "field": "purification_method",
+   "reason": "targets an existing column: re-report or augmentation, not ingested",
+   "group": "defibrotide-batches",
+   "verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG058",
+   "field": "purification_method",
+   "reason": "targets an existing column: re-report or augmentation, not ingested",
+   "group": "defibrotide-batches",
+   "verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG057",
+   "field": "counterion",
+   "reason": "targets an existing column: re-report or augmentation, not ingested",
+   "group": "defibrotide-batches",
+   "verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG058",
+   "field": "counterion",
+   "reason": "targets an existing column: re-report or augmentation, not ingested",
+   "group": "defibrotide-batches",
+   "verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG057",
+   "field": "impurity_classes",
+   "reason": "targets an existing column: re-report or augmentation, not ingested",
+   "group": "defibrotide-batches",
+   "verdict": "DEFECTS_FOUND"
+  },
+  {
+   "oligo_id": "COG-OLG058",
+   "field": "impurity_classes",
+   "reason": "targets an existing column: re-report or augmentation, not ingested",
+   "group": "defibrotide-batches",
+   "verdict": "DEFECTS_FOUND"
+  }
+ ]
+}

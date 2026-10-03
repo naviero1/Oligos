@@ -607,6 +607,64 @@ def apply_characterisation(oligos, log):
     return oligos
 
 
+# Oscar, 2026-10-03: "as long as we can tag that somewhere in the data set with an identifying
+# column, the more information we can get, the better." That is the authorisation for recovering
+# characterisation out of documents already committed here, and the condition attached to it.
+# `characterisation_recovery_round` is that identifying column: it names the round that put the
+# value in, so recovered-from-a-held-document is always separable from extracted-at-first-pass,
+# and every recovered field carries its own basis, source and locus beside it.
+#
+# What this round actually produced is in sources/held_document_recovery.json, including the
+# records it REFUSED and why. The headline is a correction to our own artifact rather than new
+# evidence: the gap register recorded endotoxin_level as absent for 218/218, which is true of
+# the column and misleading about the evidence, because the previous round had already captured
+# a named bacterial-endotoxins test in characterisation_methods for nine compounds. The numeric
+# limit is what the public documents withhold, exactly as they withhold purity limits.
+RECOVERED_FIELDS = ("endotoxin_level", "molecular_weight", "dna_content")
+
+
+def apply_held_document_recovery(oligos, log):
+    cols = []
+    for f in RECOVERED_FIELDS:
+        cols += [f, f + "_basis", f + "_source_id", f + "_locus", f + "_limit_redacted",
+                 f + "_evidence_quote"]
+    for o in oligos:
+        for c in cols:
+            o.setdefault(c, NR)
+        o.setdefault("endotoxin_method_named", NR)
+        o.setdefault("characterisation_recovery_round", NA)
+
+    path = os.path.join(ROOT, "sources", "held_document_recovery.json")
+    if not os.path.exists(path):
+        return oligos
+    blob = json.load(open(path, encoding="utf-8"))
+    rnd = blob.get("recovery_round", "unnamed_round")
+    by_id = {o["oligo_id"]: o for o in oligos}
+    for r in blob["records"]:
+        o = by_id.get(r.get("oligo_id"))
+        f = r.get("field")
+        if not o or f not in RECOVERED_FIELDS:
+            log["HD_skipped"] += 1
+            continue
+        v = str(r.get("value", "")).strip()
+        if v and v not in (NR, NA):
+            o[f] = v
+            log["HD_value_" + f] += 1
+        o[f + "_basis"] = str(r.get("basis") or NR)
+        o[f + "_source_id"] = str(r.get("source_id") or NR)
+        o[f + "_locus"] = str(r.get("locus") or NR)[:400]
+        o[f + "_limit_redacted"] = str(r.get("limit_redacted") or "FALSE").upper()
+        q = re.sub(r"\s+", " ", str(r.get("verbatim_quote", "") or "")).strip()
+        o[f + "_evidence_quote"] = q or NR
+        if r.get("method_named"):
+            o["endotoxin_method_named"] = str(r["method_named"])[:300]
+        rounds = {x for x in str(o["characterisation_recovery_round"]).split("; ") if x not in ("", NA)}
+        rounds.add(rnd)
+        o["characterisation_recovery_round"] = "; ".join(sorted(rounds))
+        log["HD_record_applied"] += 1
+    return oligos
+
+
 def apply_control_class(rows, log):
     for r in rows:
         blob = f"{r.get('control_description','')} {r.get('co_administered_agent','')}"
@@ -1122,6 +1180,7 @@ def main():
         s["n_oligos"] = len(o_per_s.get(s["source_id"], ()))
 
     oligos = apply_characterisation(oligos, _log)
+    oligos = apply_held_document_recovery(oligos, _log)
     sources, measurements, oligos = apply_quote_rights(sources, measurements, oligos, _log)
 
     def write(name, rows):

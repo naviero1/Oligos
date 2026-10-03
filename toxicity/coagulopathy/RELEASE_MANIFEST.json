@@ -1,7 +1,7 @@
 {
   "endpoint": "coagulopathy",
   "generated": "2026-10-03",
-  "commit": "9ee2b59d100fa7723097ee098e27bc69bb857cf0",
+  "commit": "59cc0761888b4dd928748f40fca2c2a9b36d7e80",
   "branch": "claude/coagulopathy-oligos-toxicity-ap70gf",
   "tree_dirty": true,
   "counts": {
@@ -68,8 +68,8 @@
       "bytes": 6218521
     },
     "data/oligos.csv": {
-      "sha256": "f2b2254c6517e4c73d1707e732d95fa8b7cf3828abce027fa3e17374270c6aa5",
-      "bytes": 404379
+      "sha256": "652ac292e2c358c633179097559c9eb7425143815c8fd9530258a35dd789e61a",
+      "bytes": 467111
     },
     "data/modifications.csv": {
       "sha256": "a257ab0858e72aac0f515e363ec0f7f22ddb016414f7b4da73bbf900cf9ed9f2",
@@ -112,24 +112,24 @@
       "bytes": 22372
     },
     "OligoTox-Coagulopathy_Dataset.xlsx": {
-      "sha256": "7cfbd54ad97149ee6ac5f2193744e9c3e21122c7c5a6c344ff112a3fe58dbcbb",
-      "bytes": 2971743
+      "sha256": "e3f2fff3f9398a17082f2c112f0785d4775d0e4dd64a22edf258501592872f33",
+      "bytes": 2991592
     },
     "OligoTox-Coagulopathy_Narrative.pdf": {
-      "sha256": "8c276ee94c14efb239cb5f346b078386ec9ee9d4691c128e04695897c3bccd5b",
+      "sha256": "3b853c326e2cdcdfa34802cdc7a4f29e3d7ba605ef2ccc23f8f99c6154a76326",
       "bytes": 229084
     },
     "OligoTox-Coagulopathy_Methodology.pdf": {
-      "sha256": "959fd91d37b4e4bf10ed581467b990a1c41bfb25227f0b923c318ee536ae4960",
+      "sha256": "868071bee10c1b567b37f36d8129eef53f106cb5a4c57b2af3110959a233ad5b",
       "bytes": 165703
     },
     "OligoTox-Coagulopathy_PADP.pdf": {
-      "sha256": "8678c888902cd512f9e5db98ffb1d297eceac290a964acdb6ee492bf15998311",
+      "sha256": "79c918433e4f8c6fc6255b5e3777334491dace2347a0c3a8fbdce4d32ee5ae5f",
       "bytes": 149115
     },
     "OligoTox-Coagulopathy_Sources.pdf": {
-      "sha256": "adeaaf1fb6371a9f015b4611bfd7538e8bcdba2907c93c8943cc06cc917c3267",
-      "bytes": 676795
+      "sha256": "a3e72b4ae9eb4329e302748a4b74584b36bf67d351c72dfdce09bcafe1c895b5",
+      "bytes": 679620
     },
     "sources/DOWNLOAD_MANIFEST.csv": {
       "sha256": "7630a9d4442800c770561c54c2fc2a630dfd818cad284f334ef0ac4d69c76dd1",

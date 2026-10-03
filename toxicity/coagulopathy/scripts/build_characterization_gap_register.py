@@ -77,7 +77,23 @@ def main():
                 continue
 
             # WHY, derived from this compound's own state rather than asserted
-            if field == "purity_pct" and o.get("purity_limits_redacted") == "TRUE":
+            if field == "endotoxin_level" and o.get("endotoxin_level_limit_redacted") == "TRUE":
+                # Corrected 2026-10-03 after the held-document round: this register reported
+                # endotoxin as absent for 218/218 and that was relayed upward as "nobody
+                # looked". Half wrong. The test is NAMED in the specification for these
+                # compounds -- captured in characterisation_methods by the previous round and
+                # now promoted to endotoxin_level -- and what the public document withholds is
+                # the numeric limit, exactly as it withholds purity limits.
+                why = ("the specification NAMES a bacterial-endotoxins test and WITHHOLDS the "
+                       "numeric acceptance limit. The method is recorded in "
+                       "endotoxin_method_named; the limit exists and is not published")
+                attempted = ("2026-10-03 purity round captured the named test; 2026-10-03 "
+                             "held-document round searched all three files per compound for "
+                             "EU/mg, EU/mL, 'endotoxin unit', pyrogen, LAL, Ph.Eur. 2.6.14 and "
+                             "USP <85> and found no numeric criterion")
+                closes_this = ("the unredacted CMC module (3.2.S.4.1 specification), or a lot "
+                               "certificate of analysis")
+            elif field == "purity_pct" and o.get("purity_limits_redacted") == "TRUE":
                 why = ("the regulatory document NAMES the purity test and WITHHOLDS the numeric "
                        "acceptance limit, which public assessment reports routinely do. The value "
                        "exists; it is not published")
@@ -131,8 +147,14 @@ def main():
     for k, v in c.most_common():
         print(f"    {v:4d}  {k}")
     print("  by lane:", dict(lanes))
-    red = sum(1 for r in rows if "WITHHOLDS" in r["why_it_is_missing"])
-    print(f"  of the purity gaps, {red} are a WITHHELD LIMIT rather than an absent value")
+    # Count per field. Adding the endotoxin branch made a single total read as if it were all
+    # purity, which is the kind of mislabelled figure this register exists to prevent.
+    red = Counter(r["missing_field"] for r in rows if "WITHHOLDS" in r["why_it_is_missing"])
+    if red:
+        print("  gaps that are a WITHHELD LIMIT rather than an absent value "
+              "(the test is named, the number is not published):")
+        for k, v in red.most_common():
+            print(f"    {v:4d}  {k}")
     print(f"  -> data/characterization_gap_register.csv")
     return 0
 
