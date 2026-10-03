@@ -1,0 +1,97 @@
+{
+  "_README": [
+    "Figures in shipped prose that are NOT counts over this dataset and therefore",
+    "cannot be rendered from qc/stats.json. Each needs a reason it cannot move.",
+    "qc/validate.py masks these exact substrings before looking for untokenised",
+    "figures. Adding an entry here is a claim that the number is fixed by",
+    "something outside data/ -- a source document, a regulation, another branch --",
+    "and the reason must say which. If a figure is a count over data/, it belongs",
+    "in a <!--stat:KEY--> token, not here.",
+    "LIMIT: the matcher reads digits, not words. 'three designed controls' is",
+    "invisible to it. Figures that matter are written as digits for that reason."
+  ],
+  "README.md": [
+    {
+      "text": "placebo arm moved 35.58 → 36.46 mL (+2.5%, n=12), while the two highest dose",
+      "why": "Ventricular volumes measured and published by NCT02519036's own report (Tabrizi 2019 / Roche disclosure). Source-reported values; this release transcribes them and does not recompute them."
+    },
+    {
+      "text": "arms moved 39.33 → 44.43 mL (+13.0%, n=9) and 27.53 → 33.02 mL (+19.9%, n=10).",
+      "why": "Same source and same reason as the line above: per-arm published volumes from the trial report, not a dataset aggregate."
+    },
+    {
+      "text": "FAERS hydrocephalus counts are ~1 report against thousands, and the two",
+      "why": "A deliberately approximate order-of-magnitude statement about the per-drug FAERS denominators, not a count. It is qualitative and stays qualitative; the exact per-drug counts are in data/measurements.csv."
+    },
+    {
+      "text": "inclisiran trial (2/778).",
+      "why": "Numerator and denominator exactly as the inclisiran trial's posted results table states them. Changing either would misreport the source."
+    }
+  ],
+  "METHODOLOGY.md": [
+    {
+      "text": "of the sibling kidney dataset was hand-transcription error — 21 rows recording a",
+      "why": "A finding about the sibling kidney branch at the time it was audited, cited as the reason this release machine-extracts. It is a fact about that audit, not about data/ here, and must not drift with this dataset."
+    },
+    {
+      "text": "database-wide, FAERS holds 5,367 reports",
+      "why": "openFDA's own total for the HYDROCEPHALUS reaction term across all drugs, as returned on the retrieval date recorded in data/sources.csv. A snapshot of an external API, not a count over this release."
+    },
+    {
+      "text": "carrying `HYDROCEPHALUS` against 20,692,690 reports in total.",
+      "why": "openFDA's total report count on the same retrieval date. External API snapshot; re-querying would change it and would not describe this release."
+    },
+    {
+      "text": "1,839 of its oligonucleotides",
+      "why": "The sibling OligoTox-CNS release's compound count, cited for comparison. It lives on another branch, is subject to German's decision 1 on which CNS lineage is authoritative, and cannot be computed from this endpoint's data."
+    },
+    {
+      "text": "trial's table with a count of 0 for that arm",
+      "why": "Part of the definition of the strongest negative grade: the literal value 0 that a results table must carry for the row to qualify. A rubric threshold, not a tally."
+    },
+    {
+      "text": "tier-A term appears in a trial's posted serious-adverse-event table, which 42",
+      "why": "The opening of the 42 CFR 11.48(a)(4)(ii)(A) citation, split across a line break. A regulation number."
+    },
+    {
+      "text": "claim that imaging was performed, and a non-serious event below the 5 percent",
+      "why": "The 5 percent reporting threshold set by 42 CFR 11.48(a)(4)(ii)(B) for non-serious events. Fixed by regulation."
+    },
+    {
+      "text": "returned 188 unique sources.",
+      "why": "The number of unique sources the multi-modal discovery pass returned on 2026-10-02. The list itself was agent output and only the unextracted remainder was written to notes/source_backlog.csv, so this is a historical record of that pass and is not recomputable from data/."
+    },
+    {
+      "text": "threshold, unlike subparagraph (B), which sets 5 percent within any arm for",
+      "why": "The same 42 CFR 11.48(a)(4)(ii)(B) threshold, quoted a second time where the two subparagraphs are contrasted. Fixed by regulation."
+    },
+    {
+      "text": "ventricular event below the 5 percent threshold would not appear",
+      "why": "Third occurrence of the same regulatory threshold, in the statement of what the negatives do not cover. Fixed by regulation."
+    }
+  ],
+  "SCHEMA.md": [
+    {
+      "text": "them — 12 hydrocephalus rows on the nervous-system branch are already present",
+      "why": "A count of hydrocephalus rows held on a different branch's nervous-system table, quoted to show the overlap this endpoint must not duplicate. It is not computed from this endpoint's data and changes only when that branch changes."
+    },
+    {
+      "text": "the sibling OligoTox-CNS release reports the same for all 1,839 of its compounds.",
+      "why": "The same cross-branch CNS compound count as in METHODOLOGY.md, cited for the purity comparison. Subject to German's decision 1; not computable here."
+    }
+  ],
+  "PHASE2_COMPLIANCE.md": [
+    {
+      "text": "single PDF ≤ 5 pages",
+      "why": "The page limit the Phase 2 instructions set for the methodology document. Fixed by the challenge rules."
+    },
+    {
+      "text": "carries a published range (90-97%, HPLC-purified) for",
+      "why": "The purity range printed by the Gai2 oligodeoxynucleotides' source paper. A source-reported value; the count of compounds it covers is tokenised separately."
+    },
+    {
+      "text": "The sibling CNS release reports the same for all 1,839 of its compounds.",
+      "why": "The cross-branch OligoTox-CNS compound count, quoted a third time in the compliance table's purity row. Same reason as the SCHEMA.md and METHODOLOGY.md entries: it belongs to another branch and is subject to German's decision 1."
+    }
+  ]
+}

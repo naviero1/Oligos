@@ -68,7 +68,7 @@ MEASUREMENT_COLS = [
     "comparator_arm", "n_affected_comparator",
     "n_at_risk_comparator", "statistic", "effect_direction", "effect_vs_control",
     "seriousness", "assessment_type", "organ_system", "source_vocabulary",
-    "hydroceph_grade", "grade_basis", "grade_status",
+    "hydroceph_grade", "grade_basis", "grade_status", "severity_axis",
     "ascertainment", "ascertainment_basis",
     "attribution_as_stated", "attribution_evidence", "tox_axis", "event_cluster_id",
     "source_ref", "source_location", "redistribution", "notes",
@@ -378,6 +378,28 @@ def main():
         if r["subject_class"] not in SUBJECT_CLASSES:
             raise SystemExit("unmapped subject_class for species=%r study_type=%r"
                              % (r["species"], r["study_type"]))
+
+        # SCIENTIFIC_RULES.md section E, as applied project-wide by Crank on
+        # 2026-10-03: an in-vitro readout must not be labelled with a clinical
+        # severity grade. Two rows here are cultured rodent ependymal cells
+        # graded on a rubric whose other clauses are symptomatic raised
+        # intracranial pressure and permanent CSF diversion -- things a cell
+        # culture cannot have. The VALUES DO NOT CHANGE; what changes is that
+        # the row now says which axis its number is on, so no reader and no
+        # model can pool a cell-culture 2 with a clinical 2.
+        if r["hydroceph_grade"] in ("", "NOT_APPLICABLE"):
+            r["severity_axis"] = "NOT_APPLICABLE"
+        elif r["subject_class"].endswith("in_vitro"):
+            r["severity_axis"] = "experimental_response_severity_0_3"
+        elif r["subject_class"] == "animal_in_vivo":
+            # Organism-level animal findings are NOT resolved here. The rubric's
+            # grade-3 clause requires a clinical intervention, so whether an
+            # animal row belongs on the clinical axis is German's call; until he
+            # rules, the row states that it is an animal axis rather than
+            # claiming to be either.
+            r["severity_axis"] = "animal_in_vivo_severity_0_3"
+        else:
+            r["severity_axis"] = "clinical_hydrocephalus_severity_0_3"
 
     for i, r in enumerate(rows, 1):
         r["measurement_id"] = "HYD-MSR-%05d" % i

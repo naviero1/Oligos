@@ -139,10 +139,10 @@ oligo identity"*. A full-text sweep of all sixteen committed US labels for
 purity, purification, chromatography, mass-spectrometry, identity and
 characterisation language returns **no statement about the drug substance in any
 of them** — every hit is a patient baseline characteristic or an efficacy assay.
-`purity_pct` is therefore `NOT_REPORTED` for 50 of the 53 roster records. The
-three exceptions are the Gai2 oligodeoxynucleotides, which carry a published
-range of 90-97% (HPLC-purified) from their source; all three are rat-only, so
-purity for the human-evidence subset is **0 of 41 compounds**. Elsewhere
+`purity_pct` is therefore `NOT_REPORTED` for <!--stat:oligos_without_purity-->50<!--/stat--> of the <!--stat:n_oligo_records-->53<!--/stat--> roster
+records. The <!--stat:oligos_with_purity-->3<!--/stat--> exceptions are the Gai2 oligodeoxynucleotides, which carry a
+published range of 90-97% (HPLC-purified) from their source; all three are rat-only,
+so purity for the human-evidence subset is **<!--stat:human_subset_with_purity-->0<!--/stat--> of <!--stat:human_subset_compounds-->41<!--/stat--> compounds**. Elsewhere
 `purity_method` / `identity_confirmation` are `NOT_REPORTED` except where a
 research source names a supplier. This is a property of the published record, and
 the sibling OligoTox-CNS release reports the same for all 1,839 of its compounds.
@@ -170,6 +170,25 @@ Rules that constrain the rubric, and which the QC suite enforces:
 2. **Grade 0 requires `ascertainment = measured_null`.** A row that was never
    assessed is `not_assessed` with an **empty** grade, not a zero. This is the
    rule the sibling kidney dataset lacked.
+
+   > **OPEN CONTRADICTION, disclosed not resolved.** This document says
+   > *requires* `measured_null`; `scripts/data_dictionary.py` says grade 0 is
+   > *permitted* on `measured_null` **or** `reported_zero_no_denominator`, and
+   > `qc/validate.py` enforces that permissive version. <!--stat:grade0_reported_zero_rows-->411<!--/stat--> grade-0
+   > rows carry `reported_zero_no_denominator`, so they satisfy the code and
+   > violate the rule as written here. Separately, <!--stat:grade0_absence_measured_null_rows-->583<!--/stat--> grade-0 rows
+   > carry `measured_null` on the basis of an **absence** — <!--stat:tier_A_absence_cfr_rows-->507<!--/stat--> from the absence of a
+   > tier-A term in a trial's posted serious-adverse-event table and the rest
+   > from the absence of a matching statement in a prescribing information.
+   > `SCIENTIFIC_RULES.md` §E says a no-event mention or an absence from an
+   > adverse-event table is not a negative; this release's §9 of
+   > [`METHODOLOGY.md`](METHODOLOGY.md) argues that 42 CFR 11.48(a)(4)(ii)(A)
+   > makes the table complete and so makes the absence a reported zero for
+   > serious events. **Which reading governs is a scientific ruling, not a
+   > curation choice, and it is German's.** It is the difference between
+   > roughly <!--stat:grade0_rows-->1,114<!--/stat--> grade-0 rows and roughly <!--stat:grade0_not_absence_rows-->120<!--/stat-->. Nothing has been
+   > re-graded or re-labelled pending that ruling; see
+   > `ROCKSTEADY_GERMAN_QUESTION_absence_negatives_2026-10-03.md`.
 3. **The scale is censored by study type.** An `in_vitro` or `csf_composition`
    row cannot reach grade 3, because grade 3 is defined by whole-organism
    intervention. Grades are therefore **not comparable across `study_type`**, and

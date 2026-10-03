@@ -573,6 +573,150 @@ def main():
     PLACEHOLDERS = {"NOT_APPLICABLE", "placebo_or_sham_control"}
     stats["n_compounds_real"] = sum(1 for r in o
                                     if r["oligo_name"] not in PLACEHOLDERS)
+    stats["oligos_without_sequence"] = sum(
+        1 for r in o if r["sequence_5to3_asprinted"] in ("", "NOT_REPORTED"))
+    # Figures the prose quotes that are not already a column tally. Each is
+    # defined here once, so the document cannot hold a second definition.
+    # "marketed" means a product label is carried for it — DailyMed or an EMA
+    # SmPC. Both give 11; the "12" the README carried matched neither definition.
+    _labelled = {r["oligo_name"] for r in m if r["study_type"] == "regulatory_label"}
+    stats["oligos_with_sequence_marketed"] = sum(
+        1 for r in o if r["oligo_name"] in _labelled
+        and r["sequence_5to3_asprinted"] not in ("", "NOT_REPORTED",
+                                                 "NOT_APPLICABLE"))
+    stats["n_placeholder_oligos"] = len(o) - stats["n_compounds_real"]
+    # The exact MedDRA preferred term, not a sum over the category: the category
+    # also holds HYPERTENSIVE HYDROCEPHALUS (1) and two reported zeros, and a sum
+    # over it would silently pool four different terms into one quoted figure.
+    stats["faers_nusinersen_hydrocephalus_reports"] = sum(
+        int(r["n_affected"]) for r in m
+        if r["source_id"].startswith("FAERS") and "nusinersen" in r["oligo_name"]
+        and r["readout_term_verbatim"] == "HYDROCEPHALUS"
+        and r["n_affected"].isdigit())
+    stats["rows_ema_smpc"] = sum(1 for r in m if r["source_id"].startswith("EMA_"))
+    _meth = os.path.join(ROOT, "METHODOLOGY.md")
+    stats["open_items"] = (len(re.findall(r"^\*\*OI-\d+", open(_meth).read(),
+                                          re.M)) if os.path.exists(_meth) else 0)
+    # ---- source-level rights register reconciles to the data --------------
+    #     A rights register that does not account for every row is worse than
+    #     none: it reads as coverage. Its measurement counts must sum to
+    #     measurements.csv and its per-tier totals must match by_redistribution.
+    _rr = os.path.join(ROOT, "notes", "rights_register_source.csv")
+    if os.path.exists(_rr):
+        rr = list(csv.DictReader(open(_rr)))
+        _tot = sum(int(r["n_measurements"] or 0) for r in rr)
+        check("rights register accounts for every measurement row",
+              _tot == len(m), "register %d vs measurements %d" % (_tot, len(m)))
+        check("every source in the register has a tier",
+              all(r["rights_tier"] in set("ABCDU") for r in rr),
+              "untiered: %s" % [r["source_ref"] for r in rr
+                                if r["rights_tier"] not in set("ABCDU")][:5])
+        check("no rights row asserts legal clearance",
+              all("NOT legal clearance" in r["resolved_by"] for r in rr),
+              "a rights tag records an observation and a proposal, never "
+              "clearance")
+        check("every held row states why it is held",
+              all(r["hold_reason"] for r in rr
+                  if r["extracted_data_release"] != "RELEASE"),
+              "a DECISION_REQUIRED row with no reason is a silent hold")
+        stats["rights_register_sources"] = len(rr)
+        stats["rights_by_tier"] = dict(collections.Counter(
+            r["rights_tier"] for r in rr))
+
+    # ---- SCIENTIFIC_RULES section G: the sequence-family join rule --------
+    #     ml/build_analysis_set.py groups folds on oligos.sequence_base, which is
+    #     upper-cased, chemistry-stripped and U->T mapped. Crank's project-wide
+    #     rule forbids case-insensitive merging without adjudication, so the
+    #     normalization must be shown not to be doing the work. Byte-exact
+    #     re-keying on the as-printed sequence must give the same families.
+    def _fams(col):
+        g = collections.defaultdict(set)
+        for r in o:
+            v = r[col]
+            if v not in ("", "NOT_REPORTED", "NOT_APPLICABLE"):
+                g[v].add(r["oligo_name"])
+        return {frozenset(v) for v in g.values() if len(v) > 1}
+    _norm, _exact = _fams("sequence_base"), _fams("sequence_5to3_asprinted")
+    check("normalized and byte-exact sequence families agree",
+          _norm == _exact,
+          "case/U-T folding changes the grouping: normalized %s vs exact %s"
+          % (sorted(map(sorted, _norm)), sorted(map(sorted, _exact))))
+    stats["sequence_families_multi_member"] = sorted(sorted(f) for f in _exact)
+
+    # ---- SCIENTIFIC_RULES section E: severity axes stay apart -------------
+    AXES = {"clinical_hydrocephalus_severity_0_3",
+            "animal_in_vivo_severity_0_3",
+            "experimental_response_severity_0_3", "NOT_APPLICABLE"}
+    check("severity_axis uses the declared vocabulary",
+          all(r["severity_axis"] in AXES for r in m),
+          "unexpected: %s" % sorted({r["severity_axis"] for r in m} - AXES))
+    check("no in-vitro row carries a clinical severity grade",
+          not [r for r in m if r["subject_class"].endswith("in_vitro")
+               and r["severity_axis"] == "clinical_hydrocephalus_severity_0_3"],
+          "section E forbids mapping an in-vitro readout onto a clinical scale")
+    check("every graded row states its severity axis",
+          not [r for r in m if r["hydroceph_grade"] not in ("", "NOT_APPLICABLE")
+               and r["severity_axis"] == "NOT_APPLICABLE"],
+          "a grade with no axis can be pooled with any other grade")
+    check("every ungraded row carries severity_axis NOT_APPLICABLE",
+          not [r for r in m if r["hydroceph_grade"] in ("", "NOT_APPLICABLE")
+               and r["severity_axis"] != "NOT_APPLICABLE"],
+          "an axis on an ungraded row implies a grade that is not there")
+    check("the experimental axis is not pooled into any published grade count",
+          "experimental_response_severity" in open(
+              os.path.join(ROOT, "scripts", "data_dictionary.py")).read(),
+          "the axis must be documented where readers look for column meanings")
+    stats["by_severity_axis"] = dict(collections.Counter(
+        r["severity_axis"] for r in m))
+
+    # The grade-0 decomposition. Published because the headline "1,114 negatives"
+    # is not 1,114 measured negatives: most rest on an absence. SCIENTIFIC_RULES
+    # section E and this release's 42 CFR reading disagree on whether that is a
+    # negative at all, so the split is a figure German needs, not a footnote.
+    def _g0basis(r):
+        b = r["grade_basis"]
+        if "no FAERS report" in b:
+            return "faers_absence"
+        if "no serious adverse event coded" in b:
+            return "sae_table_absence"
+        if ("contains no statement" in b or "no occurrence" in b
+                or "returns zero occurrences" in b):
+            return "label_absence"
+        if "explicitly reported count of 0" in b:
+            return "explicit_reported_zero"
+        return "other"
+    _g0 = [r for r in m if r["hydroceph_grade"] == "0"]
+    stats["grade0_rows"] = len(_g0)
+    stats["grade0_by_basis"] = dict(collections.Counter(_g0basis(r) for r in _g0))
+    stats["grade0_reported_zero_rows"] = sum(
+        1 for r in _g0 if r["ascertainment"] == "reported_zero_no_denominator")
+    stats["grade0_absence_measured_null_rows"] = sum(
+        1 for r in _g0 if r["ascertainment"] == "measured_null"
+        and _g0basis(r) in ("sae_table_absence", "label_absence"))
+    stats["grade0_not_absence_rows"] = sum(
+        1 for r in _g0 if _g0basis(r) not in ("sae_table_absence",
+                                              "label_absence", "faers_absence"))
+    # Ratchet: the contradiction between SCHEMA.md's "requires measured_null" and
+    # data_dictionary.py's "measured_null OR reported_zero_no_denominator" is
+    # German's to rule on. What is enforceable here is that it stays DISCLOSED.
+    _sch = os.path.join(ROOT, "SCHEMA.md")
+    check("the grade-0 ascertainment contradiction is disclosed in SCHEMA.md",
+          os.path.exists(_sch) and "OPEN CONTRADICTION" in open(_sch).read(),
+          "SCHEMA.md states grade 0 requires measured_null while "
+          "data_dictionary.py permits reported_zero_no_denominator, and "
+          "%d rows take the permissive reading" % sum(
+              1 for r in _g0 if r["ascertainment"]
+              == "reported_zero_no_denominator"))
+    stats["oligos_with_purity"] = sum(
+        1 for r in o if r["purity_pct"] not in ("", "NOT_REPORTED",
+                                                "NOT_APPLICABLE"))
+    stats["oligos_without_purity"] = len(o) - stats["oligos_with_purity"]
+    check("sequenced + unsequenced + placeholders = roster",
+          stats["oligos_with_sequence"] + stats["oligos_without_sequence"]
+          + (len(o) - stats["n_compounds_real"]) == len(o),
+          "%d + %d + %d != %d" % (stats["oligos_with_sequence"],
+                                  stats["oligos_without_sequence"],
+                                  len(o) - stats["n_compounds_real"], len(o)))
     # Trial counters. The release previously published four disagreeing trial
     # figures (161 / 159 / 155 / none) and qc/stats.json held none at all.
     reg = list(csv.DictReader(open(os.path.join(ROOT, "data", "trial_registry.csv"))))
@@ -592,6 +736,10 @@ def main():
         r["study_type"] for r in m if r["subject_class"].startswith("human")))
     stats["animal_rows"] = sum(1 for r in m
                                if r["subject_class"].startswith("animal"))
+    # render_docs.stat_values() used to add these two itself, which put two of
+    # the renderable keys outside stats.json and outside every check over it.
+    stats["n_trials"] = len(reg)
+    stats["n_ctgov_rows"] = sum(1 for r in m if r["source_id"].startswith("NCT"))
     stats["trials_registry_rows"] = len(reg)
     stats["trials_excluded_identity"] = len(reg) - len(kept)
     stats["trials_human_unique"] = len({r["nct_id"] for r in kept} & with_rows)
@@ -630,6 +778,166 @@ def main():
     )
     stats["human_in_vitro_rows"] = sum(1 for r in m
                                        if r["subject_class"] == "human_in_vitro")
+    # Flat aliases so prose can quote the human-subset figures through a token.
+    for _k, _v in stats["human_subset"].items():
+        stats["human_subset_" + _k] = _v
+
+    # ---- figures that shipped prose quotes -------------------------------
+    #     Eleven figures in METHODOLOGY.md, PHASE2_COMPLIANCE.md and README.md
+    #     were stale: "39 checks" (64), "10 of 50 compounds carry a sequence"
+    #     (26 of 53), "202 per-position records" (555), "animal arm is 5 rows"
+    #     (10), "1,290 public domain" (1,303), component row counts off by
+    #     hundreds. Every one of them was a figure a human typed next to a word.
+    #     Typing is the defect, so these keys exist to be rendered into the
+    #     prose as <!--stat:KEY--> tokens and the prose-figure check below
+    #     refuses any untokenised figure that is not a declared constant.
+    COMPONENT_FILES = {
+        "rows_ctgov": "_ctgov_measurements.csv",
+        "rows_ctgov_outcomes": "_ctgov_outcome_measurements.csv",
+        "rows_faers": "_faers_measurements.csv",
+        "rows_labels": "_label_measurements.csv",
+        "rows_literature": "_literature_measurements.csv",
+        "rows_nonclinical": "_nonclinical_measurements.csv",
+    }
+    for key, fname in COMPONENT_FILES.items():
+        fpath = os.path.join(DATA, fname)
+        # csv.reader, not line count: arm_description carries embedded newlines,
+        # so `wc -l` reads 898 records where the file holds 746.
+        stats[key] = (sum(1 for _ in csv.DictReader(open(fpath)))
+                      if os.path.exists(fpath) else 0)
+    check("component row counts sum to measurements.csv",
+          sum(stats[k] for k in COMPONENT_FILES) == len(m),
+          "components %d vs measurements %d"
+          % (sum(stats[k] for k in COMPONENT_FILES), len(m)))
+
+    _rights = collections.Counter(r["redistribution"] for r in m)
+    for term in ("public_domain", "cc_by", "cc_by_nc", "summary_stat_only",
+                 "verify"):
+        stats["rights_" + term] = _rights.get(term, 0)
+
+    # The 42 CFR 11.48(a)(4)(ii)(A) absence negatives, quoted in METHODOLOGY §9.
+    stats["tier_A_absence_cfr_rows"] = sum(
+        1 for r in m if r["endpoint_tier"] == "A"
+        and "11.48" in r.get("ascertainment_basis", ""))
+    stats["tier_A_negative_rows"] = sum(
+        1 for r in m if r["endpoint_tier"] == "A"
+        and r["ascertainment"] in ("measured_null",
+                                   "reported_zero_no_denominator"))
+
+    _bk = os.path.join(ROOT, "notes", "source_backlog.csv")
+    stats["source_backlog_rows"] = (sum(1 for _ in csv.DictReader(open(_bk)))
+                                    if os.path.exists(_bk) else 0)
+
+    for key, fname in (("n_measurement_cols", "measurements.csv"),
+                       ("n_oligo_cols", "oligos.csv"),
+                       ("n_modification_cols", "modifications.csv"),
+                       ("n_source_cols", "sources.csv")):
+        fpath = os.path.join(DATA, fname)
+        stats[key] = (len(next(csv.reader(open(fpath))))
+                      if os.path.exists(fpath) else 0)
+
+    # ---- shipped-prose figure ratchet ------------------------------------
+    #     Eleven figures in the shipped documents were stale at once and nothing
+    #     caught them, because a number typed next to a word is invisible to a
+    #     dataset check. Every statistical figure in a shipped document must now
+    #     be EITHER rendered from a <!--stat:KEY--> token (scripts/render_docs.py
+    #     rewrites those on every build) OR declared in qc/prose_constants.json
+    #     with a reason it cannot move. Anything else fails here.
+    #
+    #     The matcher deliberately runs in both directions and crosses markdown
+    #     pipes. A number-then-noun pattern bounded by [^.|] misses every stale
+    #     figure in table form, because in a table the noun precedes the number
+    #     and a pipe sits between them -- that is how the sibling endpoints'
+    #     check_doc_numbers.py missed figures that were live at the time.
+    PROSE_FILES = ["README.md", "METHODOLOGY.md", "SCHEMA.md",
+                   "PHASE2_COMPLIANCE.md"]
+    NOUNS = (r"(?:compounds?|oligos?|oligonucleotides?|trials?|rows?|arms?"
+             r"|participants?|sequences?|columns?|sources?|modifications?"
+             r"|folds?|studies|records?|reports?|events?|cases?|checks?)")
+    FWD = re.compile(r"\b\d[\d,]*\b[^.\n]{0,40}?\b" + NOUNS, re.I)
+    REV = re.compile(NOUNS + r"[^.\n]{0,25}?\b\d[\d,]*\b", re.I)
+    TOKEN_SPAN = re.compile(r"<!--stat:[A-Za-z_0-9]+-->.*?<!--/stat-->", re.S)
+    # Masked first, because these are not figures about this dataset at all and
+    # declaring each one a "constant" would turn the register into noise and hide
+    # the handful of external facts that genuinely need a reason recorded.
+    NOT_A_FIGURE = [
+        re.compile(r"\bOI-\d+"),                       # open-item section ids
+        re.compile(r"\bNCT\d+"),                       # trial registrations
+        re.compile(r"\b[A-Z]{2,}-\d{3,}\b"),           # development codes
+        re.compile(r"\b\d+ CFR\b"),                    # regulation citations
+        re.compile(r"CC BY(?:-NC)?(?:-ND)?(?:\s[\d.]+)?"),
+        re.compile(r"\b[Pp]hase \d(?:/\d)?[a-z]?\b"),
+        re.compile(r"\bgrades?[- ]\d\b", re.I),        # rubric levels, incl. "grade-0"
+        re.compile(r"\b\d+-mer\b"),                    # oligo length idiom
+        re.compile(r"\b\d+-\d+-\d+\b"),                # gapmer motif strings
+        re.compile(r"\b\d+-methylation\b"),
+        re.compile(r"\bTable \d+\b"), re.compile(r"§\s?\d+(?:\.\d+)*"),
+        re.compile(r"\bsections? \d+(?:\.\d+)*", re.I),
+        re.compile(r"\*?n−1\*?"), re.compile(r"\bn=\d+"),
+        # Source-reported quantities carrying a unit or a percent sign are
+        # measurements quoted from a paper, not counts over this dataset.
+        re.compile(r"\d[\d.,]*\s*(?:-\s*\d[\d.,]*)?\s*%"),
+        re.compile(r"\d[\d.,]*\s*(?:mL|mg|g/L|kg|µ[gm]|nM|µM|mm|cm|mmHg)\b"),
+        re.compile(r"\b(?:19|20)\d{2}\b"),             # years in citations
+    ]
+    GEN_BLOCK = re.compile(r"<!-- BEGIN GENERATED.*?<!-- END GENERATED -->", re.S)
+
+    cpath = os.path.join(HERE, "prose_constants.json")
+    constants = {k: v for k, v in
+                 (json.load(open(cpath)) if os.path.exists(cpath) else {}).items()
+                 if not k.startswith("_")}  # "_README" documents the file itself
+    # A token whose key is not a known statistic renders nothing and is a silent
+    # hole in the ratchet, so the keys are checked here, not only at render time.
+    bad_keys = sorted({k for rel in PROSE_FILES
+                       if os.path.exists(os.path.join(ROOT, rel))
+                       for k in re.findall(r"<!--stat:([A-Za-z_0-9]+)-->",
+                                           open(os.path.join(ROOT, rel)).read())
+                       if k not in stats})
+    check("every <!--stat:KEY--> token names a real statistic",
+          not bad_keys, "unknown keys: %s" % bad_keys[:6])
+    check("qc/prose_constants.json exists", os.path.exists(cpath),
+          "the prose ratchet needs its declared-constant register")
+    bad_reason = [c.get("text", "")[:40] for f in constants
+                  for c in constants[f] if len(c.get("why", "")) < 12]
+    check("every declared prose constant states why it cannot move",
+          not bad_reason, "no reason given for: %s" % bad_reason[:5])
+
+    unaccounted = []
+    for rel in PROSE_FILES:
+        fpath = os.path.join(ROOT, rel)
+        if not os.path.exists(fpath):
+            continue
+        for lineno, line in enumerate(open(fpath).read().split("\n"), 1):
+            masked = TOKEN_SPAN.sub(" ", line)
+            # Declared constants are matched against the line as written, BEFORE
+            # the not-a-figure masks run: a declaration quoting a percentage or a
+            # unit would otherwise never match, because the mask had already
+            # removed the very characters it quotes.
+            for decl in constants.get(rel, []):
+                masked = masked.replace(decl["text"], " ")
+            for pat in NOT_A_FIGURE:
+                masked = pat.sub(" ", masked)
+            if FWD.search(masked) or REV.search(masked):
+                hit = (FWD.search(masked) or REV.search(masked)).group(0)
+                unaccounted.append("%s:%d %r" % (rel, lineno, hit[:60]))
+    # The generated block in README is rendered wholesale from stats.json, so it
+    # is masked by file-region rather than per figure.
+    gen_lines = set()
+    rpath = os.path.join(ROOT, "README.md")
+    if os.path.exists(rpath):
+        text = open(rpath).read()
+        mo = GEN_BLOCK.search(text)
+        if mo:
+            lo = text[:mo.start()].count("\n") + 1
+            hi = text[:mo.end()].count("\n") + 1
+            gen_lines = set(range(lo, hi + 1))
+    unaccounted = [u for u in unaccounted
+                   if not (u.startswith("README.md:")
+                           and int(u.split(":")[1].split(" ")[0]) in gen_lines)]
+    check("every figure in shipped prose is rendered or declared constant",
+          not unaccounted,
+          "%d unaccounted: %s" % (len(unaccounted), "; ".join(unaccounted[:6])))
+    stats["prose_figures_unaccounted"] = len(unaccounted)
 
     # ---- release identifier ----------------------------------------------
     #     Different branches and Drive exports held different versions with no key

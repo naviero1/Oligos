@@ -260,6 +260,19 @@ experimental series. The grouped runs also carry **no uncertainty interval**,
 which \u00a7K-11 requires. This endpoint is **not model-ready**, and nothing here
 should be read as validation.
 
+**No model permission is on record for this endpoint.** \u00a7H's release-state table
+names thrombocytopenia, the human platelet POC, immunotoxicity and matched-context
+analyses; it names no hydrocephalus item either way. So the permission that \u00a7H
+governs has not been granted here and has not been refused either — it has not been
+asked. The numbers in this section exist because they were computed before that gap
+was noticed, and they are kept rather than deleted because deleting them would hide
+what was run. They are **descriptive, exploratory and not authorised**: the
+sequence-join normalization, the fold degeneracy and the bootstrap interval are all
+stated so the work can be audited, not so a score can be quoted. Nothing in this
+section may be strengthened, extended or carried into a deliverable until German
+rules on it. The request is in
+`ROCKSTEADY_GERMAN_QUESTION_model_permission_2026-10-03.md`.
+
 This grouping is a **validation-safety measure, not an identity claim.** It
 merges no inventory record, changes no count, and asserts nothing about whether
 two constructs are the same molecule — it says only that they must not sit on

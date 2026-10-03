@@ -79,7 +79,13 @@ ROWS_N3 = [
          readout="ciliary_beat_frequency", direction="decrease", grade=2,
          status="provisional",
          basis=("2 = irreversible ciliary stasis in cultured ependymal cells, a "
-                "measured CSF-propulsion abnormality (SCHEMA.md rubric grade 2). "
+                "measured CSF-propulsion abnormality, scored at SCHEMA.md rubric "
+                "LEVEL 2 on the EXPERIMENTAL RESPONSE SEVERITY axis "
+                "(severity_axis = experimental_response_severity_0_3). It is not a "
+                "clinical grade: SCIENTIFIC_RULES.md section E forbids labelling an "
+                "in-vitro readout with a clinical severity scale, and the rubric's "
+                "own level-2 clause names symptomatic raised intracranial pressure, "
+                "which a cell culture cannot have. The value is unchanged. "
                 "Confounded: the source states the cells 'gradually started showing "
                 "decreased viability' over the 48-hour observation, so ciliary stasis "
                 "is not cleanly separable from general cytotoxicity."),
@@ -95,7 +101,10 @@ ROWS_N3 = [
          readout="ciliary_beat_frequency", direction="no_change", grade=0,
          status="provisional",
          basis=("0 = a DESIGNED control oligonucleotide, assessed on the same readout "
-                "in the same experiment, with no effect (SCHEMA.md rubric grade 0)."),
+                "in the same experiment, with no effect. Scored at SCHEMA.md rubric "
+                "LEVEL 0 on the EXPERIMENTAL RESPONSE SEVERITY axis "
+                "(severity_axis = experimental_response_severity_0_3), not as a "
+                "clinical grade -- see SCIENTIFIC_RULES.md section E."),
          asc="measured_null", attribution="not_discussed",
          evidence=('"...while the control oligo had no such effect (Figure 9)." The '
                    'mismatch was chosen as "a more stringent control, maintaining '

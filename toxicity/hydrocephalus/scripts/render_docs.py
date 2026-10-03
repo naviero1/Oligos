@@ -220,18 +220,25 @@ def main():
 # of itself that "the counts in this dossier are transcribed, not regenerated, and
 # will drift if the dataset changes" -- and it did drift, claiming zero in vitro
 # rows after two were added. A count a document states is now a count it renders.
-TOKEN_FILES = ["PHASE2_COMPLIANCE.md", os.path.join("..", "hydrocephalus.md")]
-TOKEN = re.compile(r"(<!--stat:([a-z_0-9]+)-->)(.*?)(<!--/stat-->)", re.S)
+# A sweep on 2026-10-03 found ELEVEN stale figures across these files that no
+# check could see: "39 checks" where 64 run, "10 of 50 compounds carry a
+# sequence" where 26 of 53 do, "202 per-position records" where 555 exist,
+# "animal arm is 5 rows" where 10 exist, "1,290 public domain" where 1,303 are,
+# component row counts off by hundreds, and two gap items ("no in vitro rows",
+# "no narrative/methodology/PADP PDF") that had been closed. Every one was a
+# figure a human typed. METHODOLOGY.md, SCHEMA.md and README.md are therefore
+# token files too, and qc/validate.py now refuses an untokenised figure that is
+# not declared a constant in qc/prose_constants.json.
+TOKEN_FILES = ["PHASE2_COMPLIANCE.md", "METHODOLOGY.md", "SCHEMA.md", "README.md",
+               os.path.join("..", "hydrocephalus.md")]
+TOKEN = re.compile(r"(<!--stat:([A-Za-z_0-9]+)-->)(.*?)(<!--/stat-->)", re.S)
 
 
 def stat_values(s):
     """Every value a document may quote inline, formatted for prose."""
-    trials = list(csv.DictReader(open(os.path.join(ROOT, "data",
-                                                   "trial_registry.csv"))))
-    meas = list(csv.DictReader(open(os.path.join(ROOT, "data", "measurements.csv"))))
+    # Every renderable key now comes from qc/stats.json, so qc/validate.py can
+    # check that each <!--stat:KEY--> token names a statistic that exists.
     v = {k: s[k] for k in s if isinstance(s[k], int)}
-    v["n_trials"] = len(trials)
-    v["n_ctgov_rows"] = sum(1 for r in meas if r["source_id"].startswith("NCT"))
     return {k: "{:,}".format(n) for k, n in v.items()}
 
 

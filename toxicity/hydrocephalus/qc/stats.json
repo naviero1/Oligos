@@ -320,6 +320,48 @@
   "oligos_with_sequence": 26,
   "checks_run": 64,
   "checks_failed": 0,
+  "oligos_without_sequence": 25,
+  "oligos_with_sequence_marketed": 11,
+  "n_placeholder_oligos": 2,
+  "faers_nusinersen_hydrocephalus_reports": 22,
+  "rows_ema_smpc": 8,
+  "open_items": 9,
+  "rights_register_sources": 195,
+  "rights_by_tier": {
+    "C": 4,
+    "A": 172,
+    "U": 16,
+    "B": 3
+  },
+  "sequence_families_multi_member": [
+    [
+      "eplontersen",
+      "inotersen"
+    ],
+    [
+      "olezarsen",
+      "volanesorsen"
+    ]
+  ],
+  "by_severity_axis": {
+    "clinical_hydrocephalus_severity_0_3": 1308,
+    "NOT_APPLICABLE": 26,
+    "animal_in_vivo_severity_0_3": 6,
+    "experimental_response_severity_0_3": 2
+  },
+  "grade0_rows": 1114,
+  "grade0_by_basis": {
+    "sae_table_absence": 507,
+    "explicit_reported_zero": 113,
+    "faers_absence": 411,
+    "label_absence": 76,
+    "other": 7
+  },
+  "grade0_reported_zero_rows": 411,
+  "grade0_absence_measured_null_rows": 583,
+  "grade0_not_absence_rows": 120,
+  "oligos_with_purity": 3,
+  "oligos_without_purity": 50,
   "trials_verified_register": 156,
   "trials_by_evaluability": {
     "adverse_event_table_absence_only": 127,
@@ -337,6 +379,8 @@
     "background_epidemiology": 3
   },
   "animal_rows": 10,
+  "n_trials": 161,
+  "n_ctgov_rows": 767,
   "trials_registry_rows": 161,
   "trials_excluded_identity": 6,
   "trials_human_unique": 154,
@@ -353,6 +397,44 @@
     "rows_with_duration": 739
   },
   "human_in_vitro_rows": 0,
-  "release_inputs_modified": [],
-  "release_id": "hydrocephalus-8ff856c"
+  "human_subset_compounds": 41,
+  "human_subset_with_sequence": 19,
+  "human_subset_with_position_map": 19,
+  "human_subset_with_purity": 0,
+  "human_subset_with_conjugate": 0,
+  "human_subset_rows": 1332,
+  "human_subset_rows_with_dose": 0,
+  "human_subset_rows_with_duration": 739,
+  "rows_ctgov": 746,
+  "rows_ctgov_outcomes": 21,
+  "rows_faers": 456,
+  "rows_labels": 80,
+  "rows_literature": 29,
+  "rows_nonclinical": 10,
+  "rights_public_domain": 1303,
+  "rights_cc_by": 13,
+  "rights_cc_by_nc": 3,
+  "rights_summary_stat_only": 15,
+  "rights_verify": 8,
+  "tier_A_absence_cfr_rows": 507,
+  "tier_A_negative_rows": 736,
+  "source_backlog_rows": 100,
+  "n_measurement_cols": 56,
+  "n_oligo_cols": 32,
+  "n_modification_cols": 12,
+  "n_source_cols": 20,
+  "prose_figures_unaccounted": 0,
+  "release_inputs_modified": [
+    "toxicity/hydrocephalus/METHODOLOGY.md",
+    "toxicity/hydrocephalus/ROCKSTEADY_GERMAN_QUESTION_absence_negatives_2026-10-03.md",
+    "toxicity/hydrocephalus/ROCKSTEADY_GERMAN_QUESTION_model_permission_2026-10-03.md",
+    "toxicity/hydrocephalus/SCHEMA.md",
+    "toxicity/hydrocephalus/ml/analyse.py",
+    "toxicity/hydrocephalus/ml/build_analysis_set.py",
+    "toxicity/hydrocephalus/qc/prose_constants.json",
+    "toxicity/hydrocephalus/qc/validate.py",
+    "toxicity/hydrocephalus/scripts/assemble.py",
+    "toxicity/hydrocephalus/scripts/build_nonclinical.py"
+  ],
+  "release_id": "hydrocephalus-a9280bc-dirty"
 }

@@ -129,6 +129,22 @@ def main():
     # merges no inventory record, changes no count and asserts nothing about
     # whether they are the same molecule. Two pairs share a base sequence here
     # and differ in conjugation: eplontersen/inotersen and olezarsen/volanesorsen.
+    #
+    # THE NORMALIZATION, WRITTEN DOWN BESIDE THE FIGURE, per Crank's project-wide
+    # join rule of 2026-10-03. sequence_base is: upper case, chemistry stripped,
+    # and U mapped to T. So this key is NOT case-sensitive and NOT RNA/DNA-aware,
+    # and the rule forbids case-insensitive merging without adjudication because
+    # in the kidney corpus letter case encodes the wing/gap boundary.
+    #
+    # Checked rather than assumed, and the check is in qc/validate.py so it
+    # cannot rot: re-keying on sequence_5to3_asprinted -- byte-exact, case and
+    # U/T preserved -- yields THE SAME TWO FAMILIES with the same members. The
+    # normalization is therefore not load-bearing at this endpoint. In this
+    # corpus case does not encode chemistry at all; per-position chemistry lives
+    # in data/modifications.csv, which is why folding case changes nothing here
+    # and would change a great deal on kidney. If a future compound makes the
+    # two keyings disagree, that check fails and this grouping goes to German
+    # before it is used again.
     seq_of = {n: (oligos.get(n, {}) or {}).get("sequence_base", "") for n in
               {rec.get("oligo_name", "") for rec in arms.values()}}
     fam_of = {}

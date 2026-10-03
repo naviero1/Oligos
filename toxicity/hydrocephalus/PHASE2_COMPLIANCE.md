@@ -22,7 +22,7 @@ and will drift; [`README.md`](README.md) is authoritative.
 | # | Required part | Owner | Status for this endpoint |
 |---|---|---|---|
 | 1 | **Narrative document**, single PDF ≤ 12 pages | Gustavo | **Not started.** The material for five of its six required sections exists in `README.md` and `METHODOLOGY.md` and is listed below, but no narrative PDF has been written. |
-| 2 | **Methodology document**, single PDF ≤ 5 pages, *"including the methods used to purify and characterize oligo identity"* | German | **Draft material exists, not in deliverable form.** [`METHODOLOGY.md`](METHODOLOGY.md) covers curation methods, source-study methods, QC and 9 open items, and §"Purification and identity characterisation" answers the purity clause with evidence. It is Markdown and longer than 5 pages. |
+| 2 | **Methodology document**, single PDF ≤ 5 pages, *"including the methods used to purify and characterize oligo identity"* | German | **Draft material exists, not in deliverable form.** [`METHODOLOGY.md`](METHODOLOGY.md) covers curation methods, source-study methods, QC and <!--stat:open_items-->9<!--/stat--> open items, and §"Purification and identity characterisation" answers the purity clause with evidence. It is Markdown and longer than 5 pages. |
 | 3 | **Dataset**: data dictionary + schema, raw data in Excel or similar, *"sequences of all oligos tested, as well as the location of all chemical modifications in each oligo, data on the purity and characterization of each, and any additional metadata"*, under an open licence | Oscar | **Substantially met; two gaps.** Detailed below. |
 | 4 | **PADP**, ≤ 5 pages | Gustavo | **Not started for this endpoint.** A kidney-endpoint PADP exists at the repository root; it is not this endpoint's and has not been adapted. |
 | — | *Optional*: code documentation, interactive notebooks, tutorials | Oscar | **Code documented, notebooks not started.** Every build step is a documented script; there is no tutorial notebook. |
@@ -38,11 +38,11 @@ This is the part owned by this workstream, so it is broken out in full.
 | "a data dictionary and schema documenting all metadata" | **Met** | [`scripts/data_dictionary.py`](scripts/data_dictionary.py) is the authoritative definition, rendered as the workbook's `data_dictionary` sheet. The QC suite asserts in **both directions** that every column has an entry and every entry is a real column. [`SCHEMA.md`](SCHEMA.md) carries the conceptual schema: tiers, rubric, missing-value convention. |
 | "access to the raw data … by including a data file in Excel (or similar format)" | **Met** | `OligoTox-Hydrocephalus_Dataset.xlsx`, 10 sheets, same layout as the sibling CNS release. CSVs in `data/` are the canonical form. |
 | Provenance of every value (supplementary, not separately required) | **Met** | `OligoTox-Hydrocephalus_Sources.pdf` — every database, document and link, with per-source rights, exclusions with reasons, the retrieved-but-unextracted backlog, and a resolved-URL check on all source locators. |
-| "the sequences of all oligos tested" | **Partly met — gap** | **10 of 50** compounds carry a published sequence. Recovered from WHO INN Recommended lists by deterministic parse, validated against each label's molecular formula. Missing for the double-stranded siRNAs, the morpholinos, and 15 compounds that reach the dataset only through the trial registry. See `METHODOLOGY.md` **OI-02**. |
-| "the location of all chemical modifications in each oligo" | **Partly met — gap** | [`data/modifications.csv`](data/modifications.csv): **202 rows, one per nucleotide position, over 10 compounds**, giving sugar, base, 5-methylation and phosphorothioate-vs-phosphodiester at every position. Same 40 compounds missing as above. |
+| "the sequences of all oligos tested" | **Partly met — gap** | **<!--stat:oligos_with_sequence-->26<!--/stat--> of <!--stat:n_oligo_records-->53<!--/stat-->** roster records carry a published sequence — <!--stat:human_subset_with_sequence-->19<!--/stat--> of <!--stat:human_subset_compounds-->41<!--/stat--> on the human-evidence subset. Recovered from WHO INN Recommended lists by deterministic parse, validated against each label's molecular formula. The duplex siRNAs and the morpholinos are no longer the gap — the parser now reads both. What remains unsequenced is development-code compounds with no INN entry, the composite multi-drug rows, and classes whose INN entry prints no base sequence (aptamer, defibrotide, imetelstat). See `METHODOLOGY.md` **OI-02**. |
+| "the location of all chemical modifications in each oligo" | **Partly met — gap** | [`data/modifications.csv`](data/modifications.csv): **<!--stat:n_modification_positions-->555<!--/stat--> rows, one per nucleotide position, over <!--stat:n_oligos_with_position_map-->26<!--/stat--> compounds**, giving sugar, base, 5-methylation and phosphorothioate-vs-phosphodiester at every position. Missing for the remaining roster records as above. |
 | "data on the purity and characterization of each" | **Partly met; a hard gap on the human subset** | `purity_pct` carries a published range (90-97%, HPLC-purified) for three constructs and is `NOT_REPORTED` for the rest. Those three are **rat-only**, so purity for the human-evidence subset is zero of <!--stat:n_compounds_real-->51<!--/stat--> compounds. From evidence: a full-text sweep of all 16 committed US labels finds no drug-substance purity, purification or identity statement in any of them. Recorded with the sweep as its basis, not left blank. The sibling CNS release reports the same for all 1,839 of its compounds. |
-| "any additional metadata" | **Met** | 55 measurement columns, 32 oligo columns, 12 modification columns, 20 source columns — including provenance, ascertainment, attribution and rights on every row. |
-| "terms for data access and data use … allowing for open and public access, such as through a creative commons license" | **Partly met — gap** | Rights are tracked **per row** (`redistribution`): 1,290 public domain, 8 CC BY, 3 CC BY-NC, 15 summary-statistic-only, 8 `verify`. A `LICENSE` file **does exist** at `toxicity/hydrocephalus/LICENSE`, granting CC BY 4.0 over the curation layer with a per-row rights table for the underlying sources. **Open discrepancy, escalated, not resolved here:** that LICENSE states it does not relicense third-party source material, while PADP section 1 lists `sources/raw/` among the artifacts covered by the grant. The two cannot both be right. Referred to Oscar and to Beebop's rights audit. |
+| "any additional metadata" | **Met** | <!--stat:n_measurement_cols-->55<!--/stat--> measurement columns, <!--stat:n_oligo_cols-->32<!--/stat--> oligo columns, <!--stat:n_modification_cols-->12<!--/stat--> modification columns, <!--stat:n_source_cols-->20<!--/stat--> source columns — including provenance, ascertainment, attribution and rights on every row. |
+| "terms for data access and data use … allowing for open and public access, such as through a creative commons license" | **Partly met — gap** | Rights are tracked **per row** (`redistribution`): <!--stat:rights_public_domain-->1,303<!--/stat--> public domain, <!--stat:rights_cc_by-->13<!--/stat--> CC BY, <!--stat:rights_cc_by_nc-->3<!--/stat--> CC BY-NC, <!--stat:rights_summary_stat_only-->15<!--/stat--> summary-statistic-only, <!--stat:rights_verify-->8<!--/stat--> `verify`. A `LICENSE` file **does exist** at `toxicity/hydrocephalus/LICENSE`, granting CC BY 4.0 over the curation layer with a per-row rights table for the underlying sources. **Open discrepancy, escalated, not resolved here:** that LICENSE states it does not relicense third-party source material, while PADP section 1 lists `sources/raw/` among the artifacts covered by the grant. The two cannot both be right. Referred to Oscar and to Beebop's rights audit. |
 
 ### Datasets "of particular interest" to the sponsor
 
@@ -103,7 +103,7 @@ report*; the four documents are the November block.
 
 | Step | Status |
 |---|---|
-| Data prep | **Done**, and extended past the original scope: <!--stat:n_measurements-->1,342<!--/stat--> rows, <!--stat:n_compounds_real-->51<!--/stat--> compounds (of <!--stat:n_oligo_records-->53<!--/stat--> roster records; 2 are non-compound placeholders), <!--stat:n_sources-->195<!--/stat--> sources, <!--stat:n_trials-->161<!--/stat--> trials, <!--stat:checks_run-->64<!--/stat--> QC checks. |
+| Data prep | **Done**, and extended past the original scope: <!--stat:n_measurements-->1,342<!--/stat--> rows, <!--stat:n_compounds_real-->51<!--/stat--> compounds (of <!--stat:n_oligo_records-->53<!--/stat--> roster records; <!--stat:n_placeholder_oligos-->2<!--/stat--> are non-compound placeholders), <!--stat:n_sources-->195<!--/stat--> sources, <!--stat:n_trials-->161<!--/stat--> trials, <!--stat:checks_run-->64<!--/stat--> QC checks. |
 | **Finish ML** | **Done.** Arm-level analysis with leave-one-compound-out validation and explicit leakage probes; `ml/ML_REPORT.md` is generated from `ml/results.json`, not typed. |
 | Write up report | **Done.** Narrative, methodology and PADP PDFs, plus a supplementary source and provenance register. |
 
@@ -116,14 +116,17 @@ report*; the four documents are the November block.
    needed — it is a rights grant, not a curation choice.)*
 2. **No ML analysis.** Next in the work plan's own order; supplies the narrative's
    weakest section.
-3. **No in vitro rows**, against a stated sponsor interest. Hunt in progress;
-   may end in a documented absence.
-4. **Sequences and modification maps for 40 of 50 compounds** (OI-02): duplex
-   siRNAs, morpholinos, and the registry-only compounds.
-5. **Animal arm is 5 rows** (OI-03), so human-to-animal extrapolation is not
-   supported either.
-6. **No narrative, methodology or PADP PDF** for this endpoint — Gustavo and
-   German's deliverables, listed here for completeness rather than as this
-   workstream's backlog.
-7. **100 verified sources retrieved but unextracted**, in
+3. **No HUMAN in vitro rows** (<!--stat:human_in_vitro_rows-->0<!--/stat-->), against a stated sponsor interest. The
+   in vitro evidence that exists is <!--stat:n_in_vitro_rows-->2<!--/stat--> rows of cultured rodent ependymal cells.
+   The absence of a human laboratory lane is documented, not still being hunted.
+4. **Sequences and modification maps absent for <!--stat:oligos_without_sequence-->25<!--/stat--> of <!--stat:n_oligo_records-->53<!--/stat--> roster
+   records** (OI-02): the registry-only compounds, and the compounds whose INN
+   entry publishes no base sequence.
+5. **Animal arm is <!--stat:animal_rows-->10<!--/stat--> rows** (OI-03), so human-to-animal extrapolation is
+   not supported either.
+6. **Narrative, methodology and PADP PDFs now exist** and are built by
+   `docs/build_pdfs.py` from the committed markdown, within the page limits.
+   Gustavo and German own the submitted versions; these are the workstream's
+   drafts, not a claim on their deliverable.
+7. **<!--stat:source_backlog_rows-->100<!--/stat--> verified sources retrieved but unextracted**, in
    [`notes/source_backlog.md`](notes/source_backlog.md).

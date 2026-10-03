@@ -328,7 +328,8 @@ asserting; every one traces to a row and a locus.
   identical molecule is a datum about how strong the signal is judged to be, not
   a discrepancy to be resolved away. Meanwhile nusinersen's own posted trial
   results contain no hydrocephalus term — the signal is entirely post-marketing,
-  which is exactly what the FAERS rows (22 hydrocephalus reports) show.
+  which is exactly what the FAERS rows (<!--stat:faers_nusinersen_hydrocephalus_reports-->22<!--/stat--> reports coded to the
+  preferred term HYDROCEPHALUS) show.
 - **The successor trial made the endpoint a primary outcome.** GENERATION HD2
   (NCT05686551) specifies, as a *primary* outcome, change from baseline in
   structural MRI "assessing any new abnormalities including radiographic features
@@ -406,7 +407,7 @@ python3 scripts/assemble.py               # canonical tables + provenance regist
 python3 scripts/build_modifications.py    # per-position chemistry (needs the keys assemble assigns)
 python3 scripts/assemble.py               # re-run: modification rows join the provenance registry
 python3 scripts/check_source_links.py     # resolves every URL in the register; caches the status
-python3 qc/validate.py                    # 50 checks; writes qc/stats.json
+python3 qc/validate.py                    # <!--stat:checks_run-->64<!--/stat--> checks; writes qc/stats.json
 python3 ml/build_analysis_set.py          # aggregate to trial arms
 python3 ml/analyse.py                     # route stratification, LOCO CV, leakage probes, ML_REPORT.md
 python3 scripts/render_docs.py            # regenerates the counts in this file
@@ -440,10 +441,10 @@ and every value it takes is actually used by rows in the table.
 expert review. Known gaps are stated as numbered open items in
 [`METHODOLOGY.md`](METHODOLOGY.md#open-items) rather than left for a reader to
 discover — chiefly that purity is absent for the whole human subset (0 of 41
-compounds), that nonclinical coverage is 10 qualitative rows (OI-03), and that
+compounds), that nonclinical coverage is <!--stat:animal_rows-->10<!--/stat--> qualitative rows (OI-03), and that
 only three compounds in the release are designed controls, none of them positive
-controls (OI-08). OI-02 is now largely closed: 26 of 53 roster records carry a
-published sequence, 12 of them marketed compounds, recovered by deterministic
-parse of the WHO INN chemical names. A further
-100 verified sources were retrieved but not extracted; they are listed in
+controls (OI-08). OI-02 is now largely closed: <!--stat:oligos_with_sequence-->26<!--/stat--> of <!--stat:n_oligo_records-->53<!--/stat--> roster records carry a
+published sequence, <!--stat:oligos_with_sequence_marketed-->11<!--/stat--> of them compounds for which a product label is
+carried, recovered by deterministic parse of the WHO INN chemical names. A further
+<!--stat:source_backlog_rows-->100<!--/stat--> verified sources were retrieved but not extracted; they are listed in
 [`notes/source_backlog.md`](notes/source_backlog.md).

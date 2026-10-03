@@ -91,7 +91,7 @@ rat study as mouse, a 15-day design as 7 days, and a published dose as absent.
 A parser cannot make that error, and its mapping tables are auditable in one
 place.
 
-**4.1 ClinicalTrials.gov (`scripts/extract_ctgov.py`, 323 rows).** Walks the
+**4.1 ClinicalTrials.gov (`scripts/extract_ctgov.py`, <!--stat:rows_ctgov-->746<!--/stat--> rows).** Walks the
 `resultsSection.adverseEventsModule` of each committed study record. Emits one
 row per (trial × adverse-event term × arm), copying `numAffected` and
 `numAtRisk` from the named JSON path, which is written into `source_location`.
@@ -102,7 +102,7 @@ normalised or spelling-corrected — `Meningitis asceptic` is preserved as the
 source prints it in NCT04617860.
 
 **4.1b ClinicalTrials.gov outcome measures (`scripts/extract_ctgov_outcomes.py`,
-21 rows).** Kept as a separate component because the epistemics differ. An
+<!--stat:rows_ctgov_outcomes-->21<!--/stat--> rows).** Kept as a separate component because the epistemics differ. An
 adverse-event count is a clinician noticing something and coding it; a
 pre-specified outcome measure is a quantity the protocol required to be measured
 in every participant, on a schedule, by an instrument. These are the only rows in
@@ -113,7 +113,7 @@ pharmacokinetics and neurofilament biomarkers, which are drug exposure and
 neuronal injury, not CSF dynamics. Values are recorded exactly as published; no
 change score or test statistic is computed.
 
-**4.2 openFDA FAERS (`scripts/extract_faers.py`, 456 rows).** One exact query per
+**4.2 openFDA FAERS (`scripts/extract_faers.py`, <!--stat:rows_faers-->456<!--/stat--> rows).** One exact query per
 (drug, MedDRA term) pair. An aggregation counting drugs within a term was tried
 first and rejected: openFDA caps a `count` aggregation at 100 buckets without an
 API key, which silently drops precisely the rare drug/term pairs this endpoint is
@@ -137,7 +137,7 @@ carrying `HYDROCEPHALUS` against 20,692,690 reports in total. Anyone wanting a
 disproportionality measure has the numerator, the drug denominator and this
 background in the dataset and its audit trail; the dataset computes none itself.
 
-**4.3 DailyMed labels (`scripts/extract_labels.py`, 80 rows).** Parses the SPL
+**4.3 DailyMed labels (`scripts/extract_labels.py`, <!--stat:rows_labels-->80<!--/stat--> rows).** Parses the SPL
 XML and records the matching sentence verbatim with its section title and LOINC
 display name. A label that is **silent** on the endpoint produces an explicit
 `measured_null` row rather than no row. The word "ventricular" is ambiguous in a
@@ -145,12 +145,12 @@ drug label — cardiac ventricular repolarisation and arrhythmia are common — 
 matching is CNS-anchored and every sentence rejected by the cardiac filter is
 written to the audit report, so the filter itself can be checked.
 
-**4.4 Curated literature (`scripts/build_literature.py`, 11 rows).** These cannot
+**4.4 Curated literature (`scripts/build_literature.py`, <!--stat:rows_literature-->29<!--/stat--> rows).** These cannot
 be parsed; each comes from prose a human read. Each row therefore stores the
 **verbatim sentence** it was taken from in `attribution_evidence`, so the value
 and its evidence travel together.
 
-**4.4b Per-position chemistry (`scripts/build_modifications.py`, 122 rows).** The
+**4.4b Per-position chemistry (`scripts/build_modifications.py`, <!--stat:n_modification_positions-->555<!--/stat--> rows).** The
 Challenge requires the location of every chemical modification, not a motif
 string. Sugar chemistry is resolved at all twenty tofersen positions and all
 eighteen nusinersen positions from the labels' own words; nucleobase is resolved
@@ -269,7 +269,7 @@ from the disease-baseline rows, which is exactly why both are in the dataset.
 
 ## 7. Quality control
 
-`qc/validate.py` runs **39 checks** and exits non-zero on any failure. They cover
+`qc/validate.py` runs **<!--stat:checks_run-->64<!--/stat--> checks** and exits non-zero on any failure. They cover
 primary-key uniqueness and non-emptiness on all three tables; referential
 integrity on both foreign keys; controlled-vocabulary conformance on ten columns;
 grade range; the requirement that every graded row state its rule; the
@@ -328,15 +328,15 @@ What it supports well:
 
 What it does **not** yet support, stated plainly:
 
-- **Sequence-based prediction.** 26 of 53 roster records now carry a published
-  sequence and 555 position-resolved chemistry rows exist (**OI-02** largely
-  closed), but the human-evidence subset is 19 of 41 compounds and the per-
+- **Sequence-based prediction.** <!--stat:oligos_with_sequence-->26<!--/stat--> of <!--stat:n_oligo_records-->53<!--/stat--> roster records now carry a published
+  sequence and <!--stat:n_modification_positions-->555<!--/stat--> position-resolved chemistry rows exist (**OI-02** largely
+  closed), but the human-evidence subset is <!--stat:human_subset_with_sequence-->19<!--/stat--> of <!--stat:human_subset_compounds-->41<!--/stat--> compounds and the per-
   position table reaches no model feature. Design predictors remain chemistry-
   and design-level, not sequence-level.
 - **Compound-level dose–response.** Doses are recorded where a source states
   them, but the tier-A events are too few for a within-compound dose model.
 - **Any causal claim about an individual compound.** With 54 tier-A positive
-  rows on the ventricular axis for real compounds (of 62 tier-A positives in
+  rows on the ventricular axis for real compounds (of <!--stat:tier_A_positive-->62<!--/stat--> tier-A positives in
   total) against a disease baseline whose incidence rate ratio is 4.7, the dataset
   is powered to describe and to control, not to attribute.
 
@@ -347,9 +347,16 @@ What it does **not** yet support, stated plainly:
 Source discovery ran as a structured multi-modal pass — eight blind sweeps by
 retrieval modality, four completeness critics tasked only with naming what the
 sweeps had missed, and twelve gap-fills chasing what the critics named. It
-returned 188 unique sources, of which this release carries 53.
+returned 188 unique sources.
 
-The remaining 100 verified sources are listed in
+`data/sources.csv` now carries <!--stat:n_sources-->195<!--/stat--> source records. That is not 195 of the 188: most
+of the growth is trial-registry records found by the register query described in §3,
+not by the discovery pass. **The list of 188 is not held as a data file** — it was the
+discovery agents' own output and only the unextracted remainder was written down — so
+the overlap between the two sets is not computable here and is not asserted.
+
+The <!--stat:source_backlog_rows-->100<!--/stat--> verified sources that the discovery pass retrieved but this release does
+not extract are listed in
 [`notes/source_backlog.md`](notes/source_backlog.md) with their retrieval routes,
 exact loci and per-source caveats. That list is the honest statement of this
 release's completeness limit: the largest untouched bodies of evidence are
@@ -376,7 +383,9 @@ frequency of each event by arm or comparison group"* — with **no** frequency
 threshold, unlike subparagraph (B), which sets 5 percent within any arm for
 non-serious events. Absence of a tier-A term from a posted serious-adverse-event
 table is therefore a **reported zero for serious events**, not an unreported one, and
-that is what the 253 tier-A negative rows now assert. The regulation text is committed
+that is what the <!--stat:tier_A_absence_cfr_rows-->507<!--/stat--> tier-A rows citing that
+regulation assert. (Tier-A negatives of every kind, including explicit reported zeros and
+FAERS absences, total <!--stat:tier_A_negative_rows-->736<!--/stat--> — a different and larger set.) The regulation text is committed
 at `sources/raw/ecfr_42CFR11.48_results_reporting.xml` and cited in every affected
 row's `ascertainment_basis`.
 
@@ -386,10 +395,11 @@ evidence that ventricular imaging was performed. The residual open question is n
 — whether every trial in this release is an "applicable clinical trial" bound by the
 rule, or posted voluntarily under the same structure.
 
-**OI-02 — LARGELY CLOSED for the compounds that carry the signal; open for two
-classes.** Ten of 35 compounds now carry a published sequence, and 202
-per-position records give the location of every chemical modification for ten of
-them.
+**OI-02 — LARGELY CLOSED for the compounds that carry the signal.** <!--stat:oligos_with_sequence-->26<!--/stat--> of <!--stat:n_oligo_records-->53<!--/stat--> roster records now carry a published
+sequence, and <!--stat:n_modification_positions-->555<!--/stat--> per-position records give the location of every chemical
+modification for <!--stat:n_oligos_with_position_map-->26<!--/stat--> of them. On the human-evidence subset — the
+compounds that actually carry clinical rows — it is <!--stat:human_subset_with_sequence-->19<!--/stat--> of <!--stat:human_subset_compounds-->41<!--/stat--> compounds, which is
+the figure that bears on anything predictive.
 
 Sequences for the marketed and clinical ASOs come from the **WHO INN Recommended
 lists**, the route the sibling kidney dataset established. An INN entry spells
@@ -460,7 +470,7 @@ release has the same weakness, now with one exception and with the distinction
 recorded in `arm_role` and `ascertainment` rather than glossed.
 
 **OI-05 — PARTIALLY CLOSED.** EMA Summaries of Product Characteristics are now
-carried for nusinersen, tofersen and inotersen (8 rows), and they proved to be
+carried for nusinersen, tofersen and inotersen (<!--stat:rows_ema_smpc-->8<!--/stat--> rows), and they proved to be
 more than a duplicate of the US labels: the EMA gives hydrocephalus its own
 subheading under section 4.4 for nusinersen where the FDA confines it to section
 6.2, and the EU tofersen SmPC quantifies incidences the US label does not.

@@ -201,6 +201,17 @@ DICTIONARY = {
         "grade_basis": "The exact rule that produced the grade. A grade with no "
                        "stated basis is a defect.",
         "grade_status": "provisional | expert_confirmed | not_graded",
+        "severity_axis": "Which severity axis hydroceph_grade is on for this "
+                         "row: clinical_hydrocephalus_severity_0_3 | "
+                         "animal_in_vivo_severity_0_3 | "
+                         "experimental_response_severity_0_3 | NOT_APPLICABLE. "
+                         "SCIENTIFIC_RULES.md section E forbids labelling an "
+                         "in-vitro readout with a clinical severity grade, so a "
+                         "cell-culture row carries the experimental axis and its "
+                         "number must never be pooled with a clinical one. "
+                         "Whether the animal in-vivo axis is the clinical axis "
+                         "is an open question for German; the value states the "
+                         "axis rather than assuming the answer.",
         "ascertainment": "measured_positive | measured_null | "
                          "reported_zero_no_denominator | "
                          "reported_threshold_limited | not_assessed. A grade of 0 "
