@@ -139,7 +139,7 @@ def main():
 
     f += [Paragraph("1 &nbsp; Executive summary", H1),
           Paragraph(
-        f"OligoTox-Hydrocephalus pairs the design of {st['n_oligos']} oligonucleotide "
+        f"OligoTox-Hydrocephalus pairs the design of {st['n_compounds_real']} oligonucleotide "
         f"therapeutics with {st['n_measurements']:,} measured hydrocephalus and "
         f"CSF-dynamics outcomes drawn from {st['n_sources']} sources. It is the first "
         "public dataset for this endpoint. Hydrocephalus is the eighth toxicity on the "
@@ -315,7 +315,7 @@ def main():
           Paragraph("Predictor variables across the tested oligonucleotides", H2),
           Paragraph(
         f"Design predictors are carried at chemistry and design level for all "
-        f"{st['n_oligos']} compounds and at <b>per-position</b> level for "
+        f"{st['n_compounds_real']} compounds and at <b>per-position</b> level for "
         f"{st['n_oligos_with_position_map']}: "
         f"{st['n_modification_positions']} rows giving the sugar, base, 5-methylation and "
         "phosphorothioate-versus-phosphodiester status at every nucleotide. "
@@ -401,7 +401,7 @@ def main():
         "a covariate; hypothesis generation for CSF-dynamics monitoring in intrathecal "
         "programmes.",
         "<b>Not supported:</b> sequence-to-toxicity prediction across the full roster "
-        f"({st['oligos_with_sequence']} of {st['n_oligos']} sequences); within-compound "
+        f"({st['oligos_with_sequence']} of {st['n_oligo_records']} sequences); within-compound "
         "dose–response for tier A; in vitro-to-in vivo extrapolation; and any causal "
         "claim about an individual compound, given Finding 2.",
     ])
@@ -568,7 +568,7 @@ def main():
         f"<b>No in vitro rows.</b> {st['n_human_rows']:,} human and "
         f"{st['n_animal_rows']} animal rows, none in vitro. The dataset cannot support "
         "in vitro-to-animal extrapolation.",
-        f"<b>Sequences for {st['oligos_with_sequence']} of {st['n_oligos']} compounds.</b> "
+        f"<b>Sequences for {st['oligos_with_sequence']} of {st['n_compounds_real']} compounds ({st['n_oligo_records']} roster records, 2 placeholders).</b> "
         "Duplex siRNAs and morpholinos are refused by the INN parser rather than guessed; "
         "one compound's sequence exists only as an image whose bold/underline chemistry "
         "encoding does not survive text extraction.",

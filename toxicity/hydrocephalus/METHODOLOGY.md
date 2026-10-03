@@ -328,13 +328,16 @@ What it supports well:
 
 What it does **not** yet support, stated plainly:
 
-- **Sequence-based prediction.** No compound in this release carries a published
-  sequence (**OI-02**). Design predictors are currently chemistry- and
-  design-level, not sequence-level.
+- **Sequence-based prediction.** 26 of 53 roster records now carry a published
+  sequence and 555 position-resolved chemistry rows exist (**OI-02** largely
+  closed), but the human-evidence subset is 19 of 41 compounds and the per-
+  position table reaches no model feature. Design predictors remain chemistry-
+  and design-level, not sequence-level.
 - **Compound-level dose–response.** Doses are recorded where a source states
   them, but the tier-A events are too few for a within-compound dose model.
-- **Any causal claim about an individual compound.** With 25 tier-A positive
-  rows against a disease baseline whose incidence rate ratio is 4.7, the dataset
+- **Any causal claim about an individual compound.** With 54 tier-A positive
+  rows on the ventricular axis for real compounds (of 62 tier-A positives in
+  total) against a disease baseline whose incidence rate ratio is 4.7, the dataset
   is powered to describe and to control, not to attribute.
 
 ---

@@ -139,7 +139,10 @@ oligo identity"*. A full-text sweep of all sixteen committed US labels for
 purity, purification, chromatography, mass-spectrometry, identity and
 characterisation language returns **no statement about the drug substance in any
 of them** — every hit is a patient baseline characteristic or an efficacy assay.
-`purity_pct` is therefore `NOT_REPORTED` for every compound in this release, and
+`purity_pct` is therefore `NOT_REPORTED` for 50 of the 53 roster records. The
+three exceptions are the Gai2 oligodeoxynucleotides, which carry a published
+range of 90-97% (HPLC-purified) from their source; all three are rat-only, so
+purity for the human-evidence subset is **0 of 41 compounds**. Elsewhere
 `purity_method` / `identity_confirmation` are `NOT_REPORTED` except where a
 research source names a supplier. This is a property of the published record, and
 the sibling OligoTox-CNS release reports the same for all 1,839 of its compounds.

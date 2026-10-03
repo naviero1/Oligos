@@ -139,7 +139,11 @@ merges" governs *inventory identity* in `molecule.csv` — whether two records a
 the same molecule, which changes counts and the roster. Grouping for a split
 asserts nothing about identity. It says only that two constructs must not sit on
 opposite sides of a train/test boundary. It merges no record, changes no count,
-and is directionally safe: it can only lower a score, never inflate one. The two
+and it removes an optimistic bias in expectation. (An earlier version of this
+sentence said grouping "can only lower a score, never inflate one". That is
+false and Beebop corrected it: the realised AUC is a noisy estimate and a fold
+can move either way. The argument for grouping does not need the stronger
+claim.) The two
 rules guard opposite failure modes, and doing the conservative thing on both is
 consistent.
 
@@ -156,8 +160,9 @@ share a base sequence and differ in conjugation.
 | Route + indication | 0.606 | 0.606 |
 | Route + indication + chemistry | 0.517 | 0.516 |
 
-**They agree to within 0.001, so shared-sequence leakage is not material for this
-endpoint** — measured rather than assumed. The grouping is labelled in
+**They agree to within 0.001 for these three models under this grouping** — a
+narrow sensitivity result, not a finding that sequence leakage is immaterial here
+(a second Beebop correction, accepted) — measured rather than assumed. The grouping is labelled in
 `ml/ML_REPORT.md` §3a as a validation-safety measure and explicitly not an
 identity claim.
 
@@ -227,3 +232,55 @@ request. Flagging so it is not assumed someone else has it.
 No schema field added. No re-graining. No label assigned or changed. No scientific
 conflict resolved. No release or freeze claimed. The two changes made were a
 reproducibility-mechanism fix and a corrected count label, both inside my row.
+
+
+---
+
+# Addendum — 2026-10-03: re-confirmation against §K, and two corrections accepted
+
+**§K was added to `SCIENTIFIC_RULES.md` after my receipt was filed.** Re-read at
+HEAD, where the rules file now lives on this branch. §K carries German's twelve
+sign-off gates, generalized from the immunotoxicity memo §9. Assessed against
+this endpoint:
+
+| Gate | State |
+|---|---|
+| 1 traceable primary source + exact location on every row | **Meets.** `source_id`, `source_ref`, `source_location` on 1,342/1,342; 195 URLs and 7 DOIs resolve |
+| 2 sequence verified 5′→3′, strand identity, duplex partner | **Partial.** 26/53 sequenced, strand recorded on all 555 position rows, duplex cores reverse-complement verified — but **no `duplex_partner_id` column** (schema, gated) |
+| 3 modification encoded by position, not molecule-level flag | **Meets in encoding** (555 position rows), **incomplete in coverage** (26 of 53) |
+| 4 assay context: cell system, donor, delivery/formulation, dose, exposure time | **Fails.** Dose is **0 of 1,332 human rows**; no donor, cell-system or formulation columns |
+| 5 raw/continuous retained; curator-derived labels explicitly marked derived | **Open — this is the German question.** Raw values retained; `grade_status=provisional` on all 1,316 graded rows, but whether that satisfies "explicitly marked derived" is precisely what is asked |
+| 6 agonist / antagonist / potentiator / inert separated | **Not applicable as written** to a structural CNS endpoint; the analogous separation (toxic vs therapeutic-direction vs disease-background axes) is present in `tox_axis` |
+| 7 human and animal not pooled | **Meets.** Separate views, separate sheets, animal in an appendix |
+| 8 endpoint-specific outcomes not collapsed into a composite | **Meets, and strengthened** — excluding procedure complications from the tier-B outcome was exactly this |
+| 9 citation metadata and file identities pass QC | **Meets.** Enforced by three QC checks |
+| 10 splitting checked for exact-sequence, counterpart, strand, family, paper, series leakage | **Partial — one of six.** Exact-sequence family done. Modified/unmodified counterpart, strand, paper/study and experimental-series **not** checked |
+| 11 LOPO and sequence-family performance reported **with uncertainty** | **Partial.** Sequence-family reported; **no uncertainty interval on the grouped runs**; LOPO not reported (and may have no natural unit — Q4) |
+| 12 claims no stronger than the evidence supports | **Two breaches, both corrected this round** — see below |
+
+**Gate 12, breached twice, corrected.** Beebop caught both:
+
+1. I wrote that grouped validation "can only lower a score, never inflate one."
+   **False** — no such monotonicity guarantee exists; grouping removes an
+   optimistic bias *in expectation* and a realised fold can move either way.
+2. I wrote that the 0.001 agreement showed "shared-sequence leakage is not
+   material for this endpoint." **Overstated** — it is a narrow sensitivity
+   result for three models under one grouping of two known exact-sequence pairs.
+
+Both corrected in `ml/ML_REPORT.md` §3a and above. The report now states plainly
+that this endpoint is **not model-ready** and lists the five leakage checks and
+the uncertainty interval still outstanding under §K-10 and §K-11.
+
+**German's question repaired before he sees it**, also on Beebop's correction. The
+first draft conflated event severity with drug causality and offered rulings that
+would have deleted sourced severity observations because causality was absent. It
+also claimed the model rests on the grade, which is **false**: verified at HEAD,
+`hydroceph_grade` is neither a feature nor the outcome — the outcome is
+`tierB_event_nonprocedure` from `n_affected` counts, and `max_grade` is carried
+as a descriptive column only. The question is now an interpretation question in
+three parts, with no deletion option.
+
+**Still open, unchanged and unresolvable by this session:** **zero** human
+laboratory or ex-vivo rows and **zero** numerical doses among 1,332 human rows.
+There is no human-to-animal bridge at this endpoint. Gate 4 cannot be met from
+the sources currently held, and §F directs disclosure rather than rescue.

@@ -186,6 +186,14 @@ a random split leaks the compound across folds and inflates the score.
 
 Bootstrap 95% CI for the best model: **{ci_lo:.3f}\u2013{ci_hi:.3f}**.
 
+Transparent reference, as \u00a7G requires: the majority class (no event) is
+**{maj:.1%}** of {n_rows} arms, and the no-information AUC is **0.5**. Any model
+at or below those is worthless. Length-only, chemistry-only and family-only
+baselines are **not fitted** \u2014 at {n_pos} positives they would not be
+interpretable, and fitting them is a modelling decision for German rather than a
+gap this analysis closed. Fold degeneracy is now reported for every model, not
+only for the leakage probes.
+
 > **That interval contains 0.5, so the primary model is not distinguishable from
 > chance.** This is the direct consequence of excluding procedure complications:
 > the outcome drops to {n_armsB} positive arms, and at that count the data do not
@@ -237,9 +245,20 @@ twin in training. Grouping by exact base-sequence equality collapses
 | Route + indication | {auc_ri} | {auc_ri_fam} |
 | Route + indication + chemistry | {auc_ric} | {auc_ric_fam} |
 
-**The two agree to within 0.001, so shared-sequence leakage is not material for
-this endpoint.** That is a result, not a formality: it had to be measured rather
-than assumed, and it could only have moved the score downwards.
+**The two agree to within 0.001 for these three models, under this grouping.**
+That is a narrow sensitivity result and nothing wider. It says that collapsing
+the two known exact-sequence pairs does not move these particular scores; it does
+**not** establish that sequence leakage is immaterial at this endpoint. Grouping
+removes an optimistic bias in expectation, but it carries no guarantee that a
+score can only fall — the realised AUC is a noisy estimate and a fold can move
+either way.
+
+Leakage checks still **not** performed, so the \u00a7G and \u00a7K-10 requirement is
+incomplete: near-neighbour (needs a similarity threshold, a scientific
+judgement), modified/unmodified counterpart, strand, paper or study, and
+experimental series. The grouped runs also carry **no uncertainty interval**,
+which \u00a7K-11 requires. This endpoint is **not model-ready**, and nothing here
+should be read as validation.
 
 This grouping is a **validation-safety measure, not an identity claim.** It
 merges no inventory record, changes no count, and asserts nothing about whether
@@ -325,6 +344,8 @@ python3 ml/analyse.py
         trial_const=_diag("trial")["constant_folds"],
         trial_folds=_diag("trial")["folds"],
         n_armsB_all=R["n_armsB_all_axes"],
+        maj=R["baseline"]["majority_class_rate"],
+        n_rows=R["baseline"]["n_rows"], n_pos=R["baseline"]["n_positive"],
         n_seqfam=R.get("n_sequence_families", 0),
         n_cmpd_model=R.get("n_compounds_in_model", 0),
         auc_route_fam=_fam("route only"), auc_ri_fam=_fam("route + indication"),
@@ -493,8 +514,11 @@ def main():
         entry = dict(name=name, features=cols,
                      auc=None if auc is None else round(float(auc), 3),
                      n_scored=n)
-        if "LEAKAGE PROBE" in name:
-            entry["diagnostic"] = loco_degeneracy(df, yB, cols)
+        # Run the degeneracy diagnostic on EVERY model, not only the probes.
+        # SCIENTIFIC_RULES G says to report failed or degenerate folds rather
+        # than replacing them; a real model can be fold-degenerate too, and
+        # reporting it only for the probes hid that possibility.
+        entry["diagnostic"] = loco_degeneracy(df, yB, cols)
         R["models"].append(entry)
 
     # ---- SENSITIVITY: the same models against an outcome with the procedure
@@ -502,11 +526,31 @@ def main():
     #      delivery_procedure_complication as their ONLY positive axis, so the
     #      headline model is largely predicting "was this arm lumbar-punctured"
     #      from its own route feature — tautology, not compound toxicity.
+    # TRANSPARENT REFERENCE (SCIENTIFIC_RULES G: "complex models must beat
+    # transparent baselines"). The majority-class rate and the no-information
+    # AUC are arithmetic, not fitted models, so they are reported here rather
+    # than trained. Length-only, chemistry-only and family-only baselines ARE
+    # models and are not fitted: with 18 positives they would be uninterpretable,
+    # and fitting them is a modelling decision for German.
+    n_pos = int(yB.sum())
+    R["baseline"] = dict(
+        n_rows=int(len(yB)), n_positive=n_pos,
+        majority_class_rate=round(1 - n_pos / len(yB), 4),
+        no_information_auc=0.5,
+        note=("Majority-class accuracy is the share of arms with NO event; any "
+              "accuracy at or below it is worthless. The no-information AUC is "
+              "0.5 by construction. Length-only, chemistry-only and family-only "
+              "baselines are NOT fitted -- see SCIENTIFIC_RULES G; that is a "
+              "modelling decision for German, not a gap this session closed."))
+
     # GROUPED SPLITS (SCIENTIFIC_RULES G). Leave-one-compound-out is not
     # sufficient on its own: two pairs share a base sequence and differ only in
     # conjugation, so holding out one leaves its twin in training. Grouping by
-    # sequence family closes that, and can only LOWER the score -- it never
-    # inflates one. Reported beside LOCO rather than replacing it.
+    # sequence family removes that optimistic bias IN EXPECTATION. It does NOT
+    # guarantee a lower score: the realised AUC is a noisy estimate and removing
+    # a twin from training can move a fold either way. An earlier version of this
+    # comment claimed grouping "can only lower the score", which is false.
+    # Reported beside LOCO rather than replacing it.
     R["n_sequence_families"] = int(df.sequence_family.nunique())
     R["n_compounds_in_model"] = int(df.oligo_name.nunique())
     R["models_sequence_family"] = []

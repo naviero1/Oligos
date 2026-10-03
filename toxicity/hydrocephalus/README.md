@@ -439,8 +439,11 @@ and every value it takes is actually used by rows in the table.
 **v0.1.** All grades ship `grade_status = provisional` pending subject-matter
 expert review. Known gaps are stated as numbered open items in
 [`METHODOLOGY.md`](METHODOLOGY.md#open-items) rather than left for a reader to
-discover — chiefly that no clinical or marketed compound carries a published
-sequence (OI-02), that nonclinical coverage is five qualitative rows (OI-03), and
-that only one compound in the release is a designed control (OI-08). A further
+discover — chiefly that purity is absent for the whole human subset (0 of 41
+compounds), that nonclinical coverage is 10 qualitative rows (OI-03), and that
+only three compounds in the release are designed controls, none of them positive
+controls (OI-08). OI-02 is now largely closed: 26 of 53 roster records carry a
+published sequence, 12 of them marketed compounds, recovered by deterministic
+parse of the WHO INN chemical names. A further
 100 verified sources were retrieved but not extracted; they are listed in
 [`notes/source_backlog.md`](notes/source_backlog.md).
