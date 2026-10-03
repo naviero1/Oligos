@@ -236,11 +236,17 @@ rows whose entire readout was a CNS warning *not appearing* in a label, graded 0
 disagrees with `ascertainment`, so regeneration cannot restore the misleading
 classification.
 
-## Derived table — `data/oligotox_cns_merged.csv` (generated, not canonical)
+## Derived table — removed 2026-10-03
 
-An analysis-ready **denormalized join** of the two canonical CNS tables on
-`oligo_id`, produced by `scripts/build_merged_cns.py`: one row per measurement
-carrying both the design predictors and the graded outcome, so downstream
-EDA/model training needs no join. `data/cns_oligos.csv` and
-`data/cns_measurements.csv` remain the source of truth; regenerate this file
-after any change and never hand-edit it.
+There is no denormalised analysis view on this branch; `oligotox_cns_merged.csv`
+**was removed on 2026-10-03.** It was a materialised
+join of the two normalised tables carrying no independent information (0 cell
+differences against a straight join on `oligo_id`), and it was short 11 columns
+— the four characterization fields and the seven evidence fields — because its
+generator hardcoded a column list that silently stopped being complete. A
+consumer reading it got a dataset that failed the mandatory purity and
+characterization requirement while the normalised tables passed. Rather than
+keep two artifacts in step, **join the two normalised tables on `oligo_id`**;
+both the view and `scripts/build_merged_cns.py` are recoverable from git history
+at `b8598d7`. Rationale and recovery commands:
+`chronic-neurotoxicity/ROCKSTEADY_TO_CRANK_MERGED_VIEW_REMOVAL_2026-10-03.md`.

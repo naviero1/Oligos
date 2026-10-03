@@ -36,7 +36,6 @@ endpoints, sharing one schema design, one provenance discipline and one licence.
 |---|---|
 | `data/cns_oligos.csv` | 585 oligonucleotides — identity + design predictors (same 17-column layout, so the two datasets union without re-mapping) |
 | `data/cns_measurements.csv` | 2,331 graded per-measurement CNS-toxicity records (26 columns) |
-| `data/oligotox_cns_merged.csv` | Generated analysis-ready denormalised view |
 | `schema-cns.md` | Data dictionary, vocabularies, and the 0–3 `neurotox_grade` rubric |
 | `METHODOLOGY-CNS.md` | Assembly, extraction hazards, grading disciplines, QC |
 | `sources/SOURCES-CNS.md` | Source registry (102 documents), generated from the data |

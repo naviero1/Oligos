@@ -515,7 +515,7 @@ Every value is traceable to a citable locus, and the pipeline is scripted
 end-to-end: `scripts/ingest_calcium_panel.py` (one deterministic lane),
 `scripts/parse_inn_chemical_names.py` (sequence derivation, with a self-test),
 `scripts/assemble_cns.py` (merge), `scripts/qc_cns.py` (validation),
-`scripts/build_merged_cns.py` (analysis view), `scripts/dataset_stats_cns.py`
+`scripts/dataset_stats_cns.py`
 (documentation statistics). Source documents are archived under `sources/cns/`,
 so the derivations can be re-run without network access.
 

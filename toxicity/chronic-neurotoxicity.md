@@ -106,7 +106,6 @@ The CNS curation was carried out as **one corpus of 2,538 measurements serving b
 |---|---|
 | Measurements | [`chronic-neurotoxicity.measurements.csv`](./chronic-neurotoxicity.measurements.csv) (2,393 × 32) |
 | Oligos | [`chronic-neurotoxicity.oligos.csv`](./chronic-neurotoxicity.oligos.csv) (573 × 17) |
-| Analysis view (generated) | [`notes/cns/corpus/oligotox_cns_merged.csv`](./notes/cns/corpus/oligotox_cns_merged.csv) |
 | Schema, vocabularies, 0–3 rubric | [`chronic-neurotoxicity.schema.md`](./chronic-neurotoxicity.schema.md) |
 | Methodology | [`chronic-neurotoxicity.methodology.md`](./chronic-neurotoxicity.methodology.md) |
 | Verification record | [`chronic-neurotoxicity.verification.md`](./chronic-neurotoxicity.verification.md) |
