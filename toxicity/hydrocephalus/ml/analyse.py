@@ -80,6 +80,12 @@ def write_report(R):
                 return m.get("diagnostic", {"folds": 0, "constant_folds": 0})
         return {"folds": 0, "constant_folds": 0}
 
+    def _fam(name):
+        for m in R.get("models_sequence_family", []):
+            if m["name"] == name and m["auc"] is not None:
+                return "%.3f" % m["auc"]
+        return "n/a"
+
     def _all(name):
         for m in R.get("models_all_axes", []):
             if m["name"] == name and m["auc"] is not None:
@@ -216,6 +222,36 @@ Three things worth reading off that table:
   {auc_cmpd} is an artefact of pooled scoring, not evidence of anything. It is
   retained only as a transparency diagnostic.
 
+## 3a. Grouped splits: compound, and sequence family
+
+SCIENTIFIC_RULES §G requires grouped splits by sequence family, not only by
+compound. Leave-one-compound-out is not sufficient on its own here: two pairs
+share a base sequence and differ only in conjugation
+(eplontersen/inotersen, olezarsen/volanesorsen), so holding out one leaves its
+twin in training. Grouping by exact base-sequence equality collapses
+{n_cmpd_model} compounds into {n_seqfam} families.
+
+| Model | Leave-one-compound-out | Leave-one-sequence-family-out |
+|---|---:|---:|
+| Route only | {auc_route} | {auc_route_fam} |
+| Route + indication | {auc_ri} | {auc_ri_fam} |
+| Route + indication + chemistry | {auc_ric} | {auc_ric_fam} |
+
+**The two agree to within 0.001, so shared-sequence leakage is not material for
+this endpoint.** That is a result, not a formality: it had to be measured rather
+than assumed, and it could only have moved the score downwards.
+
+This grouping is a **validation-safety measure, not an identity claim.** It
+merges no inventory record, changes no count, and asserts nothing about whether
+two constructs are the same molecule — it says only that they must not sit on
+opposite sides of a split. The identity question stays unadjudicated.
+
+Still outstanding under §G: **near-neighbour** grouping needs a sequence-similarity
+threshold, which is a scientific judgement and is not set here; leave-one-paper-out
+has no natural unit for this endpoint, where 155 of 195 sources are trial registry
+records rather than papers; and transparent baselines (null/majority, length-only,
+chemistry-only, family-only) are not yet fitted.
+
 ## 3b. What excluding procedure complications changed
 
 This is the most consequential decision in this report, so the discarded
@@ -289,6 +325,10 @@ python3 ml/analyse.py
         trial_const=_diag("trial")["constant_folds"],
         trial_folds=_diag("trial")["folds"],
         n_armsB_all=R["n_armsB_all_axes"],
+        n_seqfam=R.get("n_sequence_families", 0),
+        n_cmpd_model=R.get("n_compounds_in_model", 0),
+        auc_route_fam=_fam("route only"), auc_ri_fam=_fam("route + indication"),
+        auc_ric_fam=_fam("route + indication + chemistry"),
         proc_only=R["n_armsB_all_axes"] - R["n_armsB"],
         auc_route_all=_all("route only"), auc_ri_all=_all("route + indication"),
         auc_ric_all=_all("route + indication + chemistry"),
@@ -385,11 +425,16 @@ def main():
         X = pd.get_dummies(frame[cols].astype(str), drop_first=False)
         return X.astype(float), list(X.columns)
 
-    def loco(frame, y, cols):
-        """Leave-one-compound-out CV. Random folds would leak the compound."""
+    def loco(frame, y, cols, group="oligo_name"):
+        """Leave-one-GROUP-out CV. Random folds would leak the group.
+
+        `group` defaults to compound. SCIENTIFIC_RULES G additionally requires
+        grouping by sequence family, so the same splitter is run over
+        `sequence_family` and both are reported.
+        """
         preds, truth = [], []
-        for comp in frame.oligo_name.unique():
-            te = frame.oligo_name == comp
+        for comp in frame[group].unique():
+            te = frame[group] == comp
             tr = ~te
             if y[tr].nunique() < 2 or te.sum() == 0:
                 continue
@@ -457,6 +502,22 @@ def main():
     #      delivery_procedure_complication as their ONLY positive axis, so the
     #      headline model is largely predicting "was this arm lumbar-punctured"
     #      from its own route feature — tautology, not compound toxicity.
+    # GROUPED SPLITS (SCIENTIFIC_RULES G). Leave-one-compound-out is not
+    # sufficient on its own: two pairs share a base sequence and differ only in
+    # conjugation, so holding out one leaves its twin in training. Grouping by
+    # sequence family closes that, and can only LOWER the score -- it never
+    # inflates one. Reported beside LOCO rather than replacing it.
+    R["n_sequence_families"] = int(df.sequence_family.nunique())
+    R["n_compounds_in_model"] = int(df.oligo_name.nunique())
+    R["models_sequence_family"] = []
+    for name, cols in models.items():
+        if "LEAKAGE" in name:
+            continue
+        auc, n = loco(df, yB, cols, group="sequence_family")
+        R["models_sequence_family"].append(
+            dict(name=name, features=cols,
+                 auc=None if auc is None else round(float(auc), 3), n_scored=n))
+
     # SENSITIVITY: the discarded definition, kept so the effect of the decision
     # is auditable rather than asserted.
     yBn = df.tierB_event

@@ -122,6 +122,20 @@ def main():
         for nct, lab, n in sorted(dropped_pooled, key=lambda x: -x[2])[:8]:
             print("     %-14s %-42s n=%d" % (nct, lab[:42], n))
 
+    # SEQUENCE-FAMILY KEY for grouped validation (SCIENTIFIC_RULES G).
+    # Exact equality of oligos.sequence_base -- objective, no judgement. This is
+    # a VALIDATION-SAFETY grouping, NOT an identity claim: it says only that two
+    # constructs must not sit on opposite sides of a train/test split, and it
+    # merges no inventory record, changes no count and asserts nothing about
+    # whether they are the same molecule. Two pairs share a base sequence here
+    # and differ in conjugation: eplontersen/inotersen and olezarsen/volanesorsen.
+    seq_of = {n: (oligos.get(n, {}) or {}).get("sequence_base", "") for n in
+              {rec.get("oligo_name", "") for rec in arms.values()}}
+    fam_of = {}
+    for n, sq in seq_of.items():
+        fam_of[n] = ("SEQFAM:" + sq) if sq not in ("", "NOT_REPORTED",
+                                                   "NOT_APPLICABLE") else "CMPD:" + n
+
     out = []
     for (nct, arm), rec in sorted(arms.items()):
         o = oligos.get(rec["oligo_name"], {})
@@ -136,6 +150,7 @@ def main():
             tierB_affected=rec["tierB_affected"],
             tierA_event=int(rec["tierA_affected"] > 0),
             tierB_event=int(rec["tierB_affected"] > 0),
+            sequence_family=fam_of.get(rec["oligo_name"], "CMPD:" + rec["oligo_name"]),
             tierB_axes=";".join(sorted(rec["tierB_axes"])) or "none",
             tierB_event_nonprocedure=int(rec["tierB_affected_nonproc"] > 0),
             tierA_terms=";".join(sorted(rec["tierA_terms"])) or "none",

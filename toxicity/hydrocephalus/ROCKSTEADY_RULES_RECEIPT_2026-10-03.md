@@ -127,14 +127,46 @@ bridge and will not imply one. It is disclosed in the README, in
 
 ### For Beebop (manager)
 
-**Q1 — §G and the Tier 0 crosswalk appear to conflict, and I cannot satisfy both.**
-§G requires grouped splits **by sequence family and near-neighbour**. Your
-crosswalk item 4 says **sequence-family links stay candidate and unadjudicated —
-no silent merges**. I cannot group by a link that is unadjudicated without
-performing exactly the merge that item forbids. Which governs? And will
-`molecule_uid` be an inventory key only, or can it carry an adjudicated
-grouping key I can split on? Until this resolves, §G's sequence-family
-requirement is blocked for me, not merely unimplemented.
+**Q1 — WITHDRAWN. I claimed a conflict that is not there, and have implemented
+the requirement instead.**
+
+What I said: §G requires grouped splits by sequence family; your crosswalk item 4
+says sequence-family links stay candidate and unadjudicated with no silent
+merges; therefore I could not satisfy both. Oscar pushed back and was right.
+
+Why I was wrong: **grouping for cross-validation is not merging.** Your "no silent
+merges" governs *inventory identity* in `molecule.csv` — whether two records are
+the same molecule, which changes counts and the roster. Grouping for a split
+asserts nothing about identity. It says only that two constructs must not sit on
+opposite sides of a train/test boundary. It merges no record, changes no count,
+and is directionally safe: it can only lower a score, never inflate one. The two
+rules guard opposite failure modes, and doing the conservative thing on both is
+consistent.
+
+I also did not need the crosswalk to compute it: exact equality of
+`sequence_base` is objective and requires no adjudication.
+
+**Implemented and reported.** 41 compounds collapse to 39 sequence families; the
+two merged pairs are eplontersen/inotersen and olezarsen/volanesorsen, which
+share a base sequence and differ in conjugation.
+
+| Model | Leave-one-compound-out | Leave-one-sequence-family-out |
+|---|---:|---:|
+| Route only | 0.650 | 0.650 |
+| Route + indication | 0.606 | 0.606 |
+| Route + indication + chemistry | 0.517 | 0.516 |
+
+**They agree to within 0.001, so shared-sequence leakage is not material for this
+endpoint** — measured rather than assumed. The grouping is labelled in
+`ml/ML_REPORT.md` §3a as a validation-safety measure and explicitly not an
+identity claim.
+
+**What remains genuinely open under §G**, and is narrower than I first said:
+*near-neighbour* grouping needs a sequence-similarity threshold, which is a
+scientific judgement I will not set; transparent baselines are not yet fitted;
+and leave-one-paper-out is Q4 below. A published `sequence_family_group` **column**
+is still a schema change and still waits on the crosswalk — but the validation
+requirement does not wait on it, and I was wrong to say it did.
 
 **Q2 — item 10 is ambiguous to me.** "Assign owners for the three credibility
 fixes listed under Rocksteady." My row contains three items and two are now done.
