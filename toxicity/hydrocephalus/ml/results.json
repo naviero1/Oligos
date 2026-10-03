@@ -215,7 +215,12 @@
     "delivery_route"
    ],
    "auc": 0.65,
-   "n_scored": 519
+   "n_scored": 519,
+   "diagnostic": {
+    "folds": 41,
+    "constant_folds": 31,
+    "degenerate": false
+   }
   },
   {
    "name": "route + indication",
@@ -224,7 +229,12 @@
     "indication"
    ],
    "auc": 0.606,
-   "n_scored": 519
+   "n_scored": 519,
+   "diagnostic": {
+    "folds": 41,
+    "constant_folds": 19,
+    "degenerate": false
+   }
   },
   {
    "name": "route + indication + chemistry",
@@ -235,7 +245,12 @@
     "backbone_chemistry"
    ],
    "auc": 0.517,
-   "n_scored": 519
+   "n_scored": 519,
+   "diagnostic": {
+    "folds": 41,
+    "constant_folds": 19,
+    "degenerate": false
+   }
   },
   {
    "name": "LEAKAGE PROBE: trial identity only",
@@ -264,6 +279,13 @@
    }
   }
  ],
+ "baseline": {
+  "n_rows": 519,
+  "n_positive": 18,
+  "majority_class_rate": 0.9653,
+  "no_information_auc": 0.5,
+  "note": "Majority-class accuracy is the share of arms with NO event; any accuracy at or below it is worthless. The no-information AUC is 0.5 by construction. Length-only, chemistry-only and family-only baselines are NOT fitted -- see SCIENTIFIC_RULES G; that is a modelling decision for German, not a gap this session closed."
+ },
  "n_sequence_families": 39,
  "n_compounds_in_model": 41,
  "models_sequence_family": [

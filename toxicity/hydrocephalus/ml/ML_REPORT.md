@@ -80,6 +80,14 @@ a random split leaks the compound across folds and inflates the score.
 
 Bootstrap 95% CI for the best model: **0.301–0.778**.
 
+Transparent reference, as §G requires: the majority class (no event) is
+**96.5%** of 519 arms, and the no-information AUC is **0.5**. Any model
+at or below those is worthless. Length-only, chemistry-only and family-only
+baselines are **not fitted** — at 18 positives they would not be
+interpretable, and fitting them is a modelling decision for German rather than a
+gap this analysis closed. Fold degeneracy is now reported for every model, not
+only for the leakage probes.
+
 > **That interval contains 0.5, so the primary model is not distinguishable from
 > chance.** This is the direct consequence of excluding procedure complications:
 > the outcome drops to 18 positive arms, and at that count the data do not
@@ -131,9 +139,20 @@ twin in training. Grouping by exact base-sequence equality collapses
 | Route + indication | 0.606 | 0.606 |
 | Route + indication + chemistry | 0.517 | 0.516 |
 
-**The two agree to within 0.001, so shared-sequence leakage is not material for
-this endpoint.** That is a result, not a formality: it had to be measured rather
-than assumed, and it could only have moved the score downwards.
+**The two agree to within 0.001 for these three models, under this grouping.**
+That is a narrow sensitivity result and nothing wider. It says that collapsing
+the two known exact-sequence pairs does not move these particular scores; it does
+**not** establish that sequence leakage is immaterial at this endpoint. Grouping
+removes an optimistic bias in expectation, but it carries no guarantee that a
+score can only fall — the realised AUC is a noisy estimate and a fold can move
+either way.
+
+Leakage checks still **not** performed, so the §G and §K-10 requirement is
+incomplete: near-neighbour (needs a similarity threshold, a scientific
+judgement), modified/unmodified counterpart, strand, paper or study, and
+experimental series. The grouped runs also carry **no uncertainty interval**,
+which §K-11 requires. This endpoint is **not model-ready**, and nothing here
+should be read as validation.
 
 This grouping is a **validation-safety measure, not an identity claim.** It
 merges no inventory record, changes no count, and asserts nothing about whether
