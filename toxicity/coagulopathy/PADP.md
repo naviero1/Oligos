@@ -151,7 +151,8 @@ before they build on it.
 
 Contact and issue tracking through the public repository, so requests and defects are
 visible to everyone rather than resolved privately. Defect reports against specific rows
-are welcome and are the reason `verbatim_quote` and `source_locus` exist on all 2,388 rows:
+are welcome and are the reason `verbatim_quote` and `source_locus` exist on all
+<!--N:n_meas--> rows:
 any user can check any row against its source without asking the team for anything.
 
 ## 8. Compliance summary

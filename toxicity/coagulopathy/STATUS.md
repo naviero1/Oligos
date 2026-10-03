@@ -25,7 +25,7 @@ findings and conclusions; how the data were produced including computational pro
 how indicators and predictors were measured and their distributions; the gap addressed;
 and how the data support a predictive model.
 
-The dataset requirement is met item by item — sequences of all oligos tested (97 of 213
+The dataset requirement is met item by item — sequences of all oligos tested (104 of 218
 have one published; the rest are recorded `NOT_REPORTED`, never guessed), **the location of
 every chemical modification** (941 per-position records over 47 compounds), purity and
 characterisation data (method where stated; `purity_pct` is `NOT_REPORTED` throughout,

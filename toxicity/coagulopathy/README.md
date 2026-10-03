@@ -85,8 +85,12 @@ and ex-vivo rows become visible as human at all; `species_class_basis` records h
 was decided, and 26 rows whose source never states the origin stay `not_determined` rather
 than being quietly assigned.
 
-Only **30 of 213 compounds carry both human and animal data**. That is the ceiling on any
-translation claim built from this release.
+Only **24 of 218 compounds carry the same readout category measured both in a human in
+vitro system and in an animal** — the directly comparable pairs, and the ceiling on any
+translation claim built from this release. 29 compounds have human in vitro and animal
+data without a shared readout, and only 5 have participant and animal data. The three are
+counted separately because a shared assay is what makes a bridge usable; the earlier
+single figure of 30 mixed them together and overstated it.
 
 ## One endpoint per folder
 
@@ -238,7 +242,7 @@ to. A QC check fails the build if a scope-adjacent row wears a coagulation categ
 
 ## Read this before using the data: the dataset has two axes, not one
 
-**1,720 of the 2,388 rows are ON-TARGET pharmacology, not toxicity.** The compounds with
+**1,790 of the 2,685 rows are ON-TARGET pharmacology, not toxicity.** The compounds with
 the most published coagulation numbers are, unsurprisingly, the ones *designed* to change
 coagulation: anti-factor-XI and anti-factor-XII antisense, prekallikrein and factor-VII
 programmes, anticoagulant aptamers, fitusiran lowering antithrombin. A model trained on
@@ -356,7 +360,7 @@ patent tables was confirmed once and needs a row-label re-check of three large t
 
 Every measurement carries `source_id`, `source_locus` (exact table, figure, section or
 label section) and a `verbatim_quote` copied from the document. Structural QC enforces
-that all three are present on all 2,388 rows. `redistribution` is tracked per row:
+that all three are present on all 2,685 rows. `redistribution` is tracked per row:
 1,382 rows are public domain (US patents and FDA labels), 383 are CC BY or CC BY-NC,
 426 CC BY-NC-ND, 192 publisher-restricted, 5 unresolved.
 

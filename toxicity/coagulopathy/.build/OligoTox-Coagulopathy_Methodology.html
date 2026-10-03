@@ -38,7 +38,7 @@ h2, h3 { page-break-after: avoid; } table, figure { page-break-inside: avoid; }
 <p>studies, recorded as each source states them, and <b>(b)</b> the curation methods used to</p>
 <p>find, extract, verify and harmonise them. Conflating the two would let curation choices</p>
 <p>masquerade as experimental fact.</p>
-<p>Snapshot: **213 oligonucleotides · 2,388 measurements · 941 per-position modification</p>
+<p>Snapshot: **218 oligonucleotides · 2,685 measurements · 1,039 per-position modification</p>
 <p>records · 75 sources.**</p>
 <h2>2. Scope — what counts as this endpoint</h2>
 <p>Included: clotting times (aPTT, PT/INR, TT, ACT), fibrinogen, D-dimer, thrombin generation,</p>
@@ -116,55 +116,85 @@ h2, h3 { page-break-after: avoid; } table, figure { page-break-inside: avoid; }
 </ul>
 <p>  extraction.</p>
 <h2>6. Oligonucleotide identity, purity and characterisation</h2>
-<p>The Challenge requires the methods used to purify and characterise oligo identity. The</p>
-<p>compounds were synthesised by the source laboratories, so what can be reported is what each</p>
-<p>source states, and <code>purity_pct</code> is <b><code>NOT_REPORTED</code> for all 213 compounds</b>. No purity</p>
-<p>value was estimated, inferred from a synthesis platform, or carried across from another</p>
-<p>compound. Where a source states a synthesis platform, purification method or identity</p>
-<p>confirmation, it populates <code>synthesis_platform</code>, <code>purity_method</code> and</p>
-<p><code>identity_confirmation</code>. This absence is a property of the published literature, not of the</p>
-<p>curation: per-compound purity is almost never published alongside toxicity results.</p>
-<p>Identity here means the printed sequence together with its per-position chemistry.</p>
-<p>97 of 213 compounds have a published sequence; 47 have position-resolved chemistry. QC</p>
-<p>checks that every declared length equals the actual string (plus any documented terminal</p>
-<p>residue) and that every modification row's nucleobase matches the sequence at that</p>
-<p>position.</p>
+<p>Until 2026-10-03 this section reported <code>purity_pct</code> as <code>NOT_REPORTED</code> for every compound and</p>
+<p>blamed the literature. <b>That was wrong and the error was ours:</b> earlier extraction read the</p>
+<p>*clinical* sections of the EMA assessment reports and FDA integrated reviews already held in</p>
+<p><code>sources/documents/</code> and never opened their Quality/CMC sections. Nothing had to be acquired.</p>
+<p>Recovery used eleven parallel extraction passes, one per compound programme, each checked by</p>
+<p>an independent pass that string-matched every quote against the cited file and every purity</p>
+<p>value against a printed purity context. Eight verified clean; three reported metadata defects</p>
+<p>(a spliced quote, two page misattributions, one unsupported claim about redaction markers),</p>
+<p>each corrected in <code>sources/characterisation.json</code> with the correction recorded in the record.</p>
+<p>Those checks now run inside <code>verify_against_sources.py</code> on every build.</p>
+<p><b>Two distinctions carry the result.</b> A public EPAR *names* every purity and impurity test</p>
+<p>and *withholds* the numeric limit — volanesorsen's active-substance specification lists</p>
+<p>purity, specified and unspecified impurities and total degradation products, all by</p>
+<p>IP-HPLC-UV-MS, with no limit printed for any. That is <code>purity_limits_redacted = TRUE</code> with</p>
+<p><code>purity_pct</code> left <code>NOT_REPORTED</code> on 12 compounds: a withheld limit is a finding, never a</p>
+<p>value. And a purity value belongs to a <b>lot</b> — fitusiran 98.5% (lot P07916), olezarsen</p>
+<p>91.3% (drug substance CA678354-002), tofersen 90% (TA666853-008) and 94% (TA666853-001), all</p>
+<p>tested batches. Tofersen therefore carries no single <code>purity_pct</code>; both values sit in</p>
+<p><code>purity_batches</code> and the basis says why. A drug-substance specification is likewise never</p>
+<p>spread across batches, and QC fails the build if a compound with several lot purities reports</p>
+<p>a single one.</p>
+<p>Coverage, against the denominator that matters — the 38 compounds actually dosed in people,</p>
+<p>with the whole roster for comparison:</p>
+<table>
+<tr><th></th><th>all 218</th><th>38 dosed in participants</th></tr>
+<tr><td>sequence as printed</td><td>121</td><td>14</td></tr>
+<tr><td>position-resolved chemistry</td><td>52</td><td>11</td></tr>
+<tr><td>purity value</td><td>2</td><td>2</td></tr>
+<tr><td>purity test named, limit withheld</td><td>12</td><td>12</td></tr>
+<tr><td>purity method named</td><td>46</td><td>11</td></tr>
+<tr><td>identity confirmation</td><td>32</td><td>16</td></tr>
+</table>
+<p>Counterion is recorded for 17 of the 38, purification or manufacture for 14, impurity classes</p>
+<p>for 12 and other characterisation tests for 16. Against the previous release that is 0→2</p>
+<p>purity values, 1→11 named methods, 3→16 identity confirmations and 0→14 purification records</p>
+<p>on the clinically dosed subset. It remains <b>thin</b>, and the two worst gaps are untouched:</p>
+<p>only 14 of 38 have a printed sequence and only 11 have position-resolved chemistry.</p>
+<p>The recovered methods are consistent across sponsors. <b>Identity</b> — accurate mass by MS</p>
+<p>within an IP-HPLC-UV-MS run; sequence confirmation by thermal melting temperature; failure-</p>
+<p>sequence analysis of crude material by IP-HPLC-TOF-MS; structure elucidation by ¹H, ¹³C and</p>
+<p>³¹P NMR with high-resolution ESI-TOF. <b>Purity</b> — one IP-HPLC-UV-MS method determines assay,</p>
+<p>purity and impurities together, with impurities specified as *groups* rather than individual</p>
+<p>components. <b>Other attributes</b> — counterion by ICP-OES, elemental impurities by ICP-MS,</p>
+<p>water by Karl Fischer, residual solvents by GC, endotoxin and microbial limits by Ph. Eur.</p>
+<p>One fact deserves emphasis: a 20-mer full-phosphorothioate is a mixture of 2¹⁹ (524,288)</p>
+<p>diastereoisomers, no individual isomer above roughly 0.0018% of the total. **"The sequence"</p>
+<p>and "the molecule" are not the same thing for a phosphorothioate**, and a model treating a PS</p>
+<p>sequence as one species is modelling a mixture.</p>
+<p>Identity here means the printed sequence plus its per-position chemistry. QC checks that every</p>
+<p>declared length equals the actual string (plus any documented terminal residue) and that every</p>
+<p>modification row's nucleobase matches the sequence at that position. No purity value was</p>
+<p>estimated, inferred from a synthesis platform, or carried across compounds; regulatory-derived</p>
+<p>and publication-derived values are held in separate columns.</p>
 <h2>7. Harmonisation and grading</h2>
 <p>Categorical fields use the controlled vocabularies in <code>schema.md</code>. Grading</p>
 <p>is mechanical, from the control-referenced ratio, by <b>CTCAE v5.0</b> cut-offs — a published</p>
-<p>standard, not thresholds invented here — and only for the readouts CTCAE defines. 942 of</p>
-<p>2,388 rows are graded; the remaining 1,446 each state in <code>grade_basis</code> why no published</p>
+<p>standard, not thresholds invented here — and only for the readouts CTCAE defines.</p>
+<p>918 of 2,685 rows are graded; the remaining 1,767 each</p>
+<p>state in <code>grade_basis</code> why no published</p>
 <p>rule applies. The one deviation, applying CTCAE's limit-of-normal ratios to a</p>
 <p>matched-control ratio, is named in every graded row's <code>grade_basis</code> so it cannot be</p>
 <p>overlooked. All grades are <code>provisional</code>.</p>
-<h2>8. Predictor variables and their distribution</h2>
-<table>
-<tr><th>Variable</th><th>Distribution (n = 213 compounds)</th></tr>
-<tr><td>Class</td><td>aptamer 59 · ASO gapmer 58 · other 36 · GalNAc-siRNA 28 · siRNA 13 · tcDNA-ASO 7 · PMO 4 · polydisperse ssDNA 3 · ASO mixmer 2 · CpG ODN 2 · SSO 1</td></tr>
-<tr><td>Backbone</td><td>not reported 98 · full-PS 57 · mixed PO/PS 34 · full-PO 14 · PMO-neutral 4 · other/NA 4</td></tr>
-<tr><td>Sequence published</td><td>97 / 213</td></tr>
-<tr><td>Position-resolved chemistry</td><td>47 / 213 (941 position records)</td></tr>
-</table>
-<h2>9. Indicator variables and their distribution</h2>
-<table>
-<tr><th>Variable</th><th>Distribution (n = 2,388 measurements)</th></tr>
-<tr><td>Readout category</td><td>clotting time 1,160 · factor activity 387 · bleeding outcome 240 · thrombotic outcome 220 · fibrinogen 144 · platelet–coagulation crosstalk 83 · anticoagulant activity 76 · thrombin generation 47 · fibrinolysis marker 31</td></tr>
-<tr><td>Readout (top)</td><td>aPTT 599 · PT 376 · fibrinogen 140 · FXI activity 108 · antithrombin activity 75 · TT 37 · ACT 25</td></tr>
-<tr><td>Study type</td><td>animal in vivo 1,430 · clinical 453 · in vitro 297 · ex vivo human plasma 205</td></tr>
-<tr><td>Species</td><td>human 850 · monkey 818 · mouse 569 · rat 33 · pig 21 · minipig 17 · other 11 · not applicable 69</td></tr>
-<tr><td>Effect direction</td><td>increase 702 · no change 573 · decrease 544 · not reported 449 · not applicable (pre-dose baseline) 120</td></tr>
-<tr><td>Grade</td><td>ungraded 1,521 · 0 → 463 · 1 → 312 · 2 → 66 · 3 → 26 (155 grades flagged <code>within_reference_range_resolution</code>)</td></tr>
-<tr><td>Axis</td><td>on-target only 1,576 · unintended only 289 · both 144 · neither 379</td></tr>
-</table>
-<p><b>On negative controls.</b> 573 rows carry a measured null (<code>effect_direction = no_change</code>),</p>
-<p>and they are the class most at risk of meaning "nobody looked". The extraction contract</p>
-<p>required that a null be written only where the source reports a measured null, with</p>
-<p>reporting silence recorded separately in <code>notes</code>; the verification pass tested this</p>
-<p>stratum specifically, because a prior review of the sibling kidney dataset found its</p>
-<p>negative class was substantially "nobody looked" rather than "looked and found nothing".</p>
-<p><b>That defect does not repeat here</b>: four independent reviewers tried to break the null</p>
-<p>class and could not — the nulls are measured nulls, and unmeasured endpoints are typed</p>
-<p><code>NOT_REPORTED</code> with notes saying so explicitly.</p>
+<h2>8. Predictor and indicator variables</h2>
+<p>The variables themselves are defined in <code>schema.md</code>, their definitions are in the</p>
+<p><code>data_dictionary</code> sheet of the workbook, and their **distributions are reported in the</p>
+<p>narrative document** (section 4), which is where the Challenge asks for them. They are</p>
+<p>computed from the tables at build time in both documents, never transcribed.</p>
+<p><b>On negative controls.</b> 640 rows carry a measured null</p>
+<p>(<code>effect_direction = no_change</code>) — the class most at risk of meaning "nobody looked". The</p>
+<p>extraction contract required a null only where the source reports a measured null, with</p>
+<p>reporting silence recorded separately in <code>notes</code>, and verification tested this stratum</p>
+<p>specifically because a prior review of the sibling kidney dataset found its negative class</p>
+<p>was substantially "nobody looked". <b>That defect does not repeat here</b>: four independent</p>
+<p>reviewers tried to break the null class and could not.</p>
+<p><code>control_class</code> records the reference each row was compared against. Vehicle, buffer and</p>
+<p>placebo rows dominate; the sequence-matched negative control — a scrambled or</p>
+<p>reverse-complement oligo, the only control that separates a sequence effect from a chemistry</p>
+<p>or formulation effect — is present on 8 rows. That number is small and is</p>
+<p>stated rather than smoothed over.</p>
 <h2>10. Quality control</h2>
 <p>Two committed scripts, both exiting non-zero on failure:</p>
 <ul>
@@ -194,13 +224,4 @@ h2, h3 { page-break-after: avoid; } table, figure { page-break-inside: avoid; }
 <p><code>build_dataset.py</code> → <code>validate_dataset.py</code> → <code>verify_against_sources.py</code>. The build reads</p>
 <p>the committed extraction records in <code>sources/extraction/</code> and writes <code>data/</code>; it uses only</p>
 <p>the Python standard library. Every number in this document and in <code>README.md</code> is</p>
-<p>recomputable from <code>data/</code>.</p>
-<h2>13. Intended use for predictive modelling</h2>
-<p>The four-table design exposes sequence, per-position chemistry and design predictors</p>
-<p>against graded, per-condition coagulation outcomes. The two axis flags are not optional</p>
-<p>metadata: any model trained across <code>on_target_effect = TRUE</code> rows without them will learn</p>
-<p>that anticoagulant drugs prolong clotting times, which is true, circular and useless for</p>
-<p>safety prediction. The intended target is the <b>unintended</b> class — the</p>
-<p>hybridization-independent, Cmax-driven prolongation associated with phosphorothioate</p>
-<p>content — with the on-target rows serving as a mechanistically-explained positive class and</p>
-<p>the 604 measured nulls as negatives.</p></body></html>
+<p>recomputable from <code>data/</code>.</p></body></html>

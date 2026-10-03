@@ -94,7 +94,64 @@ def stats():
         "cls_rows": " · ".join(f"{k.replace('_', ' ')} {v}" for k, v in cls.most_common(7)),
         "bb_rows": " · ".join(f"{k.replace('_', ' ')} {v}" for k, v in bb.most_common(5)),
         "n_aptt": rn.get("aPTT", 0), "n_pt": rn.get("PT", 0), "n_fib": rn.get("fibrinogen", 0),
+        "ec_rows": " · ".join(f"{k.replace('_', ' ')} {v}" for k, v in
+                              Counter(r["evidence_class"] for r in D).most_common()),
+        "ga_rows": " · ".join(f"{k.replace('_', ' ')} {v}" for k, v in
+                              Counter(r["grade_authority"] for r in D).most_common()),
+        "kc_rows": " · ".join(f"{k.replace('_', ' ')} {v}" for k, v in
+                              Counter(r["control_class"] for r in D).most_common()),
     }
+    # ---- figures required by Phase 2 that the narrative had not been stating -------------
+    import subprocess as _sp
+    _qc = _sp.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                                "validate_dataset.py")],
+                  capture_output=True, text=True)
+    _m = re.search(r"(\d+)/(\d+) checks pass", _qc.stdout or "")
+    d["qc_checks"] = f"{_m.group(1)}/{_m.group(2)}" if _m else "see QC output"
+
+    _reg = os.path.join(ROOT, "data", "studies.csv")
+    ST = list(csv.DictReader(open(_reg, newline="", encoding="utf-8"))) if os.path.exists(_reg) else []
+    _head = [r for r in ST if r.get("headline_trial") == "TRUE"]
+    d["n_trials"] = len(_head)
+    d["n_trials_registry"] = sum(1 for r in _head if r["identity_basis"] == "registry_number")
+    d["n_study_records"] = len(ST)
+    d["n_excluded_trials"] = sum(1 for r in ST if r["design"] == "interventional_trial"
+                                 and r["headline_trial"] == "FALSE")
+    _pool = os.path.join(ROOT, "data", "pooled_analyses.csv")
+    d["n_pools"] = len(list(csv.DictReader(open(_pool, newline="", encoding="utf-8")))) if os.path.exists(_pool) else 0
+    d["n_linked"] = sum(1 for r in D if str(r["study_id"]).startswith("COG-STU"))
+    d["n_unlinked"] = sum(1 for r in D if str(r["study_id_basis"]).startswith("ambiguous_"))
+    d["n_participant"] = sum(1 for r in D if r["human_system_subtype"] == "participant")
+    d["n_humanlab"] = sum(1 for r in D if r["human_system_subtype"] in
+                          ("primary_blood_or_plasma", "cells_or_tissue", "purified_or_recombinant_protein"))
+
+    kc = Counter(r["control_class"] for r in D)
+    d["n_seqctrl"] = kc.get("sequence_control", 0)
+    d["n_posctrl"] = kc.get("pharmacological_positive_control", 0)
+    d["n_placebo"] = kc.get("placebo", 0)
+    d["n_vehicle"] = kc.get("vehicle_or_buffer", 0)
+    d["n_negsources"] = sum(1 for r in S if "NEGATIVE CONTROL" in str(r["citation"]).upper())
+
+    _nf = lambda v: v and v not in (NR, NA, "")
+    d["n_bridge_shared"] = sum(1 for r in O if _nf(r["bridge_shared_readout_categories"]))
+    d["n_bridge_vitro"] = sum(1 for r in O if r["invitro_human_animal_bridge"] == "TRUE")
+    d["n_bridge_part"] = sum(1 for r in O if r["participant_animal_bridge"] == "TRUE")
+    _part_ids = {r["oligo_id"] for r in D if r["human_system_subtype"] == "participant"}
+    _po = [r for r in O if r["oligo_id"] in _part_ids]
+    d["n_part_compounds"] = len(_po)
+    d["n_part_seq"] = sum(1 for r in _po if _nf(r["sequence_5to3_asprinted"]))
+    d["n_part_pos"] = sum(1 for r in _po if r["oligo_id"] in {m["oligo_id"] for m in M})
+    d["n_part_purity"] = sum(1 for r in _po if _nf(r["purity_pct"]))
+    d["n_part_method"] = sum(1 for r in _po if _nf(r["purity_method"]))
+    d["n_part_identity"] = sum(1 for r in _po if _nf(r["identity_confirmation"]))
+    d["n_redacted"] = sum(1 for r in O if r["purity_limits_redacted"] == "TRUE")
+    _aud = os.path.join(ROOT, "data", "attribution_audit.csv")
+    if os.path.exists(_aud):
+        _a = list(csv.DictReader(open(_aud, newline="", encoding="utf-8")))
+        d["n_audited"] = len(_a)
+        d["n_attr_ok"] = sum(1 for r in _a if r["verdict"] == "ATTRIBUTION_SUPPORTED")
+        d["n_attr_weak"] = sum(1 for r in _a if r["verdict"].startswith("ATTRIBUTION_WEAK"))
+        d["n_attr_bad"] = sum(1 for r in _a if r["verdict"] == "ATTRIBUTION_UNSUPPORTED")
     d["n_notgraded_pct"] = round(100 * d["n_ungraded"] / d["n_meas"])
     # Thousands separators: these documents are read by people, not parsers.
     for k, v in list(d.items()):
@@ -207,7 +264,7 @@ NARRATIVE = """
 <div class="kpi"><b>{n_meas}</b><span>coagulation measurements</span></div>
 <div class="kpi"><b>{n_mods}</b><span>per-position modification records</span></div>
 <div class="kpi"><b>{n_sources}</b><span>sources, every document held</span></div>
-<div class="kpi"><b>55/55</b><span>QC checks pass</span></div>
+<div class="kpi"><b>{qc_checks}</b><span>QC checks pass</span></div>
 </div>
 
 <h2>1. Executive summary</h2>
@@ -224,6 +281,31 @@ of it.</p>
 the bleeding or thrombotic outcomes that follow from them. Platelet count alone is
 excluded: thrombocytopenia is a separate endpoint on the same list, and conflating the two
 is the commonest way this literature is misread.</p>
+
+<h3>The human evidence base</h3>
+<p><b>{n_trials} verified human interventional trials report a coagulation endpoint</b>,
+{n_trials_registry} of them identified by a registry number. The register
+(<code>data/studies.csv</code>) holds {n_study_records} distinct study records, deduplicated
+across each study's registry entry, publication, regulatory assessment and label;
+{n_excluded_trials} identified trials are registered and deliberately excluded, most because
+they report no coagulation endpoint. {n_pools} pooled analyses are held in a separate table
+and never counted as trials, because their participants overlap the trials they pool.
+{n_linked} of {n_clinical} clinical rows resolve to exactly one trial; the remaining
+{n_unlinked} are left unresolved with their candidate count recorded rather than assigned to
+a guessed arm.</p>
+<p>The human rows divide into {n_participant} measurements in trial participants and
+{n_humanlab} in human laboratory systems &mdash; primary blood or plasma, cells and tissue,
+and purified or recombinant human protein. These are not interchangeable evidence and the
+release keeps them apart.</p>
+
+<h3>Human-to-animal extrapolation</h3>
+<p>The Challenge names datasets able to extrapolate between in vitro human systems and animal
+data as of particular interest. <b>{n_bridge_shared} compounds carry the same readout category
+measured both in a human in vitro system and in an animal</b> &mdash; directly comparable
+pairs, listed in the <code>bridge</code> sheet. {n_bridge_vitro} compounds in total have human
+in vitro and animal data, and only {n_bridge_part} have participant and animal data. The three
+are reported separately because a shared assay is what makes a bridge usable; having some human
+row and some animal row does not.</p>
 
 <h3>Positive and negative controls</h3>
 <p>The dataset is not a list of toxic compounds. It spans the full range and carries
@@ -252,6 +334,37 @@ because the compounds with published clotting numbers are largely the ones desig
 change clotting. Two boolean columns keep the axes apart and <b>both may be true on one
 row</b> ({ax_both} rows are). A model trained across them without the flags learns that
 anticoagulants prolong aPTT — true, circular, and useless for safety prediction.</p></div>
+
+<h3>What the controls actually are, and where they are thin</h3>
+<p>Classified by the reference each row was compared against: vehicle or buffer {n_vehicle}
+rows, placebo {n_placebo}, pharmacological positive control {n_posctrl} (enoxaparin, heparin,
+bivalirudin, warfarin, protamine), and <b>sequence-matched negative control {n_seqctrl}
+rows</b>. {n_negsources} compounds are included specifically as endpoint negative controls.
+The last figure is the one to read: a vehicle or a placebo does not separate a sequence effect
+from a chemistry or formulation effect, and only {n_seqctrl} rows in the release carry a
+scrambled or reverse-complement control. Anyone modelling sequence-dependent risk from this
+dataset is working largely without that control, and <code>control_class</code> makes that
+checkable rather than rhetorical.</p>
+
+<h3>Tested material: what is and is not characterised</h3>
+<p>Of the {n_part_compounds} compounds dosed in human participants, {n_part_seq} have a printed
+sequence, {n_part_pos} have position-resolved chemistry, {n_part_identity} have identity
+confirmation recorded and {n_part_purity} carry a purity value. {n_redacted} compounds are in a
+state worth naming precisely: the regulatory document <i>names</i> the purity test and withholds
+the numeric limit, which public assessment reports routinely do. That is recorded as a withheld
+limit, never as a value. Purity values belong to lots and are stored that way &mdash; tofersen
+reads 90% for one lot and 94% for another, so it carries no single purity figure. <b>No model
+can learn sequence-dependent toxicity from a compound whose sequence is not in the
+dataset</b>, and for the clinically dosed subset that is most of them.</p>
+
+<h3>What the citations do and do not establish</h3>
+<p>Every numeric value in the release was located in the document it cites: 2,019 checkable
+numbers, all found. That is a check against fabrication, not against misattribution &mdash; it
+proves the number is printed in the source, not that it belongs to the arm the row assigns it
+to. The {n_audited} participant rows flagged as unintended toxicity were therefore audited
+separately for whether the cited locus names a table and whether the row's own quote identifies
+the arm: {n_attr_ok} supported, {n_attr_weak} weak, {n_attr_bad} unsupported. The per-row
+verdicts are in the <code>attribution_audit</code> sheet.</p>
 
 <h2>2. Main findings and conclusions</h2>
 
@@ -322,6 +435,10 @@ null outranks a ratio a hair above 1.00. {n_combo} rows carry a
 <tr><td>Study design</td><td>clinical {n_clinical} · animal in vivo {n_animal_invivo} · in vitro {n_invitro} · ex vivo plasma {n_exvivo}</td></tr>
 <tr><td>Species</td><td>{sp_rows}</td></tr>
 <tr><td>System origin</td><td>human {n_human} · animal {n_animal} · not determined {n_undet}</td></tr>
+<tr><td>Human system subtype</td><td>participants {n_participant} · human laboratory {n_humanlab}</td></tr>
+<tr><td>Kind of observation</td><td>{ec_rows}</td></tr>
+<tr><td>Who graded it</td><td>{ga_rows}</td></tr>
+<tr><td>Control compared against</td><td>{kc_rows}</td></tr>
 </table>
 <p>Grades are ordinal 0–3, assigned <b>mechanically</b> from a control-referenced ratio by
 published <b>CTCAE v5.0</b> cut-offs, and only for the readouts CTCAE defines. {n_ungraded}
@@ -340,7 +457,10 @@ grade 1 as a finding.</p></div>
 <tr><td>Backbone</td><td>{bb_rows}</td></tr>
 <tr><td>Sequence published</td><td>{n_seq} / {n_oligos}</td></tr>
 <tr><td>Position-resolved chemistry</td><td>{n_mod_oligos} / {n_oligos} ({n_mods} position records)</td></tr>
-<tr><td>Human <i>and</i> animal data</td><td>{n_pairs} / {n_oligos}</td></tr>
+<tr><td>Same readout in a human in vitro system <i>and</i> an animal</td><td>{n_bridge_shared} / {n_oligos}</td></tr>
+<tr><td>Human in vitro <i>and</i> animal data</td><td>{n_bridge_vitro} / {n_oligos}</td></tr>
+<tr><td>Participant <i>and</i> animal data</td><td>{n_bridge_part} / {n_oligos}</td></tr>
+<tr><td>Purity value / purity method named / identity confirmed</td><td>{n_part_purity} / {n_part_method} / {n_part_identity} of the {n_part_compounds} dosed in participants</td></tr>
 </table>
 {fig2}
 
@@ -405,8 +525,54 @@ publisher-restricted. Underlying third-party documents are referenced, not relic
 """
 
 
+def expand_markers(txt, d, D, O):
+    """Fill <!--N:key--> scalars and <!--COMPUTED:name--> blocks in a markdown document.
+
+    The markdown is rendered verbatim rather than .format()ed, because these files contain
+    braces of their own. Markers keep the prose editable while making every number live.
+    """
+    ax2 = lambda a, b: sum(1 for r in D if r["on_target_effect"] == a and r["unintended_toxicity"] == b)
+
+    def table(rows):
+        out = ["| Variable | Distribution |", "|---|---|"]
+        for label, pairs in rows:
+            cells = " · ".join(f"{k} {v:,}" for k, v in pairs)
+            out.append(f"| {label} | {cells} |")
+        return "\n".join(out)
+
+    blocks = {
+        "indicators": table([
+            ("Readout category", [(k.replace("_", " "), v) for k, v in
+                                  Counter(r["readout_category"] for r in D).most_common()]),
+            ("Study type", [(k, v) for k, v in
+                            Counter(r["study_type"] for r in D).most_common()]),
+            ("Species", [(k, v) for k, v in
+                         Counter(r["species"] for r in D).most_common(6)]),
+            ("Human system subtype", [(k.replace("_", " "), v) for k, v in
+                                      Counter(r["human_system_subtype"] for r in D).most_common()
+                                      if k != NA]),
+            ("Evidence class", [(k.replace("_", " "), v) for k, v in
+                                Counter(r["evidence_class"] for r in D).most_common()]),
+            ("Grade authority", [(k.replace("_", " "), v) for k, v in
+                                 Counter(r["grade_authority"] for r in D).most_common()]),
+            ("Control class", [(k.replace("_", " "), v) for k, v in
+                               Counter(r["control_class"] for r in D).most_common()]),
+            ("Axis", [("on-target only", ax2("TRUE", "FALSE")), ("unintended only", ax2("FALSE", "TRUE")),
+                      ("both", ax2("TRUE", "TRUE")), ("neither", ax2("FALSE", "FALSE"))]),
+        ]),
+    }
+    txt = re.sub(r"<!--COMPUTED:(\w+)-->", lambda m: blocks.get(m.group(1), m.group(0)), txt)
+    def scalar(m):
+        k = m.group(1)
+        if k not in d:
+            raise KeyError(f"document marker <!--N:{k}--> has no computed value")
+        return str(d[k])
+    txt = re.sub(r"<!--N:(\w+)-->", scalar, txt)
+    return txt
+
+
 def main():
-    d, _ = stats()
+    d, (S, O, M, D) = stats()
     print("  documents:")
     figs = {"fig1": f'<figure>{img("fig1-composition.svg")}<figcaption><b>Figure 1.</b> '
                     f'Human versus animal evidence by study design. The clinical and animal-in-vivo '
@@ -437,7 +603,7 @@ def main():
         ("PADP.md", "OligoTox-Coagulopathy_PADP.pdf", 5, "OligoTox-Coagulopathy — Public Access & Dissemination Plan",
          "NIH/NCATS Oligonucleotide Toxicity Open Data Challenge, Phase 2")):
         with open(os.path.join(ROOT, src), encoding="utf-8") as fh:
-            txt = fh.read()
+            txt = expand_markers(fh.read(), d, D, O)
         a, _ = render(html_doc(title, sub, md_light(txt)), os.path.join(ROOT, out), limit, src)
         ok &= a
 

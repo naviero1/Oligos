@@ -37,7 +37,7 @@ One row per source document. 75 rows.
 
 ## `data/oligos.csv` — one row per compound
 
-213 rows. Identity and the design predictors a model would use as input features.
+218 rows. Identity and the design predictors a model would use as input features.
 
 | Column | Description |
 |---|---|
@@ -89,7 +89,7 @@ Challenge's requirement for "the location of all chemical modifications in each 
 
 ## `data/measurements.csv` — one row per measured outcome
 
-2,388 rows. Grain: oligo × system × delivery × dose × timepoint × readout.
+2,685 rows. Grain: oligo × system × delivery × dose × timepoint × readout.
 
 | Column | Description |
 |---|---|
@@ -126,7 +126,7 @@ Challenge's requirement for "the location of all chemical modifications in each 
 | `on_target_effect`, `unintended_toxicity` | The two axes. Both may be `TRUE`. See README. |
 | `source_locus` | Exact locus — table number, figure panel, section heading, label section, PDF page. |
 | `redistribution` | Inherited from the source. |
-| `verbatim_quote` | Text copied from the document that supports this row. Present on all 2,388 rows (QC-enforced). |
+| `verbatim_quote` | Text copied from the document that supports this row. Present on all 2,685 rows (QC-enforced). |
 | `notes` | Free text, including method limitations and reporting-silence flags. |
 
 ---
@@ -238,7 +238,7 @@ by relaxing the check:
    splits a sequence cell into the leading nucleotide run plus a `sequence_note`.
 2. **Spurious compound merges.** Because those contaminated cells were used as the
    deduplication key, 12 distinct compounds had been merged into others. Cleaning the key
-   split them back out: 213 compounds, with zero duplicate names and zero duplicate
+   split them back out: 218 compounds, with zero duplicate names and zero duplicate
    sequences remaining.
 3. **A terminal cap holding a position row.** A 3′-inverted-dT occupied position 31 of a
    30-base aptamer, breaking the position↔base check. Terminal residues are now lifted to

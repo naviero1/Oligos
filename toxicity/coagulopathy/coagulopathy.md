@@ -1,6 +1,6 @@
 # Coagulopathy
 
-**Endpoint key:** `coagulopathy` · **Status:** delivered — 213 oligonucleotides, 2,388 measurements; **9 open defects in §7, none a release blocker** · **Register:** [`../README.md`](../README.md)
+**Endpoint key:** `coagulopathy` · **Status:** delivered — 218 oligonucleotides, 2,685 measurements; **9 open defects in §7, none a release blocker** · **Register:** [`../README.md`](../README.md)
 
 Coagulopathy is the fifth endpoint in the Challenge brief's list of toxicities of interest,
 quoted verbatim in [the register index](../README.md#scope-authority). In oligonucleotide
@@ -71,7 +71,7 @@ was set before extraction and it matters: the largest concentration of
 thrombocytopenia and belongs there, not here.
 
 **Both toxicity and on-target pharmacology are in scope, on separate flags.** 1,720 of the
-2,388 rows are on-target: the compounds with published clotting numbers are mostly the ones
+1,790 of 2,685 rows are on-target: the compounds with published clotting numbers are mostly the ones
 designed to change clotting. Excluding them would have discarded most of the endpoint's
 quantitative literature; pooling them would teach a model that anticoagulants prolong aPTT.
 They are therefore kept and flagged, and `on_target_effect` and `unintended_toxicity` may
