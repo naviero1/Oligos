@@ -157,7 +157,7 @@ them was not.** This was a code defect, not an extraction defect.
 
 ### Over-merge is now a QC failure, not a comment
 
-55 checks passed while two drugs sat in one trial row (QC is now 112). Three checks now make that
+At an earlier release 55 checks passed while two drugs sat in one trial row (that count is superseded; the current one is in the summary table above, and is printed by `scripts/validate_dataset.py`). Three checks now make that
 impossible: two registry numbers **from the same registry** in one cluster fails, two
 sponsor compound numbers fails, and any `OVER_MERGE_*` flag fails. Two numbers from
 *different* registries do **not** fail — one trial legitimately holds both an NCT and a

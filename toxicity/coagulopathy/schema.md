@@ -53,6 +53,9 @@ One row per source document. 100 rows.
 | `sequence_note` | Anything the source said about the sequence or length that is not itself sequence (a 3′ cap, strand layout, a qualification). Kept verbatim so nothing is discarded. |
 | `terminal_modification` | A terminal residue with no position in a 5′→3′ base string — e.g. a 3′-inverted dT cap. Held at oligo level precisely because it cannot own a position row. |
 | `sequence_locus` | Where in the document the sequence is printed. |
+| `sequence_locus_held` | Whether that location is **in this repository**. `FALSE` on 11 compounds whose sequences cite a supplementary table the corpus does not hold, in an article that prints no nucleotide sequence at all — so the value looks complete and cannot be checked, which is worse than an absence and is why it has its own flag. Each `FALSE` carries a `sequence_locus_not_held` row in the gap register, enforced by a validator check. `TRUE` where a held document prints it; `NOT_ASSESSED` where the 2026-10-03 recovery did not reach. |
+| `oligo_supplier` | Vendor and grade as stated, e.g. *Eurofins Genomics (Japan), HPLC grade*. |
+| `oligo_lot_number` | `NOT_REPORTED` throughout. A supplier is **not** a batch: every supplier statement recovered so far names a company and no lot, and a validator check stops the dataset acquiring a lot number by drift. |
 | `backbone_chemistry` | `full_PS` \| `mixed_PO_PS` \| `full_PO` \| `PMO_neutral` \| `other` \| `NOT_REPORTED`. |
 | `sugar_modifications`, `gapmer_design`, `conjugate`, `ps_count` | Design predictors. |
 | `purity_pct`, `purity_method`, `identity_confirmation`, `synthesis_platform` | The Challenge's oligo-characterisation requirement, recorded as each source states it. |
@@ -205,7 +208,7 @@ disagrees, so a hand-edited grade cannot survive a build.
 
 ## QC log
 
-**2026-08-29 — build v1.1, after adversarial verification.** 45 structural checks passed at that build; QC is now 112.
+**2026-08-29 — build v1.1, after adversarial verification.** 45 structural checks passed at that earlier release; that figure is superseded and the current count is printed by `scripts/validate_dataset.py`.
 174 rows were re-checked against their sources by reviewers instructed to refute them:
 117 confirmed, 50 corrected, 2 refuted, 5 unverifiable, **no fabricated value or quote**.
 Ten defect classes were found; all ten are corrected in `build_dataset.py` (functions

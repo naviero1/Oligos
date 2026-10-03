@@ -1,0 +1,416 @@
+[
+ {
+  "group": "volanesorsen",
+  "documents": [
+   {
+    "source_id": "COG-S076",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/waylivra_EPAR_assessment_report.txt",
+    "citation": "European Medicines Agency, Committee for Medicinal Products for Human Use (CHMP). Assessment report: Waylivra (volanesorsen), International non-proprietary name"
+   },
+   {
+    "source_id": "COG-S077",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/waylivra_EPAR_RMP.txt",
+    "citation": "Akcea Therapeutics Ireland Ltd. WAYLIVRA (volanesorsen) EU Risk Management Plan, CTD Module 1.8.2, Version 3.0, 24 February 2025 (published as part of the Wayli"
+   },
+   {
+    "source_id": "COG-S078",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/waylivra_EPAR_product_information.txt",
+    "citation": "European Medicines Agency. Waylivra (volanesorsen) Product Information: Annex I Summary of Product Characteristics, Annex II, Annex III Labelling and Package Le"
+   },
+   {
+    "source_id": "COG-S095",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/fda_tryngolza_olezarsen_218614_IntegratedR.txt",
+    "citation": "U.S. Food and Drug Administration, Center for Drug Evaluation and Research. Integrated Review, NDA 218614, TRYNGOLZA (olezarsen sodium) injection. Applicant: Io"
+   }
+  ],
+  "compounds": [
+   {
+    "oligo_id": "COG-OLG055",
+    "name": "volanesorsen",
+    "aliases": "ISIS 304801; ISIS-ApoCIIIRx; IONIS-ApoCIIIRx (all three aliases printed in the source); Wa"
+   },
+   {
+    "oligo_id": "COG-OLG217",
+    "name": "olezarsen sodium",
+    "aliases": "TRYNGOLZA; ISIS 678354; ION-678354; AKCEA-APOCIII-LRx"
+   }
+  ]
+ },
+ {
+  "group": "olezarsen",
+  "documents": [
+   {
+    "source_id": "COG-S047",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/dailymed_olezarsen_tryngolza_0f51aa8e-8475-8cf9-e063-6394a90a6848.xml",
+    "citation": "TRYNGOLZA (olezarsen) injection, for subcutaneous use - US Prescribing Information. Ionis Pharmaceuticals, Inc. Patient Information revised 06/2026."
+   },
+   {
+    "source_id": "COG-S100",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/tryngolza_AR.txt",
+    "citation": "European Medicines Agency, Committee for Medicinal Products for Human Use. Assessment report: Tryngolza (olezarsen). EMA/277774/2025, Procedure EMEA/H/C/006265/"
+   },
+   {
+    "source_id": "COG-S095",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/fda_tryngolza_olezarsen_218614_IntegratedR.txt",
+    "citation": "U.S. Food and Drug Administration, Center for Drug Evaluation and Research. Integrated Review, NDA 218614, TRYNGOLZA (olezarsen sodium) injection. Applicant: Io"
+   }
+  ],
+  "compounds": [
+   {
+    "oligo_id": "COG-OLG055",
+    "name": "volanesorsen",
+    "aliases": "ISIS 304801; ISIS-ApoCIIIRx; IONIS-ApoCIIIRx (all three aliases printed in the source); Wa"
+   },
+   {
+    "oligo_id": "COG-OLG121",
+    "name": "olezarsen",
+    "aliases": "olezarsen sodium; TRYNGOLZA; AKCEA-APOCIII-LRx; ISIS 678354"
+   },
+   {
+    "oligo_id": "COG-OLG217",
+    "name": "olezarsen sodium",
+    "aliases": "TRYNGOLZA; ISIS 678354; ION-678354; AKCEA-APOCIII-LRx"
+   }
+  ]
+ },
+ {
+  "group": "donidalorsen",
+  "documents": [
+   {
+    "source_id": "COG-S048",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/dailymed_donidalorsen_dawnzera_3ff501e0-f75f-07da-e063-6294a90a0cb7.xml",
+    "citation": "DAWNZERA (donidalorsen) injection, for subcutaneous use - US Prescribing Information. Ionis Pharmaceuticals, Inc."
+   },
+   {
+    "source_id": "COG-S082",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/dawnzera_AR.txt",
+    "citation": "European Medicines Agency, Committee for Medicinal Products for Human Use (CHMP). Assessment report: Dawnzera (donidalorsen). 2025."
+   }
+  ],
+  "compounds": [
+   {
+    "oligo_id": "COG-OLG122",
+    "name": "donidalorsen",
+    "aliases": "donidalorsen sodium; DAWNZERA; IONIS-PKK-LRx; ISIS 721744"
+   }
+  ]
+ },
+ {
+  "group": "inotersen",
+  "documents": [
+   {
+    "source_id": "COG-S045",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/dailymed_inotersen_tegsedi_akcea_8513207e-b55f-417b-9473-af785146a543.xml",
+    "citation": "TEGSEDI (inotersen) injection, for subcutaneous use - US Prescribing Information. Akcea Therapeutics, Inc. Initial U.S. Approval 2018; label revised 1/2024."
+   },
+   {
+    "source_id": "COG-S050",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/dailymed_eplontersen_wainua_d7dcb847-71dd-4fff-82d0-d43a465fc096.xml",
+    "citation": "NEGATIVE CONTROL - WAINUA (eplontersen) injection, for subcutaneous use - US Prescribing Information. AstraZeneca / Ionis."
+   },
+   {
+    "source_id": "COG-S079",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/tegsedi_AR.txt",
+    "citation": "European Medicines Agency, Committee for Medicinal Products for Human Use (CHMP). Assessment report: Tegsedi (inotersen), Procedure No. EMEA/H/C/004782/0000. 20"
+   },
+   {
+    "source_id": "COG-S096",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/fda_wainua_eplontersen_217388_IntegratedR.txt",
+    "citation": "U.S. Food and Drug Administration, Center for Drug Evaluation and Research. Integrated Review, NDA 217388, WAINUA (eplontersen) injection. Applicant: Ionis Phar"
+   }
+  ],
+  "compounds": [
+   {
+    "oligo_id": "COG-OLG119",
+    "name": "inotersen",
+    "aliases": "inotersen sodium; TEGSEDI; ISIS 420915; IONIS-TTR-Rx;eplontersen"
+   },
+   {
+    "oligo_id": "COG-OLG218",
+    "name": "eplontersen",
+    "aliases": "WAINUA; ION-682884; IONIS-TTR-LRx; AKCEA-TTR-LRx"
+   }
+  ]
+ },
+ {
+  "group": "eplontersen",
+  "documents": [
+   {
+    "source_id": "COG-S096",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/fda_wainua_eplontersen_217388_IntegratedR.txt",
+    "citation": "U.S. Food and Drug Administration, Center for Drug Evaluation and Research. Integrated Review, NDA 217388, WAINUA (eplontersen) injection. Applicant: Ionis Phar"
+   },
+   {
+    "source_id": "COG-S050",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/dailymed_eplontersen_wainua_d7dcb847-71dd-4fff-82d0-d43a465fc096.xml",
+    "citation": "NEGATIVE CONTROL - WAINUA (eplontersen) injection, for subcutaneous use - US Prescribing Information. AstraZeneca / Ionis."
+   }
+  ],
+  "compounds": [
+   {
+    "oligo_id": "COG-OLG119",
+    "name": "inotersen",
+    "aliases": "inotersen sodium; TEGSEDI; ISIS 420915; IONIS-TTR-Rx;eplontersen"
+   },
+   {
+    "oligo_id": "COG-OLG218",
+    "name": "eplontersen",
+    "aliases": "WAINUA; ION-682884; IONIS-TTR-LRx; AKCEA-TTR-LRx"
+   }
+  ]
+ },
+ {
+  "group": "nusinersen",
+  "documents": [
+   {
+    "source_id": "COG-S049",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/dailymed_nusinersen_spinraza_dd70cd5f-b0fc-4ba4-a5ea-89a34778bd94.xml",
+    "citation": "SPINRAZA (nusinersen) injection, for intrathecal use - US Prescribing Information. Biogen."
+   },
+   {
+    "source_id": "COG-S092",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/spinraza_AR.txt",
+    "citation": "Committee for Medicinal Products for Human Use (CHMP). Assessment report: Spinraza (nusinersen). Procedure No. EMEA/H/C/004312/0000. EMA/289068/2017, 21 April 2"
+   }
+  ],
+  "compounds": [
+   {
+    "oligo_id": "COG-OLG054",
+    "name": "nusinersen",
+    "aliases": "Spinraza (not named in this source)"
+   }
+  ]
+ },
+ {
+  "group": "mipomersen",
+  "documents": [
+   {
+    "source_id": "COG-S091",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/kynamro_AR.txt",
+    "citation": "Committee for Medicinal Products for Human Use (CHMP). Assessment report: Kynamro (mipomersen), solution for injection 189 mg. Procedure No. EMEA/H/C/002429/000"
+   }
+  ],
+  "compounds": [
+   {
+    "oligo_id": "COG-OLG216",
+    "name": "mipomersen sodium",
+    "aliases": "Kynamro; ISIS 301012; ISIS301012; mipomersen"
+   }
+  ]
+ },
+ {
+  "group": "fitusiran",
+  "documents": [
+   {
+    "source_id": "COG-S026",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/dailymed_fitusiran_qfitlia_6dd2f8ac-6f90-4cbf-b197-97d74964135c.xml",
+    "citation": "QFITLIA (fitusiran) injection, for subcutaneous use. US Prescribing Information. Genzyme Corporation. SPL version 6, 2025-09-18."
+   },
+   {
+    "source_id": "COG-S093",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/fda_qfitlia_fitusiran_219019_IntegratedR.txt",
+    "citation": "U.S. Food and Drug Administration, Center for Drug Evaluation and Research. Integrated Review, NDA 219019, QFITLIA (fitusiran) injection, for subcutaneous use. "
+   }
+  ],
+  "compounds": [
+   {
+    "oligo_id": "COG-OLG060",
+    "name": "fitusiran",
+    "aliases": "QFITLIA; fitusiran sodium; ALN-AT3; ALN-AT3SC; SAR439774"
+   }
+  ]
+ },
+ {
+  "group": "imetelstat",
+  "documents": [
+   {
+    "source_id": "COG-S046",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/dailymed_imetelstat_rytelo_b0fab7ca-e578-43c5-9df6-bdaff4182257.xml",
+    "citation": "RYTELO (imetelstat) for injection, for intravenous use - US Prescribing Information. Geron Corporation. Medication Guide issued 6/2024."
+   },
+   {
+    "source_id": "COG-S099",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/rytelo_AR.txt",
+    "citation": "European Medicines Agency, Committee for Medicinal Products for Human Use. Assessment report: Rytelo (imetelstat). EMA/13310/2025, Procedure EMEA/H/C/006098/000"
+   }
+  ],
+  "compounds": [
+   {
+    "oligo_id": "COG-OLG120",
+    "name": "imetelstat",
+    "aliases": "imetelstat sodium; RYTELO; GRN163L"
+   }
+  ]
+ },
+ {
+  "group": "vutrisiran",
+  "documents": [
+   {
+    "source_id": "COG-S083",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/amvuttra_AR.txt",
+    "citation": "European Medicines Agency, Committee for Medicinal Products for Human Use (CHMP). Assessment report: Amvuttra (vutrisiran). 2022."
+   },
+   {
+    "source_id": "COG-S054",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/dailymed_givosiran_givlaari_167e663c-11e1-497b-a3fc-951d65d58eaa.xml",
+    "citation": "NEGATIVE CONTROL (delivery-platform class) - GalNAc-conjugated siRNA US Prescribing Information: GIVLAARI (givosiran), OXLUMO (lumasiran), LEQVIO (inclisiran), "
+   }
+  ],
+  "compounds": [
+   {
+    "oligo_id": "COG-OLG053",
+    "name": "inclisiran",
+    "aliases": "Leqvio (not named in this source)"
+   },
+   {
+    "oligo_id": "COG-OLG129",
+    "name": "givosiran",
+    "aliases": "GIVLAARI; ALN-AS1"
+   },
+   {
+    "oligo_id": "COG-OLG130",
+    "name": "lumasiran",
+    "aliases": "OXLUMO; ALN-GO1"
+   },
+   {
+    "oligo_id": "COG-OLG131",
+    "name": "vutrisiran",
+    "aliases": "AMVUTTRA; ALN-TTRsc02"
+   },
+   {
+    "oligo_id": "COG-OLG132",
+    "name": "nedosiran",
+    "aliases": "RIVFLOZA; DCR-PHXC"
+   },
+   {
+    "oligo_id": "COG-OLG133",
+    "name": "plozasiran",
+    "aliases": "REDEMPLO; ARO-APOC3"
+   }
+  ]
+ },
+ {
+  "group": "tofersen",
+  "documents": [
+   {
+    "source_id": "COG-S051",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/dailymed_tofersen_qalsody_81356b45-1cb7-4eef-88ea-e44cc18b47c5.xml",
+    "citation": "NEGATIVE CONTROL - QALSODY (tofersen) injection, for intrathecal use - US Prescribing Information. Biogen."
+   },
+   {
+    "source_id": "COG-S097",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/fda_qalsody_tofersen_215887_IntegratedR.txt",
+    "citation": "U.S. Food and Drug Administration, Center for Drug Evaluation and Research. Integrated Review, NDA 215887, QALSODY (tofersen) injection, for intrathecal use. Ap"
+   },
+   {
+    "source_id": "COG-S098",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/qalsody_AR.txt",
+    "citation": "European Medicines Agency, Committee for Medicinal Products for Human Use. Assessment report: Qalsody (tofersen). EMA/276404/2024, Procedure EMEA/H/C/005996/000"
+   }
+  ],
+  "compounds": [
+   {
+    "oligo_id": "COG-OLG123",
+    "name": "tofersen",
+    "aliases": "QALSODY; BIIB067; ISIS 666853"
+   }
+  ]
+ },
+ {
+  "group": "other-classes",
+  "documents": [
+   {
+    "source_id": "COG-S024",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/dailymed_defibrotide_defitelio_2c3db989-d7ad-41ed-9ebf-698dcf6c24ec.xml",
+    "citation": "DEFITELIO (defibrotide sodium) injection, for intravenous use. US Prescribing Information. Jazz Pharmaceuticals, Inc. Initial U.S. Approval 2016. SPL version 8,"
+   },
+   {
+    "source_id": "COG-S052",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/dailymed_patisiran_onpattro_e87ec36f-b4b4-49d4-aea4-d4ffb09b0970.xml",
+    "citation": "NEGATIVE CONTROL - ONPATTRO (patisiran) injection, lipid complex, for intravenous use - US Prescribing Information. Alnylam Pharmaceuticals."
+   },
+   {
+    "source_id": "COG-S053",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/dailymed_eteplirsen_exondys_33bff678-7829-479e-9110-b8e33a0bc0aa.xml",
+    "citation": "NEGATIVE CONTROL (chemistry class) - Phosphorodiamidate morpholino oligomer exon-skipping US Prescribing Information: EXONDYS 51 (eteplirsen), VYONDYS 53 (golod"
+   },
+   {
+    "source_id": "COG-S054",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/dailymed_givosiran_givlaari_167e663c-11e1-497b-a3fc-951d65d58eaa.xml",
+    "citation": "NEGATIVE CONTROL (delivery-platform class) - GalNAc-conjugated siRNA US Prescribing Information: GIVLAARI (givosiran), OXLUMO (lumasiran), LEQVIO (inclisiran), "
+   },
+   {
+    "source_id": "COG-S084",
+    "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/label_izervay_avacincaptad.json",
+    "citation": "Astellas Pharma US, Inc. IZERVAY (avacincaptad pegol) intravitreal solution \u2014 US Prescribing Information, SPL version 9, effective 2026-02-27. Retrieved as an o"
+   }
+  ],
+  "compounds": [
+   {
+    "oligo_id": "COG-OLG053",
+    "name": "inclisiran",
+    "aliases": "Leqvio (not named in this source)"
+   },
+   {
+    "oligo_id": "COG-OLG059",
+    "name": "Defibrotide sodium (DEFITELIO) injection",
+    "aliases": "DEFITELIO; defibrotide sodium; polydeoxyribonucleotide, sodium salt; defibrotide free acid"
+   },
+   {
+    "oligo_id": "COG-OLG124",
+    "name": "patisiran",
+    "aliases": "patisiran sodium; ONPATTRO; ALN-TTR02"
+   },
+   {
+    "oligo_id": "COG-OLG125",
+    "name": "eteplirsen",
+    "aliases": "EXONDYS 51; AVI-4658"
+   },
+   {
+    "oligo_id": "COG-OLG126",
+    "name": "golodirsen",
+    "aliases": "VYONDYS 53; SRP-4053"
+   },
+   {
+    "oligo_id": "COG-OLG127",
+    "name": "viltolarsen",
+    "aliases": "VILTEPSO; NS-065/NCNP-01"
+   },
+   {
+    "oligo_id": "COG-OLG128",
+    "name": "casimersen",
+    "aliases": "AMONDYS 45; SRP-4045"
+   },
+   {
+    "oligo_id": "COG-OLG129",
+    "name": "givosiran",
+    "aliases": "GIVLAARI; ALN-AS1"
+   },
+   {
+    "oligo_id": "COG-OLG130",
+    "name": "lumasiran",
+    "aliases": "OXLUMO; ALN-GO1"
+   },
+   {
+    "oligo_id": "COG-OLG131",
+    "name": "vutrisiran",
+    "aliases": "AMVUTTRA; ALN-TTRsc02"
+   },
+   {
+    "oligo_id": "COG-OLG132",
+    "name": "nedosiran",
+    "aliases": "RIVFLOZA; DCR-PHXC"
+   },
+   {
+    "oligo_id": "COG-OLG133",
+    "name": "plozasiran",
+    "aliases": "REDEMPLO; ARO-APOC3"
+   },
+   {
+    "oligo_id": "COG-OLG214",
+    "name": "avacincaptad pegol",
+    "aliases": "IZERVAY; avacincaptad pegol sodium; Zimura; UNII K86ENL12I5"
+   }
+  ]
+ }
+]

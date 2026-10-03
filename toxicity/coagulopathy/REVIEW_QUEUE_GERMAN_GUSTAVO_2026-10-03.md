@@ -325,6 +325,86 @@ his. Until it exists, gate 6 is **absent**, not failed-but-fixable.
 
 ---
 
+## Item 10 — Does "chemically unmodified" license `PO` at every position? (added by the chemistry recovery)
+
+**Lane:** human laboratory. **Decision owner:** German. **Rows affected:** 106, one construct
+(`COG-OLG183`, Pse08-29), the only position-resolved chemistry the 2026-10-03 recovery produced.
+
+The source (`COG-S074`, PMC10445101) states two things and never states a third:
+
+- **Sugar is stated.** *"All dimeric aptamers were readily prepared from the corresponding ssDNAs
+  using an annealing procedure"*, corroborated by the Figure 4A legend calling this construct's
+  G-quadruplex guanines **deoxy**guanines. `sugar_mod = DNA` rests on the document.
+- **Absence of modification is stated.** *"the M08s-1-based bivalent aptamers were chemically
+  unmodified"* (Discussion). The independent pass verified the naming bridge: the Results name
+  Pse08-29 as one of exactly those four aptamers, so the statement does cover this construct. It
+  also confirmed the document prints **no modification legend of any kind** — zero occurrences of
+  phosphorothioate, 2'-O-methyl, LNA, 5-methyl or phosphodiester in the whole article.
+- **The backbone linkage term is never printed.** Not once, anywhere.
+
+So `backbone_linkage_3p = PO` on 105 internal positions is a **curator expansion** of an
+affirmative absence-of-modification statement, not a transcription. Every row says so in its own
+`basis` string, and a validator check enforces that the declaration cannot be dropped.
+
+**Why this is yours and not mine.** It is defensible chemistry — unmodified DNA *is*
+phosphodiester — and it is still a step the document does not take in words. §A says no agent
+infers values. The two readings differ in what the dataset asserts about 105 positions:
+
+| reading | consequence |
+|---|---|
+| An affirmative "chemically unmodified" **is** a positional statement | 105 `PO` values stand; this is the only construct in the strict human-laboratory lane with position-resolved backbone |
+| Only a printed linkage term counts | those 105 become `NOT_REPORTED`; sugar (`DNA`) survives either way, being separately stated |
+
+Reversible in one query either way: `basis LIKE '%CURATOR EXPANSION%'`.
+
+**Precedent at stake.** The same question governs the rest of the lane. `COG-S057`
+(alicaforsen) says *"phosphorothioate oligonucleotide"* at whole-molecule level, and the
+recovery **refused** to expand that to per-position values — correctly, because a class
+descriptor does not say which linkages are PS. If you rule that "chemically unmodified" also
+cannot be expanded, the two cases become consistent by refusal. If you rule that it can, the
+distinction to write down is that a **universal negative** ("no modifications") is positional
+while a **class descriptor** ("a phosphorothioate oligonucleotide") is not.
+
+---
+
+## Item 11 — Eleven compounds' sequences cite a document this repository does not hold
+
+**Lane:** human laboratory. **Decision owner:** German for the disposition; **Oscar** for the
+acquisition. **Rows affected:** 11 of the 38 compounds in the strict human-laboratory lane.
+
+All eleven `COG-S074` compounds record `sequence_locus = "Supplementary Table S1 'Summary of
+oligonucleotide sequence in this study', supplementary file ..."`. That supplementary file **is
+not in this repository**, and the held article cannot stand in for it:
+
+- 125,483 bytes, and **zero** runs of 12 or more consecutive A/C/G/T characters — it prints no
+  nucleotide sequence at all.
+- **Zero** occurrences of the string `Table S1`.
+- The `sugar_modifications` basis for all eleven quotes that absent table's column header
+  (*"ssDNA Sequence (5' to 3')"*), so the chemistry basis is unverifiable from held sources too.
+
+**§K gate 1** (traceable source and exact location) and **gate 2** (sequence verified at that
+location) therefore fail for eleven rows **already in the dataset**. This was not caught earlier
+because `verify_against_sources.py` checks numeric values and quotes; it never checked that a
+*sequence* resolves at its cited locus. That gap is now closed by
+`sequence_locus_held`, a gap-register class, and three validator checks.
+
+Recorded, flagged, and **not** silently repaired. The disposition is yours:
+
+| option | consequence |
+|---|---|
+| **(a) Keep, flagged** (current state) | 11 sequences remain, each carrying `sequence_locus_held = FALSE` and a gap-register row. Honest, and openness-compliant, but eleven published sequences rest on a document no reader can check |
+| **(b) Acquire the supplementary file** | Closes it properly. `mmc1.pdf` / `mmc2.pdf` for PMC10445101. This is the acquisition request to Oscar |
+| **(c) Withdraw the sequences** | Gate-clean and costly: it removes eleven of the lane's sequences, and Phase 2 requires sequences for all oligos tested |
+
+**My recommendation is (b), then (a) until it lands** — the sequences are almost certainly
+correct, and the defect is in what we can *prove*, which is exactly what a flag is for.
+
+One correctable case went the other way and has been fixed: `COG-OLG030` (HD22) cited `COG-S010`,
+which prints no sequence either — but `COG-S008` **does** print the 29-mer in Introduction body
+text, identical to `sequence_base`. Locus repointed to the source where it verifies.
+
+---
+
 ## Summary: who is blocking what
 
 | Item | Decides | Also needs | Blocks |
@@ -338,12 +418,14 @@ his. Until it exists, gate 6 is **absent**, not failed-but-fixable.
 | 7 — 19 composites | German | crosswalk | single-endpoint analysis |
 | 8 — 23 single-record trials | German | — | external quotation of 46 |
 | 9 — gate 6 state vocabulary | German | Gustavo | gate 6 compliance, and any mechanism feature |
+| 10 — "chemically unmodified" → `PO`? | German | — | 105 backbone values, and the precedent for the lane |
+| 11 — 11 sequences cite an unheld document | German + **Oscar** (acquisition) | — | §K gates 1 and 2 on rows already shipped |
 
-**Reproduce any figure here with:** `scripts/validate_dataset.py` (104 checks),
+**Reproduce any figure here with:** `scripts/validate_dataset.py` (118 checks),
 `scripts/audit_scientific_rules.py` (§C/§G field coverage),
 `scripts/build_controls_inventory.py`, `scripts/build_characterization_gap_register.py`,
 `scripts/audit_attribution.py`. All run from `scripts/make_release.py`.
 
 ---
 
-JOINT REVIEW QUEUE — ITEM 1 BLOCKS THE SCORECARD · NOTHING BELOW HAS BEEN ACTED ON
+JOINT REVIEW QUEUE — 11 ITEMS · ITEM 1 BLOCKS THE SCORECARD · NO ITEM HERE HAS BEEN ACTED ON

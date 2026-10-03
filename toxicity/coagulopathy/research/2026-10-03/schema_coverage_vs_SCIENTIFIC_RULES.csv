@@ -2,9 +2,9 @@ german_field,group,status,our_column,table,populated,note
 sequence_5to3,identity,present_renamed,sequence_5to3_asprinted,oligos,121 of 218,"also sequence_base with chemistry stripped, and length_nt_from_sequence computed from it"
 strand_role,identity,absent,-,oligos,-,"NOT MODELLED. modality distinguishes single_stranded_ASO / double_stranded_siRNA / aptamer, but a duplex is held as ONE row with one sequence field: the antisense and sense strands cannot be addressed separately and the complement is unrepresentable, not NOT_REPORTED"
 duplex_partner_id,identity,absent,-,oligos,-,NOT MODELLED. follows from strand_role: there is no second strand row to point at
-backbone_by_linkage,identity,present_renamed,backbone_linkage_3p,modifications,919 of 1039,"per position, linkage 3' of each residue; molecule-level backbone_chemistry is the secondary derived flag, which is the ordering §C requires"
-sugar_mod_by_position,identity,present_renamed,sugar_mod,modifications,1038 of 1039,per position
-base_mod_by_position,identity,partial,is_5_methyl_C,modifications,1039 of 1039,"only 5-methyl-C is captured, as a boolean. Any other base modification has nowhere to go"
+backbone_by_linkage,identity,present_renamed,backbone_linkage_3p,modifications,1024 of 1145,"per position, linkage 3' of each residue; molecule-level backbone_chemistry is the secondary derived flag, which is the ordering §C requires"
+sugar_mod_by_position,identity,present_renamed,sugar_mod,modifications,1144 of 1145,per position
+base_mod_by_position,identity,partial,is_5_methyl_C,modifications,1145 of 1145,"only 5-methyl-C is captured, as a boolean. Any other base modification has nowhere to go"
 terminal_modifications,identity,present_renamed,terminal_modification,oligos,1 of 218,held at oligo level because a terminal residue has no position in a 5'->3' base string
 gap_length_nt,identity,partial,gapmer_design,oligos,65 of 218,free text such as '5-10-5' rather than an integer gap length; machine-readable gap length absent
 purity_pct,characterization,present,purity_pct,oligos,2 of 218,"plus purity_batches holding every value against its lot, and purity_pct_basis separating tested_batch from drug_substance_specification"

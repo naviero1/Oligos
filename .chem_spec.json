@@ -1,0 +1,142 @@
+[
+ {
+  "source_id": "COG-S074",
+  "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/PMC10445101.xml",
+  "citation": "Nagano M, Kubota K, Sakata A, Nakamura R, Yoshitomi T, Wakui K, Yoshimoto K. A neutralizable dimeric anti-thrombin aptamer with potent anticoagulant activity in",
+  "compounds": [
+   {
+    "oligo_id": "COG-OLG183",
+    "name": "Pse08-29",
+    "aliases": "M08s-ds17-TBA29; AT/GC-17bp; pse08-29",
+    "sequence_as_printed": "GTCACTAGAGGTCAGATGATGGGGATGGGGGGTTGGAGGAATGGATGACCTCTAGTGACTGATTTACGAGTCCGTGGTAGGGCAGGTTGGGGTGACTCGTAAATCA",
+    "sequence_locus": "Supplementary Table S1 'Summary of oligonucleotide sequence in this study', supplementary file mmc1.pdf page 14 (also mm",
+    "oligo_class": "aptamer"
+   },
+   {
+    "oligo_id": "COG-OLG194",
+    "name": "Pse08-29 0 bp",
+    "aliases": "duplex-linker optimisation variant of the M08s-1 / TBA29 pseudo-circular heterod",
+    "sequence_as_printed": "AGGTCAGATGATGGGGATGGGGGGTTGGAGGAATGGATGACCTAGTCCGTGGTAGGGCAGGTTGGGGTGACT",
+    "sequence_locus": "Supplementary Table S1 'Summary of oligonucleotide sequence in this study', supplementary file mmc1.pdf page 14 (also mm",
+    "oligo_class": "aptamer"
+   },
+   {
+    "oligo_id": "COG-OLG195",
+    "name": "TA-5 bp",
+    "aliases": "duplex-linker optimisation variant of the M08s-1 / TBA29 pseudo-circular heterod",
+    "sequence_as_printed": "TAAGGTCAGATGATGGGGATGGGGGGTTGGAGGAATGGATGACCTTATATAGTCCGTGGTAGGGCAGGTTGGGGTGACTATA",
+    "sequence_locus": "Supplementary Table S1 'Summary of oligonucleotide sequence in this study', supplementary file mmc1.pdf page 14 (also mm",
+    "oligo_class": "aptamer"
+   },
+   {
+    "oligo_id": "COG-OLG196",
+    "name": "TA-9bp",
+    "aliases": "duplex-linker optimisation variant of the M08s-1 / TBA29 pseudo-circular heterod",
+    "sequence_as_printed": "TATAAGGTCAGATGATGGGGATGGGGGGTTGGAGGAATGGATGACCTTATATATATAGTCCGTGGTAGGGCAGGTTGGGGTGACTATATA",
+    "sequence_locus": "Supplementary Table S1 'Summary of oligonucleotide sequence in this study', supplementary file mmc1.pdf page 14 (also mm",
+    "oligo_class": "aptamer"
+   },
+   {
+    "oligo_id": "COG-OLG197",
+    "name": "TA-13bp",
+    "aliases": "duplex-linker optimisation variant of the M08s-1 / TBA29 pseudo-circular heterod",
+    "sequence_as_printed": "TATATAAGGTCAGATGATGGGGATGGGGGGTTGGAGGAATGGATGACCTTATATATATATATAGTCCGTGGTAGGGCAGGTTGGGGTGACTATATATA",
+    "sequence_locus": "Supplementary Table S1 'Summary of oligonucleotide sequence in this study', supplementary file mmc1.pdf page 14 (also mm",
+    "oligo_class": "aptamer"
+   },
+   {
+    "oligo_id": "COG-OLG198",
+    "name": "TA-17bp",
+    "aliases": "duplex-linker optimisation variant of the M08s-1 / TBA29 pseudo-circular heterod",
+    "sequence_as_printed": "TATATATAAGGTCAGATGATGGGGATGGGGGGTTGGAGGAATGGATGACCTTATATATATATATATATAGTCCGTGGTAGGGCAGGTTGGGGTGACTATATATATA",
+    "sequence_locus": "Supplementary Table S1 'Summary of oligonucleotide sequence in this study', supplementary file mmc1.pdf page 14 (also mm",
+    "oligo_class": "aptamer"
+   },
+   {
+    "oligo_id": "COG-OLG199",
+    "name": "TA-21bp",
+    "aliases": "duplex-linker optimisation variant of the M08s-1 / TBA29 pseudo-circular heterod",
+    "sequence_as_printed": "TATATATATAAGGTCAGATGATGGGGATGGGGGGTTGGAGGAATGGATGACCTTATATATATATATATATATATAGTCCGTGGTAGGGCAGGTTGGGGTGACTATATATATATA",
+    "sequence_locus": "Supplementary Table S1 'Summary of oligonucleotide sequence in this study', supplementary file mmc1.pdf page 14 (also mm",
+    "oligo_class": "aptamer"
+   },
+   {
+    "oligo_id": "COG-OLG200",
+    "name": "AT/GC-5bp",
+    "aliases": "duplex-linker optimisation variant of the M08s-1 / TBA29 pseudo-circular heterod",
+    "sequence_as_printed": "AAAGGTCAGATGATGGGGATGGGGGGTTGGAGGAATGGATGACCTTTACGAGTCCGTGGTAGGGCAGGTTGGGGTGACTCGT",
+    "sequence_locus": "Supplementary Table S1 'Summary of oligonucleotide sequence in this study', supplementary file mmc1.pdf page 14 (also mm",
+    "oligo_class": "aptamer"
+   },
+   {
+    "oligo_id": "COG-OLG201",
+    "name": "AT/GC-9bp",
+    "aliases": "duplex-linker optimisation variant of the M08s-1 / TBA29 pseudo-circular heterod",
+    "sequence_as_printed": "ATCAAGGTCAGATGATGGGGATGGGGGGTTGGAGGAATGGATGACCTTGATTTACGAGTCCGTGGTAGGGCAGGTTGGGGTGACTCGTAA",
+    "sequence_locus": "Supplementary Table S1 'Summary of oligonucleotide sequence in this study', supplementary file mmc1.pdf page 14 (also mm",
+    "oligo_class": "aptamer"
+   },
+   {
+    "oligo_id": "COG-OLG202",
+    "name": "AT/GC-13 bp",
+    "aliases": "duplex-linker optimisation variant of the M08s-1 / TBA29 pseudo-circular heterod",
+    "sequence_as_printed": "CAGTCAAGGTCAGATGATGGGGATGGGGGGTTGGAGGAATGGATGACCTTGACTGATTTACGAGTCCGTGGTAGGGCAGGTTGGGGTGACTCGTAAAT",
+    "sequence_locus": "Supplementary Table S1 'Summary of oligonucleotide sequence in this study', supplementary file mmc1.pdf page 14 (also mm",
+    "oligo_class": "aptamer"
+   },
+   {
+    "oligo_id": "COG-OLG203",
+    "name": "AT/GC-21bp",
+    "aliases": "duplex-linker optimisation variant of the M08s-1 / TBA29 pseudo-circular heterod",
+    "sequence_as_printed": "CACTAGACTGAGGTCAGATGATGGGGATGGGGGGTTGGAGGAATGGATGACCTCAGTCTAGTGACTGATTTACGAGTCCGTGGTAGGGCAGGTTGGGGTGACTCGTAAATCAGT",
+    "sequence_locus": "Supplementary Table S1 'Summary of oligonucleotide sequence in this study', supplementary file mmc1.pdf page 14 (also mm",
+    "oligo_class": "aptamer"
+   }
+  ]
+ },
+ {
+  "source_id": "COG-S010",
+  "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/PMC11087511.xml",
+  "citation": "Yu H, et al. Aptameric hirudins as selective and reversible EXosite-ACTive site (EXACT) inhibitors. Nat Commun. 2024;15:3977.",
+  "compounds": [
+   {
+    "oligo_id": "COG-OLG030",
+    "name": "HD22",
+    "aliases": "29-mer thrombin exosite II (ABE2) DNA aptamer",
+    "sequence_as_printed": "AGTCCGTGGTAGGGCAGGTTGGGGTGACT",
+    "sequence_locus": "Fig. 2j is captioned 'Sequence of HD22-7A-DAB and different antidotes' but is a figure image; Supplementary Table 1 hold",
+    "oligo_class": "aptamer"
+   }
+  ]
+ },
+ {
+  "source_id": "COG-S008",
+  "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/PMC10526462.xml",
+  "citation": "Ali AS et al. New High-Affinity Thrombin Aptamers for Advancing Coagulation Therapy. Cells. 2023;12(18):2230.",
+  "compounds": [
+   {
+    "oligo_id": "COG-OLG030",
+    "name": "HD22",
+    "aliases": "29-mer thrombin exosite II (ABE2) DNA aptamer",
+    "sequence_as_printed": "AGTCCGTGGTAGGGCAGGTTGGGGTGACT",
+    "sequence_locus": "Fig. 2j is captioned 'Sequence of HD22-7A-DAB and different antidotes' but is a figure image; Supplementary Table 1 hold",
+    "oligo_class": "aptamer"
+   }
+  ]
+ },
+ {
+  "source_id": "COG-S057",
+  "path": "/home/user/oligos/toxicity/coagulopathy/sources/documents/pubmed_9716589.txt",
+  "citation": "Sheehan JP, Lan HC. Phosphorothioate oligonucleotides inhibit the intrinsic tenase complex. Blood. 1998 Sep 1;92(5):1617-25.",
+  "compounds": [
+   {
+    "oligo_id": "COG-OLG134",
+    "name": "ISIS 2302",
+    "aliases": "alicaforsen",
+    "sequence_as_printed": "NOT_REPORTED",
+    "sequence_locus": "NOT_REPORTED",
+    "oligo_class": "other"
+   }
+  ]
+ }
+]

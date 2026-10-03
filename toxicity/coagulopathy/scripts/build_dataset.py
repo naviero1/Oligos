@@ -665,6 +665,99 @@ def apply_held_document_recovery(oligos, log):
     return oligos
 
 
+# ---------------------------------------------------------------------------------------
+# Bounded human-laboratory chemistry recovery, 2026-10-03.
+#
+# Beebop reversed an earlier Crank instruction: the 325 unresolved row-to-trial links wait,
+# and the strict human-laboratory lane -- 34 compounds with zero position-resolved chemistry --
+# is worked first, through the five staged and held sources, for constructs already represented.
+#
+# What came back is small and that is the honest result. Position-resolved chemistry exists in
+# exactly ONE of those sources, for ONE construct. The other three print no position-keyed
+# legend, and the extraction emitted zero position rows for them rather than expanding a
+# whole-molecule descriptor ("phosphorothioate oligonucleotide", "DNA aptamer") into per-position
+# values -- which would be the inference §A forbids and which Beebop's instruction named.
+#
+# This function also carries a defect in data already shipped. The 11 compounds from COG-S074
+# cite their sequences to a Supplementary Table S1 that is NOT in this repository, and the held
+# article prints no nucleotide sequence at all. Their sequences and their sugar_modifications
+# basis are therefore unverifiable from a held source: §K gate 1 and gate 2 fail for rows that
+# are already in the dataset. That is recorded, not quietly repaired.
+def apply_chemistry_recovery(oligos, mods, log):
+    for o in oligos:
+        o.setdefault("oligo_supplier", NR)
+        o.setdefault("oligo_lot_number", NR)
+        o.setdefault("sequence_locus_held", NR)
+    path = os.path.join(ROOT, "sources", "chemistry_recovery.json")
+    if not os.path.exists(path):
+        return oligos, mods
+    blob = json.load(open(path, encoding="utf-8"))
+    rnd = blob.get("recovery_round", "unnamed_round")
+    by_id = {o["oligo_id"]: o for o in oligos}
+
+    # Position rows. Appended only where the oligo exists, the position is inside the recorded
+    # sequence, and the nucleobase agrees with it -- a recovery may not silently restate a base.
+    have = {(m["oligo_id"], str(m["position"])) for m in mods}
+    for r in blob.get("position_rows", []):
+        o = by_id.get(r.get("oligo_id"))
+        if o is None:
+            log["CR_position_no_oligo"] += 1
+            continue
+        pos, base = str(r.get("position")), str(r.get("nucleobase", ""))
+        seq = o.get("sequence_base", "")   # nucleotides alone; as-printed carries prefixes/case legends
+        if (o["oligo_id"], pos) in have:
+            log["CR_position_already_present"] += 1
+            continue
+        if not (pos.isdigit() and 1 <= int(pos) <= len(seq)
+                and seq[int(pos) - 1].upper() == base.upper()):
+            log["CR_position_base_disagrees"] += 1
+            continue
+        mods.append({"oligo_id": o["oligo_id"], "position": pos, "nucleobase": base,
+                     "sugar_mod": r.get("sugar_mod", NR),
+                     "backbone_linkage_3p": r.get("backbone_linkage_3p", NR),
+                     "is_5_methyl_C": str(r.get("is_5_methyl_C", "FALSE")).upper(),
+                     "basis": re.sub(r"\s+", " ", str(r.get("basis", NR))).strip()})
+        log["CR_position_row"] += 1
+
+    # Supplier and grade. A supplier is not a lot: every record here states a vendor and none
+    # states a lot, batch or catalogue number, so oligo_lot_number stays NOT_REPORTED throughout.
+    for r in blob.get("supplier_facts", []):
+        o = by_id.get(r.get("oligo_id"))
+        if o is None:
+            continue
+        o["oligo_supplier"] = str(r.get("supplier_and_grade", NR))[:300]
+        o["oligo_lot_number"] = str(r.get("lot_number", NR))
+        frag = "supplier: " + str(r.get("supplier_and_grade", ""))[:200]
+        blobm = o.get("characterisation_methods", NR)
+        if frag not in str(blobm):
+            o["characterisation_methods"] = frag if blobm in ("", NR, NA) else f"{blobm}; {frag}"
+        rounds = {x for x in str(o.get("characterisation_recovery_round", NA)).split("; ")
+                  if x not in ("", NA)}
+        rounds.add(rnd)
+        o["characterisation_recovery_round"] = "; ".join(sorted(rounds))
+        log["CR_supplier"] += 1
+
+    # Sequence provenance. The flag is the disclosure; the repoint is the one case where a held
+    # source does print the sequence and the dataset was pointing at the source that does not.
+    for g in blob.get("integrity_gaps", []):
+        o = by_id.get(g.get("oligo_id"))
+        if o is None:
+            continue
+        if g.get("gap_class") == "sequence_locus_not_held":
+            o["sequence_locus_held"] = "FALSE"
+            log["CR_locus_not_held"] += 1
+        elif g.get("gap_class") == "sequence_locus_correctable":
+            o["sequence_locus"] = ("Introduction body text, printed as "
+                "5'-AGTCCGTGGTAGGGCAGGTTGGGGTGACT-3' [repointed 2026-10-03 from COG-S010, which "
+                "prints no sequence, to COG-S008, which does]")
+            o["sequence_locus_held"] = "TRUE"
+            log["CR_locus_repointed"] += 1
+    for o in oligos:
+        if o["sequence_locus_held"] == NR:
+            o["sequence_locus_held"] = "NOT_ASSESSED"
+    return oligos, mods
+
+
 def apply_control_class(rows, log):
     for r in rows:
         blob = f"{r.get('control_description','')} {r.get('co_administered_agent','')}"
@@ -1181,6 +1274,7 @@ def main():
 
     oligos = apply_characterisation(oligos, _log)
     oligos = apply_held_document_recovery(oligos, _log)
+    oligos, mods = apply_chemistry_recovery(oligos, mods, _log)
     sources, measurements, oligos = apply_quote_rights(sources, measurements, oligos, _log)
 
     def write(name, rows):

@@ -20,14 +20,14 @@ here — see [`METHODOLOGY.md`](METHODOLOGY.md) and [`schema.md`](schema.md).
 <!--BEGIN:SUMMARY_TABLE-->
 | | Value | Source of the figure |
 |---|---|---|
-| Unique oligonucleotides | 218 | `data/oligos.csv` (218 x 72) |
+| Unique oligonucleotides | 218 | `data/oligos.csv` (218 x 75) |
 | Measurement rows | 2,685 | `data/measurements.csv` (2685 x 58) |
-| Per-position modification records | 1,039 over 52 oligonucleotides | `data/modifications.csv` |
+| Per-position modification records | 1,145 over 53 oligonucleotides | `data/modifications.csv` |
 | Source documents | 100, all with the cited document committed | `data/sources.csv`, `sources/documents/` |
 | Sequences published | 104 of 218 | `sequence_base` not `NOT_REPORTED`/`NOT_APPLICABLE` |
 | Verified human interventional trials | 46 (21 registry-identified) | `data/studies.csv`, `headline_trial` |
 | Graded rows | 918 (0/1/2/3 = 506/315/69/28) | `coag_tox_grade`; 1,767 ungraded, each with a stated reason |
-| Structural QC | 112 / 112 pass | `scripts/validate_dataset.py`, exits non-zero on failure |
+| Structural QC | 118 / 118 pass | `scripts/validate_dataset.py`, exits non-zero on failure |
 | Numeric values found in their cited source | 2019 / 2019 | `scripts/verify_against_sources.py` |
 <!--END:SUMMARY_TABLE-->
 

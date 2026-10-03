@@ -376,6 +376,61 @@ if os.path.exists(_gp):
     bad = [r["oligo_id"] for r in G if r["oligo_id"] not in {o["oligo_id"] for o in O}]
     check("the gap register names no compound outside the roster", not bad, f"{len(bad)}: {bad[:5]}")
 
+# ---- chemistry recovery, 2026-10-03 -------------------------------------------------
+# A recovered sequence whose cited location is not held is more dangerous than a missing one,
+# because the row looks complete. These checks exist so that condition cannot be present in the
+# dataset without being declared in the gap register, and so that a position row can never
+# restate a nucleobase the recorded sequence does not carry.
+if O and M:
+    _locus_gaps = {r["oligo_id"] for r in G if r["missing_field"] == "sequence_locus_not_held"}
+
+    bad = [o["oligo_id"] for o in O
+           if str(o.get("sequence_locus_held", "")) == "FALSE" and o["oligo_id"] not in _locus_gaps]
+    check("every unverifiable sequence locus is declared in the gap register", not bad,
+          f"{len(bad)}: {bad[:5]}")
+
+    bad = [o for o in _locus_gaps
+           if str({x["oligo_id"]: x for x in O}.get(o, {}).get("sequence_locus_held", "")) != "FALSE"]
+    check("the gap register and the locus flag agree", not bad, f"{len(bad)}: {bad[:5]}")
+
+    bad = [str(o.get("sequence_locus_held")) for o in O
+           if str(o.get("sequence_locus_held")) not in ("TRUE", "FALSE", "NOT_ASSESSED")]
+    check("vocabulary: oligos.sequence_locus_held", not bad, f"unexpected {sorted(set(bad))[:4]}")
+
+    # A vendor is not a batch. Every supplier statement recovered on 2026-10-03 names a company
+    # and no lot number, and the dataset must not acquire one by drift.
+    bad = [o["oligo_id"] for o in O if str(o.get("oligo_supplier", NR)) not in (NR, NA, "")
+           and str(o.get("oligo_lot_number", NR)) not in (NR, NA)]
+    check("a named supplier never implies a lot number", not bad, f"{len(bad)}: {bad[:5]}")
+
+    # The integrity check on the recovery itself: a position row's nucleobase must be the base the
+    # recorded sequence carries at that position.
+    # Index against sequence_base, not sequence_5to3_asprinted, and compare case-blind. The
+    # as-printed column is the source's own rendering: it carries conjugate prefixes ("40 kDa
+    # mPEG-GUGGAcuAuAcc...") and in several sources the LETTER CASE is the modification legend
+    # ("uppercase-2' F, lowercase-2'O Methyl"). Indexing position 1 into it lands on the "4" of
+    # the PEG mass, and a case-sensitive compare would read a chemistry annotation as a different
+    # base. sequence_base is the nucleotides alone, which is what a position refers to.
+    _seq = {o["oligo_id"]: str(o.get("sequence_base", "")) for o in O}
+    bad = []
+    for m in M:
+        q = _seq.get(m["oligo_id"], "")
+        pos = str(m.get("position", ""))
+        if q in (NR, NA, "") or not pos.isdigit() or not (1 <= int(pos) <= len(q)):
+            continue
+        if q[int(pos) - 1].upper() != str(m.get("nucleobase", "")).upper():
+            bad.append(f'{m["oligo_id"]}@{pos}')
+    check("every position row's nucleobase matches the recorded sequence", not bad,
+          f"{len(bad)}: {bad[:5]}")
+
+    # A whole-molecule descriptor expanded to positions must say so in the row, so the expansion
+    # is reversible by query if German rules it out.
+    bad = [f'{m["oligo_id"]}@{m["position"]}' for m in M
+           if "expanded from an affirmative construct-level statement" in str(m.get("basis", ""))
+           and "CURATOR EXPANSION" not in str(m.get("basis", ""))]
+    check("an expanded construct-level chemistry declares the expansion", not bad,
+          f"{len(bad)}: {bad[:5]}")
+
 # ---- quote rights (Crank 2026-10-03) -----------------------------------------------
 # "Drop or hash the verbatim_quote column ... publisher prose inside a file meant to ship
 # openly." Hashed rather than dropped, so the row stays checkable by anyone holding the

@@ -67,6 +67,7 @@ def main():
         swept = {r.get("oligo_id") for r in json.load(open(cp, encoding="utf-8"))["records"]}
 
     rows = []
+    by_oid = {o["oligo_id"]: o for o in O}
     for o in O:
         oid = o["oligo_id"]
         lane = ("human_participant" if oid in part else
@@ -135,6 +136,44 @@ def main():
                 "max_phase": o.get("max_phase", NR),
                 "n_measurements": o.get("n_measurements", "0"),
             })
+
+
+    # ---- a gap class that is not an absence ------------------------------------------
+    # Everything above records a field with no value. This records the opposite and worse case:
+    # a field that HAS a value whose cited location is not held, so the value looks complete and
+    # cannot be checked. The 2026-10-03 chemistry recovery found 11 compounds citing sequences to
+    # a Supplementary Table S1 that is not in this repository, in an article that prints no
+    # nucleotide sequence at all. §K gate 1 wants a traceable source and exact location and gate 2
+    # wants the sequence verified there; neither is satisfiable for those rows today.
+    import json as _json
+    crp = os.path.join(ROOT, "sources", "chemistry_recovery.json")
+    n_locus = 0
+    if os.path.exists(crp):
+        blob = _json.load(open(crp, encoding="utf-8"))
+        for g in blob.get("integrity_gaps", []):
+            if g.get("gap_class") != "sequence_locus_not_held":
+                continue
+            o = by_oid.get(g["oligo_id"])
+            if not o:
+                continue
+            seq = o.get("sequence_5to3_asprinted", NR)
+            rows.append({
+                "oligo_id": g["oligo_id"],
+                "oligo_name": o["oligo_name"],
+                "evidence_lane": "human_laboratory",
+                "missing_field": "sequence_locus_not_held",
+                "what_is_missing": ("the cited location itself, not the value: the sequence is recorded "
+                                    "but the document it is cited to is not in this repository"),
+                "why_it_is_missing": g["finding"],
+                "what_was_attempted": ("2026-10-03 bounded chemistry recovery through the five staged and "
+                                       "held sources; the held article was searched for the cited table and "
+                                       "for any printed sequence, and contains neither"),
+                "what_would_close_it": g["remedy"],
+                "field_value_in_dataset": (f"{len(seq)} nt recorded" if seq not in (NR, NA, "") else NR),
+                "max_phase": o.get("max_phase", NR),
+                "n_measurements": o.get("n_measurements", "0"),
+            })
+            n_locus += 1
 
     out = os.path.join(DATA, "characterization_gap_register.csv")
     with open(out, "w", newline="", encoding="utf-8") as fh:
