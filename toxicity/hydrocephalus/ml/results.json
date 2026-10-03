@@ -4,7 +4,9 @@
  "n_compounds": 41,
  "n_participants": 29728,
  "n_armsA": 9,
- "n_armsB": 84,
+ "n_armsB_all_axes": 84,
+ "n_armsB": 18,
+ "outcome_definition": "tier-B (CSF-dynamics) event in an arm, EXCLUDING delivery_procedure_complication. Set as the default outcome by Oscar on 2026-10-03; German retains scientific adjudication.",
  "route": [
   {
    "label": "CNS-delivered (intrathecal / ICV)",
@@ -212,63 +214,6 @@
    "features": [
     "delivery_route"
    ],
-   "auc": 0.889,
-   "n_scored": 519
-  },
-  {
-   "name": "route + indication",
-   "features": [
-    "delivery_route",
-    "indication"
-   ],
-   "auc": 0.91,
-   "n_scored": 519
-  },
-  {
-   "name": "route + indication + chemistry",
-   "features": [
-    "delivery_route",
-    "indication",
-    "oligo_class",
-    "backbone_chemistry"
-   ],
-   "auc": 0.893,
-   "n_scored": 519
-  },
-  {
-   "name": "LEAKAGE PROBE: trial identity only",
-   "features": [
-    "nct_id"
-   ],
-   "auc": 0.724,
-   "n_scored": 519,
-   "diagnostic": {
-    "folds": 41,
-    "constant_folds": 19,
-    "degenerate": false
-   }
-  },
-  {
-   "name": "LEAKAGE PROBE: compound identity only",
-   "features": [
-    "oligo_name"
-   ],
-   "auc": 0.098,
-   "n_scored": 519,
-   "diagnostic": {
-    "folds": 41,
-    "constant_folds": 41,
-    "degenerate": true
-   }
-  }
- ],
- "n_armsB_nonprocedure": 18,
- "models_nonprocedure": [
-  {
-   "name": "route only",
-   "features": [
-    "delivery_route"
-   ],
    "auc": 0.65,
    "n_scored": 519
   },
@@ -291,10 +236,67 @@
    ],
    "auc": 0.517,
    "n_scored": 519
+  },
+  {
+   "name": "LEAKAGE PROBE: trial identity only",
+   "features": [
+    "nct_id"
+   ],
+   "auc": 0.331,
+   "n_scored": 519,
+   "diagnostic": {
+    "folds": 41,
+    "constant_folds": 19,
+    "degenerate": false
+   }
+  },
+  {
+   "name": "LEAKAGE PROBE: compound identity only",
+   "features": [
+    "oligo_name"
+   ],
+   "auc": 0.114,
+   "n_scored": 519,
+   "diagnostic": {
+    "folds": 41,
+    "constant_folds": 41,
+    "degenerate": true
+   }
+  }
+ ],
+ "n_armsB_nonprocedure": 18,
+ "models_all_axes": [
+  {
+   "name": "route only",
+   "features": [
+    "delivery_route"
+   ],
+   "auc": 0.889,
+   "n_scored": 519
+  },
+  {
+   "name": "route + indication",
+   "features": [
+    "delivery_route",
+    "indication"
+   ],
+   "auc": 0.91,
+   "n_scored": 519
+  },
+  {
+   "name": "route + indication + chemistry",
+   "features": [
+    "delivery_route",
+    "indication",
+    "oligo_class",
+    "backbone_chemistry"
+   ],
+   "auc": 0.893,
+   "n_scored": 519
   }
  ],
  "best_model_auc_ci": [
-  0.835,
-  0.947
+  0.301,
+  0.778
  ]
 }

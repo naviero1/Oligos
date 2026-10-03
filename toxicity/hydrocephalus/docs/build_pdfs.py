@@ -360,26 +360,40 @@ def main():
         BODY),
           fig("model_auc.png", 6.0), Spacer(1, 4),
           Paragraph(
-        f"On the tier-B (CSF-dynamics) outcome, which occurs in {ml['n_armsB']} arms and "
-        "is the mechanistic precursor the index case documents, route and indication give "
-        f"a leave-one-compound-out AUC of "
+        f"The modelled outcome is a tier-B (CSF-dynamics) event <b>excluding delivery "
+        f"procedure complications</b>, which occurs in {ml['n_armsB']} arms. That "
+        f"exclusion matters more than any model here: under the previous definition the "
+        f"outcome occurred in {ml['n_armsB_all_axes']} arms, but "
+        f"{ml['n_armsB_all_axes'] - ml['n_armsB']} of those carried a lumbar-puncture "
+        "complication as their only positive axis, so the model was largely predicting "
+        "whether an arm had been punctured, from a route feature. Route and indication "
+        f"now give a leave-one-compound-out AUC of "
         f"{[m for m in ml['models'] if m['name']=='route + indication'][0]['auc']} "
         f"(bootstrap 95% CI {ml.get('best_model_auc_ci',['—','—'])[0]}–"
-        f"{ml.get('best_model_auc_ci',['—','—'])[1]}). Adding chemistry <i>degrades</i> "
-        "it, because chemistry is NOT_REPORTED for most compounds and contributes noise. "
-        "The tier-A outcome, with 9 affected arms, will not support a classifier and we "
-        "do not present one.", BODY),
+        f"{ml.get('best_model_auc_ci',['—','—'])[1]}), down from "
+        f"{[m for m in ml.get('models_all_axes',[]) if m['name']=='route + indication'][0]['auc'] if ml.get('models_all_axes') else '—'} "
+        "under the old definition.", BODY),
           Paragraph(
-        "<b>The leakage probes are the most useful result.</b> A model given only trial "
-        "identity reaches AUC "
-        f"{[m for m in ml['models'] if 'trial identity' in m['name']][0]['auc']}, so a "
-        "material share of any apparent performance is provenance, not biology. A model "
+        "<b>That interval contains 0.5, so we do not claim a predictive classifier.</b> "
+        "The honest position is that this dataset supports descriptive route and "
+        "population stratification, not prediction: the earlier, higher figure was "
+        "substantially a procedure effect that should never have been attributed to a "
+        "compound. The tier-A outcome, with 9 affected arms, will not support a "
+        "classifier either and we do not present one.", BODY),
+          Paragraph(
+        "<b>The leakage probes are reported as diagnostics, not as evidence.</b> A model "
         "given only compound identity scores "
-        f"{[m for m in ml['models'] if 'compound identity' in m['name']][0]['auc']} — "
-        "below chance, which is the correct behaviour under leave-one-compound-out and "
-        "confirms the validation is doing its job. We ran these because a review of our "
-        "sibling kidney dataset found study_type and source_id were strong shortcut "
-        "predictors of its label.", BODY),
+        f"{[m for m in ml['models'] if 'compound identity' in m['name']][0]['auc']}. An "
+        "earlier version of this document read that below-chance value as confirming the "
+        "validation was working. That reasoning was wrong. The probe is degenerate: the "
+        "held-out compound's own indicator never exists in training, so every prediction "
+        "in a fold is a constant (in all 41 folds), and the pooled score ranks fold "
+        "constants rather than cases against controls. Its no-information value is 0.5, "
+        "and the number carries no inference. The trial-identity probe, at AUC "
+        f"{[m for m in ml['models'] if 'trial identity' in m['name']][0]['auc']}, is less "
+        "degenerate but at this positive count is dominated by the same artefact. We ran "
+        "these because a review of our sibling kidney dataset found study_type and "
+        "source_id were strong shortcut predictors of its label.", BODY),
           Paragraph("What a user should build with it, and what they should not", H2)]
     f += bullets([
         "<b>Supported:</b> route- and population-stratified risk models; separating drug "

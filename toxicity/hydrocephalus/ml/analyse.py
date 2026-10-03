@@ -80,8 +80,8 @@ def write_report(R):
                 return m.get("diagnostic", {"folds": 0, "constant_folds": 0})
         return {"folds": 0, "constant_folds": 0}
 
-    def _np(name):
-        for m in R.get("models_nonprocedure", []):
+    def _all(name):
+        for m in R.get("models_all_axes", []):
             if m["name"] == name and m["auc"] is not None:
                 return "%.3f" % m["auc"]
         return "n/a"
@@ -124,7 +124,8 @@ of thing.
 | Compounds | {n_compounds} |
 | Participants at risk (arm-sum) | {n_participants:,} |
 | Arms with a tier-A (ventricular) event | **{n_armsA}** |
-| Arms with a tier-B (CSF-dynamics) event | {n_armsB} |
+| Arms with a tier-B event, procedure complications excluded (primary) | **{n_armsB}** |
+| Arms with any tier-B event, all axes (previous definition) | {n_armsB_all} |
 
 **{n_armsA} tier-A arms will not support a classifier**, and this report does not
 present one. What the data supports is route stratification, a modellable
@@ -159,10 +160,15 @@ this dataset, which is why both are in it.
 
 ## 3. Models, and what they actually learn
 
-Outcome: tier-B (CSF-dynamics) event in an arm \u2014 {n_armsB} of {n_arms:,} arms, the
-mechanistic precursor the index case documents. Validation is
-**leave-one-compound-out**: arms of one compound are correlated, so a random
-split leaks the compound across folds and inflates the score.
+Outcome: a tier-B (CSF-dynamics) event in an arm **excluding
+`delivery_procedure_complication`** \u2014 {n_armsB} of {n_arms:,} arms. A lumbar-puncture
+complication is a procedure outcome, not a compound toxicity, and the dataset's
+own documentation says that axis must be excluded from compound-toxicity
+analysis. Oscar set this as the default outcome on 2026-10-03; \u00a73b shows exactly
+what that decision changed. German retains scientific adjudication.
+
+Validation is **leave-one-compound-out**: arms of one compound are correlated, so
+a random split leaks the compound across folds and inflates the score.
 
 | Model | LOCO AUC |
 |---|---:|
@@ -172,7 +178,13 @@ split leaks the compound across folds and inflates the score.
 | *Leakage probe: trial identity only* | *{auc_trial}* |
 | *Leakage probe: compound identity only* | *{auc_cmpd}* |
 
-Bootstrap 95% CI for the best model: {ci_lo:.3f}\u2013{ci_hi:.3f}.
+Bootstrap 95% CI for the best model: **{ci_lo:.3f}\u2013{ci_hi:.3f}**.
+
+> **That interval contains 0.5, so the primary model is not distinguishable from
+> chance.** This is the direct consequence of excluding procedure complications:
+> the outcome drops to {n_armsB} positive arms, and at that count the data do not
+> support a predictive model. The release should be argued on the descriptive
+> route stratification in \u00a71\u2013\u00a72, not on a classifier.
 
 Three things worth reading off that table:
 
@@ -180,8 +192,12 @@ Three things worth reading off that table:
   compounds, so the feature contributes noise. This is a data-coverage result,
   not a biological one.
 - **Trial identity alone reaches {auc_trial}**, and unlike the compound probe it
-  is only partly degenerate (constant in {trial_const} of {trial_folds} folds), so
-  this one does carry signal. A material share of any apparent
+  is less degenerate (constant in {trial_const} of {trial_folds} folds) but is now
+  also below chance. At {n_armsB} positives spread over {trial_folds} compounds,
+  most folds contain no positive at all, so this probe is dominated by the same
+  pooled-constant artefact as the compound one and supports no inference either
+  way. Under the previous all-axes outcome it reached 0.724 and did carry signal;
+  that reading does not transfer. A material share of any apparent
   performance is provenance, not biology. We ran this because a review of our
   sibling kidney dataset found `study_type` and `source_id` were strong shortcut
   predictors of its label.
@@ -200,39 +216,47 @@ Three things worth reading off that table:
   {auc_cmpd} is an artefact of pooled scoring, not evidence of anything. It is
   retained only as a transparency diagnostic.
 
-## 3b. The headline number is mostly a procedure effect
+## 3b. What excluding procedure complications changed
 
-This is the most important correction in this report. The modelled outcome is any
-tier-B (CSF-dynamics) event in an arm. But {proc_only} of the {n_armsB} tier-B
-positive arms carry `delivery_procedure_complication` as their ONLY positive axis
-\u2014 a lumbar-puncture complication, not a compound toxicity. The dataset's own
-documentation says that axis must be excluded from compound-toxicity analysis.
+This is the most consequential decision in this report, so the discarded
+definition is kept rather than dropped.
 
-Re-running the identical leave-one-compound-out procedure against an outcome with
-that axis removed ({n_armsB_nonproc} positive arms):
+Under the previous definition \u2014 any tier-B event \u2014 the outcome occurred in
+{n_armsB_all} of {n_arms:,} arms. But **{proc_only} of those {n_armsB_all} carried
+`delivery_procedure_complication` as their ONLY positive axis**. The model was
+therefore substantially predicting *was this arm lumbar-punctured*, from a route
+feature \u2014 a tautology, since the route is how the procedure happens.
 
-| Model | tier-B (all axes) | tier-B excluding procedure complications |
+| Model | Primary: procedure complications EXCLUDED | Previous: all tier-B axes |
 |---|---:|---:|
-| Route only | {auc_route} | {auc_route_np} |
-| Route + indication | {auc_ri} | {auc_ri_np} |
-| Route + indication + chemistry | {auc_ric} | {auc_ric_np} |
+| Route only | **{auc_route}** | {auc_route_all} |
+| **Route + indication** | **{auc_ri}** | {auc_ri_all} |
+| Route + indication + chemistry | **{auc_ric}** | {auc_ric_all} |
+| Positive arms | **{n_armsB}** | {n_armsB_all} |
 
-The headline {auc_ri} falls to {auc_ri_np}, and the chemistry model falls below
-chance. So the model was substantially predicting *was this arm lumbar-punctured*
-from a route feature \u2014 a tautology, since the route is how the procedure happens.
-What survives is weak and rests on {n_armsB_nonproc} positive arms. No predictive
-claim in this release should be quoted without this table beside it.
+The headline falls from {auc_ri_all} to **{auc_ri}**. That is the honest number:
+the earlier figure was inflated by a procedure effect the dataset was never
+meant to attribute to a compound. What survives rests on **{n_armsB} positive
+arms**, which is thin, and no predictive claim in this release should be quoted
+without that denominator attached.
 
 ## 4. What this supports, and what it does not
 
-**Supported:** route- and population-stratified risk stratification; separating
-drug effect from procedure and disease effect; modelling ascertainment explicitly
-as a covariate; hypothesis generation for CSF-dynamics monitoring in intrathecal
-programmes.
+**Supported:** descriptive, route- and population-stratified risk *stratification*;
+separating drug effect from procedure and disease effect \u2014 which is exactly what
+the outcome change in \u00a73b does; modelling ascertainment explicitly as a covariate;
+hypothesis generation for CSF-dynamics monitoring in intrathecal programmes.
+
+**No longer claimed:** a predictive classifier. With procedure complications
+excluded the best model's bootstrap interval includes 0.5. The earlier 0.910 was
+largely a procedure effect, and reporting it as predictive performance would
+overstate what this dataset can do.
 
 **Not supported:** sequence-to-toxicity prediction across the roster
 ({n_seq} of {n_olg} compounds carry a sequence); within-compound dose\u2013response for
-tier A; {vitro_clause}; any causal claim about an individual compound, given \u00a72.
+tier A; {vitro_clause}; any causal claim about an individual compound, given \u00a72;
+and any predictive claim quoted without the {n_armsB}-positive-arm denominator
+and the \u00a73b comparison.
 
 ## Reproducing
 
@@ -264,10 +288,10 @@ python3 ml/analyse.py
         cmpd_folds=_diag("compound")["folds"],
         trial_const=_diag("trial")["constant_folds"],
         trial_folds=_diag("trial")["folds"],
-        proc_only=R["n_armsB"] - R["n_armsB_nonprocedure"],
-        n_armsB_nonproc=R["n_armsB_nonprocedure"],
-        auc_route_np=_np("route only"), auc_ri_np=_np("route + indication"),
-        auc_ric_np=_np("route + indication + chemistry"),
+        n_armsB_all=R["n_armsB_all_axes"],
+        proc_only=R["n_armsB_all_axes"] - R["n_armsB"],
+        auc_route_all=_all("route only"), auc_ri_all=_all("route + indication"),
+        auc_ric_all=_all("route + indication + chemistry"),
         ci_lo=R["best_model_auc_ci"][0], ci_hi=R["best_model_auc_ci"][1],
         n_seq=n_seq, n_olg=n_olg, vitro_clause=vitro_clause)
 
@@ -284,7 +308,20 @@ def main():
     R["n_compounds"] = int(df.oligo_name.nunique())
     R["n_participants"] = int(df.n_at_risk.sum())
     R["n_armsA"] = int(df.tierA_event.sum())
-    R["n_armsB"] = int(df.tierB_event.sum())
+    # OUTCOME DEFINITION, decided by Oscar on 2026-10-03 after this analysis
+    # showed 66 of the 84 tier-B positive arms carried
+    # delivery_procedure_complication as their ONLY positive axis. A lumbar-
+    # puncture complication is a procedure outcome, not a compound toxicity, and
+    # the dataset's own documentation says that axis must be excluded from
+    # compound-toxicity analysis. The PRIMARY outcome is therefore tier-B with
+    # that axis removed; the all-axes version is retained as a sensitivity
+    # analysis so the difference stays visible rather than being quietly dropped.
+    R["n_armsB_all_axes"] = int(df.tierB_event.sum())
+    R["n_armsB"] = int(df.tierB_event_nonprocedure.sum())
+    R["outcome_definition"] = (
+        "tier-B (CSF-dynamics) event in an arm, EXCLUDING "
+        "delivery_procedure_complication. Set as the default outcome by Oscar on "
+        "2026-10-03; German retains scientific adjudication.")
 
     # ---- 1. route stratification, arm level and participant level ----------
     def block(sub, label):
@@ -396,7 +433,7 @@ def main():
         return dict(folds=n_folds, constant_folds=const,
                     degenerate=(n_folds > 0 and const == n_folds))
 
-    yB = df.tierB_event
+    yB = df.tierB_event_nonprocedure      # primary; see outcome_definition
     models = {
         "route only": ["delivery_route"],
         "route + indication": ["delivery_route", "indication"],
@@ -420,14 +457,16 @@ def main():
     #      delivery_procedure_complication as their ONLY positive axis, so the
     #      headline model is largely predicting "was this arm lumbar-punctured"
     #      from its own route feature — tautology, not compound toxicity.
-    yBn = df.tierB_event_nonprocedure
-    R["n_armsB_nonprocedure"] = int(yBn.sum())
-    R["models_nonprocedure"] = []
+    # SENSITIVITY: the discarded definition, kept so the effect of the decision
+    # is auditable rather than asserted.
+    yBn = df.tierB_event
+    R["n_armsB_nonprocedure"] = R["n_armsB"]        # retained key, same meaning
+    R["models_all_axes"] = []
     for name, cols in models.items():
         if "LEAKAGE" in name:
             continue
         auc, n = loco(df, yBn, cols)
-        R["models_nonprocedure"].append(
+        R["models_all_axes"].append(
             dict(name=name, features=cols,
                  auc=None if auc is None else round(float(auc), 3), n_scored=n))
 
@@ -438,7 +477,7 @@ def main():
     for _ in range(300):
         idx = rng.choice(len(df), len(df), replace=True)
         sub = df.iloc[idx].reset_index(drop=True)
-        a, _n = loco(sub, sub.tierB_event, best)
+        a, _n = loco(sub, sub.tierB_event_nonprocedure, best)
         if a is not None:
             aucs.append(a)
     if aucs:
@@ -503,7 +542,8 @@ def main():
 
     print("arms %(n_arms)d | trials %(n_trials)d | compounds %(n_compounds)d | "
           "participants %(n_participants)d" % R)
-    print("tier-A arms %(n_armsA)d | tier-B arms %(n_armsB)d" % R)
+    print("tier-A arms %(n_armsA)d | tier-B arms (primary, procedure excluded) "
+          "%(n_armsB)d | tier-B all axes %(n_armsB_all_axes)d" % R)
     for b in R["route"]:
         print("  %-38s %d/%d = %.2f per 1,000 (%.2f-%.2f)"
               % (b["label"], b["participants_affected"], b["participants"],

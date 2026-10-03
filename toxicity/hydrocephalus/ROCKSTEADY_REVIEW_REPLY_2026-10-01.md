@@ -234,3 +234,47 @@ For **Oscar**: whether to import the ~207 nervous-system rows (crosses an endpoi
 boundary); whether to accept the CC BY 4.0 grant on the curation layer.
 
 **REVIEW COMPLETE — AWAITING OSCAR'S IMPLEMENTATION AUTHORIZATION**
+
+---
+
+## Addendum — 2026-10-03: the tier-B outcome decision is made
+
+Oscar decided that **procedure complications are excluded from the tier-B
+outcome by default**. German's scientific adjudication is still welcome, but the
+release now implements the exclusion rather than reporting it as a sensitivity
+analysis.
+
+What changed, and it is not a presentational change:
+
+| | Previous (all tier-B axes) | **Primary (procedure complications excluded)** |
+|---|---:|---:|
+| Positive arms | 84 of 519 | **18 of 519** |
+| Route only | 0.889 | **0.650** |
+| Route + indication | 0.910 | **0.606** |
+| Route + indication + chemistry | 0.893 | **0.517** |
+| Bootstrap 95% CI, best model | 0.848–0.951 | **0.301–0.778** |
+
+**The interval now contains 0.5, so the release no longer claims a predictive
+classifier.** That is the honest consequence of the decision: 66 of the 84
+previously-positive arms carried a lumbar-puncture complication as their only
+positive axis, so the earlier 0.910 was substantially a procedure effect
+attributed to a compound. What the dataset supports is descriptive route and
+population stratification — the §1–§2 analysis — not prediction.
+
+Both leakage probes are now uninformative at 18 positives. The compound probe
+remains degenerate (constant in 41 of 41 folds). The trial-identity probe fell
+from 0.724 to 0.331: less degenerate by the fold diagnostic, but at this positive
+count dominated by the same pooled-constant artefact, so its earlier reading as
+real provenance signal does not transfer. Stated rather than carried over.
+
+The discarded all-axes definition is retained in `ml/results.json` as
+`models_all_axes` and tabulated in `ml/ML_REPORT.md` §3b, so the effect of the
+decision stays auditable.
+
+**One correction to my own earlier work found while implementing this.** The
+narrative PDF still contained the claim that a below-chance compound-identity AUC
+"confirms the validation is doing its job" — the exact reasoning I had already
+established was wrong and corrected in `ml/ML_REPORT.md`. I fixed the generated
+report and missed the copy in a submitted document. Now corrected, and a
+repository-wide sweep confirms the claim survives nowhere except where this
+reply quotes it.

@@ -24,7 +24,8 @@ of thing.
 | Compounds | 41 |
 | Participants at risk (arm-sum) | 29,728 |
 | Arms with a tier-A (ventricular) event | **9** |
-| Arms with a tier-B (CSF-dynamics) event | 84 |
+| Arms with a tier-B event, procedure complications excluded (primary) | **18** |
+| Arms with any tier-B event, all axes (previous definition) | 84 |
 
 **9 tier-A arms will not support a classifier**, and this report does not
 present one. What the data supports is route stratification, a modellable
@@ -59,33 +60,48 @@ this dataset, which is why both are in it.
 
 ## 3. Models, and what they actually learn
 
-Outcome: tier-B (CSF-dynamics) event in an arm — 84 of 519 arms, the
-mechanistic precursor the index case documents. Validation is
-**leave-one-compound-out**: arms of one compound are correlated, so a random
-split leaks the compound across folds and inflates the score.
+Outcome: a tier-B (CSF-dynamics) event in an arm **excluding
+`delivery_procedure_complication`** — 18 of 519 arms. A lumbar-puncture
+complication is a procedure outcome, not a compound toxicity, and the dataset's
+own documentation says that axis must be excluded from compound-toxicity
+analysis. Oscar set this as the default outcome on 2026-10-03; §3b shows exactly
+what that decision changed. German retains scientific adjudication.
+
+Validation is **leave-one-compound-out**: arms of one compound are correlated, so
+a random split leaks the compound across folds and inflates the score.
 
 | Model | LOCO AUC |
 |---|---:|
-| Route only | 0.889 |
-| **Route + indication** | **0.910** |
-| Route + indication + chemistry | 0.893 |
-| *Leakage probe: trial identity only* | *0.724* |
-| *Leakage probe: compound identity only* | *0.098* |
+| Route only | 0.650 |
+| **Route + indication** | **0.606** |
+| Route + indication + chemistry | 0.517 |
+| *Leakage probe: trial identity only* | *0.331* |
+| *Leakage probe: compound identity only* | *0.114* |
 
-Bootstrap 95% CI for the best model: 0.835–0.947.
+Bootstrap 95% CI for the best model: **0.301–0.778**.
+
+> **That interval contains 0.5, so the primary model is not distinguishable from
+> chance.** This is the direct consequence of excluding procedure complications:
+> the outcome drops to 18 positive arms, and at that count the data do not
+> support a predictive model. The release should be argued on the descriptive
+> route stratification in §1–§2, not on a classifier.
 
 Three things worth reading off that table:
 
 - **Adding chemistry makes it worse.** Chemistry is `NOT_REPORTED` for most
   compounds, so the feature contributes noise. This is a data-coverage result,
   not a biological one.
-- **Trial identity alone reaches 0.724**, and unlike the compound probe it
-  is only partly degenerate (constant in 19 of 41 folds), so
-  this one does carry signal. A material share of any apparent
+- **Trial identity alone reaches 0.331**, and unlike the compound probe it
+  is less degenerate (constant in 19 of 41 folds) but is now
+  also below chance. At 18 positives spread over 41 compounds,
+  most folds contain no positive at all, so this probe is dominated by the same
+  pooled-constant artefact as the compound one and supports no inference either
+  way. Under the previous all-axes outcome it reached 0.724 and did carry signal;
+  that reading does not transfer. A material share of any apparent
   performance is provenance, not biology. We ran this because a review of our
   sibling kidney dataset found `study_type` and `source_id` were strong shortcut
   predictors of its label.
-- **Compound identity alone scores 0.098, and that number means nothing.**
+- **Compound identity alone scores 0.114, and that number means nothing.**
   An earlier version of this report read the below-chance value as "the correct
   behaviour under leave-one-compound-out" that "confirms the validation is doing
   its job". That reasoning was wrong, and a wrong reason quoted as a validation
@@ -97,42 +113,50 @@ Three things worth reading off that table:
   against each other, not cases against controls, and lands far below 0.5 because
   removing an event-rich compound lowers the training base rate for exactly the
   fold that holds the events. The no-information value for this probe is 0.5;
-  0.098 is an artefact of pooled scoring, not evidence of anything. It is
+  0.114 is an artefact of pooled scoring, not evidence of anything. It is
   retained only as a transparency diagnostic.
 
-## 3b. The headline number is mostly a procedure effect
+## 3b. What excluding procedure complications changed
 
-This is the most important correction in this report. The modelled outcome is any
-tier-B (CSF-dynamics) event in an arm. But 66 of the 84 tier-B
-positive arms carry `delivery_procedure_complication` as their ONLY positive axis
-— a lumbar-puncture complication, not a compound toxicity. The dataset's own
-documentation says that axis must be excluded from compound-toxicity analysis.
+This is the most consequential decision in this report, so the discarded
+definition is kept rather than dropped.
 
-Re-running the identical leave-one-compound-out procedure against an outcome with
-that axis removed (18 positive arms):
+Under the previous definition — any tier-B event — the outcome occurred in
+84 of 519 arms. But **66 of those 84 carried
+`delivery_procedure_complication` as their ONLY positive axis**. The model was
+therefore substantially predicting *was this arm lumbar-punctured*, from a route
+feature — a tautology, since the route is how the procedure happens.
 
-| Model | tier-B (all axes) | tier-B excluding procedure complications |
+| Model | Primary: procedure complications EXCLUDED | Previous: all tier-B axes |
 |---|---:|---:|
-| Route only | 0.889 | 0.650 |
-| Route + indication | 0.910 | 0.606 |
-| Route + indication + chemistry | 0.893 | 0.517 |
+| Route only | **0.650** | 0.889 |
+| **Route + indication** | **0.606** | 0.910 |
+| Route + indication + chemistry | **0.517** | 0.893 |
+| Positive arms | **18** | 84 |
 
-The headline 0.910 falls to 0.606, and the chemistry model falls below
-chance. So the model was substantially predicting *was this arm lumbar-punctured*
-from a route feature — a tautology, since the route is how the procedure happens.
-What survives is weak and rests on 18 positive arms. No predictive
-claim in this release should be quoted without this table beside it.
+The headline falls from 0.910 to **0.606**. That is the honest number:
+the earlier figure was inflated by a procedure effect the dataset was never
+meant to attribute to a compound. What survives rests on **18 positive
+arms**, which is thin, and no predictive claim in this release should be quoted
+without that denominator attached.
 
 ## 4. What this supports, and what it does not
 
-**Supported:** route- and population-stratified risk stratification; separating
-drug effect from procedure and disease effect; modelling ascertainment explicitly
-as a covariate; hypothesis generation for CSF-dynamics monitoring in intrathecal
-programmes.
+**Supported:** descriptive, route- and population-stratified risk *stratification*;
+separating drug effect from procedure and disease effect — which is exactly what
+the outcome change in §3b does; modelling ascertainment explicitly as a covariate;
+hypothesis generation for CSF-dynamics monitoring in intrathecal programmes.
+
+**No longer claimed:** a predictive classifier. With procedure complications
+excluded the best model's bootstrap interval includes 0.5. The earlier 0.910 was
+largely a procedure effect, and reporting it as predictive performance would
+overstate what this dataset can do.
 
 **Not supported:** sequence-to-toxicity prediction across the roster
 (26 of 53 compounds carry a sequence); within-compound dose–response for
-tier A; in vitro-to-in vivo extrapolation beyond the single compound that carries both (2 in vitro rows in the release); any causal claim about an individual compound, given §2.
+tier A; in vitro-to-in vivo extrapolation beyond the single compound that carries both (2 in vitro rows in the release); any causal claim about an individual compound, given §2;
+and any predictive claim quoted without the 18-positive-arm denominator
+and the §3b comparison.
 
 ## Reproducing
 

@@ -257,3 +257,21 @@ round. SafeSense remains in quarantine; the thrombocytopenia v0.9 baseline is
 untouched by anything here.
 
 **RESEARCH REPORT COMPLETE — AWAITING OSCAR'S IMPLEMENTATION AUTHORIZATION**
+
+---
+
+## Addendum — 2026-10-03: tier-B outcome decided
+
+Oscar set **procedure complications excluded** as the default tier-B outcome.
+Implemented; see the addendum to `ROCKSTEADY_REVIEW_REPLY_2026-10-01.md` for the
+before/after table.
+
+The consequence for §1.6 of this report — "favour descriptive evidence over model
+expansion" — is now stronger than caution. With the exclusion applied the best
+model's bootstrap interval is **0.301–0.778**, which contains 0.5. The release
+makes **no predictive-classifier claim**. Descriptive route and population
+stratification stands; the earlier 0.910 does not, and is retained only as the
+documented previous definition.
+
+This removes one item from §7's German list. The remaining scientific decisions
+there are unchanged.
