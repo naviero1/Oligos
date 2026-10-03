@@ -196,6 +196,37 @@ Carry these; do not re-derive them.
 - Sources whose per-row provenance is unresolved stay excluded from validated training data
   until matched — not auto-resolved.
 
+## K. German's scientist sign-off gates
+
+Twelve gates, from the immunotoxicity validation memo §9. They are written there for that
+endpoint; the **Minimum Qualified Record is their cross-endpoint generalization**, and is derived
+from them rather than invented.
+
+1. Every training row has a traceable primary source and exact source location.
+2. Every sequence is verified 5′→3′, with strand identity and duplex partner where applicable.
+3. Every chemical modification is encoded **by position**, not only as a molecule-level flag.
+4. Assay context includes cell system, donor information, delivery/formulation, dose and exposure
+   time.
+5. Raw/continuous outcomes are retained when available; curator-derived binary labels are
+   **explicitly marked derived**.
+6. Agonist, antagonist, potentiator and inert/low-response states are separated.
+7. **Human and animal observations are not pooled as interchangeable ground truth.**
+8. TLR7, TLR8 and TLR9 outcomes are not collapsed prematurely. *(Generalizes to: endpoint-specific
+   outcomes are not collapsed into a composite; a composite is a secondary derived field only.)*
+9. Citation metadata and file identities pass QC.
+10. Train/test splitting has been checked for exact-sequence, modified/unmodified counterpart,
+    strand, family, paper and experimental-series leakage.
+11. LOPO and sequence-family grouped performance are reported with uncertainty.
+12. All major mechanistic and clinical claims are **no stronger than the evidence supports**.
+
+Gate 8 is the only one written in endpoint-specific terms; its generalization is given above. The
+other eleven apply as written to every endpoint.
+
+**On producing work against this file.** A *proposal* may be derived from this file and submitted
+for German's ratification — that is what a proposal is. Only an *authority claim* requires his
+primary documents. Do not stall a proposal for want of a source you need only in order to assert
+finality.
+
 ## J. What this file does not settle
 
 Endpoint definitions, phenotype and control assignments, scientific labels, evidence tiers,
