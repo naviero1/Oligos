@@ -489,6 +489,77 @@ CONTROL_CLASSES = [
 _CTRL = [(n, re.compile(p, re.I)) for n, p in CONTROL_CLASSES]
 
 
+def apply_characterisation(oligos, log):
+    """Fill purity and oligo-identity characterisation from the regulatory quality sections.
+
+    Phase 2 requires the dataset to contain "data on the purity and characterization of
+    each" oligo, and the methodology document to state "the methods used to purify and
+    characterize oligo identity". This dataset reported purity for 0 of 218 compounds, and
+    I told Oscar there was no recovery route that avoided contacting sponsors. That was
+    wrong, and the reason is worth recording: earlier extraction read the CLINICAL sections
+    of the EMA assessment reports and FDA integrated reviews we already held and skipped
+    their Quality / CMC sections entirely. The route was inside documents in the repository.
+
+    What these documents actually give, and the distinction that must survive:
+      * Public EPARs name the analytical method and WITHHOLD the numeric limit. That is
+        recorded as purity_limits_redacted=TRUE with purity_pct left NOT_REPORTED. A
+        withheld limit is a finding, not a value.
+      * A drug-substance SPECIFICATION is not the batch used in any particular study.
+        purity_pct_basis says which it is. A specification is never spread across batches.
+      * Values already extracted from publications are not overwritten. Regulatory methods
+        land in their own columns so the provenance of each stays separable.
+    """
+    path = os.path.join(ROOT, "sources", "characterisation.json")
+    NEW = ["purity_pct_basis", "purity_locus", "purity_source_id", "purity_evidence_quote",
+           "purity_limits_redacted", "analytical_methods_regulatory", "identity_methods_regulatory",
+           "characterisation_methods", "purification_method", "counterion", "impurity_classes",
+           "characterisation_basis"]
+    for o in oligos:
+        for c in NEW:
+            o.setdefault(c, NR)
+        o["characterisation_basis"] = "not_recovered_from_a_regulatory_quality_section"
+    if not os.path.exists(path):
+        return oligos
+    recs = json.load(open(path, encoding="utf-8"))["records"]
+    by_id = {o["oligo_id"]: o for o in oligos}
+    for r in recs:
+        o = by_id.get(r.get("oligo_id"))
+        if not o:
+            log["CH_unmatched_oligo_id"] += 1
+            continue
+        def put(col, val, overwrite=True):
+            v = str(val or "").strip()
+            if not v or v in (NR, NA, "NOT_KNOWN"):
+                return
+            if overwrite or o.get(col, NR) in (NR, NA, ""):
+                o[col] = v
+        # a numeric purity is only ever written when the document printed one
+        pct = str(r.get("purity_pct", "")).strip()
+        if re.fullmatch(r"\d{1,3}(?:\.\d+)?", pct):
+            prev = o.get("purity_pct", NR)
+            # a tested batch outranks a specification; otherwise first value wins
+            if prev in (NR, NA, "") or r.get("purity_pct_basis") == "tested_batch":
+                o["purity_pct"] = pct
+                put("purity_pct_basis", r.get("purity_pct_basis"))
+                log["CH_purity_value"] += 1
+        put("purity_locus", r.get("locus"))
+        put("purity_source_id", r.get("source_id"))
+        put("purity_evidence_quote", re.sub(r"\s+", " ", str(r.get("verbatim_quote", "")))[:1200])
+        put("purity_limits_redacted", r.get("limits_redacted"))
+        put("analytical_methods_regulatory", r.get("purity_method"))
+        put("identity_methods_regulatory", r.get("identity_confirmation"))
+        put("characterisation_methods", r.get("characterisation_methods"))
+        put("purification_method", r.get("purification_method"))
+        put("counterion", r.get("counterion"))
+        put("impurity_classes", r.get("impurity_classes"))
+        # never overwrite a value a publication gave us
+        put("purity_method", r.get("purity_method"), overwrite=False)
+        put("identity_confirmation", r.get("identity_confirmation"), overwrite=False)
+        o["characterisation_basis"] = "regulatory_quality_section:" + str(r.get("source_id", NR))
+        log["CH_record_applied"] += 1
+    return oligos
+
+
 def apply_control_class(rows, log):
     for r in rows:
         blob = f"{r.get('control_description','')} {r.get('co_administered_agent','')}"
@@ -936,6 +1007,8 @@ def main():
     for s in sources:
         s["n_measurements"] = per_s.get(s["source_id"], 0)
         s["n_oligos"] = len(o_per_s.get(s["source_id"], ()))
+
+    oligos = apply_characterisation(oligos, _log)
 
     def write(name, rows):
         p = os.path.join(DATA, name)

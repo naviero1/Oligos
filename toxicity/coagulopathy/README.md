@@ -98,28 +98,98 @@ this folder is shared with another endpoint's.
 
 ## Counting: what is and is not a trial
 
-**30 verified human interventional trials with a coagulation endpoint** — 18 of them
-identified by a registry number. That is the headline total, and it is reproducible: a
-study enters it only when it is an interventional trial, reports a coagulation endpoint,
-and carries an identity (registry number, trial acronym or sponsor protocol token) that
-lets it be deduplicated against its other appearances. A QC check re-derives the flag from
-those three columns and fails the build if it cannot.
+**46 verified human interventional trials with a coagulation endpoint** — 21 identified by
+a registry number. This figure **replaces the 30 published on 2026-10-01**, which was an
+under-count produced by a defect in my own clustering code and which is hereby retracted.
+Do not cite 30.
 
-The register ([`data/studies.csv`](data/studies.csv), sheet `human_trials`) holds **198
-distinct study records** from 336 raw observations — 138 duplicate appearances were merged,
+The headline is reproducible: a study enters it only when it is an interventional trial,
+reports a coagulation endpoint, and carries an identity (registry number, trial acronym or
+sponsor protocol code) that lets it be deduplicated against its other appearances. A QC
+check re-derives the flag from those three columns and fails the build if it cannot.
+
+### Why the number went up, not down
+
+Beebop's 2026-10-01 review asked for the six flagged clusters to be inspected before 30
+was relied on. Inspecting them found a fourth defect of the same family as the three
+reported on 2026-09-30, and it ran in the opposite direction to the flag's implication.
+
+A pooled-analysis record carries a protocol field that *enumerates the trials it pools* —
+`pooled FCS safety set (CS6 + CS7)`, `Pool 2 (integrated long-term safety pool: CS2 + CS3 +
+CS5 + CS7)`, `All Volanesorsen Treated Patients (CS1 + CS13 + ...)`. Every code in those
+strings was emitted as an identity token, so **one pooled record unioned an entire
+development programme into a single "trial"**. A second mechanism crossed programmes: a
+record naming a comparator or prior therapy (`olezarsen; volanesorsen as prior therapy`)
+carried both compound keys and bridged two different drugs. The result was that one
+register row held nine volanesorsen trials *and* an olezarsen trial, and another put
+eplontersen inside inotersen's CS2.
+
+Four changes close it:
+
+1. **Pooled analyses are not trials and not identifiers.** The 43 pooled records are
+   partitioned out before clustering and published separately in
+   [`data/pooled_analyses.csv`](data/pooled_analyses.csv) (sheet `pooled_analyses`), each
+   carrying the member protocols it names and its counting rule. They stay as evidence — a
+   regulatory pooled safety table is real — but a pooled number is never attributed to one
+   trial.
+2. **A bare protocol code is qualified by the sponsor compound number**, taken from the
+   record's own protocol string or from the subject programme of its source document.
+   `ISIS 304801-CS7` and `ISIS 678354-CS7` are different trials. Where no programme can be
+   established, a bare `CS2` identifies nothing and no longer merges — unqualified, it had
+   put nusinersen and volanesorsen in one cluster.
+3. **A comparator is not a subject compound.** Eplontersen's `ION-682884-CS3` carries
+   inotersen as its concurrent active reference arm; that is one trial, correctly recorded,
+   and it no longer reads as an over-merge.
+4. **Acronyms are compared on their head**, and a registry-verified crosswalk links each
+   registry number to the sponsor protocol code its documents use. `ATLAS-A/B (also written
+   ATLAS-AB)` and `ATLAS-A/B` are one name; without the crosswalk that trial was counted
+   twice.
+
+The four fitusiran trial identities were checked against the ClinicalTrials.gov API (v2, read
+2026-10-02) and all four agree with what two independent documents gave us —
+`NCT03417102`/`EFC14768`/ATLAS-INH, `NCT03417245`/`EFC14769`, `NCT03549871`/`EFC15110`/ATLAS-PPX,
+`NCT03754790`/`LTE15174`/ATLAS-OLE. **The extracted identities were sound; the clustering over
+them was not.** This was a code defect, not an extraction defect.
+
+### Over-merge is now a QC failure, not a comment
+
+55 checks passed while two drugs sat in one trial row. Three checks now make that
+impossible: two registry numbers **from the same registry** in one cluster fails, two
+sponsor compound numbers fails, and any `OVER_MERGE_*` flag fails. Two numbers from
+*different* registries do **not** fail — one trial legitimately holds both an NCT and a
+EudraCT number, so that is recorded as an alias and flagged for linkage review (Beebop's
+correction, 2026-10-02). One reconciled exception is declared in code with the evidence
+that reconciles it: the FDA reviewer's own annotation records the mipomersen–warfarin
+interaction study as `MIPO2900509` in the filing checklist and `MIPO2900210` in the
+Clinical Summary.
+
+**Zero clusters now fail the over-merge test, and zero headline trials carry a review
+flag.** The six clusters flagged on 2026-10-01 were artefacts of the defects above; the
+largest remaining cluster is five source records.
+
+### The register
+
+[`data/studies.csv`](data/studies.csv) (sheet `human_trials`) holds **211 distinct study
+records** built from the 293 non-pooled raw observations — 82 duplicate appearances merged,
 because the same trial is reported by its registry entry, its publication, its regulatory
-assessment *and* its label. 120 identified trials are registered and **excluded** from the
-headline: 93 report no coagulation endpoint, and the rest are pooled analyses, labels,
+assessment *and* its label. 141 identified trials are registered and **excluded** from the
+headline: 115 report no coagulation endpoint, 26 carry no usable identifier. Labels,
 regulatory summaries, observational studies, case reports, healthy-volunteer laboratory
-work or spontaneous reporting. None of those is a trial.
+work and spontaneous reporting are never trials.
 
 For scale: the dataset's 749 human *clinical measurement rows* were never 749 trials, and
 89 of them are FAERS spontaneous reports, which are not a study at all.
 
-**Six headline trials carry `review_flag` and should be confirmed before the number is
-quoted externally** — their clusters merged more than eight source records each, which is
-either a heavily-reported trial or an over-merge, and that is a scientific judgement rather
-than a clustering rule.
+### Rows are now linked to trials
+
+`measurements.study_id` and `study_id_basis` connect each clinical row to the register.
+Keying on source plus compound alone resolved 243 of 749 rows, because one regulatory
+review covers six trials of the same drug; a second pass reads the row's own
+`source_locus`, notes and quote for the registry number or protocol code it already cites.
+**424 of 749 clinical rows now resolve to exactly one trial**, across 39 trials, and
+nothing is unmatched. The remaining 325 stay `NOT_RESOLVED` with their candidate count
+recorded in `study_id_basis`: an arm misattribution is worse than a missing link. Closing
+them means re-reading the loci those rows already cite, which is research, not a code fix.
 
 ## What kind of observation each row is
 
@@ -132,8 +202,8 @@ does, and `evidence_class_basis` names the rule that assigned it:
 | `intended_pharmacodynamic` | 971 | on-target effect of a compound designed to alter coagulation |
 | `measured_negative` | 640 | endpoint measured and unchanged |
 | `unintended_lab_disturbance` | 408 | laboratory change the source presents as unintended |
-| `clinical_outcome_unattributed` | 292 | bleeding/thrombotic outcome the source does *not* present as adverse |
-| **`adverse_clinical_outcome`** | **160** | **bleeding/thrombotic outcome the source presents as adverse** |
+| `outcome_not_attributed` | 292 | bleeding/thrombotic outcome the source does *not* present as adverse |
+| **`adverse_outcome_source_attributed`** | **160** | **bleeding/thrombotic outcome the source presents as adverse** |
 | `baseline_reference` | 120 | pre-dose draw — a reference point, not an outcome |
 | `unresolved_observation` | 77 | no direction, no flag, or endpoint not reported |
 | `unattributed_lab_change` | 17 | measured change with neither flag set |
@@ -141,6 +211,30 @@ does, and `evidence_class_basis` names the rule that assigned it:
 The adverse-outcome subset is therefore derivable without re-reading the inventory. Every
 value is `evidence_class_review_status = curator_derived_unreviewed`: it is a rule, not a
 scientist's adjudication.
+
+**These classes are species-agnostic and must be read with `species_class`.** The two
+classes above were called `adverse_clinical_outcome` and `clinical_outcome_unattributed`
+until 2026-10-03. That was wrong: a mouse tail-vein transection is a bleeding outcome too,
+and **222 of the 292 rows in the old `clinical_outcome_unattributed` were mouse, monkey, rat
+or pig** (Beebop, 2026-10-02). The rows were correctly typed throughout — `species_class`,
+`species`, `study_type`, `human_system` and `human_system_subtype` all said animal, and the
+workbook splits human from animal on `species_class`, so no animal row ever reached the
+human sheets — but a reader filtering `evidence_class` alone would have read five animal
+rows as human adverse events. The names are fixed, and a QC check now fails the build if any
+class whose name contains "clinical" carries a non-human row. The human clinical subset is
+`human_system_subtype == participant` (749 rows); no `evidence_class` value means it.
+
+### Rows that are not coagulation readouts
+
+Six rows are `endpoint_scope = scope_adjacent`: they are kept because a source reports them
+beside a coagulation endpoint, not because they are one. Every one of them had been given a
+core coagulation category — `COG-MSR0345` said `clotting_time` for complement fragment Bb
+while its own note read "ADJACENT, NOT A COAGULATION READOUT" (Beebop flagged this row;
+auditing found the other five). Each now carries its true category
+(`complement_marker`, `target_transcript_level`, `infusion_reaction`,
+`blanket_adverse_event_statement`), the curator's original value in
+`readout_category_as_curated`, and `cross_endpoint_referral` naming the endpoint it belongs
+to. A QC check fails the build if a scope-adjacent row wears a coagulation category.
 
 ## Read this before using the data: the dataset has two axes, not one
 

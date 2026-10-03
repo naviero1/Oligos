@@ -30,7 +30,8 @@ One row per source document. 75 rows.
 | `document_file` | File in `sources/documents/`. The row's evidence is re-readable from the repository. |
 | `retrieval_route` | How it was obtained (Europe PMC REST, DailyMed API, USPTO PDF endpoint, …). |
 | `licence` | Licence as stated by the source. |
-| `redistribution` | `public_domain` \| `CC_BY` \| `CC_BY_NC` \| `CC_BY_NC_ND` \| `publisher_restricted` \| `unresolved`. |
+| `redistribution` | `public_domain` \| `CC_BY` \| `CC_BY_NC` \| `CC_BY_NC_ND` \| `publisher_restricted` \| `cite_and_link_only`. **No source is `unresolved`**: Phase 2 gates the prize on openness, so each was decided. |
+| `licence_resolution_basis` | How the licence was decided — `as_extracted_from_source`, or the evidence actually read. Auditing the two `unresolved` rows exposed a worse inconsistency: all ten EMA-sourced records lack the standard reuse statement in the text layer we hold, yet carried five different values (`public_domain` ×3, `CC_BY` ×1, `publisher_restricted` ×5, `unresolved` ×1). Identical provenance cannot carry five licences. [`sources/licence_resolutions.json`](sources/licence_resolutions.json) decides each case, conservatively, and records what was read — including two corrections **downward**, because an EMA assessment report is neither a US federal work nor a Creative Commons work. EMA's own legal notice could not be read on 2026-10-03 (two URLs, both HTTP 404), so no permission is asserted from anything unread. |
 | `extraction_bundle` | Which extraction bundle read this source — audit trail, not data. |
 | `n_oligos`, `n_measurements` | Roll-ups, recomputed by the build and checked by QC. |
 
@@ -58,7 +59,11 @@ One row per source document. 75 rows.
 | `source_ids` | `;`-separated sources that describe this compound. |
 | `n_measurements` | Measurement rows for this compound. |
 | `n_human_measurements`, `n_animal_measurements` | Rows in a human and in an animal system. |
-| `has_human_and_animal_data` | `TRUE` where the compound carries **both** — a human/animal translation pair, the shape the Challenge calls "of particular interest". Derived, never asserted; QC re-derives it. |
+| `has_human_and_animal_data` | `TRUE` where the compound carries **both** a human and an animal row. Retained, but it **mixes two different things** and so overstates the bridge — see the three columns below. |
+| `invitro_human_animal_bridge` | `TRUE` where the compound has at least one measurement in a human **in vitro** system (blood/plasma, cells/tissue, purified protein) *and* at least one in an animal. Phase 2 is specific: datasets "able to extrapolate data between **in vitro human systems** and animal data are of particular interest". 29 compounds. |
+| `participant_animal_bridge` | `TRUE` where the compound has trial-participant data and animal data. 5 compounds. Kept apart from the in vitro bridge because they are not the same evidence. |
+| `bridge_shared_readout_categories` | The readout categories measured in **both** a human in vitro system and an animal for this compound — the directly comparable pairs. **24 compounds**, and this is the column the extrapolation claim rests on. |
+| `n_invitro_human_measurements` | Rows in a human in vitro system, excluding trial participants. |
 | `notes` | Free text. |
 
 ## `data/modifications.csv` — per-position chemistry
@@ -91,7 +96,11 @@ Challenge's requirement for "the location of all chemical modifications in each 
 | `human_system` | `TRUE` where the measurement is made in a human subject, human tissue, plasma or cells, or purified/recombinant human proteins. This is the Challenge's "in vitro human system" criterion made queryable. |
 | `system_model`, `matrix` | Model/subject, and `plasma` \| `whole_blood` \| `serum` \| `in_vivo` \| `purified_system`. |
 | `delivery_method`, `dose_value`, `dose_unit`, `timepoint`, `exposure_duration`, `n_subjects` | Exposure. `n_subjects` matters: several clinical rows are badly underpowered and that must be visible. |
-| `readout_category` | `clotting_time` \| `factor_activity` \| `fibrinogen` \| `thrombin_generation` \| `fibrinolysis_marker` \| `anticoagulant_activity` \| `bleeding_outcome` \| `thrombotic_outcome` \| `platelet_coag_crosstalk`. |
+| `readout_category` | Nine core coagulation families: `clotting_time` \| `factor_activity` \| `fibrinogen` \| `thrombin_generation` \| `fibrinolysis_marker` \| `anticoagulant_activity` \| `bleeding_outcome` \| `thrombotic_outcome` \| `platelet_coag_crosstalk`. Plus four that exist **only** on `scope_adjacent` rows: `complement_marker`, `target_transcript_level`, `infusion_reaction`, `blanket_adverse_event_statement`. |
+| `readout_category_as_curated` | What the curator originally wrote where the scope rule replaced it. All six scope-adjacent rows had been given a core coagulation category: `COG-MSR0345` said `clotting_time` for complement fragment Bb while its own note read "ADJACENT, NOT A COAGULATION READOUT". |
+| `cross_endpoint_referral` | For a scope-adjacent row, the Challenge endpoint it actually belongs to (`complement-activation`, `cross-cutting`) or `none_stays_in_coagulopathy`. |
+| `study_id`, `study_id_basis` | The register trial this clinical row belongs to, and how that was established. `NOT_RESOLVED` where the row cannot be pinned to exactly one trial, with the candidate count in the basis. **424 of 749 clinical rows resolve**; the rest are left unresolved rather than guessed, because an arm misattribution is worse than a missing link. `NOT_APPLICABLE` on non-clinical rows. |
+| `control_class` | The reference the row was compared against: `sequence_control` \| `pharmacological_positive_control` \| `placebo` \| `vehicle_or_buffer` \| `untreated_or_predose` \| `active_comparator` \| `other_described_control` \| `no_control_described`. Phase 2 requires the controls to be stated, and the control was free text, so they could not be counted. **Only 8 rows carry a sequence-matched negative control** — 4 human reverse-complement aptamer, 4 mouse scrambled siRNA. Vehicle (1,277) and placebo (223) are **not** sequence controls: they do not separate a sequence effect from a chemistry or formulation effect. |
 | `readout_name` | e.g. `aPTT`, `PT`, `INR`, `TT`, `ACT`, `fibrinogen`, `D_dimer`, `anti_Xa`, `anti_IIa`, `FXI_activity`, `antithrombin_activity`, `peak_thrombin`, `bleeding_event`, `thrombotic_event`. |
 | `readout_value` | The value **exactly as printed**, including any `±` or range. Not reformatted; downstream parsing takes the leading number. |
 | `readout_unit`, `readout_is_qualitative` | Unit, and whether the row carries no number at all. |
