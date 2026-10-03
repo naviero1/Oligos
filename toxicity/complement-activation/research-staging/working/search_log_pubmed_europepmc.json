@@ -1,0 +1,851 @@
+{
+ "PubMed (https://pubmed.ncbi.nlm.nih.gov/) via NCBI E-utilities (esearch / esummary / efetch / elink)": {
+  "resource": "PubMed (https://pubmed.ncbi.nlm.nih.gov/) via NCBI E-utilities (esearch / esummary / efetch / elink)",
+  "actually_searched": true,
+  "access_barrier": "none",
+  "endpoint_applicable": true,
+  "applicability_justification": "Fully applicable and highly productive. 17 distinct esearch queries plus one elink neighbor_score expansion executed against db=pubmed with no login, no cookie wall, no paywall and no bot check. All hit counts and all titles/abstracts below were read first-hand from E-utilities responses (esummary JSON, efetch rettype=abstract plain text, and efetch retmode=xml for metadata). I did NOT read any full texts: PubMed does not host full text, so every result characterisation below is from the abstract/metadata text I actually retrieved. Where an abstract named complement as a measured endpoint but did not state the outcome, I recorded that explicitly rather than inferring a direction.",
+  "queries_run": [
+   "complement activation AND antisense oligonucleotide",
+   "(C3a OR C5a OR C4a OR sC5b-9 OR \"Bb fragment\" OR CH50) AND (oligonucleotide OR siRNA OR aptamer)",
+   "phosphorothioate AND complement",
+   "(CARPA OR \"complement activation-related pseudoallergy\") AND (oligonucleotide OR siRNA OR aptamer OR nucleic acid)",
+   "(CpG oligodeoxynucleotide OR \"CpG ODN\" OR TLR9 agonist) AND (complement OR anaphylatoxin)",
+   "aptamer AND (complement activation OR anaphylatoxin OR C3a OR C5a) AND (safety OR toxicity OR adverse OR infusion reaction OR hypersensitivity)",
+   "(alicaforsen OR \"ISIS 2302\" OR trecovirsen OR GEM91 OR GEM231 OR pegnivacogin OR \"REG1 anticoagulation\" OR ApTOLL OR \"QPI-1002\" OR I5NP OR \"CALAA-01\" OR fomivirsen OR zintevir OR AR177) AND (complement OR C3a OR C5a OR Bb OR CH50)",
+   "(mipomersen OR drisapersen OR inotersen OR volanesorsen OR nusinersen OR eteplirsen OR golodirsen OR tofersen OR patisiran OR givosiran OR inclisiran OR lumasiran OR vutrisiran OR nedosiran OR fitusiran) AND (complement OR C3a OR C5a OR Bb)",
+   "(siRNA OR \"small interfering RNA\" OR GalNAc OR \"lipid nanoparticle\") AND \"complement activation\" AND (toxicity OR safety OR monkey OR nonhuman primate OR human serum OR whole blood)",
+   "(\"clinical trial\"[pt] OR \"randomized controlled trial\"[pt]) AND (oligonucleotide OR siRNA OR aptamer OR antisense) AND complement",
+   "(oligonucleotide OR antisense OR siRNA OR aptamer OR \"CpG DNA\") AND complement AND (\"human serum\" OR \"human plasma\" OR \"whole blood\" OR \"ex vivo\" OR \"in vitro\")",
+   "(oligonucleotide OR antisense OR aptamer) AND (properdin OR \"factor H\" OR \"factor B\" OR C1q) AND (bind OR binding OR interaction OR inhibit) NOT (knockdown OR siRNA-mediated)",
+   "\"Oligonucleotides\"[Mesh] AND \"Complement Activation\"[Mesh]",
+   "(oligonucleotide OR antisense OR siRNA) AND (CH50 OR \"total hemolytic complement\" OR \"haemolytic complement\" OR sC5b-9 OR \"terminal complement complex\" OR \"SC5b-9\")",
+   "Sewing S[au] AND (oligonucleotide OR complement)",
+   "(oligonucleotide OR antisense OR siRNA) AND \"complement activation\" AND (rat OR mouse OR mice OR dog OR minipig OR swine OR rabbit)",
+   "(oligonucleotide OR antisense OR \"phosphorothioate\") AND (\"alternative pathway\" OR \"factor H\") AND (activation OR dysregulation OR inhibition) AND (serum OR plasma OR blood)",
+   "elink dbfrom=pubmed db=pubmed cmd=neighbor_score id=29107969,19864604,25093529 (PubMed related-articles expansion, 119 unique neighbours triaged)",
+   "efetch db=pubmed retmode=xml id=29107969,19864604,36104112,27357629,29270490 (metadata inspection for data-availability / DataBankList / AccessionNumber / NCT)"
+  ],
+  "relevant_results": [
+   {
+    "identifier": "PMID 27739230",
+    "title": "Safety, Tolerability, and Pharmacokinetics of ARC-520 Injection, an RNA Interference-Based Therapeutic for the Treatment of Chronic Hepatitis B Virus Infection, in Healthy Volunteers",
+    "why_relevant": "HIGHEST-VALUE NEW HUMAN CLINICAL HIT. Abstract read first-hand states assessments included 'pharmacodynamics (cytokines and complement)' and reports 'Low-level, transient complement induction and sporadic, mild, and transient elevations of several cytokines were observed but not associated with any symptoms.' This is a prospectively measured, positive complement-activation finding in healthy human volunteers given an RNAi therapeutic (ARC-520, cholesterol-conjugated siRNA + DPC excipient), i.e. toxicity pharmacodynamics, not efficacy. Specific analytes and assay NOT stated in abstract.",
+    "is_novel_vs_context": true,
+    "evidence_class": "human_clinical",
+    "species": "human",
+    "human_matrix": "UNVERIFIED (not stated in abstract; serum vs plasma unknown)",
+    "complement_analytes": "UNVERIFIED (abstract says 'complement' only; no analyte named)"
+   },
+   {
+    "identifier": "PMID 26210642",
+    "title": "Antisense therapy targeting apolipoprotein(a): a randomised, double-blind, placebo-controlled phase 1 study (ISIS-APO(a)Rx)",
+    "why_relevant": "NEW HUMAN CLINICAL with a TRIAL IDENTIFIER. I read the methods sentence verbatim: safety assessment 'included determination of the incidence, severity, and dose relation of adverse events and changes in laboratory variables, including lipid panel, routine haematology, blood chemistry, urinalysis, coagulation, and complement variables.' 47 randomised volunteers. Registered EudraCT 2012-004909-27 (NOT an NCT). Valuable because the context notes Crooke 2016 carries no trial identifiers; this 2'-MOE PS ASO phase 1 does carry one. CAVEAT: complement RESULTS are not reported in the abstract (only 'mild injection site reactions were the most common adverse events'), so the outcome is UNVERIFIED from PubMed alone.",
+    "is_novel_vs_context": true,
+    "evidence_class": "human_clinical",
+    "species": "human",
+    "human_matrix": "UNVERIFIED",
+    "complement_analytes": "UNVERIFIED ('complement variables'; no analyte named in abstract)"
+   },
+   {
+    "identifier": "PMID 9034989",
+    "title": "Reduction in circulating dsDNA antibody titer after administration of LJP 394 (abetimus sodium)",
+    "why_relevant": "NEW HUMAN CLINICAL. Abstract read first-hand: 'Routine safety variables were measured, as well as anti-dsDNA, circulating immune complexes, complement, and complement split products.' Result: 'Transient increases in some complement split products were noted; however, no adverse clinical events occurred during or immediately after infusion.' LJP 394 / abetimus sodium is an oligonucleotide-based therapeutic (tetrameric dsDNA epitopes on a non-immunogenic platform) given IV to SLE patients, so this is a positive human in-vivo complement-split-product signal from an oligonucleotide drug. Confound to flag: SLE patients have disease-driven complement consumption at baseline.",
+    "is_novel_vs_context": true,
+    "evidence_class": "human_clinical",
+    "species": "human",
+    "human_matrix": "UNVERIFIED (abstract says 'circulating')",
+    "complement_analytes": "UNVERIFIED (abstract says 'complement' and 'complement split products'; specific splits not named)"
+   },
+   {
+    "identifier": "PMID 9873494",
+    "title": "Effects of phosphorothioate oligodeoxyribonucleotide and oligoribonucleotides on human complement and coagulation",
+    "why_relevant": "NEW HUMAN LABORATORY. Direct chemistry-vs-complement comparison in human complement in vitro: PS-DNA vs PS-RNA vs 2'-O-methyl-RNA vs 2'-5'-RNA. Abstract read first-hand: '...studied the effects of phosphorothioate (PS) oligodeoxyribonucleotide (DNA) and oligoribonucleotides (RNA, 2'-O-methyl-RNA and 2'-5'-RNA) on complement activation and prolongation of activated partial thromboplastin time (aPTT) in vitro' and 'a PS-DNA prolongs aPTT, and inhibits complement lysis more than do the PS-RNA analogs.' This is the companion/sister paper to the already-known Shaw 1997 (PMID 9175717) and Agrawal 1995 (PMID 8597089) and is a genuinely separate human-complement experiment. Note the readout is complement LYSIS INHIBITION (a hemolytic assay), not anaphylatoxin generation.",
+    "is_novel_vs_context": true,
+    "evidence_class": "human_laboratory",
+    "species": "human",
+    "human_matrix": "UNVERIFIED (human complement in vitro; serum vs plasma not stated in abstract)",
+    "complement_analytes": "complement-mediated lysis (hemolytic readout); specific analyte UNVERIFIED"
+   },
+   {
+    "identifier": "PMID 38044589",
+    "title": "Investigation of the Relationship between Aptamers' Targeting Functions and Human Plasma Proteins",
+    "why_relevant": "NEW HUMAN LABORATORY, mechanistic. Abstract read first-hand: 'Further pull-down assay and proteomic identification verified that the interactions between aptamers and plasma proteins were mainly involved in complement activation and immune response as well as showed structure-selective and sequence-specific features.' Direct evidence that therapeutic-class aptamers bind human plasma complement proteins in a sequence- and structure-dependent way \u2014 mechanistically the aptamer analogue of the PS-ASO/factor H axis. Which complement proteins were identified is NOT stated in the abstract.",
+    "is_novel_vs_context": true,
+    "evidence_class": "human_laboratory",
+    "species": "human",
+    "human_matrix": "human plasma",
+    "complement_analytes": "UNVERIFIED (proteomic identification of 'complement activation' proteins; individual proteins not named in abstract)"
+   },
+   {
+    "identifier": "PMID 27140858",
+    "title": "Effects of Repeated Complement Activation Associated with Chronic Treatment of Cynomolgus Monkeys with 2'-O-Methoxyethyl Modified Antisense Oligonucleotide",
+    "why_relevant": "MAJOR NEW ANIMAL PAPER \u2014 the chronic-dosing counterpart to the known acute monkey literature. ISIS 104838 (2'-MOE). Abstract read first-hand: 'Acute elevations of complement split products (Bb and C3a) and a transient decrease in C3 occurred after the first dose and were drug plasma concentration dependent.' 'with repeated complement activation after chronic ASO treatment, there were progressive increases in basal (predose) levels of Bb and C3a, and a sustained C3 reduction in all treated groups.' Also 'a progressive increase in C3d-bound circulating immune complex (CIC) that was considered secondary to the C3 depletion.' Establishes cumulative/basal-shift kinetics absent from the context set.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "cynomolgus monkey (Macaca fascicularis)",
+    "human_matrix": "n/a",
+    "complement_analytes": "Bb, C3a, C3, C3d-bound circulating immune complex"
+   },
+   {
+    "identifier": "PMID 37093125",
+    "title": "Complement C3d/C4d Deposition on Platelets Correlates with 2'-O-Methoxyethyl Antisense Oligonucleotide-Induced Thrombocytopenia in Monkeys",
+    "why_relevant": "NEW ANIMAL. ISIS 405879, 2'-MOE ASO, Mauritian- vs Asian-sourced cynomolgus monkeys. Abstract read first-hand: 'Marked increases in PLT-bound C3d/C4d were detected in all thrombocytopenic Mauritian-sourced monkeys but not in the unaffected Mauritian- or Asian-sourced monkeys, suggesting increased PLT clearance due to complement deposition on the PLTs.' Crucially: 'However, this effect was independent of the ASO-mediated fluid-phase alternative complement activation.' That explicit dissociation between CELL-SURFACE complement fixation and FLUID-PHASE alternative-pathway activation is a distinct mechanism not represented in the context set, and matters for endpoint definition.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "cynomolgus monkey (Mauritian- and Asian-sourced)",
+    "human_matrix": "n/a",
+    "complement_analytes": "platelet-bound C3d/C4d (cell-surface); fluid-phase alternative pathway (analyte not named in abstract)"
+   },
+   {
+    "identifier": "PMID 12429653",
+    "title": "Pharmacokinetics, toxicity, and efficacy of ends-modified raf antisense oligodeoxyribonucleotide encapsulated in a novel cationic liposome (LErafAON)",
+    "why_relevant": "NEW ANIMAL with quantitative complement numbers I read first-hand: 'Transient decrease in total hemolytic complement activity (approximately 62-74%) and increases in C3a (approximately 3-fold) and Bb levels (approximately 5-12-fold) were observed in LErafAON and blank liposome groups of monkeys.' Important nuance: the effect occurred in the BLANK LIPOSOME group too, so the complement activation is at least partly vehicle-driven, not purely oligonucleotide-driven \u2014 a formulation-vs-backbone attribution point the context set does not cover.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "monkey (species not specified in abstract)",
+    "human_matrix": "n/a",
+    "complement_analytes": "total hemolytic complement activity, C3a, Bb"
+   },
+   {
+    "identifier": "PMID 28123102",
+    "title": "From the Cover: The Minipig is a Suitable Non-Rodent Model in the Safety Assessment of Single Stranded Oligonucleotides",
+    "why_relevant": "NEW ANIMAL, NEW SPECIES. Abstract read first-hand: 'For the first time, we showed similar and dose-dependent effects on the coagulation and complement cascade after intravenous dosing similar to those observed in NHPs.' Extends oligonucleotide complement activation beyond non-human primates to the G\u00f6ttingen minipig \u2014 directly relevant to cross-species translation arguments, since the context set is monkey/human only. Analytes NOT named in abstract.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "G\u00f6ttingen minipig",
+    "human_matrix": "n/a",
+    "complement_analytes": "UNVERIFIED ('complement cascade'; no analyte named in abstract)"
+   },
+   {
+    "identifier": "PMID 8819516",
+    "title": "Single-dose hemodynamic toxicity and pharmacokinetics of a partial phosphorothioate anti-HIV oligonucleotide (AR177) after intravenous infusion to cynomolgus monkeys",
+    "why_relevant": "NEW ANIMAL, and an APTAMER (AR177/zintevir is a G-quartet oligonucleotide), filling the aptamer gap in the context set. Abstract read first-hand: 'Blood pressure, ECG, clinical chemistry, hematology, complement factors, coagulation parameters and the AR177 plasma concentration were determined' and 'There was a minimal, dose-dependent increase in the levels of complement split product Bb and total hemolytic complement.'",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "cynomolgus monkey",
+    "human_matrix": "n/a",
+    "complement_analytes": "Bb, total hemolytic complement"
+   },
+   {
+    "identifier": "PMID 10048140",
+    "title": "Preclinical evaluation of the effects of a novel antisense compound targeting C-raf kinase in mice and monkeys (CGP 69846A / ISIS 5132)",
+    "why_relevant": "NEW ANIMAL with a concentration THRESHOLD read first-hand: 'Below a concentration of 35 micrograms/ml of intact CGP 69846A the prolongation of APTT was less than 50% and levels of complement split products were not increased.' Also 'In monkeys, administration of 10 mg/kg ... was associated with ... prolongation of APTT and activation of complement'; 'All monkeys tolerated complement activation with no evidence of treatment-related clinical signs'; 'Complement and coagulation were not affected by the lower doses of 1 and 3 mg/kg.' A quantitative no-effect concentration is directly useful for a dose-response/threshold endpoint.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "mouse and monkey (species of monkey not stated in abstract)",
+    "human_matrix": "n/a",
+    "complement_analytes": "complement split products (not individually named in abstract)"
+   },
+   {
+    "identifier": "PMID 10367680",
+    "title": "Correlation of toxicity and pharmacokinetic properties of a phosphorothioate oligonucleotide designed to inhibit ICAM-1 (ISIS 2302)",
+    "why_relevant": "NEW ANIMAL preclinical companion to the already-known ISIS 2302 human phase 1 (PMID 9316823, Glover 1997). Abstract read first-hand: 'In monkeys, high concentrations of oligonucleotide caused a transient increase in clotting times and activation of the alternative complement pathway.' Pairs the animal and human arms of the same molecule.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "monkey (species not stated in abstract)",
+    "human_matrix": "n/a",
+    "complement_analytes": "UNVERIFIED (alternative complement pathway; no analyte named in abstract)"
+   },
+   {
+    "identifier": "PMID 11446591",
+    "title": "Toxicity and toxicokinetics of a phosphorothioate oligonucleotide against the c-myc oncogene in cynomolgus monkeys (INX-3280)",
+    "why_relevant": "NEW ANIMAL and a genuine, properly-qualified NEGATIVE (not an 'unreported'). Abstract read first-hand: complement activation was among the endpoints explicitly 'examined'; 'there were no test article-related changes in hematology, serum chemistry, or complement activation parameters'; and critically 'Maximum concentration (Cmax) values for INX-3280 (101-119 microg/ml) were in excess of the threshold plasma concentrations reported to trigger complement activation by phosphorothioate oligonucleotides.' A measured non-activation ABOVE the literature activation threshold is high-information for sequence/structure-dependence.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "cynomolgus monkey",
+    "human_matrix": "n/a",
+    "complement_analytes": "UNVERIFIED ('complement activation parameters'; not named in abstract)"
+   },
+   {
+    "identifier": "PMID 24292388",
+    "title": "Species-specific inflammatory responses as a primary component for the development of glomerular lesions in mice and monkeys following chronic administration of a second-generation antisense oligonucleotide (drisapersen)",
+    "why_relevant": "NEW ANIMAL, TISSUE-phase complement (not fluid phase). Abstract read first-hand: monkey kidneys showed 'increased mesangial and inflammatory cells, endothelial cell hypertrophy, and subepithelial and membranous electron-dense deposits' and 'Lesions in monkeys resembled typical features of C3 glomerulopathy, a condition described in man and experimental animals to be linked to dysregulation of the alternative complement pathway.' Directly relevant because the context notes drisapersen complement data otherwise exists only in EMA/FDA assessment reports \u2014 this is a peer-reviewed drisapersen complement-pathology record in the open literature.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "mouse and monkey",
+    "human_matrix": "n/a",
+    "complement_analytes": "tissue immunohistochemistry consistent with C3 glomerulopathy (exact antisera UNVERIFIED from abstract)"
+   },
+   {
+    "identifier": "PMID 23692080",
+    "title": "Preclinical evaluation of the toxicological effects of a novel constrained ethyl modified antisense compound targeting signal transducer and activator of transcription 3 in mice and cynomolgus monkeys",
+    "why_relevant": "NEW ANIMAL, and a different chemistry class (cEt / 2',4'-constrained ethyl, i.e. AZD9150/danvatirsen lineage). Abstract read first-hand: 'mild and transient activated partial thromboplastin time elevations and mild increases in complement Bb were observed at the higher doses by intravenous dosing only.' The route-dependence (IV only, not SC) is a useful exposure-driven detail.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "mouse and cynomolgus monkey",
+    "human_matrix": "n/a",
+    "complement_analytes": "Bb"
+   },
+   {
+    "identifier": "PMID 20886212",
+    "title": "Preclinical toxicity and toxicokinetics of GTI-2040, a phosphorothioate oligonucleotide targeting ribonucleotide reductase R2",
+    "why_relevant": "NEW ANIMAL, another distinct PS oligonucleotide. Abstract read first-hand: 'In monkeys, there was a dose-related increase in GTI-2040 plasma levels with concomitant increase in complement activation and prolongation of activated partial thromboplastin time.' Adds an independent compound to the exposure/complement dose-response series.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "monkey (species not stated in abstract)",
+    "human_matrix": "n/a",
+    "complement_analytes": "UNVERIFIED ('complement activation'; not named in abstract)"
+   },
+   {
+    "identifier": "PMID 22913596",
+    "title": "Toxicological and pharmacokinetic properties of chemically modified siRNAs targeting p53 RNA following intravenous administration (I5NP / QPI-1002)",
+    "why_relevant": "NEW ANIMAL and directly answers the context's named compound QPI-1002/I5NP. Abstract read first-hand: 'Doses of 800 mg/kg I5NP in rodents, and 1,000 mg/kg I5NP in nonhuman primates, were required to elicit adverse effects, which in the monkey were isolated to direct effects on the blood that included a sub-clinical activation of complement and slightly increased clotting times.' A naked (non-formulated) chemically modified siRNA activating complement only at extreme dose \u2014 useful as the high-dose siRNA anchor.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "rodent and non-human primate (monkey)",
+    "human_matrix": "n/a",
+    "complement_analytes": "UNVERIFIED ('sub-clinical activation of complement'; not named in abstract)"
+   },
+   {
+    "identifier": "PMID 24720569",
+    "title": "Non-clinical safety studies of IMT504, a unique non-CpG oligonucleotide",
+    "why_relevant": "NEW ANIMAL, mostly negative and carefully split. Abstract read first-hand: 'In monkeys, this dosage caused slight changes in total serum complement and leukocyte count on day 14' AND 'No changes in clotting time and activation of the alternative complement pathway were observed.' The abstract therefore reports a small change in TOTAL complement alongside explicit non-activation of the ALTERNATIVE PATHWAY \u2014 an analyte-level dissociation worth preserving rather than collapsing.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "monkey (and other non-clinical species; not fully specified in abstract)",
+    "human_matrix": "n/a",
+    "complement_analytes": "total serum complement; alternative pathway activation (analyte not named)"
+   },
+   {
+    "identifier": "PMID 26048585",
+    "title": "Safety evaluation of intravenously administered mono-thioated aptamer against E-selectin in mice",
+    "why_relevant": "NEW ANIMAL, APTAMER, explicit measured NEGATIVE with named analytes. Abstract read first-hand: 'intravenous injection of ESTA did not affect the levels of plasma cytokines (IL-1b, IL-2, IL-4, IL-5, IL-6, IL-10, GM-CSF, IFN-g, and TNF-a) or complement split products (C3a and C5a) in either study.' A mono-thioated (reduced-PS-content) aptamer with C3a and C5a explicitly measured and unchanged \u2014 a backbone-content contrast to full-PS compounds.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "mouse",
+    "human_matrix": "n/a",
+    "complement_analytes": "C3a, C5a (both measured, both unchanged)"
+   },
+   {
+    "identifier": "PMID 35737426",
+    "title": "Preclinical Toxicological Assessment of A Novel siRNA, SLN360, Targeting Elevated Lipoprotein (a) in Cardiovascular Disease",
+    "why_relevant": "NEW ANIMAL, modern GalNAc-siRNA era, explicit measured NEGATIVE. Abstract read first-hand: 'No SLN360-induced cytokine production, complement activation, or micronucleus formation was observed in vivo.' Useful contrast class: conjugated siRNA at therapeutic exposures vs high-dose PS ASO. Species and analytes NOT stated in abstract.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "UNVERIFIED (not stated in abstract)",
+    "human_matrix": "n/a",
+    "complement_analytes": "UNVERIFIED ('complement activation'; not named in abstract)"
+   },
+   {
+    "identifier": "PMID 18766340",
+    "title": "Lack of toxicity of a STAT3 decoy oligonucleotide",
+    "why_relevant": "NEW ANIMAL, explicit measured NEGATIVE with a named analyte. Abstract read first-hand: 'Assessment of complement activation breakdown product (Bb) levels demonstrated no activation of the alternative pathway of complement in any animal at any dose level.' Species confirmed from the abstract text I read: 'male and female Cynomolgus monkeys', single IV dose. A double-stranded DECOY oligonucleotide (distinct structural class from single-stranded gapmers) that does NOT activate the alternative pathway in the species that is most sensitive to PS ASOs.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "cynomolgus monkey",
+    "human_matrix": "n/a",
+    "complement_analytes": "Bb (measured, no activation)"
+   },
+   {
+    "identifier": "PMID 27854228",
+    "title": "Toxicological Characterization of Exon Skipping Phosphorodiamidate Morpholino Oligomers (PMOs) in Non-human Primates",
+    "why_relevant": "NEW ANIMAL and the key UNCHARGED-BACKBONE comparator. Abstract read first-hand: 'Endpoints evaluated included plasma exposures, clinical observations, body weight/food consumption, eye exams, electrocardiograms, male reproductive hormones/endpoints, complement alternative pathway, clinical pathology, urinalysis, and macroscopic/light microscopic pathology.' Covers eteplirsen (39-week chronic NHP) plus SRP-4045 and SRP-4053 (12-week NHP). IMPORTANT HONESTY FLAG: the abstract names complement alternative pathway as a MEASURED endpoint but does NOT state the complement result, so the outcome is UNVERIFIED from PubMed \u2014 this must NOT be recorded as a negative without reading the full text.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "non-human primate (species not stated in abstract)",
+    "human_matrix": "n/a",
+    "complement_analytes": "alternative pathway (measured; RESULT UNVERIFIED from abstract)"
+   },
+   {
+    "identifier": "PMID 31881528",
+    "title": "Identifying and Avoiding tcDNA-ASO Sequence-Specific Toxicity for the Development of DMD Exon 51 Skipping Therapy",
+    "why_relevant": "NEW ANIMAL + in vitro, and a rare SEQUENCE-dependence demonstration. Abstract read first-hand: 'In vivo and in vitro assays revealed complement activation, prolonged coagulation times, and platelet activation, correlating with the observed toxicity' for the PS-modified tricyclo-DNA ASO targeting human dystrophin exon 51; and 'The resulting detoxified wobble-tcDNA candidate did not affect coagulation or complement pathways any longer nor activated platelets in vitro and was well tolerated in vivo in mice.' Same chemistry, same length, different sequence, complement activation switched off \u2014 strong evidence that the endpoint is sequence- as well as backbone-driven.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "mouse (in vivo); in vitro species UNVERIFIED",
+    "human_matrix": "n/a",
+    "complement_analytes": "UNVERIFIED ('complement pathways'; no analyte named in abstract)"
+   },
+   {
+    "identifier": "PMID 15264853",
+    "title": "Physicochemical and biological characterization of polyethylenimine-graft-poly(ethylene glycol) block copolymers as a delivery system for oligonucleotides and ribozymes",
+    "why_relevant": "NEW mechanistic/in-vitro. Abstract read first-hand: the oligonucleotide interpolyelectrolyte complexes 'were characterized with respect to their physicochemical properties, protection efficiency against enzymatic degradation, complement activation, and biological activity under in vitro conditions' and 'Complement activation decreased with an increasing number of short PEG 550 Da chains.' A structure-activity relationship for complement activation driven by the DELIVERY POLYMER rather than the oligonucleotide \u2014 important for attribution. Matrix/species NOT stated in abstract.",
+    "is_novel_vs_context": true,
+    "evidence_class": "mechanistic_only",
+    "species": "UNVERIFIED (not stated in abstract)",
+    "human_matrix": "UNVERIFIED",
+    "complement_analytes": "UNVERIFIED ('complement activation'; no analyte named)"
+   },
+   {
+    "identifier": "PMID 38214504",
+    "title": "In Vitro and In Vivo Evaluation of the Pathology and Safety Aspects of Three- and Four-Way Junction RNA Nanoparticles",
+    "why_relevant": "NEW mechanistic/in-vitro. Abstract read first-hand: 'In vitro studies include hemolysis, platelet aggregation, complement activation, plasma coagulation, and interferon induction.' Structured RNA nanoparticles (3WJ/4WJ) with complement activation as a declared assay. HONESTY FLAG: the abstract does not state the complement result or the matrix/species, so both are UNVERIFIED from PubMed.",
+    "is_novel_vs_context": true,
+    "evidence_class": "mechanistic_only",
+    "species": "UNVERIFIED",
+    "human_matrix": "UNVERIFIED",
+    "complement_analytes": "UNVERIFIED ('complement activation'; no analyte named; result not stated)"
+   },
+   {
+    "identifier": "PMID 29191134",
+    "title": "Safety Evaluation of Lipid Nanoparticle-Formulated Modified mRNA in the Sprague-Dawley Rat and Cynomolgus Monkey",
+    "why_relevant": "NEW ANIMAL, adjacent class (mRNA-LNP, not a therapeutic oligonucleotide, so label carefully). Abstract read first-hand: 'In the monkey, as seen with the parenteral administration of cationic LNPs, splenic necrosis and lymphocyte depletion were observed, accompanied with mild and reversible complement activation.' Included because it isolates the cationic-LNP contribution to complement activation, which is the key confounder for formulated oligonucleotide products (cf. CALAA-01 in the context set).",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "Sprague-Dawley rat and cynomolgus monkey",
+    "human_matrix": "n/a",
+    "complement_analytes": "UNVERIFIED ('complement activation'; no analyte named)"
+   },
+   {
+    "identifier": "PMID 31295956",
+    "title": "Anti-Bacterial Effect of CpG-DNA Involves Enhancement of the Complement Systems",
+    "why_relevant": "NEW ANIMAL, CpG ODN class. Abstract read first-hand: 'coli K1 infection increased the levels of the complement C3 but not C3a and C3b' and complement depletion by cobra venom factor changed the outcome. This is a CpG-ODN/complement interaction measured in mice, but framed as HOST-DEFENCE EFFICACY, not toxicity, and the C3 rise is reported in the infection context \u2014 so it is weak as a toxicity datapoint and should be labelled as such rather than counted as oligonucleotide-induced complement activation.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "mouse",
+    "human_matrix": "n/a",
+    "complement_analytes": "C3 (increased), C3a and C3b (not increased)"
+   },
+   {
+    "identifier": "PMID 32833564",
+    "title": "Immunogenicity Assessment of Inotersen, a 2'-O-(2-Methoxyethyl) Antisense Oligonucleotide in Animals and Humans: Effect on Pharmacokinetics, Pharmacodynamics, and Safety",
+    "why_relevant": "NEW, and directly addresses the context's note that inotersen complement data exists only in EMA/FDA assessment reports \u2014 this is a peer-reviewed inotersen paper that touches complement. Abstract read first-hand: 'no association was observed between IM [immunogenicity] and toxicity findings (eg, platelet, complement activation, and histopathology findings) in the inotersen 9-month monkey study.' CAREFUL SCOPE: the complement statement pertains to the MONKEY study, not the human data, and only reports absence of an association with anti-drug antibodies \u2014 it is not a human complement measurement and not a quantitative complement result.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "cynomolgus monkey (9-month study); paper also covers humans but not for complement",
+    "human_matrix": "n/a",
+    "complement_analytes": "UNVERIFIED ('complement activation findings'; no analyte named, no values)"
+   },
+   {
+    "identifier": "PMID 28609186",
+    "title": "Recommendations of the Oligonucleotide Safety Working Group's Formulated Oligonucleotide Subcommittee for the Safety Assessment of Formulated Oligonucleotide-Based Therapeutics",
+    "why_relevant": "NEW GUIDANCE document, the formulated-oligonucleotide sibling of the already-known OSWG complement paper (PMID 26981618). Relevant for how complement should be assessed for FORMULATED products specifically. HONESTY FLAG: I read the abstract and it contains NO complement term, so whether/how it specifies complement endpoints is UNVERIFIED from PubMed alone. It is guidance, not experimental evidence.",
+    "is_novel_vs_context": true,
+    "evidence_class": "not_relevant",
+    "species": "n/a",
+    "human_matrix": "n/a",
+    "complement_analytes": "UNVERIFIED (no complement term in abstract)"
+   },
+   {
+    "identifier": "PMID 33419768",
+    "title": "Inhibition of the Complement Alternative Pathway by Chemically Modified DNA Aptamers That Bind with Picomolar Affinity to Factor B",
+    "why_relevant": "TARGET IS COMPLEMENT \u2014 efficacy, NOT toxicity. Flagged separately per the rules. Included only because it is mechanistically load-bearing for the toxicity endpoint: it demonstrates that chemically modified DNA aptamers bind complement FACTOR B with picomolar affinity. The known PS-ASO mechanism (Sewing/Shen/Henry, factor H / alternative-pathway dysregulation) concerns oligonucleotide binding to alternative-pathway regulators; this shows the same backbone class engaging factor B directly and with high affinity. Must NOT be counted as a toxicity observation.",
+    "is_novel_vs_context": true,
+    "evidence_class": "target_is_complement_efficacy",
+    "species": "UNVERIFIED (in vitro; human reagents likely but not confirmed from abstract)",
+    "human_matrix": "UNVERIFIED",
+    "complement_analytes": "factor B binding; alternative pathway inhibition"
+   },
+   {
+    "identifier": "PMID 39431879",
+    "title": "The Inhibitory Effects of a Factor B-Binding DNA Aptamer Family Supersede the Gain of Function of Factor B Variants Associated with Atypical Hemolytic Uremic Syndrome",
+    "why_relevant": "TARGET IS COMPLEMENT \u2014 efficacy, NOT toxicity. Companion to PMID 33419768 from the same programme; same mechanistic value (DNA-aptamer/factor B interaction) and same exclusion from the toxicity tally.",
+    "is_novel_vs_context": true,
+    "evidence_class": "target_is_complement_efficacy",
+    "species": "UNVERIFIED",
+    "human_matrix": "UNVERIFIED",
+    "complement_analytes": "factor B (wild-type and aHUS gain-of-function variants); alternative pathway"
+   },
+   {
+    "identifier": "PMID 42713733",
+    "title": "A First-in-Japanese Phase 1, Double-Blind, Placebo-Controlled, Parallel-Cohort Study of Sefaxersen, an Antisense Oligonucleotide Targeting Complement Factor B, in Healthy Participants",
+    "why_relevant": "TARGET IS COMPLEMENT \u2014 efficacy pharmacodynamics, NOT toxicity. Logged separately per the rules so it is not miscounted. Novel relative to the context set (which names sefaxersen only as a drug to exclude, not this publication).",
+    "is_novel_vs_context": true,
+    "evidence_class": "target_is_complement_efficacy",
+    "species": "human",
+    "human_matrix": "UNVERIFIED",
+    "complement_analytes": "complement factor B (intended pharmacology)"
+   },
+   {
+    "identifier": "PMID 42718940",
+    "title": "GOLDEN: Efficacy and Safety of Complement Factor B Antisense, Sefaxersen, in Geographic Atrophy due to Age-Related Macular Degeneration",
+    "why_relevant": "TARGET IS COMPLEMENT \u2014 efficacy, NOT toxicity. Logged separately. Novel publication relative to the context set.",
+    "is_novel_vs_context": true,
+    "evidence_class": "target_is_complement_efficacy",
+    "species": "human",
+    "human_matrix": "UNVERIFIED",
+    "complement_analytes": "complement factor B (intended pharmacology)"
+   },
+   {
+    "identifier": "PMID 42596551",
+    "title": "A complement C5-targeted GalNAc-conjugated siRNA with sustained efficacy in a non-human primate model of IgA nephropathy",
+    "why_relevant": "TARGET IS COMPLEMENT \u2014 efficacy, NOT toxicity. Logged separately per the rules.",
+    "is_novel_vs_context": true,
+    "evidence_class": "target_is_complement_efficacy",
+    "species": "non-human primate",
+    "human_matrix": "n/a",
+    "complement_analytes": "C5 (intended pharmacology)"
+   },
+   {
+    "identifier": "PMID 42030965",
+    "title": "Efficacy and safety of cemdisiran siRNA in myasthenia gravis (NIMBLE): a double-blind, randomised, placebo-controlled, phase 3 trial",
+    "why_relevant": "TARGET IS COMPLEMENT \u2014 efficacy, NOT toxicity. Cemdisiran is named in the context as an exclusion; this specific phase 3 publication is new. Logged separately.",
+    "is_novel_vs_context": true,
+    "evidence_class": "target_is_complement_efficacy",
+    "species": "human",
+    "human_matrix": "n/a",
+    "complement_analytes": "C5 (intended pharmacology)"
+   },
+   {
+    "identifier": "PubMed metadata finding (no single PMID) \u2014 records 29107969, 19864604, 36104112, 27357629, 29270490",
+    "title": "PubMed carries NO data-availability, accession or trial-identifier metadata for any of the five priority papers",
+    "why_relevant": "NEGATIVE RESULT I VERIFIED FIRST-HAND, directly answering the task's data-availability sub-question. I fetched each record with efetch retmode=xml and inspected it: for Sewing 2017 (29107969), Mangsbo 2009 (19864604), de Boer 2022 (36104112), Crooke 2016 (27357629) and Demirjian (29270490) there is NO <DataBankList>, NO <AccessionNumber>, NO <DataBankName>, and the substring 'availab' appears NOWHERE in any of the five XML records. A grep for NCT[0-9]{8} returned EMPTY for all five, so Demirjian's NCT00554359 is NOT present in its PubMed record either, and Crooke 2016's lack of trial identifiers is confirmed at the metadata level. PublicationType for all five is 'Journal Article' (no 'Clinical Trial' tag). CONCLUSION: PubMed metadata structurally does not carry data-availability statements or supplementary-file manifests; the Sewing supplement pone.0187574.s001.xlsx is reachable only via PMC/PLOS, not via PubMed. This is a metadata absence, NOT a paywall and NOT a missing deposit.",
+    "is_novel_vs_context": true,
+    "evidence_class": "not_relevant",
+    "species": "n/a",
+    "human_matrix": "n/a",
+    "complement_analytes": "n/a"
+   }
+  ],
+  "no_useful_result": false,
+  "urls_touched": [
+   {
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=...&retmax=200&retmode=json",
+    "outcome": "HTTP 200 for all 17 queries; JSON returned with counts and ID lists; no login, no cookie wall, no rate-limit block"
+   },
+   {
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=...&retmode=json",
+    "outcome": "HTTP 200; titles/journals/pubdates returned for all requested ID batches (one batch raised a local KeyError on an empty-result edge case, re-run succeeded)"
+   },
+   {
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=...&retmode=text&rettype=abstract",
+    "outcome": "HTTP 200; full abstract text returned and read first-hand for 6 batches (~60 records)"
+   },
+   {
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=29107969,19864604,36104112,27357629,29270490&retmode=xml",
+    "outcome": "HTTP 200; full XML inspected per record \u2014 confirmed absence of DataBankList, AccessionNumber, NCT identifiers and any 'availab' string"
+   },
+   {
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=pubmed&db=pubmed&id=29107969&id=19864604&id=25093529&cmd=neighbor_score&retmode=json",
+    "outcome": "HTTP 200; 119 unique related-article neighbours returned and triaged \u2014 surfaced PMID 18766340 and PMID 31295956 that keyword queries had missed"
+   },
+   {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/ (HTML interface)",
+    "outcome": "NOT USED \u2014 per task guidance the HTML search has a cookie wall; all work done through the E-utilities API, which required no login and presented no barrier"
+   }
+  ],
+  "notes": "PRODUCTIVITY: very high, as predicted. No access barrier of any kind \u2014 E-utilities served every request without login, payment, CAPTCHA or bot check. I created no accounts, made no purchases, requested no credentials and contacted nobody. I saw no price or subscription terms anywhere, so all such terms are \"unverified\".\n\nSCOPE OF WHAT I READ FIRST-HAND vs INFERRED \u2014 this matters for the strictness rules:\n- READ FIRST-HAND: every hit count, every title, and the complete abstract text for ~60 records (efetch rettype=abstract), plus the raw XML metadata for the 5 priority papers. Every quoted sentence in the results above is a verbatim string from an abstract I retrieved.\n- NOT READ: no full texts. PubMed does not host full text, so for records whose abstract names complement as a measured endpoint WITHOUT stating the outcome, I recorded the outcome as UNVERIFIED rather than guessing. The two most important such cases are PMID 27854228 (PMO/eteplirsen NHP \u2014 \"complement alternative pathway\" listed as an endpoint, result not in abstract; do NOT score as negative) and PMID 26210642 (ISIS-APO(a)Rx phase 1 \u2014 \"complement variables\" measured, result not in abstract).\n- INFERRED (and labelled as such): classification of each record into human_clinical / human_laboratory / animal / mechanistic_only / target_is_complement_efficacy is my judgement from the abstract text, not a claim the paper self-labels that way.\n\nHIGHEST-VALUE NOVEL FINDS, ranked:\n1. PMID 27739230 (ARC-520, healthy human volunteers) \u2014 a positive, prospectively measured \"low-level, transient complement induction\" in humans given an RNAi therapeutic. This is a genuinely new human clinical datapoint and is NOT in the context set.\n2. PMID 26210642 (ISIS-APO(a)Rx phase 1) \u2014 human clinical with complement measured as a declared safety variable AND a trial identifier (EudraCT 2012-004909-27, not an NCT), which partially answers the context's \"Crooke 2016 has no trial identifiers\" gap.\n3. PMID 9034989 (LJP 394 / abetimus sodium, SLE patients) \u2014 human clinical, transient increases in complement split products after IV oligonucleotide. Confound: SLE baseline complement consumption.\n4. PMID 9873494 \u2014 a second, separate human in-vitro complement experiment comparing PS-DNA against PS-RNA / 2'-OMe-RNA / 2'-5'-RNA, i.e. a chemistry-dependence dataset in human complement.\n5. PMID 27140858 \u2014 chronic-dosing monkey data showing PROGRESSIVE rises in basal Bb and C3a and SUSTAINED C3 depletion, which is kinetically different from the single-dose picture in the context set.\n6. PMID 28123102 \u2014 minipig, a species beyond the monkey/human axis of the context set.\n7. PMID 37093125 \u2014 explicitly dissociates platelet-surface C3d/C4d deposition from fluid-phase alternative-pathway activation; an endpoint-definition caution.\n8. PMID 31881528 \u2014 same chemistry and length, different sequence, complement activation abolished: sequence-dependence evidence.\n\nPROPERLY-QUALIFIED NEGATIVES (measured non-activation, which per the rules is distinct from \"unreported\"): PMID 11446591 (INX-3280, no complement change despite Cmax ABOVE the published activation threshold \u2014 the strongest of these), PMID 18766340 (STAT3 decoy, Bb measured, no AP activation, cynomolgus), PMID 26048585 (E-selectin aptamer, C3a and C5a measured, unchanged, mouse), PMID 35737426 (SLN360 siRNA, no complement activation in vivo), PMID 24720569 (IMT504: slight total-complement change BUT explicit no alternative-pathway activation \u2014 do not collapse these two statements).\n\nATTRIBUTION CAUTION I want to flag to the parent: PMID 12429653 (LErafAON) reports large complement changes (total hemolytic complement down ~62-74%, C3a ~3-fold, Bb ~5-12-fold) but states these occurred \"in LErafAON AND BLANK LIPOSOME groups\". Likewise PMID 29191134 (LNP-mRNA), PMID 15264853 (PEI-g-PEG) and PMID 10411464 (ATTA8-DSPE liposomes) show complement activation driven by the DELIVERY VEHICLE. For any formulated product (including CALAA-01 in the context set) the oligonucleotide and the carrier cannot be assumed to be the same cause.\n\nSTRICT SEPARATION APPLIED: sefaxersen (PMIDs 39893955, 41443406, 42713733, 42718940), cemdisiran (42030965), the C5 GalNAc-siRNA (42596551), factor B ASOs (28855795, 26307001), avacincaptad pegol (32882310, 41407269), the factor B-binding DNA aptamers (33419768, 39431879) and the complement-targeting oligonucleotide hydrogel microspheres (41312643) all measure complement as EFFICACY pharmacodynamics. I have labelled every one target_is_complement_efficacy and kept them out of the toxicity evidence tally. The two factor-B aptamer papers are nonetheless mechanistically interesting for the toxicity endpoint because they show the same oligonucleotide backbone class binding an alternative-pathway component at picomolar affinity.\n\nDATA-AVAILABILITY SUB-TASK \u2014 ANSWERED, NEGATIVE: PubMed is structurally the wrong resource for this. Verified by direct XML inspection: none of the five priority records carries a DataBankList, an AccessionNumber, an NCT identifier or any \"availab\" string. Demirjian's NCT00554359 is absent from its own PubMed record. The Sewing 2017 supplement (pone.0187574.s001.xlsx) must be obtained from PMC/PLOS. This is a metadata absence, explicitly NOT a paywall, NOT a login wall, NOT a bot check and NOT a missing repository deposit.\n\nNOT CONFIRMED / DO NOT CITE AS COMPLEMENT EVIDENCE \u2014 abstracts I read that contained NO complement term, despite plausible-looking titles: PMID 16145049 (OGX-011 phase I), 34060347 (LNA ASOs in rats), 32530964 (LNA PS stereochemistry), 35860384 (phosphorodithioate LNA gapmers), 29846725 (ISIS 104838 platelet mechanism), 37111598 (ASO platelet activation in minipig), 27500733 (GalNAc3-ASO Lp(a) monkeys), 14570775 (TNF-a 2'-MOE ASO cross-species PK), 25646267 (PS backbone platelet activation), 36801361 (cholesterol-conjugated ASO thrombocytopenia), 39252874 (DNA/RNA heteroduplex), 32707001 (anti-miR-92a first-in-human), 25403217 (Atu027 first-in-human), 38009241 and 40673861 (donidalorsen \u2014 \"complement\" appears only as the drug name \"complement protein 1 inhibitor\"), 18668592 and 12571854 (abetimus phase III/renal flare). PMID 25012289 (ASO to CRP, human endotoxin challenge) mentions complement ONLY in a background sentence about CRP biology, not as a measured endpoint. PMID 32784904 (ApTOLL in pigs) lists \"C5/C5A\" only as one spot in a large cytokine array, which I consider too weak to call a complement measurement.\n\nUNPRODUCTIVE QUERY FORMULATIONS, for the record: query 2 (bare analyte names OR'd with oligo classes) returned 318 hits dominated by complement-biology papers using siRNA/ASO as laboratory knockdown tools rather than as therapeutics; query 11 was similarly swamped; query 12 failed because \"factor B\" matches \"growth factor B\", \"transcription factor B\" etc. The MeSH-intersection query (\"Oligonucleotides\"[Mesh] AND \"Complement Activation\"[Mesh], 78 hits) and the elink related-articles expansion were the two most efficient formulations and each surfaced records the keyword queries missed."
+ },
+ "Europe PMC (https://europepmc.org/) \u2014 searched via REST API at https://www.ebi.ac.uk/europepmc/webservices/rest/ (search, fullTextXML, supplementaryFiles)": {
+  "resource": "Europe PMC (https://europepmc.org/) \u2014 searched via REST API at https://www.ebi.ac.uk/europepmc/webservices/rest/ (search, fullTextXML, supplementaryFiles)",
+  "actually_searched": true,
+  "access_barrier": "none \u2014 for the resource itself. No login, no payment prompt, no price/subscription terms displayed, no Cloudflare/reCAPTCHA/bot check, no rate limiting encountered. All 24 search queries returned HTTP 200 JSON. SEPARATE sub-resource restrictions observed and classified: (1) TECHNICAL ERROR \u2014 /fullTextXML returned HTTP 500 {\"status\":500,\"error\":\"Internal Server Error\"} for three records that are inEPMC=Y but isOpenAccess=N: PMC2857538 (Mangsbo 2009), PMC1829492 (PNAS 2007 NHP siRNA nanoparticle), PMC12043408 (PMID 40101742). (2) OA-SUBSET RESTRICTION \u2014 /supplementaryFiles for PMC2857538 returned HTTP 200 with an errorBean reading verbatim \"Article with id PMC2857538 is not open access one\". Neither is a paywall and neither is a login requirement; both articles are free to read in PMC, only the machine-readable API route is withheld. I did not visit europepmc.org web pages at all, so the documented 403 behaviour on those pages was neither encountered nor contradicted.",
+  "endpoint_applicable": true,
+  "applicability_justification": "Highly applicable and the single most productive resource searched so far. Field-restricted queries (TITLE:, ABSTRACT:, METHODS:, JOURNAL:, SRC:, HAS_SUPPL:) collapse hit counts from hundreds of review-noise results to 3-70 precise results. The API surfaced 16 novel toxicity-relevant primary studies plus 9 target-is-complement efficacy studies, and the /fullTextXML + /supplementaryFiles endpoints let me verify analyte names, licences, trial identifiers and raw-data contents FIRST-HAND rather than inferring them. Concretely: I retrieved and parsed Sewing 2017's actual supplementary workbook through the API, and I extracted the exact complement analytes from six full texts. Two caveats learned by running the queries: (a) unrestricted boolean queries sort newest-first and flood with 2026 reviews, so hit counts are not a relevance signal; (b) the word \"complement\" used as an ordinary verb (\"to complement this assessment\", \"complement UFH\", \"complement oligodeoxynucleotide-mediated adjuvanticity\") is a major false-positive source \u2014 it is why PMID 36579950 and PMID 35021888 matched and both are not relevant.",
+  "queries_run": [
+   "\"complement activation\" AND \"antisense oligonucleotide\"",
+   "(C3a OR C5a OR \"sC5b-9\" OR anaphylatoxin) AND (oligonucleotide OR siRNA OR aptamer) AND (phosphorothioate OR antisense OR \"CpG ODN\")",
+   "\"complement activation\" AND phosphorothioate",
+   "(ABSTRACT:\"complement\" OR TITLE:\"complement\") AND (ABSTRACT:\"phosphorothioate\" OR TITLE:\"phosphorothioate\" OR ABSTRACT:\"antisense oligonucleotide\")  AND (ABSTRACT:\"C3a\" OR ABSTRACT:\"C5a\" OR ABSTRACT:\"Bb\" OR ABSTRACT:\"C5b-9\")",
+   "TITLE:\"complement\" AND TITLE:\"oligonucleotide\"",
+   "(\"ISIS 2302\" OR alicaforsen OR \"ISIS 5132\" OR \"ISIS 3521\" OR aprinocarsen OR GEM91 OR trecovirsen OR GEM231) AND complement",
+   "(mipomersen OR drisapersen OR inotersen OR volanesorsen OR eteplirsen OR nusinersen) AND (complement OR C3a OR C5a OR Bb)",
+   "(pegnivacogin OR \"REG1\" OR ApTOLL OR \"CALAA-01\" OR \"QPI-1002\" OR I5NP OR teprasiran OR avacincaptad OR pegaptanib) AND complement",
+   "CARPA AND (oligonucleotide OR siRNA OR aptamer OR \"nucleic acid\")",
+   "(\"CpG oligodeoxynucleotide\" OR \"CpG ODN\" OR ODN2395 OR \"CpG 2006\" OR \"CpG 7909\") AND (C3a OR C5a OR \"complement activation\")",
+   "(TITLE:\"complement\" OR TITLE:\"anaphylatoxin\" OR TITLE:\"C3a\" OR TITLE:\"C5a\") AND (TITLE:\"antisense\" OR TITLE:\"oligodeoxynucleotide\" OR TITLE:\"siRNA\" OR TITLE:\"aptamer\" OR TITLE:\"oligo\")",
+   "ABSTRACT:\"complement activation\" AND (ABSTRACT:\"antisense\" OR ABSTRACT:\"oligodeoxynucleotide\" OR ABSTRACT:\"oligonucleotide\") AND (ABSTRACT:\"monkey\" OR ABSTRACT:\"cynomolgus\" OR ABSTRACT:\"rhesus\" OR ABSTRACT:\"primate\")",
+   "(ABSTRACT:\"Bb\" OR ABSTRACT:\"factor Bb\" OR ABSTRACT:\"properdin\" OR ABSTRACT:\"factor H\" OR ABSTRACT:\"CH50\") AND (ABSTRACT:\"antisense oligonucleotide\" OR ABSTRACT:\"phosphorothioate\" OR ABSTRACT:\"2-MOE\" OR ABSTRACT:\"siRNA\")",
+   "ABSTRACT:\"alternative pathway\" AND (ABSTRACT:\"oligonucleotide\" OR ABSTRACT:\"antisense\") AND NOT ABSTRACT:\"factor B inhibitor\"",
+   "EXT_ID:27140858 OR EXT_ID:37093125 OR EXT_ID:23692080 OR EXT_ID:8819516 OR EXT_ID:11446591 OR EXT_ID:20886212 OR EXT_ID:18766340 OR EXT_ID:32833564",
+   "PMCID:PMC2857538",
+   "(ABSTRACT:\"whole blood\" OR ABSTRACT:\"human serum\" OR ABSTRACT:\"human plasma\" OR ABSTRACT:\"ex vivo\") AND (ABSTRACT:\"complement\" ) AND (ABSTRACT:\"oligonucleotide\" OR ABSTRACT:\"oligodeoxynucleotide\" OR ABSTRACT:\"siRNA\" OR ABSTRACT:\"aptamer\")",
+   "(ABSTRACT:\"sC5b-9\" OR ABSTRACT:\"C5b-9\" OR ABSTRACT:\"terminal complement complex\" OR ABSTRACT:\"SC5b-9\") AND (ABSTRACT:\"oligonucleotide\" OR ABSTRACT:\"siRNA\" OR ABSTRACT:\"aptamer\" OR ABSTRACT:\"nucleic acid\")",
+   "(ABSTRACT:\"complement\") AND (ABSTRACT:\"locked nucleic acid\" OR ABSTRACT:\"LNA\" OR ABSTRACT:\"gapmer\" OR ABSTRACT:\"GalNAc\")",
+   "ABSTRACT:\"complement\" AND (ABSTRACT:\"infusion reaction\" OR ABSTRACT:\"hypersensitivity\" OR ABSTRACT:\"pseudoallergy\" OR ABSTRACT:\"pseudo-allergic\") AND (ABSTRACT:\"oligonucleotide\" OR ABSTRACT:\"siRNA\" OR ABSTRACT:\"aptamer\")",
+   "EXT_ID:17379663 OR EXT_ID:35737426 OR EXT_ID:27739230 OR EXT_ID:38779336 OR EXT_ID:36579950 OR EXT_ID:39252874 OR EXT_ID:42381708 OR EXT_ID:35021888",
+   "JOURNAL:\"Nucleic Acid Therapeutics\" AND (complement OR C3a OR C5a)",
+   "SRC:\"PAT\" AND (complement) AND (oligonucleotide OR phosphorothioate OR antisense)",
+   "(ABSTRACT:\"complement\" AND (ABSTRACT:\"C3a\" OR ABSTRACT:\"Bb\")) AND (ABSTRACT:\"rat\" OR ABSTRACT:\"mouse\" OR ABSTRACT:\"mice\" OR ABSTRACT:\"rabbit\" OR ABSTRACT:\"swine\" OR ABSTRACT:\"pig\")  AND (ABSTRACT:\"oligonucleotide\" OR ABSTRACT:\"siRNA\" OR ABSTRACT:\"ASO\")",
+   "(\"whole blood loop\" OR \"blood loop model\") AND (complement OR CpG OR oligonucleotide)",
+   "(GEM91 OR trecovirsen OR \"GEM 91\" OR \"ISIS 104838\" OR \"ISIS 481464\" OR \"ISIS 405879\" OR \"ISIS 2503\" OR \"ISIS 113715\" OR \"ISIS 301012\") AND (complement OR C3a OR Bb)",
+   "EXT_ID:36104112",
+   "EXT_ID:40101742",
+   "METHODS:\"complement\" AND METHODS:(\"C3a\" OR \"Bb\") AND (oligonucleotide OR siRNA OR antisense)",
+   "(HAS_SUPPL:Y) AND (TITLE:\"oligonucleotide\" OR TITLE:\"antisense\" OR TITLE:\"siRNA\") AND (ABSTRACT:\"complement activation\" OR ABSTRACT:\"C3a\" OR ABSTRACT:\"Bb\")",
+   "(ABSTRACT:\"complement activation\") AND (ABSTRACT:\"oligonucleotide\" OR ABSTRACT:\"siRNA\" OR ABSTRACT:\"antisense\") AND (HAS_LABSLINKS:Y OR HAS_TM_ACCESSION_NUMBERS:Y)",
+   "EXT_ID:29107969 / EXT_ID:27357629 / EXT_ID:19864604 / EXT_ID:31821125 / EXT_ID:30570431 / EXT_ID:27739230 / EXT_ID:35737426 (seven separate resultType=core calls for licence and data-link flags)"
+  ],
+  "relevant_results": [
+   {
+    "identifier": "PMID 27739230 / PMC5516171 / NCT01872065",
+    "title": "Safety, Tolerability, and Pharmacokinetics of ARC-520 Injection, an RNA Interference-Based Therapeutic for the Treatment of Chronic Hepatitis B Virus Infection, in Healthy Volunteers",
+    "why_relevant": "READ FIRST-HAND (full text via /fullTextXML). Highest-value novel find: a human clinical complement dataset for an siRNA therapeutic that is absent from the context. Methods, verbatim: 'Venous blood samples were collected and processed to produce serum (for complement CH50 analysis) or plasma (for split products-Bb analysis).' Results, verbatim: 'An increase in individual Bb levels (a measure of alternative pathway activation) was detected beginning in cohort 3 (1 subject) and cohort 4 (1 subject)'; 'A pattern of Bb increase was seen in the cohort average for groups 6, 7, 8, and 9'; 'In all cases, the increase in Bb occurred at 0.5 and 2 hours postdose'; 'in cohort 9, there was a pattern toward a decrease in CH50 at 2 hours postdose in 4 subjects (3 treated with ARC-520 Injection, 1 treated with placebo)'. Abstract conclusion: 'Low-level, transient complement induction and sporadic, mild, and transient elevations of several cytokines were observed but not associated with any symptoms.' Trial identifier extracted first-hand from text: Heparc-1001, NCT01872065, single centre Nucleus Network Melbourne, 9 sequential cohorts, recruitment from July 2013, database closure October 2014. Licence cc by-nc-nd (API field). Unlike Crooke 2016 this paper DOES carry its trial identifier. NOT a complement-targeting drug: ARC-520 targets HBV transcripts, so this is toxicity/safety pharmacodynamics.",
+    "is_novel_vs_context": true,
+    "evidence_class": "human_clinical",
+    "species": "human (healthy adult volunteers)",
+    "human_matrix": "serum for CH50; plasma for Bb split product (two different matrices, stated explicitly)",
+    "complement_analytes": "Bb (plasma), CH50 (serum)"
+   },
+   {
+    "identifier": "PMID 30570431 / PMC6386089",
+    "title": "Integrated Assessment of the Clinical Performance of GalNAc3-Conjugated 2'-O-Methoxyethyl Chimeric Antisense Oligonucleotides: I. Human Volunteer Experience",
+    "why_relevant": "READ FIRST-HAND (full text via /fullTextXML). Second major novel human clinical complement dataset. Methods, verbatim: 'Samples were collected before dosing for standard clinical laboratory tests and collected at several time points within a 24-h period after SC dose administration for coagulation tests and complement split products.' Figure legend, verbatim: 'Mean laboratory measurements of coagulation and complement activation over the 24-h period postdose 1 in single and weekly multidose regimen cohorts, (a) activated partial thromboplastin time, (b) prothrombin time, (c) complement split product Bb, and (d) complement split product C5a.' Result, verbatim: 'there was no effect on coagulation or evidence of complement activation relative to baseline during the 24-h period after the first dose in both the single- and multidose cohorts (Table 5 and Fig. ...)'. This is an explicit human NEGATIVE (measured and non-activating), not an 'unreported'. Pools several GalNAc3-2'MOE ASO programmes; target abbreviations listed in the paper include AGT, ANGPTL3, APOC3, CFB (complement factor B), GHR, HBV S, KLKB1 and LPA. Cohort n values appearing in the safety table row: 36, 121, 32, 38, 33, 12, 6. Licence cc by-nc (API field). NOTE the mixed-intent trap: one pooled programme targets CFB, where complement reduction is efficacy; but Bb and C5a here are measured as SAFETY endpoints across the whole platform, so the dataset belongs on the toxicity side with that caveat flagged. Like Crooke 2016, NO NCT identifiers anywhere in the full text (checked by regex: zero matches).",
+    "is_novel_vs_context": true,
+    "evidence_class": "human_clinical",
+    "species": "human (healthy volunteers)",
+    "human_matrix": "UNVERIFIED whether serum or plasma \u2014 the paper says 'complement split products' without naming the matrix in the text I retrieved",
+    "complement_analytes": "Bb, C5a (both named as 'complement split product' in the figure legend)"
+   },
+   {
+    "identifier": "PMID 27140858",
+    "title": "Effects of Repeated Complement Activation Associated with Chronic Treatment of Cynomolgus Monkeys with 2'-O-Methoxyethyl Modified Antisense Oligonucleotide",
+    "why_relevant": "Abstract READ FIRST-HAND via resultType=core. The single most detailed chronic-dosing complement toxicology study found anywhere in this resource, and absent from the context. ISIS 104838, up to 9 months, total 30 mg/kg/week given as 4.3 mg/kg/day s.c., or 30 mg/kg once weekly s.c., or 30 mg/kg 30-min i.v. infusion. Verbatim: 'Acute elevations of complement split products (Bb and C3a) and a transient decrease in C3 occurred after the first dose and were drug plasma concentration dependent. However, with repeated complement activation after chronic ASO treatment, there were progressive increases in basal (predose) levels of Bb and C3a, and a sustained C3 reduction in all treated groups. There was also a progressive increase in C3d-bound circulating immune complex (CIC) that was considered secondary to the C3 depletion.' Vascular inflammation in liver, kidney and heart correlated with severe C3 depletion. The authors' own caveat, verbatim: 'based on the known sensitivity of monkeys to ASO-induced complement activation, these findings have limited relevance to humans.' Not OA (isOpenAccess=N, no PMC); full text not retrieved, so sub-abstract numbers are UNVERIFIED.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "cynomolgus monkey",
+    "human_matrix": "not applicable (animal study)",
+    "complement_analytes": "Bb, C3a, C3, C3d-bound circulating immune complex"
+   },
+   {
+    "identifier": "PMID 31821125 / PMC6987735",
+    "title": "Nonclinical Safety Profile of Revusiran, a 1st-Generation GalNAc-siRNA Conjugate for Treatment of Hereditary Transthyretin-Mediated Amyloidosis",
+    "why_relevant": "READ FIRST-HAND (full text via /fullTextXML). Novel animal NEGATIVE with the assay vendor named. Verbatim: 'In monkeys, blood was collected for analysis of serum TTR concentrations, plasma complement C3a and Bb concentrations, and plasma cytokines/chemokines'; 'Plasma complement (Bb and C3a) was measured by AniLytics, Inc.'; 'There were no revusiran-related changes in complement split products C3a and Bb, or in plasma cytokines'; and 'no complement activation (as gauged by plasma split products Bb and C3a) or elevations in plasma cytokines were observed.' A measured non-activation for a GalNAc-conjugated siRNA, which contrasts usefully with the phosphorothioate ASO literature. Licence cc by (API field).",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "cynomolgus monkey (monkey; rat also in study)",
+    "human_matrix": "not applicable (animal study)",
+    "complement_analytes": "C3a, Bb (plasma; assayed by AniLytics, Inc.)"
+   },
+   {
+    "identifier": "PMID 35737426 / PMC9516055",
+    "title": "Preclinical Toxicological Assessment of A Novel siRNA, SLN360, Targeting Elevated Lipoprotein (a) in Cardiovascular Disease",
+    "why_relevant": "READ FIRST-HAND (full text via /fullTextXML). Novel animal NEGATIVE with the full analyte panel named. Verbatim methods: 'Clinical chemistry, hematology, circulatory, and ECG parameters (jacketed telemetry), respiratory rate, neurobehavior, plasma cytokines (IL-1b, IL-2, IL-6, IL-8, IL-10, IFNg, and TNF-a), complement activation (C3a, Bb, and sC5b-9) and CRP levels were measured prior to the first dose, at parameter-specific timepoints during the study and at the end of the recovery period.' Verbatim results: 'No SLN360-induced cytokine production, complement activation, or micronucleus formation was observed in vivo'; 'there was an absence of cytokine induction or complement activation in NHP in vivo'; 'No evidence of complement activation or enhanced cytokine production in relation to SLN360 was observed.' This is the only novel study found that measured all three of C3a, Bb AND sC5b-9 together. Licence cc by, hasSuppl=Y. Caveat read first-hand: the in vitro human/NHP whole-blood arm tested CYTOKINE induction, not complement \u2014 'Cytokine induction was not induced in human or NHP whole blood in vitro' \u2014 so this paper supplies no human complement measurement.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "non-human primate (in vivo); rabbit (anti-drug antibodies)",
+    "human_matrix": "none for complement \u2014 the human whole-blood in vitro work measured cytokines only, not complement",
+    "complement_analytes": "C3a, Bb, sC5b-9"
+   },
+   {
+    "identifier": "PMID 39252874 / PMC11382116",
+    "title": "DNA/RNA heteroduplex technology with cationic oligopeptide reduces class-related adverse effects of nucleic acid drugs",
+    "why_relevant": "READ FIRST-HAND (full text via /fullTextXML); complement is INVISIBLE in the abstract (which names only aPTT and thrombocytopenia) and only appears in the full text \u2014 a good argument for full-text rather than abstract-level screening. Verbatim: 'Effects of ASOs and HDOs with the same sequence on aPTT and complement activation were investigated (Figure 1)'; 'We measured C3a levels by ELISA using ASOs and HDOs in different base lengths'; 'HDOs significantly decreased C3a levels compared to ASOs in both base lengths in the ex vivo assay (Figures 1E and 1F)'; 'Ex vivo study measuring C3a levels showed high C3a levels in cynomolgus monkey serum incubated with ASOs and Chol-HDOs for two different target RNAs as well as with zymosan, which was used as a positive control for complement activation (Figure S4)'; 'The DabO/Chol-HDO complex showed significantly lower C3a levels than Chol-HDO alone.' Mechanism probed via factor H: 'we evaluated the binding affinities of ASOs and HDOs with human factor H, which is associated with complement activation' and a gel-shift comparison (Figure S5). Conclusion, verbatim: 'HDOs and Chol-HDOs with PS modifications caused aPTT prolongation and complement activation, as did the parent ASOs.' 16-mer and 20-mer ASO/HDO against Malat1. 'Quidel' appears once in the text, so the C3a ELISA is plausibly Quidel \u2014 the same vendor as Sewing 2017 \u2014 but the exact kit attribution is UNVERIFIED. Licence cc by-nc-nd, hasSuppl=Y. Matrix caveat: monkey serum is explicitly stated for Figure S4; the matrix for Figures 1E/1F is UNVERIFIED in the text I extracted.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "cynomolgus monkey (serum, ex vivo) for C3a; human factor H protein for the binding/gel-shift mechanism work",
+    "human_matrix": "none \u2014 the human component is purified human factor H protein, not a human blood matrix",
+    "complement_analytes": "C3a (ELISA); human factor H binding (gel-shift)"
+   },
+   {
+    "identifier": "PMID 37093125",
+    "title": "Complement C3d/C4d Deposition on Platelets Correlates with 2'-O-Methoxyethyl Antisense Oligonucleotide-Induced Thrombocytopenia in Monkeys",
+    "why_relevant": "Abstract READ FIRST-HAND via resultType=core. Novel, and mechanistically distinct from every other item: measures CELL-BOUND complement rather than fluid-phase split products. ISIS 405879, 40 mg/kg/week for 16 weeks, induced severe thrombocytopenia (platelets <50 K/uL) in seven of nine Mauritian-sourced cynomolgus monkeys but not in Asian-sourced animals. Verbatim: 'Marked increases in PLT-bound C3d/C4d were detected in all thrombocytopenic Mauritian-sourced monkeys but not in the unaffected Mauritian- or Asian-sourced monkeys, suggesting increased PLT clearance due to complement deposition on the PLTs. However, this effect was independent of the ASO-mediated fluid-phase alternative complement activation.' That last clause is important for the endpoint: it dissociates platelet-surface complement deposition from the classic fluid-phase alternative-pathway readout. Also reports anti-GPIIb/IIIa IgG correlating with platelet reduction, and increases in total serum IgM, anti-platelet IgM and anti-PF4 IgM. Not OA, no PMC; full text not retrieved.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "cynomolgus monkey (Mauritian-sourced vs Asian-sourced)",
+    "human_matrix": "not applicable (animal study)",
+    "complement_analytes": "platelet-bound C3d/C4d (cell-surface, not fluid-phase)"
+   },
+   {
+    "identifier": "PMID 23692080",
+    "title": "Preclinical evaluation of the toxicological effects of a novel constrained ethyl modified antisense compound targeting signal transducer and activator of transcription 3 in mice and cynomolgus monkeys",
+    "why_relevant": "Abstract READ FIRST-HAND via resultType=core. Novel; extends the chemistry coverage of the endpoint to constrained ethyl (cEt) rather than 2'-MOE. ISIS 481464, a cEt phosphorothioate ASO targeting STAT3, 6-week studies to 70 mg/kg/week (mice) and 30 mg/kg/week (monkey). Verbatim: 'mild and transient activated partial thromboplastin time elevations and mild increases in complement Bb were observed at the higher doses by intravenous dosing only.' The route-dependence (i.v. only, not s.c.) is a useful detail. Author conclusion, verbatim: 'The toxicity profile of ISIS 481464 is consistent with effects observed with phosphorothioate ASOs containing 2'-O-methoxyethylribose modifications instead of cEt.' Not OA, no PMC; full text not retrieved.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "cynomolgus monkey (complement finding); mouse (other endpoints)",
+    "human_matrix": "not applicable (animal study)",
+    "complement_analytes": "Bb"
+   },
+   {
+    "identifier": "PMID 8819516",
+    "title": "Single-dose hemodynamic toxicity and pharmacokinetics of a partial phosphorothioate anti-HIV oligonucleotide (AR177) after intravenous infusion to cynomolgus monkeys",
+    "why_relevant": "Abstract READ FIRST-HAND via resultType=core. Novel, and valuable because of the unusual chemistry: AR177 (zintevir) is a 17-mer with a PHOSPHODIESTER backbone carrying single phosphorothioate linkages only at the 3' and 5' ends \u2014 sequence given in the abstract as 5' GTGGTGGGTGGGTGGGT-3'. Single 10-minute i.v. infusions of 5, 20 or 50 mg/kg or saline. Verbatim: 'There was a minimal, dose-dependent increase in the levels of complement split product Bb and total hemolytic complement.' So a near-fully-phosphodiester, G-quartet-forming oligonucleotide still produced a dose-dependent Bb rise \u2014 relevant to apportioning the effect between backbone chemistry and higher-order structure. 'Total hemolytic complement' is the CH50-type functional readout the task asked about. Note the direction as written is an INCREASE in total hemolytic complement, unlike the CH50 decrease seen in ARC-520; I am reporting the sentence as written and not reconciling the two. Not OA, no PMC; full text not retrieved.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "cynomolgus monkey",
+    "human_matrix": "not applicable (animal study)",
+    "complement_analytes": "Bb; total hemolytic complement"
+   },
+   {
+    "identifier": "PMID 20886212",
+    "title": "Preclinical toxicity and toxicokinetics of GTI-2040, a phosphorothioate oligonucleotide targeting ribonucleotide reductase R2",
+    "why_relevant": "Abstract READ FIRST-HAND via resultType=core. Novel, and one of few rhesus (rather than cynomolgus) datasets. GTI-2040, a 20-mer phosphorothioate ASO. Rats at 2, 10, 50 mg/kg/day i.v. every second day for 21 days; monkeys given single escalating doses of 10-80 mg/kg as 24-h continuous i.v. infusion, plus a 21-day continuous i.v. infusion study at 2, 10, 50 mg/kg/day. Verbatim: 'In monkeys, there was a dose-related increase in GTI-2040 plasma levels with concomitant increase in complement activation and prolongation of activated partial thromboplastin time.' NOAEL stated as 2 mg/kg/day in both species. Specific complement analytes are NOT named in the abstract, so they are UNVERIFIED; the paper is not OA and full text was not retrieved.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "rhesus monkey (complement finding); Sprague-Dawley rat",
+    "human_matrix": "not applicable (animal study)",
+    "complement_analytes": "UNVERIFIED \u2014 abstract says only 'complement activation' without naming analytes"
+   },
+   {
+    "identifier": "PMID 11446591",
+    "title": "Toxicity and toxicokinetics of a phosphorothioate oligonucleotide against the c-myc oncogene in cynomolgus monkeys",
+    "why_relevant": "Abstract READ FIRST-HAND via resultType=core. Novel, and an unusually well-qualified animal NEGATIVE: non-activation at plasma concentrations that EXCEEDED the published activation threshold, which makes it a genuine negative rather than an underdosed null. INX-3280, a 15-mer phosphorothioate, i.v. three times weekly for 2 weeks at 3 or 15 mg/kg, deliberately converted to its monomeric form because the oligonucleotide otherwise adopts a quadruplex aggregate. Verbatim: 'there were no test article-related changes in hematology, serum chemistry, or complement activation parameters'; and crucially 'Maximum concentration (Cmax) values for INX-3280 (101-119 microg/ml) were in excess of the threshold plasma concentrations reported to trigger complement activation by phosphorothioate oligonucleotides.' Read together with AR177 above, this pair speaks directly to the quadruplex/higher-order-structure question. Specific analytes not named in the abstract \u2014 UNVERIFIED. Not OA, no PMC.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "cynomolgus monkey",
+    "human_matrix": "not applicable (animal study)",
+    "complement_analytes": "UNVERIFIED \u2014 abstract says 'complement activation parameters' without naming them"
+   },
+   {
+    "identifier": "PMID 18766340 / PMC3422883",
+    "title": "Lack of toxicity of a STAT3 decoy oligonucleotide",
+    "why_relevant": "Abstract READ FIRST-HAND via resultType=core. Novel animal NEGATIVE with the analyte named, and a different oligonucleotide class again \u2014 a double-stranded DECOY rather than an antisense, siRNA or aptamer. Single intramuscular injection, 0.8 mg or 3.2 mg total dose per monkey or PBS vehicle, two monkeys per sex per group, necropsies day 2 and day 15. Verbatim: 'Assessment of complement activation breakdown product (Bb) levels demonstrated no activation of the alternative pathway of complement in any animal at any dose level.' NOAEL reported as greater than 3.2 mg/kg. Caveats worth carrying: intramuscular (not i.v.) route, a single dose, and very small group sizes, so the negative is weak in power even though it is explicit. inEPMC=Y but isOpenAccess=N, so full text was not retrievable via /fullTextXML.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "cynomolgus monkey",
+    "human_matrix": "not applicable (animal study)",
+    "complement_analytes": "Bb"
+   },
+   {
+    "identifier": "PMID 17379663 / PMC1829492",
+    "title": "Administration in non-human primates of escalating intravenous doses of targeted nanoparticles containing ribonucleotide reductase subunit M2 siRNA",
+    "why_relevant": "Abstract READ FIRST-HAND via resultType=core. Novel and directly adjacent to the context's CALAA-01 entry (PMID 25049380) \u2014 this is the non-human-primate study of the transferrin-targeted cyclodextrin nanoparticle/RRM2 siRNA platform that CALAA-01 came from, so it supplies the animal tier the context lacks for that compound. Verbatim: 'Analysis of complement factors does not reveal any changes that are clearly attributable to dosing with the nanoparticle formulation.' Note the hedged phrasing ('not clearly attributable') \u2014 this is weaker than a flat negative and I am not upgrading it. Specific analytes are NOT named in the abstract, so UNVERIFIED. ACCESS NOTE: inEPMC=Y but isOpenAccess=N, and /fullTextXML returned HTTP 500 for PMC1829492, so the analyte list could not be confirmed from this resource. This is a technical/OA-subset limitation, not a paywall.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "non-human primate (cynomolgus monkey per abstract context)",
+    "human_matrix": "not applicable (animal study)",
+    "complement_analytes": "UNVERIFIED \u2014 abstract says only 'complement factors'"
+   },
+   {
+    "identifier": "PMID 38779336 / PMC11109470",
+    "title": "siRNA-mediated reduction of a circulating protein in swine using lipid nanoparticles",
+    "why_relevant": "Abstract READ FIRST-HAND via resultType=core. Novel, and the only CARPA-framed result in a large animal that this resource produced. Verbatim: 'Lipid nanoparticles (LNPs) efficiently deliver small interfering RNA (siRNA) to knock down circulating proteins, but swine are sensitive to LNP-induced complement activation-related pseudoallergy (CARPA).' IMPORTANT ATTRIBUTION CAVEAT, and the reason I rank this lower than the ASO studies: the activation here is ascribed to the LIPID NANOPARTICLE carrier, not to the oligonucleotide backbone. The siRNA is the payload. For an endpoint defined as complement activation BY therapeutic oligonucleotides this is carrier-mediated CARPA and must be kept in a separate bucket from phosphorothioate-backbone-driven alternative-pathway activation, or it will contaminate the chemistry-attribution analysis. Specific analytes UNVERIFIED (not named in abstract; full text not retrieved). Licence cc by-nc-nd.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "swine",
+    "human_matrix": "not applicable (animal study)",
+    "complement_analytes": "UNVERIFIED \u2014 abstract names CARPA but no analytes"
+   },
+   {
+    "identifier": "PMID 31295956 / PMC6678731",
+    "title": "Anti-Bacterial Effect of CpG-DNA Involves Enhancement of the Complement Systems",
+    "why_relevant": "READ FIRST-HAND (full text via /fullTextXML). Novel, and the only animal-tier CpG ODN complement study this resource surfaced; it cites the context's Mangsbo 2009 whole-blood-loop paper as its reference [7] \u2014 verbatim: 'It was reported that CpG-DNA affects complement activation, which results in the modulation of the immune system by upregulation of CD40 and CD83 and the induction of cytokines (IL-6 and TNF-a) in the whole blood loop system [7]'. Design: 'To determine the levels of the complement components in the mouse serum after the administration of CpG-DNA, BALB/c mice were i.p. [injected]... The sera were obtained from the mice at the indicated time points, and the levels of the serum complement components were measured using ELISA kits.' Term counts in full text: complement 41, C3 36, C3a 23, C5a 2, C4a 1, factor H 1, Quidel 1. DIRECTION CAVEAT, important: the framing is ENHANCEMENT/augmentation of complement component levels as a beneficial anti-bacterial mechanism, not toxicity \u2014 verbatim, 'we suggest that CpG-DNA enhances the anti-bacterial activity of the immune system by augmenting the levels of complement systems'. And one result cuts against a simple activation reading: 'coli K1 infection increased the levels of the complement C3 but not C3a and C3b.' So this is complement-component-level modulation in mouse serum, which is not the same measurement as anaphylatoxin generation, and should not be scored as an activation-toxicity positive. Licence: OA, in EPMC. Full text retrievable.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "BALB/c mouse",
+    "human_matrix": "not applicable (animal study)",
+    "complement_analytes": "C3, C3a, C3b (ELISA, mouse serum); C5a and C4a mentioned"
+   },
+   {
+    "identifier": "PMID 32833564 / NCT01737398",
+    "title": "Immunogenicity Assessment of Inotersen, a 2'-O-(2-Methoxyethyl) Antisense Oligonucleotide in Animals and Humans: Effect on Pharmacokinetics, Pharmacodynamics, and Safety",
+    "why_relevant": "Abstract READ FIRST-HAND via resultType=core. Novel as a PUBLICATION (the context has inotersen complement data existing 'ONLY in EMA/FDA assessment reports' \u2014 this is a peer-reviewed paper that touches it), though the trial NCT01737398 is already in the known list. The complement content is narrow and must not be oversold: the paper's subject is anti-drug antibodies, and complement appears only as one of the toxicity findings cross-tabulated against immunogenicity status. Verbatim: 'no association was observed between IM and toxicity findings (eg, platelet, complement activation, and histopathology findings) in the inotersen 9-month monkey study.' So it confirms that complement activation findings EXIST in the 9-month cynomolgus study and that they were not ADA-associated; it does not itself report the complement values. For humans it reports only that 'no difference was observed in hematology, including platelets, kidney function tests, or incidence of adverse events between IM-positive and -negative patients' \u2014 complement is not among the human readouts listed. Monkey ADA incidence 28.6-50.0% after 36 weeks; human 30% after 65 weeks. Not OA, no PMC; full text not retrieved, so the underlying complement analytes are UNVERIFIED.",
+    "is_novel_vs_context": true,
+    "evidence_class": "animal",
+    "species": "cynomolgus monkey (complement); human and mouse (other endpoints)",
+    "human_matrix": "none for complement \u2014 human arm reports hematology/renal/AEs, not complement",
+    "complement_analytes": "UNVERIFIED \u2014 'complement activation findings' referenced without analyte names"
+   },
+   {
+    "identifier": "PMID 42381708 / PMC13315839",
+    "title": "Meta-analysis of adverse events in clinical studies with antisense oligonucleotide therapies",
+    "why_relevant": "READ FIRST-HAND (full text via /fullTextXML). Included as a framing/taxonomy source ONLY, explicitly NOT as evidence of a measurement, per the rule that a review repeating a primary experiment is not a second experiment. The full text mentions 'complement' just 3 times and reports no complement measurements. Its one useful contribution is the class taxonomy, verbatim: 'Sequence-independent AEs are not sequence-specific and are commonly divided into four subcategories: (1) accumulation in the kidney and liver tissues, (2) complement activation, (3) pro-inflammatory effects, and (4) thrombocytopenia (notably, some studies argue that thrombocytopenia can also be sequence-derived).' Covers 13 USFDA- or EMA-approved ASO therapies. Licence cc by, hasSuppl=Y \u2014 the supplement may hold a per-drug AE table worth checking in a later pass, which I did not open.",
+    "is_novel_vs_context": true,
+    "evidence_class": "not_relevant",
+    "species": "human (literature meta-analysis, no new measurement)",
+    "human_matrix": "none \u2014 no primary complement measurement",
+    "complement_analytes": "none measured"
+   },
+   {
+    "identifier": "PMID 42713733 / PMC13555670",
+    "title": "A First-in-Japanese Phase 1, Double-Blind, Placebo-Controlled, Parallel-Cohort Study of Sefaxersen, an Antisense Oligonucleotide Targeting Complement Factor B, in Healthy Participants",
+    "why_relevant": "EFFICACY, NOT TOXICITY \u2014 flagged per the task rule. Sefaxersen's TARGET is complement factor B, so any complement measurement here is intended pharmacodynamics, not an adverse finding. Listed so it is not miscounted as toxicity evidence. Two Europe PMC records exist for the same article (PMID 42713733 with no PMC, and a separate PMC13555670 record with no PMID attached) \u2014 a duplicate-record hazard for automated counting. isOpenAccess=Y, hasSuppl=Y on the PMC record. Title and metadata read first-hand; full text not retrieved.",
+    "is_novel_vs_context": true,
+    "evidence_class": "target_is_complement_efficacy",
+    "species": "human (healthy Japanese participants)",
+    "human_matrix": "UNVERIFIED",
+    "complement_analytes": "UNVERIFIED \u2014 complement factor B is the drug target"
+   },
+   {
+    "identifier": "PMID 42718940 / PMC13553563",
+    "title": "GOLDEN: Efficacy and Safety of Complement Factor B Antisense, Sefaxersen, in Geographic Atrophy due to Age-Related Macular Degeneration",
+    "why_relevant": "EFFICACY, NOT TOXICITY \u2014 flagged per the task rule; complement factor B is the drug target. Recorded to keep the efficacy/toxicity boundary clean. isOpenAccess=Y, hasSuppl=Y. Metadata read first-hand; full text not retrieved.",
+    "is_novel_vs_context": true,
+    "evidence_class": "target_is_complement_efficacy",
+    "species": "human",
+    "human_matrix": "UNVERIFIED",
+    "complement_analytes": "UNVERIFIED \u2014 complement factor B is the drug target"
+   },
+   {
+    "identifier": "PMID 41443406",
+    "title": "A single-arm phase 2 trial of an investigational RNA therapeutic to complement factor B sefaxersen for treatment of IgA nephropathy",
+    "why_relevant": "EFFICACY, NOT TOXICITY \u2014 flagged per the task rule; complement factor B is the drug target. Kidney Int 2026, isOpenAccess=N. Metadata read first-hand.",
+    "is_novel_vs_context": true,
+    "evidence_class": "target_is_complement_efficacy",
+    "species": "human (IgA nephropathy patients)",
+    "human_matrix": "UNVERIFIED",
+    "complement_analytes": "UNVERIFIED \u2014 complement factor B is the drug target"
+   },
+   {
+    "identifier": "PMID 39893955",
+    "title": "Inhibiting the alternative pathway of complement by reducing systemic complement factor B: Randomized, double-blind, placebo-controlled phase 1 studies with Sefaxersen",
+    "why_relevant": "EFFICACY, NOT TOXICITY \u2014 flagged per the task rule. This is the factor B ASO phase 1 programme (the IONIS-FB-LRx/sefaxersen lineage named in the task's exclusion list). Immunobiology 2025, 230:152876, isOpenAccess=N. Full citation recovered first-hand from the reference list of PMC13315839, where it appears verbatim as 'Inhibiting the alternative pathway of complement by reducing systemic complement factor B: Randomized, double-blind, placebo-controlled phase 1 studies with Sefaxersen Immunobiology 230 2025 152876 10.1016/j.imbio.2025.152876 39893955'.",
+    "is_novel_vs_context": true,
+    "evidence_class": "target_is_complement_efficacy",
+    "species": "human (phase 1)",
+    "human_matrix": "UNVERIFIED",
+    "complement_analytes": "UNVERIFIED \u2014 complement factor B is the drug target"
+   },
+   {
+    "identifier": "PMID 28855795 / PMC5563462",
+    "title": "Reduction in ocular complement factor B protein in mice and monkeys by systemic administration of factor B antisense oligonucleotide",
+    "why_relevant": "EFFICACY, NOT TOXICITY \u2014 flagged per the task rule; factor B is the target. Mol Vis 2017, isOpenAccess=Y, in EPMC. Useful only as the animal pharmacodynamic arm of the factor B ASO programme.",
+    "is_novel_vs_context": true,
+    "evidence_class": "target_is_complement_efficacy",
+    "species": "mouse and monkey",
+    "human_matrix": "not applicable",
+    "complement_analytes": "complement factor B protein (drug target)"
+   },
+   {
+    "identifier": "PMID 26307001",
+    "title": "Inhibition of the alternative complement pathway by antisense oligonucleotides targeting complement factor B improves lupus nephritis in mice",
+    "why_relevant": "EFFICACY, NOT TOXICITY \u2014 flagged per the task rule; factor B is the target. Immunobiology 2016, isOpenAccess=N.",
+    "is_novel_vs_context": true,
+    "evidence_class": "target_is_complement_efficacy",
+    "species": "mouse",
+    "human_matrix": "not applicable",
+    "complement_analytes": "alternative pathway / factor B (drug target)"
+   },
+   {
+    "identifier": "PMID 42596551",
+    "title": "A complement C5-targeted GalNAc-conjugated siRNA with sustained efficacy in a non-human primate model of IgA nephropathy",
+    "why_relevant": "EFFICACY, NOT TOXICITY \u2014 flagged per the task rule; C5 is the target. Mol Ther 2026, isOpenAccess=N. Listed to keep the C5-siRNA cluster from being miscounted as toxicity evidence.",
+    "is_novel_vs_context": true,
+    "evidence_class": "target_is_complement_efficacy",
+    "species": "non-human primate",
+    "human_matrix": "not applicable",
+    "complement_analytes": "C5 (drug target)"
+   },
+   {
+    "identifier": "PMID 38371766 / PMC10870387",
+    "title": "Development of the Complement C5 Assay by LC-MS/MS in Monkey Serum and Comparison with Enzyme-Linked Immunosorbent Assay",
+    "why_relevant": "METHODOLOGY, in a complement-as-target context \u2014 flagged, not toxicity evidence. Relevant to the challenge only as assay-platform intelligence: it cross-compares LC-MS/MS against ELISA for a complement protein in monkey serum, which bears on whether ELISA-derived values (such as the Quidel C3a/C5a values in the Sewing dataset) are platform-comparable. ACS Omega 2024, isOpenAccess=Y. Metadata and title read first-hand; full text not retrieved, so the degree of ELISA/LC-MS agreement is UNVERIFIED.",
+    "is_novel_vs_context": true,
+    "evidence_class": "target_is_complement_efficacy",
+    "species": "monkey (serum)",
+    "human_matrix": "none",
+    "complement_analytes": "C5 (assay development; LC-MS/MS vs ELISA)"
+   },
+   {
+    "identifier": "PMID 29107969 / PMC5673186 (Sewing 2017)",
+    "title": "Establishing a pre-clinical in vitro assay to assess the pro-inflammatory potential of therapeutic oligonucleotides (PLoS One 12(11):e0187574) \u2014 DATA-AVAILABILITY AND RAW-DATA VERIFICATION",
+    "why_relevant": "Already in context, so is_novel=false, but I verified the committed dataset FIRST-HAND and the context's key numeric claim CHECKS OUT EXACTLY. (1) Licence confirmed CC BY 4.0 from two independent places: the API license field reads 'cc by', and the full-text XML carries xlink:href='http://creativecommons.org/licenses/by/4.0/' with the standard unrestricted-reuse text. (2) Data-availability statement, verbatim and complete: 'All relevant data are within the paper and its Supporting Information files.' There is NO repository deposit \u2014 hasDbCrossReferences=N and hasTMAccessionNumbers=N, so no GEO/Dryad/figshare/accession of any kind. The supplement IS the only raw data. (3) The /supplementaryFiles endpoint WORKS for this article and is the clean machine route: it returned HTTP 200, a 580,042-byte ZIP containing 17 entries, among them pone.0187574.s001.xlsx at 54,955 bytes, declared in the XML as 'S1 File Raw data figures. (XLSX)'. (4) I parsed that workbook directly. It holds 6 sheets: 'Figure 1' through 'Figure 6'. Sheet 'Figure 6' spans A1:R46, header cell A1 = 'Individual data Whole Blood Assays [Stimulation Index]', and contains FOUR stacked analyte blocks, labelled in column A: MCP1 (rows 2-8), IL8 (rows 10-16), C3a (rows 18-24), C5a (rows 26-32), followed by a separate 'AC8 concentration response:' section (rows 35-46) that carries MCP1 and IL8 only and NO complement. (5) THE 144 FIGURE IS CONFIRMED, and it is specifically the complement subset, not the sheet total: the C3a block has 3 donor rows of 16 values (columns A-P) plus 2 donor rows of 12 values (B and N-P absent) = 72, and the C5a block has the identical shape = 72, giving 72 + 72 = 144 per-donor stimulation-index values. For contrast the whole sheet holds 380 numeric cells, so anyone quoting a sheet-level count would get 380, not 144 \u2014 worth pinning down in the commit note. (6) A structural detail that matters for interpretation and that I have not seen stated in the context: the complement blocks use DIFFERENT column controls from the cytokine blocks. C3a and C5a rows read A=PBS, B='Class. Path.', C='Alt. Path.', D='Inhib.', E=' + PS', F=' - PS', then a length series G=10, H=12, I=14, J=16, K=18, L=20, M=22, then N='16 LNA', O='18 LNA', P='20 LNA' \u2014 i.e. classical/alternative-pathway activator and inhibitor controls \u2014 whereas MCP1 and IL8 use B=R848, C=CpG, D='poly DC' TLR controls in those same columns. Column position alone therefore does NOT identify the condition; the block header must be read. (7) Reading the values as they stand: for C3a the '+ PS' column gives 17.1, 9.9, 10.3, 12.8, 8.9 against '- PS' at 0.6, 0.5, 0.6, 0.5, 1.4; for C5a '+ PS' gives 4.9, 3.1, 6.8, 4.8, 3.4 against '- PS' at 0.8, 0.7, 0.9, 0.7, 0.9; the 10-22mer length series sits mostly between 0.5 and 2.7 and the three LNA columns between 0.6 and 1.5. I am reporting the cell contents, not inferring the compound identities behind '+ PS'/'- PS'.",
+    "is_novel_vs_context": false,
+    "evidence_class": "human_laboratory",
+    "species": "human",
+    "human_matrix": "whole blood (sheet header: 'Individual data Whole Blood Assays [Stimulation Index]')",
+    "complement_analytes": "C3a, C5a (144 per-donor stimulation-index values total, 72 each \u2014 verified by direct parse)"
+   },
+   {
+    "identifier": "PMID 27357629 / PMC5112040 (Crooke 2016)",
+    "title": "Integrated Safety Assessment of 2'-O-Methoxyethyl Chimeric Antisense Oligonucleotides in NonHuman Primates and Healthy Human Volunteers (Mol Ther 24(10):1771-1782) \u2014 IDENTIFIER AND DATA-AVAILABILITY VERIFICATION",
+    "why_relevant": "Already in context, so is_novel=false, but I verified the context's 'NO trial identifiers' claim FIRST-HAND against the full text and it is CORRECT. Regex over the complete /fullTextXML: NCT matches = NONE (zero), EudraCT-pattern matches = NONE (zero). There is also no data-availability statement at all \u2014 'data availab' = 0 occurrences, 'accession' = 0 occurrences \u2014 and hasDbCrossReferences=N, so no deposit anywhere. Licence confirmed CC BY-NC-SA 4.0 from both the API license field ('cc by-nc-sa') and the full-text licence text. Analyte term counts in the full text: Bb appears 7 times, C5a twice, 'C3 ' twice; 'sC5b' = 0 and 'Quidel' = 0 and 'ELISA' = 0, so the assay vendor and platform are NOT recoverable from this article. The supplement is a single PDF: /supplementaryFiles returned a 2,549,427-byte ZIP whose only non-image entry is mt2016136x1.pdf at 1,934,231 bytes \u2014 figures and tables as images otherwise, i.e. NO machine-readable raw data. One correction worth carrying: the context describes this as human clinical, and the title confirms it spans NonHuman Primates AND healthy human volunteers, so the 750 subjects should not be assumed to be the whole dataset.",
+    "is_novel_vs_context": false,
+    "evidence_class": "human_clinical",
+    "species": "human (healthy volunteers) and non-human primate",
+    "human_matrix": "UNVERIFIED \u2014 not recoverable from the text; no ELISA/vendor mention",
+    "complement_analytes": "Bb, C5a, C3 (per context; term counts confirmed in full text)"
+   },
+   {
+    "identifier": "PMID 19864604 / PMC2857538 (Mangsbo 2009)",
+    "title": "Complement activation by CpG in a human whole blood loop system: mechanisms and immunomodulatory effects (J Immunol 183(10):6724-6732) \u2014 ACCESS AND LICENCE VERIFICATION",
+    "why_relevant": "Already in context, so is_novel=false, but the ACCESS STATUS is the finding and it confirms the context's 'free, no CC licence' note precisely. API core record read first-hand: isOpenAccess=N, license=None, inEPMC=Y, inPMC=Y, hasPDF=Y, hasSuppl=Y. The practical consequence for the challenge: because the article sits outside Europe PMC's open-access subset, BOTH machine routes are closed even though the article is free to read. /fullTextXML returned HTTP 500 Internal Server Error, and /supplementaryFiles returned an errorBean whose message is verbatim 'Article with id PMC2857538 is not open access one'. So hasSuppl=Y advertises supplementary material that the API will not serve. CLASSIFICATION, stated explicitly per the task rules: this is an OA-subset restriction plus a server error \u2014 it is NOT a paywall, NOT a login requirement, and NOT a missing deposit. Any raw C3a/C4a/C5a CBA values from this paper would have to be read off the PDF manually, and the absence of a CC licence constrains redistribution in a way Sewing's CC BY does not \u2014 which is consistent with committing Sewing only.",
+    "is_novel_vs_context": false,
+    "evidence_class": "human_laboratory",
+    "species": "human",
+    "human_matrix": "whole blood (whole blood loop system)",
+    "complement_analytes": "C3a, C4a, C5a by CBA (per context; not re-verifiable via API)"
+   },
+   {
+    "identifier": "PMID 36104112 (de Boer 2022)",
+    "title": "Synthetic Oligodeoxynucleotide CpG Motifs Activate Human Complement through Their Backbone Structure and Induce Complement-Dependent Cytokine Release (J Immunol) \u2014 ANTICOAGULANT AND ACCESS VERIFICATION",
+    "why_relevant": "Already in context, so is_novel=false, but I read the abstract first-hand and it pins down the ANTICOAGULANT CONVENTION directly, which is the live methodological question: verbatim, 'LEPIRUDIN-anticoagulated human whole blood and plasma were incubated with increasing concentrations of three classes of synthetic CpGs: CpG-A, -B, and -C oligodeoxynucleotides and their GpC sequence controls.' Lepirudin is the thrombin-specific anticoagulant chosen precisely because citrate and EDTA chelate the divalent cations that complement activation requires, so this is the non-complement-inhibiting convention, and it contrasts with whatever Sewing 2017 used \u2014 a difference that must be recorded per dataset rather than assumed uniform. Also read first-hand: complement activation products were measured by immunoassay, cytokines by 27-plex bead immunoassay, and CpG-protein interactions by magnetic beads coated with CpG-B to identify individual complement proteins. The backbone-structure attribution in the title matters for the endpoint, since it separates backbone chemistry from CpG sequence motif \u2014 and the GpC sequence controls are what license that claim. ACCESS: pmcid=NONE, isOpenAccess=N, inEPMC=N, hasSuppl=N \u2014 this paper has NO Europe PMC full text or supplement at all, so only the abstract is reachable here. The abstract is truncated mid-sentence in the API record ('In whole blood and plasma, CpG-B and CpG-C (p p > 0.8 for all), led to time- and dose-dependent increase of'), so the actual effect sizes and p-values are UNVERIFIED from this resource.",
+    "is_novel_vs_context": false,
+    "evidence_class": "human_laboratory",
+    "species": "human",
+    "human_matrix": "lepirudin-anticoagulated whole blood and plasma",
+    "complement_analytes": "complement activation products by immunoassay (specific analytes UNVERIFIED \u2014 abstract text truncated in the API record)"
+   },
+   {
+    "identifier": "PMID 29270490 / PMC5733816 (Demirjian) / NCT00554359",
+    "title": "Kidney Int Rep (Demirjian et al.) \u2014 LICENCE AND SUPPLEMENT VERIFICATION",
+    "why_relevant": "Already in context, so is_novel=false, but two details verified first-hand correct/refine the context. (1) LICENCE CORRECTION: the full-text XML licence reads verbatim 'This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/)' \u2014 that is CC BY-NC-ND, which is MORE restrictive than Crooke's CC BY-NC-SA and prohibits derivatives, so it should not be grouped with the Crooke licence terms when deciding what can be redistributed. (2) NO RAW COMPLEMENT DATA IS DEPOSITED: /supplementaryFiles returned a 624,075-byte ZIP, and the only two non-image entries are mmc1.doc (223,744 bytes) and mmc2.doc (36,352 bytes), which the XML identifies as 'Figure S1 CONSORT 2010 checklist of information' and 'Figure S2 CONSORT 2010 flow diagram'. So the supplement is trial-reporting boilerplate only. hasDbCrossReferences=N confirms no external deposit. The Bb/C3a/C4a/C5a values from this trial are therefore locked in the article body and figures, not in any reusable file \u2014 same situation as Crooke, and the opposite of Sewing.",
+    "is_novel_vs_context": false,
+    "evidence_class": "human_clinical",
+    "species": "human",
+    "human_matrix": "UNVERIFIED from this resource",
+    "complement_analytes": "Bb, C3a, C4a, C5a (per context)"
+   }
+  ],
+  "no_useful_result": false,
+  "notes": "BOTTOM LINE: Europe PMC was the most productive resource so far. 24 distinct query formulations, all executed successfully, no access barrier to the resource. Yield: 16 novel toxicity-relevant primary studies (2 human clinical, 13 animal, 1 CpG/mouse), 9 novel target-is-complement efficacy studies kept strictly separate, and first-hand verification of the licence, data-availability and supplement status of all four priority papers.\n\nTHE TWO FINDINGS THAT MOST CHANGE THE PICTURE:\n1. PMID 27739230 / PMC5516171 \u2014 ARC-520, NCT01872065. A human clinical complement dataset (Bb in plasma, CH50 in serum) for an siRNA therapeutic, with a real trial identifier, entirely absent from the context. The context's human clinical tier was Crooke 2016 (no identifiers) + Demirjian + regulatory-report-only compounds. This adds a citable, identifier-bearing, OA human dataset showing low-level transient alternative-pathway activation.\n2. PMID 30570431 / PMC6386089 \u2014 GalNAc3-2'MOE ASO integrated human volunteer experience, measuring Bb and C5a, reporting an explicit measured NEGATIVE across single and multidose cohorts. A measured human non-activation is scientifically distinct from \"unreported\" and the endpoint needs both poles.\n\nON THE COMMIT-SEWING-ONLY DECISION, which this search supports on three independent grounds: Sewing is the ONLY one of the four priority papers whose raw data is both openly licensed (CC BY 4.0, confirmed twice) and machine-retrievable (the /supplementaryFiles endpoint serves pone.0187574.s001.xlsx, 54,955 bytes, HTTP 200). Mangsbo's API routes are both closed (fullTextXML HTTP 500; supplementaryFiles returns \"not open access\") and it carries no CC licence at all. Crooke's supplement is one 1.9 MB PDF with figures as images. Demirjian's supplement is two CONSORT .doc files. None of the four has any repository deposit \u2014 hasDbCrossReferences=N for every one, and hasTMAccessionNumbers=Y only for ARC-520 (that flag is picking up the NCT, not a data accession).\n\nON THE ANTICOAGULANT CONVENTION: de Boer 2022 uses LEPIRUDIN-anticoagulated human whole blood and plasma, read first-hand from the abstract. This is the complement-compatible choice (citrate and EDTA chelate the divalent cations complement activation requires), so adopting lepirudin as the stated convention is consistent with the closest human whole-blood comparator. Flag, though: the convention should be recorded PER DATASET rather than assumed uniform, because I could not verify Sewing's or Mangsbo's anticoagulant from what I retrieved, and a cross-study comparison of absolute C3a/C5a across different anticoagulants would not be sound.\n\nVERIFIED NUMERIC CHECK ON THE COMMITTED DATASET: the context's \"144 per-donor stimulation-index values in sheet Figure 6\" is EXACTLY RIGHT, but only for the complement subset \u2014 C3a block 72 values + C5a block 72 values. The sheet as a whole holds 380 numeric cells because it also stacks MCP1 and IL8 blocks plus an AC8 concentration-response section with no complement in it. Anyone recomputing a sheet-level count will get 380 and think the context is wrong. Also, and this is a real parsing trap: the C3a/C5a blocks use classical/alternative-pathway activator and inhibitor controls in columns B/C/D, whereas the MCP1/IL8 blocks use R848/CpG/poly-dC in those same columns. Column position does not identify the condition; the block header in column A must be read.\n\nMETHOD LESSONS FOR THE REMAINING RESOURCES:\n- Field restriction is everything here. \"complement activation\" AND \"antisense oligonucleotide\" gave 663 hits of mostly 2026 reviews; TITLE:\"complement\" AND TITLE:\"oligonucleotide\" gave 14 hits of which 8 were on-target. Unrestricted boolean queries sort newest-first, so hit count is not a relevance signal.\n- \"Complement\" as an ordinary VERB is the dominant false positive. PMID 36579950 matched on \"small preliminary in vivo studies should also be considered to complement this early assessment\" and PMID 35021888 on \"complement UFH, rather than replace it\"; both are not relevant. Any automated screen on the string \"complement\" needs this filter.\n- Abstract-level screening MISSES real complement data. PMID 39252874's abstract names only aPTT and thrombocytopenia, yet its full text reports C3a ELISA in cynomolgus serum and human factor H binding. Full-text search is not optional for this endpoint.\n- JOURNAL:\"Nucleic Acid Therapeutics\" as a sweep (65 hits) was efficient and surfaced the revusiran and GalNAc3 human-volunteer papers that analyte queries had missed.\n\nHONEST LIMITS ON WHAT I READ:\n- Read as FULL TEXT: PMC5673186, PMC5112040, PMC5733816, PMC5516171, PMC9516055, PMC13315839, PMC11382116, PMC6386089, PMC6987735, PMC6461157, PMC7415887, PMC6678731. Plus the Sewing XLSX parsed cell by cell.\n- Read as ABSTRACT ONLY (not OA, full text unavailable here): PMID 27140858, 37093125, 23692080, 8819516, 11446591, 20886212, 18766340, 32833564, 17379663, 38779336, 36104112, 40101742. Where these abstracts do not name analytes I have written UNVERIFIED rather than guessing: that applies to 20886212, 11446591, 17379663, 38779336 and 32833564.\n- NOT CONFIRMED, deliberately excluded from results: PMID 40101742 / PMC12043408 (J Immunol 2025, mass-cytometry immune phenotyping during ISIS 405879 thrombocytopenia in 24 monkeys). It surfaced on an ISIS-compound query, but its abstract contains NO complement mention and /fullTextXML returned HTTP 500, so I cannot confirm complement was measured. Listing it as relevant would be a guess. Worth one targeted check elsewhere given its sibling paper PMID 37093125 does measure platelet-bound C3d/C4d.\n- PATENTS FOUND BUT NOT COUNTED AS EVIDENCE, per the task rule that a patent describing an assay is not evidence the assay was run. SRC:\"PAT\" returned 585 hits including, by title: \"Inhibition of complement activation and complement modulation by use of modified oligonucleotides\" (2004); \"Use of oligonucleotides for inhibition of complement activation\" (2002); \"USE OF OLIGONUCLEOTIDE PHOSPHOROTHIOATE FOR DEPLETING COMPLEMENT AND FOR REDUCING BLOOD PRESSURE\" (two records, 1995 and 1997); \"Antisense modulation of complement component C3 expression\" (several records, 2003-2004). Europe PMC's lite records for these carry no PMID, DOI or patent number, so I am NOT asserting any identifier for them. Note that the phosphorothioate/complement-depletion patents date from 1995-1997, contemporaneous with Henry 1997 (PMID 9152389) in the context.\n- Guidance/position documents found, listed as leads not evidence: PMID 36579950 (preclinical ASO safety considerations, cc by), PMID 33470890 (Japanese working group, ICH S6), PMID 41565351 (industry perspective on ICH S13), PMID 41680369 (2024 FDA-CRCG workshop on immunogenicity risk for generic peptide/oligonucleotide). These sit alongside the context's PMID 26981618 OSWG guidance.\n- One unopened lead I would pick up next: PMC13315839's supplement (cc by, hasSuppl=Y) may contain a per-drug adverse-event table across the 13 approved ASO therapies, which could identify further complement-reporting trials. I did not download it.\n\nNo purchases, subscriptions, account creations, credential requests or author/sponsor contacts were made. No price or entitlement terms were displayed anywhere, so none are recorded. Local working files are under /tmp/claude-0/-home-user/8c04d0e6-e833-5402-9d28-4b447a5b5c4f/scratchpad/epmc/ (query JSON, retrieved full-text XML, and sewing_s001.xlsx extracted from the Europe PMC supplementary ZIP).",
+  "urls_touched": [
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=...&format=json&resultType=lite",
+    "outcome": "HTTP 200 for all 24 distinct search queries; no login, no payment, no bot check, no rate limiting. Default sort is newest-first, not relevance."
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:...&resultType=core",
+    "outcome": "HTTP 200; returned abstracts plus licence, isOpenAccess, inEPMC, hasSuppl, hasDbCrossReferences and hasTMAccessionNumbers fields for all targeted PMIDs (used in 3 batched calls plus 7 single calls)"
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5673186/fullTextXML",
+    "outcome": "HTTP 200, 133,406 bytes \u2014 Sewing 2017. CC BY 4.0 confirmed; data-availability statement and S1 File reference extracted"
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5673186/supplementaryFiles",
+    "outcome": "HTTP 200, 580,042-byte ZIP, 17 entries including pone.0187574.s001.xlsx (54,955 bytes) \u2014 parsed successfully; 6 sheets, Figure 6 complement blocks = 144 values"
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2857538/fullTextXML",
+    "outcome": "HTTP 500 Internal Server Error \u2014 Mangsbo 2009. TECHNICAL ERROR / OA-subset restriction (isOpenAccess=N), NOT a paywall and NOT a login requirement"
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2857538/supplementaryFiles",
+    "outcome": "HTTP 200 but errorBean, message verbatim 'Article with id PMC2857538 is not open access one' \u2014 OA-subset restriction. hasSuppl=Y advertises material the API will not serve"
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5112040/fullTextXML",
+    "outcome": "HTTP 200, 93,518 bytes \u2014 Crooke 2016. CC BY-NC-SA 4.0 confirmed; zero NCT and zero EudraCT matches; no data-availability statement"
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5112040/supplementaryFiles",
+    "outcome": "HTTP 200, 2,549,427-byte ZIP; only non-image entry is mt2016136x1.pdf (1,934,231 bytes) \u2014 no machine-readable raw data"
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5733816/fullTextXML",
+    "outcome": "HTTP 200, 71,502 bytes \u2014 Demirjian. Licence read as CC BY-NC-ND 4.0 (more restrictive than the context implied)"
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5733816/supplementaryFiles",
+    "outcome": "HTTP 200, 624,075-byte ZIP; only non-image entries are mmc1.doc and mmc2.doc, both CONSORT reporting documents \u2014 no raw complement data"
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5516171/fullTextXML",
+    "outcome": "HTTP 200, 128,198 bytes \u2014 ARC-520. Extracted Bb/CH50 methods and results plus trial identifier NCT01872065"
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6386089/fullTextXML",
+    "outcome": "HTTP 200, 182,961 bytes \u2014 GalNAc3-2'MOE human volunteers. Extracted Bb and C5a as measured split products and the explicit no-activation result"
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6987735/fullTextXML",
+    "outcome": "HTTP 200, 173,118 bytes \u2014 revusiran. Extracted plasma C3a/Bb, assay vendor AniLytics Inc., and the negative result"
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9516055/fullTextXML",
+    "outcome": "HTTP 200, 124,881 bytes \u2014 SLN360. Extracted the C3a/Bb/sC5b-9 panel and the negative result"
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11382116/fullTextXML",
+    "outcome": "HTTP 200, 149,907 bytes \u2014 DNA/RNA heteroduplex. Extracted C3a ELISA in cynomolgus serum, zymosan control, human factor H gel-shift; complement absent from abstract"
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13315839/fullTextXML",
+    "outcome": "HTTP 200, 348,766 bytes \u2014 ASO adverse-event meta-analysis. Only 3 complement mentions, no measurements; recovered the full Immunobiology citation for PMID 39893955"
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6678731/fullTextXML",
+    "outcome": "HTTP 200, 104,194 bytes \u2014 CpG-DNA and complement in BALB/c mice. Extracted mouse-serum ELISA design and the C3-versus-C3a dissociation"
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6461157/fullTextXML",
+    "outcome": "HTTP 200, 112,565 bytes \u2014 IONIS-PKKRx. Only 1 incidental complement mention; screened out as not relevant"
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7415887/fullTextXML",
+    "outcome": "HTTP 200, 84,962 bytes \u2014 volanesorsen QTc. Complement appears only as background citation; screened out as not relevant"
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC1829492/fullTextXML",
+    "outcome": "HTTP 500 Internal Server Error \u2014 PNAS 2007 NHP siRNA nanoparticle (inEPMC=Y, isOpenAccess=N). TECHNICAL ERROR / OA-subset restriction, not a paywall; analytes remain UNVERIFIED"
+   },
+   {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12043408/fullTextXML",
+    "outcome": "HTTP 500 Internal Server Error \u2014 PMID 40101742 (inEPMC=Y, isOpenAccess=N). TECHNICAL ERROR / OA-subset restriction; complement content unconfirmed, so excluded from results"
+   }
+  ]
+ }
+}

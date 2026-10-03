@@ -1,0 +1,145 @@
+analyte,condition,donor_index,value,unit
+C3a,PBS,1,1.0,stimulation_index
+C3a,PBS,2,1.0,stimulation_index
+C3a,PBS,3,1.0,stimulation_index
+C3a,Class. Path.,1,18.7,stimulation_index
+C3a,Class. Path.,2,10.2,stimulation_index
+C3a,Class. Path.,3,18.4,stimulation_index
+C3a,Class. Path.,4,21.0,stimulation_index
+C3a,Class. Path.,5,15.0,stimulation_index
+C3a,Alt. Path.,1,6.4,stimulation_index
+C3a,Alt. Path.,2,9.2,stimulation_index
+C3a,Alt. Path.,3,6.5,stimulation_index
+C3a,Alt. Path.,4,13.3,stimulation_index
+C3a,Alt. Path.,5,11.8,stimulation_index
+C3a,Inhib.,1,0.3,stimulation_index
+C3a,Inhib.,2,0.2,stimulation_index
+C3a,Inhib.,3,0.3,stimulation_index
+C3a,Inhib.,4,0.2,stimulation_index
+C3a,Inhib.,5,0.1,stimulation_index
+C3a,+ PS,1,17.1,stimulation_index
+C3a,+ PS,2,9.9,stimulation_index
+C3a,+ PS,3,10.3,stimulation_index
+C3a,+ PS,4,12.8,stimulation_index
+C3a,+ PS,5,8.9,stimulation_index
+C3a,- PS,1,0.6,stimulation_index
+C3a,- PS,2,0.5,stimulation_index
+C3a,- PS,3,0.6,stimulation_index
+C3a,- PS,4,0.5,stimulation_index
+C3a,- PS,5,1.4,stimulation_index
+C3a,10,1,1.3,stimulation_index
+C3a,10,2,0.8,stimulation_index
+C3a,10,3,1.3,stimulation_index
+C3a,10,4,0.9,stimulation_index
+C3a,10,5,0.6,stimulation_index
+C3a,12,1,1.6,stimulation_index
+C3a,12,2,1.2,stimulation_index
+C3a,12,3,1.4,stimulation_index
+C3a,12,4,1.5,stimulation_index
+C3a,12,5,0.7,stimulation_index
+C3a,14,1,1.3,stimulation_index
+C3a,14,2,1.7,stimulation_index
+C3a,14,3,1.0,stimulation_index
+C3a,14,4,2.0,stimulation_index
+C3a,14,5,1.0,stimulation_index
+C3a,16,1,1.3,stimulation_index
+C3a,16,2,2.6,stimulation_index
+C3a,16,3,1.0,stimulation_index
+C3a,16,4,1.4,stimulation_index
+C3a,16,5,1.1,stimulation_index
+C3a,18,1,1.6,stimulation_index
+C3a,18,2,2.7,stimulation_index
+C3a,18,3,0.9,stimulation_index
+C3a,18,4,0.8,stimulation_index
+C3a,18,5,0.8,stimulation_index
+C3a,20,1,0.8,stimulation_index
+C3a,20,2,2.1,stimulation_index
+C3a,20,3,0.8,stimulation_index
+C3a,20,4,0.5,stimulation_index
+C3a,20,5,0.5,stimulation_index
+C3a,22,1,0.7,stimulation_index
+C3a,22,2,2.1,stimulation_index
+C3a,22,3,1.4,stimulation_index
+C3a,22,4,0.7,stimulation_index
+C3a,22,5,1.3,stimulation_index
+C3a,16 LNA,1,1.5,stimulation_index
+C3a,16 LNA,2,0.8,stimulation_index
+C3a,16 LNA,3,0.7,stimulation_index
+C3a,18 LNA,1,1.2,stimulation_index
+C3a,18 LNA,2,0.7,stimulation_index
+C3a,18 LNA,3,0.6,stimulation_index
+C3a,20 LNA,1,1.3,stimulation_index
+C3a,20 LNA,2,0.7,stimulation_index
+C3a,20 LNA,3,0.6,stimulation_index
+C5a,PBS,1,1.0,stimulation_index
+C5a,PBS,2,1.0,stimulation_index
+C5a,PBS,3,1.0,stimulation_index
+C5a,Class. Path.,1,4.8,stimulation_index
+C5a,Class. Path.,2,3.1,stimulation_index
+C5a,Class. Path.,3,7.6,stimulation_index
+C5a,Class. Path.,4,5.5,stimulation_index
+C5a,Class. Path.,5,4.0,stimulation_index
+C5a,Alt. Path.,1,4.6,stimulation_index
+C5a,Alt. Path.,2,3.1,stimulation_index
+C5a,Alt. Path.,3,6.9,stimulation_index
+C5a,Alt. Path.,4,5.6,stimulation_index
+C5a,Alt. Path.,5,4.0,stimulation_index
+C5a,Inhib.,1,0.3,stimulation_index
+C5a,Inhib.,2,0.4,stimulation_index
+C5a,Inhib.,3,0.5,stimulation_index
+C5a,Inhib.,4,0.4,stimulation_index
+C5a,Inhib.,5,0.4,stimulation_index
+C5a,+ PS,1,4.9,stimulation_index
+C5a,+ PS,2,3.1,stimulation_index
+C5a,+ PS,3,6.8,stimulation_index
+C5a,+ PS,4,4.8,stimulation_index
+C5a,+ PS,5,3.4,stimulation_index
+C5a,- PS,1,0.8,stimulation_index
+C5a,- PS,2,0.7,stimulation_index
+C5a,- PS,3,0.9,stimulation_index
+C5a,- PS,4,0.7,stimulation_index
+C5a,- PS,5,0.9,stimulation_index
+C5a,10,1,0.9,stimulation_index
+C5a,10,2,0.7,stimulation_index
+C5a,10,3,1.0,stimulation_index
+C5a,10,4,0.7,stimulation_index
+C5a,10,5,0.9,stimulation_index
+C5a,12,1,1.1,stimulation_index
+C5a,12,2,1.0,stimulation_index
+C5a,12,3,1.1,stimulation_index
+C5a,12,4,0.9,stimulation_index
+C5a,12,5,0.9,stimulation_index
+C5a,14,1,0.9,stimulation_index
+C5a,14,2,1.3,stimulation_index
+C5a,14,3,0.9,stimulation_index
+C5a,14,4,1.0,stimulation_index
+C5a,14,5,0.9,stimulation_index
+C5a,16,1,0.7,stimulation_index
+C5a,16,2,1.7,stimulation_index
+C5a,16,3,1.0,stimulation_index
+C5a,16,4,0.8,stimulation_index
+C5a,16,5,1.0,stimulation_index
+C5a,18,1,0.9,stimulation_index
+C5a,18,2,1.9,stimulation_index
+C5a,18,3,1.0,stimulation_index
+C5a,18,4,0.7,stimulation_index
+C5a,18,5,0.9,stimulation_index
+C5a,20,1,0.6,stimulation_index
+C5a,20,2,1.6,stimulation_index
+C5a,20,3,1.0,stimulation_index
+C5a,20,4,0.7,stimulation_index
+C5a,20,5,0.8,stimulation_index
+C5a,22,1,0.6,stimulation_index
+C5a,22,2,1.3,stimulation_index
+C5a,22,3,1.1,stimulation_index
+C5a,22,4,0.8,stimulation_index
+C5a,22,5,0.9,stimulation_index
+C5a,16 LNA,1,1.0,stimulation_index
+C5a,16 LNA,2,0.9,stimulation_index
+C5a,16 LNA,3,0.8,stimulation_index
+C5a,18 LNA,1,0.9,stimulation_index
+C5a,18 LNA,2,0.8,stimulation_index
+C5a,18 LNA,3,0.7,stimulation_index
+C5a,20 LNA,1,0.8,stimulation_index
+C5a,20 LNA,2,0.7,stimulation_index
+C5a,20 LNA,3,0.6,stimulation_index
