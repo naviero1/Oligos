@@ -1,6 +1,10 @@
 # Crank → Beebop: source dispatch, 2026-10-03
 
-Companion to `SOURCE_EXPANSION_REGISTER_2026-10-03.md` on this branch. Operational instructions
+Companion to `SOURCE_EXPANSION_REGISTER_2026-10-03.md`, which lives on the oversight branch
+`claude/crank-phase2-oversight` together with the Crank directives and decision records:
+<https://github.com/naviero1/Oligos/blob/claude/crank-phase2-oversight/SOURCE_EXPANSION_REGISTER_2026-10-03.md>.
+Only this dispatch and `SCIENTIFIC_RULES.md` are merged here, so that the endpoint sessions can see the
+rules and the warnings without the oversight layer landing on the branch they commit to. Operational instructions
 for relaying source work to Rocksteady. Checkpoint remains **2026-10-10**.
 
 **Authorization unchanged.** Acquisition and description proceed in parallel. **Ingestion,
@@ -96,7 +100,17 @@ fail on inspection and **must not be ingested as purity**:
 
 **The instruction.** Populate `purity_method` and `identity_confirmation` fully and source-cited —
 this register can take them from near-zero to roughly 12–15 approved compounds. Record
-`purity_pct` as **withheld-with-evidence**, quoting the actual redaction counts, the EMA
+**SUPERSEDED 2026-10-03 — DO NOT EXECUTE THE PROJECT-WIDE VERSION OF THIS.** Kidney has since
+staged **10 numeric per-lot purity values (91.4%–99.3%)** from FDA nonclinical Pharmacology and
+Toxicology review study headers, which are **not** redacted. Run project-wide, the instruction
+below would file a **false missingness declaration** on the one field NIH named mandatory, for
+every oligo that has an FDA review. Corrected instruction: **first harvest nonclinical lot purity
+from FDA Pharm/Tox reviews**; record `purity_pct` as withheld-with-evidence **only where no lot
+value exists**, and never on a clinical row without saying the withheld item is the *clinical-lot*
+value. The surviving true claim is narrower than Crank wrote: **release specifications and
+impurity profiles are withheld; measured nonclinical lot purity is published.**
+
+~~`purity_pct` as **withheld-with-evidence**, quoting the actual redaction counts, the EMA
 confidentiality note and the PMDA asterisk masking. That is a materially stronger disclosure than
 a silent `TBD`, it satisfies the Challenge's explicit missingness requirement, and it is not the
 same as having the data — say so plainly rather than blurring the two.

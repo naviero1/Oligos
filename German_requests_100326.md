@@ -36,14 +36,36 @@ and Sewing structured files not locally available; (iii) analytical identity and
 from all 45 oligo records; (iv) relational implementation and deterministic export tests
 incomplete; (v) grouped POC outputs, sensitivity analyses and model card not returned; (vi)
 repository, persistent identifier, executed licence, preservation plan and release audit open.
-New since v0.9: we have now established that numeric release purity is **systematically withheld
-by every regulator** — FDA redacts as `(b)(4)` (56 redactions in the inotersen review, 84 pages
-withheld in tofersen), EMA deletes commercially confidential information, PMDA masks with
-asterisks. Blocker (iii) may be unclosable from public sources.
+**Corrected since this document was first written, same day.** An earlier version told you numeric
+purity was *systematically withheld by every regulator* and that blocker (iii) "may be unclosable
+from public sources." **That was wrong, and the correction matters to your ruling.**
 
-**Needed.** Which blockers remain binding today, and which may be discharged by **documented
-missingness** rather than closure — specifically whether (iii) is satisfied by populating
-`purity_method` and `identity_confirmation` while recording `purity_pct` as withheld-with-evidence.
+What stands: drug-substance **release specification** purity is withheld — FDA redacts as `(b)(4)`
+(56 redactions in the inotersen review, 84 pages withheld in tofersen), EMA deletes commercially
+confidential information, PMDA masks with asterisks.
+
+What was missed: FDA **nonclinical Pharmacology/Toxicology reviews publish per-lot test-article
+purity in their study headers**, and they are not redacted. The kidney session has staged **10
+numeric values (91.4%–99.3%)** across casimersen, golodirsen and viltolarsen, read from
+"Drug, lot #, and % purity:" lines, each tied to a named study. Two further inotersen rows were
+correctly flagged DO-NOT-INGEST at 104.2% and 103.1%.
+
+Three caveats the kidney session raised itself and that bear on your ruling: these are
+**nonclinical study lots, not clinical lots**, so they attach to the study rather than to the
+molecule globally; **lot 7001257 is reported as 92%, 91% and 91% in three different places**, so a
+single lot carries three stated values and must not be averaged; and nothing is ingested — every
+row is marked `PROPOSED_PENDING_GERMAN`.
+
+For a toxicity dataset this may be the **more** relevant number, not a lesser substitute: the
+toxicity outcome came from that lot, and it attaches at the experiment-condition grain your
+architecture requires.
+
+**Needed.** Which blockers remain binding today. For (iii) specifically, now that per-lot values
+exist: does **nonclinical test-article lot purity discharge blocker (iii)**, in whole or in part?
+If yes, is it recorded against the study or against the construct? If a lot carries conflicting
+stated values across reviews, which governs? And where no lot value exists, is the blocker
+discharged by populating `purity_method` and `identity_confirmation` with `purity_pct` recorded as
+withheld-with-evidence?
 
 **Blocks.** Thrombocytopenia release, and the precedent for the bar applied to the other seven
 endpoints.

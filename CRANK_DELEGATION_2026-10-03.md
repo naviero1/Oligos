@@ -18,7 +18,11 @@ scientific.
 **Blocking, do first**
 
 1. **Harmonized schema proposal** for Oscar. *Generalize German's model; do not redesign it* — his
-   38 named fields and the canonical-oligo-to-observation architecture already exist.
+   **35** named fields and the canonical-oligo-to-observation architecture already exist.
+   *(Corrected 2026-10-03: Crank wrote 38. Five independent counts — Beebop, complement, kidney and
+   two reviewers — agree on 35: 8 identity/chemistry + 3 characterization + 12 exposure/system +
+   10 outcome/adjudication + 2 grouping, no duplicates. Beebop preserved all 35 and declined to
+   invent three. That was the correct response.)*
 2. **Minimum Qualified Record**, derived from German's published sign-off gates, not invented.
    Submit to German as a derivation of his own criteria.
 
@@ -30,7 +34,8 @@ scientific.
    Name the three branches carrying no LICENSE.
 4. **Tier 0 crosswalk:** `molecule.csv` with `molecule_uid` as **inventory record identifiers**
    (sequence-family links stay candidate and unadjudicated — no silent merges); the controlled
-   vocabulary; `endpoint_coverage.csv` with each MQR field as present-populated / present-empty /
+   vocabulary; `endpoint_coverage.csv` with **each of German's twelve gates** as
+   present-populated / present-empty /
    absent. **Include a `licence_class` column and a documented switch that regenerates the dataset
    excluding ND-derived rows.**
 5. **Corrected endpoint scorecard.** Every figure carries its **denominator and provenance tag**
@@ -51,7 +56,10 @@ scientific.
    anyone read it.
 9. **Positive and negative control inventory.** The narrative deliverable explicitly requires both.
    Measured: only acute-neurotoxicity has a `control_role` column, with **0 positive controls of
-   1,866**; kidney, coagulopathy, hydrocephalus and cns-alternate have no control column at all;
+   1,866**; kidney, hydrocephalus and cns-alternate have no control column at all. **Coagulopathy
+   is struck from that list — corrected 2026-10-03: `control_class` is populated on 2,685 of 2,685
+   rows across 8 classes, plus a published 108-group controls inventory. Item 7 is unblocked there
+   and Crank's stated blocker was false;**
    only thrombocytopenia's `controls_inventory.csv` holds real arms. Item 7 cannot be drafted
    without this.
 10. **Assign owners for the three credibility fixes** listed under Rocksteady below. They are
@@ -79,8 +87,8 @@ pending German's stereochemistry ruling.
 | Endpoint | Owns |
 |---|---|
 | **Kidney** | Correct the false "blocked" assertion at `SOURCES.md:12` and `SOURCE_REGISTER.md` §2 — accessdata.fda.gov works with a browser user agent (verified: 420-byte apology page vs 2,181,318-byte PDF). **Do not act on the audit's Directive 5** — it claims 10 staged sequences against the 10 TBD gaps; the id sets intersect at **6**, and promoting everything reaches 61/65, not 65/65. MSR066 awaits German. |
-| **Thrombocytopenia** | SafeSense `mmc4.csv` and Sewing 2017 S1. Prepare DEVOTE (NCT04089566) **for German's ruling — do not classify it yourselves**. Audit the 984 of 1,959 rows shipping inside `submission/` under non-redistributable terms. Report modification maps at the dataset-wide denominator (**44/259**), not the 18/34 subset. |
-| **Coagulopathy** | Repair stale arithmetic across six shipped files including `METHODOLOGY.md` (states 213 / 2,388 / 941 / 75 against measured **218 / 2,685 / 1,039 / 100**). **Drop or hash the `verbatim_quote` column on 687 rows** — 30,885 words of publisher prose inside a file meant to ship openly; the numbers beside it are unaffected. Only **18 of 30** headline trials carry a registry id. True human in-vitro set is **34 oligos with zero position-resolved chemistry**. |
+| **Thrombocytopenia** | SafeSense `mmc4.csv` and Sewing 2017 S1. Prepare DEVOTE (NCT04089566) **for German's ruling — do not classify it yourselves**. Audit the **224 of 1,959** rows that are genuinely licence-restricted. *(Corrected: Crank said 984. That figure is the legacy `summary_stat` tag, meaning "a number extracted from a paper" — not a licence finding. Licence-resolved, the decision set is 224, all inside the 984. Crank overstated this endpoint's rights exposure by 4.4x, from the session's own superseded artifact.)* Report modification maps at the dataset-wide denominator (**44/259**), not the 18/34 subset. |
+| **Coagulopathy** | Repair stale arithmetic across six shipped files including `METHODOLOGY.md` (states 213 / 2,388 / 941 / 75 against measured **218 / 2,685 / 1,039 / 100**). **Drop or hash the `verbatim_quote` column on 687 rows** — 30,885 words of publisher prose inside a file meant to ship openly; the numbers beside it are unaffected. **Corrected: 21 of 46** headline trials carry a registry id. *(Crank said 18 of 30; both numbers were wrong. The session rebuilt the register from 30 to 46 and its README states "Do not cite 30". Crank read a pre-rebuild document.)* True human in-vitro set is **34 oligos with zero position-resolved chemistry**. |
 | **Hepatic** | **Sewing 2016 is the critical path** — the only primary human-hepatocyte source, absent from the repository. The human-hepatocyte lead is **seven constructs, not nine** (corrected 2026-10-03). Burdick's 80-construct panel stages as clearly-labelled **animal** support and is never presented as human progress. |
 | **Complement** | **Build the schema before any further acquisition** — six of seven MQR fields have no column in existence. Copy the per-position pattern in `valentin2021_S1_S2_sequences.csv`. Report honestly that **zero human rows carry a numeric complement value**, and that one of the ten rows is not a complement readout. |
 | **Immunotoxicity** | **Commit the Drive workbook, or a faithful CSV reduction**, so every figure becomes auditable in one place. Correct the trial-candidate figure: **64 appears in zero cells; the adjudication is 54 approved / 48 hold / 40 support-only.** |
