@@ -1,0 +1,71 @@
+source_uid,legacy_source_id,source_ref,cluster,n_rows,n_human_clinical,n_human_lab,n_animal,subject_classes
+SRC-7A3CBD,A-IZERVAY,"FDA NDA 217225 (IZERVAY / avacincaptad pegol) Pharmacology/Toxicology review, reviewer Maria I. Rivera PhD, Reference ID 5180757",literature_misc,7,0,0,6,animal_in_vivo=6;unspecified=1
+SRC-9AA67E,CROOKE2017,PMID 28145801; PMCID PMC5467133; doi:10.1089/nat.2016.0650,crooke2017_pooled,387,387,0,0,human_clinical=387
+SRC-71A3B9,M-BIJL26,"PMID 42381708 / PMCID PMC13315839 / doi:10.1016/j.omtn.2026.102976 — ""Meta-analysis of adverse events in clinical studies with antisense oligonucleotide therapies"", Mol Ther Nucleic Acids (CC BY)",literature_misc,11,11,0,0,human_clinical=11
+SRC-31A43C,P-APOL1,"US 10,927,377 B2 (Ionis Pharmaceuticals, ""Modulators of APOL1 expression"", granted 2021-02-23)",literature_misc,46,0,0,46,animal_in_vivo=46
+SRC-A2A30D,P-PKK,"US 10,100,310 B2 (Ionis Pharmaceuticals, ""Modulation of prekallikrein (PKK) expression"", granted 2018-10-16)",literature_misc,9,0,0,9,animal_in_vivo=9
+SRC-E96400,R-FRAZ15,"doi:10.1177/0192623314551840 — Frazier KS (2015) ""Antisense oligonucleotide therapies: the promise and the challenges from a toxicologic pathologist's perspective"", Toxicol Pathol 43:78-89",literature_misc,5,1,0,2,animal_in_vivo=2;human_clinical=1;multi_species=2
+SRC-993E3D,S-EMA-AMVU,"EMA Amvuttra (vutrisiran) EPAR public assessment report, EMA/CHMP/689555/2022 (EMEA/H/C/005852)",other_regulatory,1,1,0,0,human_clinical=1
+SRC-8F8ECC,S-EMA-ONPA,"EMA Onpattro (patisiran) EPAR public assessment report, EMA/554262/2018 (EMEA/H/C/004699)",other_regulatory,1,1,0,0,human_clinical=1
+SRC-4911F9,S-EMA-OXLU,"EMA Oxlumo (lumasiran) EPAR public assessment report, EMA/568312/2020 (EMEA/H/C/005040)",literature_misc,3,0,0,3,animal_in_vivo=3
+SRC-FBAB65,S-EMA-QALS,"EMA Qalsody (tofersen) EPAR public assessment report, EMA/276404/2024 (EMEA/H/C/006072)",other_regulatory,3,3,0,0,human_clinical=3
+SRC-B37863,S-EMA-SPIN,"EMA Spinraza (nusinersen) EPAR public assessment report, EMA/289068/2017 (EMEA/H/C/004312)",other_regulatory,1,1,0,0,human_clinical=1
+SRC-5870A3,S-FDA-CASI,"FDA NDA 213026 Orig1s000 Pharmacology/Toxicology Review (AMONDYS 45, reviewer B.J. Wilcox), Reference ID 4735654",literature_misc,2,0,0,2,animal_in_vivo=2
+SRC-4AA6CC,S-FDA-ETEP,"FDA NDA 206488 Orig1s000 Pharmacology/Toxicology Review (EXONDYS 51, reviewer D.B. Hawver), Reference ID 3876740",literature_misc,4,0,0,4,animal_in_vivo=4
+SRC-353C9A,S-FDA-GIVO,"FDA NDA 212194 Orig1s000 Multi-discipline Review and Evaluation (GIVLAARI), Reference ID 4522419",literature_misc,3,0,0,3,animal_in_vivo=3
+SRC-ECFCF2,S-FDA-GOLO,"FDA NDA 211970 Orig1s000 Pharmacology/Toxicology Review (VYONDYS 53, reviewer B.J. Wilcox), Reference ID 4457029",literature_misc,2,0,0,2,animal_in_vivo=2
+SRC-C76E2B,S-FDA-INCL,"FDA NDA 214012 Orig1s000 Clinical Review (LEQVIO, reviewers E. Craig and I. Chowdhury), Reference ID 4697450",other_regulatory,3,3,0,0,human_clinical=3
+SRC-0970FF,S-FDA-PATI,FDA NDA 210922 Orig1s000 Multi-discipline Review (210922Orig1s000MultiR.pdf),other_regulatory,8,2,0,6,animal_in_vivo=6;human_clinical=2
+SRC-D65444,S-FDA-VILT,"FDA NDA 212154 Orig1s000 Pharmacology/Toxicology Review (VILTEPSO, reviewer D.L. Carbone), Reference ID 4641598",literature_misc,1,0,0,1,animal_in_vivo=1
+SRC-913834,S-FDA-VUTR,"FDA NDA 215515 Orig1s000 Clinical Review (AMVUTTRA, reviewer R.W. Paine MD PhD), Reference ID 4998267",other_regulatory,2,2,0,0,human_clinical=2
+SRC-84A608,S-HENRY17,"PMID 28541820 / doi:10.1089/nat.2017.0666 (Henry et al. 2017, Nucleic Acid Ther 27:197-208)",literature_misc,6,1,0,5,animal_in_vivo=5;human_clinical=1
+SRC-FD4B55,S-JOHA24,"PMID 39155024 / doi:10.1016/j.jtha.2024.08.003 (Johansson et al. 2024, J Thromb Haemost 22:3266-3276)",literature_misc,2,0,0,2,animal_in_vivo=2
+SRC-C7A0C2,S-NARA18,"PMID 29846725 / doi:10.1093/toxsci/kfy119 (Narayanan et al. 2018, Toxicol Sci 164:613-626)",literature_misc,4,0,0,4,animal_in_vivo=4
+SRC-F95FCA,S-SHEN23,"PMID 37093125 / doi:10.1089/nat.2022.0042 (Shen et al. 2023, Nucleic Acid Ther 33:209-225)",literature_misc,4,0,0,4,animal_in_vivo=4
+SRC-283D3D,TL-PMC12846741,PMC12846741 / PMID 41592789 / DOI 10.1093/nar/gkag007,literature_misc,11,0,0,11,animal_in_vitro=7;animal_in_vivo=4
+SRC-99915A,TL-PMC7063478,PMC7063478 / PMID 31881528 / DOI 10.1016/j.omtn.2019.11.020,literature_misc,6,0,6,0,human_in_vitro=6
+SRC-24EDAC,TP-US11535849,"US 11,535,849 B2",literature_misc,68,0,0,68,animal_in_vivo=68
+SRC-2E278D,TP-US20150031747,US 2015/0031747 A1,literature_misc,9,0,0,9,animal_in_vivo=9
+SRC-B1EFB3,TP-US20210355497,US 2021/0355497 A1,literature_misc,10,2,0,8,animal_in_vivo=8;human_clinical=2
+SRC-74F263,TP-US20230263822,US 2023/0263822 A1,literature_misc,99,0,0,99,animal_ex_vivo=5;animal_in_vivo=94
+SRC-1A5965,curated_regulatory_labels,EMA_SmPC_WAYLIVRA_EPAR_product_information,volanesorsen,9,9,0,0,human_clinical=9
+SRC-82B0FA,curated_regulatory_labels,FDA_label_RYTELO_SPL_imetelstat,imetelstat,2,2,0,0,human_clinical=2
+SRC-997D26,curated_regulatory_labels,FDA_label_SPINRAZA_SPL_nusinersen,other_regulatory,2,2,0,0,human_clinical=2
+SRC-5C4E17,curated_regulatory_labels,FDA_label_TEGSEDI_SPL_8513207e-b55f-417b-9473-af785146a543_v10,inotersen,6,6,0,0,human_clinical=6
+SRC-D96193,curated_regulatory_labels,FDA_label_TRYNGOLZA_SPL_olezarsen,other_regulatory,4,4,0,0,human_clinical=4
+SRC-16CDF5,workflow:10.1038/mt.2016.136 (PMC5112040; PMID 273576,10.1038/mt.2016.136 (PMC5112040; PMID 27357629),volanesorsen,49,22,0,27,animal_in_vivo=27;human_clinical=22
+SRC-01443B,workflow:10.3324/haematol.2020.260059,10.3324/haematol.2020.260059,literature_misc,157,0,152,5,animal_in_vitro=5;human_in_vitro=152
+SRC-49E0E4,workflow:ClinicalTrials.gov NCT00138658 (posted resul,"ClinicalTrials.gov NCT00138658 (posted results); primary publication PMID 22198426 / doi:10.1097/JTO.0b013e31823f459c (Laskin JJ et al., J Thorac Oncol 2012;7:579-86)",oncology_aso,4,4,0,0,human_clinical=4
+SRC-F5C784,workflow:ClinicalTrials.gov NCT00138658 (posted resul,"ClinicalTrials.gov NCT00327340 (posted results); related publication PMID 21788353 / doi:10.1158/1078-0432.CCR-11-0859 (Saad F et al., CUOG trial P-06c, Clin Cancer Res 2011;17:5765-73)",oncology_aso,2,2,0,0,human_clinical=2
+SRC-4E910E,workflow:ClinicalTrials.gov NCT00138658 (posted resul,PMID 23836992 / PMC3699352 / doi:10.2147/OTT.S33077 (Higano CS. OncoTargets Ther. 2013;6:785-797),oncology_aso,1,1,0,0,human_clinical=1
+SRC-BE5868,workflow:ClinicalTrials.gov NCT00138658 (posted resul,"PMID 25782535 / PMC4574829 / doi:10.1111/bcp.12633 (Rabinovich-Guilatt L et al., Br J Clin Pharmacol 2015;80:436-45)",oncology_aso,1,1,0,0,human_clinical=1
+SRC-59EFB1,workflow:ClinicalTrials.gov NCT00138658 (posted resul,"PMID 30732140 / PMC6380863 / doi:10.1097/MD.0000000000014254 (Liu C, Li K. Medicine (Baltimore). 2019;98(6):e14254)",oncology_aso,1,1,0,0,human_clinical=1
+SRC-2A425E,workflow:EMA/180717/2019 (EMEA/H/C/004538) Waylivra E,EMA/180717/2019 (EMEA/H/C/004538) Waylivra EPAR Public Assessment Report,volanesorsen,117,96,2,19,animal_in_vivo=19;human_clinical=96;human_in_vitro=2
+SRC-115703,workflow:EMA/411876/2018 (EMEA/H/C/004782) Tegsedi EP,EMA/411876/2018 (EMEA/H/C/004782) Tegsedi EPAR public assessment report,inotersen,81,62,0,16,animal_in_vivo=16;human_clinical=62;multi_species=2;unspecified=1
+SRC-5AC926,workflow:FDA NDA 203568 Orig1s000 PharmR (Kynamro/mip,FDA NDA 203568 Orig1s000 PharmR (Kynamro/mipomersen Pharmacology Review(s)),literature_misc,33,0,0,33,animal_in_vivo=33
+SRC-6E838B,workflow:FDA NDA 211172 211172Orig1s000MedR.pdf,FDA NDA 211172 211172Orig1s000MedR.pdf,inotersen,115,111,0,4,animal_in_vivo=4;human_clinical=111
+SRC-EAC193,workflow:FDA NDA 217779 Orig1s000 Multi-discipline Re,FDA NDA 217779 Orig1s000 Multi-discipline Review (imetelstat/Rytelo),imetelstat,91,77,6,8,animal_in_vivo=8;human_clinical=77;human_ex_vivo=2;human_in_vitro=4
+SRC-51EE70,workflow:PMC10472096 / PMID 37364001 / doi:10.1158/10,"PMC10472096 / PMID 37364001 / doi:10.1158/1078-0432.CCR-22-2483 (Roschewski M et al., Clin Cancer Res 2023;29:3301-3312)",oncology_aso,6,6,0,0,human_clinical=6
+SRC-E9C596,workflow:PMC10472096 / PMID 37364001 / doi:10.1158/10,"PMC11428464 / PMID 39335531 / doi:10.3390/biomedicines12092017 (Calcaterra IL et al., Biomedicines 2024;12:2017)",literature_misc,15,5,10,0,human_clinical=5;human_ex_vivo=10
+SRC-11B6D6,workflow:PMC10472096 / PMID 37364001 / doi:10.1158/10,"PMC12856967 / PMID 41085094 / doi:10.1002/cpdd.1615 (Youssef A et al., Clin Pharmacol Drug Dev 2026;15:879-907)",literature_misc,5,5,0,0,human_clinical=5
+SRC-FF0090,workflow:PMC10472096 / PMID 37364001 / doi:10.1158/10,"PMC6461157 / PMID 30817230 / doi:10.1089/nat.2018.0754 (Ferrone JD et al., Nucleic Acid Ther 2019;29:82-91)",literature_misc,4,4,0,0,human_clinical=4
+SRC-C4FA75,workflow:PMC10472096 / PMID 37364001 / doi:10.1158/10,"PMC7835591 / PMID 33283485 / doi:10.1002/ehf2.13154 (Viney NJ et al., ESC Heart Fail 2021;8:652-661)",literature_misc,10,10,0,0,human_clinical=10
+SRC-6415C6,workflow:PMC10472096 / PMID 37364001 / doi:10.1158/10,"PMC8246029 / PMID 34222719 / doi:10.1016/j.jacbts.2021.04.004 (Morgan ES et al., JACC Basic Transl Sci 2021;6:485-)",literature_misc,4,4,0,0,human_clinical=4
+SRC-C0EA80,workflow:PMC10472096 / PMID 37364001 / doi:10.1158/10,"PMC9594513 / PMID 36270753 / doi:10.1136/bmjopen-2021-055718 (Nishina T et al., BMJ Open 2022;12:e055718)",literature_misc,5,5,0,0,human_clinical=5
+SRC-7B393B,workflow:PMC10472096 / PMID 37364001 / doi:10.1158/10,"PMC9804925 / PMID 35971951 / doi:10.1002/cpdd.1154 (Han K et al., Clin Pharmacol Drug Dev 2022;11:1191-)",literature_misc,4,4,0,0,human_clinical=4
+SRC-1E7D93,workflow:PMC4322051; PMID 25646267; doi:10.1084/jem.2,PMC4322051; PMID 25646267; doi:10.1084/jem.20140391,literature_misc,91,1,76,14,animal_ex_vivo=8;animal_in_vivo=6;human_clinical=1;human_ex_vivo=3;human_in_vitro=73
+SRC-2C9C71,workflow:PMC5673186; doi:10.1371/journal.pone.0187574,PMC5673186; doi:10.1371/journal.pone.0187574,literature_misc,115,0,114,0,human_in_vitro=114;unspecified=1
+SRC-82D288,workflow:PMC6386089 / PMID 30570431 / doi:10.1089/nat,PMC6386089 / PMID 30570431 / doi:10.1089/nat.2018.0753,volanesorsen,43,43,0,0,human_clinical=43
+SRC-36D263,workflow:PMC8264460; PMID 33540294; doi:10.1016/j.thr,PMC8264460; PMID 33540294; doi:10.1016/j.thromres.2021.01.006,literature_misc,56,0,48,8,animal_in_vivo=8;human_ex_vivo=10;human_in_vitro=38
+SRC-59215A,workflow:PMID 12269969 / doi:10.1046/j.1365-2036.2002,"PMID 12269969 / doi:10.1046/j.1365-2036.2002.01341.x (Yacyshyn et al. 2002, Aliment Pharmacol Ther 16:1761-1770)",literature_misc,3,3,0,0,human_clinical=3
+SRC-BAA558,workflow:PMID 31390500; doi:10.1056/NEJMoa1715944,PMID 31390500; doi:10.1056/NEJMoa1715944,volanesorsen,47,47,0,0,human_clinical=47
+SRC-919D01,workflow:PMID 9152389 / doi:10.1016/s0022-3565(24)366,PMID 9152389 / doi:10.1016/s0022-3565(24)36667-4,literature_misc,6,0,0,5,animal_in_vivo=5;unspecified=1
+SRC-2A3252,workflow:PMID:12438559; DOI:10.1124/jpet.102.036749,PMID:12438559; DOI:10.1124/jpet.102.036749,literature_misc,3,3,0,0,human_clinical=3
+SRC-D2FAA7,workflow:PMID:18025536; doi:10.1161/CIRCULATIONAHA.10,PMID:18025536; doi:10.1161/CIRCULATIONAHA.107.724864,literature_misc,1,1,0,0,human_clinical=1
+SRC-E2485F,workflow:PMID:22740102; DOI:10.1160/TH11-12-0889,PMID:22740102; DOI:10.1160/TH11-12-0889,literature_misc,3,3,0,0,human_clinical=3
+SRC-1A18CC,workflow:PMID:28403626; DOI:10.1177/2048872617703065,PMID:28403626; DOI:10.1177/2048872617703065,literature_misc,2,0,2,0,human_in_vitro=2
+SRC-0B8427,workflow:PMID:29972757; DOI:10.1056/NEJMoa1716793; PM,PMID:29972757; DOI:10.1056/NEJMoa1716793; PMCID:PMC12611561,inotersen,19,19,0,0,human_clinical=19
+SRC-BCC78E,workflow:PMID:32243492; DOI:10.1093/cvr/cvaa077,PMID:32243492; DOI:10.1093/cvr/cvaa077,volanesorsen,22,22,0,0,human_clinical=22
+SRC-CEBDC4,workflow:PMID:9184201; doi:10.1016/s0300-483x(97)0366,PMID:9184201; doi:10.1016/s0300-483x(97)03661-5,literature_misc,5,0,0,5,animal_in_vivo=5
+SRC-A3AFE1,workflow:doi:10.1182/blood-2013-01-478966 (PMC3709655,doi:10.1182/blood-2013-01-478966 (PMC3709655 / PMID 23673861),literature_misc,37,0,31,5,animal_in_vitro=2;animal_in_vivo=3;human_in_vitro=31;unspecified=1
+SRC-ED840F,workflow:doi:10.3390/pharmaceutics15041112 (PMC101434,doi:10.3390/pharmaceutics15041112 (PMC10143489; PMID 37111598),literature_misc,60,2,4,54,animal_in_vitro=41;animal_in_vivo=13;human_clinical=2;human_in_vitro=4

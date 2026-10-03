@@ -1,0 +1,142 @@
+[
+ {
+  "desc": "THE anchor source for this lane. Pooled Ionis integrated safety database: 59 trials, 16 distinct 2'-MOE PS ASOs, 3,476 subjects. Verified full text via efetch (132 KB XML) AND the 10-page supplementary PDF via the Europe PMC supplementaryFiles zip endpoint (https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5467133/supplementaryFiles) - all tables text-extractable. Table 1: 16 ASOs with ISIS number, target gene, full 5'->3' sequence, gapmer design (5-10-5 etc.), trial and subject counts - populates oligos.csv directly. Table 2: dose ranges (mg/week) and treatment duration by indication. Table 3: incidence of confirmed platelet reductions, phase 1-3, panel A (normal-baseline subjects) and panel B, cross-tabulated by 5 platelet-count bands (LLN-100, <100-75, <75-50, <50-25, <25 K/uL) and 2 relative bands (<0.7xBSLN, <0.5xBSLN) against placebo, ASO total, and SIX dose bands (>0-75, >75-175, >175-275, >275-375, >375-475, >475 mg/week) - this table alone is the dose-response backbone. Table 4: mipomersen-specific confirmed post-baseline platelet reductions, total/6-month/1-year phase 3 RCTs vs placebo. Table 5: proportion of ASOs with >10% incidence of >30% platelet decline, by dose band. Table 6: platelet reductions stratified by antithrombotic co-medication use. Table 7: bleeding-event incidence, mipomersen vs placebo. Fig 1: platelet level over time (percent change and absolute count) for ISIS 104838 in a 12-week phase 2 RA trial. Supplementary Tables S4 (DDI trials), S6 (42 randomized placebo-controlled trials, full dose x threshold grid), S7 (on- vs post-treatment), S8 (subject-level meta-analysis of mean % change by dose), S9 (subject-level meta-analysis of incidence), S11 (bleeding events), S12 (coagulation-time abnormalities).",
+  "id": "PMC5467133 / PMID 28145801 / DOI 10.1089/nat.2016.0650",
+  "k": "PMC5467133",
+  "oa": "open_access",
+  "redist": "summary_stat",
+  "rows": 130,
+  "title": "The Effects of 2'-O-Methoxyethyl Containing Antisense Oligonucleotides on Platelets in Human Clinical Trials",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5467133/"
+ },
+ {
+  "desc": "VERIFIED: full-text JATS XML, 142,752 bytes (also PMC page HTTP 200). Highest-volume in-vitro human platelet source in the lane. Table 2 'Design of the tool ONs' gives 12 oligonucleotides with COMPLETE 5'->3' sequences and explicit PS linkage marks (ODN2395_Thio, ODN2395 non-PS, (AC)5 through (AC)11, and (AC)8/9/10 LNA) — directly populates oligos.csv incl. ps_count and length_nt. Per-compound human platelet readouts: Fig 1A PAC-1 and Fig 1B P-selectin on human platelets, all 12 ONs at 10 uM (10 min, vs 20 uM ADP / 20 uM TRAP controls, n=5); Fig 1C (AC)8 concentration-response with the text stating 1 uM as the lowest active concentration; Fig 2A-C GPVI surface-plasmon-resonance binding for all ONs at 10 uM vs bovine collagen I control, Fig 2D (AC)8 concentration-response with half-maximal GPVI binding ~2 uM; Fig 3B-C PF4/KKO-antibody ELISA per ON expressed as % maximal heparin binding (n=4), bell-shaped curve for (AC)11. Adjacent non-platelet rows (is_platelet_specific=FALSE): Fig 4 human primary bone-marrow ATP content, Fig 6 human whole-blood IL-8 (>20-fold for ODN2395 Thio; 8-13 fold for (AC)n at 50 uM) and MCP-1 (3-4 fold). Table 1 documents the five-assay battery. LICENCE: CC-BY 4.0 confirmed from the article licence field (ali:license_ref, creativecommons.org/licenses/by/4.0/) => schema class `cc_by`, raw per-compound values reproducible with attribution.",
+  "id": "PMC5673186 / PMID 29107969 / DOI 10.1371/journal.pone.0187574",
+  "k": "PMC5673186",
+  "oa": "open_access",
+  "redist": "summary_stat",
+  "rows": 60,
+  "title": "Assessing single-stranded oligonucleotide drug-induced effects in vitro reveals key risk factors for thrombocytopenia (Sewing et al.)",
+  "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5673186/fullTextXML"
+ },
+ {
+  "desc": "Verified: HTTP 200, 121 pages, 49 pages containing platelet content, parsed with PyMuPDF. The definitive public-domain record of volanesorsen's dose-limiting thrombocytopenia, and it supersedes the paywalled APPROACH (NEJM) and COMPASS (Lancet Diabetes Endocrinol) primary papers. Table 37 (p91): 'Summary of Confirmed Nadir Post-Baseline Platelet Counts in Study CS6 (APPROACH)' - full 5-band nadir distribution (100-140k, 75-100k, 50-75k, 25-50k, 0-25k per mm3) for placebo n=33 vs volanesorsen n=33, plus <140,000 and <100,000 cumulative rows (24/33 = 75.0% vs 8/33 = 24.2%; <100,000 in 15/32 = 46.9% vs 0%). Table 38 (p92): same for Study CS16 (COMPASS), N=113 - NOTE this one is an embedded image, needs vision extraction. Table 39 (p94): fully text-extractable - dose, average baseline platelet count, average nadir platelet count and average nadir % change from baseline, split by body weight <70 kg (N=11, nadir 76 x10^9/L, -62.3%) vs >=70 kg (N=8, nadir 126 x10^9/L, -43.3%). Table 40 (p98): per-patient listing of every platelet decrease to <50,000/mm3 across CS2, CS6 and CS16 with preferred term, platelet nadir, time to onset, duration, associated bleeding events and discontinuation action. Table 41 (p99): per-patient nadir count, initial monitoring frequency, dose regimen at onset, time to decline from >100,000 to nadir (days), time to recover to >50,000 and to >140,000 - text-extractable, spans CS2/CS6/CS16/CS7. Table 22 (p60): actions taken in patients with low platelet count in CS6. Figure 20: platelet decline time course reaching a plateau ~30% below baseline. Narrative (p90-92) adds CS6 mean nadir 134,000/mm3 at Week 25 vs 207,000 placebo, mean change -48,000 vs +25,000, AE incidences (platelet count decreased 30% vs 3%; thrombocytopenia 12% vs 0% in CS6; 4% vs 5% and 13% vs 5% in CS16), 2 grade-4 (<25,000/mm3) events leading to discontinuation, and CS7 open-label figures (platelet count decreased 18%, thrombocytopenia 9%).",
+  "id": "EMA/180717/2019 (EMEA/H/C/004538)",
+  "k": "EMA/180717/2019",
+  "oa": "public_domain",
+  "redist": "public_domain",
+  "rows": 60,
+  "title": "Waylivra (volanesorsen) EPAR Public Assessment Report",
+  "url": "https://www.ema.europa.eu/en/documents/assessment-report/waylivra-epar-public-assessment-report_en.pdf"
+ },
+ {
+  "desc": "Verified: HTTP 200, 10.2 MB, 223 pages, 64 pages with platelet content (IMPORTANT: accessdata.fda.gov returns 404 to a default curl UA - a browser User-Agent is required). Contains Evelyn Mentari's full Clinical Safety Review section 8.5 'Thrombocytopenia' with the most granular public inotersen platelet data anywhere. Table 24 (p140): subjects with decreased platelet measurements, central and local lab values, Studies CS2 and CS3 (image - vision extraction). Table 25 (p141): the explicit bimodal typology - 'Rare' (rapid onset, severe, catastrophic fatal bleeding) vs 'Common' (gradual slow decline, often mild) - text-extractable and maps directly onto the schema's grade-3 vs grade-1 split. Table 31 (p154): antiplatelet antibody test results cross-tabulated against platelet-count change, Study CS2. Table 32 (p155): subjects with nadir platelet count <75 x10^9/L AND treatment-emergent positive antiplatelet antibodies. Table 33 (p159): post-baseline nadir platelets and dose exposure by baseline platelet count. Table 34 (p160): FULLY TEXT-EXTRACTABLE - frequency and relative risk of nadir <75 x10^9/L by baseline platelet count: CS2 10/39 (25.6%) for baseline <200 x10^9/L vs 3/73 (4.1%) for >=200, RR 6.2; longitudinal CS2+CS3 15/39 (38.5%) vs 4/73 (5.5%), RR 7.0. Table 35 (p162): subjects who paused dosing due to platelet count <75 x10^9/L. Narrative p141 gives CS2 <100 x10^9/L in 28/112 (25.0%) inotersen vs 1/60 (1.7%) placebo; <75 x10^9/L in 16/112 (14.3%) vs 0/60; <25 x10^9/L (severe) in 3 (2.7%); 71% of subjects had a >=30% post-treatment platelet decline. Individual clinical summaries follow for all 3 severe-thrombocytopenia subjects including the fatal intracranial haemorrhage. The companion OtherR.pdf (232 pp, 5.6 MB, same URL pattern) is a Division of Hematology Products consult with its own Tables 2-7 and 14-17 restating the sponsor's Summary of Clinical Safety tables 64/67/69 - overlapping but independently citable (e.g. its narrative gives <100 x10^9/L as 26/112 = 23.2% vs 1/60 = 1.6%, and a 22.4% incidence-rate difference, 95% CI 13.9-31.0).",
+  "id": "FDA NDA 211172 - 211172Orig1s000MedR.pdf (and 211172Orig1s000OtherR.pdf)",
+  "k": "NDA 211172",
+  "oa": "public_domain",
+  "redist": "public_domain",
+  "rows": 45,
+  "title": "FDA Clinical Safety Review, Tegsedi (inotersen) NDA 211172 (Medical Review; companion DHP haematology consult in OtherR)",
+  "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2018/211172Orig1s000MedR.pdf"
+ },
+ {
+  "desc": "VERIFIED: full-text XML 96,724 bytes; publisher PDF also downloaded (3.1 MB, 13 pp) from haematologica.org/article/download/haematol.2020.260059/72951. Five PS ASOs, three 2'MOE (487660 = no clinical platelet effect, 104838 = phenotype-1 associated, 501861 = unknown) and two CpG (120704, ODN 2395); Ionis Pharmaceuticals is a co-author, so these are Ionis compound numbers. NUMERIC VALUES IN PROSE (not just figures): Fig 3A human PRP P-selectin at 5 uM, 9 donors — vehicle 10+/-2%, 104838 19+/-3%, 501861 20+/-3%, 120704 38+/-3%, ODN 2395 38+/-4%, 487660 no increase; Fig 3B whole blood (8 donors) +/- SYK inhibitor PRT-060318; Fig 3C-D per-donor GPVI MFI correlated with P-selectin (7 donors); Fig 3E-F SDF1-alpha release in PRP and WB at 1, 5 and 10 uM (4 donors); Fig 7F fluorescence-polarisation GPVI binding, KD ~0.2-1.5 uM for all five ASO, with human serum albumin KD stated per compound in text (487660 12.9 uM, 104838 24 uM, 501861 26 uM); Fig 2 immuno-EM ASO uptake in human washed platelets at 5 uM; Fig 6-7 SYK-dependent platelet-neutrophil and platelet-monocyte aggregates; Suppl Fig S1 LDH non-cytotoxicity at 1 and 5 uM; Fig 1A human cord-blood-derived megakaryocyte proplatelet counts (120704 117+/-5 vs vehicle 79+/-7). CAVEATS: Table 1 (the ASO sequences/chemistry) is a bitmap <graphic> in both XML and PDF — sequences are NOT text-extractable and must remain TBD; and the PDF text layer renders every 'uM' as 'mM' via symbol-font substitution (the XML has the correct uM) — use the XML units. LICENCE: CC-BY-NC 4.0 confirmed from the article licence field; the NC clause conflicts with a CC-BY dataset release, so treat as fair-use summary statistics.",
+  "id": "PMC8804562 / PMID 33567808 / DOI 10.3324/haematol.2020.260059",
+  "k": "PMC8804562",
+  "oa": "open_access",
+  "redist": "summary_stat",
+  "rows": 40,
+  "title": "Sequence-specific 2'-O-methoxyethyl antisense oligonucleotides activate human platelets through glycoprotein VI, triggering formation of platelet-leukocyte aggregates (Lundberg Slingsby et al.)",
+  "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8804562/fullTextXML"
+ },
+ {
+  "desc": "442 pp, 460 platelet/thrombocytopenia hits. Applicant Table 95 (p.306) Grade 3/4 decreased platelets and bleeding within 7 days, Study MDS3001 Phase 2 + Phase 3: Grade 3/4 platelets 77/118 (65.3%) imetelstat Ph3 vs 5/59 (8.5%) placebo, 33/57 (57.9%) Ph2, 110/175 (62.9%) pooled; with any bleeding 9 (7.6%) / 0 / 8 (14.0%) / 17 (9.7%); Grade 3/4 bleeding 0 / 0 / 2 (3.5%) / 2 (1.1%). Table 99 (p.310) thrombocytopenia and hemorrhagic events BY DOSE LEVEL across the whole development program — low dose N=54: 11 (21%); standard N=190: 137 (73%); high N=296: 184 (62%); placebo N=59: 6 (10%); hemorrhage 12 (22%) / 50 (26%) / 153 (52%) / 7 (12%); Grade 3-4 hemorrhage 1 (1.9%) / 11 (6%) / 62 (21%) / 1 (1.7%); fatal hemorrhage 0 / 0 / 5 (1.7%) / 0. Figure 36 (p.288) mean platelet count by study arm at baseline and over treatment. Resolution kinetics p.278: 183/212 (86.3%) Grade 3/4 events resolved to Grade <=2 and 40/47 (85.1%) Grade 4 events to Grade <=3 within 4 weeks, vs 4/9 (44.4%) placebo; Ph2 median time to onset of Grade 3/4 decreased platelets 4.0 weeks (range 2.0-89.7). Placebo-arm data p.304 (any-grade 10.2%, Grade 3/4 8.5%, Grade 4 3.4%). Mechanism is telomerase-inhibitor myelosuppression, NOT phosphorothioate platelet binding — flag in notes.",
+  "id": "NDA 217779 Orig1s000 MultidisciplineR",
+  "k": "NDA 217779",
+  "oa": "public_domain",
+  "redist": "public_domain",
+  "rows": 35,
+  "title": "FDA Multi-Discipline Review and Evaluation, NDA 217779 Rytelo (imetelstat)",
+  "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2024/217779Orig1s000MultidisciplineR.pdf"
+ },
+ {
+  "desc": "Verified: HTTP 200, 142 pages, 42 pages with platelet content, PyMuPDF text-extractable. The EU regulator's independent read of NEURO-TTR (CS2) and its open-label extension (CS3), with numbers that do not all appear in the FDA review or the NEJM paper. p90: TEAE incidences by preferred term - thrombocytopenia 13.4% inotersen vs 1.7% placebo; platelet count decreased 10.7% vs 0%; anaemia 13.4% vs 3.3%. p93 (Assessment p92): mean platelet count decline from baseline of 20% at 3 months, 24% at 6 months and 26% at Week 65 (EOT) in CS2; documents an initial RISE in platelets at Week 2/3 attributed to hsCRP-driven reactive thrombocytosis - a distinct effect_direction=increase row. p93-95: severe-thrombocytopenia case detail with nadir <10 x10^9/L concomitant with fatal intracranial haemorrhage; monitoring changed from every 2-3 weeks to weekly as a consequence. p94: immune-mediation evidence - all subjects with grade 4 thrombocytopenia were positive for treatment-emergent antiplatelet IgG; 4 of 8 grade 3/4 subjects also positive for anti-platelet-surface-glycoprotein (GP IIb/IIIa) antibodies; anti-PF4 IgA in one and anti-PF4 IgM in two; CS3 anti-PF4 IgM 20% placebo-inotersen vs 0% inotersen-inotersen. p95: re-initiation in 16 recovered subjects with prior platelet decreases <75 x10^9/L led to recurrent thrombocytopenia in all but one. p88: 4 discontinuations for thrombocytopenia as an AE of special interest. p101: bleeding-event rate 33% vs 24% by anticoagulant co-medication.",
+  "id": "EMA/411876/2018 (EMEA/H/C/004782)",
+  "k": "EMA/411876/2018",
+  "oa": "public_domain",
+  "redist": "public_domain",
+  "rows": 30,
+  "title": "Tegsedi (inotersen) EPAR Public Assessment Report",
+  "url": "https://www.ema.europa.eu/en/documents/assessment-report/tegsedi-epar-public-assessment-report_en.pdf"
+ },
+ {
+  "desc": "VERIFIED: full-text XML 87,249 bytes. The foundational GPVI-mechanism paper. Human in-vitro panels (mouse panels 1d-1e and 3a-3d belong to the animal lane and must be excluded here): Fig 1a ODN2395 binding to human platelets at 50 nM vs 1-10 uM non-PS ODN2395 (n=6); Fig 1b CD62P/P-selectin on human WASHED platelets, concentration-resolved 50 nM to 10 uM (n=5); Fig 1c platelet AGGREGATION in human PRP at 5 uM ODN2395 vs 5 uM ADP / 1 ug/mL collagen (n=6); Fig 1f ODN2395-coated-bead binding/activation of washed platelets; Fig 1g platelet-monocyte aggregate formation in human whole blood at 1 and 5 uM (n=10); Fig 1h adhesion/spreading on 30 ug/mL fibrinogen; Fig 1i intraplatelet ROS at 5 uM vs 10 ug/mL CRP-XL; Fig 2a thrombus formation under 400/s flow on collagen/fibrinogen at 5 uM; Fig 2d Syk (Bay 61-3606) and Src (PP2) inhibitor blockade; Fig 2f-2g GPVI-Fc bead binding and GPVI pull-down; Fig 2h platelets from two GPVI-DEFICIENT PATIENTS show no binding or activation up to 10 uM (a mechanistically decisive negative row); Fig 2j GPVI dimer formation at 5 uM by 204-FAB. Additional compounds: Fig 3e PS-modified miR-322 concentration-dependent PAC-1 binding (n=3); Fig 3f-3g G3139/oblimersen-induced activation and binding in whole blood at 1 uM input vs 10 uM non-PS G3139 (n=6), with washed-platelet activity stated at 50-100 nM. CLINICAL-RELEVANCE ANCHOR for fold_Cmax: the paper states the measured human G3139 plasma concentration after i.v. infusion was 0.84 +/- 0.6 uM (Marcucci et al.), and that PS-ASO plasma concentrations approach 5 uM. Sequences for ODN2395 (PS and non-PS), the scrambled PS ODN, and PS ODN TTAGGG are given verbatim in Methods. LICENCE: CC-BY-NC-SA 3.0 from the article licence field (Europe PMC license = 'cc by-nc-sa') — the NC and SA clauses conflict with a CC-BY dataset release, so treat as fair-use summary statistics.",
+  "id": "PMC4322051 / PMID 25646267 / DOI 10.1084/jem.20140391",
+  "k": "PMC4322051",
+  "oa": "open_access",
+  "redist": "summary_stat",
+  "rows": 30,
+  "title": "Phosphorothioate backbone modifications of nucleotide-based drugs are potent platelet activators (Flierl et al.)",
+  "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4322051/fullTextXML"
+ },
+ {
+  "desc": "VERIFIED: 190,149 chars of PMC full-text XML, both tables parsed as machine-readable rows. Valenzuela, Ayuso, Buyssens et al. Table 1 = 7 tool ASOs with FULL 5'->3' SEQUENCES written residue-by-residue with explicit phosphorothioate linkage markers and case-encoded chemistry (ODN2395, ODN2395-PO, ISIS104838, ISIS104838-PS, RTR5001, RTR5001-PS, RTR5001-PO), plus modification class (PS / unmodified / 2'MOE-PS-2'MOE / LNA-PS-LNA), length (14-22 nt), PS load (0-21) and platelet effect — an unusually clean PS-count-vs-effect predictor set for oligos.csv. Table 2 = cross-species matrix of in-vivo and in-vitro platelet response for all 7 ASOs across Gottingen minipig, NHP and human (in-vivo effect, activation assay, aggregometry), e.g. ISIS104838 'thrombocytopenia' in human and NHP vs RTR5001 'no effect' in human, NHP and minipig. Fig 1 = thrombospondin-1 platelet activation at 1 and 5 uM per ASO. Fig 2 = PRP aggregometry (% change in OD trend lines). Fig 3 = pull-down assay identifying GPVI as the PS-ASO binding partner. Fig 4 = platelet concentration plus GPVI and PF4 ontogeny (juvenile vs adult minipig). Directly on-lane for the PF4 and GPVI arm of the mechanism. Licence field confirmed CC-BY 4.0 (MDPI) — should be registered as schema class cc_by, permitting raw-value reproduction with attribution.",
+  "id": "PMC10143489 / PMID 37111598 / doi:10.3390/pharmaceutics15041112",
+  "k": "PMC10143489",
+  "oa": "open_access",
+  "redist": "verify",
+  "rows": 28,
+  "title": "Platelet Activation by Antisense Oligonucleotides (ASOs) in the Gottingen Minipig, including an Evaluation of Glycoprotein VI (GPVI) and Platelet Factor 4 (PF4) Ontogeny",
+  "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=10143489"
+ },
+ {
+  "desc": "VERIFIED: the PMC/efetch record is ABSTRACT-ONLY (10 kB, no <body>) and the Europe PMC fullTextXML endpoint returns nothing, but the Europe PMC PDF-render URL above returns HTTP 200 with a real 1,218,316-byte 10-page PDF that parses to 51,319 characters of full text via PyMuPDF — this is the route that works, do not use efetch for this one. The best APTAMER-modality source in the lane, and the only one covering the PF4/HIT-like idiosyncratic axis with human platelets. Four aptamers of different length and secondary structure (15mer-DNA thrombin aptamer, 44mer-DNA activated-protein-C aptamer, 57mer-RNA tetracycline aptamer, 77mer-RNA FMN aptamer) plus a construct series (10mer-ssDNA, 21mer-hairpin RNA, 21mer-dsDNA and two other 21mer DNA secondary structures, 45mer double-stem-loop RNA I and II, the sequence-matched 45mer double-stem-loop DNA, 45mer-polyA, 45mer-polyC, single nucleotides, cellular RNA +/- RNase A). PER-COMPOUND NUMERIC VALUES IN PROSE with the concentration at which they occur, on human gel-filtered platelets (50 x 10^9/L, flow cytometry): heparin 4.44-fold +/-0.15; cellular RNA 3.69-fold +/-1.09 at 0.63 ug/mL, falling to 1.25-fold +/-0.29 after RNase A (P=.0037); 57mer-RNA tetracycline aptamer 2.48-fold +/-0.63 and 77mer-RNA FMN aptamer 2.07-fold +/-0.52, both maximal at 0.63 ug/mL; 44mer-DNA protein C aptamer 2.59-fold +/-0.35 at 5 ug/mL; 15mer-DNA thrombin aptamer only 3.57-fold +/-1.1 and only at 320 ug/mL; polyA, polyC and single nucleotides no enhancement. Fig 5D EIA optical densities of human anti-PF4/heparin IgG against PF4/aptamer complexes (PF4/heparin control OD 1.130+/-0.143; 44mer aptamer 1.098+/-0.140 over 5-30 ug/mL; 15mer aptamer only 0.431+/-0.064 at 40 ug/mL; reduced to 0.593+/-0.203 by 660 ug/mL heparin, P<.0001) plus a functional heparin-induced-platelet-activation assay with human HIT sera. Sequences and mfold secondary structures for every construct are in Fig 1. LICENCE: ASH copyright, free to read; Europe PMC isOpenAccess=N — free-to-read but NOT open-licensed, so reproduce as summary statistics only.",
+  "id": "PMC3709655 / PMID 23673861 / DOI 10.1182/blood-2013-01-478966",
+  "k": "PMC3709655",
+  "oa": "open_access",
+  "redist": "summary_stat",
+  "rows": 25,
+  "title": "Complex formation with nucleic acids and aptamers alters the antigenic properties of platelet factor 4 (Jaax et al.)",
+  "url": "https://europepmc.org/articles/PMC3709655?pdf=render"
+ },
+ {
+  "desc": "VERIFIED: PMC page HTTP 200 and NCBI efetch returns 76,475 bytes of full-text XML with a complete <body>. NOTE the Europe PMC fullTextXML endpoint 404s for this PMCID — use NCBI efetch db=pmc, not Europe PMC. Human washed platelets and PRP from healthy donors. Two non-targeting ASOs with FULL SEQUENCES GIVEN IN METHODS: NC5 PS-ASO 5'-G*C*G*A*C*T*A*T*A*C*G*C*G*C*A*A*T*A*T*G-3' (20mer, full PS) and its 2'-MOE/PS congener NC5 2'OMe/PS with explicit per-residue modification marks — both directly usable for oligos.csv. Comparators: PC-3 prostate-cancer genomic DNA, a four-member single-stranded pre-miRNA mixture, and two protein controls (thrombospondin-1, EGF). Readouts, per compound and concentration: Fig 1 fluorescence and electron microscopy of oligonucleotide uptake by human platelets (labelled 20mer) and dose-dependent potentiation of low-dose-thrombin platelet aggregation by PS- and MOE/PS-ASO and gDNA (washed platelets at 3 x 10^8/mL); Fig 2 flow-cytometric P-selectin-positive platelets after PS-ASO, MOE/PS-ASO, gDNA, pre-miRNA, TSP-1 or EGF, with abrogation by a TLR-7/-8/-9 antagonist (mechanistically distinct from the GPVI axis of the other sources — worth capturing in notes); Fig 3A EX-VIVO PLATELET COUNT in healthy-donor platelets before and after PS-ASO exposure at 16 uM and 24 uM, n=10 donors with each donor line-matched. CAVEAT: the prose repeatedly writes 'mM' where the methods and figure axes mean uM (e.g. '24 mM' = 24 uM) — a unit typo carried through the article; do not transcribe literally. LICENCE: the PMC permissions block states only 'available for text mining... may also be used consistent with the principles of fair use' — no CC licence, so summary statistics / derived features only.",
+  "id": "PMC8264460 / PMID 33540294 / DOI 10.1016/j.thromres.2021.01.006",
+  "k": "PMC8264460",
+  "oa": "open_access",
+  "redist": "summary_stat",
+  "rows": 22,
+  "title": "Antisense oligonucleotides and nucleic acids generate hypersensitive platelets (Zaslavsky et al.)",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8264460/"
+ },
+ {
+  "desc": "Verified full text via efetch (177 KB XML, license cc by-nc). The lane's NEGATIVE-CONTROL source and the direct chemistry contrast to the unconjugated gapmers in Crooke 2017 - GalNAc conjugation cuts the dose ~10-20x and the platelet signal disappears entirely. Table 1: eight unique GalNAc3-conjugated PS 2'-MOE ASOs with ISIS ID, RNA target (APOC3, LPA, CFB, ANGPTL3, HBV S, KLKB1, AGT, GHR), full 5'->3' sequence with the L=GalNAc3 prefix, length, design (5-10-5 MOE, PS vs PO/PS backbone), and placebo/active/total n per phase 1 HV-RCT - populates oligos.csv for 8 more compounds including pelacarsen's parent (LPA 681257), olezarsen's parent (APOC3 678354), and IONIS-FB-LRx (CFB 696844). Table 5: 'Incidence of Abnormal Laboratory Test Results in Weekly Multidose Regimen Cohort (N=157)' - the Hematology block gives Platelets <100 K/mm3 and <75 K/mm3 as 0 (0.0%) for placebo (n=36), total ASO (n=121) and each of five dose bands (>0-10, >10-20, >20-40, >40-60, >60 mg/week) - i.e. 14 clean grade-0 rows at named doses. Figures also give mean platelet counts over time and individual-subject platelet spaghetti plots by dose level (placebo, >0-10, >10-20, >20-40, >40-60, >60 mg). Table 4 supplies the cohort demographics/denominators.",
+  "id": "PMC6386089 / PMID 30570431 / DOI 10.1089/nat.2018.0753",
+  "k": "PMC6386089",
+  "oa": "open_access",
+  "redist": "summary_stat",
+  "rows": 20,
+  "title": "Integrated Assessment of the Clinical Performance of GalNAc3-Conjugated 2'-O-Methoxyethyl Antisense Oligonucleotides in Phase I Development",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6386089/"
+ },
+ {
+  "desc": "271 pp, 52 platelet hits. High scientific value as a SPECIES-TRANSLATION CONTRAST: the human Kynamro label contains zero platelet/thrombocytopenia/bleeding content (verified), yet the 1-year cynomolgus monkey study at 30 mg/kg/week (~10x clinical exposure) produced thrombocytopenia in 3 high-dose monkeys requiring dosing holidays of various durations, with platelet counts recovering on drug withdrawal in 2 of 3. Per-animal detail: HD female #5506 sacrificed moribund on Day 271 (Week 39) while on a platelet-driven dosing holiday (last dose Day 239), with a 30-minute post-venipuncture bleed, widespread multifocal hemorrhage at postmortem; animals #5007 and #5506 had the greatest platelet reductions AND the greatest up-regulation of the platelet activation marker CD62P, alongside decreased plasma C3 (complement consumption) — the review proposes complement-mediated platelet activation, increased consumption and splenic removal, with splenomegaly and platelet sequestration; #5505 and #5506 showed macrophage/histiocyte extravascular destruction of RBCs and/or platelets (HLH-like). Also contains a lifetime mouse study and a named mouse surrogate oligo, ISIS 147764, usable as an additional compound. Same 2'-MOE full-PS gapmer chemistry class as inotersen — a within-chemistry comparator.",
+  "id": "NDA 203568 Orig1s000 PharmR",
+  "k": "NDA 203568",
+  "oa": "public_domain",
+  "redist": "public_domain",
+  "rows": 18,
+  "title": "FDA Pharmacology/Toxicology Review, NDA 203568 Kynamro (mipomersen), R. Wange Ph.D.",
+  "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2013/203568Orig1s000PharmR.pdf"
+ },
+ {
+  "desc": "Verified full text via efetch (88 KB XML, license cc by-nc-sa). The Ionis integrated safety assessment named in the lane brief, and the dataset's animal-to-human translation anchor for this endpoint. Table 2: 'Incidence of abnormal laboratory test results in healthy human volunteers' with a hematology block including platelets, stratified by dose group. Table 1: the matching incidence table for nonhuman primates (13-week dosing). CAVEAT - Tables 1 and 2 are embedded JPEG graphics (mt2016136t1.jpg / mt2016136t2.jpg), not XHTML, so they need page-image vision extraction; I verified the images fetch cleanly (HTTP 200, 518 KB for t2) from https://pmc.ncbi.nlm.nih.gov/articles/instance/5112040/bin/mt2016136t2.jpg. Figure 4 IS described in text and gives mean +/- SE platelet counts by dose group over time for (a) nonhuman primates, ULN 677 K/mm3, up to 13 weeks and (b) healthy human volunteers, LLN 140 / ULN 400 K/mm3, up to 6 weeks, with each data point representing >=10 subjects, 4 ASOs and 4 independent studies - directly comparable NHP-vs-human rows on the same axis. Figure 1 documents the subject-count distribution and sequence diversity of the 2'-MOE ASOs in the translational safety set.",
+  "id": "PMC5112040 / PMID 27357629 / DOI 10.1038/mt.2016.136",
+  "k": "PMC5112040",
+  "oa": "open_access",
+  "redist": "summary_stat",
+  "rows": 18,
+  "title": "Integrated Safety Assessment of 2'-O-Methoxyethyl Chimeric Antisense Oligonucleotides in NonHuman Primates and Healthy Human Volunteers",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5112040/"
+ }
+]

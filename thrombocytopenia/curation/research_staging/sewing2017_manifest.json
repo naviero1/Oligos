@@ -1,0 +1,131 @@
+{
+ "source_title": "Sewing S, Roth AG, Winter M, et al. Assessing single-stranded oligonucleotide drug-induced effects in vitro reveals key risk factors for thrombocytopenia.",
+ "journal": "PLOS ONE",
+ "year": 2017,
+ "doi": "10.1371/journal.pone.0187574",
+ "pmid": "29095938",
+ "pmcid": "PMC5673186",
+ "supplement": "S1 File (raw data workbook)",
+ "retrieval_url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0187574.s001",
+ "retrieved": "2026-10-02",
+ "licence": "PLOS ONE publishes under CC BY 4.0 \u2014 verify on the article page before release",
+ "access_barrier": "none; HTTP 200, no login, no paywall",
+ "staged_filename": "sewing2017_pone.0187574_S1.xlsx",
+ "sha256": "cd4d4b092e112982cb3ab56e6de88101d523933dcf147185c20a829a71f6a3fc",
+ "bytes": 54955,
+ "sheets": [
+  {
+   "sheet": "Figure 1",
+   "numeric_cells_staged": 174,
+   "endpoint_blocks": [
+    "MFI P Selectin",
+    "MFI PAC",
+    "Stimulation Index P Selectin",
+    "Stimulation Index PAC"
+   ]
+  },
+  {
+   "sheet": "Figure 2",
+   "numeric_cells_staged": 169,
+   "endpoint_blocks": [
+    "% binding"
+   ]
+  },
+  {
+   "sheet": "Figure 3",
+   "numeric_cells_staged": 614,
+   "endpoint_blocks": [
+    "%  heparin",
+    "OD450 sample/OD450 PF4"
+   ]
+  },
+  {
+   "sheet": "Figure 4",
+   "numeric_cells_staged": 420,
+   "endpoint_blocks": [
+    "[ATPi] in \uf06dM"
+   ]
+  },
+  {
+   "sheet": "Figure 5",
+   "numeric_cells_staged": 600,
+   "endpoint_blocks": [
+    "% Heparin",
+    "% binding",
+    "P-Sel MFI",
+    "P-Selectin - MFI",
+    "PAC MFI",
+    "PAC1 - MFI"
+   ]
+  },
+  {
+   "sheet": "Figure 6",
+   "numeric_cells_staged": 370,
+   "endpoint_blocks": [
+    "Individual data Whole Blood Assays [Stimulation Index]",
+    "MCP1"
+   ]
+  }
+ ],
+ "total_values_staged": 2347,
+ "controls_present": [
+  "backbone_control_phosphodiester",
+  "backbone_control_phosphorothioate",
+  "negative_control_unstimulated",
+  "positive_control_agonist"
+ ],
+ "constructs_named": [
+  "(AC)10",
+  "(AC)10 + LNA",
+  "(AC)11",
+  "(AC)5",
+  "(AC)6",
+  "(AC)7",
+  "(AC)8",
+  "(AC)8 + LNA",
+  "(AC)9",
+  "(AC)9 + LNA",
+  "ODN 2395",
+  "ODN 2395 Thio"
+ ],
+ "scope_note": "Staged for research review only. Does not enter data/, any label, any scientific adjudication or any model. Recovering these values reconstructs the source publication's own measurements at finer grain; it is NOT independent biological replication.",
+ "honest_accounting": {
+  "numeric_cells_staged": 2347,
+  "cells_resolving_to_a_named_construct": 163,
+  "distinct_constructs": 12,
+  "cells_that_are_controls": 190,
+  "cells_with_no_resolvable_row_label": 96,
+  "per_construct": {
+   "(AC)10": 19,
+   "(AC)10 + LNA": 4,
+   "(AC)11": 17,
+   "(AC)5": 35,
+   "(AC)6": 17,
+   "(AC)7": 17,
+   "(AC)8": 21,
+   "(AC)8 + LNA": 4,
+   "(AC)9": 23,
+   "(AC)9 + LNA": 2,
+   "ODN 2395": 2,
+   "ODN 2395 Thio": 2
+  },
+  "per_control_class": {
+   "backbone_control_phosphodiester": 50,
+   "backbone_control_phosphorothioate": 22,
+   "negative_control_unstimulated": 30,
+   "positive_control_agonist": 88
+  },
+  "WHAT_THESE_NUMBERS_ARE_NOT": "A numeric cell is NOT an independent observation. Of 2347 staged cells, 163 resolve to a named construct across 12 constructs; the remainder are controls, heparin comparators, concentration axes, and published means/standard deviations recomputable from the replicates beside them. Several cells are therefore derived values, not independent measurements. Recovering any of this reconstructs the source publication's own reported measurements at finer grain. It is NOT independent biological replication and does NOT externally validate the dataset's grades.",
+  "matched_contrasts_now_backed_by_replicates": [
+   "(AC)8 vs (AC)8 + LNA  \u2014 scientist contrast MCON-TMB-002",
+   "(AC)9 vs (AC)9 + LNA  \u2014 scientist contrast MCON-TMB-003",
+   "(AC)10 vs (AC)10 + LNA \u2014 scientist contrast MCON-TMB-004",
+   "ODN 2395 Thio vs ODN 2395 \u2014 scientist contrast MCON-TMB-001 (backbone PS vs PO)"
+  ],
+  "known_parse_limitations": [
+   "96 cells have no resolvable row label; their endpoint block and exact cell locus are still recorded, so they are auditable but not self-describing.",
+   "Side-by-side block layouts were resolved by climbing the column band for the nearest construct-resolving header; that inference is recorded per row in construct_basis.",
+   "No value was altered, rounded or imputed. Every row carries its source cell."
+  ]
+ }
+}

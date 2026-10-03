@@ -1,0 +1,17 @@
+path,owner,exists,bytes,sha256,why_gustavo_needs_it
+data/controls_inventory.csv,Rocksteady,yes,13948,86a850dd1598bbfa,"Positive/negative control inventory: 31 records over 26 compounds, each with permitted AND prohibited use. Feeds the narrative's required controls section and the MR-TMB-008 control/ontology lane."
+data/study_counts.csv,Rocksteady,yes,1086,039fd63fa8ef5cfd,The trial-count ladder with a definition per rung (56 typed / 39 with rows / 19 audited). Use the audited rung; never the row count.
+data/toxicity_denominator_audit.csv,Rocksteady,yes,8096,0f434e9664964a20,"Per-unit four-test audit behind the 19. Monitoring quoted, exposure stated, platelet denominator present, retrievable locus."
+data/approved_analyses.json,Rocksteady,yes,16537,e2e498fb7ffbfc56,"Matched-contrast outputs under German's locked lanes, plus the retraction record for the blocked classifier."
+data/study_nesting_ledger.csv,Rocksteady,yes,4600,29aab1299ecc3390,"23 declared pool/trial overlaps, each proved by arm-size arithmetic. Required before any participant total."
+data/recovery_ledger.csv,Rocksteady,yes,11651,75cf284b97cf29fb,"18 open gaps (10 critical) with sources searched, next action, stopping criterion, owner. This endpoint's Characterization Gap Register."
+curation/research_staging/sewing2017_condition_level.csv,"Rocksteady (STAGED, GATED)",yes,563211,e39317489dc6497f,"2,347 per-replicate cells with exact cell loci. 163 resolve to a named construct; 190 are controls. NOT ingested, NOT promoted. Gated on German (SRQ-TMB-006) and Oscar."
+curation/scientist_v09/Model_Card_v0.9.csv,German,yes,2125,e934fa61ebefd80a,THE MODEL CARD ALREADY EXISTS. Read before drafting anything.
+curation/scientist_v09/Model_Readiness_v0.7.csv,German,yes,5969,57ef55e2e829e41e,"Nine lanes with status, training permission, allowed claim and PROHIBITED claim."
+curation/scientist_v09/Model_Specification_v0.8.csv,German,yes,5473,e8c48b6d041e9ef9,"Unit of observation, required grouping and prohibited split per lane."
+curation/scientist_v09/Mechanistic_POC_Plan_v0_9.csv,German,yes,3938,61e5dc687a7139bc,The POC protocol for MR-TMB-001.
+curation/scientist_v09/Training_Manifest_v0.9.csv,German,yes,35888,c232f40bc09e665d,The authorized population: 16 mechanistic candidates + 6 matched contrasts.
+curation/scientist_v09/Leakage_Grouping_Audit.csv,German,yes,2991,e5751e1209ddefee,Eight leakage sources with detection rules and required actions.
+curation/scientist_v09/Sequence_Family_Groups.csv,German,yes,20589,388c1eca742d252d,"Outer split groups: exact sequence, scaffold family, matched pair, publication."
+curation/scientist_v09/Claims_Traceability_v0.9.csv,German,yes,8992,f814081c3b18ae36,Claim-to-evidence trace; governs permitted wording.
+curation/scientist_v09/Dataset_Card_v0.9.csv,German,yes,3244,8bc54b08921df795,Dataset card as the scientist states it.

@@ -1,0 +1,21 @@
+Step_ID,Component,Pre-specified_Requirement,Stop_or_Limitation,Owner
+POC-01,Scientific objective,Test whether sequence/chemistry descriptors contain reproducible signal for ordinal human platelet interaction within the curated mechanistic panels.,No clinical prediction claim.,German
+POC-02,Analysis unit,One exact oligo construct under a defined human platelet assay context; repeated doses/donors remain grouped.,No row-level pseudo-replication.,Oscar + Gustavo
+POC-03,Primary target,"Scientist-adjudicated ordinal response score 0-3, with endpoint-specific raw outcomes analyzed separately where numeric values exist.",Do not merge clinical platelet counts.,German
+POC-04,Eligible input,The 16 rows in Mechanistic_Features_v0.8 and six predefined matched contrasts; no clinical labels.,Stop if unrelated support rows enter.,German
+POC-05,Feature families,"Sequence composition/motifs, length, PS load/fraction, sugar-modification flags, backbone, scaffold/family indicators, and position-derived chemistry summaries.",Do not add post-outcome features.,Gustavo
+POC-06,Leakage protection,"Keep same sequence, scaffold, parent/derivative, matched pair, publication, dose series, and donor series in one outer group.",Random row split prohibited.,Oscar
+POC-07,Primary analysis,Matched contrasts are the primary interpretable evidence; report all six pairs individually with assay context and causal limitations.,No pooled universal effect without justification.,Gustavo + German
+POC-08,Secondary exploratory model,Regularized ordinal/logistic baseline or shallow tree used only to test ranking stability; compare with simple length-only and family-only baselines.,No headline AUC.,Gustavo
+POC-09,Cross-validation,"Use grouped folds only. With only three major scaffold families, leave-one-family-out is a stress test, not a precise generalization estimate.",Stop if any fold has no target variation.,Gustavo
+POC-10,Sensitivity analysis A,Repeat after removing the alternating-AC length series to quantify scaffold/length dependence.,Disclose if signal disappears.,Gustavo
+POC-11,Sensitivity analysis B,Repeat after excluding CpG positive controls and after restricting to 2′MOE panel.,Disclose class imbalance and reduced N.,Gustavo
+POC-12,Sensitivity analysis C,Analyze raw numeric endpoints separately for the subset with reported values; do not impute missing numeric outcomes from ordinal scores.,No numeric fabrication.,German + Gustavo
+POC-13,Metrics,"MAE for ordinal target, rank correlation, class-wise sensitivity, confusion matrix, and calibration description where feasible; uncertainty by resampling whole families/pairs only.",Avoid unsupported asymptotic p-values.,Gustavo
+POC-14,Baselines,"Null/majority, length-only, PS-load-only, family-only, and chemistry-only baselines.",Complex model must outperform transparent baselines under grouped evaluation.,Gustavo
+POC-15,Model complexity,Prefer penalized/interpretable models. Tree ensembles may be included only as secondary comparators due to N=16.,No deep learning.,Gustavo
+POC-16,Feature importance,Treat importance as descriptive association; inspect stability across grouped folds and sensitivity subsets.,No causal wording.,German
+POC-17,Reporting,"Report every attempted specification, failed fold, sensitivity result, and uncertainty limitation.",No selective metric reporting.,Gustavo
+POC-18,External validation,None currently available. Label all results internal proof-of-concept.,No claim of independent validation.,German
+POC-19,Decision rule,Proceed beyond proof-of-concept only if signal persists outside the dominant scaffold family and is directionally consistent with matched contrasts.,Otherwise retain as descriptive evidence only.,German
+POC-20,Final gate,"German reviews target construction, data rows, grouping, output tables, plots, and every scientific claim before dissemination.",No release without scientist signoff.,German

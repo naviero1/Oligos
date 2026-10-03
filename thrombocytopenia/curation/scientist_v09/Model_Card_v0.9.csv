@@ -1,0 +1,21 @@
+Field,Current_v0.9_Specification
+Model name,Human mechanistic platelet-interaction proof-of-concept
+Version,v0.9 protocol
+Scientific status,CONDITIONALLY APPROVED FOR RESTRICTED PROOF OF CONCEPT
+Objective,Assess whether curated sequence/chemistry features relate to ordinal human platelet interaction within defined assay panels.
+Unit of analysis,Exact oligo construct under defined human ex vivo assay context.
+Candidate N,16
+Major scaffold families,"3 major groups: Slingsby human platelet panel, alternating-AC length/chemistry family, and ODN2395 backbone pair."
+Primary target,Scientist-adjudicated ordinal response 0-3; raw endpoint-specific values analyzed separately when reported.
+Features,"Sequence counts/motifs, length, GC, PS load/fraction, 2′MOE/LNA/CpG flags, backbone, position-derived chemistry summaries."
+Primary evidence,Six predefined matched contrasts.
+Validation,Grouped by sequence/scaffold/matched pair/publication/series; no random row split.
+Models,"Penalized ordinal/logistic baseline and shallow tree comparator; simple length-only, PS-only, chemistry-only, and family-only baselines."
+Metrics,"MAE, rank correlation, class-wise sensitivity, confusion matrix, qualitative calibration, family/pair-resampled uncertainty where feasible."
+Required sensitivity analyses,Remove alternating-AC family; exclude CpG controls; restrict to 2′MOE panel; numeric-only endpoint subset.
+Permitted claim,Exploratory evidence that sequence/chemistry features relate to human platelet interaction in curated panels.
+Prohibited claim,"Clinical thrombocytopenia prediction, clinical validation, generalizable causal feature effect, or clinical-grade accuracy."
+Key limitations,N=16; only three major families; ordinal labels partly reconstructed; raw numeric values incomplete; no external validation.
+Deployment,None. Research analysis only.
+Fairness/subgroup assessment,Not estimable from current construct-level panel; donor heterogeneity must be retained where available.
+Scientist gate,"German approves all rows, target definitions, splits, outputs, and wording before dissemination."

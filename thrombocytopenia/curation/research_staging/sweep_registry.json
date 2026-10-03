@@ -1,0 +1,721 @@
+{
+ "resources": [
+  {
+   "resource": "ClinicalTrials.gov REST API v2 \u2014 search endpoint (/api/v2/studies)",
+   "url": "https://clinicaltrials.gov/api/v2/studies",
+   "searched": true,
+   "search_date": "2026-10-02",
+   "queries": [
+    "query.term=oblimersen OR G3139 OR Genasense&pageSize=100",
+    "query.term=aprinocarsen OR \"ISIS 3521\" OR LY900003 OR affinitak&pageSize=100",
+    "query.term=\"ISIS 5132\" OR ISIS5132&pageSize=100",
+    "query.term=alicaforsen OR \"ISIS 2302\"&pageSize=100",
+    "query.term=mipomersen OR \"ISIS 301012\" OR Kynamro&pageSize=100",
+    "query.term=eteplirsen OR golodirsen OR viltolarsen OR casimersen&pageSize=100",
+    "query.term=drisapersen OR GSK2402968 OR PRO051 OR \"2OMe\" OR ataluren&filter.advanced=AREA[HasResults]true&pageSize=200",
+    "query.term=antisense oligonucleotide&filter.advanced=AREA[HasResults]true&pageSize=200",
+    "query.term=siRNA OR \"small interfering RNA\" OR \"RNA interference\"&filter.advanced=AREA[HasResults]true&pageSize=200",
+    "query.term=inotersen OR volanesorsen OR tofersen OR eplontersen OR olezarsen OR pelacarsen OR donidalorsen OR nusinersen OR tominersen OR custirsen OR apatorsen OR trabedersen OR aganirsen OR fomivirsen OR defibrotide OR imetelstat OR danvatirsen OR cobomarsen OR miravirsen OR RG-101 OR AZD4785 OR ISIS OR IONIS&filter.advanced=AREA[HasResults]true&pageSize=200",
+    "query.term=patisiran OR vutrisiran OR givosiran OR lumasiran OR nedosiran OR inclisiran OR fitusiran OR revusiran OR teprasiran OR cemdisiran OR zilebesiran OR olpasiran OR plozasiran OR nucresiran OR elebsiran&filter.advanced=AREA[HasResults]true&pageSize=200",
+    "query.term=ARC1779 OR aptamer&filter.advanced=AREA[HasResults]true&pageSize=200",
+    "query.term=ARC1779&pageSize=100",
+    "query.term=(oligonucleotide OR antisense OR siRNA) AND (thrombocytopenia OR \"platelet count decreased\")&pageSize=100",
+    "query.term=phosphorothioate AND platelet&pageSize=100",
+    "query.term=AREA[InterventionName]antisense AND thrombocytopenia&pageSize=100",
+    "query.term=(antisense OR oligonucleotide OR siRNA OR aptamer) AND (\"platelet aggregation\" OR \"platelet function\" OR \"platelet activation\" OR \"P-selectin\" OR PAC-1 OR \"glycoprotein VI\")&pageSize=100"
+   ],
+   "n_results_relevant": 65,
+   "result_identifiers": [
+    "NCT03358030",
+    "NCT04136184",
+    "NCT01737398",
+    "NCT02175004",
+    "NCT04089566",
+    "NCT02598661",
+    "NCT02426086",
+    "NCT01731951",
+    "NCT01836549",
+    "NCT05583552",
+    "NCT02211209",
+    "NCT02658175",
+    "NCT02300233",
+    "NCT02527343",
+    "NCT00063934",
+    "NCT00064259",
+    "NCT01200342",
+    "NCT00736450",
+    "NCT00054639",
+    "NCT00477594",
+    "NCT00694109",
+    "NCT00362180",
+    "NCT00794664",
+    "NCT00706849",
+    "NCT00707746",
+    "NCT00770146",
+    "NCT00607373",
+    "NCT01475825",
+    "NCT01254019",
+    "NCT02386553",
+    "NCT02594124",
+    "NCT03020745",
+    "NCT01839604",
+    "NCT02499328",
+    "NCT03334617",
+    "NCT05814666",
+    "NCT03794544",
+    "NCT00138658",
+    "NCT01829113",
+    "NCT01844817",
+    "NCT01780545",
+    "NCT01681433",
+    "NCT01675128",
+    "NCT00761280",
+    "NCT03713320",
+    "NCT03548415",
+    "NCT04568434",
+    "NCT04307381",
+    "NCT02310906",
+    "NCT00844597",
+    "NCT03218995",
+    "NCT00159250",
+    "NCT04179409",
+    "NCT03985878",
+    "NCT02530905",
+    "NCT01540409",
+    "NCT01396239",
+    "NCT04956289",
+    "NCT04060199",
+    "NCT02255552",
+    "NCT02286947",
+    "NCT02420379",
+    "NCT03532542",
+    "NCT03814187",
+    "NCT03060577",
+    "NCT03399370",
+    "NCT05192941",
+    "NCT03681184",
+    "NCT03841448",
+    "NCT04998201",
+    "NCT04153149",
+    "NCT05001269",
+    "NCT02314052",
+    "NCT04412863"
+   ],
+   "outcome": "results",
+   "barrier_class": "none",
+   "barrier_detail": "",
+   "notes": "All search calls returned HTTP 200. IMPORTANT METHOD LIMITATION I verified rather than assumed: query.term full-text does NOT index the posted-results adverse-event tables. Control query 'AREA[InterventionName]antisense AND thrombocytopenia' returned totalCount=0, and '(oligonucleotide OR antisense OR siRNA) AND (thrombocytopenia OR \"platelet count decreased\")' returned only 8 studies, none of which were the trials that actually post thrombocytopenia AE rows. Platelet evidence therefore CANNOT be found by term search; it must be found by enumerating oligonucleotide interventions with filter.advanced=AREA[HasResults]true and then parsing each resultsSection. I did that: 270 unique results-bearing NCTs enumerated, all 270 fetched and parsed, 95 carried a platelet AE row or platelet outcome measure, 65 of those had a genuine oligonucleotide intervention (the other 30 were text-match noise: farletuzumab, veliparib, lurbinectedin, bevacizumab, palbociclib, pixantrone, AMG 706, pralatrexate, palonosetron, vinorelbine, CO-1.01 etc., matched via the bare tokens 'ISIS'/'IONIS' or sponsor text). 'phosphorothioate AND platelet' returned 0 - chemistry terms are not in registry free text at all, which is why the registry gives platelet COUNTS but no oligo chemical characterization."
+  },
+  {
+   "resource": "ClinicalTrials.gov REST API v2 \u2014 single-study endpoint (/api/v2/studies/<NCT>)",
+   "url": "https://clinicaltrials.gov/api/v2/studies/NCT01737398",
+   "searched": true,
+   "search_date": "2026-10-02",
+   "queries": [
+    "GET /api/v2/studies/<NCT> for each of 281 NCT ids (11 named priority-target NCTs + 270 enumerated results-bearing oligonucleotide trials + 5 aptamer protocol records)",
+    "GET /api/v2/studies/NCT00024440",
+    "GET /api/v2/studies/NCT01254019",
+    "GET /api/v2/studies/NCT01480245",
+    "GET /api/v2/studies/NCT05139810",
+    "GET /api/v2/studies/NCT05392114",
+    "GET /api/v2/studies/NCT03070782",
+    "GET /api/v2/studies/NCT04023552",
+    "GET /api/v2/studies/NCT03385239",
+    "GET /api/v2/studies/NCT02386553",
+    "GET /api/v2/studies/NCT02594124",
+    "GET /api/v2/studies/NCT04089566"
+   ],
+   "n_results_relevant": 65,
+   "result_identifiers": [
+    "NCT03358030",
+    "NCT04136184",
+    "NCT01737398",
+    "NCT04089566",
+    "NCT02598661",
+    "NCT02175004",
+    "NCT03020745",
+    "NCT02211209",
+    "NCT00063934",
+    "NCT00694109"
+   ],
+   "outcome": "results",
+   "barrier_class": "none",
+   "barrier_detail": "",
+   "notes": "Every one of the 281 single-study GETs returned HTTP 200 with a complete JSON record; no rate-limiting, no CAPTCHA, no login. Verification of all 11 named priority-target NCTs (rule 6): NCT00024440 oblimersen+FC CLL (O'Brien) COMPLETED hasResults=FALSE; NCT01254019 drisapersen DEMAND-II hasResults=TRUE; NCT01480245 drisapersen open-label hasResults=FALSE; NCT05139810 OASIS-HAE donidalorsen hasResults=TRUE (but no platelet AE row - all platelet terms fell below the 5% reporting threshold); NCT05392114 OASISplus hasResults=FALSE; NCT03070782 pelacarsen ph2 hasResults=TRUE (no platelet AE row, 5% threshold); NCT04023552 Lp(a)HORIZON hasResults=FALSE (ongoing); NCT03385239 olezarsen ph2 hasResults=TRUE (no platelet AE row, 5% threshold); NCT02386553 NURTURE, NCT02594124 SHINE, NCT04089566 DEVOTE all hasResults=TRUE with platelet data. So 4 of the 11 named NCTs have no posted results at all, and 3 more have results but no platelet row; the platelet yield from the named list is 4 of 11. The bulk enumeration is where the real value came from."
+  },
+  {
+   "resource": "ClinicalTrials.gov REST API v2 \u2014 CSV/flat export (format=csv) and /studies/metadata",
+   "url": "https://clinicaltrials.gov/api/v2/studies?query.term=inotersen&format=csv",
+   "searched": true,
+   "search_date": "2026-10-02",
+   "queries": [
+    "query.term=inotersen&format=csv&pageSize=5",
+    "GET /api/v2/studies/metadata"
+   ],
+   "n_results_relevant": 0,
+   "result_identifiers": [],
+   "outcome": "no_useful_result",
+   "barrier_class": "none",
+   "barrier_detail": "",
+   "notes": "Both HTTP 200. The CSV export is reachable and returns a valid header row (NCT Number, Study Title, Study URL, Acronym, Study Status, Brief Summary, Study Results, Conditions, Interventions, Primary Outcome Measures, Secondary Outcome Measures...), but it flattens only protocol-level fields. It does NOT emit the adverse-event or outcome-measure result tables, which are the only platelet-bearing content. Recorded as no_useful_result rather than a barrier: the endpoint worked exactly as documented, it simply does not carry this endpoint's data. Use the JSON single-study endpoint instead."
+  },
+  {
+   "resource": "ClinicalTrials.gov legacy REST API v1 (/api/query/study_fields)",
+   "url": "https://clinicaltrials.gov/api/query/study_fields?expr=inotersen&fields=NCTId&fmt=json",
+   "searched": true,
+   "search_date": "2026-10-02",
+   "queries": [
+    "expr=inotersen&fields=NCTId&fmt=json"
+   ],
+   "n_results_relevant": 0,
+   "result_identifiers": [],
+   "outcome": "access_barrier",
+   "barrier_class": "broken_link",
+   "barrier_detail": "HTTP 404. The legacy v1 API was retired by NLM and the endpoint no longer resolves. No content returned. Not a block on us - the service is simply gone. Fully superseded by v2, which I used instead, so this cost nothing.",
+   "notes": "Probed only to confirm it is dead rather than assume it. Recorded honestly as a broken link, not as a search."
+  },
+  {
+   "resource": "ClinicalTrials.gov individual participant data (IPD) sharing \u2014 ipdSharingStatementModule",
+   "url": "https://clinicaltrials.gov/api/v2/studies/NCT01737398",
+   "searched": true,
+   "search_date": "2026-10-02",
+   "queries": [
+    "parsed protocolSection.ipdSharingStatementModule for NCT01737398, NCT03358030, NCT04136184, NCT02598661 and across all 270 results-bearing records"
+   ],
+   "n_results_relevant": 0,
+   "result_identifiers": [
+    "NCT01737398",
+    "NCT03358030",
+    "NCT04136184",
+    "NCT02598661"
+   ],
+   "outcome": "not_applicable",
+   "barrier_class": "none",
+   "barrier_detail": "",
+   "notes": "Not applicable, with justification. The challenge ranks raw per-donor / per-replicate data above summary tables, so I checked whether the registry can supply any. It cannot. ipdSharing is explicitly 'NO' on every one of the four highest-value platelet trials (inotersen NEURO-TTR, IONIS-FXIRx, NEURO-TTRansform, imetelstat IMerge). ClinicalTrials.gov is an aggregate-results registry by design - it holds per-ARM counts and per-stratum participant counts, never per-participant records and never per-replicate assay values. This is a structural ceiling on the whole registry family, not a retrievable gap, and it is the single most important honest caveat on everything below."
+  }
+ ],
+ "candidates": [
+  {
+   "full_title": "A Study of ISIS 416858 (IONIS-FXIRx) Administered Subcutaneously to Participants With End-Stage Renal Disease on Hemodialysis \u2014 posted results, 'Number of Participants With Laboratory Abnormalities Related to Platelet Count'",
+   "authors_year": "Ionis Pharmaceuticals, results posted; study 2017-2020",
+   "identifier": "NCT03358030",
+   "link": "https://clinicaltrials.gov/study/NCT03358030",
+   "discovered_via": "ClinicalTrials.gov v2 API \u2014 enumeration of AREA[HasResults]true oligonucleotide interventions, then parsing resultsSection.outcomeMeasuresModule",
+   "publisher_or_repo": "ClinicalTrials.gov (NLM) \u2014 public domain",
+   "required_file": "resultsSection.outcomeMeasuresModule, outcome 'Number of Participants With Laboratory Abnormalities Related to Platelet Count' (already retrieved)",
+   "endpoint_gap_it_closes": "The single best dose-response platelet dataset in the registry. A pre-specified 5-bin platelet-count distribution (100-<140, 75-<100, 50-<75, 25-<50, <25 K/mm^3) crossed with placebo and three ascending doses of the same 2'-MOE PS gapmer (200/250/300 mg). Gives a graded exposure-response curve rather than a single incidence number: placebo 2 participants <100 K/mm^3 and 0 below 75, vs 250 mg 6/4/1/1 and 300 mg 7/0/1/1 across the descending bins. Converts oligo thrombocytopenia from a binary AE flag into a dose-ordered severity distribution.",
+   "expected_usable_observations": "20 stratum x arm cells (5 severity bins x 4 arms) plus 3 platelet AE terms x 4 arms = 12 AE cells; 32 usable observations, all with denominators.",
+   "access_attempted": [
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT03358030",
+     "200 OK, full resultsSection returned"
+    ]
+   ],
+   "outcome": "retrieved",
+   "priority": 1,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "NEURO-TTRansform: A Study to Evaluate the Efficacy and Safety of Eplontersen (ION-682884) in Participants With Hereditary Transthyretin-Mediated Amyloid Polyneuropathy \u2014 posted results, with an inotersen reference arm",
+   "authors_year": "Ionis Pharmaceuticals / AstraZeneca, results posted; study 2019-2023",
+   "identifier": "NCT04136184",
+   "link": "https://clinicaltrials.gov/study/NCT04136184",
+   "discovered_via": "ClinicalTrials.gov v2 API enumeration + resultsSection parse",
+   "publisher_or_repo": "ClinicalTrials.gov (NLM) \u2014 public domain",
+   "required_file": "resultsSection.adverseEventsModule (already retrieved)",
+   "endpoint_gap_it_closes": "The only within-trial human head-to-head of two oligonucleotides that share a backbone but differ in conjugation and dose. Inotersen (unconjugated 2'-MOE PS gapmer, 300 mg weekly) vs eplontersen (the same gapmer chemistry bearing a triantennary GalNAc3 ligand, 45 mg monthly). Thrombocytopenia 4/24 on inotersen vs 1/144 on eplontersen; platelet count decreased 2/24 vs 2/144; and 0/20 in the inotersen-to-eplontersen switch arm. Directly supports extrapolation of platelet risk across a defined chemical modification (ligand conjugation plus the ~30-fold lower dose it permits) within one protocol and one patient population \u2014 exactly the between-system extrapolation Phase 2 asks for, but on the chemistry axis.",
+   "expected_usable_observations": "6 AE cells (2 terms x 3 arms) with denominators, plus the switch-arm longitudinal contrast.",
+   "access_attempted": [
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT04136184",
+     "200 OK"
+    ]
+   ],
+   "outcome": "retrieved",
+   "priority": 1,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Oblimersen (G3139/Genasense) trials with posted results \u2014 five studies",
+   "authors_year": "Genta Inc. / NCI cooperative groups, results posted 2009-2014",
+   "identifier": "NCT00063934; NCT00064259; NCT01200342; NCT00736450; NCT00054639",
+   "link": "https://clinicaltrials.gov/study/NCT01200342",
+   "discovered_via": "ClinicalTrials.gov v2 API, query.term='oblimersen OR G3139 OR Genasense' (46 studies), then hasResults filter",
+   "publisher_or_repo": "ClinicalTrials.gov (NLM) \u2014 public domain",
+   "required_file": "resultsSection.adverseEventsModule for each (already retrieved)",
+   "endpoint_gap_it_closes": "Closes the named oblimersen gap by a different route than the one the brief proposed. The brief pointed at NCT00024440 (O'Brien 2007 JCO CLL) \u2014 I verified that record has hasResults=FALSE, so nothing is posted there. But five OTHER oblimersen trials do have posted results carrying platelet rows: NCT01200342 uveal melanoma platelet count decreased 6/7 participants with 12 events; NCT00063934 thrombocytopenia 4/30 serious plus 6/30 non-serious; NCT00064259 1/15 serious plus 2/15 other; NCT00736450 1/14 serious with 3 events plus 4/14 other with 6 events. This is public-domain per-arm data on the 18-mer uniform phosphorothioate oligodeoxynucleotide class, the strongest-signal chemistry in the whole corpus.",
+   "expected_usable_observations": "~14 AE cells with numerator, denominator and (for three trials) event counts.",
+   "access_attempted": [
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00063934",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00064259",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT01200342",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00736450",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00054639",
+     "200 OK, results present but no platelet AE row"
+    ]
+   ],
+   "outcome": "retrieved",
+   "priority": 1,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Mipomersen (ISIS 301012) trials with posted results \u2014 nine studies, per-trial and per-arm platelet rows",
+   "authors_year": "Ionis/Genzyme/Kastle, results posted 2010-2016",
+   "identifier": "NCT00477594; NCT00694109; NCT00362180; NCT00794664; NCT00706849; NCT00707746; NCT00770146; NCT00607373; NCT01475825",
+   "link": "https://clinicaltrials.gov/study/NCT00694109",
+   "discovered_via": "ClinicalTrials.gov v2 API, query.term='mipomersen OR \"ISIS 301012\" OR Kynamro' (19 studies), hasResults filter",
+   "publisher_or_repo": "ClinicalTrials.gov (NLM) \u2014 public domain",
+   "required_file": "resultsSection.adverseEventsModule for each (already retrieved)",
+   "endpoint_gap_it_closes": "Closes the named 'mipomersen per-trial platelet values (pooled only at present)' gap precisely and completely. Seven of the nine trials post platelet rows, and critically SIX of them were posted at aeFrequencyThreshold=0, meaning every event was reported with no 5% suppression \u2014 so these are exhaustive, not truncated. Five are placebo-controlled with a matched concurrent placebo denominator: NCT00706849 placebo 0/41 vs mipomersen 2/83; NCT00707746 0/12 vs 1/21; NCT00794664 1/19 vs 0/39; NCT00770146 thrombocytopenia 1/52 vs 0/105 and platelet count decreased 0/52 vs 1/105; NCT00362180 0/14 vs 1/19 with an untreated 0/6 arm. Open-label extensions give the long-exposure picture: NCT00694109 5/141 thrombocytopenia and 5/141 platelet count decreased; NCT00477594 dose-split 1/16 at 200 mg weekly vs 0/5 every other week.",
+   "expected_usable_observations": "~24 AE cells, 6 of them from threshold-0 (complete-ascertainment) reports, with per-arm denominators and a dose-frequency contrast.",
+   "access_attempted": [
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00477594",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00694109",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00362180",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00794664",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00706849",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00707746",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00770146",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00607373",
+     "200 OK, results present, no platelet row"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT01475825",
+     "200 OK, results present, no platelet row (5% threshold)"
+    ]
+   ],
+   "outcome": "retrieved",
+   "priority": 1,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Phosphorodiamidate morpholino oligomer (PMO) trials with posted results \u2014 fifteen studies, the neutral-backbone negative comparator",
+   "authors_year": "Sarepta / NS Pharma / AVI BioPharma, results posted 2013-2024",
+   "identifier": "NCT02310906; NCT00844597; NCT03218995; NCT00159250; NCT04179409; NCT03985878; NCT02530905; NCT01540409; NCT01396239; NCT04956289; NCT04060199; NCT02255552; NCT02286947; NCT02420379; NCT03532542",
+   "link": "https://clinicaltrials.gov/study/NCT02310906",
+   "discovered_via": "ClinicalTrials.gov v2 API, query.term='eteplirsen OR golodirsen OR viltolarsen OR casimersen' (22 studies), hasResults filter, then resultsSection parse of all 15",
+   "publisher_or_repo": "ClinicalTrials.gov (NLM) \u2014 public domain",
+   "required_file": "resultsSection.adverseEventsModule for all 15 (already retrieved)",
+   "endpoint_gap_it_closes": "Closes the named 'PMO class as the neutral-backbone comparator' gap, and it closes it as a structured NEGATIVE result, which is what makes it valuable. Across all 15 PMO trials with posted results there is not one thrombocytopenia event and not one platelet-count-decreased event. Four of the 15 were posted at aeFrequencyThreshold=0 (NCT03218995, NCT00159250, NCT04179409, NCT03985878), i.e. complete AE ascertainment with no suppression, so the zeros are real zeros and not threshold artefacts. The only platelet terms anywhere in the class are platelet count INCREASED (NCT02310906, 2/4 \u2014 and in the PLACEBO arm, 0/8 in every golodirsen dose arm) and one platelet anisocytosis (NCT00844597, 1/3 at 4 mg/kg). A charge-neutral phosphorodiamidate backbone with no PS linkages produces no platelet signal under the same regulatory reporting regime that makes PS ASOs light up. That is the cleanest available human anchor for attributing the effect to the phosphorothioate backbone rather than to oligonucleotides as such.",
+   "expected_usable_observations": "15 trial-level negative determinations with denominators (n>500 PMO-exposed participants in total), 4 of them at complete ascertainment, plus 9 explicit zero-count cells.",
+   "access_attempted": [
+    [
+     "https://clinicaltrials.gov/api/v2/studies/ (15 single-study GETs)",
+     "all 200 OK"
+    ]
+   ],
+   "outcome": "retrieved",
+   "priority": 1,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "DEVOTE: Study of Nusinersen (BIIB058) in Participants With Spinal Muscular Atrophy \u2014 platelet count below LLN as a PRIMARY safety outcome",
+   "authors_year": "Biogen, results posted; study 2019-2024",
+   "identifier": "NCT04089566",
+   "link": "https://clinicaltrials.gov/study/NCT04089566",
+   "discovered_via": "ClinicalTrials.gov v2 API, named priority target, resultsSection.outcomeMeasuresModule parse",
+   "publisher_or_repo": "ClinicalTrials.gov (NLM) \u2014 public domain",
+   "required_file": "resultsSection.outcomeMeasuresModule, four platelet outcomes; plus adverseEventsModule (already retrieved)",
+   "endpoint_gap_it_closes": "Closes the named DEVOTE gap and is the only registry record where a platelet endpoint is PRE-SPECIFIED AS PRIMARY rather than appearing as an incidental AE. 'Percentage of Participants With a Postbaseline Platelet Count Below the Lower Limit of Normal on at Least 2 Consecutive Measurements' \u2014 a confirmed, repeat-measurement definition that screens out single spurious lows: Part A 28/28 mg 0% vs Part C 50/28 mg 2.5%; Part B infantile 12/12 mg 4% vs 50/28 mg 0%, later-onset both 0%. Plus platelet shift-to-low/shift-to-high participant counts across six arms. The high-dose vs standard-dose contrast within one drug makes this a dose-response observation, and aeFrequencyThreshold=0 means AE ascertainment is complete.",
+   "expected_usable_observations": "4 outcome measures x up to 6 arms with 2 strata each; ~28 cells, plus 12 threshold-0 AE cells.",
+   "access_attempted": [
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT04089566",
+     "200 OK"
+    ]
+   ],
+   "outcome": "retrieved",
+   "priority": 1,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Volanesorsen (ISIS-APOCIIIRx) trials with posted results \u2014 APPROACH, APPROACH open-label, COMPASS, BROADEN",
+   "authors_year": "Ionis/Akcea, results posted 2018-2022",
+   "identifier": "NCT02211209; NCT02658175; NCT02300233; NCT02527343",
+   "link": "https://clinicaltrials.gov/study/NCT02211209",
+   "discovered_via": "ClinicalTrials.gov v2 API named-drug enumeration with hasResults filter",
+   "publisher_or_repo": "ClinicalTrials.gov (NLM) \u2014 public domain",
+   "required_file": "resultsSection.adverseEventsModule for each (already retrieved)",
+   "endpoint_gap_it_closes": "Volanesorsen is the 2'-MOE PS ASO whose development was defined by thrombocytopenia (EMA restricted it, FDA declined it on this basis), yet it is not among the named targets. Four trials give placebo-controlled and dose-frequency-controlled per-arm rows: APPROACH NCT02211209 platelet count decreased placebo 1/33 vs volanesorsen 11/33, thrombocytopenia 0/33 vs 3/33, serious thrombocytopenia 0/33 vs 2/33 \u2014 one of the largest placebo-referenced effect sizes available for any oligonucleotide. COMPASS NCT02300233 gives a dosing-frequency contrast within one trial: thrombocytopenia placebo 2/38, 300 mg weekly 2/25, 300 mg biweekly 8/50. BROADEN NCT02527343 separates randomized from open-label-extension periods. The open-label NCT02658175 adds treatment-naive 15/51 platelet count decreased and 9/51 thrombocytopenia.",
+   "expected_usable_observations": "~30 AE cells with denominators across placebo-controlled, dose-frequency and open-label-extension contrasts.",
+   "access_attempted": [
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT02211209",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT02658175",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT02300233",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT02527343",
+     "200 OK"
+    ]
+   ],
+   "outcome": "retrieved",
+   "priority": 1,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Inotersen (IONIS-TTR-Rx) NEURO-TTR pivotal trial and its open-label extension",
+   "authors_year": "Ionis Pharmaceuticals, results posted; NEURO-TTR 2013-2017, extension 2014-2021",
+   "identifier": "NCT01737398; NCT02175004",
+   "link": "https://clinicaltrials.gov/study/NCT01737398",
+   "discovered_via": "ClinicalTrials.gov v2 API named-drug enumeration with hasResults filter",
+   "publisher_or_repo": "ClinicalTrials.gov (NLM) \u2014 public domain",
+   "required_file": "resultsSection.adverseEventsModule (both) and outcomeMeasuresModule (NCT02175004) \u2014 already retrieved",
+   "endpoint_gap_it_closes": "The reference case for 2'-MOE PS gapmer thrombocytopenia, placebo-controlled with a clean denominator: NEURO-TTR thrombocytopenia 14/112 inotersen vs 1/60 placebo, platelet count decreased 12/112 vs 0/60, serious thrombocytopenia 2/112 vs 0/60. The extension NCT02175004 then supplies a THRESHOLD-DEFINED laboratory outcome rather than a clinician-labelled AE: 'Confirmed Value of Platelets <75 x 10^9/L' at 12.0% (previous-placebo-to-inotersen) and 12.9% (previous-inotersen-to-inotersen), measured against three other confirmed lab abnormalities in the same table. The two records together give the acute randomized signal and the long-exposure steady-state rate with an explicit platelet-count cutoff.",
+   "expected_usable_observations": "6 placebo-controlled AE cells plus 2 threshold-defined laboratory-outcome cells plus 6 extension AE cells.",
+   "access_attempted": [
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT01737398",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT02175004",
+     "200 OK"
+    ]
+   ],
+   "outcome": "retrieved",
+   "priority": 1,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Imetelstat (GRN163L) trials with posted results \u2014 IMerge, IMbark and three others",
+   "authors_year": "Geron / Janssen, results posted 2019-2025",
+   "identifier": "NCT02598661; NCT02426086; NCT01731951; NCT01836549; NCT05583552",
+   "link": "https://clinicaltrials.gov/study/NCT02598661",
+   "discovered_via": "ClinicalTrials.gov v2 API, 'imetelstat' in the named-drug enumeration, hasResults filter",
+   "publisher_or_repo": "ClinicalTrials.gov (NLM) \u2014 public domain",
+   "required_file": "resultsSection.adverseEventsModule for each (already retrieved)",
+   "endpoint_gap_it_closes": "Adds a backbone chemistry absent from the whole priority-target list: a 13-mer N3'->P5' thio-phosphoramidate oligonucleotide with a 5' palmitoyl lipid conjugate \u2014 neither a PS gapmer nor a PMO nor a GalNAc siRNA. Thrombocytopenia is its dose-limiting toxicity and the magnitudes are an order above the ASOs: IMerge NCT02598661 placebo-controlled with 89 participants affected; IMbark NCT02426086 two-dose-level design (4.7 vs 9.4 mg/kg) with 29 affected, giving an internal dose-response; NCT01836549 and NCT05583552 posted at aeFrequencyThreshold=0. Extends the chemistry axis of the dataset at the high-severity end, which is where a model trained only on 2'-MOE PS and PMO would otherwise have no anchor.",
+   "expected_usable_observations": "~20 AE cells with denominators, including a within-trial two-dose contrast and two complete-ascertainment reports.",
+   "access_attempted": [
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT02598661",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT02426086",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT01731951",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT01836549",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT05583552",
+     "200 OK"
+    ]
+   ],
+   "outcome": "retrieved",
+   "priority": 1,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "GSK3389404 (GalNAc-conjugated PS ASO) hepatitis B study \u2014 CTCAE-graded platelet table at complete AE ascertainment",
+   "authors_year": "GlaxoSmithKline, results posted; study 2017-2020",
+   "identifier": "NCT03020745",
+   "link": "https://clinicaltrials.gov/study/NCT03020745",
+   "discovered_via": "ClinicalTrials.gov v2 API enumeration + outcomeMeasuresModule parse",
+   "publisher_or_repo": "ClinicalTrials.gov (NLM) \u2014 public domain",
+   "required_file": "resultsSection.outcomeMeasuresModule 'Number of Participants With Maximum Post-Baseline Grade by Category in Hematology and Coagulation Parameters' (3 instances) and adverseEventsModule \u2014 already retrieved",
+   "endpoint_gap_it_closes": "Gives SEVERITY-GRADED rather than binary platelet data, as a pre-specified PRIMARY outcome, at aeFrequencyThreshold=0. Platelet CTCAE grades 1-4 are tabulated separately for placebo and four dose/schedule arms (30 mg weekly, 60 mg weekly, 120 mg biweekly, 120 mg weekly) at two time horizons (Day 169 and Day 450): placebo 0 at every grade; 60 mg weekly 1 at grade 1; 120 mg weekly 2 at grade 1 and 1 at grade 2. Matching AE rows show thrombocytopenia 2/15 and platelet count decreased 1/15 confined to the 120 mg weekly arm with 0 in all lower-dose arms and 0/10 placebo. A dose-and-schedule-resolved severity gradient in a GalNAc-conjugated PS ASO, which bridges the unconjugated-ASO and conjugated-ASO chemistry classes.",
+   "expected_usable_observations": "4 grades x 5 arms x 2 time horizons = 40 graded cells, plus 16 threshold-0 AE cells.",
+   "access_attempted": [
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT03020745",
+     "200 OK"
+    ]
+   ],
+   "outcome": "retrieved",
+   "priority": 1,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Danvatirsen (AZD9150 / ISIS-STAT3Rx) constrained-ethyl (cEt) gapmer trials with posted results \u2014 five studies",
+   "authors_year": "AstraZeneca / Ionis, results posted 2017-2024",
+   "identifier": "NCT01839604; NCT02499328; NCT03334617; NCT05814666; NCT03794544",
+   "link": "https://clinicaltrials.gov/study/NCT01839604",
+   "discovered_via": "ClinicalTrials.gov v2 API enumeration with hasResults filter",
+   "publisher_or_repo": "ClinicalTrials.gov (NLM) \u2014 public domain",
+   "required_file": "resultsSection.adverseEventsModule for each (already retrieved)",
+   "endpoint_gap_it_closes": "Adds the constrained-ethyl (cEt) bicyclic sugar modification to the chemistry axis \u2014 a high-affinity 2'-modification class entirely absent from the priority-target list, which covers only PS-ODN, 2'-OMe, 2'-MOE and PMO. NCT01839604 thrombocytopenia and platelet count decreased with up to 10 affected; NCT02499328 posted at aeFrequencyThreshold=0 with 10 affected across platelet count decreased, thrombocytopenia and thrombocytopenic purpura; NCT03794544 also threshold 0. Confounded by concurrent chemotherapy and checkpoint inhibitors in most arms, which must be recorded as a covariate, but the threshold-0 reporting makes the ascertainment complete.",
+   "expected_usable_observations": "~25 AE cells with denominators, two trials at complete ascertainment; requires a co-medication confounder flag.",
+   "access_attempted": [
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT01839604",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT02499328",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT03334617",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT05814666",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT03794544",
+     "200 OK"
+    ]
+   ],
+   "outcome": "retrieved",
+   "priority": 2,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Second-generation 2'-MOE PS oncology ASOs with posted results \u2014 custirsen (OGX-011), apatorsen (OGX-427), ISIS 183750, trabedersen (AP 12009), cobomarsen (MRG-106)",
+   "authors_year": "OncoGenex / Teva / Ionis / Isarna / miRagen, results posted 2010-2021",
+   "identifier": "NCT00138658; NCT01829113; NCT01844817; NCT01780545; NCT01681433; NCT01675128; NCT00761280; NCT03713320",
+   "link": "https://clinicaltrials.gov/study/NCT01829113",
+   "discovered_via": "ClinicalTrials.gov v2 API enumeration with hasResults filter",
+   "publisher_or_repo": "ClinicalTrials.gov (NLM) \u2014 public domain",
+   "required_file": "resultsSection.adverseEventsModule for each (already retrieved)",
+   "endpoint_gap_it_closes": "Broadens the 2'-MOE PS class well beyond the named targets, and three of the eight were posted at aeFrequencyThreshold=0 (NCT01780545, NCT01681433, NCT01675128) so their platelet rows are exhaustive. Several are randomized against a chemotherapy-only control arm (NCT01829113 OGX-427 plus carboplatin/pemetrexed vs placebo; NCT01844817 OGX-427 plus gemcitabine/nab-paclitaxel vs placebo), which isolates the oligonucleotide contribution against a matched cytotoxic backbone \u2014 unusually clean for oncology. NCT00138658 additionally records thrombotic thrombocytopenic purpura, a mechanistically distinct platelet event worth capturing separately. Also adds a locally-administered ASO (trabedersen, intratumoral convection-enhanced delivery) and an anti-miR (cobomarsen), i.e. route and modality variation.",
+   "expected_usable_observations": "~35 AE cells, 3 trials at complete ascertainment, 2 with placebo-controlled chemotherapy-matched denominators.",
+   "access_attempted": [
+    [
+     "https://clinicaltrials.gov/api/v2/studies/ (8 single-study GETs)",
+     "all 200 OK"
+    ]
+   ],
+   "outcome": "retrieved",
+   "priority": 2,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "GalNAc-conjugated siRNA trials with posted results \u2014 inclisiran, lumasiran, cemdisiran, plozasiran, vutrisiran, nedosiran; plus DCR-MYC (LNP siRNA) and VIR-2218",
+   "authors_year": "Novartis / Alnylam / Arrowhead / Dicerna / Vir, results posted 2018-2025",
+   "identifier": "NCT03814187; NCT03060577; NCT03399370; NCT05192941; NCT03681184; NCT03841448; NCT04998201; NCT04153149; NCT05001269; NCT02314052; NCT04412863",
+   "link": "https://clinicaltrials.gov/study/NCT03814187",
+   "discovered_via": "ClinicalTrials.gov v2 API, siRNA named-drug enumeration with hasResults filter",
+   "publisher_or_repo": "ClinicalTrials.gov (NLM) \u2014 public domain",
+   "required_file": "resultsSection.adverseEventsModule for each (already retrieved)",
+   "endpoint_gap_it_closes": "Supplies the duplex-RNA / GalNAc-conjugate comparator arm, which the priority-target list omits entirely. Six of the eleven were posted at aeFrequencyThreshold=0 or near it (NCT03814187, NCT03060577, NCT03681184, NCT03841448, NCT04998201, NCT02314052), so their low counts are complete-ascertainment zeros and near-zeros rather than suppressed rows, and five are placebo-controlled. Maximum affected across the entire class is 8 participants (NCT03814187 inclisiran, long-term dosing) with most trials at 0-2. Establishes that a GalNAc-conjugated, largely 2'-OMe/2'-F-modified duplex with few or no PS linkages behaves like the PMO class and unlike the PS gapmers \u2014 a second independent chemistry anchor for backbone attribution, and one with placebo denominators the PMO trials mostly lack.",
+   "expected_usable_observations": "~40 AE cells with denominators, 6 at complete ascertainment, 5 placebo-controlled.",
+   "access_attempted": [
+    [
+     "https://clinicaltrials.gov/api/v2/studies/ (11 single-study GETs)",
+     "all 200 OK"
+    ]
+   ],
+   "outcome": "retrieved",
+   "priority": 2,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Nusinersen NURTURE and SHINE, and drisapersen DEMAND-II \u2014 posted platelet shift tables",
+   "authors_year": "Biogen / GSK, results posted 2019-2024",
+   "identifier": "NCT02386553; NCT02594124; NCT01254019",
+   "link": "https://clinicaltrials.gov/study/NCT02386553",
+   "discovered_via": "ClinicalTrials.gov v2 API, named priority targets, resultsSection parse",
+   "publisher_or_repo": "ClinicalTrials.gov (NLM) \u2014 public domain",
+   "required_file": "resultsSection.outcomeMeasuresModule hematology shift tables and adverseEventsModule \u2014 already retrieved",
+   "endpoint_gap_it_closes": "Closes three named gaps. NURTURE NCT02386553 posts platelet shift-to-low 3 (2-SMN2-copy) and 5 (3-copy) with shift-to-high 9 and 7, at aeFrequencyThreshold=5. SHINE NCT02594124 gives thrombocytopenia, thrombocytosis, mean platelet volume decreased and platelet count increased across NINE separate prior-study cohorts with denominators from 8 to 83 \u2014 the widest cohort stratification of any record found, letting prior exposure be modelled. DEMAND-II NCT01254019 posts a protocol-defined 'potential clinical concern' threshold for drisapersen with the cutoff stated explicitly in the outcome description (platelet count 0.67 x lower limit of normal and 1.57 x upper limit), giving 0 placebo vs 1 drisapersen below range and 1 vs 0 above \u2014 the only 2'-OMe PS record in the registry with a numeric platelet threshold attached.",
+   "expected_usable_observations": "~45 cells: SHINE 36 AE cells across 9 cohorts, NURTURE 4 shift cells plus 2 AE cells, DEMAND-II 4 threshold cells.",
+   "access_attempted": [
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT02386553",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT02594124",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT01254019",
+     "200 OK"
+    ]
+   ],
+   "outcome": "retrieved",
+   "priority": 2,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "IONIS-GHR-LRx, olezarsen (AKCEA-APOCIII-LRx) phase 3, and donidalorsen extension \u2014 single-event ligand-conjugated ASO rows",
+   "authors_year": "Ionis/Akcea, results posted 2021-2025",
+   "identifier": "NCT03548415; NCT04568434; NCT04307381",
+   "link": "https://clinicaltrials.gov/study/NCT04307381",
+   "discovered_via": "ClinicalTrials.gov v2 API enumeration with hasResults filter",
+   "publisher_or_repo": "ClinicalTrials.gov (NLM) \u2014 public domain",
+   "required_file": "resultsSection.adverseEventsModule for each (already retrieved)",
+   "endpoint_gap_it_closes": "Partially substitutes for two named targets whose own records are empty. The named olezarsen phase 2 NCT03385239 posts results but carries NO platelet AE row (suppressed below the 5% threshold); NCT04568434 does carry one (platelet count decreased, 3 affected). The named donidalorsen trials OASIS-HAE NCT05139810 (no platelet row) and OASISplus NCT05392114 (no results at all) are likewise empty, but the donidalorsen extension NCT04307381 posts platelet count decreased in 1 participant. Low-count rows, but they are the only posted platelet observations for these two GalNAc-conjugated agents and they matter as near-zero anchors for the conjugated class.",
+   "expected_usable_observations": "3-5 AE cells with denominators; low magnitude, value is as conjugated-ASO near-zero anchors.",
+   "access_attempted": [
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT03548415",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT04568434",
+     "200 OK"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT04307381",
+     "200 OK"
+    ]
+   ],
+   "outcome": "retrieved",
+   "priority": 3,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Anti-von Willebrand factor aptamer trials with ex vivo human platelet-function endpoints \u2014 ARC1779, BT200 (rondaptivon pegol), BB-031/BB-025",
+   "authors_year": "Archemix 2007-2010; Band Therapeutics / Medical University of Vienna, ongoing",
+   "identifier": "NCT00632242; NCT00432770; NCT00726544; NCT00742612; NCT00507338; NCT00694785; NCT07273721; NCT07202663",
+   "link": "https://clinicaltrials.gov/study/NCT07273721",
+   "discovered_via": "ClinicalTrials.gov v2 API, query.term='(antisense OR oligonucleotide OR siRNA OR aptamer) AND (\"platelet aggregation\" OR \"platelet function\" OR ...)' and 'ARC1779'",
+   "publisher_or_repo": "ClinicalTrials.gov (NLM) \u2014 protocol records only",
+   "required_file": "resultsSection \u2014 DOES NOT EXIST for any of the eight; only protocolSection.outcomesModule is available",
+   "endpoint_gap_it_closes": "Would be the registry's only route to the human EX VIVO platelet-function readouts that Phase 2 ranks above clinical incidence rows. These are DNA/RNA aptamers against the vWF A1 domain whose pharmacodynamic endpoints are assays on human blood: NCT07273721 (BT200 in type 2B von Willebrand disease) has Platelet Counts as its PRIMARY outcome plus platelet function under high shear by Platelet Function Analyzer, vWF:collagen binding, vWF:ristocetin cofactor activity and a GP1bM assay; NCT07202663 (BB-031/BB-025 in healthy volunteers) has whole-blood platelet function closure times; NCT00632242 characterizes the PD profile in vWF-related platelet function disorders. Mechanistically these are platelet-ADHESION modulators rather than thrombocytopenia cases, so they inform the oligo-platelet interaction axis rather than the count-reduction axis \u2014 a distinction to preserve on ingestion.",
+   "expected_usable_observations": "Zero at present. All eight would yield ex vivo assay series if results were ever posted.",
+   "access_attempted": [
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00632242",
+     "200 OK, hasResults=false, no resultsSection"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00432770",
+     "200 OK, hasResults=false"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00726544",
+     "200 OK, hasResults=false"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT07273721",
+     "200 OK, hasResults=false, RECRUITING"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT07202663",
+     "200 OK, hasResults=false, COMPLETED"
+    ]
+   ],
+   "outcome": "access_barrier",
+   "priority": 3,
+   "human_in_vitro": true
+  },
+  {
+   "full_title": "Named priority-target trials verified to have NO posted results \u2014 oblimersen CLL, drisapersen DEMAND-III, Lp(a)HORIZON, OASISplus",
+   "authors_year": "various sponsors",
+   "identifier": "NCT00024440; NCT01480245; NCT04023552; NCT05392114",
+   "link": "https://clinicaltrials.gov/study/NCT00024440",
+   "discovered_via": "ClinicalTrials.gov v2 API, direct GET on each named priority-target NCT",
+   "publisher_or_repo": "ClinicalTrials.gov (NLM) \u2014 protocol records only",
+   "required_file": "resultsSection \u2014 absent from all four",
+   "endpoint_gap_it_closes": "Nothing, and recording that is the point. These four named targets cannot be served from the registry and must be sourced from the literature family instead. NCT00024440 (oblimersen plus fludarabine/cyclophosphamide in CLL, the O'Brien 2007 JCO trial where thrombocytopenia was a principal toxicity) is COMPLETED with hasResults=false \u2014 it predates FDAAA 801 results-reporting, so no posting was ever required and none exists. NCT01480245 (drisapersen open-label) COMPLETED, hasResults=false. NCT04023552 (Lp(a)HORIZON pelacarsen) is ongoing, so results are not yet due. NCT05392114 (OASISplus donidalorsen) hasResults=false. Classed as unresolved_citation rather than a technical block: the API served each record correctly, the results simply were never posted.",
+   "expected_usable_observations": "0 from the registry.",
+   "access_attempted": [
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00024440",
+     "200 OK, hasResults=false, 11897 bytes, no resultsSection"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT01480245",
+     "200 OK, hasResults=false"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT04023552",
+     "200 OK, hasResults=false, ongoing"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT05392114",
+     "200 OK, hasResults=false"
+    ]
+   ],
+   "outcome": "access_barrier",
+   "priority": 3,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "First-generation PS ASO programmes with no posted results anywhere \u2014 aprinocarsen (ISIS 3521/LY900003), ISIS 5132, alicaforsen (ISIS 2302) CS20/CS21/CS22/CS27",
+   "authors_year": "Isis Pharmaceuticals / Eli Lilly / NCI, trials 1998-2004",
+   "identifier": "NCT00042679; NCT00034268; NCT00003236; NCT00017407; NCT00003989; NCT00003892; NCT00048113; NCT00048295; NCT00063830; NCT00063414; NCT02525523",
+   "link": "https://clinicaltrials.gov/study/NCT00034268",
+   "discovered_via": "ClinicalTrials.gov v2 API, query.term='aprinocarsen OR \"ISIS 3521\" OR LY900003 OR affinitak', '\"ISIS 5132\"', 'alicaforsen OR \"ISIS 2302\"'",
+   "publisher_or_repo": "ClinicalTrials.gov (NLM) \u2014 protocol records only",
+   "required_file": "resultsSection \u2014 absent from 10 of 11; present but platelet-empty in NCT02525523",
+   "endpoint_gap_it_closes": "Nothing retrievable, recorded so the gap is not mistaken for absence of effect. Three named priority targets fall entirely in this hole. All 5 aprinocarsen trials (including the phase 3 NCT00034268, where thrombocytopenia was the dose-limiting toxicity) have hasResults=false. Both ISIS 5132 trials have hasResults=false \u2014 NCT00003236 is notable as a trial of BOTH ISIS 3521 and ISIS 5132, so a direct first-generation PS comparison exists on paper but with nothing posted. For alicaforsen, the named CS20/CS21 phase 3 Crohn's trials correspond to NCT00048113 and NCT00048295, both hasResults=false, as are CS22 and CS27; the one alicaforsen trial that DID post results (NCT02525523, pouchitis enema) contains no platelet AE row at all. These are all pre-FDAAA or non-US-jurisdiction registrations, so non-posting is lawful and permanent. The entire first-generation uniform-PS chemistry class is therefore unavailable from the registry except through oblimersen, which makes the five oblimersen results-bearing trials above disproportionately important.",
+   "expected_usable_observations": "0 from the registry. Must be sourced from publications and FDA/EMA review documents.",
+   "access_attempted": [
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00034268",
+     "200 OK, hasResults=false"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00003236",
+     "200 OK, hasResults=false"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00003892",
+     "200 OK, hasResults=false"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00048113",
+     "200 OK, hasResults=false"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT00048295",
+     "200 OK, hasResults=false"
+    ],
+    [
+     "https://clinicaltrials.gov/api/v2/studies/NCT02525523",
+     "200 OK, hasResults=true, no platelet AE row"
+    ]
+   ],
+   "outcome": "access_barrier",
+   "priority": 3,
+   "human_in_vitro": false
+  }
+ ],
+ "notes": "SCOPE. Resource family 'registry' = ClinicalTrials.gov. I searched it through four distinct endpoints and recorded each separately, plus one not_applicable row for the IPD question. Search date recorded as 2026-10-02 per the task; wall-clock execution 2026-10-03.\n\nNO BARRIERS ON THE LIVE SERVICE. Every v2 API call I made returned HTTP 200 - 18 search calls and 281 single-study GETs. No login, no CAPTCHA, no rate limiting, no human-verification page. The one genuine barrier is the retired legacy v1 API (HTTP 404, broken_link), which I probed only to confirm it is dead rather than assume it, and which cost nothing because v2 fully supersedes it. The web UI at /study/<NCT> also returned 200 with 94323 bytes and no CAPTCHA or JS-wall markers. I am not reporting any blocked service as searched, and I am not reporting any service as blocked that was not.\n\nMETHOD FINDING THAT SHOULD CHANGE HOW OTHERS SWEEP THIS SOURCE. Term search does not reach posted results. I verified this with controls rather than inferring it: 'AREA[InterventionName]antisense AND thrombocytopenia' returns totalCount=0, and '(oligonucleotide OR antisense OR siRNA) AND (thrombocytopenia OR \"platelet count decreased\")' returns 8 studies, none of which are the trials that actually post thrombocytopenia rows. 'phosphorothioate AND platelet' returns 0. The adverse-event tables are simply not in the free-text index. Anyone who sweeps this registry by keyword will conclude there is almost nothing here. The working method is: enumerate oligonucleotide interventions with filter.advanced=AREA[HasResults]true, fetch every record, parse resultsSection. I enumerated 270 unique results-bearing NCTs across six named-drug and class queries, fetched and parsed all 270, found 95 with a platelet AE row or platelet outcome measure, and after excluding 30 text-match false positives (bare tokens 'ISIS' and 'IONIS' pull in farletuzumab, veliparib, lurbinectedin, bevacizumab, palbociclib, pixantrone, AMG 706, pralatrexate, palonosetron, vinorelbine, CO-1.01) retained 65 trials with a genuine oligonucleotide intervention.\n\nHONEST POSITIONING AGAINST WHAT PHASE 2 ACTUALLY WANTS. Phase 2 prioritises human in vitro / ex vivo systems and raw per-donor or per-replicate data, and states that row count is not a qualification criterion. On that scale this family is structurally mid-tier, and I want to be explicit about why rather than let the volume imply otherwise. (1) Nothing here is in vitro. Every observation is in vivo clinical. The only in-vitro-adjacent records I found are the eight anti-vWF aptamer trials with ex vivo platelet-function assays, and NOT ONE has posted results. (2) Nothing here is per-donor. I checked ipdSharingStatementModule on the four highest-value trials and it is 'NO' on all four; the registry holds per-ARM aggregates by design, never per-participant rows. So this family cannot satisfy the challenge's top-ranked criterion at all, and should be positioned as the denominator-bearing clinical anchor that in vitro work is validated against, not as a substitute for it.\n\nWHERE IT IS GENUINELY STRONG. Three things make it worth the effort despite the above. First, licensing: ClinicalTrials.gov posted results are US Government work in the public domain, so unlike journal tables there is no reuse question at all. Second, denominators and concurrent placebo: ~20 of the 65 trials are placebo-controlled with a matched concurrent denominator, which almost no published platelet dataset provides. Third and most important, aeFrequencyThreshold. Roughly 25 of the 65 were posted at threshold 0, meaning every adverse event was reported with no 5% suppression. This matters more than it sounds: a zero in a threshold-0 report is a real zero, whereas a zero in a threshold-5 report is uninformative. It is what makes the PMO negative result usable as evidence rather than as absence of evidence. Any ingestion of this data MUST carry aeFrequencyThreshold as a column, or the PS-vs-PMO contrast becomes uninterpretable.\n\nTHE CHEMISTRY CONTRAST THIS FAMILY UNIQUELY SUPPORTS. Holding the regulatory reporting regime constant and varying only backbone chemistry: uniform PS oligodeoxynucleotide (oblimersen) up to 6/7 participants with platelet count decreased; 2'-MOE PS gapmer (inotersen 14/112 vs 1/60 placebo, volanesorsen 11/33 vs 1/33 placebo); thio-phosphoramidate lipid conjugate (imetelstat, 89 participants affected, dose-limiting); GalNAc-conjugated PS ASO (GSK3389404, confined to the top dose, grade 1-2 only); GalNAc siRNA (maximum 8 affected across 11 trials, 6 at threshold 0); phosphorodiamidate morpholino (zero thrombocytopenia events across 15 trials, 4 at threshold 0). That is a monotonic ordering across six chemistry classes in human subjects under one reporting standard. The PMO and siRNA zeros are what let the signal be attributed to the phosphorothioate backbone rather than to oligonucleotides generally, which is the inference the dataset needs and which no single trial can supply.\n\nNAMED-TARGET YIELD, STATED PLAINLY. Of the 11 named NCTs, 4 have no posted results at all (NCT00024440 oblimersen CLL, NCT01480245 DEMAND-III, NCT04023552 Lp(a)HORIZON, NCT05392114 OASISplus) and 3 more have results but no platelet row because it fell below the 5% threshold (NCT05139810 OASIS-HAE, NCT03070782 pelacarsen ph2, NCT03385239 olezarsen ph2). Only 4 of 11 named NCTs yielded platelet data. Three named targets - aprinocarsen, ISIS 5132, alicaforsen CS20/CS21 - have zero posted results across all 11 of their registry records, lawfully, as pre-FDAAA registrations; the entire first-generation uniform-PS class is unavailable here except via oblimersen. The real value came from trials NOT on the named list: IONIS-FXIRx, NEURO-TTRansform, volanesorsen, imetelstat, GSK3389404, danvatirsen, the five results-bearing oblimersen trials and the PMO negative set.\n\nOUT OF SCOPE FOR THIS FAMILY. The cASO7/cASO9/cASO11 control sequences (doi:10.1016/j.omtn.2026.103051 Table S2) and the Sewing 2017 / Slingsby 2022 per-donor data are literature and supplement targets; a trial registry holds no sequence or chemistry fields, so I did not attempt them here. Relatedly, 'phosphorothioate AND platelet' returning 0 is itself the finding that this registry carries platelet COUNTS but no oligonucleotide chemical characterization whatsoever - every chemistry attribution above comes from my own knowledge of the agents, not from the registry records, and must be sourced and cited elsewhere before use.\n\nDATA QUALITY WARNINGS FOR INGESTION. (a) NCT00736450 files 'Platelet count decreased' under organSystem 'Infections and infestations' and NCT00063934 files 'Thrombocytopenia' under 'Metabolism and nutrition disorders' - sponsor mis-mapping, so match on term and never on organ system. (b) Term vocabulary is inconsistent across sponsors: 'Thrombocytopenia', 'THROMBOCYTOPENIA', 'Platelet count decreased', 'Platelet Count Decreased', 'PLATELET COUNT DECREASED' all occur and need case-insensitive normalisation. (c) Several records report thrombocytopenia AND platelet count decreased as separate rows for what may be the same participants - do not sum them. (d) Keep thrombocytosis, platelet count increased, mean platelet volume decreased and platelet anisocytosis as distinct endpoints; they are not thrombocytopenia and in NCT02310906 the platelet-increase signal sits in the PLACEBO arm. (e) Oncology trials are confounded by concurrent cytotoxic chemotherapy and need a co-medication flag; defibrotide trials are confounded in the opposite direction because the indication (hepatic veno-occlusive disease post-HSCT) is itself thrombocytopenic, which is why I excluded defibrotide from the saved extract despite its large platelet counts.\n\nARTIFACT WRITTEN. /home/user/oligos/thrombocytopenia/curation/research_staging/ctgov_v2_platelet_AE_extract.json - 228576 bytes, sha256 66b7ce0ae4b114b775b6ca4ae4a5454da5ea5568cf806eeb5f10bcdd2b89e34c, verified to parse. 65 trials, 516 per-arm platelet adverse-event rows, 231 platelet outcome-measure rows, each row carrying arm label, numAffected, numAtRisk, numEvents where posted, and the trial's aeFrequencyThreshold. Zero-count rows are deliberately retained because they are the denominator evidence that makes the PMO and siRNA comparisons valid. Public domain as US Government work. No other file was modified."
+}

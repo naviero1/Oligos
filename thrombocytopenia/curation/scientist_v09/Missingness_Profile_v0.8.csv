@@ -1,0 +1,22 @@
+Missingness_ID,Entity,Field_or_Data_Element,Missing_Count,Total_Rows,Missing_Percent,Status,Scientific_Interpretation,Required_Action
+MISS8-001,Oligo Master,Compound-level exact sequence,1,45,2.2,PASS WITH COMPONENT EXCEPTION,Only Givosiran is blank at compound level because it is represented as two exact duplex components.,Use Duplex_Component_Master for siRNA products.
+MISS8-002,Position Chemistry,Main single/core position map,0,831,0,PASS,All stored main chemistry rows are populated and key-valid.,Retain automated completeness checks.
+MISS8-003,Duplex Components,Givosiran component sequences,0,2,0,PASS,Both exact component sequences are present.,Keep parent-component link.
+MISS8-004,Duplex Position Chemistry,Givosiran component position maps,0,44,0,PASS,All 44 strand positions have chemistry records.,Keep component+position unique key.
+MISS8-005,Oligo Characterization,Analytical identity method,45,45,100,MAJOR GAP,The corpus rarely reports the analytical assay used to confirm identity.,Acquire HPLC/MS/capillary methods where publicly available; never infer.
+MISS8-006,Oligo Characterization,Purity percentage,45,45,100,MAJOR GAP,Purity is a Phase 2-required metadata area and remains largely unavailable.,Recover supplement/regulatory values or retain NOT_REPORTED.
+MISS8-007,Oligo Characterization,Observed molecular weight,45,45,100,MAJOR GAP,Observed MW is not provided for most constructs.,Recover from analytical supplements only.
+MISS8-008,Oligo Characterization,Lot or batch identifier,45,45,100,MAJOR GAP,Lot-level traceability is not available in the current public corpus.,Retain explicit NOT_REPORTED.
+MISS8-009,Human Clinical Ground Truth,Active_N,4,35,11.4,PARTIAL,"Some records are qualitative, single-arm, threshold-specific, or pooled-context evidence.",Do not calculate rates when denominator/event count is absent.
+MISS8-010,Human Clinical Ground Truth,Comparator_N,11,35,31.4,PARTIAL,"Some records are qualitative, single-arm, threshold-specific, or pooled-context evidence.",Do not calculate rates when denominator/event count is absent.
+MISS8-011,Human Clinical Ground Truth,Active_Events,7,35,20,PARTIAL,"Some records are qualitative, single-arm, threshold-specific, or pooled-context evidence.",Do not calculate rates when denominator/event count is absent.
+MISS8-012,Human Clinical Ground Truth,Comparator_Events,13,35,37.1,PARTIAL,"Some records are qualitative, single-arm, threshold-specific, or pooled-context evidence.",Do not calculate rates when denominator/event count is absent.
+MISS8-013,Human Clinical Ground Truth,Active_Rate,5,35,14.3,PARTIAL,"Some records are qualitative, single-arm, threshold-specific, or pooled-context evidence.",Do not calculate rates when denominator/event count is absent.
+MISS8-014,Human Clinical Ground Truth,Comparator_Rate,12,35,34.3,PARTIAL,"Some records are qualitative, single-arm, threshold-specific, or pooled-context evidence.",Do not calculate rates when denominator/event count is absent.
+MISS8-015,Human Ex Vivo Ground Truth,Observed numeric/value field,49,75,65.3,MAJOR GAP,Many records are qualitative or ordinal reconstructions from figures/text.,Acquire raw Sewing S1 and preserve original values.
+MISS8-016,Human Ex Vivo Ground Truth,Observed units,23,75,30.7,PARTIAL,Unit is absent when the source supports only a qualitative result.,Never invent units.
+MISS8-017,Human Ex Vivo Ground Truth,Comparator numeric/value field,52,75,69.3,MAJOR GAP,Many comparisons are qualitative or source-figure based.,Acquire raw tables and retain comparator type even when value is absent.
+MISS8-018,Source Provenance,Source URL,0,63,0,PASS,All current provenance records have a URL or persistent source locator.,Preserve URLs and add repository PIDs on release.
+MISS8-019,Clinical Controls,Clean sequence-linked clinical negative class,1,1,100,BLOCKER,"No construct passes every clinical-negative gate; this is a class absence, not a missing cell.",Do not train a balanced sequence-only clinical classifier.
+MISS8-020,Structured Source Acquisition,SafeSense treatment-level CSV,1,1,100,NOT ACQUIRED,The paper is available but the local structured treatment-level export is not.,Manual download/upload triggers controlled Claude transfer.
+MISS8-021,Structured Source Acquisition,Sewing S1 raw spreadsheet,1,1,100,NOT ACQUIRED,Main-paper reconstruction is present; raw spreadsheet is absent.,Manual download/upload triggers controlled Claude transfer.
