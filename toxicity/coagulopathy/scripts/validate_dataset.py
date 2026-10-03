@@ -55,9 +55,15 @@ check("FK: modifications.oligo_id -> oligos", not bad, f"{len(bad)} orphans: {ba
 # ---- 8-12 controlled vocabularies ------------------------------------------
 VOCAB = {
  "study_type": {"in_vitro", "ex_vivo_plasma", "animal_invivo", "clinical", NR},
+ # The nine core coagulation categories, plus four that exist only on scope_adjacent rows:
+ # a complement fragment, a target transcript level, an infusion reaction and a blanket
+ # adverse-event statement are not coagulation readouts and no longer borrow a name that
+ # says they are. readout_category_as_curated keeps what the curator originally wrote.
  "readout_category": {"clotting_time", "factor_activity", "fibrinogen", "thrombin_generation",
                       "fibrinolysis_marker", "anticoagulant_activity", "bleeding_outcome",
-                      "thrombotic_outcome", "platelet_coag_crosstalk", NR},
+                      "thrombotic_outcome", "platelet_coag_crosstalk",
+                      "complement_marker", "target_transcript_level", "infusion_reaction",
+                      "blanket_adverse_event_statement", NR},
  "effect_direction": {"increase", "decrease", "no_change", NR, NA},  # NA = pre-dose baseline, not an effect
  "grade_status": {"provisional"},
  "readout_is_qualitative": {"TRUE", "FALSE"},
@@ -271,8 +277,8 @@ check("every scope_adjacent row says why it is out of scope", not bad, f"{len(ba
 
 
 # ---- 56-63 invariants added after the Beebop review (2026-09-30) -------------
-EV = {"baseline_reference", "measured_negative", "adverse_clinical_outcome",
-      "clinical_outcome_unattributed", "unintended_lab_disturbance",
+EV = {"baseline_reference", "measured_negative", "adverse_outcome_source_attributed",
+      "outcome_not_attributed", "unintended_lab_disturbance",
       "intended_pharmacodynamic", "unattributed_lab_change", "unresolved_observation"}
 bad = sorted({r["evidence_class"] for r in D if r["evidence_class"] not in EV})
 check("vocabulary: measurements.evidence_class", not bad, f"unexpected {bad[:5]}")
@@ -292,6 +298,30 @@ check("vocabulary: measurements.human_system_subtype", not bad, f"unexpected {ba
 bad = [r["measurement_id"] for r in D
        if (r["species_class"] == "human") != (r["human_system_subtype"] != NA)]
 check("human_system_subtype is set on exactly the human rows", not bad, f"{len(bad)}: {bad[:5]}")
+
+# A class name that says "clinical" must hold human rows only. The previous vocabulary
+# called two classes clinical while 222 of their rows were mouse, monkey, rat or pig. The
+# names are fixed; this check is what stops the mistake being reintroduced.
+bad = [r["measurement_id"] for r in D
+       if "clinical" in r["evidence_class"] and r["species_class"] != "human"]
+check("no evidence_class named 'clinical' carries a non-human row", not bad, f"{len(bad)}: {bad[:5]}")
+
+# A row that is out of endpoint scope must not wear a coagulation category. COG-MSR0345
+# said clotting_time for complement fragment Bb; all six scope-adjacent rows did this.
+CORE = {"clotting_time", "factor_activity", "bleeding_outcome", "thrombotic_outcome",
+        "fibrinogen", "anticoagulant_activity", "platelet_coag_crosstalk",
+        "thrombin_generation", "fibrinolysis_marker"}
+bad = [r["measurement_id"] for r in D
+       if r["endpoint_scope"] == "scope_adjacent" and r["readout_category"] in CORE]
+check("no scope_adjacent row carries a core coagulation category", not bad, f"{len(bad)}: {bad[:5]}")
+
+bad = [r["measurement_id"] for r in D
+       if r["endpoint_scope"] == "scope_adjacent" and r["cross_endpoint_referral"] in ("", NA)]
+check("every scope_adjacent row names the endpoint it belongs to", not bad, f"{len(bad)}: {bad[:5]}")
+
+bad = [r["measurement_id"] for r in D
+       if r["readout_category_as_curated"] not in ("", NA) and r["endpoint_scope"] != "scope_adjacent"]
+check("a recategorised row is recorded only where the scope says so", not bad, f"{len(bad)}: {bad[:5]}")
 
 AUTH = {"source_reported", "curator_derived_research_score",
         "both_source_reported_and_curator_derived", "ungraded"}
@@ -340,6 +370,54 @@ if os.path.exists(_sp):
 
     bad = [r["study_id"] for r in ST if r["identity_basis"] == "no_identifier" and r["headline_trial"] == "TRUE"]
     check("an unidentifiable study never enters the headline total", not bad, f"{len(bad)}: {bad[:4]}")
+
+    # ---- over-merge is a failure, not a comment (Beebop 2026-10-02) ------------------
+    # 55 checks passed while two drugs sat in one trial row. These are the checks that
+    # would have caught it. Two registry numbers from the SAME registry, or two sponsor
+    # compound numbers, cannot be one trial. Two numbers from DIFFERENT registries can:
+    # one trial legitimately holds both an NCT and a EudraCT number, so that is an alias.
+    bad = [r["study_id"] for r in ST if "OVER_MERGE" in r["review_flag"]]
+    check("no study cluster fails the over-merge test", not bad, f"{len(bad)}: {bad[:4]}")
+
+    def _reg_fam(x):
+        for f in ("NCT", "EUDRACT", "ISRCTN", "JAPICCTI", "EUCT"):
+            if x.startswith(f):
+                return f
+        return "OTHER"
+
+    bad = []
+    for r in ST:
+        regs = [x.strip() for x in r["registry_ids_all"].split(";") if x.strip() and x.strip() != NR]
+        if len({_reg_fam(x) for x in regs}) < len(regs):
+            bad.append(r["study_id"])
+    check("no cluster holds two registry numbers from one registry", not bad, f"{len(bad)}: {bad[:4]}")
+
+    bad = [r["study_id"] for r in ST
+           if len([x for x in r["sponsor_programme"].split(";") if x.strip() and x.strip() != NR]) > 1
+           and "OVER_MERGE" not in r["review_flag"]
+           and "MIPO2900210" not in r["sponsor_protocol"]]
+    check("two sponsor compound numbers in one cluster are declared, not silent", not bad, f"{len(bad)}: {bad[:4]}")
+
+    # A pooled analysis re-reports trials already counted. It must not be a study row.
+    bad = [r["study_id"] for r in ST if r["design"] == "pooled_analysis"]
+    check("pooled analyses are not study records", not bad, f"{len(bad)}: {bad[:4]}")
+
+    # The compound id is embedded in the compound string, so it must be extracted. Filtering
+    # on startswith() resolved 5 of 30 headline trials and I reported that as the dataset's
+    # state rather than as my bug.
+    bad = [r["study_id"] for r in ST
+           if re.search(r"COG-OLG\d+", r["compounds"]) and r["oligo_ids"] == NR]
+    check("a compound id written inside the compound string is extracted", not bad, f"{len(bad)}: {bad[:4]}")
+
+_pp = os.path.join(ROOT, "data", "pooled_analyses.csv")
+if os.path.exists(_pp):
+    PA = list(_csv.DictReader(open(_pp, newline="", encoding="utf-8")))
+    ids = [r["pool_id"] for r in PA]
+    check("PK unique: pooled_analyses.pool_id", len(set(ids)) == len(ids), "duplicated pool ids")
+    bad = [r["pool_id"] for r in PA if not str(r["pool_descriptor"]).strip()]
+    check("every pooled analysis records what it pools", not bad, f"{len(bad)}: {bad[:4]}")
+    bad = [r["pool_id"] for r in PA if "NOT a trial" not in r["counting_rule"]]
+    check("every pooled analysis carries its counting rule", not bad, f"{len(bad)}: {bad[:4]}")
 
 # ---- report -----------------------------------------------------------------
 w = max(len(n) for n, _, _ in checks)

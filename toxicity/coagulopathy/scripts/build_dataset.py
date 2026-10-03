@@ -279,14 +279,32 @@ def apply_species_split(rows, log):
 # adverse-event statements. They are kept (each is honest context its extractor flagged in
 # notes) but marked, so a coagulation-row count is never inflated by them and a neighbouring
 # endpoint's readout is never silently counted here.
+# Scope-adjacent readouts: why they are not coagulation endpoints, the category they
+# actually belong to, and the endpoint they should be read under.
+#
+# Beebop (2026-10-02) flagged COG-MSR0345: readout_category said `clotting_time` while the
+# readout is complement fragment Bb and the row's own note said "NOT A COAGULATION READOUT".
+# Auditing the rest found the same contradiction in all six scope-adjacent rows -- each had
+# been given a core coagulation category. The scope flag and the note were right; the
+# category was wrong, so a reader filtering on readout_category alone would read a
+# complement fragment as a clotting time and a blanket adverse-event statement as a bleed.
 SCOPE_ADJACENT_READOUTS = {
-    "complement_alternative_pathway_Bb":       "complement activation is a separate Challenge endpoint",
-    "F8_gene_expression_lung":                 "transcript level, not a clotting-factor activity",
-    "adverse_events_any":                      "blanket adverse-event statement, not a coagulation readout",
-    "serious_or_severe_adverse_event":         "blanket adverse-event statement, not a coagulation readout",
-    "fatal_treatment_emergent_adverse_event":  "blanket adverse-event statement, not a coagulation readout",
-    "infusion_related_reaction_or_toxicity":   "infusion reaction / LNP complement axis, not a coagulation readout",
+    "complement_alternative_pathway_Bb":      ("complement activation is a separate Challenge endpoint",
+                                               "complement_marker", "complement-activation"),
+    "F8_gene_expression_lung":                ("transcript level, not a clotting-factor activity",
+                                               "target_transcript_level", "none_stays_in_coagulopathy"),
+    "adverse_events_any":                     ("blanket adverse-event statement, not a coagulation readout",
+                                               "blanket_adverse_event_statement", "cross-cutting"),
+    "serious_or_severe_adverse_event":        ("blanket adverse-event statement, not a coagulation readout",
+                                               "blanket_adverse_event_statement", "cross-cutting"),
+    "fatal_treatment_emergent_adverse_event": ("blanket adverse-event statement, not a coagulation readout",
+                                               "blanket_adverse_event_statement", "cross-cutting"),
+    "infusion_related_reaction_or_toxicity":  ("infusion reaction / LNP complement axis, not a coagulation readout",
+                                               "infusion_reaction", "complement-activation"),
 }
+CORE_COAG_CATEGORIES = {"clotting_time", "factor_activity", "bleeding_outcome", "thrombotic_outcome",
+                        "fibrinogen", "anticoagulant_activity", "platelet_coag_crosstalk",
+                        "thrombin_generation", "fibrinolysis_marker"}
 
 COAG_LEXICON = re.compile(
     r"aptt|ptt|prothrombin|\bpt\b|pt_ratio|\btt\b|inr|thrombin|thrombus|clot|coagul|fibrin|d[_ -]?dimer|antithrombin|anti[_-]?xa|anti[_-]?iia|bleed|blood_loss|blood_flow|blood_transfusion|h(?:ae|e|a)?morrhag|h(?:ae|e|a)?mostas|h(?:ae|e|a)?mostatic|thromb|kallikrein|tenase|xase|\bact\b|tfpi|vwf|von[_ ]willebrand|platelet|heparin|protamine|bivalirudin|argatroban|hirudin|\btat\b|epistaxis|h(?:ae|e|a)?matoma|h(?:ae|e|a)?maturia|contusion|transfusion|\bF(?:I|II|V|VII|VIII|IX|X|XI|XII)a?(?:se)?[_ ]|fxa|fixa|fviia|fxia|fxiia|fviii|factor|serpin|plasmin|PAI[_ ]?1|tPA|PF4|ecarin|russell|reptilase|TEG|ROTEM|bradykinin|P[_ ]selectin|occlusion|patency|perfusion|neurologic_deficit|mortality|Evans_blue|oxygenator|cerebrovascular|saphenous|carotid|jugular|contact_pathway|proenzyme|zymogen|prekallikrein|injection_site", re.I)
@@ -310,9 +328,9 @@ def apply_evidence_class(rows, log):
         elif dirn == "no_change":
             cls, basis = "measured_negative", "source reports the endpoint measured and unchanged"
         elif cat in ("bleeding_outcome", "thrombotic_outcome") and un:
-            cls, basis = "adverse_clinical_outcome", "bleeding/thrombotic outcome the source presents as adverse"
+            cls, basis = "adverse_outcome_source_attributed", "bleeding/thrombotic outcome the source presents as adverse (ANY species -- read with species_class)"
         elif cat in ("bleeding_outcome", "thrombotic_outcome"):
-            cls, basis = "clinical_outcome_unattributed", "bleeding/thrombotic outcome NOT presented as adverse by the source (e.g. efficacy or on-target context)"
+            cls, basis = "outcome_not_attributed", "bleeding/thrombotic outcome NOT presented as adverse by the source (e.g. efficacy or on-target context); ANY species -- read with species_class"
         elif un:
             cls, basis = "unintended_lab_disturbance", "laboratory coagulation change the source presents as unintended"
         elif on:
@@ -377,14 +395,24 @@ def apply_grade_authority(rows, log):
 def apply_endpoint_scope(rows, log):
     for r in rows:
         nm = r.get("readout_name", "")
-        why = SCOPE_ADJACENT_READOUTS.get(nm)
-        if why:
+        hit = SCOPE_ADJACENT_READOUTS.get(nm)
+        if hit:
+            why, cat, referral = hit
             r["endpoint_scope"] = "scope_adjacent"
             r["endpoint_scope_note"] = why
+            r["cross_endpoint_referral"] = referral
+            if r.get("readout_category") in CORE_COAG_CATEGORIES:
+                r["readout_category_as_curated"] = r["readout_category"]
+                r["readout_category"] = cat
+                log["E_scope_recategorised"] += 1
+            else:
+                r["readout_category_as_curated"] = NA
             log["E_scope_adjacent"] += 1
         else:
             r["endpoint_scope"] = "coagulation"
             r["endpoint_scope_note"] = NA
+            r["cross_endpoint_referral"] = NA
+            r["readout_category_as_curated"] = NA
             log["E_scope_coagulation"] += 1
     return rows
 
