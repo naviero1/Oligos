@@ -507,6 +507,21 @@ DEFS = {
     ("measurements", "species"): "Species as the source states it, or NOT_APPLICABLE for a purified system.",
     ("measurements", "species_class"): "human | animal | not_determined. The human-versus-animal axis. A purified-protein assay is human when the proteins are human.",
     # ---- columns added in the 2026-10-03 work package -------------------------------
+    # ---- purity and characterisation, recovered 2026-10-03 ---------------------------
+    ("oligos", "purity_pct_basis"): "tested_batch | drug_substance_specification | publication_methods | multiple_lots_reported_with_different_values_see_purity_batches | NOT_REPORTED. A specification is not the batch used in a study and is never spread across batches.",
+    ("oligos", "purity_batches"): "Every reported purity value against its lot, e.g. 'TA666853-008:90%; TA666853-001:94%'. A purity belongs to a lot, so all are kept; where lots disagree, purity_pct carries no single number.",
+    ("oligos", "n_purity_batches_reported"): "How many lot-level purity values the sources report for this compound.",
+    ("oligos", "purity_locus"): "Exact section or table in the cited document where the purity/characterisation evidence sits.",
+    ("oligos", "purity_source_id"): "The source document the characterisation came from.",
+    ("oligos", "purity_evidence_quote"): "Verbatim quote supporting the purity and characterisation fields. Every quote was string-matched against the cited file by an independent verification pass.",
+    ("oligos", "purity_limits_redacted"): "TRUE where a regulatory document NAMES the purity test but withholds the numeric acceptance limit, which public EPARs routinely do. A withheld limit is recorded as a finding, never as a value.",
+    ("oligos", "analytical_methods_regulatory"): "Purity/assay methods as named in a regulatory quality section (typically IP-HPLC-UV-MS). Kept separate from purity_method so publication-derived and regulatory-derived provenance stay distinguishable.",
+    ("oligos", "identity_methods_regulatory"): "Identity-confirmation methods as named in a regulatory quality section - accurate mass by MS, sequence confirmation by duplex melting temperature (Tm), NMR, ESI-TOF.",
+    ("oligos", "characterisation_methods"): "Other characterisation tests named: counterion by ICP-OES, water by Karl Fischer, residual solvents by GC, elemental impurities by ICP-MS, endotoxin, XRPD, TGA.",
+    ("oligos", "purification_method"): "How the material was manufactured or purified, where the document states it.",
+    ("oligos", "counterion"): "The salt form and how the counterion is controlled.",
+    ("oligos", "impurity_classes"): "Impurity and degradant classes named in the specification.",
+    ("oligos", "characterisation_basis"): "regulatory_quality_section:<source_id> where characterisation was recovered from a Quality/CMC section, else not_recovered_from_a_regulatory_quality_section.",
     # ---- definitions shared by several tables (the ("*", col) fallback) --------------
     ("*", "compound_families"): "Drug families named by the record, comparators included.",
     ("*", "subject_compound_families"): "The drug families actually under test, with comparators, prior therapies, placebos and positive controls removed.",

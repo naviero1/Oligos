@@ -93,20 +93,111 @@ individually. Extraction rules, enforced by the output contract:
 
 ## 6. Oligonucleotide identity, purity and characterisation
 
-The Challenge requires the methods used to purify and characterise oligo identity. The
-compounds were synthesised by the source laboratories, so what can be reported is what each
-source states, and `purity_pct` is **`NOT_REPORTED` for all 213 compounds**. No purity
-value was estimated, inferred from a synthesis platform, or carried across from another
-compound. Where a source states a synthesis platform, purification method or identity
-confirmation, it populates `synthesis_platform`, `purity_method` and
-`identity_confirmation`. This absence is a property of the published literature, not of the
-curation: per-compound purity is almost never published alongside toxicity results.
+The Challenge requires the methods used to purify and characterise oligo identity. Until
+2026-10-03 this section reported `purity_pct` as `NOT_REPORTED` for every compound and
+attributed that to the literature: "per-compound purity is almost never published alongside
+toxicity results." **That explanation was wrong, and the error was ours.** Earlier
+extraction read the *clinical* sections of the EMA assessment reports and FDA integrated
+reviews already held in `sources/documents/` and never opened their Quality / CMC sections,
+where the purity and identity methods for every approved compound are set out. Nothing had
+to be acquired to close this; the evidence was in the repository.
 
-Identity here means the printed sequence together with its per-position chemistry.
-97 of 213 compounds have a published sequence; 47 have position-resolved chemistry. QC
-checks that every declared length equals the actual string (plus any documented terminal
-residue) and that every modification row's nucleobase matches the sequence at that
-position.
+### Method
+
+Eleven parallel extraction passes, one per compound programme, each reading only that
+programme's documents, followed by eleven independent verification passes that
+string-matched every quote against the cited file and checked every numeric purity against
+a printed purity context. Eight programmes verified clean. Three reported defects, all
+metadata rather than values — one spliced quote, two page misattributions, one unsupported
+claim about redaction markers — and each is corrected in
+`sources/characterisation.json` with the correction recorded in the record itself. The
+same checks now run inside `verify_against_sources.py`, so the evidence is re-checked on
+every build rather than resting on a one-off review.
+
+### What these documents do and do not give
+
+A public EPAR **names every purity and impurity test and withholds the numeric acceptance
+limit**. For volanesorsen, for example, the active-substance specification lists purity,
+specified impurities, unspecified impurities, total degradation products and total
+impurities, all by ion-pair HPLC with UV and mass-spectrometric detection
+(IP-HPLC-UV-MS) — and prints no limit for any of them. That is recorded as
+`purity_limits_redacted = TRUE` with `purity_pct` left `NOT_REPORTED`: **a withheld limit
+is a finding, never a value.** 12 compounds are in that state.
+
+FDA integrated reviews occasionally print a value, and when they do it belongs to a **lot**:
+
+| Compound | Lot | Purity | Basis |
+|---|---|---|---|
+| fitusiran | P07916 | 98.5% | tested batch |
+| olezarsen | lot not named in the quoted passage | 91.3% | tested batch (drug substance CA678354-002) |
+| tofersen | TA666853-008 | 90% | tested batch |
+| tofersen | TA666853-001 | 94% | tested batch |
+
+Tofersen therefore carries **no single `purity_pct`**. Both lot values are kept in
+`purity_batches` and `purity_pct` is `NOT_REPORTED` with the basis
+`multiple_lots_reported_with_different_values_see_purity_batches`. Choosing one lot as "the"
+compound's purity would transfer one batch's result to every use of that compound, and a
+drug-substance *specification* is likewise never spread across batches — `purity_pct_basis`
+always says which kind of number it is. A QC check fails the build if a compound with
+several lot purities reports a single one.
+
+### Coverage, with the denominators that matter
+
+Phase 2 asks for the purity and characterisation of **each oligo tested**, so the honest
+denominator is the subset actually dosed in people, not the whole roster.
+
+| | all 218 | 38 dosed in human participants | 95 in human in vitro systems |
+|---|---:|---:|---:|
+| sequence as printed | 121 | 14 | 45 |
+| nucleobase sequence | 104 | 13 | 43 |
+| position-resolved chemistry | 52 | 11 | 3 |
+| purity value (single) | 2 | 2 | 1 |
+| purity test named but limit withheld | 12 | 12 | 2 |
+| purity method named | 46 | 11 | 36 |
+| identity confirmation | 32 | 16 | 18 |
+| other characterisation tests | 16 | 16 | 3 |
+| purification / manufacture | 14 | 14 | 3 |
+| counterion | 17 | 17 | 3 |
+| impurity classes | 12 | 12 | 2 |
+
+Read against the previous release this is 0/38 → 2/38 for a purity value, 1/38 → 11/38 for
+a named method, 3/38 → 16/38 for identity confirmation, and 0/38 → 14/38 for purification.
+It remains **thin**, and the two gaps that matter most are unchanged by this work: only 14
+of the 38 clinically dosed compounds have a printed sequence, and only 11 have
+position-resolved chemistry. No model can learn sequence-dependent toxicity from a compound
+whose sequence we do not hold.
+
+### The methods, as the sources state them
+
+For the approved antisense and siRNA compounds the recovered methods are consistent across
+sponsors and worth stating plainly, because they are the answer to "how was identity
+characterised":
+
+- **Identity** — accurate mass by MS, usually within an IP-HPLC-UV-MS run; sequence
+  confirmation by thermal melting temperature (Tm); failure-sequence analysis of crude
+  material by IP-HPLC-TOF-MS to confirm the claimed nucleotide sequence; structure
+  elucidation by ¹H, ¹³C and ³¹P NMR with high-resolution ESI-TOF.
+- **Purity and impurities** — a single IP-HPLC-UV-MS method determines assay, purity and
+  impurities together; impurities are specified as *groups* (specified, unspecified, total
+  degradation products, total impurities) rather than as individual components.
+- **Other attributes** — counterion identity and content by ICP-OES, elemental impurities
+  by ICP-MS, water by Karl Fischer, residual solvents by GC, endotoxin and microbial
+  limits by Ph. Eur. methods.
+- **Diastereomeric composition** — a 20-mer full-phosphorothioate is a mixture of 2¹⁹
+  (524,288) diastereoisomers, with no individual diastereoisomer contributing more than
+  about 0.0018% of the total. This is stated in the volanesorsen assessment and is a
+  property of the chemistry class, not of one compound: **"the sequence" and "the molecule"
+  are not the same thing for a phosphorothioate**, and any model treating a PS sequence as
+  a single species is modelling a mixture.
+
+Identity here means the printed sequence together with its per-position chemistry. QC checks
+that every declared length equals the actual string (plus any documented terminal residue)
+and that every modification row's nucleobase matches the sequence at that position.
+
+No purity value was estimated, inferred from a synthesis platform, or carried across from
+another compound. Values recovered from a regulatory quality section are marked
+`characterisation_basis = regulatory_quality_section:<source_id>`; values already extracted
+from publications were not overwritten, and the two provenances are held in separate columns.
 
 ## 7. Harmonisation and grading
 

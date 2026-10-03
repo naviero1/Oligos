@@ -510,53 +510,100 @@ def apply_characterisation(oligos, log):
         land in their own columns so the provenance of each stays separable.
     """
     path = os.path.join(ROOT, "sources", "characterisation.json")
-    NEW = ["purity_pct_basis", "purity_locus", "purity_source_id", "purity_evidence_quote",
-           "purity_limits_redacted", "analytical_methods_regulatory", "identity_methods_regulatory",
+    NEW = ["purity_pct_basis", "purity_batches", "n_purity_batches_reported", "purity_locus",
+           "purity_source_id", "purity_evidence_quote", "purity_limits_redacted",
+           "analytical_methods_regulatory", "identity_methods_regulatory",
            "characterisation_methods", "purification_method", "counterion", "impurity_classes",
            "characterisation_basis"]
     for o in oligos:
         for c in NEW:
             o.setdefault(c, NR)
         o["characterisation_basis"] = "not_recovered_from_a_regulatory_quality_section"
+        o["n_purity_batches_reported"] = "0"
     if not os.path.exists(path):
         return oligos
     recs = json.load(open(path, encoding="utf-8"))["records"]
     by_id = {o["oligo_id"]: o for o in oligos}
+    grouped = defaultdict(list)
     for r in recs:
-        o = by_id.get(r.get("oligo_id"))
+        grouped[r.get("oligo_id")].append(r)
+
+    for oid, group in grouped.items():
+        o = by_id.get(oid)
         if not o:
-            log["CH_unmatched_oligo_id"] += 1
+            log["CH_unmatched_oligo_id"] += len(group)
             continue
+
         def put(col, val, overwrite=True):
             v = str(val or "").strip()
             if not v or v in (NR, NA, "NOT_KNOWN"):
                 return
             if overwrite or o.get(col, NR) in (NR, NA, ""):
                 o[col] = v
-        # a numeric purity is only ever written when the document printed one
-        pct = str(r.get("purity_pct", "")).strip()
-        if re.fullmatch(r"\d{1,3}(?:\.\d+)?", pct):
-            prev = o.get("purity_pct", NR)
-            # a tested batch outranks a specification; otherwise first value wins
-            if prev in (NR, NA, "") or r.get("purity_pct_basis") == "tested_batch":
-                o["purity_pct"] = pct
-                put("purity_pct_basis", r.get("purity_pct_basis"))
-                log["CH_purity_value"] += 1
-        put("purity_locus", r.get("locus"))
-        put("purity_source_id", r.get("source_id"))
-        put("purity_evidence_quote", re.sub(r"\s+", " ", str(r.get("verbatim_quote", "")))[:1200])
-        put("purity_limits_redacted", r.get("limits_redacted"))
-        put("analytical_methods_regulatory", r.get("purity_method"))
-        put("identity_methods_regulatory", r.get("identity_confirmation"))
-        put("characterisation_methods", r.get("characterisation_methods"))
-        put("purification_method", r.get("purification_method"))
-        put("counterion", r.get("counterion"))
-        put("impurity_classes", r.get("impurity_classes"))
-        # never overwrite a value a publication gave us
-        put("purity_method", r.get("purity_method"), overwrite=False)
-        put("identity_confirmation", r.get("identity_confirmation"), overwrite=False)
-        o["characterisation_basis"] = "regulatory_quality_section:" + str(r.get("source_id", NR))
-        log["CH_record_applied"] += 1
+
+        # ---- method facts accumulate across every record for this compound -------------
+        for r in group:
+            put("analytical_methods_regulatory", r.get("purity_method"), overwrite=False)
+            put("identity_methods_regulatory", r.get("identity_confirmation"), overwrite=False)
+            put("characterisation_methods", r.get("characterisation_methods"), overwrite=False)
+            put("purification_method", r.get("purification_method"), overwrite=False)
+            put("counterion", r.get("counterion"), overwrite=False)
+            put("impurity_classes", r.get("impurity_classes"), overwrite=False)
+            # never overwrite a value a publication already gave us
+            put("purity_method", r.get("purity_method"), overwrite=False)
+            put("identity_confirmation", r.get("identity_confirmation"), overwrite=False)
+            if str(r.get("limits_redacted", "")).upper() == "TRUE":
+                o["purity_limits_redacted"] = "TRUE"
+            log["CH_record_applied"] += 1
+
+        # ---- the purity EVIDENCE is one coupled unit ------------------------------------
+        # quote, locus, source and value must come from the SAME record. Applying them
+        # record-by-record let a value from an FDA review end up cited to a DailyMed label,
+        # which the build's own verification caught: a mis-citation is worse than a gap.
+        numeric = [r for r in group
+                   if re.fullmatch(r"\d{1,3}(?:\.\d+)?", str(r.get("purity_pct", "")).strip())]
+        ev = None
+        if numeric:
+            # all numeric records must agree on the source, or the evidence is not one unit
+            same = {r.get("source_id") for r in numeric}
+            if len(same) == 1:
+                ev, lots = numeric[0], numeric
+            else:
+                ev, lots = numeric[0], [r for r in numeric if r.get("source_id") == numeric[0].get("source_id")]
+                log["CH_purity_values_from_several_sources"] += 1
+        else:
+            red = [r for r in group if str(r.get("limits_redacted", "")).upper() == "TRUE"]
+            ev, lots = (red[0] if red else group[0]), []
+
+        put("purity_locus", ev.get("locus"))
+        put("purity_source_id", ev.get("source_id"))
+        put("purity_evidence_quote", re.sub(r"\s+", " ", str(ev.get("verbatim_quote", "")))[:1200])
+        o["characterisation_basis"] = "regulatory_quality_section:" + str(ev.get("source_id", NR))
+
+        # A purity value belongs to a LOT. Tofersen reads 90% for lot TA666853-008 and 94%
+        # for TA666853-001; presenting either as "the" purity would transfer one batch's
+        # result to the compound, which is what Beebop warned against on 2026-10-02.
+        seen = []
+        for r in lots:
+            pct = str(r.get("purity_pct", "")).strip()
+            m = re.search(r"[Ll]ot\s*#?\s*([A-Z]{1,3}\d{4,8}-?\d*)|\b([A-Z]{2}\d{6}-\d{3})\b",
+                          str(r.get("verbatim_quote", "")))
+            lot = (m.group(1) or m.group(2)) if m else "unspecified_lot"
+            entry = f"{lot}:{pct}%"
+            if entry not in seen:
+                seen.append(entry)
+        if seen:
+            o["purity_batches"] = "; ".join(seen)
+            o["n_purity_batches_reported"] = str(len(seen))
+            vals = {x.split(":")[1] for x in seen}
+            if len(vals) == 1:
+                o["purity_pct"] = seen[0].split(":")[1].rstrip("%")
+                put("purity_pct_basis", lots[0].get("purity_pct_basis"))
+            else:
+                o["purity_pct"] = NR
+                o["purity_pct_basis"] = "multiple_lots_reported_with_different_values_see_purity_batches"
+            log["CH_purity_value"] += len(seen)
+
     return oligos
 
 

@@ -55,7 +55,13 @@ One row per source document. 75 rows.
 | `sequence_locus` | Where in the document the sequence is printed. |
 | `backbone_chemistry` | `full_PS` \| `mixed_PO_PS` \| `full_PO` \| `PMO_neutral` \| `other` \| `NOT_REPORTED`. |
 | `sugar_modifications`, `gapmer_design`, `conjugate`, `ps_count` | Design predictors. |
-| `purity_pct`, `purity_method`, `identity_confirmation`, `synthesis_platform` | The Challenge's oligo-characterisation requirement, recorded as each source states it. `purity_pct` is `NOT_REPORTED` for every compound — see METHODOLOGY §3. |
+| `purity_pct`, `purity_method`, `identity_confirmation`, `synthesis_platform` | The Challenge's oligo-characterisation requirement, recorded as each source states it. |
+| `purity_batches`, `n_purity_batches_reported` | Every reported purity value **against its lot**. A purity belongs to a lot: tofersen reads 90% for lot TA666853-008 and 94% for TA666853-001, so it carries no single `purity_pct` and `purity_pct_basis` says why. Picking a representative lot is a scientific judgement, not a build step. |
+| `purity_pct_basis` | `tested_batch` \| `drug_substance_specification` \| `publication_methods` \| `multiple_lots_reported_with_different_values_see_purity_batches`. A specification is not the batch used in any study and is never spread across batches. |
+| `purity_limits_redacted` | `TRUE` where a regulatory document **names** the purity test and withholds the numeric limit, which public EPARs routinely do. A withheld limit is recorded as a finding, never as a value. 12 compounds. |
+| `purity_locus`, `purity_source_id`, `purity_evidence_quote` | The coupled evidence for the characterisation. Quote, locus, source and value always come from the **same** record — applying them independently once cited an FDA review's purity value to a DailyMed label, which the build's own verification caught. |
+| `analytical_methods_regulatory`, `identity_methods_regulatory`, `characterisation_methods`, `purification_method`, `counterion`, `impurity_classes` | Characterisation recovered from the Quality/CMC sections of regulatory documents already held in `sources/documents/`. Held separately from the publication-derived columns so the two provenances stay distinguishable. See METHODOLOGY §6. |
+| `characterisation_basis` | `regulatory_quality_section:<source_id>`, or `not_recovered_from_a_regulatory_quality_section`. |
 | `source_ids` | `;`-separated sources that describe this compound. |
 | `n_measurements` | Measurement rows for this compound. |
 | `n_human_measurements`, `n_animal_measurements` | Rows in a human and in an animal system. |

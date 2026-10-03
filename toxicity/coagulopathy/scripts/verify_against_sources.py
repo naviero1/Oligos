@@ -88,5 +88,57 @@ def main():
     checked = res["verified_present_in_source"]
     print(f"\n{checked}/{checked} checkable numeric values located in their cited source document")
 
+    # ---- purity and characterisation evidence ------------------------------------------
+    # The characterisation recovered from the regulatory quality sections was checked by an
+    # independent agent pass at extraction time; this makes the same check part of the
+    # deterministic build, so the evidence stays verifiable on every rebuild rather than
+    # resting on a one-off review. Each quote must appear in its cited file, and each purity
+    # value must be printed there.
+    opath = os.path.join(ROOT, "data", "oligos.csv")
+    srcs = {r["source_id"]: r for r in csv.DictReader(open(os.path.join(ROOT, "data", "sources.csv"),
+                                                          newline="", encoding="utf-8"))}
+    pres = Counter()
+    pbad = []
+    for o in csv.DictReader(open(opath, newline="", encoding="utf-8")):
+        sid = o.get("purity_source_id", "")
+        quote = o.get("purity_evidence_quote", "")
+        if sid in ("", NR, "NOT_APPLICABLE") or quote in ("", NR, "NOT_APPLICABLE"):
+            continue
+        fn = srcs.get(sid, {}).get("document_file", "")
+        t = doctext(fn)
+        if t is None:
+            pres["document_not_held"] += 1
+            continue
+        # The stored quote is faithful to the file's bytes, so a quote taken from an SPL
+        # or JATS document can itself contain tags. doctext() strips markup from markup
+        # files, so the quote must be stripped the same way or a faithful quote fails.
+        q = quote
+        if fn.lower().endswith((".xml", ".html", ".htm")):
+            q = re.sub(r"<[^<>]{0,400}?>", " ", q)
+        q = re.sub(r"\s+", " ", normalise(q)).strip()
+        if q[:300] in normalise(t):
+            pres["quote_located"] += 1
+        else:
+            pres["QUOTE_ABSENT"] += 1
+            pbad.append((o["oligo_id"], sid, quote[:80]))
+        for entry in str(o.get("purity_batches", "")).split(";"):
+            m = re.search(r"(\d{1,3}(?:\.\d+)?)%", entry)
+            if not m:
+                continue
+            if m.group(1) in t:
+                pres["purity_value_located"] += 1
+            else:
+                pres["PURITY_VALUE_ABSENT"] += 1
+                pbad.append((o["oligo_id"], sid, "purity " + m.group(1)))
+    if pres:
+        print("\n  purity / characterisation evidence:")
+        for k, v in pres.most_common():
+            print(f"  {v:>5}  {k}")
+    if pbad:
+        print(f"\n  {len(pbad)} purity items NOT found in their cited source:")
+        for a in pbad[:15]:
+            print("   ", a)
+        sys.exit(1)
+
 if __name__ == "__main__":
     main()

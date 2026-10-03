@@ -323,6 +323,34 @@ bad = [r["measurement_id"] for r in D
        if r["readout_category_as_curated"] not in ("", NA) and r["endpoint_scope"] != "scope_adjacent"]
 check("a recategorised row is recorded only where the scope says so", not bad, f"{len(bad)}: {bad[:5]}")
 
+# ---- purity and characterisation (Phase 2 mandatory dataset clause) -----------------
+# "This file must contain the sequences of all oligos tested, as well as the location of all
+# chemical modifications in each oligo, data on the purity and characterization of each."
+bad = [o["oligo_id"] for o in O if o["purity_pct"] not in (NR, NA, "")
+       and not re.fullmatch(r"\d{1,3}(?:\.\d+)?", o["purity_pct"])]
+check("purity_pct is a number or NOT_REPORTED, never prose", not bad, f"{len(bad)}: {bad[:5]}")
+
+bad = [o["oligo_id"] for o in O if o["purity_pct"] not in (NR, NA, "")
+       and (o["purity_locus"] in (NR, NA, "") or o["purity_source_id"] in (NR, NA, "")
+            or o["purity_evidence_quote"] in (NR, NA, ""))]
+check("a purity value carries its locus, source and quote", not bad, f"{len(bad)}: {bad[:5]}")
+
+# A value belongs to a lot. Tofersen is 90% for one lot and 94% for another; presenting
+# either as "the" purity would transfer one batch's result to the compound.
+bad = [o["oligo_id"] for o in O if int(o["n_purity_batches_reported"] or 0) > 1
+       and o["purity_pct"] not in (NR, NA, "")]
+check("a compound with several lot purities reports no single purity_pct", not bad, f"{len(bad)}: {bad[:5]}")
+
+bad = [o["oligo_id"] for o in O if int(o["n_purity_batches_reported"] or 0) > 0
+       and o["purity_batches"] in (NR, NA, "")]
+check("every reported purity value is listed against its lot", not bad, f"{len(bad)}: {bad[:5]}")
+
+bad = [o["oligo_id"] for o in O if o["characterisation_basis"].startswith("regulatory_quality_section")
+       and all(o[c] in (NR, NA, "") for c in ("analytical_methods_regulatory", "identity_methods_regulatory",
+                                              "characterisation_methods", "purification_method",
+                                              "counterion", "impurity_classes", "purity_batches"))]
+check("a compound credited to a quality section carries something from it", not bad, f"{len(bad)}: {bad[:5]}")
+
 # ---- controls (Phase 2 executive-summary requirement) --------------------------------
 CTRL = {"sequence_control", "pharmacological_positive_control", "placebo", "vehicle_or_buffer",
         "untreated_or_predose", "active_comparator", "other_described_control", "no_control_described"}
