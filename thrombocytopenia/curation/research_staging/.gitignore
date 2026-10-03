@@ -1,11 +1,21 @@
-# Bulk retrieved source material is NOT committed. It is third-party content that
-# would bloat the repository and whose redistribution rights vary per publisher.
-# What IS committed: the condition-level extraction, the manifests, and
-# staged_inventory.csv, which records every retrieved file with its sha256, byte
-# count, original filename and retrieval URL so any of it can be re-fetched and
-# verified. The one exception committed in full is the Sewing 2017 S1 workbook,
-# which is a small CC-BY supplement central to the mechanistic lane.
-*.zip
-*.xml
-*.pdf
+# Bulk retrieved third-party source material is NOT committed: it would bloat the
+# repository and its redistribution rights vary per publisher. What IS committed:
+# the derived extraction, the manifests, the coverage log, the candidate table,
+# the correction record, and staged_inventory.csv -- which records every retrieved
+# file with its sha256, byte count, original filename, retrieval URL and inner
+# file/sheet inventory, so any of it can be re-fetched and verified.
+#
+# The one full-content exception is the Sewing 2017 S1 workbook: a small CC-BY
+# supplement that is the direct input to the scientist-approved mechanistic lane.
+*
+!.gitignore
+!README.md
 !sewing2017_pone.0187574_S1.xlsx
+!sewing2017_condition_level.csv
+!sewing2017_manifest.json
+!search_coverage_log.csv
+!sweep_all_resource_rows.csv
+!acquisition_candidates.csv
+!sweep_corrections.csv
+!staged_inventory.csv
+!sweep_*.json

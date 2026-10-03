@@ -1,0 +1,1211 @@
+{
+ "resources": [
+  {
+   "resource": "OpenAlex (works API)",
+   "url": "https://api.openalex.org/works",
+   "searched": true,
+   "search_date": "2026-10-02",
+   "queries": [
+    "api.openalex.org/works?search=oligonucleotide thrombocytopenia",
+    "api.openalex.org/works?search=antisense oligonucleotide platelet",
+    "api.openalex.org/works?search=phosphorothioate platelet activation",
+    "api.openalex.org/works?search=oblimersen G3139 thrombocytopenia",
+    "api.openalex.org/works?search=drisapersen platelet",
+    "api.openalex.org/works?search=aprinocarsen ISIS 3521 thrombocytopenia",
+    "api.openalex.org/works?search=ISIS 5132 c-raf antisense phase I",
+    "api.openalex.org/works?search=alicaforsen ISIS 2302 Crohn",
+    "api.openalex.org/works?search=mipomersen platelet count",
+    "api.openalex.org/works?search=pelacarsen olezarsen donidalorsen platelet",
+    "api.openalex.org/works?search=nusinersen platelet coagulation",
+    "api.openalex.org/works?search=eteplirsen golodirsen viltolarsen casimersen safety platelet",
+    "api.openalex.org/works?search=siRNA GalNAc platelet count thrombocytopenia",
+    "api.openalex.org/works?search=glycoprotein VI GPVI oligonucleotide platelet binding",
+    "api.openalex.org/works?search=PAC-1 P-selectin oligonucleotide human platelet flow cytometry",
+    "api.openalex.org/works?search=platelet factor 4 PF4 oligonucleotide aptamer complex",
+    "api.openalex.org/works?filter=title_and_abstract.search:(oligonucleotide OR antisense OR siRNA) AND (platelet OR thrombocytopenia)&sort=cited_by_count:desc&per-page=50",
+    "api.openalex.org/works/doi:10.1371/journal.pone.0187574 (Sewing 2017 anchor record + referenced_works)",
+    "api.openalex.org/works/pmid:33567808 (Slingsby 2022 anchor record + referenced_works)",
+    "api.openalex.org/works/doi:10.1016/j.omtn.2026.103051 (control-ASO paper anchor record)",
+    "api.openalex.org/works?filter=cites:W2767260707 (works citing Sewing 2017)",
+    "api.openalex.org/works?filter=cites:W3126189506 (works citing Slingsby 2022)",
+    "api.openalex.org/works?filter=cites:W7172412980 (works citing omtn 2026 control-ASO paper)",
+    "api.openalex.org/works?filter=cited_by:W3126189506 (Slingsby 2022 reference list)",
+    "api.openalex.org/works?filter=cited_by:W2767260707 (Sewing 2017 reference list)",
+    "api.openalex.org/works?filter=cited_by:W7172412980 (omtn 2026 control-ASO reference list)",
+    "api.openalex.org/works?search=inotersen thrombocytopenia platelet monitoring NEURO-TTR",
+    "api.openalex.org/works?search=volanesorsen platelet count decline APPROACH COMPASS",
+    "api.openalex.org/works?search=platelet activation antisense oligonucleotides Gottingen minipig human comparison",
+    "api.openalex.org/works?filter=title_and_abstract.search:oligonucleotide AND (\"human platelet\" OR \"platelet-rich plasma\" OR \"whole blood\")&sort=publication_year:desc&per-page=100",
+    "api.openalex.org/works?search=oblimersen sodium Genasense phase III randomized trial",
+    "api.openalex.org/works?search=drisapersen GSK2402968 PRO051 phase III DEMAND Duchenne",
+    "api.openalex.org/works?search=LY900003 aprinocarsen non-small cell lung cancer phase III",
+    "api.openalex.org/works?filter=title_and_abstract.search:(antisense OR oligonucleotide) AND (thrombocytopenia OR \"platelet count\")&sort=cited_by_count:desc&per-page=100",
+    "api.openalex.org/works?search=5-year survival randomized phase III fludarabine cyclophosphamide oblimersen chronic lymphocytic leukemia O'Brien",
+    "api.openalex.org/works?search=Bedikian dacarbazine with or without oblimersen sodium patients advanced melanoma phase III [HTTP 429, no data]",
+    "api.openalex.org/works?filter=title_and_abstract.search:oligonucleotide AND (sequence OR \"full modification\" OR backbone) AND (platelet OR thrombocytopenia) [NOT ATTEMPTED - budget gone]",
+    "api.openalex.org/works?filter=title_and_abstract.search:(antisense OR oligonucleotide OR siRNA) AND (\"healthy donor\" OR donors OR \"ex vivo\") AND platelet [NOT ATTEMPTED - budget gone]",
+    "api.openalex.org/works?search=nusinersen safety analysis laboratory parameters platelet spinal muscular atrophy [NOT ATTEMPTED - budget gone]",
+    "api.openalex.org/works?filter=title_and_abstract.search:(antisense OR oligonucleotide) AND thrombocytopenia,type:article|preprint|other&sort=publication_year:desc [NOT ATTEMPTED - budget gone]",
+    "api.openalex.org/works?filter=title_and_abstract.search:(morpholino OR \"phosphorodiamidate\") AND (platelet OR thrombocytopenia OR haematolog OR hematolog) [NOT ATTEMPTED - budget gone]",
+    "api.openalex.org/works?filter=title_and_abstract.search:oligonucleotide AND (\"microphysiological\" OR \"organ-on-a-chip\" OR iPSC OR \"induced pluripotent\") AND (platelet OR megakaryocyte) [NOT ATTEMPTED - budget gone]"
+   ],
+   "n_results_relevant": 57,
+   "result_identifiers": [
+    "10.3324/haematol.2020.260059",
+    "PMID:33567808",
+    "10.1084/jem.20140391",
+    "PMID:25646267",
+    "10.1016/j.thromres.2021.01.006",
+    "PMID:33540294",
+    "10.1371/journal.pone.0187574",
+    "PMID:29107969",
+    "10.1089/nat.2016.0650",
+    "PMID:28145801",
+    "10.1089/nat.2022.0042",
+    "PMID:37093125",
+    "10.1016/j.tiv.2023.105569",
+    "PMID:36801361",
+    "10.3390/pharmaceutics15041112",
+    "PMID:37111598",
+    "10.1182/blood-2013-01-478966",
+    "PMID:23673861",
+    "10.1182/blood-2025-204",
+    "10.1038/s41598-024-64063-y",
+    "PMID:38898080",
+    "10.1089/nat.2017.0666",
+    "PMID:28541820",
+    "10.1093/toxsci/kfy119",
+    "PMID:29846725",
+    "10.1111/jth.13669",
+    "PMID:28296036",
+    "10.1111/jth.13877",
+    "PMID:29052937",
+    "10.1016/j.jtha.2024.08.003",
+    "PMID:39155024",
+    "10.1093/cvr/cvaa077",
+    "PMID:32243492",
+    "10.1089/nat.2019.0829",
+    "PMID:32043907",
+    "10.1016/j.omtn.2026.103051",
+    "PMID:42733805",
+    "10.1111/jth.14808",
+    "PMID:32227586",
+    "10.3389/fphar.2019.00068",
+    "PMID:30842734",
+    "10.1186/s13023-023-02743-0",
+    "PMID:37370069",
+    "10.1016/j.omtn.2024.102289",
+    "PMID:39252874",
+    "10.14573/altex.2108241",
+    "PMID:34766620",
+    "10.1089/nat.2022.0061",
+    "PMID:36579950",
+    "10.1016/j.omtn.2019.11.020",
+    "PMID:31881528",
+    "10.1200/jco.2007.14.3461",
+    "PMID:18281659",
+    "W2767260707",
+    "W3126189506",
+    "W7172412980"
+   ],
+   "outcome": "results",
+   "barrier_class": "technical_block",
+   "barrier_detail": "PARTIAL BLOCK, twice. (1) First contact 2026-10-02T23:41:18Z: HTTP/2 429 from api.openalex.org (server: cloudflare), headers x-ratelimit-remaining: 0, x-ratelimit-remaining-usd: 0, retry-after: 1122; body {\"error\":\"Rate limit exceeded\",\"message\":\"Insufficient budget. This request has no API key, so it counts against the free daily budget shared by everyone on your network's IP address, and that budget is used up ($0 remaining; resets at midnight UTC)...\",\"retryAfter\":1122}. No API key was created (hard rule 4), so I polled every 45 s and logged 24 consecutive HTTP 429 probe responses between 23:41:18Z and 23:59:37Z. (2) At the 00:00 UTC budget reset the budget returned and 35 queries ran with HTTP 200 (20 stage-1 + 14 citation-chain + 1 stage-3). (3) The shared-IP budget was then exhausted again mid-stage-3: the 2nd stage-3 query returned HTTP 429 with retryAfter 84931 s (next midnight UTC), so 1 query returned no data and 6 further planned queries were never attempted. Net: 35/43 planned OpenAlex calls returned data.",
+   "notes": "No key, no account, no payment (hard rule 4 respected). Citation-chain expansion was the highest-yield move: cites:W2767260707 (Sewing 2017, 53 citing works), cites:W3126189506 (Slingsby 2022, 14 citing works) and the cited_by: reference lists of both anchors produced the strongest human-in-vitro leads. OpenAlex also resolved all three anchor records to primary IDs: Sewing 2017 = W2767260707 / PMID 29107969; Slingsby 2022 = W3126189506 / PMID 33567808 / DOI 10.3324/haematol.2020.260059; the control-ASO source paper = W7172412980 / PMID 42733805 / DOI 10.1016/j.omtn.2026.103051 (title: 'To scramble or not: Steric blocking 2'-MOE/PS control antisense oligonucleotides across cellular models'), which confirms the cASO7/cASO9/cASO11 Table S2 target exists and is indexed. Six still-unrun queries (morpholino/PMO x platelet, ex vivo donor x platelet, nusinersen lab parameters, iPSC/microphysiological x megakaryocyte, sequence-characterisation, recent-ASO-thrombocytopenia sweep) are listed verbatim above so a later run after the next UTC reset can execute them unchanged."
+  },
+  {
+   "resource": "Semantic Scholar (Academic Graph API)",
+   "url": "https://api.semanticscholar.org/graph/v1/paper/search",
+   "searched": true,
+   "search_date": "2026-10-02",
+   "queries": [
+    "paper/search?query=oligonucleotide induced thrombocytopenia [200]",
+    "paper/search?query=antisense oligonucleotide human platelet activation in vitro [200]",
+    "paper/search?query=phosphorothioate oligonucleotide platelet aggregation GPVI [429 x14 attempts, then 429 again on retry x14 -> never returned data]",
+    "paper/search?query=oblimersen G3139 Bcl-2 antisense thrombocytopenia [429 x14, retry 429 x14 -> never returned data]",
+    "paper/search?query=drisapersen 2'-O-methyl phosphorothioate thrombocytopenia Duchenne [200]",
+    "paper/search?query=aprinocarsen ISIS 3521 protein kinase C alpha antisense dose limiting thrombocytopenia [429 x14 first pass; retry pass 200]",
+    "paper/search?query=ISIS 5132 c-raf-1 antisense phase I toxicity [200]",
+    "paper/search?query=alicaforsen ISIS 2302 ICAM-1 antisense Crohn disease trial [200]",
+    "paper/search?query=mipomersen apolipoprotein B antisense platelet count [200]",
+    "paper/search?query=pelacarsen TQJ230 lipoprotein(a) antisense platelet [200]",
+    "paper/search?query=olezarsen donidalorsen antisense platelet count safety [200]",
+    "paper/search?query=nusinersen intrathecal antisense platelet coagulation abnormality [200]",
+    "paper/search?query=phosphorodiamidate morpholino oligomer eteplirsen safety hematology [200]",
+    "paper/search?query=Sewing species specific orthology antisense oligonucleotide induced thrombocytopenia [200, 0 hits]",
+    "paper/search?query=Slingsby antisense oligonucleotide platelet activation GPVI non-human primate [200]",
+    "paper/search?query=review safety profile antisense oligonucleotide class toxicities thrombocytopenia clinical trials [200]",
+    "paper/search?query=pegnivacogin REG1 aptamer platelet factor 4 adverse reaction [200]",
+    "paper/search?query=GalNAc siRNA platelet count thrombocytopenia clinical [200]",
+    "paper/search?query=polyanion platelet factor 4 antibody oligonucleotide heparin induced thrombocytopenia like [200]",
+    "paper/search?query=ex vivo human donor whole blood oligonucleotide platelet flow cytometry P-selectin [200]",
+    "paper/DOI:10.1371/journal.pone.0187574 [200]",
+    "paper/DOI:10.1371/journal.pone.0187574/citations?limit=100 [200]",
+    "paper/DOI:10.1371/journal.pone.0187574/references?limit=100 [200]",
+    "paper/PMID:33567808 [200]",
+    "paper/PMID:33567808/citations?limit=100 [200]",
+    "paper/PMID:33567808/references?limit=100 [200]",
+    "paper/DOI:10.1089/nat.2022.0042 [200]",
+    "paper/DOI:10.1089/nat.2022.0042/citations?limit=100 [200]",
+    "paper/PMID:32043907 [200]",
+    "paper/PMID:32043907/citations?limit=100 [200]",
+    "paper/DOI:10.1038/s41598-024-64063-y [200]",
+    "paper/DOI:10.1016/j.omtn.2026.103051 [200]",
+    "paper/search?query=Randomized phase III trial of fludarabine plus cyclophosphamide with or without oblimersen sodium chronic lymphocytic leukemia [429 x14 -> never returned data]",
+    "paper/search?query=Bedikian dacarbazine oblimersen sodium advanced melanoma phase III randomized [200]",
+    "paper/search?query=class effects toxicology phosphorothioate antisense oligonucleotide thrombocytopenia complement platelet review [200]",
+    "paper/search?query=human platelet rich plasma incubated antisense oligonucleotide concentration dependent activation donors [200]",
+    "paper/search?query=oligonucleotide binds platelet glycoprotein VI direct activation mechanism [200]",
+    "paper/search?query=antisense oligonucleotide PF4 antibody immune thrombocytopenia inotersen volanesorsen [200]",
+    "paper/search?query=volanesorsen APPROACH platelet count decline familial chylomicronemia [429 x14 -> never returned data]"
+   ],
+   "n_results_relevant": 92,
+   "result_identifiers": [
+    "PMID:33567808",
+    "10.3324/haematol.2020.260059",
+    "PMID:29107969",
+    "10.1371/journal.pone.0187574",
+    "10.1182/blood-2025-204",
+    "10.1093/jimmun/vkae055",
+    "PMID:40101742",
+    "10.1158/1538-7445.am2025-7276",
+    "10.1158/1538-7445.am2025-6835",
+    "10.1182/BLOOD-2018-99-116590",
+    "10.1016/j.omtn.2026.102976",
+    "PMID:42381708",
+    "10.1111/cts.13476",
+    "PMID:36631935",
+    "10.14573/altex.2108241",
+    "PMID:34766620",
+    "10.1002/jcph.2389",
+    "PMID:38041205",
+    "10.1016/S1474-4422(14)70195-4",
+    "PMID:25209738",
+    "10.1016/j.nmd.2013.09.004",
+    "PMID:24321374",
+    "10.1200/JCO.1999.17.11.3586",
+    "PMID:10550158",
+    "PMID:11948111",
+    "PMID:10589745",
+    "10.1007/s10637-005-2906-0",
+    "PMID:16133798",
+    "10.1093/ANNONC/MDH359",
+    "PMID:15319248",
+    "PMID:15447994",
+    "10.1158/1078-0432.CCR-04-0779",
+    "10.1200/JCO.1999.17.7.2227",
+    "PMID:10561280",
+    "PMID:11350886",
+    "PMID:10815879",
+    "PMID:12114419",
+    "PMID:12171880",
+    "10.1016/S0959-8049(01)00286-6",
+    "PMID:11677106",
+    "10.1016/S0090-8258(02)00144-0",
+    "PMID:12694666",
+    "10.1097/JTO.0b013e3181b2793f",
+    "PMID:19704336",
+    "10.1136/gut.51.1.30",
+    "PMID:12077088",
+    "10.1046/j.1365-2036.2002.01341.x",
+    "PMID:12269969",
+    "10.1097/01.TP.0000128857.77893.D2",
+    "PMID:15385805",
+    "10.1200/JCO.2006.06.0483",
+    "PMID:16966688",
+    "10.1097/CMR.0000000000000056",
+    "PMID:24667300",
+    "10.1016/j.jacc.2009.11.069",
+    "PMID:20378080",
+    "10.1016/j.jacc.2013.07.081",
+    "PMID:24013058",
+    "10.1016/S0140-6736(10)60284-X",
+    "PMID:20227758",
+    "10.1016/j.atherosclerosis.2018.11.017",
+    "PMID:30500603",
+    "10.1186/s12887-024-04955-0",
+    "PMID:39054521",
+    "10.1007/s00415-021-10569-8",
+    "PMID:33899154",
+    "10.1016/S2213-8587(21)00046-2",
+    "PMID:33798466",
+    "10.1016/j.jacl.2023.03.007",
+    "PMID:37100699",
+    "10.1016/j.ahj.2025.03.019",
+    "PMID:40185318",
+    "10.1089/nat.2020.0867",
+    "PMID:32833564",
+    "10.1089/nat.2024.0013",
+    "PMID:39018509",
+    "10.1038/s41598-024-64063-y",
+    "PMID:38898080",
+    "10.1089/nat.2022.0042",
+    "PMID:37093125",
+    "10.1089/nat.2019.0829",
+    "PMID:32043907",
+    "10.1016/j.tiv.2023.105569",
+    "PMID:36801361",
+    "10.3390/pharmaceutics15041112",
+    "PMID:37111598",
+    "10.1161/circ.124.suppl_21.a9771",
+    "10.1016/S0140-6736(15)00515-2",
+    "PMID:26547100",
+    "10.1016/j.omtn.2026.103051",
+    "PMID:42733805",
+    "10.1016/j.omtn.2026.103062",
+    "PMID:42724647"
+   ],
+   "outcome": "results",
+   "barrier_class": "technical_block",
+   "barrier_detail": "PARTIAL BLOCK by unauthenticated shared-pool rate limiting. Every call was retried up to 14 times with escalating backoff (4 s -> 25 s). Observed failure response, verbatim and repeatedly: HTTP/2 429, x-amzn-errortype: TooManyRequestsException, x-cache: Error from cloudfront, body {\"message\": \"Too Many Requests. Please wait and try again or apply for a key for higher rate limits. https://www.semanticscholar.org/product/api#api-key-form\", \"code\": \"429\"}. 126 individual HTTP 429 responses were logged in the first pass alone; successful calls needed between 1 and 14 attempts. Final tally: 35 of 42 calls returned HTTP 200. 7 calls never returned data after 14 attempts each: phosphorothioate+platelet+GPVI search (blocked on both the first pass and a dedicated retry pass), oblimersen+Bcl-2+thrombocytopenia search (blocked on both passes), the O'Brien CLL oblimersen phase III search, and the volanesorsen APPROACH platelet-count search. No API key was requested and no account created (hard rule 4).",
+   "notes": "Compensating coverage: the two queries permanently blocked here (phosphorothioate x platelet; oblimersen) were covered by the equivalent OpenAlex queries, which did return data, so the underlying evidence is not lost - but the Semantic Scholar rows for them are genuinely empty and are recorded as such. Semantic Scholar's unique contribution over OpenAlex was its /citations endpoint on 10.1089/nat.2022.0042 and PMID 32043907, which surfaced 10.1111/cts.13476 (BJAB in-vitro assay ranking vs clinical AEs) and 10.1016/j.omtn.2026.102976 (meta-analysis of AEs across ASO clinical studies), plus two 2025 AACR abstracts on ex vivo human whole-blood prediction of oligonucleotide immunotoxicity, and the complete aprinocarsen / ISIS 5132 / alicaforsen trial sets."
+  }
+ ],
+ "candidates": [
+  {
+   "full_title": "Sequence-specific 2'-O-methoxyethyl antisense oligonucleotides activate human platelets through glycoprotein VI, triggering formation of platelet-leukocyte aggregates",
+   "authors_year": "Lundberg Slingsby MH, Gaynor-Gillett K, Cui B, et al.; 15 authors; 2021 (epub 2021-02-01, PMID dated 2022 in some indexes)",
+   "identifier": "PMID 33567808 / DOI 10.3324/haematol.2020.260059 / OpenAlex W3126189506",
+   "link": "https://doi.org/10.3324/haematol.2020.260059",
+   "discovered_via": "OpenAlex works?search=antisense oligonucleotide platelet AND cites:W2767260707 chain; confirmed by Semantic Scholar paper/PMID:33567808",
+   "publisher_or_repo": "Haematologica (Ferrata Storti Foundation), gold OA",
+   "required_file": "Online supplementary appendix: per-donor flow-cytometry (PAC-1, P-selectin), aggregometry traces, platelet-leukocyte aggregate counts, and the exact ASO sequences/chemistries tested",
+   "endpoint_gap_it_closes": "The single named priority gap 'Slingsby 2022 raw/per-donor data'. Human washed-platelet and whole-blood in vitro activation with sequence-resolved 2'-MOE/PS ASOs, mechanism mapped to GPVI.",
+   "expected_usable_observations": "Per-donor activation readouts across multiple ASO sequences and concentrations; GPVI-blockade and GPVI-knockout controls; directly chemistry-linkable rows",
+   "access_attempted": [
+    {
+     "url": "https://api.openalex.org/works/pmid:33567808",
+     "status": "200"
+    },
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/PMID:33567808",
+     "status": "200"
+    },
+    {
+     "url": "https://haematologica.org/article/download/haematol.2020.260059/72951",
+     "status": "200 application/pdf 3087420 bytes - DOWNLOADED"
+    }
+   ],
+   "outcome": "retrieved_main_article_open_access",
+   "priority": 1,
+   "human_in_vitro": true
+  },
+  {
+   "full_title": "Phosphorothioate backbone modifications of nucleotide-based drugs are potent platelet activators",
+   "authors_year": "Flierl U, Nero TL, Lim B, et al.; 16 authors; 2015",
+   "identifier": "PMID 25646267 / DOI 10.1084/jem.20140391",
+   "link": "https://doi.org/10.1084/jem.20140391",
+   "discovered_via": "OpenAlex cited_by:W3126189506 (Slingsby reference list) + cited_by:W2767260707 (Sewing reference list); also OpenAlex works?search=phosphorothioate platelet activation",
+   "publisher_or_repo": "Journal of Experimental Medicine / Rockefeller University Press (bronze OA, free after embargo)",
+   "required_file": "Full text + supplemental figures/tables: human platelet aggregometry and flow cytometry dose-response per PS oligonucleotide, and the identity/chemistry of each oligonucleotide tested",
+   "endpoint_gap_it_closes": "Backbone-attributable human platelet activation. This is the foundational PS-vs-neutral-backbone comparison the dataset needs as its chemistry anchor, and it predates and underpins the GPVI story.",
+   "expected_usable_observations": "Dose-response human platelet activation for several PS oligos incl. an aptamer and ASOs; GPIIb/IIIa-dependence experiments; a usable PS/non-PS contrast",
+   "access_attempted": [
+    {
+     "url": "https://api.openalex.org/works?filter=cited_by:W3126189506",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://rupress.org/jem/article-pdf/212/2/129/541673/jem_20140391.pdf",
+     "status": "403 text/html 5528 bytes - bot/WAF interstitial, not a paywall page; the record is flagged is_oa=true oa_status=bronze"
+    }
+   ],
+   "outcome": "metadata_confirmed_fulltext_blocked_by_publisher_WAF",
+   "priority": 1,
+   "human_in_vitro": true
+  },
+  {
+   "full_title": "Assessing single-stranded oligonucleotide drug-induced effects in vitro reveals key risk factors for thrombocytopenia",
+   "authors_year": "Sewing S, Gubler M, Gerard R, et al.; 13 authors; 2017",
+   "identifier": "PMID 29107969 / DOI 10.1371/journal.pone.0187574 / OpenAlex W2767260707",
+   "link": "https://doi.org/10.1371/journal.pone.0187574",
+   "discovered_via": "OpenAlex works/doi: lookup (anchor) + Semantic Scholar paper/DOI lookup",
+   "publisher_or_repo": "PLOS ONE, gold OA (CC BY)",
+   "required_file": "S1-Sn supporting information files: per-replicate platelet activation / CD62P / aggregation values and the full oligonucleotide panel table (sequence, length, backbone, 2'-chemistry)",
+   "endpoint_gap_it_closes": "The named priority gap 'Sewing 2017 raw/per-donor data'. Human in vitro platelet assay across a designed oligonucleotide panel, which is exactly the chemistry-to-effect mapping the challenge wants.",
+   "expected_usable_observations": "Panel-wide in vitro activation values with per-compound chemistry; CC BY licence means rows are reusable without permission",
+   "access_attempted": [
+    {
+     "url": "https://api.openalex.org/works/doi:10.1371/journal.pone.0187574",
+     "status": "200"
+    },
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1371/journal.pone.0187574",
+     "status": "200"
+    },
+    {
+     "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0187574&type=printable",
+     "status": "200 application/pdf 2375108 bytes - DOWNLOADED"
+    }
+   ],
+   "outcome": "retrieved_main_article_open_access",
+   "priority": 1,
+   "human_in_vitro": true
+  },
+  {
+   "full_title": "The Effects of 2'-O-Methoxyethyl Containing Antisense Oligonucleotides on Platelets in Human Clinical Trials",
+   "authors_year": "Crooke ST, Baker BF, Witztum JL, et al.; 11 authors; 2017",
+   "identifier": "PMID 28145801 / DOI 10.1089/nat.2016.0650",
+   "link": "https://doi.org/10.1089/nat.2016.0650",
+   "discovered_via": "OpenAlex works?search=mipomersen platelet count and the Sewing/Slingsby reference lists (cited_by: filters); corroborated by Semantic Scholar drisapersen and nusinersen searches",
+   "publisher_or_repo": "Nucleic Acid Therapeutics / Mary Ann Liebert (flagged bronze OA)",
+   "required_file": "Main tables + supplementary: per-trial and per-drug platelet count distributions across the Ionis 2'-MOE clinical database",
+   "endpoint_gap_it_closes": "Directly addresses the named gap 'Mipomersen per-trial platelet values (pooled only at present)' and gives per-drug breakdown across the 2'-MOE class rather than one pooled number.",
+   "expected_usable_observations": "Platelet count summary statistics and <100x10^9/L event rates by drug and by trial; the denominator table needed to turn clinical rows into rates",
+   "access_attempted": [
+    {
+     "url": "https://api.openalex.org/works?search=mipomersen+platelet+count",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://www.liebertpub.com/doi/pdf/10.1089/nat.2016.0650",
+     "status": "403 text/html 5664 bytes - Cloudflare/WAF block despite oa_status=bronze"
+    }
+   ],
+   "outcome": "metadata_confirmed_fulltext_blocked_by_publisher_WAF",
+   "priority": 1,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Anti-PF4 antibodies are a potential mediator of antisense oligonucleotide (ASO)-induced thrombocytopenia",
+   "authors_year": "Singh AK, Cousin MA, et al. (Mayo Clinic, Dept of Laboratory Medicine and Pathology); 6 authors; 2025",
+   "identifier": "DOI 10.1182/blood-2025-204 (Blood 146, Supplement 1, p.204; ASH 2025 abstract)",
+   "link": "https://doi.org/10.1182/blood-2025-204",
+   "discovered_via": "OpenAlex works?search=oligonucleotide thrombocytopenia (W4417008411); independently returned by Semantic Scholar ex-vivo-donor and PF4 searches",
+   "publisher_or_repo": "Blood / American Society of Hematology (bronze OA abstract PDF)",
+   "required_file": "Abstract full text and any figures: patient-serum anti-PF4 ELISA/functional assay values and the ASO(s) implicated",
+   "endpoint_gap_it_closes": "Newest mechanistic human evidence (2025) for an immune, PF4-mediated route to ASO thrombocytopenia - a mechanism class the existing dataset has from HIT analogy only, not from ASO patients.",
+   "expected_usable_observations": "Human patient anti-PF4 antibody positivity with paired platelet counts; functional platelet-activation assay results on patient sera",
+   "access_attempted": [
+    {
+     "url": "https://api.openalex.org/works?search=oligonucleotide+thrombocytopenia",
+     "status": "200 (record retrieved, 6 authors, Mayo Clinic)"
+    },
+    {
+     "url": "https://doi.org/10.1182/blood-2025-204",
+     "status": "302 -> https://ashpublications.org/blood/article/146/Supplement%201/204/551588/ (DOI verified live)"
+    }
+   ],
+   "outcome": "identifier_verified_fulltext_not_yet_fetched",
+   "priority": 1,
+   "human_in_vitro": true
+  },
+  {
+   "full_title": "Correlations between preclinical BJAB assay ranking of antisense drugs and clinical trial adverse events",
+   "authors_year": "(Ionis/collaborators) 2023; Clinical and Translational Science",
+   "identifier": "PMID 36631935 / DOI 10.1111/cts.13476",
+   "link": "https://doi.org/10.1111/cts.13476",
+   "discovered_via": "Semantic Scholar paper/PMID:32043907/citations (inotersen citation chain)",
+   "publisher_or_repo": "Clinical and Translational Science / Wiley (ASCPT), likely gold OA",
+   "required_file": "Main tables + supplementary: per-ASO in vitro human cell assay ranking paired with the clinical AE rates (including thrombocytopenia) of the same ASO",
+   "endpoint_gap_it_closes": "This is the single best match to the Phase 2 wording 'able to extrapolate data between in vitro human systems and animal data / clinical outcome' - it is an explicit in-vitro-human-assay-to-clinical-AE bridge table across many named ASOs.",
+   "expected_usable_observations": "Paired (in vitro human assay score, clinical AE incidence) rows for a double-digit number of named ASOs",
+   "access_attempted": [
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/PMID:32043907/citations?limit=100",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://doi.org/10.1111/cts.13476",
+     "status": "302 (DOI verified live)"
+    }
+   ],
+   "outcome": "identifier_verified_fulltext_not_yet_fetched",
+   "priority": 1,
+   "human_in_vitro": true
+  },
+  {
+   "full_title": "Meta-analysis of adverse events in clinical studies with antisense oligonucleotide therapies",
+   "authors_year": "2026; Molecular Therapy Nucleic Acids",
+   "identifier": "PMID 42381708 / DOI 10.1016/j.omtn.2026.102976",
+   "link": "https://doi.org/10.1016/j.omtn.2026.102976",
+   "discovered_via": "Semantic Scholar paper/DOI:10.1371/journal.pone.0187574/citations and paper/PMID:33567808/citations (both anchors' citation chains)",
+   "publisher_or_repo": "Molecular Therapy Nucleic Acids / Cell Press (gold OA, CC BY)",
+   "required_file": "Supplementary data: the extracted per-trial adverse-event table (trial, drug, chemistry, n, thrombocytopenia events)",
+   "endpoint_gap_it_closes": "A ready-made, licence-clean, per-trial clinical AE extraction across the ASO class - the fastest legal route to many of the named per-trial platelet gaps at once (drisapersen, pelacarsen, olezarsen, donidalorsen, nusinersen).",
+   "expected_usable_observations": "Potentially hundreds of per-trial AE rows with drug identity; CC BY so directly reusable",
+   "access_attempted": [
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1371/journal.pone.0187574/citations?limit=100",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://doi.org/10.1016/j.omtn.2026.102976",
+     "status": "302 (DOI verified live)"
+    }
+   ],
+   "outcome": "identifier_verified_fulltext_not_yet_fetched",
+   "priority": 1,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Platelet Activation by Antisense Oligonucleotides (ASOs) in the Göttingen Minipig, including an Evaluation of Glycoprotein VI (GPVI) Involvement",
+   "authors_year": "Valenzuela A, et al.; 7 authors; 2023",
+   "identifier": "PMID 37111598 / DOI 10.3390/pharmaceutics15041112",
+   "link": "https://doi.org/10.3390/pharmaceutics15041112",
+   "discovered_via": "OpenAlex cites:W2767260707 and cites:W3126189506; Semantic Scholar GPVI and human-platelet-in-vitro searches",
+   "publisher_or_repo": "Pharmaceutics / MDPI, gold OA (CC BY)",
+   "required_file": "Main figures/tables + any supplementary: side-by-side minipig and human platelet activation data per ASO, with GPVI blockade arms",
+   "endpoint_gap_it_closes": "The explicit cross-species in-vitro bridge (human vs minipig platelets, same ASOs, same assay) that Phase 2 asks for; also supplies a non-primate animal comparator the dataset lacks.",
+   "expected_usable_observations": "Paired human/minipig activation values per ASO; GPVI-dependence per species",
+   "access_attempted": [
+    {
+     "url": "https://api.openalex.org/works?filter=cites:W3126189506",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://www.mdpi.com/1999-4923/15/4/1112/pdf",
+     "status": "403 text/html 409 bytes - MDPI bot block; the article is CC BY gold OA, so this is a technical block only"
+    }
+   ],
+   "outcome": "metadata_confirmed_fulltext_blocked_by_publisher_bot_check",
+   "priority": 1,
+   "human_in_vitro": true
+  },
+  {
+   "full_title": "The mechanism of thrombocytopenia caused by cholesterol-conjugated antisense oligonucleotides",
+   "authors_year": "Harada K, et al.; 11 authors; 2023",
+   "identifier": "PMID 36801361 / DOI 10.1016/j.tiv.2023.105569",
+   "link": "https://doi.org/10.1016/j.tiv.2023.105569",
+   "discovered_via": "OpenAlex cites:W2767260707 (Sewing citation chain) and works?search=oligonucleotide thrombocytopenia",
+   "publisher_or_repo": "Toxicology in Vitro / Elsevier (hybrid, flagged is_oa=true)",
+   "required_file": "Main figures + supplementary: in vitro human and animal platelet data per conjugate chemistry",
+   "endpoint_gap_it_closes": "Conjugate-chemistry (cholesterol) contribution to thrombocytopenia, in vitro - a chemistry axis entirely absent from the named gap list and complementary to the PS/2'-MOE axis.",
+   "expected_usable_observations": "Platelet activation/aggregation per conjugated vs unconjugated ASO; mechanism arms",
+   "access_attempted": [
+    {
+     "url": "https://api.openalex.org/works?filter=cites:W2767260707",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://doi.org/10.1016/j.tiv.2023.105569",
+     "status": "200 but text/html only 2709 bytes - Elsevier interstitial stub, not the article body"
+    }
+   ],
+   "outcome": "metadata_confirmed_fulltext_stub_only",
+   "priority": 1,
+   "human_in_vitro": true
+  },
+  {
+   "full_title": "Physiological platelet aggregation assay to mitigate drug-induced thrombocytopenia using a microphysiological system",
+   "authors_year": "Harada K, Sato Y, Kinoshita M (3 authors); 2024",
+   "identifier": "PMID 38898080 / DOI 10.1038/s41598-024-64063-y",
+   "link": "https://doi.org/10.1038/s41598-024-64063-y",
+   "discovered_via": "OpenAlex cites:W2767260707 and cites:W3126189506; Semantic Scholar oligonucleotide-thrombocytopenia search",
+   "publisher_or_repo": "Scientific Reports / Springer Nature, gold OA (CC BY)",
+   "required_file": "Source data + supplementary: per-run aggregation measurements in the MPS, with the oligonucleotide/drug panel",
+   "endpoint_gap_it_closes": "A human-system in vitro platform (microphysiological system) purpose-built for drug-induced thrombocytopenia - the kind of human in vitro assay Phase 2 ranks above extra clinical rows. Scientific Reports routinely ships machine-readable source data.",
+   "expected_usable_observations": "Per-replicate aggregation under flow for a drug panel incl. oligonucleotides; CC BY",
+   "access_attempted": [
+    {
+     "url": "https://api.openalex.org/works?filter=cites:W3126189506",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://www.nature.com/articles/s41598-024-64063-y",
+     "status": "200 text/html 371298 bytes - article page reachable"
+    }
+   ],
+   "outcome": "open_access_reachable_files_not_yet_extracted",
+   "priority": 1,
+   "human_in_vitro": true
+  },
+  {
+   "full_title": "Antisense oligonucleotides and nucleic acids generate hypersensitive platelets",
+   "authors_year": "Zaslavsky A, et al.; 20 authors; 2021",
+   "identifier": "PMID 33540294 / DOI 10.1016/j.thromres.2021.01.006",
+   "link": "https://doi.org/10.1016/j.thromres.2021.01.006",
+   "discovered_via": "OpenAlex cites:W2767260707 and works?search=phosphorothouate platelet activation / antisense oligonucleotide platelet",
+   "publisher_or_repo": "Thrombosis Research / Elsevier (flagged bronze OA)",
+   "required_file": "Main figures + supplementary: platelet hypersensitivity (priming) readouts per nucleic acid",
+   "endpoint_gap_it_closes": "Sub-threshold priming/hypersensitisation rather than outright activation - a distinct in vitro endpoint not represented in the named gaps, and relevant to why clinical thrombocytopenia appears only in a subset of patients.",
+   "expected_usable_observations": "Agonist dose-shift values per oligonucleotide; priming index data",
+   "access_attempted": [
+    {
+     "url": "https://api.openalex.org/works?filter=cites:W2767260707",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://doi.org/10.1016/j.thromres.2021.01.006",
+     "status": "302 (DOI verified live)"
+    }
+   ],
+   "outcome": "identifier_verified_fulltext_not_yet_fetched",
+   "priority": 1,
+   "human_in_vitro": true
+  },
+  {
+   "full_title": "Complement C3d/C4d Deposition on Platelets Correlates with 2'-O-Methoxyethyl Antisense Oligonucleotide-Induced Thrombocytopenia",
+   "authors_year": "Shen L, et al.; 9 authors; 2023",
+   "identifier": "PMID 37093125 / DOI 10.1089/nat.2022.0042",
+   "link": "https://doi.org/10.1089/nat.2022.0042",
+   "discovered_via": "Semantic Scholar paper/search 'oligonucleotide induced thrombocytopenia' (top hit) and its /citations endpoint; OpenAlex works?search=oligonucleotide thrombocytopenia",
+   "publisher_or_repo": "Nucleic Acid Therapeutics / Mary Ann Liebert (closed, oa_status=closed)",
+   "required_file": "Main tables: per-subject platelet-bound C3d/C4d values with paired platelet counts",
+   "endpoint_gap_it_closes": "Complement-opsonisation mechanism with a measurable per-subject biomarker, linking 2'-MOE chemistry to a thrombocytopenia mechanism distinct from direct GPVI activation.",
+   "expected_usable_observations": "Per-subject biomarker/platelet-count pairs; correlation statistics",
+   "access_attempted": [
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1089/nat.2022.0042",
+     "status": "200"
+    },
+    {
+     "url": "https://doi.org/10.1089/nat.2022.0042",
+     "status": "403 text/html 5507 bytes - Liebert WAF block; OpenAlex oa_status=closed, so a genuine paywall is also likely behind it"
+    }
+   ],
+   "outcome": "metadata_confirmed_access_blocked",
+   "priority": 2,
+   "human_in_vitro": true
+  },
+  {
+   "full_title": "Abstract 7276: Accurate prediction of clinical immunotoxicity of oligonucleotide therapeutics using ex vivo human (whole blood) systems",
+   "authors_year": "2025; AACR Annual Meeting abstract (Cancer Research supplement)",
+   "identifier": "DOI 10.1158/1538-7445.am2025-7276",
+   "link": "https://doi.org/10.1158/1538-7445.am2025-7276",
+   "discovered_via": "Semantic Scholar paper/search 'antisense oligonucleotide human platelet activation in vitro' and 'ex vivo human donor whole blood oligonucleotide platelet flow cytometry P-selectin'",
+   "publisher_or_repo": "American Association for Cancer Research (abstract, not OA PDF)",
+   "required_file": "Abstract text and any poster/figure: the ex vivo human whole-blood readouts and the oligonucleotides tested",
+   "endpoint_gap_it_closes": "A human ex vivo whole-blood platform explicitly validated against clinical outcome - again the Phase 2 extrapolation criterion, and the newest such platform in the literature.",
+   "expected_usable_observations": "Ex vivo human whole blood immunotoxicity readouts per oligonucleotide with claimed clinical concordance",
+   "access_attempted": [
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=ex+vivo+human+donor+whole+blood+oligonucleotide+platelet...",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://doi.org/10.1158/1538-7445.am2025-7276",
+     "status": "302 (DOI verified live)"
+    }
+   ],
+   "outcome": "identifier_verified_abstract_not_yet_fetched",
+   "priority": 2,
+   "human_in_vitro": true
+  },
+  {
+   "full_title": "Abstract 6835: Inhibition of platelet activation and antibody-dependent cellular cytotoxicity by the (oligonucleotide) ...",
+   "authors_year": "2025; AACR Annual Meeting abstract",
+   "identifier": "DOI 10.1158/1538-7445.am2025-6835",
+   "link": "https://doi.org/10.1158/1538-7445.am2025-6835",
+   "discovered_via": "Semantic Scholar paper/search 'human platelet rich plasma incubated antisense oligonucleotide concentration dependent activation donors'",
+   "publisher_or_repo": "American Association for Cancer Research (abstract)",
+   "required_file": "Abstract text: platelet activation inhibition data and compound identity",
+   "endpoint_gap_it_closes": "Pharmacological reversal/inhibition arm for oligonucleotide-driven platelet activation in a human system - useful as a mechanism control rather than a new dose-response.",
+   "expected_usable_observations": "Inhibitor-arm platelet activation values; mechanism attribution",
+   "access_attempted": [
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=human+platelet+rich+plasma+incubated+antisense...",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://doi.org/10.1158/1538-7445.am2025-6835",
+     "status": "302 (DOI verified live)"
+    }
+   ],
+   "outcome": "identifier_verified_abstract_not_yet_fetched",
+   "priority": 3,
+   "human_in_vitro": true
+  },
+  {
+   "full_title": "Investigating Potential Mechanism(s) By Which ASO-Based Drugs Cause Thrombocytopenia",
+   "authors_year": "2018; Blood 132 Supplement 1 (ASH 2018 abstract)",
+   "identifier": "DOI 10.1182/BLOOD-2018-99-116590",
+   "link": "https://doi.org/10.1182/BLOOD-2018-99-116590",
+   "discovered_via": "Semantic Scholar paper/search 'class effects toxicology phosphorothioate antisense oligonucleotide thrombocytopenia complement platelet review'",
+   "publisher_or_repo": "Blood / American Society of Hematology (abstract)",
+   "required_file": "Abstract text and figures: the mechanistic assay results",
+   "endpoint_gap_it_closes": "Earlier mechanistic snapshot that, together with the 2025 anti-PF4 abstract, establishes the chronology of the immune-mechanism hypothesis for ASO thrombocytopenia.",
+   "expected_usable_observations": "Mechanistic assay readouts; likely few quantitative rows",
+   "access_attempted": [
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=class+effects+toxicology+phosphorothioate...",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://doi.org/10.1182/BLOOD-2018-99-116590",
+     "status": "302 (DOI verified live)"
+    }
+   ],
+   "outcome": "identifier_verified_abstract_not_yet_fetched",
+   "priority": 3,
+   "human_in_vitro": true
+  },
+  {
+   "full_title": "Leveraging microphysiological systems to address challenges encountered during development of oligonucleotide therapeutics",
+   "authors_year": "2021; ALTEX",
+   "identifier": "PMID 34766620 / DOI 10.14573/altex.2108241",
+   "link": "https://doi.org/10.14573/altex.2108241",
+   "discovered_via": "Semantic Scholar citation chains of both anchors (Sewing and Slingsby /citations endpoints)",
+   "publisher_or_repo": "ALTEX (gold OA)",
+   "required_file": "Full text: the catalogue of human microphysiological platforms applied to oligonucleotide toxicity, incl. platelet/megakaryocyte systems",
+   "endpoint_gap_it_closes": "A review that enumerates human in vitro platforms for oligonucleotide toxicity - the fastest way to find further human in vitro datasets that no keyword query surfaces, because they are indexed under platform names not 'platelet'.",
+   "expected_usable_observations": "No primary rows; high value as a pointer document to further human in vitro studies",
+   "access_attempted": [
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/PMID:33567808/citations?limit=100",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://doi.org/10.14573/altex.2108241",
+     "status": "302 (DOI verified live)"
+    }
+   ],
+   "outcome": "identifier_verified_fulltext_not_yet_fetched",
+   "priority": 2,
+   "human_in_vitro": true
+  },
+  {
+   "full_title": "Complex formation with nucleic acids and aptamers alters the antigenic properties of platelet factor 4",
+   "authors_year": "Jaax ME, Krauel K, Marschall T, et al.; 13 authors; 2013",
+   "identifier": "PMID 23673861 / DOI 10.1182/blood-2013-01-478966",
+   "link": "https://doi.org/10.1182/blood-2013-01-478966",
+   "discovered_via": "OpenAlex cited_by:W2767260707 (Sewing reference list)",
+   "publisher_or_repo": "Blood / ASH; green OA via PMC3709655",
+   "required_file": "Main figures + PMC full text: PF4/nucleic-acid complex formation and anti-PF4 antibody binding per oligonucleotide length and backbone",
+   "endpoint_gap_it_closes": "Supplies the chemistry-resolved PF4 arm (length- and backbone-dependence of PF4 complexation) that the 2025 anti-PF4 ASO abstract rests on. Human PF4, human HIT antibodies.",
+   "expected_usable_observations": "Complex formation and antibody-binding values across defined oligonucleotide lengths/chemistries",
+   "access_attempted": [
+    {
+     "url": "https://api.openalex.org/works?filter=cited_by:W2767260707",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3709655/",
+     "status": "200 text/html 202725 bytes - free full text reachable"
+    }
+   ],
+   "outcome": "open_access_reachable_files_not_yet_extracted",
+   "priority": 2,
+   "human_in_vitro": true
+  },
+  {
+   "full_title": "Targeting of C-type lectin-like receptor 2 or P2Y12 for the prevention of platelet activation by immunotherapeutic CpG oligodeoxynucleotides",
+   "authors_year": "Delierneux C, et al.; 12 authors; 2017 (with 2017 correction, PMID 29052937 / DOI 10.1111/jth.13877)",
+   "identifier": "PMID 28296036 / DOI 10.1111/jth.13669",
+   "link": "https://doi.org/10.1111/jth.13669",
+   "discovered_via": "OpenAlex works?filter=title_and_abstract.search:(oligonucleotide OR antisense OR siRNA) AND (platelet OR thrombocytopenia)",
+   "publisher_or_repo": "Journal of Thrombosis and Haemostasis / Wiley (bronze OA)",
+   "required_file": "Main figures: CpG ODN-induced platelet activation with CLEC-2 and P2Y12 blockade, human and mouse",
+   "endpoint_gap_it_closes": "A receptor route other than GPVI (CLEC-2) for oligonucleotide-platelet interaction, and the CpG/immunostimulatory ODN class, neither of which appears in the named gap list.",
+   "expected_usable_observations": "Activation values per ODN with receptor-blockade arms; cross-species comparison",
+   "access_attempted": [
+    {
+     "url": "https://api.openalex.org/works?filter=title_and_abstract.search%3A...platelet...",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://doi.org/10.1111/jth.13669",
+     "status": "not individually fetched - only the metadata record was retrieved"
+    }
+   ],
+   "outcome": "identifier_verified_fulltext_not_yet_fetched",
+   "priority": 2,
+   "human_in_vitro": true
+  },
+  {
+   "full_title": "CpG oligonucleotides induce acute murine thrombocytopenia dependent on toll-like receptor 9 and spleen tyrosine kinase pathways",
+   "authors_year": "Johansson KE, et al.; 10 authors; 2024",
+   "identifier": "PMID 39155024 / DOI 10.1016/j.jtha.2024.08.003",
+   "link": "https://doi.org/10.1016/j.jtha.2024.08.003",
+   "discovered_via": "OpenAlex cites:W2767260707 and cites:W3126189506",
+   "publisher_or_repo": "Journal of Thrombosis and Haemostasis / Elsevier (hybrid OA, PDF endpoint listed)",
+   "required_file": "Main figures + supplementary: TLR9/Syk-dependent platelet loss per ODN",
+   "endpoint_gap_it_closes": "The animal half of a human-animal pair for the CpG/TLR9 route; useful only as the extrapolation counterpart to PMID 28296036, not as human evidence.",
+   "expected_usable_observations": "Murine platelet count time courses per ODN and per knockout",
+   "access_attempted": [
+    {
+     "url": "https://api.openalex.org/works?filter=cites:W2767260707",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://www.jthjournal.org/article/S1538-7836(24)00479-3/pdf",
+     "status": "not individually fetched - listed as best_oa_location by OpenAlex"
+    }
+   ],
+   "outcome": "identifier_verified_fulltext_not_yet_fetched",
+   "priority": 3,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Safety and efficacy of drisapersen for the treatment of Duchenne muscular dystrophy (DEMAND II): an exploratory, randomised, placebo-controlled phase 2 study",
+   "authors_year": "Voit T, Topaloglu H, Straub V, et al.; 2014",
+   "identifier": "PMID 25209738 / DOI 10.1016/S1474-4422(14)70195-4 / NCT01254019 (verified HTTP 200 via ClinicalTrials.gov API v2)",
+   "link": "https://doi.org/10.1016/S1474-4422(14)70195-4",
+   "discovered_via": "Semantic Scholar paper/search 'drisapersen 2'-O-methyl phosphorothioate thrombocytopenia Duchenne'",
+   "publisher_or_repo": "Lancet Neurology / Elsevier (closed)",
+   "required_file": "Safety tables + appendix: platelet count data and thrombocytopenia AE counts by arm and dose",
+   "endpoint_gap_it_closes": "The named gap 'Drisapersen DEMAND-II NCT01254019'. 2'-OMe-PS chemistry, a backbone class under-represented relative to 2'-MOE.",
+   "expected_usable_observations": "Per-arm thrombocytopenia incidence; possibly mean platelet counts over time in the appendix",
+   "access_attempted": [
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=drisapersen...",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://clinicaltrials.gov/api/v2/studies/NCT01254019",
+     "status": "200 - title confirmed 'A Clinical Study to Assess the Efficacy and Safety of GSK2402968 in Subjects With Duchenne Muscular Dystrophy'"
+    },
+    {
+     "url": "https://doi.org/10.1016/S1474-4422(14)70195-4",
+     "status": "302 (DOI verified live)"
+    }
+   ],
+   "outcome": "identifier_verified_fulltext_not_yet_fetched",
+   "priority": 2,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Phase I evaluation of ISIS 3521, an antisense oligodeoxynucleotide to protein kinase C-alpha, in patients with advanced cancer",
+   "authors_year": "Nemunaitis J, Holmlund JT, Kraynak M, et al.; 1999",
+   "identifier": "PMID 10550158 / DOI 10.1200/JCO.1999.17.11.3586",
+   "link": "https://doi.org/10.1200/JCO.1999.17.11.3586",
+   "discovered_via": "Semantic Scholar paper/search 'aprinocarsen ISIS 3521 protein kinase C alpha antisense dose limiting thrombocytopenia' (retry pass, HTTP 200 after first pass was 429)",
+   "publisher_or_repo": "Journal of Clinical Oncology / ASCO (closed)",
+   "required_file": "Toxicity tables: per-dose-level thrombocytopenia grade counts (thrombocytopenia was the DLT)",
+   "endpoint_gap_it_closes": "The named gap 'Aprinocarsen / ISIS 3521 / LY900003 - thrombocytopenia was the dose-limiting toxicity'. Also establishes dose-dependence for a first-generation uniform-PS ODN.",
+   "expected_usable_observations": "Dose-level x platelet-toxicity-grade table - the kind of dose-resolved human row the dataset most needs for PS chemistry",
+   "access_attempted": [
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=aprinocarsen+ISIS+3521...",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://doi.org/10.1200/JCO.1999.17.11.3586",
+     "status": "302 (DOI verified live)"
+    }
+   ],
+   "outcome": "identifier_verified_fulltext_not_yet_fetched",
+   "priority": 1,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Aprinocarsen / ISIS 3521 further trial set: phase I PKC-alpha ASO (PMID 11948111), phase I 21-day infusion (PMID 10589745), phase I aprinocarsen LY900003 (PMID 16133798, DOI 10.1007/s10637-005-2906-0), phase II NSCLC (PMID 15319248, DOI 10.1093/ANNONC/MDH359), phase I/II LY900003 + cisplatin/gemcitabine (PMID 15447994, DOI 10.1158/1078-0432.CCR-04-0779)",
+   "authors_year": "multiple first authors; 1999-2005",
+   "identifier": "PMID 11948111; PMID 10589745; PMID 16133798; PMID 15319248; PMID 15447994",
+   "link": "https://pubmed.ncbi.nlm.nih.gov/16133798/",
+   "discovered_via": "Semantic Scholar paper/search aprinocarsen retry pass (HTTP 200) and 'class effects' review search",
+   "publisher_or_repo": "JCO / Clin Cancer Res / Investigational New Drugs / Annals of Oncology (mixed, mostly closed)",
+   "required_file": "Per-trial toxicity tables with platelet grades by dose level",
+   "endpoint_gap_it_closes": "Turns the single named aprinocarsen gap into a dose-ranging series across five trials, which is what makes a chemistry-to-dose-to-platelet relationship fittable rather than anecdotal.",
+   "expected_usable_observations": "Five independent dose-level x platelet-grade tables for the same molecule",
+   "access_attempted": [
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=aprinocarsen+ISIS+3521...",
+     "status": "200 (records retrieved)"
+    }
+   ],
+   "outcome": "identifiers_verified_fulltext_not_yet_fetched",
+   "priority": 2,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "ISIS 5132 (c-raf-1, first-generation PS) trial set: phase I/PK/PD JCO 1999 (PMID 10561280, DOI 10.1200/JCO.1999.17.7.2227), phase I 24-h weekly infusion (PMID 11350886), phase I continuous infusion (PMID 10815879), phase II SCLC/NSCLC EORTC (PMID 11677106), phase II ovarian NCIC (PMID 12694666), phase I + carboplatin/paclitaxel (PMID 19704336), randomised phase II ISIS 3521 + ISIS 5132 colorectal (PMID 12114419, PMID 12171880)",
+   "authors_year": "multiple first authors; 1999-2009",
+   "identifier": "PMID 10561280; PMID 11350886; PMID 10815879; PMID 11677106; PMID 12694666; PMID 19704336; PMID 12114419; PMID 12171880",
+   "link": "https://doi.org/10.1200/JCO.1999.17.7.2227",
+   "discovered_via": "Semantic Scholar paper/search 'ISIS 5132 c-raf-1 antisense phase I toxicity' (HTTP 200)",
+   "publisher_or_repo": "JCO / Clinical Cancer Research / European Journal of Cancer / Gynecologic Oncology / Journal of Thoracic Oncology (mostly closed)",
+   "required_file": "Per-trial toxicity tables: platelet nadir and thrombocytopenia grades by dose and schedule",
+   "endpoint_gap_it_closes": "The named gap 'ISIS 5132 (c-raf, first-generation PS)', and in a form that spans several schedules (bolus, 24-h, continuous infusion), which separates exposure shape from total dose.",
+   "expected_usable_observations": "Eight trials' platelet toxicity tables for one first-generation PS ODN across schedules",
+   "access_attempted": [
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=ISIS+5132+c-raf-1+antisense+phase+I+toxicity",
+     "status": "200 (records retrieved)"
+    },
+    {
+     "url": "https://doi.org/10.1200/JCO.1999.17.7.2227",
+     "status": "not individually fetched"
+    }
+   ],
+   "outcome": "identifiers_verified_fulltext_not_yet_fetched",
+   "priority": 2,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Alicaforsen / ISIS 2302 trial set: double-blind placebo-controlled remission-inducing and steroid-sparing trial in Crohn's disease (PMID 12077088, DOI 10.1136/gut.51.1.30, free via Gut/PMC); dose-ranging high-dose PK trial (PMID 12269969); phase I/II in renal transplant (PMID 15385805)",
+   "authors_year": "Yacyshyn BR and colleagues; 2002-2004",
+   "identifier": "PMID 12077088 / DOI 10.1136/gut.51.1.30; PMID 12269969 / DOI 10.1046/j.1365-2036.2002.01341.x; PMID 15385805 / DOI 10.1097/01.TP.0000128857.77893.D2",
+   "link": "https://doi.org/10.1136/gut.51.1.30",
+   "discovered_via": "Semantic Scholar paper/search 'alicaforsen ISIS 2302 ICAM-1 antisense Crohn disease trial' (HTTP 200)",
+   "publisher_or_repo": "Gut / BMJ (free full text, PMC-deposited); Aliment Pharmacol Ther / Wiley; Transplantation / Wolters Kluwer",
+   "required_file": "Safety/laboratory tables: platelet counts and thrombocytopenia events; the Gut paper is the openly readable one",
+   "endpoint_gap_it_closes": "The named gap 'Alicaforsen / ISIS 2302 (CS20, CS21 phase 3 Crohn's)'. The Gut 2002 trial is a legally open route into first-generation PS ODN human platelet safety at high cumulative dose.",
+   "expected_usable_observations": "Platelet laboratory values and AE counts by arm; an openly licensed route for at least one of the three",
+   "access_attempted": [
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=alicaforsen+ISIS+2302+ICAM-1...",
+     "status": "200 (records retrieved)"
+    },
+    {
+     "url": "https://doi.org/10.1136/gut.51.1.30",
+     "status": "302 (DOI verified live)"
+    }
+   ],
+   "outcome": "identifiers_verified_fulltext_not_yet_fetched",
+   "priority": 2,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Bcl-2 antisense (oblimersen sodium) plus dacarbazine in patients with advanced melanoma: the Oblimersen Melanoma Study Group",
+   "authors_year": "Bedikian AY, Millward M, Pehamberger H, et al.; 2006",
+   "identifier": "PMID 16966688 / DOI 10.1200/JCO.2006.06.0483",
+   "link": "https://doi.org/10.1200/JCO.2006.06.0483",
+   "discovered_via": "Semantic Scholar paper/search 'Bedikian dacarbazine oblimersen sodium advanced melanoma phase III randomized' (HTTP 200 after 9 attempts)",
+   "publisher_or_repo": "Journal of Clinical Oncology / ASCO (closed)",
+   "required_file": "Toxicity tables: grade 3/4 thrombocytopenia by arm; the AGENDA follow-up trial is PMID 24667300 / DOI 10.1097/CMR.0000000000000056",
+   "endpoint_gap_it_closes": "The named gap 'Bedikian 2006 melanoma' for oblimersen/G3139, the 18-mer uniform-PS oligodeoxynucleotide for which thrombocytopenia was a principal toxicity. The AGENDA trial adds a second large randomised denominator.",
+   "expected_usable_observations": "Two large randomised arms' thrombocytopenia incidence with chemotherapy-alone controls - rare and valuable, because the control arm separates drug effect from chemotherapy effect",
+   "access_attempted": [
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=Bedikian+dacarbazine+oblimersen...",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://doi.org/10.1200/JCO.2006.06.0483",
+     "status": "302 (DOI verified live)"
+    }
+   ],
+   "outcome": "identifier_verified_fulltext_not_yet_fetched",
+   "priority": 1,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Fludarabine and Cyclophosphamide With or Without Oblimersen in Treating Patients With Relapsed or Refractory Chronic Lymphocytic Leukemia",
+   "authors_year": "O'Brien S and colleagues; trial registration record; trial conducted 2001-2007",
+   "identifier": "NCT00024440 (verified HTTP 200 via https://clinicaltrials.gov/api/v2/studies/NCT00024440); related indexed reports: DOI 10.1182/BLOOD.V104.11.338.338 (ASH 2004 phase 3 abstract), DOI 10.1200/JCO.2006.24.18_SUPPL.6611 (PMID 27953444, pooled safety analysis of oblimersen), DOI 10.1200/jco.2008.26.15_suppl.7008 (ASCO 2008)",
+   "link": "https://clinicaltrials.gov/study/NCT00024440",
+   "discovered_via": "OpenAlex works?search='5-year survival randomized phase III fludarabine cyclophosphamide oblimersen chronic lymphocytic leukemia O'Brien' and works?search=oligonucleotide thrombocytopenia; NCT verified directly against the ClinicalTrials.gov API",
+   "publisher_or_repo": "ClinicalTrials.gov + ASCO/ASH abstract supplements",
+   "required_file": "Registry results section (if posted) and the pooled oblimersen safety analysis table",
+   "endpoint_gap_it_closes": "The named gap 'Oblimersen / G3139 / Genasense ... O'Brien 2007 JCO CLL NCT00024440'. NOTE: I could NOT verify the O'Brien 2007 JCO article's own DOI/PMID - the dedicated Semantic Scholar search for it returned HTTP 429 on all 14 attempts and the OpenAlex relevance search did not surface it, so I am deliberately NOT asserting an identifier for that article.",
+   "expected_usable_observations": "Registry arm-level AE data if posted; the pooled safety analysis gives cross-trial oblimersen thrombocytopenia rates",
+   "access_attempted": [
+    {
+     "url": "https://clinicaltrials.gov/api/v2/studies/NCT00024440",
+     "status": "200 - title confirmed"
+    },
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=Randomized+phase+III+trial+of+fludarabine+plus+cyclophosphamide+with+or+without+oblimersen...",
+     "status": "429 on all 14 attempts - no data"
+    }
+   ],
+   "outcome": "partially_resolved_primary_article_identifier_unverified",
+   "priority": 1,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Mipomersen per-trial reports: phase 3 homozygous FH (PMID 20227758, DOI 10.1016/S0140-6736(10)60284-X), severe hypercholesterolaemia (PMID 24013058, DOI 10.1016/j.jacc.2013.07.081), on-statin add-on (PMID 20378080, DOI 10.1016/j.jacc.2009.11.069), heterozygous FH safety/efficacy (PMID 30500603, DOI 10.1016/j.atherosclerosis.2018.11.017)",
+   "authors_year": "Raal FJ 2010; Thomas GS 2013; Akdim F 2010; Reeskamp LF 2019",
+   "identifier": "PMID 20227758; PMID 24013058; PMID 20378080; PMID 30500603",
+   "link": "https://doi.org/10.1016/S0140-6736(10)60284-X",
+   "discovered_via": "Semantic Scholar paper/search 'mipomersen apolipoprotein B antisense platelet count' (HTTP 200)",
+   "publisher_or_repo": "The Lancet / JACC / Atherosclerosis - Elsevier (mostly closed)",
+   "required_file": "Per-trial safety/laboratory tables with platelet counts, plus supplementary appendices",
+   "endpoint_gap_it_closes": "The named gap 'Mipomersen per-trial platelet values (pooled only at present)' - these are the four individual trial reports whose values the current pooled row collapses.",
+   "expected_usable_observations": "Four independent per-trial platelet distributions for one 2'-MOE/PS molecule, which is what lets a per-trial variance estimate replace a single pooled mean",
+   "access_attempted": [
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=mipomersen+apolipoprotein+B+antisense+platelet+count",
+     "status": "200 (records retrieved)"
+    }
+   ],
+   "outcome": "identifiers_verified_fulltext_not_yet_fetched",
+   "priority": 2,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Nusinersen laboratory-parameter safety analyses: paediatric patients (PMID 39054521, DOI 10.1186/s12887-024-04955-0, BMC Pediatrics, gold OA) and adult patients (PMID 33899154, DOI 10.1007/s00415-021-10569-8, Journal of Neurology)",
+   "authors_year": "2024 (paediatric); 2021 (adult)",
+   "identifier": "PMID 39054521 / DOI 10.1186/s12887-024-04955-0; PMID 33899154 / DOI 10.1007/s00415-021-10569-8",
+   "link": "https://doi.org/10.1186/s12887-024-04955-0",
+   "discovered_via": "Semantic Scholar paper/search 'nusinersen intrathecal antisense platelet coagulation abnormality' (HTTP 200)",
+   "publisher_or_repo": "BMC Pediatrics / Springer Nature (CC BY); Journal of Neurology / Springer",
+   "required_file": "Laboratory-parameter tables: platelet counts over repeated dosing cycles",
+   "endpoint_gap_it_closes": "A practical substitute for the named nusinersen gaps (NURTURE NCT02386553, SHINE NCT02594124, DEVOTE NCT04089566 - all three NCTs verified HTTP 200). These two papers report the platelet laboratory values those registry records do not expose, and the BMC one is CC BY.",
+   "expected_usable_observations": "Longitudinal platelet counts under repeated intrathecal 2'-MOE/PS dosing; one source openly licensed",
+   "access_attempted": [
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=nusinersen+intrathecal+antisense+platelet+coagulation+abnormality",
+     "status": "200 (records retrieved)"
+    },
+    {
+     "url": "https://clinicaltrials.gov/api/v2/studies/NCT02386553",
+     "status": "200"
+    },
+    {
+     "url": "https://clinicaltrials.gov/api/v2/studies/NCT02594124",
+     "status": "200"
+    },
+    {
+     "url": "https://clinicaltrials.gov/api/v2/studies/NCT04089566",
+     "status": "200"
+    },
+    {
+     "url": "https://doi.org/10.1186/s12887-024-04955-0",
+     "status": "302 (DOI verified live)"
+    }
+   ],
+   "outcome": "identifiers_verified_fulltext_not_yet_fetched",
+   "priority": 2,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Volanesorsen clinical set: COMPASS multifactorial chylomicronaemia (PMID 33798466, DOI 10.1016/S2213-8587(21)00046-2), long-term FCS efficacy/safety (PMID 37100699, DOI 10.1016/j.jacl.2023.03.007), post-prandial platelet count and platelet function in FCS patients (PMID 37370069, DOI 10.1186/s13023-023-02743-0, Orphanet JRD, gold OA)",
+   "authors_year": "Gouni-Berthold I 2021; 2023; 2023",
+   "identifier": "PMID 33798466; PMID 37100699; PMID 37370069 / DOI 10.1186/s13023-023-02743-0",
+   "link": "https://doi.org/10.1186/s13023-023-02743-0",
+   "discovered_via": "OpenAlex cites:W3126189506 (Slingsby citation chain) surfaced the Orphanet paper; Semantic Scholar olezarsen/donidalorsen and mipomersen searches surfaced COMPASS and the long-term data",
+   "publisher_or_repo": "Lancet Diabetes & Endocrinology / Elsevier; J Clin Lipidol / Elsevier; Orphanet Journal of Rare Diseases / Springer Nature (CC BY)",
+   "required_file": "Platelet count trajectories and platelet function measurements in patients on volanesorsen; the Orphanet paper has patient-level platelet function data",
+   "endpoint_gap_it_closes": "Volanesorsen is the marketed ASO with the most severe clinical platelet signal and is NOT in the named gap list - an omission worth closing. The Orphanet paper is unusual in giving human platelet FUNCTION (not just count) in treated patients, under CC BY.",
+   "expected_usable_observations": "Patient-level platelet counts plus platelet function readouts; one CC BY source",
+   "access_attempted": [
+    {
+     "url": "https://api.openalex.org/works?filter=cites:W3126189506",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=olezarsen+donidalorsen+antisense+platelet+count+safety",
+     "status": "200 (records retrieved)"
+    },
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=volanesorsen+APPROACH+platelet+count+decline+familial+chylomicronemia",
+     "status": "429 on all 14 attempts - the dedicated APPROACH query never returned data"
+    }
+   ],
+   "outcome": "identifiers_verified_fulltext_not_yet_fetched",
+   "priority": 1,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Underlying Immune Disorder May Predispose Some Transthyretin Amyloidosis Subjects to Inotersen-Mediated Thrombocytopenia",
+   "authors_year": "Narayanan P, et al.; 17 authors; 2020",
+   "identifier": "PMID 32043907 / DOI 10.1089/nat.2019.0829",
+   "link": "https://doi.org/10.1089/nat.2019.0829",
+   "discovered_via": "OpenAlex cited_by:W3126189506 (Slingsby reference list); Semantic Scholar paper/PMID:32043907 and its /citations endpoint",
+   "publisher_or_repo": "Nucleic Acid Therapeutics / Mary Ann Liebert (oa_status=closed)",
+   "required_file": "Per-subject tables: anti-platelet antibody status, immune markers and platelet counts in NEURO-TTR subjects",
+   "endpoint_gap_it_closes": "Per-subject human immune-mechanism data for a marketed 2'-MOE/PS ASO - the patient-level counterpart to the in vitro GPVI and complement work. Its citation chain also yielded the two highest-value bridge papers (10.1111/cts.13476 and the AE meta-analysis).",
+   "expected_usable_observations": "Per-subject antibody/platelet pairs for the severe-thrombocytopenia subset",
+   "access_attempted": [
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/PMID:32043907",
+     "status": "200"
+    },
+    {
+     "url": "https://doi.org/10.1089/nat.2019.0829",
+     "status": "403 text/html 5507 bytes - Liebert WAF block; record is oa_status=closed so a paywall is likely behind it"
+    }
+   ],
+   "outcome": "metadata_confirmed_access_blocked",
+   "priority": 2,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Animal-side bridge set: Assessment of the Effects of 2'-MOE ASOs on Platelet Count in Cynomolgus Nonhuman Primates (PMID 28541820, DOI 10.1089/nat.2017.0666); Investigation into the Mechanism(s) That Leads to Platelet Decreases in Cynomolgus Monkeys During Administration of ISIS 104838 (PMID 29846725, DOI 10.1093/toxsci/kfy119); Cellular Immune Changes during Severe ASO-Associated Thrombocytopenia in a Non-Human Primate (PMID 40101742, DOI 10.1093/jimmun/vkae055)",
+   "authors_year": "Henry SP 2017; Narayanan P 2018; 2025",
+   "identifier": "PMID 28541820; PMID 29846725; PMID 40101742 / DOI 10.1093/jimmun/vkae055",
+   "link": "https://doi.org/10.1093/jimmun/vkae055",
+   "discovered_via": "OpenAlex cited_by:W3126189506 and cites:W2767260707; Semantic Scholar paper/DOI:10.1089/nat.2022.0042/citations surfaced the 2025 NHP immune paper (free via PMC12043408)",
+   "publisher_or_repo": "Nucleic Acid Therapeutics / Liebert (closed); Toxicological Sciences / OUP (closed); Journal of Immunology / OUP (free via PMC)",
+   "required_file": "NHP platelet count datasets and mechanism assays, to pair against the human in vitro and clinical rows",
+   "endpoint_gap_it_closes": "The animal half of the human-to-animal extrapolation Phase 2 asks for, deliberately kept at lower priority than the human in vitro rows. The 2025 J Immunol paper is the only one of the three with a free full text.",
+   "expected_usable_observations": "Cynomolgus platelet counts per ASO and dose; immune-cell changes during severe NHP thrombocytopenia",
+   "access_attempted": [
+    {
+     "url": "https://api.openalex.org/works?filter=cited_by:W3126189506",
+     "status": "200 (records retrieved)"
+    },
+    {
+     "url": "https://doi.org/10.1093/toxsci/kfy119",
+     "status": "403 text/html 5481 bytes - OUP WAF block; oa_status=closed"
+    },
+    {
+     "url": "https://doi.org/10.1093/jimmun/vkae055",
+     "status": "302 (DOI verified live; Semantic Scholar lists free PDF at pmc.ncbi.nlm.nih.gov/articles/PMC12043408/)"
+    }
+   ],
+   "outcome": "mixed_one_open_two_blocked",
+   "priority": 3,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "To scramble or not: Steric blocking 2'-MOE/PS control antisense oligonucleotides across cellular models",
+   "authors_year": "2026; Molecular Therapy Nucleic Acids",
+   "identifier": "PMID 42733805 / DOI 10.1016/j.omtn.2026.103051 / OpenAlex W7172412980",
+   "link": "https://doi.org/10.1016/j.omtn.2026.103051",
+   "discovered_via": "OpenAlex works/doi: lookup (anchor record) and Semantic Scholar paper/DOI lookup",
+   "publisher_or_repo": "Molecular Therapy Nucleic Acids / Cell Press (gold OA)",
+   "required_file": "Supplementary Table S2: exact sequences of control ASOs cASO7, cASO9, cASO11",
+   "endpoint_gap_it_closes": "The named gap 'Control ASOs cASO7, cASO9, cASO11 - exact sequences, from doi:10.1016/j.omtn.2026.103051 Table S2'. Both graph APIs confirm the record exists and resolve it to PMID 42733805, which the task text did not supply.",
+   "expected_usable_observations": "Three control ASO sequences with full chemistry annotation - the negative-control chemistry rows the dataset needs to make sequence-specificity claims",
+   "access_attempted": [
+    {
+     "url": "https://api.openalex.org/works/doi:10.1016/j.omtn.2026.103051",
+     "status": "200 - resolved to W7172412980, PMID 42733805, 77 referenced works"
+    },
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1016/j.omtn.2026.103051",
+     "status": "200"
+    },
+    {
+     "url": "https://api.openalex.org/works?filter=cites:W7172412980",
+     "status": "200 - 0 citing works (too recent)"
+    }
+   ],
+   "outcome": "identifier_resolved_supplement_handled_by_another_resource_family",
+   "priority": 1,
+   "human_in_vitro": true
+  },
+  {
+   "full_title": "Safety and toxicity assessment of antisense oligonucleotides in brain-relevant human cellular models",
+   "authors_year": "2026; Molecular Therapy Nucleic Acids",
+   "identifier": "PMID 42724647 / DOI 10.1016/j.omtn.2026.103062",
+   "link": "https://doi.org/10.1016/j.omtn.2026.103062",
+   "discovered_via": "Semantic Scholar paper/search 'antisense oligonucleotide human platelet activation in vitro' (HTTP 200)",
+   "publisher_or_repo": "Molecular Therapy Nucleic Acids / Cell Press (gold OA)",
+   "required_file": "Supplementary data: per-ASO toxicity readouts in human cellular models, with the ASO chemistry table",
+   "endpoint_gap_it_closes": "Human cellular in vitro ASO toxicity with per-compound chemistry, published in the same issue-range as the control-ASO paper (103051 vs 103062) and likely sharing its ASO panel - which would let the cASO sequences be joined to measured effects.",
+   "expected_usable_observations": "Per-ASO human cell toxicity values; CC BY; possible shared compound panel with the control-ASO paper",
+   "access_attempted": [
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=antisense+oligonucleotide+human+platelet+activation+in+vitro",
+     "status": "200 (record retrieved)"
+    }
+   ],
+   "outcome": "identifier_verified_fulltext_not_yet_fetched",
+   "priority": 2,
+   "human_in_vitro": true
+  },
+  {
+   "full_title": "Effect of inclisiran, the small-interfering RNA against PCSK9, on platelets, immune cells and immunological biomarkers",
+   "authors_year": "Landmesser U, et al.; 9 authors; 2020",
+   "identifier": "PMID 32243492 / DOI 10.1093/cvr/cvaa077",
+   "link": "https://doi.org/10.1093/cvr/cvaa077",
+   "discovered_via": "OpenAlex cites:W2767260707 and works?filter=title_and_abstract.search:(antisense OR oligonucleotide) AND (thrombocytopenia OR platelet count)",
+   "publisher_or_repo": "Cardiovascular Research / Oxford University Press (oa_status=closed)",
+   "required_file": "Platelet function and count data in inclisiran-treated subjects",
+   "endpoint_gap_it_closes": "A GalNAc-siRNA (neutral-ish backbone, conjugated) human platelet comparator. The named gap list has no siRNA human platelet entry at all, yet siRNA is the obvious chemistry contrast to PS ASOs.",
+   "expected_usable_observations": "Human platelet counts and function on a marketed siRNA - the negative-control arm for the PS-backbone hypothesis",
+   "access_attempted": [
+    {
+     "url": "https://api.openalex.org/works?filter=cites:W2767260707",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://doi.org/10.1093/cvr/cvaa077",
+     "status": "not individually fetched; OpenAlex oa_status=closed, no best_oa_location"
+    }
+   ],
+   "outcome": "identifier_verified_likely_paywalled",
+   "priority": 2,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "An Updated Comprehensive Pharmacovigilance Study of Drug-Induced Thrombocytopenia Based on FDA Adverse Event Reporting System",
+   "authors_year": "2023; Journal of Clinical Pharmacology",
+   "identifier": "PMID 38041205 / DOI 10.1002/jcph.2389",
+   "link": "https://doi.org/10.1002/jcph.2389",
+   "discovered_via": "Semantic Scholar paper/PMID:32043907/citations (inotersen citation chain)",
+   "publisher_or_repo": "Journal of Clinical Pharmacology / Wiley (ASCPT)",
+   "required_file": "Supplementary tables: disproportionality signals per drug, including the oligonucleotide entries",
+   "endpoint_gap_it_closes": "A class-wide human signal-detection denominator from FAERS, letting oligonucleotide thrombocytopenia signals be ranked against all other drug classes. Weaker evidence than trial data, so lower priority.",
+   "expected_usable_observations": "Per-drug ROR/PRR signal values for thrombocytopenia; oligonucleotide rows extractable",
+   "access_attempted": [
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/PMID:32043907/citations?limit=100",
+     "status": "200 (record retrieved)"
+    },
+    {
+     "url": "https://doi.org/10.1002/jcph.2389",
+     "status": "302 (DOI verified live)"
+    }
+   ],
+   "outcome": "identifier_verified_fulltext_not_yet_fetched",
+   "priority": 3,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "Comparison of Effects of Anti-thrombin Aptamers HD1 and HD22 on Aggregation of Human Platelets, Thrombin Generation, Fibrin Formation and Thrombus Formation",
+   "authors_year": "Derszniak K, et al.; 7 authors; 2019",
+   "identifier": "PMID 30842734 / DOI 10.3389/fphar.2019.00068",
+   "link": "https://doi.org/10.3389/fphar.2019.00068",
+   "discovered_via": "OpenAlex works?filter=title_and_abstract.search:(oligonucleotide OR antisense OR siRNA) AND (platelet OR thrombocytopenia)",
+   "publisher_or_repo": "Frontiers in Pharmacology, gold OA (CC BY)",
+   "required_file": "Main figures: human platelet aggregation per aptamer and concentration",
+   "endpoint_gap_it_closes": "Aptamer-class human platelet data under CC BY. Aptamers (and the pegnivacogin/REG1 PF4 story, abstract DOI 10.1161/circ.124.suppl_21.a9771 and Lancet REGULATE-PCI PMID 26547100) are a nucleic-acid chemistry class absent from the named gap list.",
+   "expected_usable_observations": "Concentration-resolved human platelet aggregation for defined aptamer sequences; openly licensed",
+   "access_attempted": [
+    {
+     "url": "https://api.openalex.org/works?filter=title_and_abstract.search%3A...",
+     "status": "200 (record retrieved)"
+    }
+   ],
+   "outcome": "identifier_verified_open_access_not_yet_fetched",
+   "priority": 3,
+   "human_in_vitro": true
+  },
+  {
+   "full_title": "Donidalorsen and pelacarsen registry anchors: OASIS-HAE NCT05139810, OASISplus NCT05392114, pelacarsen phase 2 NCT03070782, Lp(a)HORIZON NCT04023552, olezarsen phase 2 NCT03385239 - plus the Lp(a)HORIZON design paper (PMID 40185318, DOI 10.1016/j.ahj.2025.03.019)",
+   "authors_year": "design paper 2025, American Heart Journal; registry records various",
+   "identifier": "NCT05139810; NCT05392114; NCT03070782; NCT04023552; NCT03385239 (all five verified HTTP 200 via the ClinicalTrials.gov API) / PMID 40185318",
+   "link": "https://clinicaltrials.gov/study/NCT04023552",
+   "discovered_via": "Semantic Scholar paper/search 'pelacarsen TQJ230 lipoprotein(a) antisense platelet' and 'olezarsen donidalorsen antisense platelet count safety' (both HTTP 200); NCTs verified directly",
+   "publisher_or_repo": "ClinicalTrials.gov; American Heart Journal / Elsevier",
+   "required_file": "Registry results sections where posted; the design paper for planned platelet monitoring",
+   "endpoint_gap_it_closes": "The named gaps for donidalorsen (OASIS-HAE, OASISplus), pelacarsen (phase 2, Lp(a)HORIZON) and olezarsen phase 2. My contribution here is confirming all five NCTs are live and that the graph APIs do NOT yet index per-trial platelet publications for them - so these rows must come from registries or regulatory documents, not from the literature.",
+   "expected_usable_observations": "Arm-level AE and laboratory data if posted; otherwise a documented absence",
+   "access_attempted": [
+    {
+     "url": "https://clinicaltrials.gov/api/v2/studies/NCT05139810",
+     "status": "200"
+    },
+    {
+     "url": "https://clinicaltrials.gov/api/v2/studies/NCT05392114",
+     "status": "200"
+    },
+    {
+     "url": "https://clinicaltrials.gov/api/v2/studies/NCT03070782",
+     "status": "200"
+    },
+    {
+     "url": "https://clinicaltrials.gov/api/v2/studies/NCT04023552",
+     "status": "200"
+    },
+    {
+     "url": "https://clinicaltrials.gov/api/v2/studies/NCT03385239",
+     "status": "200"
+    }
+   ],
+   "outcome": "registry_identifiers_verified_no_platelet_publication_indexed",
+   "priority": 2,
+   "human_in_vitro": false
+  },
+  {
+   "full_title": "PMO (neutral-backbone) comparator set: Clinical safety of eteplirsen, a phosphorodiamidate morpholino oligomer, in DMD (DOI 10.1017/CJN.2018.178 and DOI 10.1016/J.NMD.2016.06.247); Pharmacology and toxicology of eteplirsen and SRP-5051 for DMD exon 51 skipping (PMID 34797383, DOI 10.1007/s00204-021-03184-z)",
+   "authors_year": "2015-2021",
+   "identifier": "PMID 34797383 / DOI 10.1007/s00204-021-03184-z; DOI 10.1017/CJN.2018.178; DOI 10.1016/J.NMD.2016.06.247",
+   "link": "https://doi.org/10.1007/s00204-021-03184-z",
+   "discovered_via": "Semantic Scholar paper/search 'phosphorodiamidate morpholino oligomer eteplirsen safety hematology' (HTTP 200)",
+   "publisher_or_repo": "Archives of Toxicology / Springer; Canadian Journal of Neurological Sciences / Cambridge; Neuromuscular Disorders / Elsevier",
+   "required_file": "Haematology safety tables for the PMO class",
+   "endpoint_gap_it_closes": "The named gap 'PMO class as the neutral-backbone comparator: eteplirsen, golodirsen, viltolarsen, casimersen'. HONEST CAVEAT: neither graph API surfaced any PMO paper with platelet or thrombocytopenia in the title, and the one OpenAlex query designed to test this directly (morpholino x platelet) was among the six killed by the second budget exhaustion. So the PMO comparator is only partially addressed here, and the absence of a signal is not yet established as a real negative.",
+   "expected_usable_observations": "Haematology AE tables; expected to show the absence of a platelet signal, which is exactly what makes PMO a useful backbone control - but this needs the unrun query to confirm",
+   "access_attempted": [
+    {
+     "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=phosphorodiamidate+morpholino+oligomer+eteplirsen+safety+hematology",
+     "status": "200 (records retrieved)"
+    },
+    {
+     "url": "https://api.openalex.org/works?filter=title_and_abstract.search:(morpholino OR phosphorodiamidate) AND (platelet OR thrombocytopenia...)",
+     "status": "NOT ATTEMPTED - OpenAlex shared-IP budget exhausted (HTTP 429, retryAfter 84931)"
+    }
+   ],
+   "outcome": "partially_addressed_key_query_blocked",
+   "priority": 2,
+   "human_in_vitro": false
+  }
+ ],
+ "notes": "RESOURCE FAMILY: metadata_graphs (OpenAlex + Semantic Scholar). Search session ran 2026-10-02 23:41 UTC to 2026-10-03 01:05 UTC; recorded search_date is 2026-10-02 per the task instruction, but note the UTC date rolled over mid-session and that rollover is exactly what unblocked OpenAlex (its free budget resets at midnight UTC). WHAT WAS ACTUALLY ACHIEVED: 35 of 43 OpenAlex calls and 35 of 42 Semantic Scholar calls returned HTTP 200; the rest are recorded as barriers with the verbatim error bodies. BOTH named resources were genuinely rate-limited, not merely slow - OpenAlex because the free daily budget is shared across everyone on this container's egress IP, Semantic Scholar because unauthenticated calls draw on a global shared pool (126 individual HTTP 429 responses logged in the first pass alone). No API key was requested, no account created, no author contacted (hard rules 4 and 5 respected). RANKING LOGIC, per the Phase 2 criterion: priority 1 is reserved for human in vitro / ex vivo platelet evidence and for in-vitro-to-clinical bridge datasets, not for additional clinical rows. The three strongest finds are (a) Slingsby 2022 PMID 33567808, human platelets, GPVI, sequence-resolved - main article DOWNLOADED openly; (b) Flierl 2015 PMID 25646267 / DOI 10.1084/jem.20140391, the foundational human-platelet PS-backbone paper, which is NOT in the task's named gap list and is arguably the single most important omission from it; and (c) PMID 36631935 / DOI 10.1111/cts.13476, which pairs an in vitro human cell assay ranking against clinical AE rates for many named ASOs and is therefore the most literal match to the Phase 2 extrapolation wording. DISCOVERY AIDS vs PRIMARY EVIDENCE: every candidate below carries a DOI, PMID, OpenAlex work ID or NCT that I resolved myself; nothing is reported on the strength of a search-engine snippet alone. 16 DOIs were independently confirmed live by HTTP HEAD against doi.org (all 302) and 11 NCT numbers were confirmed HTTP 200 against https://clinicaltrials.gov/api/v2/studies/<NCT> with their brief titles read back. FILES WRITTEN to /home/user/oligos/thrombocytopenia/curation/research_staging (both legally open, both fetched HTTP 200, nothing else in that directory touched): slingsby2022_haematologica_260059.pdf, 3087420 bytes, sha256 d09e60f0ebc112e1bca76370a043e10c9af2ef28177d92c58349f2d48a0f26dc, from https://haematologica.org/article/download/haematol.2020.260059/72951 (gold OA); sewing2017_plosone_0187574.pdf, 2375108 bytes, sha256 03da73a13c4d03522b3a1723db408de66de35dccf59942b8375d1ac992234dac, from the PLOS printable endpoint (CC BY). WHAT I DID NOT DO - read this before trusting any row: I retrieved MAIN ARTICLES only, never a supplementary data file. Every 'required_file' naming a supplement, appendix, source-data file or Table S2 remains UNRETRIEVED, so no per-donor or per-replicate value has actually been extracted by me and no observation count below is measured - all 'expected_usable_observations' are inferences from titles, abstracts and venue conventions. Five publisher endpoints returned HTTP 403 bot/WAF interstitials (Rockefeller UP, Liebert x2, MDPI, OUP) and one Elsevier DOI returned a 2709-byte HTML stub; for the Liebert and OUP items OpenAlex also reports oa_status=closed, so a real paywall probably sits behind the WAF, whereas the MDPI and Rockefeller items are flagged open and those 403s are technical blocks only - that distinction is recorded per candidate and should not be collapsed. Six OpenAlex queries were never run at all, including the only query designed to test the PMO neutral-backbone comparator, so the apparent absence of a PMO platelet signal is NOT yet an established negative. The O'Brien 2007 JCO CLL article's own DOI/PMID could not be verified (its dedicated Semantic Scholar query returned 429 fourteen times and OpenAlex relevance search did not surface it), so I have deliberately left that identifier blank rather than guess it - only NCT00024440 and the related ASH/ASCO abstract DOIs are asserted. Equally, no per-trial platelet publication is indexed by either graph for donidalorsen, pelacarsen, olezarsen or the drisapersen DEMAND-III record, so those rows will have to come from registries or regulatory filings, not from the literature. HANDOFF: the six unrun OpenAlex queries are written out verbatim in the OpenAlex resource row and can be replayed unchanged after the next 00:00 UTC budget reset. ATTRIBUTION OF STAGED FILES: at the time I wrote this file the staging directory already contained many epmc_*, bs_*, geo_*, pride_* and sewing2017_* files plus other sweep_*.json files produced by SIBLING resource families in this same sweep (Europe PMC, NCBI/omics, proteomics, discovery services). Those are NOT my retrievals and must not be attributed to this metadata_graphs row. The only two files this run added are slingsby2022_haematologica_260059.pdf and sewing2017_plosone_0187574.pdf, named above with their sha256 sums; note that the Europe PMC family independently obtained fuller versions of both plus the supplements I could not reach, so my two PDFs are redundant with its output and the earlier caveat about unretrieved supplements is a limit of THIS family's work, not of the sweep as a whole."
+}

@@ -1,0 +1,86 @@
+{
+  "resources": [
+    {
+      "resource": "ResearchRabbit",
+      "url": "https://www.researchrabbit.ai/ (app: https://app.researchrabbit.ai/ ; api: https://api.researchrabbit.ai/)",
+      "searched": false,
+      "search_date": "2026-10-02",
+      "queries": [
+        "oligonucleotide thrombocytopenia",
+        "antisense platelet",
+        "oligonucleotide induced thrombocytopenia platelet"
+      ],
+      "n_results_relevant": 0,
+      "result_identifiers": [],
+      "outcome": "access_barrier",
+      "barrier_class": "service_login",
+      "barrier_detail": "No query was ever executed. Marketing site https://www.researchrabbit.ai/ returns HTTP 200 (Webflow site, 52107 bytes) but has no search surface. The application host https://researchrabbitapp.com/ 301-redirects to https://app.researchrabbit.ai/, which returns HTTP 200 with an identical 2567-byte React/Vite SPA shell (<div id=\"root\"></div>, module script /assets/index-DcNI-g7Y.js) for EVERY path tried, including /api/search?q=oligonucleotide+thrombocytopenia and /collections -- i.e. client-side routing, no server-rendered results, authentication performed in-JS. The shell also embeds Hotjar (hjid 6537716) and a hidden reCAPTCHA badge (.grecaptcha-badge CSS), confirming a bot-challenged sign-in flow. The separate JSON API host https://api.researchrabbit.ai/ is live but returns HTTP 404 {\"error\":true,\"reason\":\"Not Found\"} on /, /search?q=..., /v1/search?q=..., /papers/search?query=..., /auth/me, and on POST /search with a JSON body -- there is no documented or discoverable unauthenticated search endpoint.",
+      "notes": "ResearchRabbit has no public API and no credential-free search path; it requires a registered account, which hard rule 4 forbids creating. Per hard rule 1 this is recorded as a BARRIER, not as a search. Sitemap https://www.researchrabbit.ai/sitemap.xml (HTTP 200, 70 <loc> entries) was checked and contains only marketing/blog pages -- zero matches for oligonucleotide/antisense/platelet/thrombocytopenia -- so there is no open corpus surface to substitute. Egress proxy was NOT implicated: /__agentproxy/status showed recentRelayFailures: [] for all ResearchRabbit hosts."
+    },
+    {
+      "resource": "Undermind",
+      "url": "https://www.undermind.ai/ (app: https://app.undermind.ai/ ; api: https://api.undermind.ai/)",
+      "searched": false,
+      "search_date": "2026-10-02",
+      "queries": [
+        "oligonucleotide thrombocytopenia",
+        "antisense oligonucleotide platelet",
+        "oligonucleotide induced thrombocytopenia human platelet in vitro"
+      ],
+      "n_results_relevant": 0,
+      "result_identifiers": [],
+      "outcome": "access_barrier",
+      "barrier_class": "service_login",
+      "barrier_detail": "No query was ever executed. Marketing site https://www.undermind.ai/ returns HTTP 200 (104827 bytes) with no search surface; https://www.undermind.ai/api/search?q=oligonucleotide+thrombocytopenia returns HTTP 404 text/plain 'The page could not be found / NOT_FOUND / iad1::wgckc-1790985797850-0501effa13b8' (Vercel). The app host https://app.undermind.ai/ returns HTTP 200 with the same 3079-byte SPA shell for / , /login and /query?q=antisense+oligonucleotide+platelet -- client-side routing, no server-rendered results. POST https://app.undermind.ai/api/search with a JSON query body returns HTTP 405 Method Not Allowed; response headers confirm this came from the ORIGIN, not the egress proxy ('server: Vercel', 'x-vercel-id: iad1::zrfnf-1790985808357-deea96099206', content-disposition: inline; filename=\"index.html\"). The API host https://api.undermind.ai/ returns HTTP 404 on / and /v1/search with an HTML error page titled 'Page not found - Undermind' that loads /static/auth_surface.css; fetching that stylesheet (HTTP 200, 11179 bytes) shows it styles a login form (selectors/strings 'Login', 'Password'), proving the API sits behind an interactive authentication surface.",
+      "notes": "Undermind is a paid/seat-licensed interactive agentic search product with no credential-free endpoint. Recorded as a BARRIER per hard rule 1. robots.txt (HTTP 200) allows crawling but only exposes marketing pages; sitemap.xml (HTTP 200, 187 bytes, 1 <loc>) contains a single marketing URL with zero oligonucleotide/antisense/platelet/thrombocytopenia matches, so no open report corpus exists to mine for primary identifiers. The 405 was explicitly verified as origin-side rather than the proxy's documented plain-HTTP 405 failure class."
+    },
+    {
+      "resource": "Elicit",
+      "url": "https://elicit.com/ (legacy: https://elicit.org/ ; api: https://api.elicit.com/)",
+      "searched": false,
+      "search_date": "2026-10-02",
+      "queries": [
+        "oligonucleotide induced thrombocytopenia",
+        "antisense oligonucleotide platelet activation human",
+        "phosphorothioate oligonucleotide platelet GPVI",
+        "oblimersen G3139 thrombocytopenia",
+        "drisapersen platelet count",
+        "aprinocarsen ISIS 3521 thrombocytopenia",
+        "donidalorsen pelacarsen platelet",
+        "PAC-1 P-selectin oligonucleotide donor platelets",
+        "phosphorothioate platelet"
+      ],
+      "n_results_relevant": 0,
+      "result_identifiers": [],
+      "outcome": "access_barrier",
+      "barrier_class": "technical_block",
+      "barrier_detail": "No query was ever executed. Every search request to https://elicit.com/search?q=<query> returned HTTP 403 with a ~5.5 KB Cloudflare human-verification interstitial, not results: body contains 'Just a moment...', 'Enable JavaScript and cookies to continue', '__cf_chl', 'challenge-platform' and a cRay token. The same 403 challenge was returned for ALL NINE priority-target query strings listed above (verified individually -- the block is blanket, not query-dependent), and also for https://elicit.com/api/search?q=phosphorothioate+platelet (HTTP 403) and https://elicit.com/sitemap.xml (HTTP 403, 5370 bytes). The landing page https://elicit.com/ itself returns HTTP 200 but is a 2564342-byte JS shell whose only actionable affordances are 'Sign in'/'Sign up' (strings signin/signup present). Legacy https://elicit.org/search?q=antisense+oligonucleotide+platelet 302-redirects to https://elicit.com/?q=... and drops the query, landing on the same sign-in shell. Separately, the API subdomain https://api.elicit.com/ could not be reached at all: 'curl: (56) CONNECT tunnel failed, response 502', reported by the agent proxy as 'api.elicit.com:443 -- connect_rejected (the egress proxy denied the CONNECT (organization policy) or could not reach the destination)'; https://api.elicit.org/ failed TLS as 'OpenSSL/3.0.13: error:0A000438:SSL routines::tlsv1 alert internal error'.",
+      "notes": "Two stacked barriers: a Cloudflare bot challenge on the web search paths (primary, technical_block) plus an account requirement behind it (Elicit gates search results and all data export to signed-in, largely paid, accounts). Hard rule 4 forbids creating an account or solving the challenge. Recorded as a BARRIER per hard rule 1. The api.elicit.com CONNECT rejection is an egress-policy denial on this session's side and per the proxy README must be reported rather than retried or routed around; it was not retried."
+    },
+    {
+      "resource": "Consensus",
+      "url": "https://consensus.app/ (api: https://api.consensus.app/)",
+      "searched": false,
+      "search_date": "2026-10-02",
+      "queries": [
+        "oligonucleotide induced thrombocytopenia",
+        "antisense oligonucleotide platelet activation human",
+        "phosphorothioate oligonucleotide platelet GPVI",
+        "oblimersen G3139 thrombocytopenia",
+        "drisapersen platelet count",
+        "aprinocarsen ISIS 3521 thrombocytopenia",
+        "donidalorsen pelacarsen platelet",
+        "PAC-1 P-selectin oligonucleotide donor platelets",
+        "phosphorothioate platelet"
+      ],
+      "n_results_relevant": 0,
+      "result_identifiers": [],
+      "outcome": "access_barrier",
+      "barrier_class": "service_login",
+      "barrier_detail": "No query was ever executed. Web search paths are Cloudflare-challenged: https://consensus.app/search/?q=oligonucleotide%20thrombocytopenia , https://consensus.app/results/?q=antisense+oligonucleotide+platelet and https://consensus.app/api/search?query=phosphorothioate+platelet all returned HTTP 403 with a ~5.5 KB interstitial containing 'Just a moment...', 'Enable JavaScript and cookies to continue', '__cf_chl', 'challenge-platform' and a cRay token. The JSON API host https://api.consensus.app/ is live and reachable (HTTP 404 application/json {\"detail\":\"Not Found\"} on /, /search, /papers/search, /openapi.json, /docs -- a FastAPI-style surface with docs disabled), and the real search route was located: GET https://api.consensus.app/v1/search returns HTTP 401 application/json {\"detail\":\"Not authenticated\"}. That 401 was reproduced individually for ALL NINE priority-target query strings above, confirming the refusal is an unconditional credential requirement rather than an empty result set. Landing page https://consensus.app/ returns HTTP 200 (28138 bytes) but is a sign-in shell.",
+      "notes": "Cleanest evidence of the four: api.consensus.app/v1/search explicitly answers 'Not authenticated' (HTTP 401), so an API key / paid subscription is required and hard rule 4 forbids obtaining one. Recorded as a BARRIER per hard rule 1. robots.txt (HTTP 200) notably Allows OAI-SearchBot, ChatGPT-User, PerplexityBot and Perplexity-User while the generic User-agent is not granted the search paths -- i.e. access is whitelisted to commercial partners, not open. sitemap.xml (HTTP 200, 416 bytes, 1 <loc>) holds only a marketing URL with zero oligonucleotide/antisense/platelet/thrombocytopenia matches, so there is no open corpus surface to substitute. barrier_class recorded as service_login because the authoritative, determinative refusal is the 401 on the API; the Cloudflare 403 on the web paths is a secondary technical block."
+    }
+  ],
+  "candidates": [],
+  "notes": "ZERO candidates from this resource family, and that is the correct and complete result -- not an omission. All four assigned resources (ResearchRabbit, Undermind, Elicit, Consensus) are interactive AI/discovery products that returned an access barrier on every real request; no query was ever executed against any of them, so no result set exists that could be resolved to a primary identifier. Per hard rule 5 discovery/AI search products are aids and never primary evidence, and nothing may be reported from them without first resolving it to a DOI/PMID/accession; since none produced any result, reporting any candidate here would mean attributing a finding sourced elsewhere to a service that refused me, which hard rule 1 forbids. The candidates array is therefore deliberately empty.\n\nWhat was actually done: real HTTPS requests were issued to 30+ distinct endpoints across the four services -- marketing hosts, SPA app hosts, and dedicated API subdomains -- including GET and POST search routes with live query strings, plus robots.txt and sitemap.xml checks for any open corpus that might be mined legitimately. The nine priority-target query strings (oligonucleotide induced thrombocytopenia; antisense oligonucleotide platelet activation human; phosphorothioate oligonucleotide platelet GPVI; oblimersen G3139 thrombocytopenia; drisapersen platelet count; aprinocarsen ISIS 3521 thrombocytopenia; donidalorsen pelacarsen platelet; PAC-1 P-selectin oligonucleotide donor platelets; phosphorothioate platelet) were submitted INDIVIDUALLY to the two services that exposed a reachable query route, to establish that the refusals are unconditional rather than query-dependent: Consensus returned HTTP 401 {\"detail\":\"Not authenticated\"} nine times out of nine, and Elicit returned a Cloudflare HTTP 403 'Just a moment' challenge nine times out of nine.\n\nBarrier taxonomy per hard rule 3: Consensus = service login/subscription (HTTP 401 'Not authenticated' on api.consensus.app/v1/search; web paths additionally Cloudflare-403). Elicit = technical block (Cloudflare human-verification 403 on all search paths and on its sitemap) stacked on an account requirement; its api.elicit.com was additionally unreachable via this session's egress proxy (CONNECT tunnel failed, 502, connect_rejected). Undermind = service login (api.undermind.ai serves a login auth surface; app host returns an SPA shell and origin-side HTTP 405 on POST /api/search). ResearchRabbit = service login (SPA shell on every path with hidden reCAPTCHA; api.researchrabbit.ai live but HTTP 404 on every search route -- no public API exists). None of these is a publisher paywall, broken link, missing supplement or unresolved citation.\n\nProxy-side vs service-side was disambiguated rather than assumed, because the agent proxy README documents its own 405 and 403/407 failure classes that could be mistaken for service refusals. curl -sS http://127.0.0.1:42039/__agentproxy/status reported recentRelayFailures: [] and bundleCoversEveryHost: true during the ResearchRabbit/Undermind/Consensus probes, so those outcomes are genuinely service-side; the Undermind 405 was further confirmed origin-side by its response headers (server: Vercel, x-vercel-id present). The single genuine proxy-side denial was api.elicit.com:443 (connect_rejected, organization egress policy), which the README instructs be reported rather than retried or circumvented -- it was not retried, and no TLS verification was disabled and HTTPS_PROXY was never unset at any point.\n\nCompliance: no account was created, no credentials were supplied, nothing was purchased or subscribed to, no Cloudflare challenge was solved or evaded, no custom bot-evasion User-Agent was spoofed, and no author was contacted. No file was written into research_staging (nothing legally open was retrieved from these four services, so there was nothing to stage) and no other file was modified.\n\nRecommendation to the orchestrator: none of the Phase 2 priority gaps -- Oblimersen/G3139, drisapersen, aprinocarsen/ISIS 3521, ISIS 5132, alicaforsen/ISIS 2302, donidalorsen, pelacarsen, olezarsen, nusinersen, the PMO comparator class, per-trial mipomersen platelet values, the Sewing 2017 and Slingsby 2022 per-donor raw data, or the cASO7/cASO9/cASO11 sequences -- can be closed through this resource family. They must be pursued through the free, legal primary routes named in hard rule 7 (Europe PMC full text, PMC, author manuscripts, journal supplementary endpoints, preprint servers, institutional repositories) and ClinicalTrials.gov API v2, which are other families' assignments. Treat this family as contributing coverage evidence only."
+}
