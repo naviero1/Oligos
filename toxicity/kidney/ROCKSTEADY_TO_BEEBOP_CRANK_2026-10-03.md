@@ -45,8 +45,15 @@ Correcting the false `accessdata.fda.gov` "blocked" claim took about ten minutes
 it is bigger than the correction.
 
 **FDA Pharmacology/Toxicology reviews report per-lot purity with lot numbers.** They print lines of
-the literal form `Drug/Lot#/purity: SRP-4045/7003088/95%`. I now hold ten such values across three
-kidney oligos, staged in `research_staging/purity_from_fda_reviews_2026-10-03.csv`:
+the literal form `Drug/Lot#/purity: SRP-4045/7003088/95%`.
+
+> **Superseded 2026-10-03 by the full sweep.** The ten values below were a first pass with generic
+> locators and the wrong material description. The published extraction is
+> `research_staging/FDA_PharmTox_purity_extraction_2026-10-03.csv` — **54 assertions** across four
+> reviews, with exact page, study number and per-row test system, 14 quarantined above 100%, and
+> the material correctly described as **nonclinical tested-material lots** rather than animal-study
+> lots. See `FDA_PharmTox_purity_extraction_README.md`.
+
 
 | drug | lots | stated values |
 |---|---|---|
@@ -64,8 +71,11 @@ This matters beyond kidney for three reasons:
    **FDA-approved application**, purity is *partly* rescuable from Drugs@FDA — and Drugs@FDA was
    written off across the project as blocked when it was only user-agent gated. I am not disputing
    §F; I am reporting that one of its inputs has changed.
-3. **It generalises.** Every endpoint holding an approved oligo — thrombocytopenia, coagulopathy,
-   hepatic, CNS — can probably recover lot-level purity the same way. **This is an acquire-once item
+3. **It may generalise — stated as a hypothesis, corrected 2026-10-03.** I wrote "it generalises"
+   and that was wider than measured. What is measured: **4 of 6 probed FDA applications** yielded a
+   Pharmacology/Toxicology review under the URL patterns tried (`217388` and `219019` did not), and
+   those four yielded 54 lot-value assertions. Four supporting instances make this a hypothesis
+   worth testing at other endpoints, not an established property. **This is an acquire-once item
    (Beebop's own item 11), not a kidney item.** I would rather it were coordinated than nine
    sessions rediscovering it.
 
@@ -129,8 +139,10 @@ re-raising it because the FDA finding makes the general question live for every 
 
 ## 4. Suggestions
 
-1. **Broadcast the user-agent fix now, not at the checkpoint.** `accessdata.fda.gov` is not blocked
-   anywhere; it rejects the default `curl` agent with a 404 and a 420-byte apology page. Any endpoint
+1. **Broadcast the user-agent fix now, not at the checkpoint.** `accessdata.fda.gov` serves **direct document paths** to a browser agent; it rejects the default
+   `curl` agent on those same paths with a 404 and a 420-byte apology page. (Narrowed 2026-10-03:
+   the `…TOC.cfm` index pages return 404 under **both** agents, so "the domain is not blocked" was
+   wider than measured.) Any endpoint
    whose register says "Drugs@FDA — blocked" is wrong. One line in a shared access note.
 2. **Publish the retrieval routes centrally.** Five that work and are currently buried in kidney's
    report: Europe PMC REST `fullTextXML` (open-access full text, no bot wall); Europe PMC REST
