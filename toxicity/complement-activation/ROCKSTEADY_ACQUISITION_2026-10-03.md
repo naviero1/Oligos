@@ -7,9 +7,14 @@ is scoped rather than bought, so Oscar can judge whether a subscription is worth
 **Nothing ingested, promoted or released.** No label, no grade, no model. All rows staged
 `STAGED_NOT_INGESTED` / `model_eligibility = NOT_ASSESSED_GERMAN`.
 
-## 1. The find: `NCT02363946` is the strongest human complement dataset on this endpoint
+## 1. `NCT02363946` — analyte-resolved human complement values, extracted from a public registry
 
-It was free in a public registry the whole time, and nobody had opened it.
+> **SUPERSEDED IN PART — see `ROCKSTEADY_CORRECTIONS_2026-10-03.md`.** Beebop ruled on 2026-10-03 that
+> the interpretive characterisations originally in this section — "strongest dataset", "clean
+> dose-dependent human positive", pathway selectivity, and "positive control candidate" — are
+> **unadjudicated interpretations, not registry conclusions and not scientific admission.** They are
+> withdrawn below and routed to German. The raw analyte-specific changes and denominators are preserved
+> unchanged, which is what the round was for.
 
 **ARC-AAT** (Arrowhead, RNAi against alpha-1 antitrypsin), **Phase 1**, **TERMINATED** (company
 decision), **65 enrolled**, results posted. Complement is a **registered secondary outcome measure** —
@@ -39,24 +44,29 @@ Licence: **US federal public domain** — the only unrestricted complement sourc
 | Part B 4.0, AATD (**1**) | +59 | +219 | +160 | +22 | −18 |
 | Part B placebo (3) | −14 | +16 | −15 | −4 | −0 |
 
-### Why this matters more than its size suggests
+### What the registry posts, stated without interpretation
 
-1. **A clean dose-dependent human positive.** Plasma Bb climbs from +18% to **+309%** across 0.38→8.0
-   mg/kg against a placebo arm at **−7%**. This is the clearest human complement signal in the endpoint,
-   and it is in a registry rather than a paper.
-2. **Bb up while CH50 down, in humans, with numbers.** CH50 is negative in **every active arm** (−5 to
-   −19%) while Bb rises. This is the **third independent instance** of split-products-up with
-   function-down — after REGULATE-PCI and the Kyndrisa monkey data — and the **first with per-arm
-   quantification in humans.** The four-readout-class separation I proposed is no longer an argument from
-   principle; it is demonstrated inside one trial.
-3. **Alternative-pathway selectivity, in humans.** Bb (alternative pathway) rises strongly and
-   monotonically-ish; C4a (classical/lectin) shows no dose trend; C5a is essentially flat. That is the
-   pattern Henry 2014 and Shen 2014 describe mechanistically in serum — appearing here in dosed humans.
-4. **Analyte collapse would destroy the finding.** "Complement activation: yes/no" would lose a +309% Bb,
-   a flat C5a and a −19% CH50 in the same subjects.
-5. **It is a positive control candidate** — Beebop's item 9 needs positive controls and found almost none
-   project-wide (0 of 1,866 in acute-neurotoxicity). This is a dose-graded human positive with a placebo
-   arm.
+1. **Plasma Bb mean percentage change rises across ascending dose arms**, from +18% at 0.38 mg/kg to
+   +309% at 8.0 mg/kg, with the Part A placebo arm at −7%. **The registry states no conclusion about
+   this and I assert none.** Whether it constitutes a dose relationship, and whether it is
+   drug-attributable, is German's to adjudicate — n is 4 per active arm and no p-value is posted.
+2. **CH50 mean percentage change is negative in every active arm** (−5 to −19%) while Bb is positive.
+   Two different readout classes move in opposite directions in the same subjects. **This is recorded as
+   an observation about the data's shape, not as a mechanism.** It is the operational reason the four
+   readout classes carry separate columns; it is not evidence for a mechanism, and I draw none.
+3. **The five analytes do not move together.** Bb is positive and larger at higher doses; C4a shows no
+   ordering with dose; C5a ranges −16 to +6%; CH50 is uniformly negative. **Pathway attribution is
+   withdrawn.** My earlier claim of alternative-pathway selectivity was an interpretation layered onto
+   the numbers, and `pathway_label_source` reads `NOT_STATED` precisely because the registry makes no
+   such attribution. German owns `pathway_label_curator`.
+4. **Analyte collapse would destroy the information.** A single "complement activation: yes/no" field
+   would lose a +309% Bb, a −16 to +6% C5a and a −19% CH50 measured in the same subjects.
+5. **It is NOT a positive control, and I withdraw that suggestion.** Beebop's correction is right on two
+   independent grounds: a **treatment arm showing a signal is not a designed positive control** — a
+   positive control is a designed reference, and ARC-AAT's 8.0 mg/kg arm is a dose arm — and the trial
+   **publishes no sequence and no position chemistry**, so it cannot satisfy gates 2 and 3 and cannot be
+   a qualified record of any kind. It does carry a **vehicle (placebo) arm**, `control_role = vehicle`
+   on those rows, which is a negative-control arm and is all I should have said.
 6. **Dual matrix again, analyte-specific**: plasma for Bb, serum for C3a/C4a/C5a/CH50.
 
 ### Caveats recorded on the rows, not in prose
@@ -137,9 +147,10 @@ Lett*), Henry 2002 (*Int Immunopharmacol*), **Povsic 2016 + its Online Repositor
 Two of these are genuinely high-value — **Povsic's Online Repository**, which holds the only numeric
 complement values tied to severe human clinical harm, and the **apo(a) body**, where 47 subjects'
 analytes are unknown. But Elsevier is not a product one buys as a unit; access is institutional. **My
-recommendation: treat these as two individual-article requests, not a subscription case.** Povsic's is
-also the **only confirmed paywall in this round** — the only place a subscription notice was actually
-rendered to me rather than inferred.
+recommendation: treat these as two individual-article requests, not a subscription case.** On Povsic's access class I **overstated my own verification**: the subscription notice was rendered to a
+delegated fetch on one route on one date, I did not recheck it first-hand, and **entitlement and price
+were never independently checked.** Downgraded from "confirmed paywall" to *subscription notice observed
+on one route, unverified entitlement and price*. See corrections §5.
 
 ### Platforms 3–5 — not worth a subscription
 
@@ -166,16 +177,16 @@ Scholar still flags as bronze open access while the host returns 403.
 3. **Two retries from a browser, not a purchase**: Kandimalla 1997 and Shen 2014.
 4. **Buy nothing for platforms 3–5.**
 
-## 4. Inventory delta
+## 4. Inventory delta — **ARITHMETIC WITHDRAWN, see `ROCKSTEADY_CORRECTIONS_2026-10-03.md` §1**
 
 | | Before | After |
 |---|---:|---:|
-| Verified human trials with reported complement and a recoverable identifier | 8 | **9** — `NCT02363946` joins, `NCT03728634` does not |
-| Staged complement observation rows | 0 | **65** |
-| Staged complement constructs | 12 | 12 (ARC-AAT publishes no sequence — `sequence_family_group = UNASSIGNED_NO_SEQUENCE`) |
+| Verified human trials with reported complement and a recoverable identifier | 8 | ~~**9**~~ **WITHDRAWN — the correct figure is 7.** Both NCTs were already inside the 8, so nothing joined, and `NCT03728634` must now leave it |
+| Staged complement observation rows | 0 | **65** — `NCT02363946` only. The **138 Sewing values remain a reference parse**, not an admitted observation table, and are not counted here |
+| Staged complement constructs | 12 | 12 — ARC-AAT publishes no sequence, so **no canonical row was created and the 65 observations carry `construct_uid = UNRESOLVED_NO_CANONICAL_RECORD`**, not a key to a row that does not exist |
 | Sources under an unrestricted licence | 0 | **1** — US federal public domain |
-| Human instances of split-products-up / function-down | 1 (REGULATE-PCI) | **2**, and the new one is quantified per arm |
-| Positive-control candidates | 0 | **1** — dose-graded human positive with a placebo arm |
+| Human datasets in which a split-product and a functional analyte move in opposite directions | 1 | **2** — a statement about data shape only; **no mechanism is claimed** |
+| Positive-control candidates | 0 | **0 — WITHDRAWN.** A dose arm with a signal is not a designed positive control, and no sequence or chemistry is published, so it cannot be a qualified record. Its **vehicle arm** is a negative-control arm, `control_role = vehicle` |
 
 Gate 3 note: ARC-AAT publishes **no sequence and no chemistry**, so its construct row would be
 `sequence_5to3 = NOT_REPORTED`. **It is a strong outcome record attached to an unidentified molecule** —

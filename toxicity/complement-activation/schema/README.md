@@ -45,6 +45,8 @@ encoding** (§C).
 | Column | Type | Notes |
 |---|---|---|
 | `construct_uid` | id | an **inventory record identifier**, not a claim of molecular distinctness |
+| `construct_identity_state` | enum | `read_from_source_table` · `no_published_sequence_or_position_chemistry` · `UNRESOLVED`. Added 2026-10-03 |
+| `canonical_join_status` | enum | `joinable` · `not_joinable_no_canonical_row_exists`. **An observation whose construct has no canonical record must say so, not point at a `construct_uid` that does not exist.** Added 2026-10-03 after a dangling key was found in the `NCT02363946` table |
 | `name_as_printed` | text | verbatim from the source, including its own inconsistencies |
 | `notation_verbatim` | text | **the source's own notation, preserved** — the valentin pattern's key property |
 | `bases_5to3` | text | plain base sequence, asterisks stripped |
@@ -102,7 +104,8 @@ The curator column is **German's**, per §J.
 | Column | Notes |
 |---|---|
 | `raw_value`, `raw_unit` | the source's printed value and its literal unit string |
-| `value_basis` | `absolute_concentration` · `stimulation_index` · `fold_change` · `incidence_above_threshold` · `qualitative` |
+| `value_basis` | `absolute_concentration` · `stimulation_index` · **`percent_change`** · `fold_change` · `incidence_above_threshold` · `qualitative` |
+| | **`percent_change` added 2026-10-03.** The dictionary predated it and `NCT02363946` used it before it was declared — recorded as a defect, not a silent patch. A percentage change from a stated baseline is **not** a fold change and must not be converted into one: `+309%` is a 4.09-fold value, and storing either number under the other's basis would misstate it. |
 | `normalisation_denominator` | what a ratio is divided by — for Sewing, the same donor's PBS vehicle control |
 | `severity_scale` | **`experimental_response_severity` only.** §E prohibits mapping in-vitro fold-change bins onto CTCAE or any clinical grade without clinical validation |
 | `source_threshold`, `source_threshold_basis` | **per-source**, never a project constant. §E: no universal thresholds. 2× ULN and below-LLN live here, with their own provenance |

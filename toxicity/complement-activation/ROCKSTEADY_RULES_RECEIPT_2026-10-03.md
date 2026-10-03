@@ -9,7 +9,7 @@ imputed value, no manufactured negative, no model. No scientific conflict resolv
 |---|---|
 | Branch | `claude/amazing-galileo-rwiv95` |
 | Commit worked at | `8b9264d` |
-| `SCIENTIFIC_RULES.md` | **read in full**, `sha1 bebe077b83c8109fb2eea5fd56a1611f200afbf1` |
+| `SCIENTIFIC_RULES.md` | read in full at `sha1 bebe077b83c8109fb2eea5fd56a1611f200afbf1` (**pre-§K**). **RE-CONFIRMED at `sha1 b85d50d49ecd2ca9da841f2f0af2973626517a5c` with §K present** — see `ROCKSTEADY_CORRECTIONS_2026-10-03.md` §0. The §K audit supersedes §2.3 of this receipt. |
 | `CRANK_DELEGATION_2026-10-03.md` | read; Complement row worked below |
 | `German_requests_100326.md` | read in full; **items 2, 5 and 6 change this endpoint's work — §1.9** |
 | Grain question | **my endpoint has no dataset and therefore no grain to re-grain.** Nothing re-grained. One grain defect found in the *host* tables — §3.4 |
@@ -92,7 +92,7 @@ a leakage group **and** must stay distinct constructs. Recorded, not acted on.
 §E: a clean clinical negative requires **all six** of exact sequence, human exposure, adequate dose and
 duration, explicit monitoring, an explicit outcome, and a traceable denominator.
 
-Applied to the 8 verified human trials in my research report:
+Applied to the human trials in my research report. **Note: that set was 8 and the corrected figure is 7** — `NCT03728634` has since been removed for yielding only a composite outcome (`ROCKSTEADY_CORRECTIONS_2026-10-03.md` §1). Removing it does not change the conclusion below, since it was already in the unassessed row:
 
 | Trial | Sequence | Monitoring | Denominator | Clean negative? |
 |---|---|---|---|---|
