@@ -7,10 +7,81 @@
 **Status:** RESEARCH ROUND. No validated data, label, grade, eligibility class, adjudication or model was changed.
 Acquired material is held in `research_staging/`, outside `data/`.
 
-Work actually performed this round: **6 primary sources retrieved and read in full** (3 trial reports,
+Work actually performed this round: **7 primary sources retrieved and read in full** (4 trial reports,
 German's routed human 3D-PTEC paper, Moisan 2017 + its supplement, Crooke 2018), **20/20 resources
 logged**, **36 trial registry records surfaced**, **6 of 10 missing sequences recovered**. Work
 proposed but not performed is marked as such throughout.
+
+---
+
+## REVISION B — 2026-10-03 (later)
+
+**ENVISION is retrievable. I was wrong to leave it on the inaccessible list, and I was wrong twice:
+once by not finding the route, and once by dismissing it when a cross-check found it for me.**
+
+Revision A's §P5 note records that a cross-checking agent claimed ENVISION was free from an
+institutional repository, that I tested the route and could not substantiate it, and that ENVISION
+therefore stayed on the access list. **That dismissal was unsound.** What I actually tested was
+Semantic Scholar's advertised PDF (which resolves to `nejm.org` and is Cloudflare-blocked) and CORE
+(403), while OpenAlex — the service that enumerates repository copies — was rate-limited, so I never
+enumerated the open locations at all. I generalised "the routes I could test failed" into "the claim
+is unsubstantiated". When the completed cross-check supplied an exact URL, it worked on the first
+attempt:
+
+`kclpure.kcl.ac.uk/ws/files/148225585/nejmoa1913147.pdf` — **HTTP 200, 621,752 B, 14 pp, 9,651 words,
+"Publisher's PDF, also known as Version of record"**, SHA-256 `6c54ccd57669ede6…`. King's Research
+Portal. Staged.
+
+**Retrievable trials are 4 of 10, not 3** — and ENVISION is the renal-richest of the ten.
+
+### What ENVISION actually reports (NCT03338816, N=94; safety population 46 placebo / 48 givosiran)
+
+Note the denominator trap: the paper also prints N=43 / N=46, which is the **acute intermittent
+porphyria efficacy subgroup**, not the safety population. The two must not be conflated.
+
+| Renal endpoint | Placebo (n=46) | Givosiran (n=48) |
+|---|---|---|
+| Any renal adverse event | 3 (7%) | **7 (15%)** |
+| Increased serum creatinine or decreased eGFR | 2 (4%) | **7 (15%)** |
+| Chronic kidney disease | 0 | **5 (10%)** |
+| Decreased eGFR | 0 | **3 (6%)** |
+| Worsening CKD as a serious adverse event | 0 | 2 |
+
+Reporting threshold: renal AEs were defined as all events under **MedDRA terms for chronic kidney
+disease**; the AE table lists events ≥5 percentage points higher in one group. Baseline: **34% of
+patients had eGFR < 60 mL/min/1.73 m²**, and 25% had renal impairment in their medical history.
+The abstract states plainly that the increased efficacy *"was accompanied by a higher frequency of
+hepatic and renal adverse events."*
+
+**This confirms `MSR009`** (`readout_value = 15 pct_incidence`) against the version of record and adds
+the denominators the row lacks. It is a **non-renal indication**, so it escapes the renal-indication
+confound of §P3 — but it carries a different one that must be recorded rather than ignored: acute
+hepatic porphyria is itself associated with chronic kidney disease, and the two patients with
+worsening CKD had **renal-biopsy results "consistent with their underlying coexisting illnesses
+(hypertension and porphyria-associated nephropathy)"**. The signal is real and drug-associated at the
+adverse-event level; the paper does not attribute it to direct tubular toxicity. Both facts belong in
+the row.
+
+### Two further corrections to §5 and §6
+
+- **The Europe PMC `supplementaryFiles` endpoint works** and I had not used it for trials. `PMC8487715`
+  returns a 1,706,506 B archive containing `cir-144-1133-s001.pdf` (663,816 B) — the teprasiran
+  supplementary appendix, which holds the RIFLE/KDIGO and MAKE90 tables cited as "Table IV/V in the
+  Data Supplement". It works only for open-access records, so it does **not** reach the vupanorsen
+  supplement.
+- **Vupanorsen is not paywalled content.** Crossref reports `10.1161/CIRCULATIONAHA.122.059266`
+  licensed **CC BY-NC-ND 4.0** from 2022-05-03. Its 403 is a Cloudflare bot wall on openly licensed
+  material. Access item 4 in §5 should read **openly licensed, technically blocked** — a browser, not
+  an entitlement.
+
+**Revised verified-trial trajectory: 2 → 6 is now plausible** (PROMOVI, teprasiran, PHYOX3, ENVISION
+promotable on evidence in hand, subject to German), not the 2 → 5 I projected.
+
+**Method note I am keeping.** Verifying each cross-check before acting was right — the same agent's
+earlier, vaguer version of this claim was correctly held back, and a different agent's "green OA"
+leads for mongersen (Tor Vergata, login wall) and donidalorsen (Jagiellonian, metadata-only record)
+are genuinely false. The error was not scepticism; it was reporting "unsubstantiated" when the honest
+statement was "I could not test the route that matters, because OpenAlex was rate-limited."
 
 ---
 
@@ -100,7 +171,7 @@ items in my October 1 reply.
 | # | Proposal | Disposition |
 |---|---|---|
 | 1 | Prioritize the 67 human laboratory rows; investigate `10.2131/jts.51.75` | **ACCEPT — substantially executed** |
-| 2 | Verify the remaining 10 clinical studies, starting with teprasiran / PHYOX3 / PROMOVI | **ACCEPT — 3 of 10 executed** |
+| 2 | Verify the remaining 10 clinical studies, starting with teprasiran / PHYOX3 / PROMOVI | **ACCEPT — 4 of 10 executed** (3 here + ENVISION in Revision B) |
 | 3 | Reconsider MSR066 | **ACCEPT — and the defect is four times larger than stated** |
 | 4 | Per-dimension bridge audit; recover the 10 missing sequences | **MODIFY — audit already complete; recovery target is not 10** |
 | 5 | Correct access classifications | **ACCEPT — executed, and it immediately paid off** |
@@ -162,7 +233,7 @@ figures are the quantitative locus (Figs 3–6) and figure-level extraction from
 anchor-check discipline we use for patent tables; I did not attempt it in the time available and
 would rather do it correctly than quickly.
 
-### P2 — Clinical study verification — ACCEPT, 3 of 10 executed
+### P2 — Clinical study verification — ACCEPT, 3 of 10 executed *(4 of 10 after Revision B)*
 
 All three leads named in my October 1 reply were retrieved via the Europe PMC REST `fullTextXML`
 endpoint and read in full. Checksums and HTTP evidence in `research_staging/logs/acquisition_manifest.json`;
@@ -206,7 +277,7 @@ serious adverse events including acute kidney injury, kidney failure and pyelone
 investigator-assessed as unrelated to nedosiran, because kidney stones and nephrocalcinosis are PH1
 disease manifestations.
 
-*Not performed:* the remaining 7 of 10. Four have no PMC deposit at all (donidalorsen, ENVISION
+*Not performed:* the remaining 7 of 10 *(6 after Revision B — ENVISION was retrieved)*. Four have no PMC deposit at all (donidalorsen, ENVISION
 givosiran, mongersen, OCEANa-DOSE olpasiran — all NEJM); two are in Europe PMC but not open access
 and are bot-walled (NEURO-TTR inotersen `PMC12611561`, van Poelgeest SPC5001 `PMC4693495`); one
 (vupanorsen) has its article free but its renal numbers in a 403 supplement. See §5.
@@ -356,7 +427,7 @@ Separating **Beebop-recounted**, **my source-verified**, and **curator/reported*
 **Remaining qualification blockers:** (a) all grades provisional pending German; (b) no clinical row
 survives as a modeling negative if §P3 is accepted; (c) per-position chemistry is source-resolved for
 only part of the roster; (d) tested-batch identity is nowhere established — reference identity is not
-batch identity; (e) 7 of 10 identified trials unread.
+batch identity; (e) 7 of 10 identified trials unread *(6 after Revision B)*.
 
 ## 3. Prioritized acquisition plan
 
@@ -453,10 +524,10 @@ was checked, and no purchase, subscription or credential was used.
 | Jaffe GJ, Wykoff CC, McCaleb ML, Barrett TD, Frazer-Abel A, Norris D, et al. (2026). *GOLDEN: Efficacy and Safety of Complement Factor B Antisense, Sefaxersen, in Geographic Atrophy.* Ophthalmol Sci | `PMC13553563` | resource 2 this round | full text + safety tables | non-renal-indication renal safety | not yet attempted | — | open access | **1** |
 | Sato T, Fukase H, Ishida T, Karasawa A (2026). *A First-in-Japanese Phase 1, Double-Blind, Placebo-Controlled, Parallel-Cohort Study of Sefaxersen.* Clin Pharmacol Drug Dev | `PMC13555670` (Europe PMC marks this record a duplicate pending deletion; the sibling record is PMID 42713733, `OA=N`) | resource 2 | full text | renal safety, phase 1 | not yet attempted | — | open access | 2 |
 | Sefaxersen phase 2 IgAN | PMID 41443406, Kidney International | resource 2 | article + supplement | IgAN renal endpoints | not yet attempted | — | `OA=N, inEPMC=N` — entitlement **unverified** | 3 |
-| Vupanorsen TRANSLATE-TIMI 70 **supplement** | `10.1161/CIRCULATIONAHA.122.059266` | Oct-1 reply | **supplement only** | quantitative renal safety for `MSR079` | publisher suppl; PMC bin | **403 / 404** | **technical block** on a free supplement | 4 |
+| Vupanorsen TRANSLATE-TIMI 70 **supplement** | `10.1161/CIRCULATIONAHA.122.059266` | Oct-1 reply | **supplement only** | quantitative renal safety for `MSR079` | publisher suppl; PMC bin; EPMC supplementaryFiles (not OA) | **403 / 404** | **openly licensed (CC BY-NC-ND 4.0 per Crossref), technically blocked** — see Revision B | 4 |
 | NEURO-TTR inotersen | `PMC12611561`; `10.1056/NEJMoa1716793` | register | article + renal AE tables | our top signal | EPMC XML; PMC HTML; europepmc HTML | XML refused; **reCAPTCHA**; Cloudflare | in EPMC, `OA=N`; **technical block** | 5 |
 | van Poelgeest SPC5001 | `PMC4693495`; `10.1111/bcp.12738` | register | article | SPC5001 human data | same three routes | same | in EPMC, `OA=N`; **technical block** | 6 |
-| ENVISION givosiran | `10.1056/NEJMoa1913147` | register | article + supplement | trial verification | EPMC search; Semantic Scholar `openAccessPdf`; CORE | **no PMC deposit**; the advertised open PDF is a publisher **Cloudflare 403**; CORE 403 | missing deposit + technical block; paywall **unverified** | 7 |
+| ENVISION givosiran | `10.1056/NEJMoa1913147`; NCT03338816 | register; route from cross-check | article | trial verification | EPMC (no deposit); Semantic Scholar PDF (Cloudflare 403); CORE 403; **King's Research Portal 200** | **RETRIEVED — see Revision B** | free at institutional repository (version of record) | **done** |
 | Donidalorsen phase 3 | `10.1056/NEJMoa2402478` | register | article + supplement | trial verification | EPMC search | no PMC deposit | missing deposit; paywall unverified | 8 |
 | OCEANa-DOSE olpasiran | `10.1056/NEJMoa2211023` | register | article + supplement | trial verification | EPMC search | no PMC deposit | missing deposit; paywall unverified | 9 |
 | Mongersen phase 2 | `10.1056/NEJMoa1407250` | register | article | trial verification | EPMC search | no PMC deposit | missing deposit; paywall unverified | 10 |

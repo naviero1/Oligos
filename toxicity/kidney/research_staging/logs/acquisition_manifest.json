@@ -82,5 +82,24 @@
   "sha256": "4512027f3a140fd516b1888d74cb15913cfc4245e967bd53c4c6064275f0efcc",
   "http_code": "200",
   "retrieved_utc": "2026-10-02"
+ },
+ {
+  "slug": "envision_givosiran",
+  "pmcid": null,
+  "study_key": "ENVISION",
+  "doi": "10.1056/NEJMoa1913147",
+  "pmid": null,
+  "nct": "NCT03338816",
+  "source_url": "https://kclpure.kcl.ac.uk/ws/files/148225585/nejmoa1913147.pdf",
+  "landing_url": "https://kclpure.kcl.ac.uk/",
+  "original_filename": "nejmoa1913147.pdf",
+  "title": "Phase 3 Trial of RNAi Therapeutic Givosiran for Acute Intermittent Porphyria",
+  "journal": "New England Journal of Medicine 382(24):2289, 2020",
+  "license_note": "King's Research Portal institutional repository; document version 'Publisher's PDF, also known as Version of record'. No PMC deposit exists; the publisher site and aggregator-advertised PDF are Cloudflare-blocked",
+  "why": "4th retrievable trial; richest renal content of the ten; verifies MSR009/MSR010 givosiran rows",
+  "bytes": 621752,
+  "sha256": "6c54ccd57669ede6d3c339601d2da45ce3e9b96e892731863a87a9b9b50e9dce",
+  "http_code": "200",
+  "retrieved_utc": "2026-10-03"
  }
 ]
