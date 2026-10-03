@@ -109,7 +109,7 @@ deterministic too.
 | `_shared/cns/docs/SCORING_INSTRUMENTS.md` | 8,404 | `d31632c37512289a` |
 | `_shared/cns/docs/TRANSLATIONAL_PAIRING.md` | 1,890 | `50330fae22b351d0` |
 | `_shared/cns/docs/TRIAL_REGISTER.md` | 5,182 | `d7f210b2d97db19f` |
-| `_shared/cns/docs/VALIDATION_MANIFEST.md` | 7,042 | `061921a88cfbef76` |
+| `_shared/cns/docs/VALIDATION_MANIFEST.md` | 7,117 | `0ff9714ff467e8dd` |
 | `acute-neurotoxicity/data/measurements.csv` | 1,942,539 | `9d4c8980ba8eed1d` |
 | `acute-neurotoxicity/data/measurements_animal.csv` | 1,841,364 | `c97204e3eca3b13d` |
 | `acute-neurotoxicity/data/measurements_human.csv` | 101,796 | `cd702751bbb8bd11` |

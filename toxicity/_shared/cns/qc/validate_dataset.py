@@ -153,7 +153,9 @@ def main(as_json: bool = False) -> int:
     RETIRED = {"1,839": "superseded n_oligos", "2,065": "superseded n_measurements",
                "32,569": "superseded n_modification_rows", "2,058": "superseded acute rows",
                "26 checks": "superseded checks_total", "34 checks": "superseded checks_total",
-               "26 structural": "superseded checks_total"}
+               "26 structural": "superseded checks_total",
+               "56/87/40/57": "superseded grade distribution",
+               "Four mechanistically distinct": "superseded axis count"}
     HISTORY = ("CHANGES.md", "BEEBOP_", "ROCKSTEADY_")
     docroots = [ROOT, ROOT / "docs", endpoints.TOXICITY]
     stale = []

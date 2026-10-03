@@ -33,13 +33,21 @@ predictive model needs and what the public literature has not previously offered
    but a per-nucleotide table: position 1 is an LNA adenine, position 4 is a 2′-deoxy thymine,
    and so on, for all 32,898 positions.
 2. **Paired in vitro and in vivo readouts on the same molecules.** 181 oligonucleotides carry
-   both a rat primary-neuron calcium-oscillation score and a mouse acute tolerability score,
-   which is exactly the in-vitro-to-in-vivo extrapolation the challenge asks for.
-3. **The full severity range, including deliberate negative controls.** Grades 0/1/2/3 =
-   56/87/40/57. Thirteen sequence-matched G-free negative-control ASOs are included by design.
-4. **Four mechanistically distinct toxicity axes kept separate** rather than collapsed into one
+   both a rat primary-neuron calcium-oscillation score and a mouse acute tolerability score.
+   **Both sides are animal — rat in vitro to mouse in vivo, zero human rows.** It is a real
+   in-vitro-to-in-vivo bridge and it is *not* the one the challenge asks for, which requires
+   human cells on one side. No compound in this release carries both a human and an animal row;
+   see `docs/TRANSLATIONAL_PAIRING.md`.
+3. **The full severity range, including deliberate negative controls.** Module-wide grades
+   0/1/2/3 = **1,614 / 673 / 130 / 175**, but that total is dominated by clinical rows and
+   **1,539 of the grade-0 rows record that an event did *not* occur** in a trial arm. The animal
+   panel alone, which is where the graded severity range actually lives, is **56 / 81 / 37 / 54**.
+   Thirteen sequence-matched G-free negative-control ASOs (source H1) are included by design, and
+   are 13 of the module's 15 designated negative controls. **There are no positive controls.**
+4. **Eight mechanistically distinct axes kept separate** rather than collapsed into one
    "toxic/not" label — acute behavioural, acute neuronal excitability, late-onset
-   neurodegeneration, and three clinical axes.
+   neurodegeneration, human in vitro neural toxicity, three clinical axes, and one axis holding
+   human rows that measure uptake or off-target expression rather than injury.
 5. **Nothing invented.** No sequence and no number was ever filled from background knowledge.
    Where the literature is silent the field says `NOT_REPORTED`, and the completeness report
    counts those explicitly.
