@@ -7,10 +7,91 @@
 **Status:** RESEARCH ROUND. No validated data, label, grade, eligibility class, adjudication or model was changed.
 Acquired material is held in `research_staging/`, outside `data/`.
 
-Work actually performed this round: **4 primary sources retrieved and read in full** (3 trial reports
-+ German's routed human 3D-PTEC paper), **20/20 resources logged**, **36 trial registry records
-surfaced**, **1 sequence-recovery attempt completed with a null result**. Work proposed but not
-performed is marked as such throughout.
+Work actually performed this round: **6 primary sources retrieved and read in full** (3 trial reports,
+German's routed human 3D-PTEC paper, Moisan 2017 + its supplement, Crooke 2018), **20/20 resources
+logged**, **36 trial registry records surfaced**, **6 of 10 missing sequences recovered**. Work
+proposed but not performed is marked as such throughout.
+
+---
+
+## REVISION A — 2026-10-03
+
+**Two findings in §P4 below were wrong and are corrected here. The original text is left intact
+beneath, annotated, rather than edited away.**
+
+### A1. Sequence recovery: 6 of 10 recovered, not 0 — and my reasoning was the exact error I had just warned against
+
+§P4 states that the four Moisan AON sequences are "verified unpublished" because I read the paper in
+full and found zero nucleotide strings. **That conclusion was wrong.** The strings are absent from the
+article body because they are in **Table S2 of the supplement**, which the article itself points to:
+*"Sequences and backbone modifications are provided in Table S2."* I read the article and did not
+fetch the supplement — the precise article-versus-supplement distinction that §P5 of this very report
+argues for. The failure was mine, not the source's.
+
+The supplement is free: `europepmc.org/…/PMC5363415/supplementaryFiles` returns HTTP 200, 8.47 MB.
+Table S2's body is a **raster image with no text layer** — page 18 of `mmc1.pdf` yields 33 words, all
+caption and legend — so it defeats text extraction. Rendered at 400–600 dpi and read visually.
+
+Separately, `ISIS 113715` and `ISIS 104838` are in **Crooke 2018 Table 1**, machine-readable, with
+`<underline>` markup giving per-position 2′-MOE wings. **That source was already cited in our own
+`oligos.csv` as `OLG031`'s `design_source`.** I had searched for the compound names instead of reading
+the source our dataset already pointed at.
+
+| Oligo | Recovered sequence | Source |
+|---|---|---|
+| `OLG025` ISIS113715 | `GCTCCttccactgatCCTGC` (20 nt, PTP1B) | Crooke 2018 Table 1 |
+| `OLG026` ISIS104838 | `GCTGAttagagagagGTCCC` (20 nt, TNFA) | Crooke 2018 Table 1 |
+| `OLG041` AON-A | `mCGTcagtatgcgAATc` (16 nt, scramble control) | Moisan Table S2 |
+| `OLG042` AON-C | `GmCtgtgtgagcttGG` (15 nt, PCSK9) | Moisan Table S2 |
+| `OLG043` AON-D | `AATgctacaaaamCmCmCA` (16 nt, PCSK9) | Moisan Table S2 |
+| `OLG044` MYD88-E | `TAAggcaatcaagGTA` (16 nt, MyD88) | Moisan Table S2 |
+
+**Validation, because a wrong sequence is worse than a missing one.** The Crooke parse was checked
+against three sequences we already hold by an independent route: mipomersen and volanesorsen match
+base-for-base; pelacarsen matches after U→T normalisation, which incidentally exposes a **notation
+inconsistency in our own row** (`UGCUCCGTTGGTGCTUGUUC` mixes U and T for a DNA gapmer). The Moisan
+read is validated by row B, which reproduces `OLG002` SPC5001 exactly once methyl marks are stripped
+— independently confirming AON-B = SPC5001.
+
+Two bonus per-position chemistry upgrades fall out: Crooke supplies 5-10-5 wing encoding for
+`OLG006` mipomersen and `OLG005` volanesorsen, which our all-uppercase rows lack.
+
+**Revised coverage: 61/63 molecules (96.8%)**, not 55/63. The two genuinely remaining are `OLG014`
+and `OLG015` (Sandelius 2020, SAGE returns 403 on all three routes; `isOpenAccess=N`). `OLG030` and
+`OLG031` remain class aggregates and still should not sit in the denominator.
+
+All six are staged as **proposals pending German** in `research_staging/sequences_recovered_2026-10-02.csv`
+with per-row locus, retrieval route, extraction method and transcription confidence. **Nothing was
+written to `data/oligos.csv`.** The four Moisan transcriptions are marked `medium` confidence and
+want a second reader, since they came from an image; `OLG041`'s trailing residue is recorded as the
+lowercase `c` that is printed and is flagged.
+
+### A2. Bridge unit-match is 0/8, not 3/8 — the finding is stronger than I published
+
+The `unit shared 3/8` figure carried from my October 1 reply **does not reproduce**. Recomputed over
+the argmax rows that `human_animal_bridge.csv` actually names: **2/8 counting `NA` as a match, and
+0/8 excluding it.** The two apparent matches are `OLG012` and `OLG013`, both of which are `NA` on
+both sides — the absence of a unit, not agreement on one. My 3/8 came from widening to all rows for
+the oligo and counting `NA == NA`.
+
+Worse, **the one genuine endpoint match fails on units too.** `OLG008` compares `MSR018` human
+urinary A1M at **36.4 mg/L** against `MSR020` monkey urinary A1M at **21 fold_change** — same
+analyte, non-comparable scale. My reply also named the wrong human row for it (`MSR023`, an in-vitro
+uptake assay); the endpoint match actually comes from the clinical row `MSR018`.
+
+So the corrected bridge position: **1/8 share an endpoint, 5/8 share a route, 0/8 share a comparable
+unit, and the single endpoint match is not quantitatively comparable.** Zero of eight "paired"
+comparisons support a quantitative translational claim. That strengthens the recommendation to retire
+`comparison_type` rather than weakening it.
+
+**One consequence needs flagging to German and Oscar directly:** the only `animal_over_predicts` row
+in the entire bridge is `OLG042`, and `OLG042` fails endpoint, unit **and** route matching
+simultaneously — it is the worst-matched of the eight. `PRESENTATION.md` still headlines
+"animal tests over-predict human risk". **The most externally visible claim in the project rests on
+its least defensible comparison.** This is now the highest-priority documentation fix, ahead of the
+items in my October 1 reply.
+
+---
 
 ---
 
@@ -193,8 +274,10 @@ Note that `MSR040` (eteplirsen, DMD) is untouched by this rule and remains a mea
 ### P4 — Bridge audit and sequence recovery — MODIFY
 
 **The per-dimension bridge audit was completed and published on October 1**, before this request. Its
-verified figures: of 8 `paired_same_source` comparisons, **1/8 share a biological endpoint** (`OLG008`,
-human A1M/RAP uptake vs animal urinary A1M), 3/8 share a unit, 5/8 share a delivery route, 2/8
+verified figures: of 8 `paired_same_source` comparisons, **1/8 share a biological endpoint** (`OLG008`;
+the match is the clinical row `MSR018` vs `MSR020`, **not** the in-vitro A1M/RAP uptake row as my
+October 1 reply said), ~~3/8 share a unit~~ **0/8 share a comparable unit — see Revision A2**,
+5/8 share a delivery route, 2/8
 compare a monitoring assertion (`kidney_toxicity_monitored`) against an observed animal lesion, and
 the pairing test is **vacuous where grades tie at 0** because the argmax set becomes the whole row
 set. Recommendation stands: retire `comparison_type` in favour of per-dimension match flags and
@@ -203,15 +286,21 @@ analyte do not establish eight comparable translational pairs" — matches that 
 
 **Sequence recovery: the target is not ten. Recovered this round: zero. Honest breakdown:**
 
+> **SUPERSEDED BY REVISION A1 (2026-10-03).** Six of ten were recovered. The "verified unpublished"
+> finding below is wrong: the Moisan sequences are in the supplement's Table S2, which I did not
+> fetch. The table below is retained as the original record.
+
+
 | Count | Entries | Status |
 |---|---|---|
 | 2 | `OLG030` `GalNAc_siRNA_class_Janas`, `OLG031` `ASO_2MOE_class_human_pooled` | **Not molecules.** Class-level aggregates pooling observations across a chemistry class. They can never carry a sequence and should not sit in a sequence-coverage denominator. |
-| 4 | `OLG041` AON-A, `OLG042` AON-C, `OLG043` AON-D, `OLG044` MYD88-E | **Verified unpublished.** Moisan 2017 (`PMC5363415`) retrieved and read in full: it contains **zero** nucleotide strings of 12–25 nt. Proprietary Roche research AONs. Not an access barrier — the primary source does not publish them. |
-| 2 | `OLG025` ISIS113715, `OLG026` ISIS104838 | **Not recoverable from open literature.** Searched Europe PMC (44 and 41 hits); open-access hits are reviews naming the compounds without sequences. Remaining route: Ionis patent sequence listings. Not attempted this round. |
+| 4 | `OLG041` AON-A, `OLG042` AON-C, `OLG043` AON-D, `OLG044` MYD88-E | ~~**Verified unpublished.**~~ **WRONG — see Revision A1.** The article body contains zero nucleotide strings because the sequences are in supplementary Table S2, which is free and which I failed to fetch. All four recovered. |
+| 2 | `OLG025` ISIS113715, `OLG026` ISIS104838 | ~~**Not recoverable from open literature.**~~ **WRONG — see Revision A1.** Both are in Crooke 2018 Table 1, a source already cited in our own `oligos.csv`. Recovered. No patent search needed. |
 | 2 | `OLG014`, `OLG015` cEt tool/control ASOs | Source is Sandelius 2020 (PMID 33084520), not retrieved this round. Tool compounds; disclosure uncertain. |
 
-**Denominator correction:** sequence coverage should be reported as **55/63 molecules (87.3%)**, not
-55/65. Reporting 55/65 understates coverage by counting two aggregates as missing molecules.
+**Denominator correction:** sequence coverage should be reported over 63 molecules, not 65, because
+two roster entries are class aggregates. **Revised figure after Revision A1: 61/63 (96.8%).** The
+87.3% stated here is superseded.
 
 **Dedup check, unprompted and clean:** Moisan 2017 states *"a PCSK9-targeting LNA-AON drug (SPC5001,
 herein AON-B)"*. AON-B is SPC5001. Our roster handles this correctly — `OLG002` is SPC5001 with
