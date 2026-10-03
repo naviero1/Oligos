@@ -320,4 +320,211 @@ the highest-severity open item in this endpoint.
 
 ---
 
-**RESEARCH ROUND PARTIAL — PROPOSALS 3, 4, 5 REPORTED; 1, 2, 6 AND THE TWENTY-SOURCE LOG AWAIT OSCAR'S AUTHORIZATION**
+# Revision A — 2026-10-03
+
+Oscar authorized proposals **1, 2 and 6** after the sections above were published. This revision
+adds them without altering anything above. Research only; nothing ingested, no label or adjudication
+touched. **Three corrections to my own earlier statements are recorded below, two of them to claims I
+made twice.**
+
+## A. Proposal 1 — experiment-level reconstruction
+
+### A.1 Correction: the 6 supplement holds are Fucini 2012, not Goodchild and Valentin
+
+My 2026-10-01 reply (§P3) and Addendum A both stated that the 6 `HOLD_SUPPLEMENT` records gate
+Goodchild's 207-siRNA table and Valentin's 80-ASO matrix. **That is wrong.** All six are Fucini 2012:
+
+| Record | Paper | Oligo | `Remaining Action` (verbatim, truncated) |
+|---|---|---|---|
+| P06_001–006 | **P06 Fucini 2012** | β-gal 728 guide / passenger, β-gal control guide / passenger, ApoB guide / passenger | *"Retrieve Supplementary Table S1 and create one experiment-level row pe…"* |
+
+Goodchild (P14) and Valentin (P19) contribute **zero catalog records**, so last round's acquisitions
+add new sequences but **release no held record**. The retrieval that actually unblocks held records is
+**Fucini 2012 Supplementary Table S1**, and it is blocked — see §B.
+
+### A.2 Composition of the reconstruction targets, measured
+
+| Adjudication | n | Papers | With `Modification Positions` |
+|---|---:|---|---|
+| APPROVED_CORE_HUMAN | 23 | P15 Riera-Tur 17, P09 Jung 4, P18 Sioud 2 | **21 / 23** (P15 17/17, P09 4/4, P18 0/2) |
+| APPROVED_PATHWAY_CONTROL | 26 | P05 Forsbach 12, P02 Coch 7, P20 Vollmer 4, P07 Heil 3 | **0 / 26** |
+| APPROVED_AUXILIARY | 5 | P10 Kandimalla 5 | **0 / 5** |
+| HOLD_OUTCOME_EXTRACTION | 42 | P18 Sioud 30, P05 Forsbach 11, P02 Coch 1 | **0 / 42** |
+| HOLD_SUPPLEMENT | 6 | P06 Fucini 6 | **0 / 6** |
+
+So positional chemistry exists for **21 of the 54 approved records**, all from Riera-Tur and Jung.
+
+### A.3 All 42 outcome-extraction holds are figure-bound
+
+Grouping the holds by their own `Remaining Action` text:
+
+- **30** — *"Extract/digitize Figure 1 TNF-α and IL-6 values or source-defined qualitative result…"* (Sioud 2005)
+- **11** — *"Extract Figure 1/2 motif-series outcomes and exact assay condition."* (Forsbach 2008)
+- **1** — *"Extract exact strand-specific response from source figures or keep as identity-only sequence."* (Coch 2013)
+
+**42 of 42 require figure digitization. None can be reconstructed from text or tables.**
+
+### A.4 Modified disposition on proposal 1
+
+**MODIFIED, with a recommendation against its stated priority.** The proposal places highest value on
+reconstructing the approved human records and the 42 holds. The evidence argues otherwise: all 42
+holds need digitization, and 0 of 42 carry positional chemistry, so each reconstructed row would be a
+derived figure value attached to a construct of unverified chemistry — carrying two uncertainties
+into the primary training view. Per the validation memo, such values must be marked derived with
+method and uncertainty, and verified against representative figure points.
+
+By contrast **Yoshida 2024 Supplementary Table S1, already acquired, supplies ~39 oligo-linked
+numeric outcomes with mean, SD and n = 3 from a table**, needing no digitization, against constructs
+whose modification positions are stated in the paper's own figures. I recommend that as the first
+experiment-level package, with the 42 holds second and explicitly flagged as derived.
+
+The reconstruction schema itself (compound–strand–chemistry–dose–donor–assay–timepoint → separate
+numerical cytokine and receptor outcomes) is **accepted unchanged**; it is the right unit. German's
+existing decisions are preserved — nothing above changes an adjudication.
+
+## B. Proposal 2 — remaining acquisition, and a hard barrier
+
+**Fucini 2012 (10.1089/nat.2011.0334, PMID 22519815, PMCID PMC4047996).** Europe PMC lists
+`hasSuppl = Y` but the supplement request returns, verbatim:
+
+> `<errMsg>Article with id PMC4047996 is not open access one</errMsg>`
+
+and `PMC4047996/fullTextXML` returns HTTP 500. Both attempts were made on 2026-10-03.
+
+**Barrier classification: in PMC but outside the open-access subset.** This is *not* a confirmed
+publisher paywall and *not* a login gate — it is a reuse-licence restriction on a deposited
+manuscript. The PMC article page may still be human-readable; it is not machine-harvestable by the
+open route. **This is the single highest-value remaining file, because it is the only one that
+releases already-held records (6).** Requested from Oscar in §5 terms.
+
+Still outstanding from proposal 2: the **Goodchild 207-of-246 screened-subset mapping**, which needs
+the open-access article's figures read, not a new file.
+
+## C. Proposal 6 — cross-paper family overlap
+
+### C.1 Correction: I overstated leakage, twice, and Beebop's challenge is upheld
+
+Measured over all 142 catalog records on normalized sequence (non-alphabetic stripped, U→T):
+
+| Measure | Value |
+|---|---:|
+| Duplicate-sequence clusters (>1 record) | 12, covering 48 records |
+| …of those, spanning **more than one paper** | **1**, covering **7 records** |
+| Records in a cross-paper exact cluster | **7 / 142** |
+| Cross-paper near-neighbour pairs (≥12 nt shared, not exact) | **2**, involving **3 records** |
+| Distinct paper pairs linked by sequence similarity | **1** (P05 Forsbach ↔ P07 Heil, 18 nt and 12 nt) |
+
+**Eleven of the twelve duplicate clusters are within a single paper.** A correctly implemented
+leave-one-paper-out split therefore holds them on one side of the fold, exactly as the request
+states. My 2026-10-01 reply claimed within-paper families defeat LOPO (withdrawn in Addendum A), and
+Addendum A then claimed cross-paper overlap was large, citing 23 of 54 approved rows. **That second
+claim is also wrong**: the 23 figure counts approved records sharing a sequence with any other
+approved record, which is predominantly within-paper. The honest cross-paper magnitude is **~10 of
+142 records**. LOPO is largely intact and I withdraw the stronger framing.
+
+### C.2 The one cross-paper cluster is an identity defect, not a split defect
+
+`TCGTCGTTTTGTCGTTTTGTCGTT` (24 nt) — 7 records across three papers, **5 of them `APPROVED_CORE_HUMAN`**:
+
+| Record | Paper | Oligo name | Adjudication | Direction |
+|---|---|---|---|---|
+| P02_001 | Coch 2013 | CpG 2006 | APPROVED_PATHWAY_CONTROL | Agonist/response-positive |
+| P15_026 | Riera-Tur 2024 | ODN2006 | APPROVED_CORE_HUMAN | Control/unknown |
+| P15_027 | Riera-Tur 2024 | **ODN2006mCflanks** | APPROVED_CORE_HUMAN | Agonist/response-positive |
+| P15_028 | Riera-Tur 2024 | **ODN2006LNA** | APPROVED_CORE_HUMAN | Unknown |
+| P15_029 | Riera-Tur 2024 | **ODN2006fmC** | APPROVED_CORE_HUMAN | Agonist/response-positive |
+| P15_030 | Riera-Tur 2024 | **ODN2006fmCLNA** | APPROVED_CORE_HUMAN | Inert/low-response |
+| P20_001 | Vollmer 2004 | ODN2006 | APPROVED_PATHWAY_CONTROL | Agonist/response-positive |
+
+Four different direction labels sit on one normalized string. **That divergence is correct biology** —
+methylation and LNA context changing TLR9 activation is Riera-Tur's central finding. The defect is
+that normalization **erases the chemistry that explains the divergence**: five chemically distinct
+variants collapse to the parent's string. A model keyed on normalized sequence cannot learn the
+effect; a leakage check keyed on normalized sequence would wrongly merge them and discard real
+signal.
+
+This is the same failure the sweep found at P10_001/P10_002 (`*G1` vs `*G2` erased by
+normalization). It is an **identity and feature-representation defect**, and it reaches
+`APPROVED_CORE_HUMAN` rows. Recommend the leakage grouping key be the **chemistry-resolved**
+construct, not the normalized base sequence, and that `Normalized Sequence` be marked explicitly as
+a search aid that is not an identity.
+
+### C.3 Alharbi as one study — restated
+
+Nature Immunology 27:762–775 (2026), PMID 41667621, PMCID PMC13043311 ≡ bioRxiv 2024.07.25.605091 —
+**one study, counted once**. The unresolved question is which Alharbi paper the affected rows cite
+(§4.3 above: NAR 2020, PMID 32544249, remains the likelier intended source). That is German's call.
+
+## D. Twenty-source coverage log
+
+Queried 2026-10-03. **Blocked services are not marked searched.**
+
+| # | Source | Query | Outcome | Hits | Barrier |
+|---:|---|---|---|---:|---|
+| 1 | PubMed | `antisense oligonucleotide TLR9 inflammatory human` | searched | 12 | — |
+| 2 | Europe PMC | `oligonucleotide immunostimulation TLR9 cytokine human PBMC` | searched | 59 | — |
+| 3 | OpenAlex | same | **BLOCKED** | — | HTTP 429 after 4 attempts; verbatim *"Insufficient budget. This request has no API key"* — quota/key, not a paywall |
+| 4 | Semantic Scholar | same | **BLOCKED** | — | HTTP 429, unauthenticated tier |
+| 5 | ResearchRabbit | same | **NOT SEARCHED** | — | site reachable (52 kB); no public search API, interactive account required |
+| 6 | Undermind | same | **NOT SEARCHED** | — | reachable (105 kB); no public API |
+| 7 | Elicit | same | **NOT SEARCHED** | — | reachable (2.6 MB); no public API |
+| 8 | Consensus | same | **NOT SEARCHED** | — | reachable (28 kB); no public API |
+| 9 | GEO | `oligonucleotide AND (TLR9 OR immunostimulation)` | searched | 667 | counts unreliable, see D.1 |
+| 10 | SRA | same | searched | 2 | — |
+| 11 | PRIDE | `oligonucleotide` | searched (page 0) | 5 returned | endpoint does not expose a total |
+| 12 | ProteomeXchange | `oligonucleotide` | searched | **0** | no endpoint-relevant datasets |
+| 13 | BioStudies | `oligonucleotide TLR9` | searched | 16,306 | keyword match, not leads — see D.1 |
+| 14 | ArrayExpress (BioStudies) | `oligonucleotide TLR9` | searched | 1,005 | as above |
+| 15 | ClinicalTrials.gov | `antisense oligonucleotide inflammation` | searched | 15 | — |
+| 16 | Comparative Toxicogenomics DB | `chem=oligodeoxynucleotide; report=genes_curated` | **BLOCKED** | — | HTTP 302 redirect loop even following redirects |
+| 17 | ICE (NICEATM) | `oligonucleotide` | **NOT SEARCHED** | — | reachable; access is interactive UI / bulk download, no documented public query API found |
+| 18 | ToxCast / CompTox (CTX API) | chemical search `oligonucleotide` | **BLOCKED** | — | requires an `x-api-key` |
+| 19 | Zenodo | `oligonucleotide TLR9` | searched | 604 | keyword match, see D.1 |
+| 20 | Dryad | `oligonucleotide TLR9` | searched | **0** | — |
+
+**Tally: 11 of 20 genuinely searched, 4 blocked, 5 have no public query API.** No subscription was
+purchased or assumed; no credential was requested. Per the request, a search-product subscription
+would not unlock publisher content and none was sought.
+
+### D.1 The archive hit counts are tokenizer artefacts, not leads — verified
+
+A targeted construct-alias pass (ISIS 353512, CPG 7909, PF-3512676, ODN2006, SECA141, SY-ODN18,
+ISIS 104838, agatolimod) across GEO, SRA, BioStudies, Zenodo and PubMed appeared to return deposit
+hits. **I spot-checked them and they are false positives.** GEO's query translation for
+`"SY-ODN18"` is `SY[All Fields]` — 1,250 hits, whose top records are *Drosophila* midgut single-cell
+RNA-seq, an E. coli phage sRNA study and HS-SY-II synovial sarcoma cells. `"ISIS 353512"` translates
+to `ISIS[All Fields]` — 19 hits, top records on iPSC trophoblast differentiation and
+monoacylglycerol acyltransferase 1.
+
+**Phrase search is not honoured by these endpoints, so no deposit was confirmed endpoint-relevant,
+and no raw hit count in the table above should be read as an opportunity.** Unknown is not zero: a
+relevant deposit may exist and would need either exact-accession search from each priority paper's
+data-availability statement, or interactive search. That work is not done.
+
+## E. Open questions
+
+For **German** (scientific adjudication):
+
+1. **The ODN2006 series (§C.2).** Should the five chemistry variants keep one normalized sequence,
+   and may `ODN2006fmCLNA` stand as `Inert/low-response` while its parent is `Agonist`? Related:
+   P10_001/P10_002 (`*G1` vs `*G2`) collapse the same way.
+2. **The four reporter-cell negatives** (Addendum A §A2: P15_031, P15_032, P15_035, P15_036) remain
+   the highest-severity open item in this endpoint, unchanged by this round.
+3. **Which Alharbi paper** the affected rows cite — NAR 2020 or Nature Immunology 2026 (§4.3).
+4. **Digitized figure values**: acceptable for primary training rows at all, given that 0 of the 42
+   holds carry positional chemistry?
+5. **Reporter-line percentages** (Yoshida, normalized to SY-ODN18 = 100): may they sit in the same
+   outcome field as PBMC cytokine measurements, or do they need a separate normalization-basis field?
+
+For **Oscar** (implementation and scope):
+
+6. **Fucini 2012 Supplementary Table S1** — the only file that releases held records; no open route.
+7. Whether to attempt the 9 unsearched or blocked sources via routes this environment lacks
+   (API keys for OpenAlex / Semantic Scholar / ToxCast; interactive accounts for ResearchRabbit,
+   Undermind, Elicit, Consensus, ICE).
+8. Whether to spend effort on exact-accession archive searches from each priority paper's
+   data-availability statement, given that the keyword pass produced nothing usable.
+
+---
+
+**REVISION A COMPLETE — PROPOSALS 1, 2, 6 AND THE TWENTY-SOURCE LOG REPORTED; THREE SELF-CORRECTIONS RECORDED; AWAITING GERMAN'S ADJUDICATION AND OSCAR'S IMPLEMENTATION AUTHORIZATION**

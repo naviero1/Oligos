@@ -1,0 +1,253 @@
+[
+ {
+  "n": 1,
+  "source": "PubMed",
+  "query": "antisense oligonucleotide TLR9 inflammatory human",
+  "date": "2026-10-03",
+  "hits": 12,
+  "ids": [
+   "39155024",
+   "36355073",
+   "35976085",
+   "35848907",
+   "29948918"
+  ],
+  "outcome": "searched",
+  "barrier": null
+ },
+ {
+  "n": 2,
+  "source": "Europe PMC",
+  "query": "oligonucleotide immunostimulation TLR9 cytokine human PBMC",
+  "date": "2026-10-03",
+  "hits": 59,
+  "ids": [
+   "42724647",
+   "41685175",
+   "42213833",
+   "40027547",
+   "40708199"
+  ],
+  "outcome": "searched",
+  "barrier": null
+ },
+ {
+  "n": 3,
+  "source": "OpenAlex",
+  "query": "oligonucleotide immunostimulation TLR9 cytokine human PBMC",
+  "date": "2026-10-03",
+  "hits": null,
+  "ids": [],
+  "outcome": "BLOCKED",
+  "barrier": "HTTP 429 rate limit after 3 attempts: HTTP Error 429: Too Many Requests"
+ },
+ {
+  "n": 4,
+  "source": "Semantic Scholar",
+  "query": "oligonucleotide immunostimulation TLR9 cytokine human PBMC",
+  "date": "2026-10-03",
+  "hits": null,
+  "ids": [],
+  "outcome": "BLOCKED",
+  "barrier": "HTTP 429 rate limit after 3 attempts (unauthenticated tier): HTTP Error 429: "
+ },
+ {
+  "n": 5,
+  "source": "ResearchRabbit",
+  "query": "oligonucleotide immunostimulation TLR9 cytokine human PBMC",
+  "date": "2026-10-03",
+  "hits": null,
+  "ids": [],
+  "outcome": "NOT SEARCHED",
+  "barrier": "reachable (52107B) but no public search API; interactive account required"
+ },
+ {
+  "n": 6,
+  "source": "Undermind",
+  "query": "oligonucleotide immunostimulation TLR9 cytokine human PBMC",
+  "date": "2026-10-03",
+  "hits": null,
+  "ids": [],
+  "outcome": "NOT SEARCHED",
+  "barrier": "reachable (104827B) but no public search API; interactive account required"
+ },
+ {
+  "n": 7,
+  "source": "Elicit",
+  "query": "oligonucleotide immunostimulation TLR9 cytokine human PBMC",
+  "date": "2026-10-03",
+  "hits": null,
+  "ids": [],
+  "outcome": "NOT SEARCHED",
+  "barrier": "reachable (2564703B) but no public search API; interactive account required"
+ },
+ {
+  "n": 8,
+  "source": "Consensus",
+  "query": "oligonucleotide immunostimulation TLR9 cytokine human PBMC",
+  "date": "2026-10-03",
+  "hits": null,
+  "ids": [],
+  "outcome": "NOT SEARCHED",
+  "barrier": "reachable (28499B) but no public search API; interactive account required"
+ },
+ {
+  "n": 9,
+  "source": "GEO",
+  "query": "oligonucleotide AND (TLR9 OR immunostimulation)",
+  "date": "2026-10-03",
+  "hits": 667,
+  "ids": [
+   "200343897",
+   "200333224",
+   "200341347",
+   "200319537",
+   "200319406"
+  ],
+  "outcome": "searched",
+  "barrier": null
+ },
+ {
+  "n": 10,
+  "source": "SRA",
+  "query": "oligonucleotide AND (TLR9 OR immunostimulation)",
+  "date": "2026-10-03",
+  "hits": 2,
+  "ids": [
+   "21367476",
+   "21367475"
+  ],
+  "outcome": "searched",
+  "barrier": null
+ },
+ {
+  "n": 11,
+  "source": "PRIDE",
+  "query": "oligonucleotide",
+  "date": "2026-10-03",
+  "hits": 5,
+  "ids": [
+   "PXD082484",
+   "PAD000055",
+   "PAD000053",
+   "PAD000050",
+   "PXD079777"
+  ],
+  "outcome": "searched (page 0; total not exposed by endpoint)",
+  "barrier": null
+ },
+ {
+  "n": 12,
+  "source": "ProteomeXchange",
+  "query": "oligonucleotide",
+  "date": "2026-10-03",
+  "hits": 0,
+  "ids": [],
+  "outcome": "searched \u2014 0 results",
+  "barrier": "no endpoint-relevant datasets returned"
+ },
+ {
+  "n": 13,
+  "source": "BioStudies",
+  "query": "oligonucleotide TLR9",
+  "date": "2026-10-03",
+  "hits": 16306,
+  "ids": [
+   "S-EPMC2978577",
+   "S-EPMC12148431",
+   "S-EPMC3309554",
+   "S-EPMC6880482",
+   "S-EPMC8241214"
+  ],
+  "outcome": "searched",
+  "barrier": null
+ },
+ {
+  "n": 14,
+  "source": "ArrayExpress (BioStudies)",
+  "query": "oligonucleotide TLR9",
+  "date": "2026-10-03",
+  "hits": 1005,
+  "ids": [
+   "E-GEOD-78858",
+   "E-GEOD-48781",
+   "E-GEOD-70429",
+   "E-MTAB-8025",
+   "E-GEOD-16465"
+  ],
+  "outcome": "searched",
+  "barrier": null
+ },
+ {
+  "n": 15,
+  "source": "ClinicalTrials.gov",
+  "query": "antisense oligonucleotide inflammation",
+  "date": "2026-10-03",
+  "hits": 15,
+  "ids": [
+   "NCT06332677",
+   "NCT04549922",
+   "NCT01743768",
+   "NCT06856252",
+   "NCT01554319"
+  ],
+  "outcome": "searched",
+  "barrier": null
+ },
+ {
+  "n": 16,
+  "source": "Comparative Toxicogenomics DB",
+  "query": "chem=oligodeoxynucleotide",
+  "date": "2026-10-03",
+  "hits": null,
+  "ids": [],
+  "outcome": "ERROR",
+  "barrier": "HTTP Error 302: Moved Temporarily"
+ },
+ {
+  "n": 17,
+  "source": "ICE (NICEATM)",
+  "query": "oligonucleotide",
+  "date": "2026-10-03",
+  "hits": null,
+  "ids": [],
+  "outcome": "NOT SEARCHED",
+  "barrier": "site reachable (2135B); data access is via interactive UI/bulk download, no documented public query API found"
+ },
+ {
+  "n": 18,
+  "source": "ToxCast / CompTox (CTX API)",
+  "query": "chemical search: oligonucleotide",
+  "date": "2026-10-03",
+  "hits": null,
+  "ids": [],
+  "outcome": "BLOCKED",
+  "barrier": "CTX API requires an x-api-key; <urlopen error Tunnel connection failed: 502 Bad G"
+ },
+ {
+  "n": 19,
+  "source": "Zenodo",
+  "query": "oligonucleotide TLR9",
+  "date": "2026-10-03",
+  "hits": 604,
+  "ids": [
+   "1000130",
+   "23059595",
+   "14822524",
+   "14659854",
+   "4768307"
+  ],
+  "outcome": "searched",
+  "barrier": null
+ },
+ {
+  "n": 20,
+  "source": "Dryad",
+  "query": "oligonucleotide TLR9",
+  "date": "2026-10-03",
+  "hits": 0,
+  "ids": [],
+  "outcome": "searched",
+  "barrier": null
+ }
+]
