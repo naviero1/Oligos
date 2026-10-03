@@ -4,6 +4,16 @@ Review identifier: `2026-10-01/hepatic`.
 Date: October 2, 2026. Status: **REVIEW ONLY — NO CHANGES MADE**.
 Reply location (proposed): `claude/amazing-galileo-rwiv95:toxicity/hepatic/ROCKSTEADY_REVIEW_REPLY_2026-10-01.md`.
 
+## Revision A — 2026-10-03: three corrections to this reply
+
+Oscar authorized retrieval of Sewing 2016 and a per-source licence check. Both were performed; the work corrected three statements made below. The original wording is struck through or replaced inline and marked **[Rev A]**; nothing else in this reply changes, and no finding, disposition or work package is affected.
+
+1. **Sewing 2016 Table 1 holds 7 compounds, not 9.** Verified visually from the publisher's own high-resolution render, as Beebop's proposal 2 required. The sequences are now read character by character and are no longer unverified — §1.2, §3 and §6/A2 are corrected accordingly, and access request A2 is **withdrawn as resolved**.
+2. **The "1–30 µM" range belongs to the mouse assay, not the human one.** The paper states that range as the minimal assay definition in primary *mouse* hepatocytes, and separately reports that human cells gave weaker signals and "required higher concentrations". The human concentrations sit in Fig 8A, which I have not yet read. No human concentration range is asserted.
+3. **Hagedorn 2013's licence is unresolved, not absent.** I stated it carries no Creative Commons grant. Europe PMC's record for `PMC3760025` returns `license: cc by` while simultaneously reporting `isOpenAccess: N`, and the article PDF footer carries no CC notice. Three signals, no agreement. The earlier "derived features only" instruction is withdrawn pending a publisher check; it is not replaced by a redistribution permission.
+
+A material finding also arrived with this work and is recorded here rather than argued: Sewing's Table 1 ALT is mouse in vivo at **5 × 15 mg/kg over 2 weeks** — the Hagedorn/Dieckmann regimen — and the same 7 compounds were then run in **mouse and human primary hepatocytes**. Four of the seven (SSO 32, 33, 37, 43) match Dieckmann's LNA32, LNA33, LNA37 and LNA43 character for character. That is a sequence-matched human-in-vitro ↔ animal-in-vivo pairing inside one CC-BY source. It is reported in full in the 2026-10-02 research report, not here.
+
 ## 0. Baseline reviewed
 
 | | |
@@ -61,7 +71,9 @@ Four reconciliation items found in the supplement, all of which must be settled 
 3. **A controlled-vocabulary defect in the source.** The classification column spells the negative class two ways: `No Lesions` ×23 and `NoLesions` ×2, against `Lesions` ×55. Normalised: 25 / 55. Any naive group-by produces three classes from two.
 4. **The 71-compound modelling set cannot be reconstructed exactly.** The strict-3-8-3 subset is 75 rows carrying 51 `Lesions` and 24 non-lesion, against the paper's stated "20 non-hepatotoxic sequences and 51 sequences annotated with liver lesions". **4 non-lesion compounds were excluded from the published model by an undocumented criterion.** Also, the `Target` column reads `ApoC3` 53, `GR` 20, `ApoB` 1, `None` 6 — **no `Crtc2` at all**, though the paper's text names "human Apoc3, Crtc2 or GR". Both need resolving against the source before any modelling claim; neither is a reason to delay ingestion of the measurements.
 
-For human laboratory systems, the plan should name **Sewing et al. 2016** (*PLoS One* 11:e0159431, `PMC4956313`, CC-BY) — cryopreserved human hepatocytes, 9 LNA-ASOs, gymnotic (free-uptake) delivery, 1–30 µM, 3 days, LDH and ATP readouts, position-specific chemistry in Table 1. It is the only open-access source combining *human* liver cells with per-sequence chemistry and is named nowhere in the Sept-30 package. **Its sequences are not yet verified character-by-character** — Table 1 is served as a bitmap and the PMC table route returned a browser check. I am not asserting its sequence content.
+For human laboratory systems, the plan should name **Sewing et al. 2016** (*PLoS One* 11:e0159431, `PMC4956313`, CC-BY) — cryopreserved human hepatocytes (BioreclamationIVT), gymnotic (free-uptake) delivery, 3 days, LDH and ATP readouts, position-specific chemistry in Table 1. It is the only open-access source combining *human* liver cells with per-sequence chemistry and is named nowhere in the Sept-30 package.
+
+**[Rev A, 2026-10-03]** Three corrections to the paragraph above as originally written. (a) Table 1 carries **7** compounds (SSO 32, 33, 35, 36, 37, 43, 47), not the 9 first reported. (b) The "1–30 µM" range I attached to this source is the paper's minimal assay definition for primary **mouse** hepatocytes; the human arm is reported only as requiring higher concentrations, with values in Fig 8A, unread. (c) The sequences are **no longer unverified** — Table 1 was retrieved as the publisher's 1572×623 render plus the original TIFF and read visually at 2× upscale, per Beebop's proposal 2. Its notation is the most complete of any hepatic source held: lowercase = DNA, capitals = **beta-oxy** LNA (resolving the stereochemistry Dieckmann leaves unstated), ᵐC = methylated cytosine, subscript s = phosphorothioate linkage — sugar, per-linkage backbone and base modification all specified per position.
 
 ### Suggestion 3 — Investigate the Hagedorn 2013 supplement and the lineage of reused compound panels
 
@@ -80,7 +92,7 @@ On the supplement, the named acquisition target is the wrong file, and this reti
 - **S1 is the 25-category histopathology scoring scheme, not per-oligo scores.** The article cites it in the Histopathology methods: sections were "scored on 25 categories between 0 … and 3 (Supplementary Table S1)". The remaining files are the NMRI vs C57BL/6J strain comparison (S2/S3), the dinucleotide random-forest encodings (S4), the 90 PTEN redesigns (S5) and confirmed redesigns (S6).
 - **The 236-compound per-oligo table was never published.** It is not in the five PDFs, and it is not in the supplements. This is not a blocked acquisition; it is a non-existent one. `toxicity/hepatotoxicity.md` §3 names S1 as "the acquisition target" — that should be corrected and the item removed from the plan.
 - Two further dossier statements are wrong and cut the other way: Hagedorn **does** publish sequences — Figure 4c carries 4 compounds (`seth`, `r1`–`r3`) with ALT, legend "LNA shown in upper-case letters, DNA in lower-case" — invisible to the `[ACGTacgt]{12,}` text-layer sweep because it is a figure graphic. And Hagedorn **does** report purification and characterization method (IEX-HPLC, UPLC purity >85% as a batch pooling criterion, LC-MS for identity and purity), which is more than any other hepatic source provides and which nobody recorded.
-- Hagedorn 2013 carries **no Creative Commons grant** (Mary Ann Liebert). Derived features only. Note that Hagedorn **2022**, in the same journal, *is* CC-BY 4.0 — same journal is not same terms.
+- ~~Hagedorn 2013 carries **no Creative Commons grant** (Mary Ann Liebert). Derived features only.~~ **[Rev A, 2026-10-03: withdrawn.]** Hagedorn 2013's licence is **unresolved**, not absent. Europe PMC's record for `PMC3760025` returns `license: cc by` while reporting `isOpenAccess: N`, and the article PDF footer carries no CC notice — three signals that do not agree. The publisher's own page has not been checked. Neither "derived features only" nor a redistribution permission is established; the class stays open. Note that Hagedorn **2022**, in the same journal, *is* CC-BY 4.0 — same journal is not same terms, which is the reason this one needs checking rather than inferring.
 
 ### Suggestion 4 — Separation of measured liver injury, enzyme changes, efficacy-related effects, nonspecific adverse events, and background disease; no kidney grades; no liver negative from silence
 
@@ -104,7 +116,7 @@ Revised order, with the realistic first qualified subset being **Burdick alone**
 | Rank | File | Why it is first | Cost |
 |---|---|---|---|
 | 1 | Burdick 2014 supplement | 80 compounds, 70 numeric ALT, per-position HELM chemistry, CC-BY | **zero — already retrieved** |
-| 2 | Sewing 2016 Table 1 | only open-access *human* liver system with per-sequence chemistry | needs a browser (see §6) |
+| 2 | Sewing 2016 Table 1 | only open-access *human* liver system with per-sequence chemistry | ~~needs a browser (see §6)~~ **[Rev A] retrieved and read — zero** |
 | 3 | Stanton 2012 | the only route to purity for all 80 Burdick compounds | confirmed paywall (see §6) |
 | 4 | Hagedorn S5/S6 | redesign pairs; free on PMC | zero, low value |
 | 5 | Vupanorsen `PMC9047643` | kidney-anchored, liver relevance unestablished | zero |
@@ -132,7 +144,7 @@ Mutually exclusive, as required. No count below is offered as a headline trial t
 | **Verified human clinical trials (hepatic dataset)** | **0** | No hepatic dataset exists. This is a verified zero, not an unexamined one. |
 | Human clinical trials in the five held PDFs | **0** | All three publications are animal in vivo or transfected cell line. |
 | Registry candidate pool | **not yet qualified** | 634 unique registry records from 49 compound queries; 182 with results posted; ~93 carry a liver outcome under one screen. **I do not claim an endpoint-evaluable figure** — see below. |
-| **Human laboratory (liver injury readout)** | **0 ingested**; 1 open-access source identified (Sewing 2016, 9 ASOs) | Sequences unverified (bitmap/browser check). |
+| **Human laboratory (liver injury readout)** | **0 ingested**; 1 open-access source identified (Sewing 2016, **7** tool SSOs **[Rev A]**, plus 2 clinical-stage SSOs in Fig 8C) | **[Rev A, 2026-10-03]** Table 1 sequences now **source-verified** by visual read. Per-compound human LDH/ATP values remain in Fig 8A, unread, so the human rows are not yet quantified. Ingested count stays 0. |
 | Human laboratory (mechanistic, non-injury) | 2 documents, EGF readout | **Excluded from this endpoint** — nephrotoxicity uptake biomarker (§1.4). |
 | Human 3D / MPS | **0** | No peer-reviewed study found. |
 | **Animal supporting** | 80 compounds / 70 numeric ALT (Burdick, mouse); 6 rows (Dieckmann Table 1, mouse, = Hagedorn); 236-ASO panel (mouse, per-oligo data unpublished) | Excluded from every human total. |
@@ -176,7 +188,7 @@ Classified per the register's taxonomy. No purchase, subscription or researcher 
 | # | Citation / identifier | File needed | Affected records | Gap it closes | Routes attempted | Observed barrier | Class | Priority |
 |---|---|---|---|---|---|---|---|---|
 | A1 | Stanton et al. 2012, *Nucleic Acid Ther.* 22:344–359, doi `10.1089/nat.2012.0366`, PMID 22852836 | full text + any synthesis/characterization supplement | **all 80 Burdick compounds** | the only route to purity/analytical characterization for the entire Burdick panel; directly addresses the p.6 "must" | Europe PMC core record (`pmcid` null, `isOpenAccess N`, `hasSuppl N`, `inPMC N`) | **confirmed paywall** — no PMC deposit exists | Confirmed paywall | **High** |
-| A2 | Sewing et al. 2016, *PLoS One* 11:e0159431, `PMC4956313`, CC-BY | **Table 1** (sequences + position-specific chemistry) as readable text | 9 human-hepatocyte records | the only open-access human liver system with per-sequence chemistry; would create this endpoint's first human-laboratory rows | PLOS article page (thumbnail + PNG/TIFF only); PMC table URL | **browser check / bitmap-only rendering** — the article is open; the table is not machine-readable | **Technical access block, not a paywall** | **High** |
+| ~~A2~~ | Sewing et al. 2016, *PLoS One* 11:e0159431, `PMC4956313`, CC-BY | ~~**Table 1** as readable text~~ | ~~9 human-hepatocyte records~~ | — | PLOS figure/image endpoint at `size=large` and `size=original`; Europe PMC `fullTextXML` and `supplementaryFiles` | none — the table is a bitmap (`pone.0159431.t001`, no `<table>` markup), retrieved at 1572×623 PNG + original TIFF and read visually | **WITHDRAWN — RESOLVED [Rev A, 2026-10-03].** Never a paywall, and not an access block either: the publisher serves the render on request. Beebop's "an image table is not a paywall" was correct and my classification was wrong. | — |
 | A3 | Hagedorn et al. 2013, `PMC3760025` | `Supp_Table5.pdf`, `Supp_Table6.pdf` | PTEN redesign pairs | redesign before/after pairs, useful as mechanism support | PMC supplementary list (files confirmed present and free) | none — **retrievable, no request needed** | Resolved | Low |
 | A4 | Vupanorsen 2022, `PMC9047643` | article + safety supplements | kidney `MSR079`; liver relevance unestablished | may yield liver evidence after endpoint review | free route identified at PMC; direct open hit a browser check | browser check | Technical access block | Low |
 
@@ -238,7 +250,7 @@ Oscar has asked that this question be put to Beebop rather than settled by my re
 
 ## 10. Limitations of this review
 
-- **No sequence from Sewing 2016 has been read.** Any count attributed to it is an upper bound on expectation, not evidence.
+- ~~**No sequence from Sewing 2016 has been read.** Any count attributed to it is an upper bound on expectation, not evidence.~~ **[Rev A, 2026-10-03: closed.]** All 7 Table 1 sequences have been read visually from the publisher's render. What remains unread in that source is **Fig 8A** — the per-compound human hepatocyte LDH and ATP values and their concentrations — so the human-laboratory evidence is qualitative in this reply and no human concentration or response value is asserted.
 - Hagedorn's 4 figure-borne sequences are **not digitised**; I report their existence, not their content.
 - Moisan Table S2's 19 sequences are **reported, not re-read by me** this session.
 - Patent chemistry strings read from the OCR text layer are unreliable; conflicts must be re-checked against rendered page images before any are asserted.
