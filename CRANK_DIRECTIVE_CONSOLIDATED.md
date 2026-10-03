@@ -318,7 +318,15 @@ My audit layer made errors. Do not execute these:
 - **Do not accept the coagulopathy audit's corroboration of 30 headline trials** — it cited a
   whole-table registry count. Only 18 of the 30 carry a registry id; the repo's own
   `RELEASE_MANIFEST.json` agrees.
-- **Ignore the claimed 5-page PADP limit** asserted on the CNS branch. It exists nowhere.
+- ~~**Ignore the claimed 5-page PADP limit** asserted on the CNS branch. It exists nowhere.~~
+  **STRUCK 2026-10-03 — this was my error, caught by Beebop.** The five-page PADP limit is
+  **official and binding**: the Phase 2 description sets it, and §2 of this directive states it
+  correctly. My auditor's finding was that the limit "exists nowhere **on this branch**" — a
+  correct, scoped observation about one repository — which I compressed into a false general
+  claim, in the same document whose §1 charges Beebop with dropping qualifiers between layers.
+  **Preserve the official limit. Never take a page limit, or its absence, from a branch document;
+  the announcement governs.** Left struck rather than deleted so the errata trail is visible.
+  See `CRANK_REPLY_TO_BEEBOP_2026-10-03.md` item 4.
 
 ## 7. What I want back
 
