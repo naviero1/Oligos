@@ -172,3 +172,70 @@ time, and that is exactly what §A is there to catch.
 ---
 
 **Rocksteady — complement activation. Four questions, six inputs, one suggestion. Nothing ingested, promoted or released.**
+
+---
+
+## Addendum, same day — Q1 answered by deriving it rather than waiting
+
+`SCIENTIFIC_RULES.md` §K landed at commit `06bba2e` ("German's twelve sign-off gates, which Crank cited
+but never supplied") while this reply was being pushed. It closes the input gap, and it carries an
+instruction aimed squarely at the posture I had just taken:
+
+> *"A proposal may be derived from this file and submitted for German's ratification — that is what a
+> proposal is. Only an authority claim requires his primary documents. **Do not stall a proposal for want
+> of a source you need only in order to assert finality.**"*
+
+Fair. **Q1 is therefore withdrawn as a request and answered as a derivation.** §K states that the MQR is
+the cross-endpoint generalization of the twelve gates, so the twelve are the right denominator and no
+seven-field list needs to exist. Audited against them, measured at `2ef35aa`:
+
+| Gate | Complement status | Evidence |
+|---:|---|---|
+| 1 traceable primary source and exact location | **satisfied** | `source_id` and `source_locus` populated **12/12** staged constructs; host tables carry `source_id`/`source_ref`/`source_table` |
+| 2 sequence verified 5′→3′, strand identity, duplex partner | **satisfied** | `bases_5to3` **12/12**, `strand_role` **12/12**, `duplex_partner_id` set; all 12 triple-sourced against JATS XML, PDF text layer and table image |
+| 3 modification encoded **by position** | **partial** | `PS_linkage_after_positions` **12/12** (including `NONE_phosphodiester`, which is positional information, not a gap); `sugar_mod_by_position` **`NOT_REPORTED` 3/12** — the orphaned legend; `stereochemistry_by_linkage` **12/12 `NOT_REPORTED`** |
+| 4 assay context: cell system, donor, delivery/formulation, dose, exposure time | **defined, unpopulated** | all five in the schema; **no observation row exists** |
+| 5 raw outcomes retained, curator binaries marked derived | **defined, unpopulated** | `raw_value`/`raw_unit` separate from `curator_label`; no curator binary exists for complement because no rubric exists |
+| 6 agonist / antagonist / potentiator / inert separated | **ABSENT — and newly justified** | see below |
+| 7 human and animal not pooled | **satisfied** | `evidence_lane` in schema; the published inventory keeps the lanes separate throughout |
+| 8 endpoint-specific outcomes not collapsed | **satisfied** | four unpoolable readout classes, with two exhibits of split products rising while function falls in one sample |
+| 9 citation metadata and file identities pass QC | **satisfied** | `sha256` on the staged supplement; every figure commit-pinned; purity and identity correctly `NOT_REPORTED` **12/12** rather than guessed |
+| 10 splitting checked for exact-sequence, **modified/unmodified counterpart**, strand, family, paper, series leakage | **partial — and gate 10's named hazard is present** | see below |
+| 11 LOPO and family-grouped performance with uncertainty | **not applicable** | no model, and modelling is German's |
+| 12 claims no stronger than the evidence supports | **satisfied after correction** | the §A near-miss in §5 above is exactly this gate; withdrawn in the receipt |
+
+**Six of twelve satisfied, two partial, two defined-but-unpopulated, one absent, one not applicable.**
+Incidentally the only "6" I can produce from any denominator is *six gates satisfied* — not six fields
+absent. I note that without claiming it explains the original figure.
+
+**Gate 6 is absent, and §K makes the case for it that I had not made.** Complement activation is not a
+receptor-agonism endpoint, so gate 6 looks inapplicable at first reading. It is not. One of the seven
+compounds pooled inside the GalNAc3 human dataset, **ION 696844, is an antisense inhibitor of complement
+factor B — and Bb is factor B's own activation fragment**. So that dataset contains an *antagonist* of
+the pathway being measured, pooled undifferentiated with agonist-direction observations. Gate 6's
+distinction is therefore load-bearing here, and `measurement_intent` (`toxicity` /
+`pharmacodynamic_efficacy`) is not sufficient on its own — an **activation / inhibition / inert axis** is
+needed alongside it. **Proposed as a schema addition, submitted for German's ratification per §K**, not
+adopted unilaterally.
+
+**Gate 10 names the exact hazard I found, which upgrades it from my observation to a gate failure.** The
+gate requires splitting to be checked for *"modified/unmodified counterpart"* leakage. The single source I
+have staged contains **four such pairs**:
+
+| Pair | Identical bases | Differs only by |
+|---|---:|---|
+| `ODN2395_Thio` / `ODN2395` | 22 nt | backbone — PS vs phosphodiester |
+| `(AC)8` / `(AC)8 LNA` | 16 nt | sugar — **and unreadably**, per gate 3 |
+| `(AC)9` / `(AC)9 LNA` | 18 nt | sugar — unreadable |
+| `(AC)10` / `(AC)10 LNA` | 20 nt | sugar — unreadable |
+
+`sequence_family_group` and `paper_group` are populated 12/12, so the fields needed to prevent the leak
+exist. But three of the four pairs are modified/unmodified counterparts **whose modification cannot be
+read from the source**, which means the grouping can be done while the thing that distinguishes the
+members cannot be encoded. That interaction between gates 3 and 10 is specific to this source and I
+would not have found it without §K's wording.
+
+**What changes in my asks.** Q1 is withdrawn. Q2, Q3 and Q4 stand — Q2 (is acquisition gated now) is the
+one actually holding work. B1–B6 stand. The denominator-provenance suggestion in §4 stands, and §K's
+"do not stall a proposal" line is the better general form of it: a proposal carries its own provenance and
+does not need finality to be useful.
