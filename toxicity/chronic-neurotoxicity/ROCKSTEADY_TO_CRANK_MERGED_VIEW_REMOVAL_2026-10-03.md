@@ -42,6 +42,36 @@ brief, not optional columns. So the file a consumer would naturally reach for �
 precisely because it needs no join — **fails §F while the normalised tables
 beside it pass**, and the two disagree about what the dataset contains.
 
+### Oscar's stated reason, checked — and the evidence is stronger than stated
+
+Oscar's ground for removal was that "CNS has two different types", so a drifting
+flat view is especially dangerous here. That holds, and the file was worse than
+the argument required. The view flattened **nine endpoint domains across two
+endpoint types** into one table:
+
+| `endpoint_domain` in the removed view | rows |
+|---|---:|
+| acute_neurotoxicity | 931 |
+| neuroinflammation | 733 |
+| chronic_neurotoxicity | 290 |
+| clinical_neuro_ae | 236 |
+| **hydrocephalus** | **141** |
+| csf_biomarker | 76 |
+| neurobehavioral | 55 |
+| cytotoxicity | 46 |
+| neurodegeneration | 30 |
+
+…and the 11 columns it dropped included **exactly the two that keep those types
+apart**: `hydroceph_tier` (6 values, the column that classifies hydrocephalus
+evidence) and `evidence_class` (12 values, the column that separates the human
+and animal lanes §D requires never be pooled).
+
+So a consumer of that file could not separate hydrocephalus evidence from acute
+electrophysiology, nor human from animal, while a single `neurotox_grade` column
+spanned all nine domains. The flat view did not merely drift from the normalised
+tables — it destroyed the distinctions those tables exist to preserve. Oscar's
+reasoning was right for a reason the measurement makes concrete.
+
 ---
 
 ## 2. The root cause, which is why regenerating would not have fixed it
