@@ -83,19 +83,22 @@ tables and no submission. Convergence work therefore outranks new discovery.
 
 ## 3. Where each toxicology stands
 
-Status as of the 2026-10-02 Beebop round. "Qualified" means meeting the Minimum Qualified
-Record in §4 — which is new, so no endpoint is yet assessed against it.
+**Independently measured 2026-10-03** by a nine-endpoint audit commissioned by Crank: one
+auditor per endpoint reading its branch directly, each adversarially verified by a second
+agent, plus three synthesis agents. 21 agents, no failures. Figures below are measured from
+data files unless marked otherwise. Where the audit and Beebop disagreed, the adjudication is
+recorded in §9.
 
-| Endpoint | State | Reported mass | Binding blocker |
+| Endpoint | State | Measured mass | Binding blocker |
 |---|---|---|---|
-| **Kidney** | Only endpoint with a full four-part dossier | 65 oligos / 246 rows recounted; 67 human-lab, 137 animal | 0/65 purity values; MSR066 favourable renal result currently treated as a confirmed negative, pending German |
-| **Thrombocytopenia** | Large, scientifically frozen | 229 of 259 identifiers / 1,959 rows; 451 human-lab, 1,002 clinical, 497 animal | German reports zero clean sequence-linked clinical negatives and blocks the clinical sequence classifier; 0/34 purity; SafeSense quarantined; 224 rows need a licensing decision |
-| **Coagulopathy** | Large, counts defective | 207 of 218 identifiers / 2,685 rows; 431 human-lab, 749 participant rows, 1,476 animal | study/arm attribution and intended-pharmacology exclusion unresolved; headline trial total not defensible; 0/38 purity |
-| **Chronic neurotoxicity** | **Two competing lineages** | original 2,335 generated; alternate 2,393 recounted (incl. 931 acute) | duplicate lineages not reconciled; chronicity not established by registry outcomes; 0/21 purity and identity |
-| **Hydrocephalus** | Dedicated set exists, counts conflict | 47 reported / 53 roster; 1,342 generated (older reply said 1,361); 0 human-lab | count reconciliation; 127 absence-only register rows must not inflate the 27 assessed/observed; 0/41 purity |
-| **Immunotoxicity** | Rich catalog, **not yet trainable** | 141 identifiers / 142 catalog records; 33 narrative observations | compound→observation linkage broken: **1 identifier literally joins**, and that result is qualitative. Drive folder empty |
-| **Hepatotoxicity** | Sources held, nothing ingested | **0 dedicated rows** | Burdick panel is animal-only (80 constructs); nine human-hepatocyte constructs await source-table verification. Drive folder empty |
-| **Complement activation** | Background only | **0 dedicated rows** | no dedicated source table; proposed 19-study pool unreconciled. Drive folder empty |
+| **Kidney** | Only endpoint with a full four-part dossier | 65 oligos / **246 rows** (67 human in-vitro, 81 animal in-vitro, 56 animal in-vivo, 42 clinical); 55/65 sequences | **55.7% animal**; largest single class is animal in-vitro, not human. The 67 human in-vitro rows rest on **11 oligos, 48 of them (72%) from one patent table spanning 3 oligos**. **0/65 purity. No modification-position column exists; PS linkage positions 0/65** |
+| **Thrombocytopenia** | Large, scientifically frozen | 229/259 identifiers / 1,959 rows; 451 human-lab, 1,002 clinical, 497 animal; 200/259 sequences | German blocks the clinical sequence classifier (zero clean sequence-linked clinical negatives); **modification maps 44/259 (17%)**; **0/259 purity**; **984/1,959 rows (50.2%) shipped in a submission workbook under terms that forbid redistribution** |
+| **Coagulopathy** | Largest dataset; release documents stale | 207/218 identifiers / 2,685 rows; 1,183 human, 1,476 animal, 26 undetermined | **Only 18 of the 30 headline trials carry a registry id**; true human in-vitro set is **34 oligos with 0 position-resolved chemistry**; **0/218 purity**; METHODOLOGY.md and five other files ship stale arithmetic (213/2,388/941/75 vs measured 218/2,685/1,039/100) |
+| **Chronic neurotoxicity** | **Two rival datasets, not two views** | original 2,335 rows × 44 cols, 13 oligos; alternate 2,393 rows × 33 cols, 573 oligos | Different rosters, column sets and grade columns (`cns_tox_grade` vs `neurotox_grade`). Choosing one is a **scientific adjudication, not a schema decision**, and it must precede migration |
+| **Hydrocephalus** | Exists **three** times | dedicated 1,342 rows × 55 cols (47 compounds); alternate 145; cns-original 12 | **0 human in-vitro and 0 human ex-vivo rows — no human-to-animal bridge at all**; 35/41 human compounds lack sequence and modification map; 41/41 lack purity; generated stats carry release_id `…-dirty` (produced from an uncommitted tree) |
+| **Immunotoxicity** | **Evidence is real but lives outside git** | Drive workbook: 15 sheets, 142 catalog records / 141 identifiers, 33 observations, 20 papers. Git: **0 measurement rows** | The governing workbook is **not in version control**, so no immunotoxicity figure is auditable in-repo. Git dossier says "This project extracted no immunotoxicity data" |
+| **Hepatotoxicity** | Pre-ingestion | **0 rows.** 9 blobs (4 markdown, 5 PDFs), zero machine-readable data | All 17 extractable per-oligo records are **mouse in vivo**. Sewing 2016 — the only primary human-hepatocyte source — is absent from the repository |
+| **Complement activation** | Pre-ingestion | **0 ingested rows.** One 144-row staging CSV its own README calls "not an ingestion" | **6 of 7 MQR fields have no column in existence.** Of the 10 complement rows, **0 human rows carry a numeric value**; one of the 10 is not a complement readout at all |
 
 ### Cross-cutting data-model fact that constrains breadth
 
@@ -242,3 +245,145 @@ fabrication, always.**
 - Measurement rows are not independent experiments, patients or donors. Compound counts are
   recorded identifiers unless molecular deduplication is established.
 - No branch totals are added across lineages.
+
+---
+
+## 9. Independent audit, 2026-10-03
+
+Crank commissioned a nine-endpoint audit reading the six branches directly: one auditor per
+endpoint, each adversarially verified by a second agent instructed to refute rather than agree,
+plus a schema architect, a reasoning auditor and a completeness critic. 21 agents, no failures.
+
+### 9.1 Verdict on Beebop's reasoning: **sound, with reservations. Do not bypass.**
+
+Beebop's arithmetic reproduces **wherever a file was reachable** — nine adversarially verified
+audits found zero numerical discrepancies in its reachable figures. Its provenance labelling
+("recounted" / "reported" / "generated" / "directly read", and saying outright which tables it
+could not recount) is the most valuable thing in the baseline and is what made this
+adjudication possible at all. It refused to sum overlapping inventories and was right every
+time tested; it rejected a subordinate's prose figure in favour of a measured one; it declined
+to state a coagulopathy trial total it could not defend **and was vindicated** (30 headline
+flags, only 18 with a real registry id); and it caught a live front-door misstatement of the
+challenge's central priority that no auditor tested.
+
+**One genuine arithmetic error reached Crank:** 875 position records against a measured 831 —
+a Drive-sourced figure Beebop itself had flagged as unreconciled, restated with the caveat
+stripped. Beebop applied its own Drive-reconciliation rule to everyone except itself.
+
+**The structural reservation** is compression loss between Beebop's per-endpoint requests
+(rigorous, correctly denominated) and its round-doc summary to Crank (denominators dropped,
+dataset-wide coverage replaced by the flattering priority subset, caveats stripped). Every
+confirmed Beebop error is a summary-layer artifact, not an analysis-layer one.
+
+**Direction of bias:** Beebop under-reports weakness rather than over-reporting strength, and
+never inflated a reachable count. Evidence classes are never mixed. The bias is in *salience
+and denominator choice* — and because every figure carries an honest provenance tag, it is
+visible and correctable rather than concealed.
+
+**Remedy, cheap:** every summary figure carries its denominator and provenance tag (Beebop
+already produces both one layer down), and no Drive-sourced figure is restated until
+re-measured against the repository.
+
+### 9.2 The audit layer itself needs a correction pass
+
+Crank cannot treat these audits as a clean check on Beebop. Several erred **in Beebop's
+direction**: the coagulopathy audit "confirmed" the 30 headline trials with a whole-table
+registry count; the thrombocytopenia verifier cleared Beebop of the 875 error by grepping the
+wrong file; the cns-original audit asserted a PADP page limit that exists nowhere; the
+cns-alternate audit charged Beebop with leaving rows unaccounted that Beebop's own text
+accounts for. **Beebop's numbers survived this scrutiny better than the scrutiny did.**
+
+**Do not act on the kidney audit's Directive 5.** It claims a staging file holds 10 candidate
+sequences against the 10 TBD gaps; the id sets intersect at **6**, four staged rows target
+oligos that already carry sequences, and two are flagged for German's adjudication. Acting on
+it would push chemistry changes through as gap-filling. It is an audit claim, not a Beebop
+claim.
+
+### 9.3 P1 reassessed: a single harmonized schema across eight endpoints is **not achievable** by November
+
+The schema architect's verdict is no, for three independent reasons, each sufficient on its own:
+
+1. **Three endpoints have nothing to migrate.** Hepatic, immunotoxicity and complement hold
+   zero ingested measurement rows between them. For these the work is greenfield population
+   plus evidence acquisition plus writing a rubric from nothing — months, and gated by source
+   availability outside anyone's control.
+2. **Two endpoints have rival implementations with no canonical version.** Chronic neurotoxicity
+   exists twice and hydrocephalus three times, with different rosters, columns and grade
+   columns. Choosing is a scientific adjudication that must precede migration.
+3. **The mandatory characterization field is 99.9% absent.** `purity_pct` holds a real value on
+   **3 of 3,034** oligo rows project-wide, all three animal-only rat constructs. A harmonized
+   schema makes that legible; it cannot make it go away.
+
+**What is achievable, and it is substantial:** a **five-endpoint harmonized register** over the
+endpoints that hold adjudicated rows — kidney, thrombocytopenia, coagulopathy, hydrocephalus,
+and one chosen chronic-neurotoxicity lineage. Roughly **8,567–8,625 measurement rows and
+1,118–1,168 oligo records**, all measured.
+
+**Adopted fallback — three tiers, each independently shippable:**
+
+- **Tier 0 — crosswalk only (week 1, ~5 days, zero risk, changes no existing file).** Ship
+  `molecule.csv` with a `molecule_uid` over all 3,034 roster rows; the controlled-vocabulary
+  document; and `endpoint_coverage.csv` stating, per endpoint, measured rows, measured oligos,
+  subject-class distribution, rubric name or none, and each MQR field as
+  present-populated / present-empty / absent. **This is what actually unblocks November**,
+  because assembly needs a defensible cross-endpoint statement, not one physical table — and it
+  makes the three empty endpoints and the two rival datasets *declared facts* rather than gaps a
+  reviewer discovers.
+- **Tier 1 — view layer (weeks 2–4, reversible).** One adapter per endpoint emitting harmonized
+  views; source CSVs untouched; each adapter must reproduce its endpoint's published row count
+  exactly before its output is accepted. Coagulopathy is the reference implementation (~2 days,
+  closest to the target model).
+- **Tier 2 — in-place migration. Post-November.** This is where the released-document blast
+  radius lives; not under deadline.
+
+Note this preserves the breadth posture: all eight endpoints appear in Tier 0, five of them with
+a harmonized register behind them.
+
+### 9.4 Findings that outrank the schema work
+
+- **Licensing is an eligibility risk, not a quality risk.** **Three of six branches carry no
+  LICENSE file at all** (coagulopathy, thrombocytopenia, cns-alternate). Worse, material under
+  non-redistributable terms is **already shipped inside submission files**: thrombocytopenia
+  ships 984/1,959 rows (50.2%) classed `summary_stat` — which the project's own LICENSE.md
+  defines as CC BY-NC-ND and "not offered for redistribution as dataset content" — inside
+  `submission/OligoTox-Thrombocytopenia_dataset.xlsx`; coagulopathy ships 254
+  publisher-restricted plus 426 CC BY-NC-ND rows. Phase 2 requires an openly licensed dataset.
+- **Leakage is already in a shipped split.** `acute-neurotoxicity/data/oligos.csv` ships a
+  published train/test split in which **48 of 148 test oligos share an exact sequence with a
+  training oligo**, and 115 of 148 are contained in or contain a training sequence.
+- **The real sample size is ~25 molecules, not thousands of rows.** Distinct oligos that are
+  human-lab **and** graded **and** sequence-bearing: thrombocytopenia 25, coagulopathy 19
+  (strictly human in-vitro 7), cns-alternate 13, kidney 7, cns-acute 7, hydrocephalus 0.
+- **Purity data exists after all — in Drive, not git.** The immunotoxicity catalog carries real
+  analytical characterization on 5 records (~94–99% by IE-HPLC/RP-HPLC/CGE, identity by
+  MALDI-TOF, endotoxin <0.075 EU/mg) and **modification positions populated on 41/142**. Harvest
+  before describing purity as universally absent.
+- **The stale 111-row kidney table is a real file, not stale prose.** Five of six branches
+  physically ship an 111-row `measurements.csv`, in **two mutually divergent versions**. Any
+  script resolving `data/measurements.csv` by relative path on those branches reads the wrong
+  table. The 246-row canonical version exists only on `amazing-galileo`.
+- **The CNS front door misstates the challenge's central priority.** `_shared/cns/README.md`
+  presents 181 paired compounds as "exactly the in-vitro-to-in-vivo extrapolation the challenge
+  asks for"; all 181 measure as animal in-vitro plus animal in-vivo, rat and mouse, **zero human
+  rows** — while the same README's line 131 concedes the dataset cannot extrapolate between
+  human in-vitro and animal systems. Its grade distribution is also wrong (56/87/40/57 stated
+  against 74/81/39/51 measured). A reviewer opens the README first.
+- **Positive controls are largely absent**, and the narrative deliverable explicitly requires
+  them. Only acute-neurotoxicity has a `control_role` column (0 positive controls of 1,866);
+  kidney, coagulopathy, hydrocephalus and cns-alternate oligo tables have no control column at
+  all. Only thrombocytopenia's `controls_inventory.csv` holds real positive and negative arms.
+- **197 sequences appear in two or more endpoint datasets** with no crosswalk for most pairs
+  (coagulopathy↔thrombocytopenia has none).
+
+### 9.5 Beebop was right about immunotoxicity and was disbelieved
+
+Nine audits scoped themselves to git and concluded the endpoint is empty. The completeness
+critic opened the Drive workbook directly: it reads cleanly — 15 sheets, 142 catalog records,
+141 identifiers, 33 observations at Human 30 / Mouse 2 / Multiple 1, 20 papers. **Beebop's
+baseline was accurate.** One figure needs correcting: Beebop's 64 trial candidates appears in
+zero cells; the adjudication is 54 approved / 48 hold / 40 support-only.
+
+The lesson is the one already recorded in §9.1 and in Directive 001-A: the Drive/git divergence
+is the governing risk on this project, and it has now produced errors in both directions — one
+in Beebop's figures, and one in nine auditors concluding an endpoint was empty when its evidence
+simply lived elsewhere.
