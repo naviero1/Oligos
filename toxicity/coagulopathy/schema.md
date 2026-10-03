@@ -205,7 +205,7 @@ disagrees, so a hand-edited grade cannot survive a build.
 
 ## QC log
 
-**2026-08-29 — build v1.1, after adversarial verification.** 45 structural checks pass.
+**2026-08-29 — build v1.1, after adversarial verification.** 45 structural checks passed at that build; QC is now 112.
 174 rows were re-checked against their sources by reviewers instructed to refute them:
 117 confirmed, 50 corrected, 2 refuted, 5 unverifiable, **no fabricated value or quote**.
 Ten defect classes were found; all ten are corrected in `build_dataset.py` (functions

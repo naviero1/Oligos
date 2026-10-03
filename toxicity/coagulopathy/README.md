@@ -15,12 +15,12 @@ what the repository held before this dataset existed, and what changed — is
 | Per-position modification records | **1,039** (52 oligos) |
 | Sources | **100** |
 | Oligos with a published sequence | 104 / 218 |
-| Graded rows (0/1/2/3) | 867 — 463 / 312 / 66 / 26 |
+| Graded rows (0/1/2/3) | 918 — 506 / 315 / 69 / 28 |
 | Structural QC | 64 / 64 checks pass |
 | Numeric values located in their cited source | 2,019 / 2,019 |
 | Rows adversarially re-checked against sources | 174 — 0 fabrications found |
 | Human-system measurements | **1,183** (44%) — 749 participants · 380 primary blood/plasma · 40 purified human protein · 11 cells/tissue · 3 unresolved |
-| Human interventional trials (deduplicated, coagulation endpoint) | **30** (18 registry-identified; 6 flagged for verification) |
+| Human interventional trials (deduplicated, coagulation endpoint) | **46** (21 registry-identified; 0 flagged; 23 resting on a single source record) |
 | Animal-system measurements | 1,476 |
 | Compounds with both human and animal data | 30 of 218 |
 
@@ -50,7 +50,7 @@ one row per compound with just the oligo, its sequence, the modification to that
 and its toxicity.
 
 `python3 scripts/make_release.py` rebuilds all of it from the committed extraction records
-and fails rather than shipping: 55 structural checks, every numeric value re-checked against
+and fails rather than shipping: 112 structural checks, every numeric value re-checked against
 its source document, and the page limits enforced on the PDFs. Status assessment against the
 Phase 2 instructions and the work-plan: [`STATUS.md`](./STATUS.md).
 
@@ -157,7 +157,7 @@ them was not.** This was a code defect, not an extraction defect.
 
 ### Over-merge is now a QC failure, not a comment
 
-55 checks passed while two drugs sat in one trial row. Three checks now make that
+55 checks passed while two drugs sat in one trial row (QC is now 112). Three checks now make that
 impossible: two registry numbers **from the same registry** in one cluster fails, two
 sponsor compound numbers fails, and any `OVER_MERGE_*` flag fails. Two numbers from
 *different* registries do **not** fail — one trial legitimately holds both an NCT and a
@@ -294,7 +294,7 @@ assay means a safe compound.
 `coag_tox_grade` is an ordinal 0–3 assigned **mechanically** from the control-referenced
 ratio using **CTCAE v5.0** laboratory cut-offs — a published, citable rule, not thresholds
 invented here. It is applied only to the readouts CTCAE actually defines (aPTT, PT, INR,
-TT, ACT prolongation; fibrinogen decrease). The other 1,521 rows are **left ungraded**,
+TT, ACT prolongation; fibrinogen decrease). The other 1,767 rows are **left ungraded**,
 each stating why in `grade_basis`, rather than graded by an invented threshold. Every grade
 is `provisional`, and every grade is reproducible from `ratio_to_control` — a QC check
 re-derives all 867 and fails the build on any disagreement.

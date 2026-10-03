@@ -27,7 +27,7 @@ and how the data support a predictive model.
 
 The dataset requirement is met item by item — sequences of all oligos tested (104 of 218
 have one published; the rest are recorded `NOT_REPORTED`, never guessed), **the location of
-every chemical modification** (941 per-position records over 47 compounds), purity and
+every chemical modification** (1,039 per-position records over 52 compounds), purity and
 characterisation data (method where stated; `purity_pct` is `NOT_REPORTED` throughout,
 which is a property of the literature, not of the curation), additional metadata, and an
 open licence.
@@ -44,7 +44,7 @@ structural checks, and a verification pass that re-reads every source document.
 
 ## 2. Against what the Challenge says it values
 
-**Human clinical trials: 30**, deduplicated from 336 raw study observations across 198
+**Human clinical trials: 46**, deduplicated from 336 raw study observations across 211
 distinct study records. 18 carry a registry number. The count excludes pooled analyses,
 labels, regulatory summaries, observational studies, case reports, healthy-volunteer
 laboratory work and spontaneous reporting, and is re-derivable by QC from the register's

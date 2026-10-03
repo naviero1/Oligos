@@ -193,7 +193,29 @@ specifically.
 
 ---
 
-## Item 4 — `sequence_family_group` cannot be computed without an adjudication
+## Item 4 — `sequence_family_group` — **do not answer here; this is German's open decision 5**
+
+> **Redirected 2026-10-03.** `German_requests_100326.md` decision 5, *"Phosphorothioate
+> stereochemistry — are stereoisomers distinct constructs"*, is the same question with better
+> evidence, and it is already live. It even says so: *"This is the same question as your standing
+> rule that shared sequence or family grouping must not merge chemically distinct administered
+> constructs."* Asking it twice would be the duplication Crank's acquire-once rule exists to
+> stop. **This item contributes evidence to his decision 5 and asks nothing separately.**
+>
+> **What coagulopathy adds, and it is the opposite case from the one in front of him.** His
+> example is *stereopure*: rovanersen registers in GSRS as `Phosphorothioate R-isomer → 1_13`
+> and `S-isomer → 1_1;1_5-1_12;1_14-1_15`. This corpus supplies the mirror image — a
+> *defined mixture*. The volanesorsen assessment states that the active substance is a mixture
+> of **2¹⁹ = 524,288 diastereoisomers, with no individual diastereoisomer contributing more than
+> about 0.0018% of the total**, verified byte-exact against the held document (`COG-S076`,
+> §2.2.1 General information).
+>
+> So the corpus contains **both** stereopure constructs and stereo-random mixtures, and
+> `backbone_chemistry = full_PS` collapses them into one value. A ruling that stereoisomers are
+> distinct constructs therefore has a second consequence for this endpoint that the GSRS case
+> does not show: a stereo-random full-PS compound is not one construct either, and whatever
+> field carries stereochemistry needs a value for "mixture, undefined" that is distinguishable
+> from "not reported".
 
 **German decides.** **Gustavo needs it** — §G *requires* grouped splits by sequence family, so
 without this there is no compliant validation design.
@@ -310,7 +332,7 @@ his. Until it exists, gate 6 is **absent**, not failed-but-fixable.
 | 1 — qualified record definition | German | Gustavo, Beebop | the scorecard, every qualified-record figure, Gustavo's lane choice |
 | 2 — CTCAE on 834 non-clinical rows | German | Gustavo | any label-bearing release |
 | 3 — zero eligible sequence controls | German | Gustavo | any sequence-dependent claim |
-| 4 — `sequence_family_group` | German | Gustavo | §G-compliant validation design |
+| 4 — `sequence_family_group` | German, **via his open decision 5** | Gustavo | §G-compliant validation design |
 | 5 — grade calibration (4 of 5 disagree) | German | — | trust in the curator scale |
 | 6 — 132 both-axes rows | German | Gustavo | label resolution on the ambiguous set |
 | 7 — 19 composites | German | crosswalk | single-endpoint analysis |

@@ -30,6 +30,7 @@ import csv, os, re, sys
 from collections import Counter
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+NR, NA = "NOT_REPORTED", "NOT_APPLICABLE"
 DATA = os.path.join(ROOT, "data")
 # SOURCES.md was missing from this list on 2026-10-03, which is why its header shipped
 # "75 sources - 2388 measurements" against an actual 100 and 2,685 until Crank caught it.
@@ -49,6 +50,13 @@ def load(n):
 
 def main():
     O, D, M, S = load("oligos.csv"), load("measurements.csv"), load("modifications.csv"), load("sources.csv")
+    # the live QC count, read from the validator rather than typed
+    import subprocess
+    _qc = subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                                       "validate_dataset.py")],
+                         capture_output=True, text=True)
+    _m = re.search(r"(\d+)/(\d+) checks pass", _qc.stdout or "")
+    _n_checks = int(_m.group(2)) if _m else 0
     ST = load("studies.csv")
     head = [r for r in ST if r.get("headline_trial") == "TRUE"]
 
@@ -67,12 +75,19 @@ def main():
     # which is the difference between a guard that catches a class of defect and one that
     # catches the three instances somebody happened to remember.
     superseded = {
-        "oligonucleotides|compounds": (len(O), [213]),
-        "measurements|rows": (len(D), [2388]),
-        "modification": (len(M), [941]),
+        # The noun alternatives matter as much as the numbers: "| Unique oligos | 213 |"
+        # escaped the guard because the pattern looked for "oligonucleotides|compounds" and
+        # the table says "oligos".
+        "oligonucleotides|compounds|unique oligos": (len(O), [213]),
+        "measurements|measurement rows|rows": (len(D), [2388]),
+        "modification|modification records": (len(M), [941]),
         "sources?": (len(S), [75]),
         "trials": (len(head), [30, 65]),
         "oligos": (len({m["oligo_id"] for m in M}), [47]),
+        "graded rows|graded": (sum(1 for r in D if r["coag_tox_grade"] in "0123" and r["coag_tox_grade"]), [867, 942]),
+        "ungraded": (sum(1 for r in D if r["coag_tox_grade"] == NR), [1446, 1521]),
+        "checks?|structural qc": (_n_checks, [45, 55, 69, 97, 104]),
+        "numeric values|values found": (2019, [1876]),
     }
 
     fails = []
@@ -88,8 +103,20 @@ def main():
                 continue
             for nouns, (now, old) in superseded.items():
                 for o in old:
-                    pat = r"\b" + f"{o:,}".replace(",", "[,]?") + r"\b[^.|]{0,60}?\b(" + nouns + r")\b"
-                    if re.search(pat, line, re.I) and str(now) not in line:
+                    num = r"\b" + f"{o:,}".replace(",", "[,]?") + r"\b"
+                    # Crank, 2026-10-03: "fix the matcher first. Its pattern matches
+                    # number-then-noun within 60 characters using [^.|], so it cannot cross a
+                    # markdown pipe, and in a table the noun precedes the number." Correct, and
+                    # the cost was the whole of coagulopathy.md: a summary table carrying
+                    # 213 oligos, 2,388 rows, 867 graded and QC 45/45 passed this guard clean,
+                    # because in a table row the noun sits in the left cell and the number in
+                    # the right, separated by the pipe the old pattern refused to cross.
+                    # Both orders are now matched, and a table row is treated as one span.
+                    pats = [
+                        num + r"[^.]{0,60}?\b(" + nouns + r")\b",          # number then noun
+                        r"\b(" + nouns + r")\b[^.]{0,80}?" + num,          # noun then number
+                    ]
+                    if any(re.search(x, line, re.I) for x in pats) and str(now) not in line:
                         fails.append(f"{doc}:{i}: superseded count {o:,} beside '{nouns}' "
                                      f"(current value is {now:,})\n      {line.strip()[:150]}")
 

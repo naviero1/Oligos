@@ -189,7 +189,7 @@ stated rather than smoothed over.
 
 Two committed scripts, both exiting non-zero on failure:
 
-- `validate_dataset.py` — 45 structural checks (keys, referential integrity, vocabularies,
+- `validate_dataset.py` — <!--N:qc_checks--> structural checks (keys, referential integrity, vocabularies,
   grade reproducibility, sequence/modification consistency, roll-ups, and nine invariants
   added after verification). All pass. Defects caught during the build, and their fixes,
   are logged in `schema.md`.

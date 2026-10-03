@@ -17,17 +17,19 @@ here — see [`METHODOLOGY.md`](METHODOLOGY.md) and [`schema.md`](schema.md).
 
 ## 1. Status summary
 
+<!--BEGIN:SUMMARY_TABLE-->
 | | Value | Source of the figure |
 |---|---|---|
-| Unique oligos | 213 | `data/oligos.csv` (213 × 28) |
-| Measurement rows | 2,388 | `data/measurements.csv` (2,388 × 38) |
-| Per-position modification records | 1,039 over 52 oligos | `data/modifications.csv` |
-| Sources | 100, all with the cited document committed | `data/sources.csv`, `sources/documents/` |
+| Unique oligonucleotides | 218 | `data/oligos.csv` (218 x 72) |
+| Measurement rows | 2,685 | `data/measurements.csv` (2685 x 58) |
+| Per-position modification records | 1,039 over 52 oligonucleotides | `data/modifications.csv` |
+| Source documents | 100, all with the cited document committed | `data/sources.csv`, `sources/documents/` |
 | Sequences published | 104 of 218 | `sequence_base` not `NOT_REPORTED`/`NOT_APPLICABLE` |
-| Graded rows | 867 (0/1/2/3 = 463/312/66/26) | `coag_tox_grade`; 1,521 ungraded, each with a stated reason |
-| Structural QC | 45 / 45 pass | `scripts/validate_dataset.py`, exits non-zero on failure |
-| Numeric values found in their cited source | 1,876 / 1,876 | `scripts/verify_against_sources.py` |
-| Rows adversarially re-checked | 174 | §6 — 0 fabrications |
+| Verified human interventional trials | 46 (21 registry-identified) | `data/studies.csv`, `headline_trial` |
+| Graded rows | 918 (0/1/2/3 = 506/315/69/28) | `coag_tox_grade`; 1,767 ungraded, each with a stated reason |
+| Structural QC | 112 / 112 pass | `scripts/validate_dataset.py`, exits non-zero on failure |
+| Numeric values found in their cited source | 2019 / 2019 | `scripts/verify_against_sources.py` |
+<!--END:SUMMARY_TABLE-->
 
 ## 2. What the repository held before, and what it was worth
 
@@ -85,14 +87,20 @@ Records live in [`data/`](data/); the documents every row cites are in
 are in [`sources/extraction/`](sources/extraction/), so the pipeline is reproducible from a
 clean checkout with no network access.
 
+<!--BEGIN:DISTRIBUTION_TABLE-->
 | Axis | Distribution |
 |---|---|
-| Study type | animal in vivo 1,430 · clinical 453 · in vitro 297 · ex vivo human plasma 205 |
-| Species | human 850 · monkey 818 · mouse 569 · rat 33 · pig 21 · minipig 17 · other 11 |
-| Readout category | clotting time 1,160 · factor activity 387 · bleeding 240 · thrombotic 220 · fibrinogen 144 · platelet–coagulation crosstalk 83 · anticoagulant activity 76 · thrombin generation 47 · fibrinolysis 31 |
-| Effect direction | increase 702 · no change 573 · decrease 544 · not reported 449 · not applicable (pre-dose baseline) 120 |
-| Axis flags | on-target only 1,576 · unintended only 289 · both 144 · neither 379 |
-| Redistribution | public domain 1,382 · CC BY-NC-ND 426 · CC BY 307 · publisher-restricted 192 · CC BY-NC 76 · unresolved 5 |
+| Study type | animal invivo 1,433 · clinical 749 · in vitro 297 · ex vivo plasma 203 · NOT REPORTED 3 |
+| Species | human 1,147 · monkey 818 · mouse 569 · rat 31 · pig 21 · minipig 17 · NOT REPORTED 5 |
+| System origin | animal 1,476 · human 1,183 · not determined 26 |
+| Human system subtype | participant 749 · primary blood or plasma 380 · purified or recombinant protein 40 · cells or tissue 11 · unresolved 3 |
+| Readout category | clotting time 1,295 · factor activity 391 · bleeding outcome 306 · thrombotic outcome 252 · fibrinogen 145 · anticoagulant activity 97 · platelet coag crosstalk 96 · thrombin generation 56 · fibrinolysis marker 41 |
+| Effect direction | increase 773 · no change 640 · decrease 585 · NOT REPORTED 567 |
+| Evidence class | intended pharmacodynamic 971 · measured negative 640 · unintended lab disturbance 408 · outcome not attributed 292 · adverse outcome source attributed 160 · baseline reference 120 · unresolved observation 77 · unattributed lab change 17 |
+| Control class | vehicle or buffer 1,277 · other described control 727 · untreated or predose 314 · placebo 223 · pharmacological positive control 81 · active comparator 28 · no control described 27 · sequence control 8 |
+| Axis flags | on-target only 1,607 · unintended only 447 · both 183 · neither 448 |
+| Redistribution | public domain 1,604 · CC BY NC ND 426 · CC BY 307 · publisher restricted 204 · CC BY NC 76 · cite and link only 68 |
+<!--END:DISTRIBUTION_TABLE-->
 
 ## 5. What the data shows
 
@@ -110,7 +118,7 @@ finding.
 
 Three passes, in increasing strength:
 
-1. **Structural** — 45 checks, all passing, re-runnable from the CSVs alone.
+1. **Structural** — 112 checks, all passing, re-runnable from the CSVs alone.
 2. **Source presence** — every numeric readout searched for in the document its row cites:
    **1,876 / 1,876 located.**
 3. **Adversarial semantic** — 174 rows (every grade-3 row, plus stratified samples of
