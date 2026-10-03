@@ -123,9 +123,10 @@ grading input, not decoration, and no NfL row may be filed with
 
 Where a source printed a sequence with chemistry-encoding case, that case is
 preserved: uppercase marks a modified wing (2′-MOE / cEt / LNA), lowercase the
-DNA gap. But **268 of the 463 stored sequences are case-encoded and 176 are
-stored in flat upper case** — because their source printed them that way, and
-re-casing them from the design motif would be inference dressed as transcription.
+DNA gap. But **268 of the 466 stored sequences are case-encoded, 197 are stored
+in flat upper case and 1 in flat lower case** — because their source printed them
+that way, and re-casing them from the design motif would be inference dressed as
+transcription.
 
 So the rule for a consumer is: **`gapmer_design` is authoritative for wing/gap
 structure; case is a convenience that is present when the source provided it.**
