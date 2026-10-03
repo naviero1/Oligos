@@ -568,8 +568,11 @@ def main():
         oligos_with_sequence=sum(
             1 for r in o if r["sequence_5to3_asprinted"] not in ("NOT_REPORTED",
                                                                  "NOT_APPLICABLE")),
-        checks_run=len(CHECKS), checks_failed=len(FAILURES),
     )
+    # Seeded so the token-key check below sees them; both are overwritten with
+    # the final tallies immediately before stats.json is written.
+    stats["checks_run"] = stats["checks_failed"] = 0
+
     PLACEHOLDERS = {"NOT_APPLICABLE", "placebo_or_sham_control"}
     stats["n_compounds_real"] = sum(1 for r in o
                                     if r["oligo_name"] not in PLACEHOLDERS)
@@ -971,6 +974,13 @@ def main():
         stats["release_inputs_modified"] = []
     stats["release_id"] = ("hydrocephalus-%s%s" % (rev or "unknown",
                                                    "-dirty" if dirty else ""))
+
+    # Counted LAST. Set in the stats constructor it captured the tally at that
+    # moment -- 64 -- while 81 checks actually ran, and METHODOLOGY.md rendered
+    # the 64. A self-describing figure that describes an earlier self is the same
+    # defect as a typed one, and it was in the very field the ratchet relies on.
+    stats["checks_run"] = len(CHECKS)
+    stats["checks_failed"] = len(FAILURES)
 
     with open(os.path.join(HERE, "stats.json"), "w") as fh:
         json.dump(stats, fh, indent=2)

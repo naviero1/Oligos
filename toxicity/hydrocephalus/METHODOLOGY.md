@@ -269,7 +269,7 @@ from the disease-baseline rows, which is exactly why both are in the dataset.
 
 ## 7. Quality control
 
-`qc/validate.py` runs **<!--stat:checks_run-->64<!--/stat--> checks** and exits non-zero on any failure. They cover
+`qc/validate.py` runs **<!--stat:checks_run-->81<!--/stat--> checks** and exits non-zero on any failure. They cover
 primary-key uniqueness and non-emptiness on all three tables; referential
 integrity on both foreign keys; controlled-vocabulary conformance on ten columns;
 grade range; the requirement that every graded row state its rule; the
