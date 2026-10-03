@@ -146,8 +146,23 @@ two-table architecture §B asks for — `data/oligos.csv` as the canonical ident
 
 Tested for condition collapse on the key
 `oligo × species × system × dose × unit × duration × delivery × endpoint`:
-**246 distinct keys for 246 rows — zero duplicates, zero collapsed rows.** No row stands for several
-doses or timepoints; no dose is written as a range or a list.
+**246 distinct keys for 246 rows — zero duplicates.**
+
+> **CORRECTION, same day.** The sentence that followed this — "zero collapsed rows. No row stands
+> for several doses or timepoints" — **was wrong, and the test behind it was the wrong test.**
+> Key-uniqueness proves no two rows duplicate a condition; it says nothing about whether one row
+> summarises many. A drug-level summary row has a unique key too. Re-measured properly:
+>
+> - **37 of 65 oligos (57%) have exactly one row standing for their entire evidence.**
+> - **98 of 246 rows cannot be resolved to a single dose, a single exposure time and a numeric value.**
+> - Kidney is **two regimes**: the patent panels are **129/150 (86%) resolvable** and fully crossed;
+>   everything else is **19/96 (20%)**.
+> - 11 rows carry `species = multi_species`, pooling several species into one row; 21 carry an
+>   ordinal `in_vivo_nephrotoxicity_composite` bin rather than a measured quantity.
+>
+> So the honest answer to §B is: **the patent-derived half is at condition grain; the rest is at
+> drug-summary grain.** Still not one-row-per-oligo overall, and still nothing re-grained — but the
+> clean bill of health below was unearned. Detail in `ROCKSTEADY_TO_BEEBOP_CRANK_2026-10-03.md`.
 
 **But the grain is incomplete against §B's full unit**, and I would rather say so than claim
 compliance:
@@ -291,10 +306,16 @@ RELEASE BLOCKED — 1 hard failure(s)
 
 **This is the gate working, not a fault.** Checked file by file: all six data files — `oligos.csv`,
 `measurements.csv`, the merged view, the bridge, the clinical register and the workbook — hash
-**OK**. The single drifted file is `SOURCE_REGISTER.md`, the one I corrected. No data file moved.
+**OK**. No data file moved.
 
-I re-rendered `SOURCE_REGISTER.pdf` so the PDF does not keep publishing the false "blocked" claim
-after the markdown was fixed; that drifts a second bound document for the same reason.
+Four bound **documents** drifted, each for a stated reason, all of them description:
+
+| file | why |
+|---|---|
+| `SOURCE_REGISTER.md` | the false `accessdata.fda.gov` "blocked" entry corrected |
+| `SOURCE_REGISTER.pdf` | re-rendered so the PDF stops publishing the corrected-away claim |
+| `STATUS.md` | §3a purity item partly overtaken — FDA reviews do report per-lot purity |
+| `schema.md` | `purity_pct` note updated for the same reason |
 
 **I did not regenerate the manifest.** Doing so mints a new `release_id`, which is release
 mechanics and gated. The correct state is exactly what the gate now reports: the released artefacts

@@ -28,7 +28,7 @@ are the chemistry/sequence/design features hypothesized to drive nephrotoxicity.
 | `conjugate` | enum | `none` \| `GalNAc` \| `lipid` \| `peptide` \| `PEG` (e.g. `PEG_5prime`) \| `other`. (Affects renal exposure.) |
 | `ps_count` | int | Number of phosphorothioate linkages, or `TBD`. |
 | `sequence_5to3` | string | 5′→3′ sequence. **`TBD` unless from a redistribution-permitted source. Never guessed.** |
-| `purity_pct` | float | Reported purity of the tested oligo, %. **`TBD` for all 65** — verified unavailable, not merely unrecorded: both in-repo patents were searched for purity/HPLC/UPLC/LC-MS/mass-spec language and neither reports any, and labels and trial papers do not publish per-batch purity. No wet lab was run. This states what the sources reviewed contain, not that no source anywhere could report it; targeted supplements and manufacturer batch records remain unexamined. |
+| `purity_pct` | float | Reported purity of the tested oligo, %. **`TBD` for all 65** — verified unavailable, not merely unrecorded: both in-repo patents were searched for purity/HPLC/UPLC/LC-MS/mass-spec language and neither reports any, and labels and trial papers do not publish per-batch purity. No wet lab was run. This states what the sources reviewed contain, not that no source anywhere could report it; targeted supplements and manufacturer batch records remain unexamined. **Update 2026-10-03: the hedge proved correct and the gap is partly closable.** FDA Pharmacology/Toxicology reviews, previously recorded as inaccessible, report per-lot purity with lot numbers (`Drug/Lot#/purity:` lines). Ten values recovered for casimersen, golodirsen and viltolarsen; staged in `research_staging/purity_from_fda_reviews_2026-10-03.csv`, **not ingested**. They are nonclinical study lots, not clinical lots, so they belong to a study and not to the oligo. |
 | `purity_method` | string | Analytical method behind `purity_pct` (e.g. `HPLC`, `LC-MS`). `TBD` for all 65, same reason. |
 | `identity_confirmation` | enum | **How each oligo's identity was established** — the half of the Phase 2 "purify and characterize oligo identity" requirement a curated dataset can answer. `who_inn_chemical_nomenclature` (residue-by-residue INN parse, reverse-complement and molecular-formula checked) \| `patent_sequence_listing` \| `regulatory_label` \| `peer_reviewed_publication` \| `not_established` (sequence still `TBD`). Derived by `scripts/add_identity_characterization.py`. |
 | `design_source` | string | Source for the design metadata (DOI / patent / label). |
@@ -207,8 +207,10 @@ oligo may differ by model/dose. Record the rationale in `notes` when non-obvious
   `CLINICAL_VALIDATION.md` recommendation: `measured_and_reported` 233 / `cannot_determine` 8
   / `not_measured` 3 / `not_reported_in_source` 2. **13 grade-0 clinical rows are now
   explicitly flagged as not supported as measured negatives.**
-  Added **`purity_pct`**, **`purity_method`** (TBD for all 65 — verified unavailable: both
-  patents searched for purity/HPLC/UPLC/LC-MS/mass-spec language, none present) and
+  Added **`purity_pct`**, **`purity_method`** (TBD for all 65 — not reported in the sources
+  reviewed at the time: both patents searched for purity/HPLC/UPLC/LC-MS/mass-spec language,
+  none present. **Superseded 2026-10-03** — see the `purity_pct` row above; FDA reviews do
+  report per-lot values) and
   **`identity_confirmation`** (who_inn_chemical_nomenclature 20 / patent_sequence_listing 25
   / regulatory_label 7 / peer_reviewed_publication 3 / not_established 10), answering the
   identity half of the Phase 2 characterization requirement.

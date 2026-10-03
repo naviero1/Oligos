@@ -49,6 +49,21 @@ oligo). **The decision required is how to present this in the submission** — a
 limitation of the curation approach, which is our recommendation, rather than as a silent
 blank.
 
+**Update 2026-10-03 — this item is partly overtaken.** `accessdata.fda.gov` was recorded as
+blocked across the project and is in fact only **user-agent gated**. Four FDA Pharmacology/
+Toxicology reviews have since been retrieved, and they **do** report per-lot purity with lot
+numbers: ten values across casimersen, golodirsen and viltolarsen, staged in
+`research_staging/purity_from_fda_reviews_2026-10-03.csv` and **not ingested**. The paragraph
+above remains true of the patents and labels it describes, but *"no source reviewed"* was never
+the same claim as *"no source"*, and the difference now matters.
+
+Three cautions travel with those values: they are **nonclinical study lots, not clinical lots**,
+so they belong to a study rather than to the oligo; one golodirsen lot (`7001257`) carries three
+different stated values across two reviews, so they must not be averaged; and two inotersen
+figures **exceed 100%** and are therefore assay/content results against a reference standard
+rather than purity — flagged do-not-ingest. The decision this item asks for is unchanged in
+kind, but it is now a decision about a **partial recovery** rather than about a blank.
+
 **b. The negative class is improved but not clean.** The provenance/outcome confound was
 **not** measurably weakened — the apparent movement was denominator change, and the rows
 credited with it are gated out as ineligible negatives (`scripts/confound_stats.py`) — and
