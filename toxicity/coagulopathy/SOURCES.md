@@ -8,7 +8,7 @@ re-read the evidence without network access.
 This file is **generated** from [`data/sources.csv`](./data/sources.csv) — that table is the
 source of truth. Regenerate with `scripts/build_sources_md.py` after any rebuild.
 
-**75 sources · 2388 measurements.**
+**100 sources · 2,685 measurements.**
 
 | Redistribution | Sources |
 |---|---:|

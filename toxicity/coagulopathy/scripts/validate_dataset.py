@@ -323,6 +323,64 @@ bad = [r["measurement_id"] for r in D
        if r["readout_category_as_curated"] not in ("", NA) and r["endpoint_scope"] != "scope_adjacent"]
 check("a recategorised row is recorded only where the scope says so", not bad, f"{len(bad)}: {bad[:5]}")
 
+# ---- the Characterization Gap Register (SCIENTIFIC_RULES.md §F) ---------------------
+# "The field value and the register are both required: the value states the truth, the
+# register discharges the requirement." A register that lags the values discharges nothing,
+# so every missing characterisation field must have a register row.
+_gp = os.path.join(ROOT, "data", "characterization_gap_register.csv")
+if os.path.exists(_gp):
+    G = list(csv.DictReader(open(_gp, newline="", encoding="utf-8")))
+    have = {(r["oligo_id"], r["missing_field"]) for r in G}
+    _mo = {m["oligo_id"] for m in M}
+    missing = []
+    for o in O:
+        for f in ("purity_pct", "identity_confirmation", "purity_method", "endotoxin_level",
+                  "sequence_5to3_asprinted"):
+            v = str(o.get(f, "")).strip()
+            if v in ("", NR, NA) and (o["oligo_id"], f) not in have:
+                missing.append(f'{o["oligo_id"]}.{f}')
+        if o["oligo_id"] not in _mo and (o["oligo_id"], "position_chemistry") not in have:
+            missing.append(f'{o["oligo_id"]}.position_chemistry')
+    check("every missing characterisation field has a gap-register row", not missing,
+          f"{len(missing)}: {missing[:5]}")
+
+    bad = [r["oligo_id"] for r in G if not all(str(r[k]).strip() for k in
+           ("why_it_is_missing", "what_was_attempted", "what_would_close_it"))]
+    check("every gap record says why, what was attempted and what would close it", not bad,
+          f"{len(bad)}: {bad[:5]}")
+
+    bad = [r["oligo_id"] for r in G if r["oligo_id"] not in {o["oligo_id"] for o in O}]
+    check("the gap register names no compound outside the roster", not bad, f"{len(bad)}: {bad[:5]}")
+
+# ---- quote rights (Crank 2026-10-03) -----------------------------------------------
+# "Drop or hash the verbatim_quote column ... publisher prose inside a file meant to ship
+# openly." Hashed rather than dropped, so the row stays checkable by anyone holding the
+# source. These checks make the rule structural instead of a one-off edit.
+PERMISSIVE = {"public_domain", "CC_BY"}
+_red = {r["source_id"]: r["redistribution"] for r in S}
+bad = [r["measurement_id"] for r in D
+       if _red.get(r["source_id"]) not in PERMISSIVE
+       and not str(r["verbatim_quote"]).startswith("WITHHELD_SOURCE_LICENCE_RESTRICTED")
+       and str(r["verbatim_quote"]).strip() not in ("", NR, NA)]
+check("no quote is republished from a source whose licence forbids it", not bad, f"{len(bad)}: {bad[:5]}")
+
+bad = [r["measurement_id"] for r in D
+       if r["verbatim_quote_status"] == "withheld_source_licence_restricted"
+       and not (r["verbatim_quote_sha256"].startswith("sha256:")
+                and str(r["source_locus"]).strip() not in ("", NR))]
+check("a withheld quote still carries its hash and its locus", not bad, f"{len(bad)}: {bad[:5]}")
+
+QS = {"quoted_in_full_source_licence_permits_republication",
+      "withheld_source_licence_restricted", NA, NR}
+bad = sorted({r["verbatim_quote_status"] for r in D if r["verbatim_quote_status"] not in QS})
+check("vocabulary: measurements.verbatim_quote_status", not bad, f"unexpected {bad[:4]}")
+
+bad = [o["oligo_id"] for o in O
+       if _red.get(o["purity_source_id"]) not in PERMISSIVE
+       and str(o["purity_evidence_quote"]).strip() not in ("", NR, NA)
+       and not str(o["purity_evidence_quote"]).startswith("WITHHELD_SOURCE_LICENCE_RESTRICTED")]
+check("no purity quote is republished against its source licence", not bad, f"{len(bad)}: {bad[:5]}")
+
 # ---- purity and characterisation (Phase 2 mandatory dataset clause) -----------------
 # "This file must contain the sequences of all oligos tested, as well as the location of all
 # chemical modifications in each oligo, data on the purity and characterization of each."

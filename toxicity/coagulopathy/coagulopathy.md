@@ -21,9 +21,9 @@ here — see [`METHODOLOGY.md`](METHODOLOGY.md) and [`schema.md`](schema.md).
 |---|---|---|
 | Unique oligos | 213 | `data/oligos.csv` (213 × 28) |
 | Measurement rows | 2,388 | `data/measurements.csv` (2,388 × 38) |
-| Per-position modification records | 941 over 47 oligos | `data/modifications.csv` |
-| Sources | 75, all with the cited document committed | `data/sources.csv`, `sources/documents/` |
-| Sequences published | 97 of 213 | `sequence_base` not `NOT_REPORTED`/`NOT_APPLICABLE` |
+| Per-position modification records | 1,039 over 52 oligos | `data/modifications.csv` |
+| Sources | 100, all with the cited document committed | `data/sources.csv`, `sources/documents/` |
+| Sequences published | 104 of 218 | `sequence_base` not `NOT_REPORTED`/`NOT_APPLICABLE` |
 | Graded rows | 867 (0/1/2/3 = 463/312/66/26) | `coag_tox_grade`; 1,521 ungraded, each with a stated reason |
 | Structural QC | 45 / 45 pass | `scripts/validate_dataset.py`, exits non-zero on failure |
 | Numeric values found in their cited source | 1,876 / 1,876 | `scripts/verify_against_sources.py` |

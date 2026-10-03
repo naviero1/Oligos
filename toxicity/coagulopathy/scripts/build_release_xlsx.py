@@ -522,6 +522,16 @@ DEFS = {
     ("oligos", "counterion"): "The salt form and how the counterion is controlled.",
     ("oligos", "impurity_classes"): "Impurity and degradant classes named in the specification.",
     ("oligos", "characterisation_basis"): "regulatory_quality_section:<source_id> where characterisation was recovered from a Quality/CMC section, else not_recovered_from_a_regulatory_quality_section.",
+    # ---- quote rights (Crank's delegation, 2026-10-03) ------------------------------
+    ("*", "verbatim_quote_status"): "quoted_in_full_source_licence_permits_republication | withheld_source_licence_restricted. A quote is printed only where the source licence permits republication (public_domain, CC BY). 774 of 2,685 are withheld.",
+    ("*", "verbatim_quote_sha256"): "SHA-256 of the normalised quote, present whether or not the quote itself is printed. A withheld quote stays checkable: recompute the hash from the source text at source_locus and compare.",
+    ("*", "verbatim_quote_word_count"): "Word count of the original quote, kept so a withheld quote's extent is still visible.",
+    ("*", "purity_evidence_quote_status"): "Same rule as verbatim_quote_status, for the purity evidence.",
+    ("*", "purity_evidence_quote_sha256"): "SHA-256 of the normalised purity quote; present whether or not the quote is printed.",
+    ("*", "purity_evidence_quote_word_count"): "Word count of the original purity quote.",
+    ("*", "evidence_quote_status"): "Same rule as verbatim_quote_status. A study cluster drawing on several sources is withheld unless EVERY source behind it permits republication, because the quote cannot be attributed to the permissive half.",
+    ("*", "evidence_quote_sha256"): "SHA-256 of the normalised register quote.",
+    ("*", "evidence_quote_word_count"): "Word count of the original register quote.",
     # ---- definitions shared by several tables (the ("*", col) fallback) --------------
     ("*", "compound_families"): "Drug families named by the record, comparators included.",
     ("*", "subject_compound_families"): "The drug families actually under test, with comparators, prior therapies, placebos and positive controls removed.",

@@ -12,7 +12,7 @@ in the dossier.
 
 Exits non-zero if any value cannot be located.
 """
-import csv, os, re, sys, unicodedata
+import csv, json, os, re, sys, unicodedata
 from collections import Counter, defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -99,9 +99,25 @@ def main():
                                                           newline="", encoding="utf-8"))}
     pres = Counter()
     pbad = []
+    _cpath = os.path.join(ROOT, "sources", "characterisation.json")
+    _orig_purity_quote = {}
+    if os.path.exists(_cpath):
+        for _r in json.load(open(_cpath, encoding="utf-8"))["records"]:
+            _q = str(_r.get("verbatim_quote", "") or "")
+            if _q and _r.get("oligo_id") not in _orig_purity_quote:
+                _orig_purity_quote[_r.get("oligo_id")] = _q
     for o in csv.DictReader(open(opath, newline="", encoding="utf-8")):
         sid = o.get("purity_source_id", "")
         quote = o.get("purity_evidence_quote", "")
+        # A quote withheld for licence reasons is not published, but it still has to be
+        # verifiable on every build, so verification reads the ORIGINAL from the curation
+        # input we hold rather than the redacted column. Withholding protects the publisher;
+        # it must not weaken the check.
+        if str(quote).startswith("WITHHELD_SOURCE_LICENCE_RESTRICTED"):
+            quote = _orig_purity_quote.get(o["oligo_id"], "")
+            if not quote:
+                pres["withheld_and_original_unavailable"] += 1
+                continue
         if sid in ("", NR, "NOT_APPLICABLE") or quote in ("", NR, "NOT_APPLICABLE"):
             continue
         fn = srcs.get(sid, {}).get("document_file", "")

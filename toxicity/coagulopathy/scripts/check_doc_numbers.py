@@ -31,7 +31,15 @@ from collections import Counter
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
-DOCS = ["METHODOLOGY.md", "PADP.md", "README.md", "STATUS.md", "schema.md", "coagulopathy.md"]
+# SOURCES.md was missing from this list on 2026-10-03, which is why its header shipped
+# "75 sources - 2388 measurements" against an actual 100 and 2,685 until Crank caught it.
+# A guard with an incomplete file list is a guard that reports clean while the defect ships.
+DOCS = ["METHODOLOGY.md", "PADP.md", "README.md", "STATUS.md", "schema.md", "coagulopathy.md",
+        "SOURCES.md", "ROCKSTEADY_RESEARCH_REPORT_2026-10-02.md"]
+# Dated correspondence is an archive of what was said on a date, not a current claim, so it
+# is out of scope here and carries a superseded-figures banner instead. Checking it would
+# force either rewriting history or exempting whole files from the guard.
+ARCHIVE = ["ROCKSTEADY_REVIEW_REPLY_2026-10-01.md", "ROCKSTEADY_RESPONSE_TO_BEEBOP.md"]
 
 
 def load(n):
@@ -50,13 +58,21 @@ def main():
         "modification records": len(M),
         "sources": len(S),
         "headline trials": len(head),
+        "compounds with per-position chemistry": len({m["oligo_id"] for m in M}),
     }
     # value that is current -> values it replaced, with the noun they sit beside
+    # Every value that has ever been published for one of these counts. Crank's 2026-10-03
+    # delegation named four this guard did not know about -- the source count, the
+    # modification-record count over its oligo count, and the published-sequence count --
+    # which is the difference between a guard that catches a class of defect and one that
+    # catches the three instances somebody happened to remember.
     superseded = {
         "oligonucleotides|compounds": (len(O), [213]),
         "measurements|rows": (len(D), [2388]),
         "modification": (len(M), [941]),
+        "sources?": (len(S), [75]),
         "trials": (len(head), [30, 65]),
+        "oligos": (len({m["oligo_id"] for m in M}), [47]),
     }
 
     fails = []
@@ -83,6 +99,11 @@ def main():
     for label, v in live.items():
         if f"{v:,}" not in joined and str(v) not in joined:
             missing.append(f"no document states the current {label} count ({v:,})")
+
+    for a in ARCHIVE:
+        q = os.path.join(ROOT, a)
+        if os.path.exists(q) and "Superseded figures" not in open(q, encoding="utf-8").read():
+            fails.append(f"{a}: dated correspondence carries no superseded-figures banner")
 
     for f in fails:
         print(f"  FAIL  {f}")

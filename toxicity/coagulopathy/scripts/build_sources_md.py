@@ -10,6 +10,14 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 S = list(csv.DictReader(open(os.path.join(ROOT, "data", "sources.csv"))))
 S.sort(key=lambda r: -int(r["n_measurements"]))
 out = open(os.path.join(ROOT, "SOURCES.md")).read().split("## Registry")[0]
+
+# Fill the header counts from the tables. The header read "75 sources - 2388 measurements"
+# against an actual 100 and 2,685; Crank caught it on 2026-10-03, and my own document-figure
+# guard had missed it because SOURCES.md was not in the guard's file list and no assertion
+# covered the source count. Generated now, so the header cannot drift from the registry
+# printed underneath it.
+_n_meas = len(list(csv.DictReader(open(os.path.join(ROOT, "data", "measurements.csv")))))
+out = out.replace("<!--HEADER_COUNTS-->", f"**{len(S)} sources \u00b7 {_n_meas:,} measurements.**")
 rows = ["## Registry\n",
         "| ID | Rows | Oligos | Source | Identifier | Redistribution |",
         "|---|---:|---:|---|---|---|"]

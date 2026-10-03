@@ -210,6 +210,27 @@ def family(r, subject_only=False):
     return fams
 
 
+# Crank 2026-10-03, applied to the register as well as to measurements: a quote whose source
+# licence does not permit republication is withheld and hashed rather than printed. A study
+# cluster can draw on several sources, so a quote is kept only when EVERY source behind the
+# cluster permits it -- a mixed cluster is withheld, because the quote cannot be attributed
+# to the permissive half.
+QUOTE_LICENCE_PERMITS_REPUBLICATION = {"public_domain", "CC_BY"}
+
+
+def quote_rights(quote, source_ids, red):
+    import hashlib
+    q = str(quote or "")
+    h = "sha256:" + hashlib.sha256(re.sub(r"\s+", " ", q).strip().encode("utf-8")).hexdigest()
+    if not q.strip() or q.strip() == NR:
+        return q, NR, "0", NR
+    licences = {red.get(s.strip(), NR) for s in source_ids if s.strip()}
+    if licences and licences <= QUOTE_LICENCE_PERMITS_REPUBLICATION:
+        return q, h, str(len(q.split())), "quoted_in_full_source_licence_permits_republication"
+    return ("WITHHELD_SOURCE_LICENCE_RESTRICTED - verify against the source at `locus` and "
+            "compare evidence_quote_sha256."), h, str(len(q.split())), "withheld_source_licence_restricted"
+
+
 def best(vals):
     """Most informative non-empty value: the longest that is not a placeholder."""
     v = [str(x).strip() for x in vals if str(x).strip() and str(x).strip() not in (NR, "NOT_APPLICABLE", "None")]
@@ -218,6 +239,10 @@ def best(vals):
 
 def main():
     raw = json.load(open(RAW))["raw_records"]
+    _sp = os.path.join(ROOT, "data", "sources.csv")
+    red = ({r["source_id"]: r.get("redistribution", NR)
+            for r in csv.DictReader(open(_sp, newline="", encoding="utf-8"))}
+           if os.path.exists(_sp) else {})
     pooled = [r for r in raw if is_pooled(r)]
     trial = [r for r in raw if not is_pooled(r)]
 
@@ -348,7 +373,14 @@ def main():
             "n_source_records": len(rs),
             "source_ids": "; ".join(sorted({r.get("source_id", "") for r in rs})),
             "designs_reported": "; ".join(sorted(designs)),
-            "evidence_quote": best([r.get("evidence_quote") for r in rs])[:1200],
+            "evidence_quote": quote_rights(best([r.get("evidence_quote") for r in rs])[:1200],
+                                           {r.get("source_id", "") for r in rs}, red)[0],
+            "evidence_quote_sha256": quote_rights(best([r.get("evidence_quote") for r in rs])[:1200],
+                                                  {r.get("source_id", "") for r in rs}, red)[1],
+            "evidence_quote_word_count": quote_rights(best([r.get("evidence_quote") for r in rs])[:1200],
+                                                      {r.get("source_id", "") for r in rs}, red)[2],
+            "evidence_quote_status": quote_rights(best([r.get("evidence_quote") for r in rs])[:1200],
+                                                  {r.get("source_id", "") for r in rs}, red)[3],
             "locus": best([r.get("locus") for r in rs])[:400],
             "duplicate_of_hint": best([r.get("duplicate_of_hint") for r in rs])[:600],
             "review_flag": "; ".join(flags),
@@ -388,7 +420,12 @@ def main():
             "enrolled": str(r.get("enrolled") or NR)[:400],
             "analysed": str(r.get("analysed") or NR)[:400],
             "population": str(r.get("population") or NR)[:300],
-            "evidence_quote": str(r.get("evidence_quote") or NR)[:1200],
+            "evidence_quote": quote_rights(str(r.get("evidence_quote") or NR)[:1200],
+                                           {r.get("source_id", "")}, red)[0],
+            "evidence_quote_sha256": quote_rights(str(r.get("evidence_quote") or NR)[:1200],
+                                                  {r.get("source_id", "")}, red)[1],
+            "evidence_quote_status": quote_rights(str(r.get("evidence_quote") or NR)[:1200],
+                                                  {r.get("source_id", "")}, red)[3],
             "locus": str(r.get("locus") or NR)[:400],
             "counting_rule": "NOT a trial; never added to the human-trial total; its "
                              "participants overlap the member protocols named above",

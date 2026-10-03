@@ -20,7 +20,7 @@ enforces that.
 
 ## `data/sources.csv` — the provenance registry
 
-One row per source document. 75 rows.
+One row per source document. 100 rows.
 
 | Column | Description |
 |---|---|
@@ -74,7 +74,7 @@ One row per source document. 75 rows.
 
 ## `data/modifications.csv` — per-position chemistry
 
-941 rows over 47 oligos: **one row per nucleotide position, 5′→3′**, for every compound
+1,039 rows over 52 oligos: **one row per nucleotide position, 5′→3′**, for every compound
 whose source publishes position-resolved chemistry. This is the table that answers the
 Challenge's requirement for "the location of all chemical modifications in each oligo".
 

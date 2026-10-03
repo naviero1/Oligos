@@ -12,7 +12,7 @@ find, extract, verify and harmonise them. Conflating the two would let curation 
 masquerade as experimental fact.
 
 Snapshot: **<!--N:n_oligos--> oligonucleotides · <!--N:n_meas--> measurements · <!--N:n_mods--> per-position modification
-records · 75 sources.**
+records · <!--N:n_sources--> sources.**
 
 ## 2. Scope — what counts as this endpoint
 

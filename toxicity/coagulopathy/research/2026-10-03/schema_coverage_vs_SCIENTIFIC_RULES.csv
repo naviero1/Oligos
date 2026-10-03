@@ -1,0 +1,36 @@
+german_field,group,status,our_column,table,populated,note
+sequence_5to3,identity,present_renamed,sequence_5to3_asprinted,oligos,121 of 218,"also sequence_base with chemistry stripped, and length_nt_from_sequence computed from it"
+strand_role,identity,absent,-,oligos,-,"NOT MODELLED. modality distinguishes single_stranded_ASO / double_stranded_siRNA / aptamer, but a duplex is held as ONE row with one sequence field: the antisense and sense strands cannot be addressed separately and the complement is unrepresentable, not NOT_REPORTED"
+duplex_partner_id,identity,absent,-,oligos,-,NOT MODELLED. follows from strand_role: there is no second strand row to point at
+backbone_by_linkage,identity,present_renamed,backbone_linkage_3p,modifications,919 of 1039,"per position, linkage 3' of each residue; molecule-level backbone_chemistry is the secondary derived flag, which is the ordering §C requires"
+sugar_mod_by_position,identity,present_renamed,sugar_mod,modifications,1038 of 1039,per position
+base_mod_by_position,identity,partial,is_5_methyl_C,modifications,1039 of 1039,"only 5-methyl-C is captured, as a boolean. Any other base modification has nowhere to go"
+terminal_modifications,identity,present_renamed,terminal_modification,oligos,1 of 218,held at oligo level because a terminal residue has no position in a 5'->3' base string
+gap_length_nt,identity,partial,gapmer_design,oligos,65 of 218,free text such as '5-10-5' rather than an integer gap length; machine-readable gap length absent
+purity_pct,characterization,present,purity_pct,oligos,2 of 218,"plus purity_batches holding every value against its lot, and purity_pct_basis separating tested_batch from drug_substance_specification"
+identity_method,characterization,present_renamed,identity_confirmation,oligos,32 of 218,plus identity_methods_regulatory for values recovered from a regulatory quality section
+endotoxin_level,characterization,absent,-,oligos,-,NOT MODELLED. endotoxin limits appear in the EPAR quality sections we hold and were not extracted
+formulation,exposure,partial,delivery_method,measurements,2604 of 2685,delivery_method mixes route and vehicle; formulation is not a separate field
+delivery_agent,exposure,partial,delivery_method,measurements,2604 of 2685,"LNP / GalNAc / naked is partly inferable from delivery_method and oligos.conjugate, not a field"
+anticoagulant,exposure,absent,-,measurements,-,"NOT MODELLED, and this one bites HERE specifically: citrate vs heparin vs hirudin changes a clotting-time readout directly. Some rows name it inside system_model free text"
+dose_value,exposure,present,dose_value,measurements,2339 of 2685,
+dose_unit,exposure,present,dose_unit,measurements,2314 of 2685,
+exposure_time_h,exposure,partial,exposure_duration,measurements,1949 of 2685,"free text with mixed units ('26 weeks', '4 h'), not normalised to hours; timepoint is separate"
+cell_system,exposure,present_renamed,system_model,measurements,2685 of 2685,plus matrix (plasma / whole_blood / serum / in_vivo / purified_system)
+cell_subset,exposure,absent,-,measurements,-,NOT MODELLED
+species,exposure,present,species,measurements,2611 of 2685,"plus species_class (human/animal/not_determined) and species_class_basis, because a purified human protein assay carries species=NOT_APPLICABLE while being a human system"
+donor_id,exposure,absent,-,measurements,-,NOT MODELLED. donor-level replication cannot be distinguished from technical replication
+donor_class,exposure,absent,-,measurements,-,NOT MODELLED. healthy volunteer vs patient is only in population text on the study register
+sample_state,exposure,absent,-,measurements,-,NOT MODELLED. fresh / frozen / pooled is not captured; pooled plasma is named in free text only
+endpoint_name,outcome,present_renamed,readout_name,measurements,2685 of 2685,"plus readout_category, and readout_category_as_curated where the scope rule replaced it"
+raw_value,outcome,present_renamed,readout_value,measurements,2170 of 2685,"plus control_value, ratio_to_control and ratio_basis"
+raw_unit,outcome,present_renamed,readout_unit,measurements,2318 of 2685,
+author_interpretation,outcome,present_renamed,severity_stated_by_source,measurements,1015 of 2685,plus source_stated_grade where the source graded severity itself
+curator_label,outcome,present_renamed,coag_tox_grade,measurements,918 of 2685,"plus grade_basis, grade_authority, grade_status and is_validated_clinical_grade. SEE THE FLAG ON §E BELOW: the grade is derived from CTCAE cut-offs, which §E prohibits for in-vitro fold-change bins"
+immunomodulatory_direction,outcome,present_renamed,effect_direction,measurements,1998 of 2685,increase / decrease / no_change; the immune-specific sense of the field does not apply here
+receptor_pathway,outcome,absent,-,measurements,-,"NOT MODELLED as a field. GPVI, PF4 and contact-pathway mechanisms appear in notes free text"
+mechanism_evidence_type,outcome,absent,-,measurements,-,NOT MODELLED
+clinical_anchor,outcome,partial,study_id,measurements,424 of 2685,"study_id links a clinical row to a register trial for 424 of 749 rows; it is a trial link, not the clinical-anchor concept of §C"
+evidence_confidence,outcome,partial,evidence_class,measurements,2685 of 2685,"evidence_class says what KIND of observation a row is, with evidence_class_basis and evidence_class_review_status. It is not a confidence score and no GOLD/SILVER/BRONZE tier exists"
+sequence_family_group,grouping,absent,-,oligos,-,"ABSENT AND REQUIRED FROM THE START by §G. Grouped splits by sequence family are impossible without it. A candidate grouping can be computed but §G also forbids merging chemically distinct constructs, so the adjudication is German's"
+paper_group,grouping,absent,-,measurements,-,"ABSENT AS A COLUMN, but source_id is a faithful proxy: every row carries exactly one source, so leave-one-paper-out is computable today by grouping on source_id"

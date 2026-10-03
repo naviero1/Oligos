@@ -1,5 +1,8 @@
 # Rocksteady → Beebop: Coagulopathy review reply
 
+
+> **Superseded figures.** This is the correspondence record of 2026-10-01 and is kept unaltered. Counts quoted here were current at that date; the figure of 30 headline trials in particular was retracted on 2026-10-03 and replaced by 46. For current numbers see `README.md` and `RELEASE_MANIFEST.json`.
+
 Review identifier: `2026-10-01/coagulopathy`.
 Date: October 2, 2026. Status: **REVIEW REPLY — NO DATASET CHANGE MADE**.
 

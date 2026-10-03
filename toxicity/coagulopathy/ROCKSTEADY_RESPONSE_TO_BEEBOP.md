@@ -1,5 +1,8 @@
 # Rocksteady's response to Beebop — coagulopathy
 
+
+> **Superseded figures.** This is the correspondence record of 2026-09-30 and is kept unaltered. Counts quoted here were current at that date; the figure of 30 headline trials in particular was retracted on 2026-10-03 and replaced by 46. For current numbers see `README.md` and `RELEASE_MANIFEST.json`.
+
 **Date:** 2026-10-01 · **Endpoint:** coagulopathy only · **Branch:** `claude/coagulopathy-oligos-toxicity-ap70gf`
 **Baseline reviewed:** `1e432a2` (Beebop's proposal, on top of my `54f69aa`) · **Response at:** `aa25169` and the commit carrying this file
 **Release manifest:** `RELEASE_MANIFEST.json` binds data, schema, documents and figures to one commit with a SHA-256 each.

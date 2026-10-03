@@ -661,6 +661,72 @@ def apply_licence_resolutions(sources, rows, log):
     return sources, rows
 
 
+# --------------------------------------------- quote rights
+# Crank's delegation of 2026-10-03 assigned this endpoint: "Drop or hash the `verbatim_quote`
+# column on 687 rows -- 30,885 words of publisher prose inside a file meant to ship openly;
+# the numbers beside it are unaffected." Measured here after the 2026-10-03 licence
+# resolutions: 774 rows carrying 34,278 words whose source licence does not permit us to
+# republish its text, of which 698 rows / 31,318 words come from sources that forbid
+# derivative republication outright. Crank's figure is confirmed in substance; the small
+# difference is that ten EMA sources moved from public_domain/CC_BY to cite_and_link_only
+# when their licences were resolved.
+#
+# HASH, NOT DROP, and the distinction matters. The quote is the audit trail: it is how a
+# reader checks that a number means what the row says it means. Deleting it would protect
+# the publisher and blind the reviewer. Replacing it with a SHA-256 of the normalised quote
+# keeps the row checkable by anyone who holds the source -- they recompute the hash and
+# compare -- while publishing none of the prose. `source_locus` stays, because a pointer to
+# a table is our description, not the publisher's text.
+#
+# A quote is kept in full only where the source licence permits redistribution:
+# public_domain (US federal works, USPTO grant text, openFDA) and CC_BY. Everything else is
+# withheld, CC_BY_NC included -- NC permits derivatives but not commercial reuse, and this
+# dataset ships CC BY 4.0, which is more permissive than its source would allow.
+#
+# WHAT THIS DOES NOT FIX, stated plainly rather than left for someone to discover: the same
+# prose remains in sources/extraction/*.json (2,773 verbatim_quote keys, the curation inputs
+# the build reads), and 48 complete non-permissive source documents remain committed under
+# sources/documents/ -- 15 CC_BY_NC_ND, 20 publisher_restricted, 3 CC_BY_NC and 10
+# cite_and_link_only, 6.3 MB in total. Those are rights-audit decisions under an explicit
+# "zero automatic withdrawals" instruction, so they are reported, not acted on here.
+QUOTE_LICENCE_PERMITS_REPUBLICATION = {"public_domain", "CC_BY"}
+
+
+def _quote_hash(q):
+    import hashlib
+    return "sha256:" + hashlib.sha256(re.sub(r"\s+", " ", str(q)).strip().encode("utf-8")).hexdigest()
+
+
+def apply_quote_rights(sources, rows, oligos, log):
+    red = {s["source_id"]: s.get("redistribution", NR) for s in sources}
+
+    def handle(rec, field, source_id):
+        q = str(rec.get(field, "") or "")
+        if not q.strip() or q.strip() in (NR, NA):
+            rec[field + "_status"] = NA
+            rec[field + "_sha256"] = NA
+            rec[field + "_word_count"] = "0"
+            return
+        permitted = red.get(source_id) in QUOTE_LICENCE_PERMITS_REPUBLICATION
+        rec[field + "_sha256"] = _quote_hash(q)
+        rec[field + "_word_count"] = str(len(q.split()))
+        if permitted:
+            rec[field + "_status"] = "quoted_in_full_source_licence_permits_republication"
+            log["Q_kept"] += 1
+        else:
+            rec[field] = ("WITHHELD_SOURCE_LICENCE_RESTRICTED - the quote is not republished "
+                          "here. Verify it against the source at source_locus and compare "
+                          "the hash in " + field + "_sha256.")
+            rec[field + "_status"] = "withheld_source_licence_restricted"
+            log["Q_withheld"] += 1
+
+    for r in rows:
+        handle(r, "verbatim_quote", r.get("source_id"))
+    for o in oligos:
+        handle(o, "purity_evidence_quote", o.get("purity_source_id"))
+    return sources, rows, oligos
+
+
 def apply_endpoint_scope(rows, log):
     for r in rows:
         nm = r.get("readout_name", "")
@@ -1056,6 +1122,7 @@ def main():
         s["n_oligos"] = len(o_per_s.get(s["source_id"], ()))
 
     oligos = apply_characterisation(oligos, _log)
+    sources, measurements, oligos = apply_quote_rights(sources, measurements, oligos, _log)
 
     def write(name, rows):
         p = os.path.join(DATA, name)

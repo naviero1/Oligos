@@ -1,7 +1,7 @@
 {
   "endpoint": "coagulopathy",
   "generated": "2026-10-03",
-  "commit": "3531327794f6b97acd366d58298c7c526cf9e2e3",
+  "commit": "9ee2b59d100fa7723097ee098e27bc69bb857cf0",
   "branch": "claude/coagulopathy-oligos-toxicity-ap70gf",
   "tree_dirty": true,
   "counts": {
@@ -64,12 +64,12 @@
   },
   "files": {
     "data/measurements.csv": {
-      "sha256": "5be74b135888676d67054c2bdbd379f3aa25f8b04fb029ce1a717dc8648f1a23",
-      "bytes": 5974612
+      "sha256": "652efb760b5eefd18039a106ae3910c2d4d0ff911dc593e439c0081df4770827",
+      "bytes": 6218521
     },
     "data/oligos.csv": {
-      "sha256": "ec92a1b82a4a220b520a992e8f35484fa32bcfbf69594051683f135461491156",
-      "bytes": 398966
+      "sha256": "f2b2254c6517e4c73d1707e732d95fa8b7cf3828abce027fa3e17374270c6aa5",
+      "bytes": 404379
     },
     "data/modifications.csv": {
       "sha256": "a257ab0858e72aac0f515e363ec0f7f22ddb016414f7b4da73bbf900cf9ed9f2",
@@ -80,16 +80,16 @@
       "bytes": 65400
     },
     "data/studies.csv": {
-      "sha256": "a8a5f9d4c8e921df8b9c8c6576a860aca67c7d53c6342e840abcec9ec45a9818",
-      "bytes": 393773
+      "sha256": "2b54289d130184eade96660c8da3c7cd5c776a0100cf5b6b815add82a0b57696",
+      "bytes": 336051
     },
     "schema.md": {
-      "sha256": "dd15e6a5d583bf853a3ce8c54c5d939a24278180833c49c0b2fd546a1aa17a8f",
-      "bytes": 23265
+      "sha256": "b3cb16280786c11bab92ccea72034f9bd1883f7c91a6e8533037c62c923f0500",
+      "bytes": 23268
     },
     "METHODOLOGY.md": {
-      "sha256": "22d4d02a1bbc807a62846255bfb0e08b50e879e87473a18f27bd93f9ed3e809b",
-      "bytes": 13191
+      "sha256": "b6985958aeba9adb8356ac4c3eded5de2af3acc8ad491a8cc571c3c738978120",
+      "bytes": 13207
     },
     "README.md": {
       "sha256": "74340ae9136f7b943a4e91edbce3bab3e0d5211cba645e179c4684792b5c8875",
@@ -104,32 +104,32 @@
       "bytes": 8294
     },
     "coagulopathy.md": {
-      "sha256": "401e89b8e73eb97b6c5ace1f441a06a95f28691f9f6a44487d7f0974b4c28883",
-      "bytes": 13995
+      "sha256": "9319baeb558178db4e4ca9b23072e09d5f49a96ddfd83cbcf539803695a04d0b",
+      "bytes": 13999
     },
     "SOURCES.md": {
-      "sha256": "cdb6065eb2b77088316761357f94a79f8d90c4c099a8fdb78ac570a9543ca038",
-      "bytes": 22370
+      "sha256": "da8ba5f839e2f978ee2c0ed7896d3cafc165f378637fd9c708a6d0f9dcf10a55",
+      "bytes": 22372
     },
     "OligoTox-Coagulopathy_Dataset.xlsx": {
-      "sha256": "232d963fa0c195a392531bfc8fa6fdc2552337a2589a21f981ee1f01b33572eb",
-      "bytes": 2805994
+      "sha256": "7cfbd54ad97149ee6ac5f2193744e9c3e21122c7c5a6c344ff112a3fe58dbcbb",
+      "bytes": 2971743
     },
     "OligoTox-Coagulopathy_Narrative.pdf": {
-      "sha256": "c5c46c204e143bf572868775839c21277ea076169d640d29b2d03a9f4eefe99c",
+      "sha256": "8c276ee94c14efb239cb5f346b078386ec9ee9d4691c128e04695897c3bccd5b",
       "bytes": 229084
     },
     "OligoTox-Coagulopathy_Methodology.pdf": {
-      "sha256": "b1c1104b2083ac62a24e8017e672c999a39bd6c062784ea1c7e98e1190979b47",
-      "bytes": 165705
+      "sha256": "959fd91d37b4e4bf10ed581467b990a1c41bfb25227f0b923c318ee536ae4960",
+      "bytes": 165703
     },
     "OligoTox-Coagulopathy_PADP.pdf": {
-      "sha256": "9b0680d6f94d7985ad194790617f51414d15fb324f47d25a6e0ce53c4a65caa7",
+      "sha256": "8678c888902cd512f9e5db98ffb1d297eceac290a964acdb6ee492bf15998311",
       "bytes": 149115
     },
     "OligoTox-Coagulopathy_Sources.pdf": {
-      "sha256": "83030665cf7517b7acc43016cbd1ab45e53ae51c16be3e7dd43fca71e418514b",
-      "bytes": 672734
+      "sha256": "adeaaf1fb6371a9f015b4611bfd7538e8bcdba2907c93c8943cc06cc917c3267",
+      "bytes": 676795
     },
     "sources/DOWNLOAD_MANIFEST.csv": {
       "sha256": "7630a9d4442800c770561c54c2fc2a630dfd818cad284f334ef0ac4d69c76dd1",
